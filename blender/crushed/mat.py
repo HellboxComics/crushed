@@ -170,6 +170,7 @@ def get(spec, rng):
     if key in _CACHE and not p.get("unique"):
         return _CACHE[key]
     m = bpy.data.materials.new(f"{kind}")
+    m.use_nodes = True       # Blender 4.x needs this for a node tree; 5.x always has one
     g = G(m)
     fn = KINDS[kind]
     s = fn(g, p, rng)

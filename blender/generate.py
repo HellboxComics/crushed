@@ -21,7 +21,7 @@ sys.path.insert(0, HERE)
 
 import bpy  # noqa: E402
 
-from crushed import build, recipe  # noqa: E402
+from crushed import build, recipe, stage, tex  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
 
@@ -38,6 +38,9 @@ def token(tid, offset=0):
 
 def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=0, look="studio"):
     r = token(tid, offset)
+    stale = os.path.join(out, f"{tid:04d}.part.png")
+    if os.path.exists(stale):
+        os.remove(stale)
     t0 = time.time()
     sc = build.build(r, res=res, samples=samples, turntable=turntable, look=look)
     os.makedirs(out, exist_ok=True)
@@ -51,22 +54,43 @@ def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=0
         sc.render.filepath = os.path.abspath(os.path.join(fdir, "f_"))
         bpy.ops.render.render(animation=True)
     else:
-        sc.render.filepath = os.path.abspath(stem + ".png")
+        # render to a .part file and rename, so a killed run never leaves a half-written PNG that --skip-existing trusts
+        part = os.path.abspath(stem + ".part")
+        sc.render.filepath = part
         bpy.ops.render.render(write_still=True)
+        os.replace(part + ".png", os.path.abspath(stem + ".png"))
     print(f"[crushed] #{tid:04d} {r['condition']:<11} {r['era']} build {t1 - t0:.1f}s "
-          f"render {time.time() - t1:.1f}s crypto={r['crypto']}", flush=True)
+          f"render {time.time() - t1:.1f}s device={stage.DEVICE['used'] or 'CPU'} crypto={r['crypto']}", flush=True)
     return r
 
 
-def write_manifest(out):
-    """manifest.json is the whole collection, frozen. Its sha256 is the provenance hash."""
+def manifest_blob():
     rows = []
     for tid in range(1, recipe.SUPPLY + 1):
         r = recipe.recipe(tid)
         rows.append({"id": tid, "seed": r["seed"], "traits": dict(r["traits"]), "weight_lb": r["weight_lb"],
                      "items": r["items"], "heroes": r["heroes"], "crypto": r["crypto"]})
     blob = json.dumps({"collection": "CRUSHED IT", "supply": recipe.SUPPLY, "collection_seed": recipe.COLLECTION_SEED,
-                       "tokens": rows}, sort_keys=True, separators=(",", ":")).encode()
+                       "slots": tex.slot_hashes(), "tokens": rows}, sort_keys=True, separators=(",", ":")).encode()
+    return blob, rows
+
+
+def verify_manifest():
+    """Recompute the whole collection on this machine and compare it with the frozen provenance hash.
+    A different numpy, a changed object, or a different slot file all show up here, before a render is wasted."""
+    blob, _ = manifest_blob()
+    digest = "0x" + hashlib.sha256(blob).hexdigest()
+    with open(os.path.join(ROOT, "collection", "provenance.txt")) as f:
+        frozen = f.read().strip()
+    if digest != frozen:
+        print(f"[verify] MISMATCH\n  this machine: {digest}\n  frozen:       {frozen}")
+        sys.exit(2)
+    print(f"[verify] ok, this machine reproduces the frozen collection: {digest}")
+
+
+def write_manifest(out):
+    """manifest.json is the whole collection, frozen. Its sha256 is the provenance hash."""
+    blob, rows = manifest_blob()
     os.makedirs(out, exist_ok=True)
     with open(os.path.join(out, "manifest.json"), "wb") as f:
         f.write(blob)
@@ -129,15 +153,21 @@ def main():
     ap.add_argument("--turntable", type=int, default=0, help="frames for a 360 turn")
     ap.add_argument("--blend", action="store_true", help="also save the .blend")
     ap.add_argument("--manifest", action="store_true")
+    ap.add_argument("--verify", action="store_true", help="recompute the collection and compare it with provenance.txt")
     ap.add_argument("--metadata", metavar="IMAGE_BASE_URI")
     ap.add_argument("--anim-base", metavar="ANIM_BASE_URI")
     ap.add_argument("--skip-existing", action="store_true")
+    ap.add_argument("--device", default="auto", choices=["auto", "cpu", "gpu"],
+                    help="auto uses a GPU if Cycles finds one; cpu forces the processor")
     ap.add_argument("--look", default="studio", choices=["classic", "studio", "showroom", "daylight"], help="stage look (lights and floor only); studio is the release look")
     ap.add_argument("--offset", type=int, default=0, help="the contract's reveal offset (post-reveal only)")
     ap.add_argument("--sealed", action="store_true", help="render the pre-reveal image (renders/sealed.png)")
     ap.add_argument("--showcase", action="store_true", help="the 100 blocks shown on the site's pile page")
     a = ap.parse_args(argv)
+    stage.DEVICE["want"] = a.device
 
+    if a.verify:
+        verify_manifest()
     if a.manifest:
         write_manifest(os.path.join(ROOT, "collection"))
     if a.metadata:

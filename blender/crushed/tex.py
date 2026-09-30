@@ -797,3 +797,55 @@ def gas_label(rng, name):
     c.text("GAS", 0.08, 0.92, 0.4, (0.85, 0.08, 0.05), bold=True)
     c.text("$9.99", 0.1, 0.22, 0.13, (1, 0.85, 0.1), bold=True)
     return c.image(name)
+
+
+# -- drop-in art slots -----------------------------------------------------------------------------
+# Every printed surface above is a slot. Put a PNG named after the slot in assets/slots/ (slot.png, or
+# slot_anything.png for several variants, dealt per object) and it is used instead of the procedural one.
+# Nothing in the recipe changes; the files are hashed into the manifest, so the final art stays reproducible.
+
+import glob
+import hashlib
+import os
+
+SLOT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "assets", "slots")
+SLOT_NAMES = ["sticker", "keypad", "notebook", "chart", "pcb", "can_print", "ramen", "screen", "griptape_art", "battery",
+              "cd_marker", "app_grid", "lockscreen", "vape_print", "mag_cover", "poster", "tissue_print", "foil_print",
+              "scratch_print", "beer_print", "matchbook_print", "mug_print", "sun_label", "hdd_label", "street_sign",
+              "newspaper", "play_money", "card_print", "badge_print", "spectrum_print", "sock_print", "watch_face",
+              "sanitizer_label", "gas_label"]
+
+
+def slot_files(slot):
+    if not os.path.isdir(SLOT_DIR):
+        return []
+    hits = glob.glob(os.path.join(SLOT_DIR, slot + ".png")) + glob.glob(os.path.join(SLOT_DIR, slot + "_*.png"))
+    return sorted(hits)
+
+
+def slot_hashes():
+    """{filename: sha256} of every slot file: part of the collection's provenance."""
+    out = {}
+    if os.path.isdir(SLOT_DIR):
+        for f in sorted(glob.glob(os.path.join(SLOT_DIR, "*.png"))):
+            with open(f, "rb") as fh:
+                out[os.path.basename(f)] = hashlib.sha256(fh.read()).hexdigest()
+    return out
+
+
+def _slotted(fn):
+    def wrapped(rng, name, *args, **kw):
+        files = slot_files(fn.__name__)
+        if files:
+            path = files[int(rng.integers(0, len(files)))] if len(files) > 1 else files[0]
+            img = bpy.data.images.load(path, check_existing=True)
+            img.colorspace_settings.name = "sRGB"
+            return img
+        return fn(rng, name, *args, **kw)
+    wrapped.__name__ = fn.__name__
+    wrapped.__doc__ = fn.__doc__
+    return wrapped
+
+
+for _n in SLOT_NAMES:
+    globals()[_n] = _slotted(globals()[_n])

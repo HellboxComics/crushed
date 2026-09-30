@@ -1,4 +1,4 @@
-# CRUSHED rarity
+# CRUSHED IT rarity
 
 888 blocks. Every count below is exact.
 
@@ -6,72 +6,115 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| 1985-1990 | 222 | 25.0% |
-| 1991-1996 | 222 | 25.0% |
-| 1997-2002 | 222 | 25.0% |
-| 2003-2008 | 222 | 25.0% |
+| 1985-1990 | 178 | 20.0% |
+| 1991-1996 | 178 | 20.0% |
+| 2003-2008 | 178 | 20.0% |
+| 1997-2002 | 177 | 19.9% |
+| 2009-2026 | 177 | 19.9% |
 
 ## Condition
 
 | Value | Count | % |
 |---|---:|---:|
-| JUNK | 751 | 84.6% |
-| SOAKED | 36 | 4.1% |
+| JUNK | 738 | 83.1% |
 | BURNT | 36 | 4.1% |
+| SOAKED | 36 | 4.1% |
 | CLEAN | 27 | 3.0% |
 | BIOHAZARD | 19 | 2.1% |
 | GOLD | 11 | 1.2% |
 | SOLID GOLD | 1 | 0.1% |
+| SLOW MOTION | 1 | 0.1% |
+| LOW RES | 1 | 0.1% |
+| BLOW ON IT | 1 | 0.1% |
+| UNDER THE MATTRESS | 1 | 0.1% |
+| STOP THE PRESSES | 1 | 0.1% |
 | BULL TRAP | 1 | 0.1% |
 | MIXTAPE | 1 | 0.1% |
+| SAVE ICON | 1 | 0.1% |
 | DOUBLE A | 1 | 0.1% |
 | UNCRUSHED | 1 | 0.1% |
+| STILL ALIVE | 1 | 0.1% |
 | SCREEN TIME | 1 | 0.1% |
+| COLD STORAGE | 1 | 0.1% |
+| COASTERS | 1 | 0.1% |
+| CCFF00 | 1 | 0.1% |
+| LANDFILL DRIVE | 1 | 0.1% |
 | LEFTOVERS | 1 | 0.1% |
 | EMPTY | 1 | 0.1% |
+| GM | 1 | 0.1% |
+| GAS FEES | 1 | 0.1% |
 
 ## Headliner
 
 | Value | Count | % |
 |---|---:|---:|
-| Sneaker | 78 | 8.8% |
-| TV Remote | 62 | 7.0% |
-| CRT Monitor | 52 | 5.9% |
-| MP3 Player | 44 | 5.0% |
-| Game Controller | 43 | 4.8% |
-| Corded Phone | 42 | 4.7% |
-| VHS Tape | 36 | 4.1% |
-| Cassette Tape | 35 | 3.9% |
-| Puzzle Cube | 33 | 3.7% |
-| Flip Phone | 32 | 3.6% |
-| Calculator | 26 | 2.9% |
-| Handheld Console | 26 | 2.9% |
-| Portable Tape Player | 25 | 2.8% |
-| Boom Box | 25 | 2.8% |
-| Disposable Camera | 25 | 2.8% |
-| Ball Mouse | 24 | 2.7% |
-| Portable CD Player | 23 | 2.6% |
+| Sneaker | 89 | 10.0% |
+| TV Remote | 53 | 6.0% |
+| Corded Phone | 37 | 4.2% |
+| Game Controller | 32 | 3.6% |
+| CRT Monitor | 31 | 3.5% |
+| VHS Tape | 29 | 3.3% |
+| Magazine | 28 | 3.2% |
+| Cassette Tape | 27 | 3.0% |
+| Soda Can | 25 | 2.8% |
+| Handheld Console | 25 | 2.8% |
+| Disposable Camera | 24 | 2.7% |
+| MP3 Player | 24 | 2.7% |
+| Tissue Box | 23 | 2.6% |
+| Beer Can | 23 | 2.6% |
 | Energy Drink | 23 | 2.6% |
-| Soda Can | 22 | 2.5% |
-| Keyboard (Partial) | 22 | 2.5% |
-| Digital Camera | 22 | 2.5% |
-| Foam Headphones | 21 | 2.4% |
-| Skateboard | 19 | 2.1% |
-| Metal Lunchbox | 18 | 2.0% |
-| Yo-Yo | 16 | 1.8% |
-| 16-Bit Controller | 16 | 1.8% |
-| Pager | 15 | 1.7% |
-| Brick Phone | 13 | 1.5% |
-| Joystick | 12 | 1.4% |
-| Roller Skate | 11 | 1.2% |
-| Virtual Pet | 10 | 1.1% |
+| Digital Camera | 21 | 2.4% |
+| Portable Tape Player | 20 | 2.3% |
+| Boom Box | 20 | 2.3% |
+| Keyboard (Partial) | 18 | 2.0% |
+| Flip Phone | 18 | 2.0% |
+| Calculator | 16 | 1.8% |
+| Yo-Yo | 15 | 1.7% |
+| Metal Lunchbox | 14 | 1.6% |
+| Portable CD Player | 14 | 1.6% |
+| Disposable Vape | 14 | 1.6% |
+| Foam Headphones | 13 | 1.5% |
+| Puzzle Cube | 13 | 1.5% |
+| Pager | 13 | 1.5% |
+| Smartphone | 13 | 1.5% |
+| 16-Bit Controller | 12 | 1.4% |
+| Ball Mouse | 12 | 1.4% |
+| Joystick | 11 | 1.2% |
+| Poker Chip | 10 | 1.1% |
+| Drone | 10 | 1.1% |
+| Power Bank | 9 | 1.0% |
+| VR Headset | 8 | 0.9% |
+| 9999-in-1 Handheld | 7 | 0.8% |
 | Webcam | 7 | 0.8% |
-| 9999-in-1 Handheld | 5 | 0.6% |
+| Smartwatch | 7 | 0.8% |
+| Roller Skate | 6 | 0.7% |
+| Skateboard | 6 | 0.7% |
+| Brick Phone | 6 | 0.7% |
+| Virtual Pet | 6 | 0.7% |
+| Tablet | 6 | 0.7% |
+| Fidget Spinner | 6 | 0.7% |
+| Earbud Case | 6 | 0.7% |
+| Bluetooth Speaker | 6 | 0.7% |
+| Hand Sanitizer | 5 | 0.6% |
+| Face Mask | 4 | 0.5% |
+| Selfie Stick | 4 | 0.5% |
+| Ring Light | 3 | 0.3% |
+| Rescue Can | 1 | 0.1% |
+| Pixel Hoodie | 1 | 0.1% |
+| Game Cartridge | 1 | 0.1% |
+| Street Sign | 1 | 0.1% |
 | Dead Bull | 1 | 0.1% |
+| Floppy Disk | 1 | 0.1% |
 | AA Batteries | 1 | 0.1% |
 | Everything | 1 | 0.1% |
+| Hardware Wallet | 1 | 0.1% |
+| Burned CD | 1 | 0.1% |
+| Neon Tube | 1 | 0.1% |
+| Hard Drive | 1 | 0.1% |
 | Pizza Crust | 1 | 0.1% |
 | Nothing | 1 | 0.1% |
+| Coffee Mug | 1 | 0.1% |
+| Gas Can | 1 | 0.1% |
 
 ## Contaminant
 
@@ -104,111 +147,162 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| Hot Dust on a CRT | 121 | 13.6% |
-| New Plastic | 112 | 12.6% |
-| Mall Food Court | 101 | 11.4% |
-| Arcade Carpet | 96 | 10.8% |
-| Blue Raspberry | 86 | 9.7% |
-| Fresh Batteries (Licked) | 65 | 7.3% |
-| Body Spray Cloud | 62 | 7.0% |
-| Grandma's Couch | 62 | 7.0% |
-| Gym Bag, Forgotten | 53 | 6.0% |
-| Scratch-n-Sniff Sticker | 45 | 5.1% |
-| Rink Snack Bar | 41 | 4.6% |
-| Basement | 14 | 1.6% |
-| Burnt Popcorn | 9 | 1.0% |
-| Victory | 4 | 0.5% |
-| Melted Crayon | 4 | 0.5% |
-| Wet Cardboard | 4 | 0.5% |
-| Don't | 2 | 0.2% |
+| Hot Dust on a CRT | 98 | 11.0% |
+| New Plastic | 98 | 11.0% |
+| Arcade Carpet | 82 | 9.2% |
+| Mall Food Court | 80 | 9.0% |
+| Blue Raspberry | 76 | 8.6% |
+| Grandma's Couch | 66 | 7.4% |
+| Cheap Cologne | 56 | 6.3% |
+| Cigarette in a Jacket | 52 | 5.9% |
+| Gym Bag, Forgotten | 47 | 5.3% |
+| Fresh Batteries (Licked) | 43 | 4.8% |
+| Body Spray Cloud | 38 | 4.3% |
+| Scratch-n-Sniff Sticker | 36 | 4.1% |
+| Vegas Carpet | 36 | 4.1% |
+| Rink Snack Bar | 30 | 3.4% |
+| Basement | 11 | 1.2% |
+| Wet Cardboard | 7 | 0.8% |
+| Burnt Popcorn | 5 | 0.6% |
+| Victory | 2 | 0.2% |
 | Science Lab | 2 | 0.2% |
+| Hot Tub | 2 | 0.2% |
+| Melted Crayon | 2 | 0.2% |
+| Coconut Sunscreen | 1 | 0.1% |
+| Warm Amplifier | 1 | 0.1% |
+| Hot Breath | 1 | 0.1% |
+| Shame | 1 | 0.1% |
+| Fresh Newsprint | 1 | 0.1% |
 | Capitulation | 1 | 0.1% |
 | Magnetic Tape | 1 | 0.1% |
+| Static Electricity | 1 | 0.1% |
 | Anticipation | 1 | 0.1% |
+| Warm Plastic | 1 | 0.1% |
+| Freezer Burn | 1 | 0.1% |
+| Stale Beer | 1 | 0.1% |
+| Don't | 1 | 0.1% |
+| Fresh Highlighter | 1 | 0.1% |
+| Wet Landfill | 1 | 0.1% |
 | Friday Night | 1 | 0.1% |
 | Nothing | 1 | 0.1% |
+| Burnt Coffee | 1 | 0.1% |
+| Gasoline | 1 | 0.1% |
 
 ## Recovered From
 
 | Value | Count | % |
 |---|---:|---:|
-| Under the Bed | 143 | 16.1% |
-| Dad's Junk Drawer | 105 | 11.8% |
-| Back of the Closet | 105 | 11.8% |
-| Garage Sale Free Bin | 99 | 11.1% |
-| School Lost & Found | 81 | 9.1% |
-| Mom's Minivan | 77 | 8.7% |
-| Grandma's Attic | 68 | 7.7% |
-| Storage Unit (Auctioned) | 58 | 6.5% |
-| Behind the Couch | 54 | 6.1% |
-| A Very Specific Ditch | 33 | 3.7% |
-| Estate of a Collector | 27 | 3.0% |
-| Nobody Knows | 15 | 1.7% |
-| House Fire (Everyone's Fine) | 9 | 1.0% |
-| Flooded Basement | 5 | 0.6% |
+| Under the Bed | 101 | 11.4% |
+| Back of the Closet | 83 | 9.3% |
+| Mom's Minivan | 74 | 8.3% |
+| Dad's Junk Drawer | 63 | 7.1% |
+| Grandma's Attic | 57 | 6.4% |
+| Storage Unit (Auctioned) | 52 | 5.9% |
+| School Lost & Found | 51 | 5.7% |
+| Dad's Truck, Glovebox | 51 | 5.7% |
+| Garage Sale Free Bin | 51 | 5.7% |
+| A Buddy's Basement | 47 | 5.3% |
+| Behind the Couch | 45 | 5.1% |
+| The Bachelor Pad | 35 | 3.9% |
+| Ex's Garage | 32 | 3.6% |
+| Vegas Hotel Room | 31 | 3.5% |
+| A Very Specific Ditch | 31 | 3.5% |
+| Behind the Bar | 25 | 2.8% |
+| Estate of a Collector | 13 | 1.5% |
+| Nobody Knows | 9 | 1.0% |
+| Flooded Basement | 8 | 0.9% |
+| Behind the Science Wing | 4 | 0.5% |
+| House Fire (Everyone's Fine) | 3 | 0.3% |
 | The Mall Fountain | 3 | 0.3% |
+| The Beach, in Slow Motion | 1 | 0.1% |
+| A Bedroom Studio, 3 A.M. | 1 | 0.1% |
+| The Bottom of the Toy Box | 1 | 0.1% |
+| Under the Mattress | 1 | 0.1% |
+| The Newsroom Floor | 1 | 0.1% |
 | The Top | 1 | 0.1% |
 | Every Car Glovebox | 1 | 0.1% |
+| Every School Computer Lab | 1 | 0.1% |
 | Every Remote in the House | 1 | 0.1% |
 | Right Next to the Crusher | 1 | 0.1% |
+| A Drawer, Still Beeping | 1 | 0.1% |
 | The Den | 1 | 0.1% |
+| The Back of the Freezer | 1 | 0.1% |
+| Every Coffee Table | 1 | 0.1% |
+| The Neon Aisle | 1 | 0.1% |
+| Under Forty Feet of Garbage | 1 | 0.1% |
 | Nowhere | 1 | 0.1% |
+| Every Timeline, 6 A.M. | 1 | 0.1% |
+| The Pump, 3 A.M. | 1 | 0.1% |
 
 ## Tape
 
 | Value | Count | % |
 |---|---:|---:|
-| None | 329 | 37.0% |
-| Loose Ends | 253 | 28.5% |
-| Wrapped | 211 | 23.8% |
-| Mummified | 94 | 10.6% |
+| None | 447 | 50.3% |
+| Loose Ends | 211 | 23.8% |
+| Wrapped | 164 | 18.5% |
+| Mummified | 65 | 7.3% |
 | Fully Mixtaped | 1 | 0.1% |
 
 ## Loose Wires
 
 | Value | Count | % |
 |---|---:|---:|
-| Several | 358 | 40.3% |
-| Concerning | 330 | 37.2% |
-| A Few | 199 | 22.4% |
-| None | 1 | 0.1% |
+| Concerning | 350 | 39.4% |
+| Several | 340 | 38.3% |
+| A Few | 187 | 21.1% |
+| None | 11 | 1.2% |
 
 ## One of One
 
 | Value | Count | % |
 |---|---:|---:|
 | SOLID GOLD | 1 | 0.1% |
+| SLOW MOTION | 1 | 0.1% |
+| LOW RES | 1 | 0.1% |
+| BLOW ON IT | 1 | 0.1% |
+| UNDER THE MATTRESS | 1 | 0.1% |
+| STOP THE PRESSES | 1 | 0.1% |
 | BULL TRAP | 1 | 0.1% |
 | MIXTAPE | 1 | 0.1% |
+| SAVE ICON | 1 | 0.1% |
 | DOUBLE A | 1 | 0.1% |
 | UNCRUSHED | 1 | 0.1% |
+| STILL ALIVE | 1 | 0.1% |
 | SCREEN TIME | 1 | 0.1% |
+| COLD STORAGE | 1 | 0.1% |
+| COASTERS | 1 | 0.1% |
+| CCFF00 | 1 | 0.1% |
+| LANDFILL DRIVE | 1 | 0.1% |
 | LEFTOVERS | 1 | 0.1% |
 | EMPTY | 1 | 0.1% |
+| GM | 1 | 0.1% |
+| GAS FEES | 1 | 0.1% |
 
 ## Finish
 
 | Value | Count | % |
 |---|---:|---:|
-| GRAPE | 7 | 0.8% |
-| ICE | 6 | 0.7% |
-| SAFETY ORANGE | 5 | 0.6% |
-| OBSIDIAN | 5 | 0.6% |
-| BONE | 3 | 0.3% |
-| CHROME | 1 | 0.1% |
+| SAFETY ORANGE | 9 | 1.0% |
+| BONE | 6 | 0.7% |
+| ICE | 4 | 0.5% |
+| CHROME | 3 | 0.3% |
+| OBSIDIAN | 3 | 0.3% |
+| GRAPE | 2 | 0.2% |
 
 ## Gilded
 
 | Value | Count | % |
 |---|---:|---:|
-| Floppy Disk | 2 | 0.2% |
-| 16-Bit Controller | 2 | 0.2% |
-| Pizza Crust | 2 | 0.2% |
+| Flip Phone | 2 | 0.2% |
+| TV Remote | 2 | 0.2% |
+| 9999-in-1 Handheld | 1 | 0.1% |
+| Cheap Sunglasses | 1 | 0.1% |
+| Puzzle Cube | 1 | 0.1% |
+| Beer Can | 1 | 0.1% |
 | Sneaker | 1 | 0.1% |
-| Calculator | 1 | 0.1% |
-| TV Remote | 1 | 0.1% |
-| AA Batteries | 1 | 0.1% |
-| Digital Camera | 1 | 0.1% |
+| Game Controller | 1 | 0.1% |
+| Pizza Crust | 1 | 0.1% |
 
 ## Top 25
 
@@ -216,26 +310,26 @@
 |---:|---|---|---|---|
 | 1 | #0811 | EMPTY | Nothing | None |
 | 2 | #0534 | UNCRUSHED | Everything | None |
-| 3 | #0324 | MIXTAPE | Cassette Tape | None |
-| 4 | #0319 | BULL TRAP | Dead Bull | None |
-| 5 | #0801 | LEFTOVERS | Pizza Crust | None |
-| 6 | #0520 | DOUBLE A | AA Batteries | None |
-| 7 | #0571 | SCREEN TIME | CRT Monitor | None |
-| 8 | #0008 | SOLID GOLD | Yo-Yo | None |
-| 9 | #0290 | SOAKED | 16-Bit Controller | Tiny Green Candle |
-| 10 | #0437 | GOLD | Metal Lunchbox | None |
-| 11 | #0244 | GOLD | 16-Bit Controller | None |
-| 12 | #0397 | GOLD | Foam Headphones | None |
-| 13 | #0745 | GOLD | Game Controller | None |
-| 14 | #0552 | GOLD | Corded Phone | None |
-| 15 | #0577 | CLEAN | CRT Monitor | None |
-| 16 | #0761 | GOLD | Handheld Console | None |
-| 17 | #0084 | GOLD | Puzzle Cube | None |
-| 18 | #0886 | GOLD | TV Remote | None |
-| 19 | #0389 | BIOHAZARD | Sneaker | Suspicious Rectangle |
-| 20 | #0276 | BIOHAZARD | 9999-in-1 Handheld | None |
-| 21 | #0282 | GOLD | Skateboard | None |
-| 22 | #0650 | BIOHAZARD | Virtual Pet | None |
-| 23 | #0240 | GOLD | Corded Phone | None |
-| 24 | #0503 | GOLD | Game Controller | None |
-| 25 | #0415 | BIOHAZARD | Keyboard (Partial) | None |
+| 3 | #0229 | SLOW MOTION | Rescue Can | None |
+| 4 | #0310 | STOP THE PRESSES | Street Sign | None |
+| 5 | #0815 | GM | Coffee Mug | None |
+| 6 | #0886 | GAS FEES | Gas Can | None |
+| 7 | #0597 | COASTERS | Burned CD | None |
+| 8 | #0319 | BULL TRAP | Dead Bull | None |
+| 9 | #0324 | MIXTAPE | Cassette Tape | None |
+| 10 | #0240 | LOW RES | Pixel Hoodie | None |
+| 11 | #0397 | SAVE ICON | Floppy Disk | None |
+| 12 | #0718 | CCFF00 | Neon Tube | None |
+| 13 | #0745 | LANDFILL DRIVE | Hard Drive | None |
+| 14 | #0582 | COLD STORAGE | Hardware Wallet | None |
+| 15 | #0244 | BLOW ON IT | Game Cartridge | None |
+| 16 | #0552 | STILL ALIVE | Virtual Pet | None |
+| 17 | #0282 | UNDER THE MATTRESS | Magazine | None |
+| 18 | #0801 | LEFTOVERS | Pizza Crust | None |
+| 19 | #0520 | DOUBLE A | AA Batteries | None |
+| 20 | #0571 | SCREEN TIME | CRT Monitor | None |
+| 21 | #0008 | SOLID GOLD | Sneaker | None |
+| 22 | #0276 | GOLD | Yo-Yo | None |
+| 23 | #0772 | GOLD | VR Headset | None |
+| 24 | #0527 | GOLD | Portable CD Player | Tiny Red Candle |
+| 25 | #0344 | GOLD | Calculator | None |

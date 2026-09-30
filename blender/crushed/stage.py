@@ -104,6 +104,7 @@ def world(sc, strength=1.0):
     """Black to the camera. To reflections, a studio: a bright ceiling, a dim horizon and
     one long softbox, so chrome, gold, CRT glass and glossy plastic have something to show."""
     w = bpy.data.worlds.new("world")
+    w.use_nodes = True       # Blender 4.x needs this for a node tree; 5.x always has one
     sc.world = w
     nt = w.node_tree
     nt.nodes.clear()
@@ -160,6 +161,30 @@ def floor(sc, rng):
     return ob
 
 
+DEVICE = {"want": "auto", "used": None}     # set from --device; "used" says what actually rendered
+
+
+def use_gpu(sc):
+    """Switch Cycles to the best GPU backend this machine offers. Returns its name, or None (CPU)."""
+    try:
+        prefs = bpy.context.preferences.addons["cycles"].preferences
+    except KeyError:
+        return None
+    for backend in ("METAL", "OPTIX", "CUDA", "HIP", "ONEAPI"):
+        try:
+            prefs.compute_device_type = backend
+            prefs.get_devices()
+        except (TypeError, RuntimeError):
+            continue
+        gpus = [d for d in prefs.devices if d.type != "CPU"]
+        if gpus:
+            for d in prefs.devices:
+                d.use = d.type != "CPU"
+            sc.cycles.device = "GPU"
+            return backend
+    return None
+
+
 def render_settings(sc, res=1024, samples=96, fast=False, exposure=0.0):
     r = sc.render
     r.engine = "CYCLES"
@@ -171,6 +196,8 @@ def render_settings(sc, res=1024, samples=96, fast=False, exposure=0.0):
     r.use_persistent_data = True
     cy = sc.cycles
     cy.device = "CPU"
+    if DEVICE["want"] != "cpu":
+        DEVICE["used"] = use_gpu(sc)
     cy.samples = samples
     cy.use_adaptive_sampling = True
     cy.adaptive_threshold = 0.02 if not fast else 0.05
