@@ -17,7 +17,7 @@ CRUSHED #0044
 |---|---|
 | `blender/` | The generator. Pure Blender Python, runs in Blender or with the `bpy` wheel |
 | `blender/crushed/objects/` | The item library: 55 era objects, 11 contaminants, 19 kinds of filler debris |
-| `collection/` | `manifest.json` (every block, frozen), `provenance.txt` (its sha256), `RARITY.md`, per-token `metadata/` |
+| `collection/` | `manifest.json` (every block, frozen), `provenance.txt` (its sha256), `RARITY.md`, per-token `metadata/`, `sealed.json` + `contract.json` templates |
 | `contracts/` | `Crushed.sol` (ERC-721, 888 max), Foundry tests, deploy script for Robinhood Chain |
 | `site/` | Black page, one rotating cube, `WE KEPT THE IMPORTANT SHIT.`, `VIEW THE PILE` |
 | `docs/` | Item catalog sheets and sample renders |
@@ -110,9 +110,11 @@ python3 blender/generate.py --token 44
 python3 blender/generate.py --token 44 --res 2048 --samples 160     # final quality
 blender -b -P blender/generate.py -- --token 44                     # inside Blender
 
-# a range, a turntable, the .blend for poking around
+# a range, the site's 100-block showcase, a turntable, the pre-reveal image, the .blend
 python3 blender/generate.py --range 1 888 --res 2048 --skip-existing
-python3 blender/generate.py --token 44 --turntable 120
+python3 blender/generate.py --showcase
+python3 blender/generate.py --token 44 --turntable 96
+python3 blender/generate.py --sealed
 python3 blender/generate.py --token 44 --blend
 
 # item catalog sheets

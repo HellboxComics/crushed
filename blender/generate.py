@@ -134,6 +134,7 @@ def main():
     ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--offset", type=int, default=0, help="the contract's reveal offset (post-reveal only)")
     ap.add_argument("--sealed", action="store_true", help="render the pre-reveal image (renders/sealed.png)")
+    ap.add_argument("--showcase", action="store_true", help="the 100 blocks shown on the site's pile page")
     a = ap.parse_args(argv)
 
     if a.manifest:
@@ -150,6 +151,11 @@ def main():
     ids = list(a.token or [])
     if a.range:
         ids += list(range(a.range[0], a.range[1] + 1))
+    if a.showcase:
+        ids += recipe.showcase()
+    bad = [t for t in ids if not 1 <= t <= recipe.SUPPLY]
+    if bad:
+        ap.error(f"token ids must be 1..{recipe.SUPPLY}: {bad}")
     for tid in ids:
         if a.skip_existing and os.path.exists(os.path.join(a.out, f"{tid:04d}.png")):
             continue

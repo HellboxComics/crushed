@@ -484,7 +484,7 @@ def core(g, p, rng):
     stops = [(i / len(pal), tuple(x * 0.05 for x in _lin(c))) for i, c in enumerate(pal)]
     col = g.ramp(g.voronoi(45.0, "F1").outputs["Color"], stops, "CONSTANT")
     col = g.mix(g.maprange(n.outputs["Fac"], 0.45, 0.7), (0.0, 0.0, 0.0), col)
-    return {"color": col, "rough": g.maprange(n.outputs["Fac"], 0.3, 0.7, 0.25, 0.7),
+    return {"color": col, "rough": g.maprange(n.outputs["Fac"], 0.3, 0.7, 0.6, 0.95),
             "normal": g.bump(n.outputs["Fac"], 1.0, 0.004)}
 
 
