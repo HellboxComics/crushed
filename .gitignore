@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+/renders/
+*.blend
+*.blend1
+/contracts/out/
+/contracts/cache/
+/contracts/broadcast/
+.env
+node_modules/
+*_frames/
