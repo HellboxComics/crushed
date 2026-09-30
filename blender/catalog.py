@@ -53,7 +53,7 @@ def main():
         R = np.array(q.to_matrix())
         v = v @ R.T
         v -= (v.min(axis=0) + v.max(axis=0)) / 2
-        v[:, 2] -= v[:, 2].min()
+        v[:, 2] -= v[:, 2].min() - 0.0015   # flat prints sit just above the floor
         crush.set_verts(ob.data, v)
         c, r = i % cols, i // cols
         ob.location = ((c - (cols - 1) / 2) * cell, ((rows - 1) / 2 - r) * cell, 0.0)

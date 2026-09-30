@@ -128,6 +128,9 @@ python3 blender/export_site.py --pile
 python3 blender/export_site.py --turntable renders/0044_frames
 ```
 
+Preview the site locally with `python3 -m http.server -d site 8000` (it fetches JSON, so `file://` won't work).
+It's fully static: host `site/` anywhere.
+
 Rendering is Cycles on CPU or GPU. A 1024px block takes ~1–2 minutes on a 4-core CPU; set
 `sc.cycles.device = "GPU"` in `blender/crushed/stage.py` if you have one.
 

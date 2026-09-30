@@ -14,7 +14,7 @@
 
   pile.forEach((b, i) => {
     const t = document.createElement("button");
-    t.className = "tile";
+    t.className = "tile" + (b.attributes.some((a) => a.trait_type === "One of One") ? " one" : "");
     t.setAttribute("aria-label", b.name);
     const img = document.createElement("img");
     img.loading = "lazy";

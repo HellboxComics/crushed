@@ -1,9 +1,12 @@
+/* one look only: black, like the brief says. Warm off-white type, rust as the single accent. */
 :root {
   --bg: #000;
   --fg: #e9e6df;
   --dim: #7d7a74;
   --line: #2a2926;
-  --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  --rust: #c8683a;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -110,6 +113,15 @@ h1 {
 }
 .tile:hover span, .tile:focus-visible span { opacity: 0.85; }
 .tile:focus-visible { outline: 1px solid var(--fg); outline-offset: -1px; }
+.tile.one::after {
+  content: "1/1";
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  font: 10px var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--rust);
+}
 
 /* ---- viewer ---------------------------------------------------------------- */
 
@@ -166,7 +178,7 @@ dialog::backdrop { background: #000; }
 .info dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
 .info dt { color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; padding-top: 2px; }
 .info dd { margin: 0; }
-.info .rare { color: #f2c14e; }
+.info .rare { color: var(--rust); }
 
 .controls {
   position: absolute;

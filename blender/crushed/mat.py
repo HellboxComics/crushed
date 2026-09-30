@@ -267,6 +267,8 @@ def _finish(g, s, kind, p):
         b.inputs["Thin Film Thickness"].default_value = s["film"]
     if "sss" in s:
         b.inputs["Subsurface Weight"].default_value = s["sss"]
+    if "spec" in s:
+        b.inputs["Specular IOR Level"].default_value = s["spec"]
     if "sheen" in s:
         b.inputs["Sheen Weight"].default_value = s["sheen"]
     if "alpha" in s:
@@ -484,7 +486,7 @@ def core(g, p, rng):
     stops = [(i / len(pal), tuple(x * 0.05 for x in _lin(c))) for i, c in enumerate(pal)]
     col = g.ramp(g.voronoi(45.0, "F1").outputs["Color"], stops, "CONSTANT")
     col = g.mix(g.maprange(n.outputs["Fac"], 0.45, 0.7), (0.0, 0.0, 0.0), col)
-    return {"color": col, "rough": g.maprange(n.outputs["Fac"], 0.3, 0.7, 0.6, 0.95),
+    return {"color": col, "rough": g.maprange(n.outputs["Fac"], 0.3, 0.7, 0.6, 0.95), "spec": 0.12,
             "normal": g.bump(n.outputs["Fac"], 1.0, 0.004)}
 
 
