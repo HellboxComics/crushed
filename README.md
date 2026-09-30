@@ -100,7 +100,11 @@ The description is an evidence log:
 
 ## Running the generator
 
-Blender 4.2+ or the `bpy` wheel (Python 3.11):
+Tested with Blender 5.0 (and the `bpy` 5.0.1 wheel on Python 3.11). Use Blender 5.0: on 4.x, new materials
+start without node trees and `mat.py` will need `m.use_nodes = True` added. Rendering defaults to CPU; for GPU set
+`cy.device = "GPU"` in `blender/crushed/stage.py` and enable your GPU under Preferences > System (or in the script).
+
+`renders/` holds the 41 finished 1024px preview blocks (not the final 888).
 
 ```sh
 pip install bpy pillow            # or use Blender's own python
