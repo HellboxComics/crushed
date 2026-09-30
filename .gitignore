@@ -9,3 +9,7 @@ __pycache__/
 .env
 node_modules/
 *_frames/
+
+# handoff packages
+*.zip
+*.bundle
