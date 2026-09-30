@@ -195,7 +195,7 @@ def _finish(g, s, kind, p):
         cav = g.maprange(ao.outputs["AO"], 0.0, 1.0, 0.2, 1.0)
         col = g.mix(g.math("SUBTRACT", 1.0, cav), col, (0.0, 0.0, 0.0))
 
-    if kind not in ("floor", "goo") and cond != "CLEAN":
+    if kind not in ("floor", "goo", "wrap") and cond != "CLEAN":
         # grime lives in the cracks and on upward faces: everything was on a floor once
         dn = g.noise(18.0, 6.0, 0.7)
         dirt = g.maprange(dn.outputs["Fac"], 0.5, 0.75, 0.0, 0.55 if cond == "JUNK" else 0.3)
@@ -380,6 +380,9 @@ def printed(g, p, rng):
          "normal": g.bump(n.outputs["Fac"], 0.1, 0.0005)}
     if p.get("alpha_from_image"):
         s["alpha"] = t.outputs["Alpha"]
+    if COND["glow"] and p["image"].get("lcd"):
+        s["emit"] = t.outputs["Color"]
+        s["estr"] = COND["glow"] * 0.6
     return s
 
 
@@ -538,6 +541,17 @@ def goo(g, p, rng):
             "emit": _lin((0.35, 1.0, 0.02)), "estr": 1.5}
 
 
+def wrap(g, p, rng):
+    """Black shrink-wrap over something lumpy: glossy, creased, stress-whitened."""
+    v = g.voronoi(26.0, "DISTANCE_TO_EDGE")
+    crease = g.maprange(v.outputs["Distance"], 0.05, 0.0)
+    n = g.noise(40.0, 6.0, 0.65)
+    stress = g.math("MULTIPLY", crease, g.maprange(n.outputs["Fac"], 0.5, 0.7))
+    col = g.mix(g.math("MULTIPLY", stress, 0.5), _lin((0.012, 0.012, 0.014)), _lin((0.35, 0.35, 0.37)))
+    return {"color": col, "rough": g.maprange(n.outputs["Fac"], 0.3, 0.7, 0.08, 0.3), "coat": 0.6,
+            "normal": g.bump(g.math("ADD", crease, g.math("MULTIPLY", n.outputs["Fac"], 0.4)), 0.5, 0.004)}
+
+
 def water(g, p, rng):
     return {"color": (1.0, 1.0, 1.0), "rough": 0.0, "trans": 1.0, "ior": 1.33}
 
@@ -575,7 +589,7 @@ KINDS = {
     "gold": gold, "glass": glass, "screen": screen, "printed": printed, "paper": paper, "cardboard": cardboard,
     "foam": foam, "fabric": fabric, "tape": tape, "disc": disc, "wax": wax, "crust": crust, "pcb": pcb,
     "copper": copper, "steel": steel, "rust": rust, "core": core, "floor": floor, "goo": goo, "lens": lens,
-    "gem": gem, "water": water, "army": army, "slime": slime, "wood": wood,
+    "gem": gem, "water": water, "wrap": wrap, "army": army, "slime": slime, "wood": wood,
 }
 
 __all__ = ["get", "set_condition", "tex"]

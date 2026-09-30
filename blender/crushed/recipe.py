@@ -319,3 +319,23 @@ def metadata(r, image_uri, animation_uri=None):
     if animation_uri:
         m["animation_url"] = animation_uri
     return m
+
+
+def showcase(n=100):
+    """The preview pile for the site: every one-of-one, some of each condition,
+    some contaminated blocks, and the rest JUNK spread evenly across the eras."""
+    conds, cont = deck()
+    rng = np.random.default_rng([COLLECTION_SEED, 1])
+    ids = [i + 1 for i, c in enumerate(conds) if c in ONE_OF_ONES]
+    for c, k in (("GOLD", 4), ("BIOHAZARD", 5), ("CLEAN", 6), ("BURNT", 5), ("SOAKED", 5)):
+        pool = [i + 1 for i, x in enumerate(conds) if x == c]
+        ids += [int(x) for x in rng.choice(pool, k, replace=False)]
+    junk = [i + 1 for i, x in enumerate(conds) if x == "JUNK"]
+    dirty = [t for t in junk if t in cont]
+    ids += [t for t, k in cont.items() if k == "green_candle"]
+    ids += [int(x) for x in rng.choice(dirty, 8, replace=False)]
+    rest = [t for t in junk if t not in ids]
+    need = n - len(set(ids))
+    step = len(rest) / need
+    ids += [rest[int(i * step)] for i in range(need)]
+    return sorted(set(ids))[:n]

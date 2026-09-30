@@ -775,10 +775,17 @@ def pizza_crust(b, rng, pal):
     n = 18
     pts = [(R * math.cos(arc * i / n), R * math.sin(arc * i / n), 0) for i in range(n + 1)]
     b.tube(pts, lambda t: 0.012 + 0.004 * math.sin(t * 17) + 0.004 * math.sin(t * 5.3), mat="crust", seg=12)
-    if rng.random() < 0.5:
-        ch = [(0, 0)] + [(R * math.cos(arc * i / n) * 0.96, R * math.sin(arc * i / n) * 0.96) for i in range(n + 1)]
-        b.extrude(ch, 0.004, loc=(0, 0, -0.006), mat="cheese")
-    return {"crust": ("crust", {}), "cheese": P((0.95, 0.75, 0.3), 0.4)}
+    if rng.random() < 0.7:
+        # what's left of the slice: a bite-shaped wedge of cheese, maybe pepperoni
+        bite = rng.uniform(0.25, 0.6)
+        ch = [(R * bite * math.cos(arc / 2), R * bite * math.sin(arc / 2))]
+        ch += [(R * math.cos(arc * i / n) * 0.96, R * math.sin(arc * i / n) * 0.96) for i in range(n + 1)]
+        b.extrude(ch, 0.005, loc=(0, 0, -0.005), mat="cheese")
+        for _ in range(rng.integers(1, 4)):
+            rr = R * rng.uniform(bite + 0.1, 0.85)
+            aa = arc * rng.uniform(0.2, 0.8)
+            b.cyl(0.013, 0.003, loc=(rr * math.cos(aa), rr * math.sin(aa), -0.001), mat="pep", seg=16)
+    return {"crust": ("crust", {}), "cheese": P((0.98, 0.78, 0.3), 0.35), "pep": P((0.6, 0.08, 0.05), 0.45)}
 
 
 @obj("soda_can", eras=(0, 1, 2), mass=0.015, weight=1.4)

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE PILE — CRUSHED</title>
+<meta name="description" content="We kept the important shit.">
+<meta property="og:title" content="CRUSHED">
+<meta property="og:image" content="og.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pile">
+<header>
+  <a href="index.html">CRUSHED</a>
+  <span id="count"></span>
+</header>
+<main class="grid" id="grid"></main>
+
+<dialog id="viewer" aria-label="Block viewer">
+  <div class="viewer">
+    <div class="stage" id="stage">
+      <div class="controls">
+        <button id="prev" aria-label="Previous">&larr;</button>
+        <button id="next" aria-label="Next">&rarr;</button>
+        <button id="close" aria-label="Close">ESC</button>
+      </div>
+      <img id="full" alt="">
+    </div>
+    <aside class="info">
+      <h2 id="title"></h2>
+      <p id="desc"></p>
+      <dl id="traits"></dl>
+    </aside>
+  </div>
+</dialog>
+<script src="pile.js"></script>
+</body>
+</html>

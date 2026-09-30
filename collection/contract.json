@@ -1,0 +1,8 @@
+{
+ "name": "CRUSHED",
+ "description": "888 perfect 12-inch cubes of crushed nostalgic shit. We kept the important shit.",
+ "image": "ipfs://<site-cid>/og.jpg",
+ "external_link": "https://<your-domain>",
+ "seller_fee_basis_points": 500,
+ "fee_recipient": "0x<royalty-receiver>"
+}

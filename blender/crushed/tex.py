@@ -168,13 +168,18 @@ def keypad(rng, name, rows=4, cols=3, key=(0.85, 0.85, 0.82), body=(0.2, 0.2, 0.
     return c.image(name)
 
 
+SCREENS_ON = {"on": False}   # SCREEN TIME: every screen you ever stared at, still on
+
+
 def lcd(rng, name, text=None, bg=(0.55, 0.62, 0.45), ink=(0.08, 0.1, 0.06), w=256, h=96):
     c = Canvas(w, h, (*bg, 1))
     t = text or rng.choice(["911", "143", "07734", "8008", "1337", "420", "555-0199", "HELLO", "88:88",
                             "12:00", "LOW BATT", "ERROR", "GM", "NO SIGNAL", "0.00"])
     c.text(t, 0.08, 0.8, 0.55, ink, bold=True)
     c.noise(rng, 0.02)
-    return c.image(name)
+    img = c.image(name)
+    img["lcd"] = True
+    return img
 
 
 def notebook(rng, name, paper=(0.96, 0.95, 0.9)):
@@ -266,6 +271,8 @@ def ramen(rng, name):
 
 def screen(rng, name, kind=None):
     kind = kind or rng.choice(["off", "blue", "term", "off", "static"])
+    if SCREENS_ON["on"] and kind == "off":
+        kind = rng.choice(["blue", "term", "static"])
     if kind == "blue":
         c = Canvas(256, 192, (0.05, 0.1, 0.55, 1))
         c.rect(0.35, 0.8, 0.65, 0.88, (0.7, 0.7, 0.7))

@@ -73,14 +73,53 @@ def lights(sc):
 
 
 def world(sc):
+    """Black to the camera. To reflections, a studio: a bright ceiling, a dim horizon and
+    one long softbox, so chrome, gold, CRT glass and glossy plastic have something to show."""
     w = bpy.data.worlds.new("world")
     sc.world = w
     nt = w.node_tree
-    bg = nt.nodes.get("Background") or nt.nodes.new("ShaderNodeBackground")
-    bg.inputs["Color"].default_value = (0.0, 0.0, 0.0, 1)
-    bg.inputs["Strength"].default_value = 0.0
-    out = nt.nodes.get("World Output") or nt.nodes.new("ShaderNodeOutputWorld")
-    nt.links.new(bg.outputs[0], out.inputs[0])
+    nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputWorld")
+    bg = nt.nodes.new("ShaderNodeBackground")
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+    nt.links.new(tc.outputs["Generated"], sep.inputs[0])
+    ramp = nt.nodes.new("ShaderNodeValToRGB")
+    els = ramp.color_ramp.elements
+    els[0].position, els[0].color = 0.0, (0.0, 0.0, 0.0, 1)
+    els[1].position, els[1].color = 1.0, (0.55, 0.56, 0.6, 1)
+    e = els.new(0.45)
+    e.color = (0.0, 0.0, 0.0, 1)
+    e = els.new(0.6)
+    e.color = (0.06, 0.06, 0.065, 1)
+    nt.links.new(sep.outputs["Z"], ramp.inputs["Fac"])
+    # a long softbox off to the key side
+    strip = nt.nodes.new("ShaderNodeMath")
+    strip.operation = "MULTIPLY"
+    a = nt.nodes.new("ShaderNodeMapRange")
+    a.inputs["From Min"].default_value, a.inputs["From Max"].default_value = -0.75, -0.6
+    b = nt.nodes.new("ShaderNodeMapRange")
+    b.inputs["From Min"].default_value, b.inputs["From Max"].default_value = 0.2, 0.35
+    nt.links.new(sep.outputs["X"], a.inputs["Value"])
+    nt.links.new(sep.outputs["Z"], b.inputs["Value"])
+    nt.links.new(a.outputs[0], strip.inputs[0])
+    nt.links.new(b.outputs[0], strip.inputs[1])
+    add = nt.nodes.new("ShaderNodeMix")
+    add.data_type = "RGBA"
+    add.blend_type = "ADD"
+    nt.links.new(strip.outputs[0], add.inputs[0])
+    nt.links.new(ramp.outputs["Color"], add.inputs[6])
+    add.inputs[7].default_value = (1.4, 1.35, 1.3, 1)
+    nt.links.new(add.outputs[2], bg.inputs["Color"])
+    bg.inputs["Strength"].default_value = 1.0
+    nt.links.new(bg.outputs[0], out.inputs["Surface"])
+    # reflections only: the frame edges stay black and the floor stays lit by the lights alone
+    vis = w.cycles_visibility
+    vis.camera = False
+    vis.diffuse = False
+    vis.transmission = True
+    vis.glossy = True
+    vis.scatter = False
 
 
 def floor(sc, rng):

@@ -133,12 +133,20 @@ def main():
     ap.add_argument("--anim-base", metavar="ANIM_BASE_URI")
     ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--offset", type=int, default=0, help="the contract's reveal offset (post-reveal only)")
+    ap.add_argument("--sealed", action="store_true", help="render the pre-reveal image (renders/sealed.png)")
     a = ap.parse_args(argv)
 
     if a.manifest:
         write_manifest(os.path.join(ROOT, "collection"))
     if a.metadata:
         write_metadata(os.path.join(ROOT, "collection", "metadata"), a.metadata, a.anim_base, a.offset)
+    if a.sealed:
+        r = recipe.recipe(1)
+        r.update(sealed=True, condition="JUNK", one_of_one=None, clean=None)
+        sc = build.build(r, res=a.res, samples=a.samples)
+        os.makedirs(a.out, exist_ok=True)
+        sc.render.filepath = os.path.abspath(os.path.join(a.out, "sealed.png"))
+        bpy.ops.render.render(write_still=True)
     ids = list(a.token or [])
     if a.range:
         ids += list(range(a.range[0], a.range[1] + 1))

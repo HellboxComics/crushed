@@ -5,7 +5,7 @@ import bpy
 import numpy as np
 from mathutils import Euler, Vector
 
-from . import crush, dressing, mat, stage
+from . import crush, dressing, mat, stage, tex
 from .geo import Builder
 from .objects import PALETTES, Palette, load
 from .stage import H
@@ -93,7 +93,7 @@ def build_block(r, coll, rng):
     # the dense undifferentiated mass behind everything
     core_pal = list(PALETTES[era]["body"]) + list(PALETTES[era]["loud"])
     if r["clean"]:
-        c = r["clean"][1][1].get("color", (0.8, 0.8, 0.8))
+        c = r["clean"][1][1].get("color", (1.0, 0.78, 0.34) if r["clean"][1][0] == "gold" else (0.8, 0.8, 0.8))
         core_pal = [tuple(x * k for x in c) for k in (0.5, 0.7, 0.85, 1.0)]
     objs.append(dressing.core(coll, rng, core_pal, r["seed"]))
 
@@ -106,20 +106,22 @@ def build_block(r, coll, rng):
         override = ("gold", {}) if r["gold_index"] == i else None
         ob = make_object(d, rng, pal, coll, override)
         limit = rng.uniform(0.15, 0.21) if d.big else 0.17
-        if head:
+        if head or override:
             limit = 0.21 if d.big else 0.19
         v = prepare(ob, limit, rng)
         if v is None:
             continue
-        v = damage(v, rng, inten * (0.6 if head else 1.0), keep_shape=head or not d.big)
+        v = damage(v, rng, inten * (0.6 if head or override else 1.0), keep_shape=head or override or not d.big)
         if head:
             face = "-Y"
+        elif override:
+            face = "-Y" if rng.random() < 0.5 else "+X"
         else:
-            face = faces.pick_face(FACE_WEIGHTS if override is None else {k: 1.0 for k in VISIBLE})
+            face = faces.pick_face(FACE_WEIGHTS)
         nrm, t1, t2 = crush.FACES[face]
         ext = np.ptp(v, axis=0)
         radius = float(np.sort(ext)[1]) * 0.5
-        uv = faces.pick_uv(face, radius, spread=0.2 if head else 0.82)
+        uv = faces.pick_uv(face, radius, spread=0.2 if head else 0.55 if override else 0.82)
         q = crush.orient(rng, d.hero, nrm, tilt=0.2 if head else 0.35)
         if head:
             poke, depth, layer = rng.uniform(0.004, 0.01), 0.07, 0.004
@@ -185,11 +187,125 @@ def build_block(r, coll, rng):
 
 
 def build_empty(r, coll, rng):
+    """The straps, holding absolutely nothing. A few crumbs where the block used to be."""
+    reg = load()
+    pal = Palette(r["era_index"], rng)
+    for k in range(22):
+        d = reg[str(rng.choice(["plastic_shard", "crumpled_paper", "glass_shard", "wire_bit", "foam_chunk",
+                                "bottle_cap", "receipt"]))]
+        ob = make_object(d, rng, pal, coll)
+        v = prepare(ob, 0.035, rng)
+        v = crush.crumple(v, rng, 1.0)
+        v = v - v.mean(axis=0)
+        R = np.array(Euler((rng.normal(0, 0.2), rng.normal(0, 0.2), rng.uniform(0, 6.3))).to_matrix())
+        v = v @ R.T
+        v[:, 2] -= v[:, 2].min() + LIFT - 0.0005
+        v[:, :2] += rng.uniform(-0.8, 0.8, 2) * H
+        crush.set_verts(ob.data, v)
     objs = []
     for j, x in enumerate(r["straps"]):
         objs.append(dressing.strap(coll, rng, x, r["condition"], stamp_text=f"{r['id']:04d}" if j == 0 else None,
                                    empty=True))
     return objs
+
+
+def build_sealed(coll, rng):
+    """Pre-reveal: a block under black shrink-wrap. Every token looks like this until reveal."""
+    import bmesh
+    bm = bmesh.new()
+    bmesh.ops.create_cube(bm, size=2 * H * 0.99)
+    bmesh.ops.subdivide_edges(bm, edges=bm.edges[:], cuts=60, use_grid_fill=True)
+    me = bpy.data.meshes.new("wrap")
+    bm.to_mesh(me)
+    bm.free()
+    ob = bpy.data.objects.new("wrap", me)
+    coll.objects.link(ob)
+    v = crush.verts(me)
+    crush.store_rest(me, v)
+    from . import noise
+    lumps = noise.fbm(v, 1.0 / 0.07, 4, 99) * 0.012 + noise.fbm(v, 1.0 / 0.02, 2, 5) * 0.003
+    dirn = v / (np.linalg.norm(v, axis=1, keepdims=True) + 1e-9)
+    v = v + dirn * lumps[:, None]
+    v = crush.compact(v, 0.002, 7, strength=0.4)
+    crush.set_verts(me, v)
+    me.shade_smooth()
+    me.materials.append(mat.get(("wrap", {"keep": True}), rng))
+    crush.STRAPS = [-0.082, 0.082]
+    for j, x in enumerate(crush.STRAPS):
+        dressing.strap(coll, rng, x, "JUNK", stamp_text="????" if j == 0 else None)
+
+
+def _funnel(coll, center, r0=0.16, r1=0.34, h=0.5, seg=24):
+    """An invisible bin the pile is dumped into, so it heaps instead of scattering."""
+    import bmesh
+    bm = bmesh.new()
+    lo = [bm.verts.new((r0 * math.cos(2 * math.pi * i / seg), r0 * math.sin(2 * math.pi * i / seg), 0.0))
+          for i in range(seg)]
+    hi = [bm.verts.new((r1 * math.cos(2 * math.pi * i / seg), r1 * math.sin(2 * math.pi * i / seg), h))
+          for i in range(seg)]
+    for i in range(seg):
+        j = (i + 1) % seg
+        bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
+    me = bpy.data.meshes.new("funnel")
+    bm.to_mesh(me)
+    bm.free()
+    ob = bpy.data.objects.new("funnel", me)
+    ob.location = (center[0], center[1], 0.0)
+    coll.objects.link(ob)
+    return ob
+
+
+def _settle(sc, objs, floor, frames=260, walls=None, release=120):
+    """Drop everything and let Bullet sort it out, then bake the resting transforms."""
+    vl = bpy.context.view_layer
+    bpy.ops.rigidbody.world_add()
+    rbw = sc.rigidbody_world
+    rbw.point_cache.frame_start = 1
+    rbw.point_cache.frame_end = frames
+    rbw.substeps_per_frame = 12
+    rbw.solver_iterations = 20
+    for o in vl.objects:
+        o.select_set(False)
+    for o in objs:
+        o.select_set(True)
+    vl.objects.active = objs[0]
+    bpy.ops.rigidbody.objects_add(type="ACTIVE")
+    for o in objs:
+        rb = o.rigid_body
+        rb.collision_shape = "CONVEX_HULL"
+        rb.friction = 0.9
+        rb.restitution = 0.02
+        rb.linear_damping = 0.5
+        rb.angular_damping = 0.9
+        rb.collision_margin = 0.001
+        o.select_set(False)
+    passive = [floor] + ([walls] if walls else [])
+    for o in passive:
+        o.select_set(True)
+    vl.objects.active = floor
+    bpy.ops.rigidbody.objects_add(type="PASSIVE")
+    for o in passive:
+        o.rigid_body.collision_shape = "MESH"
+        o.rigid_body.friction = 1.0
+    if walls:
+        # hold the heap together, then open the bin slowly so it slumps into a mound
+        walls.rigid_body.kinematic = True
+        walls.scale = (1, 1, 1)
+        walls.keyframe_insert("scale", frame=release)
+        walls.scale = (3.5, 3.5, 1)
+        walls.keyframe_insert("scale", frame=release + 60)
+    for f in range(1, frames + 1):
+        sc.frame_set(f)
+    rest = {o.name: o.matrix_world.copy() for o in objs}
+    for o in vl.objects:
+        o.select_set(o in objs or o in passive)
+    bpy.ops.rigidbody.objects_remove()
+    bpy.ops.rigidbody.world_remove()
+    sc.frame_set(1)
+    for o in objs:
+        o.matrix_world = rest[o.name]
+    if walls:
+        bpy.data.objects.remove(walls)
 
 
 def build_pile(r, coll, rng):
@@ -198,34 +314,35 @@ def build_pile(r, coll, rng):
     pal = Palette(r["era_index"], rng)
     names = list(r["heroes"]) + ([r["crypto"]] if r["crypto"] else []) + list(r["fillers"][:14])
     names.sort(key=lambda n: not reg[n].big)
-    grid = 48
-    ext_xy = 0.36
-    hmap = np.zeros((grid, grid))
     objs = []
-    for name in names:
+    n = len(names)
+    for i, name in enumerate(names):
         d = reg[name]
         ob = make_object(d, rng, pal, coll)
         v = prepare(ob, 0.22 if d.big else 0.16, rng)
         if v is None:
             continue
-        if d.group == "filler" and name in ("crumpled_paper", "receipt", "fabric_scrap"):
+        if d.group == "filler" and name in ("crumpled_paper", "receipt", "fabric_scrap", "plastic_film"):
             v = crush.crumple(v, rng, 2.0)
-        R = np.array(Euler(rng.uniform(0, 2 * math.pi, 3)).to_matrix())
-        v = v @ R.T
-        # drop it onto the heap
-        rad = rng.uniform(0, 0.2) ** 1.0
-        ang = rng.uniform(0, 2 * math.pi)
-        cx, cy = rad * math.cos(ang) - 0.02, rad * math.sin(ang) * 0.8 + 0.03
-        v[:, 0] += cx - v[:, 0].mean()
-        v[:, 1] += cy - v[:, 1].mean()
-        ix = np.clip(((v[:, 0] + ext_xy) / (2 * ext_xy) * grid).astype(int), 0, grid - 1)
-        iy = np.clip(((v[:, 1] + ext_xy) / (2 * ext_xy) * grid).astype(int), 0, grid - 1)
-        base = hmap[ix, iy].max()
-        v[:, 2] += base - v[:, 2].min() - 0.01 * (base > 0)
-        np.maximum.at(hmap, (ix, iy), v[:, 2])
+        v = v - (v.min(axis=0) + v.max(axis=0)) / 2
         crush.set_verts(ob.data, v)
-        ob.location.z = 0.0
+        # golden-spiral drop points, staggered so they land one after another; the heap sits
+        # a little back from the block's footprint so it's centred in the same frame
+        a = i * 2.39996
+        rad = 0.01 + 0.13 * math.sqrt(i / max(n - 1, 1))
+        cx, cy = -0.07, 0.09
+        ob.location = (cx + rad * math.cos(a), cy + rad * math.sin(a), 0.12 + i * 0.03)
+        if d.big:
+            # big things land showing their good side to the camera
+            toward = Vector((math.sin(stage.AZIMUTH), -math.cos(stage.AZIMUTH), 0.9)).normalized()
+            q = Vector(d.hero).rotation_difference(toward)
+            ob.rotation_euler = q.to_euler()
+            ob.location.z = 0.14 + i * 0.02
+        else:
+            ob.rotation_euler = tuple(rng.uniform(0, 2 * math.pi, 3))
         objs.append(ob)
+    walls = _funnel(coll, (-0.07, 0.09))
+    _settle(bpy.context.scene, objs, bpy.data.objects["floor"], walls=walls)
     # the straps, cut and discarded in front of the pile
     for j in range(2):
         b = Builder("cut_strap")
@@ -255,11 +372,14 @@ def build(r, res=1024, samples=96, turntable=0):
     one = r.get("one_of_one")
     cond = r["condition"] if not one else ("CLEAN" if one == "SOLID GOLD" else "JUNK")
     mat.set_condition(cond, r["clean"][1] if r["clean"] else None, glow=3.0 if one == "SCREEN TIME" else None)
+    tex.SCREENS_ON["on"] = one == "SCREEN TIME"
     stage.build(sc, rng, res, samples)
     coll = bpy.data.collections.new("block")
     sc.collection.children.link(coll)
 
-    if r["condition"] == "EMPTY":
+    if r.get("sealed"):
+        build_sealed(coll, rng)
+    elif r["condition"] == "EMPTY":
         build_empty(r, coll, rng)
     elif r["condition"] == "UNCRUSHED":
         build_pile(r, coll, rng)

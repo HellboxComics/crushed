@@ -1,0 +1,6 @@
+{
+ "name": "CRUSHED (Sealed)",
+ "description": "Still wrapped. Still heavy. Something in there is making a noise.",
+ "image": "ipfs://<images-cid>/sealed.png",
+ "attributes": [{"trait_type": "Status", "value": "Sealed"}]
+}

@@ -1,0 +1,198 @@
+:root {
+  --bg: #000;
+  --fg: #e9e6df;
+  --dim: #7d7a74;
+  --line: #2a2926;
+  --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--fg); }
+
+/* ---- home ---------------------------------------------------------------- */
+
+.home main {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 16px;
+}
+
+#cube {
+  width: min(82vmin, 780px);
+  height: auto;
+  aspect-ratio: 1;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+#cube.dragging { cursor: grabbing; }
+
+h1 {
+  margin: 0;
+  font-size: clamp(13px, 2.1vw, 19px);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-align: center;
+  padding-left: 0.32em;
+}
+
+.cta {
+  font-size: 12px;
+  letter-spacing: 0.42em;
+  padding: 0 0 5px 0.42em;
+  text-decoration: none;
+  border-bottom: 1px solid #3a3935;
+  transition: border-color 0.2s;
+}
+.cta:hover, .cta:focus-visible { border-color: var(--fg); outline: none; }
+
+/* ---- pile ---------------------------------------------------------------- */
+
+.pile header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 22px 16px 18px;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+}
+.pile header a { text-decoration: none; color: var(--dim); }
+.pile header a:hover { color: var(--fg); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px;
+  padding: 0 2px 2px;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  background: #050505;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  cursor: zoom-in;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.tile:hover img, .tile:focus-visible img { transform: scale(1.06); }
+.tile span {
+  position: absolute;
+  left: 8px;
+  bottom: 7px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--fg);
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-family: var(--mono);
+}
+.tile:hover span, .tile:focus-visible span { opacity: 0.85; }
+.tile:focus-visible { outline: 1px solid var(--fg); outline-offset: -1px; }
+
+/* ---- viewer ---------------------------------------------------------------- */
+
+dialog {
+  width: 100vw;
+  height: 100svh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #000;
+  color: var(--fg);
+}
+dialog::backdrop { background: #000; }
+
+.viewer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  height: 100%;
+}
+.stage {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  touch-action: none;
+}
+.stage.zoomed { cursor: zoom-out; }
+.stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.stage.zoomed img { transform: scale(2.6); transition: none; }
+
+.info {
+  border-left: 1px solid var(--line);
+  padding: 22px 20px;
+  overflow-y: auto;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.info h2 {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+}
+.info p { color: #b9b5ad; margin: 0 0 18px; }
+.info dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
+.info dt { color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; padding-top: 2px; }
+.info dd { margin: 0; }
+.info .rare { color: #f2c14e; }
+
+.controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.controls button {
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  font: 12px var(--mono);
+  letter-spacing: 0.2em;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+.controls button:hover, .controls button:focus-visible { border-color: var(--fg); outline: none; }
+
+@media (max-width: 760px) {
+  .viewer { grid-template-columns: 1fr; grid-template-rows: minmax(0, 62svh) auto; }
+  .info { border-left: 0; border-top: 1px solid var(--line); }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile img, .stage img { transition: none; }
+}

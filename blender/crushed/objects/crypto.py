@@ -103,7 +103,13 @@ def crumpled_chart(b, rng, pal):
     return {"chart": PR(tex.chart(rng, "chart"), 0.85)}
 
 
-def _quad(b, body, head, legs, horns, tail, mat, dead):
+def _quad(b, body, head, legs, horns, tail, mat, dead, k=1.7):
+    """A little cast-metal animal, k times the base scale."""
+    body = tuple(x * k for x in body)
+    head = (tuple(x * k for x in head[0]), tuple(x * k for x in head[1]))
+    legs = [(x * k, y * k) for x, y in legs]
+    horns = [[tuple(c * k for c in p) for p in h] for h in horns]
+    tail = [tuple(c * k for c in p) for p in tail] if tail else None
     if dead:
         b.frame = Matrix.Rotation(math.pi, 4, "X")
     b.sphere(1.0, scale=body, mat=mat, seg=18)
@@ -111,9 +117,9 @@ def _quad(b, body, head, legs, horns, tail, mat, dead):
     for (x, y) in legs:
         b.cyl(body[2] * 0.3, body[2] * 1.6, loc=(x, y, -body[2] * 1.3), mat=mat, seg=10)
     for pts in horns:
-        b.tube(pts, lambda t: 0.004 * (1 - t) + 0.0008, mat=mat, seg=8)
+        b.tube(pts, lambda t: (0.004 * (1 - t) + 0.0008) * k, mat=mat, seg=8)
     if tail:
-        b.tube(tail, 0.0015, mat=mat, seg=6)
+        b.tube(tail, 0.0015 * k, mat=mat, seg=6)
     b.frame = Matrix.Identity(4)
 
 
@@ -133,9 +139,10 @@ def bear(b, rng, pal):
     dead = False
     _quad(b, (0.038, 0.024, 0.026), ((0.042, 0, 0.012), (0.017, 0.016, 0.016)),
           [(0.022, 0.014), (0.022, -0.014), (-0.022, 0.014), (-0.022, -0.014)], [], None, "bronze", dead)
+    k = 1.7
     for sy in (-1, 1):
-        b.sphere(0.006, loc=(0.04, sy * 0.012, 0.03 * (-1 if dead else 1)), mat="bronze", seg=10)
-    b.sphere(0.008, loc=(0.058, 0, 0.008 * (-1 if dead else 1)), scale=(1.2, 0.8, 0.7), mat="bronze", seg=10)
+        b.sphere(0.006 * k, loc=(0.04 * k, sy * 0.012 * k, 0.03 * k), mat="bronze", seg=10)
+    b.sphere(0.008 * k, loc=(0.058 * k, 0, 0.008 * k), scale=(1.2, 0.8, 0.7), mat="bronze", seg=10)
     return {"bronze": MET((0.25, 0.2, 0.17), 0.4)}
 
 
