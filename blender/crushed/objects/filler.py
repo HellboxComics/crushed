@@ -4,7 +4,7 @@ import math
 from .. import tex
 from . import MET, P, PR, T, obj
 
-F = dict(group="filler", eras=(0, 1, 2, 3))
+F = dict(group="filler", eras=(0, 1, 2, 3, 4))
 
 
 @obj("crumpled_paper", mass=0.005, weight=2.0, **F)

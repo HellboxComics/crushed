@@ -1,7 +1,7 @@
-"""Tiny procedural modelling kit on top of bmesh.
+"""Tiny procedural modeling kit on top of bmesh.
 
 Every object in the library is assembled from these parts in real-world
-metres. A Builder collects parts into one bmesh, tracks which material slot
+meters. A Builder collects parts into one bmesh, tracks which material slot
 each part uses, and turns the result into a Blender object.
 """
 import math
@@ -73,8 +73,15 @@ class Builder:
 
     def plane(self, w, h, loc=(0, 0, 0), rot=(0, 0, 0), mat="label", cuts=4):
         """A UV-mapped (0..1) quad, used for labels, screens and prints."""
-        res = bmesh.ops.create_grid(self.bm, x_segments=cuts, y_segments=cuts, size=0.5,
-                                    matrix=self._m(loc, rot, (w, h, 1)), calc_uvs=True)
+        m = self._m(loc, rot, (w, h, 1))
+        res = bmesh.ops.create_grid(self.bm, x_segments=cuts, y_segments=cuts, size=0.5, matrix=m, calc_uvs=False)
+        # Blender's own grid UVs come out scrambled once the bmesh already holds other parts, so write them
+        # from the grid's local coordinates: u, v = x + 0.5, y + 0.5 before the transform.
+        inv = m.inverted()
+        for f in {f for v in res["verts"] for f in v.link_faces}:
+            for l in f.loops:
+                q = inv @ l.vert.co
+                l[self.uv].uv = (q.x + 0.5, q.y + 0.5)
         return self._tag(res["verts"], mat)
 
     def lathe(self, profile, loc=(0, 0, 0), rot=(0, 0, 0), mat="body", seg=24, scale=(1, 1, 1)):
@@ -160,7 +167,7 @@ class Builder:
         return self._tag([v for r in rings for v in r], mat)
 
     def extrude(self, poly, depth, loc=(0, 0, 0), rot=(0, 0, 0), mat="body", scale=(1, 1, 1), bevel=0.0):
-        """Extrude a 2D outline (list of (x, y)) along +Z by depth, centred."""
+        """Extrude a 2D outline (list of (x, y)) along +Z by depth, centered."""
         m = self._m(loc, rot, scale)
         bot = [self.bm.verts.new(m @ Vector((x, y, -depth / 2))) for x, y in poly]
         top = [self.bm.verts.new(m @ Vector((x, y, depth / 2))) for x, y in poly]

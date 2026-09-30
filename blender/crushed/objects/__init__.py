@@ -1,15 +1,15 @@
 """Object library registry.
 
 Every object is original, generic geometry. Nothing copies a real product's
-trade dress: era is communicated by shape, colour and material only.
+trade dress: era is communicated by shape, color and material only.
 
 A definition function receives (Builder, rng, Palette) and returns a dict
 mapping material-slot keys to material specs. Objects are built lying with
-their most recognisable face toward +Z unless `hero` says otherwise.
+their most recognizable face toward +Z unless `hero` says otherwise.
 """
 from dataclasses import dataclass, field
 
-ERAS = ["1985-1990", "1991-1996", "1997-2002", "2003-2008"]
+ERAS = ["1985-1990", "1991-1996", "1997-2002", "2003-2008", "2009-2026"]
 
 
 @dataclass
@@ -28,7 +28,7 @@ class Def:
 REG = {}
 
 
-def obj(name, eras=(0, 1, 2, 3), mass=0.1, weight=1.0, hero=(0, 0, 1), group="era", big=False, tags=()):
+def obj(name, eras=(0, 1, 2, 3, 4), mass=0.1, weight=1.0, hero=(0, 0, 1), group="era", big=False, tags=()):
     def deco(fn):
         REG[name] = Def(name, fn, tuple(eras), mass, weight, hero, group, big, tuple(tags))
         return fn
@@ -87,6 +87,10 @@ PALETTES = {
     3: {"body": [WHITE, BLACK, SILVER, (0.2, 0.2, 0.22), (0.85, 0.5, 0.65), (0.25, 0.35, 0.6)],
         "loud": [(0.45, 0.9, 0.2), (1.0, 0.35, 0.6), (0.1, 0.6, 1.0), (1.0, 0.55, 0.1), (0.95, 0.1, 0.1)],
         "clear": 0.08},
+    4: {"body": [WHITE, BLACK, SILVER, (0.2, 0.2, 0.22), (0.88, 0.88, 0.9), (0.15, 0.25, 0.42), (0.85, 0.62, 0.55)],
+        "loud": [(0.8, 1.0, 0.0), (0.2, 0.9, 0.5), (1.0, 0.3, 0.55), (0.3, 0.4, 1.0), (1.0, 0.6, 0.1),
+                 (0.6, 0.3, 1.0)],
+        "clear": 0.05},
 }
 
 
@@ -119,5 +123,5 @@ class Palette:
 
 
 def load():
-    from . import era, crypto, filler  # noqa: F401  (registration side effects)
+    from . import era, crypto, filler, modern, degen, special  # noqa: F401  (registration side effects)
     return REG

@@ -24,6 +24,22 @@ NAMES = {
     "green_candle": "Tiny Green Candle", "paper_hand": "Paper Hand", "diamond": "Diamond",
     "hardware_wallet": "Suspicious Rectangle", "crumpled_chart": "Crumpled Chart", "bull": "Bull",
     "bear": "Bear", "ramen_packet": "Emergency Ramen",
+    # 2009-2026
+    "smartphone": "Smartphone", "tablet": "Tablet", "earbuds_case": "Earbud Case", "smartwatch": "Smartwatch",
+    "vr_headset": "VR Headset", "drone": "Drone", "fidget_spinner": "Fidget Spinner", "selfie_stick": "Selfie Stick",
+    "ring_light": "Ring Light", "vape": "Disposable Vape", "face_mask": "Face Mask", "hand_sanitizer": "Hand Sanitizer",
+    "bluetooth_speaker": "Bluetooth Speaker", "power_bank": "Power Bank",
+    # the shelf nobody admits to
+    "magazine": "Magazine", "centerfold": "Centerfold", "tissue_box": "Tissue Box", "tissues": "Tissues",
+    "foil_packet": "Foil Wrapper", "dice": "Dice", "poker_chip": "Poker Chip", "scratch_ticket": "Scratch Ticket",
+    "beer_can": "Beer Can", "shot_glass": "Shot Glass", "matchbook": "Matchbook",
+    # one-of-one props
+    "hdd": "Hard Drive", "cold_wallet": "Hardware Wallet", "gas_can": "Gas Can", "coffee_mug": "Coffee Mug", "rescue_can": "Rescue Can",
+    "whistle": "Lifeguard Whistle", "sunscreen": "Sunscreen", "swimsuit": "Red Swimsuit", "flashlight": "Flashlight",
+    "sock": "Tube Sock", "pixel_hoodie": "Pixel Hoodie", "studio_headphones": "Studio Headphones",
+    "synth_keys": "Synth Keys", "ribbon_cable": "Ribbon Cable", "neon_tube": "Neon Tube", "highlighter": "Highlighter",
+    "tennis_ball": "Tennis Ball", "street_sign": "Street Sign", "newspaper": "Newspaper", "microphone": "Microphone",
+    "press_badge": "Press Badge", "play_money": "Play Money", "playing_cards": "Playing Cards",
 }
 
 # the parenthetical in the evidence inventory; picked per token
@@ -101,7 +117,66 @@ NOTES = {
     "bull": ["dead", "trapped", "flipped"],
     "bear": ["thriving", "doing fine actually"],
     "ramen_packet": ["for emergencies", "the whole strategy"],
+    "smartphone": ["screen protector did nothing", "1% battery, forever", "cracked in the first week",
+                   "last text: read, no reply"],
+    "tablet": ["used once as a cutting board", "bought for the kids, taken back by dad", "one thumbprint of juice"],
+    "earbuds_case": ["one bud present", "survived the wash", "both buds gone, case still charges nothing"],
+    "smartwatch": ["10,000 steps, never", "says STAND, does not", "still counting steps in the dryer"],
+    "vr_headset": ["worn twice", "the walls were real and they were hit", "watched one (1) movie"],
+    "drone": ["over the neighbor's fence", "flew once, into a tree", "40 seconds of freedom"],
+    "fidget_spinner": ["banned by the school", "spins for four seconds, like the trend", "bearing went missing"],
+    "selfie_stick": ["banned at the museum", "mid-trip, mid-ocean", "the person holding it is not in the photo"],
+    "ring_light": ["the eyes in every mirror selfie", "one bulb out, one ego intact"],
+    "vape": ["5000 puffs, 4999 regrets", "mango, mostly", "zero nicotine, allegedly"],
+    "face_mask": ["worn below the nose", "from 2020, still fresh", "one of 400 in a coat pocket"],
+    "hand_sanitizer": ["was in every pocket in 2020", "60% alcohol, 40% anxiety", "half empty, half crusty"],
+    "bluetooth_speaker": ["paired with the wrong phone", "played one song, too loud", "lost, found, lost"],
+    "power_bank": ["at 4%, like all of them", "dead when needed", "10000 mAh of dead weight"],
+    "magazine": ["read for the articles", "for the interviews, obviously", "the staples are doing the work",
+                 "found in a dad's truck"],
+    "centerfold": ["folded out, then folded back in a hurry", "staples removed, an attempt was made",
+                   "left open to the wrong page"],
+    "tissue_box": ["nearly empty", "one for every mood", "there was a reason it lived on the nightstand"],
+    "tissues": ["crusty", "a tragic number of them", "found in a coat pocket"],
+    "foil_packet": ["from a wallet, 2003", "expired; hope did not", "XL, optimistic"],
+    "dice": ["snake eyes, twice", "blown on for luck", "loaded, rumor says"],
+    "poker_chip": ["taken from a casino, small heist", "never cashed out", "a stack of ambition"],
+    "scratch_ticket": ["not a winner", "$2 for hope", "scratched with a house key"],
+    "beer_can": ["crushed on a forehead", "12 of 12", "warm, sadly", "last one in the fridge"],
+    "shot_glass": ["souvenir of a night nobody recalls", "from a trip to Vegas", "chipped rim"],
+    "matchbook": ["from a gentlemen's club, reportedly", "matches missing, reasons unclear"],
+    "cold_wallet": ["the seed phrase is in the other jacket", "backed up on a napkin", "never plugged in, for safety",
+                    "frozen, like the price"],
+    "hdd": ["WALLET.DAT inside, allegedly", "backed up nothing", "thrown out in a cleanup, instant regret"],
+    "gas_can": ["empty, like the wallet", "the receipt says $9.99 a gallon", "used once, for a mower that did not start"],
+    "coffee_mug": ["says GM, like all the others", "chipped handle, favorite", "cold since 6 A.M."],
+    "rescue_can": ["never once rescued", "used as a pillow at the beach", "a torpedo with no torpedo"],
+    "whistle": ["blown exactly once, at a pool", "around the neck of the loudest person alive", "sounds like authority"],
+    "sunscreen": ["SPF 100, the burn did not care", "applied to half a back", "mostly in the sand"],
+    "swimsuit": ["red, obviously", "drying since the nineties", "built for running in slow motion"],
+    "flashlight": ["for reading under the covers", "batteries gone, guilt remains"],
+    "sock": ["one of a pair, no pair", "gym sock, past tense", "found under the bed, do not ask"],
+    "pixel_hoodie": ["hood up, lights off", "soft from 400 washes", "drawstring long gone"],
+    "studio_headphones": ["one cup loud, one cup soft", "mixed at 3 A.M.", "cable replaced four times"],
+    "synth_keys": ["stuck on one (1) preset", "C, D and a lot of reverb", "an 808 lives in here"],
+    "ribbon_cable": ["rainbow, the good kind", "pin one is the red stripe", "once inside a real computer"],
+    "neon_tube": ["buzzing a little", "the only thing in the cube still awake", "the sign said OPEN, for real"],
+    "highlighter": ["highlighted the whole page", "dry, but loud", "yellow, everywhere"],
+    "tennis_ball": ["found in a dog", "hit over a fence", "deflated, bouncing on hope"],
+    "street_sign": ["taken for a dorm wall", "name faded, sign did not", "bent at the corner"],
+    "newspaper": ["EXTRA EXTRA", "yesterday's news", "crossword half done, in pen"],
+    "microphone": ["is this thing on", "check one, two, recording", "held too close, for years"],
+    "press_badge": ["ALL ACCESS, laminated", "lost at the after party", "hanging by a thread"],
+    "play_money": ["worth exactly what it says", "no cash value, ever", "won, then lost, at cards"],
+    "playing_cards": ["one short of a deck", "the ace of spades, hidden", "a bluff, in four cards"],
 }
+# a few extra lines on the old favorites, same voice
+NOTES["sneaker"] += ["smells like 1989", "worn to one (1) very bad decision"]
+NOTES["sunglasses"] += ["worn indoors at 2 A.M."]
+NOTES["cassette"] += ["a mix for someone who never listened"]
+NOTES["vhs"] += ["the unmarked one, from the back of the closet"]
+NOTES["pager"] += ["last page from a number nobody called back"]
+NOTES["lighter"] += ["borrowed in 1997, never returned"]
 
 SMELLS = [
     # (value, weight, conditions it prefers)
@@ -122,6 +197,10 @@ SMELLS = [
     ("Rink Snack Bar", 3, ()),
     ("Science Lab", 2, ("BIOHAZARD",)),
     ("Don't", 1, ("BIOHAZARD",)),
+    ("Cheap Cologne", 5, ()),
+    ("Cigarette in a Jacket", 4, ()),
+    ("Vegas Carpet", 3, ()),
+    ("Hot Tub", 3, ("SOAKED",)),
     ("Victory", 1, ("GOLD",)),
 ]
 
@@ -141,6 +220,12 @@ RECOVERED = [
     ("House Fire (Everyone's Fine)", 5, ("BURNT",)),
     ("Behind the Science Wing", 4, ("BIOHAZARD",)),
     ("Estate of a Collector", 2, ("CLEAN", "GOLD")),
+    ("A Buddy's Basement", 6, ()),
+    ("Dad's Truck, Glovebox", 6, ()),
+    ("The Bachelor Pad", 5, ()),
+    ("Vegas Hotel Room", 4, ()),
+    ("Ex's Garage", 4, ()),
+    ("Behind the Bar", 3, ()),
     ("Nobody Knows", 1, ()),
 ]
 
@@ -164,6 +249,19 @@ ONE_OF_ONES = {
     "DOUBLE A": "Every AA battery that ever went missing from a remote.",
     "SCREEN TIME": "Every screen you ever stared at, still on.",
     "BULL TRAP": "They all bought the top.",
+    "LANDFILL DRIVE": "Every drive that held something that mattered. All of it is in the dump now.",
+    "BLOW ON IT": "Forty-four cartridges, all blown on. It never helped. You did it anyway.",
+    "STILL ALIVE": "Thirty-eight virtual pets. One is still alive. Nobody has fed it since 1997.",
+    "GAS FEES": "A block of gas cans and receipts. You paid it. You'd pay it again.",
+    "SAVE ICON": "Sixty-four floppy disks. The save icon, before it became a joke.",
+    "COASTERS": "Every burned CD that ended up under a drink.",
+    "GM": "Good morning. Good morning. Good morning. Good morning.",
+    "COLD STORAGE": "Every hardware wallet, frozen solid. Do not ask where the seed phrases are.",
+    "SLOW MOTION": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous.",
+    "UNDER THE MATTRESS": "It was under the mattress. Everyone's mother knew. Nobody said a word.",
+    "LOW RES": "Made in a hoodie and a pair of headphones at three in the morning. Low res and loud.",
+    "CCFF00": "One color. All of it CCFF00. None of it subtle.",
+    "STOP THE PRESSES": "Extra. Extra. The street has news, and a street sign to prove it.",
 }
 
 SIGNOFFS = [
@@ -174,17 +272,22 @@ SIGNOFFS = [
     "Do not attempt to uncrush.",
     "Some assembly was removed.",
     "Contents may have settled.",
+    "Crushed it.",
+    "Nobody made you keep this.",
 ]
 
 
-_SAME = ("s", "Ramen", "Men", "Slime")
-_IRREGULAR = {"Boom Box": "Boom Boxes", "Keyboard (Partial)": "Keyboards (Partial)",
-              "9999-in-1 Handheld": "9999-in-1 Handhelds", "Laptop Charger": "Laptop Chargers"}
+_SAME = ("s", "Ramen", "Men", "Slime", "Money", "Dice")
+_IRREGULAR = {"Boom Box": "Boom Boxes", "Keyboard (Partial)": "Keyboards (Partial)", "Smartwatch": "Smartwatches",
+              "9999-in-1 Handheld": "9999-in-1 Handhelds", "Laptop Charger": "Laptop Chargers",
+              "Ball Mouse": "Ball Mice"}
 
 
 def plural(name):
     if name in _IRREGULAR:
         return _IRREGULAR[name]
+    if name.endswith(("ss", "x", "ch", "sh")):
+        return name + "es"
     if name.endswith(_SAME):
         return name
     return name + "s"
@@ -195,6 +298,6 @@ def smells_like(smell):
         return "Do not smell it."
     if smell == "Nothing":
         return "Smells like nothing."
-    keep = ("Grandma's", "CRT")
+    keep = ("Grandma's", "CRT", "Vegas")
     words = [w if any(w.startswith(k) for k in keep) else w.lower() for w in smell.split()]
     return "Smells like " + " ".join(words) + "."

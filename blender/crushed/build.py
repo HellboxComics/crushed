@@ -10,7 +10,7 @@ from .geo import Builder
 from .objects import PALETTES, Palette, load
 from .stage import H
 
-LIFT = H + 0.004           # centre height of the block above the floor
+LIFT = H + 0.004           # center height of the block above the floor
 
 FACE_WEIGHTS = {"-Y": 0.32, "+X": 0.26, "+Z": 0.24, "+Y": 0.09, "-X": 0.09}
 VISIBLE = ("-Y", "+X", "+Z")
@@ -44,7 +44,7 @@ def prepare(ob, scale_limit, rng):
 
 
 def damage(v, rng, inten, brittle=False, keep_shape=False):
-    """keep_shape: recognisable objects get dented and bent, not destroyed."""
+    """keep_shape: recognizable objects get dented and bent, not destroyed."""
     if brittle:
         return crush.dents(v, rng, int(rng.integers(0, 2)), 0.002)
     if keep_shape:
@@ -97,7 +97,7 @@ def build_block(r, coll, rng):
         core_pal = [tuple(x * k for x in c) for k in (0.5, 0.7, 0.85, 1.0)]
     objs.append(dressing.core(coll, rng, core_pal, r["seed"]))
 
-    # the headliner goes front and centre; then big things (the back layer); then the rest
+    # the headliner goes front and center; then big things (the back layer); then the rest
     rest = sorted(range(1, len(r["heroes"])), key=lambda i: not reg[r["heroes"][i]].big)
     order = ([0] if r["heroes"] else []) + rest
     for rank, i in enumerate(order):
@@ -182,7 +182,8 @@ def build_block(r, coll, rng):
     if r["condition"] == "SOAKED":
         objs.append(dressing.droplets(coll, rng, int(rng.integers(40, 90))))
     for j, x in enumerate(r["straps"]):
-        objs.append(dressing.strap(coll, rng, x, r["condition"], stamp_text=f"{r['id']:04d}" if j == 0 else None))
+        objs.append(dressing.strap(coll, rng, x, "CLEAN" if r["clean"] else r["condition"],
+                                   stamp_text=f"{r['id']:04d}" if j == 0 else None))
     return objs
 
 
@@ -327,7 +328,7 @@ def build_pile(r, coll, rng):
         v = v - (v.min(axis=0) + v.max(axis=0)) / 2
         crush.set_verts(ob.data, v)
         # golden-spiral drop points, staggered so they land one after another; the heap sits
-        # a little back from the block's footprint so it's centred in the same frame
+        # a little back from the block's footprint so it's centered in the same frame
         a = i * 2.39996
         rad = 0.01 + 0.13 * math.sqrt(i / max(n - 1, 1))
         cx, cy = -0.07, 0.09
@@ -370,9 +371,10 @@ def build(r, res=1024, samples=96, turntable=0, look="studio"):
     sc = stage.reset()
     rng = np.random.default_rng(r["seed"])
     one = r.get("one_of_one")
-    cond = r["condition"] if not one else ("CLEAN" if one == "SOLID GOLD" else "JUNK")
-    mat.set_condition(cond, r["clean"][1] if r["clean"] else None, glow=3.0 if one == "SCREEN TIME" else None)
-    tex.SCREENS_ON["on"] = one == "SCREEN TIME"
+    cond = r["condition"] if not one else ("CLEAN" if r["clean"] else "JUNK")
+    glow = {"SCREEN TIME": 3.0, "STILL ALIVE": 2.0}.get(one)
+    mat.set_condition(cond, r["clean"][1] if r["clean"] else None, glow=glow)
+    tex.SCREENS_ON["on"] = one in ("SCREEN TIME", "STILL ALIVE")
     stage.build(sc, rng, res, samples, look=look)
     coll = bpy.data.collections.new("block")
     sc.collection.children.link(coll)

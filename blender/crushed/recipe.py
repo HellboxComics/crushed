@@ -14,15 +14,20 @@ from .objects import ERAS, load
 SUPPLY = 888
 COLLECTION_SEED = 19972008
 
-ONE_OF_ONES = ["EMPTY", "UNCRUSHED", "SOLID GOLD", "MIXTAPE", "LEFTOVERS", "DOUBLE A", "SCREEN TIME", "BULL TRAP"]
+ONE_OF_ONES = [
+    "EMPTY", "UNCRUSHED", "SOLID GOLD", "MIXTAPE", "LEFTOVERS", "DOUBLE A", "SCREEN TIME", "BULL TRAP",
+    "LANDFILL DRIVE", "BLOW ON IT", "STILL ALIVE", "GAS FEES", "SAVE ICON", "COASTERS", "GM", "COLD STORAGE",
+    "SLOW MOTION", "UNDER THE MATTRESS",
+    "LOW RES", "CCFF00", "STOP THE PRESSES",          # three gift blocks, made for other people's worlds
+]
 
-CONDITIONS = {          # exact counts across all 888 (plus the 8 one-of-ones)
+CONDITIONS = {          # exact counts across all 888 (plus the one-of-ones)
     "GOLD": 11,
     "BIOHAZARD": 19,
     "CLEAN": 27,
     "BURNT": 36,
     "SOAKED": 36,
-}                       # JUNK: the other 751
+}                       # JUNK: the rest
 
 CONTAMINANTS = {        # exact counts; 88 of 888 blocks are contaminated
     "red_candle": 16,
@@ -68,21 +73,65 @@ HEADLINERS = {
     "digital_camera": 1.5, "mp3_player": 2.0, "vhs": 2.0, "cassette": 2.0, "keyboard_chunk": 1.2,
     "calculator": 1.5, "headphones": 1.2, "mouse": 1.5, "energy_can": 1.5, "disposable_camera": 1.2,
     "webcam": 1.0, "soda_can": 1.0, "yoyo": 1.0,
+    "smartphone": 3.0, "tablet": 1.5, "earbuds_case": 1.5, "smartwatch": 1.0, "vr_headset": 2.0, "drone": 2.0,
+    "fidget_spinner": 1.5, "selfie_stick": 1.0, "ring_light": 1.0, "vape": 1.5, "face_mask": 1.0,
+    "hand_sanitizer": 1.0, "bluetooth_speaker": 1.5, "power_bank": 1.0,
+    "magazine": 1.2, "beer_can": 0.8, "tissue_box": 0.8, "poker_chip": 0.6,
 }
 
 GOLDABLE = {"sneaker", "pizza_crust", "tv_remote", "corded_phone", "cassette", "pager", "controller_16bit",
             "controller_modern", "joystick", "flip_phone", "candybar_phone", "walkman", "mouse", "yoyo",
             "sunglasses", "headphones", "puzzle_cube", "aa_batteries", "floppy", "vhs", "digital_camera",
             "mp3_player", "energy_can", "soda_can", "skate_wheel", "brick_game", "game_cart", "roller_skate",
-            "calculator"}
+            "calculator", "smartphone", "fidget_spinner", "smartwatch", "earbuds_case", "dice", "poker_chip",
+            "beer_can", "bluetooth_speaker", "power_bank", "vape"}
 
 MONOCULTURES = {   # one-of-ones that are made of one idea
-    "MIXTAPE": [("cassette", 30), ("vhs", 4), ("walkman", 3), ("boombox", 1)],
+    "MIXTAPE": [("cassette", 40), ("walkman", 3), ("boombox", 1)],
     "LEFTOVERS": [("pizza_crust", 42)],
     "DOUBLE A": [("aa_batteries", 44), ("tv_remote", 4)],
     "SCREEN TIME": [("crt", 3), ("brick_game", 4), ("handheld", 4), ("candybar_phone", 4), ("flip_phone", 4),
                     ("pager", 4), ("digital_camera", 3), ("mp3_player", 4), ("calculator", 4), ("virtual_pet", 4)],
     "BULL TRAP": [("bull", 22), ("red_candle", 12), ("paper_hand", 3), ("crumpled_chart", 4), ("bear", 1)],
+    "LANDFILL DRIVE": [("hdd", 28), ("gold_coin", 6), ("charger_brick", 3), ("usb_stick", 4), ("floppy", 3)],
+    "BLOW ON IT": [("game_cart", 44), ("controller_16bit", 3), ("controller_modern", 2)],
+    "STILL ALIVE": [("virtual_pet", 38), ("brick_game", 3), ("handheld", 3), ("aa_batteries", 4)],
+    "GAS FEES": [("gas_can", 28), ("lighter", 5), ("gold_coin", 4)],
+    "SAVE ICON": [("floppy", 64), ("usb_stick", 1)],
+    "COASTERS": [("cd", 56), ("jewel_case", 10), ("beer_can", 6), ("shot_glass", 2)],
+    "GM": [("coffee_mug", 32), ("energy_can", 5), ("gold_coin", 8), ("smartphone", 3)],
+    "COLD STORAGE": [("cold_wallet", 40), ("hardware_wallet", 8), ("usb_stick", 3)],
+    "SLOW MOTION": [("rescue_can", 10), ("whistle", 6), ("sunscreen", 8), ("swimsuit", 8), ("sunglasses", 6),
+                    ("pager", 3), ("vhs", 4), ("walkman", 1)],
+    "UNDER THE MATTRESS": [("magazine", 14), ("centerfold", 9), ("tissue_box", 5), ("tissues", 12), ("flashlight", 3),
+                           ("sock", 4), ("foil_packet", 4)],
+    "LOW RES": [("pixel_hoodie", 6), ("studio_headphones", 5), ("synth_keys", 4), ("cassette", 10), ("floppy", 6),
+                ("ribbon_cable", 8), ("crt", 2), ("game_cart", 4), ("controller_16bit", 2)],
+    "CCFF00": [("neon_tube", 10), ("highlighter", 14), ("glow_stick", 12), ("tennis_ball", 10),
+               ("energy_can", 6), ("floppy", 6), ("sneaker", 1)],
+    "STOP THE PRESSES": [("street_sign", 4), ("newspaper", 12), ("microphone", 5), ("press_badge", 8),
+                         ("play_money", 10), ("playing_cards", 6), ("digital_camera", 3), ("boombox", 1)],
+}
+
+# one-of-ones whose gaps are packed with their own kind of debris
+ONE_FILLERS = {
+    "LEFTOVERS": ("cardboard_scrap", "packaging", "crumpled_paper", "receipt"),
+    "LANDFILL DRIVE": ("pcb_chunk", "cardboard_scrap", "crumpled_paper", "wire_bit", "plastic_shard", "packaging"),
+    "GAS FEES": ("receipt", "crumpled_paper"),
+    "COASTERS": ("receipt", "bottle_cap", "crumpled_paper"),
+    "SLOW MOTION": ("fabric_scrap", "plastic_film", "receipt", "gum_wrapper", "bottle_cap"),
+    "UNDER THE MATTRESS": ("tissues", "crumpled_paper", "fabric_scrap", "foil_packet", "receipt"),
+}
+
+# whole-block finishes for one-of-ones that are a single material
+# one-of-ones made of paper, cloth or glass: loose electrical wire has no business on them
+NO_WIRES = {"UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
+            "UNCRUSHED", "EMPTY", "BULL TRAP", "SOLID GOLD"}
+
+ONE_FINISH = {
+    "SOLID GOLD": ("SOLID GOLD", ("gold", {"rough": 0.2})),
+    "CCFF00": ("CCFF00", ("plastic", {"color": (0.8, 1.0, 0.0), "rough": 0.28, "coat": 0.7})),
+    "COLD STORAGE": ("FROZEN", ("plastic", {"color": (0.74, 0.9, 1.0), "rough": 0.24, "coat": 0.9})),
 }
 
 ONE_OF_ONE_FLAVOR = {  # (smell, recovered from, headliner)
@@ -94,13 +143,26 @@ ONE_OF_ONE_FLAVOR = {  # (smell, recovered from, headliner)
     "DOUBLE A": ("Fresh Batteries (Licked)", "Every Remote in the House", "AA Batteries"),
     "SCREEN TIME": ("Hot Dust on a CRT", "The Den", "CRT Monitor"),
     "BULL TRAP": ("Capitulation", "The Top", "Dead Bull"),
+    "LANDFILL DRIVE": ("Wet Landfill", "Under Forty Feet of Garbage", "Hard Drive"),
+    "BLOW ON IT": ("Hot Breath", "The Bottom of the Toy Box", "Game Cartridge"),
+    "STILL ALIVE": ("Warm Plastic", "A Drawer, Still Beeping", "Virtual Pet"),
+    "GAS FEES": ("Gasoline", "The Pump, 3 A.M.", "Gas Can"),
+    "SAVE ICON": ("Static Electricity", "Every School Computer Lab", "Floppy Disk"),
+    "COASTERS": ("Stale Beer", "Every Coffee Table", "Burned CD"),
+    "GM": ("Burnt Coffee", "Every Timeline, 6 A.M.", "Coffee Mug"),
+    "COLD STORAGE": ("Freezer Burn", "The Back of the Freezer", "Hardware Wallet"),
+    "SLOW MOTION": ("Coconut Sunscreen", "The Beach, in Slow Motion", "Rescue Can"),
+    "UNDER THE MATTRESS": ("Shame", "Under the Mattress", "Magazine"),
+    "LOW RES": ("Warm Amplifier", "A Bedroom Studio, 3 A.M.", "Pixel Hoodie"),
+    "CCFF00": ("Fresh Highlighter", "The Neon Aisle", "Neon Tube"),
+    "STOP THE PRESSES": ("Fresh Newsprint", "The Newsroom Floor", "Street Sign"),
 }
 
 LOCKED = ("SOAKED", "BURNT", "BIOHAZARD", "GOLD")
 
 
 def era_of(token_id):
-    return min(3, (token_id - 1) * 4 // SUPPLY)
+    return min(len(ERAS) - 1, (token_id - 1) * len(ERAS) // SUPPLY)
 
 
 def base_intensity(token_id):
@@ -122,6 +184,15 @@ def _weighted(rng, table, cond):
     return vals[int(rng.choice(len(vals), p=ws / ws.sum()))]
 
 
+# eras (indexes into ERAS) each one-of-one may be dealt into; the rest can land anywhere
+ONE_ERA = {
+    "MIXTAPE": {0, 1}, "SCREEN TIME": {2, 3}, "LANDFILL DRIVE": {3, 4}, "BLOW ON IT": {1}, "STILL ALIVE": {2, 3},
+    "GAS FEES": {2, 3, 4}, "SAVE ICON": {0, 1, 2}, "COASTERS": {1, 2, 3}, "GM": {4}, "COLD STORAGE": {3, 4},
+    "SLOW MOTION": {1}, "UNDER THE MATTRESS": {0, 1, 2, 3}, "LOW RES": {1}, "CCFF00": {1, 2, 3, 4},
+    "STOP THE PRESSES": {0, 1, 2, 3},
+}
+
+
 def deck():
     rng = np.random.default_rng([COLLECTION_SEED, 0])
     conds = list(ONE_OF_ONES)
@@ -129,6 +200,13 @@ def deck():
         conds += [k] * n
     conds += ["JUNK"] * (SUPPLY - len(conds))
     conds = [str(c) for c in rng.permutation(conds)]
+    for name, allowed in ONE_ERA.items():     # a one-of-one lands in an era its contents actually belong to
+        i = conds.index(name)
+        if era_of(i + 1) in allowed:
+            continue
+        cand = [j for j in range(SUPPLY) if era_of(j + 1) in allowed and conds[j] not in ONE_OF_ONES]
+        j = cand[int(rng.integers(0, len(cand)))]
+        conds[i], conds[j] = conds[j], conds[i]
     eligible = [i + 1 for i in range(SUPPLY) if conds[i] not in ONE_OF_ONES]
     items = []
     for k, n in CONTAMINANTS.items():
@@ -162,7 +240,7 @@ def recipe(token_id):
     def pool(e, group="era"):
         return [d for d in reg.values() if d.group == group and e in d.eras]
 
-    # the headliner: the first thing you see, front and centre
+    # the headliner: the first thing you see, front and center
     hp = [d.name for d in pool(era) if d.name in HEADLINERS]
     hw = np.array([HEADLINERS[n] for n in hp])
     headliner = hp[int(rng.choice(len(hp), p=hw / hw.sum()))]
@@ -175,7 +253,7 @@ def recipe(token_id):
         tries += 1
         e = era
         if rng.random() < 0.15:
-            e = int(np.clip(era + rng.choice([-1, 1]), 0, 3))
+            e = int(np.clip(era + rng.choice([-1, 1]), 0, len(ERAS) - 1))
         p = pool(e)
         w = np.array([d.weight for d in p])
         d = p[rng.choice(len(p), p=w / w.sum())]
@@ -193,8 +271,8 @@ def recipe(token_id):
     crypto = contaminants.get(token_id)
 
     fp = pool(era, "filler")
-    if one == "LEFTOVERS":
-        fp = [d for d in fp if d.name in ("cardboard_scrap", "packaging", "crumpled_paper", "receipt")]
+    if one in ONE_FILLERS:
+        fp = [d for d in fp if d.name in ONE_FILLERS[one]]
     fw = np.array([d.weight for d in fp])
     n_fill = int(rng.integers(60, 80) + round(inten * 30))
     fillers = [fp[i].name for i in rng.choice(len(fp), n_fill, p=fw / fw.sum())]
@@ -202,8 +280,8 @@ def recipe(token_id):
     clean = None
     if cond == "CLEAN":
         clean = CLEAN_FINISHES[int(rng.integers(0, len(CLEAN_FINISHES)))]
-    if one == "SOLID GOLD":
-        clean = ("SOLID GOLD", ("gold", {"rough": 0.2}))
+    if one in ONE_FINISH:
+        clean = ONE_FINISH[one]
 
     tape = 0
     if any(h in CASSETTEY for h in heroes) and cond != "CLEAN" and rng.random() < 0.85:
@@ -211,6 +289,8 @@ def recipe(token_id):
     if one == "MIXTAPE":
         tape = 8
     wires = int(rng.integers(1, 6) + round(inten * 2.5))
+    if one in NO_WIRES:
+        wires = 0
     gold_index = _gold(rng, heroes) if cond == "GOLD" else None
     straps = [float(-0.082 + rng.normal(0, 0.004)), float(0.082 + rng.normal(0, 0.004))]
     seed = int(rng.integers(0, 1 << 30))
@@ -256,7 +336,7 @@ def recipe(token_id):
     return {
         "id": token_id,
         "recipe_id": token_id,
-        "name": f"CRUSHED #{token_id:04d}",
+        "name": f"CRUSHED IT #{token_id:04d}",
         "era": ERAS[era],
         "era_index": era,
         "condition": cond,
@@ -296,18 +376,18 @@ def description(r):
         note = notes[int(rng.integers(0, len(notes)))]
         name = lore.NAMES[n] if k == 1 else lore.plural(lore.NAMES[n])
         if n == gold:
-            name, note, k = "Gold " + name, "why", 1
+            name, note, k = "Gold " + lore.NAMES[n], "why", 1
         lines.append(f"{k} {name}" + (f" ({note})" if note else ""))
         if len(lines) >= 5:
             break
     if r["crypto"]:
         c = r["crypto"]
         notes = lore.NOTES[c]
-        lines.append(f"1 {CONTAMINANT_NAMES[c]} ({notes[int(rng.integers(0, len(notes)))]})")
+        lines.append(f"1 {lore.NAMES.get(c, CONTAMINANT_NAMES[c])} ({notes[int(rng.integers(0, len(notes)))]})")
     t = dict(r["traits"])
     head = lore.ONE_OF_ONES[one] + " " if one else ""
     sign = lore.SIGNOFFS[int(rng.integers(0, len(lore.SIGNOFFS)))]
-    return (f"{head}Recovered from {t['Recovered From']}. {lore.smells_like(t['Smell'])} "
+    return (f"{head}Recovered from {t['Recovered From'].rstrip('.')}. {lore.smells_like(t['Smell'])} "
             f"Contents (partial): {'; '.join(lines)}. Weight {r['weight_lb']} lb. {sign}")
 
 

@@ -149,7 +149,7 @@ def _rgba(c):
 
 
 def _lin(c):
-    """sRGB display colour -> linear, so palettes can be written by eye."""
+    """sRGB display color -> linear, so palettes can be written by eye."""
     def f(x):
         return x / 12.92 if x <= 0.04045 else ((x + 0.055) / 1.055) ** 2.4
     return tuple(f(x) for x in c[:3])
@@ -209,7 +209,7 @@ def _finish(g, s, kind, p):
         n1 = g.noise(5.0, 8.0, 0.7, vec=w)
         char = g.maprange(n1.outputs["Fac"], 0.22, 0.42)
         col = g.mix(char, col, _lin((0.018, 0.015, 0.013)))
-        # scorched edge band between char and surviving colour
+        # scorched edge band between char and surviving color
         edge = g.math("MULTIPLY", g.maprange(n1.outputs["Fac"], 0.12, 0.22), g.maprange(n1.outputs["Fac"], 0.32, 0.22))
         col = g.mix(edge, col, _lin((0.25, 0.12, 0.04)), "MULTIPLY")
         blister = g.noise(70.0, 6.0, 0.7, vec=w)
@@ -319,7 +319,11 @@ def plastic(g, p, rng):
     col = g.mix(g.math("MULTIPLY", scratch, 0.3), col, (0.9, 0.9, 0.9), "SCREEN")
     tex_ = p.get("texture", 0.15)
     normal = g.bump(g.math("ADD", g.math("MULTIPLY", n.outputs["Fac"], tex_), scratch), 0.1, 0.001)
-    return {"color": col, "rough": rough, "normal": normal, "coat": p.get("coat", 0.0)}
+    out = {"color": col, "rough": rough, "normal": normal, "coat": p.get("coat", 0.0)}
+    if p.get("glow"):
+        out["emit"] = c
+        out["estr"] = p["glow"]
+    return out
 
 
 def translucent(g, p, rng):
@@ -481,7 +485,7 @@ def rust(g, p, rng):
 
 
 def core(g, p, rng):
-    """The compressed mass visible between recognisable objects: deep, dark, dense.
+    """The compressed mass visible between recognizable objects: deep, dark, dense.
     Nearly black, with just enough glint to read as more crushed stuff."""
     pal = p["palette"]
     n = g.noise(60.0, 8.0, 0.75)

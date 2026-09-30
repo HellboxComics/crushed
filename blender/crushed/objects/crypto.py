@@ -9,7 +9,7 @@ from mathutils import Matrix
 from .. import tex
 from . import MET, P, PR, obj
 
-C = dict(group="crypto", eras=(0, 1, 2, 3))
+C = dict(group="crypto", eras=(0, 1, 2, 3, 4))
 
 
 @obj("broken_rocket", mass=0.2, **C)

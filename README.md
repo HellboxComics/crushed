@@ -1,4 +1,4 @@
-# CRUSHED
+# CRUSHED IT
 
 Not characters. Not PFPs. Not lore.
 
@@ -6,7 +6,7 @@ Not characters. Not PFPs. Not lore.
 Same camera, same floor, same lights, same cube. Completely different guts.
 
 ```
-CRUSHED #0044
+CRUSHED IT #0044
 ```
 
 ---
@@ -28,7 +28,7 @@ Each token id seeds a recipe (`blender/crushed/recipe.py`). The recipe is then b
 
 1. **Core** – a dark, dense mass, so every gap reads as more compressed stuff.
 2. **Big items** – CRTs, boom boxes, skateboards, pressed hardest; they become the back layer.
-3. **Headliner** – the first thing you see, placed front and centre, dented but recognisable.
+3. **Headliner** – the first thing you see, placed front and center, dented but recognizable.
 4. **Heroes** – 26–46 era objects spread across the five visible faces, oriented so their best side faces out.
 5. **Contaminant** – in 88 of 888 blocks, one crypto item buried near the surface.
 6. **Filler** – 60–110 flattened housings, packaging, film, paper, PCB chunks, glass and wire.
@@ -41,7 +41,7 @@ z-fighting, and wrinkled in proportion to how hard it was squeezed. Textures fol
 a stored rest position), so a notebook's ruled lines bend with the page.
 
 Nothing is AI-generated and nothing copies a real product: every object is original, generic geometry
-built from primitives in code. Era is carried by shape, colour and material.
+built from primitives in code. Era is carried by shape, color and material.
 
 ## Traits and rarity
 
@@ -53,7 +53,7 @@ Full tables: [`collection/RARITY.md`](collection/RARITY.md).
 | Era | 1985-1990 · 1991-1996 · 1997-2002 · 2003-2008 (222 each, in token order) |
 | Condition | JUNK 751 · SOAKED 36 · BURNT 36 · CLEAN 27 · BIOHAZARD 19 · GOLD 11 |
 | One of One | EMPTY · UNCRUSHED · SOLID GOLD · MIXTAPE · LEFTOVERS · DOUBLE A · SCREEN TIME · BULL TRAP |
-| Headliner | the front-and-centre object (Sneaker, CRT Monitor, Corded Phone, Pager, ...) |
+| Headliner | the front-and-center object (Sneaker, CRT Monitor, Corded Phone, Pager, ...) |
 | Contaminant | None 800 · Tiny Red Candle 16 · Paper Hand 12 · Emergency Ramen 11 · Crumpled Chart 10 · Broken Rocket 9 · Dead Bull 8 · Bear (Thriving) 7 · Gold Coin 6 · Suspicious Rectangle 5 · Diamond 3 · **Tiny Green Candle 1** |
 | Pressure | Firm Handshake → Hydraulic → Industrial → Unreasonable (the collection gets progressively more fucked up) |
 | Smell | Hot Dust on a CRT, New Plastic, Arcade Carpet, Blue Raspberry, ... Burnt Popcorn, Science Lab, Don't |
@@ -63,12 +63,12 @@ Full tables: [`collection/RARITY.md`](collection/RARITY.md).
 | Finish | CLEAN only: BONE, OBSIDIAN, CHROME, GRAPE, SAFETY ORANGE, ICE |
 | Gilded | GOLD only: which object turned gold |
 | Weight (lb) | computed from what's inside |
-| Item Count | how many recognisable things went in |
+| Item Count | how many recognizable things went in |
 
 **Conditions**
 
 - **JUNK** – most of them.
-- **CLEAN** – almost entirely one material and colour.
+- **CLEAN** – almost entirely one material and color.
 - **BURNT** – charred, blistered, embers still glowing in the cracks, soot on the floor.
 - **SOAKED** – wet, oxidised, moldy, sitting in its own puddle.
 - **BIOHAZARD** – something deeply questionable leaked into it. It glows.
@@ -92,7 +92,7 @@ The description is an evidence log:
 
 ```json
 {
- "name": "CRUSHED #0044",
+ "name": "CRUSHED IT #0044",
  "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 2 Calculators (solar panel covered by a sticker); ... Contents may have settled.",
  "attributes": [{"trait_type": "Era", "value": "1985-1990"}, {"trait_type": "Condition", "value": "JUNK"}, ...]
 }

@@ -342,7 +342,7 @@ def memory_card(b, rng, pal):
     return {"card": P(rng.choice([(0.1, 0.25, 0.7), BLACK, (0.6, 0.1, 0.1), SILVER]), 0.3)}
 
 
-@obj("usb_stick", eras=(3,), mass=0.01, weight=1.2)
+@obj("usb_stick", eras=(3, 4), mass=0.01, weight=1.2)
 def usb_stick(b, rng, pal):
     b.box((0.045, 0.018, 0.009), mat="body", bevel=0.003)
     b.box((0.013, 0.012, 0.0045), loc=(0.029, 0, 0), mat="plug")
@@ -351,7 +351,7 @@ def usb_stick(b, rng, pal):
     return {"body": pal.body(loud=0.5, clear=0.2), "plug": MET(SILVER, 0.2)}
 
 
-@obj("charger_brick", eras=(3,), mass=0.3)
+@obj("charger_brick", eras=(3, 4), mass=0.3)
 def charger_brick(b, rng, pal):
     b.box((0.11, 0.05, 0.03), mat="body", bevel=0.005)
     _cord(b, rng, (0.055, 0, 0), 0.3, 0.003)
@@ -382,14 +382,14 @@ def controller_16bit(b, rng, pal):
     for x in (-0.008, 0.008):
         b.box((0.01, 0.004, 0.003), loc=(x, -0.01, 0.0115), rot=(0, 0, 0.5), mat="dpad", bevel=0.001)
     _cord(b, rng, (0, 0.03, 0), 0.3, 0.0022)
-    grey = rng.random() < 0.6
-    return {"body": P((0.62, 0.62, 0.64) if grey else CHARCOAL, 0.45), "dpad": P(BLACK, 0.4),
+    gray = rng.random() < 0.6
+    return {"body": P((0.62, 0.62, 0.64) if gray else CHARCOAL, 0.45), "dpad": P(BLACK, 0.4),
             "btn0": P(rng.choice([(0.4, 0.25, 0.55), (0.8, 0.1, 0.1), (0.2, 0.2, 0.2)]), 0.3),
             "btn1": P(rng.choice([(0.55, 0.45, 0.7), (0.1, 0.3, 0.8), (0.85, 0.75, 0.1)]), 0.3),
             "cord": P(BLACK, 0.5)}
 
 
-@obj("controller_modern", eras=(2, 3), mass=0.2, weight=1.5)
+@obj("controller_modern", eras=(2, 3, 4), mass=0.2, weight=1.5)
 def controller_modern(b, rng, pal):
     pts = []
     for i in range(48):
@@ -452,7 +452,7 @@ def brick_game(b, rng, pal):
             "btn": P(BLACK), "btn2": P(rng.choice([(0.9, 0.85, 0.1), (0.9, 0.1, 0.1)]))}
 
 
-@obj("handheld", eras=(3,), mass=0.2, weight=1.0)
+@obj("handheld", eras=(3, 4), mass=0.2, weight=1.0)
 def handheld(b, rng, pal):
     b.extrude(rounded_rect(0.16, 0.07, 0.03, 6), 0.02, mat="body", bevel=0.004)
     b.plane(0.07, 0.045, loc=(0, 0.004, 0.0105), mat="lcd")
@@ -539,7 +539,7 @@ def _foot(t, L):
     return L * (0.115 + 0.075 * math.sin(math.pi * min(1.0, t * 1.05)) ** 0.7 - 0.02 * math.exp(-((t - 0.45) / 0.12) ** 2))
 
 
-@obj("sneaker", eras=(0, 1, 2, 3), mass=0.45, weight=1.6, hero=(0, -1, 0))
+@obj("sneaker", eras=(0, 1, 2, 3, 4), mass=0.45, weight=1.6, hero=(0, -1, 0))
 def sneaker(b, rng, pal):
     L = 0.28
     high = pal.era <= 1 and rng.random() < 0.55
@@ -581,7 +581,7 @@ def sneaker(b, rng, pal):
         xx = -L * 0.05 + i * 0.02
         zz = sole_h + (top - 0.01) - i * (0.01 if not high else 0.016)
         b.box((0.006, 0.075, 0.003), loc=(xx, 0, zz + 0.012), rot=(0, 0.3, 0), mat="lace", bevel=0.001)
-    # side panels: toe cap and heel counter in the accent colour
+    # side panels: toe cap and heel counter in the accent color
     for sy in (-1, 1):
         b.extrude([(0.0, 0.0), (0.06, 0.0), (0.075, 0.03), (0.03, 0.045), (-0.01, 0.03)], 0.002,
                   loc=(-L / 2 + 0.005, sy * _foot(0.08, L) * 1.02, sole_h), rot=(math.pi / 2, 0, 0), mat="panel")
@@ -595,7 +595,7 @@ def sneaker(b, rng, pal):
             "panel": P(acc, 0.4), "lining": ("fabric", {"color": (0.1, 0.1, 0.1)})}
 
 
-@obj("sunglasses", eras=(0, 1, 2), mass=0.03, weight=1.5)
+@obj("sunglasses", eras=(0, 1, 2, 3, 4), mass=0.03, weight=1.5)
 def sunglasses(b, rng, pal):
     for sx in (-1, 1):
         shape = rounded_rect(0.052, 0.04, 0.012, 4)
@@ -638,7 +638,7 @@ def slap_bracelet(b, rng, pal):
 
 # -- school -----------------------------------------------------------------------------
 
-@obj("notebook", eras=(0, 1, 2, 3), mass=0.3, weight=1.3)
+@obj("notebook", eras=(0, 1, 2, 3, 4), mass=0.3, weight=1.3)
 def notebook(b, rng, pal):
     w, h = 0.2, 0.26
     b.box((w, h, 0.012), mat="pages")
@@ -652,7 +652,7 @@ def notebook(b, rng, pal):
             "cover": ("cardboard", {"color": pal.color("loud")}), "spiral": MET(SILVER, 0.3)}
 
 
-@obj("pencil", eras=(0, 1, 2, 3), mass=0.01, weight=1.2)
+@obj("pencil", eras=(0, 1, 2, 3, 4), mass=0.01, weight=1.2)
 def pencil(b, rng, pal):
     n = rng.integers(1, 4)
     for i in range(n):
@@ -724,7 +724,7 @@ def skate_wheel(b, rng, pal):
 
 # -- power & misc -----------------------------------------------------------------------
 
-@obj("aa_batteries", eras=(0, 1, 2, 3), mass=0.1, weight=1.8)
+@obj("aa_batteries", eras=(0, 1, 2, 3, 4), mass=0.1, weight=1.8)
 def aa_batteries(b, rng, pal):
     n = rng.integers(2, 5)
     img = tex.battery(rng, "aa")
@@ -737,7 +737,7 @@ def aa_batteries(b, rng, pal):
             "cap": MET(SILVER, 0.2)}
 
 
-@obj("tv_remote", eras=(0, 1, 2, 3), mass=0.15, weight=1.5)
+@obj("tv_remote", eras=(0, 1, 2, 3, 4), mass=0.15, weight=1.5)
 def tv_remote(b, rng, pal):
     w, h, d = 0.05, 0.18, 0.02
     b.box((w, h, d), mat="body", bevel=0.006, seg=3)
@@ -753,7 +753,7 @@ def tv_remote(b, rng, pal):
             "ir": T((0.2, 0.02, 0.02), 0.1)}
 
 
-@obj("extension_cord", eras=(0, 1, 2, 3), mass=0.6, weight=1.2)
+@obj("extension_cord", eras=(0, 1, 2, 3, 4), mass=0.6, weight=1.2)
 def extension_cord(b, rng, pal):
     b.box((0.25, 0.055, 0.035), mat="body", bevel=0.006)
     for i in range(4):
@@ -768,7 +768,7 @@ def extension_cord(b, rng, pal):
             "switch": T((0.9, 0.1, 0.05), 0.2)}
 
 
-@obj("pizza_crust", eras=(0, 1, 2, 3), mass=0.05, weight=1.4)
+@obj("pizza_crust", eras=(0, 1, 2, 3, 4), mass=0.05, weight=1.4)
 def pizza_crust(b, rng, pal):
     arc = rng.uniform(0.6, 1.1)
     R = 0.17
@@ -788,7 +788,7 @@ def pizza_crust(b, rng, pal):
     return {"crust": ("crust", {}), "cheese": P((0.98, 0.78, 0.3), 0.35), "pep": P((0.6, 0.08, 0.05), 0.45)}
 
 
-@obj("soda_can", eras=(0, 1, 2), mass=0.015, weight=1.4)
+@obj("soda_can", eras=(0, 1, 2, 3, 4), mass=0.015, weight=1.4)
 def soda_can(b, rng, pal):
     prof = [(0.0, -0.061), (0.025, -0.0615), (0.032, -0.055), (0.033, 0.05), (0.028, 0.06), (0.027, 0.0615),
             (0.0, 0.0615)]
@@ -796,7 +796,7 @@ def soda_can(b, rng, pal):
     return {"print": ("printed", {"image": tex.can_print(rng, "soda"), "rough": 0.2, "metal": 0.6})}
 
 
-@obj("energy_can", eras=(3,), mass=0.02, weight=2.0)
+@obj("energy_can", eras=(3, 4), mass=0.02, weight=2.0)
 def energy_can(b, rng, pal):
     prof = [(0.0, -0.085), (0.024, -0.086), (0.0295, -0.079), (0.0295, 0.075), (0.026, 0.084), (0.025, 0.0855),
             (0.0, 0.0855)]
@@ -812,7 +812,7 @@ def film_canister(b, rng, pal):
     return {"can": P(BLACK, 0.4), "lid": P(rng.choice([(0.6, 0.6, 0.62), (0.1, 0.1, 0.1)]), 0.5)}
 
 
-@obj("disposable_camera", eras=(1, 2, 3), mass=0.1, weight=1.1)
+@obj("disposable_camera", eras=(1, 2, 3, 4), mass=0.1, weight=1.1)
 def disposable_camera(b, rng, pal):
     b.box((0.11, 0.055, 0.033), mat="wrap", bevel=0.004)
     b.cyl(0.012, 0.008, loc=(0.02, 0, 0.018), mat="barrel", seg=18)
@@ -823,7 +823,7 @@ def disposable_camera(b, rng, pal):
             "barrel": P(BLACK), "lens": ("lens", {}), "flash": T((0.95, 0.95, 0.95), 0.4)}
 
 
-@obj("glow_stick", eras=(2, 3), mass=0.02)
+@obj("glow_stick", eras=(2, 3, 4), mass=0.02)
 def glow_stick(b, rng, pal):
     col = rng.choice([(0.3, 1.0, 0.2), (1.0, 0.2, 0.7), (0.2, 0.7, 1.0), (1.0, 0.6, 0.1)])
     bend = rng.uniform(0.0, 0.8)
@@ -833,7 +833,7 @@ def glow_stick(b, rng, pal):
     return {"glow": ("slime", {"color": tuple(col)})}
 
 
-@obj("lighter", eras=(1, 2, 3), mass=0.02)
+@obj("lighter", eras=(1, 2, 3, 4), mass=0.02)
 def lighter(b, rng, pal):
     b.box((0.025, 0.012, 0.06), mat="body", bevel=0.004)
     b.box((0.02, 0.011, 0.012), loc=(0, 0, 0.036), mat="top")

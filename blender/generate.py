@@ -1,4 +1,4 @@
-"""CRUSHED generator.
+"""CRUSHED IT generator.
 
 Runs either inside Blender or with the `bpy` module from PyPI:
 
@@ -28,11 +28,11 @@ ROOT = os.path.dirname(HERE)
 
 def token(tid, offset=0):
     """Token id -> its recipe. Before reveal offset is 0 and they're the same thing;
-    after reveal the contract's offset decides (Crushed.recipeOf)."""
+    after reveal the contract's offset decides (the contract's recipeOf)."""
     rid = ((tid - 1 + offset) % recipe.SUPPLY) + 1
     r = recipe.recipe(rid)
     r["id"] = tid
-    r["name"] = f"CRUSHED #{tid:04d}"
+    r["name"] = f"CRUSHED IT #{tid:04d}"
     return r
 
 
@@ -65,7 +65,7 @@ def write_manifest(out):
         r = recipe.recipe(tid)
         rows.append({"id": tid, "seed": r["seed"], "traits": dict(r["traits"]), "weight_lb": r["weight_lb"],
                      "items": r["items"], "heroes": r["heroes"], "crypto": r["crypto"]})
-    blob = json.dumps({"collection": "CRUSHED", "supply": recipe.SUPPLY, "collection_seed": recipe.COLLECTION_SEED,
+    blob = json.dumps({"collection": "CRUSHED IT", "supply": recipe.SUPPLY, "collection_seed": recipe.COLLECTION_SEED,
                        "tokens": rows}, sort_keys=True, separators=(",", ":")).encode()
     os.makedirs(out, exist_ok=True)
     with open(os.path.join(out, "manifest.json"), "wb") as f:
@@ -93,7 +93,7 @@ def write_rarity(out, rows):
     with open(os.path.join(out, "rarity.json"), "w") as f:
         json.dump({"traits": freq, "ranks": {r["id"]: {"rank": r["rank"], "score": r["score"]} for r in rows}},
                   f, indent=1, sort_keys=True)
-    lines = ["# CRUSHED rarity", "", f"{n} blocks. Every count below is exact.", ""]
+    lines = ["# CRUSHED IT rarity", "", f"{n} blocks. Every count below is exact.", ""]
     for k, table in freq.items():
         lines += [f"## {k}", "", "| Value | Count | % |", "|---|---:|---:|"]
         for v, c in sorted(table.items(), key=lambda kv: -kv[1]):

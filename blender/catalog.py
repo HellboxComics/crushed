@@ -23,7 +23,8 @@ from crushed.objects import Palette, load  # noqa: E402
 def main():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:]
     ap = argparse.ArgumentParser()
-    ap.add_argument("--group", default="era", choices=["era", "crypto", "filler"])
+    ap.add_argument("--group", default="era", choices=["era", "crypto", "filler", "special", "all"])
+    ap.add_argument("--names", default=None, help="comma list of object names")
     ap.add_argument("--era", type=int, default=None)
     ap.add_argument("--out", required=True)
     ap.add_argument("--res", type=int, default=1600)
@@ -31,7 +32,10 @@ def main():
     a = ap.parse_args(argv)
 
     reg = load()
-    defs = [d for d in reg.values() if d.group == a.group and (a.era is None or a.era in d.eras)]
+    defs = [d for d in reg.values() if (a.group == "all" or d.group == a.group) and (a.era is None or a.era in d.eras)]
+    if a.names:
+        want = a.names.split(",")
+        defs = [reg[n] for n in want]
     defs.sort(key=lambda d: d.name)
     sc = stage.reset()
     rng = np.random.default_rng(7)
