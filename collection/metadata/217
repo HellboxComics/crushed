@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0217",
+ "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 AA Batteries (taken out of the smoke detector); 2 No. 2 Pencils (sharpened to a nub); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Game Cartridges (blown into 400 times). Weight 88.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0217.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Yo-Yo"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 88.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0474",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Keyboards (Partial) (F, J and the crumbs); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Flip Phones (12 texts left this month); 1 Memory Card (corrupted during a birthday); 2 Floppy Disks (DISK 2 of 7); 1 Broken Rocket (didn't make it). Weight 82.1 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0474.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0887",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Spiral Notebooks (note says 'check YES or NO'); 1 AA Batteries (taken out of the smoke detector); 2 Burned CDs (says ROAD TRIP in marker); 2 Game Controllers (stick drift since day one). Weight 33.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0887.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

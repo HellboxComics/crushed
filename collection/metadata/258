@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0258",
+ "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Soda Can (flat); 1 Sneaker (was in the dryer); 2 Milk Caps (won in a bet); 2 Army Man Squads (melted with a magnifying glass); 1 Tiny Red Candle (lit). Weight 47.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0258.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Tiny Red Candle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 47.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

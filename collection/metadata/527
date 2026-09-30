@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0527",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Cheap Sunglasses (one lens popped out); 2 Digital Cameras (2 megapixels of truth); 2 TV Remotes (found in the couch); 1 Webcam (240p of pure confidence). Weight 82.5 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0527.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

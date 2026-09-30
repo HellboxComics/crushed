@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0344",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 2 Ball Mouses (ball removed as a prank); 3 16-Bit Controllers (cord pulled the console off the shelf); 2 Pagers (last page: 911 (it was not)); 1 AA Batteries (probably dead); 2 No. 2 Pencils (never saw a scantron it liked). Weight 73.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0344.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 73.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

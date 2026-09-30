@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0407",
+ "description": "Recovered from Estate of a Collector. Smells like Grandma's couch. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 16-Bit Controllers (the B button is sticky); 3 Cassette Tapes (labeled MIX 4 U); 2 Calculators (spelled BOOBIES upside down); 2 Cheap Sunglasses (mall kiosk special). Weight 70.7 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0407.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 70.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0207",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Roller Skates (toe stop worn to nothing); 2 Joysticks (suction cups gave up); 3 Army Man Squads (the one with the radio survived); 2 Spiral Notebooks (spiral unwound halfway). Weight 63.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0207.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 63.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

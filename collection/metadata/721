@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0721",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Flip Phones (12 texts left this month); 3 Memory Cards (corrupted during a birthday); 3 Energy Drinks (third one that night); 2 Burned CDs (says ROAD TRIP in marker); 3 Sneakers (untied since 1989). Weight 66.3 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0721.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 66.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

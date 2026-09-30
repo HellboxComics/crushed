@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0241",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Cheap Sunglasses (mall kiosk special); 1 Virtual Pet (died during math class); 2 Toy Slime (was in the hair of a sibling); 1 Skate Wheel (flat spot from a power slide). Weight 86.8 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0241.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

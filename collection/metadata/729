@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0729",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 3 Game Controllers (stick drift since day one); 3 USB Sticks (never ejected safely); 2 Power Strips (daisy-chained into three more); 1 TV Remote (held together with tape); 1 Diamond (hands not included). Weight 32.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0729.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Diamond"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

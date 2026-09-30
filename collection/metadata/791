@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0791",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 TV Remotes (the volume button worn smooth); 3 Spiral Notebooks (doodles in the margins); 3 USB Sticks (contains homework_FINAL_final2.doc); 3 Glow Sticks (cracked at a school dance). Weight 26.8 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0791.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

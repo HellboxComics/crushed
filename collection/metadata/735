@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0735",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Disposable Cameras (never developed); 3 MP3 Players (shuffle picked the same song 6 times); 1 Power Strip (overloaded on purpose); 1 No. 2 Pencil (sharpened to a nub); 2 Laptop Chargers (warm to the touch, somehow). Weight 32.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0735.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

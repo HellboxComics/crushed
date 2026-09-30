@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0812",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Brick Phone (faceplate swapped 4 times); 2 Power Strips (daisy-chained into three more); 3 Laptop Chargers (warm to the touch, somehow); 1 Memory Card (8MB, full). Weight 31.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0812.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

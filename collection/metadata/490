@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0490",
+ "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 3 TV Remotes (found in the couch); 1 Jewel Case (hinge broken on arrival); 1 Glow Stick (cracked at a school dance); 3 Burned CDs (burned at 1x, 4 hours); 2 Game Controllers (thrown during a boss fight); 1 Dead Bull (flipped). Weight 70.3 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0490.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Dead Bull"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 70.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

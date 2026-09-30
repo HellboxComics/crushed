@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0383",
+ "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 2 Soda Cans (shaken as a prank); 3 16-Bit Controllers (cord pulled the console off the shelf); 2 TV Remotes (the volume button worn smooth); 2 Pagers (last page: 911 (it was not)). Weight 76.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0383.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

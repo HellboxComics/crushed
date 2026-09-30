@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0394",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 1 No. 2 Pencil (chewed); 1 Yo-Yo (string tied to a finger for 3 years); 1 Milk Caps (the slammer is chipped); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 44.2 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0394.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 44.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0197",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 3 No. 2 Pencils (sharpened to a nub); 1 Film Canister (holds one quarter); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Portable Tape Player (auto-reverse broke in 1991). Weight 92.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0197.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Roller Skate"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 92.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

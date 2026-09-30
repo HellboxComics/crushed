@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0633",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Corded Phone (someone is still on hold); 1 Burned CD (says ROAD TRIP in marker); 1 Memory Card (corrupted during a birthday). Weight 84.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0633.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "BONE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

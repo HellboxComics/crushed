@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0545",
+ "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Spiral Notebook (doodles in the margins); 1 Floppy Disk (contains one (1) virus); 3 Cheap Sunglasses (mall kiosk special); 1 Foam Headphones (orange foam, allegedly). Weight 82.7 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0545.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

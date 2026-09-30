@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0792",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 TV Remotes (the volume button worn smooth); 1 Ball Mouse (rollers caked with 1998); 2 Handheld Consoles (battery cover lost immediately); 2 Spiral Notebooks (doodles in the margins); 1 Tiny Red Candle (lit). Weight 31.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0792.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Tiny Red Candle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

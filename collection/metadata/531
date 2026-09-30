@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0531",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 VHS Tapes (taped over a wedding); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Memory Card (corrupted during a birthday); 1 Soda Can (flat); 3 Virtual Pets (fed 0 times); 1 Broken Rocket (didn't make it). Weight 69.7 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0531.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

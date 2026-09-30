@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0462",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Flip Phones (ringtone composed by hand); 3 Cheap Sunglasses (mall kiosk special); 2 Glow Sticks (cracked at a school dance); 3 Sneakers (untied since 1989). Weight 42.8 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0462.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 42.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

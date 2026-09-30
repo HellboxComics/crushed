@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0092",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 Yo-Yos (walked the dog one time); 2 AA Batteries (taken out of the smoke detector); 2 TV Remotes (held together with tape); 1 Boom Box (one speaker still believes). Weight 86.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0092.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

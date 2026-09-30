@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0853",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Sneakers (was in the dryer); 3 Laptop Chargers (fits nothing else in the house); 3 AA Batteries (mixed old and new, like animals); 2 Pizza Crusts (found behind the couch); 3 Burned CDs (coaster now). Weight 34.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0853.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

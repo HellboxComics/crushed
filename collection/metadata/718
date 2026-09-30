@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0718",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Spiral Notebook (spiral unwound halfway); 1 Pager (last page: 911 (it was not)); 3 Power Strips (daisy-chained into three more); 2 Disposable Cameras (never developed). Weight 34.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0718.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

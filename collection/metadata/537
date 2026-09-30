@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0537",
+ "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 1 Pager (last page: 911 (it was not)); 3 Floppy Disks (save icon, but real); 3 AA Batteries (probably dead); 1 Flip Phone (12 texts left this month); 1 Ball Mouse (rollers caked with 1998). Weight 28.8 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0537.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 28.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

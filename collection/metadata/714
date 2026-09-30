@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0714",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 1 Disposable Camera (never developed); 3 Glow Sticks (still glowing a little, somehow); 2 Burned CDs (says ROAD TRIP in marker); 3 Energy Drinks (exam week casualty); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 35.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0714.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

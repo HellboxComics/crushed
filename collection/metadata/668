@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0668",
+ "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 Portable CD Player (anti-skip lied); 2 Laptop Chargers (warm to the touch, somehow); 1 Pizza Crust (from a sleepover); 3 Burned CDs (coaster now). Weight 35.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0668.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0302",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Ball Mouse (ball removed as a prank); 2 Portable CD Players (anti-skip lied); 3 Army Man Squads (melted with a magnifying glass); 1 Corded Phone (was on the line when mom picked up); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 33.9 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0302.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0447",
+ "description": "Recovered from Estate of a Collector. Smells like gym bag, forgotten. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Soda Can (shaken as a prank); 2 TV Remotes (found in the couch); 1 Pizza Crust (found behind the couch); 2 Skate Wheels (rolled into a storm drain once); 1 Paper Hand (sold at the bottom). Weight 33.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0447.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

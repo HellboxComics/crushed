@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0347",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Slap Bracelet (cut someone, probably); 1 16-Bit Controller (the B button is sticky); 3 Foam Headphones (one ear works if you hold it); 1 Three-Ring Binder (velcro screams when opened). Weight 76.5 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0347.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

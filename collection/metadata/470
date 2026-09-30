@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0470",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 Ball Mouses (ball removed as a prank); 1 Portable CD Player (anti-skip lied); 1 Virtual Pet (fed 0 times); 2 No. 2 Pencils (chewed); 2 MP3 Players (shuffle picked the same song 6 times). Weight 21.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0470.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 21.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

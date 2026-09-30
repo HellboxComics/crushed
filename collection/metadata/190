@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0190",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Pizza Crusts (petrified); 3 AA Batteries (taken out of the smoke detector); 1 Yo-Yo (string tied to a finger for 3 years); 2 Game Cartridges (blown into 400 times); 1 Tiny Red Candle (lit). Weight 82.9 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0190.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Tiny Red Candle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "OBSIDIAN"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

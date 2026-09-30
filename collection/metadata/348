@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0348",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 3 Pagers (last page: 143); 1 Skate Wheel (rolled into a storm drain once); 2 Clear Lighters (for incense, obviously); 3 AA Batteries (probably dead). Weight 39.7 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0348.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0653",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Game Controllers (stick drift since day one); 1 Sneaker (untied since 1989); 1 Brick Phone (unbreakable until today); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Energy Drink (tastes like a battery). Weight 78.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0653.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

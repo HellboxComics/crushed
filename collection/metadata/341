@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0341",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 Power Strips (overloaded on purpose); 3 Foam Headphones (orange foam, allegedly); 2 Ball Mouses (cord chewed by a dog); 1 TV Remote (found in the couch). Weight 89.3 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0341.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 89.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

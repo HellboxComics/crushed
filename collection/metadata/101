@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0101",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Sneakers (light-up heel, dead); 3 Joysticks (fire button pressed 40 million times); 2 Film Canisters (undeveloped, forever); 1 Corded Phone (someone is still on hold). Weight 82.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0101.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0306",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 Burned CDs (coaster now); 3 Ball Mouses (rollers caked with 1998); 2 Power Strips (overloaded on purpose); 2 Disposable Cameras (never developed). Weight 74.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0306.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

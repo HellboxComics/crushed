@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0658",
+ "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 No. 2 Pencil (never saw a scantron it liked); 2 Ball Mouses (rollers caked with 1998); 1 Power Strip (overloaded on purpose); 3 Spiral Notebooks (doodles in the margins). Weight 84.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0658.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0750",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Game Controller (stick drift since day one); 2 Flip Phones (snapped shut dramatically); 3 No. 2 Pencils (sharpened to a nub); 1 Foam Headphones (orange foam, allegedly); 3 TV Remotes (found in the couch). Weight 32.0 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0750.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

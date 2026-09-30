@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0282",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Gold 16-Bit Controllers (why); 1 Skateboard (griptape ate a pair of jeans); 1 Slap Bracelet (cut someone, probably); 2 Jewel Cases (hinge broken on arrival); 3 Sneakers (was in the dryer). Weight 48.9 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0282.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "GOLD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 48.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

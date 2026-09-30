@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0692",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 MP3 Players (shuffle picked the same song 6 times); 1 Burned CD (track 7 skips); 2 TV Remotes (held together with tape); 1 Floppy Disk (contains one (1) virus). Weight 41.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0692.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 41.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

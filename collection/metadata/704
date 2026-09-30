@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0704",
+ "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 1 Game Controller (stick drift since day one); 2 Clear Lighters (for incense, obviously); 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Spiral Notebooks (doodles in the margins); 2 Burned CDs (burned at 1x, 4 hours). Weight 31.0 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0704.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

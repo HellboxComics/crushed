@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0365",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 Portable CD Players (anti-skip lied); 2 Game Cartridges (save file erased by a sibling); 1 Disposable Camera (never developed); 2 16-Bit Controllers (cord pulled the console off the shelf). Weight 83.7 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0365.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

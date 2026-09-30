@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0557",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Floppy Disks (says DO NOT FORMAT); 1 Foam Headphones (orange foam, allegedly); 2 Glow Sticks (still glowing a little, somehow); 2 Burned CDs (coaster now). Weight 75.4 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0557.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

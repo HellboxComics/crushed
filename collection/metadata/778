@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0778",
+ "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 Energy Drink (exam week casualty); 3 Burned CDs (says ROAD TRIP in marker); 1 Spiral Notebook (doodles in the margins); 3 Jewel Cases (insert is from a different album); 3 No. 2 Pencils (sharpened to a nub). Weight 73.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0778.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 73.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

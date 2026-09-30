@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0581",
+ "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Cassette Tapes (labeled MIX 4 U); 3 No. 2 Pencils (sharpened to a nub); 2 Ball Mouses (cord chewed by a dog); 1 Virtual Pet (died during math class). Weight 71.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0581.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 71.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

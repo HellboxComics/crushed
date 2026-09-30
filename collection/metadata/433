@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0433",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Calculator (spelled BOOBIES upside down); 1 Power Strip (overloaded on purpose); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Cassette Tapes (rewound with a pencil). Weight 78.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0433.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

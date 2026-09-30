@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0651",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 1 Virtual Pet (reincarnated 40 times); 3 VHS Tapes (BE KIND REWIND (they did not)); 3 Game Controllers (stick drift since day one); 2 AA Batteries (taken out of the smoke detector); 3 Floppy Disks (says DO NOT FORMAT). Weight 32.4 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0651.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Virtual Pet"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

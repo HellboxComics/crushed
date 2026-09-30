@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0491",
+ "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (still warm); 2 Portable CD Players (anti-skip lied); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Glow Stick (still glowing a little, somehow); 3 Sneakers (left only). Weight 78.9 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0491.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

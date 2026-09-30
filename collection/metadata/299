@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0299",
+ "description": "Recovered from Estate of a Collector. Smells like Grandma's couch. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Burned CD (track 7 skips); 3 Skate Wheels (rolled into a storm drain once); 1 Milk Caps (the slammer is chipped). Weight 78.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0299.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

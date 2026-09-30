@@ -145,20 +145,27 @@ def jewel_case(b, rng, pal):
 
 @obj("corded_phone", eras=(0, 1, 2), mass=1.1, weight=1.5, big=True)
 def corded_phone(b, rng, pal):
-    prof = [(-0.1, 0.0), (0.1, 0.0), (0.1, 0.045), (-0.1, 0.075)]
-    b.extrude(prof, 0.2, rot=(math.pi / 2, 0, math.pi / 2), mat="body", bevel=0.006)
-    b.plane(0.07, 0.09, loc=(0.0, 0.02, 0.062), rot=(-0.15, 0, 0), mat="keys")
-    # handset lying in its cradle, dog-bone
-    hs = [(-0.1, -0.05, 0.1), (-0.07, -0.05, 0.085), (0.07, -0.05, 0.085), (0.1, -0.05, 0.1)]
-    b.tube(hs, 0.016, mat="body", seg=14)
+    # low wedge base with a sloped keypad face
+    prof = [(-0.1, 0.0), (0.1, 0.0), (0.1, 0.03), (-0.1, 0.06)]
+    b.extrude(prof, 0.19, rot=(math.pi / 2, 0, math.pi / 2), mat="body", bevel=0.008)
+    b.plane(0.075, 0.085, loc=(0.0, 0.035, 0.047), rot=(-0.15, 0, 0), mat="keys")
+    # two cradle prongs
     for sx in (-1, 1):
-        b.sphere(0.028, loc=(sx * 0.1, -0.05, 0.1), scale=(0.9, 1.0, 0.55), mat="body", seg=16)
-    b.tube(helix(0.009, 0.006, 14, 12, start=(0.1, -0.09, 0.06)), 0.0022, mat="cord", seg=6)
+        b.box((0.025, 0.03, 0.02), loc=(sx * 0.07, -0.05, 0.06), mat="body", bevel=0.006)
+    # handset: slim grip, fat ear and mouth pieces angled down
+    b.frame = Matrix.Translation((0, -0.05, 0.085))
+    b.box((0.13, 0.034, 0.022), mat="body", bevel=0.009)
+    for sx in (-1, 1):
+        b.box((0.055, 0.052, 0.034), loc=(sx * 0.085, 0, -0.008), rot=(0, sx * 0.25, 0), mat="body", bevel=0.012)
+        b.cyl(0.018, 0.002, loc=(sx * 0.09, 0, -0.026), mat="grille", seg=16)
+    b.frame = Matrix.Identity(4)
+    b.tube(helix(0.008, 0.006, 16, 12, start=(0.11, -0.05, 0.07)), 0.0022, mat="cord", seg=6)
     clear = pal.era == 2 and rng.random() < 0.7
     body = T(rng.choice([(0.55, 0.2, 0.8), (0.2, 0.5, 0.95), (0.9, 0.3, 0.5), (0.4, 0.85, 0.2)]), 0.12) \
         if clear else P(rng.choice([BEIGE, (0.7, 0.1, 0.1), BLACK, WHITE, (0.9, 0.85, 0.75)]))
     return {"body": body, "keys": PR(tex.keypad(rng, "phonekeys", key=(0.9, 0.9, 0.88),
-                                                 body=(0.25, 0.25, 0.25))), "cord": body}
+                                                 body=(0.25, 0.25, 0.25))), "cord": body,
+            "grille": P(CHARCOAL, 0.6)}
 
 
 @obj("pager", eras=(1, 2), mass=0.08, weight=2.0)
@@ -270,6 +277,20 @@ def floppy(b, rng, pal):
     return {"body": pal.body(loud=0.3, clear=0.4 if pal.era == 2 else 0.05),
             "shutter": MET(SILVER, 0.25),
             "label": PR(tex.sticker(rng, "fl", words=rng.choice(["DISK 1", "DOS", "BACKUP", "GAMES", "HW", "TERM"])))}
+
+
+@obj("calculator", eras=(0, 1), mass=0.1, weight=1.3)
+def calculator(b, rng, pal):
+    w, h, d = 0.075, 0.13, 0.012
+    b.box((w, h, d), mat="body", bevel=0.003)
+    b.plane(0.058, 0.02, loc=(0, 0.043, d / 2 + 0.0004), mat="lcd")
+    b.plane(0.03, 0.008, loc=(0.012, 0.059, d / 2 + 0.0004), mat="solar")
+    b.plane(0.064, 0.078, loc=(0, -0.018, d / 2 + 0.0004), mat="keys")
+    return {"body": P(rng.choice([CHARCOAL, BLACK, (0.55, 0.52, 0.48), SILVER]), 0.4),
+            "lcd": PR(tex.lcd(rng, "calc", rng.choice(["5318008", "58008", "0.", "7734", "ERROR", "80085"])), 0.15),
+            "solar": P((0.12, 0.08, 0.06), 0.1),
+            "keys": PR(tex.keypad(rng, "calck", rows=5, cols=4, labels="789/456*123-0.=+C", key=(0.8, 0.8, 0.78),
+                                  body=(0.15, 0.15, 0.15)))}
 
 
 @obj("webcam", eras=(2,), mass=0.12)
@@ -507,49 +528,71 @@ def army_men(b, rng, pal):
         b.cyl(0.0014, 0.03, loc=(0.008, -0.008, 0.038), rot=(1.2, 0, 0.3), mat="green", seg=6)
         b.cyl(0.0022, 0.012, loc=(-0.008, -0.006, 0.036), rot=(1.0, 0, 0), mat="green", seg=6)
     b.frame = Matrix.Identity(4)
-    return {"green": ("army", {"color": tuple(rng.choice([(0.32, 0.38, 0.2), (0.3, 0.35, 0.18),
-                                                          (0.55, 0.5, 0.35)]))})}
+    return {"green": ("army", {"color": tuple(rng.choice([(0.22, 0.36, 0.12), (0.27, 0.34, 0.15),
+                                                          (0.2, 0.3, 0.1)]))})}
 
 
 # -- wearables -------------------------------------------------------------------------
 
+def _foot(t, L):
+    """Half-width of a shoe footprint at t (0 heel .. 1 toe)."""
+    return L * (0.115 + 0.075 * math.sin(math.pi * min(1.0, t * 1.05)) ** 0.7 - 0.02 * math.exp(-((t - 0.45) / 0.12) ** 2))
+
+
 @obj("sneaker", eras=(0, 1, 2, 3), mass=0.45, weight=1.6, hero=(0, -1, 0))
 def sneaker(b, rng, pal):
-    L = 0.29
-    high = pal.era <= 1 and rng.random() < 0.6
-    rings_up, rings_sole = [], []
-    n = 16
+    L = 0.28
+    high = pal.era <= 1 and rng.random() < 0.55
+    sole_h = 0.028
+    n = 22
+    # sole: footprint extrusion
+    fp = []
     for i in range(n):
         t = i / (n - 1)
-        x = -L / 2 + t * L
-        wdt = 0.045 * (0.75 + 0.35 * math.sin(math.pi * min(1, t * 1.15))) + 0.012
-        heel = (1 - t)
-        ht = 0.045 + 0.06 * max(0, heel - 0.35) * (2.3 if high else 1.2) + 0.012 * math.sin(math.pi * t)
-        if t > 0.85:
-            ht *= 1 - (t - 0.85) * 2.5
+        fp.append((-L / 2 + t * L, _foot(t, L)))
+    for i in range(n - 1, -1, -1):
+        t = i / (n - 1)
+        fp.append((-L / 2 + t * L, -_foot(t, L)))
+    b.extrude(fp, sole_h, loc=(0, 0, sole_h / 2), mat="sole", bevel=0.006)
+    b.extrude([(x * 1.01, y * 1.01) for x, y in fp], 0.008, loc=(0, 0, sole_h * 0.85), mat="mid")
+    # upper: arched cross sections, low at the toe, high at the collar
+    rings = []
+    for i in range(n):
+        t = i / (n - 1)
+        x = -L / 2 + 0.006 + t * (L - 0.012)
+        w = _foot(t, L) * 0.96
+        collar = (0.13 if high else 0.075)
+        if t < 0.3:
+            h = 0.07 + (collar - 0.07) * math.sin(math.pi * t / 0.6)
+        else:
+            h = 0.03 + (collar - 0.03) * (1 - (t - 0.3) / 0.7) ** 1.3
+        h = max(h, 0.028) if t < 0.97 else 0.02
         ring = []
-        for k in range(16):
-            a = math.pi * k / 15
-            ring.append((x, math.cos(a) * wdt, 0.025 + math.sin(a) * ht))
-        ring += [(x, -wdt, 0.025)]
-        rings_up.append(ring[:16])
-        sr = [(x, math.cos(2 * math.pi * k / 16) * (wdt + 0.004), 0.013 + math.sin(2 * math.pi * k / 16) * 0.013)
-              for k in range(16)]
-        rings_sole.append(sr)
-    b.loft(rings_up, mat="upper", closed=False, cap=False)
-    b.loft(rings_sole, mat="sole")
+        for k in range(18):
+            a = math.pi * k / 17
+            ring.append((x, math.cos(a) * w, sole_h + math.sin(a) * h * (0.9 + 0.1 * math.sin(a))))
+        rings.append(ring)
+    b.loft(rings, mat="upper", closed=False, cap=False)
+    # collar opening and tongue
+    top = 0.075 if not high else 0.13
+    b.sphere(0.032, loc=(-L * 0.3, 0, sole_h + top - 0.004), scale=(1.4, 0.9, 0.18), mat="lining", seg=16)
+    b.box((0.06, 0.05, 0.008), loc=(-L * 0.12, 0, sole_h + top - 0.005), rot=(0, -0.55, 0), mat="upper", bevel=0.003)
     for i in range(5):
-        x = -0.02 + i * 0.022
-        b.box((0.008, 0.07, 0.004), loc=(x, 0, 0.1 - i * 0.008), rot=(0, 0.35, 0), mat="lace", bevel=0.0015)
-    b.extrude([(-0.1, 0.0), (0.02, 0.0), (0.09, 0.04), (0.0, 0.04)], 0.002,
-              loc=(0.0, -0.058, 0.055), rot=(math.pi / 2, 0, 0), mat="panel")
-    b.extrude([(-0.1, 0.0), (0.02, 0.0), (0.09, 0.04), (0.0, 0.04)], 0.002,
-              loc=(0.0, 0.058, 0.055), rot=(math.pi / 2, 0, 0), mat="panel")
-    up = rng.choice([WHITE, BLACK, (0.85, 0.1, 0.1), (0.2, 0.3, 0.7), (0.9, 0.9, 0.85)])
+        xx = -L * 0.05 + i * 0.02
+        zz = sole_h + (top - 0.01) - i * (0.01 if not high else 0.016)
+        b.box((0.006, 0.075, 0.003), loc=(xx, 0, zz + 0.012), rot=(0, 0.3, 0), mat="lace", bevel=0.001)
+    # side panels: toe cap and heel counter in the accent colour
+    for sy in (-1, 1):
+        b.extrude([(0.0, 0.0), (0.06, 0.0), (0.075, 0.03), (0.03, 0.045), (-0.01, 0.03)], 0.002,
+                  loc=(-L / 2 + 0.005, sy * _foot(0.08, L) * 1.02, sole_h), rot=(math.pi / 2, 0, 0), mat="panel")
+        b.extrude([(0.0, 0.0), (0.09, 0.0), (0.05, 0.04), (0.0, 0.03)], 0.002,
+                  loc=(L * 0.1, sy * _foot(0.72, L) * 0.98, sole_h), rot=(math.pi / 2, 0, 0), mat="panel")
+    up = tuple(rng.choice([WHITE, BLACK, (0.85, 0.1, 0.1), (0.2, 0.3, 0.7), (0.9, 0.9, 0.85), (0.3, 0.3, 0.32)]))
     acc = pal.color("loud")
-    return {"upper": ("fabric", {"color": up}) if rng.random() < 0.5 else P(up, 0.5),
-            "sole": RUB((0.92, 0.9, 0.85)) if rng.random() < 0.7 else RUB(), "lace": ("fabric", {"color": WHITE}),
-            "panel": P(acc, 0.4)}
+    return {"upper": ("fabric", {"color": up}) if rng.random() < 0.4 else P(up, 0.5),
+            "sole": RUB((0.93, 0.91, 0.86)) if rng.random() < 0.7 else RUB((0.55, 0.35, 0.2)),
+            "mid": P(acc, 0.4), "lace": ("fabric", {"color": WHITE if up != WHITE else acc}),
+            "panel": P(acc, 0.4), "lining": ("fabric", {"color": (0.1, 0.1, 0.1)})}
 
 
 @obj("sunglasses", eras=(0, 1, 2), mass=0.03, weight=1.5)
@@ -650,7 +693,7 @@ def slime(b, rng, pal):
 
 # -- boards & wheels ------------------------------------------------------------------
 
-@obj("skateboard", eras=(1, 2), mass=1.8, weight=1.3, big=True)
+@obj("skateboard", eras=(1, 2), mass=1.8, weight=1.3, big=True, hero=(0, 0, -1))
 def skateboard(b, rng, pal):
     L = 0.4
     pts = rounded_rect(L, 0.2, 0.09, 8)

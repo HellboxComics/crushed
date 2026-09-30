@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0547",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Memory Cards (8MB, full); 3 MP3 Players (shuffle picked the same song 6 times); 1 Clear Lighter (for incense, obviously); 2 Skate Wheels (flat spot from a power slide). Weight 75.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0547.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

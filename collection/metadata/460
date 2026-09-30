@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0460",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Cassette Tape (labeled MIX 4 U); 3 Clear Lighters (out of fluid); 1 Handheld Console (battery cover lost immediately); 2 Power Strips (overloaded on purpose). Weight 52.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0460.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 52.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

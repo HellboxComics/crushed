@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0436",
+ "description": "Recovered from Nobody Knows. Smells like arcade carpet. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Toy Slime (stuck in the carpet); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 9999-in-1 Handhelds (HI SCORE 00000); 3 AA Batteries (taken out of the smoke detector); 1 Crumpled Chart (printed out for emotional reasons). Weight 49.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0436.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nobody Knows"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "ICE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0175",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 3 TV Remotes (held together with tape); 1 Corded Phone (cord stretched to the bathroom); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Ball Mouse (rollers caked with 1998). Weight 85.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0175.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

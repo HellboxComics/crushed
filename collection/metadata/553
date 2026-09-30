@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0553",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Ball Mouses (rollers caked with 1998); 2 Pagers (last page: 143); 1 Clear Lighter (out of fluid); 3 Jewel Cases (hinge broken on arrival); 2 Flip Phones (ringtone composed by hand). Weight 81.7 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0553.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 81.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

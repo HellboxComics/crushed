@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0848",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 3 Burned CDs (burned at 1x, 4 hours); 3 Sneakers (untied since 1989); 2 Memory Cards (8MB, full); 1 Pizza Crust (found behind the couch). Weight 33.6 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0848.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

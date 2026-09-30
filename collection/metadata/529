@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0529",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Corded Phone (was on the line when mom picked up); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Floppy Disk (says DO NOT FORMAT); 1 Yo-Yo (walked the dog one time); 1 Crumpled Chart (it went up, then it went down). Weight 74.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0529.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0351",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Ball Mouses (rollers caked with 1998); 1 Disposable Camera (never developed); 1 Calculator (solar panel covered by a sticker); 1 CRT Monitor (weighs more than the desk); 2 AA Batteries (probably dead). Weight 76.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0351.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

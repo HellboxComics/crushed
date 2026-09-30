@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0085",
+ "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 2 Roller Skates (the rink smell is still in there); 2 Cheap Sunglasses (mall kiosk special); 2 TV Remotes (held together with tape); 3 Calculators (spelled BOOBIES upside down); 3 Yo-Yos (walked the dog one time). Weight 82.1 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0085.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Roller Skate"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

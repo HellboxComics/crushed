@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0760",
+ "description": "Recovered from The Mall Fountain. Smells like body spray cloud. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Clear Lighters (out of fluid); 3 Digital Cameras (2 megapixels of truth); 3 Energy Drinks (exam week casualty); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 29.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0760.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "The Mall Fountain"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0024",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (took 10 D batteries); 3 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 TV Remotes (found in the couch); 1 Calculator (solar panel covered by a sticker). Weight 89.3 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0024.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 89.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

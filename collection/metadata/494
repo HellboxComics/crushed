@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0494",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 3 Pagers (clipped to jeans for status only); 3 Burned CDs (burned at 1x, 4 hours); 1 CRT Monitor (still warm); 1 Handheld Console (battery cover lost immediately); 1 Brick Phone (faceplate swapped 4 times). Weight 76.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0494.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0247",
+ "description": "Recovered from Estate of a Collector. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Pizza Crusts (petrified); 2 Toy Slime (was in the hair of a sibling); 3 AA Batteries (taken out of the smoke detector); 3 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 87.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0247.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

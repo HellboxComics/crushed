@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0513",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Game Controller (thrown during a boss fight); 1 Pizza Crust (found behind the couch); 3 Jewel Cases (hinge broken on arrival); 2 Portable CD Players (anti-skip lied). Weight 76.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0513.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

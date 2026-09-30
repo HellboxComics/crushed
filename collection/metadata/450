@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0450",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 VHS Tape (BE KIND REWIND (they did not)); 2 Pizza Crusts (found behind the couch); 2 AA Batteries (mixed old and new, like animals); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 76.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0450.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

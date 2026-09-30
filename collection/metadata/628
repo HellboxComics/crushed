@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0628",
+ "description": "Recovered from Nobody Knows. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Pizza Crust (found behind the couch); 1 Memory Card (corrupted during a birthday); 1 Skateboard (griptape ate a pair of jeans). Weight 77.7 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0628.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nobody Knows"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

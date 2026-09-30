@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0695",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 3 TV Remotes (found in the couch); 3 Clear Lighters (for incense, obviously); 1 Laptop Charger (warm to the touch, somehow); 3 AA Batteries (mixed old and new, like animals). Weight 39.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0695.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

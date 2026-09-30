@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0766",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Skate Wheel (rolled into a storm drain once); 2 No. 2 Pencils (sharpened to a nub); 3 Game Controllers (thrown during a boss fight); 2 Pizza Crusts (petrified); 1 Tiny Red Candle (one of many). Weight 34.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0766.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Tiny Red Candle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

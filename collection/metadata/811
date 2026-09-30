@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0811",
+ "description": "We kept the important shit. There wasn't any. Weight 4.2 lb.",
+ "image": "ipfs://IMAGES_CID/0811.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "EMPTY"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Nothing"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "None Applied"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Nothing"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nowhere"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "EMPTY"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 4.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 0,
+   "display_type": "number"
+  }
+ ]
+}

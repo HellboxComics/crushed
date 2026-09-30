@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0138",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like body spray cloud. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 3 Puzzle Cubes (solved once, stickers moved); 1 AA Batteries (probably dead); 2 Army Man Squads (the one with the radio survived); 1 Pizza Crust (from a sleepover). Weight 54.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0138.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Roller Skate"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 54.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

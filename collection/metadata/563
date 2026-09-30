@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0563",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Ball Mouse (ball removed as a prank); 1 Handheld Console (battery cover lost immediately); 3 Power Strips (overloaded on purpose); 1 Digital Camera (memory full, 14 photos); 1 Tiny Red Candle (one of many). Weight 50.7 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0563.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Soda Can"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Tiny Red Candle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 50.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

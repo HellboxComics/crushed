@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0352",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Burned CDs (track 7 skips); 3 Soda Cans (flat); 1 Game Controller (thrown during a boss fight). Weight 69.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0352.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

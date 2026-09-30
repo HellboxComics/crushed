@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0863",
+ "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Sneakers (left only); 1 Glow Stick (cracked at a school dance); 3 TV Remotes (found in the couch); 1 CRT Monitor (screen burn-in reads LOADING). Weight 75.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0863.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

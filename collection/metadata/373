@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0373",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Skate Wheel (flat spot from a power slide); 2 No. 2 Pencils (chewed); 1 Pager (last page: 911 (it was not)); 2 Pizza Crusts (petrified); 1 Emergency Ramen (the whole strategy). Weight 49.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0373.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

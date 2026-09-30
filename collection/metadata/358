@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0358",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Disposable Cameras (never developed); 3 Yo-Yos (walked the dog one time); 2 No. 2 Pencils (sharpened to a nub); 1 Metal Lunchbox (the smell stays); 2 Burned CDs (track 7 skips). Weight 74.2 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0358.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

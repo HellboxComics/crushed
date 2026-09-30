@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0564",
+ "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 TV Remote (the volume button worn smooth); 1 Foam Headphones (orange foam, allegedly); 1 Corded Phone (cord stretched to the bathroom); 2 Game Controllers (stick drift since day one). Weight 30.1 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0564.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0201",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Spiral Notebooks (spiral unwound halfway); 2 Film Canisters (undeveloped, forever); 1 TV Remote (the volume button worn smooth); 1 Cassette Tape (someone's voicemail greeting). Weight 47.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0201.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 47.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0874",
+ "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 3 Disposable Cameras (never developed); 3 Game Controllers (stick drift since day one); 3 Memory Cards (8MB, full); 3 Sneakers (left only); 1 Skateboard (one ollie, lifetime). Weight 45.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0874.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 45.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

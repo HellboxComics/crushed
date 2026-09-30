@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0774",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Jewel Cases (hinge broken on arrival); 3 Pizza Crusts (still better than most portfolios); 3 Memory Cards (corrupted during a birthday); 3 Digital Cameras (memory full, 14 photos). Weight 32.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0774.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

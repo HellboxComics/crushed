@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0071",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Sneaker (left only); 1 Corded Phone (someone is still on hold); 2 AA Batteries (mixed old and new, like animals); 1 Boom Box (shoulder-mounted in its prime); 1 Calculator (spelled BOOBIES upside down). Weight 95.9 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0071.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 95.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

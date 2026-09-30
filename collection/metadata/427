@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0427",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (someone is still on hold); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Jewel Cases (hinge broken on arrival); 1 Clear Lighter (out of fluid); 2 Toy Slime (was in the hair of a sibling). Weight 88.5 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0427.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 88.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0512",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Disposable Cameras (never developed); 2 Film Canisters (undeveloped, forever); 2 Soda Cans (flat). Weight 68.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0512.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 68.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0699",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Jewel Cases (hinge broken on arrival); 3 Pizza Crusts (found behind the couch); 2 USB Sticks (never ejected safely); 3 Memory Cards (8MB, full). Weight 27.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0699.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

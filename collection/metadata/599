@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0599",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 Brick Phone (snake high score intact); 3 Digital Cameras (memory full, 14 photos); 2 MP3 Players (shuffle picked the same song 6 times); 2 Webcams (pointed at the ceiling forever); 1 Handheld Console (screen scratched from a pocket with keys). Weight 74.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0599.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Brick Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

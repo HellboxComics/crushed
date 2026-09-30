@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0875",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 3 Memory Cards (8MB, full); 2 Digital Cameras (memory full, 14 photos); 3 Energy Drinks (tastes like a battery); 3 AA Batteries (licked to test). Weight 30.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0875.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

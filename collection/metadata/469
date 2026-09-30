@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0469",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 2 Power Strips (overloaded on purpose); 1 Cheap Sunglasses (one lens popped out); 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 Jewel Cases (insert is from a different album). Weight 33.8 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0469.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

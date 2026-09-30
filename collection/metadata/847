@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0847",
+ "description": "Recovered from Nobody Knows. Smells like rink snack bar. Contents (partial): 3 Sneakers (untied since 1989); 1 Cassette Tape (labeled MIX 4 U); 3 No. 2 Pencils (sharpened to a nub); 3 Energy Drinks (third one that night); 3 Pizza Crusts (found behind the couch); 1 Paper Hand (folded under light pressure). Weight 30.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0847.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nobody Knows"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 45,
+   "display_type": "number"
+  }
+ ]
+}

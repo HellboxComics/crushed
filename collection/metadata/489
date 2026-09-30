@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0489",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 AA Batteries (licked to test); 2 Soda Cans (shaken as a prank); 1 Glow Stick (still glowing a little, somehow); 2 Disposable Cameras (never developed). Weight 74.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0489.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

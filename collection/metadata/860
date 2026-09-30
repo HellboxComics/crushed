@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0860",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (stick drift since day one); 2 USB Sticks (contains homework_FINAL_final2.doc); 3 Flip Phones (12 texts left this month); 3 Digital Cameras (memory full, 14 photos); 3 TV Remotes (held together with tape). Weight 31.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0860.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 45,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0411",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Cassette Tapes (side B only); 2 Foam Headphones (orange foam, allegedly); 3 VHS Tapes (BE KIND REWIND (they did not)); 3 Army Man Squads (the one with the radio survived); 2 No. 2 Pencils (never saw a scantron it liked). Weight 34.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0411.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

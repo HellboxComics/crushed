@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0387",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Calculators (solar panel covered by a sticker); 2 Foam Headphones (one ear works if you hold it); 2 Floppy Disks (says DO NOT FORMAT); 3 Puzzle Cubes (two stickers peeled); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 56.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0387.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 56.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

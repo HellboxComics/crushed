@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0780",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 TV Remote (held together with tape); 2 Game Controllers (stick drift since day one); 2 Memory Cards (corrupted during a birthday); 1 Disposable Camera (27 exposures of a thumb). Weight 32.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0780.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

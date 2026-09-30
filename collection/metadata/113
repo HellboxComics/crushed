@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0113",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like melted crayon. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Soda Cans (shaken as a prank); 2 Film Canisters (holds one quarter); 1 Ball Mouse (ball removed as a prank); 2 Joysticks (suction cups gave up). Weight 87.9 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0113.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Melted Crayon"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "House Fire (Everyone's Fine)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

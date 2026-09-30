@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0636",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 2 Ball Mouses (rollers caked with 1998); 1 Webcam (pointed at the ceiling forever); 3 Burned CDs (coaster now); 1 Handheld Console (screen scratched from a pocket with keys); 1 Corded Phone (cord stretched to the bathroom); 1 Gold Coin (real, probably). Weight 84.2 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0636.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Gold Coin"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

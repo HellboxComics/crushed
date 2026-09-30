@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0787",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Energy Drinks (exam week casualty); 3 Game Controllers (thrown during a boss fight); 1 Jewel Case (hinge broken on arrival); 2 Spiral Notebooks (spiral unwound halfway). Weight 32.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0787.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

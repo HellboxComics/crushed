@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0696",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Sneakers (was in the dryer); 2 Clear Lighters (for incense, obviously); 2 Burned CDs (says ROAD TRIP in marker); 3 Game Controllers (thrown during a boss fight); 1 Flip Phone (ringtone composed by hand). Weight 35.5 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0696.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

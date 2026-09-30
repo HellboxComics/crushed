@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0442",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Ball Mouses (cord chewed by a dog); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Clear Lighter (out of fluid); 1 Puzzle Cube (two stickers peeled); 3 Calculators (spelled BOOBIES upside down). Weight 45.6 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0442.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 45.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

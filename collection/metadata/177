@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0177",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Game Cartridges (blown into 400 times); 3 Joysticks (fire button pressed 40 million times); 2 Power Strips (overloaded on purpose); 2 Pizza Crusts (from a sleepover). Weight 55.0 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0177.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 55.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

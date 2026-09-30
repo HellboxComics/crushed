@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0397",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Gold Calculator (why); 1 Foam Headphones (one ear works if you hold it); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Keyboard (Partial) (F, J and the crumbs); 2 Burned CDs (track 7 skips). Weight 49.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0397.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "GOLD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

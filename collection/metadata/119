@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0119",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 2 Sneakers (left only); 2 Floppy Disks (DISK 2 of 7); 1 Power Strip (overloaded on purpose); 1 Foam Headphones (orange foam, allegedly). Weight 71.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0119.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 71.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

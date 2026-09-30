@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0423",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Army Man Squad (melted with a magnifying glass); 2 Calculators (solar panel covered by a sticker); 1 Foam Headphones (one ear works if you hold it); 2 Slap Bracelets (cut someone, probably). Weight 49.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0423.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

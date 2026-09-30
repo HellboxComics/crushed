@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0451",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Sneaker (untied since 1989); 2 Power Strips (daisy-chained into three more); 2 Foam Headphones (one ear works if you hold it); 2 Memory Cards (corrupted during a birthday); 2 Cheap Sunglasses (one lens popped out). Weight 77.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0451.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

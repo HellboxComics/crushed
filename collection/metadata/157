@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0157",
+ "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 3 Power Strips (daisy-chained into three more); 2 Film Canisters (holds one quarter); 3 Army Man Squads (the one with the radio survived); 1 AA Batteries (mixed old and new, like animals). Weight 99.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0157.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 99.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

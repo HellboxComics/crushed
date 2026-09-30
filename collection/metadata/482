@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0482",
+ "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Pager (clipped to jeans for status only); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (track 7 skips); 1 Floppy Disk (save icon, but real); 1 Paper Hand (folded under light pressure). Weight 77.8 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0482.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

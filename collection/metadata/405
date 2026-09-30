@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0405",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived); 2 Puzzle Cubes (solved once, stickers moved); 3 VHS Tapes (taped over a wedding); 1 CRT Monitor (still warm). Weight 71.6 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0405.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 71.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0410",
+ "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 1 16-Bit Controller (the B button is sticky); 2 Pagers (clipped to jeans for status only); 1 Joystick (suction cups gave up); 3 Calculators (spelled BOOBIES upside down); 2 Floppy Disks (contains one (1) virus). Weight 77.2 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0410.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

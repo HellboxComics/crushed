@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0842",
+ "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 1 Sneaker (light-up heel, dead); 2 Digital Cameras (memory full, 14 photos); 3 AA Batteries (probably dead); 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Burned CDs (track 7 skips). Weight 30.6 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0842.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

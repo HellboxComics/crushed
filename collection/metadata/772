@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0772",
+ "description": "Recovered from Nobody Knows. Smells like new plastic. Contents (partial): 3 Sneakers (left only); 3 USB Sticks (never ejected safely); 3 Power Strips (daisy-chained into three more); 2 TV Remotes (found in the couch); 3 Disposable Cameras (never developed). Weight 33.2 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0772.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nobody Knows"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

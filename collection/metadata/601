@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0601",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Skateboard (one ollie, lifetime); 2 Power Strips (overloaded on purpose); 3 MP3 Players (shuffle picked the same song 6 times); 3 Digital Cameras (2 megapixels of truth); 2 AA Batteries (mixed old and new, like animals). Weight 39.2 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0601.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

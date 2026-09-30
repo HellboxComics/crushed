@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0179",
+ "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Joysticks (suction cups gave up); 3 Game Cartridges (save file erased by a sibling); 2 Sneakers (was in the dryer); 1 Calculator (spelled BOOBIES upside down). Weight 92.9 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0179.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 92.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

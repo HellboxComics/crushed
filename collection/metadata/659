@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0659",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 1 Flip Phone (ringtone composed by hand); 1 Pizza Crust (found behind the couch); 1 Energy Drink (exam week casualty); 2 Cheap Sunglasses (one lens popped out); 1 Pager (last page: 143). Weight 31.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0659.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

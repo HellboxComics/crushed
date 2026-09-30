@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0486",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Spiral Notebooks (spiral unwound halfway); 1 Flip Phone (snapped shut dramatically); 3 Soda Cans (flat); 2 Glow Sticks (still glowing a little, somehow). Weight 36.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0486.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

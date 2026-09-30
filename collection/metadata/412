@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0412",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 1 Puzzle Cube (two stickers peeled); 1 Burned CD (track 7 skips); 3 Pizza Crusts (still better than most portfolios); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (side B only); 1 Paper Hand (folded under light pressure). Weight 38.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0412.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 38.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

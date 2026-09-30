@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0144",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Spiral Notebooks (spiral unwound halfway); 1 Puzzle Cube (two stickers peeled); 3 TV Remotes (the volume button worn smooth); 1 Cassette Tape (rewound with a pencil); 1 Paper Hand (folded under light pressure). Weight 36.8 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0144.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

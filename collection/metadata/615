@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0615",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 TV Remote (found in the couch); 1 Memory Card (corrupted during a birthday); 1 Power Strip (daisy-chained into three more); 1 Digital Camera (2 megapixels of truth); 1 Spiral Notebook (spiral unwound halfway). Weight 79.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0615.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

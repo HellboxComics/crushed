@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0418",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Yo-Yo (walked the dog one time); 3 Pizza Crusts (petrified); 3 Cassette Tapes (rewound with a pencil); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (save icon, but real). Weight 38.1 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0418.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Yo-Yo"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 38.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

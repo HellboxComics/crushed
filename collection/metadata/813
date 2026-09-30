@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0813",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 TV Remote (the volume button worn smooth); 3 Power Strips (daisy-chained into three more); 2 AA Batteries (taken out of the smoke detector); 3 Burned CDs (track 7 skips). Weight 36.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0813.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0767",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Laptop Chargers (fits nothing else in the house); 3 USB Sticks (never ejected safely); 3 Flip Phones (ringtone composed by hand); 3 Game Controllers (thrown during a boss fight); 1 Dead Bull (flipped). Weight 30.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0767.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Dead Bull"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

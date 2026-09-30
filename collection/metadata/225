@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0225",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 CRT Monitor (screen burn-in reads LOADING); 1 Skateboard (griptape ate a pair of jeans); 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Spiral Notebook (doodles in the margins). Weight 80.4 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0225.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

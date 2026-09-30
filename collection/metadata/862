@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0862",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 3 Game Controllers (thrown during a boss fight); 1 VHS Tape (late fees now exceed GDP of a small nation); 3 No. 2 Pencils (sharpened to a nub); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 32.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0862.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

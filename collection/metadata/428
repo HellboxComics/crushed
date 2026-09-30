@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0428",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 3 VHS Tapes (late fees now exceed GDP of a small nation); 3 Burned CDs (says ROAD TRIP in marker); 1 Puzzle Cube (solved once, stickers moved); 2 Army Man Squads (the one with the radio survived). Weight 77.6 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0428.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0749",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 2 TV Remotes (found in the couch); 3 Glow Sticks (cracked at a school dance); 1 Memory Card (corrupted during a birthday); 3 Flip Phones (snapped shut dramatically); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 31.7 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0749.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

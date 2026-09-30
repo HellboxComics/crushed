@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0356",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Soda Can (tab kept for charity); 1 Virtual Pet (fed 0 times); 1 Skateboard (griptape ate a pair of jeans); 1 Webcam (pointed at the ceiling forever); 1 Broken Rocket (was going to the moon). Weight 40.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0356.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "9999-in-1 Handheld"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 40.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

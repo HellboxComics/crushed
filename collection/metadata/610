@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0610",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 2 Flip Phones (12 texts left this month); 3 Burned CDs (burned at 1x, 4 hours); 3 Cassette Tapes (labeled MIX 4 U); 2 AA Batteries (licked to test); 2 Film Canisters (holds one quarter). Weight 31.4 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0610.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

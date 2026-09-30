@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0769",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Energy Drinks (third one that night); 2 Laptop Chargers (warm to the touch, somehow); 3 Jewel Cases (hinge broken on arrival); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 72.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0769.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

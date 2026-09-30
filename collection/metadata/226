@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0226",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Game Cartridge (save file erased by a sibling); 2 Cheap Sunglasses (mall kiosk special); 2 AA Batteries (mixed old and new, like animals); 2 Soda Cans (shaken as a prank). Weight 86.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0226.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "GRAPE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

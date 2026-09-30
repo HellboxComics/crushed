@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0626",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 2 Ball Mouses (ball removed as a prank); 3 Clear Lighters (for incense, obviously); 2 AA Batteries (probably dead); 3 Burned CDs (burned at 1x, 4 hours); 1 CRT Monitor (screen burn-in reads LOADING). Weight 68.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0626.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 68.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

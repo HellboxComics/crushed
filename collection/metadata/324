@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0324",
+ "description": "Forty cassettes and every inch of their tape. Recovered from Every Car Glovebox. Smells like magnetic tape. Contents (partial): 30 Cassette Tapes (someone's voicemail greeting); 3 Portable Tape Players (belt clip snapped at a bus stop); 4 VHS Tapes (taped over a wedding); 1 Boom Box (one speaker still believes). Weight 33.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0324.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "MIXTAPE"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Magnetic Tape"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Every Car Glovebox"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Fully Mixtaped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "MIXTAPE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

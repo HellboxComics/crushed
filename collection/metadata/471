@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0471",
+ "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 2 TV Remotes (held together with tape); 1 Spiral Notebook (note says 'check YES or NO'); 3 Clear Lighters (out of fluid); 3 Skate Wheels (rolled into a storm drain once); 3 No. 2 Pencils (never saw a scantron it liked). Weight 27.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0471.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

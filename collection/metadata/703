@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0703",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 USB Stick (contains homework_FINAL_final2.doc); 3 Energy Drinks (exam week casualty); 1 Memory Card (corrupted during a birthday); 1 Power Strip (daisy-chained into three more). Weight 32.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0703.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

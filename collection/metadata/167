@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0167",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Power Strips (daisy-chained into three more); 1 CRT Monitor (weighs more than the desk); 3 Cassette Tapes (rewound with a pencil); 1 No. 2 Pencil (never saw a scantron it liked). Weight 90.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0167.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 90.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

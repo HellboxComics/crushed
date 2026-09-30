@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0163",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like hot dust on a CRT. Contents (partial): 1 Joystick (fire button pressed 40 million times); 1 CRT Monitor (weighs more than the desk); 3 Cassette Tapes (rewound with a pencil); 3 Puzzle Cubes (two stickers peeled); 3 Army Man Squads (melted with a magnifying glass). Weight 79.4 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0163.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Joystick"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "House Fire (Everyone's Fine)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

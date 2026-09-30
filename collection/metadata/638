@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0638",
+ "description": "Recovered from A Very Specific Ditch. Smells like body spray cloud. Contents (partial): 3 Brick Phones (unbreakable until today); 1 Cassette Tape (side B only); 2 Spiral Notebooks (doodles in the margins); 1 Game Controller (thrown during a boss fight); 1 Corded Phone (someone is still on hold). Weight 81.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0638.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Brick Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 81.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

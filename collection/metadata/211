@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0211",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Joysticks (suction cups gave up); 1 Pizza Crust (from a sleepover); 3 Game Cartridges (blown into 400 times); 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Three-Ring Binder (velcro screams when opened). Weight 90.6 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0211.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Joystick"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 90.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

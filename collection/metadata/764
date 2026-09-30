@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0764",
+ "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Disposable Cameras (never developed); 3 Digital Cameras (memory full, 14 photos); 2 Memory Cards (corrupted during a birthday). Weight 30.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0764.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

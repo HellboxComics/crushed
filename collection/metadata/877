@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0877",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (was in the dryer); 3 Digital Cameras (2 megapixels of truth); 1 Flip Phone (ringtone composed by hand); 3 Glow Sticks (still glowing a little, somehow); 1 Film Canister (undeveloped, forever); 1 Dead Bull (dead). Weight 39.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0877.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Dead Bull"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 46,
+   "display_type": "number"
+  }
+ ]
+}

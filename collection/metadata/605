@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0605",
+ "description": "Recovered from Nobody Knows. Smells like gym bag, forgotten. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 1 Pager (clipped to jeans for status only); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Game Controller (stick drift since day one); 3 Burned CDs (burned at 1x, 4 hours). Weight 74.1 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0605.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nobody Knows"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

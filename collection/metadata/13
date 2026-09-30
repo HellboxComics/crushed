@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0013",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 3 VHS Tapes (BE KIND REWIND (they did not)); 3 Yo-Yos (walked the dog one time); 2 Cheap Sunglasses (mall kiosk special); 1 Corded Phone (was on the line when mom picked up); 2 Power Strips (overloaded on purpose). Weight 100.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0013.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 100.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

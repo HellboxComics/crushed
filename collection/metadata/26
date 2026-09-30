@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0026",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Soda Cans (tab kept for charity); 2 Floppy Disks (save icon, but real); 1 Calculator (solar panel covered by a sticker); 3 Sneakers (untied since 1989); 2 AA Batteries (taken out of the smoke detector). Weight 95.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0026.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Soda Can"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 95.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0263",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 16-Bit Controller (cord pulled the console off the shelf); 3 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 1 Floppy Disk (contains one (1) virus); 1 Slap Bracelet (banned by the school). Weight 86.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0263.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

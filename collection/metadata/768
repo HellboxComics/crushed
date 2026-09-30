@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0768",
+ "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 3 Game Controllers (stick drift since day one); 2 Disposable Cameras (never developed); 2 Power Strips (overloaded on purpose); 2 Handheld Consoles (screen scratched from a pocket with keys); 3 Laptop Chargers (warm to the touch, somehow). Weight 39.2 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0768.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0549",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Disposable Cameras (27 exposures of a thumb); 1 Corded Phone (someone is still on hold); 1 CRT Monitor (degaussed one last time); 2 Digital Cameras (memory full, 14 photos). Weight 79.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0549.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

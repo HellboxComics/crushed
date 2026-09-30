@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0093",
+ "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 3 TV Remotes (held together with tape); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries); 1 Three-Ring Binder (covered in band names); 3 Soda Cans (shaken as a prank). Weight 51.2 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0093.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 51.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0281",
+ "description": "Recovered from A Very Specific Ditch. Smells like mall food court. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Disposable Camera (never developed); 3 Toy Slime (was in the hair of a sibling); 3 Burned CDs (track 7 skips); 1 Skateboard (griptape ate a pair of jeans); 1 Diamond (held through everything). Weight 79.0 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0281.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Diamond"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

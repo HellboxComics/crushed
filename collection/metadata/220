@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0220",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (DISK 2 of 7); 2 Soda Cans (shaken as a prank); 2 Power Strips (overloaded on purpose). Weight 93.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0220.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 93.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

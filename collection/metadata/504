@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0504",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Glow Sticks (still glowing a little, somehow); 2 MP3 Players (shuffle picked the same song 6 times); 2 Soda Cans (tab kept for charity); 3 Pizza Crusts (from a sleepover). Weight 67.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0504.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 67.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0734",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Energy Drinks (tastes like a battery); 3 AA Batteries (probably dead); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 No. 2 Pencils (sharpened to a nub); 1 Corded Phone (was on the line when mom picked up). Weight 35.6 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0734.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

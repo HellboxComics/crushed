@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0858",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Digital Cameras (memory full, 14 photos); 1 Jewel Case (hinge broken on arrival); 1 Game Controller (thrown during a boss fight); 1 Film Canister (undeveloped, forever); 1 Suspicious Rectangle (PIN forgotten). Weight 33.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0858.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Suspicious Rectangle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0646",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 1 Clear Lighter (out of fluid); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Skate Wheels (flat spot from a power slide); 3 Game Controllers (stick drift since day one). Weight 86.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0646.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

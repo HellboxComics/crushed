@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0476",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Puzzle Cube (two stickers peeled); 1 No. 2 Pencil (chewed); 1 Disposable Camera (27 exposures of a thumb); 3 Clear Lighters (out of fluid). Weight 67.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0476.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 67.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

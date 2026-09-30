@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0155",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Cassette Tapes (labeled MIX 4 U); 1 Foam Headphones (one ear works if you hold it); 1 Boom Box (one speaker still believes). Weight 88.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0155.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 88.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

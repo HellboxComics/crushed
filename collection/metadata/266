@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0266",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Ball Mouses (cord chewed by a dog); 2 Power Strips (overloaded on purpose); 1 Skate Wheel (rolled into a storm drain once); 2 AA Batteries (probably dead); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 86.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0266.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0122",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Cheap Sunglasses (mall kiosk special); 1 TV Remote (found in the couch); 3 Floppy Disks (save icon, but real); 2 Cassette Tapes (side B only). Weight 75.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0122.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

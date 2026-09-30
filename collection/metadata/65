@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0065",
+ "description": "Recovered from School Lost & Found. Smells like basement. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 1 Keyboard (Partial) (F, J and the crumbs); 2 Sneakers (was in the dryer); 3 AA Batteries (mixed old and new, like animals); 3 Calculators (spelled BOOBIES upside down). Weight 75.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0065.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Basement"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

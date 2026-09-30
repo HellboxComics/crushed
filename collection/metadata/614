@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0614",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Brick Phones (unbreakable until today); 1 Clear Lighter (for incense, obviously); 1 Webcam (pointed at the ceiling forever); 3 MP3 Players (shuffle picked the same song 6 times); 1 Flip Phone (snapped shut dramatically). Weight 86.8 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0614.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Brick Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0566",
+ "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 3 TV Remotes (held together with tape); 2 AA Batteries (taken out of the smoke detector); 2 Cassette Tapes (labeled MIX 4 U); 2 Ball Mouses (rollers caked with 1998); 1 Handheld Console (battery cover lost immediately). Weight 77.7 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0566.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

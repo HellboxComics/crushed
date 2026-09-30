@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0479",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 3 Virtual Pets (fed 0 times); 2 Film Canisters (undeveloped, forever); 1 Cassette Tape (someone's voicemail greeting); 1 Corded Phone (someone is still on hold). Weight 27.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0479.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

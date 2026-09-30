@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0800",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 3 TV Remotes (held together with tape); 3 Burned CDs (coaster now); 2 Laptop Chargers (fits nothing else in the house); 2 Pizza Crusts (found behind the couch). Weight 34.0 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0800.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

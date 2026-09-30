@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0523",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Virtual Pet (died during math class); 2 Glow Sticks (still glowing a little, somehow); 3 Soda Cans (flat); 1 Disposable Camera (never developed); 2 Pagers (last page: 911 (it was not)). Weight 37.7 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0523.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Virtual Pet"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 37.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

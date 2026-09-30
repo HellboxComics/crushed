@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0815",
+ "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 AA Batteries (taken out of the smoke detector); 1 Glow Stick (cracked at a school dance); 3 No. 2 Pencils (sharpened to a nub); 3 Pizza Crusts (found behind the couch). Weight 27.0 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0815.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

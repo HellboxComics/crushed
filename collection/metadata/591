@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0591",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Brick Phone (snake high score intact); 1 Flip Phone (ringtone composed by hand); 3 Digital Cameras (2 megapixels of truth); 3 TV Remotes (held together with tape); 1 Soda Can (shaken as a prank). Weight 83.7 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0591.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Brick Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

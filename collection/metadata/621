@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0621",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Spiral Notebook (doodles in the margins); 1 Digital Camera (2 megapixels of truth); 1 AA Batteries (probably dead); 3 Virtual Pets (fed 0 times). Weight 68.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0621.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 68.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

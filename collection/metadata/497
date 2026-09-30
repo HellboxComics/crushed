@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0497",
+ "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 3 Portable CD Players (45-second buffer, 2-second attention span); 3 Cassette Tapes (rewound with a pencil); 2 Cheap Sunglasses (one lens popped out); 1 Game Controller (thrown during a boss fight); 3 TV Remotes (found in the couch). Weight 83.4 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0497.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

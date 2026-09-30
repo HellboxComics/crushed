@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0136",
+ "description": "Recovered from A Very Specific Ditch. Smells like gym bag, forgotten. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Metal Lunchbox (thermos missing); 2 Three-Ring Binders (covered in band names); 3 Power Strips (overloaded on purpose); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 50.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0136.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 50.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

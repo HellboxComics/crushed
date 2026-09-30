@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0467",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 Pagers (last page: 143); 3 Soda Cans (shaken as a prank); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Spiral Notebooks (spiral unwound halfway). Weight 70.1 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0467.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 70.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

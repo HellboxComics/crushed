@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0073",
+ "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 AA Batteries (mixed old and new, like animals); 3 Game Cartridges (save file erased by a sibling); 1 Puzzle Cube (solved once, stickers moved); 2 Soda Cans (flat). Weight 85.6 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0073.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

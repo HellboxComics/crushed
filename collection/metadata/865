@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0865",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 USB Sticks (never ejected safely); 1 Power Strip (daisy-chained into three more); 3 No. 2 Pencils (never saw a scantron it liked); 3 Clear Lighters (out of fluid); 1 Emergency Ramen (for emergencies). Weight 26.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0865.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0215",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 2 Calculators (solar panel covered by a sticker); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 No. 2 Pencils (chewed); 2 Game Cartridges (save file erased by a sibling); 2 Floppy Disks (save icon, but real). Weight 55.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0215.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 55.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

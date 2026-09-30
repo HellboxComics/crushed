@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0528",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 2 TV Remotes (held together with tape); 1 CRT Monitor (still warm); 3 No. 2 Pencils (sharpened to a nub); 2 Webcams (pointed at the ceiling forever); 3 Pizza Crusts (still better than most portfolios). Weight 85.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0528.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

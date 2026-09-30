@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 800
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "forge-std/=lib/forge-std/src/",
+]
+
+[fuzz]
+runs = 256
+
+# Robinhood Chain (Arbitrum Orbit). block.number reads the L1 block on Arbitrum
+# chains; nothing here depends on it except as entropy in reveal().
+[rpc_endpoints]
+robinhood = "${ROBINHOOD_RPC_URL}"
+robinhood_testnet = "${ROBINHOOD_TESTNET_RPC_URL}"
+
+[etherscan]
+robinhood = { key = "blockscout", chain = 4663, url = "https://robinhoodchain.blockscout.com/api" }
+robinhood_testnet = { key = "blockscout", chain = 46630, url = "https://explorer.testnet.chain.robinhood.com/api" }

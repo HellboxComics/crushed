@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0843",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (was in the dryer); 2 Flip Phones (snapped shut dramatically); 1 Ball Mouse (cord chewed by a dog); 3 TV Remotes (found in the couch); 1 Disposable Camera (never developed). Weight 67.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0843.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 67.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

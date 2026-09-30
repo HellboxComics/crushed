@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0464",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Film Canisters (undeveloped, forever); 3 Game Controllers (stick drift since day one); 2 AA Batteries (mixed old and new, like animals); 2 Brick Phones (faceplate swapped 4 times). Weight 36.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0464.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

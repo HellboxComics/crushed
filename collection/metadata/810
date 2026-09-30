@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0810",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Game Controllers (thrown during a boss fight); 1 Energy Drink (exam week casualty); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Digital Cameras (memory full, 14 photos); 1 Gold Coin (real, probably). Weight 34.8 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0810.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Gold Coin"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

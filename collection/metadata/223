@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0223",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Puzzle Cubes (two stickers peeled); 2 Toy Slime (was in the hair of a sibling); 1 VHS Tape (taped over a wedding); 1 Cassette Tape (recorded off the radio, DJ talks over every intro). Weight 49.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0223.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

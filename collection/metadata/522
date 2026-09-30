@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0522",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Brick Phones (unbreakable until today); 2 Power Strips (overloaded on purpose); 1 Virtual Pet (died during math class); 1 Corded Phone (someone is still on hold); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 82.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0522.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Brick Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0662",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Flip Phone (snapped shut dramatically); 1 Pizza Crust (from a sleepover); 1 Virtual Pet (reincarnated 40 times); 3 Memory Cards (8MB, full); 1 Foam Headphones (one ear works if you hold it). Weight 82.2 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0662.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

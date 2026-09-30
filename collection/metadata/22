@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0022",
+ "description": "Recovered from Mom's Minivan. Smells like basement. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 1 VHS Tape (taped over a wedding); 1 CRT Monitor (weighs more than the desk); 3 TV Remotes (the volume button worn smooth); 2 Spiral Notebooks (spiral unwound halfway). Weight 87.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0022.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Basement"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

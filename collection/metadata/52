@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0052",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 1 Joystick (suction cups gave up); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Game Cartridges (save file erased by a sibling); 3 TV Remotes (the volume button worn smooth); 3 Pizza Crusts (still better than most portfolios). Weight 87.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0052.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Joystick"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

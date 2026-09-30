@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0607",
+ "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 3 Virtual Pets (reincarnated 40 times); 3 Floppy Disks (says DO NOT FORMAT); 3 AA Batteries (probably dead); 2 Glow Sticks (cracked at a school dance); 3 Pagers (last page: 143). Weight 69.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0607.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Virtual Pet"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

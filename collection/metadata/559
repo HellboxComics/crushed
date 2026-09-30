@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0559",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 No. 2 Pencils (chewed); 2 Soda Cans (flat); 3 AA Batteries (taken out of the smoke detector); 2 Spiral Notebooks (doodles in the margins); 1 Suspicious Rectangle (PIN forgotten). Weight 77.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0559.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Suspicious Rectangle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

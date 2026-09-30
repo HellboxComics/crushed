@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0786",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (thrown during a boss fight); 1 Jewel Case (insert is from a different album); 3 Spiral Notebooks (doodles in the margins); 3 USB Sticks (never ejected safely); 1 Floppy Disk (contains one (1) virus); 1 Emergency Ramen (for emergencies). Weight 26.3 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0786.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0009",
+ "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Game Cartridges (blown into 400 times); 3 No. 2 Pencils (never saw a scantron it liked); 3 Joysticks (fire button pressed 40 million times); 2 Floppy Disks (DISK 2 of 7). Weight 44.5 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0009.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 44.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

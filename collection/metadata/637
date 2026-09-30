@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0637",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Pager (last page: 143); 1 Disposable Camera (27 exposures of a thumb); 3 Cassette Tapes (labeled MIX 4 U); 1 Glow Stick (still glowing a little, somehow). Weight 27.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0637.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

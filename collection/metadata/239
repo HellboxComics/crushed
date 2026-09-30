@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0239",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 TV Remotes (held together with tape); 2 Soda Cans (tab kept for charity); 2 Toy Slime (stuck in the carpet); 2 Clear Lighters (for incense, obviously); 1 Power Strip (daisy-chained into three more). Weight 32.8 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0239.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

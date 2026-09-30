@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0234",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Game Controller (stick drift since day one); 1 Virtual Pet (fed 0 times); 3 Army Man Squads (the one with the radio survived); 1 Jewel Case (insert is from a different album); 1 Crumpled Chart (printed out for emotional reasons). Weight 69.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0234.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

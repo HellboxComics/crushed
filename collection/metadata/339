@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0339",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Pizza Crust (still better than most portfolios); 1 Ball Mouse (ball removed as a prank); 2 Calculators (spelled BOOBIES upside down); 1 Three-Ring Binder (velcro screams when opened). Weight 46.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0339.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 46.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

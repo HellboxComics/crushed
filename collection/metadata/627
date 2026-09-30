@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0627",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Skateboard (griptape ate a pair of jeans); 1 Puzzle Cube (solved once, stickers moved); 1 No. 2 Pencil (never saw a scantron it liked); 3 Memory Cards (corrupted during a birthday); 1 Suspicious Rectangle (PIN forgotten). Weight 83.9 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0627.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Suspicious Rectangle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 45,
+   "display_type": "number"
+  }
+ ]
+}

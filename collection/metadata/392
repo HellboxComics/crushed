@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0392",
+ "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 1 TV Remote (found in the couch); 1 Metal Lunchbox (the smell stays); 1 Cheap Sunglasses (one lens popped out); 2 Sneakers (was in the dryer); 1 Slap Bracelet (cut someone, probably). Weight 69.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0392.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

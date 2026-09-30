@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0459",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Flip Phone (12 texts left this month); 3 AA Batteries (licked to test); 1 VHS Tape (taped over a wedding); 1 Corded Phone (someone is still on hold); 2 Webcams (pointed at the ceiling forever). Weight 78.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0459.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "ICE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

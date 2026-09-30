@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0335",
+ "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 AA Batteries (mixed old and new, like animals); 2 Floppy Disks (DISK 2 of 7); 3 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (found behind the couch). Weight 74.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0335.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

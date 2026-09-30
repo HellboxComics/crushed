@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0367",
+ "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 2 Yo-Yos (walked the dog one time); 1 Power Strip (overloaded on purpose); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom); 3 Cassette Tapes (labeled MIX 4 U). Weight 88.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0367.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Yo-Yo"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 88.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

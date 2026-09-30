@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0582",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 2 Portable CD Players (anti-skip lied); 2 Clear Lighters (for incense, obviously); 1 Ball Mouse (cord chewed by a dog); 1 TV Remote (held together with tape). Weight 32.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0582.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0480",
+ "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Digital Cameras (memory full, 14 photos); 3 Portable CD Players (45-second buffer, 2-second attention span); 3 Brick Phones (snake high score intact). Weight 81.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0480.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 81.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

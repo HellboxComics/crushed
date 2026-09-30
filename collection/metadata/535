@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0535",
+ "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 1 Webcam (240p of pure confidence); 3 Spiral Notebooks (spiral unwound halfway); 1 Flip Phone (snapped shut dramatically); 1 Burned CD (burned at 1x, 4 hours); 1 Film Canister (holds one quarter). Weight 79.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0535.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Webcam"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

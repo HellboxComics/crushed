@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0832",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 TV Remotes (held together with tape); 1 Ball Mouse (cord chewed by a dog); 2 Burned CDs (coaster now); 3 Energy Drinks (third one that night). Weight 30.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0832.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 45,
+   "display_type": "number"
+  }
+ ]
+}

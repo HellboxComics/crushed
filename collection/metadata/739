@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0739",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Digital Cameras (memory full, 14 photos); 2 Sneakers (left only); 3 AA Batteries (probably dead); 3 Handheld Consoles (battery cover lost immediately). Weight 27.6 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0739.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

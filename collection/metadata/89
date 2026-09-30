@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0089",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Joystick (suction cups gave up); 2 Puzzle Cubes (two stickers peeled); 2 Power Strips (overloaded on purpose); 3 Cassette Tapes (side B only); 3 Floppy Disks (DISK 2 of 7). Weight 88.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0089.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Joystick"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 88.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

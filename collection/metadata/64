@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0064",
+ "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 Boom Box (one speaker still believes); 1 Joystick (suction cups gave up); 3 Yo-Yos (string tied to a finger for 3 years); 1 Metal Lunchbox (the smell stays); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Emergency Ramen (for emergencies). Weight 48.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0064.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 48.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0148",
+ "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 Soda Can (tab kept for charity); 2 AA Batteries (licked to test); 1 Cheap Sunglasses (mall kiosk special); 3 Yo-Yos (walked the dog one time); 1 Boom Box (shoulder-mounted in its prime). Weight 90.7 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0148.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Soda Can"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 90.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

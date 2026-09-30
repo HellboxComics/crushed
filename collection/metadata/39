@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0039",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 3 Roller Skates (toe stop worn to nothing); 2 Yo-Yos (walked the dog one time); 2 No. 2 Pencils (never saw a scantron it liked); 2 Power Strips (daisy-chained into three more). Weight 94.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0039.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 94.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 31,
+   "display_type": "number"
+  }
+ ]
+}

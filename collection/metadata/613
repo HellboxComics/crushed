@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0613",
+ "description": "Recovered from Behind the Couch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Pagers (last page: 911 (it was not)); 1 Flip Phone (ringtone composed by hand); 3 No. 2 Pencils (sharpened to a nub); 1 Webcam (pointed at the ceiling forever); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 86.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0613.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

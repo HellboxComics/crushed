@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0834",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 1 Virtual Pet (fed 0 times); 1 Power Strip (overloaded on purpose); 3 Sneakers (untied since 1989); 2 Disposable Cameras (never developed). Weight 35.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0834.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0076",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Pizza Crusts (found behind the couch); 1 Yo-Yo (walked the dog one time); 2 Sneakers (was in the dryer). Weight 77.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0076.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

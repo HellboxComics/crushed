@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0262",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Toy Slime (stuck in the carpet); 1 TV Remote (the volume button worn smooth); 1 VHS Tape (taped over a wedding); 3 Soda Cans (shaken as a prank). Weight 80.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0262.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

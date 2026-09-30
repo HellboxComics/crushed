@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0880",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 3 Sneakers (was in the dryer); 3 Burned CDs (burned at 1x, 4 hours); 2 Jewel Cases (insert is from a different album); 2 Laptop Chargers (fits nothing else in the house); 3 Flip Phones (snapped shut dramatically). Weight 77.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0880.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

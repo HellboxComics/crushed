@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0661",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Virtual Pets (reincarnated 40 times); 2 Cassette Tapes (someone's voicemail greeting); 1 AA Batteries (licked to test); 1 Brick Phone (unbreakable until today); 1 Flip Phone (12 texts left this month). Weight 36.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0661.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Virtual Pet"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

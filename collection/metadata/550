@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0550",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Foam Headphones (orange foam, allegedly); 1 Floppy Disk (says DO NOT FORMAT); 3 Portable CD Players (anti-skip lied); 2 Burned CDs (says ROAD TRIP in marker). Weight 69.5 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0550.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

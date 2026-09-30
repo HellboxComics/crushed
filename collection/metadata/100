@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0100",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (still warm); 2 AA Batteries (licked to test); 1 Roller Skate (toe stop worn to nothing); 3 Puzzle Cubes (solved once, stickers moved); 1 Foam Headphones (orange foam, allegedly). Weight 83.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0100.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0109",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (DISK 2 of 7); 2 Game Cartridges (blown into 400 times); 1 Three-Ring Binder (velcro screams when opened); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 74.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0109.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Yo-Yo"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

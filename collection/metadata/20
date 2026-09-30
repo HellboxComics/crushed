@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0020",
+ "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 3 TV Remotes (held together with tape); 2 Foam Headphones (one ear works if you hold it); 3 Puzzle Cubes (two stickers peeled); 3 Yo-Yos (walked the dog one time). Weight 91.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0020.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 91.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

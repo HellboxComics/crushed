@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0331",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 1 Calculator (spelled BOOBIES upside down); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (the one with the radio survived); 1 Boom Box (shoulder-mounted in its prime). Weight 47.3 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0331.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 47.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

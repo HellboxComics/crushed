@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0402",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 3 Floppy Disks (save icon, but real); 3 Soda Cans (tab kept for charity); 3 Power Strips (daisy-chained into three more); 1 Ball Mouse (rollers caked with 1998). Weight 39.9 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0402.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

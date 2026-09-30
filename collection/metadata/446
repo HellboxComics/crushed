@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0446",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Cheap Sunglasses (one lens popped out); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Sneakers (left only). Weight 77.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0446.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

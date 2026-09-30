@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0252",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Pizza Crust (petrified); 2 Disposable Cameras (27 exposures of a thumb); 1 16-Bit Controller (the B button is sticky); 1 Cheap Sunglasses (mall kiosk special). Weight 89.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0252.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 89.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0371",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 3 Portable Tape Players (belt clip snapped at a bus stop); 3 Army Man Squads (the one with the radio survived); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Spiral Notebook (note says 'check YES or NO'). Weight 36.2 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0371.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

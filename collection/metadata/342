@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0342",
+ "description": "Recovered from Behind the Couch. Smells like scratch-n-sniff sticker. Contents (partial): 1 Boom Box (one speaker still believes); 2 Portable Tape Players (belt clip snapped at a bus stop); 3 AA Batteries (taken out of the smoke detector); 3 Cassette Tapes (rewound with a pencil); 1 TV Remote (held together with tape). Weight 40.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0342.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "GRAPE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 40.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0057",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Floppy Disks (save icon, but real); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Power Strip (daisy-chained into three more); 1 AA Batteries (probably dead). Weight 84.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0057.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

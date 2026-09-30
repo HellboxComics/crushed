@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0797",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (untied since 1989); 3 Pizza Crusts (petrified); 2 Skate Wheels (flat spot from a power slide); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 TV Remotes (the volume button worn smooth). Weight 26.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0797.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0150",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Foam Headphones (one ear works if you hold it); 1 Soda Can (tab kept for charity); 2 Game Cartridges (blown into 400 times); 2 Joysticks (fire button pressed 40 million times). Weight 86.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0150.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 86.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

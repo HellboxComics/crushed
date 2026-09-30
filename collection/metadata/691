@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0691",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Disposable Cameras (never developed); 2 No. 2 Pencils (chewed); 2 TV Remotes (found in the couch); 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Glow Sticks (still glowing a little, somehow). Weight 30.5 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0691.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

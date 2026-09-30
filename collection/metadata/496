@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0496",
+ "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 1 Portable CD Player (anti-skip lied); 3 VHS Tapes (BE KIND REWIND (they did not)); 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Floppy Disks (save icon, but real); 3 Sneakers (left only). Weight 31.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0496.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0059",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Army Man Squad (the one with the radio survived); 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Pizza Crusts (still better than most portfolios); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 89.0 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0059.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 89.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

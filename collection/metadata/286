@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0286",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Sneaker (was in the dryer); 3 Portable CD Players (45-second buffer, 2-second attention span); 1 Slap Bracelet (cut someone, probably); 2 Skate Wheels (flat spot from a power slide); 1 Toy Slime (stuck in the carpet). Weight 52.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0286.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 52.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

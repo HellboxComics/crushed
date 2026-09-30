@@ -7,6 +7,7 @@ Runs either inside Blender or with the `bpy` module from PyPI:
     python3 blender/generate.py --range 1 100 --res 768
     python3 blender/generate.py --token 44 --turntable 96
     python3 blender/generate.py --manifest
+    python3 blender/generate.py --metadata ipfs://<images-cid> [--anim-base ipfs://<video-cid>]
 """
 import argparse
 import hashlib
@@ -25,22 +26,18 @@ from crushed import build, recipe  # noqa: E402
 ROOT = os.path.dirname(HERE)
 
 
-def metadata(r, image_uri, animation_uri=None):
-    attrs = [
-        {"trait_type": "Era", "value": r["era"]},
-        {"trait_type": "Condition", "value": r["condition"]},
-        {"trait_type": "Weight (lb)", "value": r["weight_lb"], "display_type": "number"},
-    ]
-    if r["clean"]:
-        attrs.append({"trait_type": "Finish", "value": r["clean"][0]})
-    m = {"name": r["name"], "image": image_uri, "attributes": attrs}
-    if animation_uri:
-        m["animation_url"] = animation_uri
-    return m
+def token(tid, offset=0):
+    """Token id -> its recipe. Before reveal offset is 0 and they're the same thing;
+    after reveal the contract's offset decides (Crushed.recipeOf)."""
+    rid = ((tid - 1 + offset) % recipe.SUPPLY) + 1
+    r = recipe.recipe(rid)
+    r["id"] = tid
+    r["name"] = f"CRUSHED #{tid:04d}"
+    return r
 
 
-def render_token(tid, out, res, samples, turntable=0, save_blend=False):
-    r = recipe.recipe(tid)
+def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=0):
+    r = token(tid, offset)
     t0 = time.time()
     sc = build.build(r, res=res, samples=samples, turntable=turntable)
     os.makedirs(out, exist_ok=True)
@@ -56,40 +53,69 @@ def render_token(tid, out, res, samples, turntable=0, save_blend=False):
     else:
         sc.render.filepath = os.path.abspath(stem + ".png")
         bpy.ops.render.render(write_still=True)
-    print(f"[crushed] #{tid:04d} {r['condition']:<9} {r['era']} build {t1 - t0:.1f}s render {time.time() - t1:.1f}s"
-          f" crypto={r['crypto']}", flush=True)
+    print(f"[crushed] #{tid:04d} {r['condition']:<11} {r['era']} build {t1 - t0:.1f}s "
+          f"render {time.time() - t1:.1f}s crypto={r['crypto']}", flush=True)
     return r
 
 
 def write_manifest(out):
+    """manifest.json is the whole collection, frozen. Its sha256 is the provenance hash."""
     rows = []
     for tid in range(1, recipe.SUPPLY + 1):
         r = recipe.recipe(tid)
-        rows.append({k: r[k] for k in ("id", "era", "condition", "heroes", "crypto", "tape_loops", "seed",
-                                         "weight_lb")} | {"finish": r["clean"][0] if r["clean"] else None})
-    blob = json.dumps({"collection_seed": recipe.COLLECTION_SEED, "tokens": rows}, sort_keys=True,
-                      separators=(",", ":")).encode()
+        rows.append({"id": tid, "seed": r["seed"], "traits": dict(r["traits"]), "weight_lb": r["weight_lb"],
+                     "items": r["items"], "heroes": r["heroes"], "crypto": r["crypto"]})
+    blob = json.dumps({"collection": "CRUSHED", "supply": recipe.SUPPLY, "collection_seed": recipe.COLLECTION_SEED,
+                       "tokens": rows}, sort_keys=True, separators=(",", ":")).encode()
     os.makedirs(out, exist_ok=True)
     with open(os.path.join(out, "manifest.json"), "wb") as f:
         f.write(blob)
-    digest = hashlib.sha256(blob).hexdigest()
+    digest = "0x" + hashlib.sha256(blob).hexdigest()
     with open(os.path.join(out, "provenance.txt"), "w") as f:
-        f.write(f"0x{digest}\n")
-    counts = {}
+        f.write(digest + "\n")
+    write_rarity(out, rows)
+    print("provenance:", digest)
+
+
+def write_rarity(out, rows):
+    """Trait frequencies and a statistical rarity rank (sum of 1/frequency)."""
+    n = len(rows)
+    freq = {}
     for row in rows:
-        counts[row["condition"]] = counts.get(row["condition"], 0) + 1
-    print(json.dumps(counts, indent=1))
-    print("contaminated:", sum(1 for row in rows if row["crypto"]))
-    print("provenance: 0x" + digest)
+        for k, v in row["traits"].items():
+            freq.setdefault(k, {}).setdefault(v, 0)
+            freq[k][v] += 1
+    for row in rows:
+        row["score"] = round(sum(n / freq[k][v] for k, v in row["traits"].items()), 2)
+    ranked = sorted(rows, key=lambda r: -r["score"])
+    for i, row in enumerate(ranked):
+        row["rank"] = i + 1
+    with open(os.path.join(out, "rarity.json"), "w") as f:
+        json.dump({"traits": freq, "ranks": {r["id"]: {"rank": r["rank"], "score": r["score"]} for r in rows}},
+                  f, indent=1, sort_keys=True)
+    lines = ["# CRUSHED rarity", "", f"{n} blocks. Every count below is exact.", ""]
+    for k, table in freq.items():
+        lines += [f"## {k}", "", "| Value | Count | % |", "|---|---:|---:|"]
+        for v, c in sorted(table.items(), key=lambda kv: -kv[1]):
+            lines.append(f"| {v} | {c} | {100 * c / n:.1f}% |")
+        lines.append("")
+    lines += ["## Top 25", "", "| Rank | Token | Condition | Headliner | Contaminant |", "|---:|---|---|---|---|"]
+    for row in ranked[:25]:
+        t = row["traits"]
+        lines.append(f"| {row['rank']} | #{row['id']:04d} | {t['Condition']} | {t['Headliner']} | {t['Contaminant']} |")
+    with open(os.path.join(out, "RARITY.md"), "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
-def write_metadata(out, base_image_uri, base_anim_uri=None):
+def write_metadata(out, base_image_uri, base_anim_uri=None, offset=0):
+    """One JSON file per token, named by token id (tokenURI = baseURI + id)."""
     os.makedirs(out, exist_ok=True)
     for tid in range(1, recipe.SUPPLY + 1):
-        r = recipe.recipe(tid)
+        r = token(tid, offset)
         anim = f"{base_anim_uri}/{tid:04d}.mp4" if base_anim_uri else None
         with open(os.path.join(out, str(tid)), "w") as f:
-            json.dump(metadata(r, f"{base_image_uri}/{tid:04d}.png", anim), f, indent=1)
+            json.dump(recipe.metadata(r, f"{base_image_uri}/{tid:04d}.png", anim), f, indent=1)
+    print(f"metadata: {recipe.SUPPLY} files -> {out}")
 
 
 def main():
@@ -106,19 +132,20 @@ def main():
     ap.add_argument("--metadata", metavar="IMAGE_BASE_URI")
     ap.add_argument("--anim-base", metavar="ANIM_BASE_URI")
     ap.add_argument("--skip-existing", action="store_true")
+    ap.add_argument("--offset", type=int, default=0, help="the contract's reveal offset (post-reveal only)")
     a = ap.parse_args(argv)
 
     if a.manifest:
         write_manifest(os.path.join(ROOT, "collection"))
     if a.metadata:
-        write_metadata(os.path.join(ROOT, "collection", "metadata"), a.metadata, a.anim_base)
+        write_metadata(os.path.join(ROOT, "collection", "metadata"), a.metadata, a.anim_base, a.offset)
     ids = list(a.token or [])
     if a.range:
         ids += list(range(a.range[0], a.range[1] + 1))
     for tid in ids:
         if a.skip_existing and os.path.exists(os.path.join(a.out, f"{tid:04d}.png")):
             continue
-        render_token(tid, a.out, a.res, a.samples, a.turntable, a.blend)
+        render_token(tid, a.out, a.res, a.samples, a.turntable, a.blend, a.offset)
 
 
 if __name__ == "__main__":

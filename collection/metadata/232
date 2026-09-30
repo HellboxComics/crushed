@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0232",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Power Strips (daisy-chained into three more); 1 Ball Mouse (cord chewed by a dog); 1 Skate Wheel (rolled into a storm drain once); 3 Pizza Crusts (found behind the couch). Weight 48.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0232.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 48.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

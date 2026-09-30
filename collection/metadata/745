@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0745",
+ "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 1 Gold Digital Cameras (why); 3 Game Controllers (thrown during a boss fight); 3 Energy Drinks (exam week casualty); 3 AA Batteries (mixed old and new, like animals); 2 Pizza Crusts (found behind the couch). Weight 33.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0745.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "GOLD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

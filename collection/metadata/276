@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0276",
+ "description": "Recovered from Storage Unit (Auctioned). Do not smell it. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 AA Batteries (mixed old and new, like animals); 1 Skate Wheel (rolled into a storm drain once); 2 Cassette Tapes (side B only); 3 Burned CDs (coaster now). Weight 28.4 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0276.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "9999-in-1 Handheld"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Don't"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 28.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

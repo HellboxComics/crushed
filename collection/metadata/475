@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0475",
+ "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 AA Batteries (taken out of the smoke detector); 2 Cheap Sunglasses (one lens popped out); 3 No. 2 Pencils (chewed); 2 Pizza Crusts (from a sleepover). Weight 71.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0475.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 71.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

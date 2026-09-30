@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0741",
+ "description": "Recovered from Garage Sale Free Bin. Smells like burnt popcorn. Contents (partial): 2 TV Remotes (found in the couch); 3 Energy Drinks (exam week casualty); 2 Pizza Crusts (petrified); 3 Burned CDs (track 7 skips); 2 Power Strips (daisy-chained into three more). Weight 32.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0741.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Burnt Popcorn"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

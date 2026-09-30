@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0814",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Game Controller (thrown during a boss fight); 3 No. 2 Pencils (sharpened to a nub); 1 Floppy Disk (DISK 2 of 7); 2 Disposable Cameras (27 exposures of a thumb). Weight 31.8 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0814.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

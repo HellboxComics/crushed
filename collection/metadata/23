@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0023",
+ "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Skateboard (one ollie, lifetime); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries); 2 Floppy Disks (DISK 2 of 7). Weight 57.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0023.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 57.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0850",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 3 No. 2 Pencils (never saw a scantron it liked); 3 USB Sticks (never ejected safely); 2 Glow Sticks (still glowing a little, somehow); 3 Flip Phones (12 texts left this month). Weight 33.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0850.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

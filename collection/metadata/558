@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0558",
+ "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 2 Portable CD Players (anti-skip lied); 2 Calculators (solar panel covered by a sticker); 1 Disposable Camera (never developed); 1 Corded Phone (was on the line when mom picked up); 2 Soda Cans (shaken as a prank). Weight 40.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0558.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 40.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

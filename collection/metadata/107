@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0107",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (one speaker still believes); 2 Game Cartridges (save file erased by a sibling); 1 Broken Rocket (was going to the moon). Weight 54.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0107.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 54.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

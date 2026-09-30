@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0573",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 1 Game Controller (stick drift since day one); 1 No. 2 Pencil (chewed); 2 Floppy Disks (DISK 2 of 7); 1 Burned CD (coaster now); 3 Soda Cans (flat). Weight 72.9 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0573.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

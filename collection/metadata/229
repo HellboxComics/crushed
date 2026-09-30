@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0229",
+ "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 3 9999-in-1 Handhelds (9999 games, 4 real ones); 1 CRT Monitor (still warm); 2 Power Strips (daisy-chained into three more); 1 Skateboard (griptape ate a pair of jeans); 2 Portable CD Players (anti-skip lied). Weight 82.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0229.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "9999-in-1 Handheld"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

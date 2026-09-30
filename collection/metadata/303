@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0303",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 Ball Mouse (ball removed as a prank); 1 No. 2 Pencil (chewed); 1 Corded Phone (cord stretched to the bathroom); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Power Strip (daisy-chained into three more); 1 Crumpled Chart (it went up, then it went down). Weight 44.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0303.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 44.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

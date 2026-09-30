@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0279",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 3 Three-Ring Binders (covered in band names); 2 Yo-Yos (walked the dog one time); 1 Pizza Crust (petrified); 3 AA Batteries (taken out of the smoke detector). Weight 68.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0279.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 68.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0441",
+ "description": "Recovered from Dad's Junk Drawer. Smells like melted crayon. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 3 Burned CDs (says ROAD TRIP in marker); 2 Yo-Yos (walked the dog one time); 2 Pagers (last page: 911 (it was not)); 1 Cheap Sunglasses (one lens popped out). Weight 70.5 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0441.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Melted Crayon"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 70.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

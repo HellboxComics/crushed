@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0272",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Army Man Squads (the one with the radio survived); 3 Game Cartridges (blown into 400 times); 2 No. 2 Pencils (sharpened to a nub). Weight 87.6 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0272.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

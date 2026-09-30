@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0309",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 9999-in-1 Handhelds (HI SCORE 00000); 1 Skateboard (one ollie, lifetime); 1 CRT Monitor (degaussed one last time); 1 MP3 Player (shuffle picked the same song 6 times); 1 Tiny Red Candle (one of many). Weight 79.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0309.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Tiny Red Candle"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Burnt Popcorn"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "House Fire (Everyone's Fine)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

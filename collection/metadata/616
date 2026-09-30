@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0616",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 TV Remotes (found in the couch); 3 VHS Tapes (taped over a wedding); 1 Corded Phone (someone is still on hold); 2 AA Batteries (licked to test). Weight 78.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0616.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "ICE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

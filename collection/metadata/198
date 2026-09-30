@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0198",
+ "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Power Strips (overloaded on purpose); 2 Sneakers (left only); 2 Film Canisters (holds one quarter); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 87.9 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0198.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

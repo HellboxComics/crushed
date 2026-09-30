@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0631",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 3 Power Strips (overloaded on purpose); 2 Floppy Disks (says DO NOT FORMAT); 1 Brick Phone (faceplate swapped 4 times); 3 Disposable Cameras (27 exposures of a thumb). Weight 32.7 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0631.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

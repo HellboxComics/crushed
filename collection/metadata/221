@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0221",
+ "description": "Recovered from School Lost & Found. Smells like wet cardboard. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Spiral Notebook (doodles in the margins); 2 Calculators (spelled BOOBIES upside down); 1 Joystick (fire button pressed 40 million times); 3 Keyboards (Partial) (F, J and the crumbs). Weight 51.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0221.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Wet Cardboard"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 51.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

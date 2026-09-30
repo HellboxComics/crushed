@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0204",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 3 Sneakers (left only); 2 Floppy Disks (save icon, but real); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Pizza Crust (still better than most portfolios). Weight 87.2 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0204.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

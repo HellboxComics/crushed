@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0456",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 CRT Monitor (still warm); 2 No. 2 Pencils (sharpened to a nub); 1 Digital Camera (2 megapixels of truth); 3 Clear Lighters (for incense, obviously); 3 Sneakers (was in the dryer); 1 Emergency Ramen (the whole strategy). Weight 75.5 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0456.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

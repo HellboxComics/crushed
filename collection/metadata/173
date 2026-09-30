@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0173",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Pizza Crusts (found behind the couch); 1 Three-Ring Binder (covered in band names); 2 Sneakers (light-up heel, dead); 3 Game Cartridges (blown into 400 times). Weight 83.0 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0173.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

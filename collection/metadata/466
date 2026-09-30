@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0466",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Pagers (last page: 911 (it was not)); 2 Floppy Disks (contains one (1) virus); 3 Digital Cameras (2 megapixels of truth); 1 Webcam (240p of pure confidence); 2 No. 2 Pencils (chewed). Weight 81.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0466.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 81.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

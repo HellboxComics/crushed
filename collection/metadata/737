@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0737",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Sneaker (untied since 1989); 3 Memory Cards (8MB, full); 1 AA Batteries (licked to test); 2 USB Sticks (never ejected safely); 3 Pizza Crusts (petrified). Weight 26.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0737.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

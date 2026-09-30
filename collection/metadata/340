@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0340",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Three-Ring Binders (covered in band names); 1 No. 2 Pencil (never saw a scantron it liked); 2 Floppy Disks (save icon, but real); 1 Milk Caps (the slammer is chipped). Weight 81.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0340.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 81.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

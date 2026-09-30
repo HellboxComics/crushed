@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0671",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Flip Phones (ringtone composed by hand); 1 Handheld Console (screen scratched from a pocket with keys); 2 Jewel Cases (insert is from a different album); 3 AA Batteries (probably dead). Weight 24.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0671.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 24.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

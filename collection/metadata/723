@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0723",
+ "description": "Recovered from Behind the Couch. Smells like scratch-n-sniff sticker. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Clear Lighters (for incense, obviously); 2 Laptop Chargers (fits nothing else in the house); 2 Disposable Cameras (27 exposures of a thumb); 1 Cassette Tape (recorded off the radio, DJ talks over every intro). Weight 30.9 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0723.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

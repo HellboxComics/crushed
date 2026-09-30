@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0825",
+ "description": "Recovered from Nobody Knows. Smells like scratch-n-sniff sticker. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Floppy Disks (contains one (1) virus); 1 TV Remote (found in the couch); 1 Disposable Camera (27 exposures of a thumb); 2 Spiral Notebooks (note says 'check YES or NO'). Weight 25.1 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0825.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Nobody Knows"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 25.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

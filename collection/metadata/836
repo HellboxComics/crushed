@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0836",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Sneakers (left only); 3 AA Batteries (taken out of the smoke detector); 1 Soda Can (flat); 2 Flip Phones (12 texts left this month); 2 Burned CDs (says ROAD TRIP in marker). Weight 27.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0836.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

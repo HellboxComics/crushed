@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0624",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 TV Remotes (found in the couch); 1 Spiral Notebook (note says 'check YES or NO'); 1 Ball Mouse (cord chewed by a dog); 2 Clear Lighters (for incense, obviously); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Bear (Thriving) (doing fine actually). Weight 76.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0624.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Bear (Thriving)"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

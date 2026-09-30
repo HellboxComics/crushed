@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0205",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 2 Floppy Disks (save icon, but real); 1 Game Cartridge (save file erased by a sibling); 1 Joystick (suction cups gave up); 2 Pizza Crusts (found behind the couch). Weight 45.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0205.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 45.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

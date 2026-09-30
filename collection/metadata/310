@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0310",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 3 Power Strips (daisy-chained into three more); 2 Toy Slime (was in the hair of a sibling); 2 Disposable Cameras (27 exposures of a thumb); 1 Spiral Notebook (doodles in the margins). Weight 46.5 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0310.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 46.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

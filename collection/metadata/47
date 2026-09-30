@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0047",
+ "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Boom Box (one speaker still believes); 1 Metal Lunchbox (the smell stays); 3 Three-Ring Binders (covered in band names); 1 Soda Can (shaken as a prank); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 56.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0047.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 56.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

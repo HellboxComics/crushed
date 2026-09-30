@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0349",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Film Canisters (undeveloped, forever); 2 Milk Caps (won in a bet); 1 Ball Mouse (rollers caked with 1998); 2 Spiral Notebooks (doodles in the margins). Weight 56.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0349.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 56.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

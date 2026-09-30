@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0319",
+ "description": "They all bought the top. Recovered from The Top. Smells like capitulation. Contents (partial): 22 Bulls (flipped); 12 Tiny Red Candles (lit); 4 Crumpled Charts (it went up, then it went down); 1 Bear (doing fine actually); 3 Paper Hands (sold at the bottom). Weight 35.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0319.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BULL TRAP"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Dead Bull"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Capitulation"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "The Top"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "BULL TRAP"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

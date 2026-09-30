@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0619",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Soda Can (shaken as a prank); 1 USB Stick (contains homework_FINAL_final2.doc); 1 TV Remote (the volume button worn smooth); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (one lens popped out). Weight 39.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0619.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Soda Can"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

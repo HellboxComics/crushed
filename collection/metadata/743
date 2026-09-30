@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0743",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 2 Clear Lighters (out of fluid); 1 Flip Phone (ringtone composed by hand); 2 TV Remotes (the volume button worn smooth); 3 Memory Cards (8MB, full). Weight 26.5 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0743.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

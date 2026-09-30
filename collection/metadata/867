@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0867",
+ "description": "Recovered from Garage Sale Free Bin. Smells like melted crayon. Contents (partial): 2 TV Remotes (held together with tape); 3 No. 2 Pencils (never saw a scantron it liked); 3 Pizza Crusts (petrified); 3 Game Controllers (thrown during a boss fight); 1 Brick Phone (unbreakable until today). Weight 25.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0867.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Melted Crayon"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 25.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

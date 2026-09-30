@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0859",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 2 Game Controllers (thrown during a boss fight); 2 Power Strips (daisy-chained into three more); 1 USB Stick (contains homework_FINAL_final2.doc); 2 TV Remotes (held together with tape). Weight 37.5 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0859.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 37.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

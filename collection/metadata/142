@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0142",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Game Cartridge (blown into 400 times); 1 Power Strip (overloaded on purpose); 2 Puzzle Cubes (solved once, stickers moved); 3 Pizza Crusts (found behind the couch). Weight 94.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0142.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 94.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

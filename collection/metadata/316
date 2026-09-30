@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0316",
+ "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 2 Ball Mouses (ball removed as a prank); 2 Keyboards (Partial) (F, J and the crumbs); 1 Milk Caps (won in a bet); 1 Corded Phone (cord stretched to the bathroom); 1 Boom Box (one speaker still believes). Weight 93.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0316.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 93.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0544",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Skate Wheels (flat spot from a power slide); 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 Floppy Disk (contains one (1) virus); 3 Ball Mouses (cord chewed by a dog). Weight 76.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0544.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 76.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

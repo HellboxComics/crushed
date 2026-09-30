@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0345",
+ "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 1 Disposable Camera (never developed); 2 Puzzle Cubes (solved once, stickers moved); 2 Three-Ring Binders (velcro screams when opened); 2 Floppy Disks (save icon, but real); 3 Calculators (solar panel covered by a sticker). Weight 31.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0345.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

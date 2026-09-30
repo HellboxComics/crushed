@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0178",
+ "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Foam Headphones (orange foam, allegedly); 3 Sneakers (left only); 3 Yo-Yos (string tied to a finger for 3 years); 2 Pizza Crusts (found behind the couch). Weight 89.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0178.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 89.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

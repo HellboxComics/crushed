@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0644",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 3 Flip Phones (snapped shut dramatically); 2 Clear Lighters (out of fluid); 3 Brick Phones (faceplate swapped 4 times); 1 Burned CD (burned at 1x, 4 hours). Weight 75.8 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0644.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

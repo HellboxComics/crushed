@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0492",
+ "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 2 Power Strips (overloaded on purpose); 1 CRT Monitor (weighs more than the desk); 3 Pagers (last page: 143); 2 Virtual Pets (reincarnated 40 times). Weight 75.6 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0492.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

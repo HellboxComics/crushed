@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0487",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Ball Mouse (ball removed as a prank); 3 Game Controllers (stick drift since day one); 2 Soda Cans (shaken as a prank); 3 Flip Phones (snapped shut dramatically); 3 Burned CDs (burned at 1x, 4 hours). Weight 81.5 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0487.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 81.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

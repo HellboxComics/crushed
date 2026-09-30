@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0329",
+ "description": "Recovered from Grandma's Attic. Smells like basement. Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 1 CRT Monitor (weighs more than the desk); 1 Spiral Notebook (spiral unwound halfway); 1 Metal Lunchbox (thermos missing); 3 Film Canisters (holds one quarter). Weight 74.7 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0329.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Basement"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

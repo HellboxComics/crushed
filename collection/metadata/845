@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0845",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Clear Lighters (for incense, obviously); 3 Burned CDs (burned at 1x, 4 hours); 3 Energy Drinks (third one that night); 1 Power Strip (overloaded on purpose); 1 Broken Rocket (didn't make it). Weight 29.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0845.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

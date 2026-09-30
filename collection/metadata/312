@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0312",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Soda Cans (flat); 2 AA Batteries (taken out of the smoke detector); 1 Pager (last page: 143); 2 Burned CDs (burned at 1x, 4 hours). Weight 47.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0312.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 47.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

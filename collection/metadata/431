@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0431",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 2 16-Bit Controllers (the B button is sticky); 3 Skate Wheels (flat spot from a power slide); 1 CRT Monitor (degaussed one last time); 2 Soda Cans (shaken as a prank); 3 Floppy Disks (says DO NOT FORMAT). Weight 79.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0431.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0803",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 2 Sneakers (was in the dryer); 3 Memory Cards (corrupted during a birthday); 2 Glow Sticks (cracked at a school dance); 3 Laptop Chargers (warm to the touch, somehow); 3 Flip Phones (snapped shut dramatically); 1 Emergency Ramen (for emergencies). Weight 31.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0803.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 31.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

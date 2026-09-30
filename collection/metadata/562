@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0562",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 1 Sneaker (left only); 1 Disposable Camera (never developed); 1 VHS Tape (taped over a wedding); 1 Webcam (pointed at the ceiling forever); 1 Power Strip (overloaded on purpose). Weight 71.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0562.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 71.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0164",
+ "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Spiral Notebooks (spiral unwound halfway); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Pizza Crusts (from a sleepover); 1 AA Batteries (taken out of the smoke detector). Weight 80.8 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0164.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Yo-Yo"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

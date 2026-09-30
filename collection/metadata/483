@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0483",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 USB Sticks (never ejected safely); 2 Clear Lighters (out of fluid); 2 Film Canisters (holds one quarter); 2 Cassette Tapes (someone's voicemail greeting). Weight 69.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0483.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 69.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

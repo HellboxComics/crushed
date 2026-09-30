@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0617",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Soda Cans (shaken as a prank); 1 AA Batteries (probably dead); 3 Floppy Disks (says DO NOT FORMAT); 2 Brick Phones (unbreakable until today). Weight 74.0 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0617.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

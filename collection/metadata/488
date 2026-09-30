@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0488",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Sneaker (was in the dryer); 2 Skate Wheels (flat spot from a power slide); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Flip Phones (snapped shut dramatically); 3 Ball Mouses (cord chewed by a dog). Weight 45.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0488.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 45.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

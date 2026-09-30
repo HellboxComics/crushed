@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0253",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Disposable Cameras (never developed); 2 Army Man Squads (the one with the radio survived); 1 Toy Slime (was in the hair of a sibling); 3 Soda Cans (flat); 2 Pizza Crusts (found behind the couch). Weight 87.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0253.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0120",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Soda Cans (tab kept for charity); 1 Corded Phone (someone is still on hold); 2 VHS Tapes (BE KIND REWIND (they did not)); 3 Foam Headphones (orange foam, allegedly). Weight 44.9 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0120.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 44.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

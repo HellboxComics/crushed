@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0503",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 Gold Floppy Disks (why); 2 Game Controllers (thrown during a boss fight); 1 Cheap Sunglasses (mall kiosk special); 1 Pizza Crust (petrified); 3 VHS Tapes (BE KIND REWIND (they did not)). Weight 29.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0503.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "GOLD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Floppy Disk"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

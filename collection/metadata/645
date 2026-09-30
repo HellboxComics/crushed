@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0645",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 1 CRT Monitor (screen burn-in reads LOADING); 1 Pizza Crust (petrified); 1 Cassette Tape (labeled MIX 4 U); 3 Flip Phones (12 texts left this month). Weight 72.0 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0645.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0589",
+ "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 2 Flip Phones (12 texts left this month); 1 Foam Headphones (orange foam, allegedly); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Disposable Camera (never developed); 1 CRT Monitor (weighs more than the desk). Weight 72.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0589.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Wet Cardboard"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Flooded Basement"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

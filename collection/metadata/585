@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0585",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Cassette Tapes (side B only); 1 Portable CD Player (anti-skip lied); 3 Burned CDs (says ROAD TRIP in marker); 2 No. 2 Pencils (sharpened to a nub); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Bear (Thriving) (thriving). Weight 74.9 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0585.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Bear (Thriving)"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

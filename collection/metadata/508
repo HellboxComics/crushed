@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0508",
+ "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 1 Corded Phone (someone is still on hold); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Webcam (240p of pure confidence); 1 Portable Tape Player (belt clip snapped at a bus stop); 2 TV Remotes (held together with tape). Weight 80.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0508.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

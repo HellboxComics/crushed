@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0429",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Cassette Tape (side B only); 2 Calculators (solar panel covered by a sticker); 1 Corded Phone (was on the line when mom picked up); 3 Soda Cans (shaken as a prank); 2 Portable Tape Players (auto-reverse broke in 1991). Weight 84.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0429.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

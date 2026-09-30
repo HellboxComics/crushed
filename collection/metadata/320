@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0320",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 3 Ball Mouses (ball removed as a prank); 1 Burned CD (coaster now); 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Portable CD Players (45-second buffer, 2-second attention span); 2 TV Remotes (held together with tape). Weight 78.9 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0320.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Ball Mouse"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "GRAPE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

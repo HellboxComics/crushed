@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0672",
+ "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 3 Sneakers (was in the dryer); 3 USB Sticks (contains homework_FINAL_final2.doc); 3 Power Strips (daisy-chained into three more); 2 Clear Lighters (for incense, obviously); 1 Energy Drink (tastes like a battery). Weight 38.7 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0672.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 38.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

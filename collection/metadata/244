@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0244",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Gold Sneakers (why); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Power Strip (overloaded on purpose); 2 AA Batteries (taken out of the smoke detector); 2 Calculators (spelled BOOBIES upside down). Weight 85.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0244.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "GOLD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

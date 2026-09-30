@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0754",
+ "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 2 Clear Lighters (for incense, obviously); 3 Pizza Crusts (found behind the couch); 3 AA Batteries (taken out of the smoke detector); 2 Power Strips (overloaded on purpose). Weight 42.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0754.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 42.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

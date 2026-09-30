@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0054",
+ "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Power Strip (overloaded on purpose); 3 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (undeveloped, forever); 2 Pizza Crusts (still better than most portfolios); 1 Emergency Ramen (the whole strategy). Weight 85.4 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0054.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

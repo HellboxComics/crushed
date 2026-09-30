@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0139",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Sneaker (light-up heel, dead); 1 Ball Mouse (ball removed as a prank); 2 Three-Ring Binders (velcro screams when opened); 2 Spiral Notebooks (spiral unwound halfway). Weight 79.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0139.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

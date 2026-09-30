@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0235",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 1 Floppy Disk (DISK 2 of 7); 3 Game Controllers (stick drift since day one); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Disposable Camera (never developed). Weight 85.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0235.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

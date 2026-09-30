@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0355",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like arcade carpet. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Clear Lighter (out of fluid); 3 Sneakers (left only); 2 Game Cartridges (blown into 400 times). Weight 84.4 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0355.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "House Fire (Everyone's Fine)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

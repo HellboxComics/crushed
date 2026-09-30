@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0782",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Pizza Crusts (petrified); 1 USB Stick (never ejected safely); 3 Digital Cameras (memory full, 14 photos); 2 Spiral Notebooks (note says 'check YES or NO'). Weight 30.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0782.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

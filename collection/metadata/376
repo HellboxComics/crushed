@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0376",
+ "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 1 Skateboard (one ollie, lifetime); 2 Burned CDs (burned at 1x, 4 hours); 2 No. 2 Pencils (sharpened to a nub); 1 Boom Box (shoulder-mounted in its prime); 1 CRT Monitor (degaussed one last time). Weight 84.7 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0376.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 84.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

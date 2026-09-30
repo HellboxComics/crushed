@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0821",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 Energy Drinks (tastes like a battery); 1 Ball Mouse (rollers caked with 1998); 2 Glow Sticks (cracked at a school dance); 3 Digital Cameras (memory full, 14 photos); 3 USB Sticks (never ejected safely). Weight 33.6 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0821.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

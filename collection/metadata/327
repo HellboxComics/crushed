@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0327",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Portable Tape Player (auto-reverse broke in 1991); 1 Jewel Case (insert is from a different album); 3 Three-Ring Binders (covered in band names); 3 Portable CD Players (anti-skip lied). Weight 92.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0327.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "9999-in-1 Handheld"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 92.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

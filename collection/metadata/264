@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0264",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (left only); 1 Portable Tape Player (auto-reverse broke in 1991); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Burned CDs (coaster now); 2 Army Man Squads (the one with the radio survived). Weight 49.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0264.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

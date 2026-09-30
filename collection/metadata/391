@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0391",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 3 Floppy Disks (DISK 2 of 7); 2 Burned CDs (says ROAD TRIP in marker); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Puzzle Cubes (solved once, stickers moved). Weight 85.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0391.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

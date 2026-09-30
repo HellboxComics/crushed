@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0499",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Burned CDs (says ROAD TRIP in marker); 1 Handheld Console (battery cover lost immediately); 1 Pizza Crust (from a sleepover); 2 Soda Cans (flat). Weight 32.3 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0499.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

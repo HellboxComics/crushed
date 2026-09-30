@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0292",
+ "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 9999-in-1 Handheld (HI SCORE 00000); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Skate Wheels (flat spot from a power slide); 3 Pizza Crusts (from a sleepover). Weight 80.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0292.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0208",
+ "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Metal Lunchbox (thermos missing); 2 Soda Cans (shaken as a prank); 3 Cassette Tapes (rewound with a pencil); 1 Foam Headphones (orange foam, allegedly). Weight 49.5 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0208.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

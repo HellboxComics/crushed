@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0308",
+ "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Burned CDs (track 7 skips); 3 AA Batteries (probably dead); 1 Puzzle Cube (solved once, stickers moved); 2 Foam Headphones (orange foam, allegedly). Weight 82.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0308.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

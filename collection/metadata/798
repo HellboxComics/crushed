@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0798",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Floppy Disks (save icon, but real); 2 Laptop Chargers (fits nothing else in the house); 3 Burned CDs (burned at 1x, 4 hours); 3 Energy Drinks (exam week casualty). Weight 29.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0798.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

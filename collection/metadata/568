@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0568",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (stick drift since day one); 3 Cassette Tapes (side B only); 1 Skateboard (griptape ate a pair of jeans); 2 Brick Phones (snake high score intact); 1 VHS Tape (late fees now exceed GDP of a small nation). Weight 78.5 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0568.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

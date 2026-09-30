@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0864",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (found in the couch); 3 Pizza Crusts (found behind the couch); 2 AA Batteries (licked to test); 3 USB Sticks (never ejected safely); 3 Digital Cameras (memory full, 14 photos). Weight 77.4 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0864.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

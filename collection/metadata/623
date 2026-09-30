@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0623",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Flip Phones (ringtone composed by hand); 1 Power Strip (overloaded on purpose); 2 Glow Sticks (still glowing a little, somehow); 3 Skate Wheels (flat spot from a power slide); 3 Burned CDs (says ROAD TRIP in marker). Weight 77.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0623.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

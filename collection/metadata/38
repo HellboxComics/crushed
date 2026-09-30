@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0038",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (light-up heel, dead); 3 AA Batteries (licked to test); 2 Cassette Tapes (rewound with a pencil); 1 Cheap Sunglasses (mall kiosk special); 2 TV Remotes (the volume button worn smooth); 1 Crumpled Chart (it went up, then it went down). Weight 49.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0038.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

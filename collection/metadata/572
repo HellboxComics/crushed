@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0572",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Digital Cameras (memory full, 14 photos); 3 Cassette Tapes (side B only); 1 Ball Mouse (ball removed as a prank); 2 Pagers (last page: 911 (it was not)). Weight 66.2 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0572.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 66.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

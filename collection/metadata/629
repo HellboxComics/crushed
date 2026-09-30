@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0629",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Cassette Tapes (side B only); 1 Power Strip (overloaded on purpose); 1 Slap Bracelet (banned by the school); 2 Portable CD Players (anti-skip lied); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 71.7 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0629.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 71.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

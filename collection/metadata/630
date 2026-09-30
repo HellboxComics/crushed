@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0630",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Pizza Crusts (from a sleepover); 2 Film Canisters (holds one quarter). Weight 77.3 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0630.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 77.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

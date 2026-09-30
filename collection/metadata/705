@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0705",
+ "description": "Recovered from A Very Specific Ditch. Smells like hot dust on a CRT. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 1 Film Canister (holds one quarter); 3 AA Batteries (taken out of the smoke detector); 1 Soda Can (tab kept for charity); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 30.5 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0705.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0417",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Sneakers (left only); 1 Film Canister (holds one quarter); 3 Burned CDs (says ROAD TRIP in marker); 3 Jewel Cases (hinge broken on arrival); 3 VHS Tapes (taped over a wedding). Weight 51.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0417.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 51.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

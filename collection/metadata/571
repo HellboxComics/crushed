@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0571",
+ "description": "Every screen you ever stared at, still on. Recovered from The Den. Smells like hot dust on a CRT. Contents (partial): 3 CRT Monitors (degaussed one last time); 4 MP3 Players (shuffle picked the same song 6 times); 4 Flip Phones (snapped shut dramatically); 4 Handheld Consoles (screen scratched from a pocket with keys); 4 9999-in-1 Handhelds (9999 games, 4 real ones). Weight 152.0 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0571.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SCREEN TIME"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "The Den"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "SCREEN TIME"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 152.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

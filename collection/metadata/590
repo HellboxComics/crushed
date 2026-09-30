@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0590",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Disposable Cameras (27 exposures of a thumb); 1 Brick Phone (faceplate swapped 4 times); 3 Virtual Pets (fed 0 times); 2 Flip Phones (12 texts left this month). Weight 73.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0590.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 73.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

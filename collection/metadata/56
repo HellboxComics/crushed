@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0056",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Joystick (suction cups gave up); 1 Corded Phone (was on the line when mom picked up); 3 Cassette Tapes (rewound with a pencil); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 88.3 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0056.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 88.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

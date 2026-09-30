@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0219",
+ "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 3 VHS Tapes (taped over a wedding); 2 Army Man Squads (melted with a magnifying glass); 1 TV Remote (found in the couch); 2 Calculators (spelled BOOBIES upside down). Weight 35.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0219.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

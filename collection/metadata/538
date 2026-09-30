@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0538",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 2 Pagers (clipped to jeans for status only); 2 No. 2 Pencils (sharpened to a nub); 3 Cheap Sunglasses (one lens popped out); 2 Power Strips (overloaded on purpose); 1 Memory Card (corrupted during a birthday); 1 Crumpled Chart (printed out for emotional reasons). Weight 79.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0538.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

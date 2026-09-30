@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0395",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 2 Game Cartridges (blown into 400 times); 1 16-Bit Controller (the B button is sticky); 2 AA Batteries (probably dead); 3 Sneakers (untied since 1989). Weight 39.9 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0395.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

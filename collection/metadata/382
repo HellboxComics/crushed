@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0382",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 1 Puzzle Cube (two stickers peeled); 1 Cassette Tape (someone's voicemail greeting); 2 AA Batteries (licked to test); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 16-Bit Controller (the B button is sticky). Weight 35.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0382.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

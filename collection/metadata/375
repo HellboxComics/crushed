@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0375",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 1 CRT Monitor (still warm); 2 Yo-Yos (string tied to a finger for 3 years); 2 Ball Mouses (cord chewed by a dog); 1 Puzzle Cube (two stickers peeled); 2 Three-Ring Binders (covered in band names). Weight 83.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0375.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 83.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

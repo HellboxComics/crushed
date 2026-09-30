@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0468",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Burned CDs (track 7 skips); 1 Skateboard (griptape ate a pair of jeans); 1 Power Strip (daisy-chained into three more); 1 Webcam (240p of pure confidence). Weight 72.1 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0468.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

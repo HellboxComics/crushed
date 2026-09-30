@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0579",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 3 Brick Phones (unbreakable until today); 1 Spiral Notebook (note says 'check YES or NO'); 1 Cheap Sunglasses (one lens popped out); 2 Virtual Pets (reincarnated 40 times). Weight 35.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0579.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

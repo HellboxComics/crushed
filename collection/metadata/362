@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0362",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 3 Calculators (solar panel covered by a sticker); 1 Power Strip (overloaded on purpose); 2 Burned CDs (says ROAD TRIP in marker); 1 Disposable Camera (27 exposures of a thumb). Weight 46.3 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0362.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 46.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

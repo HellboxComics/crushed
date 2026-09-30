@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0539",
+ "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 2 Pagers (last page: 143); 2 Brick Phones (faceplate swapped 4 times); 1 Ball Mouse (ball removed as a prank); 3 Burned CDs (burned at 1x, 4 hours); 1 AA Batteries (licked to test). Weight 29.6 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0539.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

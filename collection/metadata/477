@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0477",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Pagers (last page: 143); 1 Jewel Case (hinge broken on arrival); 3 Digital Cameras (memory full, 14 photos); 2 AA Batteries (taken out of the smoke detector); 3 Skate Wheels (flat spot from a power slide); 1 Broken Rocket (was going to the moon). Weight 41.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0477.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Pager"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "GRAPE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 41.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0295",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 2 Milk Caps (the slammer is chipped); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Sneakers (untied since 1989); 2 Soda Cans (tab kept for charity). Weight 87.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0295.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 87.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

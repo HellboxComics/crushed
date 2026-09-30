@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0622",
+ "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Ball Mouses (ball removed as a prank); 3 Pagers (clipped to jeans for status only); 1 AA Batteries (mixed old and new, like animals); 3 MP3 Players (128MB, 30 songs, 29 skipped). Weight 75.3 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0622.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

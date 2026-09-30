@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0509",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Floppy Disks (save icon, but real); 3 Foam Headphones (one ear works if you hold it); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 Pagers (last page: 911 (it was not)). Weight 73.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0509.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 73.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

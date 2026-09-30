@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0634",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Brick Phones (unbreakable until today); 1 Virtual Pet (fed 0 times); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Soda Can (flat); 3 Jewel Cases (hinge broken on arrival). Weight 72.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0634.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Brick Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

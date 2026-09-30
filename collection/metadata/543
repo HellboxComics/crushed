@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0543",
+ "description": "Recovered from Behind the Couch. Smells like scratch-n-sniff sticker. Contents (partial): 1 Flip Phone (ringtone composed by hand); 3 Pizza Crusts (from a sleepover); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Cassette Tapes (labeled MIX 4 U); 3 Game Controllers (stick drift since day one). Weight 72.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0543.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 72.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

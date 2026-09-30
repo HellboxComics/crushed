@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0314",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 TV Remotes (found in the couch); 1 Pizza Crust (found behind the couch); 2 Cheap Sunglasses (one lens popped out); 3 Toy Slime (was in the hair of a sibling). Weight 91.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0314.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 91.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

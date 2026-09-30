@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0824",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Flip Phones (12 texts left this month); 3 Burned CDs (track 7 skips); 1 Ball Mouse (cord chewed by a dog); 3 Handheld Consoles (battery cover lost immediately); 3 TV Remotes (the volume button worn smooth). Weight 28.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0824.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 28.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

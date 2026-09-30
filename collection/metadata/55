@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0055",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 3 VHS Tapes (taped over a wedding); 1 Pager (clipped to jeans for status only); 2 Film Canisters (undeveloped, forever); 1 Power Strip (overloaded on purpose); 1 Roller Skate (toe stop worn to nothing). Weight 74.7 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0055.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 74.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

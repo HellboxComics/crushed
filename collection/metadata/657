@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0657",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Burned CDs (burned at 1x, 4 hours); 1 Sneaker (untied since 1989); 3 Portable CD Players (45-second buffer, 2-second attention span); 3 Floppy Disks (DISK 2 of 7). Weight 36.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0657.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

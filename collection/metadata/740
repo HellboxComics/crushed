@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0740",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 3 Flip Phones (snapped shut dramatically); 2 Sneakers (left only); 3 Spiral Notebooks (spiral unwound halfway); 1 Keyboard (Partial) (F, J and the crumbs); 2 AA Batteries (licked to test); 1 Bear (Thriving) (doing fine actually). Weight 34.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0740.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Bear (Thriving)"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

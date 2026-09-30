@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0193",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 No. 2 Pencil (never saw a scantron it liked); 3 Roller Skates (toe stop worn to nothing); 1 Keyboard (Partial) (F, J and the crumbs); 1 Soda Can (shaken as a prank); 1 Diamond (hands not included). Weight 79.5 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0193.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "VHS Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Diamond"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

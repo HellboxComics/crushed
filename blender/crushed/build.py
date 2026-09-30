@@ -97,24 +97,33 @@ def build_block(r, coll, rng):
         core_pal = [tuple(x * k for x in c) for k in (0.5, 0.7, 0.85, 1.0)]
     objs.append(dressing.core(coll, rng, core_pal, r["seed"]))
 
-    # big things first: they become the back layer
-    order = sorted(range(len(r["heroes"])), key=lambda i: not reg[r["heroes"][i]].big)
+    # the headliner goes front and centre; then big things (the back layer); then the rest
+    rest = sorted(range(1, len(r["heroes"])), key=lambda i: not reg[r["heroes"][i]].big)
+    order = ([0] if r["heroes"] else []) + rest
     for rank, i in enumerate(order):
         d = reg[r["heroes"][i]]
+        head = i == 0
         override = ("gold", {}) if r["gold_index"] == i else None
         ob = make_object(d, rng, pal, coll, override)
         limit = rng.uniform(0.15, 0.21) if d.big else 0.17
+        if head:
+            limit = 0.21 if d.big else 0.19
         v = prepare(ob, limit, rng)
         if v is None:
             continue
-        v = damage(v, rng, inten, keep_shape=not d.big)
-        face = faces.pick_face(FACE_WEIGHTS if override is None else {k: 1.0 for k in VISIBLE})
+        v = damage(v, rng, inten * (0.6 if head else 1.0), keep_shape=head or not d.big)
+        if head:
+            face = "-Y"
+        else:
+            face = faces.pick_face(FACE_WEIGHTS if override is None else {k: 1.0 for k in VISIBLE})
         nrm, t1, t2 = crush.FACES[face]
         ext = np.ptp(v, axis=0)
         radius = float(np.sort(ext)[1]) * 0.5
-        uv = faces.pick_uv(face, radius)
-        q = crush.orient(rng, d.hero, nrm, tilt=0.35)
-        if d.big:
+        uv = faces.pick_uv(face, radius, spread=0.2 if head else 0.82)
+        q = crush.orient(rng, d.hero, nrm, tilt=0.2 if head else 0.35)
+        if head:
+            poke, depth, layer = rng.uniform(0.004, 0.01), 0.07, 0.004
+        elif d.big:
             poke, depth, layer = rng.uniform(0.01, 0.04), rng.uniform(0.05, 0.08), rng.uniform(-0.003, 0.0)
         else:
             poke, depth, layer = rng.uniform(0.003, 0.012), rng.uniform(0.04, 0.09), rng.uniform(0.0, 0.003)
@@ -243,7 +252,9 @@ def build_pile(r, coll, rng):
 def build(r, res=1024, samples=96, turntable=0):
     sc = stage.reset()
     rng = np.random.default_rng(r["seed"])
-    mat.set_condition(r["condition"], r["clean"][1] if r["clean"] else None)
+    one = r.get("one_of_one")
+    cond = r["condition"] if not one else ("CLEAN" if one == "SOLID GOLD" else "JUNK")
+    mat.set_condition(cond, r["clean"][1] if r["clean"] else None, glow=3.0 if one == "SCREEN TIME" else None)
     stage.build(sc, rng, res, samples)
     coll = bpy.data.collections.new("block")
     sc.collection.children.link(coll)

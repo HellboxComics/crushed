@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0546",
+ "description": "Recovered from The Mall Fountain. Smells like body spray cloud. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 Ball Mouses (ball removed as a prank); 1 Power Strip (overloaded on purpose); 1 Brick Phone (snake high score intact); 3 Pizza Crusts (petrified). Weight 34.1 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0546.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "The Mall Fountain"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

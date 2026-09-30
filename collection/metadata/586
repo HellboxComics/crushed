@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0586",
+ "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 1 Flip Phone (ringtone composed by hand); 2 Burned CDs (says ROAD TRIP in marker); 2 Sneakers (light-up heel, dead); 1 Brick Phone (snake high score intact); 3 Foam Headphones (orange foam, allegedly); 1 Broken Rocket (didn't make it). Weight 26.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0586.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Broken Rocket"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "A Very Specific Ditch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 26.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

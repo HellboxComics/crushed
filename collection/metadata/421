@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0421",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Disposable Camera (27 exposures of a thumb); 2 Burned CDs (says ROAD TRIP in marker); 2 AA Batteries (taken out of the smoke detector); 1 Portable Tape Player (auto-reverse broke in 1991). Weight 79.8 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0421.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

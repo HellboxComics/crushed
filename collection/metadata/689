@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0689",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 3 TV Remotes (held together with tape); 3 Pizza Crusts (found behind the couch); 2 Flip Phones (12 texts left this month); 3 Energy Drinks (exam week casualty); 3 No. 2 Pencils (never saw a scantron it liked). Weight 33.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0689.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "ICE"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

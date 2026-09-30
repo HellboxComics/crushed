@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0866",
+ "description": "Recovered from School Lost & Found. Smells like basement. Contents (partial): 3 Energy Drinks (exam week casualty); 3 Disposable Cameras (never developed); 2 Flip Phones (snapped shut dramatically); 3 Burned CDs (burned at 1x, 4 hours); 3 Handheld Consoles (battery cover lost immediately). Weight 28.2 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0866.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Basement"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 28.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

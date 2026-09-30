@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0426",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 Disposable Cameras (never developed); 3 Cheap Sunglasses (one lens popped out); 2 9999-in-1 Handhelds (HI SCORE 00000); 3 Toy Slime (stuck in the carpet); 1 Burned CD (says ROAD TRIP in marker). Weight 89.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0426.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 89.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0649",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Clear Lighters (for incense, obviously); 1 Memory Card (8MB, full); 1 Foam Headphones (one ear works if you hold it); 1 Floppy Disk (contains one (1) virus); 1 Crumpled Chart (it went up, then it went down). Weight 23.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0649.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Crumpled Chart"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 23.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

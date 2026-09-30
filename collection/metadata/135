@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0135",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 TV Remote (found in the couch); 1 VHS Tape (taped over a wedding); 1 Game Cartridge (save file erased by a sibling); 3 Cassette Tapes (rewound with a pencil); 3 Pizza Crusts (petrified). Weight 80.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0135.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

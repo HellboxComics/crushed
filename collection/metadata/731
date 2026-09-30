@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0731",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Digital Cameras (2 megapixels of truth); 3 Memory Cards (8MB, full); 2 Pizza Crusts (from a sleepover); 2 Glow Sticks (cracked at a school dance); 3 Burned CDs (burned at 1x, 4 hours). Weight 35.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0731.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

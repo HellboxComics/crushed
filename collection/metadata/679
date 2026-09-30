@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0679",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Game Controllers (stick drift since day one); 2 Handheld Consoles (battery cover lost immediately); 3 Energy Drinks (exam week casualty); 1 Corded Phone (someone is still on hold). Weight 30.6 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0679.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

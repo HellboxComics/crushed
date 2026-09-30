@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0386",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Foam Headphones (one ear works if you hold it); 2 Three-Ring Binders (velcro screams when opened); 1 Sneaker (was in the dryer); 1 TV Remote (found in the couch). Weight 37.8 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0386.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 37.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0416",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Film Canisters (undeveloped, forever); 1 Burned CD (burned at 1x, 4 hours); 1 Yo-Yo (walked the dog one time); 2 Foam Headphones (orange foam, allegedly); 1 Paper Hand (folded under light pressure). Weight 38.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0416.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 38.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

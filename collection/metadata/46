@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0046",
+ "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Cheap Sunglasses (one lens popped out); 3 Floppy Disks (contains one (1) virus); 1 AA Batteries (taken out of the smoke detector); 2 Film Canisters (holds one quarter). Weight 51.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0046.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Metal Lunchbox"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 51.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

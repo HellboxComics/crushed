@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0793",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Cheap Sunglasses (one lens popped out); 2 USB Sticks (never ejected safely); 3 TV Remotes (held together with tape); 3 Disposable Cameras (27 exposures of a thumb). Weight 28.7 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0793.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 28.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

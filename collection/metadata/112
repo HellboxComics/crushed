@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0112",
+ "description": "Recovered from Flooded Basement. Smells like blue raspberry. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Sneaker (was in the dryer); 3 Cassette Tapes (labeled MIX 4 U); 2 TV Remotes (held together with tape); 1 Cheap Sunglasses (one lens popped out). Weight 91.2 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0112.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Flooded Basement"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 91.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

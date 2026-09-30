@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0298",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down); 1 Toy Slime (stuck in the carpet); 2 Cassette Tapes (labeled MIX 4 U); 1 CRT Monitor (weighs more than the desk); 1 Paper Hand (folded under light pressure). Weight 64.7 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0298.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Paper Hand"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 64.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

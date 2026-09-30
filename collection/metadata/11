@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0011",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Sneaker (untied since 1989); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 3 TV Remotes (held together with tape); 3 Soda Cans (shaken as a prank); 3 Floppy Disks (save icon, but real). Weight 101.5 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0011.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 101.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

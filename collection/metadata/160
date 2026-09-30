@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0160",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (held together with tape); 1 Cheap Sunglasses (mall kiosk special); 3 Cassette Tapes (side B only); 3 Three-Ring Binders (velcro screams when opened); 3 Spiral Notebooks (spiral unwound halfway). Weight 85.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0160.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 85.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

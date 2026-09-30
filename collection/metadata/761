@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0761",
+ "description": "Recovered from School Lost & Found. Smells like victory. Contents (partial): 1 Gold Pizza Crusts (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Digital Cameras (memory full, 14 photos); 3 No. 2 Pencils (chewed); 3 Flip Phones (snapped shut dramatically). Weight 30.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0761.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "GOLD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Victory"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Pizza Crust"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

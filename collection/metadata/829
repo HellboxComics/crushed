@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0829",
+ "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 TV Remotes (held together with tape); 3 Pizza Crusts (still better than most portfolios); 2 Game Controllers (thrown during a boss fight); 2 Memory Cards (corrupted during a birthday). Weight 29.9 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0829.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

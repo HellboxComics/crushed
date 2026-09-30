@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0726",
+ "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Sneakers (light-up heel, dead); 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 TV Remotes (found in the couch); 3 No. 2 Pencils (chewed). Weight 33.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0726.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

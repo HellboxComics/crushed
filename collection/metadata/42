@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0042",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Keyboard (Partial) (F, J and the crumbs); 1 Burned CD (coaster now); 1 Sneaker (light-up heel, dead); 1 Joystick (fire button pressed 40 million times). Weight 47.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0042.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 47.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

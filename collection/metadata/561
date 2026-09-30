@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0561",
+ "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Portable CD Players (45-second buffer, 2-second attention span); 2 No. 2 Pencils (never saw a scantron it liked); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Webcams (240p of pure confidence). Weight 36.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0561.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

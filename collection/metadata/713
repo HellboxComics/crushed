@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0713",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 Energy Drinks (third one that night); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Pizza Crust (petrified); 3 Clear Lighters (out of fluid); 3 AA Batteries (licked to test). Weight 29.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0713.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Energy Drink"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

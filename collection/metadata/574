@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0574",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Ball Mouse (cord chewed by a dog); 1 MP3 Player (shuffle picked the same song 6 times); 2 Clear Lighters (out of fluid); 2 Virtual Pets (fed 0 times). Weight 36.2 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0574.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 36.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

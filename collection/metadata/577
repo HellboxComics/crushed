@@ -1,0 +1,57 @@
+{
+ "name": "CRUSHED #0577",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 VHS Tapes (taped over a wedding); 1 Sneaker (was in the dryer); 3 Pizza Crusts (petrified); 1 Game Controller (stick drift since day one). Weight 78.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0577.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "CLEAN"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "CHROME"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 44,
+   "display_type": "number"
+  }
+ ]
+}

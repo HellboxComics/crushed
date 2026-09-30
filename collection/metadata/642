@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0642",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Cassette Tapes (someone's voicemail greeting); 2 Foam Headphones (one ear works if you hold it); 1 Pizza Crust (from a sleepover); 1 Jewel Case (insert is from a different album). Weight 68.0 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0642.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 68.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

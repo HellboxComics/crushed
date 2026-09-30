@@ -11,12 +11,13 @@ import bpy
 
 from . import tex
 
-COND = {"name": "JUNK", "clean": None}
+COND = {"name": "JUNK", "clean": None, "glow": None}
 
 
-def set_condition(name, clean=None):
+def set_condition(name, clean=None, glow=None):
     COND["name"] = name
     COND["clean"] = clean
+    COND["glow"] = glow
 
 
 class G:
@@ -364,7 +365,8 @@ def screen(g, p, rng):
     crack = g.maprange(v.outputs["Distance"], 0.025, 0.0)
     col = g.mix(crack, g.mix(0.6, t.outputs["Color"], (0.02, 0.02, 0.02), "MULTIPLY"), (0.8, 0.8, 0.8))
     return {"color": col, "rough": g.mixf(crack, 0.05, 0.5), "coat": 1.0,
-            "emit": t.outputs["Color"], "estr": p.get("glow", 0.0), "normal": g.bump(crack, 0.8, 0.002)}
+            "emit": t.outputs["Color"], "estr": COND["glow"] or p.get("glow", 0.0),
+            "normal": g.bump(crack, 0.8, 0.002)}
 
 
 def printed(g, p, rng):

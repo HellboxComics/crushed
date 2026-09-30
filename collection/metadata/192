@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0192",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Sneaker (left only); 3 AA Batteries (licked to test); 3 Joysticks (suction cups gave up); 2 VHS Tapes (taped over a wedding); 1 No. 2 Pencil (sharpened to a nub). Weight 92.8 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0192.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 92.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

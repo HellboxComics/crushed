@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0701",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 3 Burned CDs (burned at 1x, 4 hours); 3 AA Batteries (taken out of the smoke detector); 2 No. 2 Pencils (chewed); 2 Power Strips (overloaded on purpose). Weight 30.6 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0701.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "MP3 Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "School Lost & Found"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

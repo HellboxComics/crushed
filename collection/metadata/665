@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0665",
+ "description": "Recovered from Dad's Junk Drawer. Smells like melted crayon. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Webcam (240p of pure confidence); 3 Skate Wheels (rolled into a storm drain once); 1 Power Strip (overloaded on purpose); 3 Game Controllers (stick drift since day one). Weight 79.9 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0665.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Melted Crayon"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

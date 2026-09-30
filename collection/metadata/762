@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0762",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Laptop Charger (fits nothing else in the house); 2 Energy Drinks (exam week casualty); 3 Digital Cameras (memory full, 14 photos); 3 Power Strips (overloaded on purpose). Weight 34.0 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0762.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

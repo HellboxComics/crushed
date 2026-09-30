@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0439",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Yo-Yo (string tied to a finger for 3 years); 2 Floppy Disks (contains one (1) virus); 1 Three-Ring Binder (covered in band names); 1 Power Strip (daisy-chained into three more). Weight 82.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0439.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "16-Bit Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 82.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

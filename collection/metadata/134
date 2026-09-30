@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0134",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (someone is still on hold); 2 AA Batteries (mixed old and new, like animals); 1 Keyboard (Partial) (F, J and the crumbs); 1 Sneaker (left only); 2 Three-Ring Binders (covered in band names). Weight 35.3 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0134.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Corded Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 35.3,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 33,
+   "display_type": "number"
+  }
+ ]
+}

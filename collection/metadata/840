@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0840",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Sneakers (light-up heel, dead); 3 Glow Sticks (cracked at a school dance); 1 Game Controller (stick drift since day one); 3 Burned CDs (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth). Weight 29.9 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0840.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "SOAKED"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 29.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0236",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 2 16-Bit Controllers (the B button is sticky); 3 Army Man Squads (melted with a magnifying glass); 3 9999-in-1 Handhelds (HI SCORE 00000); 3 AA Batteries (probably dead). Weight 91.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0236.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Skateboard"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 91.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

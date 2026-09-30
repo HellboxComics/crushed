@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0650",
+ "description": "Recovered from Mom's Minivan. Smells like science lab. Contents (partial): 3 Virtual Pets (died during math class); 3 Glow Sticks (still glowing a little, somehow); 1 Disposable Camera (never developed); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Portable CD Player (anti-skip lied). Weight 32.9 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0650.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Virtual Pet"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Science Lab"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 32.9,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0015",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 Cheap Sunglasses (one lens popped out); 3 Portable Tape Players (auto-reverse broke in 1991); 3 Spiral Notebooks (doodles in the margins); 1 Puzzle Cube (two stickers peeled); 1 Dead Bull (flipped). Weight 97.0 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0015.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Dead Bull"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Gym Bag, Forgotten"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 97.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

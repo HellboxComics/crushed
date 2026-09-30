@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0420",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Portable CD Players (45-second buffer, 2-second attention span); 1 Boom Box (took 10 D batteries); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Cassette Tapes (rewound with a pencil); 2 Pagers (last page: 143). Weight 51.4 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0420.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable CD Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 51.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0820",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 No. 2 Pencils (never saw a scantron it liked); 3 Sneakers (left only); 2 AA Batteries (taken out of the smoke detector); 1 Pizza Crust (still better than most portfolios). Weight 34.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0820.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 34.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

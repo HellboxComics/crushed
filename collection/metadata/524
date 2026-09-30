@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0524",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Flip Phone (12 texts left this month); 2 Film Canisters (undeveloped, forever); 1 TV Remote (the volume button worn smooth); 2 Spiral Notebooks (doodles in the margins); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 68.5 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0524.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 68.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}

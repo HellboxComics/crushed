@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0805",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Flip Phones (snapped shut dramatically); 1 Memory Card (corrupted during a birthday); 3 Pizza Crusts (still better than most portfolios); 3 Clear Lighters (out of fluid). Weight 27.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0805.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 27.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

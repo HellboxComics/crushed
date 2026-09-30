@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0183",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 1 Yo-Yo (walked the dog one time); 1 Skate Wheel (rolled into a storm drain once); 1 No. 2 Pencil (never saw a scantron it liked); 3 Foam Headphones (one ear works if you hold it). Weight 99.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0183.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 99.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 35,
+   "display_type": "number"
+  }
+ ]
+}

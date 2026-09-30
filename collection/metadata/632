@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0632",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 AA Batteries (probably dead); 2 Brick Phones (unbreakable until today); 3 Clear Lighters (out of fluid); 1 No. 2 Pencil (sharpened to a nub). Weight 75.2 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0632.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Keyboard (Partial)"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 75.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

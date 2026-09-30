@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0289",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 2 Floppy Disks (says DO NOT FORMAT); 2 Skate Wheels (flat spot from a power slide); 3 Calculators (solar panel covered by a sticker); 1 Power Strip (overloaded on purpose). Weight 80.4 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0289.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Puzzle Cube"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Back of the Closet"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

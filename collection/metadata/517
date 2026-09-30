@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0517",
+ "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Webcams (pointed at the ceiling forever); 2 AA Batteries (mixed old and new, like animals); 3 Pagers (clipped to jeans for status only); 3 TV Remotes (held together with tape). Weight 79.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0517.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Blue Raspberry"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

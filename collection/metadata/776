@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0776",
+ "description": "Recovered from Estate of a Collector. Smells like arcade carpet. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Flip Phones (snapped shut dramatically); 2 Sneakers (light-up heel, dead); 3 MP3 Players (shuffle picked the same song 6 times); 3 No. 2 Pencils (chewed). Weight 70.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0776.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Estate of a Collector"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 70.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

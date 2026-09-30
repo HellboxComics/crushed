@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0311",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 2 Game Cartridges (blown into 400 times); 1 Film Canister (holds one quarter); 3 VHS Tapes (taped over a wedding); 2 Portable Tape Players (auto-reverse broke in 1991). Weight 79.4 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0311.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 79.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

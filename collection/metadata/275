@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0275",
+ "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Ball Mouse (ball removed as a prank); 3 Burned CDs (burned at 1x, 4 hours); 3 Cassette Tapes (someone's voicemail greeting); 1 Clear Lighter (out of fluid). Weight 80.1 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0275.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Portable Tape Player"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

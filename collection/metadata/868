@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0868",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 2 Disposable Cameras (never developed); 3 Energy Drinks (third one that night); 3 Memory Cards (corrupted during a birthday); 1 Digital Camera (memory full, 14 photos); 3 Handheld Consoles (battery cover lost immediately). Weight 30.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0868.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Disposable Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Fresh Batteries (Licked)"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 30.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 42,
+   "display_type": "number"
+  }
+ ]
+}

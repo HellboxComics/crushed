@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0088",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Boom Box (one speaker still believes); 1 Soda Can (shaken as a prank); 1 Toy Slime (stuck in the carpet); 3 Pizza Crusts (petrified); 2 Three-Ring Binders (covered in band names). Weight 53.0 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0088.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Boom Box"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Grandma's Couch"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 53.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

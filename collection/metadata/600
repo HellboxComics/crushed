@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0600",
+ "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 1 AA Batteries (taken out of the smoke detector); 1 No. 2 Pencil (chewed); 2 Digital Cameras (memory full, 14 photos); 1 Power Strip (daisy-chained into three more). Weight 33.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://IMAGES_CID/0600.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Foam Headphones"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Rink Snack Bar"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Behind the Couch"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.4,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0670",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 3 Clear Lighters (for incense, obviously); 1 Laptop Charger (fits nothing else in the house); 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 No. 2 Pencils (chewed). Weight 25.6 lb. Contents may have settled.",
+ "image": "ipfs://IMAGES_CID/0670.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Handheld Console"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "New Plastic"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 25.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 36,
+   "display_type": "number"
+  }
+ ]
+}

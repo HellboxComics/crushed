@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0541",
+ "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Webcam (pointed at the ceiling forever); 2 Pagers (last page: 143); 1 Floppy Disk (contains one (1) virus); 2 TV Remotes (the volume button worn smooth); 2 Soda Cans (tab kept for charity). Weight 73.6 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0541.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Webcam"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Scratch-n-Sniff Sticker"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 73.6,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 38,
+   "display_type": "number"
+  }
+ ]
+}

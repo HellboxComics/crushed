@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0454",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Brick Phone (faceplate swapped 4 times); 1 Disposable Camera (never developed); 3 No. 2 Pencils (chewed); 3 TV Remotes (held together with tape). Weight 39.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0454.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BURNT"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Soda Can"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 39.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

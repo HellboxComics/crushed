@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0595",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Cassette Tapes (side B only); 1 Film Canister (holds one quarter); 1 Corded Phone (was on the line when mom picked up); 3 Burned CDs (track 7 skips). Weight 78.0 lb. Some assembly was removed.",
+ "image": "ipfs://IMAGES_CID/0595.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "BIOHAZARD"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "CRT Monitor"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Arcade Carpet"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Garage Sale Free Bin"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Mummified"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 78.0,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 34,
+   "display_type": "number"
+  }
+ ]
+}

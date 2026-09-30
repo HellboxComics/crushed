@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0759",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Flip Phones (12 texts left this month); 3 AA Batteries (mixed old and new, like animals); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Power Strips (overloaded on purpose); 3 Burned CDs (track 7 skips). Weight 38.1 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0759.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Under the Bed"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 38.1,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

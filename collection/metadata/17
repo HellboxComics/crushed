@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0017",
+ "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Joysticks (fire button pressed 40 million times); 2 TV Remotes (found in the couch); 3 Cassette Tapes (rewound with a pencil); 1 Film Canister (undeveloped, forever). Weight 49.7 lb. We kept the important shit.",
+ "image": "ipfs://IMAGES_CID/0017.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1985-1990"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Firm Handshake"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Body Spray Cloud"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 49.7,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 40,
+   "display_type": "number"
+  }
+ ]
+}

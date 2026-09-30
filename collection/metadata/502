@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0502",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Skateboard (one ollie, lifetime); 2 Film Canisters (undeveloped, forever); 3 Virtual Pets (fed 0 times); 2 Pizza Crusts (from a sleepover). Weight 73.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0502.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1997-2002"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Dad's Junk Drawer"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Wrapped"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 73.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 43,
+   "display_type": "number"
+  }
+ ]
+}

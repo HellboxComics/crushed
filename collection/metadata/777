@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0777",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Memory Cards (8MB, full); 3 Game Controllers (stick drift since day one); 1 Jewel Case (hinge broken on arrival); 3 Burned CDs (track 7 skips). Weight 33.2 lb. Handle with both hands.",
+ "image": "ipfs://IMAGES_CID/0777.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Digital Camera"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "None"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Unreasonable"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Mom's Minivan"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Several"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 33.2,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 41,
+   "display_type": "number"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0315",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 1 Clear Lighter (out of fluid); 2 Toy Slime (was in the hair of a sibling); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Keyboards (Partial) (F, J and the crumbs); 1 Emergency Ramen (for emergencies). Weight 80.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://IMAGES_CID/0315.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "1991-1996"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Cassette Tape"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Hydraulic"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Mall Food Court"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Storage Unit (Auctioned)"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "Loose Ends"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 80.5,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 39,
+   "display_type": "number"
+  }
+ ]
+}

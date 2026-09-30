@@ -1,0 +1,53 @@
+{
+ "name": "CRUSHED #0680",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Energy Drinks (third one that night); 2 Clear Lighters (out of fluid); 3 No. 2 Pencils (sharpened to a nub); 2 Flip Phones (snapped shut dramatically); 1 Emergency Ramen (for emergencies). Weight 28.8 lb. Still heavier than it looks.",
+ "image": "ipfs://IMAGES_CID/0680.png",
+ "attributes": [
+  {
+   "trait_type": "Era",
+   "value": "2003-2008"
+  },
+  {
+   "trait_type": "Condition",
+   "value": "JUNK"
+  },
+  {
+   "trait_type": "Headliner",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Contaminant",
+   "value": "Emergency Ramen"
+  },
+  {
+   "trait_type": "Pressure",
+   "value": "Industrial"
+  },
+  {
+   "trait_type": "Smell",
+   "value": "Hot Dust on a CRT"
+  },
+  {
+   "trait_type": "Recovered From",
+   "value": "Grandma's Attic"
+  },
+  {
+   "trait_type": "Tape",
+   "value": "None"
+  },
+  {
+   "trait_type": "Loose Wires",
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Weight (lb)",
+   "value": 28.8,
+   "display_type": "number"
+  },
+  {
+   "trait_type": "Item Count",
+   "value": 37,
+   "display_type": "number"
+  }
+ ]
+}
