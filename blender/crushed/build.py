@@ -366,14 +366,14 @@ def build_pile(r, coll, rng):
     return objs
 
 
-def build(r, res=1024, samples=96, turntable=0):
+def build(r, res=1024, samples=96, turntable=0, look="studio"):
     sc = stage.reset()
     rng = np.random.default_rng(r["seed"])
     one = r.get("one_of_one")
     cond = r["condition"] if not one else ("CLEAN" if one == "SOLID GOLD" else "JUNK")
     mat.set_condition(cond, r["clean"][1] if r["clean"] else None, glow=3.0 if one == "SCREEN TIME" else None)
     tex.SCREENS_ON["on"] = one == "SCREEN TIME"
-    stage.build(sc, rng, res, samples)
+    stage.build(sc, rng, res, samples, look=look)
     coll = bpy.data.collections.new("block")
     sc.collection.children.link(coll)
 

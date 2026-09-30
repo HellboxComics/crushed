@@ -12,6 +12,8 @@ import bpy
 from . import tex
 
 COND = {"name": "JUNK", "clean": None, "glow": None}
+# stage look: "classic" (the original), "showroom" (glossy black, colored edge lights), "daylight" (bright seamless sweep)
+LOOK = {"name": "classic"}
 
 
 def set_condition(name, clean=None, glow=None):
@@ -491,8 +493,23 @@ def core(g, p, rng):
 
 
 def floor(g, p, rng):
+    look = LOOK["name"]
     s = _floor(g, p, rng)
+    if look == "daylight":
+        # a bright seamless sweep: the floor is the backdrop, softly darker toward the frame edge
+        s["color"] = g.mix(0.82, s["color"], _lin((0.74, 0.72, 0.68)))
+        s["rough"] = g.math("MULTIPLY", s["rough"], 0.8)
+        s["fade"] = g.maprange(_radius(g), 0.9, 0.2, 0.25, 1.0)
+        return s
     s["fade"] = _vignette(g)
+    if look == "showroom":
+        # near-mirror black floor: the block stands on its own reflection
+        s["rough"] = g.math("MULTIPLY", s["rough"], 0.22)
+    elif look == "studio":
+        # a soft, blurred reflection; the pool of light is tight and dim so the floor never competes with the block
+        s["rough"] = g.math("MULTIPLY", s["rough"], 0.5)
+        s["fade"] = g.maprange(_radius(g), 0.46, 0.1, 0.0, 0.8)
+        s["spec"] = 0.1          # low shine: a faint reflection of the block, no glare from the studio
     return s
 
 
@@ -529,13 +546,16 @@ def _floor(g, p, rng):
     return {"color": col, "rough": rough, "normal": g.bump(n2.outputs["Fac"], 0.15, 0.002)}
 
 
-def _vignette(g):
+def _radius(g):
     geo = g.n.new("ShaderNodeNewGeometry")
     sep = g.n.new("ShaderNodeSeparateXYZ")
     g.link(geo.outputs["Position"], sep.inputs[0])
-    r = g.math("SQRT", g.math("ADD", g.math("MULTIPLY", sep.outputs[0], sep.outputs[0]),
-                               g.math("MULTIPLY", sep.outputs[1], sep.outputs[1])))
-    return g.maprange(r, 0.6, 0.2)
+    return g.math("SQRT", g.math("ADD", g.math("MULTIPLY", sep.outputs[0], sep.outputs[0]),
+                                 g.math("MULTIPLY", sep.outputs[1], sep.outputs[1])))
+
+
+def _vignette(g):
+    return g.maprange(_radius(g), 0.6, 0.2)
 
 
 def goo(g, p, rng):

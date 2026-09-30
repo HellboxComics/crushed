@@ -36,10 +36,10 @@ def token(tid, offset=0):
     return r
 
 
-def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=0):
+def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=0, look="studio"):
     r = token(tid, offset)
     t0 = time.time()
-    sc = build.build(r, res=res, samples=samples, turntable=turntable)
+    sc = build.build(r, res=res, samples=samples, turntable=turntable, look=look)
     os.makedirs(out, exist_ok=True)
     stem = os.path.join(out, f"{tid:04d}")
     if save_blend:
@@ -132,6 +132,7 @@ def main():
     ap.add_argument("--metadata", metavar="IMAGE_BASE_URI")
     ap.add_argument("--anim-base", metavar="ANIM_BASE_URI")
     ap.add_argument("--skip-existing", action="store_true")
+    ap.add_argument("--look", default="studio", choices=["classic", "studio", "showroom", "daylight"], help="stage look (lights and floor only); studio is the release look")
     ap.add_argument("--offset", type=int, default=0, help="the contract's reveal offset (post-reveal only)")
     ap.add_argument("--sealed", action="store_true", help="render the pre-reveal image (renders/sealed.png)")
     ap.add_argument("--showcase", action="store_true", help="the 100 blocks shown on the site's pile page")
@@ -159,7 +160,7 @@ def main():
     for tid in ids:
         if a.skip_existing and os.path.exists(os.path.join(a.out, f"{tid:04d}.png")):
             continue
-        render_token(tid, a.out, a.res, a.samples, a.turntable, a.blend, a.offset)
+        render_token(tid, a.out, a.res, a.samples, a.turntable, a.blend, a.offset, a.look)
 
 
 if __name__ == "__main__":

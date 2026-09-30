@@ -54,15 +54,43 @@ def _area(sc, name, loc, size, power, color=(1, 1, 1), target=(0, 0, 0.15), spre
     return ob
 
 
-def lights(sc):
-    # big soft key from front-left, cool rim from behind-right, overhead box, low warm kicker
-    _area(sc, "key", (-1.2, -1.3, 1.5), 0.8, 190, (1.0, 0.96, 0.9))
-    _area(sc, "top", (0.1, 0.1, 1.4), 0.7, 65, (1.0, 1.0, 1.0))
-    _area(sc, "rim", (1.1, 1.4, 0.7), 0.5, 210, (0.75, 0.85, 1.0))
-    _area(sc, "kick", (1.6, -0.6, 0.35), 0.5, 45, (1.0, 0.85, 0.7))
+def lights(sc, look="studio"):
+    if look == "showroom":
+        # dark room, cool key, a cyan edge light from behind-right and a magenta one from behind-left
+        _area(sc, "key", (-1.2, -1.3, 1.5), 0.8, 150, (0.86, 0.92, 1.0))
+        _area(sc, "top", (0.1, 0.1, 1.4), 0.7, 40, (1.0, 1.0, 1.0))
+        _area(sc, "rim", (1.1, 1.4, 0.7), 0.5, 420, (0.25, 0.85, 1.0))
+        _area(sc, "rim2", (-1.3, 1.2, 0.7), 0.5, 330, (1.0, 0.2, 0.65))
+        _area(sc, "kick", (1.6, -0.6, 0.35), 0.5, 30, (1.0, 0.85, 0.7))
+        pool = 26
+    elif look == "studio":
+        # the cube is the showpiece: warm key, a faint cool edge light, a whisper of warm from the other side,
+        # and a neutral pool on the floor. Nothing colored enough to tint the block or the floor.
+        _area(sc, "key", (-1.2, -1.3, 1.5), 0.8, 175, (1.0, 0.97, 0.93))
+        _area(sc, "top", (0.1, 0.1, 1.4), 0.7, 55, (1.0, 1.0, 1.0))
+        _area(sc, "rim", (1.1, 1.4, 0.7), 0.5, 260, (0.82, 0.9, 1.0))
+        _area(sc, "rim2", (-1.3, 1.2, 0.7), 0.5, 90, (1.0, 0.92, 0.85))
+        _area(sc, "kick", (1.6, -0.6, 0.35), 0.5, 35, (1.0, 0.88, 0.75))
+        pool = 22
+    elif look == "daylight":
+        # big soft boxes, almost no colored light: a product shot on a bright sweep
+        _area(sc, "key", (-1.4, -1.5, 1.7), 1.6, 430, (1.0, 0.97, 0.92))
+        _area(sc, "fill", (1.6, -1.0, 0.9), 1.4, 170, (0.9, 0.95, 1.0))
+        _area(sc, "top", (0.1, 0.1, 1.6), 1.4, 210, (1.0, 1.0, 1.0))
+        _area(sc, "rim", (1.1, 1.4, 0.7), 0.8, 130, (1.0, 1.0, 1.0))
+        pool = 0
+    else:
+        # big soft key from front-left, cool rim from behind-right, overhead box, low warm kicker
+        _area(sc, "key", (-1.2, -1.3, 1.5), 0.8, 190, (1.0, 0.96, 0.9))
+        _area(sc, "top", (0.1, 0.1, 1.4), 0.7, 65, (1.0, 1.0, 1.0))
+        _area(sc, "rim", (1.1, 1.4, 0.7), 0.5, 210, (0.75, 0.85, 1.0))
+        _area(sc, "kick", (1.6, -0.6, 0.35), 0.5, 45, (1.0, 0.85, 0.7))
+        pool = 40
+    if not pool:
+        return
     # the pool of light on the floor; the frame edges fall off to black
     s = bpy.data.lights.new("pool", "SPOT")
-    s.energy = 40
+    s.energy = pool
     s.spot_size = math.radians(48)
     s.spot_blend = 1.0
     s.shadow_soft_size = 0.35
@@ -72,7 +100,7 @@ def lights(sc):
     ob.rotation_euler = (Vector((0, 0, 0)) - ob.location).to_track_quat("-Z", "Y").to_euler()
 
 
-def world(sc):
+def world(sc, strength=1.0):
     """Black to the camera. To reflections, a studio: a bright ceiling, a dim horizon and
     one long softbox, so chrome, gold, CRT glass and glossy plastic have something to show."""
     w = bpy.data.worlds.new("world")
@@ -111,7 +139,7 @@ def world(sc):
     nt.links.new(ramp.outputs["Color"], add.inputs[6])
     add.inputs[7].default_value = (1.4, 1.35, 1.3, 1)
     nt.links.new(add.outputs[2], bg.inputs["Color"])
-    bg.inputs["Strength"].default_value = 1.0
+    bg.inputs["Strength"].default_value = strength
     nt.links.new(bg.outputs[0], out.inputs["Surface"])
     # reflections only: the frame edges stay black and the floor stays lit by the lights alone
     vis = w.cycles_visibility
@@ -132,7 +160,7 @@ def floor(sc, rng):
     return ob
 
 
-def render_settings(sc, res=1024, samples=96, fast=False):
+def render_settings(sc, res=1024, samples=96, fast=False, exposure=0.0):
     r = sc.render
     r.engine = "CYCLES"
     r.resolution_x = r.resolution_y = res
@@ -171,12 +199,13 @@ def render_settings(sc, res=1024, samples=96, fast=False):
                 continue
     except TypeError:
         vs.view_transform = "Filmic"
-    vs.exposure = 0.0
+    vs.exposure = exposure
 
 
-def build(sc, rng, res=1024, samples=96, fast=False):
-    world(sc)
+def build(sc, rng, res=1024, samples=96, fast=False, look="studio"):
+    mat.LOOK["name"] = look
+    world(sc, {"showroom": 0.7, "studio": 0.85, "daylight": 1.5}.get(look, 1.0))
     camera(sc)
-    lights(sc)
+    lights(sc, look)
     floor(sc, rng)
-    render_settings(sc, res, samples, fast)
+    render_settings(sc, res, samples, fast, {"daylight": 0.25}.get(look, 0.0))
