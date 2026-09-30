@@ -7,6 +7,10 @@
   try {
     meta = await (await fetch("turntable/frames.json")).json();
   } catch (e) {
+    // no turntable rendered yet: show a still of #0044 instead
+    const still = new Image();
+    still.onload = () => ctx.drawImage(still, 0, 0, canvas.width, canvas.height);
+    still.src = "pile/0044.webp";
     return;
   }
   const n = meta.count;

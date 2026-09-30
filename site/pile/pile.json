@@ -1,0 +1,2285 @@
+[
+ {
+  "id": 1,
+  "name": "CRUSHED #0001",
+  "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 2 Roller Skates (the rink smell is still in there); 3 Film Canisters (undeveloped, forever); 3 Calculators (spelled BOOBIES upside down); 2 Cheap Sunglasses (one lens popped out); 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 Bear (Thriving) (doing fine actually). Weight 52.0 lb. Some assembly was removed.",
+  "image": "pile/0001.webp",
+  "thumb": "pile/0001_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Roller Skate"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Bear (Thriving)"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Fresh Batteries (Licked)"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Garage Sale Free Bin"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Mummified"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 52.0,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 38,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "name": "CRUSHED #0008",
+  "description": "Every single thing in here is gold. Nobody can explain it. Recovered from Estate of a Collector. Smells like victory. Contents (partial): 2 Yo-Yos (walked the dog one time); 3 TV Remotes (held together with tape); 3 AA Batteries (taken out of the smoke detector); 3 Joysticks (suction cups gave up); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 79.9 lb. Still heavier than it looks.",
+  "image": "pile/0008.webp",
+  "thumb": "pile/0008_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "SOLID GOLD"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Yo-Yo"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Victory"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Estate of a Collector"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "One of One",
+    "value": "SOLID GOLD"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 79.9,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 34,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "name": "CRUSHED #0014",
+  "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Game Cartridge (save file erased by a sibling); 2 TV Remotes (held together with tape); 1 Pizza Crust (still better than most portfolios); 3 Army Man Squads (the one with the radio survived). Weight 79.6 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0014.webp",
+  "thumb": "pile/0014_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Metal Lunchbox"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Hot Dust on a CRT"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Back of the Closet"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 79.6,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 37,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "name": "CRUSHED #0028",
+  "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 3 TV Remotes (found in the couch); 1 VHS Tape (taped over a wedding); 1 No. 2 Pencil (never saw a scantron it liked); 1 Joystick (suction cups gave up). Weight 81.1 lb. Contents may have settled.",
+  "image": "pile/0028.webp",
+  "thumb": "pile/0028_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Cassette Tape"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Arcade Carpet"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Back of the Closet"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 81.1,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 31,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "name": "CRUSHED #0044",
+  "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 2 Calculators (solar panel covered by a sticker); 2 Power Strips (daisy-chained into three more); 2 Cheap Sunglasses (one lens popped out). Weight 75.5 lb. Contents may have settled.",
+  "image": "pile/0044.webp",
+  "thumb": "pile/0044_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Yo-Yo"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Arcade Carpet"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 75.5,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 32,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "name": "CRUSHED #0057",
+  "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Floppy Disks (save icon, but real); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Power Strip (daisy-chained into three more); 1 AA Batteries (probably dead). Weight 84.9 lb. Handle with both hands.",
+  "image": "pile/0057.webp",
+  "thumb": "pile/0057_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "CRT Monitor"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Hot Dust on a CRT"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Under the Bed"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 84.9,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 35,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "name": "CRUSHED #0064",
+  "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 Boom Box (one speaker still believes); 1 Joystick (suction cups gave up); 3 Yo-Yos (string tied to a finger for 3 years); 1 Metal Lunchbox (the smell stays); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Emergency Ramen (for emergencies). Weight 48.4 lb. Do not attempt to uncrush.",
+  "image": "pile/0064.webp",
+  "thumb": "pile/0064_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Boom Box"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Emergency Ramen"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Grandma's Couch"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Behind the Couch"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 48.4,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 35,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "name": "CRUSHED #0065",
+  "description": "Recovered from School Lost & Found. Smells like basement. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 1 Keyboard (Partial) (F, J and the crumbs); 2 Sneakers (was in the dryer); 3 AA Batteries (mixed old and new, like animals); 3 Calculators (spelled BOOBIES upside down). Weight 75.2 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0065.webp",
+  "thumb": "pile/0065_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "SOAKED"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Portable Tape Player"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Basement"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "School Lost & Found"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 75.2,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 36,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "name": "CRUSHED #0072",
+  "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 3 Pizza Crusts (still better than most portfolios); 3 AA Batteries (mixed old and new, like animals); 1 Game Cartridge (save file erased by a sibling); 1 Milk Caps (the slammer is chipped). Weight 79.6 lb. We kept the important shit.",
+  "image": "pile/0072.webp",
+  "thumb": "pile/0072_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Yo-Yo"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Hot Dust on a CRT"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 79.6,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 36,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 84,
+  "name": "CRUSHED #0084",
+  "description": "Recovered from Dad's Junk Drawer. Smells like victory. Contents (partial): 1 Gold Floppy Disks (why); 3 Puzzle Cubes (two stickers peeled); 3 Soda Cans (shaken as a prank); 2 VHS Tapes (taped over a wedding); 1 Keyboard (Partial) (the W key is missing, for obvious reasons). Weight 52.6 lb. Contents may have settled.",
+  "image": "pile/0084.webp",
+  "thumb": "pile/0084_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "GOLD"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Puzzle Cube"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Victory"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Mummified"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Gilded",
+    "value": "Floppy Disk"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 52.6,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 40,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 88,
+  "name": "CRUSHED #0088",
+  "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Boom Box (one speaker still believes); 1 Soda Can (shaken as a prank); 1 Toy Slime (stuck in the carpet); 3 Pizza Crusts (petrified); 2 Three-Ring Binders (covered in band names). Weight 53.0 lb. Handle with both hands.",
+  "image": "pile/0088.webp",
+  "thumb": "pile/0088_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Boom Box"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Grandma's Couch"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Under the Bed"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Mummified"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 53.0,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 40,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 99,
+  "name": "CRUSHED #0099",
+  "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Cassette Tapes (rewound with a pencil); 3 Yo-Yos (string tied to a finger for 3 years); 2 Game Cartridges (blown into 400 times); 2 Power Strips (daisy-chained into three more); 1 Tiny Red Candle (lit). Weight 90.1 lb. We kept the important shit.",
+  "image": "pile/0099.webp",
+  "thumb": "pile/0099_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Sneaker"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Tiny Red Candle"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Hot Dust on a CRT"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 90.1,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 39,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 103,
+  "name": "CRUSHED #0103",
+  "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Game Cartridges (save file erased by a sibling); 1 Power Strip (daisy-chained into three more); 1 Foam Headphones (orange foam, allegedly); 1 Clear Lighter (for incense, obviously). Weight 101.1 lb. We kept the important shit.",
+  "image": "pile/0103.webp",
+  "thumb": "pile/0103_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "CRT Monitor"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Gym Bag, Forgotten"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Back of the Closet"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 101.1,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 38,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 119,
+  "name": "CRUSHED #0119",
+  "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 2 Sneakers (left only); 2 Floppy Disks (DISK 2 of 7); 1 Power Strip (overloaded on purpose); 1 Foam Headphones (orange foam, allegedly). Weight 71.3 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0119.webp",
+  "thumb": "pile/0119_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Portable Tape Player"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Fresh Batteries (Licked)"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Under the Bed"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 71.3,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 33,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 135,
+  "name": "CRUSHED #0135",
+  "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 TV Remote (found in the couch); 1 VHS Tape (taped over a wedding); 1 Game Cartridge (save file erased by a sibling); 3 Cassette Tapes (rewound with a pencil); 3 Pizza Crusts (petrified). Weight 80.9 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0135.webp",
+  "thumb": "pile/0135_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "TV Remote"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Grandma's Couch"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "School Lost & Found"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 80.9,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 40,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 149,
+  "name": "CRUSHED #0149",
+  "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Boom Box (took 10 D batteries); 3 Floppy Disks (says DO NOT FORMAT); 3 Cheap Sunglasses (mall kiosk special); 2 Calculators (spelled BOOBIES upside down). Weight 83.0 lb. We kept the important shit.",
+  "image": "pile/0149.webp",
+  "thumb": "pile/0149_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "CRT Monitor"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Hot Dust on a CRT"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Under the Bed"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 83.0,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 35,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 162,
+  "name": "CRUSHED #0162",
+  "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 2 Joysticks (fire button pressed 40 million times); 3 Yo-Yos (string tied to a finger for 3 years); 3 Puzzle Cubes (solved once, stickers moved); 2 Army Man Squads (melted with a magnifying glass); 3 Calculators (solar panel covered by a sticker). Weight 76.2 lb. Contents may have settled.",
+  "image": "pile/0162.webp",
+  "thumb": "pile/0162_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Joystick"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Fresh Batteries (Licked)"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Mom's Minivan"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 76.2,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 42,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 169,
+  "name": "CRUSHED #0169",
+  "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 2 Soda Cans (shaken as a prank); 3 Sneakers (was in the dryer); 3 Roller Skates (the rink smell is still in there); 1 TV Remote (held together with tape); 1 Game Cartridge (save file erased by a sibling); 1 Paper Hand (folded under light pressure). Weight 61.7 lb. Handle with both hands.",
+  "image": "pile/0169.webp",
+  "thumb": "pile/0169_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Soda Can"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Paper Hand"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Arcade Carpet"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "A Very Specific Ditch"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Mummified"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 61.7,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 39,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 178,
+  "name": "CRUSHED #0178",
+  "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Foam Headphones (orange foam, allegedly); 3 Sneakers (left only); 3 Yo-Yos (string tied to a finger for 3 years); 2 Pizza Crusts (found behind the couch). Weight 89.8 lb. We kept the important shit.",
+  "image": "pile/0178.webp",
+  "thumb": "pile/0178_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Puzzle Cube"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Gym Bag, Forgotten"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Mom's Minivan"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 89.8,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 36,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 193,
+  "name": "CRUSHED #0193",
+  "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 No. 2 Pencil (never saw a scantron it liked); 3 Roller Skates (toe stop worn to nothing); 1 Keyboard (Partial) (F, J and the crumbs); 1 Soda Can (shaken as a prank); 1 Diamond (hands not included). Weight 79.5 lb. Some assembly was removed.",
+  "image": "pile/0193.webp",
+  "thumb": "pile/0193_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "VHS Tape"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Diamond"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Scratch-n-Sniff Sticker"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Under the Bed"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 79.5,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 34,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 207,
+  "name": "CRUSHED #0207",
+  "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Roller Skates (toe stop worn to nothing); 2 Joysticks (suction cups gave up); 3 Army Man Squads (the one with the radio survived); 2 Spiral Notebooks (spiral unwound halfway). Weight 63.6 lb. Do not attempt to uncrush.",
+  "image": "pile/0207.webp",
+  "thumb": "pile/0207_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Sneaker"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Mall Food Court"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Grandma's Attic"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 63.6,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 39,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 220,
+  "name": "CRUSHED #0220",
+  "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (DISK 2 of 7); 2 Soda Cans (shaken as a prank); 2 Power Strips (overloaded on purpose). Weight 93.1 lb. Still heavier than it looks.",
+  "image": "pile/0220.webp",
+  "thumb": "pile/0220_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1985-1990"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Cassette Tape"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "New Plastic"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 93.1,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 39,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 235,
+  "name": "CRUSHED #0235",
+  "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 1 Floppy Disk (DISK 2 of 7); 3 Game Controllers (stick drift since day one); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Disposable Camera (never developed). Weight 85.1 lb. Do not attempt to uncrush.",
+  "image": "pile/0235.webp",
+  "thumb": "pile/0235_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Puzzle Cube"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Grandma's Couch"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 85.1,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 38,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 244,
+  "name": "CRUSHED #0244",
+  "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Gold Sneakers (why); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Power Strip (overloaded on purpose); 2 AA Batteries (taken out of the smoke detector); 2 Calculators (spelled BOOBIES upside down). Weight 85.5 lb. Do not attempt to uncrush.",
+  "image": "pile/0244.webp",
+  "thumb": "pile/0244_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "GOLD"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "16-Bit Controller"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "New Plastic"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "A Very Specific Ditch"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Gilded",
+    "value": "Sneaker"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 85.5,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 33,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 250,
+  "name": "CRUSHED #0250",
+  "description": "Recovered from Back of the Closet. Smells like wet cardboard. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Jewel Case (hinge broken on arrival); 2 Game Cartridges (save file erased by a sibling); 1 Portable Tape Player (auto-reverse broke in 1991); 2 AA Batteries (probably dead). Weight 72.8 lb. We kept the important shit.",
+  "image": "pile/0250.webp",
+  "thumb": "pile/0250_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "SOAKED"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Corded Phone"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Wet Cardboard"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Back of the Closet"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 72.8,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 37,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 252,
+  "name": "CRUSHED #0252",
+  "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Pizza Crust (petrified); 2 Disposable Cameras (27 exposures of a thumb); 1 16-Bit Controller (the B button is sticky); 1 Cheap Sunglasses (mall kiosk special). Weight 89.2 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0252.webp",
+  "thumb": "pile/0252_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Pager"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Mall Food Court"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "School Lost & Found"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 89.2,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 42,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 265,
+  "name": "CRUSHED #0265",
+  "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 2 Soda Cans (shaken as a prank); 3 Milk Caps (won in a bet); 1 Three-Ring Binder (velcro screams when opened); 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Sneakers (was in the dryer). Weight 39.8 lb. Handle with both hands.",
+  "image": "pile/0265.webp",
+  "thumb": "pile/0265_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Soda Can"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Fresh Batteries (Licked)"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Dad's Junk Drawer"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 39.8,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 42,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 280,
+  "name": "CRUSHED #0280",
+  "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Sneakers (untied since 1989); 3 Calculators (solar panel covered by a sticker); 1 Skate Wheel (rolled into a storm drain once); 3 Cheap Sunglasses (mall kiosk special); 2 Burned CDs (burned at 1x, 4 hours). Weight 48.7 lb. Still heavier than it looks.",
+  "image": "pile/0280.webp",
+  "thumb": "pile/0280_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Sneaker"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "New Plastic"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Back of the Closet"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 48.7,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 42,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 282,
+  "name": "CRUSHED #0282",
+  "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Gold 16-Bit Controllers (why); 1 Skateboard (griptape ate a pair of jeans); 1 Slap Bracelet (cut someone, probably); 2 Jewel Cases (hinge broken on arrival); 3 Sneakers (was in the dryer). Weight 48.9 lb. Contents may have settled.",
+  "image": "pile/0282.webp",
+  "thumb": "pile/0282_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "GOLD"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Skateboard"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Blue Raspberry"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Storage Unit (Auctioned)"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Gilded",
+    "value": "16-Bit Controller"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 48.9,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 40,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 290,
+  "name": "CRUSHED #0290",
+  "description": "Recovered from Behind the Couch. Smells like wet cardboard. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 3 Sneakers (left only); 1 Keyboard (Partial) (F, J and the crumbs); 2 Toy Slime (stuck in the carpet); 3 Burned CDs (says ROAD TRIP in marker); 1 Tiny Green Candle (rarest thing in here). Weight 79.1 lb. We kept the important shit.",
+  "image": "pile/0290.webp",
+  "thumb": "pile/0290_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "SOAKED"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "16-Bit Controller"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Tiny Green Candle"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Wet Cardboard"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Behind the Couch"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 79.1,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 35,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 295,
+  "name": "CRUSHED #0295",
+  "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 2 Milk Caps (the slammer is chipped); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Sneakers (untied since 1989); 2 Soda Cans (tab kept for charity). Weight 87.0 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0295.webp",
+  "thumb": "pile/0295_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Foam Headphones"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "New Plastic"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Behind the Couch"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 87.0,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 38,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 298,
+  "name": "CRUSHED #0298",
+  "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down); 1 Toy Slime (stuck in the carpet); 2 Cassette Tapes (labeled MIX 4 U); 1 CRT Monitor (weighs more than the desk); 1 Paper Hand (folded under light pressure). Weight 64.7 lb. Still heavier than it looks.",
+  "image": "pile/0298.webp",
+  "thumb": "pile/0298_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Puzzle Cube"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Paper Hand"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "New Plastic"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Back of the Closet"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Mummified"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 64.7,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 36,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 313,
+  "name": "CRUSHED #0313",
+  "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 TV Remotes (held together with tape); 2 Soda Cans (flat); 1 Calculator (spelled BOOBIES upside down); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Disposable Camera (never developed). Weight 40.7 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0313.webp",
+  "thumb": "pile/0313_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "SOAKED"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "TV Remote"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Grandma's Couch"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "School Lost & Found"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Mummified"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 40.7,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 35,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 315,
+  "name": "CRUSHED #0315",
+  "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 1 Clear Lighter (out of fluid); 2 Toy Slime (was in the hair of a sibling); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Keyboards (Partial) (F, J and the crumbs); 1 Emergency Ramen (for emergencies). Weight 80.5 lb. Do not attempt to uncrush.",
+  "image": "pile/0315.webp",
+  "thumb": "pile/0315_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Cassette Tape"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "Emergency Ramen"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Mall Food Court"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Storage Unit (Auctioned)"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Loose Ends"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 80.5,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 39,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 319,
+  "name": "CRUSHED #0319",
+  "description": "They all bought the top. Recovered from The Top. Smells like capitulation. Contents (partial): 22 Bulls (flipped); 12 Tiny Red Candles (lit); 4 Crumpled Charts (it went up, then it went down); 1 Bear (doing fine actually); 3 Paper Hands (sold at the bottom). Weight 35.3 lb. Some assembly was removed.",
+  "image": "pile/0319.webp",
+  "thumb": "pile/0319_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "BULL TRAP"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Dead Bull"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Capitulation"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "The Top"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Concerning"
+   },
+   {
+    "trait_type": "One of One",
+    "value": "BULL TRAP"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 35.3,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 42,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 324,
+  "name": "CRUSHED #0324",
+  "description": "Forty cassettes and every inch of their tape. Recovered from Every Car Glovebox. Smells like magnetic tape. Contents (partial): 30 Cassette Tapes (someone's voicemail greeting); 3 Portable Tape Players (belt clip snapped at a bus stop); 4 VHS Tapes (taped over a wedding); 1 Boom Box (one speaker still believes). Weight 33.7 lb. No refunds. No returns. No explanation.",
+  "image": "pile/0324.webp",
+  "thumb": "pile/0324_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "MIXTAPE"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Cassette Tape"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Magnetic Tape"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Every Car Glovebox"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Fully Mixtaped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "One of One",
+    "value": "MIXTAPE"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 33.7,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 38,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 326,
+  "name": "CRUSHED #0326",
+  "description": "Recovered from Nobody Knows. Smells like gym bag, forgotten. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 No. 2 Pencils (chewed); 1 Soda Can (tab kept for charity); 2 Ball Mouses (ball removed as a prank); 1 Toy Slime (was in the hair of a sibling). Weight 72.2 lb. Handle with both hands.",
+  "image": "pile/0326.webp",
+  "thumb": "pile/0326_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "CLEAN"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Cassette Tape"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Gym Bag, Forgotten"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Nobody Knows"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Finish",
+    "value": "GRAPE"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 72.2,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 37,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 332,
+  "name": "CRUSHED #0332",
+  "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Cheap Sunglasses (mall kiosk special); 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Soda Cans (shaken as a prank); 1 AA Batteries (taken out of the smoke detector). Weight 80.8 lb. We kept the important shit.",
+  "image": "pile/0332.webp",
+  "thumb": "pile/0332_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Sneaker"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Blue Raspberry"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Garage Sale Free Bin"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 80.8,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 42,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 344,
+  "name": "CRUSHED #0344",
+  "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 2 Ball Mouses (ball removed as a prank); 3 16-Bit Controllers (cord pulled the console off the shelf); 2 Pagers (last page: 911 (it was not)); 1 AA Batteries (probably dead); 2 No. 2 Pencils (never saw a scantron it liked). Weight 73.5 lb. Do not attempt to uncrush.",
+  "image": "pile/0344.webp",
+  "thumb": "pile/0344_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "BIOHAZARD"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Ball Mouse"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Firm Handshake"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "New Plastic"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Storage Unit (Auctioned)"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "Wrapped"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "A Few"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 73.5,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 39,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 348,
+  "name": "CRUSHED #0348",
+  "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 3 Pagers (last page: 143); 1 Skate Wheel (rolled into a storm drain once); 2 Clear Lighters (for incense, obviously); 3 AA Batteries (probably dead). Weight 39.7 lb. Still heavier than it looks.",
+  "image": "pile/0348.webp",
+  "thumb": "pile/0348_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "JUNK"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "Portable Tape Player"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Body Spray Cloud"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Under the Bed"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 39.7,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 36,
+    "display_type": "number"
+   }
+  ]
+ },
+ {
+  "id": 357,
+  "name": "CRUSHED #0357",
+  "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 9999-in-1 Handheld (HI SCORE 00000); 3 Milk Caps (won in a bet); 3 Film Canisters (holds one quarter); 1 Ball Mouse (cord chewed by a dog); 1 Skateboard (one ollie, lifetime). Weight 49.3 lb. Some assembly was removed.",
+  "image": "pile/0357.webp",
+  "thumb": "pile/0357_t.webp",
+  "attributes": [
+   {
+    "trait_type": "Era",
+    "value": "1991-1996"
+   },
+   {
+    "trait_type": "Condition",
+    "value": "BIOHAZARD"
+   },
+   {
+    "trait_type": "Headliner",
+    "value": "9999-in-1 Handheld"
+   },
+   {
+    "trait_type": "Contaminant",
+    "value": "None"
+   },
+   {
+    "trait_type": "Pressure",
+    "value": "Hydraulic"
+   },
+   {
+    "trait_type": "Smell",
+    "value": "Arcade Carpet"
+   },
+   {
+    "trait_type": "Recovered From",
+    "value": "Garage Sale Free Bin"
+   },
+   {
+    "trait_type": "Tape",
+    "value": "None"
+   },
+   {
+    "trait_type": "Loose Wires",
+    "value": "Several"
+   },
+   {
+    "trait_type": "Weight (lb)",
+    "value": 49.3,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Item Count",
+    "value": 37,
+    "display_type": "number"
+   }
+  ]
+ }
+]
