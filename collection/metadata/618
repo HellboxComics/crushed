@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0618",
- "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 Energy Drink (third one that night); 2 Power Strips (daisy-chained into three more); 3 Sneakers (worn to one (1) very bad decision); 3 Centerfolds (staples removed, an attempt was made); 2 TV Remotes (the volume button worn smooth). Weight 29.8 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 Energy Drink (third one that night); 2 Power Strips (daisy-chained into three more); 3 Sneakers (worn to one (1) very bad decision); 3 Centerfolds (staples removed, an attempt was made); 2 TV Remotes (the volume button worn smooth); 1 Tiny Red Candle (lit). Weight 29.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0618.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.8,
+   "value": 29.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

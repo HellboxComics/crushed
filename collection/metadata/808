@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0808",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 2 Power Banks (dead when needed); 2 Tablets (bought for the kids, taken back by dad); 3 Soda Cans (tab kept for charity); 2 Clear Lighters (borrowed in 1997, never returned); 1 Smartphone (last text: read, no reply). Weight 38.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 2 Power Banks (dead when needed); 2 Tablets (bought for the kids, taken back by dad); 3 Soda Cans (tab kept for charity); 2 Clear Lighters (borrowed in 1997, never returned); 1 Smartphone (last text: read, no reply); 1 Tiny Red Candle (lit). Weight 38.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0808.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.6,
+   "value": 38.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 45,
    "display_type": "number"
   }
  ]

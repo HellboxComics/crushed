@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0500",
- "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Jewel Case (hinge broken on arrival); 2 Power Strips (overloaded on purpose); 2 Flip Phones (ringtone composed by hand); 2 Game Controllers (stick drift since day one); 1 Diamond (held through everything). Weight 79.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Jewel Case (hinge broken on arrival); 2 Power Strips (overloaded on purpose); 2 Flip Phones (ringtone composed by hand); 2 Game Controllers (stick drift since day one). Weight 79.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0500.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Diamond"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -54,7 +54,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

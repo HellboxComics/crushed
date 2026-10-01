@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0735",
- "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 2 Tissue Boxes (one for every mood); 3 Energy Drinks (exam week casualty); 1 Ring Light (one bulb out, one ego intact); 2 AA Batteries (taken out of the smoke detector); 2 Pizza Crusts (still better than most portfolios). Weight 28.0 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 2 Tissue Boxes (one for every mood); 3 Energy Drinks (exam week casualty); 1 Ring Light (one bulb out, one ego intact); 2 AA Batteries (taken out of the smoke detector); 2 Pizza Crusts (still better than most portfolios); 1 Emergency Ramen (for emergencies). Weight 28.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0735.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.0,
+   "value": 28.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

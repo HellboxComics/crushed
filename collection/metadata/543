@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0543",
- "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Dice (blown on for luck); 1 Pizza Crust (found behind the couch); 3 Burned CDs (track 7 skips); 2 Tissue Boxes (nearly empty); 1 Paper Hand (folded under light pressure). Weight 30.3 lb. Some assembly was removed.",
+ "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Dice (blown on for luck); 1 Pizza Crust (found behind the couch); 3 Burned CDs (track 7 skips); 2 Tissue Boxes (nearly empty). Weight 30.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0543.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.3,
+   "value": 30.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

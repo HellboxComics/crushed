@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0524",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Poker Chips (taken from a casino, small heist); 3 Floppy Disks (says DO NOT FORMAT); 1 Digital Camera (2 megapixels of truth); 1 Glow Stick (cracked at a school dance); 1 Emergency Ramen (for emergencies). Weight 22.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Poker Chips (taken from a casino, small heist); 3 Floppy Disks (says DO NOT FORMAT); 1 Digital Camera (2 megapixels of truth); 1 Glow Stick (cracked at a school dance). Weight 21.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0524.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 22.2,
+   "value": 21.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

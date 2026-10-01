@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0509",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 2 Virtual Pets (reincarnated 40 times); 1 Jewel Case (insert is from a different album); 1 Game Cartridge (save file erased by a sibling); 3 Portable CD Players (anti-skip lied); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 72.9 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 2 Virtual Pets (reincarnated 40 times); 1 Jewel Case (insert is from a different album); 1 Game Cartridge (save file erased by a sibling); 3 Portable CD Players (anti-skip lied); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Broken Rocket (didn't make it). Weight 73.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0509.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.9,
+   "value": 73.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

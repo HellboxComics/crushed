@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0411",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Cassette Tapes (side B only); 2 Burned CDs (track 7 skips); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Spiral Notebooks (note says 'check YES or NO'); 2 TV Remotes (held together with tape); 1 Tiny Red Candle (one of many). Weight 33.4 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Cassette Tapes (side B only); 2 Burned CDs (track 7 skips); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Spiral Notebooks (note says 'check YES or NO'); 2 TV Remotes (held together with tape). Weight 33.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0411.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.4,
+   "value": 33.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

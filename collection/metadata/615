@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0615",
- "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 Spiral Notebook (doodles in the margins); 2 Laptop Chargers (fits nothing else in the house); 1 Energy Drink (exam week casualty). Weight 31.6 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 Spiral Notebook (doodles in the margins); 2 Laptop Chargers (fits nothing else in the house); 1 Energy Drink (exam week casualty); 1 Tiny Red Candle (one of many). Weight 31.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0615.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.6,
+   "value": 31.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

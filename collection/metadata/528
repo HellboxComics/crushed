@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0528",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Disposable Camera (never developed); 2 Floppy Disks (DISK 2 of 7); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (the volume button worn smooth); 2 Centerfolds (staples removed, an attempt was made). Weight 69.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Disposable Camera (never developed); 2 Floppy Disks (DISK 2 of 7); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (the volume button worn smooth); 2 Centerfolds (staples removed, an attempt was made); 1 Tiny Red Candle (lit). Weight 69.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0528.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.7,
+   "value": 69.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

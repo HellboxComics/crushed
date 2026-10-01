@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0836",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Fidget Spinner (banned by the school); 1 VR Headset (watched one (1) movie); 1 Poker Chip (taken from a casino, small heist); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Bluetooth Speakers (lost, found, lost). Weight 29.0 lb. Some assembly was removed.",
+ "name": "CRUSHED IT #0044: CLAY DAY",
+ "description": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 7 Clay Bulls (molded at the top); 6 Clay Pigs (fattest lump on the desk); 5 Clay Cuts (fresh cuts, fresh clay); 5 Clay Frogs (squat and smug); 5 Clay Candles (green, for once). Weight 37.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0836.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "CLAY DAY"
   },
   {
    "trait_type": "Headliner",
-   "value": "Fidget Spinner"
+   "value": "Clay Bull"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Warm Plasticine"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "A Desk, Mid-Pump"
   },
   {
    "trait_type": "Tape",
@@ -37,7 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "CLAY DAY"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.0,
+   "value": 37.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 43,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0409",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Sneakers (smells like 1989); 1 Foam Headphones (orange foam, allegedly); 2 Soda Cans (flat); 1 Keyboard (Partial) (F, J and the crumbs); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Tiny Red Candle (one of many). Weight 88.4 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Sneakers (smells like 1989); 1 Foam Headphones (orange foam, allegedly); 2 Soda Cans (flat); 1 Keyboard (Partial) (F, J and the crumbs); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 88.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0409.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 88.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

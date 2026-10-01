@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0277",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Ball Mouse (rollers caked with 1998); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Clear Lighter (out of fluid); 1 Tiny Red Candle (one of many). Weight 79.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Ball Mouse (rollers caked with 1998); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Clear Lighter (out of fluid). Weight 79.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0277.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.5,
+   "value": 79.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

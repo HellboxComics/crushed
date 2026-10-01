@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0826",
- "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (mango, mostly); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo); 1 Tiny Red Candle (lit). Weight 27.1 lb. Handle with both hands.",
+ "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (mango, mostly); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo). Weight 27.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0826.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.1,
+   "value": 27.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

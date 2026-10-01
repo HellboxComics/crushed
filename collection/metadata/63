@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0063",
- "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 2 Soda Cans (flat); 1 VHS Tape (the unmarked one, from the back of the closet); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 TV Remote (the volume button worn smooth); 1 Tissue Box (nearly empty); 1 Gold Coin (real, probably). Weight 27.4 lb. Crushed it.",
+ "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 2 Soda Cans (flat); 1 VHS Tape (the unmarked one, from the back of the closet); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 TV Remote (the volume button worn smooth); 1 Tissue Box (nearly empty); 1 Crumpled Chart (printed out for emotional reasons). Weight 27.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0063.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.4,
+   "value": 27.3,
    "display_type": "number"
   },
   {

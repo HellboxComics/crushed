@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0412",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Virtual Pet (fed 0 times); 1 Corded Phone (cord stretched to the bathroom); 2 Tissue Boxes (one for every mood); 2 Dice (snake eyes, twice); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Bear (thriving). Weight 29.4 lb. Crushed it.",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Virtual Pet (fed 0 times); 1 Corded Phone (cord stretched to the bathroom); 2 Tissue Boxes (one for every mood); 2 Dice (snake eyes, twice); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 28.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0412.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.4,
+   "value": 28.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 33,
    "display_type": "number"
   }
  ]

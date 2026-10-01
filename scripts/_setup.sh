@@ -27,4 +27,4 @@ if [ ! -f .venv/.ready ]; then
   fi
   touch .venv/.ready
 fi
-.venv/bin/python blender/generate.py --verify 2>&1 | grep -E "verify" || { echo "The recipe on this Mac does not match the frozen collection. Stop and tell Claude."; exit 2; }
+.venv/bin/python blender/generate.py --verify 2>&1 | grep -E "verify\] ok" || { echo "STOP: the recipe on this Mac does not match the frozen collection. Tell Claude."; exit 2; }

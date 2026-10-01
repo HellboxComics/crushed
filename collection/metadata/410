@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0410",
- "description": "Recovered from Ex's Garage. Smells like Vegas carpet. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Burned CD (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth); 1 Floppy Disk (contains one (1) virus). Weight 76.9 lb. We kept the important shit.",
+ "description": "Recovered from Ex's Garage. Smells like Vegas carpet. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Burned CD (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth); 1 Floppy Disk (contains one (1) virus); 1 Broken Rocket (didn't make it). Weight 77.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0410.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.9,
+   "value": 77.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

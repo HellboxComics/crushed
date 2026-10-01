@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0473",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Magazines (found in a dad's truck); 1 Corded Phone (someone is still on hold); 3 Cassette Tapes (rewound with a pencil). Weight 73.2 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Magazines (found in a dad's truck); 1 Corded Phone (someone is still on hold); 3 Cassette Tapes (rewound with a pencil); 1 Broken Rocket (was going to the moon). Weight 73.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0473.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.2,
+   "value": 73.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 44,
    "display_type": "number"
   }
  ]

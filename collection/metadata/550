@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0550",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Flip Phones (snapped shut dramatically); 3 Dice (blown on for luck); 3 Scratch Tickets ($2 for hope); 2 Digital Cameras (memory full, 14 photos); 1 Bear (doing fine actually). Weight 25.5 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Flip Phones (snapped shut dramatically); 3 Dice (blown on for luck); 3 Scratch Tickets ($2 for hope); 2 Digital Cameras (memory full, 14 photos). Weight 24.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0550.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.5,
+   "value": 24.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

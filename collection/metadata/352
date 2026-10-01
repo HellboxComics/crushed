@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0352",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Metal Lunchbox (thermos missing); 3 Burned CDs (says ROAD TRIP in marker); 2 Jewel Cases (hinge broken on arrival); 3 Dice (snake eyes, twice); 2 Spiral Notebooks (spiral unwound halfway); 1 Crumpled Chart (it went up, then it went down). Weight 71.2 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Metal Lunchbox (thermos missing); 3 Burned CDs (says ROAD TRIP in marker); 2 Jewel Cases (hinge broken on arrival); 3 Dice (snake eyes, twice); 2 Spiral Notebooks (spiral unwound halfway). Weight 71.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0352.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0446",
- "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (spiral unwound halfway); 2 AA Batteries (probably dead); 3 Foam Headphones (orange foam, allegedly); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 33.2 lb. Some assembly was removed.",
+ "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (spiral unwound halfway); 2 AA Batteries (probably dead); 3 Foam Headphones (orange foam, allegedly); 1 USB Stick (contains homework_FINAL_final2.doc); 1 Tiny Red Candle (one of many). Weight 33.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0446.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.2,
+   "value": 33.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0041: LOW RES",
- "description": "A bedroom studio at three in the morning: purple light, acid green, a lava lamp, a cat on the keys. Low res and loud. Recovered from A Bedroom Studio, 3 A.M. Smells like warm amplifier and incense. Contents (partial): 4 Pixel Hoodies (soft from 400 washes); 5 Skull Candles (burned down to the eyebrows); 8 Cassette Tapes (recorded off the radio, DJ talks over every intro); 4 Mini Arcade Cabinets (INSERT COIN, forever); 4 Game Cartridges (blown into 400 times). Weight 139.2 lb. Crushed it.",
+ "name": "CRUSHED IT #0240",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Metal Lunchbox (thermos missing); 3 Power Strips (overloaded on purpose); 2 AA Batteries (licked to test); 2 Pagers (last page from a number nobody called back). Weight 46.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0240.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "LOW RES"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Lava Lamp"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Warm Amplifier and Incense"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Bedroom Studio, 3 A.M."
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,21 +40,17 @@
    "value": "Several"
   },
   {
-   "trait_type": "One of One",
-   "value": "LOW RES"
-  },
-  {
    "trait_type": "Serial",
    "value": "0240"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 139.2,
+   "value": 46.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 56,
+   "value": 35,
    "display_type": "number"
   }
  ]

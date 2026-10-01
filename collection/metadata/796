@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0044: CLAY DAY",
- "description": "Bulls, bears, pigs and frogs, all squeezed out of clay by hand, then squeezed again by a crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 8 Clay Bulls (hat on, horns up); 8 Clay Candles (red, like always); 6 Clay Coins (worth one lump of clay); 6 Clay Frogs (squat and smug); 7 Clay Pigs (greedy, in clay). Weight 37.3 lb. We kept the important shit.",
+ "name": "CRUSHED IT #0043: STOP THE PRESSES",
+ "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (a boar doing a pig's job); 3 Newspapers (yesterday's news); 3 Play Money (no cash value, ever); 2 Corded Phones (was on the line when mom picked up); 4 Neckties (worn once, to a funeral for a portfolio). Weight 50.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0796.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLAY DAY"
+   "value": "STOP THE PRESSES"
   },
   {
    "trait_type": "Headliner",
-   "value": "Clay Bull"
+   "value": "Piggy Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Warm Plasticine"
+   "value": "Bacon and Newsprint"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Desk, Mid-Pump"
+   "value": "The Trading Floor, After the Bell"
   },
   {
    "trait_type": "Tape",
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "One of One",
-   "value": "CLAY DAY"
+   "value": "STOP THE PRESSES"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.3,
+   "value": 50.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 53,
    "display_type": "number"
   }
  ]

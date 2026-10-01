@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0043: STOP THE PRESSES",
- "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (a boar doing a pig's job); 4 Ticker Tapes (PIG +420%, allegedly); 2 Calculators (solar panel covered by a sticker); 3 Bulls (dead); 2 Poker Chips (taken from a casino, small heist). Weight 50.1 lb. Do not attempt to uncrush.",
+ "name": "CRUSHED IT #0041: LOW RES",
+ "description": "The whole hood, hoods up, smushed into a room: minis, the clan, the frames off the wall, the lava lamp, the cat. Low res and loud. Recovered from A Pixel Room, 3 A.M. Smells like warm amplifier and incense. Contents (partial): 8 Hooded Clan Members (chain on, mask up); 3 Mini Arcade Cabinets (INSERT COIN, forever); 8 Framed Pixel Arts (sixteen by sixteen, framed); 4 Mushrooms (grew out of the carpet); 4 Potted Plants (leaning toward the monitor). Weight 56.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0813.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "STOP THE PRESSES"
+   "value": "LOW RES"
   },
   {
    "trait_type": "Headliner",
-   "value": "Piggy Bank"
+   "value": "Hooded Clan Member"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Bacon and Newsprint"
+   "value": "Warm Amplifier and Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Trading Floor, After the Bell"
+   "value": "A Pixel Room, 3 A.M."
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "None"
+   "value": "Concerning"
   },
   {
    "trait_type": "One of One",
-   "value": "STOP THE PRESSES"
+   "value": "LOW RES"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.1,
+   "value": 56.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 53,
+   "value": 60,
    "display_type": "number"
   }
  ]

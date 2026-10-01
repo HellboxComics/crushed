@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0305",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (took 10 D batteries); 2 Pagers (last page: 143); 1 CRT Monitor (screen burn-in reads LOADING); 1 Slap Bracelet (banned by the school); 3 Cassette Tapes (a mix for someone who never listened); 1 Paper Hand (folded under light pressure). Weight 91.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (took 10 D batteries); 2 Pagers (last page: 143); 1 CRT Monitor (screen burn-in reads LOADING); 1 Slap Bracelet (banned by the school); 3 Cassette Tapes (a mix for someone who never listened). Weight 91.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0305.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.2,
+   "value": 91.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

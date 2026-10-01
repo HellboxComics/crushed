@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0567",
- "description": "Recovered from A Very Specific Ditch. Smells like cheap cologne. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Cheap Sunglasses (mall kiosk special); 3 Disposable Cameras (never developed); 1 Game Controller (stick drift since day one); 1 Tiny Red Candle (lit). Weight 30.0 lb. Nobody made you keep this.",
+ "description": "Recovered from A Very Specific Ditch. Smells like cheap cologne. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Cheap Sunglasses (mall kiosk special); 3 Disposable Cameras (never developed); 1 Game Controller (stick drift since day one). Weight 29.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0567.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.0,
+   "value": 29.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

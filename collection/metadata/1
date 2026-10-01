@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0001",
- "description": "Recovered from Storage Unit (Auctioned). Smells like gym bag, forgotten. Contents (partial): 1 TV Remote (found in the couch); 3 AA Batteries (probably dead); 3 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (someone is still on hold); 1 Three-Ring Binder (covered in band names); 1 Crumpled Chart (it went up, then it went down). Weight 41.5 lb. Crushed it.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like gym bag, forgotten. Contents (partial): 1 TV Remote (found in the couch); 3 AA Batteries (probably dead); 3 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (someone is still on hold); 1 Three-Ring Binder (covered in band names); 1 Gold Coin (bought the top). Weight 41.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0001.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.5,
+   "value": 41.6,
    "display_type": "number"
   },
   {

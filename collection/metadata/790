@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0790",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Game Controllers (stick drift since day one); 1 Scratch Ticket (scratched with a house key); 2 Glow Sticks (cracked at a school dance); 2 AA Batteries (mixed old and new, like animals). Weight 26.0 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Game Controllers (stick drift since day one); 1 Scratch Ticket (scratched with a house key); 2 Glow Sticks (cracked at a school dance); 2 AA Batteries (mixed old and new, like animals); 1 Crumpled Chart (it went up, then it went down). Weight 26.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0790.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

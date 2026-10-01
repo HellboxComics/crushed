@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0484",
- "description": "Recovered from Grandma's Attic. Smells like wet cardboard. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 2 Pagers (clipped to jeans for status only); 1 Energy Drink (third one that night); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Magazine (found in a dad's truck); 1 Bull (trapped). Weight 66.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like wet cardboard. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 2 Pagers (clipped to jeans for status only); 1 Energy Drink (third one that night); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Magazine (found in a dad's truck). Weight 65.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0484.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 66.3,
+   "value": 65.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

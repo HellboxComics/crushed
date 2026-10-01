@@ -468,23 +468,73 @@ def clay_cleaver(b, rng, pal):
 
 # -- LOW RES, the room itself: the pieces a Pixel Hood room is made of ---------------------------
 
-@obj("hooded_figure", mass=0.2, weight=1.0, hero=(0, -1, 0), **G)
-def hooded_figure(b, rng, pal):
-    """A small blocky figure in a green hoodie, hood up, face in shadow. Built from steps so it reads as pixels."""
-    s = 0.009
+HOOD_COLORS = [(0.35, 0.85, 0.2), (0.55, 1.0, 0.1), (0.42, 0.12, 0.65), (0.08, 0.08, 0.1), (0.95, 0.95, 0.93),
+               (0.9, 0.15, 0.15), (0.2, 0.45, 0.95), (1.0, 0.55, 0.1), (0.9, 0.3, 0.6), (0.1, 0.7, 0.75)]
+
+
+def _hooded(b, rng, s, big):
+    """A blocky hooded figure, hood up, face in shadow, built from square steps so it reads as pixels.
+    `s` is the pixel size. Big ones (the clan) get extras: chains, masks, shades, a cap under the hood, a
+    backpack, a held item. Small ones (the minis) are the plain squad."""
+    specs = {}
+    hood = tuple(HOOD_COLORS[int(rng.integers(0, len(HOOD_COLORS)))])
     b.box((6 * s, 4 * s, 7 * s), loc=(0, 0, 0), mat="hood", bevel=0.0006)                 # torso
     b.box((5 * s, 4.5 * s, 5 * s), loc=(0, 0, 6 * s), mat="hood", bevel=0.0006)           # hood
     b.box((3.4 * s, 0.6 * s, 3 * s), loc=(0, -2.3 * s, 5.6 * s), mat="void", bevel=0.0004)  # the face: dark
+    eye = tuple(rng.choice([(0.55, 1.0, 0.1), (1.0, 0.2, 0.2), (0.3, 0.6, 1.0), (1.0, 1.0, 1.0), (0.9, 0.3, 0.9)]))
     for sx in (-1, 1):
         b.box((0.7 * s, 0.4 * s, 0.7 * s), loc=(sx * 0.9 * s, -2.65 * s, 5.8 * s), mat="eye")
         b.box((2 * s, 3.6 * s, 6 * s), loc=(sx * 4 * s, 0, -0.5 * s), mat="hood", bevel=0.0006)   # arms
         b.box((2.4 * s, 3.8 * s, 4 * s), loc=(sx * 1.4 * s, 0, -5.5 * s), mat="pants", bevel=0.0006)
         b.box((2.6 * s, 4.6 * s, 1.4 * s), loc=(sx * 1.4 * s, -0.3 * s, -8.2 * s), mat="shoe", bevel=0.0006)
     b.box((4.5 * s, 0.5 * s, 2 * s), loc=(0, -2.25 * s, -1.5 * s), mat="pocket", bevel=0.0004)
+    specs.update({"hood": ("fabric", {"color": hood}), "void": P((0.01, 0.01, 0.015), 0.9), "eye": P(eye, 0.2, glow=3.0),
+                  "pants": ("fabric", {"color": tuple(rng.choice([(0.08, 0.08, 0.1), (0.2, 0.2, 0.5), (0.42, 0.12, 0.65)]))}),
+                  "shoe": P(tuple(rng.choice([(0.95, 0.95, 0.93), (0.1, 0.1, 0.1), (0.55, 1.0, 0.1)])), 0.5),
+                  "pocket": ("fabric", {"color": tuple(x * 0.75 for x in hood)})})
+    if not big:
+        return specs
+    extras = rng.random(5) < 0.5
+    if extras[0]:   # face mask across the lower face
+        b.box((3.2 * s, 0.5 * s, 1.2 * s), loc=(0, -2.5 * s, 4.7 * s), mat="mask", bevel=0.0003)
+        specs["mask"] = ("fabric", {"color": tuple(rng.choice([(0.08, 0.08, 0.1), (0.95, 0.95, 0.93), (0.9, 0.15, 0.15)]))})
+    if extras[1]:   # shades over the eyes
+        b.box((3.6 * s, 0.5 * s, 0.9 * s), loc=(0, -2.6 * s, 5.8 * s), mat="shades", bevel=0.0003)
+        specs["shades"] = P((0.03, 0.03, 0.04), 0.15, coat=1.0)
+    if extras[2]:   # chain
+        b.tube([(-2.4 * s, -2.1 * s, 3.2 * s), (-1.2 * s, -2.3 * s, 1.8 * s), (0, -2.4 * s, 1.2 * s), (1.2 * s, -2.3 * s, 1.8 * s), (2.4 * s, -2.1 * s, 3.2 * s)],
+               0.35 * s, mat="chain", seg=8)
+        b.box((1.4 * s, 0.4 * s, 1.4 * s), loc=(0, -2.5 * s, 0.6 * s), mat="chain", bevel=0.0004)
+        specs["chain"] = ("gold", {"rough": 0.3}) if rng.random() < 0.6 else ("chrome", {})
+    if extras[3]:   # backpack
+        b.box((4 * s, 2 * s, 5 * s), loc=(0, 2.8 * s, 0.5 * s), mat="pack", bevel=0.0008)
+        specs["pack"] = ("fabric", {"color": tuple(rng.choice([(0.08, 0.08, 0.1), (0.42, 0.12, 0.65), (0.9, 0.3, 0.6)]))})
+    if extras[4]:   # something in hand: a phone, a can, a controller
+        b.box((1.4 * s, 0.4 * s, 2.4 * s), loc=(4 * s, -2 * s, -2.5 * s), mat="item", bevel=0.0003)
+        specs["item"] = P(tuple(rng.choice([(0.1, 0.1, 0.12), (0.55, 1.0, 0.1), (0.9, 0.9, 0.9)])), 0.3, glow=1.0)
+    return specs
+
+
+@obj("hood_mini", mass=0.08, weight=1.0, hero=(0, -1, 0), **G)
+def hood_mini(b, rng, pal):
+    """A mini: a small hooded figure, plain, in one of the squad colors."""
+    return _hooded(b, rng, 0.0055, big=False)
+
+
+@obj("hood_clan", mass=0.25, weight=1.0, hero=(0, -1, 0), **G)
+def hood_clan(b, rng, pal):
+    """A clan member: a big hooded figure with the extras: mask, shades, chain, backpack, something in hand."""
+    return _hooded(b, rng, 0.009, big=True)
+
+
+@obj("hooded_figure", mass=0.2, weight=1.0, hero=(0, -1, 0), **G)
+def hooded_figure(b, rng, pal):
+    """The one at the desk: a plain green hoodie, hood up."""
+    specs = _hooded(b, rng, 0.009, big=False)
     green = tuple(rng.choice([(0.35, 0.85, 0.2), (0.55, 1.0, 0.1), (0.2, 0.6, 0.25)]))
-    return {"hood": ("fabric", {"color": green}), "void": P((0.01, 0.01, 0.015), 0.9), "eye": P(ACID, 0.2, glow=3.0),
-            "pants": ("fabric", {"color": (0.08, 0.08, 0.1)}), "shoe": P((0.95, 0.95, 0.93), 0.5),
-            "pocket": ("fabric", {"color": tuple(x * 0.75 for x in green)})}
+    specs["hood"] = ("fabric", {"color": green})
+    specs["pocket"] = ("fabric", {"color": tuple(x * 0.75 for x in green)})
+    return specs
 
 
 @obj("pixel_frame", mass=0.15, weight=1.0, **G)

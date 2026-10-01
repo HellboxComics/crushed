@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0810",
- "description": "Recovered from Vegas Hotel Room. Smells like arcade carpet. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 3 Energy Drinks (exam week casualty); 1 Power Bank (10000 mAh of dead weight); 1 Glow Stick (cracked at a school dance); 1 Handheld Console (battery cover lost immediately); 1 Emergency Ramen (for emergencies). Weight 34.2 lb. Crushed it.",
+ "description": "Recovered from Vegas Hotel Room. Smells like arcade carpet. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 3 Energy Drinks (exam week casualty); 1 Power Bank (10000 mAh of dead weight); 1 Glow Stick (cracked at a school dance); 1 Handheld Console (battery cover lost immediately). Weight 33.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0810.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.2,
+   "value": 33.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0569",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 3 Sneakers (smells like 1989); 1 Tablet (one thumbprint of juice); 1 Foam Headphones (one ear works if you hold it); 2 Clear Lighters (borrowed in 1997, never returned); 2 Game Controllers (stick drift since day one); 1 Emergency Ramen (the whole strategy). Weight 29.5 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 3 Sneakers (smells like 1989); 1 Tablet (one thumbprint of juice); 1 Foam Headphones (one ear works if you hold it); 2 Clear Lighters (borrowed in 1997, never returned); 2 Game Controllers (stick drift since day one). Weight 29.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0569.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.5,
+   "value": 29.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

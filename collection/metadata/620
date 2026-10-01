@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0620",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 3 Magazines (the staples are doing the work); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Soda Cans (tab kept for charity); 2 Disposable Cameras (never developed); 2 Scratch Tickets ($2 for hope); 1 Broken Rocket (didn't make it). Weight 25.5 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 3 Magazines (the staples are doing the work); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Soda Cans (tab kept for charity); 2 Disposable Cameras (never developed); 2 Scratch Tickets ($2 for hope). Weight 24.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0620.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.5,
+   "value": 24.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

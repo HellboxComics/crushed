@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0676",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 TV Remotes (found in the couch); 2 Dice (blown on for luck); 1 Soda Can (flat); 3 Energy Drinks (exam week casualty); 2 Tissue Boxes (nearly empty). Weight 24.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 TV Remotes (found in the couch); 2 Dice (blown on for luck); 1 Soda Can (flat); 3 Energy Drinks (exam week casualty); 2 Tissue Boxes (nearly empty); 1 Gold Coin (bought the top). Weight 24.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0676.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 24.5,
+   "value": 24.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

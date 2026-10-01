@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0466",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Skateboard (griptape ate a pair of jeans); 3 Floppy Disks (DISK 2 of 7); 3 Power Strips (overloaded on purpose); 1 Keyboard (Partial) (F, J and the crumbs). Weight 79.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Skateboard (griptape ate a pair of jeans); 3 Floppy Disks (DISK 2 of 7); 3 Power Strips (overloaded on purpose); 1 Keyboard (Partial) (F, J and the crumbs); 1 Emergency Ramen (for emergencies). Weight 79.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0466.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.6,
+   "value": 79.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

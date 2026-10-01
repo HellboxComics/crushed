@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0315",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Cassette Tapes (a mix for someone who never listened); 1 Shot Glass (chipped rim); 1 TV Remote (held together with tape); 1 VHS Tape (taped over a wedding); 3 Floppy Disks (says DO NOT FORMAT). Weight 40.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Cassette Tapes (a mix for someone who never listened); 1 Shot Glass (chipped rim); 1 TV Remote (held together with tape); 1 VHS Tape (taped over a wedding); 3 Floppy Disks (says DO NOT FORMAT); 1 Tiny Red Candle (lit). Weight 40.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0315.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.4,
+   "value": 40.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

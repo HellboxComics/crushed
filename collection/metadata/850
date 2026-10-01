@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0850",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Soda Can (tab kept for charity); 2 Beer Cans (warm, sadly); 1 Pizza Crust (found behind the couch); 2 Power Banks (dead when needed); 1 AA Batteries (mixed old and new, like animals). Weight 31.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Soda Can (tab kept for charity); 2 Beer Cans (warm, sadly); 1 Pizza Crust (found behind the couch); 2 Power Banks (dead when needed); 1 AA Batteries (mixed old and new, like animals); 1 Emergency Ramen (the whole strategy). Weight 32.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0850.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.9,
+   "value": 32.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

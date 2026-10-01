@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0468",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 2 Jewel Cases (hinge broken on arrival); 1 Pizza Crust (found behind the couch); 3 Burned CDs (burned at 1x, 4 hours); 1 Game Controller (thrown during a boss fight); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 72.6 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 2 Jewel Cases (hinge broken on arrival); 1 Pizza Crust (found behind the couch); 3 Burned CDs (burned at 1x, 4 hours); 1 Game Controller (thrown during a boss fight). Weight 72.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0468.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.6,
+   "value": 72.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

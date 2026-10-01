@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0369",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time); 1 Floppy Disk (save icon, but real); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Crumpled Chart (it went up, then it went down). Weight 73.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time); 1 Floppy Disk (save icon, but real); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 73.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0369.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

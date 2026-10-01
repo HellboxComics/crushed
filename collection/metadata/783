@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0783",
- "description": "Recovered from Behind the Bar. Smells like Grandma's couch. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 2 AA Batteries (mixed old and new, like animals); 1 Earbud Case (survived the wash); 3 Energy Drinks (exam week casualty); 1 Face Mask (from 2020, still fresh); 1 Tiny Red Candle (lit). Weight 28.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Behind the Bar. Smells like Grandma's couch. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 2 AA Batteries (mixed old and new, like animals); 1 Earbud Case (survived the wash); 3 Energy Drinks (exam week casualty); 1 Face Mask (from 2020, still fresh). Weight 28.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0783.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.5,
+   "value": 28.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

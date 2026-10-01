@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0755",
- "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 Gold TV Remote (why); 3 Beer Cans (crushed on a forehead); 1 Soda Can (flat); 1 Power Strip (daisy-chained into three more); 2 Disposable Vapes (mango, mostly). Weight 32.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 Gold TV Remote (why); 3 Beer Cans (crushed on a forehead); 1 Soda Can (flat); 1 Power Strip (daisy-chained into three more); 2 Disposable Vapes (mango, mostly); 1 Suspicious Rectangle (PIN forgotten). Weight 32.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0755.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Suspicious Rectangle"
   },
   {
    "trait_type": "Pressure",
@@ -54,7 +54,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 45,
    "display_type": "number"
   }
  ]

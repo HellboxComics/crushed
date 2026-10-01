@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0863",
- "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 2 Smartphones (screen protector did nothing); 3 Tissue Boxes (nearly empty); 3 Fidget Spinners (banned by the school); 1 Ring Light (the eyes in every mirror selfie); 2 Glow Sticks (still glowing a little, somehow). Weight 32.5 lb. We kept the important shit.",
+ "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 2 Smartphones (screen protector did nothing); 3 Tissue Boxes (nearly empty); 3 Fidget Spinners (banned by the school); 1 Ring Light (the eyes in every mirror selfie); 2 Glow Sticks (still glowing a little, somehow); 1 Bull (dead). Weight 33.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0863.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 33.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 44,
    "display_type": "number"
   }
  ]

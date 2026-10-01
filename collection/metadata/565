@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0565",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Clear Lighters (out of fluid); 2 Handheld Consoles (battery cover lost immediately); 3 Sneakers (was in the dryer); 1 Cheap Sunglasses (mall kiosk special). Weight 30.1 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Clear Lighters (out of fluid); 2 Handheld Consoles (battery cover lost immediately); 3 Sneakers (was in the dryer); 1 Cheap Sunglasses (mall kiosk special); 1 Bear (doing fine actually). Weight 31.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0565.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.1,
+   "value": 31.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0697",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Matchbook (matches missing, reasons unclear); 1 Poker Chip (a stack of ambition); 2 No. 2 Pencils (sharpened to a nub); 3 Flip Phones (snapped shut dramatically). Weight 24.7 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Matchbook (matches missing, reasons unclear); 1 Poker Chip (a stack of ambition); 2 No. 2 Pencils (sharpened to a nub); 3 Flip Phones (snapped shut dramatically); 1 Paper Hand (sold at the bottom). Weight 24.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0697.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

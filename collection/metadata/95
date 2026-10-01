@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0095",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT); 1 Bull (dead). Weight 84.8 lb. Handle with both hands.",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT); 1 Bear (thriving). Weight 84.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0095.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",

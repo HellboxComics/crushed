@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0578",
- "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 2 Flip Phones (snapped shut dramatically); 3 Power Strips (overloaded on purpose); 1 Tissue Box (there was a reason it lived on the nightstand); 3 TV Remotes (the volume button worn smooth); 3 Beer Cans (crushed on a forehead); 1 Gold Coin (real, probably). Weight 31.6 lb. Handle with both hands.",
+ "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 2 Flip Phones (snapped shut dramatically); 3 Power Strips (overloaded on purpose); 1 Tissue Box (there was a reason it lived on the nightstand); 3 TV Remotes (the volume button worn smooth); 3 Beer Cans (crushed on a forehead). Weight 31.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0578.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.6,
+   "value": 31.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 44,
    "display_type": "number"
   }
  ]

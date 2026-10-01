@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0395",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Glow Stick (still glowing a little, somehow); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (smells like 1989); 1 Tiny Green Candle (genuinely unheard of). Weight 74.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Glow Stick (still glowing a little, somehow); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (smells like 1989). Weight 74.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0395.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Green Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.3,
+   "value": 74.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

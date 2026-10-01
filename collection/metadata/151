@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0151",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Soda Cans (tab kept for charity); 1 Calculator (spelled BOOBIES upside down); 3 Matchbooks (matches missing, reasons unclear); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Crumpled Chart (it went up, then it went down). Weight 43.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Soda Cans (tab kept for charity); 1 Calculator (spelled BOOBIES upside down); 3 Matchbooks (matches missing, reasons unclear); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Diamond (held through everything). Weight 43.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0151.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "Diamond"
   },
   {
    "trait_type": "Pressure",

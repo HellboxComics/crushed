@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0255",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived); 2 Film Canisters (holds one quarter); 3 Spiral Notebooks (spiral unwound halfway); 2 Shot Glasses (from a trip to Vegas); 1 Bull (trapped). Weight 72.4 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived); 2 Film Canisters (holds one quarter); 3 Spiral Notebooks (spiral unwound halfway); 2 Shot Glasses (from a trip to Vegas). Weight 71.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0255.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.4,
+   "value": 71.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

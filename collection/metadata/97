@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0097",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 TV Remotes (found in the couch); 1 Magazine (the staples are doing the work); 2 Puzzle Cubes (solved once, stickers moved); 1 Power Strip (daisy-chained into three more); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 80.9 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 TV Remotes (found in the couch); 1 Magazine (the staples are doing the work); 2 Puzzle Cubes (solved once, stickers moved); 1 Power Strip (daisy-chained into three more); 1 Diamond (hands not included). Weight 80.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0097.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "Diamond"
   },
   {
    "trait_type": "Pressure",

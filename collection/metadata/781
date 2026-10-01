@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0781",
- "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 2 Power Banks (at 4%, like all of them); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (taken out of the smoke detector); 2 Tablets (one thumbprint of juice); 1 Disposable Vape (zero nicotine, allegedly). Weight 33.9 lb. Contents may have settled.",
+ "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 2 Power Banks (at 4%, like all of them); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (taken out of the smoke detector); 2 Tablets (one thumbprint of juice); 1 Disposable Vape (zero nicotine, allegedly); 1 Crumpled Chart (it went up, then it went down). Weight 34.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0781.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.9,
+   "value": 34.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 43,
    "display_type": "number"
   }
  ]

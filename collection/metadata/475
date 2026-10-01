@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0475",
- "description": "Recovered from Behind the Science Wing. Smells like body spray cloud. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Film Canister (holds one quarter); 2 AA Batteries (taken out of the smoke detector); 3 TV Remotes (found in the couch); 2 Pagers (last page: 911 (it was not)); 1 Gold Coin (real, probably). Weight 75.7 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Science Wing. Smells like body spray cloud. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Film Canister (holds one quarter); 2 AA Batteries (taken out of the smoke detector); 3 TV Remotes (found in the couch); 2 Pagers (last page: 911 (it was not)). Weight 75.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0475.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.7,
+   "value": 75.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

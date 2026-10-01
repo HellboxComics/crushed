@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0731",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Sneakers (untied since 1989); 3 No. 2 Pencils (never saw a scantron it liked); 2 Disposable Vapes (mango, mostly); 1 Scratch Ticket (not a winner); 2 Spiral Notebooks (doodles in the margins); 1 Broken Rocket (was going to the moon). Weight 30.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Sneakers (untied since 1989); 3 No. 2 Pencils (never saw a scantron it liked); 2 Disposable Vapes (mango, mostly); 1 Scratch Ticket (not a winner); 2 Spiral Notebooks (doodles in the margins). Weight 29.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0731.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.3,
+   "value": 29.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 40,
    "display_type": "number"
   }
  ]

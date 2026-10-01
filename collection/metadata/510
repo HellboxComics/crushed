@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0510",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Sneakers (untied since 1989); 1 Matchbook (matches missing, reasons unclear); 3 Disposable Cameras (never developed); 1 Floppy Disk (DISK 2 of 7); 1 Bear (doing fine actually). Weight 35.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Sneakers (untied since 1989); 1 Matchbook (matches missing, reasons unclear); 3 Disposable Cameras (never developed); 1 Floppy Disk (DISK 2 of 7). Weight 34.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0510.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.6,
+   "value": 34.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

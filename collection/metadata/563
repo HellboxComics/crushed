@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0563",
- "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (mall kiosk special); 2 Glow Sticks (still glowing a little, somehow); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 AA Batteries (taken out of the smoke detector); 1 Crumpled Chart (it went up, then it went down). Weight 23.1 lb. Crushed it.",
+ "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (mall kiosk special); 2 Glow Sticks (still glowing a little, somehow); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 AA Batteries (taken out of the smoke detector). Weight 23.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0563.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

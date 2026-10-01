@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0847",
- "description": "Recovered from Nobody Knows. Smells like Vegas carpet. Contents (partial): 1 VR Headset (the walls were real and they were hit); 1 Burned CD (track 7 skips); 2 Energy Drinks (tastes like a battery); 2 Bluetooth Speakers (paired with the wrong phone); 2 Face Masks (one of 400 in a coat pocket). Weight 32.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Nobody Knows. Smells like Vegas carpet. Contents (partial): 1 VR Headset (the walls were real and they were hit); 1 Burned CD (track 7 skips); 2 Energy Drinks (tastes like a battery); 2 Bluetooth Speakers (paired with the wrong phone); 2 Face Masks (one of 400 in a coat pocket); 1 Bull (dead). Weight 33.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0847.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 33.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 45,
    "display_type": "number"
   }
  ]

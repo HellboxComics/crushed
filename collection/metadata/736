@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0736",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Scratch Ticket (not a winner); 2 Bluetooth Speakers (lost, found, lost); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 Hand Sanitizers (half empty, half crusty). Weight 28.0 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Scratch Ticket (not a winner); 2 Bluetooth Speakers (lost, found, lost); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 Hand Sanitizers (half empty, half crusty); 1 Gold Coin (bought the top). Weight 28.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0736.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.0,
+   "value": 28.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0498",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Sneakers (smells like 1989); 1 Jewel Case (hinge broken on arrival); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 31.0 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Sneakers (smells like 1989); 1 Jewel Case (hinge broken on arrival); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Paper Hand (sold at the bottom). Weight 31.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0498.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 31.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0503",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Virtual Pet (died during math class); 1 AA Batteries (mixed old and new, like animals); 1 Skate Wheel (flat spot from a power slide); 1 Foam Headphones (orange foam, allegedly); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Broken Rocket (didn't make it). Weight 22.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Virtual Pet (died during math class); 1 AA Batteries (mixed old and new, like animals); 1 Skate Wheel (flat spot from a power slide); 1 Foam Headphones (orange foam, allegedly); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 21.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0503.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 22.1,
+   "value": 21.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0758",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Poker Chip (taken from a casino, small heist); 1 Pizza Crust (found behind the couch); 1 USB Stick (never ejected safely); 3 Smartphones (last text: read, no reply); 1 Game Controller (stick drift since day one); 1 Paper Hand (sold at the bottom). Weight 31.7 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Poker Chip (taken from a casino, small heist); 1 Pizza Crust (found behind the couch); 1 USB Stick (never ejected safely); 3 Smartphones (last text: read, no reply); 1 Game Controller (stick drift since day one). Weight 31.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0758.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.7,
+   "value": 31.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 44,
    "display_type": "number"
   }
  ]

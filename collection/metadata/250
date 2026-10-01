@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0250",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Ball Mouse (ball removed as a prank); 2 TV Remotes (the volume button worn smooth); 1 Power Strip (daisy-chained into three more); 2 Pizza Crusts (petrified). Weight 72.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Ball Mouse (ball removed as a prank); 2 TV Remotes (the volume button worn smooth); 1 Power Strip (daisy-chained into three more); 2 Pizza Crusts (petrified); 1 Bear (thriving). Weight 73.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0250.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.6,
+   "value": 73.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0829",
- "description": "Recovered from School Lost & Found. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Handheld Console (battery cover lost immediately); 1 Smartwatch (says STAND, does not); 3 Hand Sanitizers (half empty, half crusty); 2 Pizza Crusts (from a sleepover); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 32.4 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Handheld Console (battery cover lost immediately); 1 Smartwatch (says STAND, does not); 3 Hand Sanitizers (half empty, half crusty); 2 Pizza Crusts (from a sleepover). Weight 32.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0829.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.4,
+   "value": 32.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 44,
    "display_type": "number"
   }
  ]

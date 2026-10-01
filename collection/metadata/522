@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0522",
- "description": "Recovered from A Buddy's Basement. Smells like scratch-n-sniff sticker. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Magazines (found in a dad's truck); 1 No. 2 Pencil (chewed); 3 AA Batteries (licked to test); 1 Pager (last page: 911 (it was not)). Weight 45.4 lb. Still heavier than it looks.",
+ "description": "Recovered from A Buddy's Basement. Smells like scratch-n-sniff sticker. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Magazines (found in a dad's truck); 1 No. 2 Pencil (chewed); 3 AA Batteries (licked to test); 1 Pager (last page: 911 (it was not)); 1 Crumpled Chart (printed out for emotional reasons). Weight 45.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0522.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.4,
+   "value": 45.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

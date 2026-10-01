@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0293",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 1 Magazine (the staples are doing the work); 1 Calculator (solar panel covered by a sticker); 1 Yo-Yo (walked the dog one time); 1 Army Man Squad (melted with a magnifying glass); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 26.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 1 Magazine (the staples are doing the work); 1 Calculator (solar panel covered by a sticker); 1 Yo-Yo (walked the dog one time); 1 Army Man Squad (melted with a magnifying glass); 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Tiny Red Candle (one of many). Weight 26.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0293.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.1,
+   "value": 26.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

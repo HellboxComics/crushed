@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0555",
- "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Shot Glasses (souvenir of a night nobody recalls); 3 AA Batteries (probably dead); 3 Spiral Notebooks (spiral unwound halfway); 1 Cheap Sunglasses (one lens popped out); 1 Tiny Red Candle (one of many). Weight 32.1 lb. Nobody made you keep this.",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Shot Glasses (souvenir of a night nobody recalls); 3 AA Batteries (probably dead); 3 Spiral Notebooks (spiral unwound halfway); 1 Cheap Sunglasses (one lens popped out). Weight 32.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0555.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.1,
+   "value": 32.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

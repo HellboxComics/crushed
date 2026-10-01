@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0295",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Shot Glass (chipped rim); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 No. 2 Pencil (never saw a scantron it liked); 2 Skate Wheels (rolled into a storm drain once); 1 Bull (dead). Weight 82.2 lb. We kept the important shit.",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Shot Glass (chipped rim); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 No. 2 Pencil (never saw a scantron it liked); 2 Skate Wheels (rolled into a storm drain once). Weight 81.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0295.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.2,
+   "value": 81.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

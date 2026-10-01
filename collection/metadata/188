@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0188",
- "description": "Recovered from The Bachelor Pad. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Paper Hand (sold at the bottom). Weight 64.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Bachelor Pad. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Bull (flipped). Weight 65.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0188.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 64.3,
+   "value": 65.4,
    "display_type": "number"
   },
   {

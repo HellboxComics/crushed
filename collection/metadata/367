@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0367",
- "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Centerfold (staples removed, an attempt was made); 3 Foam Headphones (orange foam, allegedly); 1 Pager (last page: 911 (it was not)); 1 Clear Lighter (out of fluid). Weight 32.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Centerfold (staples removed, an attempt was made); 3 Foam Headphones (orange foam, allegedly); 1 Pager (last page: 911 (it was not)); 1 Clear Lighter (out of fluid); 1 Tiny Red Candle (lit). Weight 32.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0367.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.1,
+   "value": 32.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

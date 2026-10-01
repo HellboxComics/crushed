@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0802",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 Dice (loaded, rumor says); 1 Emergency Ramen (for emergencies). Weight 35.7 lb. Contents may have settled.",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 Dice (loaded, rumor says). Weight 35.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0802.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.7,
+   "value": 35.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 44,
    "display_type": "number"
   }
  ]

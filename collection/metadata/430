@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0430",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Webcams (pointed at the ceiling forever); 1 MP3 Player (shuffle picked the same song 6 times); 2 Brick Phones (unbreakable until today); 2 Film Canisters (undeveloped, forever). Weight 76.8 lb. Contents may have settled.",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Webcams (pointed at the ceiling forever); 1 MP3 Player (shuffle picked the same song 6 times); 2 Brick Phones (unbreakable until today); 2 Film Canisters (undeveloped, forever); 1 Broken Rocket (was going to the moon). Weight 77.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0430.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.8,
+   "value": 77.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

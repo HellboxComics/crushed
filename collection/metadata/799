@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0799",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Pizza Crust (petrified); 2 TV Remotes (the volume button worn smooth); 3 Soda Cans (shaken as a prank); 1 Disposable Camera (never developed). Weight 35.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Pizza Crust (petrified); 2 TV Remotes (the volume button worn smooth); 3 Soda Cans (shaken as a prank); 1 Disposable Camera (never developed); 1 Paper Hand (sold at the bottom). Weight 35.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0799.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 35.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 43,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0300",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Cassette Tapes (someone's voicemail greeting); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly); 1 Emergency Ramen (the whole strategy). Weight 44.6 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Cassette Tapes (someone's voicemail greeting); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly). Weight 44.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0300.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.6,
+   "value": 44.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

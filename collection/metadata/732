@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0732",
- "description": "Recovered from The Bachelor Pad. Smells like rink snack bar. Contents (partial): 2 Selfie Sticks (banned at the museum); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 3 Smartphones (cracked in the first week); 1 Glow Stick (cracked at a school dance); 3 TV Remotes (the volume button worn smooth). Weight 31.1 lb. Contents may have settled.",
+ "description": "Recovered from The Bachelor Pad. Smells like rink snack bar. Contents (partial): 2 Selfie Sticks (banned at the museum); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 3 Smartphones (cracked in the first week); 1 Glow Stick (cracked at a school dance); 3 TV Remotes (the volume button worn smooth); 1 Tiny Red Candle (one of many). Weight 31.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0732.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.1,
+   "value": 31.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

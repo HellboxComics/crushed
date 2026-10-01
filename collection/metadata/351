@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0351",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 1 Cassette Tape (someone's voicemail greeting); 2 AA Batteries (taken out of the smoke detector); 2 Ball Mice (cord chewed by a dog); 2 Disposable Cameras (27 exposures of a thumb); 1 Paper Hand (folded under light pressure). Weight 42.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 1 Cassette Tape (someone's voicemail greeting); 2 AA Batteries (taken out of the smoke detector); 2 Ball Mice (cord chewed by a dog); 2 Disposable Cameras (27 exposures of a thumb). Weight 42.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0351.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

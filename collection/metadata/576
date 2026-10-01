@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0576",
- "description": "Recovered from The Bachelor Pad. Smells like Vegas carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Dice (loaded, rumor says); 3 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (sharpened to a nub). Weight 28.2 lb. We kept the important shit.",
+ "description": "Recovered from The Bachelor Pad. Smells like Vegas carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Dice (loaded, rumor says); 3 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (sharpened to a nub); 1 Paper Hand (folded under light pressure). Weight 28.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0576.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.2,
+   "value": 28.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

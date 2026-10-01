@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0792",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Disposable Camera (never developed); 1 Ring Light (the eyes in every mirror selfie); 2 Cheap Sunglasses (one lens popped out); 3 Energy Drinks (tastes like a battery); 1 Glow Stick (cracked at a school dance); 1 Diamond (hands not included). Weight 28.5 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Disposable Camera (never developed); 1 Ring Light (the eyes in every mirror selfie); 2 Cheap Sunglasses (one lens popped out); 3 Energy Drinks (tastes like a battery); 1 Glow Stick (cracked at a school dance). Weight 28.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0792.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Diamond"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

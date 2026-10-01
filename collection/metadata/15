@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0015",
- "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 2 Poker Chips (never cashed out); 1 Floppy Disk (save icon, but real); 2 Power Strips (daisy-chained into three more); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 TV Remotes (held together with tape); 1 Bear (doing fine actually). Weight 85.6 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 2 Poker Chips (never cashed out); 1 Floppy Disk (save icon, but real); 2 Power Strips (daisy-chained into three more); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 TV Remotes (held together with tape); 1 Broken Rocket (was going to the moon). Weight 85.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0015.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.6,
+   "value": 85.2,
    "display_type": "number"
   },
   {

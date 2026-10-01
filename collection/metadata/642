@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0642",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Clear Lighters (borrowed in 1997, never returned); 2 Flip Phones (ringtone composed by hand); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times); 1 Emergency Ramen (for emergencies). Weight 24.1 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Clear Lighters (borrowed in 1997, never returned); 2 Flip Phones (ringtone composed by hand); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times). Weight 23.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0642.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 24.1,
+   "value": 23.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

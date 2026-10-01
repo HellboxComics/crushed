@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0838",
- "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Laptop Charger (fits nothing else in the house); 3 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean); 1 Paper Hand (folded under light pressure). Weight 30.3 lb. We kept the important shit.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Laptop Charger (fits nothing else in the house); 3 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean). Weight 30.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0838.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

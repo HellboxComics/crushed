@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0482",
- "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (a mix for someone who never listened); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times). Weight 32.0 lb. Handle with both hands.",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (a mix for someone who never listened); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times); 1 Bear (thriving). Weight 33.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0482.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.0,
+   "value": 33.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

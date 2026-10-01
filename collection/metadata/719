@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0719",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Hand Sanitizer (half empty, half crusty); 2 Laptop Chargers (warm to the touch, somehow); 1 Smartphone (cracked in the first week); 1 Fidget Spinner (bearing went missing); 3 AA Batteries (probably dead). Weight 37.4 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Hand Sanitizer (half empty, half crusty); 2 Laptop Chargers (warm to the touch, somehow); 1 Smartphone (cracked in the first week); 1 Fidget Spinner (bearing went missing); 3 AA Batteries (probably dead); 1 Tiny Red Candle (lit). Weight 37.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0719.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.4,
+   "value": 37.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

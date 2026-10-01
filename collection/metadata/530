@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0530",
- "description": "Recovered from School Lost & Found. Smells like Vegas carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Skateboard (one ollie, lifetime); 1 Floppy Disk (contains one (1) virus); 2 VHS Tapes (taped over a wedding); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 45.0 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like Vegas carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Skateboard (one ollie, lifetime); 1 Floppy Disk (contains one (1) virus); 2 VHS Tapes (taped over a wedding); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 44.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0530.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.0,
+   "value": 44.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

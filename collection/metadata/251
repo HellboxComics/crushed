@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0251",
- "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway); 1 Gold Coin (bought the top). Weight 78.1 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway). Weight 78.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0251.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.1,
+   "value": 78.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

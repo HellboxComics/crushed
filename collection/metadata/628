@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0628",
- "description": "Recovered from Nobody Knows. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Burned CD (burned at 1x, 4 hours); 1 Sneaker (smells like 1989); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Glow Stick (still glowing a little, somehow); 1 Broken Rocket (was going to the moon). Weight 23.9 lb. We kept the important shit.",
+ "description": "Recovered from Nobody Knows. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Burned CD (burned at 1x, 4 hours); 1 Sneaker (smells like 1989); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Glow Stick (still glowing a little, somehow). Weight 23.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0628.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.9,
+   "value": 23.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

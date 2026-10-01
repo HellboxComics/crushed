@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0734",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (exam week casualty); 1 Broken Rocket (didn't make it). Weight 43.2 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (exam week casualty). Weight 42.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0734.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.2,
+   "value": 42.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

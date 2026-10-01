@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0721",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 TV Remotes (found in the couch); 2 Bluetooth Speakers (paired with the wrong phone); 1 VR Headset (the walls were real and they were hit); 2 Smartphones (cracked in the first week); 1 Broken Rocket (didn't make it). Weight 32.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 TV Remotes (found in the couch); 2 Bluetooth Speakers (paired with the wrong phone); 1 VR Headset (the walls were real and they were hit); 2 Smartphones (cracked in the first week). Weight 31.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0721.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.0,
+   "value": 31.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

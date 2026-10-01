@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0469",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (mixed old and new, like animals); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989). Weight 27.6 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (mixed old and new, like animals); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989); 1 Gold Coin (bought the top). Weight 27.7 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0469.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.6,
+   "value": 27.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

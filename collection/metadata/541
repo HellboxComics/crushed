@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0541",
- "description": "Recovered from Mom's Minivan. Smells like science lab. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition). Weight 70.4 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Minivan. Smells like science lab. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition); 1 Emergency Ramen (the whole strategy). Weight 70.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0541.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.4,
+   "value": 70.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

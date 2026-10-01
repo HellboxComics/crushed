@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0730",
- "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 2 Face Masks (worn below the nose); 2 Tablets (one thumbprint of juice); 1 Shot Glass (souvenir of a night nobody recalls); 2 Pizza Crusts (found behind the couch); 2 Smartwatches (still counting steps in the dryer). Weight 31.4 lb. Contents may have settled.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 2 Face Masks (worn below the nose); 2 Tablets (one thumbprint of juice); 1 Shot Glass (souvenir of a night nobody recalls); 2 Pizza Crusts (found behind the couch); 2 Smartwatches (still counting steps in the dryer); 1 Bull (flipped). Weight 32.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0730.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.4,
+   "value": 32.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

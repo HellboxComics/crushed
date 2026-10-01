@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0699",
- "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Corded Phone (cord stretched to the bathroom); 2 Flip Phones (12 texts left this month); 1 Centerfold (left open to the wrong page); 2 Handheld Consoles (battery cover lost immediately); 1 Broken Rocket (was going to the moon). Weight 28.7 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Corded Phone (cord stretched to the bathroom); 2 Flip Phones (12 texts left this month); 1 Centerfold (left open to the wrong page); 2 Handheld Consoles (battery cover lost immediately). Weight 28.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0699.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.7,
+   "value": 28.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

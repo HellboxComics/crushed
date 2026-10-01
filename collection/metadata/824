@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0824",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 TV Remotes (held together with tape); 3 Disposable Cameras (never developed); 2 Tissue Boxes (one for every mood). Weight 30.9 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 TV Remotes (held together with tape); 3 Disposable Cameras (never developed); 2 Tissue Boxes (one for every mood); 1 Crumpled Chart (printed out for emotional reasons). Weight 30.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0824.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 43,
    "display_type": "number"
   }
  ]

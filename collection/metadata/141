@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0141",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Cassette Tapes (side B only); 1 Floppy Disk (contains one (1) virus); 1 Dice (snake eyes, twice); 1 No. 2 Pencil (never saw a scantron it liked); 1 Tiny Red Candle (one of many). Weight 77.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Cassette Tapes (side B only); 1 Floppy Disk (contains one (1) virus); 1 Dice (snake eyes, twice); 1 No. 2 Pencil (never saw a scantron it liked); 1 Gold Coin (bought the top). Weight 77.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0141.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",

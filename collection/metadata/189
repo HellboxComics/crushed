@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0189",
- "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Sneaker (left only); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Soda Can (tab kept for charity); 1 Ball Mouse (cord chewed by a dog); 1 Broken Rocket (was going to the moon). Weight 45.4 lb. Handle with both hands.",
+ "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Sneaker (left only); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Soda Can (tab kept for charity); 1 Ball Mouse (cord chewed by a dog). Weight 44.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0189.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.4,
+   "value": 44.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

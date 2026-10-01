@@ -24,7 +24,6 @@
 | GOLD | 11 | 1.2% |
 | SOLID GOLD | 1 | 0.1% |
 | SLOW MOTION | 1 | 0.1% |
-| LOW RES | 1 | 0.1% |
 | BLOW ON IT | 1 | 0.1% |
 | UNDER THE MATTRESS | 1 | 0.1% |
 | BULL TRAP | 1 | 0.1% |
@@ -38,11 +37,12 @@
 | COASTERS | 1 | 0.1% |
 | CCFF00 | 1 | 0.1% |
 | LANDFILL DRIVE | 1 | 0.1% |
-| CLAY DAY | 1 | 0.1% |
+| STOP THE PRESSES | 1 | 0.1% |
 | LEFTOVERS | 1 | 0.1% |
 | EMPTY | 1 | 0.1% |
-| STOP THE PRESSES | 1 | 0.1% |
+| LOW RES | 1 | 0.1% |
 | GM | 1 | 0.1% |
+| CLAY DAY | 1 | 0.1% |
 | GAS FEES | 1 | 0.1% |
 
 ## Headliner
@@ -51,7 +51,7 @@
 |---|---:|---:|
 | Sneaker | 89 | 10.0% |
 | TV Remote | 53 | 6.0% |
-| Corded Phone | 37 | 4.2% |
+| Corded Phone | 38 | 4.3% |
 | Game Controller | 32 | 3.6% |
 | CRT Monitor | 31 | 3.5% |
 | VHS Tape | 29 | 3.3% |
@@ -93,15 +93,14 @@
 | Brick Phone | 6 | 0.7% |
 | Virtual Pet | 6 | 0.7% |
 | Tablet | 6 | 0.7% |
-| Fidget Spinner | 6 | 0.7% |
 | Earbud Case | 6 | 0.7% |
 | Bluetooth Speaker | 6 | 0.7% |
 | Hand Sanitizer | 5 | 0.6% |
+| Fidget Spinner | 5 | 0.6% |
 | Face Mask | 4 | 0.5% |
 | Selfie Stick | 4 | 0.5% |
 | Ring Light | 3 | 0.3% |
 | Rescue Can | 1 | 0.1% |
-| Lava Lamp | 1 | 0.1% |
 | Game Cartridge | 1 | 0.1% |
 | Dead Bull | 1 | 0.1% |
 | Floppy Disk | 1 | 0.1% |
@@ -111,11 +110,12 @@
 | Burned CD | 1 | 0.1% |
 | Big Neon Square | 1 | 0.1% |
 | Hard Drive | 1 | 0.1% |
-| Clay Bull | 1 | 0.1% |
+| Piggy Bank | 1 | 0.1% |
 | Pizza Crust | 1 | 0.1% |
 | Nothing | 1 | 0.1% |
-| Piggy Bank | 1 | 0.1% |
+| Hooded Clan Member | 1 | 0.1% |
 | Coffee Mug | 1 | 0.1% |
+| Clay Bull | 1 | 0.1% |
 | Gas Can | 1 | 0.1% |
 
 ## Contaminant
@@ -151,10 +151,10 @@
 |---|---:|---:|
 | Hot Dust on a CRT | 98 | 11.0% |
 | New Plastic | 98 | 11.0% |
-| Arcade Carpet | 83 | 9.3% |
+| Arcade Carpet | 82 | 9.2% |
 | Mall Food Court | 80 | 9.0% |
 | Blue Raspberry | 76 | 8.6% |
-| Grandma's Couch | 66 | 7.4% |
+| Grandma's Couch | 67 | 7.5% |
 | Cheap Cologne | 56 | 6.3% |
 | Cigarette in a Jacket | 51 | 5.7% |
 | Gym Bag, Forgotten | 48 | 5.4% |
@@ -171,7 +171,6 @@
 | Hot Tub | 2 | 0.2% |
 | Melted Crayon | 2 | 0.2% |
 | Coconut Sunscreen | 1 | 0.1% |
-| Warm Amplifier and Incense | 1 | 0.1% |
 | Hot Breath | 1 | 0.1% |
 | Shame | 1 | 0.1% |
 | Capitulation | 1 | 0.1% |
@@ -184,11 +183,12 @@
 | Don't | 1 | 0.1% |
 | Hot Plastic and Ozone | 1 | 0.1% |
 | Wet Landfill | 1 | 0.1% |
-| Warm Plasticine | 1 | 0.1% |
+| Bacon and Newsprint | 1 | 0.1% |
 | Friday Night | 1 | 0.1% |
 | Nothing | 1 | 0.1% |
-| Bacon and Newsprint | 1 | 0.1% |
+| Warm Amplifier and Incense | 1 | 0.1% |
 | Burnt Coffee | 1 | 0.1% |
+| Warm Plasticine | 1 | 0.1% |
 | Gasoline | 1 | 0.1% |
 
 ## Recovered From
@@ -198,8 +198,8 @@
 | Under the Bed | 100 | 11.3% |
 | Back of the Closet | 83 | 9.3% |
 | Mom's Minivan | 74 | 8.3% |
-| Dad's Junk Drawer | 64 | 7.2% |
-| Grandma's Attic | 57 | 6.4% |
+| Dad's Junk Drawer | 63 | 7.1% |
+| Grandma's Attic | 58 | 6.5% |
 | Storage Unit (Auctioned) | 52 | 5.9% |
 | School Lost & Found | 51 | 5.7% |
 | Garage Sale Free Bin | 51 | 5.7% |
@@ -218,7 +218,6 @@
 | House Fire (Everyone's Fine) | 3 | 0.3% |
 | The Mall Fountain | 3 | 0.3% |
 | The Beach, in Slow Motion | 1 | 0.1% |
-| A Bedroom Studio, 3 A.M. | 1 | 0.1% |
 | The Bottom of the Toy Box | 1 | 0.1% |
 | Under the Mattress | 1 | 0.1% |
 | The Top | 1 | 0.1% |
@@ -232,10 +231,11 @@
 | Every Coffee Table | 1 | 0.1% |
 | The Neon Aisle | 1 | 0.1% |
 | Under Forty Feet of Garbage | 1 | 0.1% |
-| A Desk, Mid-Pump | 1 | 0.1% |
-| Nowhere | 1 | 0.1% |
 | The Trading Floor, After the Bell | 1 | 0.1% |
+| Nowhere | 1 | 0.1% |
+| A Pixel Room, 3 A.M. | 1 | 0.1% |
 | Every Timeline, 6 A.M. | 1 | 0.1% |
+| A Desk, Mid-Pump | 1 | 0.1% |
 | The Pump, 3 A.M. | 1 | 0.1% |
 
 ## Tape
@@ -252,9 +252,9 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| Concerning | 349 | 39.3% |
+| Concerning | 350 | 39.4% |
 | Several | 340 | 38.3% |
-| A Few | 187 | 21.1% |
+| A Few | 186 | 20.9% |
 | None | 12 | 1.4% |
 
 ## One of One
@@ -263,7 +263,6 @@
 |---|---:|---:|
 | SOLID GOLD | 1 | 0.1% |
 | SLOW MOTION | 1 | 0.1% |
-| LOW RES | 1 | 0.1% |
 | BLOW ON IT | 1 | 0.1% |
 | UNDER THE MATTRESS | 1 | 0.1% |
 | BULL TRAP | 1 | 0.1% |
@@ -277,11 +276,12 @@
 | COASTERS | 1 | 0.1% |
 | CCFF00 | 1 | 0.1% |
 | LANDFILL DRIVE | 1 | 0.1% |
-| CLAY DAY | 1 | 0.1% |
+| STOP THE PRESSES | 1 | 0.1% |
 | LEFTOVERS | 1 | 0.1% |
 | EMPTY | 1 | 0.1% |
-| STOP THE PRESSES | 1 | 0.1% |
+| LOW RES | 1 | 0.1% |
 | GM | 1 | 0.1% |
+| CLAY DAY | 1 | 0.1% |
 | GAS FEES | 1 | 0.1% |
 
 ## Finish
@@ -316,17 +316,17 @@
 | 1 | #0811 | EMPTY | Nothing | None |
 | 2 | #0534 | UNCRUSHED | Everything | None |
 | 3 | #0229 | SLOW MOTION | Rescue Can | None |
-| 4 | #0796 | CLAY DAY | Clay Bull | None |
-| 5 | #0813 | STOP THE PRESSES | Piggy Bank | None |
-| 6 | #0815 | GM | Coffee Mug | None |
+| 4 | #0796 | STOP THE PRESSES | Piggy Bank | None |
+| 5 | #0815 | GM | Coffee Mug | None |
+| 6 | #0836 | CLAY DAY | Clay Bull | None |
 | 7 | #0886 | GAS FEES | Gas Can | None |
 | 8 | #0598 | COASTERS | Burned CD | None |
 | 9 | #0319 | BULL TRAP | Dead Bull | None |
 | 10 | #0324 | MIXTAPE | Cassette Tape | None |
-| 11 | #0240 | LOW RES | Lava Lamp | None |
-| 12 | #0397 | SAVE ICON | Floppy Disk | None |
-| 13 | #0718 | CCFF00 | Big Neon Square | None |
-| 14 | #0745 | LANDFILL DRIVE | Hard Drive | None |
+| 11 | #0397 | SAVE ICON | Floppy Disk | None |
+| 12 | #0718 | CCFF00 | Big Neon Square | None |
+| 13 | #0745 | LANDFILL DRIVE | Hard Drive | None |
+| 14 | #0813 | LOW RES | Hooded Clan Member | None |
 | 15 | #0582 | COLD STORAGE | Hardware Wallet | None |
 | 16 | #0244 | BLOW ON IT | Game Cartridge | None |
 | 17 | #0552 | STILL ALIVE | Virtual Pet | None |
@@ -335,6 +335,6 @@
 | 20 | #0520 | DOUBLE A | AA Batteries | None |
 | 21 | #0571 | SCREEN TIME | CRT Monitor | None |
 | 22 | #0008 | SOLID GOLD | Sneaker | None |
-| 23 | #0276 | GOLD | Yo-Yo | None |
+| 23 | #0276 | GOLD | Yo-Yo | Paper Hand |
 | 24 | #0389 | GOLD | Sneaker | None |
 | 25 | #0772 | GOLD | VR Headset | None |

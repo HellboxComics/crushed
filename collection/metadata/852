@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0852",
- "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 2 TV Remotes (the volume button worn smooth); 3 Tablets (used once as a cutting board); 1 Jewel Case (hinge broken on arrival); 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (tastes like a battery); 1 Tiny Red Candle (one of many). Weight 34.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 2 TV Remotes (the volume button worn smooth); 3 Tablets (used once as a cutting board); 1 Jewel Case (hinge broken on arrival); 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (tastes like a battery). Weight 34.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0852.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.6,
+   "value": 34.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

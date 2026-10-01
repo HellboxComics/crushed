@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0617",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (untied since 1989); 2 Scratch Tickets ($2 for hope); 1 Magazine (read for the articles); 3 Spiral Notebooks (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Crumpled Chart (it went up, then it went down). Weight 28.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (untied since 1989); 2 Scratch Tickets ($2 for hope); 1 Magazine (read for the articles); 3 Spiral Notebooks (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 28.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0617.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.6,
+   "value": 28.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0776",
- "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 1 Disposable Camera (never developed); 2 Cheap Sunglasses (mall kiosk special); 3 Pizza Crusts (from a sleepover); 1 Smartphone (cracked in the first week); 1 Earbud Case (one bud present). Weight 31.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 1 Disposable Camera (never developed); 2 Cheap Sunglasses (mall kiosk special); 3 Pizza Crusts (from a sleepover); 1 Smartphone (cracked in the first week); 1 Earbud Case (one bud present); 1 Broken Rocket (didn't make it). Weight 31.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0776.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.2,
+   "value": 31.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]
