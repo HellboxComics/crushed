@@ -10,7 +10,20 @@ LIME = (204, 255, 0)          # CCFF00
 BONE = (233, 230, 223)        # the site's off-white
 DIM = (125, 122, 116)
 
-HERO = 529                    # TRICK OR TREAT
+
+def _serials():
+    import json
+    import os
+    m = json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collection",
+                                    "manifest.json")))
+    return {r["traits"].get("One of One"): r["id"] for r in m["tokens"] if r["traits"].get("One of One", "None") != "None"}
+
+
+SERIAL = _serials()
+NAMES = {v: k for k, v in SERIAL.items()}
+COUNT = len(SERIAL)
+HERO = SERIAL["TRICK OR TREAT"]
+
 
 # ---- the rendered shots. cam: (start, end) of (camera position, aim point, vertical field of view in degrees)
 SHOTS = [
@@ -28,11 +41,13 @@ SHOTS = [
 ]
 
 # ---- 0:14 the montage: the best of the rest, each held a little shorter than the one before
-MONTAGE = [8, 718, 324, 552, 282, 344, 595, 571, 494, 813, 527, 755, 244, 837, 772, 276, 599, 797]
-NAMES = {8: "SOLID GOLD", 718: "CCFF00", 324: "MIXTAPE", 552: "STILL ALIVE", 282: "UNDER THE MATTRESS",
-         344: "BE MINE", 595: "LIGHT THE FUSE", 571: "SCREEN TIME", 494: "Y2K", 813: "LOW RES", 527: "EGG HUNT",
-         755: "SOME ASSEMBLY REQUIRED", 244: "BLOW ON IT", 837: "CLAY DAY", 772: "GREEN BEER",
-         276: "HAND TURKEY", 599: "COASTERS", 797: "STOP THE PRESSES", 529: "TRICK OR TREAT"}
+# picked by title, so a re-freeze that moves a one-of-one to another serial can't put the wrong cube in the film
+MONTAGE_TITLES = ["SOLID GOLD", "CCFF00", "CONSOLE WARS", "MIXTAPE", "STILL ALIVE", "UNDER THE MATTRESS", "BE MINE",
+                  "BASS BOOSTED", "LIGHT THE FUSE", "IT'S AWAKE", "Y2K", "LOW RES", "SPACE OPERA", "EGG HUNT",
+                  "SLIMED", "BE KIND REWIND", "CLAY DAY", "STOP THE PRESSES"]
+MONTAGE = [SERIAL[t] for t in MONTAGE_TITLES]
+
+
 MONTAGE_FRAMES = 144
 
 

@@ -5,7 +5,7 @@ import bpy
 import numpy as np
 from mathutils import Euler, Vector
 
-from . import crush, dressing, mat, stage, tex
+from . import crush, dressing, mat, models, stage, tex
 from .geo import Builder
 from .objects import PALETTES, Palette, load
 from .recipe import WIRED
@@ -24,6 +24,12 @@ VISIBLE = ("-Y", "+X", "+Z")
 
 
 def make_object(defn, rng, pal, coll, override=None):
+    if models.path(defn.name):                      # a remastered Blender model replaces the code-built one
+        ob = models.load(defn.name, coll)
+        if override:
+            ob.data.materials.clear()
+            ob.data.materials.append(mat.get(override, rng))
+        return ob
     b = Builder(defn.name)
     specs = defn.fn(b, rng, pal)
     ob = b.build(coll)

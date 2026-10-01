@@ -18,10 +18,30 @@ from crushed.objects import Palette, load  # noqa: E402
 
 def main(seeds=6):
     reg = load()
+    fails = 0
+    # every one-of-one is made of at least 10 different things, all of which exist and have a name
+    from crushed import lore
+    for one in recipe.ONE_OF_ONES:
+        # generic debris (paper, film, shards) has no name and doesn't count as one of the ten
+        names = {n for n, _ in recipe.MONOCULTURES.get(one, [])} | set(recipe.ONE_FILLERS.get(one, ()))
+        missing = [n for n in names if n not in reg]
+        names = {n for n in names if n in lore.NAMES}
+        if missing:
+            fails += 1
+            print(f"FAIL one-of-one {one}: unknown or unnamed items {missing}")
+        if one not in ("EMPTY", "UNCRUSHED", "SOLID GOLD") and len(names) < 10:
+            fails += 1
+            print(f"FAIL one-of-one {one}: only {len(names)} different items (needs 10)")
+        if one not in lore.ONE_OF_ONES or one not in recipe.ONE_OF_ONE_FLAVOR:
+            fails += 1
+            print(f"FAIL one-of-one {one}: no lore text or flavor row")
+    for n in reg:
+        if n not in lore.NAMES and reg[n].group != "filler":
+            fails += 1
+            print(f"FAIL {n}: no display name")
     sc = stage.reset()
     coll = bpy.data.collections.new("t")
     sc.collection.children.link(coll)
-    fails = 0
     for name, d in sorted(reg.items()):
         for s in range(seeds):
             rng = np.random.default_rng(s)

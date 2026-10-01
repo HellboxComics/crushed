@@ -30,7 +30,7 @@ NAMES = {
     "ring_light": "Ring Light", "vape": "Disposable Vape", "face_mask": "Face Mask", "hand_sanitizer": "Hand Sanitizer",
     "bluetooth_speaker": "Bluetooth Speaker", "power_bank": "Power Bank",
     # the shelf nobody admits to
-    "magazine": "Magazine", "centerfold": "Centerfold", "bunny_charm": "Bunny Charm", "neon_pig": "Neon Piggy Bank", "tissue_box": "Tissue Box", "tissues": "Tissues",
+    "magazine": "Magazine", "centerfold": "Centerfold", "bunny_charm": "Bunny Charm", "neon_pig": "Neon Piggy Bank", "neon_coin": "Neon Coin", "tissue_box": "Tissue Box", "tissues": "Tissues",
     "foil_packet": "Foil Wrapper", "dice": "Dice", "poker_chip": "Poker Chip", "scratch_ticket": "Scratch Ticket",
     "beer_can": "Beer Can", "shot_glass": "Shot Glass", "matchbook": "Matchbook",
     # one-of-one props
@@ -154,6 +154,7 @@ NOTES = {
     "hand_sanitizer": ["was in every pocket in 2020", "60% alcohol, 40% anxiety", "half empty, half crusty"],
     "bluetooth_speaker": ["paired with the wrong phone", "played one song, too loud", "lost, found, lost"],
     "power_bank": ["at 4%, like all of them", "dead when needed", "10000 mAh of dead weight"],
+    "neon_coin": ["legal tender nowhere", "glows brighter than the portfolio", "CCFF00, minted twice"],
     "neon_pig": ["glows in the dark, saves nothing", "CCFF00 all the way down", "the slot is for bags, not coins"],
     "bunny_charm": ["hung from a rearview mirror until the divorce", "black, glossy, deniable",
                     "came free with a subscription nobody admits to", "on a keychain with no keys"],
@@ -378,7 +379,7 @@ ONE_OF_ONES = {
     "UNCRUSHED": "The pile, as it was, the minute before.",
     "SOLID GOLD": "Every single thing in here is gold. Nobody can explain it.",
     "MIXTAPE": "Forty cassettes and every inch of their tape.",
-    "LEFTOVERS": "A block of pizza crust. Only pizza crust. One sleepover's worth.",
+    "LEFTOVERS": "Pizza crust, mostly. Plus everything else left on the floor after the sleepover.",
     "DOUBLE A": "Every AA battery that ever went missing from a remote.",
     "SCREEN TIME": "Every screen you ever stared at, still on.",
     "BULL TRAP": "They all bought the top.",
@@ -403,6 +404,16 @@ ONE_OF_ONES = {
     "Y2K": "Midnight, 1999. The computers were going to end the world. They did not. The glasses survived.",
     "GREEN BEER": "Everybody was Irish for one day. The beads, the hats, the cups and the buttons stayed.",
     "CLAY DAY": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher.",
+    "BE KIND REWIND": "Every tape that came back late, unrewound, in the wrong case. The fees outlived the store.",
+    "CONSOLE WARS": "Every side of every playground argument, crushed into one block. Nobody won.",
+    "LUNCH TRADE": "The whole cafeteria trade table. Somebody got robbed for a fruit snack. It was you.",
+    "IT'S AWAKE": "Every fuzzy gremlin that ever talked at 3 A.M. with no batteries in it. Still talking.",
+    "BASS BOOSTED": "Two subs, three amps and a faceplate in its case. The trunk rattled. So did the neighborhood.",
+    "RETIREMENT PLAN": "Tags protected. Price guide highlighted. The college fund is in here somewhere.",
+    "MINT CONDITION": "Rookie cards in top-loaders, signed balls, pennants. Was going to pay for a house. Crushed instead.",
+    "SPACE OPERA": "Never opened. Still on the card. Mint, until now.",
+    "SLIMED": "Green slime, orange splats, and every kids' channel trophy nobody actually won.",
+    "DIAL-UP": "A thousand free hours on a thousand discs. The phone line was busy the whole time.",
     "STOP THE PRESSES": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties.",
 }
 

@@ -130,5 +130,11 @@ class Palette:
 
 
 def load():
-    from . import era, crypto, filler, modern, degen, special, gifts, holiday  # noqa: F401  (games, toys, tech, life: not wired in until reviewed)
+    from . import era, crypto, filler, modern, degen, special, gifts, holiday, games, toys, tech, life  # noqa: F401
+    from .. import lore
+    for mod in (games, toys, tech, life):          # these modules carry their own names and evidence-log notes
+        for k, v in getattr(mod, "LORE_NAMES", {}).items():
+            lore.NAMES.setdefault(k, v)
+        for k, v in getattr(mod, "LORE_NOTES", {}).items():
+            lore.NOTES.setdefault(k, v)
     return REG

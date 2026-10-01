@@ -21,7 +21,7 @@ sys.path.insert(0, HERE)
 
 import bpy  # noqa: E402
 
-from crushed import build, recipe, stage, tex  # noqa: E402
+from crushed import build, models, recipe, stage, tex  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
 
@@ -105,7 +105,7 @@ def manifest_blob():
         rows.append({"id": tid, "seed": r["seed"], "traits": dict(r["traits"]), "weight_lb": r["weight_lb"],
                      "items": r["items"], "heroes": r["heroes"], "crypto": r["crypto"]})
     blob = json.dumps({"collection": "CRUSHED IT", "supply": recipe.SUPPLY, "collection_seed": recipe.COLLECTION_SEED,
-                       "slots": tex.slot_hashes(), "tokens": rows}, sort_keys=True, separators=(",", ":")).encode()
+                       "slots": tex.slot_hashes(), "models": models.hashes(), "tokens": rows}, sort_keys=True, separators=(",", ":")).encode()
     return blob, rows
 
 

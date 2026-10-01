@@ -167,7 +167,7 @@ def reveal(c):
         al = fade(i, 46, 119, fin=8, fout=1)
         if al:
             img = c.text(img, "TRICK OR TREAT", 0.05, plan.BONE, al, y=0.085, weight="Bold", track=0.2)
-            img = c.text(img, "ONE OF ONE  ·  01/30", 0.024, plan.LIME, al, y=0.15, track=0.3)
+            img = c.text(img, f"ONE OF ONE  ·  01/{plan.COUNT}", 0.024, plan.LIME, al, y=0.15, track=0.3)
         yield img
 
 
@@ -180,7 +180,7 @@ def montage(c):
             if k >= late and i == 0:
                 img = img * 0.5 + 0.5                  # the last cuts hit with a white flash
             img = c.text(img, plan.NAMES[cube], 0.04, plan.BONE, 1.0, y=0.085, weight="Bold", track=0.2)
-            img = c.text(img, f"ONE OF ONE  ·  {k + 2:02d}/30", 0.024, plan.LIME, 1.0, y=0.15, track=0.3)
+            img = c.text(img, f"ONE OF ONE  ·  {k + 2:02d}/{plan.COUNT}", 0.024, plan.LIME, 1.0, y=0.15, track=0.3)
             yield img
 
 
@@ -193,7 +193,7 @@ def ending(c):
         img = c.text(img, "crushed.buzz", 0.115, plan.LIME, min(1.0, (i + 1) / 6), y=0.45, weight="Bold",
                      track=0.04, glow=0.9)
         if i >= 14:
-            img = c.text(img, "888 CUBES  ·  30 ONE-OF-ONES  ·  SOON", 0.026, (170, 166, 158), min(1.0, (i - 13) / 6),
+            img = c.text(img, f"888 CUBES  ·  {plan.COUNT} ONE-OF-ONES  ·  SOON", 0.026, (170, 166, 158), min(1.0, (i - 13) / 6),
                          y=0.6, track=0.3)
         yield img
     for i in range(e["button"] + e["fade"]):

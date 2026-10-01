@@ -2139,7 +2139,7 @@ def cassette_adapter(b, rng, pal):
     c = Canvas(320, 160, (0.92, 0.92, 0.9, 1))
     c.rect(0, 0.75, 1, 1, (0.9, 0.1, 0.1))
     c.text_fit("CAR CASSETTE ADAPTER", 0.04, 0.95, 0.92, 0.15, (1, 1, 1), bold=True)
-    c.text_fit(_ch(rng, ["FOR DISCMAN-ISH", "FOR CD AND MP3", "PLAYS YOUR WALKMAN-ISH THRU YOUR CAR"]), 0.04, 0.68, 0.92,
+    c.text_fit(_ch(rng, ["FOR DISCMANGLED", "FOR CD AND MP3", "PLAYS YOUR WALKMAYBE THRU YOUR CAR"]), 0.04, 0.68, 0.92,
                0.1, (0.1, 0.1, 0.1), bold=True)
     c.rect(0.2, 0.08, 0.8, 0.45, (0.25, 0.25, 0.28))
     for cx in (0.35, 0.65):

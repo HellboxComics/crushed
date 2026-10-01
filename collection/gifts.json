@@ -2,14 +2,14 @@
  "tokens_1_to_4": {
   "LOW RES": 813,
   "CCFF00": 718,
-  "STOP THE PRESSES": 797,
-  "CLAY DAY": 837
+  "STOP THE PRESSES": 796,
+  "CLAY DAY": 836
  },
  "deploy_env": {
   "GIFT1": 813,
   "GIFT2": 718,
-  "GIFT3": 797,
-  "GIFT4": 837
+  "GIFT3": 796,
+  "GIFT4": 836
  },
  "recipients": {
   "CCFF00": {

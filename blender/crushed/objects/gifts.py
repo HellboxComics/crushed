@@ -174,6 +174,17 @@ def neon_pig(b, rng, pal):
     return specs
 
 
+@obj("neon_coin", mass=0.02, weight=1.0, hero=(0, 0, 1), **G)
+def neon_coin(b, rng, pal):
+    """A fat coin in the brand color, a black CCFF00 stamped in the face."""
+    r = float(rng.uniform(0.02, 0.028))
+    b.cyl(r, 0.004, mat="body", seg=36)
+    b.torus(r * 0.92, 0.0012, loc=(0, 0, 0.002), mat="body", seg=36, rseg=6)
+    b.plane(r * 1.3, r * 0.5, loc=(0, 0, 0.0021), mat="face", cuts=2)
+    return {"body": ("plastic", {"color": LIME, "rough": 0.25, "coat": 0.6, "glow": NEON, "keep": True}),
+            "face": PR(tex.neon_tile(rng, "nc", neg=False, big=False), 0.3, keep=True, glow=NEON)}
+
+
 @obj("stock_cert", mass=0.01, weight=1.0, **G)
 def stock_cert(b, rng, pal):
     _sheet(b, 0.16, 0.112, "cert", bow=0.011, wobble=0.0015)
