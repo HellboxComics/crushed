@@ -16,7 +16,7 @@ LIFT = H + 0.004           # center height of the block above the floor
 # how much of a baler it is: strata = how many pressed layers show on the sides, ram = how flat the top-down press
 # squashes things on the sides, borrow = how many of the layers are made of this block's own stuff (its wrappers,
 # its plastics) instead of plain card and paper. 0/0 is the old "pressed into the core" look.
-BALE = {"strata": 1.0, "ram": 1.0, "borrow": 0.6}       # "full bale", picked 2026-10-01
+BALE = {"strata": 0.0, "ram": 1.0, "borrow": 0.6, "products": 1.0}   # a bale of crushed products (Cody's reference photo)
 
 # every side but the bottom gets covered: the block turns in 3D, so there is no back
 FACE_WEIGHTS = {"-Y": 0.23, "+X": 0.22, "+Z": 0.21, "+Y": 0.17, "-X": 0.17}
@@ -128,8 +128,9 @@ def build_block(r, coll, rng):
         v = prepare(ob, limit, rng)
         if v is None:
             continue
-        v = damage(v, rng, inten * (0.6 if head or override else 1.0) * r.get("soft", 1.0),
-                   keep_shape=head or override or not d.big)
+        keep = "keep" in d.tags           # signature pieces (the gift pigs) stay whole enough to name at a glance
+        v = damage(v, rng, inten * (0.6 if head or override or keep else 1.0) * r.get("soft", 1.0),
+                   keep_shape=head or override or keep or not d.big)
         if head:
             face = "-Y"
         elif override:
@@ -151,9 +152,11 @@ def build_block(r, coll, rng):
                 poke, depth, layer = rng.uniform(0.015, 0.03), rng.uniform(0.06, 0.1), rng.uniform(0.008, 0.02)
         if override:
             poke, layer = rng.uniform(0.0, 0.008), 0.005
+        if keep:
+            poke, depth, layer = rng.uniform(0.012, 0.025), rng.uniform(0.07, 0.1), rng.uniform(0.008, 0.016)
         v = crush.place(v, q, nrm, uv, t1, t2, poke, depth)
         # pressed, not erased: you still have to be able to tell what it was
-        v = crush.ram(v, nrm, t1, kz_for(0.85, 0.95, 0.8) if head or override else kz_for(0.68, 0.88, 0.6))
+        v = crush.ram(v, nrm, t1, kz_for(0.85, 0.95, 0.8) if head or override or keep else kz_for(0.68, 0.88, 0.6))
         v = crush.compact(v, layer, r["seed"] + rank, margin=0.008, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)
@@ -212,6 +215,16 @@ def build_block(r, coll, rng):
         objs.append(dressing.strata(coll, rng, pal, r["seed"] + 77, inten,
                                     per_side=int((46 + 26 * inten) * BALE["strata"]), prints=prints,
                                     borrow=own, borrow_share=BALE["borrow"]))
+
+    # the bale itself: crushed products wearing their labels, tiled between everything else
+    if r.get("one_of_one") not in ("CCFF00", "SOLID GOLD") and not r["clean"]:
+        printed = []
+        for ob in objs[1:]:
+            for m in ob.data.materials:
+                if m and m not in printed and m.node_tree and any(n.type == "TEX_IMAGE" for n in m.node_tree.nodes):
+                    printed.append(m)
+        objs += dressing.products(coll, rng, pal, r["seed"] + 91, inten, int((70 + 40 * inten) * BALE["products"]),
+                                  borrow=printed[:14])
 
     top = []
     if r["tape_loops"]:

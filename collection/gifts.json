@@ -10,5 +10,23 @@
   "GIFT2": 718,
   "GIFT3": 797,
   "GIFT4": 837
+ },
+ "recipients": {
+  "CCFF00": {
+   "to": "0x831a31005569cf93e9fb20449d5f79b033b36cee",
+   "who": "roaring piggy (premier CCFF00 one-of-one)"
+  },
+  "STOP THE PRESSES": {
+   "to": "0xd84e69fa5a0975da11edc9a9721cf893f7784bc6",
+   "who": "cash (second CCFF00 one-of-one)"
+  },
+  "LOW RES": {
+   "to": "0xBDB0Dd845E95d2E24B77D9bEf54d4dF82bAF8335",
+   "who": "Pixelord"
+  },
+  "CLAY DAY": {
+   "to": "0x9ffcfba8c5f37422407826e811b56ebafc1c19e2",
+   "who": "Clay StonKz"
+  }
  }
 }

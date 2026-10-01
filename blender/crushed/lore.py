@@ -30,7 +30,7 @@ NAMES = {
     "ring_light": "Ring Light", "vape": "Disposable Vape", "face_mask": "Face Mask", "hand_sanitizer": "Hand Sanitizer",
     "bluetooth_speaker": "Bluetooth Speaker", "power_bank": "Power Bank",
     # the shelf nobody admits to
-    "magazine": "Magazine", "centerfold": "Centerfold", "bunny_charm": "Bunny Charm", "tissue_box": "Tissue Box", "tissues": "Tissues",
+    "magazine": "Magazine", "centerfold": "Centerfold", "bunny_charm": "Bunny Charm", "neon_pig": "Neon Piggy Bank", "tissue_box": "Tissue Box", "tissues": "Tissues",
     "foil_packet": "Foil Wrapper", "dice": "Dice", "poker_chip": "Poker Chip", "scratch_ticket": "Scratch Ticket",
     "beer_can": "Beer Can", "shot_glass": "Shot Glass", "matchbook": "Matchbook",
     # one-of-one props
@@ -154,6 +154,7 @@ NOTES = {
     "hand_sanitizer": ["was in every pocket in 2020", "60% alcohol, 40% anxiety", "half empty, half crusty"],
     "bluetooth_speaker": ["paired with the wrong phone", "played one song, too loud", "lost, found, lost"],
     "power_bank": ["at 4%, like all of them", "dead when needed", "10000 mAh of dead weight"],
+    "neon_pig": ["glows in the dark, saves nothing", "CCFF00 all the way down", "the slot is for bags, not coins"],
     "bunny_charm": ["hung from a rearview mirror until the divorce", "black, glossy, deniable",
                     "came free with a subscription nobody admits to", "on a keychain with no keys"],
     "magazine": ["read for the articles", "for the interviews, obviously", "the staples are doing the work",

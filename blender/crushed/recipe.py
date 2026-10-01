@@ -112,7 +112,7 @@ MONOCULTURES = {   # one-of-ones that are made of one idea
                 ("potted_plant", 4), ("bookshelf_slice", 3), ("couch_cushion", 2), ("synth_keys", 2),
                 ("ribbon_cable", 2)],
     "CCFF00": [("neon_square_big", 1), ("neon_square", 16), ("neon_diamond", 9), ("neon_cube", 8),
-               ("neon_stack", 3), ("neon_frame", 4)],
+               ("neon_stack", 3), ("neon_frame", 4), ("neon_pig", 6)],
     "STOP THE PRESSES": [("piggy_bank", 14), ("stock_cert", 5), ("ticker_tape", 4), ("necktie", 4), ("bull", 3),
                          ("bear", 3), ("corded_phone", 2), ("calculator", 2), ("newspaper", 3), ("street_sign", 1),
                          ("microphone", 1), ("press_badge", 2), ("play_money", 3), ("poker_chip", 2),

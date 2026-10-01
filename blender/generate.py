@@ -132,9 +132,13 @@ def write_manifest(out):
     with open(os.path.join(out, "provenance.txt"), "w") as f:
         f.write(digest + "\n")
     write_rarity(out, rows)
-    with open(os.path.join(out, "gifts.json"), "w") as f:             # what the deploy pins to tokens 1..4
+    gp = os.path.join(out, "gifts.json")
+    keep = {}
+    if os.path.exists(gp):                                             # the wallets the gifts go to are Cody's, keep them
+        keep = {k: v for k, v in json.load(open(gp)).items() if k == "recipients"}
+    with open(gp, "w") as f:             # what the deploy pins to tokens 1..4
         json.dump({"tokens_1_to_4": dict(zip(GIFT_NAMES, GIFT_RECIPES)),
-                   "deploy_env": {f"GIFT{i + 1}": r for i, r in enumerate(GIFT_RECIPES)}}, f, indent=1)
+                   "deploy_env": {f"GIFT{i + 1}": r for i, r in enumerate(GIFT_RECIPES)}, **keep}, f, indent=1)
     print("provenance:", digest)
 
 

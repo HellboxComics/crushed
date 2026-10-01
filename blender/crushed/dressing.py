@@ -286,3 +286,84 @@ def strata(coll, rng, pal, seed, inten=1.0, per_side=56, prints=(), borrow=(), b
     for key in b.slots:
         me.materials.append(picks[int(key[3:])] if key.startswith("own") else mat.get(specs[key], rng))
     return ob
+
+
+def _label_pool(rng, borrow):
+    """The printed labels this block's crushed packaging wears: mostly its own (the wrappers, covers and boxes of the
+    things in it), the rest from its era's parody shelf."""
+    from .objects import PR
+    pool = list(borrow)
+    makers = [tex.can_print, tex.beer_print, tex.ramen, tex.sun_label, tex.tissue_print, tex.foil_print,
+              tex.matchbook_print, tex.sanitizer_label, tex.battery, tex.vape_print, tex.sticker]
+    want = max(4, 10 - len(pool))
+    for i in range(want):
+        fn = makers[int(rng.integers(len(makers)))]
+        try:
+            img = fn(rng, f"pk{i}")
+        except TypeError:
+            continue
+        pool.append(mat.get(PR(img, float(rng.uniform(0.2, 0.45)), metal=float(rng.random() < 0.6)), rng))
+    return pool
+
+
+def products(coll, rng, pal, seed, inten, n, borrow=()):
+    """What a real bale is made of: hundreds of crushed products, every one still wearing its label. Cans pressed
+    flat with the can end showing, cartons folded in on themselves, chip bags and wrappers crumpled tight. They
+    tile the whole surface between the objects, so the bale reads as stuff all the way through."""
+    from .objects import MET
+    labels = _label_pool(rng, borrow)
+    metal_end = mat.get(MET((0.82, 0.82, 0.84), 0.22), rng)
+    faces = {"-Y": 1.0, "+X": 1.0, "+Z": 1.0, "+Y": 0.85, "-X": 0.85}
+    keys, w = list(faces), np.array(list(faces.values()))
+    w = w / w.sum()
+    out = []
+    for k in range(n):
+        kind = rng.choice(["can", "can", "carton", "bag", "wrapper"])
+        b = Builder(f"pk_{kind}")
+        if kind == "can":
+            r, h = rng.uniform(0.026, 0.034), rng.uniform(0.09, 0.125)
+            b.lathe([(0.0, 0.0), (r * 0.82, 0.0), (r, 0.006), (r, h - 0.006), (r * 0.82, h), (0.0, h)], mat="lbl", seg=20)
+            b.cyl(r * 0.8, 0.002, loc=(0, 0, h + 0.0005), mat="end", seg=20)
+            hero = (0, 0, 1) if rng.random() < 0.45 else (1, 0, 0)    # end-on: the can lid ring, like a real bale
+        elif kind == "carton":
+            sx, sy, sz = rng.uniform(0.05, 0.11), rng.uniform(0.07, 0.15), rng.uniform(0.02, 0.05)
+            b.box((sx, sy, sz), mat="lbl")
+            hero = (0, 0, 1)
+        elif kind == "bag":
+            b.plane(rng.uniform(0.09, 0.15), rng.uniform(0.12, 0.18), mat="lbl", cuts=10)
+            hero = (0, 0, 1)
+        else:
+            b.plane(rng.uniform(0.06, 0.11), rng.uniform(0.025, 0.045), mat="lbl", cuts=8)
+            hero = (0, 0, 1)
+        ob = b.build(coll)
+        lab = labels[int(rng.integers(len(labels)))]
+        for key in b.slots:
+            ob.data.materials.append(metal_end if key == "end" else lab)
+        me = ob.data
+        v = crush.verts(me)
+        ext = np.ptp(v, axis=0)
+        s = min(1.0, rng.uniform(0.07, 0.12) / max(ext.max(), 1e-6))
+        v = (v - (v.min(axis=0) + v.max(axis=0)) / 2) * s
+        if kind == "bag":                                   # air still in the bag before the press
+            rr = np.hypot(v[:, 0] / (np.ptp(v[:, 0]) / 2 + 1e-6), v[:, 1] / (np.ptp(v[:, 1]) / 2 + 1e-6))
+            v[:, 2] += np.clip(1 - rr, 0, 1) * 0.012 * np.sign(rng.normal())
+        crush.set_verts(me, v)
+        crush.densify(me, 0.006)
+        me.set_sharp_from_angle(angle=math.radians(35))
+        v = crush.verts(me)
+        crush.store_rest(me, v)
+        # crushed hard: folded, crumpled, dented, every one differently
+        v = crush.bend(v, rng, 0.7 * inten)
+        v = crush.fold(v, rng, int(rng.integers(1, 3)), 1.2 * inten)
+        v = crush.crumple(v, rng, rng.uniform(0.6, 1.3) * inten)
+        v = crush.dents(v, rng, int(rng.integers(1, 5)), rng.uniform(0.004, 0.012) * inten)
+        face = keys[int(rng.choice(len(keys), p=w))]
+        nrm, t1, t2 = crush.FACES[face]
+        q = crush.orient(rng, hero, nrm, tilt=0.55)
+        uv = rng.uniform(-0.98, 0.98, 2) * H
+        v = crush.place(v, q, nrm, uv, t1, t2, rng.uniform(0.0, 0.008), rng.uniform(0.018, 0.035))
+        # behind the recognizable objects: the products fill around them, they never paper over them
+        v = crush.compact(v, rng.uniform(-0.007, -0.0008), seed + 3000 + k, margin=0.007, strength=inten)
+        crush.set_verts(me, v)
+        out.append(ob)
+    return out

@@ -121,7 +121,7 @@ def _sheet(b, w, h, mat, bow=0.012, n=9, wobble=0.0):
     b.loft(rows, mat=mat, closed=False, cap=False)
 
 
-@obj("piggy_bank", mass=0.5, weight=1.0, hero=(0, -1, 0), **G)
+@obj("piggy_bank", mass=0.5, weight=1.0, hero=(1, -0.6, 0), tags=("keep",), **G)
 def piggy_bank(b, rng, pal):
     """Fat body, big snout, real ears, a curly tail and a coin slot. Five breeds: pink ceramic, gold, a tusked
     iron boar, plush, and chrome."""
@@ -160,6 +160,18 @@ def piggy_bank(b, rng, pal):
     else:
         body = snout = ("chrome", {})
     return {"body": body, "snout": snout, "dark": dark, "tusk": P((0.92, 0.88, 0.76), 0.4)}
+
+
+@obj("neon_pig", mass=0.5, weight=1.0, hero=(1, -0.6, 0), tags=("keep",), **G)
+def neon_pig(b, rng, pal):
+    """The piggy bank in the brand colors: gloss black, with a CCFF00 snout, eyes and coin slot that glow."""
+    specs = piggy_bank(b, rng, pal)
+    # gloss black so it pops off the lime pile; the snout, eyes and slot glow CCFF00
+    specs["body"] = P((0.015, 0.015, 0.017), 0.12, coat=0.9, keep=True)
+    specs["snout"] = ("plastic", {"color": LIME, "rough": 0.3, "coat": 0.4, "glow": NEON, "keep": True})
+    specs["dark"] = ("plastic", {"color": LIME, "rough": 0.3, "glow": NEON, "keep": True})
+    specs["tusk"] = ("plastic", {"color": LIME, "rough": 0.3, "glow": NEON, "keep": True})
+    return specs
 
 
 @obj("stock_cert", mass=0.01, weight=1.0, **G)
