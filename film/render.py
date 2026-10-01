@@ -30,9 +30,13 @@ def clear_lights():
 
 
 def world_strength(sc, k):
+    """Set the room light to k times what the stage built. Absolute, not cumulative: shots share one scene."""
     for n in sc.world.node_tree.nodes:
         if n.type == "BACKGROUND":
-            n.inputs[1].default_value *= k
+            base = n.get("_base")
+            if base is None:
+                n["_base"] = base = n.inputs[1].default_value
+            n.inputs[1].default_value = base * k
 
 
 def area(sc, name, loc, size, power, color, target=(0, 0, 0.16)):
@@ -124,6 +128,9 @@ def smooth(ob):
 def setup_shot(sc, shot):
     rig(sc, shot["rig"])
     ob = perspective(sc)
+    # every shot of a cube shares one camera: wipe the last shot's moves, or its keys leak into this one
+    ob.animation_data_clear()
+    ob.data.animation_data_clear()
     ob.data.shift_y = shot.get("shift", 0.0)
     n = shot["frames"]
     if "orbit" in shot:
