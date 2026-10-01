@@ -33,23 +33,30 @@ def cull_hidden(ob):
     bm = bmesh.new()
     bm.from_mesh(me)
     bm.faces.ensure_lookup_table()
+    keep = bm.faces.layers.int.get("keep")
     tree = BVHTree.FromBMesh(bm, epsilon=0.0)
     dead = []
     for f in bm.faces:
+        if keep is not None and f[keep]:
+            continue                  # the lime core is what shows through every gap: never cut it
         n = f.normal
         if n.length < 1e-9:
             dead.append(f)
             continue
-        c = f.calc_center_median()
         side = n.orthogonal().normalized()
         side2 = n.cross(side)
+        c = f.calc_center_median()
+        # test the middle and every corner (pulled a little inward): a face half hidden under a scrap is still seen
+        pts = [c] + [v.co.lerp(c, 0.15) for v in f.verts]
         seen = False
-        for base in (n, -n):
-            for d in (base, (base + side * 0.6).normalized(), (base - side * 0.6).normalized(),
-                      (base + side2 * 0.6).normalized(), (base - side2 * 0.6).normalized()):
-                hit = tree.ray_cast(c + d * 0.0002, d, 2.0)
-                if hit[0] is None:
-                    seen = True
+        for p in pts:
+            for base in (n, -n):
+                for d in (base, (base + side * 0.6).normalized(), (base - side * 0.6).normalized(),
+                          (base + side2 * 0.6).normalized(), (base - side2 * 0.6).normalized()):
+                    if tree.ray_cast(p + d * 0.0002, d, 2.0)[0] is None:
+                        seen = True
+                        break
+                if seen:
                     break
             if seen:
                 break
@@ -73,7 +80,10 @@ def export(tid, out, size=4096, samples=16, device="auto"):
     objs = [o for o in coll.objects if o.type == "MESH" and len(o.data.polygons)]
     for o in bpy.data.objects:
         o.select_set(False)
-    # one mesh, one UV layout for the bake
+    # one mesh, one UV layout for the bake. Mark the core first so the hidden-face cut leaves it whole.
+    for o in objs:
+        a = o.data.attributes.get("keep") or o.data.attributes.new("keep", "INT", "FACE")
+        a.data.foreach_set("value", [1 if o.name.startswith("core") else 0] * len(o.data.polygons))
     for o in objs:
         o.select_set(True)
     bpy.context.view_layer.objects.active = objs[0]
@@ -81,6 +91,7 @@ def export(tid, out, size=4096, samples=16, device="auto"):
     ob = bpy.context.view_layer.objects.active
     ob.name = f"crushed_{tid:04d}"
     cull_hidden(ob)
+    ob.data.attributes.remove(ob.data.attributes["keep"])
     bake_uv = ob.data.uv_layers.new(name="bake")
     ob.data.uv_layers.active = bake_uv
     bpy.ops.object.mode_set(mode="EDIT")
