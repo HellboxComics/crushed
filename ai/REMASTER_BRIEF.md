@@ -16,6 +16,12 @@ sheet on. Result: assets/models_pending/<name>/ with model.glb, reference.png an
    the real object: overall shape and proportions, materials (glossy ABS, rubber, brushed aluminum, cardboard),
    exact colors, every recognizable detail (button layout, vents, ports, seams, screws, labels' placement and
    colors), wear. One paragraph. The image model draws exactly what the text says, nothing more.
+   Then the INSIDE: write ai/remaster/prompts/<name>.inside.txt, what you would see if it split open. A game
+   cartridge: green circuit board, black chips, gold contacts. A chocolate bar: the filling (nougat, caramel,
+   wafer layers). A sneaker: foam midsole and fabric lining. A plush: white polyester stuffing and plastic
+   pellets. A console: motherboard, heat sink, ribbon cables. A soda can: bare aluminum, a little syrup.
+   The crusher tears holes in the shell and this is what shows through, so make it true to the object.
+   Writing the .inside.txt is what marks the object ready: the loop only makes objects that have one.
 2. LOOK at every review.png. A remaster passes only if, from the four sides, it is (a) obviously that object,
    (b) more real than the code version under it, (c) whole: no holes, no melted blobs, no extra limbs, no
    background baked into the texture, no wrong colors. Then write one line to

@@ -28,6 +28,34 @@ def hashes():
     return out
 
 
+def tear(ob, rng, holes=(2, 5)):
+    """Crushed things split open: punch a few ragged holes in the outer shell so the inside shows through."""
+    import bmesh
+    import numpy as np
+    me = ob.data
+    inside = next((i for i, m in enumerate(me.materials) if m and m.name.startswith("inside")), None)
+    if inside is None:
+        return
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    shell = [f for f in bm.faces if f.material_index != inside]
+    if not shell:
+        bm.free()
+        return
+    cen = np.array([f.calc_center_median()[:] for f in shell])
+    ext = float(np.ptp(cen, axis=0).max())
+    dead = set()
+    for _ in range(int(rng.integers(*holes))):
+        p = cen[int(rng.integers(len(cen)))]
+        r = ext * rng.uniform(0.08, 0.18)
+        d = np.linalg.norm(cen - p, axis=1)
+        ragged = r * (0.7 + 0.6 * rng.random(len(cen)))          # torn, not cut
+        dead.update(np.nonzero(d < ragged)[0].tolist())
+    bmesh.ops.delete(bm, geom=[shell[i] for i in dead], context="FACES")
+    bm.to_mesh(me)
+    bm.free()
+
+
 def load(name, coll):
     """Import the model and return it as one mesh object, linked into coll, centered, in meters."""
     before = set(bpy.data.objects)

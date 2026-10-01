@@ -124,6 +124,42 @@ def project(ob, sheet_path):
     me.uv_layers["sheet"].name = "UVMap"
 
 
+def add_inside(ob, inside_path):
+    """What it's made of inside: a slightly smaller copy of the shape, wearing the inside picture (circuit board,
+    filling, foam, wires), mapped straight onto each side. The crusher tears holes in the outer shell, so this is
+    what shows through them."""
+    import bmesh
+    me = ob.data
+    mt = bpy.data.materials.new("inside")
+    mt.use_nodes = True
+    nt = mt.node_tree
+    bsdf = next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED")
+    tx = nt.nodes.new("ShaderNodeTexImage")
+    tx.image = bpy.data.images.load(inside_path)
+    nt.links.new(tx.outputs["Color"], bsdf.inputs["Base Color"])
+    bsdf.inputs["Roughness"].default_value = 0.6
+    me.materials.append(mt)
+    k = len(me.materials) - 1
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    uv = bm.loops.layers.uv.active
+    v = np.array([x.co[:] for x in bm.verts])
+    c = (v.min(0) + v.max(0)) / 2
+    lo, span = v.min(0), np.maximum(np.ptp(v, axis=0), 1e-6)
+    dup = bmesh.ops.duplicate(bm, geom=bm.faces[:])
+    for x in [g for g in dup["geom"] if isinstance(g, bmesh.types.BMVert)]:
+        x.co = Vector((c + (np.array(x.co[:]) - c) * 0.9).tolist())
+    for f in [g for g in dup["geom"] if isinstance(g, bmesh.types.BMFace)]:
+        f.material_index = k
+        ax = int(np.argmax(np.abs(np.array(f.normal[:]))))
+        a, b = [i for i in range(3) if i != ax]
+        for l in f.loops:
+            p = (np.array(l.vert.co[:]) - lo) / span
+            l[uv].uv = (float(p[a]), float(p[b]))
+    bm.to_mesh(me)
+    bm.free()
+
+
 def preview(ob, out, extra=None):
     """Four sides of the model (and, below, the code-built version) on grey."""
     from PIL import Image
@@ -173,12 +209,15 @@ def main():
     ap.add_argument("--shape", required=True)
     ap.add_argument("--sheet", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--inside", default=None, help="picture of what it looks like inside, broken open")
     a = ap.parse_args(argv)
     bpy.ops.wm.read_factory_settings(use_empty=True)
     target, d = code_size(a.name)
     ob = import_shape(a.shape)
     fit(ob, target)
     project(ob, a.sheet)
+    if a.inside:
+        add_inside(ob, a.inside)
     od = os.path.join(a.out, a.name)
     os.makedirs(od, exist_ok=True)
     for o in bpy.data.objects:

@@ -26,6 +26,7 @@ VISIBLE = ("-Y", "+X", "+Z")
 def make_object(defn, rng, pal, coll, override=None):
     if models.path(defn.name):                      # a remastered Blender model replaces the code-built one
         ob = models.load(defn.name, coll)
+        models.tear(ob, rng)
         if override:
             ob.data.materials.clear()
             ob.data.materials.append(mat.get(override, rng))

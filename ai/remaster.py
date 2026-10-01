@@ -13,8 +13,11 @@ For each object:
   1. REFERENCE   the drawing room (~/Desktop/AI/draw.py, FLUX on this Mac) paints a 2x2 reference sheet of the
                  real thing from ai/remaster/prompts/<name>.txt: front, back, left side, right side.
   2. SHAPE       the sheet goes into ~/3D Drop; the sculptor (Hunyuan3D-2mv, on this Mac) turns it into a 3D shape.
-  3. BLENDER     blender/remaster_texture.py fits the shape to the object's real size and paints the sheet onto it.
-  4. REVIEW      assets/models_pending/<name>/review.png: the remaster's four sides above the code version's.
+  3. INSIDE      the drawing room paints what it is made of inside (ai/remaster/prompts/<name>.inside.txt): the
+                 circuit board in a cartridge, the filling in a chocolate, the foam in a shoe.
+  4. BLENDER     blender/remaster_texture.py fits the shape to the object's real size, paints the sheet onto it,
+                 and adds the inside as an inner layer. Crushing tears holes in the shell so the inside shows.
+  5. REVIEW      assets/models_pending/<name>/review.png: the remaster's four sides above the code version's.
 Nothing reaches the collection until it is approved. An approved model lives in assets/models/<name>/model.glb
 and replaces the code-built object in every cube (crushed the same way), and is hashed into the manifest.
 
@@ -47,7 +50,8 @@ SHEET_STYLE = ("Product reference sheet, a 2x2 grid of four photos of the same s
 
 
 def names():
-    return sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(PROMPTS, "*.txt")))
+    return sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(PROMPTS, "*.txt"))
+                  if not p.endswith(".inside.txt"))
 
 
 def say(msg):
@@ -61,6 +65,19 @@ def trash(path):
 
 def draw_sheet(name, out):
     prompt = SHEET_STYLE + open(os.path.join(PROMPTS, name + ".txt")).read().strip()
+    r = subprocess.run([sys.executable, DRAW_PY, prompt, "--out", out], capture_output=True, text=True)
+    return r.returncode == 0 and os.path.exists(out)
+
+
+INSIDE_STYLE = ("Extreme close-up photo, filling the whole frame edge to edge, of the INSIDE of this object after it "
+                "was crushed and split open: only the inner material, no outer shell, no background. The inside: ")
+
+
+def draw_inside(name, out):
+    p = os.path.join(PROMPTS, name + ".inside.txt")
+    if not os.path.exists(p):
+        return False
+    prompt = INSIDE_STYLE + open(p).read().strip()
     r = subprocess.run([sys.executable, DRAW_PY, prompt, "--out", out], capture_output=True, text=True)
     return r.returncode == 0 and os.path.exists(out)
 
@@ -94,8 +111,10 @@ def remaster(name, redo=False):
     shape = sculpt(name, sheet)
     if not shape:
         return "the sculptor could not make a shape (see ~/3D Drop/_PROBLEM.txt)"
+    inside = os.path.join(WORK, name + "_inside.png")
+    extra = ["--inside", inside] if draw_inside(name, inside) else []
     r = subprocess.run([PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", name, "--shape", shape,
-                        "--sheet", sheet, "--out", PENDING], capture_output=True, text=True)
+                        "--sheet", sheet, "--out", PENDING] + extra, capture_output=True, text=True)
     if r.returncode or not os.path.exists(os.path.join(out, "model.glb")):
         return "Blender pass failed: " + (r.stderr.strip().splitlines() or ["?"])[-1]
     shutil.copy(sheet, os.path.join(out, "reference.png"))
@@ -162,8 +181,12 @@ def main():
         sheet(); return
     if a.approve:
         approve(a.approve); return
+    # an object is ready once its prompts are written: the inside prompt is the last one the AI writes
     todo = a.only or [n for n in names() if not os.path.exists(os.path.join(PENDING, n, "model.glb"))
-                      and not os.path.exists(os.path.join(MODELS, n, "model.glb"))]
+                      and not os.path.exists(os.path.join(MODELS, n, "model.glb"))
+                      and os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))]
+    if not todo:
+        say("nothing ready: write the prompts (see the brief); an object is ready once <name>.inside.txt exists")
     for i, n in enumerate(todo[:a.limit] if not a.only else todo):
         t0 = time.time()
         res = remaster(n, a.redo)
