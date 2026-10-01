@@ -566,14 +566,28 @@ def vape_print(rng, name):
     return c.image(name)
 
 
-MASTHEADS = ["NIGHTCAP", "HIGH ROLLER", "LATE EDITION", "BACHELOR", "MAN CAVE", "THE LOUNGE", "SMOKING JACKET",
-             "AFTER HOURS", "BAD IDEA"]
+# parody mastheads: in the ballpark of the real newsstand, never the real name
+MASTHEADS = ["PLAYPEN", "PLAYBOI", "PLAYBUOY", "PENTHOUSE", "PLAYDOH", "HUSTLE", "PLAYBOY'S NEPHEW", "PLAYBAE",
+             "NIGHTCAP", "HIGH ROLLER", "BACHELOR", "AFTER HOURS"]
+MASTHEADS = [m for m in MASTHEADS if m not in ("PENTHOUSE",)]       # real titles stay out; the riffs stay in
 COVER_LINES = ["THE ARTICLES ISSUE", "CENTERFOLD INSIDE!", "FICTION!!", "WHY YOU'RE BROKE", "BEST BAR TABS",
                "GIRLS OF THE GROUP CHAT", "BUY THE TOP", "HOT TUBS RANKED", "INTERVIEW: A LIAR", "WALLET TIPS",
                "DIVORCE LAWYERS", "BEER: A HISTORY", "MY BUDDY'S BOAT", "PLUS: CIGARS"]
 BACKGROUNDS = [((0.1, 0.28, 0.6), (0.02, 0.07, 0.25)), ((0.8, 0.1, 0.15), (0.25, 0.02, 0.08)),
                ((0.05, 0.5, 0.55), (0.02, 0.15, 0.3)), ((0.35, 0.08, 0.55), (0.08, 0.02, 0.2)),
                ((0.96, 0.78, 0.15), (0.85, 0.35, 0.1)), ((0.08, 0.08, 0.1), (0.3, 0.05, 0.12))]
+
+
+def bunny_head(c, cx, cy, r, col):
+    """Our rabbit: a round head, two tall ears leaning apart, one eye, a bow tie. Nobody's logo; everybody's bunny."""
+    asp = c.w / c.h
+    for sx, lean in ((-1, 0.35), (1, 0.15)):
+        c.poly([(cx + sx * r * 0.25 / asp, cy + r * 0.6), (cx + sx * r * (0.55 + lean) / asp, cy + r * 2.4),
+                (cx + sx * r * (0.95 + lean) / asp, cy + r * 2.2), (cx + sx * r * 0.75 / asp, cy + r * 0.5)], col)
+    c.circle(cx, cy, r, col)
+    c.circle(cx + r * 0.35 / asp, cy + r * 0.15, r * 0.14, (0, 0, 0))
+    c.poly([(cx - r * 0.55 / asp, cy - r * 1.1), (cx, cy - r * 0.95), (cx + r * 0.55 / asp, cy - r * 1.1),
+            (cx + r * 0.55 / asp, cy - r * 1.55), (cx, cy - r * 1.35), (cx - r * 0.55 / asp, cy - r * 1.55)], col)
 
 
 def mag_cover(rng, name):
@@ -583,7 +597,10 @@ def mag_cover(rng, name):
     c.circle(0.5, 0.5, 0.27, (1.0, 0.9, 0.5, 0.22))
     figure(c, 0.5, 0.2, 0.67, rng, outfit=str(rng.choice(["bunny", "bunny", "bikini", "swim"])))
     mh = MASTHEADS[int(rng.integers(0, len(MASTHEADS)))]
-    c.text_fit(mh, 0.06, 0.975, 0.88, 0.1, (1, 1, 1), bold=True, spacing=1.05)
+    c.text_fit(mh, 0.06, 0.975, 0.72, 0.1, (1, 1, 1), bold=True, spacing=1.05)
+    bunny_head(c, 0.9, 0.925, 0.055, (1, 1, 1))
+    c.text(str(rng.choice(["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]))
+           + " " + str(int(rng.integers(1988, 2009))), 0.06, 0.865, 0.035, (1, 1, 1, 0.85))
     lines = [COVER_LINES[i] for i in rng.choice(len(COVER_LINES), 3, replace=False)]
     for i, (ln, col) in enumerate(zip(lines, ((1, 1, 0.55), (1, 1, 1), (1, 0.6, 0.7)))):
         c.text_fit(ln, 0.05, 0.175 - i * 0.055, 0.6, 0.042, col, bold=True, spacing=1.0)
@@ -615,13 +632,21 @@ def poster(rng, name):
     return c.image(name)
 
 
+def _bunny_tissue(c, rng):
+    bunny_head(c, 0.5, 0.42, 0.12, (1.0, 1.0, 1.0, 0.9))
+
+
 def tissue_print(rng, name):
     c = Canvas(128, 128, (*rng.choice([(0.75, 0.9, 0.95), (0.95, 0.8, 0.85), (0.85, 0.95, 0.8), (0.95, 0.92, 0.75)]), 1))
     for _ in range(18):
         x, y = rng.uniform(0, 1, 2)
         c.circle(x, y, rng.uniform(0.04, 0.08), (1, 1, 1, 0.8))
         c.circle(x, y, 0.02, (0.9, 0.7, 0.3))
-    c.text("SOFT", 0.08, 0.3, 0.2, (1, 1, 1), bold=True)
+    if rng.random() < 0.5:
+        _bunny_tissue(c, rng)
+        c.text_fit("BUNNY SOFT", 0.06, 0.2, 0.88, 0.12, (1, 1, 1), bold=True)
+    else:
+        c.text("SOFT", 0.08, 0.3, 0.2, (1, 1, 1), bold=True)
     return c.image(name)
 
 
