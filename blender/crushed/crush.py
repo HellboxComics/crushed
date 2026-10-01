@@ -125,9 +125,9 @@ FACES = {
 }
 
 
-def orient(rng, hero, normal, tilt=0.45):
+def orient(rng, hero, normal, tilt=0.45, upright=False):
     q = Vector(hero).normalized().rotation_difference(normal)
-    spin = Quaternion(normal, rng.uniform(0, 2 * math.pi))
+    spin = Quaternion(normal, rng.normal(0, 0.1) if upright else rng.uniform(0, 2 * math.pi))
     ax = normal.orthogonal().normalized()
     ax.rotate(Quaternion(normal, rng.uniform(0, 2 * math.pi)))
     t = Quaternion(ax, rng.normal(0, tilt))
@@ -185,7 +185,18 @@ def compact(v, layer, seed, margin=0.012, strength=1.0):
     # wrinkles where material got squeezed hardest
     comp = np.linalg.norm(v - out, axis=1)
     wr = noise.fbm_vec(v, 1.0 / 0.018, 2, seed + 11) * np.clip(comp, 0, 0.04)[:, None] * 0.35 * strength
-    return out + wr
+    return under_straps(out + wr)
+
+
+def under_straps(v):
+    """The straps are the top layer, always: nothing under a strap rises above its underside."""
+    out = v.copy()
+    for sx in STRAPS:
+        band = np.clip(1 - (np.abs(out[:, 0] - sx) - STRAP_W / 2 - 0.002) / 0.006, 0, 1)
+        lim = H - 0.0045 - 0.0012 + (1 - band) * 0.05
+        for a in (1, 2):
+            out[:, a] = np.sign(out[:, a]) * np.minimum(np.abs(out[:, a]), lim)
+    return out
 
 
 def core_mesh(me_verts, seed):

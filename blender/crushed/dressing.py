@@ -74,7 +74,7 @@ def strap(coll, rng, x, cond, stamp_text=None, name="strap", empty=False):
     for dz in (-0.013, 0.013):
         b.box((w + 0.008, 0.0035, 0.006), loc=(x, -half - 0.0065, seal_z + dz), mat="seal", bevel=0.0008)
     slots = ["steel", "seal"]
-    specs = {"steel": ("rust", {"amount": 0.35 if cond == "CLEAN" else 0.9 if cond == "SOAKED" else 0.6,
+    specs = {"steel": ("rust", {"amount": 0.12 if cond == "CLEAN" else 0.9 if cond == "SOAKED" else 0.6,
                                 "base": (0.2, 0.18, 0.2) if cond == "BURNT" else (0.42, 0.42, 0.44)}),
              "seal": ("rust", {"amount": 0.3, "base": (0.5, 0.5, 0.52)})}
     if stamp_text:

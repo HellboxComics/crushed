@@ -701,7 +701,7 @@ def street_sign(rng, name):
 
 def newspaper(rng, name):
     c = Canvas(256, 320, (0.86, 0.85, 0.8, 1))
-    c.text("THE STREET", 0.06, 0.96, 0.065, (0.05, 0.05, 0.05), bold=True)
+    c.text("THE LEDGER", 0.06, 0.96, 0.065, (0.05, 0.05, 0.05), bold=True)
     c.rect(0.04, 0.84, 0.96, 0.85, (0.05, 0.05, 0.05))
     c.text("EXTRA EXTRA", 0.06, 0.8, 0.06, (0.05, 0.05, 0.05), bold=True)
     c.rect(0.06, 0.4, 0.6, 0.64, (0.45, 0.45, 0.45))
@@ -796,6 +796,127 @@ def gas_label(rng, name):
     c.rect(0, 0, 1, 0.28, (0.05, 0.05, 0.05))
     c.text("GAS", 0.08, 0.92, 0.4, (0.85, 0.08, 0.05), bold=True)
     c.text("$9.99", 0.1, 0.22, 0.13, (1, 0.85, 0.1), bold=True)
+    return c.image(name)
+
+
+# -- gift-block prints ---------------------------------------------------------------------------
+
+_LIME = (0.8, 1.0, 0.0)          # CCFF00
+_VOID = (0.012, 0.012, 0.014)
+_NEON_WORDS = ["MY NEON", "PROOF OF NEON", "ONE COLOR", "SQUARE", "IS THE WALLET", "NEON", "HEX", "ONE OF ONE"]
+
+
+def neon_tile(rng, name, neg=False, big=False):
+    """A flat CCFF00 tile with small black mono type. `neg` flips it: black tile, lime type. `big` is the headliner."""
+    bg, ink = (_VOID, _LIME) if neg else (_LIME, (0.02, 0.02, 0.02))
+    n = 512 if big else 192
+    c = Canvas(n, n, (*ink, 1))
+    c.rect(0.022, 0.022, 0.978, 0.978, bg)      # a hairline of the other color, so every tile reads as a tile
+    if big:
+        c.rect(0.035, 0.035, 0.965, 0.965, ink)
+        c.rect(0.045, 0.045, 0.955, 0.955, bg)
+        c.text("HEX /", 0.08, 0.92, 0.06, ink, bold=True)
+        c.text_fit("CCFF00", 0.07, 0.64, 0.86, 0.3, ink, spacing=0.95, bold=True)
+        c.text_fit("ONE COLOR.", 0.08, 0.34, 0.84, 0.06, ink, bold=True)
+        c.text_fit("THOUSANDS OF", 0.08, 0.255, 0.84, 0.06, ink, bold=True)
+        c.text_fit("UNIQUE IDENTITIES.", 0.08, 0.17, 0.84, 0.06, ink, bold=True)
+        c.text("204 255 000", 0.08, 0.1, 0.04, ink)
+        c.text("#0001", 0.76, 0.1, 0.04, ink)
+        return c.image(name)
+    style = int(rng.choice(7, p=[0.14, 0.16, 0.16, 0.1, 0.12, 0.14, 0.18]))
+    num = str(int(rng.integers(1, 9999))).zfill(4)
+    if style == 0:
+        c.text(num, 0.08, 0.93, 0.07, ink)
+        c.text_fit("CCFF00", 0.08, 0.2, 0.84, 0.075, ink, bold=True)
+    elif style == 1:
+        c.text_fit("CCFF00", 0.08, 0.6, 0.84, 0.3, ink, spacing=0.95, bold=True)
+    elif style == 2:
+        c.text("HEX", 0.08, 0.93, 0.09, ink, bold=True)
+        c.text_fit("CCFF00", 0.08, 0.58, 0.84, 0.3, ink, spacing=0.95, bold=True)
+    elif style == 3:
+        for k, t in enumerate(("204", "255", "000")):
+            c.text(t, 0.12, 0.9 - k * 0.3, 0.24, ink, bold=True)
+    elif style == 4:
+        c.rect(0.12, 0.12, 0.88, 0.88, ink)
+        c.rect(0.17, 0.17, 0.83, 0.83, bg)
+        c.text_fit("#CCFF00", 0.22, 0.54, 0.56, 0.08, ink, bold=True)
+    elif style == 5:
+        w = str(rng.choice(_NEON_WORDS))
+        if len(w) > 9:
+            a, b2 = w.rsplit(" ", 1)
+            c.text_fit(a, 0.08, 0.68, 0.84, 0.18, ink, bold=True)
+            c.text_fit(b2, 0.08, 0.42, 0.84, 0.18, ink, bold=True)
+        else:
+            c.text_fit(w, 0.08, 0.6, 0.84, 0.22, ink, bold=True)
+    else:
+        c.rect(0.08, 0.08, 0.2, 0.2, ink)
+    return c.image(name)
+
+
+_COMPANIES = ["HOOD ST PIG CO", "BULLS BEARS AND PIGS", "OINK HOLDINGS", "SLOP FUND LLC", "TROUGH CAPITAL"]
+
+
+def _pig_head(c, cx, cy, r, skin=(0.96, 0.62, 0.72), dark=(0.8, 0.38, 0.5), ink=(0.1, 0.05, 0.06)):
+    """A small flat pig face: head, two ears, snout with nostrils, two eyes."""
+    asp = c.w / c.h
+    for sx in (-1, 1):
+        c.poly([(cx + sx * r * 0.35 / asp, cy + r * 0.8), (cx + sx * r * 1.05 / asp, cy + r * 1.15),
+                (cx + sx * r * 1.0 / asp, cy + r * 0.3)], dark)
+    c.circle(cx, cy, r, skin)
+    c.circle(cx, cy - r * 0.22, r * 0.46, dark)
+    c.circle(cx, cy - r * 0.22, r * 0.4, skin)
+    for sx in (-1, 1):
+        c.circle(cx + sx * r * 0.14 / asp, cy - r * 0.22, r * 0.07, ink)
+        c.circle(cx + sx * r * 0.42 / asp, cy + r * 0.28, r * 0.09, ink)
+
+
+def stock_cert(rng, name):
+    paper, green = (0.93, 0.9, 0.78), (0.1, 0.35, 0.2)
+    c = Canvas(320, 224, (*paper, 1))
+    c.rect(0.02, 0.03, 0.98, 0.97, green)
+    c.rect(0.03, 0.045, 0.97, 0.955, paper)
+    c.rect(0.05, 0.07, 0.95, 0.93, green)
+    c.rect(0.056, 0.083, 0.944, 0.917, paper)
+    c.text_fit("SHARE CERTIFICATE", 0.1, 0.88, 0.8, 0.075, green, bold=True)
+    _pig_head(c, 0.16, 0.6, 0.085)
+    c.text_fit(str(rng.choice(_COMPANIES)), 0.28, 0.72, 0.62, 0.075, (0.08, 0.08, 0.1), bold=True)
+    c.text_fit(str(rng.choice(["10", "69", "100", "420", "888", "1000"])) + " SHARES", 0.28, 0.55, 0.62, 0.12,
+               (0.08, 0.08, 0.1), bold=True)
+    c.text_fit("BULLS MAKE MONEY. BEARS MAKE MONEY.", 0.1, 0.32, 0.8, 0.045, (0.2, 0.2, 0.22))
+    c.text_fit("PIGS GET SLAUGHTERED.", 0.1, 0.25, 0.8, 0.055, (0.75, 0.1, 0.1), bold=True)
+    c.scribble(rng, 0.12, 0.14, 0.42, 0.012, (0.1, 0.1, 0.25), amp=0.02)
+    c.circle(0.8, 0.17, 0.085, (0.85, 0.68, 0.2))
+    c.circle(0.8, 0.17, 0.065, (0.95, 0.82, 0.35), ring=0.008)
+    c.text("$", 0.775, 0.215, 0.09, (0.5, 0.35, 0.05), bold=True)
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def ticker_tape(rng, name):
+    c = Canvas(2048, 64, (0.95, 0.94, 0.88, 1))
+    green, red = (0.05, 0.5, 0.15), (0.75, 0.1, 0.1)
+    toks = [("PIG +420%", green), ("RUG -100%", red), ("BULL +12%", green), ("BEAR -3%", red), ("OINK +69%", green),
+            ("HOOD +8%", green), ("GM +1%", green), ("SLOP -42%", red), ("TRUFFLE +5%", green), ("EXIT -88%", red)]
+    x = 0.01
+    for k in rng.permutation(len(toks)).tolist() * 2:
+        t, col = toks[k]
+        x = c.text(t, x, 0.8, 0.6, col, bold=True) + 0.02
+        if x > 0.93:
+            break
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def tie_print(rng, name):
+    base = [(0.75, 0.08, 0.12), (0.08, 0.25, 0.6), (0.9, 0.45, 0.6), (0.1, 0.45, 0.25), (0.45, 0.1, 0.55)]
+    col = base[int(rng.integers(0, len(base)))]
+    light = tuple(min(1.0, x * 0.4 + 0.6) for x in col)
+    c = Canvas(128, 256, (*col, 1))
+    a = float(rng.uniform(0.15, 0.3))
+    for k in range(-3, 14):
+        y0 = k * 0.12
+        c.poly([(0, y0), (1, y0 + a), (1, y0 + a + 0.035), (0, y0 + 0.035)], light)
+    c.noise(rng, 0.02)
     return c.image(name)
 
 

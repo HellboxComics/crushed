@@ -218,14 +218,16 @@ class Builder:
         vr = [[self.bm.verts.new(m @ Vector(p)) for p in ring] for ring in rings]
         k = len(rings[0])
         n = len(vr)
+        du = k if closed else max(k - 1, 1)      # span the whole 0..1 range, so a print reaches every edge
+        dv = max(n - 1, 1)
         for j in range(n - 1):
             for i in range(k if closed else k - 1):
                 a, b = vr[j][i], vr[j][(i + 1) % k]
                 c, d = vr[j + 1][(i + 1) % k], vr[j + 1][i]
                 try:
                     f = self.bm.faces.new((a, b, c, d))
-                    for l, uv in zip(f.loops, ((i / k, j / n), ((i + 1) / k, j / n),
-                                                ((i + 1) / k, (j + 1) / n), (i / k, (j + 1) / n))):
+                    for l, uv in zip(f.loops, ((i / du, j / dv), ((i + 1) / du, j / dv),
+                                                ((i + 1) / du, (j + 1) / dv), (i / du, (j + 1) / dv))):
                         l[self.uv].uv = uv
                 except ValueError:
                     pass

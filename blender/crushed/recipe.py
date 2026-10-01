@@ -9,7 +9,7 @@ before mint so nobody (including us) can move a one-of-one afterwards.
 import numpy as np
 
 from . import lore
-from .objects import ERAS, load
+from .objects import ERAS, NEON_SPEC, load
 
 SUPPLY = 888
 COLLECTION_SEED = 19972008
@@ -18,7 +18,7 @@ ONE_OF_ONES = [
     "EMPTY", "UNCRUSHED", "SOLID GOLD", "MIXTAPE", "LEFTOVERS", "DOUBLE A", "SCREEN TIME", "BULL TRAP",
     "LANDFILL DRIVE", "BLOW ON IT", "STILL ALIVE", "GAS FEES", "SAVE ICON", "COASTERS", "GM", "COLD STORAGE",
     "SLOW MOTION", "UNDER THE MATTRESS",
-    "LOW RES", "CCFF00", "STOP THE PRESSES",          # three gift blocks, made for other people's worlds
+    "LOW RES", "CCFF00", "STOP THE PRESSES", "CLAY DAY",      # gift blocks, made for other people's worlds
 ]
 
 CONDITIONS = {          # exact counts across all 888 (plus the one-of-ones)
@@ -107,10 +107,14 @@ MONOCULTURES = {   # one-of-ones that are made of one idea
                            ("sock", 4), ("foil_packet", 4)],
     "LOW RES": [("pixel_hoodie", 6), ("studio_headphones", 5), ("synth_keys", 4), ("cassette", 10), ("floppy", 6),
                 ("ribbon_cable", 8), ("crt", 2), ("game_cart", 4), ("controller_16bit", 2)],
-    "CCFF00": [("neon_tube", 10), ("highlighter", 14), ("glow_stick", 12), ("tennis_ball", 10),
-               ("energy_can", 6), ("floppy", 6), ("sneaker", 1)],
-    "STOP THE PRESSES": [("street_sign", 4), ("newspaper", 12), ("microphone", 5), ("press_badge", 8),
-                         ("play_money", 10), ("playing_cards", 6), ("digital_camera", 3), ("boombox", 1)],
+    "CCFF00": [("neon_square_big", 1), ("neon_square", 16), ("neon_diamond", 9), ("neon_cube", 8),
+               ("neon_stack", 3), ("neon_frame", 4)],
+    "STOP THE PRESSES": [("piggy_bank", 14), ("stock_cert", 5), ("ticker_tape", 4), ("necktie", 4), ("bull", 3),
+                         ("bear", 3), ("corded_phone", 2), ("calculator", 2), ("newspaper", 3), ("street_sign", 1),
+                         ("microphone", 1), ("press_badge", 2), ("play_money", 3), ("poker_chip", 2),
+                         ("gold_coin", 2), ("neon_square", 2)],
+    "CLAY DAY": [("clay_bull", 8), ("clay_bear", 7), ("clay_pig", 7), ("clay_frog", 6), ("clay_coin", 6),
+                 ("clay_candle", 8)],
 }
 
 # one-of-ones whose gaps are packed with their own kind of debris
@@ -121,16 +125,28 @@ ONE_FILLERS = {
     "COASTERS": ("receipt", "bottle_cap", "crumpled_paper"),
     "SLOW MOTION": ("fabric_scrap", "plastic_film", "receipt", "gum_wrapper", "bottle_cap"),
     "UNDER THE MATTRESS": ("tissues", "crumpled_paper", "fabric_scrap", "foil_packet", "receipt"),
+    "CCFF00": ("neon_bit",),
+    "STOP THE PRESSES": ("receipt", "crumpled_paper", "bottle_cap"),
+    "CLAY DAY": ("clay_blob",),
+}
+
+# one-of-ones whose contents get crushed gently (flat tiles should stay tiles)
+ONE_SOFT = {"CCFF00": 0.25, "STOP THE PRESSES": 0.5, "CLAY DAY": 0.3}
+
+# one-of-ones whose dense core (the mass behind everything) is not the era's junk
+ONE_CORE = {
+    "CCFF00": [(0.012, 0.012, 0.014), (0.02, 0.02, 0.022), (0.03, 0.03, 0.032)],
+    "CLAY DAY": [(0.03, 0.03, 0.035), (0.95, 0.95, 0.93), (0.8, 1.0, 0.0), (0.96, 0.55, 0.68)],
 }
 
 # whole-block finishes for one-of-ones that are a single material
 # one-of-ones made of paper, cloth or glass: loose electrical wire has no business on them
-NO_WIRES = {"UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
+NO_WIRES = {"CLAY DAY", "UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
             "UNCRUSHED", "EMPTY", "BULL TRAP", "SOLID GOLD"}
 
 ONE_FINISH = {
     "SOLID GOLD": ("SOLID GOLD", ("gold", {"rough": 0.2})),
-    "CCFF00": ("CCFF00", ("plastic", {"color": (0.8, 1.0, 0.0), "rough": 0.28, "coat": 0.7})),
+    "CCFF00": ("CCFF00", NEON_SPEC),
     "COLD STORAGE": ("FROZEN", ("plastic", {"color": (0.74, 0.9, 1.0), "rough": 0.24, "coat": 0.9})),
 }
 
@@ -154,8 +170,9 @@ ONE_OF_ONE_FLAVOR = {  # (smell, recovered from, headliner)
     "SLOW MOTION": ("Coconut Sunscreen", "The Beach, in Slow Motion", "Rescue Can"),
     "UNDER THE MATTRESS": ("Shame", "Under the Mattress", "Magazine"),
     "LOW RES": ("Warm Amplifier", "A Bedroom Studio, 3 A.M.", "Pixel Hoodie"),
-    "CCFF00": ("Fresh Highlighter", "The Neon Aisle", "Neon Tube"),
-    "STOP THE PRESSES": ("Fresh Newsprint", "The Newsroom Floor", "Street Sign"),
+    "CCFF00": ("Hot Plastic and Ozone", "The Neon Aisle", "Big Neon Square"),
+    "STOP THE PRESSES": ("Bacon and Newsprint", "The Trading Floor, After the Bell", "Piggy Bank"),
+    "CLAY DAY": ("Warm Plasticine", "A Desk, Mid-Pump", "Clay Bull"),
 }
 
 LOCKED = ("SOAKED", "BURNT", "BIOHAZARD", "GOLD")
@@ -188,8 +205,8 @@ def _weighted(rng, table, cond):
 ONE_ERA = {
     "MIXTAPE": {0, 1}, "SCREEN TIME": {2, 3}, "LANDFILL DRIVE": {3, 4}, "BLOW ON IT": {1}, "STILL ALIVE": {2, 3},
     "GAS FEES": {2, 3, 4}, "SAVE ICON": {0, 1, 2}, "COASTERS": {1, 2, 3}, "GM": {4}, "COLD STORAGE": {3, 4},
-    "SLOW MOTION": {1}, "UNDER THE MATTRESS": {0, 1, 2, 3}, "LOW RES": {1}, "CCFF00": {1, 2, 3, 4},
-    "STOP THE PRESSES": {0, 1, 2, 3},
+    "SLOW MOTION": {1}, "UNDER THE MATTRESS": {0, 1, 2, 3}, "LOW RES": {1}, "CCFF00": {4},
+    "STOP THE PRESSES": {4}, "CLAY DAY": {4},
 }
 
 
@@ -342,6 +359,8 @@ def recipe(token_id):
         "condition": cond,
         "one_of_one": one,
         "clean": clean,
+        "core": ONE_CORE.get(one),
+        "soft": ONE_SOFT.get(one, 1.0),
         "intensity": inten,
         "headliner": headliner if heroes else None,
         "heroes": heroes,

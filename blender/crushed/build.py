@@ -95,6 +95,8 @@ def build_block(r, coll, rng):
     if r["clean"]:
         c = r["clean"][1][1].get("color", (1.0, 0.78, 0.34) if r["clean"][1][0] == "gold" else (0.8, 0.8, 0.8))
         core_pal = [tuple(x * k for x in c) for k in (0.5, 0.7, 0.85, 1.0)]
+    if r.get("core"):
+        core_pal = [tuple(c) for c in r["core"]]
     objs.append(dressing.core(coll, rng, core_pal, r["seed"]))
 
     # the headliner goes front and center; then big things (the back layer); then the rest
@@ -111,7 +113,8 @@ def build_block(r, coll, rng):
         v = prepare(ob, limit, rng)
         if v is None:
             continue
-        v = damage(v, rng, inten * (0.6 if head or override else 1.0), keep_shape=head or override or not d.big)
+        v = damage(v, rng, inten * (0.6 if head or override else 1.0) * r.get("soft", 1.0),
+                   keep_shape=head or override or not d.big)
         if head:
             face = "-Y"
         elif override:
@@ -122,7 +125,7 @@ def build_block(r, coll, rng):
         ext = np.ptp(v, axis=0)
         radius = float(np.sort(ext)[1]) * 0.5
         uv = faces.pick_uv(face, radius, spread=0.2 if head else 0.55 if override else 0.82)
-        q = crush.orient(rng, d.hero, nrm, tilt=0.2 if head else 0.35)
+        q = crush.orient(rng, d.hero, nrm, tilt=0.2 if head else 0.35, upright=head and "upright" in d.tags)
         if head:
             poke, depth, layer = rng.uniform(0.004, 0.01), 0.07, 0.004
         elif d.big:
@@ -160,7 +163,7 @@ def build_block(r, coll, rng):
         brittle = name in ("glass_shard", "bottle_cap", "spring")
         if name in ("crumpled_paper", "receipt", "fabric_scrap", "gum_wrapper", "plastic_film"):
             v = crush.crumple(v, rng, 3.0)
-        v = damage(v, rng, inten, brittle)
+        v = damage(v, rng, inten * r.get("soft", 1.0), brittle)
         face = faces.pick_face(fill_faces)
         nrm, t1, t2 = crush.FACES[face]
         uv = rng.uniform(-0.95, 0.95, 2) * H
@@ -174,13 +177,18 @@ def build_block(r, coll, rng):
         crush.set_verts(ob.data, v)
         objs.append(ob)
 
+    top = []
     if r["tape_loops"]:
-        objs.append(dressing.tape_ribbon(coll, rng, r["tape_loops"]))
-    objs.append(dressing.wires(coll, rng, r["wires"]))
+        top.append(dressing.tape_ribbon(coll, rng, r["tape_loops"]))
+    top.append(dressing.wires(coll, rng, r["wires"]))
     if r["condition"] == "BIOHAZARD":
-        objs.append(dressing.goo(coll, rng, int(rng.integers(6, 12))))
+        top.append(dressing.goo(coll, rng, int(rng.integers(6, 12))))
     if r["condition"] == "SOAKED":
-        objs.append(dressing.droplets(coll, rng, int(rng.integers(40, 90))))
+        top.append(dressing.droplets(coll, rng, int(rng.integers(40, 90))))
+    for ob in top:                     # tape, wires and goo all go under the straps too
+        if len(ob.data.vertices):
+            crush.set_verts(ob.data, crush.under_straps(crush.verts(ob.data)))
+    objs += top
     for j, x in enumerate(r["straps"]):
         objs.append(dressing.strap(coll, rng, x, "CLEAN" if r["clean"] else r["condition"],
                                    stamp_text=f"{r['id']:04d}" if j == 0 else None))

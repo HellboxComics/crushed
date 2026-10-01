@@ -392,6 +392,9 @@ def printed(g, p, rng):
     if COND["glow"] and p["image"].get("lcd"):
         s["emit"] = t.outputs["Color"]
         s["estr"] = COND["glow"] * 0.6
+    if p.get("glow"):                       # self-lit print: the dark ink stays dark, the bright color glows
+        s["emit"] = t.outputs["Color"]
+        s["estr"] = p["glow"]
     return s
 
 
@@ -430,6 +433,22 @@ def fabric(g, p, rng):
     n = g.noise(20.0, 6.0, 0.6)
     col = g.mix(g.maprange(n.outputs["Fac"], 0.3, 0.8, 0, 0.3), c, (0.2, 0.18, 0.15), "MULTIPLY")
     return {"color": col, "rough": 0.95, "sheen": 0.6, "normal": g.bump(w.outputs["Fac"], 0.25, 0.0008)}
+
+
+def clay(g, p, rng):
+    """Plasticine: matte, a little waxy, with thumbprints and smeared color where two lumps met."""
+    c = _lin(p.get("color", (0.9, 0.5, 0.2)))
+    prints = g.voronoi(140.0, "SMOOTH_F1", rand=1.0)          # thumbprint dimples
+    ridges = g.noise(900.0, 1.0, 0.4)                          # fingerprint ridges
+    lumps = g.noise(12.0, 3.0, 0.5)
+    smear = g.maprange(g.noise(9.0, 4.0, 0.6).outputs["Fac"], 0.62, 0.74, 0.0, 0.3)
+    other = _lin(p.get("smear", (0.95, 0.9, 0.85)))
+    col = g.mix(smear, c, other)
+    col = g.mix(g.maprange(lumps.outputs["Fac"], 0.3, 0.7, 0, 0.12), col, (0.0, 0.0, 0.0))
+    h = g.math("ADD", g.math("MULTIPLY", prints.outputs["Distance"], 0.6),
+               g.math("MULTIPLY", g.maprange(ridges.outputs["Fac"], 0.45, 0.55), 0.08))
+    return {"color": col, "rough": 0.62, "sss": 0.25, "spec": 0.3,
+            "normal": g.bump(g.math("ADD", h, g.math("MULTIPLY", lumps.outputs["Fac"], 0.5)), 0.45, 0.0025)}
 
 
 def tape(g, p, rng):
@@ -616,7 +635,7 @@ KINDS = {
     "gold": gold, "glass": glass, "screen": screen, "printed": printed, "paper": paper, "cardboard": cardboard,
     "foam": foam, "fabric": fabric, "tape": tape, "disc": disc, "wax": wax, "crust": crust, "pcb": pcb,
     "copper": copper, "steel": steel, "rust": rust, "core": core, "floor": floor, "goo": goo, "lens": lens,
-    "gem": gem, "water": water, "wrap": wrap, "army": army, "slime": slime, "wood": wood,
+    "gem": gem, "water": water, "wrap": wrap, "army": army, "slime": slime, "wood": wood, "clay": clay,
 }
 
 __all__ = ["get", "set_condition", "tex"]

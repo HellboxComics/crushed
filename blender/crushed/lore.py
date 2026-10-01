@@ -40,6 +40,13 @@ NAMES = {
     "synth_keys": "Synth Keys", "ribbon_cable": "Ribbon Cable", "neon_tube": "Neon Tube", "highlighter": "Highlighter",
     "tennis_ball": "Tennis Ball", "street_sign": "Street Sign", "newspaper": "Newspaper", "microphone": "Microphone",
     "press_badge": "Press Badge", "play_money": "Play Money", "playing_cards": "Playing Cards",
+    # gift blocks
+    "neon_square": "Neon Square", "neon_square_big": "Big Neon Square", "neon_diamond": "Neon Diamond",
+    "neon_cube": "Neon Cube", "neon_stack": "Square Stack", "neon_frame": "Hollow Square", "neon_bit": "Loose Pixel",
+    "piggy_bank": "Piggy Bank", "stock_cert": "Share Certificate", "ticker_tape": "Ticker Tape",
+    "necktie": "Necktie",
+    "clay_bull": "Clay Bull", "clay_bear": "Clay Bear", "clay_pig": "Clay Pig", "clay_frog": "Clay Frog",
+    "clay_coin": "Clay Coin", "clay_candle": "Clay Candle", "clay_blob": "Leftover Clay",
 }
 
 # the parenthetical in the evidence inventory; picked per token
@@ -169,6 +176,27 @@ NOTES = {
     "press_badge": ["ALL ACCESS, laminated", "lost at the after party", "hanging by a thread"],
     "play_money": ["worth exactly what it says", "no cash value, ever", "won, then lost, at cards"],
     "playing_cards": ["one short of a deck", "the ace of spades, hidden", "a bluff, in four cards"],
+    "neon_square": ["one color, zero apologies", "flat, like the market", "identical to the others, on purpose",
+                    "a square that knows exactly what it is"],
+    "neon_square_big": ["says HEX right on it", "the one everyone sees first", "one color, all the attitude"],
+    "neon_diamond": ["a square that turned 45 degrees and got an attitude", "turned, just to be different"],
+    "neon_cube": ["a square with a third dimension", "six sides, one color", "stacked up from flat ones, allegedly"],
+    "neon_stack": ["a deck of identical squares", "stacked, still all the same"],
+    "neon_frame": ["all edge, no filling", "just the outline of a square"],
+    "piggy_bank": ["never shaken, still full of hope", "the coin slot is mostly a mouth", "a boar doing a pig's job",
+                   "pigs get slaughtered, this one got saved", "cracked, not broken", "slot stuffed with receipts"],
+    "stock_cert": ["100 shares of something loud", "framed once, ignored since", "signed, sealed, worthless",
+                   "BULLS MAKE MONEY. BEARS MAKE MONEY."],
+    "ticker_tape": ["fell off the machine in the 80s", "every number was green until it wasn't",
+                    "PIG +420%, allegedly"],
+    "necktie": ["no suits, only ties cut short", "the knot is the only thing still tight",
+                "worn once, to a funeral for a portfolio"],
+    "clay_bull": ["thumbprints still in the horns", "molded at the top", "hat on, horns up"],
+    "clay_bear": ["squeezed a little harder than the others", "shades on, thriving", "molded on the way down"],
+    "clay_pig": ["fattest lump on the desk", "snout pressed on with one thumb", "greedy, in clay"],
+    "clay_frog": ["wide mouth, no comment", "squat and smug", "molded in one sitting"],
+    "clay_coin": ["worth one lump of clay", "stamped with a thumbnail"],
+    "clay_candle": ["green, for once", "red, like always", "molded by hand, like the chart"],
 }
 # a few extra lines on the old favorites, same voice
 NOTES["sneaker"] += ["smells like 1989", "worn to one (1) very bad decision"]
@@ -260,8 +288,9 @@ ONE_OF_ONES = {
     "SLOW MOTION": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous.",
     "UNDER THE MATTRESS": "It was under the mattress. Everyone's mother knew. Nobody said a word.",
     "LOW RES": "Made in a hoodie and a pair of headphones at three in the morning. Low res and loud.",
-    "CCFF00": "One color. All of it CCFF00. None of it subtle.",
-    "STOP THE PRESSES": "Extra. Extra. The street has news, and a street sign to prove it.",
+    "CCFF00": "One color, three shapes, zero apologies. Squares, diamonds and cubes, 204 255 000 all the way down.",
+    "CLAY DAY": "Bulls, bears, pigs and frogs, all squeezed out of clay by hand, then squeezed again by a crusher.",
+    "STOP THE PRESSES": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties.",
 }
 
 SIGNOFFS = [

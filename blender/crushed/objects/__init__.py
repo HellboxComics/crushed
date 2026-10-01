@@ -61,6 +61,13 @@ def PR(img, rough=0.45, **kw):
     return ("printed", {"image": img, "rough": rough, **kw})
 
 
+# -- shared gift-block constants ---------------------------------------------------
+
+LIME = (0.7, 1.0, 0.0)          # CCFF00 (a touch greener here, AgX drifts it toward yellow)
+NEON = 0.9                      # how hard the lime glows
+NEON_SPEC = ("plastic", {"color": LIME, "rough": 0.3, "coat": 0.5, "glow": NEON})
+
+
 # -- era palettes ----------------------------------------------------------------
 
 BEIGE = (0.84, 0.8, 0.68)
@@ -123,5 +130,5 @@ class Palette:
 
 
 def load():
-    from . import era, crypto, filler, modern, degen, special  # noqa: F401  (registration side effects)
+    from . import era, crypto, filler, modern, degen, special, gifts  # noqa: F401  (registration side effects)
     return REG
