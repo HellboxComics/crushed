@@ -13,7 +13,7 @@ mkdir -p site/film
 "$FF" -y -loglevel error -i "$Q" -vf scale=1080:1080 -c:v libx264 -preset slow -crf 23 -profile:v high -pix_fmt yuv420p \
   -c:a aac -b:a 160k -movflags +faststart site/film/hero_square.mp4
 ls -lh site/film/*.mp4 | awk '{print "  " $9 "  " $5}'
-SRC=~/crushed-render/out/$(cut -c3-12 collection/provenance.txt)
+SRC=~/crushed-render/out/$(cut -c3-12 collection/provenance.txt)-$(cat blender/ART_VERSION)
 for id in 529 8 282 324 344 527 552 718; do
   n=$(printf "%04d" $id)
   [ -f site/cube/$n.webp ] && [ site/cube/$n.webp -nt "$SRC/$n.png" ] && continue

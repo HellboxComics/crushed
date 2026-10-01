@@ -3,7 +3,7 @@
 (
 set -e
 cd ~/crushed-render/repo && git pull -q
-SRC=~/crushed-render/out/$(cut -c3-12 collection/provenance.txt)
+SRC=~/crushed-render/out/$(cut -c3-12 collection/provenance.txt)-$(cat blender/ART_VERSION)
 mkdir -p site/cube
 for id in 529 8 282 324 344 527 552 718; do
   n=$(printf "%04d" $id)

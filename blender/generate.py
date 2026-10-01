@@ -222,6 +222,10 @@ def main():
         conds, _ = recipe.deck()
         ids += [i + 1 for i, c in enumerate(conds) if c in recipe.ONE_OF_ONES]
     if a.range:
+        hold = os.path.join(os.path.dirname(HERE), "collection", "HOLD")
+        if os.path.exists(hold):          # new art waiting for sign-off: the batch render doesn't start
+            print("[crushed] on hold, not rendering the collection:", open(hold).read().strip())
+            return
         ids += list(range(a.range[0], a.range[1] + 1))
     if a.showcase:
         ids += recipe.showcase()

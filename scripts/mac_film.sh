@@ -7,7 +7,7 @@
 source ~/crushed-render/repo/scripts/_setup.sh
 .venv/bin/python -c "import imageio_ffmpeg" 2>/dev/null || .venv/bin/python -m pip install -q imageio-ffmpeg 2>/dev/null \
   || uv pip install -q --python .venv/bin/python imageio-ffmpeg
-OUT="renders/film_$(cut -c3-12 collection/provenance.txt)"
+OUT="renders/film_$(cut -c3-12 collection/provenance.txt)-$(cat blender/ART_VERSION)"
 nohup caffeinate -i bash -c "
   .venv/bin/python film/render.py --out '$OUT' --samples ${SAMPLES:-64} --device auto 2>&1 | grep --line-buffered '\[film\]' &&
   .venv/bin/python film/sound.py &&

@@ -6,7 +6,7 @@
 source ~/crushed-render/repo/scripts/_setup.sh
 .venv/bin/python -c "import imageio_ffmpeg" 2>/dev/null || .venv/bin/python -m pip install -q imageio-ffmpeg 2>/dev/null \
   || uv pip install -q --python .venv/bin/python imageio-ffmpeg
-FREEZE=$(cut -c3-12 collection/provenance.txt)
+FREEZE=$(cut -c3-12 collection/provenance.txt)-$(cat blender/ART_VERSION)   # the freeze plus the art version: new art, new folder
 OUT="renders/film_$FREEZE"
 nohup caffeinate -i bash -c "
   while [ \$(ls ~/crushed-render/out/$FREEZE/0[0-9][0-9][0-9].png 2>/dev/null | wc -l) -lt 888 ]; do
