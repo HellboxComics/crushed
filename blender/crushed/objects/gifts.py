@@ -204,128 +204,123 @@ def CL(c, smear=(0.95, 0.9, 0.85)):
     return ("clay", {"color": tuple(c), "smear": tuple(smear)})
 
 
-def _clay_props(b, rng, head, r, specs):
-    """Hat, shades, headband or a bare head; shirt is handled by the body."""
-    hx, hy, hz = head
-    kind = int(rng.choice(4, p=[0.35, 0.25, 0.2, 0.2]))
-    if kind == 0:         # cowboy hat
-        b.cyl(r * 1.6, r * 0.12, loc=(hx, hy, hz + r * 0.85), mat="hat", seg=20)
-        b.lathe([(0.0, 0.0), (r * 0.75, 0.0), (r * 0.8, r * 0.5), (r * 0.6, r * 0.7), (r * 0.3, r * 0.6), (0.0, r * 0.72)],
-                loc=(hx, hy, hz + r * 0.85), mat="hat", seg=18)
-        b.torus(r * 0.78, r * 0.06, loc=(hx, hy, hz + r * 1.0), mat="band", seg=18, rseg=6)
-        specs["hat"] = CL((0.45, 0.3, 0.15), (0.3, 0.2, 0.1))
-        specs["band"] = CL((0.05, 0.05, 0.05))
-    elif kind == 1:       # headband
-        b.torus(r * 0.98, r * 0.09, loc=(hx, hy, hz + r * 0.45), mat="band", seg=20, rseg=6)
-        specs["band"] = CL(tuple(rng.choice([(0.9, 0.1, 0.1), (0.1, 0.3, 0.9), (0.8, 1.0, 0.0)])))
-    elif kind == 2:       # a tiny top hat
-        b.cyl(r * 1.1, r * 0.1, loc=(hx, hy, hz + r * 0.88), mat="hat", seg=18)
-        b.cyl(r * 0.7, r * 1.0, loc=(hx, hy, hz + r * 1.4), mat="hat", seg=18)
-        specs["hat"] = CL((0.06, 0.06, 0.07), (0.2, 0.2, 0.22))
-    # shades, on most of them
-    if rng.random() < 0.65:
+def _clay_head(b, rng, kind, specs):
+    """The canonical Clay StonKz framing: one big clay HEAD, bust-style, filling the view, with an oversized hat,
+    shades and a shirt collar under it. kind: bull | bear | pig | frog. Face points -Y."""
+    R = 0.055
+    cols = {"bull": [(0.6, 0.3, 0.14), (0.22, 0.14, 0.1), (0.8, 0.78, 0.74), (0.95, 0.55, 0.3)],
+            "bear": [(0.36, 0.22, 0.13), (0.14, 0.1, 0.09), (0.62, 0.48, 0.32), (0.95, 0.95, 0.93)],
+            "pig": [(0.96, 0.55, 0.68), (0.9, 0.42, 0.52), (0.96, 0.78, 0.82), (0.75, 0.3, 0.4)],
+            "frog": [(0.3, 0.7, 0.2), (0.18, 0.5, 0.22), (0.75, 1.0, 0.1), (0.25, 0.35, 0.75)]}
+    skin = tuple(cols[kind][int(rng.integers(0, 4))])
+    specs["skin"] = CL(skin, tuple(min(1, x * 1.25 + 0.05) for x in skin))
+    # head and neck + shirt collar
+    b.sphere(R, loc=(0, 0, 0.02), scale=(1.0, 0.95, 1.0 if kind != "frog" else 0.8), mat="skin", seg=32)
+    b.cyl(R * 0.55, 0.04, loc=(0, 0.005, -0.045), mat="skin", seg=20)
+    b.sphere(R * 1.05, loc=(0, 0.01, -0.075), scale=(1.15, 0.9, 0.5), mat="shirt", seg=24)
+    shirt = tuple(rng.choice([(0.95, 0.95, 0.93), (0.1, 0.1, 0.12), (0.9, 0.15, 0.15), (0.2, 0.45, 0.95), (0.8, 1.0, 0.0), (0.2, 0.75, 0.65)]))
+    specs["shirt"] = CL(shirt, skin)
+    f = -R * 0.98          # the face plane, toward the camera
+    if kind == "bull":
+        b.sphere(R * 0.5, loc=(0, f * 0.7, -0.005), scale=(1.2, 0.8, 0.75), mat="muzzle", seg=16)
         for sy in (-1, 1):
-            b.sphere(r * 0.3, loc=(hx + r * 0.78, hy + sy * r * 0.36, hz + r * 0.2), scale=(0.35, 1.0, 0.75), mat="lens", seg=12)
-        b.box((r * 0.1, r * 0.3, r * 0.08), loc=(hx + r * 0.82, hy, hz + r * 0.22), mat="band2")
-        specs["lens"] = ("plastic", {"color": (0.03, 0.03, 0.03), "rough": 0.15, "coat": 1.0})
-        specs["band2"] = CL((0.05, 0.05, 0.05))
-    else:                 # big googly eyes
+            b.cyl(R * 0.1, R * 0.08, loc=(sy * R * 0.18, f * 1.08, -0.01), rot=(math.pi / 2, 0, 0), mat="dark", seg=10)
+            b.tube([(sy * R * 0.6, 0.0, 0.045), (sy * R * 0.95, -0.01, 0.075), (sy * R * 1.0, -0.02, 0.115)],
+                   lambda t: R * 0.16 * (1 - t) + 0.002, mat="horn", seg=10)
+            b.cyl(R * 0.3, R * 0.25, loc=(sy * R * 0.95, 0.0, 0.0), rot=(0.3, sy * 1.2, 0), mat="skin", seg=12, r2=R * 0.1)
+        b.torus(R * 0.14, R * 0.035, loc=(0, f * 0.98, -0.04), rot=(math.pi / 2, 0, 0), mat="ring", seg=14, rseg=6)
+        specs.update({"muzzle": CL(tuple(min(1, x * 1.3 + 0.1) for x in skin), skin), "horn": CL((0.92, 0.85, 0.65), (0.6, 0.5, 0.3)),
+                      "ring": ("gold", {"rough": 0.3})})
+    elif kind == "bear":
+        b.sphere(R * 0.42, loc=(0, f * 0.78, -0.012), scale=(1.1, 0.8, 0.8), mat="muzzle", seg=16)
+        b.sphere(R * 0.16, loc=(0, f * 1.12, 0.0), scale=(1.3, 0.7, 0.9), mat="dark", seg=10)
         for sy in (-1, 1):
-            b.sphere(r * 0.26, loc=(hx + r * 0.72, hy + sy * r * 0.36, hz + r * 0.22), mat="white", seg=12)
-            b.sphere(r * 0.12, loc=(hx + r * 0.93, hy + sy * r * 0.36, hz + r * 0.24), mat="pupil", seg=8)
+            b.sphere(R * 0.3, loc=(sy * R * 0.78, 0.0, 0.055), mat="skin", seg=14)
+            b.sphere(R * 0.17, loc=(sy * R * 0.78, -0.012, 0.055), mat="muzzle", seg=12)
+        specs["muzzle"] = CL((0.85, 0.7, 0.5), skin)
+    elif kind == "pig":
+        b.cyl(R * 0.36, R * 0.3, loc=(0, f * 0.85, -0.012), rot=(math.pi / 2, 0, 0), mat="snout", seg=18)
+        for sy in (-1, 1):
+            b.cyl(R * 0.08, R * 0.05, loc=(sy * R * 0.14, f * 1.12, -0.012), rot=(math.pi / 2, 0, 0), mat="dark", seg=10)
+            b.cyl(R * 0.3, R * 0.6, loc=(sy * R * 0.62, 0.0, 0.07), rot=(-sy * 0.5, 0.0, 0), mat="skin", seg=12, r2=R * 0.04)
+        specs["snout"] = CL(tuple(x * 0.85 for x in skin), skin)
+    else:   # frog
+        for sy in (-1, 1):
+            b.sphere(R * 0.34, loc=(sy * R * 0.5, -0.01, 0.055), mat="skin", seg=14)
+        b.tube([(-R * 0.6, f * 0.95, -0.02), (-R * 0.2, f * 1.02, -0.03), (R * 0.2, f * 1.02, -0.03), (R * 0.6, f * 0.95, -0.02)],
+               R * 0.04, mat="dark", seg=8)
+        b.sphere(R * 0.9, loc=(0, 0.0, -0.01), scale=(1.0, 0.9, 0.55), mat="belly", seg=20)
+        specs["belly"] = CL((0.95, 0.9, 0.7), skin)
+    specs["dark"] = CL((0.03, 0.03, 0.035))
+    # eyes: aviators (most), a visor, or bare clay eyes
+    e = int(rng.choice(3, p=[0.5, 0.25, 0.25]))
+    ez = 0.065 if kind == "frog" else 0.02
+    ey = -0.012 if kind == "frog" else f * 0.92
+    if e == 0:
+        for sy in (-1, 1):
+            b.sphere(R * 0.33, loc=(sy * R * (0.5 if kind == "frog" else 0.4), ey, ez), scale=(1.0, 0.25, 0.85), mat="lens", seg=14)
+        b.box((R * 0.2, R * 0.08, R * 0.08), loc=(0, ey, ez + R * 0.1), mat="dark")
+        b.torus(R * 0.33, R * 0.03, loc=(-R * 0.4, ey, ez), rot=(math.pi / 2, 0, 0), mat="gold", seg=16, rseg=5)
+        b.torus(R * 0.33, R * 0.03, loc=(R * 0.4, ey, ez), rot=(math.pi / 2, 0, 0), mat="gold", seg=16, rseg=5)
+        specs["lens"] = ("plastic", {"color": (0.04, 0.04, 0.05), "rough": 0.12, "coat": 1.0})
+        specs["gold"] = ("gold", {"rough": 0.3})
+    elif e == 1:
+        b.box((R * 1.7, R * 0.12, R * 0.5), loc=(0, ey, ez), mat="visor", bevel=R * 0.05)
+        specs["visor"] = CL(tuple(rng.choice([(0.2, 0.75, 0.65), (0.9, 0.2, 0.3), (0.8, 1.0, 0.0)])), (0.1, 0.1, 0.1))
+    else:
+        for sy in (-1, 1):
+            b.sphere(R * 0.2, loc=(sy * R * (0.5 if kind == "frog" else 0.4), ey, ez), mat="white", seg=12)
+            b.sphere(R * 0.09, loc=(sy * R * (0.5 if kind == "frog" else 0.4), ey - R * 0.15, ez), mat="dark", seg=8)
         specs["white"] = CL((0.97, 0.97, 0.95))
-        specs["pupil"] = CL((0.03, 0.03, 0.03))
-
-
-def _clay_body(b, rng, body_col, head_r, specs, shirt=True):
-    """Fat lump of a body on four stubby legs, a lump of a head out front. Returns the head center."""
-    b.sphere(0.045, loc=(0, 0, 0.05), scale=(1.25, 1.0, 0.9), mat="skin", seg=24)
-    for sx in (-1, 1):
-        for sy in (-1, 1):
-            b.sphere(0.014, loc=(sx * 0.03, sy * 0.028, 0.013), scale=(1, 1, 0.9), mat="skin", seg=10)
-    head = (0.06, 0.0, 0.07)
-    b.sphere(head_r, loc=head, scale=(1.0, 1.05, 0.95), mat="skin", seg=24)
-    if shirt:
-        col = tuple(rng.choice([(0.95, 0.95, 0.93), (0.1, 0.1, 0.12), (0.9, 0.15, 0.15), (0.2, 0.45, 0.95), (0.8, 1.0, 0.0)]))
-        b.sphere(0.047, loc=(-0.004, 0, 0.052), scale=(1.1, 1.03, 0.75), mat="shirt", seg=24)
-        specs["shirt"] = CL(col, body_col)
-    specs["skin"] = CL(body_col)
-    return head
+    # hat
+    h = int(rng.choice(4, p=[0.5, 0.2, 0.15, 0.15]))
+    top = 0.02 + R * (0.8 if kind != "frog" else 1.05)
+    if h == 0:        # cowboy hat, oversized, with a band
+        b.lathe([(0.0, 0.0), (R * 1.5, 0.0), (R * 1.55, R * 0.2), (R * 0.92, R * 0.14), (R * 0.95, R * 1.1), (R * 0.7, R * 1.35), (R * 0.35, R * 1.15), (0.0, R * 1.3)],
+                loc=(0, 0, top - R * 0.1), mat="hat", seg=24)
+        b.torus(R * 0.97, R * 0.07, loc=(0, 0, top + R * 0.1), mat="band", seg=22, rseg=6)
+        hc = tuple(rng.choice([(0.85, 0.82, 0.72), (0.4, 0.26, 0.15), (0.1, 0.1, 0.11), (0.8, 1.0, 0.0)]))
+        specs["hat"] = CL(hc, tuple(x * 0.7 for x in hc)); specs["band"] = CL((0.35, 0.2, 0.1))
+    elif h == 1:      # beanie
+        b.sphere(R * 1.02, loc=(0, 0, top - R * 0.35), scale=(1, 1, 0.8), mat="hat", seg=24)
+        b.torus(R * 0.98, R * 0.1, loc=(0, 0, top - R * 0.3), mat="band", seg=22, rseg=6)
+        hc = tuple(rng.choice([(0.9, 0.15, 0.15), (0.2, 0.45, 0.95), (0.8, 1.0, 0.0)]))
+        specs["hat"] = CL(hc); specs["band"] = CL(tuple(x * 0.8 for x in hc))
+    elif h == 2:      # top hat
+        b.cyl(R * 1.25, R * 0.1, loc=(0, 0, top), mat="hat", seg=22)
+        b.cyl(R * 0.8, R * 1.1, loc=(0, 0, top + R * 0.6), mat="hat", seg=22)
+        b.torus(R * 0.8, R * 0.06, loc=(0, 0, top + R * 0.2), mat="band", seg=22, rseg=6)
+        specs["hat"] = CL((0.06, 0.06, 0.07), (0.2, 0.2, 0.22)); specs["band"] = CL((0.8, 1.0, 0.0))
+    else:             # headband only
+        b.torus(R * 0.98, R * 0.09, loc=(0, 0, top - R * 0.35), mat="band", seg=22, rseg=6)
+        specs["band"] = CL(tuple(rng.choice([(0.9, 0.1, 0.1), (0.1, 0.3, 0.9), (0.8, 1.0, 0.0)])))
 
 
 @obj("clay_bull", mass=0.3, weight=1.0, hero=(0, -1, 0), **G)
 def clay_bull(b, rng, pal):
     specs = {}
-    col = tuple(rng.choice([(0.55, 0.25, 0.12), (0.2, 0.12, 0.1), (0.75, 0.75, 0.72), (0.8, 1.0, 0.0)]))
-    h = _clay_body(b, rng, col, 0.034, specs)
-    hx, hy, hz = h
-    for sy in (-1, 1):
-        b.tube([(hx, hy + sy * 0.03, hz + 0.012), (hx + 0.005, hy + sy * 0.05, hz + 0.028), (hx + 0.012, hy + sy * 0.055, hz + 0.045)],
-               lambda t: 0.006 * (1 - t) + 0.0015, mat="horn", seg=8)
-    b.sphere(0.018, loc=(hx + 0.028, hy, hz - 0.008), scale=(0.8, 1.2, 0.7), mat="muzzle", seg=12)
-    for sy in (-1, 1):
-        b.sphere(0.0035, loc=(hx + 0.042, hy + sy * 0.008, hz - 0.008), mat="pupil", seg=8)
-    b.torus(0.006, 0.0015, loc=(hx + 0.044, hy, hz - 0.016), rot=(0, math.pi / 2, 0), mat="ring", seg=12, rseg=6)
-    _clay_props(b, rng, h, 0.034, specs)
-    specs.update({"horn": CL((0.9, 0.85, 0.7)), "muzzle": CL((0.85, 0.6, 0.5)), "pupil": CL((0.03, 0.03, 0.03)),
-                  "ring": ("gold", {"rough": 0.3})})
+    _clay_head(b, rng, "bull", specs)
     return specs
 
 
 @obj("clay_bear", mass=0.3, weight=1.0, hero=(0, -1, 0), **G)
 def clay_bear(b, rng, pal):
     specs = {}
-    col = tuple(rng.choice([(0.35, 0.22, 0.14), (0.12, 0.1, 0.1), (0.6, 0.45, 0.3), (0.95, 0.95, 0.93)]))
-    h = _clay_body(b, rng, col, 0.036, specs)
-    hx, hy, hz = h
-    for sy in (-1, 1):
-        b.sphere(0.011, loc=(hx - 0.008, hy + sy * 0.03, hz + 0.028), mat="skin", seg=10)
-        b.sphere(0.006, loc=(hx - 0.005, hy + sy * 0.03, hz + 0.029), mat="muzzle", seg=8)
-    b.sphere(0.016, loc=(hx + 0.03, hy, hz - 0.006), scale=(0.9, 1.1, 0.8), mat="muzzle", seg=12)
-    b.sphere(0.006, loc=(hx + 0.045, hy, hz - 0.001), mat="pupil", seg=8)
-    _clay_props(b, rng, h, 0.036, specs)
-    specs.update({"muzzle": CL((0.85, 0.7, 0.55)), "pupil": CL((0.03, 0.03, 0.03))})
+    _clay_head(b, rng, "bear", specs)
     return specs
 
 
 @obj("clay_pig", mass=0.3, weight=1.0, hero=(0, -1, 0), **G)
 def clay_pig(b, rng, pal):
     specs = {}
-    col = tuple(rng.choice([(0.96, 0.55, 0.68), (0.9, 0.4, 0.5), (0.95, 0.75, 0.8), (0.8, 1.0, 0.0)]))
-    h = _clay_body(b, rng, col, 0.035, specs)
-    hx, hy, hz = h
-    b.cyl(0.013, 0.014, loc=(hx + 0.038, hy, hz - 0.004), rot=(0, math.pi / 2, 0), mat="snout", seg=14)
-    for sy in (-1, 1):
-        b.cyl(0.0032, 0.002, loc=(hx + 0.0455, hy + sy * 0.0055, hz - 0.004), rot=(0, math.pi / 2, 0), mat="pupil", seg=8)
-        b.cyl(0.011, 0.02, loc=(hx - 0.004, hy + sy * 0.026, hz + 0.034), rot=(-sy * 0.5, 0.3, 0), mat="skin", seg=10, r2=0.0015)
-    b.tube([(-0.055, 0, 0.055), (-0.064, 0, 0.062), (-0.07, 0, 0.072), (-0.064, 0, 0.078), (-0.058, 0, 0.072)], 0.0028,
-           mat="skin", seg=8)
-    _clay_props(b, rng, h, 0.035, specs)
-    specs.update({"snout": CL(tuple(x * 0.85 for x in col)), "pupil": CL((0.03, 0.03, 0.03))})
+    _clay_head(b, rng, "pig", specs)
     return specs
 
 
 @obj("clay_frog", mass=0.25, weight=1.0, hero=(0, -1, 0), **G)
 def clay_frog(b, rng, pal):
-    """Squat, wide mouth, eyes on top. Original lump of a frog."""
     specs = {}
-    col = tuple(rng.choice([(0.3, 0.7, 0.2), (0.15, 0.5, 0.2), (0.8, 1.0, 0.0), (0.2, 0.3, 0.7)]))
-    b.sphere(0.05, loc=(0, 0, 0.035), scale=(1.3, 1.1, 0.7), mat="skin", seg=24)
-    b.sphere(0.04, loc=(0.03, 0, 0.045), scale=(1.1, 1.2, 0.6), mat="skin", seg=20)
-    b.sphere(0.048, loc=(0.0, 0, 0.028), scale=(1.2, 1.0, 0.45), mat="belly", seg=20)
-    for sy in (-1, 1):
-        b.sphere(0.014, loc=(0.045, sy * 0.028, 0.068), mat="skin", seg=12)
-        b.sphere(0.0105, loc=(0.052, sy * 0.028, 0.072), mat="white", seg=12)
-        b.sphere(0.005, loc=(0.06, sy * 0.028, 0.074), mat="pupil", seg=8)
-        b.sphere(0.016, loc=(-0.025, sy * 0.055, 0.018), scale=(1.4, 1.0, 0.7), mat="skin", seg=12)
-        b.sphere(0.01, loc=(0.045, sy * 0.045, 0.012), scale=(1.5, 1.0, 0.6), mat="skin", seg=10)
-    b.tube([(0.07, -0.03, 0.045), (0.078, -0.012, 0.04), (0.08, 0.012, 0.04), (0.07, 0.03, 0.045)], 0.002, mat="pupil", seg=6)
-    h = (0.03, 0.0, 0.05)
-    if rng.random() < 0.5:
-        _clay_props(b, rng, h, 0.04, specs)
-        specs.pop("white", None); specs.pop("pupil", None); specs.pop("lens", None); specs.pop("band2", None)
-    specs.update({"skin": CL(col), "belly": CL((0.95, 0.9, 0.7), col), "white": CL((0.97, 0.97, 0.95)),
-                  "pupil": CL((0.03, 0.03, 0.03))})
+    _clay_head(b, rng, "frog", specs)
     return specs
 
 
