@@ -13,3 +13,6 @@ node_modules/
 # handoff packages
 *.zip
 *.bundle
+site/cube/*.glb
+site/cube/0044.webp
+site/cube/.freeze

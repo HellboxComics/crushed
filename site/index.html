@@ -17,10 +17,21 @@
 </head>
 <body class="home">
 <main>
-  <canvas id="cube" width="960" height="960" role="img" aria-label="A crushed cube, slowly rotating. Drag to turn it."></canvas>
+  <model-viewer id="cube" poster="cube/0044.webp" alt="A crushed cube. Drag to turn it."
+    camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none"
+    disable-zoom disable-pan touch-action="pan-y" shadow-intensity="1.1" shadow-softness="0.6"
+    exposure="1.05" environment-image="neutral" tone-mapping="agx" camera-orbit="35deg 72deg auto"
+    field-of-view="22deg" min-camera-orbit="auto 20deg auto" max-camera-orbit="auto 100deg auto"></model-viewer>
   <h1>WE KEPT THE IMPORTANT SHIT.</h1>
   <p class="cta teaser">888 CUBES. 12 INCHES. ROBINHOOD CHAIN. SOON.</p>
 </main>
-<script src="spin.js"></script>
+<script type="module">
+  import "./vendor/model-viewer.min.js";
+  customElements.whenDefined("model-viewer").then(() => {
+    const MV = customElements.get("model-viewer");
+    MV.dracoDecoderLocation = new URL("vendor/draco/", location.href).href;   // served from this site, nothing outside
+    document.getElementById("cube").src = "cube/0044.glb";                     // load only after the decoder is set
+  });
+</script>
 </body>
 </html>

@@ -35,10 +35,10 @@ a { color: var(--fg); }
 
 #cube {
   width: min(82vmin, 780px);
-  height: auto;
-  aspect-ratio: 1;
+  height: min(82vmin, 780px);
+  background: transparent;
+  --poster-color: transparent;
   cursor: grab;
-  touch-action: pan-y;
   user-select: none;
 }
 #cube.dragging { cursor: grabbing; }
