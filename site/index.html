@@ -17,11 +17,7 @@
 </head>
 <body class="home">
 <main>
-  <model-viewer id="cube" poster="cube/0529.webp" alt="A crushed cube. Drag to turn it."
-    camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none"
-    disable-zoom disable-pan touch-action="pan-y" shadow-intensity="1.1" shadow-softness="0.6"
-    exposure="1.05" environment-image="neutral" tone-mapping="agx" camera-orbit="35deg 72deg auto"
-    field-of-view="22deg" min-camera-orbit="auto 20deg auto" max-camera-orbit="auto 100deg auto"></model-viewer>
+  <img id="cube" src="cube/0529.webp" width="1024" height="1024" alt="TRICK OR TREAT, a crushed.buzz cube. One of one.">
   <p class="now" id="now">TRICK OR TREAT <span>1 OF 1</span></p>
 
   <h1>WE KEPT THE IMPORTANT SHIT.</h1>
@@ -48,20 +44,16 @@
   </nav>
   <p class="more">8 of the 30 shown. The other 22 stay in the pile.</p>
 </main>
-<script type="module">
-  import "./vendor/model-viewer.min.js";
+<script>
+  // one rendered picture per cube, swapped on tap. (The spinning 3D version comes back when it matches the renders.)
   const cube = document.getElementById("cube");
   const now = document.getElementById("now");
-  customElements.whenDefined("model-viewer").then(() => {
-    customElements.get("model-viewer").dracoDecoderLocation = new URL("vendor/draco/", location.href).href;
-    cube.src = "cube/0529.glb";                     // load only after the decoder is set
-  });
   document.getElementById("ones").addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
     document.querySelectorAll("#ones button").forEach((x) => x.classList.toggle("on", x === b));
-    cube.poster = `cube/${b.dataset.id}.webp`;
-    cube.src = `cube/${b.dataset.id}.glb`;
+    cube.src = `cube/${b.dataset.id}.webp`;
+    cube.alt = `${b.dataset.name}, a crushed.buzz cube. One of one.`;
     now.firstChild.textContent = b.dataset.name + " ";
     cube.scrollIntoView({ behavior: "smooth", block: "center" });
   });

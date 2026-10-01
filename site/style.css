@@ -36,12 +36,13 @@ a { color: var(--fg); }
 #cube {
   width: min(82vmin, 780px);
   height: min(82vmin, 780px);
-  background: transparent;
-  --poster-color: transparent;
-  cursor: grab;
+  display: block;
+  object-fit: contain;
   user-select: none;
+  /* the render's floor light fades into the page instead of stopping at the picture's edge */
+  -webkit-mask-image: radial-gradient(closest-side, #000 74%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 74%, transparent 100%);
 }
-#cube.dragging { cursor: grabbing; }
 
 h1 {
   margin: 0;

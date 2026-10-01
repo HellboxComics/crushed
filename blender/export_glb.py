@@ -69,6 +69,7 @@ def cull_hidden(ob):
     print(f"[glb] hidden faces removed: {len(dead)} of {before}")
 
 
+AO_SAMPLES = 128
 GROUP_NAMES = ["core", "straps", "items_a", "items_b", "items_c"]
 
 
@@ -139,10 +140,16 @@ def _bake_part(sc, ob, size):
     metal = target("metal", non_color=True)
     bpy.ops.object.bake(type="EMIT", use_clear=True)      # the materials' glow carries their metal value here
     ao = target("ao", non_color=True)
+    keep = sc.cycles.samples
+    sc.cycles.samples = max(keep, AO_SAMPLES)    # the crevice shadows are random rays: too few and they speckle
     bpy.ops.object.bake(type="AO", use_clear=True)
+    sc.cycles.samples = keep
     c = np.array(col.pixels[:], dtype=np.float32).reshape(-1, 4)
-    o = np.array(ao.pixels[:], dtype=np.float32).reshape(-1, 4)
-    c[:, :3] *= (0.25 + 0.75 * o[:, :1])
+    o = np.array(ao.pixels[:], dtype=np.float32).reshape(size, size, 4)[..., 0]
+    for _ in range(2):                           # and a light blur takes out what speckle is left
+        o = (np.roll(o, 1, 0) + o + np.roll(o, -1, 0)) / 3
+        o = (np.roll(o, 1, 1) + o + np.roll(o, -1, 1)) / 3
+    c[:, :3] *= (0.45 + 0.55 * o.reshape(-1, 1))
     col.pixels.foreach_set(c.ravel())
     um = bpy.data.materials.new(f"{ob.name}_baked")
     um.use_nodes = True
