@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0128",
- "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Beer Cans (warm, sadly); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (says DO NOT FORMAT); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 74.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Beer Cans (warm, sadly); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (says DO NOT FORMAT); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 72.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0128.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.5,
+   "value": 72.6,
    "display_type": "number"
   },
   {

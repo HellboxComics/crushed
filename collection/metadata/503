@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0503",
- "description": "Recovered from Vegas Hotel Room. Smells like blue raspberry. Contents (partial): 1 Virtual Pet (died during math class); 1 AA Batteries (Neveready, as advertised); 1 Skate Wheel (flat spot from a power slide); 1 Foam Headphones (orange foam, allegedly); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 26.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like blue raspberry. Contents (partial): 1 Virtual Pet (died during math class); 1 AA Batteries (Neveready, as advertised); 1 Skate Wheel (flat spot from a power slide); 1 Foam Headphones (orange foam, allegedly); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 24.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0503.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.4,
+   "value": 24.9,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0772",
- "description": "Recovered from Mom's Basement (Again). Smells like hot dust on a CRT. Contents (partial): 1 Gold TV Remote (why); 1 VR Headset (watched one (1) movie); 2 Power Strips (daisy-chained into three more); 2 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (one bulb out, one ego intact). Weight 34.8 lb. Contents may have settled.",
+ "name": "CRUSHED IT #0772: GREEN BEER",
+ "description": "Everybody was Irish for one day. The beads, the hats, the cups and the buttons stayed. Recovered from An Irish Pub, Allegedly. Smells like green beer. Contents (partial): 6 Green Bowlers (lost at noon); 10 Red Party Cups (beer pong veteran); 8 Beer Cans (12 of 12); 10 Pin Buttons (KISS ME, sort of); 8 Gold Coins (bought the top). Weight 16.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0772.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "GREEN BEER"
   },
   {
    "trait_type": "Headliner",
-   "value": "VR Headset"
+   "value": "Green Bowler"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Green Beer"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Basement (Again)"
+   "value": "An Irish Pub, Allegedly"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "TV Remote"
+   "trait_type": "One of One",
+   "value": "GREEN BEER"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 16.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 45,
    "display_type": "number"
   }
  ]

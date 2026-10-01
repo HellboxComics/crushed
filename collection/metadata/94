@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0094",
- "description": "Recovered from Estate of a Collector. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Magazine (for the interviews, obviously); 2 Portable Tape Players (auto-reverse broke in 1991); 2 Pizza Crusts (found behind the couch); 2 Cheap Sunglasses (mall kiosk special). Weight 83.9 lb. We kept the important shit.",
+ "description": "Recovered from Estate of a Collector. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Magazine (for the interviews, obviously); 2 Portable Tape Players (auto-reverse broke in 1991); 2 Pizza Crusts (found behind the couch); 2 Cheap Sunglasses (mall kiosk special); 1 Bear (thriving). Weight 82.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0094.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.9,
+   "value": 82.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

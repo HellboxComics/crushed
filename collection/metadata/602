@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0602",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like gym bag, forgotten. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Game Controller (stick drift since day one); 3 AA Batteries (taken out of the smoke detector); 1 Centerfold (left open to the wrong page); 3 Spiral Notebooks (doodles in the margins). Weight 35.6 lb. We kept the important shit.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like gym bag, forgotten. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Game Controller (stick drift since day one); 3 AA Batteries (taken out of the smoke detector); 1 Centerfold (left open to the wrong page); 3 Spiral Notebooks (doodles in the margins). Weight 32.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0602.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.6,
+   "value": 32.3,
    "display_type": "number"
   },
   {

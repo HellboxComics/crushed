@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0598: COASTERS",
- "description": "Every burned CD that ended up under a drink. Recovered from Every Coffee Table. Smells like stale beer. Contents (partial): 56 Burned CDs (track 7 skips); 10 Jewel Cases (hinge broken on arrival); 2 Shot Glasses (from a trip to Vegas); 6 Beer Cans (crushed on a forehead). Weight 13.3 lb. No refunds. No returns. No explanation.",
+ "name": "CRUSHED IT #0598",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Energy Drink (tastes like a battery); 3 No. 2 Pencils (sharpened to a nub); 1 Disposable Camera (27 exposures of a thumb); 2 Beer Cans (crushed on a forehead). Weight 28.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0598.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "COASTERS"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Burned CD"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Stale Beer"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Every Coffee Table"
+   "value": "An Ebay-ish Box, Never Shipped"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "None"
-  },
-  {
-   "trait_type": "One of One",
-   "value": "COASTERS"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 13.3,
+   "value": 28.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 74,
+   "value": 42,
    "display_type": "number"
   }
  ]

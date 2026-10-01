@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0823",
- "description": "Recovered from School Lost & Found. Smells like Fidget Spinner Bearings. Contents (partial): 1 VR Headset (the walls were real and they were hit); 2 Sneakers (light-up heel, dead); 3 Pizza Crusts (still better than most portfolios); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 AA Batteries (taken out of the smoke detector). Weight 35.2 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like Fidget Spinner Bearings. Contents (partial): 1 VR Headset (the walls were real and they were hit); 2 Sneakers (light-up heel, dead); 3 Pizza Crusts (still better than most portfolios); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 AA Batteries (taken out of the smoke detector). Weight 33.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0823.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 33.9,
    "display_type": "number"
   },
   {

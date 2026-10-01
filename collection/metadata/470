@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0470",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like mall food court. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours); 3 Webcams (pointed at the ceiling forever); 1 Centerfold (folded out, then folded back in a hurry); 1 MP3 Player (shuffle picked the same song 6 times). Weight 77.9 lb. Handle with both hands.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like mall food court. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours); 3 Webcams (pointed at the ceiling forever); 1 Centerfold (folded out, then folded back in a hurry); 1 MP3 Player (shuffle picked the same song 6 times); 1 Broken Rocket (didn't make it). Weight 77.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0470.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.9,
+   "value": 77.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

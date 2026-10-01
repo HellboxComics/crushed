@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0190",
- "description": "Recovered from Ex's Garage. Smells like scratch-n-sniff sticker. Contents (partial): 2 TV Remotes (held together with tape); 1 Skateboard (one ollie, lifetime); 1 Clear Lighter (borrowed in 1997, never returned); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Puzzle Cube (solved once, stickers moved); 1 Broken Rocket (didn't make it). Weight 48.9 lb. Crushed it.",
+ "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 TV Remotes (held together with tape); 1 Skateboard (one ollie, lifetime); 1 Clear Lighter (borrowed in 1997, never returned); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Puzzle Cube (solved once, stickers moved). Weight 47.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0190.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,23 +25,19 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
-  },
-  {
-   "trait_type": "Finish",
-   "value": "BONE"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.9,
+   "value": 47.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

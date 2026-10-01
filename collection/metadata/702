@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0702",
- "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Burned CDs (burned at 1x, 4 hours); 2 Magazines (for the interviews, obviously); 2 Game Controllers (stick drift since day one); 2 Cheap Sunglasses (mall kiosk special). Weight 26.3 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Burned CDs (burned at 1x, 4 hours); 2 Magazines (for the interviews, obviously); 2 Game Controllers (stick drift since day one); 2 Cheap Sunglasses (mall kiosk special). Weight 25.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0702.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.3,
+   "value": 25.1,
    "display_type": "number"
   },
   {

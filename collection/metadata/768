@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0768",
- "description": "Recovered from Mom's Basement (Again). Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Smartphones (cracked in the first week); 1 Dice (loaded, rumor says); 1 Disposable Camera (never developed); 2 Soda Cans (tab kept for charity); 2 Scratch Tickets (scratched with a house key). Weight 36.3 lb. Crushed it.",
+ "description": "Recovered from Mom's Basement (Again). Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Smartphones (cracked in the first week); 1 Dice (loaded, rumor says); 1 Disposable Camera (never developed); 2 Soda Cans (tab kept for charity); 2 Scratch Tickets (scratched with a house key). Weight 35.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0768.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.3,
+   "value": 35.6,
    "display_type": "number"
   },
   {

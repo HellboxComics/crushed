@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0595",
- "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Gold Energy Drink (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (says ROAD TRIP in marker); 1 Beer Can (Natty Lightweight, 30-rack); 2 Memory Cards (corrupted during a birthday). Weight 27.1 lb. Crushed it.",
+ "name": "CRUSHED IT #0595: LIGHT THE FUSE",
+ "description": "Bought across the state line. Lit in a field. Half of them actually went off. Recovered from A Field Behind the Gas Station. Smells like gunpowder and lighter fluid. Contents (partial): 22 Fireworks (bought across the state line); 3 Cheap Sunglasses (mall kiosk special); 6 Beer Cans (12 of 12); 8 Red Party Cups (line two means a shot); 8 Little Flags (faded in one summer). Weight 33.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0595.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "LIGHT THE FUSE"
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Firework"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,23 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Gunpowder and Lighter Fluid"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "A Field Behind the Gas Station"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Energy Drink"
+   "trait_type": "One of One",
+   "value": "LIGHT THE FUSE"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.1,
+   "value": 33.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 52,
    "display_type": "number"
   }
  ]

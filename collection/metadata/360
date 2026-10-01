@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0360",
- "description": "Recovered from The Y2K Bunker. Smells like rink snack bar. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Scratch Ticket (scratched with a house key); 1 Toy Slime (was in the hair of a sibling); 2 Portable CD Players (anti-skip lied); 2 Pizza Crusts (petrified). Weight 38.1 lb. Handle with both hands.",
+ "description": "Recovered from The Y2K Bunker. Smells like rink snack bar. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Scratch Ticket (scratched with a house key); 1 Toy Slime (was in the hair of a sibling); 2 Portable CD Players (anti-skip lied); 2 Pizza Crusts (petrified). Weight 36.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0360.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.1,
+   "value": 36.0,
    "display_type": "number"
   },
   {

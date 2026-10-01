@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0308",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like Lunchables-ish Crackers. Contents (partial): 1 16-Bit Controller (the B button is sticky); 2 Jewel Cases (hinge broken on arrival); 3 Game Cartridges (blown into 400 times); 2 Film Canisters (undeveloped, forever); 2 Ball Mice (ball removed as a prank). Weight 36.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Lunchables-ish Crackers. Contents (partial): 1 16-Bit Controller (the B button is sticky); 2 Jewel Cases (hinge broken on arrival); 3 Game Cartridges (blown into 400 times); 2 Film Canisters (undeveloped, forever); 2 Ball Mice (ball removed as a prank); 1 Bull (dead). Weight 34.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0308.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.3,
+   "value": 34.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

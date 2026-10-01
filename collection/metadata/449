@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0449",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like wet cardboard. Contents (partial): 1 CRT Monitor (still warm); 1 Burned CD (burned at 1x, 4 hours); 1 Floppy Disk (contains one (1) virus); 1 Foam Headphones (one ear works if you hold it); 2 Magazines (read for the articles). Weight 80.2 lb. Crushed it.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like wet cardboard. Contents (partial): 1 CRT Monitor (still warm); 1 Burned CD (burned at 1x, 4 hours); 1 Floppy Disk (contains one (1) virus); 1 Foam Headphones (one ear works if you hold it); 2 Magazines (read for the articles). Weight 79.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0449.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.2,
+   "value": 79.3,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0799",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Pizza Crust (petrified); 2 TV Remotes (the volume button worn smooth); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Disposable Camera (never developed); 1 Paper Hand (sold at the bottom). Weight 42.1 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Pizza Crust (petrified); 2 TV Remotes (the volume button worn smooth); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Disposable Camera (never developed). Weight 41.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0799.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.1,
+   "value": 41.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

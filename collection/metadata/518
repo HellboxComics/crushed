@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0518",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 2 Pagers (clipped to jeans for status only); 1 No. 2 Pencil (never saw a scantron it liked); 1 Soda Can (shaken as a prank); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 78.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 2 Pagers (clipped to jeans for status only); 1 No. 2 Pencil (never saw a scantron it liked); 1 Soda Can (shaken as a prank); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 75.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0518.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.0,
+   "value": 75.2,
    "display_type": "number"
   },
   {

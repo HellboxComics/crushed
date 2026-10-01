@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0844",
- "description": "Recovered from Behind the Couch. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 TV Remotes (found in the couch); 1 Fidget Spinner (banned by the school); 2 Bluetooth Speakers (lost, found, lost); 2 Game Controllers (stick drift since day one); 2 Spiral Notebooks (spiral unwound halfway). Weight 41.8 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Couch. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 TV Remotes (found in the couch); 1 Fidget Spinner (banned by the school); 2 Bluetooth Speakers (lost, found, lost); 2 Game Controllers (stick drift since day one); 2 Spiral Notebooks (spiral unwound halfway). Weight 40.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0844.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.8,
+   "value": 40.4,
    "display_type": "number"
   },
   {

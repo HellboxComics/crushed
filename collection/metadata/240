@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0240",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Metal Lunchbox (thermos missing); 3 Power Strips (overloaded on purpose); 2 AA Batteries (taken out of the smoke detector); 2 Pagers (last page from a number nobody called back). Weight 50.9 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Metal Lunchbox (thermos missing); 3 Power Strips (overloaded on purpose); 2 AA Batteries (taken out of the smoke detector); 2 Pagers (last page from a number nobody called back). Weight 49.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0240.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.9,
+   "value": 49.1,
    "display_type": "number"
   },
   {

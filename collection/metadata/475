@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0475",
- "description": "Recovered from A LAN Party Basement. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Film Canister (holds one quarter); 2 AA Batteries (mixed old and new, like animals); 3 TV Remotes (found in the couch); 2 Pagers (last page: 911 (it was not)). Weight 81.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A LAN Party Basement. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Gold Dice (why); 3 Game Controllers (thrown during a boss fight); 1 Film Canister (holds one quarter); 2 AA Batteries (probably dead); 3 TV Remotes (the volume button worn smooth). Weight 79.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0475.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
@@ -40,12 +40,16 @@
    "value": "Several"
   },
   {
+   "trait_type": "Gilded",
+   "value": "Dice"
+  },
+  {
    "trait_type": "Serial",
    "value": "0475"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.6,
+   "value": 79.4,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0298",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Sneakers (untied since 1989); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Ball Mouse (ball removed as a prank); 1 Cassette Tape (rewound with a pencil); 1 Spiral Notebook (spiral unwound halfway); 1 Paper Hand (folded under light pressure). Weight 80.2 lb. Some assembly was removed.",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (untied since 1989); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Ball Mouse (ball removed as a prank); 1 Cassette Tape (rewound with a pencil); 1 Spiral Notebook (spiral unwound halfway). Weight 79.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0298.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.2,
+   "value": 79.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

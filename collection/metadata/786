@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0786",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like blue raspberry. Contents (partial): 2 Smartphones (Instagrampa open, 900 unread); 1 Handheld Console (battery cover lost immediately); 1 Tablet (used once as a cutting board); 1 USB Stick (never ejected safely); 3 Poker Chips (a stack of ambition). Weight 31.7 lb. We kept the important shit.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like blue raspberry. Contents (partial): 2 Smartphones (Instagrampa open, 900 unread); 1 Handheld Console (battery cover lost immediately); 1 Tablet (used once as a cutting board); 1 USB Stick (never ejected safely); 3 Poker Chips (a stack of ambition). Weight 30.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0786.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.7,
+   "value": 30.8,
    "display_type": "number"
   },
   {

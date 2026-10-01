@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0446",
- "description": "Recovered from The Y2K Bunker. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (spiral unwound halfway); 2 AA Batteries (licked to test); 3 Foam Headphones (orange foam, allegedly); 1 USB Stick (contains homework_FINAL_final2.doc); 1 Tiny Red Candle (one of many). Weight 40.2 lb. Crushed it.",
+ "description": "Recovered from The Y2K Bunker. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (spiral unwound halfway); 2 AA Batteries (licked to test); 3 Foam Headphones (orange foam, allegedly); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 37.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0446.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.2,
+   "value": 37.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

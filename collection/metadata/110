@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0110",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Calculators (spelled BOOBIES upside down); 1 Cheap Sunglasses (mall kiosk special); 2 Floppy Disks (save icon, but real); 2 Army Man Squads (the one with the radio survived). Weight 34.2 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Calculators (spelled BOOBIES upside down); 1 Cheap Sunglasses (mall kiosk special); 2 Floppy Disks (save icon, but real); 2 Army Man Squads (the one with the radio survived). Weight 32.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0110.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.2,
+   "value": 32.4,
    "display_type": "number"
   },
   {

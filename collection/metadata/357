@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0357",
- "description": "Recovered from Estate of a Collector. Smells like Grandma's couch. Contents (partial): 1 Gold AA Batteries (why); 2 Game Controllers (stick drift since day one); 3 Shot Glasses (from a trip to Vegas); 3 Matchbooks (matches missing, reasons unclear); 2 VHS Tapes (taped over a wedding). Weight 38.8 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like Grandma's couch. Contents (partial): 1 Gold AA Batteries (why); 2 Game Controllers (stick drift since day one); 3 Shot Glasses (from a trip to Vegas); 3 Matchbooks (matches missing, reasons unclear); 2 VHS Tapes (taped over a wedding). Weight 37.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0357.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.8,
+   "value": 37.4,
    "display_type": "number"
   },
   {

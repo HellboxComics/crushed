@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0622",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Red Bullish and Regret. Contents (partial): 3 Flip Phones (ringtone composed by hand); 2 Cheap Sunglasses (mall kiosk special); 2 Laptop Chargers (warm to the touch, somehow); 1 Magazine (found in a dad's truck); 3 TV Remotes (found in the couch). Weight 27.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Red Bullish and Regret. Contents (partial): 3 Flip Phones (ringtone composed by hand); 2 Cheap Sunglasses (mall kiosk special); 2 Laptop Chargers (warm to the touch, somehow); 1 Magazine (found in a dad's truck); 3 TV Remotes (found in the couch). Weight 26.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0622.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.7,
+   "value": 26.8,
    "display_type": "number"
   },
   {

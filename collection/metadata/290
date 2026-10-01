@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0290",
- "description": "Recovered from Behind the Bar. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Three-Ring Binders (velcro screams when opened); 1 Webcam (pointed at the ceiling forever); 1 Puzzle Cube (solved once, stickers moved); 1 Brick Phone (snake high score intact). Weight 77.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Bar. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Three-Ring Binders (velcro screams when opened); 1 Webcam (pointed at the ceiling forever); 1 Puzzle Cube (solved once, stickers moved); 1 Brick Phone (snake high score intact). Weight 77.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0290.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.0,
+   "value": 77.2,
    "display_type": "number"
   },
   {

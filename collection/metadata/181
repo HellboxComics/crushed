@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0181",
- "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like body spray cloud. Contents (partial): 1 Magazine (the staples are doing the work); 2 VHS Tapes (taped off HBOH, commercials and all); 1 Game Cartridge (save file erased by a sibling); 2 TV Remotes (found in the couch); 1 16-Bit Controller (the B button is sticky). Weight 88.9 lb. Nobody made you keep this.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like body spray cloud. Contents (partial): 1 Magazine (the staples are doing the work); 2 VHS Tapes (taped off HBOH, commercials and all); 1 Game Cartridge (save file erased by a sibling); 2 TV Remotes (found in the couch); 1 16-Bit Controller (the B button is sticky). Weight 87.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0181.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 87.0,
    "display_type": "number"
   },
   {

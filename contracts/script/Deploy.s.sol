@@ -18,7 +18,9 @@ contract Deploy is Script {
     function run() external {
         address[] memory allowed = new address[](1);
         allowed[0] = vm.envAddress("SEADROP");
-        uint16[4] memory gifts = [uint16(813), 718, 796, 836];   // LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
+        // LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY: recipe ids from the frozen deck (collection/gifts.json)
+        uint16[4] memory gifts = [uint16(vm.envUint("GIFT1")), uint16(vm.envUint("GIFT2")),
+                                  uint16(vm.envUint("GIFT3")), uint16(vm.envUint("GIFT4"))];
         vm.startBroadcast();
         CrushedIt c = new CrushedIt(
             allowed,

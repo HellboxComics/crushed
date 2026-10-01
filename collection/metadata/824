@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0824",
- "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 TV Remotes (held together with tape); 3 Disposable Cameras (never developed); 2 Tissue Boxes (one for every mood); 1 Crumpled Chart (printed out for emotional reasons). Weight 36.8 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 TV Remotes (held together with tape); 3 Disposable Cameras (never developed); 2 Tissue Boxes (one for every mood). Weight 36.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0824.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.8,
+   "value": 36.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

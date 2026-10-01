@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0069",
- "description": "Recovered from Ex's Garage. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Floppy Disks (contains one (1) virus); 1 Yo-Yo (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 Centerfolds (folded out, then folded back in a hurry). Weight 47.1 lb. We kept the important shit.",
+ "description": "Recovered from Ex's Garage. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Floppy Disks (contains one (1) virus); 1 Yo-Yo (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 Centerfolds (folded out, then folded back in a hurry). Weight 45.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0069.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.1,
+   "value": 45.0,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0878",
- "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (the eyes in every mirror selfie); 3 Sneakers (was in the dryer); 2 Laptop Chargers (warm to the touch, somehow); 2 Disposable Cameras (never developed). Weight 37.8 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (the eyes in every mirror selfie); 3 Sneakers (was in the dryer); 2 Laptop Chargers (warm to the touch, somehow); 2 Disposable Cameras (never developed). Weight 36.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0878.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.8,
+   "value": 36.3,
    "display_type": "number"
   },
   {

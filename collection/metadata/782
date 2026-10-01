@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0782",
- "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Vegas carpet. Contents (partial): 1 Fidget Spinner (banned by the school); 2 Hand Sanitizers (was in every pocket in 2020); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 AA Batteries (mixed old and new, like animals); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 42.4 lb. Crushed it.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Vegas carpet. Contents (partial): 1 Fidget Spinner (banned by the school); 2 Hand Sanitizers (was in every pocket in 2020); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 AA Batteries (mixed old and new, like animals); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 39.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0782.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.4,
+   "value": 39.8,
    "display_type": "number"
   },
   {

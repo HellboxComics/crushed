@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0647",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Beer Cans (Milwaukee's Worst, on sale); 1 Pizza Crust (petrified); 1 Sneaker (was in the dryer); 1 Spiral Notebook (spiral unwound halfway); 1 USB Stick (never ejected safely). Weight 31.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Beer Cans (Milwaukee's Worst, on sale); 1 Pizza Crust (petrified); 1 Sneaker (was in the dryer); 1 Spiral Notebook (spiral unwound halfway); 1 USB Stick (never ejected safely). Weight 31.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0647.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 31.1,
    "display_type": "number"
   },
   {

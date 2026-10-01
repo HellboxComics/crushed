@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0571: SCREEN TIME",
- "description": "Every screen you ever stared at, still on. Recovered from The Den. Smells like hot dust on a CRT. Contents (partial): 3 CRT Monitors (degaussed one last time); 4 MP3 Players (shuffle picked the same song 6 times); 4 Flip Phones (snapped shut dramatically); 4 Handheld Consoles (screen scratched from a pocket with keys); 4 9999-in-1 Handhelds (9999 games, 4 real ones). Weight 158.2 lb. Do not attempt to uncrush.",
+ "description": "Every screen you ever stared at, still on. Recovered from The Den. Smells like hot dust on a CRT. Contents (partial): 3 CRT Monitors (degaussed one last time); 4 MP3 Players (shuffle picked the same song 6 times); 4 Flip Phones (snapped shut dramatically); 4 Handheld Consoles (screen scratched from a pocket with keys); 4 9999-in-1 Handhelds (9999 games, 4 real ones). Weight 156.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0571.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 158.2,
+   "value": 156.3,
    "display_type": "number"
   },
   {

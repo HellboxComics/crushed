@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0185",
- "description": "Recovered from Behind the Bar. Smells like Blockbusted New Release Wall. Contents (partial): 1 TV Remote (the volume button worn smooth); 2 Yo-Yos (string tied to a finger for 3 years); 1 Spiral Notebook (doodles in the margins); 1 Shot Glass (souvenir of a night nobody recalls); 1 Film Canister (undeveloped, forever); 1 Bear (thriving). Weight 33.3 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Bar. Smells like Blockbusted New Release Wall. Contents (partial): 1 TV Remote (the volume button worn smooth); 2 Yo-Yos (string tied to a finger for 3 years); 1 Spiral Notebook (doodles in the margins); 1 Shot Glass (souvenir of a night nobody recalls); 1 Film Canister (undeveloped, forever). Weight 31.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0185.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 31.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 33,
    "display_type": "number"
   }
  ]

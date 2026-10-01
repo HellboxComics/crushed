@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0035",
- "description": "Recovered from Dad's Camaro Trunk. Smells like hot dust on a CRT. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Metal Lunchbox (the smell stays); 2 VHS Tapes (Blockbusted rental, never returned); 3 Floppy Disks (Iomegalodon would have held it all); 1 Roller Skate (toe stop worn to nothing). Weight 79.6 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like hot dust on a CRT. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Metal Lunchbox (the smell stays); 2 VHS Tapes (Blockbusted rental, never returned); 3 Floppy Disks (Iomegalodon would have held it all); 1 Roller Skate (toe stop worn to nothing). Weight 78.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0035.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.6,
+   "value": 78.7,
    "display_type": "number"
   },
   {

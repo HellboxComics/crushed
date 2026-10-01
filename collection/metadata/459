@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0459",
- "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Burned CD (track 7 skips); 1 Skate Wheel (flat spot from a power slide); 1 Pager (clipped to jeans for status only); 2 Memory Cards (corrupted during a birthday). Weight 40.1 lb. Some assembly was removed.",
+ "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Burned CD (track 7 skips); 1 Skate Wheel (flat spot from a power slide); 1 Pager (clipped to jeans for status only); 2 Memory Cards (corrupted during a birthday). Weight 39.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0459.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.1,
+   "value": 39.8,
    "display_type": "number"
   },
   {

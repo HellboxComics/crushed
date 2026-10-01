@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0323",
- "description": "Recovered from Mom's Minivan. Smells like Blockbusted New Release Wall. Contents (partial): 1 VHS Tape (taped over a wedding); 1 Disposable Camera (never developed); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Cheap Sunglasses (one lens popped out); 1 Corded Phone (cord stretched to the bathroom). Weight 86.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Mom's Minivan. Smells like Blockbusted New Release Wall. Contents (partial): 1 VHS Tape (taped over a wedding); 1 Disposable Camera (never developed); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Cheap Sunglasses (one lens popped out); 1 Corded Phone (cord stretched to the bathroom). Weight 84.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0323.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.1,
+   "value": 84.3,
    "display_type": "number"
   },
   {

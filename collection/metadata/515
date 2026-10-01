@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0515",
- "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 1 Soda Can (tab kept for charity); 1 TV Remote (the volume button worn smooth); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ball Mouse (rollers caked with 1998); 1 Burned CD (track 7 skips). Weight 79.2 lb. Crushed it.",
+ "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 1 Soda Can (tab kept for charity); 1 TV Remote (the volume button worn smooth); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ball Mouse (rollers caked with 1998); 1 Burned CD (track 7 skips). Weight 78.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0515.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.2,
+   "value": 78.2,
    "display_type": "number"
   },
   {

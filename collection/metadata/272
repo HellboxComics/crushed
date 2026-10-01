@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0272",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Cassette Tapes (labeled MIX 4 U); 1 Slap Bracelet (banned by the school); 3 Calculators (spelled BOOBIES upside down); 3 Skate Wheels (flat spot from a power slide). Weight 53.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Cassette Tapes (labeled MIX 4 U); 1 Slap Bracelet (banned by the school); 3 Calculators (spelled BOOBIES upside down); 3 Skate Wheels (flat spot from a power slide). Weight 52.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0272.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.7,
+   "value": 52.8,
    "display_type": "number"
   },
   {

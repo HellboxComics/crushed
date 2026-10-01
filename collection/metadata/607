@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0607",
- "description": "Recovered from A Very Specific Ditch. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Shot Glasses (from a trip to Vegas); 1 Clear Lighter (for incense, obviously); 2 Flip Phones (ringtone composed by hand); 2 Sneakers (light-up heel, dead). Weight 80.6 lb. Still heavier than it looks.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Shot Glasses (from a trip to Vegas); 1 Clear Lighter (for incense, obviously); 2 Flip Phones (ringtone composed by hand); 2 Sneakers (light-up heel, dead). Weight 79.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0607.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.6,
+   "value": 79.0,
    "display_type": "number"
   },
   {

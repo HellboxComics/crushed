@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0161",
- "description": "Recovered from Under the Bed. Smells like Big Red-ish Gum. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Boom Box (shoulder-mounted in its prime); 1 Cheap Sunglasses (mall kiosk special); 3 Joysticks (fire button pressed 40 million times); 2 Calculators (spelled BOOBIES upside down). Weight 44.4 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Big Red-ish Gum. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Boom Box (shoulder-mounted in its prime); 1 Cheap Sunglasses (mall kiosk special); 3 Joysticks (fire button pressed 40 million times); 2 Calculators (spelled BOOBIES upside down). Weight 43.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0161.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.4,
+   "value": 43.7,
    "display_type": "number"
   },
   {

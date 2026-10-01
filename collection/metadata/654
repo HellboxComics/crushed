@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0654",
- "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Smartwatch (says STAND, does not); 2 Cheap Sunglasses (one lens popped out); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 33.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Smartwatch (says STAND, does not); 2 Cheap Sunglasses (one lens popped out); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 35.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0654.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 35.7,
    "display_type": "number"
   },
   {

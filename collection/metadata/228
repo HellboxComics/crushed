@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0228",
- "description": "Recovered from Back of the Closet. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 2 Ball Mice (rollers caked with 1998); 2 Floppy Disks (DISK 2 of 7); 1 Toy Slime (stuck in the carpet); 1 Game Cartridge (save file erased by a sibling); 1 Dice (loaded, rumor says). Weight 83.6 lb. Crushed it.",
+ "name": "CRUSHED IT #0228: SLOW MOTION",
+ "description": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous. Recovered from The Beach, in Slow Motion. Smells like coconut sunscreen. Contents (partial): 10 Rescue Cans (a torpedo with no torpedo); 8 Sunscreens (mostly in the sand); 6 Lifeguard Whistles (blown exactly once, at a pool); 3 Pagers (clipped to jeans for status only); 6 Cheap Sunglasses (one lens popped out). Weight 37.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0228.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SLOW MOTION"
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Rescue Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Bath & Body Works-ish Cucumber Melon"
+   "value": "Coconut Sunscreen"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "The Beach, in Slow Motion"
   },
   {
    "trait_type": "Tape",
@@ -37,7 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "SLOW MOTION"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.6,
+   "value": 37.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 46,
    "display_type": "number"
   }
  ]

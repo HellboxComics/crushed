@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0679",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like cheap cologne. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 1 Spiral Notebook (note says 'check YES or NO'); 2 No. 2 Pencils (never saw a scantron it liked); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Pager (clipped to jeans for status only). Weight 26.8 lb. Handle with both hands.",
+ "description": "Recovered from Nobody Knows. Smells like wet cardboard. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 1 Spiral Notebook (note says 'check YES or NO'); 2 No. 2 Pencils (never saw a scantron it liked); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Pager (clipped to jeans for status only). Weight 25.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0679.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Myspace Top 8 Breakup Box"
+   "value": "Nobody Knows"
   },
   {
    "trait_type": "Tape",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.8,
+   "value": 25.7,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0135",
- "description": "Recovered from Behind the Bar. Smells like Drakkar Noire-ish. Contents (partial): 2 Tissue Boxes (nearly empty); 3 Cassette Tapes (rewound with a pencil); 3 VHS Tapes (Blockbusted rental, never returned); 1 Poker Chip (a stack of ambition); 1 Calculator (spelled BOOBIES upside down). Weight 76.7 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like Drakkar Noire-ish. Contents (partial): 2 Tissue Boxes (nearly empty); 3 Cassette Tapes (rewound with a pencil); 3 VHS Tapes (Blockbusted rental, never returned); 1 Poker Chip (a stack of ambition); 1 Calculator (spelled BOOBIES upside down). Weight 77.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0135.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.7,
+   "value": 77.4,
    "display_type": "number"
   },
   {

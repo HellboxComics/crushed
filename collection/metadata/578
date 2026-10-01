@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0578",
- "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Hollister-ish Store Fog. Contents (partial): 2 Flip Phones (snapped shut dramatically); 3 Power Strips (overloaded on purpose); 1 Tissue Box (there was a reason it lived on the nightstand); 3 TV Remotes (the volume button worn smooth); 3 Beer Cans (12 of 12). Weight 38.0 lb. Still heavier than it looks.",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Hollister-ish Store Fog. Contents (partial): 2 Flip Phones (snapped shut dramatically); 3 Power Strips (overloaded on purpose); 1 Tissue Box (there was a reason it lived on the nightstand); 3 TV Remotes (the volume button worn smooth); 3 Beer Cans (12 of 12). Weight 34.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0578.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.0,
+   "value": 34.8,
    "display_type": "number"
   },
   {

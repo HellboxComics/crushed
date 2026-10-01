@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0821",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 Cheap Sunglasses (one lens popped out); 2 Beer Cans (crushed on a forehead); 1 No. 2 Pencil (sharpened to a nub); 2 Power Strips (overloaded on purpose). Weight 40.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 Cheap Sunglasses (one lens popped out); 2 Beer Cans (crushed on a forehead); 1 No. 2 Pencil (sharpened to a nub); 2 Power Strips (overloaded on purpose). Weight 39.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0821.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.0,
+   "value": 39.2,
    "display_type": "number"
   },
   {

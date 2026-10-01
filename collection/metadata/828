@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0828",
- "description": "Recovered from Behind the Couch. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Smartphones (Instagrampa open, 900 unread); 2 Selfie Sticks (banned at the museum); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ring Light (one bulb out, one ego intact); 1 Earbud Case (survived the wash). Weight 41.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Couch. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Smartphones (Instagrampa open, 900 unread); 2 Selfie Sticks (banned at the museum); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ring Light (one bulb out, one ego intact); 1 Earbud Case (survived the wash). Weight 37.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0828.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.0,
+   "value": 37.5,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0466",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Skateboard (griptape ate a pair of jeans); 3 Floppy Disks (says DO NOT FORMAT); 3 Power Strips (overloaded on purpose); 1 Keyboard (Partial) (F, J and the crumbs); 1 Emergency Ramen (for emergencies). Weight 85.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Skateboard (griptape ate a pair of jeans); 3 Floppy Disks (says DO NOT FORMAT); 3 Power Strips (overloaded on purpose); 1 Keyboard (Partial) (F, J and the crumbs); 1 Gold Coin (real, probably). Weight 82.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0466.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.4,
+   "value": 82.7,
    "display_type": "number"
   },
   {

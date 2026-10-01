@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0858",
- "description": "Recovered from Mom's Minivan. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Spiral Notebooks (spiral unwound halfway); 2 Disposable Vapes (5000 puffs, 4999 regrets); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Power Strip (daisy-chained into three more). Weight 33.8 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Spiral Notebooks (spiral unwound halfway); 2 Disposable Vapes (5000 puffs, 4999 regrets); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Power Strip (daisy-chained into three more). Weight 32.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0858.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.8,
+   "value": 32.3,
    "display_type": "number"
   },
   {

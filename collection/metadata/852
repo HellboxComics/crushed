@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0852",
- "description": "Recovered from Mom's Minivan. Smells like White Paw, Warm. Contents (partial): 2 TV Remotes (the volume button worn smooth); 3 Tablets (used once as a cutting board); 1 Jewel Case (hinge broken on arrival); 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (exam week casualty). Weight 39.9 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like White Paw, Warm. Contents (partial): 2 TV Remotes (the volume button worn smooth); 3 Tablets (used once as a cutting board); 1 Jewel Case (hinge broken on arrival); 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (exam week casualty). Weight 39.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0852.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.9,
+   "value": 39.7,
    "display_type": "number"
   },
   {

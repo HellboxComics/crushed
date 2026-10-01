@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0117",
- "description": "Recovered from Behind the Bar. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Magazine (read for the articles); 3 Cheap Sunglasses (one lens popped out); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Corded Phone (cord stretched to the bathroom). Weight 48.8 lb. Crushed it.",
+ "description": "Recovered from Behind the Bar. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Magazine (read for the articles); 3 Cheap Sunglasses (one lens popped out); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Corded Phone (cord stretched to the bathroom). Weight 46.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0117.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.8,
+   "value": 46.5,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0179",
- "description": "Recovered from The Mall Arcade. Smells like Grunge Flannel. Contents (partial): 2 Pagers (last page: 143); 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Floppy Disks (Iomegalodon would have held it all); 1 Corded Phone (was on the line when mom picked up); 1 Game Controller (stick drift since day one). Weight 88.9 lb. Crushed it.",
+ "description": "Recovered from The Mall Arcade. Smells like Grunge Flannel. Contents (partial): 2 Pagers (last page: 143); 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Floppy Disks (Iomegalodon would have held it all); 1 Corded Phone (was on the line when mom picked up); 1 Game Controller (stick drift since day one). Weight 88.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0179.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 88.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0112",
- "description": "Recovered from A Tupperware-ish Party. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 VHS Tapes (Blockbusted rental, never returned); 3 Sneakers (untied since 1989); 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Floppy Disks (save icon, but real). Weight 56.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 VHS Tapes (Blockbusted rental, never returned); 3 Sneakers (untied since 1989); 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Floppy Disks (save icon, but real). Weight 55.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0112.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 56.5,
+   "value": 55.0,
    "display_type": "number"
   },
   {

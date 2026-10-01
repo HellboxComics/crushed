@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0295",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like arcade carpet. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Shot Glass (chipped rim); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 No. 2 Pencil (never saw a scantron it liked); 2 Skate Wheels (rolled into a storm drain once). Weight 86.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like arcade carpet. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Shot Glass (chipped rim); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 No. 2 Pencil (never saw a scantron it liked); 2 Skate Wheels (rolled into a storm drain once). Weight 84.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0295.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.5,
+   "value": 84.2,
    "display_type": "number"
   },
   {

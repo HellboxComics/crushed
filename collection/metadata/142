@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0142",
- "description": "Recovered from Dad's Camaro Trunk. Smells like arcade carpet. Contents (partial): 1 Boom Box (one speaker still believes); 1 Army Man Squad (the one with the radio survived); 3 Film Canisters (holds one quarter); 2 TV Remotes (found in the couch); 2 Poker Chips (a stack of ambition). Weight 56.7 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like arcade carpet. Contents (partial): 1 Boom Box (one speaker still believes); 1 Army Man Squad (the one with the radio survived); 3 Film Canisters (holds one quarter); 2 TV Remotes (found in the couch); 2 Poker Chips (a stack of ambition). Weight 57.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0142.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 56.7,
+   "value": 57.0,
    "display_type": "number"
   },
   {

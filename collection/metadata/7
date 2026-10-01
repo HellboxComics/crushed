@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0007",
- "description": "Recovered from Grandma's Attic. Smells like Big Red-ish Gum. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Game Cartridge (blew on it, Nintendont said no); 3 Dice (snake eyes, twice); 1 Soda Can (flat); 2 AA Batteries (taken out of the smoke detector). Weight 80.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Big Red-ish Gum. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Game Cartridge (blew on it, Nintendont said no); 3 Dice (snake eyes, twice); 1 Soda Can (flat); 2 AA Batteries (taken out of the smoke detector). Weight 79.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0007.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.9,
+   "value": 79.9,
    "display_type": "number"
   },
   {

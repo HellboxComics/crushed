@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0106",
- "description": "Recovered from Nobody Knows. Smells like basement. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 No. 2 Pencils (never saw a scantron it liked); 3 Cheap Sunglasses (one lens popped out); 1 Pager (last page from a number nobody called back); 1 Corded Phone (was on the line when mom picked up). Weight 88.9 lb. Crushed it.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like blue raspberry. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 No. 2 Pencils (never saw a scantron it liked); 3 Cheap Sunglasses (one lens popped out); 1 Pager (last page from a number nobody called back); 1 Corded Phone (was on the line when mom picked up). Weight 88.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0106.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 88.1,
    "display_type": "number"
   },
   {

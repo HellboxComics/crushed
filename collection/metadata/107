@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0107",
- "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (Surj, the can that started a fight); 3 Game Cartridges (blew on it, Nintendont said no); 2 VHS Tapes (Blockbusted rental, never returned); 2 Joysticks (suction cups gave up); 2 Yo-Yos (string tied to a finger for 3 years). Weight 83.0 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (Surj, the can that started a fight); 3 Game Cartridges (blew on it, Nintendont said no); 2 VHS Tapes (Blockbusted rental, never returned); 2 Joysticks (suction cups gave up); 2 Yo-Yos (string tied to a finger for 3 years). Weight 82.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0107.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.0,
+   "value": 82.3,
    "display_type": "number"
   },
   {

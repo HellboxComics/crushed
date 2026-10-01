@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0861",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Power Banks (dead when needed); 2 Dice (loaded, rumor says); 2 Glow Sticks (cracked at a school dance); 2 Tissue Boxes (one for every mood); 1 AA Batteries (probably dead). Weight 37.5 lb. Nobody made you keep this.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Power Banks (dead when needed); 2 Dice (loaded, rumor says); 2 Glow Sticks (cracked at a school dance); 2 Tissue Boxes (one for every mood); 1 AA Batteries (probably dead). Weight 35.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0861.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 35.6,
    "display_type": "number"
   },
   {

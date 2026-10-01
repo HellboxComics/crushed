@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0855",
- "description": "Recovered from Mom's Basement (Again). Smells like wet cardboard. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Shot Glasses (chipped rim); 1 Disposable Camera (never developed); 1 Tablet (used once as a cutting board); 1 Clear Lighter (for incense, obviously). Weight 41.2 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Basement (Again). Smells like burnt popcorn. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Shot Glasses (chipped rim); 1 Disposable Camera (never developed); 1 Tablet (used once as a cutting board); 1 Clear Lighter (for incense, obviously). Weight 38.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0855.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Burnt Popcorn"
   },
   {
    "trait_type": "Recovered From",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.2,
+   "value": 38.6,
    "display_type": "number"
   },
   {

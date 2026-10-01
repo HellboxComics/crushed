@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0826",
- "description": "Recovered from Ex's Garage. Smells like basement. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo). Weight 33.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Ex's Garage. Smells like blue raspberry. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo). Weight 30.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0826.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 30.3,
    "display_type": "number"
   },
   {

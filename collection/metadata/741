@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0741",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like Ring Light Heat. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 1 Beer Can (Natty Lightweight, 30-rack); 3 Dice (snake eyes, twice); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Power Bank (dead when needed). Weight 39.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Ring Light Heat. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 1 Beer Can (Natty Lightweight, 30-rack); 3 Dice (snake eyes, twice); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Power Bank (dead when needed). Weight 38.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0741.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.1,
+   "value": 38.4,
    "display_type": "number"
   },
   {

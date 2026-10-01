@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0060",
- "description": "Recovered from Under the Bed. Smells like Drakkar Noire-ish. Contents (partial): 3 Joysticks (suction cups gave up); 3 Magazines (the staples are doing the work); 2 Power Strips (overloaded on purpose); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Calculators (spelled BOOBIES upside down). Weight 90.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like Drakkar Noire-ish. Contents (partial): 3 Joysticks (suction cups gave up); 3 Magazines (the staples are doing the work); 2 Power Strips (overloaded on purpose); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Calculators (spelled BOOBIES upside down). Weight 87.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0060.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.0,
+   "value": 87.9,
    "display_type": "number"
   },
   {

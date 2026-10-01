@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0403",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Game Controller (thrown during a boss fight); 2 Magazines (the staples are doing the work); 2 Burned CDs (coaster now); 1 Keyboard (Partial) (F, J and the crumbs). Weight 37.3 lb. Crushed it.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Game Controller (thrown during a boss fight); 2 Magazines (the staples are doing the work); 2 Burned CDs (coaster now); 1 Keyboard (Partial) (F, J and the crumbs); 1 Paper Hand (sold at the bottom). Weight 34.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0403.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.3,
+   "value": 34.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0714",
- "description": "Recovered from A DoorDashed Doorstep. Smells like cheap cologne. Contents (partial): 1 Poker Chip (a stack of ambition); 1 Tablet (one thumbprint of juice); 2 Laptop Chargers (warm to the touch, somehow); 3 Bluetooth Speakers (lost, found, lost); 2 Smartphones (last text: read, no reply). Weight 40.5 lb. Contents may have settled.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like cheap cologne. Contents (partial): 1 Poker Chip (a stack of ambition); 1 Tablet (one thumbprint of juice); 2 Laptop Chargers (warm to the touch, somehow); 3 Bluetooth Speakers (lost, found, lost); 2 Smartphones (last text: read, no reply). Weight 40.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0714.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.5,
+   "value": 40.0,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0778",
- "description": "Recovered from Dad's Junk Drawer. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Bluetooth Speaker (lost, found, lost); 1 Face Mask (from 2020, still fresh); 1 USB Stick (contains homework_FINAL_final2.doc); 2 Earbud Cases (survived the wash); 2 Laptop Chargers (warm to the touch, somehow). Weight 36.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Bluetooth Speaker (lost, found, lost); 1 Face Mask (from 2020, still fresh); 1 USB Stick (contains homework_FINAL_final2.doc); 2 Earbud Cases (survived the wash); 2 Laptop Chargers (warm to the touch, somehow). Weight 34.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0778.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.8,
+   "value": 34.3,
    "display_type": "number"
   },
   {

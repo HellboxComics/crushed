@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0577",
- "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 1 Burned CD (track 7 skips); 1 Beer Can (Milwaukee's Worst, on sale); 2 Tissue Boxes (nearly empty); 3 Centerfolds (staples removed, an attempt was made); 1 Paper Hand (sold at the bottom). Weight 30.4 lb. Crushed it.",
+ "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 1 Burned CD (track 7 skips); 1 Beer Can (Milwaukee's Worst, on sale); 2 Tissue Boxes (nearly empty); 3 Centerfolds (staples removed, an attempt was made). Weight 29.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0577.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.4,
+   "value": 29.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 44,
    "display_type": "number"
   }
  ]

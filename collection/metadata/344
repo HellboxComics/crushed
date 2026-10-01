@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0344",
- "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 1 Gold Dice (why); 2 Calculators (spelled BOOBIES upside down); 3 Puzzle Cubes (solved once, stickers moved); 1 Keyboard (Partial) (F, J and the crumbs); 2 Film Canisters (holds one quarter). Weight 91.3 lb. Some assembly was removed.",
+ "name": "CRUSHED IT #0344: BE MINE",
+ "description": "A shoebox mailbox's worth of candy hearts, punch-out valentines and one heart-shaped box with three left. Recovered from A Shoebox Mailbox, Third Grade. Smells like waxy chocolate and drugstore roses. Contents (partial): 2 Heart-Shaped Boxes (three left, all coconut); 12 Classroom Valentines (one for everyone in class, by rule); 3 Foil Wrappers (from a wallet, 2003); 26 Candy Hearts (the purple one, nobody eats it); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 14.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0344.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "BE MINE"
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Heart-Shaped Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Waxy Chocolate and Drugstore Roses"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "A Shoebox Mailbox, Third Grade"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Dice"
+   "trait_type": "One of One",
+   "value": "BE MINE"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.3,
+   "value": 14.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 54,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0186",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Sneakers (smells like 1989); 2 Game Cartridges (save file erased by a sibling); 1 Matchbook (matches missing, reasons unclear); 1 Floppy Disk (AOHell trial, 500 free hours). Weight 38.2 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Sneakers (smells like 1989); 2 Game Cartridges (save file erased by a sibling); 1 Matchbook (matches missing, reasons unclear); 1 Floppy Disk (AOHell trial, 500 free hours); 1 Bull (dead). Weight 37.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0186.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.2,
+   "value": 37.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

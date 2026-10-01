@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0219",
- "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 Disposable Cameras (27 exposures of a thumb); 3 VHS Tapes (the unmarked one, from the back of the closet); 1 Milk Caps (won in a bet); 2 Calculators (spelled BOOBIES upside down). Weight 47.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 Disposable Cameras (27 exposures of a thumb); 3 VHS Tapes (the unmarked one, from the back of the closet); 1 Milk Caps (won in a bet); 2 Calculators (spelled BOOBIES upside down). Weight 44.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0219.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.4,
+   "value": 44.8,
    "display_type": "number"
   },
   {

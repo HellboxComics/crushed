@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0734",
- "description": "Recovered from Back of the Closet. Smells like Prime Time Hype. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (Moonster, the whole case). Weight 49.1 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like Prime Time Hype. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (Moonster, the whole case); 1 Emergency Ramen (for emergencies). Weight 47.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0734.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.1,
+   "value": 47.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0038",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Pizza Crusts (from a sleepover); 1 Metal Lunchbox (the smell stays); 1 Film Canister (undeveloped, forever); 2 Tissue Boxes (one for every mood). Weight 77.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Pizza Crusts (from a sleepover); 1 Metal Lunchbox (the smell stays); 1 Film Canister (undeveloped, forever); 2 Tissue Boxes (one for every mood). Weight 78.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0038.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.4,
+   "value": 78.9,
    "display_type": "number"
   },
   {

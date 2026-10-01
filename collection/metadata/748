@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0748",
- "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 1 Face Mask (from 2020, still fresh); 1 VR Headset (watched one (1) movie); 1 Bluetooth Speaker (lost, found, lost); 2 Disposable Cameras (never developed); 2 TV Remotes (found in the couch). Weight 37.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 1 Face Mask (from 2020, still fresh); 1 VR Headset (watched one (1) movie); 1 Bluetooth Speaker (lost, found, lost); 2 Disposable Cameras (never developed); 2 TV Remotes (found in the couch). Weight 35.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0748.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 35.4,
    "display_type": "number"
   },
   {

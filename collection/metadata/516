@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0516",
- "description": "Recovered from A Circuit City-ish Return Counter. Smells like hot dust on a CRT. Contents (partial): 1 Webcam (240p of pure confidence); 1 Cassette Tape (a mix for someone who never listened); 1 CRT Monitor (screen burn-in reads LOADING); 3 TV Remotes (found in the couch); 2 Soda Cans (flat). Weight 81.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like hot dust on a CRT. Contents (partial): 1 Webcam (240p of pure confidence); 1 Cassette Tape (a mix for someone who never listened); 1 CRT Monitor (screen burn-in reads LOADING); 3 TV Remotes (found in the couch); 2 Soda Cans (flat). Weight 81.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0516.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.3,
+   "value": 81.0,
    "display_type": "number"
   },
   {

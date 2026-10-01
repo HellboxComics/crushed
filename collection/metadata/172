@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0172",
- "description": "Recovered from A Tupperware-ish Party. Smells like Arcade Tokens. Contents (partial): 1 Joystick (suction cups gave up); 2 Cheap Sunglasses (mall kiosk special); 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (never saw a scantron it liked); 2 Calculators (spelled BOOBIES upside down). Weight 79.9 lb. We kept the important shit.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Joystick (suction cups gave up); 2 Cheap Sunglasses (mall kiosk special); 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (never saw a scantron it liked); 2 Calculators (spelled BOOBIES upside down). Weight 78.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0172.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Tokens"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.9,
+   "value": 78.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0387",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 Disposable Camera (never developed); 3 Sneakers (light-up heel, dead); 2 VHS Tapes (Blockbusted rental, never returned); 1 Flip Phone (12 texts left this month). Weight 91.2 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 Disposable Camera (never developed); 3 Sneakers (light-up heel, dead); 2 VHS Tapes (Blockbusted rental, never returned); 1 Flip Phone (12 texts left this month). Weight 89.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0387.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.2,
+   "value": 89.1,
    "display_type": "number"
   },
   {

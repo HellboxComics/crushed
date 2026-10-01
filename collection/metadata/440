@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0440",
- "description": "Recovered from Estate of a Collector. Smells like Ballz Energy. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Scratch Ticket ($2 for hope); 2 Film Canisters (undeveloped, forever); 1 Magazine (for the interviews, obviously); 1 CRT Monitor (weighs more than the desk); 1 Paper Hand (sold at the bottom). Weight 87.9 lb. Handle with both hands.",
+ "description": "Recovered from Estate of a Collector. Smells like Ballz Energy. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Scratch Ticket ($2 for hope); 2 Film Canisters (undeveloped, forever); 1 Magazine (for the interviews, obviously); 1 CRT Monitor (weighs more than the desk). Weight 86.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0440.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.9,
+   "value": 86.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

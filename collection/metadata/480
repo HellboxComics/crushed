@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0480",
- "description": "Recovered from Dad's Junk Drawer. Smells like Ballz Energy. Contents (partial): 1 Ball Mouse (rollers caked with 1998); 2 Foam Headphones (one ear works if you hold it); 2 Game Controllers (thrown during a boss fight); 1 Memory Card (8MB, full); 3 Keyboards (Partial) (F, J and the crumbs). Weight 34.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Ballz Energy. Contents (partial): 1 Ball Mouse (rollers caked with 1998); 2 Foam Headphones (one ear works if you hold it); 2 Game Controllers (thrown during a boss fight); 1 Memory Card (8MB, full); 3 Keyboards (Partial) (F, J and the crumbs); 1 Bear (thriving). Weight 34.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0480.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.0,
+   "value": 34.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

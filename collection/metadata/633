@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0633",
- "description": "Recovered from Back of the Closet. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Disposable Cameras (never developed); 3 Memory Cards (corrupted during a birthday); 3 Sneakers (was in the dryer); 2 TV Remotes (found in the couch). Weight 35.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Back of the Closet. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Disposable Cameras (never developed); 3 Memory Cards (corrupted during a birthday); 3 Sneakers (was in the dryer); 2 TV Remotes (found in the couch). Weight 33.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0633.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 33.7,
    "display_type": "number"
   },
   {

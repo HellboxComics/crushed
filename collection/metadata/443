@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0443",
- "description": "Recovered from Ex's Garage. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Brick Phone (faceplate swapped 4 times); 1 Foam Headphones (orange foam, allegedly); 1 Spiral Notebook (spiral unwound halfway). Weight 39.9 lb. We kept the important shit.",
+ "description": "Recovered from Ex's Garage. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Brick Phone (faceplate swapped 4 times); 1 Foam Headphones (orange foam, allegedly); 1 Spiral Notebook (spiral unwound halfway); 1 Tiny Red Candle (lit). Weight 38.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0443.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.9,
+   "value": 38.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

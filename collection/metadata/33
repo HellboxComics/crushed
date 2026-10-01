@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0033",
- "description": "Recovered from Behind the Couch. Smells like Cabbage Patch Plastic. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Spiral Notebooks (doodles in the margins); 1 CRT Monitor (degaussed one last time); 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived). Weight 82.6 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Couch. Smells like Cabbage Patch Plastic. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Spiral Notebooks (doodles in the margins); 1 CRT Monitor (degaussed one last time); 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived). Weight 81.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0033.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.6,
+   "value": 81.2,
    "display_type": "number"
   },
   {

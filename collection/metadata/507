@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0507",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like cheap cologne. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 1 Pager (last page from a number nobody called back); 3 Matchbooks (matches missing, reasons unclear); 1 Beer Can (last one in the fridge); 1 No. 2 Pencil (chewed). Weight 41.7 lb. Crushed it.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like cheap cologne. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 1 Pager (last page from a number nobody called back); 3 Matchbooks (matches missing, reasons unclear); 1 Beer Can (last one in the fridge); 1 No. 2 Pencil (chewed); 1 Broken Rocket (was going to the moon). Weight 41.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0507.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.7,
+   "value": 41.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

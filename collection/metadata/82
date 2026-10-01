@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0082",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Joysticks (suction cups gave up); 3 Puzzle Cubes (solved once, stickers moved); 1 Beer Can (Milwaukee's Worst, on sale); 3 Roller Skates (the rink smell is still in there); 3 Floppy Disks (says DO NOT FORMAT). Weight 60.3 lb. Crushed it.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Joysticks (suction cups gave up); 3 Puzzle Cubes (solved once, stickers moved); 1 Beer Can (Milwaukee's Worst, on sale); 3 Roller Skates (the rink smell is still in there); 3 Floppy Disks (says DO NOT FORMAT). Weight 57.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0082.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 60.3,
+   "value": 57.9,
    "display_type": "number"
   },
   {

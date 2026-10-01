@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0727",
- "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 3 Sneakers (worn to one (1) very bad decision); 2 Fidget Spinners (spins for four seconds, like the trend); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 3 Glow Sticks (still glowing a little, somehow). Weight 34.6 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 3 Sneakers (worn to one (1) very bad decision); 2 Fidget Spinners (spins for four seconds, like the trend); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 3 Glow Sticks (still glowing a little, somehow). Weight 32.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0727.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.6,
+   "value": 32.1,
    "display_type": "number"
   },
   {

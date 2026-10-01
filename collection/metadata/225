@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0225",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Dice (loaded, rumor says); 1 Pizza Crust (found behind the couch); 1 Puzzle Cube (solved once, stickers moved); 1 Shot Glass (souvenir of a night nobody recalls). Weight 41.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Dice (loaded, rumor says); 1 Pizza Crust (found behind the couch); 1 Puzzle Cube (solved once, stickers moved); 1 Shot Glass (souvenir of a night nobody recalls). Weight 39.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0225.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.8,
+   "value": 39.8,
    "display_type": "number"
   },
   {

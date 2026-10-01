@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0311",
- "description": "Recovered from A Buddy's Basement. Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 Yo-Yos (walked the dog one time); 1 Poker Chip (never cashed out); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Foam Headphones (orange foam, allegedly). Weight 45.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Buddy's Basement. Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 Yo-Yos (walked the dog one time); 1 Poker Chip (never cashed out); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Foam Headphones (orange foam, allegedly). Weight 44.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0311.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.4,
+   "value": 44.0,
    "display_type": "number"
   },
   {

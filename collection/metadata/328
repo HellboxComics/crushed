@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0328",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Foam Headphones (one ear works if you hold it); 1 Cassette Tape (Maxhell, the one that blew your hair back); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Army Man Squad (melted with a magnifying glass). Weight 41.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Foam Headphones (one ear works if you hold it); 1 Cassette Tape (Maxhell, the one that blew your hair back); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Army Man Squad (melted with a magnifying glass). Weight 39.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0328.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.3,
+   "value": 39.0,
    "display_type": "number"
   },
   {

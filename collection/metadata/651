@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0651",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (Moonster, the whole case); 3 Burned CDs (burned at 1x, 4 hours); 2 Power Strips (daisy-chained into three more); 1 Disposable Camera (never developed); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 33.3 lb. Nobody made you keep this.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (Moonster, the whole case); 3 Burned CDs (burned at 1x, 4 hours); 2 Power Strips (daisy-chained into three more); 1 Disposable Camera (never developed); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 34.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0651.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 34.1,
    "display_type": "number"
   },
   {

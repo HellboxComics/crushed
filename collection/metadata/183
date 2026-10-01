@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0183",
- "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Sneaker (left only); 1 Film Canister (holds one quarter); 3 Skate Wheels (rolled into a storm drain once); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 32.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Sneaker (left only); 1 Film Canister (holds one quarter); 3 Skate Wheels (rolled into a storm drain once); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Bear (doing fine actually). Weight 32.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0183.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -50,7 +50,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

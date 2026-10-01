@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0257",
- "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Floppy Disks (AOHell trial, 500 free hours); 2 Sneakers (was in the dryer); 3 Milk Caps (won in a bet); 2 Centerfolds (left open to the wrong page). Weight 90.4 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Floppy Disks (AOHell trial, 500 free hours); 2 Sneakers (was in the dryer); 3 Milk Caps (won in a bet); 2 Centerfolds (left open to the wrong page). Weight 89.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0257.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.4,
+   "value": 89.4,
    "display_type": "number"
   },
   {

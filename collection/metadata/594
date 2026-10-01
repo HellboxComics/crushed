@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0594",
- "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 AA Batteries (probably dead); 1 Burned CD (coaster now); 3 Magazines (read for the articles); 3 Handheld Consoles (battery cover lost immediately). Weight 32.5 lb. Crushed it.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 AA Batteries (probably dead); 1 Burned CD (coaster now); 3 Magazines (read for the articles); 3 Handheld Consoles (battery cover lost immediately). Weight 31.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0594.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 31.0,
    "display_type": "number"
   },
   {

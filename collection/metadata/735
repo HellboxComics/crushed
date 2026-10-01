@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0735",
- "description": "Recovered from Under the Bed. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Tissue Boxes (one for every mood); 3 Energy Drinks (Moonster, the whole case); 1 Ring Light (one bulb out, one ego intact); 2 AA Batteries (mixed old and new, like animals); 2 Pizza Crusts (still better than most portfolios); 1 Emergency Ramen (for emergencies). Weight 34.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Tissue Boxes (one for every mood); 3 Energy Drinks (Moonster, the whole case); 1 Ring Light (one bulb out, one ego intact); 2 AA Batteries (mixed old and new, like animals); 2 Pizza Crusts (still better than most portfolios); 1 Gold Coin (real, probably). Weight 32.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0735.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.4,
+   "value": 32.4,
    "display_type": "number"
   },
   {

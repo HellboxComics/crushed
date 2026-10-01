@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0226",
- "description": "Recovered from The Mall Arcade. Smells like mall food court. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Yo-Yos (string tied to a finger for 3 years); 1 Skate Wheel (flat spot from a power slide); 1 Disposable Camera (never developed); 1 Dice (blown on for luck). Weight 34.8 lb. Handle with both hands.",
+ "description": "Recovered from The Mall Arcade. Smells like mall food court. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Yo-Yos (string tied to a finger for 3 years); 1 Skate Wheel (flat spot from a power slide); 1 Disposable Camera (never developed); 1 Dice (blown on for luck). Weight 34.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0226.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 34.3,
    "display_type": "number"
   },
   {

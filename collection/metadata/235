@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0235",
- "description": "Recovered from Grandma's Attic. Smells like Surj Spilled on the Carpet. Contents (partial): 3 Sneakers (untied since 1989); 1 16-Bit Controller (cord pulled the console off the shelf); 3 Spiral Notebooks (doodles in the margins); 1 Army Man Squad (melted with a magnifying glass); 1 Scratch Ticket (scratched with a house key). Weight 91.5 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like Surj Spilled on the Carpet. Contents (partial): 3 Sneakers (untied since 1989); 1 16-Bit Controller (cord pulled the console off the shelf); 3 Spiral Notebooks (doodles in the margins); 1 Army Man Squad (melted with a magnifying glass); 1 Scratch Ticket (scratched with a house key). Weight 88.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0235.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.5,
+   "value": 88.8,
    "display_type": "number"
   },
   {

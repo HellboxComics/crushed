@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0456",
- "description": "Recovered from Under the Bed. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Keyboards (Partial) (F, J and the crumbs); 1 AA Batteries (mixed old and new, like animals); 1 Shot Glass (souvenir of a night nobody recalls); 1 Skateboard (one ollie, lifetime); 1 TV Remote (held together with tape). Weight 82.1 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Keyboards (Partial) (F, J and the crumbs); 1 AA Batteries (mixed old and new, like animals); 1 Shot Glass (souvenir of a night nobody recalls); 1 Skateboard (one ollie, lifetime); 1 TV Remote (held together with tape). Weight 81.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0456.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 81.8,
    "display_type": "number"
   },
   {

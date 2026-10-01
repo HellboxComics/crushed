@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0465",
- "description": "Recovered from Behind the Couch. Smells like Frosted Tips Gel. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Cheap Sunglasses (mall kiosk special); 1 Memory Card (8MB, full); 1 Pizza Crust (petrified); 3 Power Strips (daisy-chained into three more). Weight 35.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Couch. Smells like Frosted Tips Gel. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Cheap Sunglasses (mall kiosk special); 1 Memory Card (8MB, full); 1 Pizza Crust (petrified); 3 Power Strips (daisy-chained into three more). Weight 36.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0465.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.8,
+   "value": 36.0,
    "display_type": "number"
   },
   {

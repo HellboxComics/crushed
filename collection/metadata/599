@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0599",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 3 AA Batteries (Neveready, as advertised); 1 Soda Can (New Koak, 79 days only); 2 No. 2 Pencils (chewed); 2 Cheap Sunglasses (mall kiosk special). Weight 36.5 lb. Handle with both hands.",
+ "name": "CRUSHED IT #0599: COASTERS",
+ "description": "Every burned CD that ended up under a drink. Recovered from Every Coffee Table. Smells like stale beer. Contents (partial): 56 Burned CDs (says ROAD TRIP in marker); 6 Beer Cans (warm, sadly); 10 Jewel Cases (insert is from a different album); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 13.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0599.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "COASTERS"
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Burned CD"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Juicy Couture-ish Tracksuit"
+   "value": "Stale Beer"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Myspace Top 8 Breakup Box"
+   "value": "Every Coffee Table"
   },
   {
    "trait_type": "Tape",
@@ -37,7 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "COASTERS"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 13.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 74,
    "display_type": "number"
   }
  ]

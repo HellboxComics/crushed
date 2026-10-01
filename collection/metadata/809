@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0809",
- "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 1 VR Headset (worn twice); 1 Dice (snake eyes, twice); 1 Poker Chip (a stack of ambition); 2 Sneakers (left only); 2 Soda Cans (flat). Weight 31.6 lb. Handle with both hands.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 1 VR Headset (worn twice); 1 Dice (snake eyes, twice); 1 Poker Chip (a stack of ambition); 2 Sneakers (left only); 2 Soda Cans (flat); 1 Tiny Red Candle (lit). Weight 31.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0809.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -54,7 +54,7 @@
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

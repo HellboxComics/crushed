@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0706",
- "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 TV Remotes (found in the couch); 1 No. 2 Pencil (sharpened to a nub); 2 Glow Sticks (cracked at a school dance); 1 VHS Tape (taped off HBOH, commercials and all). Weight 29.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 TV Remotes (found in the couch); 1 No. 2 Pencil (sharpened to a nub); 2 Glow Sticks (cracked at a school dance); 1 VHS Tape (taped off HBOH, commercials and all). Weight 30.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0706.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.5,
+   "value": 30.7,
    "display_type": "number"
   },
   {

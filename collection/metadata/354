@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0354",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Magazine (found in a dad's truck); 1 Three-Ring Binder (covered in band names); 2 Jewel Cases (hinge broken on arrival); 3 Soda Cans (tab kept for charity); 1 Calculator (spelled BOOBIES upside down). Weight 38.6 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Magazine (found in a dad's truck); 1 Three-Ring Binder (covered in band names); 2 Jewel Cases (hinge broken on arrival); 3 Soda Cans (tab kept for charity); 1 Calculator (spelled BOOBIES upside down). Weight 37.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0354.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.6,
+   "value": 37.0,
    "display_type": "number"
   },
   {

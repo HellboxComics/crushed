@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0095",
- "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (the unmarked one, from the back of the closet); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT); 1 Bear (thriving). Weight 89.9 lb. Handle with both hands.",
+ "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (the unmarked one, from the back of the closet); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT). Weight 87.5 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0095.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.9,
+   "value": 87.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 33,
    "display_type": "number"
   }
  ]

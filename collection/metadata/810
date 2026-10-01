@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0810",
- "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Grandma's couch. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Power Bank (10000 mAh of dead weight); 1 Glow Stick (cracked at a school dance); 1 Handheld Console (battery cover lost immediately). Weight 38.9 lb. Still heavier than it looks.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Grandma's couch. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Power Bank (10000 mAh of dead weight); 1 Glow Stick (cracked at a school dance); 1 Handheld Console (battery cover lost immediately). Weight 38.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0810.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.9,
+   "value": 38.5,
    "display_type": "number"
   },
   {

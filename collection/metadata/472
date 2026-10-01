@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0472",
- "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Tissue Boxes (nearly empty); 2 Floppy Disks (Iomegalodon would have held it all); 1 No. 2 Pencil (chewed); 1 Jewel Case (insert is from a different album). Weight 40.3 lb. Crushed it.",
+ "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Tissue Boxes (nearly empty); 2 Floppy Disks (Iomegalodon would have held it all); 1 No. 2 Pencil (chewed); 1 Jewel Case (insert is from a different album). Weight 37.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0472.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.3,
+   "value": 37.7,
    "display_type": "number"
   },
   {

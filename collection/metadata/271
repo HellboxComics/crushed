@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0271",
- "description": "Recovered from Mom's Minivan. Smells like Lunchables-ish Crackers. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 1 Scratch Ticket (not a winner); 1 Shot Glass (from a trip to Vegas); 1 Calculator (solar panel covered by a sticker); 3 Spiral Notebooks (doodles in the margins). Weight 79.5 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like Lunchables-ish Crackers. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 1 Scratch Ticket (not a winner); 1 Shot Glass (from a trip to Vegas); 1 Calculator (solar panel covered by a sticker); 3 Spiral Notebooks (doodles in the margins). Weight 77.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0271.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.5,
+   "value": 77.9,
    "display_type": "number"
   },
   {

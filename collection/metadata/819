@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0819",
- "description": "Recovered from Grandma's Attic. Smells like Moonster and Desperation. Contents (partial): 3 Soda Cans (tab kept for charity); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Disposable Camera (27 exposures of a thumb). Weight 34.3 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like Moonster and Desperation. Contents (partial): 3 Soda Cans (tab kept for charity); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Disposable Camera (27 exposures of a thumb). Weight 33.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0819.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.3,
+   "value": 33.4,
    "display_type": "number"
   },
   {

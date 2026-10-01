@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0644",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Magazines (found in a dad's truck); 3 Sneakers (left only); 2 Matchbooks (matches missing, reasons unclear); 3 Handheld Consoles (battery cover lost immediately); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 38.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Magazines (found in a dad's truck); 3 Sneakers (left only); 2 Matchbooks (matches missing, reasons unclear); 3 Handheld Consoles (battery cover lost immediately); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 36.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0644.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.8,
+   "value": 36.8,
    "display_type": "number"
   },
   {

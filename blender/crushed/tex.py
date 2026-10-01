@@ -1198,6 +1198,174 @@ def sock_print(rng, name):
     return c.image(name)
 
 
+# -- holidays ------------------------------------------------------------------------------------------
+
+HEART_WORDS = ["BE MINE", "TEXT ME", "WAGMI", "GM", "HODL ME", "CALL ME", "UR HOT", "NO FUD", "MOON", "XOXO",
+               "LOVE BUG", "BAG HOLDR", "MY FAV", "SAY YES", "TRUE LUV", "LFG"]
+FUN_SIZE = [("SNICKERZ", (0.45, 0.25, 0.12), (0.2, 0.35, 0.8)), ("3 MUSKETEARS", (0.65, 0.65, 0.68), (0.85, 0.1, 0.15)),
+            ("MILKY WAYOUT", (0.12, 0.25, 0.15), (0.85, 0.75, 0.2)), ("REESE-ISH", (0.95, 0.5, 0.05), (0.95, 0.85, 0.1)),
+            ("KIT KRAT", (0.8, 0.05, 0.1), (1, 1, 1)), ("BABY RUTHLESS", (0.95, 0.95, 0.95), (0.2, 0.2, 0.7)),
+            ("BUTTERFINGERED", (0.95, 0.75, 0.1), (0.2, 0.3, 0.8)), ("SKITTLISH", (0.85, 0.1, 0.1), (1, 1, 1)),
+            ("SMARTIEZ", (0.9, 0.9, 0.9), (0.7, 0.2, 0.6)), ("WHOPPERZ", (0.85, 0.1, 0.1), (0.95, 0.85, 0.2))]
+FIREWORKS = ["BLACK CATASTROPHE", "PIRATE'S BOOTY CALL", "SKY FURY-ISH", "DIRTY BIRD", "MORTAR BOARD",
+             "THE NEIGHBORS", "ILLEGAL IN 3 STATES", "BOTTLE ROCKET MAN", "FREEDOM 1776", "SNAP POP POP"]
+
+
+def candy_heart(rng, name):
+    c = Canvas(96, 96, (*rng.choice([(1.0, 0.75, 0.82), (0.75, 0.9, 1.0), (1.0, 0.95, 0.7), (0.8, 1.0, 0.8),
+                                       (0.9, 0.82, 1.0), (1.0, 1.0, 0.98)]), 1))
+    w = str(rng.choice(HEART_WORDS))
+    parts = w.split(" ", 1) if " " in w else [w]
+    for i, t in enumerate(parts):
+        c.text_fit(t, 0.18, 0.62 - i * 0.2 + (0.1 if len(parts) == 1 else 0), 0.64, 0.17, (0.85, 0.1, 0.3), bold=True)
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def valentine_card(rng, name):
+    """A classroom punch-out valentine: a cartoon, a pun, TO and FROM in pencil."""
+    c = Canvas(160, 112, (*rng.choice([(1.0, 0.85, 0.9), (1.0, 1.0, 1.0), (0.85, 0.92, 1.0)]), 1))
+    c.rect(0.03, 0.05, 0.97, 0.95, (0.9, 0.15, 0.3), soft=0.01)
+    c.rect(0.05, 0.08, 0.95, 0.92, (1.0, 0.97, 0.95))
+    pun = str(rng.choice(["YOU'RE DINO-MITE", "I CHOOSE YOU", "YOU ROCK MY SOCKS", "BEE MINE", "YOU'RE GNARLY",
+                          "WE'RE A MATCH", "YOU'RE OUT OF THIS WORLD", "NO CAP U R MY VAL"]))
+    c.text_fit(pun, 0.08, 0.86, 0.84, 0.13, (0.85, 0.1, 0.3), bold=True)
+    for k in range(3):
+        cx = 0.25 + k * 0.25
+        c.circle(cx, 0.48, 0.09, (0.9, 0.15, 0.3))
+        c.circle(cx + 0.07 * c.h / c.w, 0.48, 0.09, (0.9, 0.15, 0.3))
+        c.poly([(cx - 0.05, 0.45), (cx + 0.035, 0.32), (cx + 0.12, 0.45)], (0.9, 0.15, 0.3))
+    c.text("TO:", 0.08, 0.24, 0.08, (0.3, 0.3, 0.3))
+    c.scribble(rng, 0.2, 0.19, 0.55, 0.008, (0.4, 0.4, 0.45), 0.01)
+    c.text("FROM:", 0.55, 0.24, 0.08, (0.3, 0.3, 0.3))
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def fun_size(rng, name):
+    nm, base, ink = FUN_SIZE[int(rng.integers(0, len(FUN_SIZE)))]
+    c = Canvas(192, 96, (*base, 1))
+    c.rect(0, 0.0, 0.08, 1, tuple(x * 0.7 for x in base))
+    c.rect(0.92, 0.0, 1, 1, tuple(x * 0.7 for x in base))
+    c.text_fit(nm, 0.12, 0.72, 0.76, 0.32, ink, bold=True)
+    c.text_fit("FUN SIZE", 0.3, 0.26, 0.4, 0.12, ink)
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def firework_label(rng, name):
+    base = tuple(rng.choice([(0.85, 0.1, 0.1), (0.1, 0.2, 0.7), (0.95, 0.8, 0.1), (0.1, 0.1, 0.12)]))
+    c = Canvas(256, 128, (*base, 1))
+    for _ in range(14):
+        x, y = rng.uniform(0, 1, 2)
+        c.circle(x, y, rng.uniform(0.01, 0.025), (1, 1, 1, 0.8))
+    c.text_fit(str(rng.choice(FIREWORKS)), 0.05, 0.72, 0.9, 0.22, (1, 1, 1) if sum(base) < 2 else (0.1, 0.1, 0.1),
+               bold=True)
+    c.text_fit("LIGHT FUSE. GET AWAY.", 0.05, 0.28, 0.9, 0.1, (1, 0.9, 0.3) if sum(base) < 2 else (0.6, 0.05, 0.05))
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def hand_turkey(rng, name):
+    """A kid's hand turkey in crayon on construction paper."""
+    c = Canvas(160, 200, (*rng.choice([(0.95, 0.7, 0.35), (0.85, 0.75, 0.55), (0.95, 0.9, 0.75)]), 1))
+    cols = [(0.85, 0.15, 0.1), (0.95, 0.6, 0.05), (0.95, 0.85, 0.1), (0.2, 0.55, 0.2)]
+    for i, a in enumerate((-55, -25, 5, 35)):                                   # four finger feathers
+        ang = math.radians(a + 90)
+        x0, y0 = 0.5, 0.42
+        pts = [(x0 + 0.05 * math.cos(ang + 1.5), y0 + 0.04 * math.sin(ang + 1.5)),
+               (x0 + 0.32 * math.cos(ang) + 0.05 * math.cos(ang + 1.5), y0 + 0.36 * math.sin(ang)),
+               (x0 + 0.34 * math.cos(ang), y0 + 0.39 * math.sin(ang)),
+               (x0 + 0.32 * math.cos(ang) - 0.05 * math.cos(ang + 1.5), y0 + 0.36 * math.sin(ang)),
+               (x0 - 0.05 * math.cos(ang + 1.5), y0 - 0.04 * math.sin(ang + 1.5))]
+        c.poly(pts, cols[i])
+    c.circle(0.5, 0.36, 0.17, (0.5, 0.3, 0.12))
+    c.poly([(0.66, 0.42), (0.86, 0.5), (0.84, 0.36), (0.66, 0.36)], (0.5, 0.3, 0.12))   # the thumb is the head
+    c.circle(0.8, 0.46, 0.015, (0, 0, 0))
+    c.poly([(0.86, 0.45), (0.93, 0.43), (0.86, 0.41)], (0.95, 0.75, 0.1))
+    c.text_fit(str(rng.choice(["I AM THANKFUL FOR MY MOM", "GOBBLE GOBBLE", "BY TYLER AGE 6", "THANKFUL 4 PIZZA"])),
+               0.06, 0.12, 0.88, 0.07, (0.1, 0.1, 0.3), bold=True)
+    c.noise(rng, 0.03)
+    return c.image(name)
+
+
+def y2k_glasses(rng, name):
+    c = Canvas(256, 96, (0.03, 0.03, 0.04, 1))
+    col = tuple(rng.choice([(0.95, 0.8, 0.2), (0.85, 0.85, 0.9), (0.9, 0.2, 0.5)]))
+    c.text_fit("2000", 0.02, 0.92, 0.96, 0.85, col, bold=True, spacing=0.9)
+    for cx in (0.38, 0.62):                                  # the two zeros are the lenses
+        c.circle(cx, 0.5, 0.13, (0.1, 0.1, 0.14))
+    return c.image(name)
+
+
+def egg_print(rng, name):
+    a, b2 = [tuple(x) for x in rng.choice([(1.0, 0.6, 0.75), (0.6, 0.85, 1.0), (1.0, 0.95, 0.5), (0.7, 1.0, 0.7),
+                                            (0.8, 0.65, 1.0), (1.0, 0.7, 0.4)], 2, replace=False)]
+    c = Canvas(128, 128, (*a, 1))
+    c.rect(0, 0.0, 1, 0.5, b2)
+    if rng.random() < 0.5:
+        for k in range(6):
+            c.circle(0.1 + k * 0.17, 0.75, 0.04, (1, 1, 1))
+    c.noise(rng, 0.015)
+    return c.image(name)
+
+
+def wrap_paper(rng, name):
+    base = tuple(rng.choice([(0.75, 0.05, 0.08), (0.05, 0.35, 0.15), (0.1, 0.2, 0.55), (0.9, 0.9, 0.9)]))
+    c = Canvas(256, 256, (*base, 1))
+    motif = int(rng.integers(0, 3))
+    for i in range(6):
+        for j in range(6):
+            x, y = 0.08 + i * 0.17 + (0.08 if j % 2 else 0), 0.08 + j * 0.17
+            if motif == 0:
+                c.poly([(x, y + 0.06), (x + 0.04, y - 0.03), (x - 0.04, y - 0.03)], (0.2, 0.6, 0.25))     # trees
+            elif motif == 1:
+                c.circle(x, y, 0.035, (1, 1, 1))                                                          # snow
+            else:
+                c.rect(x - 0.03, y - 0.03, x + 0.03, y + 0.03, (0.95, 0.8, 0.2))                          # gifts
+                c.rect(x - 0.005, y - 0.03, x + 0.005, y + 0.03, (0.85, 0.1, 0.1))
+    c.noise(rng, 0.015)
+    return c.image(name)
+
+
+def candy_stripe(rng, name):
+    c = Canvas(64, 256, (0.98, 0.97, 0.95, 1))
+    for k in range(-4, 20):
+        y0 = k * 0.08
+        c.poly([(0, y0), (1, y0 + 0.25), (1, y0 + 0.28), (0, y0 + 0.03)], (0.85, 0.05, 0.1))
+    return c.image(name)
+
+
+def stars_stripes(rng, name):
+    c = Canvas(192, 128, (0.95, 0.95, 0.93, 1))
+    for i in range(7):
+        c.rect(0, i * 2 / 13, 1, (i * 2 + 1) / 13, (0.75, 0.08, 0.12))
+    c.rect(0, 0.46, 0.42, 1.0, (0.12, 0.17, 0.42))
+    for i in range(5):
+        for j in range(4):
+            c.circle(0.05 + i * 0.08, 0.53 + j * 0.13, 0.018, (0.95, 0.95, 0.93))
+    c.noise(rng, 0.02)
+    return c.image(name)
+
+
+def pin_print(rng, name):
+    c = Canvas(128, 128, (*rng.choice([(0.05, 0.55, 0.15), (0.95, 0.95, 0.93), (0.95, 0.8, 0.2)]), 1))
+    t = str(rng.choice(["KISS ME I'M IRISH", "KISS ME I'M IRISH-ISH", "LUCKY", "POT OF GOLD (EMPTY)", "IRISH TODAY"]))
+    ink = (1, 1, 1) if c.a[0, 0, 0] < 0.5 else (0.05, 0.45, 0.15)
+    words = t.split()
+    lines, cur = [], ""
+    for w in words:
+        if len(cur) + len(w) > 7 and cur:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = (cur + " " + w).strip()
+    lines.append(cur)
+    for i, ln in enumerate(lines[:3]):
+        c.text_fit(ln, 0.15, 0.7 - i * 0.18, 0.7, 0.16, ink, bold=True)
+    return c.image(name)
+
+
 # -- drop-in art slots -----------------------------------------------------------------------------
 # Every printed surface above is a slot. Put a PNG named after the slot in assets/slots/ (slot.png, or
 # slot_anything.png for several variants, dealt per object) and it is used instead of the procedural one.

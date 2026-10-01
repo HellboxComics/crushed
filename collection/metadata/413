@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0413",
- "description": "Recovered from A Buddy's Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Glow Sticks (still glowing a little, somehow); 1 Sneaker (smells like 1989); 1 Skateboard (griptape ate a pair of jeans); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 44.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Glow Sticks (still glowing a little, somehow); 1 Sneaker (smells like 1989); 1 Skateboard (griptape ate a pair of jeans); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 41.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0413.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.8,
+   "value": 41.9,
    "display_type": "number"
   },
   {

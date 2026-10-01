@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0102",
- "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 3 Joysticks (suction cups gave up); 1 Beer Can (12 of 12); 2 Army Man Squads (melted with a magnifying glass); 2 Game Cartridges (save file erased by a sibling); 1 Metal Lunchbox (the smell stays). Weight 85.1 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 3 Joysticks (suction cups gave up); 1 Beer Can (12 of 12); 2 Army Man Squads (melted with a magnifying glass); 2 Game Cartridges (save file erased by a sibling); 1 Metal Lunchbox (the smell stays). Weight 84.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0102.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.1,
+   "value": 84.2,
    "display_type": "number"
   },
   {

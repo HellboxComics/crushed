@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0123",
- "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like gym bag, forgotten. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 1 Corded Phone (was on the line when mom picked up); 2 Game Cartridges (blew on it, Nintendont said no); 2 Pizza Crusts (still better than most portfolios); 3 Sneakers (was in the dryer). Weight 89.0 lb. Contents may have settled.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like wet cardboard. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 1 Corded Phone (was on the line when mom picked up); 2 Game Cartridges (blew on it, Nintendont said no); 2 Pizza Crusts (still better than most portfolios); 3 Sneakers (was in the dryer). Weight 89.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0123.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Waldenbooks-ish Bargain Bin"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.0,
+   "value": 89.1,
    "display_type": "number"
   },
   {

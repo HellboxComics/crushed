@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0548",
- "description": "Recovered from Dad's Junk Drawer. Smells like Hot Razr Battery. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Earbud Case (one bud present); 1 Tissue Box (one for every mood); 1 Cheap Sunglasses (one lens popped out); 2 Pizza Crusts (found behind the couch). Weight 32.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Hot Razr Battery. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Earbud Case (one bud present); 1 Tissue Box (one for every mood); 1 Cheap Sunglasses (one lens popped out); 2 Pizza Crusts (found behind the couch); 1 Broken Rocket (didn't make it). Weight 30.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0548.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.4,
+   "value": 30.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

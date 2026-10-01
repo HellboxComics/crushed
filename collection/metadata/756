@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0756",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Game Controller (thrown during a boss fight); 1 Power Strip (daisy-chained into three more); 1 Dice (blown on for luck); 1 Tissue Box (nearly empty); 3 AA Batteries (Neveready, as advertised). Weight 36.8 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Game Controller (thrown during a boss fight); 1 Power Strip (daisy-chained into three more); 1 Dice (blown on for luck); 1 Tissue Box (nearly empty); 3 AA Batteries (Neveready, as advertised); 1 Emergency Ramen (for emergencies). Weight 36.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0756.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.8,
+   "value": 36.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

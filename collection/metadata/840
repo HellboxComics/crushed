@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0840",
- "description": "Recovered from Garage Sale Free Bin. Smells like Prime Time Hype. Contents (partial): 1 Drone (flew once, into a tree); 3 Scratch Tickets (not a winner); 1 Bluetooth Speaker (played one song, too loud); 3 Game Controllers (thrown during a boss fight); 2 No. 2 Pencils (sharpened to a nub). Weight 39.2 lb. Nobody made you keep this.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Prime Time Hype. Contents (partial): 1 Drone (flew once, into a tree); 3 Scratch Tickets (not a winner); 1 Bluetooth Speaker (played one song, too loud); 3 Game Controllers (thrown during a boss fight); 2 No. 2 Pencils (sharpened to a nub). Weight 36.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0840.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 36.4,
    "display_type": "number"
   },
   {

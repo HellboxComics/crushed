@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0473",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Magazines (found in a dad's truck); 1 Corded Phone (someone is still on hold); 3 Cassette Tapes (a mix for someone who never listened); 1 Broken Rocket (was going to the moon). Weight 79.0 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Magazines (found in a dad's truck); 1 Corded Phone (someone is still on hold); 3 Cassette Tapes (a mix for someone who never listened). Weight 76.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0473.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.0,
+   "value": 76.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

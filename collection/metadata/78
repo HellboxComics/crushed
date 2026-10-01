@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0078",
- "description": "Recovered from Vegas Hotel Room. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Puzzle Cubes (two stickers peeled); 3 Foam Headphones (orange foam, allegedly); 1 Soda Can (tab kept for charity); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 79.5 lb. Contents may have settled.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Puzzle Cubes (two stickers peeled); 3 Foam Headphones (orange foam, allegedly); 1 Soda Can (tab kept for charity); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 81.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0078.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.5,
+   "value": 81.0,
    "display_type": "number"
   },
   {

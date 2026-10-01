@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0251",
- "description": "Recovered from Dad's Junk Drawer. Smells like Crystal Peppy. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway). Weight 83.7 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Crystal Peppy. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway); 1 Crumpled Chart (it went up, then it went down). Weight 83.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0251.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.7,
+   "value": 83.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

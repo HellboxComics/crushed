@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0629",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Skate Wheel (flat spot from a power slide); 3 Digital Cameras (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours). Weight 33.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Skate Wheel (flat spot from a power slide); 3 Digital Cameras (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours). Weight 32.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0629.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.4,
+   "value": 32.2,
    "display_type": "number"
   },
   {

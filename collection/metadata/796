@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0003: STOP THE PRESSES",
- "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (a boar doing a pig's job); 3 Newspapers (yesterday's news); 3 Play Money (no cash value, ever); 2 Corded Phones (was on the line when mom picked up); 4 Neckties (worn once, to a funeral for a portfolio). Weight 51.6 lb. Still heavier than it looks.",
+ "name": "CRUSHED IT #0796",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like new plastic. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Fidget Spinners (spins for four seconds, like the trend); 2 AA Batteries (taken out of the smoke detector); 3 Disposable Cameras (27 exposures of a thumb); 2 Poker Chips (a stack of ambition). Weight 37.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0796.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "STOP THE PRESSES"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Piggy Bank"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Bacon and Newsprint"
+   "value": "New Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Trading Floor, After the Bell"
+   "value": "A Crypto Bro's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "None"
-  },
-  {
-   "trait_type": "One of One",
-   "value": "STOP THE PRESSES"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.6,
+   "value": 37.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 53,
+   "value": 42,
    "display_type": "number"
   }
  ]

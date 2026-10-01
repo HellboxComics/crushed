@@ -19,6 +19,8 @@ ONE_OF_ONES = [
     "LANDFILL DRIVE", "BLOW ON IT", "STILL ALIVE", "GAS FEES", "SAVE ICON", "COASTERS", "GM", "COLD STORAGE",
     "SLOW MOTION", "UNDER THE MATTRESS",
     "LOW RES", "CCFF00", "STOP THE PRESSES", "CLAY DAY",      # gift blocks, made for other people's worlds
+    "BE MINE", "TRICK OR TREAT", "SOME ASSEMBLY REQUIRED", "EGG HUNT", "LIGHT THE FUSE", "HAND TURKEY",
+    "Y2K", "GREEN BEER",                                         # the holidays, as the junk drawer remembers them
 ]
 
 CONDITIONS = {          # exact counts across all 888 (plus the one-of-ones)
@@ -115,6 +117,21 @@ MONOCULTURES = {   # one-of-ones that are made of one idea
                          ("bear", 3), ("corded_phone", 2), ("calculator", 2), ("newspaper", 3), ("street_sign", 1),
                          ("microphone", 1), ("press_badge", 2), ("play_money", 3), ("poker_chip", 2),
                          ("gold_coin", 2), ("neon_square", 2)],
+    "BE MINE": [("chocolate_box", 2), ("candy_heart", 26), ("valentine_card", 12), ("rose", 6), ("tissue_box", 2), ("foil_packet", 3), ("matchbook", 2), ("shot_glass", 1)],
+    "TRICK OR TREAT": [("pumpkin_pail", 2), ("fun_size_bar", 24), ("candy_corn", 10), ("costume_mask", 5),
+                       ("rubber_spider", 6), ("glow_stick", 5), ("flashlight", 2), ("vhs", 2)],
+    "SOME ASSEMBLY REQUIRED": [("present", 8), ("ornament", 14), ("light_strand", 8), ("candy_cane", 10),
+                               ("aa_batteries", 6), ("controller_16bit", 2), ("handheld", 2), ("vhs", 2), ("cassette", 2)],
+    "EGG HUNT": [("choc_bunny", 4), ("plastic_egg", 28), ("marshmallow_chick", 10), ("candy_heart", 4),
+                 ("fun_size_bar", 4)],
+    "LIGHT THE FUSE": [("firework", 22), ("mini_flag", 8), ("party_cup", 8), ("beer_can", 6), ("lighter", 4),
+                       ("sunglasses", 3), ("boombox", 1)],
+    "HAND TURKEY": [("hand_turkey", 10), ("pilgrim_hat", 6), ("cranberry_log", 4), ("drumstick", 6), ("tv_remote", 3),
+                    ("beer_can", 3), ("notebook", 3)],
+    "Y2K": [("y2k_glasses", 8), ("party_hat", 10), ("noisemaker", 10), ("champagne", 3), ("floppy", 6),
+            ("cd", 4), ("crt", 1), ("pager", 3), ("candybar_phone", 3)],
+    "GREEN BEER": [("green_bowler", 6), ("party_cup", 10), ("beer_can", 8), ("pin_button", 10), ("gold_coin", 8),
+                   ("shot_glass", 3)],
     "CLAY DAY": [("clay_bull", 7), ("clay_bear", 6), ("clay_pig", 6), ("clay_frog", 5), ("clay_steak", 5),
                  ("clay_cleaver", 2), ("clay_gem", 4), ("clay_coin", 3), ("clay_candle", 5)],
 }
@@ -130,16 +147,32 @@ ONE_FILLERS = {
     "CCFF00": ("neon_bit",),
     "STOP THE PRESSES": ("receipt", "crumpled_paper", "bottle_cap"),
     "CLAY DAY": ("clay_blob",),
+    "SOME ASSEMBLY REQUIRED": ("tinsel", "ornament", "candy_cane", "tinsel", "packaging"),
+    "EGG HUNT": ("easter_grass", "plastic_egg", "easter_grass", "marshmallow_chick"),
+    "LIGHT THE FUSE": ("sparkler", "firework", "party_cup", "bottle_cap"),
+    "TRICK OR TREAT": ("candy_corn", "fun_size_bar", "rubber_spider", "candy_corn"),
+    "BE MINE": ("candy_heart", "candy_heart", "valentine_card", "fabric_scrap"),
+    "HAND TURKEY": ("cardboard_scrap", "hand_turkey", "crumpled_paper"),
+    "Y2K": ("party_hat", "noisemaker", "tinsel", "plastic_shard"),
+    "GREEN BEER": ("shamrock_beads", "bottle_cap", "gold_coin", "pin_button"),
     "LOW RES": ("fabric_scrap", "plastic_shard", "crumpled_paper", "packaging", "foam_chunk"),
 }
 
 # one-of-ones whose contents get crushed gently (flat tiles should stay tiles)
-ONE_SOFT = {"CCFF00": 0.25, "STOP THE PRESSES": 0.5, "CLAY DAY": 0.3, "LOW RES": 0.35}
+ONE_SOFT = {"BE MINE": 0.5, "EGG HUNT": 0.5, "TRICK OR TREAT": 0.6, "SOME ASSEMBLY REQUIRED": 0.6, "CCFF00": 0.25, "STOP THE PRESSES": 0.5, "CLAY DAY": 0.3, "LOW RES": 0.35}
 
 # one-of-ones whose dense core (the mass behind everything) is not the era's junk
 ONE_CORE = {
     "CCFF00": [(0.012, 0.012, 0.014), (0.02, 0.02, 0.022), (0.03, 0.03, 0.032)],
     "CLAY DAY": [(0.03, 0.03, 0.035), (0.95, 0.95, 0.93), (0.8, 1.0, 0.0), (0.96, 0.55, 0.68)],
+    "BE MINE": [(0.8, 0.05, 0.15), (1.0, 0.6, 0.72), (0.55, 0.02, 0.1), (1.0, 0.85, 0.9)],
+    "TRICK OR TREAT": [(1.0, 0.45, 0.02), (0.05, 0.05, 0.05), (0.45, 0.1, 0.6), (0.9, 0.35, 0.02)],
+    "SOME ASSEMBLY REQUIRED": [(0.75, 0.05, 0.08), (0.05, 0.4, 0.15), (0.9, 0.75, 0.25), (0.95, 0.95, 0.95)],
+    "EGG HUNT": [(1.0, 0.75, 0.85), (0.7, 0.88, 1.0), (1.0, 0.95, 0.6), (0.75, 1.0, 0.75)],
+    "LIGHT THE FUSE": [(0.75, 0.08, 0.12), (0.95, 0.95, 0.93), (0.12, 0.17, 0.5), (0.75, 0.08, 0.12)],
+    "HAND TURKEY": [(0.55, 0.3, 0.12), (0.9, 0.5, 0.1), (0.75, 0.15, 0.08), (0.95, 0.75, 0.2)],
+    "Y2K": [(0.75, 0.75, 0.8), (0.05, 0.05, 0.08), (0.85, 0.7, 0.25), (0.3, 0.3, 0.35)],
+    "GREEN BEER": [(0.05, 0.55, 0.15), (0.1, 0.75, 0.25), (0.95, 0.8, 0.2), (0.05, 0.4, 0.1)],
     "LOW RES": [(0.42, 0.12, 0.65), (0.2, 0.05, 0.3), (0.55, 1.0, 0.1), (0.05, 0.05, 0.07)],
 }
 
@@ -153,7 +186,7 @@ WIRED = {"boombox", "headphones", "portable_cd", "corded_phone", "crt", "keyboar
          "power_bank", "selfie_stick", "ribbon_cable", "synth_keys", "studio_headphones", "hdd", "cold_wallet",
          "hardware_wallet", "mini_arcade", "lava_lamp", "neon_tube", "microphone"}
 
-NO_WIRES = {"CLAY DAY", "LOW RES", "CCFF00", "UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
+NO_WIRES = {"BE MINE", "TRICK OR TREAT", "EGG HUNT", "LIGHT THE FUSE", "HAND TURKEY", "GREEN BEER", "CLAY DAY", "LOW RES", "CCFF00", "UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
             "UNCRUSHED", "EMPTY", "BULL TRAP", "SOLID GOLD"}
 
 ONE_FINISH = {
@@ -185,6 +218,14 @@ ONE_OF_ONE_FLAVOR = {  # (smell, recovered from, headliner)
     "CCFF00": ("Hot Plastic and Ozone", "The Neon Aisle", "Big Neon Square"),
     "STOP THE PRESSES": ("Bacon and Newsprint", "The Trading Floor, After the Bell", "Piggy Bank"),
     "CLAY DAY": ("Warm Plasticine", "A Desk, Mid-Pump", "Clay Bull"),
+    "BE MINE": ("Waxy Chocolate and Drugstore Roses", "A Shoebox Mailbox, Third Grade", "Heart-Shaped Box"),
+    "TRICK OR TREAT": ("Rubber Mask Breath", "The Bottom of a Pillowcase", "Pumpkin Pail"),
+    "SOME ASSEMBLY REQUIRED": ("Pine Needles and Batteries", "Under the Tree, 6 A.M.", "Present"),
+    "EGG HUNT": ("Plastic Grass and Jelly Beans", "Grandma's Backyard, Still Hidden", "Chocolate Bunny"),
+    "LIGHT THE FUSE": ("Gunpowder and Lighter Fluid", "A Field Behind the Gas Station", "Firework"),
+    "HAND TURKEY": ("Gravy and Construction Paper", "The Fridge Door, 1993", "Hand Turkey"),
+    "Y2K": ("Cheap Champagne and Panic", "The Bunker, 11:59 P.M.", "2000 Glasses"),
+    "GREEN BEER": ("Green Beer", "An Irish Pub, Allegedly", "Green Bowler"),
 }
 
 LOCKED = ("SOAKED", "BURNT", "BIOHAZARD", "GOLD")
@@ -218,7 +259,7 @@ ONE_ERA = {
     "MIXTAPE": {0, 1}, "SCREEN TIME": {2, 3}, "LANDFILL DRIVE": {3, 4}, "BLOW ON IT": {1}, "STILL ALIVE": {2, 3},
     "GAS FEES": {2, 3, 4}, "SAVE ICON": {0, 1, 2}, "COASTERS": {1, 2, 3}, "GM": {4}, "COLD STORAGE": {3, 4},
     "SLOW MOTION": {1}, "UNDER THE MATTRESS": {0, 1, 2, 3}, "LOW RES": {4}, "CCFF00": {4},
-    "STOP THE PRESSES": {4}, "CLAY DAY": {4},
+    "STOP THE PRESSES": {4}, "CLAY DAY": {4}, "Y2K": {2},
 }
 
 
@@ -302,8 +343,8 @@ def recipe(token_id):
     # loose wire and circuit-board debris only come out of things that have wires in them
     corded = sum(1 for h in heroes if h in WIRED)
     fp = pool(era, "filler")
-    if one in ONE_FILLERS:
-        fp = [d for d in fp if d.name in ONE_FILLERS[one]]
+    if one in ONE_FILLERS:          # a one-of-one's gaps are packed with its own stuff, small props included
+        fp = [reg[n] for n in ONE_FILLERS[one]]
     if corded < 3 or one in NO_WIRES:
         fp = [d for d in fp if d.name not in ("wire_bit", "pcb_chunk", "spring")]
     fw = np.array([d.weight for d in fp])

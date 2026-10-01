@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0326",
- "description": "Recovered from Spencer's-ish Back Room. Smells like Gak-ish. Contents (partial): 2 VHS Tapes (the unmarked one, from the back of the closet); 2 Keyboards (Partial) (F, J and the crumbs); 1 Skate Wheel (rolled into a storm drain once); 2 Floppy Disks (DISK 2 of 7); 1 Power Strip (overloaded on purpose). Weight 37.1 lb. Handle with both hands.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Gak-ish. Contents (partial): 2 VHS Tapes (the unmarked one, from the back of the closet); 2 Keyboards (Partial) (F, J and the crumbs); 1 Skate Wheel (rolled into a storm drain once); 2 Floppy Disks (DISK 2 of 7); 1 Power Strip (overloaded on purpose). Weight 35.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0326.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.1,
+   "value": 35.9,
    "display_type": "number"
   },
   {

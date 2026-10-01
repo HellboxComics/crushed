@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0285",
- "description": "Recovered from A Blockbusted Return Slot. Smells like mall food court. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Dice (snake eyes, twice); 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 77.3 lb. Contents may have settled.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like mall food court. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Dice (snake eyes, twice); 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 77.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0285.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.3,
+   "value": 77.4,
    "display_type": "number"
   },
   {

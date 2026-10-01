@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0841",
- "description": "Recovered from Grandma's Attic. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Disposable Vapes (Jool pod, found in a gym bag); 1 VR Headset (worn twice); 3 Scratch Tickets (scratched with a house key); 1 Memory Card (corrupted during a birthday); 2 Poker Chips (never cashed out). Weight 35.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Disposable Vapes (Jool pod, found in a gym bag); 1 VR Headset (worn twice); 3 Scratch Tickets (scratched with a house key); 1 Memory Card (corrupted during a birthday); 2 Poker Chips (never cashed out). Weight 33.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0841.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.7,
+   "value": 33.5,
    "display_type": "number"
   },
   {

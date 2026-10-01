@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0529",
- "description": "Recovered from A Buddy's Basement. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Gold Cassette Tape (why); 3 Flip Phones (12 texts left this month); 1 VHS Tape (taped over a wedding); 1 Corded Phone (someone is still on hold); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 79.6 lb. Crushed it.",
+ "name": "CRUSHED IT #0529: TRICK OR TREAT",
+ "description": "The whole haul, dumped on the floor and sorted: fun size, candy corn, a mask with the elastic snapped. Recovered from The Bottom of a Pillowcase. Smells like rubber mask breath. Contents (partial): 2 Pumpkin Pails (still smells like candy); 2 Flashlights (for reading under the covers); 24 Fun Size Bars (the size of a regret); 10 Candy Corns (every year anyway); 5 Glow Sticks (still glowing a little, somehow). Weight 16.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0529.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "TRICK OR TREAT"
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Pumpkin Pail"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Ax-ish Body Spray, Entire Can"
+   "value": "Rubber Mask Breath"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Bottom of a Pillowcase"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Cassette Tape"
+   "trait_type": "One of One",
+   "value": "TRICK OR TREAT"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.6,
+   "value": 16.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 56,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0324: MIXTAPE",
- "description": "Forty cassettes and every inch of their tape. Recovered from Every Car Glovebox. Smells like magnetic tape. Contents (partial): 40 Cassette Tapes (TDKay SA-90, the good tape); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (one speaker still believes). Weight 38.1 lb. Nobody made you keep this.",
+ "description": "Forty cassettes and every inch of their tape. Recovered from Every Car Glovebox. Smells like magnetic tape. Contents (partial): 40 Cassette Tapes (TDKay SA-90, the good tape); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (one speaker still believes). Weight 37.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0324.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.1,
+   "value": 37.0,
    "display_type": "number"
   },
   {

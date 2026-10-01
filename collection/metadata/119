@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0119",
- "description": "Recovered from Dad's Junk Drawer. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 2 No. 2 Pencils (chewed); 3 Puzzle Cubes (solved once, stickers moved); 1 Three-Ring Binder (covered in band names); 1 Calculator (spelled BOOBIES upside down). Weight 37.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 2 No. 2 Pencils (chewed); 3 Puzzle Cubes (solved once, stickers moved); 1 Three-Ring Binder (covered in band names); 1 Calculator (spelled BOOBIES upside down); 1 Crumpled Chart (printed out for emotional reasons). Weight 36.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0119.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.9,
+   "value": 36.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 34,
    "display_type": "number"
   }
  ]

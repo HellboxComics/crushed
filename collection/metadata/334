@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0334",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Tissue Box (one for every mood); 1 Slap Bracelet (banned by the school); 1 Skateboard (griptape ate a pair of jeans); 2 Dice (snake eyes, twice); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 45.3 lb. Some assembly was removed.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like basement. Contents (partial): 1 Tissue Box (one for every mood); 1 Slap Bracelet (banned by the school); 1 Skateboard (griptape ate a pair of jeans); 2 Dice (snake eyes, twice); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 44.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0334.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Basement"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.3,
+   "value": 44.6,
    "display_type": "number"
   },
   {

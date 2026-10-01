@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0732",
- "description": "Recovered from A Lambo-Shaped Hole. Smells like Fidget Spinner Bearings. Contents (partial): 2 Selfie Sticks (banned at the museum); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 3 Smartphones (Instagrampa open, 900 unread); 1 Glow Stick (cracked at a school dance); 3 TV Remotes (the volume button worn smooth); 1 Tiny Red Candle (one of many). Weight 36.3 lb. Contents may have settled.",
+ "description": "Recovered from A Lambo-Shaped Hole. Smells like Fidget Spinner Bearings. Contents (partial): 2 Selfie Sticks (banned at the museum); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 3 Smartphones (Instagrampa open, 900 unread); 1 Glow Stick (cracked at a school dance); 3 TV Remotes (the volume button worn smooth). Weight 35.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0732.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.3,
+   "value": 35.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

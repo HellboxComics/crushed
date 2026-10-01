@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0163",
- "description": "Recovered from A Tupperware-ish Party. Smells like arcade carpet. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Spiral Notebooks (spiral unwound halfway). Weight 85.9 lb. Handle with both hands.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like new plastic. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Spiral Notebooks (spiral unwound halfway); 1 Emergency Ramen (for emergencies). Weight 82.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0163.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "New Plastic"
   },
   {
    "trait_type": "Recovered From",
@@ -33,11 +33,15 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "GRAPE"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.9,
+   "value": 82.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

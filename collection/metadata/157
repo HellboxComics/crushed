@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0157",
- "description": "Recovered from Nobody Knows. Smells like Cabbage Patch Plastic. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Dice (blown on for luck); 2 Pizza Crusts (still better than most portfolios); 2 Power Strips (daisy-chained into three more); 1 AA Batteries (Neveready, as advertised). Weight 86.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Nobody Knows. Smells like Cabbage Patch Plastic. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Dice (blown on for luck); 2 Pizza Crusts (still better than most portfolios); 2 Power Strips (daisy-chained into three more); 1 AA Batteries (Neveready, as advertised). Weight 84.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0157.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.0,
+   "value": 84.2,
    "display_type": "number"
   },
   {

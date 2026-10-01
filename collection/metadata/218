@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0218",
- "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like Grunge Flannel. Contents (partial): 2 16-Bit Controllers (the B button is sticky); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Sneaker (was in the dryer); 2 Army Man Squads (the one with the radio survived); 3 Magazines (read for the articles). Weight 31.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like Grunge Flannel. Contents (partial): 2 16-Bit Controllers (the B button is sticky); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Sneaker (was in the dryer); 2 Army Man Squads (the one with the radio survived); 3 Magazines (read for the articles). Weight 30.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0218.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.6,
+   "value": 30.4,
    "display_type": "number"
   },
   {

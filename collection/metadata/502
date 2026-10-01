@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0502",
- "description": "Recovered from Storage Unit (Auctioned). Smells like cheap cologne. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Pizza Crusts (petrified); 2 Poker Chips (taken from a casino, small heist); 2 No. 2 Pencils (sharpened to a nub); 3 Skate Wheels (flat spot from a power slide); 1 Paper Hand (sold at the bottom). Weight 33.4 lb. We kept the important shit.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like cheap cologne. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Pizza Crusts (petrified); 2 Poker Chips (taken from a casino, small heist); 2 No. 2 Pencils (sharpened to a nub); 3 Skate Wheels (flat spot from a power slide). Weight 32.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0502.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.4,
+   "value": 32.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

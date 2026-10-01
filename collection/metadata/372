@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0372",
- "description": "Recovered from Garage Sale Free Bin. Smells like Ballz Energy. Contents (partial): 2 TV Remotes (found in the couch); 2 VHS Tapes (taped over a wedding); 2 No. 2 Pencils (sharpened to a nub); 1 Toy Slime (was in the hair of a sibling); 1 Pizza Crust (found behind the couch). Weight 79.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Ballz Energy. Contents (partial): 2 TV Remotes (found in the couch); 2 VHS Tapes (taped over a wedding); 2 No. 2 Pencils (sharpened to a nub); 1 Toy Slime (was in the hair of a sibling); 1 Pizza Crust (found behind the couch). Weight 79.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0372.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 79.1,
    "display_type": "number"
   },
   {

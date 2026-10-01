@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0558",
- "description": "Recovered from A Buddy's Basement. Smells like Myspace Glitter. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Webcam (240p of pure confidence); 1 Pizza Crust (found behind the couch); 1 Glow Stick (still glowing a little, somehow); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 25.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like Myspace Glitter. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Webcam (240p of pure confidence); 1 Pizza Crust (found behind the couch); 1 Glow Stick (still glowing a little, somehow); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 24.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0558.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.8,
+   "value": 24.8,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0484",
- "description": "Recovered from Flooded Basement. Smells like hot tub. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 2 Pagers (clipped to jeans for status only); 1 Energy Drink (tastes like a battery); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Magazine (found in a dad's truck). Weight 71.0 lb. Some assembly was removed.",
+ "description": "Recovered from Flooded Basement. Smells like hot tub. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 2 Pagers (clipped to jeans for status only); 1 Energy Drink (tastes like a battery); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Magazine (found in a dad's truck); 1 Tiny Red Candle (one of many). Weight 69.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0484.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.0,
+   "value": 69.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

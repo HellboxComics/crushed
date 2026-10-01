@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0761",
- "description": "Recovered from Nobody Knows. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Smartwatches (10,000 steps, never); 2 No. 2 Pencils (chewed); 1 Disposable Camera (never developed); 2 Sneakers (light-up heel, dead); 1 Shot Glass (souvenir of a night nobody recalls). Weight 33.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Nobody Knows. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Smartwatches (10,000 steps, never); 2 No. 2 Pencils (chewed); 1 Disposable Camera (never developed); 2 Sneakers (light-up heel, dead); 1 Shot Glass (souvenir of a night nobody recalls). Weight 32.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0761.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.4,
+   "value": 32.2,
    "display_type": "number"
   },
   {

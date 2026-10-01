@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0880",
- "description": "Recovered from A DoorDashed Doorstep. Smells like new plastic. Contents (partial): 1 Drone (40 seconds of freedom); 2 Glow Sticks (cracked at a school dance); 3 Clear Lighters (borrowed in 1997, never returned); 2 Disposable Vapes (mango, mostly); 1 Hand Sanitizer (was in every pocket in 2020). Weight 35.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like new plastic. Contents (partial): 1 Drone (40 seconds of freedom); 2 Glow Sticks (cracked at a school dance); 3 Clear Lighters (borrowed in 1997, never returned); 2 Disposable Vapes (mango, mostly); 1 Hand Sanitizer (was in every pocket in 2020). Weight 34.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0880.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 34.9,
    "display_type": "number"
   },
   {

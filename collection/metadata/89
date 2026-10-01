@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0089",
- "description": "Recovered from Ex's Garage. Smells like Drakkar Noire-ish. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Sneakers (was in the dryer); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (side B only); 1 Boom Box (took 10 D batteries). Weight 52.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Ex's Garage. Smells like Drakkar Noire-ish. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Sneakers (was in the dryer); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (side B only); 1 Boom Box (took 10 D batteries). Weight 51.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0089.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 52.1,
+   "value": 51.7,
    "display_type": "number"
   },
   {

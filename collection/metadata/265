@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0265",
- "description": "Recovered from School Lost & Found. Smells like Lunchables-ish Crackers. Contents (partial): 1 Tissue Box (one for every mood); 3 Matchbooks (from a gentlemen's club, reportedly); 1 Pizza Crust (petrified); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 No. 2 Pencils (never saw a scantron it liked). Weight 88.5 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like Lunchables-ish Crackers. Contents (partial): 1 Tissue Box (one for every mood); 3 Matchbooks (from a gentlemen's club, reportedly); 1 Pizza Crust (petrified); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 No. 2 Pencils (never saw a scantron it liked). Weight 86.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0265.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.5,
+   "value": 86.7,
    "display_type": "number"
   },
   {

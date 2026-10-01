@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0398",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Disposable Cameras (never developed); 2 Skate Wheels (rolled into a storm drain once); 2 USB Sticks (never ejected safely); 1 Beer Can (PBJ, the hipster one); 2 Power Strips (daisy-chained into three more). Weight 37.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Disposable Cameras (never developed); 2 Skate Wheels (rolled into a storm drain once); 2 USB Sticks (never ejected safely); 1 Beer Can (PBJ, the hipster one); 2 Power Strips (daisy-chained into three more). Weight 36.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0398.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.1,
+   "value": 36.0,
    "display_type": "number"
   },
   {

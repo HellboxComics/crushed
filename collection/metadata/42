@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0042",
- "description": "Recovered from Ex's Garage. Smells like Drakkar Noire-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Calculators (spelled BOOBIES upside down); 1 Jewel Case (insert is from a different album); 2 Three-Ring Binders (velcro screams when opened); 2 Puzzle Cubes (solved once, stickers moved). Weight 95.5 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Drakkar Noire-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Calculators (spelled BOOBIES upside down); 1 Jewel Case (insert is from a different album); 2 Three-Ring Binders (velcro screams when opened); 2 Puzzle Cubes (solved once, stickers moved). Weight 95.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0042.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.5,
+   "value": 95.3,
    "display_type": "number"
   },
   {

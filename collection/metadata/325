@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0325",
- "description": "Recovered from A Buddy's Basement. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Soda Can (tab kept for charity); 2 Centerfolds (folded out, then folded back in a hurry); 3 Cassette Tapes (someone's voicemail greeting); 1 TV Remote (found in the couch); 3 Yo-Yos (walked the dog one time). Weight 84.6 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Soda Can (tab kept for charity); 2 Centerfolds (folded out, then folded back in a hurry); 3 Cassette Tapes (someone's voicemail greeting); 1 TV Remote (found in the couch); 3 Yo-Yos (walked the dog one time). Weight 82.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0325.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.6,
+   "value": 82.9,
    "display_type": "number"
   },
   {

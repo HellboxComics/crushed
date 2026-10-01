@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0546",
- "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Cheap Sunglasses (mall kiosk special); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Power Strips (daisy-chained into three more); 1 Dice (snake eyes, twice). Weight 36.3 lb. Crushed it.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Cheap Sunglasses (mall kiosk special); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Power Strips (daisy-chained into three more); 1 Dice (snake eyes, twice). Weight 36.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0546.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.3,
+   "value": 36.0,
    "display_type": "number"
   },
   {

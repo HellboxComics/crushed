@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0266",
- "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 3 Calculators (solar panel covered by a sticker); 1 Magazine (found in a dad's truck); 1 Milk Caps (the slammer is chipped); 1 Corded Phone (cord stretched to the bathroom); 2 Foam Headphones (one ear works if you hold it). Weight 79.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 3 Calculators (solar panel covered by a sticker); 1 Magazine (found in a dad's truck); 1 Milk Caps (the slammer is chipped); 1 Corded Phone (cord stretched to the bathroom); 2 Foam Headphones (one ear works if you hold it). Weight 77.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0266.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.6,
+   "value": 77.8,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0297",
- "description": "Recovered from Under the Bed. Smells like Grunge Flannel. Contents (partial): 3 16-Bit Controllers (the B button is sticky); 1 CRT Monitor (degaussed one last time); 1 Skate Wheel (flat spot from a power slide); 1 Poker Chip (taken from a casino, small heist); 1 Floppy Disk (contains one (1) virus). Weight 90.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like Grunge Flannel. Contents (partial): 3 16-Bit Controllers (the B button is sticky); 1 CRT Monitor (degaussed one last time); 1 Skate Wheel (flat spot from a power slide); 1 Poker Chip (taken from a casino, small heist); 1 Floppy Disk (contains one (1) virus). Weight 89.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0297.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.9,
+   "value": 89.5,
    "display_type": "number"
   },
   {

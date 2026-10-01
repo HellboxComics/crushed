@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0306",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Puzzle Cube (two stickers peeled); 1 Corded Phone (was on the line when mom picked up); 2 Calculators (solar panel covered by a sticker); 2 Ball Mice (cord chewed by a dog); 2 Beer Cans (Natty Lightweight, 30-rack). Weight 34.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Puzzle Cube (two stickers peeled); 1 Corded Phone (was on the line when mom picked up); 2 Calculators (solar panel covered by a sticker); 2 Ball Mice (cord chewed by a dog); 2 Beer Cans (Natty Lightweight, 30-rack). Weight 33.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0306.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.3,
+   "value": 33.1,
    "display_type": "number"
   },
   {

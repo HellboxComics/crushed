@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0487",
- "description": "Recovered from The Y2K Bunker. Smells like blue raspberry. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Brick Phones (unbreakable until today); 1 AA Batteries (licked to test); 1 Tiny Red Candle (one of many). Weight 75.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Y2K Bunker. Smells like blue raspberry. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Brick Phones (unbreakable until today); 1 AA Batteries (licked to test). Weight 74.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0487.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.2,
+   "value": 74.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

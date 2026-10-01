@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0508",
- "description": "Recovered from Nobody Knows. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Ball Mice (ball removed as a prank); 1 Digital Camera (memory full, 14 photos); 1 Foam Headphones (one ear works if you hold it); 2 Flip Phones (12 texts left this month). Weight 43.7 lb. Contents may have settled.",
+ "description": "Recovered from Nobody Knows. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Ball Mice (ball removed as a prank); 1 Digital Camera (memory full, 14 photos); 1 Foam Headphones (one ear works if you hold it); 2 Flip Phones (12 texts left this month). Weight 41.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0508.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.7,
+   "value": 41.7,
    "display_type": "number"
   },
   {

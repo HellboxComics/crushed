@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0777",
- "description": "Recovered from A Buddy's Basement. Smells like cheap cologne. Contents (partial): 2 Sneakers (was in the dryer); 3 Dice (blown on for luck); 1 No. 2 Pencil (chewed); 2 Disposable Cameras (27 exposures of a thumb); 2 TV Remotes (the volume button worn smooth). Weight 35.3 lb. Handle with both hands.",
+ "description": "Recovered from A Buddy's Basement. Smells like cheap cologne. Contents (partial): 2 Sneakers (was in the dryer); 3 Dice (blown on for luck); 1 No. 2 Pencil (chewed); 2 Disposable Cameras (27 exposures of a thumb); 2 TV Remotes (the volume button worn smooth); 1 Broken Rocket (didn't make it). Weight 36.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0777.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.3,
+   "value": 36.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

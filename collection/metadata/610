@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0610",
- "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Digital Cameras (2 megapixels of truth); 3 Burned CDs (says ROAD TRIP in marker); 1 Glow Stick (cracked at a school dance); 3 Clear Lighters (borrowed in 1997, never returned). Weight 32.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Digital Cameras (2 megapixels of truth); 3 Burned CDs (says ROAD TRIP in marker); 1 Glow Stick (cracked at a school dance); 3 Clear Lighters (borrowed in 1997, never returned). Weight 30.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0610.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 30.4,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0002",
- "description": "Recovered from Under the Bed. Smells like Arcade Tokens. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Boom Box (shoulder-mounted in its prime); 1 Corded Phone (someone is still on hold); 2 Pizza Crusts (found behind the couch); 3 VHS Tapes (the unmarked one, from the back of the closet). Weight 88.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like Arcade Tokens. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Boom Box (shoulder-mounted in its prime); 1 Corded Phone (someone is still on hold); 2 Pizza Crusts (found behind the couch); 3 VHS Tapes (the unmarked one, from the back of the closet). Weight 86.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0002.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.1,
+   "value": 86.9,
    "display_type": "number"
   },
   {

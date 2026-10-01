@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0603",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Myspace Glitter. Contents (partial): 2 Sneakers (left only); 2 Flip Phones (snapped shut dramatically); 1 Dice (snake eyes, twice); 3 Game Controllers (stick drift since day one); 1 TV Remote (found in the couch). Weight 32.3 lb. Crushed it.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Myspace Glitter. Contents (partial): 2 Sneakers (left only); 2 Flip Phones (snapped shut dramatically); 1 Dice (snake eyes, twice); 3 Game Controllers (stick drift since day one); 1 TV Remote (found in the couch). Weight 31.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0603.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 31.5,
    "display_type": "number"
   },
   {

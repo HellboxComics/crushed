@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0238",
- "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 3 Army Man Squads (melted with a magnifying glass); 2 Soda Cans (New Koak, 79 days only); 1 Metal Lunchbox (thermos missing); 1 Three-Ring Binder (velcro screams when opened). Weight 79.2 lb. Crushed it.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 3 Army Man Squads (melted with a magnifying glass); 2 Soda Cans (New Koak, 79 days only); 1 Metal Lunchbox (thermos missing); 1 Three-Ring Binder (velcro screams when opened). Weight 77.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0238.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.2,
+   "value": 77.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0191",
- "description": "Recovered from Garage Sale Free Bin. Smells like Lunchables-ish Crackers. Contents (partial): 1 Ball Mouse (rollers caked with 1998); 3 AA Batteries (Neveready, as advertised); 1 Disposable Camera (27 exposures of a thumb); 3 Shot Glasses (souvenir of a night nobody recalls); 2 Film Canisters (holds one quarter). Weight 73.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Lunchables-ish Crackers. Contents (partial): 1 Ball Mouse (rollers caked with 1998); 3 AA Batteries (Neveready, as advertised); 1 Disposable Camera (27 exposures of a thumb); 3 Shot Glasses (souvenir of a night nobody recalls); 2 Film Canisters (holds one quarter). Weight 72.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0191.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.0,
+   "value": 72.6,
    "display_type": "number"
   },
   {

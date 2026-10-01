@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0003",
- "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 3 Yo-Yos (walked the dog one time); 1 Army Man Squad (melted with a magnifying glass); 1 Keyboard (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 2 Calculators (solar panel covered by a sticker). Weight 51.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 3 Yo-Yos (walked the dog one time); 1 Army Man Squad (melted with a magnifying glass); 1 Keyboard (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 2 Calculators (solar panel covered by a sticker). Weight 51.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0003.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.1,
+   "value": 51.2,
    "display_type": "number"
   },
   {

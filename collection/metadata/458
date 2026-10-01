@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0458",
- "description": "Recovered from Nobody Knows. Smells like mall food court. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Dice (loaded, rumor says); 1 TV Remote (the volume button worn smooth); 1 AA Batteries (licked to test); 1 CRT Monitor (weighs more than the desk). Weight 78.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Nobody Knows. Smells like mall food court. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Dice (loaded, rumor says); 1 TV Remote (the volume button worn smooth); 1 AA Batteries (licked to test); 1 CRT Monitor (weighs more than the desk). Weight 76.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0458.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.8,
+   "value": 76.7,
    "display_type": "number"
   },
   {

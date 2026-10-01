@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0310",
- "description": "Recovered from Vegas Hotel Room. Smells like Lunchables-ish Crackers. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Centerfolds (folded out, then folded back in a hurry); 2 Power Strips (overloaded on purpose); 1 Scratch Ticket (not a winner); 1 Skateboard (one ollie, lifetime); 1 Bull (dead). Weight 80.8 lb. Crushed it.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Lunchables-ish Crackers. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Centerfolds (folded out, then folded back in a hurry); 2 Power Strips (overloaded on purpose); 1 Scratch Ticket (not a winner); 1 Skateboard (one ollie, lifetime). Weight 79.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0310.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.8,
+   "value": 79.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

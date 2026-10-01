@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0043",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Roller Skates (toe stop worn to nothing); 2 Cheap Sunglasses (one lens popped out); 3 Joysticks (fire button pressed 40 million times); 1 Shot Glass (chipped rim). Weight 52.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Behind the Science Wing. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Roller Skates (toe stop worn to nothing); 2 Cheap Sunglasses (one lens popped out); 3 Joysticks (fire button pressed 40 million times); 1 Shot Glass (chipped rim). Weight 51.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0043.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Behind the Science Wing"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
-  },
-  {
-   "trait_type": "Finish",
-   "value": "BONE"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 52.8,
+   "value": 51.6,
    "display_type": "number"
   },
   {

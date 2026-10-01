@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0404",
- "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 3 TV Remotes (held together with tape); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 CRT Monitor (still warm); 1 Pager (last page: 911 (it was not)). Weight 78.8 lb. We kept the important shit.",
+ "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 3 TV Remotes (held together with tape); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 CRT Monitor (still warm); 1 Pager (last page: 911 (it was not)). Weight 77.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0404.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.8,
+   "value": 77.2,
    "display_type": "number"
   },
   {

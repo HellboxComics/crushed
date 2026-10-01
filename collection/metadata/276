@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0276",
- "description": "Recovered from The Mall Arcade. Smells like Crystal Peppy. Contents (partial): 1 Gold 9999-in-1 Handheld (why); 2 Yo-Yos (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Burned CD (coaster now); 1 Paper Hand (folded under light pressure). Weight 35.0 lb. Do not attempt to uncrush.",
+ "name": "CRUSHED IT #0276: HAND TURKEY",
+ "description": "The hand turkey on the fridge, the paper hats, the can-shaped cranberry. Nobody threw any of it away. Recovered from The Fridge Door, 1993. Smells like gravy and construction paper. Contents (partial): 10 Hand Turkeys (I AM THANKFUL FOR MY MOM); 6 Pilgrim Hats (construction paper, second grade); 3 TV Remotes (the volume button worn smooth); 6 Drumsticks (the dog got the bone); 3 Spiral Notebooks (doodles in the margins). Weight 21.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0276.png",
  "attributes": [
   {
@@ -9,15 +9,15 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "HAND TURKEY"
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Hand Turkey"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Crystal Peppy"
+   "value": "Gravy and Construction Paper"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Mall Arcade"
+   "value": "The Fridge Door, 1993"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "9999-in-1 Handheld"
+   "trait_type": "One of One",
+   "value": "HAND TURKEY"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 21.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0104",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 Centerfold (folded out, then folded back in a hurry); 1 Foam Headphones (orange foam, allegedly); 1 Beer Can (last one in the fridge); 1 Yo-Yo (walked the dog one time). Weight 93.1 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 Centerfold (folded out, then folded back in a hurry); 1 Foam Headphones (orange foam, allegedly); 1 Beer Can (last one in the fridge); 1 Yo-Yo (walked the dog one time). Weight 91.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0104.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 93.1,
+   "value": 91.2,
    "display_type": "number"
   },
   {

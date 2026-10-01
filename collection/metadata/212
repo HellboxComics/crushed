@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0212",
- "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Pizza Crusts (still better than most portfolios); 2 Milk Caps (the slammer is chipped); 1 Poker Chip (never cashed out); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 79.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Pizza Crusts (still better than most portfolios); 2 Milk Caps (the slammer is chipped); 1 Poker Chip (never cashed out); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 78.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0212.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.9,
+   "value": 78.3,
    "display_type": "number"
   },
   {

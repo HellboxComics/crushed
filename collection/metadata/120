@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0120",
- "description": "Recovered from Vegas Hotel Room. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Metal Lunchbox (the smell stays); 2 Army Man Squads (melted with a magnifying glass); 3 Dice (snake eyes, twice); 1 Pizza Crust (from a sleepover). Weight 90.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Metal Lunchbox (the smell stays); 2 Army Man Squads (melted with a magnifying glass); 3 Dice (snake eyes, twice); 1 Pizza Crust (from a sleepover). Weight 87.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0120.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.3,
+   "value": 87.3,
    "display_type": "number"
   },
   {

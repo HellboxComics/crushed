@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0559",
- "description": "Recovered from Flooded Basement. Smells like fresh batteries (licked). Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Spiral Notebooks (doodles in the margins); 3 Game Controllers (stick drift since day one); 1 Dice (blown on for luck); 1 Energy Drink (tastes like a battery). Weight 32.0 lb. Crushed it.",
+ "description": "Recovered from Flooded Basement. Smells like fresh batteries (licked). Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Spiral Notebooks (doodles in the margins); 3 Game Controllers (stick drift since day one); 1 Dice (blown on for luck); 1 Energy Drink (tastes like a battery). Weight 30.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0559.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.0,
+   "value": 30.6,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0122",
- "description": "Recovered from School Lost & Found. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Soda Cans (Surj, the can that started a fight); 1 Game Cartridge (blown into 400 times); 1 Scratch Ticket (not a winner); 1 16-Bit Controller (the B button is sticky); 1 AA Batteries (probably dead). Weight 83.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Soda Cans (Surj, the can that started a fight); 1 Game Cartridge (blown into 400 times); 1 Scratch Ticket (not a winner); 1 16-Bit Controller (the B button is sticky); 1 AA Batteries (probably dead). Weight 84.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0122.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.2,
+   "value": 84.1,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0705",
- "description": "Recovered from The Ed Hardy-ish Era. Smells like cigarette in a jacket. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Poker Chips (a stack of ambition); 3 Energy Drinks (Jolted, twice the caffeine); 1 Dice (loaded, rumor says); 3 Pizza Crusts (from a sleepover). Weight 32.0 lb. Still heavier than it looks.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like cigarette in a jacket. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Poker Chips (a stack of ambition); 3 Energy Drinks (Jolted, twice the caffeine); 1 Dice (loaded, rumor says); 3 Pizza Crusts (from a sleepover). Weight 32.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0705.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.0,
+   "value": 32.9,
    "display_type": "number"
   },
   {

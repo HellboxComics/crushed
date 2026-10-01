@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0241",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Metal Lunchbox (thermos missing); 2 No. 2 Pencils (chewed); 1 Magazine (found in a dad's truck); 1 TV Remote (the volume button worn smooth). Weight 83.9 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Metal Lunchbox (thermos missing); 2 No. 2 Pencils (chewed); 1 Magazine (found in a dad's truck); 1 TV Remote (the volume button worn smooth). Weight 82.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0241.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.9,
+   "value": 82.1,
    "display_type": "number"
   },
   {

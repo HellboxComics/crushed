@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0833",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Moonster and Desperation. Contents (partial): 2 Selfie Sticks (mid-trip, mid-ocean); 1 Bluetooth Speaker (lost, found, lost); 2 Power Strips (daisy-chained into three more); 1 Disposable Camera (never developed); 1 Beer Can (Natty Lightweight, 30-rack). Weight 43.7 lb. Crushed it.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Moonster and Desperation. Contents (partial): 2 Selfie Sticks (mid-trip, mid-ocean); 1 Bluetooth Speaker (lost, found, lost); 2 Power Strips (daisy-chained into three more); 1 Disposable Camera (never developed); 1 Beer Can (Natty Lightweight, 30-rack). Weight 42.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0833.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.7,
+   "value": 42.5,
    "display_type": "number"
   },
   {

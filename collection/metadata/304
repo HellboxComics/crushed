@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0304",
- "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (took 10 D batteries); 2 TV Remotes (the volume button worn smooth); 1 Milk Caps (the slammer is chipped); 1 Beer Can (warm, sadly); 1 AA Batteries (probably dead); 1 Crumpled Chart (printed out for emotional reasons). Weight 38.3 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (took 10 D batteries); 2 TV Remotes (the volume button worn smooth); 1 Milk Caps (the slammer is chipped); 1 Beer Can (warm, sadly); 1 AA Batteries (probably dead). Weight 36.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0304.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.3,
+   "value": 36.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

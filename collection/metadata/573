@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0573",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Myspace Glitter. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Skate Wheel (flat spot from a power slide); 1 Spiral Notebook (doodles in the margins); 2 Digital Cameras (memory full, 14 photos); 1 Poker Chip (taken from a casino, small heist). Weight 28.9 lb. Nobody made you keep this.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Myspace Glitter. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Skate Wheel (flat spot from a power slide); 1 Spiral Notebook (doodles in the margins); 2 Digital Cameras (memory full, 14 photos); 1 Poker Chip (taken from a casino, small heist). Weight 27.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0573.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.9,
+   "value": 27.5,
    "display_type": "number"
   },
   {

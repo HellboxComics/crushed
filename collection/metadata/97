@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0097",
- "description": "Recovered from Mom's Minivan. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 TV Remotes (found in the couch); 1 Magazine (the staples are doing the work); 2 Puzzle Cubes (solved once, stickers moved); 1 Power Strip (daisy-chained into three more); 1 Diamond (hands not included). Weight 86.9 lb. Handle with both hands.",
+ "description": "Recovered from Mom's Minivan. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 TV Remotes (found in the couch); 1 Magazine (the staples are doing the work); 2 Puzzle Cubes (solved once, stickers moved); 1 Power Strip (daisy-chained into three more). Weight 85.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0097.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Diamond"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.9,
+   "value": 85.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 33,
    "display_type": "number"
   }
  ]

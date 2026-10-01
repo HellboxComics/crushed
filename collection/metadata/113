@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0113",
- "description": "Recovered from Dad's Camaro Trunk. Smells like Jean Jacket. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Magazines (for the interviews, obviously); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Floppy Disk (Iomegalodon would have held it all). Weight 79.6 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Jean Jacket. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Magazines (for the interviews, obviously); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Floppy Disk (Iomegalodon would have held it all). Weight 79.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0113.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
@@ -40,12 +40,16 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Finish",
+   "value": "ICE"
+  },
+  {
    "trait_type": "Serial",
    "value": "0113"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.6,
+   "value": 79.9,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0188",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like CK Won. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (labeled MIX 4 U); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Bull (flipped). Weight 70.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like CK Won. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (labeled MIX 4 U); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Broken Rocket (was going to the moon). Weight 69.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0188.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.1,
+   "value": 69.5,
    "display_type": "number"
   },
   {

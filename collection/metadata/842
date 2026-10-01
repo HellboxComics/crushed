@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0842",
- "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Fidget Spinner Bearings. Contents (partial): 1 Drone (flew once, into a tree); 1 Earbud Case (both buds gone, case still charges nothing); 1 Dice (snake eyes, twice); 1 AA Batteries (taken out of the smoke detector); 2 Scratch Tickets ($2 for hope). Weight 35.5 lb. We kept the important shit.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Fidget Spinner Bearings. Contents (partial): 1 Drone (flew once, into a tree); 1 Earbud Case (both buds gone, case still charges nothing); 1 Dice (snake eyes, twice); 1 AA Batteries (taken out of the smoke detector); 2 Scratch Tickets ($2 for hope). Weight 34.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0842.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 34.8,
    "display_type": "number"
   },
   {

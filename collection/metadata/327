@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0327",
- "description": "Recovered from Vegas Hotel Room. Smells like gym bag, forgotten. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 3 Burned CDs (track 7 skips); 2 AA Batteries (Durasmell, lasted till Christmas noon); 1 Foam Headphones (one ear works if you hold it); 2 No. 2 Pencils (chewed). Weight 35.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like gym bag, forgotten. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 3 Burned CDs (track 7 skips); 2 AA Batteries (Durasmell, lasted till Christmas noon); 1 Foam Headphones (one ear works if you hold it); 2 No. 2 Pencils (chewed). Weight 34.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0327.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.9,
+   "value": 34.3,
    "display_type": "number"
   },
   {

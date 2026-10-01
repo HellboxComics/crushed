@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0382",
- "description": "Recovered from School Lost & Found. Smells like Frosted Tips Gel. Contents (partial): 1 Virtual Pet (reincarnated 40 times); 1 Cassette Tape (TDKay SA-90, the good tape); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (taped off HBOH, commercials and all); 1 MP3 Player (shuffle picked the same song 6 times). Weight 28.3 lb. Contents may have settled.",
+ "description": "Recovered from School Lost & Found. Smells like Frosted Tips Gel. Contents (partial): 1 Virtual Pet (reincarnated 40 times); 1 Cassette Tape (TDKay SA-90, the good tape); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (taped off HBOH, commercials and all); 1 MP3 Player (shuffle picked the same song 6 times). Weight 28.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0382.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.3,
+   "value": 28.1,
    "display_type": "number"
   },
   {

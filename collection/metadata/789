@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0789",
- "description": "Recovered from The Bachelor Pad. Smells like mall food court. Contents (partial): 2 Disposable Vapes (mango, mostly); 2 Fidget Spinners (bearing went missing); 2 Sneakers (was in the dryer); 3 No. 2 Pencils (chewed); 2 Earbud Cases (both buds gone, case still charges nothing). Weight 37.1 lb. Crushed it.",
+ "description": "Recovered from The Bachelor Pad. Smells like mall food court. Contents (partial): 2 Disposable Vapes (mango, mostly); 2 Fidget Spinners (bearing went missing); 2 Sneakers (was in the dryer); 3 No. 2 Pencils (chewed); 2 Earbud Cases (both buds gone, case still charges nothing). Weight 36.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0789.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.1,
+   "value": 36.0,
    "display_type": "number"
   },
   {

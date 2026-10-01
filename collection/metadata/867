@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0867",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like Prime Time Hype. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (Moonster, the whole case); 3 Power Strips (daisy-chained into three more). Weight 40.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Estate of a Collector. Smells like Prime Time Hype. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (Moonster, the whole case); 3 Power Strips (daisy-chained into three more). Weight 38.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0867.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",
@@ -40,12 +40,16 @@
    "value": "Several"
   },
   {
+   "trait_type": "Finish",
+   "value": "OBSIDIAN"
+  },
+  {
    "trait_type": "Serial",
    "value": "0867"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.1,
+   "value": 38.0,
    "display_type": "number"
   },
   {

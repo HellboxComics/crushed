@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0464",
- "description": "Recovered from A LAN Party Basement. Smells like hot dust on a CRT. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Sneakers (light-up heel, dead); 1 Keyboard (Partial) (F, J and the crumbs); 3 Clear Lighters (borrowed in 1997, never returned); 2 Webcams (240p of pure confidence). Weight 34.8 lb. Crushed it.",
+ "description": "Recovered from A LAN Party Basement. Smells like hot dust on a CRT. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Sneakers (light-up heel, dead); 1 Keyboard (Partial) (F, J and the crumbs); 3 Clear Lighters (borrowed in 1997, never returned); 2 Webcams (240p of pure confidence); 1 Emergency Ramen (the whole strategy). Weight 32.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0464.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 32.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0637",
- "description": "Recovered from Grandma's Attic. Smells like Vegas carpet. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Brick Phone (unbreakable until today); 2 Beer Cans (12 of 12); 3 Burned CDs (says ROAD TRIP in marker); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 29.8 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like Vegas carpet. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Brick Phone (unbreakable until today); 2 Beer Cans (12 of 12); 3 Burned CDs (says ROAD TRIP in marker); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 29.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0637.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.8,
+   "value": 29.0,
    "display_type": "number"
   },
   {

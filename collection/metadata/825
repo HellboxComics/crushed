@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0825",
- "description": "Recovered from Mom's Basement (Again). Smells like DoorDashed Fries, Cold. Contents (partial): 2 Earbud Cases (one bud present); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Ring Light (the eyes in every mirror selfie); 1 Cheap Sunglasses (one lens popped out); 1 Smartphone (cracked in the first week); 1 Bull (dead). Weight 37.4 lb. Handle with both hands.",
+ "description": "Recovered from Mom's Basement (Again). Smells like DoorDashed Fries, Cold. Contents (partial): 2 Earbud Cases (one bud present); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Ring Light (the eyes in every mirror selfie); 1 Cheap Sunglasses (one lens popped out); 1 Smartphone (cracked in the first week); 1 Crumpled Chart (printed out for emotional reasons). Weight 36.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0825.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.4,
+   "value": 36.3,
    "display_type": "number"
   },
   {

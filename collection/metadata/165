@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0165",
- "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Corded Phone (someone is still on hold); 3 Calculators (spelled BOOBIES upside down); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (DISK 2 of 7); 1 Emergency Ramen (the whole strategy). Weight 84.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Corded Phone (someone is still on hold); 3 Calculators (spelled BOOBIES upside down); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (DISK 2 of 7); 1 Tiny Red Candle (one of many). Weight 82.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0165.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.3,
+   "value": 82.1,
    "display_type": "number"
   },
   {

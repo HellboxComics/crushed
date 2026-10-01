@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0132",
- "description": "Recovered from Dad's Camaro Trunk. Smells like Grandma's couch. Contents (partial): 1 Beer Can (PBJ, the hipster one); 2 Game Cartridges (save file erased by a sibling); 2 Soda Cans (tab kept for charity); 2 No. 2 Pencils (chewed); 1 Matchbook (matches missing, reasons unclear). Weight 44.6 lb. Crushed it.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Grandma's couch. Contents (partial): 1 Beer Can (PBJ, the hipster one); 2 Game Cartridges (save file erased by a sibling); 2 Soda Cans (tab kept for charity); 2 No. 2 Pencils (chewed); 1 Matchbook (matches missing, reasons unclear). Weight 43.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0132.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.6,
+   "value": 43.0,
    "display_type": "number"
   },
   {

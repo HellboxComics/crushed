@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0065",
- "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 3 Power Strips (daisy-chained into three more); 2 No. 2 Pencils (never saw a scantron it liked); 2 Magazines (found in a dad's truck); 2 Puzzle Cubes (solved once, stickers moved). Weight 82.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 3 Power Strips (daisy-chained into three more); 2 No. 2 Pencils (never saw a scantron it liked); 2 Magazines (found in a dad's truck); 2 Puzzle Cubes (solved once, stickers moved). Weight 81.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0065.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.9,
+   "value": 81.1,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0859",
- "description": "Recovered from Storage Unit (Auctioned). Smells like rink snack bar. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 2 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Pizza Crust (from a sleepover); 1 Ring Light (the eyes in every mirror selfie); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 41.8 lb. Handle with both hands.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like rink snack bar. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 2 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Pizza Crust (from a sleepover); 1 Ring Light (the eyes in every mirror selfie); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 38.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0859.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.8,
+   "value": 38.0,
    "display_type": "number"
   },
   {

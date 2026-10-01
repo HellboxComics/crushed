@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0059",
- "description": "Recovered from Behind the Couch. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 1 Spiral Notebook (doodles in the margins); 3 Foam Headphones (one ear works if you hold it); 3 Scratch Tickets ($2 for hope); 2 TV Remotes (the volume button worn smooth). Weight 37.5 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Couch. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 1 Spiral Notebook (doodles in the margins); 3 Foam Headphones (one ear works if you hold it); 3 Scratch Tickets ($2 for hope); 2 TV Remotes (the volume button worn smooth). Weight 36.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0059.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 36.6,
    "display_type": "number"
   },
   {

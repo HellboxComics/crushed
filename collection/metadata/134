@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0134",
- "description": "Recovered from Mom's Minivan. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Magazines (found in a dad's truck); 3 Calculators (spelled BOOBIES upside down); 1 No. 2 Pencil (chewed); 2 Pizza Crusts (found behind the couch). Weight 83.5 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Magazines (found in a dad's truck); 3 Calculators (spelled BOOBIES upside down); 1 No. 2 Pencil (chewed); 2 Pizza Crusts (found behind the couch). Weight 82.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0134.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.5,
+   "value": 82.2,
    "display_type": "number"
   },
   {

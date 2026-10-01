@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0077",
- "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 1 Three-Ring Binder (velcro screams when opened); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 3 Soda Cans (Surj, the can that started a fight). Weight 84.8 lb. Crushed it.",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 1 Three-Ring Binder (velcro screams when opened); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 3 Soda Cans (Surj, the can that started a fight). Weight 82.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0077.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -25,23 +25,19 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
-  },
-  {
-   "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.8,
+   "value": 82.5,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0016",
- "description": "Recovered from Ex's Garage. Smells like Smoke-Filled Bowling Alley. Contents (partial): 3 Joysticks (suction cups gave up); 1 Matchbook (matches missing, reasons unclear); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 Calculator (solar panel covered by a sticker); 2 Portable Tape Players (auto-reverse broke in 1991). Weight 95.5 lb. Contents may have settled.",
+ "description": "Recovered from Ex's Garage. Smells like Smoke-Filled Bowling Alley. Contents (partial): 3 Joysticks (suction cups gave up); 1 Matchbook (matches missing, reasons unclear); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 Calculator (solar panel covered by a sticker); 2 Portable Tape Players (auto-reverse broke in 1991). Weight 94.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0016.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.5,
+   "value": 94.9,
    "display_type": "number"
   },
   {

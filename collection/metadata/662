@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0662",
- "description": "Recovered from Behind the Bar. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Scratch Tickets (not a winner); 1 Pizza Crust (found behind the couch); 1 Flip Phone (ringtone composed by hand); 3 USB Sticks (never ejected safely). Weight 29.3 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Bar. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Scratch Tickets (not a winner); 1 Pizza Crust (found behind the couch); 1 Flip Phone (ringtone composed by hand); 3 USB Sticks (never ejected safely). Weight 29.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0662.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.3,
+   "value": 29.4,
    "display_type": "number"
   },
   {

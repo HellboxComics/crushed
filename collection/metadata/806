@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0806",
- "description": "Recovered from Vegas Hotel Room. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Bluetooth Speakers (paired with the wrong phone); 1 Power Bank (dead when needed); 1 Game Controller (thrown during a boss fight); 1 Burned CD (track 7 skips); 2 Energy Drinks (third one that night). Weight 39.6 lb. We kept the important shit.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Bluetooth Speakers (paired with the wrong phone); 1 Power Bank (dead when needed); 1 Game Controller (thrown during a boss fight); 1 Burned CD (track 7 skips); 2 Energy Drinks (third one that night). Weight 38.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0806.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.6,
+   "value": 38.4,
    "display_type": "number"
   },
   {

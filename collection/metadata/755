@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0755",
- "description": "Recovered from Vegas Hotel Room. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Gold Game Controller (why); 3 Beer Cans (crushed on a forehead); 1 Soda Can (flat); 1 Power Strip (daisy-chained into three more); 2 Disposable Vapes (zero nicotine, allegedly); 1 Suspicious Rectangle (PIN forgotten). Weight 37.5 lb. We kept the important shit.",
+ "name": "CRUSHED IT #0755: SOME ASSEMBLY REQUIRED",
+ "description": "Christmas morning, batteries not included, all of it. The lights still do not work. Recovered from Under the Tree, 6 A.M. Smells like pine needles and batteries. Contents (partial): 8 Presents (socks, it was socks); 2 VHS Tapes (Blockbusted rental, never returned); 8 Light Strands (untangled never); 2 Cassette Tapes (TDKay SA-90, the good tape); 14 Glass Ornaments (older than the tree). Weight 27.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0755.png",
  "attributes": [
   {
@@ -9,15 +9,15 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "SOME ASSEMBLY REQUIRED"
   },
   {
    "trait_type": "Headliner",
-   "value": "Beer Can"
+   "value": "Present"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,23 +25,23 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vape Cloud, Blue Razz Ice"
+   "value": "Pine Needles and Batteries"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Under the Tree, 6 A.M."
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Game Controller"
+   "trait_type": "One of One",
+   "value": "SOME ASSEMBLY REQUIRED"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 27.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 54,
    "display_type": "number"
   }
  ]

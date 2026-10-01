@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0476",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Sneakers (smells like 1989); 1 Pizza Crust (petrified); 2 Beer Cans (warm, sadly); 2 Matchbooks (matches missing, reasons unclear). Weight 75.5 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Sneakers (smells like 1989); 1 Pizza Crust (petrified); 2 Beer Cans (warm, sadly); 2 Matchbooks (matches missing, reasons unclear). Weight 75.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0476.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.5,
+   "value": 75.4,
    "display_type": "number"
   },
   {

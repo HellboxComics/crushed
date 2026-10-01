@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0767",
- "description": "Recovered from Under the Bed. Smells like cigarette in a jacket. Contents (partial): 1 Disposable Vape (zero nicotine, allegedly); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (chipped rim); 2 Energy Drinks (exam week casualty); 2 Power Banks (dead when needed). Weight 36.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like cigarette in a jacket. Contents (partial): 1 Disposable Vape (zero nicotine, allegedly); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (chipped rim); 2 Energy Drinks (exam week casualty); 2 Power Banks (dead when needed). Weight 32.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0767.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.8,
+   "value": 32.9,
    "display_type": "number"
   },
   {

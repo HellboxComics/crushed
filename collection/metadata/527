@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0527",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Gold Flip Phone (why); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 AA Batteries (licked to test); 2 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid). Weight 42.0 lb. We kept the important shit.",
+ "name": "CRUSHED IT #0527: EGG HUNT",
+ "description": "Every plastic egg nobody found, the bunny with no ears, and the grass that got everywhere. Recovered from Grandma's Backyard, Still Hidden. Smells like plastic grass and jelly beans. Contents (partial): 4 Chocolate Bunnys (ears first, always); 28 Plastic Eggs (two halves that never match); 4 Candy Hearts (says TEXT ME); 10 Marshmallow Chicks (stale on purpose); 4 Fun Size Bars (traded for two candy corns). Weight 10.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0527.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "EGG HUNT"
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Chocolate Bunny"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,23 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Plastic Grass and Jelly Beans"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Grandma's Backyard, Still Hidden"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Flip Phone"
+   "trait_type": "One of One",
+   "value": "EGG HUNT"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.0,
+   "value": 10.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 50,
    "display_type": "number"
   }
  ]

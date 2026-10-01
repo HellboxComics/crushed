@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0588",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Centerfold (left open to the wrong page); 2 TV Remotes (the volume button worn smooth); 1 Face Mask (one of 400 in a coat pocket). Weight 24.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Centerfold (left open to the wrong page); 2 TV Remotes (the volume button worn smooth); 1 Face Mask (one of 400 in a coat pocket). Weight 22.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0588.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -40,16 +40,12 @@
    "value": "Concerning"
   },
   {
-   "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
-  },
-  {
    "trait_type": "Serial",
    "value": "0588"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 24.6,
+   "value": 22.5,
    "display_type": "number"
   },
   {

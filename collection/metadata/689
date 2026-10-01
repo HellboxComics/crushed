@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0689",
- "description": "Recovered from The Bachelor Pad. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Disposable Cameras (never developed); 1 Pizza Crust (found behind the couch); 2 Sneakers (smells like 1989); 2 MP3 Players (shuffle picked the same song 6 times); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 37.5 lb. Some assembly was removed.",
+ "description": "Recovered from The Bachelor Pad. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Disposable Cameras (never developed); 1 Pizza Crust (found behind the couch); 2 Sneakers (smells like 1989); 2 MP3 Players (shuffle picked the same song 6 times); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 36.7 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0689.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -40,16 +40,12 @@
    "value": "Several"
   },
   {
-   "trait_type": "Finish",
-   "value": "OBSIDIAN"
-  },
-  {
    "trait_type": "Serial",
    "value": "0689"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 36.7,
    "display_type": "number"
   },
   {

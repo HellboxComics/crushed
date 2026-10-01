@@ -130,5 +130,5 @@ class Palette:
 
 
 def load():
-    from . import era, crypto, filler, modern, degen, special, gifts  # noqa: F401  (registration side effects)
+    from . import era, crypto, filler, modern, degen, special, gifts, holiday  # noqa: F401  (registration side effects)
     return REG

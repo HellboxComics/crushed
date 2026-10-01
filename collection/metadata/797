@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0797",
- "description": "Recovered from Behind the Bar. Smells like Moonster and Desperation. Contents (partial): 1 Drone (flew once, into a tree); 3 Smartphones (1% battery, forever); 1 Face Mask (worn below the nose); 2 Clear Lighters (for incense, obviously); 1 AA Batteries (taken out of the smoke detector). Weight 39.2 lb. Some assembly was removed.",
+ "name": "CRUSHED IT #0003: STOP THE PRESSES",
+ "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (pigs get slaughtered, this one got saved); 2 Press Badges (ALL ACCESS, laminated); 5 Share Certificates (100 shares of something loud); 2 Corded Phones (someone is still on hold); 3 Play Money (no cash value, ever). Weight 51.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0797.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "STOP THE PRESSES"
   },
   {
    "trait_type": "Headliner",
-   "value": "Drone"
+   "value": "Piggy Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Moonster and Desperation"
+   "value": "Bacon and Newsprint"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "The Trading Floor, After the Bell"
   },
   {
    "trait_type": "Tape",
@@ -37,7 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "STOP THE PRESSES"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 51.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 53,
    "display_type": "number"
   }
  ]

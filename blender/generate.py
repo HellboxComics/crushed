@@ -26,8 +26,8 @@ from crushed import build, recipe, stage, tex  # noqa: E402
 ROOT = os.path.dirname(HERE)
 
 
-GIFT_RECIPES = [813, 718, 796, 836]     # tokens 1..4: LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
-GIFT_NAMES = ["LOW RES", "CCFF00", "STOP THE PRESSES", "CLAY DAY"]
+GIFT_NAMES = ["LOW RES", "CCFF00", "STOP THE PRESSES", "CLAY DAY"]      # tokens 1..4, in this order
+GIFT_RECIPES = [recipe.deck()[0].index(n) + 1 for n in GIFT_NAMES]    # read from the deck, never typed by hand
 FIRST_GIFT = 1
 
 
@@ -132,6 +132,9 @@ def write_manifest(out):
     with open(os.path.join(out, "provenance.txt"), "w") as f:
         f.write(digest + "\n")
     write_rarity(out, rows)
+    with open(os.path.join(out, "gifts.json"), "w") as f:             # what the deploy pins to tokens 1..4
+        json.dump({"tokens_1_to_4": dict(zip(GIFT_NAMES, GIFT_RECIPES)),
+                   "deploy_env": {f"GIFT{i + 1}": r for i, r in enumerate(GIFT_RECIPES)}}, f, indent=1)
     print("provenance:", digest)
 
 

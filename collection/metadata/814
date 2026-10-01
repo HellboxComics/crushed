@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0814",
- "description": "Recovered from Dad's Junk Drawer. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Power Banks (dead when needed); 1 Bluetooth Speaker (lost, found, lost); 2 Smartwatches (says STAND, does not); 3 Spiral Notebooks (doodles in the margins); 3 Tissue Boxes (one for every mood). Weight 34.1 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Power Banks (dead when needed); 1 Bluetooth Speaker (lost, found, lost); 2 Smartwatches (says STAND, does not); 3 Spiral Notebooks (doodles in the margins); 3 Tissue Boxes (one for every mood). Weight 33.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0814.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.1,
+   "value": 33.1,
    "display_type": "number"
   },
   {

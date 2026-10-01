@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0511",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like blue raspberry. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 2 Pizza Crusts (still better than most portfolios); 3 Soda Cans (flat); 2 Skate Wheels (flat spot from a power slide); 2 Floppy Disks (AOHell trial, 500 free hours). Weight 79.0 lb. Handle with both hands.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like blue raspberry. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 2 Pizza Crusts (still better than most portfolios); 3 Soda Cans (flat); 2 Skate Wheels (flat spot from a power slide); 2 Floppy Disks (AOHell trial, 500 free hours). Weight 80.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0511.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.0,
+   "value": 80.3,
    "display_type": "number"
   },
   {

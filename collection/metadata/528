@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0528",
- "description": "Recovered from The Y2K Bunker. Smells like new plastic. Contents (partial): 1 Disposable Camera (never developed); 2 Floppy Disks (DISK 2 of 7); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (the volume button worn smooth); 2 Centerfolds (staples removed, an attempt was made); 1 Tiny Red Candle (lit). Weight 74.6 lb. Handle with both hands.",
+ "description": "Recovered from A LAN Party Basement. Smells like new plastic. Contents (partial): 1 Disposable Camera (never developed); 2 Floppy Disks (DISK 2 of 7); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (the volume button worn smooth); 2 Centerfolds (staples removed, an attempt was made). Weight 72.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0528.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Y2K Bunker"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.6,
+   "value": 72.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

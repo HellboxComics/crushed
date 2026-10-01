@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0875",
- "description": "Recovered from A Lambo-Shaped Hole. Smells like blue raspberry. Contents (partial): 1 Disposable Vape (mango, mostly); 3 TV Remotes (held together with tape); 1 No. 2 Pencil (never saw a scantron it liked); 3 Power Banks (dead when needed); 1 Magazine (for the interviews, obviously). Weight 33.1 lb. Handle with both hands.",
+ "description": "Recovered from A Lambo-Shaped Hole. Smells like blue raspberry. Contents (partial): 1 Disposable Vape (mango, mostly); 3 TV Remotes (held together with tape); 1 No. 2 Pencil (never saw a scantron it liked); 3 Power Banks (dead when needed); 1 Magazine (for the interviews, obviously). Weight 32.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0875.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 32.3,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0412",
- "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 1 Virtual Pet (fed 0 times); 1 Corded Phone (cord stretched to the bathroom); 2 Tissue Boxes (one for every mood); 2 Dice (snake eyes, twice); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 33.2 lb. Handle with both hands.",
+ "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 1 Virtual Pet (fed 0 times); 1 Corded Phone (cord stretched to the bathroom); 2 Tissue Boxes (one for every mood); 2 Dice (snake eyes, twice); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 32.6 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0412.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.2,
+   "value": 32.6,
    "display_type": "number"
   },
   {

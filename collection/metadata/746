@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0746",
- "description": "Recovered from A Crypto Bro's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Soda Cans (flat); 1 AA Batteries (licked to test); 3 Power Banks (10000 mAh of dead weight); 1 VR Headset (watched one (1) movie). Weight 36.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Soda Cans (flat); 1 AA Batteries (licked to test); 3 Power Banks (10000 mAh of dead weight); 1 VR Headset (watched one (1) movie). Weight 36.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0746.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.9,
+   "value": 36.7,
    "display_type": "number"
   },
   {

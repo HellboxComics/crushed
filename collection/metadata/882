@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0882",
- "description": "Recovered from Ex's Garage. Smells like Ring Light Heat. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 2 Soda Cans (flat); 2 Game Controllers (thrown during a boss fight); 2 Disposable Cameras (27 exposures of a thumb); 1 Tablet (used once as a cutting board). Weight 39.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Ex's Garage. Smells like Ring Light Heat. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 2 Soda Cans (flat); 2 Game Controllers (thrown during a boss fight); 2 Disposable Cameras (27 exposures of a thumb); 1 Tablet (used once as a cutting board). Weight 38.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0882.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.5,
+   "value": 38.8,
    "display_type": "number"
   },
   {

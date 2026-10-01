@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0757",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Disposable Vapes (zero nicotine, allegedly); 2 Game Controllers (thrown during a boss fight); 1 Fidget Spinner (bearing went missing); 3 Laptop Chargers (fits nothing else in the house); 3 Beer Cans (PBJ, the hipster one); 1 Emergency Ramen (for emergencies). Weight 43.0 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Disposable Vapes (zero nicotine, allegedly); 2 Game Controllers (thrown during a boss fight); 1 Fidget Spinner (bearing went missing); 3 Laptop Chargers (fits nothing else in the house); 3 Beer Cans (PBJ, the hipster one). Weight 40.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0757.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.0,
+   "value": 40.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

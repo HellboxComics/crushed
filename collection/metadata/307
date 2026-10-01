@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0307",
- "description": "Recovered from School Lost & Found. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 TV Remote (the volume button worn smooth); 2 16-Bit Controllers (the B button is sticky); 2 Pizza Crusts (found behind the couch); 1 Ball Mouse (cord chewed by a dog). Weight 43.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 TV Remote (the volume button worn smooth); 2 16-Bit Controllers (the B button is sticky); 2 Pizza Crusts (found behind the couch); 1 Ball Mouse (cord chewed by a dog). Weight 40.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0307.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.1,
+   "value": 40.8,
    "display_type": "number"
   },
   {

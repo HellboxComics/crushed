@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0871",
- "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 1 Selfie Stick (mid-trip, mid-ocean); 1 Energy Drink (third one that night); 2 Fidget Spinners (bearing went missing); 2 Bluetooth Speakers (played one song, too loud); 1 Disposable Vape (Jool pod, found in a gym bag). Weight 36.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 1 Selfie Stick (mid-trip, mid-ocean); 1 Energy Drink (third one that night); 2 Fidget Spinners (bearing went missing); 2 Bluetooth Speakers (played one song, too loud); 1 Disposable Vape (Jool pod, found in a gym bag). Weight 37.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0871.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.7,
+   "value": 37.1,
    "display_type": "number"
   },
   {

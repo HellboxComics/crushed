@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0729",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 Earbud Case (one bud present); 3 Energy Drinks (exam week casualty); 3 Pizza Crusts (found behind the couch); 2 Cheap Sunglasses (one lens popped out); 3 Spiral Notebooks (spiral unwound halfway). Weight 32.4 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 Earbud Case (one bud present); 3 Energy Drinks (exam week casualty); 3 Pizza Crusts (found behind the couch); 2 Cheap Sunglasses (one lens popped out); 3 Spiral Notebooks (spiral unwound halfway); 1 Bull (trapped). Weight 32.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0729.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.4,
+   "value": 32.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

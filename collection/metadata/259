@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0259",
- "description": "Recovered from A Blockbusted Return Slot. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Ball Mice (ball removed as a prank); 3 Soda Cans (shaken as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Three-Ring Binders (velcro screams when opened); 2 Dice (loaded, rumor says). Weight 83.8 lb. Crushed it.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Ball Mice (ball removed as a prank); 3 Soda Cans (shaken as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Three-Ring Binders (velcro screams when opened); 2 Dice (loaded, rumor says). Weight 82.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0259.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.8,
+   "value": 82.4,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0199",
- "description": "Recovered from The Mall Arcade. Smells like fresh batteries (licked). Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Centerfold (staples removed, an attempt was made); 3 Disposable Cameras (never developed); 2 VHS Tapes (taped off HBOH, commercials and all); 1 Game Cartridge (rented from Blockbusted, never rewound). Weight 79.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Mall Arcade. Smells like fresh batteries (licked). Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Centerfold (staples removed, an attempt was made); 3 Disposable Cameras (never developed); 2 VHS Tapes (taped off HBOH, commercials and all); 1 Game Cartridge (rented from Blockbusted, never rewound). Weight 79.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0199.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.1,
+   "value": 79.8,
    "display_type": "number"
   },
   {

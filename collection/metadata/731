@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0731",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Sneakers (untied since 1989); 3 No. 2 Pencils (never saw a scantron it liked); 2 Disposable Vapes (zero nicotine, allegedly); 1 Scratch Ticket (not a winner); 2 Spiral Notebooks (doodles in the margins). Weight 34.8 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Sneakers (untied since 1989); 3 No. 2 Pencils (never saw a scantron it liked); 2 Disposable Vapes (zero nicotine, allegedly); 1 Scratch Ticket (not a winner); 2 Spiral Notebooks (doodles in the margins); 1 Tiny Red Candle (one of many). Weight 34.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0731.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 34.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

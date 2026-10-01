@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0816",
- "description": "Recovered from Mom's Basement (Again). Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Game Controllers (thrown during a boss fight); 2 AA Batteries (taken out of the smoke detector); 1 Face Mask (worn below the nose); 1 No. 2 Pencil (chewed). Weight 37.7 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Basement (Again). Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Game Controllers (thrown during a boss fight); 2 AA Batteries (taken out of the smoke detector); 1 Face Mask (worn below the nose); 1 No. 2 Pencil (chewed). Weight 38.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0816.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.7,
+   "value": 38.1,
    "display_type": "number"
   },
   {

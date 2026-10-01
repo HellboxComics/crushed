@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0522",
- "description": "Recovered from The Y2K Bunker. Smells like Abercrombie-ish Store Entrance. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Magazines (found in a dad's truck); 1 No. 2 Pencil (chewed); 3 AA Batteries (taken out of the smoke detector); 1 Pager (last page: 911 (it was not)); 1 Crumpled Chart (printed out for emotional reasons). Weight 51.7 lb. Contents may have settled.",
+ "description": "Recovered from The Y2K Bunker. Smells like Abercrombie-ish Store Entrance. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Magazines (found in a dad's truck); 1 No. 2 Pencil (chewed); 3 AA Batteries (taken out of the smoke detector); 1 Pager (last page: 911 (it was not)). Weight 47.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0522.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.7,
+   "value": 47.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

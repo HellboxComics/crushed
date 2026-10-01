@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0785",
- "description": "Recovered from Mom's Minivan. Smells like Prime Time Hype. Contents (partial): 1 Drone (40 seconds of freedom); 3 No. 2 Pencils (sharpened to a nub); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Clear Lighters (for incense, obviously); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 35.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Mom's Minivan. Smells like Prime Time Hype. Contents (partial): 1 Drone (40 seconds of freedom); 3 No. 2 Pencils (sharpened to a nub); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Clear Lighters (for incense, obviously); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 32.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0785.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.7,
+   "value": 32.5,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0535",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Sneakers (was in the dryer); 3 Energy Drinks (Moonster, the whole case); 2 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 2 Beer Cans (last one in the fridge). Weight 39.6 lb. We kept the important shit.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Sneakers (was in the dryer); 3 Energy Drinks (Moonster, the whole case); 2 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 2 Beer Cans (last one in the fridge). Weight 39.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0535.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.6,
+   "value": 39.1,
    "display_type": "number"
   },
   {

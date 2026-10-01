@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0876",
- "description": "Recovered from Mom's Minivan. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 1 Poker Chip (never cashed out); 1 Sneaker (smells like 1989); 1 Tablet (bought for the kids, taken back by dad); 2 Earbud Cases (one bud present). Weight 38.4 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 1 Poker Chip (never cashed out); 1 Sneaker (smells like 1989); 1 Tablet (bought for the kids, taken back by dad); 2 Earbud Cases (one bud present). Weight 35.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0876.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.4,
+   "value": 35.7,
    "display_type": "number"
   },
   {

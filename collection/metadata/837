@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0837",
- "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (the volume button worn smooth); 1 USB Stick (never ejected safely); 1 Spiral Notebook (spiral unwound halfway); 1 VR Headset (watched one (1) movie); 1 Game Controller (thrown during a boss fight); 1 Bear (doing fine actually). Weight 38.3 lb. Nobody made you keep this.",
+ "name": "CRUSHED IT #0004: CLAY DAY",
+ "description": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 7 Clay Bulls (thumbprints still in the horns); 2 Clay Cleavers (the butcher's, allegedly); 6 Clay Pigs (snout pressed on with one thumb); 3 Clay Coins (stamped with a thumbnail); 6 Clay Bears (shades on, thriving). Weight 40.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0837.png",
  "attributes": [
   {
@@ -9,15 +9,15 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "CLAY DAY"
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Clay Bull"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Warm Plasticine"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Desk, Mid-Pump"
   },
   {
    "trait_type": "Tape",
@@ -37,7 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "CLAY DAY"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.3,
+   "value": 40.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 43,
    "display_type": "number"
   }
  ]

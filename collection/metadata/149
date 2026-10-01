@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0149",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Boom Box (took 10 D batteries); 3 Game Cartridges (save file erased by a sibling); 2 Three-Ring Binders (velcro screams when opened); 3 Centerfolds (folded out, then folded back in a hurry); 1 Emergency Ramen (for emergencies). Weight 91.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Boom Box (took 10 D batteries); 3 Game Cartridges (save file erased by a sibling); 2 Three-Ring Binders (velcro screams when opened); 3 Centerfolds (folded out, then folded back in a hurry). Weight 89.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0149.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.3,
+   "value": 89.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

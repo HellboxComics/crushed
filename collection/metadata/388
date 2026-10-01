@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0388",
- "description": "Recovered from Back of the Closet. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Floppy Disks (DISK 2 of 7); 1 CRT Monitor (screen burn-in reads LOADING); 2 Game Controllers (stick drift since day one); 1 Beer Can (PBJ, the hipster one). Weight 88.4 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Floppy Disks (DISK 2 of 7); 1 CRT Monitor (screen burn-in reads LOADING); 2 Game Controllers (stick drift since day one); 1 Beer Can (PBJ, the hipster one). Weight 85.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0388.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 85.5,
    "display_type": "number"
   },
   {

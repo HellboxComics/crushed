@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0401",
- "description": "Recovered from A Very Specific Ditch. Smells like cheap cologne. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Webcam (240p of pure confidence); 2 Tissue Boxes (one for every mood); 1 Memory Card (8MB, full). Weight 76.1 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Couch. Smells like victory. Contents (partial): 1 Gold Pager (why); 1 Sneaker (was in the dryer); 3 Spiral Notebooks (spiral unwound halfway); 1 Webcam (pointed at the ceiling forever); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 74.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0401.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Victory"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,12 +40,16 @@
    "value": "Several"
   },
   {
+   "trait_type": "Gilded",
+   "value": "Pager"
+  },
+  {
    "trait_type": "Serial",
    "value": "0401"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.1,
+   "value": 74.7,
    "display_type": "number"
   },
   {

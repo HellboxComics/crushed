@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0261",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 3 Magazines (the staples are doing the work); 2 TV Remotes (found in the couch); 3 Power Strips (daisy-chained into three more); 1 Soda Can (shaken as a prank); 1 Spiral Notebook (note says 'check YES or NO'). Weight 54.0 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 3 Magazines (the staples are doing the work); 2 TV Remotes (found in the couch); 3 Power Strips (daisy-chained into three more); 1 Soda Can (shaken as a prank); 1 Spiral Notebook (note says 'check YES or NO'). Weight 51.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0261.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 54.0,
+   "value": 51.8,
    "display_type": "number"
   },
   {

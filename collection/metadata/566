@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0566",
- "description": "Recovered from A Frat House Couch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Handheld Consoles (battery cover lost immediately); 1 Cassette Tape (rewound with a pencil); 1 Cheap Sunglasses (one lens popped out); 1 Glow Stick (still glowing a little, somehow); 1 Emergency Ramen (the whole strategy). Weight 31.8 lb. Crushed it.",
+ "description": "Recovered from A Frat House Couch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Handheld Consoles (battery cover lost immediately); 1 Cassette Tape (rewound with a pencil); 1 Cheap Sunglasses (one lens popped out); 1 Glow Stick (still glowing a little, somehow); 1 Emergency Ramen (the whole strategy). Weight 30.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0566.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.8,
+   "value": 30.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0703",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Sneakers (left only); 1 Centerfold (left open to the wrong page); 1 Disposable Vape (5000 puffs, 4999 regrets); 3 Scratch Tickets (not a winner). Weight 30.4 lb. Contents may have settled.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Sneakers (left only); 1 Centerfold (left open to the wrong page); 1 Disposable Vape (5000 puffs, 4999 regrets); 3 Scratch Tickets (not a winner). Weight 29.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0703.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.4,
+   "value": 29.8,
    "display_type": "number"
   },
   {

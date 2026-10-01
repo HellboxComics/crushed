@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0148",
- "description": "Recovered from Estate of a Collector. Smells like Jean Jacket. Contents (partial): 2 Poker Chips (a stack of ambition); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Toy Slime (stuck in the carpet); 3 Cheap Sunglasses (one lens popped out); 3 Roller Skates (toe stop worn to nothing). Weight 37.9 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like Jean Jacket. Contents (partial): 2 Poker Chips (a stack of ambition); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Toy Slime (stuck in the carpet); 3 Cheap Sunglasses (one lens popped out); 3 Roller Skates (toe stop worn to nothing); 1 Emergency Ramen (the whole strategy). Weight 36.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0148.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.9,
+   "value": 36.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0363",
- "description": "Recovered from A Very Specific Ditch. Smells like cigarette in a jacket. Contents (partial): 2 Magazines (for the interviews, obviously); 2 TV Remotes (the volume button worn smooth); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (rewound with a pencil); 1 16-Bit Controller (the B button is sticky). Weight 32.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Very Specific Ditch. Smells like cigarette in a jacket. Contents (partial): 2 Magazines (for the interviews, obviously); 2 TV Remotes (the volume button worn smooth); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (rewound with a pencil); 1 16-Bit Controller (the B button is sticky). Weight 33.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0363.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 33.1,
    "display_type": "number"
   },
   {

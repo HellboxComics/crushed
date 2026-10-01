@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0496",
- "description": "Recovered from A Circuit City-ish Return Counter. Smells like blue raspberry. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Flip Phone (snapped shut dramatically); 3 Sneakers (light-up heel, dead); 2 MP3 Players (shuffle picked the same song 6 times); 1 Skateboard (one ollie, lifetime). Weight 84.7 lb. Some assembly was removed.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like blue raspberry. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Flip Phone (snapped shut dramatically); 3 Sneakers (light-up heel, dead); 2 MP3 Players (shuffle picked the same song 6 times); 1 Skateboard (one ollie, lifetime); 1 Paper Hand (sold at the bottom). Weight 81.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0496.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.7,
+   "value": 81.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

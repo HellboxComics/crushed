@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0080",
- "description": "Recovered from Mom's Minivan. Smells like Cabbage Patch Plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Tissue Box (one for every mood); 1 Pizza Crust (found behind the couch). Weight 99.3 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like Cabbage Patch Plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Tissue Box (one for every mood); 1 Pizza Crust (found behind the couch). Weight 98.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0080.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 99.3,
+   "value": 98.9,
    "display_type": "number"
   },
   {

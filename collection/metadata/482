@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0482",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Ballz Energy. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (TDKay SA-90, the good tape); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times); 1 Bear (thriving). Weight 37.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Ballz Energy. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (TDKay SA-90, the good tape); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times). Weight 35.6 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0482.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.8,
+   "value": 35.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

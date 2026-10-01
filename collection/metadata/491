@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0491",
- "description": "Recovered from Vegas Hotel Room. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 3 Burned CDs (burned at 1x, 4 hours); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Ball Mouse (rollers caked with 1998); 1 Skateboard (one ollie, lifetime). Weight 35.8 lb. Crushed it.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 3 Burned CDs (burned at 1x, 4 hours); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Ball Mouse (rollers caked with 1998); 1 Skateboard (one ollie, lifetime). Weight 34.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0491.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.8,
+   "value": 34.6,
    "display_type": "number"
   },
   {

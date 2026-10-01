@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0229: SLOW MOTION",
- "description": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous. Recovered from The Beach, in Slow Motion. Smells like coconut sunscreen. Contents (partial): 10 Rescue Cans (a torpedo with no torpedo); 8 Red Swimsuits (drying since the nineties); 6 Cheap Sunglasses (one lens popped out); 1 Portable Tape Player (auto-reverse broke in 1991); 6 Lifeguard Whistles (sounds like authority). Weight 36.7 lb. Nobody made you keep this.",
+ "name": "CRUSHED IT #0229",
+ "description": "Recovered from Grandma's Attic. Smells like Crystal Peppy. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 Ball Mice (ball removed as a prank); 2 Magazines (read for the articles); 2 Pizza Crusts (found behind the couch); 2 Clear Lighters (out of fluid). Weight 69.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0229.png",
  "attributes": [
   {
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SLOW MOTION"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Rescue Can"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Coconut Sunscreen"
+   "value": "Crystal Peppy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Beach, in Slow Motion"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "None"
-  },
-  {
-   "trait_type": "One of One",
-   "value": "SLOW MOTION"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.7,
+   "value": 69.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 46,
+   "value": 35,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0550",
- "description": "Recovered from Under the Bed. Smells like Red Bullish and Regret. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Flip Phones (snapped shut dramatically); 3 Dice (blown on for luck); 3 Scratch Tickets ($2 for hope); 2 Digital Cameras (memory full, 14 photos). Weight 29.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like Red Bullish and Regret. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Flip Phones (snapped shut dramatically); 3 Dice (blown on for luck); 3 Scratch Tickets ($2 for hope); 2 Digital Cameras (memory full, 14 photos). Weight 28.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0550.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.5,
+   "value": 28.7,
    "display_type": "number"
   },
   {

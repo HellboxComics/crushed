@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0152",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like hot dust on a CRT. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 Roller Skates (toe stop worn to nothing); 2 Three-Ring Binders (velcro screams when opened); 1 VHS Tape (Blockbusted rental, never returned); 1 Joystick (fire button pressed 40 million times). Weight 86.6 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like hot dust on a CRT. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 Roller Skates (toe stop worn to nothing); 2 Three-Ring Binders (velcro screams when opened); 1 VHS Tape (Blockbusted rental, never returned); 1 Joystick (fire button pressed 40 million times). Weight 85.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0152.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.6,
+   "value": 85.0,
    "display_type": "number"
   },
   {

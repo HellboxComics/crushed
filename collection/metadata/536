@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0536",
- "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Ed Hardy-ish Cologne. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Digital Camera (2 megapixels of truth); 3 AA Batteries (Durasmell, lasted till Christmas noon); 1 Power Strip (overloaded on purpose); 2 Beer Cans (crushed on a forehead). Weight 32.5 lb. We kept the important shit.",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Red Bullish and Regret. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Digital Camera (2 megapixels of truth); 3 AA Batteries (Durasmell, lasted till Christmas noon); 1 Power Strip (overloaded on purpose); 2 Beer Cans (crushed on a forehead). Weight 31.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0536.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Ed Hardy-ish Cologne"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 31.9,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0236",
- "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 3 TV Remotes (held together with tape); 1 Puzzle Cube (two stickers peeled); 2 Slap Bracelets (cut someone, probably); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries). Weight 100.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 3 TV Remotes (held together with tape); 1 Puzzle Cube (two stickers peeled); 2 Slap Bracelets (cut someone, probably); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries). Weight 98.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0236.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 100.2,
+   "value": 98.2,
    "display_type": "number"
   },
   {

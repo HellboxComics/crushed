@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0532",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Hot Pentium. Contents (partial): 1 Soda Can (New Koak, 79 days only); 2 Pizza Crusts (found behind the couch); 1 Burned CD (says ROAD TRIP in marker); 1 Three-Ring Binder (covered in band names); 2 Spiral Notebooks (doodles in the margins). Weight 83.3 lb. Nobody made you keep this.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Hot Pentium. Contents (partial): 1 Soda Can (New Koak, 79 days only); 2 Pizza Crusts (found behind the couch); 1 Burned CD (says ROAD TRIP in marker); 1 Three-Ring Binder (covered in band names); 2 Spiral Notebooks (doodles in the margins). Weight 81.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0532.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.3,
+   "value": 81.5,
    "display_type": "number"
   },
   {

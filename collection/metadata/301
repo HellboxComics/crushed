@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0301",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like Gak-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 1 Memory Card (corrupted during a birthday); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 16-Bit Controller (the B button is sticky); 1 Power Strip (daisy-chained into three more). Weight 39.6 lb. Nobody made you keep this.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Gak-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 1 Memory Card (corrupted during a birthday); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 16-Bit Controller (the B button is sticky); 1 Power Strip (daisy-chained into three more). Weight 39.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0301.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.6,
+   "value": 39.1,
    "display_type": "number"
   },
   {

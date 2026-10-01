@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0653",
- "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 1 Soda Can (tab kept for charity); 3 Energy Drinks (Jolted, twice the caffeine); 2 Flip Phones (snapped shut dramatically); 1 Jewel Case (insert is from a different album); 2 Tissue Boxes (one for every mood). Weight 33.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 1 Soda Can (tab kept for charity); 3 Energy Drinks (Jolted, twice the caffeine); 2 Flip Phones (snapped shut dramatically); 1 Jewel Case (insert is from a different album); 2 Tissue Boxes (one for every mood). Weight 31.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0653.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.0,
+   "value": 31.6,
    "display_type": "number"
   },
   {

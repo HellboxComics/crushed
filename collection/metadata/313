@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0313",
- "description": "Recovered from Flooded Basement. Smells like Lunchables-ish Crackers. Contents (partial): 1 Magazine (the staples are doing the work); 1 Tissue Box (nearly empty); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Army Man Squad (the one with the radio survived); 2 Poker Chips (never cashed out). Weight 46.3 lb. Handle with both hands.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Lunchables-ish Crackers. Contents (partial): 1 Magazine (the staples are doing the work); 1 Tissue Box (nearly empty); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Army Man Squad (the one with the radio survived); 2 Poker Chips (never cashed out). Weight 44.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0313.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.3,
+   "value": 44.2,
    "display_type": "number"
   },
   {

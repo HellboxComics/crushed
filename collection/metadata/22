@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0022",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Joysticks (fire button pressed 40 million times); 1 Army Man Squad (the one with the radio survived); 1 Floppy Disk (Iomegalodon would have held it all); 2 Tissue Boxes (one for every mood); 1 TV Remote (held together with tape). Weight 97.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Joysticks (fire button pressed 40 million times); 1 Army Man Squad (the one with the radio survived); 1 Floppy Disk (Iomegalodon would have held it all); 2 Tissue Boxes (one for every mood); 1 TV Remote (held together with tape). Weight 96.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0022.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 97.8,
+   "value": 96.1,
    "display_type": "number"
   },
   {

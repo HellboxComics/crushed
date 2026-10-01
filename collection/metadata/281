@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0281",
- "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Beer Cans (last one in the fridge); 1 TV Remote (the volume button worn smooth); 1 Corded Phone (cord stretched to the bathroom); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 54.3 lb. Nobody made you keep this.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Beer Cans (last one in the fridge); 1 TV Remote (the volume button worn smooth); 1 Corded Phone (cord stretched to the bathroom); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 53.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0281.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 54.3,
+   "value": 53.0,
    "display_type": "number"
   },
   {

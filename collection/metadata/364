@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0364",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Tissue Boxes (one for every mood); 2 Soda Cans (tab kept for charity); 2 Ball Mice (cord chewed by a dog); 1 Skateboard (one ollie, lifetime); 3 Magazines (found in a dad's truck). Weight 87.0 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Tissue Boxes (one for every mood); 2 Soda Cans (tab kept for charity); 2 Ball Mice (cord chewed by a dog); 1 Skateboard (one ollie, lifetime); 3 Magazines (found in a dad's truck). Weight 83.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0364.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.0,
+   "value": 83.9,
    "display_type": "number"
   },
   {

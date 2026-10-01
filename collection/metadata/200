@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0200",
- "description": "Recovered from The Mall Arcade. Smells like rink snack bar. Contents (partial): 1 Magazine (the staples are doing the work); 1 Pizza Crust (petrified); 2 No. 2 Pencils (sharpened to a nub); 1 Metal Lunchbox (thermos missing); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 73.3 lb. We kept the important shit.",
+ "description": "Recovered from The Mall Arcade. Smells like rink snack bar. Contents (partial): 1 Magazine (the staples are doing the work); 1 Pizza Crust (petrified); 2 No. 2 Pencils (sharpened to a nub); 1 Metal Lunchbox (thermos missing); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 71.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0200.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.3,
+   "value": 71.4,
    "display_type": "number"
   },
   {

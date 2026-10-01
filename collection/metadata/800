@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0800",
- "description": "Recovered from Under the Bed. Smells like Ring Light Heat. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Poker Chips (a stack of ambition); 1 No. 2 Pencil (never saw a scantron it liked); 3 Fidget Spinners (banned by the school); 2 Soda Cans (New Koak, 79 days only). Weight 39.0 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Ring Light Heat. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Poker Chips (a stack of ambition); 1 No. 2 Pencil (never saw a scantron it liked); 3 Fidget Spinners (banned by the school); 2 Soda Cans (New Koak, 79 days only); 1 Paper Hand (sold at the bottom). Weight 37.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0800.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.0,
+   "value": 37.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 44,
    "display_type": "number"
   }
  ]

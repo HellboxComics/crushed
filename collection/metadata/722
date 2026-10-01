@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0722",
- "description": "Recovered from A Buddy's Basement. Smells like Moonster and Desperation. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Poker Chip (never cashed out); 3 Laptop Chargers (warm to the touch, somehow); 1 Beer Can (Milwaukee's Worst, on sale); 2 Fidget Spinners (spins for four seconds, like the trend). Weight 40.4 lb. Crushed it.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Moonster and Desperation. Contents (partial): 1 Gold Disposable Vape (why); 1 Handheld Console (screen scratched from a pocket with keys); 1 Poker Chip (a stack of ambition); 3 Laptop Chargers (warm to the touch, somehow); 1 Beer Can (Natty Lightweight, 30-rack). Weight 39.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0722.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,12 +40,16 @@
    "value": "Several"
   },
   {
+   "trait_type": "Gilded",
+   "value": "Disposable Vape"
+  },
+  {
    "trait_type": "Serial",
    "value": "0722"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.4,
+   "value": 39.6,
    "display_type": "number"
   },
   {

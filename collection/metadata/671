@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0671",
- "description": "Recovered from The Bachelor Pad. Smells like arcade carpet. Contents (partial): 2 Game Controllers (stick drift since day one); 2 Digital Cameras (memory full, 14 photos); 3 Burned CDs (burned at 1x, 4 hours); 2 Flip Phones (12 texts left this month); 2 Energy Drinks (third one that night). Weight 30.9 lb. Contents may have settled.",
+ "description": "Recovered from The Bachelor Pad. Smells like arcade carpet. Contents (partial): 2 Game Controllers (stick drift since day one); 2 Digital Cameras (memory full, 14 photos); 3 Burned CDs (burned at 1x, 4 hours); 2 Flip Phones (12 texts left this month); 2 Energy Drinks (third one that night). Weight 29.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0671.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.9,
+   "value": 29.7,
    "display_type": "number"
   },
   {

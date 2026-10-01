@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0366",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Webcams (240p of pure confidence); 2 TV Remotes (the volume button worn smooth); 1 No. 2 Pencil (sharpened to a nub); 2 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed). Weight 77.9 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Webcams (240p of pure confidence); 2 TV Remotes (the volume button worn smooth); 1 No. 2 Pencil (sharpened to a nub); 2 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed); 1 Tiny Red Candle (one of many). Weight 76.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0366.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.9,
+   "value": 76.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0524",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Poker Chips (taken from a casino, small heist); 3 Floppy Disks (contains one (1) virus); 1 Digital Camera (2 megapixels of truth); 1 Glow Stick (cracked at a school dance). Weight 28.3 lb. Handle with both hands.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Poker Chips (taken from a casino, small heist); 3 Floppy Disks (contains one (1) virus); 1 Digital Camera (2 megapixels of truth); 1 Glow Stick (cracked at a school dance). Weight 25.6 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0524.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.3,
+   "value": 25.6,
    "display_type": "number"
   },
   {

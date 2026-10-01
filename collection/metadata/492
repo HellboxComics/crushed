@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0492",
- "description": "Recovered from A LAN Party Basement. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 2 Magazines (found in a dad's truck); 2 Ball Mice (cord chewed by a dog); 2 Flip Phones (snapped shut dramatically); 2 No. 2 Pencils (never saw a scantron it liked). Weight 85.6 lb. Still heavier than it looks.",
+ "description": "Recovered from A LAN Party Basement. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 2 Magazines (found in a dad's truck); 2 Ball Mice (cord chewed by a dog); 2 Flip Phones (snapped shut dramatically); 2 No. 2 Pencils (never saw a scantron it liked). Weight 84.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0492.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.6,
+   "value": 84.2,
    "display_type": "number"
   },
   {

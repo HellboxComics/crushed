@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0070",
- "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 Pizza Crust (still better than most portfolios); 1 No. 2 Pencil (never saw a scantron it liked); 1 Shot Glass (souvenir of a night nobody recalls); 1 Calculator (solar panel covered by a sticker). Weight 82.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 Pizza Crust (still better than most portfolios); 1 No. 2 Pencil (never saw a scantron it liked); 1 Shot Glass (souvenir of a night nobody recalls); 1 Calculator (solar panel covered by a sticker). Weight 80.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0070.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 80.9,
    "display_type": "number"
   },
   {

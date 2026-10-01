@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0414",
- "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 3 VHS Tapes (taped off HBOH, commercials and all); 3 Burned CDs (coaster now); 3 Cassette Tapes (someone's voicemail greeting); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 81.6 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 3 VHS Tapes (taped off HBOH, commercials and all); 3 Burned CDs (coaster now); 3 Cassette Tapes (someone's voicemail greeting); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 80.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0414.png",
  "attributes": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
@@ -33,11 +33,15 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "ICE"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.6,
+   "value": 80.1,
    "display_type": "number"
   },
   {

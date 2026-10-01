@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0292",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Lunchables-ish Crackers. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Army Man Squad (melted with a magnifying glass); 2 Burned CDs (burned at 1x, 4 hours); 2 Floppy Disks (DISK 2 of 7); 2 Soda Cans (tab kept for charity). Weight 80.6 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Lunchables-ish Crackers. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Army Man Squad (melted with a magnifying glass); 2 Burned CDs (burned at 1x, 4 hours); 2 Floppy Disks (DISK 2 of 7); 2 Soda Cans (tab kept for charity); 1 Tiny Red Candle (lit). Weight 79.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0292.png",
  "attributes": [
   {
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.6,
+   "value": 79.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]
