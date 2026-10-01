@@ -208,14 +208,21 @@ def main():
     ap.add_argument("--out", default="renders/crushed_buzz_hero.mp4")
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--stills", help="also save these frame numbers as PNGs here (storyboard)", default=None)
+    ap.add_argument("--silent", action="store_true", help="leave the sound off")
     a = ap.parse_args()
     c = Cut(a.src, a.scale)
     pick = set(range(0, 576, 24)) if a.stills else set()
     if a.stills:
         os.makedirs(a.stills, exist_ok=True)
     cmd = [ffmpeg(), "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{c.w}x{c.h}",
-           "-r", str(plan.FPS), "-i", "-", "-c:v", "libx264", "-preset", "slow", "-crf", "15",
-           "-pix_fmt", "yuv420p", "-profile:v", "high", "-movflags", "+faststart", "-an", a.out]
+           "-r", str(plan.FPS), "-i", "-"]
+    mix = os.path.join(HERE, "audio", "hero_mix.wav")            # made by film/sound.py; silent film without it
+    if os.path.exists(mix) and not a.silent:
+        cmd += ["-i", mix, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "256k", "-shortest"]
+    else:
+        cmd += ["-an"]
+    cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "15", "-pix_fmt", "yuv420p", "-profile:v", "high",
+            "-movflags", "+faststart", a.out]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     n = 0
     for f, img in enumerate(frames(c)):

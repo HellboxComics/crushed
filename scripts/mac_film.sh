@@ -10,6 +10,7 @@ source ~/crushed-render/repo/scripts/_setup.sh
 OUT="renders/film_$(cut -c3-12 collection/provenance.txt)"
 nohup caffeinate -i bash -c "
   .venv/bin/python film/render.py --out '$OUT' --samples ${SAMPLES:-64} --device auto 2>&1 | grep --line-buffered '\[film\]' &&
+  .venv/bin/python film/sound.py &&
   .venv/bin/python film/cut.py --src '$OUT' --out ~/Desktop/crushed_buzz_hero.mp4 --stills ~/Desktop/crushed_buzz_hero_frames &&
   open ~/Desktop/crushed_buzz_hero.mp4
 " > ~/crushed-render/film.log 2>&1 &
