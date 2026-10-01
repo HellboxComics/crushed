@@ -1,27 +1,35 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.28;
+pragma solidity 0.8.17;
 
-import {Script, console2} from "forge-std/Script.sol";
-import {Crushed} from "../src/Crushed.sol";
+import "forge-std/Script.sol";
+import { CrushedIt } from "../src/CrushedIt.sol";
 
-/// forge script script/Deploy.s.sol --rpc-url robinhood_testnet --broadcast --verify
+/// Deploy CRUSHED IT. Nothing here runs without Harrow's explicit go, testnet first.
+///
+///   PROVENANCE=0x..   sha256 of collection/manifest.json (collection/provenance.txt)
+///   REVEAL_COMMIT=0x..   keccak256(abi.encodePacked(secret)); keep the secret offline until reveal
+///   IMAGE_ROOT=0x..   root from collection/sealed.json (scripts/seal_tree.py build)
+///   REVEAL_DEADLINE=  unix time after which anyone can reveal even if not sold out
+///   ROYALTY_TO=0x..   where the 5.99% goes
+///   SEADROP=0x00005EA00Ac477B1030CE78506496e8C2dE24bf5   (verified live on Robinhood Chain)
+///
+///   forge script script/Deploy.s.sol --rpc-url robinhood_testnet --broadcast --verify
 contract Deploy is Script {
-    function run() external returns (Crushed c) {
-        address owner = vm.envAddress("OWNER");
-        bytes32 provenance = vm.envBytes32("PROVENANCE");
-        bytes32 revealCommit = vm.envBytes32("REVEAL_COMMIT");
-        uint256 price = vm.envOr("PRICE_WEI", uint256(0));
-        uint256 maxPerWallet = vm.envOr("MAX_PER_WALLET", uint256(8));
-        string memory sealedURI = vm.envString("SEALED_URI");
-        string memory contractURI = vm.envString("CONTRACT_URI");
-        address royaltyReceiver = vm.envOr("ROYALTY_RECEIVER", owner);
-        uint96 royaltyBps = uint96(vm.envOr("ROYALTY_BPS", uint256(500)));
-
+    function run() external {
+        address[] memory allowed = new address[](1);
+        allowed[0] = vm.envAddress("SEADROP");
+        uint16[4] memory gifts = [uint16(240), 718, 813, 796];   // LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
         vm.startBroadcast();
-        c = new Crushed(
-            owner, provenance, revealCommit, price, maxPerWallet, sealedURI, contractURI, royaltyReceiver, royaltyBps
+        CrushedIt c = new CrushedIt(
+            allowed,
+            vm.envBytes32("PROVENANCE"),
+            vm.envBytes32("REVEAL_COMMIT"),
+            vm.envBytes32("IMAGE_ROOT"),
+            vm.envUint("REVEAL_DEADLINE"),
+            gifts,
+            vm.envAddress("ROYALTY_TO")
         );
         vm.stopBroadcast();
-        console2.log("CRUSHED deployed at", address(c));
+        console.log("CRUSHED IT at", address(c));
     }
 }
