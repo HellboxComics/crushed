@@ -130,5 +130,5 @@ class Palette:
 
 
 def load():
-    from . import era, crypto, filler, modern, degen, special, gifts, holiday, games, toys, tech, life  # noqa: F401
+    from . import era, crypto, filler, modern, degen, special, gifts, holiday  # noqa: F401  (games, toys, tech, life: not wired in until reviewed)
     return REG
