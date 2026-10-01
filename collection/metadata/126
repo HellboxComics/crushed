@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0126",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 No. 2 Pencils (chewed); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Floppy Disks (says DO NOT FORMAT); 2 Magazines (found in a dad's truck). Weight 48.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Drakkar Noire-ish. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 No. 2 Pencils (chewed); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Floppy Disks (says DO NOT FORMAT); 2 Magazines (found in a dad's truck). Weight 48.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0126.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Drakkar Noire-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

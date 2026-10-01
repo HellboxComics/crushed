@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0194",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Spiral Notebooks (spiral unwound halfway); 2 Magazines (for the interviews, obviously); 1 Dice (loaded, rumor says); 2 Beer Cans (last one in the fridge). Weight 77.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Spiral Notebooks (spiral unwound halfway); 2 Magazines (for the interviews, obviously); 1 Dice (loaded, rumor says); 2 Beer Cans (Milwaukee's Worst, on sale). Weight 77.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0194.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0370",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 MP3 Players (shuffle picked the same song 6 times); 2 Flip Phones (snapped shut dramatically); 2 Burned CDs (track 7 skips); 1 Matchbook (matches missing, reasons unclear). Weight 68.6 lb. Nobody made you keep this.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like rink snack bar. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 MP3 Players (shuffle picked the same song 6 times); 2 Flip Phones (snapped shut dramatically); 2 Burned CDs (track 7 skips); 1 Matchbook (matches missing, reasons unclear). Weight 68.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0370.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Radio Shacked Clearance Bin"
   },
   {
    "trait_type": "Tape",

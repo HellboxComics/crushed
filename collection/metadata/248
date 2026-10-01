@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0248",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 9999-in-1 Handhelds (HI SCORE 00000); 2 Poker Chips (a stack of ambition); 2 TV Remotes (found in the couch); 2 Milk Caps (the slammer is chipped); 3 Puzzle Cubes (two stickers peeled). Weight 81.4 lb. Nobody made you keep this.",
+ "description": "Recovered from The Mall Arcade. Smells like hot dust on a CRT. Contents (partial): 2 9999-in-1 Handhelds (HI SCORE 00000); 2 Poker Chips (a stack of ambition); 2 TV Remotes (found in the couch); 2 Milk Caps (the slammer is chipped); 3 Puzzle Cubes (two stickers peeled). Weight 81.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0248.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

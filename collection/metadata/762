@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0762",
- "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 1 Laptop Charger (fits nothing else in the house); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Energy Drinks (exam week casualty). Weight 28.5 lb. Crushed it.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like White Paw, Warm. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 1 Laptop Charger (fits nothing else in the house); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 28.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0762.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "White Paw, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A DoorDashed Doorstep"
   },
   {
    "trait_type": "Tape",

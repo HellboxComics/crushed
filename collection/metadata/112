@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0112",
- "description": "Recovered from Vegas Hotel Room. Smells like burnt popcorn. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 VHS Tapes (the unmarked one, from the back of the closet); 3 Sneakers (untied since 1989); 2 Cassette Tapes (a mix for someone who never listened); 2 Floppy Disks (contains one (1) virus). Weight 49.8 lb. Nobody made you keep this.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 VHS Tapes (Blockbusted rental, never returned); 3 Sneakers (untied since 1989); 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Floppy Disks (save icon, but real). Weight 49.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0112.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Tupperware-ish Party"
   },
   {
    "trait_type": "Tape",

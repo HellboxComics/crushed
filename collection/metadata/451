@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0451",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 2 Cheap Sunglasses (one lens popped out); 2 Portable CD Players (45-second buffer, 2-second attention span); 2 AA Batteries (probably dead); 3 Game Controllers (thrown during a boss fight). Weight 35.0 lb. Still heavier than it looks.",
+ "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 2 Cheap Sunglasses (one lens popped out); 2 Portable CD Players (45-second buffer, 2-second attention span); 2 AA Batteries (probably dead); 3 Game Controllers (thrown during a boss fight). Weight 35.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0451.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

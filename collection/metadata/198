@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0198",
- "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 1 Three-Ring Binder (velcro screams when opened); 2 Game Cartridges (save file erased by a sibling); 2 Pagers (last page from a number nobody called back). Weight 42.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Blockbusted New Release Wall. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 1 Three-Ring Binder (velcro screams when opened); 2 Game Cartridges (blew on it, Nintendont said no); 2 Pagers (last page from a number nobody called back). Weight 42.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0198.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",

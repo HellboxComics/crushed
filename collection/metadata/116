@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0116",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Army Man Squads (the one with the radio survived); 2 Calculators (solar panel covered by a sticker); 1 CRT Monitor (degaussed one last time). Weight 85.3 lb. Contents may have settled.",
+ "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 VHS Tape (late fees now exceed GDP of a small nation); 3 Army Man Squads (the one with the radio survived); 2 Calculators (solar panel covered by a sticker); 1 CRT Monitor (degaussed one last time). Weight 85.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0116.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

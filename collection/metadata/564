@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0564",
- "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 1 Scratch Ticket ($2 for hope). Weight 20.9 lb. Crushed it.",
+ "description": "Recovered from Behind the Couch. Smells like Red Bullish and Regret. Contents (partial): 3 TV Remotes (held together with tape); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 1 Scratch Ticket ($2 for hope). Weight 20.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0564.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

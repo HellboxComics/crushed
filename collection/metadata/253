@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0253",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Three-Ring Binder (velcro screams when opened); 2 16-Bit Controllers (the B button is sticky); 1 Spiral Notebook (doodles in the margins); 2 TV Remotes (held together with tape); 1 Crumpled Chart (printed out for emotional reasons). Weight 36.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 2 Beer Cans (PBJ, the hipster one); 1 Three-Ring Binder (velcro screams when opened); 2 16-Bit Controllers (the B button is sticky); 1 Spiral Notebook (doodles in the margins); 2 TV Remotes (held together with tape); 1 Crumpled Chart (printed out for emotional reasons). Weight 36.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0253.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

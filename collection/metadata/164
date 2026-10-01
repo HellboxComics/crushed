@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0164",
- "description": "Recovered from Ex's Garage. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 16-Bit Controller (the B button is sticky); 2 Poker Chips (never cashed out); 2 Beer Cans (warm, sadly). Weight 84.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 16-Bit Controller (the B button is sticky); 2 Poker Chips (never cashed out); 2 Beer Cans (Natty Lightweight, 30-rack). Weight 84.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0164.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Behind the Arcade Cabinets"
   },
   {
    "trait_type": "Tape",

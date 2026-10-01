@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0221",
- "description": "Recovered from Storage Unit (Auctioned). Smells like melted crayon. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 AA Batteries (probably dead); 1 Calculator (spelled BOOBIES upside down); 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Foam Headphones (orange foam, allegedly). Weight 36.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 AA Batteries (probably dead); 1 Calculator (spelled BOOBIES upside down); 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Foam Headphones (orange foam, allegedly). Weight 36.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0221.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Melted Crayon"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",

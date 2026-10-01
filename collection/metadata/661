@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0661",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 2 Energy Drinks (exam week casualty); 2 Burned CDs (coaster now); 1 Clear Lighter (out of fluid); 1 Handheld Console (screen scratched from a pocket with keys); 2 Disposable Cameras (never developed). Weight 27.4 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Energy Drinks (Moonster, the whole case); 2 Burned CDs (coaster now); 1 Clear Lighter (out of fluid); 1 Handheld Console (screen scratched from a pocket with keys); 2 Disposable Cameras (never developed). Weight 27.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0661.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Ed Hardy-ish Cologne"
   },
   {
    "trait_type": "Recovered From",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0529",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 Gold TV Remote (why); 3 Flip Phones (12 texts left this month); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Corded Phone (someone is still on hold); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 74.3 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Gold TV Remote (why); 3 Flip Phones (12 texts left this month); 1 VHS Tape (taped over a wedding); 1 Corded Phone (someone is still on hold); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 74.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0529.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

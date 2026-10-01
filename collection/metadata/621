@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0621",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (third one that night); 2 AA Batteries (probably dead); 1 Magazine (read for the articles); 3 Power Strips (overloaded on purpose). Weight 27.3 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (third one that night); 2 AA Batteries (probably dead); 1 Magazine (read for the articles); 3 Power Strips (overloaded on purpose). Weight 27.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0621.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",

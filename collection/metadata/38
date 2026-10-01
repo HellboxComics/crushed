@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0038",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Pizza Crusts (from a sleepover); 1 Metal Lunchbox (the smell stays); 1 Film Canister (undeveloped, forever); 2 Tissue Boxes (one for every mood). Weight 72.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Pizza Crusts (from a sleepover); 1 Metal Lunchbox (the smell stays); 1 Film Canister (undeveloped, forever); 2 Tissue Boxes (one for every mood). Weight 72.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0038.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

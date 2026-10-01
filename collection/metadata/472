@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0472",
- "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Tissue Boxes (nearly empty); 2 Floppy Disks (save icon, but real); 1 No. 2 Pencil (chewed); 1 Jewel Case (insert is from a different album). Weight 34.2 lb. Crushed it.",
+ "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Tissue Boxes (nearly empty); 2 Floppy Disks (Iomegalodon would have held it all); 1 No. 2 Pencil (chewed); 1 Jewel Case (insert is from a different album). Weight 34.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0472.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Frosted Tips Gel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

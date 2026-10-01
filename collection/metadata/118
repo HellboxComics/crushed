@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0118",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Magazine (read for the articles); 2 Yo-Yos (walked the dog one time); 2 Spiral Notebooks (doodles in the margins); 2 Roller Skates (toe stop worn to nothing); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 90.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 1 Magazine (read for the articles); 2 Yo-Yos (walked the dog one time); 2 Spiral Notebooks (doodles in the margins); 2 Roller Skates (toe stop worn to nothing); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 90.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0118.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

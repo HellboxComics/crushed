@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0183",
- "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Cassette Tape (a mix for someone who never listened); 1 Sneaker (left only); 1 Film Canister (holds one quarter); 3 Skate Wheels (rolled into a storm drain once); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 27.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Sneaker (left only); 1 Film Canister (holds one quarter); 3 Skate Wheels (rolled into a storm drain once); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 27.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0183.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

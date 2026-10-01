@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0684",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket (scratched with a house key); 1 Laptop Charger (fits nothing else in the house); 1 Centerfold (folded out, then folded back in a hurry). Weight 65.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket (scratched with a house key); 1 Laptop Charger (fits nothing else in the house); 1 Centerfold (folded out, then folded back in a hurry). Weight 65.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0684.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

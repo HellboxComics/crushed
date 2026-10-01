@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0730",
- "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 2 Face Masks (worn below the nose); 2 Tablets (one thumbprint of juice); 1 Shot Glass (souvenir of a night nobody recalls); 2 Pizza Crusts (found behind the couch); 2 Smartwatches (still counting steps in the dryer); 1 Bull (flipped). Weight 32.5 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Prime Time Hype. Contents (partial): 2 Face Masks (worn below the nose); 2 Tablets (one thumbprint of juice); 1 Shot Glass (souvenir of a night nobody recalls); 2 Pizza Crusts (found behind the couch); 2 Smartwatches (still counting steps in the dryer); 1 Bull (flipped). Weight 32.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0730.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Prime Time Hype"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

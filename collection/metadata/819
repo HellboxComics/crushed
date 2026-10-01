@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0819",
- "description": "Recovered from Mom's Minivan. Smells like cigarette in a jacket. Contents (partial): 3 Soda Cans (shaken as a prank); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Disposable Camera (27 exposures of a thumb). Weight 28.4 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like Moonster and Desperation. Contents (partial): 3 Soda Cans (tab kept for charity); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Disposable Camera (27 exposures of a thumb). Weight 28.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0819.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

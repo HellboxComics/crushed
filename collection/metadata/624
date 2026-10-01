@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0624",
- "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 1 Energy Drink (tastes like a battery); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Beer Can (crushed on a forehead); 1 TV Remote (found in the couch). Weight 24.9 lb. Some assembly was removed.",
+ "description": "Recovered from A Frat House Couch. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 1 Energy Drink (Jolted, twice the caffeine); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Beer Can (12 of 12); 1 TV Remote (found in the couch). Weight 24.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0624.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

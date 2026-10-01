@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0754",
- "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 2 Beer Cans (12 of 12); 3 Face Masks (one of 400 in a coat pocket); 3 Bluetooth Speakers (lost, found, lost); 1 Disposable Vape (zero nicotine, allegedly). Weight 29.4 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Basement (Again). Smells like gym bag, forgotten. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 2 Beer Cans (last one in the fridge); 3 Face Masks (one of 400 in a coat pocket); 3 Bluetooth Speakers (lost, found, lost); 1 Disposable Vape (Jool pod, found in a gym bag). Weight 29.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0754.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

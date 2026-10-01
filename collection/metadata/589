@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0589",
- "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Cheap Sunglasses (mall kiosk special); 1 Beer Can (warm, sadly); 3 Energy Drinks (tastes like a battery); 2 Memory Cards (8MB, full). Weight 24.6 lb. Some assembly was removed.",
+ "description": "Recovered from A Frat House Couch. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Cheap Sunglasses (mall kiosk special); 1 Beer Can (Natty Lightweight, 30-rack); 3 Energy Drinks (Jolted, twice the caffeine); 2 Memory Cards (8MB, full). Weight 24.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0589.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

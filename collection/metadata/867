@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0867",
- "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (exam week casualty); 3 Power Strips (daisy-chained into three more). Weight 34.3 lb. Still heavier than it looks.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Prime Time Hype. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (Moonster, the whole case); 3 Power Strips (daisy-chained into three more). Weight 34.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0867.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Prime Time Hype"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",

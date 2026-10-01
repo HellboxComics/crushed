@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0469",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (mixed old and new, like animals); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989); 1 Gold Coin (bought the top). Weight 27.7 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (Neveready, as advertised); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989); 1 Gold Coin (bought the top). Weight 27.7 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0469.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

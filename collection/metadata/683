@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0683",
- "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 2 Sneakers (left only); 3 Spiral Notebooks (spiral unwound halfway); 3 AA Batteries (taken out of the smoke detector); 2 MP3 Players (shuffle picked the same song 6 times); 1 Earbud Case (one bud present). Weight 29.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Bar. Smells like Hot Razr Battery. Contents (partial): 2 Sneakers (left only); 3 Spiral Notebooks (spiral unwound halfway); 3 AA Batteries (mixed old and new, like animals); 2 MP3 Players (shuffle picked the same song 6 times); 1 Earbud Case (one bud present). Weight 29.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0683.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

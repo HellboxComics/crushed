@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0860",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 3 Sneakers (light-up heel, dead); 1 Ring Light (one bulb out, one ego intact); 1 No. 2 Pencil (never saw a scantron it liked); 1 Face Mask (one of 400 in a coat pocket). Weight 34.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 3 Sneakers (light-up heel, dead); 1 Ring Light (one bulb out, one ego intact); 1 No. 2 Pencil (never saw a scantron it liked); 1 Face Mask (one of 400 in a coat pocket). Weight 34.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0860.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

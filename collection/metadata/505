@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0505",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Disposable Camera (never developed); 1 Flip Phone (snapped shut dramatically); 2 Floppy Disks (contains one (1) virus); 3 Ball Mice (rollers caked with 1998). Weight 29.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Disposable Camera (never developed); 1 Flip Phone (snapped shut dramatically); 2 Floppy Disks (AOHell trial, 500 free hours); 3 Ball Mice (rollers caked with 1998). Weight 29.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0505.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",

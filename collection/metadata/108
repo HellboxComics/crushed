@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0108",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Roller Skates (the rink smell is still in there); 3 Beer Cans (last one in the fridge). Weight 39.0 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 VHS Tapes (Blockbusted rental, never returned); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Roller Skates (the rink smell is still in there); 3 Beer Cans (PBJ, the hipster one). Weight 39.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0108.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

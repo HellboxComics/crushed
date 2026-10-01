@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0478",
- "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Floppy Disks (contains one (1) virus); 1 Jewel Case (insert is from a different album); 3 Pagers (clipped to jeans for status only); 3 AA Batteries (probably dead). Weight 74.8 lb. We kept the important shit.",
+ "description": "Recovered from The Y2K Bunker. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Jewel Case (insert is from a different album); 3 Pagers (clipped to jeans for status only); 3 AA Batteries (licked to test). Weight 74.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0478.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Y2K Bunker"
   },
   {
    "trait_type": "Tape",

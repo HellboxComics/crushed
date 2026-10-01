@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0396",
- "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 3 TV Remotes (found in the couch); 2 Memory Cards (8MB, full); 2 Jewel Cases (insert is from a different album); 2 Power Strips (overloaded on purpose); 3 Pagers (last page: 911 (it was not)). Weight 72.5 lb. Handle with both hands.",
+ "description": "Recovered from Napstered Dorm Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Memory Cards (8MB, full); 2 Jewel Cases (insert is from a different album); 2 Power Strips (overloaded on purpose); 3 Pagers (last page: 911 (it was not)). Weight 72.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0396.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Napstered Dorm Room"
   },
   {
    "trait_type": "Tape",

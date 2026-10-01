@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0376",
- "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom); 3 AA Batteries (taken out of the smoke detector); 1 Portable CD Player (anti-skip lied); 2 Keyboards (Partial) (F, J and the crumbs). Weight 70.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like Y2K Bunker Canned Food. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom); 3 AA Batteries (mixed old and new, like animals); 1 Portable CD Player (anti-skip lied); 2 Keyboards (Partial) (F, J and the crumbs). Weight 70.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0376.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

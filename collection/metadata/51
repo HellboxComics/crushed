@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0051",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 3 Poker Chips (a stack of ambition); 1 Clear Lighter (out of fluid); 1 Ball Mouse (rollers caked with 1998); 2 TV Remotes (found in the couch). Weight 82.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Smoke-Filled Bowling Alley. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 3 Poker Chips (a stack of ambition); 1 Clear Lighter (out of fluid); 1 Ball Mouse (rollers caked with 1998); 2 TV Remotes (found in the couch). Weight 82.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0051.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

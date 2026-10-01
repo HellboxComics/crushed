@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0829",
- "description": "Recovered from School Lost & Found. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Handheld Console (battery cover lost immediately); 1 Smartwatch (says STAND, does not); 3 Hand Sanitizers (half empty, half crusty); 2 Pizza Crusts (from a sleepover). Weight 32.3 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Handheld Console (battery cover lost immediately); 1 Smartwatch (says STAND, does not); 3 Hand Sanitizers (half empty, half crusty); 2 Pizza Crusts (from a sleepover). Weight 32.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0829.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "DoorDashed Fries, Cold"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

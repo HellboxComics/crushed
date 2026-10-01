@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0492",
- "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 2 Magazines (found in a dad's truck); 2 Ball Mice (cord chewed by a dog); 2 Flip Phones (snapped shut dramatically); 2 No. 2 Pencils (never saw a scantron it liked). Weight 79.3 lb. Still heavier than it looks.",
+ "description": "Recovered from A LAN Party Basement. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 2 Magazines (found in a dad's truck); 2 Ball Mice (cord chewed by a dog); 2 Flip Phones (snapped shut dramatically); 2 No. 2 Pencils (never saw a scantron it liked). Weight 79.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0492.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Abercrombie-ish Store Entrance"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

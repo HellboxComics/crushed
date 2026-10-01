@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0842",
- "description": "Recovered from Vegas Hotel Room. Smells like cheap cologne. Contents (partial): 1 Drone (flew once, into a tree); 1 Earbud Case (both buds gone, case still charges nothing); 1 Dice (snake eyes, twice); 1 AA Batteries (licked to test); 2 Scratch Tickets ($2 for hope). Weight 29.2 lb. We kept the important shit.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Fidget Spinner Bearings. Contents (partial): 1 Drone (flew once, into a tree); 1 Earbud Case (both buds gone, case still charges nothing); 1 Dice (snake eyes, twice); 1 AA Batteries (taken out of the smoke detector); 2 Scratch Tickets ($2 for hope). Weight 29.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0842.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Fidget Spinner Bearings"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A WeWork-ish Desk, Abandoned"
   },
   {
    "trait_type": "Tape",

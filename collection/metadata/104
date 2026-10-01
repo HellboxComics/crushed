@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0104",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 Centerfold (folded out, then folded back in a hurry); 1 Foam Headphones (orange foam, allegedly); 1 Beer Can (12 of 12); 1 Yo-Yo (walked the dog one time). Weight 87.6 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 Centerfold (folded out, then folded back in a hurry); 1 Foam Headphones (orange foam, allegedly); 1 Beer Can (last one in the fridge); 1 Yo-Yo (walked the dog one time). Weight 87.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0104.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

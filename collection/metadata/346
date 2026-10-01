@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0346",
- "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Cassette Tape (someone's voicemail greeting); 1 Corded Phone (someone is still on hold); 2 Sneakers (smells like 1989); 1 Skate Wheel (rolled into a storm drain once). Weight 34.2 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Lunchables-ish Crackers. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Corded Phone (someone is still on hold); 2 Sneakers (smells like 1989); 1 Skate Wheel (rolled into a storm drain once). Weight 34.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0346.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Lunchables-ish Crackers"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

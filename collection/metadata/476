@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0476",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Sneakers (smells like 1989); 1 Pizza Crust (petrified); 2 Beer Cans (12 of 12); 2 Matchbooks (matches missing, reasons unclear). Weight 70.3 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Sneakers (smells like 1989); 1 Pizza Crust (petrified); 2 Beer Cans (warm, sadly); 2 Matchbooks (matches missing, reasons unclear). Weight 70.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0476.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

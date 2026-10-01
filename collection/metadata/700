@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0700",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Clear Lighter (for incense, obviously); 3 Centerfolds (staples removed, an attempt was made); 2 Matchbooks (matches missing, reasons unclear); 3 Magazines (the staples are doing the work). Weight 24.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 1 Clear Lighter (for incense, obviously); 3 Centerfolds (staples removed, an attempt was made); 2 Matchbooks (matches missing, reasons unclear); 3 Magazines (the staples are doing the work). Weight 24.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0700.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",

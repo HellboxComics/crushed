@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0128",
- "description": "Recovered from The Bachelor Pad. Smells like science lab. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Beer Cans (12 of 12); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (says DO NOT FORMAT); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 68.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Beer Cans (warm, sadly); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (says DO NOT FORMAT); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 68.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0128.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Science Lab"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

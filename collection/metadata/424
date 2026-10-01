@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0424",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 No. 2 Pencil (chewed); 2 Burned CDs (burned at 1x, 4 hours); 1 Soda Can (tab kept for charity); 2 Film Canisters (holds one quarter). Weight 44.9 lb. Still heavier than it looks.",
+ "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 No. 2 Pencil (chewed); 2 Burned CDs (burned at 1x, 4 hours); 1 Soda Can (Surj, the can that started a fight); 2 Film Canisters (holds one quarter). Weight 44.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0424.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

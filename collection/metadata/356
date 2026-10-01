@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0356",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like hot dust on a CRT. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Burned CDs (coaster now); 2 Pagers (last page: 911 (it was not)); 2 Pizza Crusts (still better than most portfolios); 3 AA Batteries (licked to test). Weight 66.6 lb. Contents may have settled.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like mall food court. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Burned CDs (coaster now); 2 Pagers (last page: 911 (it was not)); 2 Pizza Crusts (still better than most portfolios); 3 AA Batteries (taken out of the smoke detector). Weight 66.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0356.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

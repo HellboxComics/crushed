@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0414",
- "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 3 Burned CDs (coaster now); 3 Cassette Tapes (rewound with a pencil); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 76.0 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 3 VHS Tapes (taped off HBOH, commercials and all); 3 Burned CDs (coaster now); 3 Cassette Tapes (someone's voicemail greeting); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 76.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0414.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

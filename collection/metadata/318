@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0318",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 3 16-Bit Controllers (the B button is sticky); 1 Magazine (found in a dad's truck); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Joystick (suction cups gave up); 1 AA Batteries (taken out of the smoke detector). Weight 24.5 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like rink snack bar. Contents (partial): 3 16-Bit Controllers (the B button is sticky); 1 Magazine (found in a dad's truck); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Joystick (suction cups gave up); 1 AA Batteries (mixed old and new, like animals). Weight 24.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0318.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

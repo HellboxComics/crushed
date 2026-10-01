@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0588",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Centerfold (left open to the wrong page); 2 TV Remotes (the volume button worn smooth); 1 Face Mask (one of 400 in a coat pocket). Weight 19.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Centerfold (left open to the wrong page); 2 TV Remotes (the volume button worn smooth); 1 Face Mask (one of 400 in a coat pocket). Weight 19.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0588.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

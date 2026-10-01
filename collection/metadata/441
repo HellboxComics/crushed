@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0441",
- "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 1 Digital Camera (2 megapixels of truth); 1 Corded Phone (someone is still on hold); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (snake high score intact); 1 Power Strip (overloaded on purpose). Weight 73.6 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Abercrombie-ish Store Entrance. Contents (partial): 1 Digital Camera (2 megapixels of truth); 1 Corded Phone (someone is still on hold); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (snake high score intact); 1 Power Strip (overloaded on purpose). Weight 73.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0441.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Abercrombie-ish Store Entrance"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

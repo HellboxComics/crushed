@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0527",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Gold Sneaker (why); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 AA Batteries (licked to test); 2 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid). Weight 36.1 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Gold Sneaker (why); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 AA Batteries (licked to test); 2 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid). Weight 36.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0527.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

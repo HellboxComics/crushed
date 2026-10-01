@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0413",
- "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Glow Sticks (still glowing a little, somehow); 1 Sneaker (smells like 1989); 1 Skateboard (griptape ate a pair of jeans); 3 VHS Tapes (label says DO NOT TAPE OVER). Weight 38.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Glow Sticks (still glowing a little, somehow); 1 Sneaker (smells like 1989); 1 Skateboard (griptape ate a pair of jeans); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 38.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0413.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Frosted Tips Gel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

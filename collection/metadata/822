@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0822",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like rink snack bar. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 Disposable Vapes (zero nicotine, allegedly); 1 Selfie Stick (the person holding it is not in the photo); 2 TV Remotes (the volume button worn smooth); 1 Spiral Notebook (spiral unwound halfway). Weight 29.6 lb. Crushed it.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like Fidget Spinner Bearings. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 Disposable Vapes (Jool pod, found in a gym bag); 1 Selfie Stick (the person holding it is not in the photo); 2 TV Remotes (the volume button worn smooth); 1 Spiral Notebook (spiral unwound halfway). Weight 29.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0822.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Fidget Spinner Bearings"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Crypto Bro's Garage"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0171",
- "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 3 Joysticks (suction cups gave up); 1 VHS Tape (label says DO NOT TAPE OVER); 1 Cheap Sunglasses (one lens popped out); 1 Boom Box (one speaker still believes); 1 Roller Skate (toe stop worn to nothing). Weight 91.4 lb. Some assembly was removed.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Joysticks (suction cups gave up); 1 VHS Tape (the unmarked one, from the back of the closet); 1 Cheap Sunglasses (one lens popped out); 1 Boom Box (one speaker still believes); 1 Roller Skate (toe stop worn to nothing). Weight 91.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0171.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",

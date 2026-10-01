@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0767",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Disposable Vape (mango, mostly); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (chipped rim); 2 Energy Drinks (tastes like a battery); 2 Power Banks (dead when needed). Weight 30.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like cigarette in a jacket. Contents (partial): 1 Disposable Vape (zero nicotine, allegedly); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (chipped rim); 2 Energy Drinks (exam week casualty); 2 Power Banks (dead when needed). Weight 30.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0767.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",

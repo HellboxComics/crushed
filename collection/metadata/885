@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0885",
- "description": "Recovered from A Very Specific Ditch. Smells like body spray cloud. Contents (partial): 1 Tissue Box (nearly empty); 1 Soda Can (shaken as a prank); 1 Handheld Console (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never); 3 Beer Cans (12 of 12). Weight 32.0 lb. Contents may have settled.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like White Paw, Warm. Contents (partial): 1 Tissue Box (nearly empty); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Handheld Console (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never); 3 Beer Cans (warm, sadly). Weight 32.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0885.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "White Paw, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

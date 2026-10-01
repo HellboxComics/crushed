@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0153",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Beer Cans (crushed on a forehead); 2 Yo-Yos (walked the dog one time); 1 Calculator (spelled BOOBIES upside down); 2 Matchbooks (matches missing, reasons unclear); 3 Spiral Notebooks (doodles in the margins). Weight 73.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like new plastic. Contents (partial): 2 Beer Cans (crushed on a forehead); 2 Yo-Yos (walked the dog one time); 1 Calculator (spelled BOOBIES upside down); 2 Matchbooks (matches missing, reasons unclear); 3 Spiral Notebooks (doodles in the margins). Weight 73.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0153.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",

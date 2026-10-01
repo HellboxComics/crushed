@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0331",
- "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 2 Yo-Yos (walked the dog one time); 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 TV Remotes (the volume button worn smooth); 2 Foam Headphones (orange foam, allegedly); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 87.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Gak-ish. Contents (partial): 2 Yo-Yos (walked the dog one time); 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 TV Remotes (the volume button worn smooth); 2 Foam Headphones (orange foam, allegedly); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 87.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0331.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Gak-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

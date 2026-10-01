@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0780",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 2 Spiral Notebooks (spiral unwound halfway); 1 Shot Glass (from a trip to Vegas); 2 TV Remotes (found in the couch); 3 Bluetooth Speakers (paired with the wrong phone). Weight 37.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Sneakers (was in the dryer); 2 Spiral Notebooks (spiral unwound halfway); 1 Shot Glass (from a trip to Vegas); 2 TV Remotes (found in the couch); 3 Bluetooth Speakers (paired with the wrong phone). Weight 37.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0780.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Hand Sanitizer, Everywhere"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0205",
- "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 1 Scratch Ticket (scratched with a house key); 1 Puzzle Cube (two stickers peeled); 2 Dice (blown on for luck); 1 Metal Lunchbox (the smell stays). Weight 38.9 lb. Still heavier than it looks.",
+ "description": "Recovered from The Mall Arcade. Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 Scratch Ticket (scratched with a house key); 1 Puzzle Cube (two stickers peeled); 2 Dice (blown on for luck); 1 Metal Lunchbox (the smell stays). Weight 38.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0205.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

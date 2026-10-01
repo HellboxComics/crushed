@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0541",
- "description": "Recovered from Mom's Minivan. Smells like science lab. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition); 1 Emergency Ramen (the whole strategy). Weight 70.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Red Bullish and Regret. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition); 1 Emergency Ramen (the whole strategy). Weight 70.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0541.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Science Lab"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0084",
- "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 2 Sneakers (left only); 1 Clear Lighter (borrowed in 1997, never returned); 1 Power Strip (overloaded on purpose); 1 Calculator (spelled BOOBIES upside down); 1 AA Batteries (taken out of the smoke detector). Weight 47.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Pizza Hut-ish Book It! Night. Contents (partial): 2 Sneakers (left only); 1 Clear Lighter (borrowed in 1997, never returned); 1 Power Strip (overloaded on purpose); 1 Calculator (spelled BOOBIES upside down); 1 AA Batteries (mixed old and new, like animals). Weight 47.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0084.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

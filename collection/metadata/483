@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0483",
- "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Spiral Notebook (spiral unwound halfway); 1 Skate Wheel (rolled into a storm drain once); 1 Shot Glass (chipped rim); 1 Jewel Case (insert is from a different album). Weight 33.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Vegas carpet. Contents (partial): 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Spiral Notebook (spiral unwound halfway); 1 Skate Wheel (rolled into a storm drain once); 1 Shot Glass (chipped rim); 1 Jewel Case (insert is from a different album). Weight 33.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0483.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

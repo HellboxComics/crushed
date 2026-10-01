@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0555",
- "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Shot Glasses (souvenir of a night nobody recalls); 3 AA Batteries (probably dead); 3 Spiral Notebooks (spiral unwound halfway); 1 Cheap Sunglasses (one lens popped out). Weight 32.0 lb. Contents may have settled.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Soda Cans (tab kept for charity); 2 Shot Glasses (souvenir of a night nobody recalls); 3 AA Batteries (probably dead); 3 Spiral Notebooks (spiral unwound halfway); 1 Cheap Sunglasses (one lens popped out). Weight 32.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0555.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0639",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 2 TV Remotes (found in the couch); 2 Pizza Crusts (still better than most portfolios); 1 AA Batteries (licked to test); 3 Soda Cans (tab kept for charity); 1 No. 2 Pencil (never saw a scantron it liked). Weight 26.2 lb. Still heavier than it looks.",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 2 TV Remotes (found in the couch); 2 Pizza Crusts (still better than most portfolios); 1 AA Batteries (taken out of the smoke detector); 3 Soda Cans (Surj, the can that started a fight); 1 No. 2 Pencil (never saw a scantron it liked). Weight 26.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0639.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

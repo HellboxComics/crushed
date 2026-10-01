@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0674",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Game Controller (stick drift since day one); 3 Sneakers (untied since 1989); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 No. 2 Pencils (never saw a scantron it liked); 3 Burned CDs (burned at 1x, 4 hours). Weight 26.7 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Couch. Smells like Hot Razr Battery. Contents (partial): 1 Game Controller (stick drift since day one); 3 Sneakers (untied since 1989); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 No. 2 Pencils (never saw a scantron it liked); 3 Burned CDs (burned at 1x, 4 hours). Weight 26.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0674.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

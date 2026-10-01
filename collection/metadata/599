@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0599",
- "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 3 AA Batteries (mixed old and new, like animals); 1 Soda Can (tab kept for charity); 2 No. 2 Pencils (chewed); 2 Cheap Sunglasses (mall kiosk special). Weight 30.7 lb. Handle with both hands.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 3 AA Batteries (Neveready, as advertised); 1 Soda Can (New Koak, 79 days only); 2 No. 2 Pencils (chewed); 2 Cheap Sunglasses (mall kiosk special). Weight 30.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0599.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Myspace Top 8 Breakup Box"
   },
   {
    "trait_type": "Tape",

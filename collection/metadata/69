@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0069",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Floppy Disks (says DO NOT FORMAT); 1 Yo-Yo (string tied to a finger for 3 years); 2 Soda Cans (shaken as a prank); 2 Centerfolds (folded out, then folded back in a hurry). Weight 41.1 lb. We kept the important shit.",
+ "description": "Recovered from Ex's Garage. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Floppy Disks (contains one (1) virus); 1 Yo-Yo (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 Centerfolds (folded out, then folded back in a hurry). Weight 41.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0069.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0859",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Energy Drinks (tastes like a battery); 2 Disposable Vapes (zero nicotine, allegedly); 1 Pizza Crust (from a sleepover); 1 Ring Light (the eyes in every mirror selfie); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 36.5 lb. Handle with both hands.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like rink snack bar. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 2 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Pizza Crust (from a sleepover); 1 Ring Light (the eyes in every mirror selfie); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 36.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0859.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

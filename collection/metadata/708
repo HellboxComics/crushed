@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0708",
- "description": "Recovered from Mom's Minivan. Smells like Vegas carpet. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 3 AA Batteries (licked to test); 1 Disposable Camera (never developed); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (exam week casualty). Weight 29.9 lb. Contents may have settled.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 3 AA Batteries (taken out of the smoke detector); 1 Disposable Camera (never developed); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (Red Bullish, gave it wings, took them back). Weight 29.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0708.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

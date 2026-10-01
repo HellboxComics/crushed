@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0382",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 1 Virtual Pet (reincarnated 40 times); 1 Cassette Tape (a mix for someone who never listened); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet); 1 MP3 Player (shuffle picked the same song 6 times). Weight 22.8 lb. Contents may have settled.",
+ "description": "Recovered from School Lost & Found. Smells like Frosted Tips Gel. Contents (partial): 1 Virtual Pet (reincarnated 40 times); 1 Cassette Tape (TDKay SA-90, the good tape); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (taped off HBOH, commercials and all); 1 MP3 Player (shuffle picked the same song 6 times). Weight 22.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0382.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Frosted Tips Gel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

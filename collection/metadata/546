@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0546",
- "description": "Recovered from A Buddy's Basement. Smells like cheap cologne. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Cheap Sunglasses (mall kiosk special); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Power Strips (daisy-chained into three more); 1 Dice (snake eyes, twice). Weight 30.7 lb. Crushed it.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Cheap Sunglasses (mall kiosk special); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Power Strips (daisy-chained into three more); 1 Dice (snake eyes, twice). Weight 30.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0546.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Hot Topic-ish Bag"
   },
   {
    "trait_type": "Tape",

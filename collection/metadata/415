@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0415",
- "description": "Recovered from Storage Unit (Auctioned). Smells like cigarette in a jacket. Contents (partial): 1 Gold Flip Phone (why); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Floppy Disk (DISK 2 of 7); 3 Clear Lighters (borrowed in 1997, never returned); 2 Magazines (for the interviews, obviously). Weight 34.9 lb. Handle with both hands.",
+ "description": "Recovered from The Bachelor Pad. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Gold Flip Phone (why); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Floppy Disk (DISK 2 of 7); 3 Clear Lighters (borrowed in 1997, never returned); 2 Magazines (for the interviews, obviously). Weight 34.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0415.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0377",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Shot Glasses (chipped rim); 2 Pizza Crusts (petrified); 1 Disposable Camera (27 exposures of a thumb); 1 Magazine (read for the articles). Weight 70.8 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Shot Glasses (chipped rim); 2 Pizza Crusts (petrified); 1 Disposable Camera (27 exposures of a thumb); 1 Magazine (read for the articles). Weight 70.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0377.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

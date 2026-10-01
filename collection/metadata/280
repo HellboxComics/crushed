@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0280",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 TV Remote (the volume button worn smooth); 2 Toy Slime (stuck in the carpet); 1 Burned CD (burned at 1x, 4 hours). Weight 47.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 TV Remote (the volume button worn smooth); 2 Toy Slime (stuck in the carpet); 1 Burned CD (burned at 1x, 4 hours). Weight 47.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0280.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

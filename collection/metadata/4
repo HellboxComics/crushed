@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0004",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 AA Batteries (mixed old and new, like animals); 3 Poker Chips (never cashed out); 3 Cheap Sunglasses (one lens popped out); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 83.2 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 AA Batteries (Durasmell, lasted till Christmas noon); 3 Poker Chips (never cashed out); 3 Cheap Sunglasses (one lens popped out); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 83.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0004.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

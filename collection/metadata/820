@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0820",
- "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 3 Tablets (one thumbprint of juice); 3 Smartwatches (still counting steps in the dryer); 3 Smartphones (screen protector did nothing); 1 Drone (40 seconds of freedom); 1 Hand Sanitizer (60% alcohol, 40% anxiety). Weight 36.4 lb. Handle with both hands.",
+ "description": "Recovered from Mom's Basement (Again). Smells like new plastic. Contents (partial): 3 Tablets (one thumbprint of juice); 3 Smartwatches (still counting steps in the dryer); 3 Smartphones (screen protector did nothing); 1 Drone (40 seconds of freedom); 1 Hand Sanitizer (60% alcohol, 40% anxiety). Weight 36.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0820.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

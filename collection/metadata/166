@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0166",
- "description": "Recovered from Behind the Bar. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Puzzle Cubes (two stickers peeled); 3 Joysticks (fire button pressed 40 million times); 2 Floppy Disks (says DO NOT FORMAT); 1 No. 2 Pencil (sharpened to a nub); 1 Tiny Red Candle (lit). Weight 75.4 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Big Red-ish Gum. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Puzzle Cubes (two stickers peeled); 3 Joysticks (fire button pressed 40 million times); 2 Floppy Disks (says DO NOT FORMAT); 1 No. 2 Pencil (sharpened to a nub); 1 Tiny Red Candle (lit). Weight 75.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0166.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Big Red-ish Gum"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Behind the Arcade Cabinets"
   },
   {
    "trait_type": "Tape",

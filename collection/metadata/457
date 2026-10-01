@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0457",
- "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Digital Cameras (memory full, 14 photos); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Beer Can (12 of 12); 3 Soda Cans (tab kept for charity). Weight 31.2 lb. We kept the important shit.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like rink snack bar. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Digital Cameras (memory full, 14 photos); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Beer Can (last one in the fridge); 3 Soda Cans (Surj, the can that started a fight). Weight 31.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0457.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "A Circuit City-ish Return Counter"
   },
   {
    "trait_type": "Tape",

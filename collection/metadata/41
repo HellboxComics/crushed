@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0041",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 TV Remote (held together with tape); 2 VHS Tapes (taped over a wedding); 2 Army Man Squads (melted with a magnifying glass); 2 Cassette Tapes (side B only); 1 No. 2 Pencil (sharpened to a nub). Weight 72.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 1 TV Remote (held together with tape); 2 VHS Tapes (taped over a wedding); 2 Army Man Squads (melted with a magnifying glass); 2 Cassette Tapes (side B only); 1 No. 2 Pencil (sharpened to a nub). Weight 72.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0041.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

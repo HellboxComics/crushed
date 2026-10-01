@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0175",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 3 Calculators (solar panel covered by a sticker); 1 CRT Monitor (still warm); 1 Army Man Squad (the one with the radio survived); 1 Game Cartridge (save file erased by a sibling). Weight 83.3 lb. Handle with both hands.",
+ "description": "Recovered from Mom's Minivan. Smells like Arcade Tokens. Contents (partial): 3 Cassette Tapes (TDKay SA-90, the good tape); 3 Calculators (solar panel covered by a sticker); 1 CRT Monitor (still warm); 1 Army Man Squad (the one with the radio survived); 1 Game Cartridge (blew on it, Nintendont said no). Weight 83.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0175.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

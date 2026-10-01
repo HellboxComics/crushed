@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0383",
- "description": "Recovered from Vegas Hotel Room. Smells like rink snack bar. Contents (partial): 1 Digital Camera (2 megapixels of truth); 1 Scratch Ticket ($2 for hope); 1 Memory Card (corrupted during a birthday); 2 Magazines (for the interviews, obviously); 2 Brick Phones (snake high score intact). Weight 26.2 lb. Handle with both hands.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Hot Pentium. Contents (partial): 1 Digital Camera (2 megapixels of truth); 1 Scratch Ticket ($2 for hope); 1 Memory Card (corrupted during a birthday); 2 Magazines (for the interviews, obviously); 2 Brick Phones (snake high score intact). Weight 26.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0383.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Hot Pentium"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Napstered Dorm Room"
   },
   {
    "trait_type": "Tape",

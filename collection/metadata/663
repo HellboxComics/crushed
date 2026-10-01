@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0663",
- "description": "Recovered from Nobody Knows. Smells like arcade carpet. Contents (partial): 2 Magazines (read for the articles); 2 MP3 Players (shuffle picked the same song 6 times); 2 Digital Cameras (2 megapixels of truth); 3 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 36.0 lb. Crushed it.",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Grandma's couch. Contents (partial): 2 Magazines (read for the articles); 2 MP3 Players (shuffle picked the same song 6 times); 2 Digital Cameras (2 megapixels of truth); 3 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 36.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0663.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "An Ebay-ish Box, Never Shipped"
   },
   {
    "trait_type": "Tape",

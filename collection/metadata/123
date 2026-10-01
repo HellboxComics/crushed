@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0123",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 1 Corded Phone (was on the line when mom picked up); 2 Game Cartridges (save file erased by a sibling); 2 Pizza Crusts (still better than most portfolios); 3 Sneakers (was in the dryer). Weight 84.1 lb. Contents may have settled.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like gym bag, forgotten. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 1 Corded Phone (was on the line when mom picked up); 2 Game Cartridges (blew on it, Nintendont said no); 2 Pizza Crusts (still better than most portfolios); 3 Sneakers (was in the dryer). Weight 84.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0123.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

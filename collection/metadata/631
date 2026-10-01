@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0631",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Dice (blown on for luck); 1 No. 2 Pencil (sharpened to a nub); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Handheld Console (screen scratched from a pocket with keys). Weight 25.6 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like new plastic. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Dice (blown on for luck); 1 No. 2 Pencil (sharpened to a nub); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Handheld Console (screen scratched from a pocket with keys). Weight 25.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0631.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

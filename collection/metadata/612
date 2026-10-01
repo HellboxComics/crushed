@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0612",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like new plastic. Contents (partial): 3 Disposable Cameras (never developed); 2 Cheap Sunglasses (one lens popped out); 3 Power Strips (overloaded on purpose); 1 Energy Drink (exam week casualty); 3 Game Controllers (stick drift since day one). Weight 28.8 lb. Contents may have settled.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like hot dust on a CRT. Contents (partial): 3 Disposable Cameras (never developed); 2 Cheap Sunglasses (one lens popped out); 3 Power Strips (overloaded on purpose); 1 Energy Drink (Moonster, the whole case); 3 Game Controllers (stick drift since day one). Weight 28.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0612.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "The Ed Hardy-ish Era"
   },
   {
    "trait_type": "Tape",

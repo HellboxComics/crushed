@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0173",
- "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 3 Floppy Disks (contains one (1) virus); 2 No. 2 Pencils (sharpened to a nub); 2 Army Man Squads (the one with the radio survived). Weight 87.5 lb. Still heavier than it looks.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like blue raspberry. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 3 Floppy Disks (save icon, but real); 2 No. 2 Pencils (sharpened to a nub); 2 Army Man Squads (the one with the radio survived). Weight 87.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0173.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",

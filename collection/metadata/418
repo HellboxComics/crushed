@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0418",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Sneaker (left only); 3 Tissue Boxes (nearly empty); 3 Cassette Tapes (someone's voicemail greeting); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ball Mouse (cord chewed by a dog). Weight 69.7 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Frosted Tips Gel. Contents (partial): 1 Sneaker (left only); 3 Tissue Boxes (nearly empty); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ball Mouse (cord chewed by a dog). Weight 69.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0418.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Frosted Tips Gel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

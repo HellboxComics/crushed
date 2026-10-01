@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0227",
- "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Tissue Box (nearly empty); 1 Digital Camera (2 megapixels of truth); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Army Man Squads (melted with a magnifying glass). Weight 42.6 lb. Contents may have settled.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like blue raspberry. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Tissue Box (nearly empty); 1 Digital Camera (2 megapixels of truth); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Army Man Squads (melted with a magnifying glass). Weight 42.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0227.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

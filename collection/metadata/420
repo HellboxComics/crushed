@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0420",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 Pagers (last page from a number nobody called back); 2 Game Controllers (stick drift since day one); 1 VHS Tape (label says DO NOT TAPE OVER); 2 Cassette Tapes (rewound with a pencil); 2 Flip Phones (snapped shut dramatically). Weight 27.1 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 Pagers (last page from a number nobody called back); 2 Game Controllers (stick drift since day one); 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Cassette Tapes (someone's voicemail greeting); 2 Flip Phones (snapped shut dramatically). Weight 27.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0420.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

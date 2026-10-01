@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0239",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 1 Magazine (the staples are doing the work); 2 Dice (loaded, rumor says); 2 Power Strips (daisy-chained into three more); 3 Beer Cans (crushed on a forehead); 2 Yo-Yos (walked the dog one time). Weight 71.0 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Magazine (the staples are doing the work); 2 Dice (loaded, rumor says); 2 Power Strips (daisy-chained into three more); 3 Beer Cans (crushed on a forehead); 2 Yo-Yos (walked the dog one time). Weight 71.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0239.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

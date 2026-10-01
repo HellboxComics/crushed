@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0304",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Boom Box (took 10 D batteries); 2 TV Remotes (the volume button worn smooth); 1 Milk Caps (the slammer is chipped); 1 Beer Can (12 of 12); 1 AA Batteries (probably dead); 1 Crumpled Chart (printed out for emotional reasons). Weight 33.2 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (took 10 D batteries); 2 TV Remotes (the volume button worn smooth); 1 Milk Caps (the slammer is chipped); 1 Beer Can (warm, sadly); 1 AA Batteries (probably dead); 1 Crumpled Chart (printed out for emotional reasons). Weight 33.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0304.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0881",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Power Strips (daisy-chained into three more); 2 Game Controllers (thrown during a boss fight); 3 Disposable Vapes (mango, mostly); 1 VR Headset (the walls were real and they were hit). Weight 34.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like blue raspberry. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Power Strips (daisy-chained into three more); 2 Game Controllers (thrown during a boss fight); 3 Disposable Vapes (zero nicotine, allegedly); 1 VR Headset (the walls were real and they were hit). Weight 34.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0881.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Crypto Bro's Garage"
   },
   {
    "trait_type": "Tape",

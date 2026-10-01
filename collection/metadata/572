@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0572",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 1 Sneaker (untied since 1989); 3 AA Batteries (taken out of the smoke detector); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Cheap Sunglasses (mall kiosk special); 1 USB Stick (never ejected safely). Weight 28.2 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Ed Hardy-ish Cologne. Contents (partial): 1 Sneaker (untied since 1989); 3 AA Batteries (Durasmell, lasted till Christmas noon); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Cheap Sunglasses (mall kiosk special); 1 USB Stick (never ejected safely). Weight 28.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0572.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Ed Hardy-ish Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

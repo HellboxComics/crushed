@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0374",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 2 Brick Phones (unbreakable until today); 2 Virtual Pets (reincarnated 40 times); 1 Skateboard (griptape ate a pair of jeans); 2 Game Controllers (stick drift since day one); 2 Dice (snake eyes, twice). Weight 73.9 lb. Contents may have settled.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Ballz Energy. Contents (partial): 2 Brick Phones (unbreakable until today); 2 Virtual Pets (reincarnated 40 times); 1 Skateboard (griptape ate a pair of jeans); 2 Game Controllers (stick drift since day one); 2 Dice (snake eyes, twice). Weight 73.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0374.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Ballz Energy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Radio Shacked Clearance Bin"
   },
   {
    "trait_type": "Tape",

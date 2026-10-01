@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0788",
- "description": "Recovered from Behind the Couch. Smells like arcade carpet. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Smartphones (screen protector did nothing); 3 Fidget Spinners (spins for four seconds, like the trend); 2 Power Banks (10000 mAh of dead weight); 1 No. 2 Pencil (never saw a scantron it liked). Weight 42.6 lb. Crushed it.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like body spray cloud. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Smartphones (screen protector did nothing); 3 Fidget Spinners (spins for four seconds, like the trend); 2 Power Banks (10000 mAh of dead weight); 1 No. 2 Pencil (never saw a scantron it liked). Weight 42.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0788.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

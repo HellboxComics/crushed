@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0693",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Jewel Case (hinge broken on arrival); 2 Spiral Notebooks (doodles in the margins); 2 Flip Phones (ringtone composed by hand); 2 Dice (loaded, rumor says). Weight 22.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Jewel Case (hinge broken on arrival); 2 Spiral Notebooks (doodles in the margins); 2 Flip Phones (ringtone composed by hand); 2 Dice (loaded, rumor says). Weight 22.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0693.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0206",
- "description": "Recovered from Estate of a Collector. Smells like cheap cologne. Contents (partial): 1 Beer Can (crushed on a forehead); 1 Digital Camera (2 megapixels of truth); 1 Sneaker (was in the dryer); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Tissue Boxes (one for every mood). Weight 78.1 lb. Some assembly was removed.",
+ "description": "Recovered from The Mall Arcade. Smells like Blockbusted New Release Wall. Contents (partial): 1 Beer Can (crushed on a forehead); 1 Digital Camera (2 megapixels of truth); 1 Sneaker (was in the dryer); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Tissue Boxes (one for every mood). Weight 78.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0206.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

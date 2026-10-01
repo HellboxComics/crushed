@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0102",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 Joysticks (suction cups gave up); 1 Beer Can (12 of 12); 2 Army Man Squads (melted with a magnifying glass); 2 Game Cartridges (blown into 400 times); 1 Metal Lunchbox (the smell stays). Weight 79.9 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 3 Joysticks (suction cups gave up); 1 Beer Can (12 of 12); 2 Army Man Squads (melted with a magnifying glass); 2 Game Cartridges (save file erased by a sibling); 1 Metal Lunchbox (the smell stays). Weight 79.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0102.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

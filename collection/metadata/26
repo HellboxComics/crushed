@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0026",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Joystick (suction cups gave up); 1 Puzzle Cube (two stickers peeled); 2 No. 2 Pencils (sharpened to a nub); 2 Magazines (the staples are doing the work). Weight 95.3 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like Vegas carpet. Contents (partial): 2 Beer Cans (PBJ, the hipster one); 1 Joystick (suction cups gave up); 1 Puzzle Cube (two stickers peeled); 2 No. 2 Pencils (sharpened to a nub); 2 Magazines (the staples are doing the work). Weight 95.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0026.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

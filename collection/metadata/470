@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0470",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like hot dust on a CRT. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours); 3 Webcams (pointed at the ceiling forever); 1 Centerfold (folded out, then folded back in a hurry); 1 MP3 Player (shuffle picked the same song 6 times). Weight 72.1 lb. Handle with both hands.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like mall food court. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours); 3 Webcams (pointed at the ceiling forever); 1 Centerfold (folded out, then folded back in a hurry); 1 MP3 Player (shuffle picked the same song 6 times). Weight 72.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0470.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Radio Shacked Clearance Bin"
   },
   {
    "trait_type": "Tape",

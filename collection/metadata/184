@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0184",
- "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Cassette Tapes (rewound with a pencil); 1 TV Remote (found in the couch); 1 Foam Headphones (one ear works if you hold it); 3 Yo-Yos (string tied to a finger for 3 years). Weight 50.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like mall food court. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Cassette Tapes (someone's voicemail greeting); 1 TV Remote (found in the couch); 1 Foam Headphones (one ear works if you hold it); 3 Yo-Yos (string tied to a finger for 3 years). Weight 50.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0184.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Spencer's-ish Back Room"
   },
   {
    "trait_type": "Tape",

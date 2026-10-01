@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0636",
- "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 3 Sneakers (was in the dryer); 2 Energy Drinks (third one that night); 2 Beer Cans (last one in the fridge); 2 Tissue Boxes (nearly empty); 3 Glow Sticks (cracked at a school dance). Weight 27.8 lb. Handle with both hands.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Sneakers (was in the dryer); 2 Energy Drinks (tastes like a battery); 2 Beer Cans (Milwaukee's Worst, on sale); 2 Tissue Boxes (nearly empty); 3 Glow Sticks (cracked at a school dance). Weight 27.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0636.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "The Ed Hardy-ish Era"
   },
   {
    "trait_type": "Tape",

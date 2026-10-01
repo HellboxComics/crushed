@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0837",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 TV Remote (the volume button worn smooth); 1 USB Stick (never ejected safely); 1 Spiral Notebook (spiral unwound halfway); 1 VR Headset (watched one (1) movie); 1 Game Controller (thrown during a boss fight); 1 Bear (doing fine actually). Weight 32.6 lb. Nobody made you keep this.",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (the volume button worn smooth); 1 USB Stick (never ejected safely); 1 Spiral Notebook (spiral unwound halfway); 1 VR Headset (watched one (1) movie); 1 Game Controller (thrown during a boss fight); 1 Bear (doing fine actually). Weight 32.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0837.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

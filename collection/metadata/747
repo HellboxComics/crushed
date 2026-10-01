@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0747",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 2 Fidget Spinners (spins for four seconds, like the trend); 3 Smartphones (screen protector did nothing); 1 VR Headset (worn twice); 3 Energy Drinks (tastes like a battery); 2 Scratch Tickets ($2 for hope). Weight 33.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Estate of a Collector. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Fidget Spinners (spins for four seconds, like the trend); 3 Smartphones (screen protector did nothing); 1 VR Headset (worn twice); 3 Energy Drinks (Jolted, twice the caffeine); 2 Scratch Tickets ($2 for hope). Weight 33.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0747.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

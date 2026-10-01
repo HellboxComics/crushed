@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0569",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 3 Sneakers (smells like 1989); 1 Tablet (one thumbprint of juice); 1 Foam Headphones (one ear works if you hold it); 2 Clear Lighters (borrowed in 1997, never returned); 2 Game Controllers (stick drift since day one). Weight 29.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 3 Sneakers (smells like 1989); 1 Tablet (one thumbprint of juice); 1 Foam Headphones (one ear works if you hold it); 2 Clear Lighters (borrowed in 1997, never returned); 2 Game Controllers (stick drift since day one). Weight 29.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0569.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

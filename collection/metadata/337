@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0337",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 9999-in-1 Handheld (HI SCORE 00000); 2 Disposable Cameras (27 exposures of a thumb); 1 Flip Phone (ringtone composed by hand); 1 Puzzle Cube (solved once, stickers moved); 1 Skate Wheel (flat spot from a power slide). Weight 73.3 lb. Contents may have settled.",
+ "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 1 9999-in-1 Handheld (HI SCORE 00000); 2 Disposable Cameras (27 exposures of a thumb); 1 Flip Phone (ringtone composed by hand); 1 Puzzle Cube (solved once, stickers moved); 1 Skate Wheel (flat spot from a power slide). Weight 73.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0337.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

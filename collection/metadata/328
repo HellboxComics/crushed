@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0328",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Foam Headphones (one ear works if you hold it); 1 Cassette Tape (someone's voicemail greeting); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Army Man Squad (melted with a magnifying glass). Weight 35.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Foam Headphones (one ear works if you hold it); 1 Cassette Tape (Maxhell, the one that blew your hair back); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Army Man Squad (melted with a magnifying glass). Weight 35.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0328.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

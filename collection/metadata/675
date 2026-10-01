@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0675",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 2 Laptop Chargers (warm to the touch, somehow); 3 Energy Drinks (third one that night); 1 Disposable Camera (never developed); 3 MP3 Players (128MB, 30 songs, 29 skipped). Weight 28.8 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Ed Hardy-ish Cologne. Contents (partial): 3 TV Remotes (held together with tape); 2 Laptop Chargers (warm to the touch, somehow); 3 Energy Drinks (third one that night); 1 Disposable Camera (never developed); 3 MP3 Players (128MB, 30 songs, 29 skipped). Weight 28.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0675.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Ed Hardy-ish Cologne"
   },
   {
    "trait_type": "Recovered From",

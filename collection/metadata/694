@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0694",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Laptop Charger (fits nothing else in the house); 1 Scratch Ticket (not a winner); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Game Controllers (thrown during a boss fight). Weight 25.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Mom's Minivan. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Laptop Charger (fits nothing else in the house); 1 Scratch Ticket (not a winner); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Game Controllers (thrown during a boss fight). Weight 25.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0694.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

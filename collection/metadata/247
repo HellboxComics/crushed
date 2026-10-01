@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0247",
- "description": "Recovered from Behind the Bar. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Ball Mouse (ball removed as a prank); 2 Power Strips (overloaded on purpose); 2 Clear Lighters (out of fluid); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 79.3 lb. Contents may have settled.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Gak-ish. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Ball Mouse (ball removed as a prank); 2 Power Strips (overloaded on purpose); 2 Clear Lighters (out of fluid); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 79.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0247.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Gak-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Spencer's-ish Back Room"
   },
   {
    "trait_type": "Tape",

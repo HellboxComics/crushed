@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0125",
- "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (untied since 1989); 3 VHS Tapes (taped over a wedding); 3 Poker Chips (a stack of ambition); 1 Film Canister (holds one quarter); 1 Calculator (solar panel covered by a sticker). Weight 79.8 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like body spray cloud. Contents (partial): 3 Sneakers (untied since 1989); 3 VHS Tapes (taped over a wedding); 3 Poker Chips (a stack of ambition); 1 Film Canister (holds one quarter); 1 Calculator (solar panel covered by a sticker). Weight 79.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0125.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",

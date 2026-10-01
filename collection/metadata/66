@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0066",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Boom Box (one speaker still believes); 2 Floppy Disks (save icon, but real); 2 Cheap Sunglasses (one lens popped out); 2 Three-Ring Binders (covered in band names); 2 Power Strips (daisy-chained into three more). Weight 85.1 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 1 Boom Box (one speaker still believes); 2 Floppy Disks (Iomegalodon would have held it all); 2 Cheap Sunglasses (one lens popped out); 2 Three-Ring Binders (covered in band names); 2 Power Strips (daisy-chained into three more). Weight 85.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0066.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",

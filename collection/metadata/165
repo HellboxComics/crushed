@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0165",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 2 Beer Cans (12 of 12); 1 Corded Phone (someone is still on hold); 3 Calculators (spelled BOOBIES upside down); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (DISK 2 of 7); 1 Emergency Ramen (the whole strategy). Weight 79.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Corded Phone (someone is still on hold); 3 Calculators (spelled BOOBIES upside down); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (DISK 2 of 7); 1 Emergency Ramen (the whole strategy). Weight 79.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0165.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Big Red-ish Gum"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

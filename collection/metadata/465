@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0465",
- "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Cheap Sunglasses (mall kiosk special); 1 Memory Card (8MB, full); 1 Pizza Crust (petrified); 3 Power Strips (daisy-chained into three more). Weight 30.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Couch. Smells like Frosted Tips Gel. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Cheap Sunglasses (mall kiosk special); 1 Memory Card (8MB, full); 1 Pizza Crust (petrified); 3 Power Strips (daisy-chained into three more). Weight 30.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0465.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Frosted Tips Gel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

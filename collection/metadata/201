@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0201",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 AA Batteries (mixed old and new, like animals); 2 Soda Cans (flat); 1 9999-in-1 Handheld (HI SCORE 00000); 1 16-Bit Controller (the B button is sticky). Weight 80.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 AA Batteries (Neveready, as advertised); 2 Soda Cans (flat); 1 9999-in-1 Handheld (HI SCORE 00000); 1 16-Bit Controller (the B button is sticky). Weight 80.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0201.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",

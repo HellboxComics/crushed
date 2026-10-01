@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0828",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 2 Smartphones (cracked in the first week); 2 Selfie Sticks (banned at the museum); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ring Light (one bulb out, one ego intact); 1 Earbud Case (survived the wash). Weight 34.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Couch. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Smartphones (Instagrampa open, 900 unread); 2 Selfie Sticks (banned at the museum); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ring Light (one bulb out, one ego intact); 1 Earbud Case (survived the wash). Weight 34.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0828.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hand Sanitizer, Everywhere"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

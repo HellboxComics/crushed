@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0779",
- "description": "Recovered from Garage Sale Free Bin. Smells like cheap cologne. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Selfie Sticks (mid-trip, mid-ocean); 1 VR Headset (worn twice); 2 TV Remotes (the volume button worn smooth); 1 Earbud Case (one bud present). Weight 38.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Moonster and Desperation. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Selfie Sticks (mid-trip, mid-ocean); 1 VR Headset (worn twice); 2 TV Remotes (the volume button worn smooth); 1 Earbud Case (one bud present). Weight 38.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0779.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

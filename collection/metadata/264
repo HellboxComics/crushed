@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0264",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 Pizza Crusts (petrified); 3 Matchbooks (matches missing, reasons unclear); 1 CRT Monitor (weighs more than the desk); 1 Slap Bracelet (banned by the school). Weight 73.0 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 Pizza Crusts (petrified); 3 Matchbooks (matches missing, reasons unclear); 1 CRT Monitor (weighs more than the desk); 1 Slap Bracelet (banned by the school). Weight 73.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0264.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",

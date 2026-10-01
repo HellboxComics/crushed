@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0299",
- "description": "Recovered from Behind the Bar. Smells like body spray cloud. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Skateboard (one ollie, lifetime); 1 Corded Phone (someone is still on hold); 1 Film Canister (holds one quarter); 1 Metal Lunchbox (the smell stays). Weight 35.4 lb. Contents may have settled.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like CK Won. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Skateboard (one ollie, lifetime); 1 Corded Phone (someone is still on hold); 1 Film Canister (holds one quarter); 1 Metal Lunchbox (the smell stays). Weight 35.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0299.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Spencer's-ish Back Room"
   },
   {
    "trait_type": "Tape",

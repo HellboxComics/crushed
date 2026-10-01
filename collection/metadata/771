@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0771",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Soda Cans (flat); 1 VR Headset (worn twice); 2 No. 2 Pencils (chewed); 2 Tablets (bought for the kids, taken back by dad); 1 Drone (flew once, into a tree). Weight 31.4 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Couch. Smells like burnt popcorn. Contents (partial): 2 Soda Cans (flat); 1 VR Headset (worn twice); 2 No. 2 Pencils (chewed); 2 Tablets (bought for the kids, taken back by dad); 1 Drone (flew once, into a tree). Weight 31.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0771.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Burnt Popcorn"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0359",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 1 Sneaker (smells like 1989); 3 Disposable Cameras (never developed); 1 Matchbook (from a gentlemen's club, reportedly); 3 Burned CDs (burned at 1x, 4 hours); 1 Film Canister (undeveloped, forever). Weight 28.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (smells like 1989); 3 Disposable Cameras (never developed); 1 Matchbook (from a gentlemen's club, reportedly); 3 Burned CDs (burned at 1x, 4 hours); 1 Film Canister (undeveloped, forever). Weight 28.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0359.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

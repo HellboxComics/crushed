@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0692",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 3 USB Sticks (never ejected safely); 3 Sneakers (light-up heel, dead); 1 Jewel Case (insert is from a different album); 2 Disposable Cameras (never developed). Weight 26.2 lb. Still heavier than it looks.",
+ "description": "Recovered from A Frat House Couch. Smells like mall food court. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 3 USB Sticks (never ejected safely); 3 Sneakers (light-up heel, dead); 1 Jewel Case (insert is from a different album); 2 Disposable Cameras (never developed). Weight 26.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0692.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0561",
- "description": "Recovered from Garage Sale Free Bin. Smells like Vegas carpet. Contents (partial): 2 Magazines (read for the articles); 1 Poker Chip (never cashed out); 2 Energy Drinks (exam week casualty); 3 AA Batteries (licked to test); 2 Shot Glasses (chipped rim); 1 Broken Rocket (didn't make it). Weight 22.4 lb. Contents may have settled.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Myspace Glitter. Contents (partial): 2 Magazines (read for the articles); 1 Poker Chip (never cashed out); 2 Energy Drinks (Red Bullish, gave it wings, took them back); 3 AA Batteries (licked to test); 2 Shot Glasses (chipped rim); 1 Broken Rocket (didn't make it). Weight 22.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0561.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Myspace Glitter"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

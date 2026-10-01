@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0237",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 2 AA Batteries (taken out of the smoke detector); 1 Poker Chip (a stack of ambition); 3 Burned CDs (says ROAD TRIP in marker); 1 Boom Box (took 10 D batteries). Weight 48.3 lb. Some assembly was removed.",
+ "description": "Recovered from Estate of a Collector. Smells like CK Won. Contents (partial): 1 VHS Tape (Blockbusted rental, never returned); 2 AA Batteries (mixed old and new, like animals); 1 Poker Chip (a stack of ambition); 3 Burned CDs (says ROAD TRIP in marker); 1 Boom Box (took 10 D batteries). Weight 48.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0237.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

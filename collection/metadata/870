@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0870",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Sneakers (was in the dryer); 1 No. 2 Pencil (chewed); 1 Pizza Crust (found behind the couch); 2 Tablets (bought for the kids, taken back by dad). Weight 35.8 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Sneakers (was in the dryer); 1 No. 2 Pencil (chewed); 1 Pizza Crust (found behind the couch); 2 Tablets (bought for the kids, taken back by dad). Weight 35.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0870.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

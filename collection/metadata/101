@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0101",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 No. 2 Pencil (chewed); 2 Yo-Yos (walked the dog one time); 3 Floppy Disks (DISK 2 of 7); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 72.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like Drakkar Noire-ish. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 No. 2 Pencil (chewed); 2 Yo-Yos (walked the dog one time); 3 Floppy Disks (DISK 2 of 7); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 72.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0101.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Drakkar Noire-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

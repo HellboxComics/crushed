@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0558",
- "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Webcam (240p of pure confidence); 1 Pizza Crust (found behind the couch); 1 Glow Stick (still glowing a little, somehow); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 20.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like Myspace Glitter. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Webcam (240p of pure confidence); 1 Pizza Crust (found behind the couch); 1 Glow Stick (still glowing a little, somehow); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 20.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0558.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Myspace Glitter"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

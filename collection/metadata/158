@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0158",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (save file erased by a sibling); 1 Cheap Sunglasses (one lens popped out); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 43.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (blew on it, Nintendont said no); 1 Cheap Sunglasses (one lens popped out); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 43.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0158.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

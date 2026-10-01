@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0030",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 1 Poker Chip (never cashed out); 1 Cassette Tape (side B only); 2 Calculators (spelled BOOBIES upside down); 2 Roller Skates (the rink smell is still in there). Weight 82.2 lb. We kept the important shit.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like rink snack bar. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 1 Poker Chip (never cashed out); 1 Cassette Tape (side B only); 2 Calculators (spelled BOOBIES upside down); 2 Roller Skates (the rink smell is still in there). Weight 82.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0030.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

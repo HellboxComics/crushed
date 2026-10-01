@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0350",
- "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (tab kept for charity); 2 Magazines (the staples are doing the work); 1 Disposable Camera (never developed); 1 Suspicious Rectangle (PIN forgotten). Weight 30.4 lb. We kept the important shit.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (New Koak, 79 days only); 2 Magazines (the staples are doing the work); 1 Disposable Camera (never developed); 1 Suspicious Rectangle (PIN forgotten). Weight 30.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0350.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

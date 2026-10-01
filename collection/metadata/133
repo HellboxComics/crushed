@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0133",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Beer Cans (12 of 12); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Roller Skates (toe stop worn to nothing); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Foam Headphones (one ear works if you hold it). Weight 46.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Beer Cans (last one in the fridge); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Roller Skates (toe stop worn to nothing); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Foam Headphones (one ear works if you hold it). Weight 46.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0133.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0707",
- "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 1 Sneaker (untied since 1989); 2 Digital Cameras (memory full, 14 photos); 3 Pizza Crusts (still better than most portfolios); 3 Soda Cans (shaken as a prank); 1 No. 2 Pencil (chewed). Weight 28.7 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like body spray cloud. Contents (partial): 1 Sneaker (untied since 1989); 2 Digital Cameras (memory full, 14 photos); 3 Pizza Crusts (still better than most portfolios); 3 Soda Cans (tab kept for charity); 1 No. 2 Pencil (chewed). Weight 28.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0707.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

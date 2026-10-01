@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0143",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 3 Tissue Boxes (nearly empty); 1 Pizza Crust (still better than most portfolios); 3 Game Cartridges (blown into 400 times); 1 Spiral Notebook (spiral unwound halfway). Weight 82.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Couch. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 3 Tissue Boxes (nearly empty); 1 Pizza Crust (still better than most portfolios); 3 Game Cartridges (save file erased by a sibling); 1 Spiral Notebook (spiral unwound halfway). Weight 82.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0143.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0437",
- "description": "Recovered from The Bachelor Pad. Smells like rink snack bar. Contents (partial): 1 TV Remote (held together with tape); 3 Magazines (found in a dad's truck); 1 Spiral Notebook (doodles in the margins); 1 CRT Monitor (screen burn-in reads LOADING); 1 Dice (blown on for luck). Weight 69.5 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Hot Pentium. Contents (partial): 1 TV Remote (held together with tape); 3 Magazines (found in a dad's truck); 1 Spiral Notebook (doodles in the margins); 1 CRT Monitor (screen burn-in reads LOADING); 1 Dice (blown on for luck). Weight 69.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0437.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Hot Pentium"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

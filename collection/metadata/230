@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0230",
- "description": "Recovered from Storage Unit (Auctioned). Smells like rink snack bar. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Power Strip (overloaded on purpose); 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Burned CD (burned at 1x, 4 hours); 2 Ball Mice (cord chewed by a dog). Weight 42.9 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Blockbusted New Release Wall. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Power Strip (overloaded on purpose); 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Burned CD (burned at 1x, 4 hours); 2 Ball Mice (cord chewed by a dog). Weight 42.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0230.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

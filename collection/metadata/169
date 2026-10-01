@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0169",
- "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 2 Beer Cans (12 of 12); 2 Soda Cans (tab kept for charity); 2 No. 2 Pencils (chewed); 3 AA Batteries (mixed old and new, like animals); 1 Magazine (the staples are doing the work). Weight 72.0 lb. We kept the important shit.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like gym bag, forgotten. Contents (partial): 2 Beer Cans (warm, sadly); 2 Soda Cans (Surj, the can that started a fight); 2 No. 2 Pencils (chewed); 3 AA Batteries (Neveready, as advertised); 1 Magazine (the staples are doing the work). Weight 72.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0169.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Tupperware-ish Party"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0067",
- "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 1 CRT Monitor (screen burn-in reads LOADING); 3 Power Strips (daisy-chained into three more); 3 Floppy Disks (contains one (1) virus); 2 Joysticks (suction cups gave up). Weight 81.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like scratch-n-sniff sticker. Contents (partial): 3 Sneakers (untied since 1989); 1 CRT Monitor (screen burn-in reads LOADING); 3 Power Strips (daisy-chained into three more); 3 Floppy Disks (save icon, but real); 2 Joysticks (suction cups gave up). Weight 81.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0067.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

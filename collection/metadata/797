@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0797",
- "description": "Recovered from Behind the Couch. Smells like cheap cologne. Contents (partial): 1 Drone (flew once, into a tree); 3 Smartphones (screen protector did nothing); 1 Face Mask (worn below the nose); 2 Clear Lighters (for incense, obviously); 1 AA Batteries (licked to test). Weight 33.9 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Bar. Smells like Moonster and Desperation. Contents (partial): 1 Drone (flew once, into a tree); 3 Smartphones (1% battery, forever); 1 Face Mask (worn below the nose); 2 Clear Lighters (for incense, obviously); 1 AA Batteries (taken out of the smoke detector). Weight 33.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0797.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

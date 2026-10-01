@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0605",
- "description": "Recovered from Nobody Knows. Smells like cheap cologne. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Flip Phones (12 texts left this month); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Power Strips (daisy-chained into three more); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 30.2 lb. Crushed it.",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like Myspace Glitter. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Flip Phones (12 texts left this month); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Power Strips (daisy-chained into three more); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 30.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0605.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Myspace Glitter"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "An Ebay-ish Box, Never Shipped"
   },
   {
    "trait_type": "Tape",

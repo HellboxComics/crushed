@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0148",
- "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 2 Poker Chips (a stack of ambition); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Toy Slime (stuck in the carpet); 3 Cheap Sunglasses (one lens popped out); 3 Roller Skates (toe stop worn to nothing). Weight 33.4 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like Jean Jacket. Contents (partial): 2 Poker Chips (a stack of ambition); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Toy Slime (stuck in the carpet); 3 Cheap Sunglasses (one lens popped out); 3 Roller Skates (toe stop worn to nothing). Weight 33.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0148.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Jean Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0426",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 3 Beer Cans (warm, sadly); 2 Brick Phones (faceplate swapped 4 times); 1 Game Controller (thrown during a boss fight); 3 Pizza Crusts (petrified); 2 Digital Cameras (memory full, 14 photos). Weight 73.3 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 3 Beer Cans (last one in the fridge); 2 Brick Phones (faceplate swapped 4 times); 1 Game Controller (thrown during a boss fight); 3 Pizza Crusts (petrified); 2 Digital Cameras (memory full, 14 photos). Weight 73.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0426.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

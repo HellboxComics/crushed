@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0432",
- "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Webcam (pointed at the ceiling forever); 2 Flip Phones (12 texts left this month); 1 Skateboard (griptape ate a pair of jeans); 3 Poker Chips (taken from a casino, small heist); 1 Game Controller (thrown during a boss fight). Weight 36.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Dial-Up Modem Heat. Contents (partial): 1 Webcam (pointed at the ceiling forever); 2 Flip Phones (12 texts left this month); 1 Skateboard (griptape ate a pair of jeans); 3 Poker Chips (taken from a casino, small heist); 1 Game Controller (thrown during a boss fight). Weight 36.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0432.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Dial-Up Modem Heat"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

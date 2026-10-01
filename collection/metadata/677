@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0677",
- "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Memory Card (corrupted during a birthday); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Energy Drinks (third one that night); 2 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 32.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 2 Soda Cans (Surj, the can that started a fight); 1 Memory Card (corrupted during a birthday); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Energy Drinks (tastes like a battery); 2 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 32.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0677.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",

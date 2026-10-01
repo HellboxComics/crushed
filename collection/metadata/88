@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0088",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 1 Boom Box (one speaker still believes); 3 Power Strips (daisy-chained into three more); 1 CRT Monitor (degaussed one last time); 3 Floppy Disks (DISK 2 of 7); 3 Cassette Tapes (rewound with a pencil). Weight 92.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Boom Box (one speaker still believes); 3 Power Strips (daisy-chained into three more); 1 CRT Monitor (degaussed one last time); 3 Floppy Disks (DISK 2 of 7); 3 Cassette Tapes (someone's voicemail greeting). Weight 92.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0088.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

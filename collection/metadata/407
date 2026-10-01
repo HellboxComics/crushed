@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0407",
- "description": "Recovered from Behind the Bar. Smells like fresh batteries (licked). Contents (partial): 2 Pagers (clipped to jeans for status only); 3 MP3 Players (shuffle picked the same song 6 times); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Keyboards (Partial) (F, J and the crumbs); 1 Skateboard (one ollie, lifetime). Weight 73.3 lb. Crushed it.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like Dial-Up Modem Heat. Contents (partial): 2 Pagers (clipped to jeans for status only); 3 MP3 Players (shuffle picked the same song 6 times); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Keyboards (Partial) (F, J and the crumbs); 1 Skateboard (one ollie, lifetime). Weight 73.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0407.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Dial-Up Modem Heat"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "A Circuit City-ish Return Counter"
   },
   {
    "trait_type": "Tape",

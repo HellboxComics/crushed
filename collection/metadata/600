@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0600",
- "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Magazine (the staples are doing the work); 3 Glow Sticks (cracked at a school dance); 2 TV Remotes (held together with tape); 2 No. 2 Pencils (chewed). Weight 17.6 lb. Handle with both hands.",
+ "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Magazine (the staples are doing the work); 3 Glow Sticks (cracked at a school dance); 2 TV Remotes (held together with tape); 2 No. 2 Pencils (chewed). Weight 17.6 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0600.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

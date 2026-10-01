@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0254",
- "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 2 Calculators (solar panel covered by a sticker); 2 Skate Wheels (rolled into a storm drain once); 1 Foam Headphones (one ear works if you hold it); 1 AA Batteries (probably dead); 1 Dice (blown on for luck). Weight 64.8 lb. Some assembly was removed.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like cigarette in a jacket. Contents (partial): 2 Calculators (solar panel covered by a sticker); 2 Skate Wheels (rolled into a storm drain once); 1 Foam Headphones (one ear works if you hold it); 1 AA Batteries (licked to test); 1 Dice (blown on for luck). Weight 64.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0254.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

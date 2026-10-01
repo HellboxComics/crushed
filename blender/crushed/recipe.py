@@ -338,8 +338,9 @@ def recipe(token_id):
 
     # -- traits ---------------------------------------------------------------------
     trng = np.random.default_rng([COLLECTION_SEED, token_id, 7])
-    smell = _weighted(trng, lore.SMELLS, cond)
-    recovered = _weighted(trng, lore.RECOVERED, cond)
+    # the era's own rows count double: a 1987 block should smell like 1987
+    smell = _weighted(trng, lore.SMELLS + [(v, w * 2, t) for v, w, t in lore.SMELLS_ERA[era]], cond)
+    recovered = _weighted(trng, lore.RECOVERED + [(v, w * 2, t) for v, w, t in lore.RECOVERED_ERA[era]], cond)
     head_name = lore.NAMES[headliner] if heroes else "Nothing"
     if one:
         s, rf, h = ONE_OF_ONE_FLAVOR[one]

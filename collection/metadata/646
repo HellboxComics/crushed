@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0646",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Magazine (found in a dad's truck); 1 Matchbook (matches missing, reasons unclear); 3 Jewel Cases (hinge broken on arrival); 2 Clear Lighters (for incense, obviously); 2 Power Strips (daisy-chained into three more). Weight 36.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Hot Razr Battery. Contents (partial): 1 Magazine (found in a dad's truck); 1 Matchbook (matches missing, reasons unclear); 3 Jewel Cases (hinge broken on arrival); 2 Clear Lighters (for incense, obviously); 2 Power Strips (daisy-chained into three more). Weight 36.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0646.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0258",
- "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Dice (snake eyes, twice); 3 Three-Ring Binders (covered in band names); 1 Pizza Crust (from a sleepover); 2 Slap Bracelets (cut someone, probably). Weight 87.0 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Blockbusted New Release Wall. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Dice (snake eyes, twice); 3 Three-Ring Binders (covered in band names); 1 Pizza Crust (from a sleepover); 2 Slap Bracelets (cut someone, probably). Weight 87.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0258.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

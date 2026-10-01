@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0209",
- "description": "Recovered from Flooded Basement. Smells like mall food court. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (string tied to a finger for 3 years); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Dice (blown on for luck); 3 Army Man Squads (the one with the radio survived). Weight 79.7 lb. Contents may have settled.",
+ "description": "Recovered from The Mall Arcade. Smells like wet cardboard. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (string tied to a finger for 3 years); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Dice (blown on for luck); 3 Army Man Squads (the one with the radio survived). Weight 79.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0209.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0503",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Virtual Pet (died during math class); 1 AA Batteries (mixed old and new, like animals); 1 Skate Wheel (flat spot from a power slide); 1 Foam Headphones (orange foam, allegedly); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 21.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like blue raspberry. Contents (partial): 1 Virtual Pet (died during math class); 1 AA Batteries (Neveready, as advertised); 1 Skate Wheel (flat spot from a power slide); 1 Foam Headphones (orange foam, allegedly); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 21.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0503.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

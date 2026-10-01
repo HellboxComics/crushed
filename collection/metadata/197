@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0197",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 Shot Glass (chipped rim); 2 Army Man Squads (the one with the radio survived); 1 Burned CD (track 7 skips). Weight 91.6 lb. Crushed it.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 Shot Glass (chipped rim); 2 Army Man Squads (the one with the radio survived); 1 Burned CD (track 7 skips). Weight 91.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0197.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

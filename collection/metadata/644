@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0644",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Magazines (found in a dad's truck); 3 Sneakers (left only); 2 Matchbooks (matches missing, reasons unclear); 3 Handheld Consoles (battery cover lost immediately); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 33.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Magazines (found in a dad's truck); 3 Sneakers (left only); 2 Matchbooks (matches missing, reasons unclear); 3 Handheld Consoles (battery cover lost immediately); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 33.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0644.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

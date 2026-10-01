@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0533",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Cassette Tape (rewound with a pencil); 1 Spiral Notebook (note says 'check YES or NO'); 1 Jewel Case (insert is from a different album); 2 Pizza Crusts (from a sleepover); 1 Film Canister (holds one quarter). Weight 71.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 Cassette Tape (someone's voicemail greeting); 1 Spiral Notebook (note says 'check YES or NO'); 1 Jewel Case (insert is from a different album); 2 Pizza Crusts (from a sleepover); 1 Film Canister (holds one quarter). Weight 71.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0533.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

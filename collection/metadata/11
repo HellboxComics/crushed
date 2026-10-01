@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0011",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Roller Skate (toe stop worn to nothing); 3 Floppy Disks (save icon, but real); 2 Joysticks (suction cups gave up); 2 Beer Cans (warm, sadly); 2 Calculators (solar panel covered by a sticker). Weight 87.7 lb. We kept the important shit.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like new plastic. Contents (partial): 1 Roller Skate (toe stop worn to nothing); 3 Floppy Disks (Iomegalodon would have held it all); 2 Joysticks (suction cups gave up); 2 Beer Cans (last one in the fridge); 2 Calculators (solar panel covered by a sticker). Weight 87.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0011.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

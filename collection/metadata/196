@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0196",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 1 Beer Can (warm, sadly); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Sneakers (worn to one (1) very bad decision); 1 Clear Lighter (borrowed in 1997, never returned). Weight 75.0 lb. Nobody made you keep this.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 VHS Tape (taped over a wedding); 1 Beer Can (Natty Lightweight, 30-rack); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Sneakers (worn to one (1) very bad decision); 1 Clear Lighter (borrowed in 1997, never returned). Weight 75.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0196.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

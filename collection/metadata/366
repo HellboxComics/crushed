@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0366",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 Webcams (240p of pure confidence); 2 TV Remotes (the volume button worn smooth); 1 No. 2 Pencil (sharpened to a nub); 2 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed). Weight 72.5 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Webcams (240p of pure confidence); 2 TV Remotes (the volume button worn smooth); 1 No. 2 Pencil (sharpened to a nub); 2 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed). Weight 72.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0366.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

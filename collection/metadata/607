@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0607",
- "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 2 Energy Drinks (exam week casualty); 2 Shot Glasses (from a trip to Vegas); 1 Clear Lighter (for incense, obviously); 2 Flip Phones (ringtone composed by hand); 2 Sneakers (light-up heel, dead). Weight 76.3 lb. Still heavier than it looks.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Shot Glasses (from a trip to Vegas); 1 Clear Lighter (for incense, obviously); 2 Flip Phones (ringtone composed by hand); 2 Sneakers (light-up heel, dead). Weight 76.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0607.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",

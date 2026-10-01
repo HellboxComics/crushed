@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0542",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Tissue Box (one for every mood); 2 Sneakers (smells like 1989); 1 Pizza Crust (still better than most portfolios); 2 Memory Cards (corrupted during a birthday). Weight 20.2 lb. Some assembly was removed.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Tissue Box (one for every mood); 2 Sneakers (smells like 1989); 1 Pizza Crust (still better than most portfolios); 2 Memory Cards (corrupted during a birthday). Weight 20.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0542.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

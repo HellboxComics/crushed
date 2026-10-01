@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0411",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Cassette Tapes (side B only); 2 Burned CDs (track 7 skips); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Spiral Notebooks (note says 'check YES or NO'); 2 TV Remotes (held together with tape). Weight 33.3 lb. Crushed it.",
+ "description": "Recovered from The Bachelor Pad. Smells like cigarette in a jacket. Contents (partial): 2 Cassette Tapes (side B only); 2 Burned CDs (track 7 skips); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Spiral Notebooks (note says 'check YES or NO'); 2 TV Remotes (held together with tape). Weight 33.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0411.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

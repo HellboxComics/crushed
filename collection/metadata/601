@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0601",
- "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 2 Magazines (read for the articles); 2 Burned CDs (coaster now); 3 AA Batteries (mixed old and new, like animals); 1 Fidget Spinner (banned by the school); 2 Poker Chips (a stack of ambition). Weight 23.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 2 Magazines (read for the articles); 2 Burned CDs (coaster now); 3 AA Batteries (Durasmell, lasted till Christmas noon); 1 Fidget Spinner (banned by the school); 2 Poker Chips (a stack of ambition). Weight 23.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0601.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

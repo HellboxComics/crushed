@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0099",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Cassette Tapes (someone's voicemail greeting); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Roller Skates (the rink smell is still in there); 2 Army Man Squads (the one with the radio survived). Weight 79.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Cassette Tapes (a mix for someone who never listened); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Roller Skates (the rink smell is still in there); 2 Army Man Squads (the one with the radio survived). Weight 79.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0099.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

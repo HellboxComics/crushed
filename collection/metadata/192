@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0192",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like new plastic. Contents (partial): 1 Sneaker (light-up heel, dead); 1 Glow Stick (cracked at a school dance); 1 Game Cartridge (save file erased by a sibling); 1 Clear Lighter (out of fluid); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 70.9 lb. Crushed it.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like new plastic. Contents (partial): 1 Sneaker (light-up heel, dead); 1 Glow Stick (cracked at a school dance); 1 Game Cartridge (rented from Blockbusted, never rewound); 1 Clear Lighter (out of fluid); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 70.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0192.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

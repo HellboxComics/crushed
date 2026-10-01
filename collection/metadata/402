@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0402",
- "description": "Recovered from Mom's Minivan. Smells like hot tub. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 Webcam (240p of pure confidence); 2 Ball Mice (cord chewed by a dog); 3 Centerfolds (folded out, then folded back in a hurry); 2 MP3 Players (shuffle picked the same song 6 times). Weight 22.7 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like Spencer's-ish Gifts Incense. Contents (partial): 2 VHS Tapes (Blockbusted rental, never returned); 1 Webcam (240p of pure confidence); 2 Ball Mice (cord chewed by a dog); 3 Centerfolds (folded out, then folded back in a hurry); 2 MP3 Players (shuffle picked the same song 6 times). Weight 22.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0402.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Tub"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

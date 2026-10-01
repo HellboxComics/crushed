@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0843",
- "description": "Recovered from A Very Specific Ditch. Smells like basement. Contents (partial): 1 Fidget Spinner (bearing went missing); 3 Sneakers (light-up heel, dead); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Selfie Sticks (banned at the museum); 1 Flip Phone (12 texts left this month). Weight 31.9 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like basement. Contents (partial): 1 Fidget Spinner (bearing went missing); 3 Sneakers (light-up heel, dead); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Selfie Sticks (banned at the museum); 1 Flip Phone (12 texts left this month). Weight 31.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0843.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

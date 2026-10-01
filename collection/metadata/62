@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0062",
- "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Puzzle Cubes (solved once, stickers moved); 1 Scratch Ticket (scratched with a house key); 2 VHS Tapes (label says DO NOT TAPE OVER); 1 Yo-Yo (string tied to a finger for 3 years). Weight 48.0 lb. Contents may have settled.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Drakkar Noire-ish. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Puzzle Cubes (solved once, stickers moved); 1 Scratch Ticket (scratched with a house key); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Yo-Yo (string tied to a finger for 3 years). Weight 48.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0062.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Drakkar Noire-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",

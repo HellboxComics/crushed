@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0160",
- "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 1 Magazine (found in a dad's truck); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (mall kiosk special); 1 Toy Slime (stuck in the carpet); 3 TV Remotes (held together with tape). Weight 65.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Arcade Tokens. Contents (partial): 1 Magazine (found in a dad's truck); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (mall kiosk special); 1 Toy Slime (stuck in the carpet); 3 TV Remotes (held together with tape). Weight 65.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0160.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

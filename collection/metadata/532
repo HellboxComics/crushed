@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0532",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like rink snack bar. Contents (partial): 1 Soda Can (tab kept for charity); 2 Pizza Crusts (found behind the couch); 1 Burned CD (says ROAD TRIP in marker); 1 Three-Ring Binder (covered in band names); 2 Spiral Notebooks (doodles in the margins). Weight 77.9 lb. Nobody made you keep this.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Hot Pentium. Contents (partial): 1 Soda Can (New Koak, 79 days only); 2 Pizza Crusts (found behind the couch); 1 Burned CD (says ROAD TRIP in marker); 1 Three-Ring Binder (covered in band names); 2 Spiral Notebooks (doodles in the margins). Weight 77.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0532.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Hot Pentium"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Radio Shacked Clearance Bin"
   },
   {
    "trait_type": "Tape",

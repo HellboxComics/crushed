@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0826",
- "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (mango, mostly); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo). Weight 27.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Ex's Garage. Smells like basement. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo). Weight 27.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0826.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

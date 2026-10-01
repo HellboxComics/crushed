@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0141",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Cassette Tapes (side B only); 1 Floppy Disk (contains one (1) virus); 1 Dice (snake eyes, twice); 1 No. 2 Pencil (never saw a scantron it liked); 1 Gold Coin (bought the top). Weight 77.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like blue raspberry. Contents (partial): 3 TV Remotes (found in the couch); 2 Cassette Tapes (side B only); 1 Floppy Disk (save icon, but real); 1 Dice (snake eyes, twice); 1 No. 2 Pencil (never saw a scantron it liked); 1 Gold Coin (bought the top). Weight 77.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0141.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

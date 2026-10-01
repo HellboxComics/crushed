@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0496",
- "description": "Recovered from Behind the Bar. Smells like arcade carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Flip Phone (snapped shut dramatically); 3 Sneakers (light-up heel, dead); 2 MP3 Players (shuffle picked the same song 6 times); 1 Skateboard (one ollie, lifetime). Weight 79.8 lb. Some assembly was removed.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like blue raspberry. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Flip Phone (snapped shut dramatically); 3 Sneakers (light-up heel, dead); 2 MP3 Players (shuffle picked the same song 6 times); 1 Skateboard (one ollie, lifetime). Weight 79.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0496.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "A Circuit City-ish Return Counter"
   },
   {
    "trait_type": "Tape",

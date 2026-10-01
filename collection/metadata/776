@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0776",
- "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 1 Disposable Camera (never developed); 2 Cheap Sunglasses (mall kiosk special); 3 Pizza Crusts (from a sleepover); 1 Smartphone (cracked in the first week); 1 Earbud Case (one bud present); 1 Broken Rocket (didn't make it). Weight 31.9 lb. Handle with both hands.",
+ "description": "Recovered from Mom's Basement (Again). Smells like gym bag, forgotten. Contents (partial): 1 Disposable Camera (never developed); 2 Cheap Sunglasses (mall kiosk special); 3 Pizza Crusts (from a sleepover); 1 Smartphone (last text: read, no reply); 1 Earbud Case (one bud present); 1 Broken Rocket (didn't make it). Weight 31.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0776.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

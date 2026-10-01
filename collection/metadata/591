@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0591",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Beer Cans (warm, sadly); 3 AA Batteries (licked to test); 2 Centerfolds (left open to the wrong page); 3 Memory Cards (corrupted during a birthday). Weight 71.6 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Beer Cans (Natty Lightweight, 30-rack); 3 AA Batteries (taken out of the smoke detector); 2 Centerfolds (left open to the wrong page); 3 Memory Cards (corrupted during a birthday). Weight 71.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0591.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Ed Hardy-ish Cologne"
   },
   {
    "trait_type": "Recovered From",

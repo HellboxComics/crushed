@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0361",
- "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Sneaker (untied since 1989); 2 Burned CDs (track 7 skips); 3 Cassette Tapes (rewound with a pencil); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 72.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Abercrombie-ish Store Entrance. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Sneaker (untied since 1989); 2 Burned CDs (track 7 skips); 3 Cassette Tapes (someone's voicemail greeting); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 72.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0361.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Abercrombie-ish Store Entrance"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

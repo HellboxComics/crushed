@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0649",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 3 Matchbooks (from a gentlemen's club, reportedly); 2 TV Remotes (held together with tape); 2 Flip Phones (12 texts left this month); 2 No. 2 Pencils (never saw a scantron it liked). Weight 25.0 lb. Nobody made you keep this.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like hot dust on a CRT. Contents (partial): 1 Game Controller (stick drift since day one); 3 Matchbooks (from a gentlemen's club, reportedly); 2 TV Remotes (held together with tape); 2 Flip Phones (12 texts left this month); 2 No. 2 Pencils (never saw a scantron it liked). Weight 25.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0649.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Myspace Top 8 Breakup Box"
   },
   {
    "trait_type": "Tape",

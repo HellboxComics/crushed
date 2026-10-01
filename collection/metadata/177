@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0177",
- "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Poker Chips (taken from a casino, small heist); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Yo-Yos (string tied to a finger for 3 years); 2 VHS Tapes (taped over a wedding). Weight 44.2 lb. Contents may have settled.",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Poker Chips (taken from a casino, small heist); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Yo-Yos (string tied to a finger for 3 years); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 44.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0177.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

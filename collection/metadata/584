@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0584",
- "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 TV Remotes (the volume button worn smooth); 2 Clear Lighters (borrowed in 1997, never returned); 2 Spiral Notebooks (note says 'check YES or NO'); 3 Flip Phones (12 texts left this month); 1 Beer Can (12 of 12). Weight 29.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from School Lost & Found. Smells like Hollister-ish Store Fog. Contents (partial): 3 TV Remotes (the volume button worn smooth); 2 Clear Lighters (borrowed in 1997, never returned); 2 Spiral Notebooks (note says 'check YES or NO'); 3 Flip Phones (12 texts left this month); 1 Beer Can (warm, sadly). Weight 29.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0584.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Hollister-ish Store Fog"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

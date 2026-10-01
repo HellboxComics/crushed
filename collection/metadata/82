@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0082",
- "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 3 Joysticks (suction cups gave up); 3 Puzzle Cubes (solved once, stickers moved); 1 Beer Can (warm, sadly); 3 Roller Skates (the rink smell is still in there); 3 Floppy Disks (DISK 2 of 7). Weight 54.5 lb. Crushed it.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Joysticks (suction cups gave up); 3 Puzzle Cubes (solved once, stickers moved); 1 Beer Can (Milwaukee's Worst, on sale); 3 Roller Skates (the rink smell is still in there); 3 Floppy Disks (says DO NOT FORMAT). Weight 54.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0082.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Behind the Arcade Cabinets"
   },
   {
    "trait_type": "Tape",

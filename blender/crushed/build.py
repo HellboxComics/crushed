@@ -387,6 +387,7 @@ def build(r, res=1024, samples=96, turntable=0, look="studio"):
     glow = {"SCREEN TIME": 3.0, "STILL ALIVE": 2.0}.get(one)
     mat.set_condition(cond, r["clean"][1] if r["clean"] else None, glow=glow)
     tex.SCREENS_ON["on"] = one in ("SCREEN TIME", "STILL ALIVE")
+    tex.ERA["i"] = r.get("era_index")          # the parody shelf stocks the brands of this block's years
     stage.build(sc, rng, res, samples, look=look)
     coll = bpy.data.collections.new("block")
     sc.collection.children.link(coll)

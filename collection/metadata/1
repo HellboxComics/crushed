@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0001",
- "description": "Recovered from Storage Unit (Auctioned). Smells like gym bag, forgotten. Contents (partial): 1 TV Remote (found in the couch); 3 AA Batteries (probably dead); 3 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (someone is still on hold); 1 Three-Ring Binder (covered in band names); 1 Gold Coin (bought the top). Weight 41.6 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like Arcade Tokens. Contents (partial): 1 TV Remote (found in the couch); 3 AA Batteries (licked to test); 3 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (someone is still on hold); 1 Three-Ring Binder (covered in band names); 1 Gold Coin (bought the top). Weight 41.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0001.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

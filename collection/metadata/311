@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0311",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 Portable CD Player (anti-skip lied); 2 Yo-Yos (walked the dog one time); 1 Poker Chip (never cashed out); 1 VHS Tape (taped over a wedding); 3 Foam Headphones (orange foam, allegedly). Weight 39.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Buddy's Basement. Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 Yo-Yos (walked the dog one time); 1 Poker Chip (never cashed out); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Foam Headphones (orange foam, allegedly). Weight 39.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0311.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0744",
- "description": "Recovered from Ex's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Disposable Vapes (zero nicotine, allegedly); 1 Tablet (one thumbprint of juice); 1 Jewel Case (insert is from a different album); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Soda Can (flat). Weight 29.1 lb. Crushed it.",
+ "description": "Recovered from Mom's Basement (Again). Smells like White Paw, Warm. Contents (partial): 2 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Tablet (one thumbprint of juice); 1 Jewel Case (insert is from a different album); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Soda Can (shaken as a prank). Weight 29.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0744.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "White Paw, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

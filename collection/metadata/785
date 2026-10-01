@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0785",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Drone (40 seconds of freedom); 3 No. 2 Pencils (sharpened to a nub); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Clear Lighters (for incense, obviously); 2 Energy Drinks (exam week casualty). Weight 29.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Mom's Minivan. Smells like Prime Time Hype. Contents (partial): 1 Drone (40 seconds of freedom); 3 No. 2 Pencils (sharpened to a nub); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Clear Lighters (for incense, obviously); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 29.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0785.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Prime Time Hype"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

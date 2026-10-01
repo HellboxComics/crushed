@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0170",
- "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Joystick (suction cups gave up); 3 AA Batteries (probably dead); 3 Puzzle Cubes (solved once, stickers moved); 2 Power Strips (daisy-chained into three more); 1 Calculator (solar panel covered by a sticker). Weight 50.3 lb. Crushed it.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Vegas carpet. Contents (partial): 1 Joystick (suction cups gave up); 3 AA Batteries (probably dead); 3 Puzzle Cubes (solved once, stickers moved); 2 Power Strips (daisy-chained into three more); 1 Calculator (solar panel covered by a sticker). Weight 50.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0170.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",

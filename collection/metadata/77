@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0077",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 1 Three-Ring Binder (velcro screams when opened); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 3 Soda Cans (tab kept for charity). Weight 79.0 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 1 Three-Ring Binder (velcro screams when opened); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 3 Soda Cans (Surj, the can that started a fight). Weight 79.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0077.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

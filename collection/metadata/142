@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0142",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (one speaker still believes); 1 Army Man Squad (the one with the radio survived); 3 Film Canisters (holds one quarter); 2 TV Remotes (found in the couch); 2 Poker Chips (a stack of ambition). Weight 51.2 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like arcade carpet. Contents (partial): 1 Boom Box (one speaker still believes); 1 Army Man Squad (the one with the radio survived); 3 Film Canisters (holds one quarter); 2 TV Remotes (found in the couch); 2 Poker Chips (a stack of ambition). Weight 51.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0142.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

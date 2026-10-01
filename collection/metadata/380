@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0380",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 2 Cassette Tapes (a mix for someone who never listened); 2 Sneakers (worn to one (1) very bad decision); 2 Disposable Cameras (27 exposures of a thumb); 1 AA Batteries (probably dead); 2 Burned CDs (track 7 skips). Weight 89.3 lb. Some assembly was removed.",
+ "description": "Recovered from A LAN Party Basement. Smells like arcade carpet. Contents (partial): 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Sneakers (worn to one (1) very bad decision); 2 Disposable Cameras (27 exposures of a thumb); 1 AA Batteries (probably dead); 2 Burned CDs (track 7 skips). Weight 89.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0380.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

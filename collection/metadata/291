@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0291",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Beer Cans (12 of 12); 1 Floppy Disk (contains one (1) virus); 1 Joystick (suction cups gave up); 2 Poker Chips (taken from a casino, small heist). Weight 31.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Beer Cans (12 of 12); 1 Floppy Disk (save icon, but real); 1 Joystick (suction cups gave up); 2 Poker Chips (taken from a casino, small heist). Weight 31.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0291.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Surj Spilled on the Carpet"
   },
   {
    "trait_type": "Recovered From",

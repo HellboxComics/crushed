@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0688",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like scratch-n-sniff sticker. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Digital Cameras (2 megapixels of truth); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Fidget Spinner (banned by the school); 2 Game Controllers (stick drift since day one). Weight 29.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Red Bullish and Regret. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Digital Cameras (2 megapixels of truth); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Fidget Spinner (banned by the school); 2 Game Controllers (stick drift since day one). Weight 29.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0688.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Hot Topic-ish Bag"
   },
   {
    "trait_type": "Tape",

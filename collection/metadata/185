@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0185",
- "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 1 TV Remote (the volume button worn smooth); 2 Yo-Yos (string tied to a finger for 3 years); 1 Spiral Notebook (doodles in the margins); 1 Shot Glass (souvenir of a night nobody recalls); 1 Film Canister (undeveloped, forever); 1 Bear (thriving). Weight 28.0 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Bar. Smells like Blockbusted New Release Wall. Contents (partial): 1 TV Remote (the volume button worn smooth); 2 Yo-Yos (string tied to a finger for 3 years); 1 Spiral Notebook (doodles in the margins); 1 Shot Glass (souvenir of a night nobody recalls); 1 Film Canister (undeveloped, forever); 1 Bear (thriving). Weight 28.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0185.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

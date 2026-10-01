@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0685",
- "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 3 Magazines (the staples are doing the work); 2 Clear Lighters (borrowed in 1997, never returned); 2 Shot Glasses (chipped rim); 1 Spiral Notebook (spiral unwound halfway); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 32.0 lb. We kept the important shit.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Magazines (the staples are doing the work); 2 Clear Lighters (borrowed in 1997, never returned); 2 Shot Glasses (chipped rim); 1 Spiral Notebook (spiral unwound halfway); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 32.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0685.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

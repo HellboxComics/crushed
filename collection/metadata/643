@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0643",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Skate Wheel (flat spot from a power slide); 1 Disposable Vape (mango, mostly); 1 Game Controller (stick drift since day one); 1 Burned CD (track 7 skips). Weight 31.2 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Skate Wheel (flat spot from a power slide); 1 Disposable Vape (mango, mostly); 1 Game Controller (stick drift since day one); 1 Burned CD (track 7 skips). Weight 31.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0643.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

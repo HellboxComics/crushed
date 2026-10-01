@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0583",
- "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Tissue Boxes (one for every mood); 3 Pizza Crusts (petrified); 1 TV Remote (found in the couch); 1 Pager (last page: 911 (it was not)). Weight 21.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Tissue Boxes (one for every mood); 3 Pizza Crusts (petrified); 1 TV Remote (found in the couch); 1 Pager (last page: 911 (it was not)). Weight 21.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0583.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Myspace Glitter"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

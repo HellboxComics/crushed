@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0604",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 3 Energy Drinks (third one that night); 3 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 3 Beer Cans (crushed on a forehead); 3 Clear Lighters (for incense, obviously). Weight 22.2 lb. Contents may have settled.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (third one that night); 3 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 3 Beer Cans (12 of 12); 3 Clear Lighters (for incense, obviously). Weight 22.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0604.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Hot Topic-ish Bag"
   },
   {
    "trait_type": "Tape",

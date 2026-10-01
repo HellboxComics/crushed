@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0073",
- "description": "Recovered from Ex's Garage. Smells like Vegas carpet. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (still better than most portfolios); 1 Shot Glass (souvenir of a night nobody recalls); 1 Power Strip (daisy-chained into three more); 1 Gold Coin (real, probably). Weight 87.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (still better than most portfolios); 1 Shot Glass (souvenir of a night nobody recalls); 1 Power Strip (daisy-chained into three more); 1 Gold Coin (real, probably). Weight 87.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0073.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Tupperware-ish Party"
   },
   {
    "trait_type": "Tape",

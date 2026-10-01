@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0716",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 Face Mask (worn below the nose); 2 Selfie Sticks (banned at the museum); 1 Tissue Box (nearly empty); 2 Clear Lighters (out of fluid); 1 Ring Light (one bulb out, one ego intact). Weight 26.0 lb. Some assembly was removed.",
+ "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 1 Face Mask (worn below the nose); 2 Selfie Sticks (banned at the museum); 1 Tissue Box (nearly empty); 2 Clear Lighters (out of fluid); 1 Ring Light (one bulb out, one ego intact). Weight 26.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0716.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

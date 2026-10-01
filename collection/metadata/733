@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0733",
- "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 1 Drone (over the neighbor's fence); 3 Soda Cans (flat); 1 Dice (loaded, rumor says); 1 Laptop Charger (warm to the touch, somehow); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 32.6 lb. Some assembly was removed.",
+ "description": "Recovered from A Lambo-Shaped Hole. Smells like White Paw, Warm. Contents (partial): 1 Drone (over the neighbor's fence); 3 Soda Cans (shaken as a prank); 1 Dice (loaded, rumor says); 1 Laptop Charger (warm to the touch, somehow); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 32.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0733.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "White Paw, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Lambo-Shaped Hole"
   },
   {
    "trait_type": "Tape",

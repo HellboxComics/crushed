@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0656",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 3 Soda Cans (flat); 3 Memory Cards (corrupted during a birthday); 3 Shot Glasses (souvenir of a night nobody recalls); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (probably dead). Weight 22.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Hollister-ish Store Fog. Contents (partial): 3 Soda Cans (shaken as a prank); 3 Memory Cards (corrupted during a birthday); 3 Shot Glasses (souvenir of a night nobody recalls); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (probably dead). Weight 22.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0656.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Hollister-ish Store Fog"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

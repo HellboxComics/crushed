@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0698",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like gym bag, forgotten. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Pizza Crust (from a sleepover); 1 Jewel Case (insert is from a different album); 3 Power Strips (daisy-chained into three more); 3 Sneakers (light-up heel, dead). Weight 31.3 lb. Handle with both hands.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like Red Bullish and Regret. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Pizza Crust (from a sleepover); 1 Jewel Case (insert is from a different album); 3 Power Strips (daisy-chained into three more); 3 Sneakers (light-up heel, dead). Weight 31.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0698.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "The Ed Hardy-ish Era"
   },
   {
    "trait_type": "Tape",

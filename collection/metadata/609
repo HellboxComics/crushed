@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0609",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 No. 2 Pencil (sharpened to a nub); 2 Shot Glasses (chipped rim); 2 Laptop Chargers (fits nothing else in the house); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 29.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 No. 2 Pencil (sharpened to a nub); 2 Shot Glasses (chipped rim); 2 Laptop Chargers (fits nothing else in the house); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 29.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0609.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

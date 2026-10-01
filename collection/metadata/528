@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0528",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Disposable Camera (never developed); 2 Floppy Disks (DISK 2 of 7); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (the volume button worn smooth); 2 Centerfolds (staples removed, an attempt was made); 1 Tiny Red Candle (lit). Weight 69.8 lb. Handle with both hands.",
+ "description": "Recovered from The Y2K Bunker. Smells like new plastic. Contents (partial): 1 Disposable Camera (never developed); 2 Floppy Disks (DISK 2 of 7); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (the volume button worn smooth); 2 Centerfolds (staples removed, an attempt was made); 1 Tiny Red Candle (lit). Weight 69.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0528.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "The Y2K Bunker"
   },
   {
    "trait_type": "Tape",

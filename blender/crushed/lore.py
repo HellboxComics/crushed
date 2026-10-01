@@ -225,6 +225,17 @@ NOTES["cassette"] += ["a mix for someone who never listened"]
 NOTES["vhs"] += ["the unmarked one, from the back of the closet"]
 NOTES["pager"] += ["last page from a number nobody called back"]
 NOTES["lighter"] += ["borrowed in 1997, never returned"]
+# the brands, parodied, in the inventory too
+NOTES["cassette"] += ["Maxhell, the one that blew your hair back", "TDKay SA-90, the good tape"]
+NOTES["vhs"] += ["Blockbusted rental, never returned", "taped off HBOH, commercials and all"]
+NOTES["floppy"] += ["AOHell trial, 500 free hours", "Iomegalodon would have held it all"]
+NOTES["soda_can"] += ["Crystal Peppy, discontinued for a reason", "Surj, the can that started a fight", "New Koak, 79 days only"]
+NOTES["energy_can"] += ["Jolted, twice the caffeine", "Red Bullish, gave it wings, took them back", "Moonster, the whole case"]
+NOTES["beer_can"] += ["Natty Lightweight, 30-rack", "Milwaukee's Worst, on sale", "PBJ, the hipster one"]
+NOTES["aa_batteries"] += ["Durasmell, lasted till Christmas noon", "Neveready, as advertised"]
+NOTES["vape"] += ["Puff Barf, Banana Regret flavor", "Jool pod, found in a gym bag"]
+NOTES["game_cart"] += ["blew on it, Nintendont said no", "rented from Blockbusted, never rewound"]
+NOTES["smartphone"] += ["Instagrampa open, 900 unread", "Venmoan request: 'gas money'"]
 
 SMELLS = [
     # (value, weight, conditions it prefers)
@@ -276,6 +287,38 @@ RECOVERED = [
     ("Behind the Bar", 3, ()),
     ("Nobody Knows", 1, ()),
 ]
+
+# the times, by era: the smells and the places of those exact years, with the brands parodied.
+# Each era's rows are added to the shared ones above when a block from that era is dealt its traits.
+SMELLS_ERA = {
+    0: [("Aqua Not-Net Hairspray", 7, ()), ("Drakkar Noire-ish", 6, ()), ("Big Red-ish Gum", 5, ()),
+        ("Smoke-Filled Bowling Alley", 6, ()), ("Arcade Tokens", 6, ()), ("Jean Jacket", 5, ()),
+        ("Cabbage Patch Plastic", 4, ()), ("Pizza Hut-ish Book It! Night", 4, ()), ("New Koak", 2, ())],
+    1: [("Bath & Body Works-ish Cucumber Melon", 7, ()), ("Surj Spilled on the Carpet", 6, ()),
+        ("CK Won", 5, ()), ("Lunchables-ish Crackers", 5, ()), ("Blockbusted New Release Wall", 7, ()),
+        ("Gak-ish", 4, ()), ("Grunge Flannel", 5, ()), ("Crystal Peppy", 2, ())],
+    2: [("Ax-ish Body Spray, Entire Can", 8, ()), ("Dial-Up Modem Heat", 6, ()), ("Frosted Tips Gel", 6, ()),
+        ("Abercrombie-ish Store Entrance", 6, ()), ("Hot Pentium", 5, ()), ("Y2K Bunker Canned Food", 4, ()),
+        ("Ballz Energy", 3, ()), ("Spencer's-ish Gifts Incense", 4, ())],
+    3: [("Juicy Couture-ish Tracksuit", 6, ()), ("Hot Razr Battery", 6, ()), ("Hollister-ish Store Fog", 6, ()),
+        ("Red Bullish and Regret", 6, ()), ("Ed Hardy-ish Cologne", 5, ()), ("Myspace Glitter", 4, ()),
+        ("Smirkoff Ice, Warm", 4, ()), ("Guitar Hero-ish Plastic", 4, ())],
+    4: [("Vape Cloud, Blue Razz Ice", 8, ()), ("Hand Sanitizer, Everywhere", 6, ()), ("Ring Light Heat", 5, ()),
+        ("White Paw, Warm", 5, ()), ("Prime Time Hype", 4, ()), ("Fidget Spinner Bearings", 4, ()),
+        ("Moonster and Desperation", 6, ()), ("DoorDashed Fries, Cold", 5, ())],
+}
+RECOVERED_ERA = {
+    0: [("A Blockbusted Drop Box", 5, ()), ("The Roller Rink Coat Check", 6, ()), ("A Waldenbooks-ish Bargain Bin", 4, ()),
+        ("Dad's Camaro Trunk", 6, ()), ("A Tupperware-ish Party", 3, ()), ("Behind the Arcade Cabinets", 6, ())],
+    1: [("The Mall Arcade", 7, ()), ("A Blockbusted Return Slot", 6, ()), ("A Sleepover, Never Picked Up", 6, ()),
+        ("Lollapaloser Lost & Found", 3, ()), ("A Columbia House-ish Box, Unopened", 4, ()), ("Spencer's-ish Back Room", 4, ())],
+    2: [("A LAN Party Basement", 7, ()), ("The Y2K Bunker", 5, ()), ("A Radio Shacked Clearance Bin", 6, ()),
+        ("An AOHell CD Pile", 6, ()), ("Napstered Dorm Room", 5, ()), ("A Circuit City-ish Return Counter", 4, ())],
+    3: [("A Myspace Top 8 Breakup Box", 5, ()), ("A Blackberried Office Drawer", 5, ()), ("A Hot Topic-ish Bag", 5, ()),
+        ("The Ed Hardy-ish Era", 4, ()), ("A Frat House Couch", 6, ()), ("An Ebay-ish Box, Never Shipped", 4, ())],
+    4: [("An Amazon Basically Return Pile", 6, ()), ("A DoorDashed Doorstep", 5, ()), ("A Crypto Bro's Garage", 6, ()),
+        ("A Lambo-Shaped Hole", 3, ()), ("A WeWork-ish Desk, Abandoned", 4, ()), ("Mom's Basement (Again)", 6, ())],
+}
 
 PRESSURE = [  # by crush intensity, the collection gets progressively more fucked up
     (0.66, "Firm Handshake"),
@@ -343,6 +386,8 @@ def plural(name):
 
 
 def smells_like(smell):
+    if any(smell == r[0] for rows in SMELLS_ERA.values() for r in rows):
+        return "Smells like " + smell + "."          # brand names keep their capitals
     if smell == "Don't":
         return "Do not smell it."
     if smell == "Nothing":

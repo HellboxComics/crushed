@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0632",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 Sneakers (was in the dryer); 1 Magazine (read for the articles); 3 Laptop Chargers (fits nothing else in the house); 2 Disposable Cameras (never developed); 2 AA Batteries (taken out of the smoke detector). Weight 70.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like Red Bullish and Regret. Contents (partial): 2 Sneakers (was in the dryer); 1 Magazine (read for the articles); 3 Laptop Chargers (fits nothing else in the house); 2 Disposable Cameras (never developed); 2 AA Batteries (mixed old and new, like animals). Weight 70.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0632.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",

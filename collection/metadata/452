@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0452",
- "description": "Recovered from Ex's Garage. Smells like cheap cologne. Contents (partial): 1 Tissue Box (nearly empty); 1 Memory Card (corrupted during a birthday); 1 No. 2 Pencil (chewed); 1 TV Remote (held together with tape); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 75.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Tissue Box (nearly empty); 1 Memory Card (corrupted during a birthday); 1 No. 2 Pencil (chewed); 1 TV Remote (held together with tape); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 75.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0452.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Napstered Dorm Room"
   },
   {
    "trait_type": "Tape",

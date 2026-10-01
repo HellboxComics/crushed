@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0462",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Film Canisters (holds one quarter); 3 AA Batteries (probably dead); 1 Shot Glass (souvenir of a night nobody recalls); 1 Skateboard (griptape ate a pair of jeans). Weight 73.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Napstered Dorm Room. Smells like mall food court. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Film Canisters (holds one quarter); 3 AA Batteries (licked to test); 1 Shot Glass (souvenir of a night nobody recalls); 1 Skateboard (griptape ate a pair of jeans). Weight 73.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0462.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Napstered Dorm Room"
   },
   {
    "trait_type": "Tape",

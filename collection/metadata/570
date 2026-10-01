@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0570",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 Beer Can (12 of 12); 1 Clear Lighter (borrowed in 1997, never returned); 1 Centerfold (left open to the wrong page); 1 Flip Phone (ringtone composed by hand); 1 Bluetooth Speaker (played one song, too loud). Weight 24.6 lb. Some assembly was removed.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like scratch-n-sniff sticker. Contents (partial): 1 Beer Can (warm, sadly); 1 Clear Lighter (borrowed in 1997, never returned); 1 Centerfold (left open to the wrong page); 1 Flip Phone (ringtone composed by hand); 1 Bluetooth Speaker (played one song, too loud). Weight 24.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0570.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A Myspace Top 8 Breakup Box"
   },
   {
    "trait_type": "Tape",

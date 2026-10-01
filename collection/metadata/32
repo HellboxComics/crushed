@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0032",
- "description": "Recovered from A Very Specific Ditch. Smells like Vegas carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 2 Film Canisters (holds one quarter); 2 TV Remotes (held together with tape); 3 Magazines (for the interviews, obviously). Weight 67.2 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like New Koak. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 2 Film Canisters (holds one quarter); 2 TV Remotes (held together with tape); 3 Magazines (for the interviews, obviously). Weight 67.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0032.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "New Koak"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",

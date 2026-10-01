@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0168",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 TV Remote (held together with tape); 3 Sneakers (worn to one (1) very bad decision); 2 Army Man Squads (melted with a magnifying glass); 2 Joysticks (suction cups gave up); 1 Poker Chip (a stack of ambition). Weight 40.1 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 TV Remote (held together with tape); 3 Sneakers (worn to one (1) very bad decision); 2 Army Man Squads (melted with a magnifying glass); 2 Joysticks (suction cups gave up); 1 Poker Chip (a stack of ambition). Weight 40.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0168.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

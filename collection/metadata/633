@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0633",
- "description": "Recovered from Under the Bed. Smells like cigarette in a jacket. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Disposable Cameras (never developed); 3 Memory Cards (corrupted during a birthday); 3 Sneakers (was in the dryer); 2 TV Remotes (found in the couch). Weight 29.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Back of the Closet. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Disposable Cameras (never developed); 3 Memory Cards (corrupted during a birthday); 3 Sneakers (was in the dryer); 2 TV Remotes (found in the couch). Weight 29.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0633.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

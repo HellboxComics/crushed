@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0501",
- "description": "Recovered from Behind the Couch. Smells like cheap cologne. Contents (partial): 1 Game Controller (stick drift since day one); 1 AA Batteries (mixed old and new, like animals); 3 Magazines (found in a dad's truck); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Webcam (240p of pure confidence). Weight 46.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A LAN Party Basement. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Game Controller (stick drift since day one); 1 AA Batteries (Neveready, as advertised); 3 Magazines (found in a dad's truck); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Webcam (240p of pure confidence). Weight 46.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0501.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

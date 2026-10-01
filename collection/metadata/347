@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0347",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Puzzle Cube (two stickers peeled); 2 Jewel Cases (insert is from a different album); 1 AA Batteries (taken out of the smoke detector); 1 Slap Bracelet (banned by the school). Weight 68.5 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Puzzle Cube (two stickers peeled); 2 Jewel Cases (insert is from a different album); 1 AA Batteries (mixed old and new, like animals); 1 Slap Bracelet (banned by the school). Weight 68.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0347.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0236",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 1 Puzzle Cube (two stickers peeled); 2 Slap Bracelets (cut someone, probably); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries). Weight 94.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 3 TV Remotes (held together with tape); 1 Puzzle Cube (two stickers peeled); 2 Slap Bracelets (cut someone, probably); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries). Weight 94.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0236.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

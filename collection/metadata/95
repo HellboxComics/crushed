@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0095",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT); 1 Bear (thriving). Weight 84.8 lb. Handle with both hands.",
+ "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (the unmarked one, from the back of the closet); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT); 1 Bear (thriving). Weight 84.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0095.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

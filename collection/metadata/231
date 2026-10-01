@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0231",
- "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (taped over a wedding); 1 Spiral Notebook (note says 'check YES or NO'); 3 Army Man Squads (melted with a magnifying glass); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 43.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (taped over a wedding); 1 Spiral Notebook (note says 'check YES or NO'); 3 Army Man Squads (melted with a magnifying glass); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 43.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0231.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

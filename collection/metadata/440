@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0440",
- "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Scratch Ticket ($2 for hope); 2 Film Canisters (undeveloped, forever); 1 Magazine (for the interviews, obviously); 1 CRT Monitor (weighs more than the desk); 1 Paper Hand (sold at the bottom). Weight 82.7 lb. Handle with both hands.",
+ "description": "Recovered from Estate of a Collector. Smells like Ballz Energy. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Scratch Ticket ($2 for hope); 2 Film Canisters (undeveloped, forever); 1 Magazine (for the interviews, obviously); 1 CRT Monitor (weighs more than the desk); 1 Paper Hand (sold at the bottom). Weight 82.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0440.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Ballz Energy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

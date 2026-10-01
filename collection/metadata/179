@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0179",
- "description": "Recovered from A Very Specific Ditch. Smells like cigarette in a jacket. Contents (partial): 2 Pagers (last page: 143); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Floppy Disks (save icon, but real); 1 Corded Phone (was on the line when mom picked up); 1 Game Controller (stick drift since day one). Weight 83.8 lb. Crushed it.",
+ "description": "Recovered from The Mall Arcade. Smells like Grunge Flannel. Contents (partial): 2 Pagers (last page: 143); 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Floppy Disks (Iomegalodon would have held it all); 1 Corded Phone (was on the line when mom picked up); 1 Game Controller (stick drift since day one). Weight 83.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0179.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Grunge Flannel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

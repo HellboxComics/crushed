@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0186",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Sneakers (smells like 1989); 2 Game Cartridges (blown into 400 times); 1 Matchbook (matches missing, reasons unclear); 1 Floppy Disk (contains one (1) virus). Weight 32.8 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Sneakers (smells like 1989); 2 Game Cartridges (save file erased by a sibling); 1 Matchbook (matches missing, reasons unclear); 1 Floppy Disk (AOHell trial, 500 free hours). Weight 32.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0186.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

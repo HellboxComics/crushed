@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0137",
- "description": "Recovered from Mom's Minivan. Smells like cigarette in a jacket. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Scratch Ticket (scratched with a house key); 2 Film Canisters (undeveloped, forever); 3 Puzzle Cubes (solved once, stickers moved); 2 Pizza Crusts (found behind the couch). Weight 48.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Scratch Ticket (scratched with a house key); 2 Film Canisters (undeveloped, forever); 3 Puzzle Cubes (solved once, stickers moved); 2 Pizza Crusts (found behind the couch). Weight 48.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0137.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

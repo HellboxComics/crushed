@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0435",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 Foam Headphones (one ear works if you hold it); 1 No. 2 Pencil (never saw a scantron it liked); 1 Centerfold (folded out, then folded back in a hurry); 1 VHS Tape (late fees now exceed GDP of a small nation). Weight 31.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 Foam Headphones (one ear works if you hold it); 1 No. 2 Pencil (never saw a scantron it liked); 1 Centerfold (folded out, then folded back in a hurry); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 31.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0435.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

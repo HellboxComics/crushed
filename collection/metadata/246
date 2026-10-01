@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0246",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 1 Portable CD Player (45-second buffer, 2-second attention span); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Dice (snake eyes, twice); 1 Soda Can (shaken as a prank). Weight 41.0 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 1 Portable CD Player (45-second buffer, 2-second attention span); 3 Cassette Tapes (labeled MIX 4 U); 1 Dice (snake eyes, twice); 1 Soda Can (tab kept for charity). Weight 41.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0246.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

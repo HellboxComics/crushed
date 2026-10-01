@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0423",
- "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 MP3 Player (shuffle picked the same song 6 times); 1 Calculator (solar panel covered by a sticker); 1 Burned CD (coaster now); 1 Ball Mouse (cord chewed by a dog). Weight 36.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 MP3 Player (shuffle picked the same song 6 times); 1 Calculator (solar panel covered by a sticker); 1 Burned CD (coaster now); 1 Ball Mouse (cord chewed by a dog). Weight 36.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0423.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

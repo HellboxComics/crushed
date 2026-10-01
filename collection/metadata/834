@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0834",
- "description": "Recovered from A Very Specific Ditch. Smells like Grandma's couch. Contents (partial): 1 Sneaker (untied since 1989); 1 Pizza Crust (from a sleepover); 1 Disposable Vape (zero nicotine, allegedly); 2 Clear Lighters (borrowed in 1997, never returned); 2 AA Batteries (mixed old and new, like animals). Weight 35.4 lb. Some assembly was removed.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Sneaker (untied since 1989); 1 Pizza Crust (from a sleepover); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 2 Clear Lighters (borrowed in 1997, never returned); 2 AA Batteries (Neveready, as advertised). Weight 35.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0834.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

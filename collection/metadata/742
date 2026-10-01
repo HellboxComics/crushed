@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0742",
- "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Power Strips (daisy-chained into three more); 1 Tablet (used once as a cutting board); 1 Drone (40 seconds of freedom); 2 Pizza Crusts (petrified). Weight 30.4 lb. Contents may have settled.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Power Strips (daisy-chained into three more); 1 Tablet (used once as a cutting board); 1 Drone (40 seconds of freedom); 2 Pizza Crusts (petrified). Weight 30.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0742.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hand Sanitizer, Everywhere"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Crypto Bro's Garage"
   },
   {
    "trait_type": "Tape",

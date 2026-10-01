@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0888",
- "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 1 Disposable Vape (mango, mostly); 1 Handheld Console (screen scratched from a pocket with keys); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (souvenir of a night nobody recalls); 3 Cheap Sunglasses (mall kiosk special). Weight 38.0 lb. Crushed it.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Fidget Spinner Bearings. Contents (partial): 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Handheld Console (screen scratched from a pocket with keys); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (souvenir of a night nobody recalls); 3 Cheap Sunglasses (mall kiosk special). Weight 38.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0888.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Fidget Spinner Bearings"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

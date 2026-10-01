@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0005",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (from a gentlemen's club, reportedly); 3 AA Batteries (taken out of the smoke detector); 2 Game Cartridges (blown into 400 times); 2 Keyboards (Partial) (F, J and the crumbs). Weight 84.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (from a gentlemen's club, reportedly); 3 AA Batteries (mixed old and new, like animals); 2 Game Cartridges (blown into 400 times); 2 Keyboards (Partial) (F, J and the crumbs). Weight 84.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0005.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

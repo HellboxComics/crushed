@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0345",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (one lens popped out); 2 AA Batteries (probably dead); 1 16-Bit Controller (the B button is sticky); 3 Game Cartridges (save file erased by a sibling). Weight 71.7 lb. Contents may have settled.",
+ "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (one lens popped out); 2 AA Batteries (probably dead); 1 16-Bit Controller (the B button is sticky); 3 Game Cartridges (blew on it, Nintendont said no). Weight 71.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0345.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

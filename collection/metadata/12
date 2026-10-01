@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0012",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 CRT Monitor (degaussed one last time); 1 Tissue Box (one for every mood); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom). Weight 76.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Drakkar Noire-ish. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 1 CRT Monitor (degaussed one last time); 1 Tissue Box (one for every mood); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom). Weight 76.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0012.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Drakkar Noire-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

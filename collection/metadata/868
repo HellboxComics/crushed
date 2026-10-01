@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0868",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Beer Can (last one in the fridge); 3 Tissue Boxes (nearly empty); 1 VR Headset (worn twice); 3 TV Remotes (held together with tape); 3 Selfie Sticks (the person holding it is not in the photo). Weight 39.5 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Science Wing. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 Beer Can (PBJ, the hipster one); 3 Tissue Boxes (nearly empty); 1 VR Headset (worn twice); 3 TV Remotes (held together with tape); 3 Selfie Sticks (the person holding it is not in the photo). Weight 39.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0868.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Hand Sanitizer, Everywhere"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Behind the Science Wing"
   },
   {
    "trait_type": "Tape",

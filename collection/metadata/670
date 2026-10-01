@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0670",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Matchbooks (from a gentlemen's club, reportedly); 1 No. 2 Pencil (chewed); 2 Magazines (read for the articles); 2 Energy Drinks (third one that night); 1 Diamond (held through everything). Weight 24.8 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Matchbooks (from a gentlemen's club, reportedly); 1 No. 2 Pencil (chewed); 2 Magazines (read for the articles); 2 Energy Drinks (third one that night); 1 Diamond (held through everything). Weight 24.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0670.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

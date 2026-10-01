@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0757",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Disposable Vapes (mango, mostly); 2 Game Controllers (thrown during a boss fight); 1 Fidget Spinner (bearing went missing); 3 Laptop Chargers (fits nothing else in the house); 3 Beer Cans (last one in the fridge); 1 Emergency Ramen (for emergencies). Weight 37.7 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Disposable Vapes (zero nicotine, allegedly); 2 Game Controllers (thrown during a boss fight); 1 Fidget Spinner (bearing went missing); 3 Laptop Chargers (fits nothing else in the house); 3 Beer Cans (PBJ, the hipster one); 1 Emergency Ramen (for emergencies). Weight 37.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0757.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

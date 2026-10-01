@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0495",
- "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 1 Disposable Camera (never developed); 2 Shot Glasses (from a trip to Vegas); 2 Foam Headphones (orange foam, allegedly); 1 Digital Camera (memory full, 14 photos); 3 Burned CDs (coaster now). Weight 71.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Y2K Bunker. Smells like fresh batteries (licked). Contents (partial): 1 Disposable Camera (never developed); 2 Shot Glasses (from a trip to Vegas); 2 Foam Headphones (orange foam, allegedly); 1 Digital Camera (memory full, 14 photos); 3 Burned CDs (coaster now). Weight 71.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0495.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Y2K Bunker"
   },
   {
    "trait_type": "Tape",

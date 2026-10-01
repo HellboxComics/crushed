@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0106",
- "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 No. 2 Pencils (never saw a scantron it liked); 3 Cheap Sunglasses (one lens popped out); 1 Pager (last page from a number nobody called back); 1 Corded Phone (was on the line when mom picked up). Weight 84.0 lb. Crushed it.",
+ "description": "Recovered from Nobody Knows. Smells like basement. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 No. 2 Pencils (never saw a scantron it liked); 3 Cheap Sunglasses (one lens popped out); 1 Pager (last page from a number nobody called back); 1 Corded Phone (was on the line when mom picked up). Weight 84.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0106.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "Nobody Knows"
   },
   {
    "trait_type": "Tape",

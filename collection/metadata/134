@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0134",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Magazines (found in a dad's truck); 3 Calculators (spelled BOOBIES upside down); 1 No. 2 Pencil (chewed); 2 Pizza Crusts (found behind the couch). Weight 78.3 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Magazines (found in a dad's truck); 3 Calculators (spelled BOOBIES upside down); 1 No. 2 Pencil (chewed); 2 Pizza Crusts (found behind the couch). Weight 78.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0134.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0853",
- "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 1 Drone (40 seconds of freedom); 3 Soda Cans (flat); 1 AA Batteries (mixed old and new, like animals); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Disposable Vapes (zero nicotine, allegedly). Weight 27.5 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Drone (40 seconds of freedom); 3 Soda Cans (flat); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Disposable Vapes (Jool pod, found in a gym bag). Weight 27.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0853.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "DoorDashed Fries, Cold"
   },
   {
    "trait_type": "Recovered From",

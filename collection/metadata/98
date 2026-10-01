@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0098",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Centerfolds (folded out, then folded back in a hurry); 3 Shot Glasses (souvenir of a night nobody recalls); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Roller Skates (the rink smell is still in there). Weight 51.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Centerfolds (folded out, then folded back in a hurry); 3 Shot Glasses (souvenir of a night nobody recalls); 2 Cassette Tapes (labeled MIX 4 U); 2 Roller Skates (the rink smell is still in there). Weight 51.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0098.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0044",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 Sneakers (smells like 1989); 2 Three-Ring Binders (velcro screams when opened); 2 Game Cartridges (save file erased by a sibling); 1 Tissue Box (nearly empty); 1 Burned CD (coaster now). Weight 50.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 3 Sneakers (smells like 1989); 2 Three-Ring Binders (velcro screams when opened); 2 Game Cartridges (rented from Blockbusted, never rewound); 1 Tissue Box (nearly empty); 1 Burned CD (coaster now). Weight 50.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0044.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

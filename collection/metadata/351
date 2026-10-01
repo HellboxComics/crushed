@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0351",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 1 Cassette Tape (someone's voicemail greeting); 2 AA Batteries (taken out of the smoke detector); 2 Ball Mice (cord chewed by a dog); 2 Disposable Cameras (27 exposures of a thumb). Weight 42.3 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 AA Batteries (mixed old and new, like animals); 2 Ball Mice (cord chewed by a dog); 2 Disposable Cameras (27 exposures of a thumb). Weight 42.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0351.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",

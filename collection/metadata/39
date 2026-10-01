@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0039",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Calculators (spelled BOOBIES upside down); 1 Foam Headphones (one ear works if you hold it); 3 AA Batteries (licked to test). Weight 38.5 lb. Contents may have settled.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 VHS Tapes (Blockbusted rental, never returned); 2 Calculators (spelled BOOBIES upside down); 1 Foam Headphones (one ear works if you hold it); 3 AA Batteries (taken out of the smoke detector). Weight 38.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0039.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",

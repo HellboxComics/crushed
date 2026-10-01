@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0734",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (exam week casualty). Weight 42.5 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like Prime Time Hype. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (Moonster, the whole case). Weight 42.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0734.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Prime Time Hype"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

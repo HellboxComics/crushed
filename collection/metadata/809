@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0809",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 VR Headset (worn twice); 1 Dice (snake eyes, twice); 1 Poker Chip (a stack of ambition); 2 Sneakers (left only); 2 Soda Cans (flat). Weight 26.2 lb. Handle with both hands.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 1 VR Headset (worn twice); 1 Dice (snake eyes, twice); 1 Poker Chip (a stack of ambition); 2 Sneakers (left only); 2 Soda Cans (flat). Weight 26.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0809.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

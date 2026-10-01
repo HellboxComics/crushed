@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0211",
- "description": "Recovered from A Buddy's Basement. Smells like body spray cloud. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 VHS Tapes (taped over a wedding); 1 Joystick (fire button pressed 40 million times); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Pizza Crust (petrified). Weight 72.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like CK Won. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Joystick (fire button pressed 40 million times); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Pizza Crust (petrified). Weight 72.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0211.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

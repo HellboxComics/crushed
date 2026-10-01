@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0379",
- "description": "Recovered from Behind the Couch. Smells like arcade carpet. Contents (partial): 3 Virtual Pets (fed 0 times); 1 VHS Tape (label says DO NOT TAPE OVER); 1 Portable CD Player (anti-skip lied); 2 Dice (blown on for luck); 2 Power Strips (daisy-chained into three more). Weight 77.4 lb. Crushed it.",
+ "description": "Recovered from Behind the Bar. Smells like gym bag, forgotten. Contents (partial): 3 Virtual Pets (fed 0 times); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Portable CD Player (anti-skip lied); 2 Dice (blown on for luck); 2 Power Strips (daisy-chained into three more). Weight 77.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0379.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

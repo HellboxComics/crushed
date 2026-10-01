@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0080",
- "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (contains one (1) virus); 1 Tissue Box (one for every mood); 1 Pizza Crust (found behind the couch). Weight 94.0 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like Cabbage Patch Plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Tissue Box (one for every mood); 1 Pizza Crust (found behind the couch). Weight 94.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0080.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Cabbage Patch Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

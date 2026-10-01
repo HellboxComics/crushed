@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0774",
- "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 2 Smartphones (last text: read, no reply); 1 Game Controller (stick drift since day one); 3 Hand Sanitizers (60% alcohol, 40% anxiety); 2 Clear Lighters (for incense, obviously); 1 Magazine (found in a dad's truck). Weight 32.0 lb. Some assembly was removed.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like scratch-n-sniff sticker. Contents (partial): 2 Smartphones (Venmoan request: 'gas money'); 1 Game Controller (stick drift since day one); 3 Hand Sanitizers (60% alcohol, 40% anxiety); 2 Clear Lighters (for incense, obviously); 1 Magazine (found in a dad's truck). Weight 32.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0774.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A DoorDashed Doorstep"
   },
   {
    "trait_type": "Tape",

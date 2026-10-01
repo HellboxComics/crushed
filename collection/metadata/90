@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0090",
- "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (walked the dog one time); 1 Calculator (solar panel covered by a sticker); 2 Film Canisters (holds one quarter); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 84.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (walked the dog one time); 1 Calculator (solar panel covered by a sticker); 2 Film Canisters (holds one quarter); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 84.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0090.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

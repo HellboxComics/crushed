@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0092",
- "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Magazines (read for the articles); 1 Beer Can (warm, sadly); 1 Boom Box (one speaker still believes); 1 Corded Phone (was on the line when mom picked up). Weight 52.3 lb. We kept the important shit.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like Arcade Tokens. Contents (partial): 2 Soda Cans (tab kept for charity); 2 Magazines (read for the articles); 1 Beer Can (last one in the fridge); 1 Boom Box (one speaker still believes); 1 Corded Phone (was on the line when mom picked up). Weight 52.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0092.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",

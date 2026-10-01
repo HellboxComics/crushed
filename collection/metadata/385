@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0385",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (faceplate swapped 4 times); 2 Virtual Pets (fed 0 times); 1 Clear Lighter (for incense, obviously). Weight 30.6 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Hot Pentium. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (faceplate swapped 4 times); 2 Virtual Pets (fed 0 times); 1 Clear Lighter (for incense, obviously). Weight 30.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0385.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Hot Pentium"
   },
   {
    "trait_type": "Recovered From",

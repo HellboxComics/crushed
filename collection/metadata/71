@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0071",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 Sneaker (left only); 1 Keyboard (Partial) (F, J and the crumbs); 2 Magazines (found in a dad's truck); 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (blown into 400 times). Weight 53.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 1 Sneaker (left only); 1 Keyboard (Partial) (F, J and the crumbs); 2 Magazines (found in a dad's truck); 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (save file erased by a sibling). Weight 53.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0071.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0245",
- "description": "Recovered from Vegas Hotel Room. Smells like gym bag, forgotten. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Dice (blown on for luck); 1 Film Canister (undeveloped, forever); 1 CRT Monitor (screen burn-in reads LOADING); 3 Foam Headphones (orange foam, allegedly). Weight 75.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Lollapaloser Lost & Found. Smells like Lunchables-ish Crackers. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Dice (blown on for luck); 1 Film Canister (undeveloped, forever); 1 CRT Monitor (screen burn-in reads LOADING); 3 Foam Headphones (orange foam, allegedly). Weight 75.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0245.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Lunchables-ish Crackers"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Lollapaloser Lost & Found"
   },
   {
    "trait_type": "Tape",

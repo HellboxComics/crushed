@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0273",
- "description": "Recovered from Ex's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 1 Metal Lunchbox (the smell stays); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Clear Lighters (borrowed in 1997, never returned). Weight 76.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Lunchables-ish Crackers. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 1 Metal Lunchbox (the smell stays); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Clear Lighters (borrowed in 1997, never returned). Weight 76.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0273.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Lunchables-ish Crackers"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Spencer's-ish Back Room"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0390",
- "description": "Recovered from Ex's Garage. Smells like blue raspberry. Contents (partial): 2 Flip Phones (12 texts left this month); 1 Beer Can (last one in the fridge); 1 Soda Can (tab kept for charity); 1 Sneaker (untied since 1989); 2 Cassette Tapes (side B only). Weight 71.1 lb. Crushed it.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 2 Flip Phones (12 texts left this month); 1 Beer Can (PBJ, the hipster one); 1 Soda Can (New Koak, 79 days only); 1 Sneaker (untied since 1989); 2 Cassette Tapes (side B only). Weight 71.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0390.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Circuit City-ish Return Counter"
   },
   {
    "trait_type": "Tape",

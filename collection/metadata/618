@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0618",
- "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 Energy Drink (third one that night); 2 Power Strips (daisy-chained into three more); 3 Sneakers (worn to one (1) very bad decision); 3 Centerfolds (staples removed, an attempt was made); 2 TV Remotes (the volume button worn smooth); 1 Tiny Red Candle (lit). Weight 29.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 1 Energy Drink (third one that night); 2 Power Strips (daisy-chained into three more); 3 Sneakers (worn to one (1) very bad decision); 3 Centerfolds (staples removed, an attempt was made); 2 TV Remotes (the volume button worn smooth); 1 Tiny Red Candle (lit). Weight 29.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0618.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Myspace Glitter"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

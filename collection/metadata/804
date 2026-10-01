@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0804",
- "description": "Recovered from Behind the Bar. Smells like fresh batteries (licked). Contents (partial): 1 VR Headset (watched one (1) movie); 2 TV Remotes (held together with tape); 3 No. 2 Pencils (sharpened to a nub); 3 Bluetooth Speakers (lost, found, lost); 1 Clear Lighter (for incense, obviously). Weight 33.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Mom's Basement (Again). Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 VR Headset (watched one (1) movie); 2 TV Remotes (held together with tape); 3 No. 2 Pencils (sharpened to a nub); 3 Bluetooth Speakers (lost, found, lost); 1 Clear Lighter (for incense, obviously). Weight 33.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0804.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hand Sanitizer, Everywhere"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

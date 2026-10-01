@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0333",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Pagers (last page: 143); 3 Soda Cans (tab kept for charity); 1 Portable CD Player (anti-skip lied); 2 Cheap Sunglasses (one lens popped out); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 26.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 3 Pagers (last page: 143); 3 Soda Cans (Surj, the can that started a fight); 1 Portable CD Player (anti-skip lied); 2 Cheap Sunglasses (one lens popped out); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 26.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0333.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",

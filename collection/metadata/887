@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0887",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 2 TV Remotes (held together with tape); 2 Tablets (bought for the kids, taken back by dad); 1 VR Headset (the walls were real and they were hit); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (third one that night). Weight 37.6 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like White Paw, Warm. Contents (partial): 2 TV Remotes (held together with tape); 2 Tablets (bought for the kids, taken back by dad); 1 VR Headset (the walls were real and they were hit); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (tastes like a battery). Weight 37.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0887.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "White Paw, Warm"
   },
   {
    "trait_type": "Recovered From",

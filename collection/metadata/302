@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0302",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 3 Burned CDs (burned at 1x, 4 hours); 3 Slap Bracelets (cut someone, probably); 1 Pager (last page from a number nobody called back); 1 VHS Tape (taped over a wedding). Weight 36.1 lb. Crushed it.",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 3 Burned CDs (burned at 1x, 4 hours); 3 Slap Bracelets (cut someone, probably); 1 Pager (last page from a number nobody called back); 1 VHS Tape (label says DO NOT TAPE OVER). Weight 36.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0302.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

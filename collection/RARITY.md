@@ -149,27 +149,67 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| Hot Dust on a CRT | 98 | 11.0% |
-| New Plastic | 98 | 11.0% |
-| Arcade Carpet | 82 | 9.2% |
-| Mall Food Court | 80 | 9.0% |
-| Blue Raspberry | 76 | 8.6% |
-| Grandma's Couch | 67 | 7.5% |
-| Cheap Cologne | 56 | 6.3% |
-| Cigarette in a Jacket | 51 | 5.7% |
-| Gym Bag, Forgotten | 48 | 5.4% |
-| Fresh Batteries (Licked) | 42 | 4.7% |
-| Body Spray Cloud | 37 | 4.2% |
-| Scratch-n-Sniff Sticker | 36 | 4.1% |
-| Vegas Carpet | 35 | 3.9% |
-| Rink Snack Bar | 29 | 3.3% |
-| Basement | 10 | 1.1% |
-| Wet Cardboard | 8 | 0.9% |
-| Burnt Popcorn | 5 | 0.6% |
-| Victory | 3 | 0.3% |
-| Science Lab | 3 | 0.3% |
+| Mall Food Court | 50 | 5.6% |
+| New Plastic | 48 | 5.4% |
+| Hot Dust on a CRT | 43 | 4.8% |
+| Blue Raspberry | 40 | 4.5% |
+| Arcade Carpet | 32 | 3.6% |
+| Grandma's Couch | 28 | 3.2% |
+| Fresh Batteries (Licked) | 26 | 2.9% |
+| Gym Bag, Forgotten | 23 | 2.6% |
+| Rink Snack Bar | 23 | 2.6% |
+| Cheap Cologne | 23 | 2.6% |
+| Bath & Body Works-ish Cucumber Melon | 22 | 2.5% |
+| Body Spray Cloud | 21 | 2.4% |
+| Cigarette in a Jacket | 20 | 2.3% |
+| Blockbusted New Release Wall | 20 | 2.3% |
+| Vape Cloud, Blue Razz Ice | 20 | 2.3% |
+| Red Bullish and Regret | 17 | 1.9% |
+| Arcade Tokens | 16 | 1.8% |
+| Vegas Carpet | 16 | 1.8% |
+| Lunchables-ish Crackers | 16 | 1.8% |
+| Ax-ish Body Spray, Entire Can | 16 | 1.8% |
+| Smirkoff Ice, Warm | 16 | 1.8% |
+| Scratch-n-Sniff Sticker | 15 | 1.7% |
+| Aqua Not-Net Hairspray | 14 | 1.6% |
+| Drakkar Noire-ish | 13 | 1.5% |
+| Cabbage Patch Plastic | 12 | 1.4% |
+| Pizza Hut-ish Book It! Night | 12 | 1.4% |
+| Myspace Glitter | 12 | 1.4% |
+| Moonster and Desperation | 12 | 1.4% |
+| DoorDashed Fries, Cold | 12 | 1.4% |
+| Smoke-Filled Bowling Alley | 11 | 1.2% |
+| Juicy Couture-ish Tracksuit | 11 | 1.2% |
+| Hot Razr Battery | 11 | 1.2% |
+| Hand Sanitizer, Everywhere | 11 | 1.2% |
+| CK Won | 10 | 1.1% |
+| Surj Spilled on the Carpet | 10 | 1.1% |
+| Frosted Tips Gel | 10 | 1.1% |
+| Y2K Bunker Canned Food | 10 | 1.1% |
+| Spencer's-ish Gifts Incense | 10 | 1.1% |
+| Guitar Hero-ish Plastic | 10 | 1.1% |
+| Abercrombie-ish Store Entrance | 9 | 1.0% |
+| Ed Hardy-ish Cologne | 9 | 1.0% |
+| Ring Light Heat | 9 | 1.0% |
+| White Paw, Warm | 9 | 1.0% |
+| Jean Jacket | 8 | 0.9% |
+| Grunge Flannel | 8 | 0.9% |
+| Hot Pentium | 8 | 0.9% |
+| Prime Time Hype | 7 | 0.8% |
+| Fidget Spinner Bearings | 7 | 0.8% |
+| Big Red-ish Gum | 6 | 0.7% |
+| Basement | 6 | 0.7% |
+| Wet Cardboard | 6 | 0.7% |
+| Gak-ish | 6 | 0.7% |
+| Ballz Energy | 5 | 0.6% |
+| Dial-Up Modem Heat | 5 | 0.6% |
+| Hollister-ish Store Fog | 5 | 0.6% |
+| Crystal Peppy | 4 | 0.5% |
+| New Koak | 3 | 0.3% |
 | Hot Tub | 2 | 0.2% |
 | Melted Crayon | 2 | 0.2% |
+| Burnt Popcorn | 2 | 0.2% |
+| Victory | 1 | 0.1% |
 | Coconut Sunscreen | 1 | 0.1% |
 | Hot Breath | 1 | 0.1% |
 | Shame | 1 | 0.1% |
@@ -180,7 +220,6 @@
 | Warm Plastic | 1 | 0.1% |
 | Freezer Burn | 1 | 0.1% |
 | Stale Beer | 1 | 0.1% |
-| Don't | 1 | 0.1% |
 | Hot Plastic and Ozone | 1 | 0.1% |
 | Wet Landfill | 1 | 0.1% |
 | Bacon and Newsprint | 1 | 0.1% |
@@ -195,28 +234,58 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| Under the Bed | 100 | 11.3% |
-| Back of the Closet | 83 | 9.3% |
-| Mom's Minivan | 74 | 8.3% |
-| Dad's Junk Drawer | 63 | 7.1% |
-| Grandma's Attic | 58 | 6.5% |
-| Storage Unit (Auctioned) | 52 | 5.9% |
-| School Lost & Found | 51 | 5.7% |
-| Garage Sale Free Bin | 51 | 5.7% |
-| Dad's Truck, Glovebox | 50 | 5.6% |
-| A Buddy's Basement | 47 | 5.3% |
-| Behind the Couch | 46 | 5.2% |
-| The Bachelor Pad | 35 | 3.9% |
-| Ex's Garage | 32 | 3.6% |
-| Vegas Hotel Room | 31 | 3.5% |
-| A Very Specific Ditch | 31 | 3.5% |
-| Behind the Bar | 24 | 2.7% |
-| Estate of a Collector | 13 | 1.5% |
-| Nobody Knows | 9 | 1.0% |
-| Flooded Basement | 8 | 0.9% |
-| Behind the Science Wing | 4 | 0.5% |
-| House Fire (Everyone's Fine) | 3 | 0.3% |
-| The Mall Fountain | 3 | 0.3% |
+| Under the Bed | 67 | 7.5% |
+| Back of the Closet | 49 | 5.5% |
+| Dad's Junk Drawer | 48 | 5.4% |
+| Grandma's Attic | 42 | 4.7% |
+| Garage Sale Free Bin | 37 | 4.2% |
+| Mom's Minivan | 34 | 3.8% |
+| School Lost & Found | 32 | 3.6% |
+| A Buddy's Basement | 31 | 3.5% |
+| Dad's Truck, Glovebox | 30 | 3.4% |
+| Vegas Hotel Room | 29 | 3.3% |
+| Storage Unit (Auctioned) | 26 | 2.9% |
+| Behind the Couch | 24 | 2.7% |
+| Estate of a Collector | 23 | 2.6% |
+| The Bachelor Pad | 23 | 2.6% |
+| Behind the Bar | 21 | 2.4% |
+| Ex's Garage | 19 | 2.1% |
+| A Blockbusted Return Slot | 17 | 1.9% |
+| A Myspace Top 8 Breakup Box | 17 | 1.9% |
+| A Frat House Couch | 16 | 1.8% |
+| An AOHell CD Pile | 15 | 1.7% |
+| Mom's Basement (Again) | 14 | 1.6% |
+| The Mall Arcade | 13 | 1.5% |
+| A Radio Shacked Clearance Bin | 12 | 1.4% |
+| An Amazon Basically Return Pile | 12 | 1.4% |
+| Behind the Arcade Cabinets | 11 | 1.2% |
+| A Blockbusted Drop Box | 11 | 1.2% |
+| A Blackberried Office Drawer | 11 | 1.2% |
+| Dad's Camaro Trunk | 10 | 1.1% |
+| A Sleepover, Never Picked Up | 10 | 1.1% |
+| A LAN Party Basement | 10 | 1.1% |
+| A Circuit City-ish Return Counter | 10 | 1.1% |
+| A Waldenbooks-ish Bargain Bin | 9 | 1.0% |
+| The Roller Rink Coat Check | 9 | 1.0% |
+| The Y2K Bunker | 9 | 1.0% |
+| A Hot Topic-ish Bag | 9 | 1.0% |
+| A Crypto Bro's Garage | 9 | 1.0% |
+| A Tupperware-ish Party | 8 | 0.9% |
+| A Very Specific Ditch | 8 | 0.9% |
+| House Fire (Everyone's Fine) | 8 | 0.9% |
+| Spencer's-ish Back Room | 8 | 0.9% |
+| Flooded Basement | 7 | 0.8% |
+| Nobody Knows | 7 | 0.8% |
+| A Columbia House-ish Box, Unopened | 7 | 0.8% |
+| Napstered Dorm Room | 7 | 0.8% |
+| The Ed Hardy-ish Era | 7 | 0.8% |
+| An Ebay-ish Box, Never Shipped | 6 | 0.7% |
+| A DoorDashed Doorstep | 6 | 0.7% |
+| A Lambo-Shaped Hole | 5 | 0.6% |
+| A WeWork-ish Desk, Abandoned | 5 | 0.6% |
+| The Mall Fountain | 4 | 0.5% |
+| Lollapaloser Lost & Found | 3 | 0.3% |
+| Behind the Science Wing | 3 | 0.3% |
 | The Beach, in Slow Motion | 1 | 0.1% |
 | The Bottom of the Toy Box | 1 | 0.1% |
 | Under the Mattress | 1 | 0.1% |
@@ -330,11 +399,11 @@
 | 15 | #0582 | COLD STORAGE | Hardware Wallet | None |
 | 16 | #0244 | BLOW ON IT | Game Cartridge | None |
 | 17 | #0552 | STILL ALIVE | Virtual Pet | None |
-| 18 | #0282 | UNDER THE MATTRESS | Magazine | None |
+| 18 | #0801 | LEFTOVERS | Pizza Crust | None |
 | 19 | #0520 | DOUBLE A | AA Batteries | None |
-| 20 | #0801 | LEFTOVERS | Pizza Crust | None |
-| 21 | #0571 | SCREEN TIME | CRT Monitor | None |
-| 22 | #0008 | SOLID GOLD | Sneaker | None |
+| 20 | #0282 | UNDER THE MATTRESS | Magazine | None |
+| 21 | #0008 | SOLID GOLD | Sneaker | None |
+| 22 | #0571 | SCREEN TIME | CRT Monitor | None |
 | 23 | #0276 | GOLD | Yo-Yo | Paper Hand |
-| 24 | #0389 | GOLD | Sneaker | None |
-| 25 | #0772 | GOLD | VR Headset | None |
+| 24 | #0772 | GOLD | VR Headset | None |
+| 25 | #0389 | GOLD | Sneaker | None |

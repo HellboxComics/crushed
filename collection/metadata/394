@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0394",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 2 No. 2 Pencils (chewed); 3 Pagers (clipped to jeans for status only); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times); 1 Tiny Red Candle (one of many). Weight 66.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Mom's Minivan. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 2 No. 2 Pencils (chewed); 3 Pagers (clipped to jeans for status only); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times); 1 Tiny Red Candle (one of many). Weight 66.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0394.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

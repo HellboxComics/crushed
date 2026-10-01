@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0373",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Pager (last page: 911 (it was not)); 2 TV Remotes (found in the couch); 1 Burned CD (track 7 skips); 1 CRT Monitor (degaussed one last time); 2 Beer Cans (crushed on a forehead). Weight 71.0 lb. Crushed it.",
+ "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 1 Pager (last page: 911 (it was not)); 2 TV Remotes (found in the couch); 1 Burned CD (track 7 skips); 1 CRT Monitor (degaussed one last time); 2 Beer Cans (crushed on a forehead). Weight 71.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0373.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

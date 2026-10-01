@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0260",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Pizza Crust (still better than most portfolios); 1 Cassette Tape (someone's voicemail greeting); 1 Puzzle Cube (solved once, stickers moved); 1 CRT Monitor (weighs more than the desk). Weight 88.6 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Pizza Crust (still better than most portfolios); 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Puzzle Cube (solved once, stickers moved); 1 CRT Monitor (weighs more than the desk). Weight 88.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0260.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0167",
- "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Shot Glasses (from a trip to Vegas); 1 Ball Mouse (cord chewed by a dog); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Magazine (the staples are doing the work). Weight 52.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Arcade Tokens. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Shot Glasses (from a trip to Vegas); 1 Ball Mouse (cord chewed by a dog); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Magazine (the staples are doing the work). Weight 52.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0167.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Roller Rink Coat Check"
   },
   {
    "trait_type": "Tape",

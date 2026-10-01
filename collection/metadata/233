@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0233",
- "description": "Recovered from A Very Specific Ditch. Smells like mall food court. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Toy Slime (was in the hair of a sibling); 1 Portable CD Player (anti-skip lied); 1 Ball Mouse (rollers caked with 1998); 3 Floppy Disks (contains one (1) virus). Weight 85.7 lb. Crushed it.",
+ "description": "Recovered from The Mall Arcade. Smells like body spray cloud. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Toy Slime (was in the hair of a sibling); 1 Portable CD Player (anti-skip lied); 1 Ball Mouse (rollers caked with 1998); 3 Floppy Disks (AOHell trial, 500 free hours). Weight 85.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0233.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

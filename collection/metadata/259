@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0259",
- "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 2 Ball Mice (ball removed as a prank); 3 Soda Cans (flat); 1 Foam Headphones (orange foam, allegedly); 2 Three-Ring Binders (velcro screams when opened); 2 Dice (loaded, rumor says). Weight 78.4 lb. Crushed it.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Ball Mice (ball removed as a prank); 3 Soda Cans (shaken as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Three-Ring Binders (velcro screams when opened); 2 Dice (loaded, rumor says). Weight 78.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0259.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Surj Spilled on the Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

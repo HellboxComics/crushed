@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0576",
- "description": "Recovered from The Bachelor Pad. Smells like Vegas carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Dice (loaded, rumor says); 3 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (sharpened to a nub); 1 Paper Hand (folded under light pressure). Weight 28.3 lb. Nobody made you keep this.",
+ "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Dice (loaded, rumor says); 3 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (sharpened to a nub); 1 Paper Hand (folded under light pressure). Weight 28.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0576.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

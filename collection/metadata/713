@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0713",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Soda Cans (flat); 2 Smartphones (last text: read, no reply); 1 Disposable Vape (mango, mostly). Weight 30.1 lb. Handle with both hands.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Ring Light Heat. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Soda Cans (flat); 2 Smartphones (Instagrampa open, 900 unread); 1 Disposable Vape (zero nicotine, allegedly). Weight 30.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0713.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Ring Light Heat"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

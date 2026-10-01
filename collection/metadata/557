@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0557",
- "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 3 Sneakers (smells like 1989); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 2 Glow Sticks (still glowing a little, somehow); 2 MP3 Players (shuffle picked the same song 6 times). Weight 30.0 lb. Nobody made you keep this.",
+ "description": "Recovered from A Frat House Couch. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (smells like 1989); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 2 Glow Sticks (still glowing a little, somehow); 2 MP3 Players (shuffle picked the same song 6 times). Weight 30.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0557.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

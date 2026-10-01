@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0856",
- "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 3 Earbud Cases (one bud present); 1 Selfie Stick (mid-trip, mid-ocean); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Ring Light (the eyes in every mirror selfie); 1 Sneaker (untied since 1989). Weight 31.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Moonster and Desperation. Contents (partial): 3 Earbud Cases (one bud present); 1 Selfie Stick (mid-trip, mid-ocean); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Ring Light (the eyes in every mirror selfie); 1 Sneaker (untied since 1989). Weight 31.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0856.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

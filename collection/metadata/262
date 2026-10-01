@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0262",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Soda Can (shaken as a prank); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (late fees now exceed GDP of a small nation); 3 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down). Weight 72.0 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet); 3 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down). Weight 72.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0262.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

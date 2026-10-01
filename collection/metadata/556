@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0556",
- "description": "Recovered from The Mall Fountain. Smells like wet cardboard. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (third one that night); 3 Dice (blown on for luck); 2 Burned CDs (track 7 skips); 1 Tablet (used once as a cutting board). Weight 29.0 lb. Crushed it.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like cheap cologne. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (third one that night); 3 Dice (blown on for luck); 2 Burned CDs (track 7 skips); 1 Tablet (used once as a cutting board). Weight 29.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0556.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Mall Fountain"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0145",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Poker Chips (never cashed out); 3 Army Man Squads (the one with the radio survived); 3 Puzzle Cubes (two stickers peeled); 1 Scratch Ticket ($2 for hope). Weight 37.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Aqua Not-Net Hairspray. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Poker Chips (never cashed out); 3 Army Man Squads (the one with the radio survived); 3 Puzzle Cubes (two stickers peeled); 1 Scratch Ticket ($2 for hope). Weight 37.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0145.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

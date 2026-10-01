@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0274",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cheap cologne. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 2 Dice (snake eyes, twice); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Centerfolds (staples removed, an attempt was made); 1 Skateboard (griptape ate a pair of jeans). Weight 73.4 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Gak-ish. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 2 Dice (snake eyes, twice); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Centerfolds (staples removed, an attempt was made); 1 Skateboard (griptape ate a pair of jeans). Weight 73.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0274.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Gak-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

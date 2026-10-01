@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0710",
- "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Beer Can (last one in the fridge); 2 Sneakers (left only); 3 TV Remotes (the volume button worn smooth); 1 Memory Card (corrupted during a birthday). Weight 31.1 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Couch. Smells like Smirkoff Ice, Warm. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Beer Can (Milwaukee's Worst, on sale); 2 Sneakers (left only); 3 TV Remotes (the volume button worn smooth); 1 Memory Card (corrupted during a birthday). Weight 31.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0710.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

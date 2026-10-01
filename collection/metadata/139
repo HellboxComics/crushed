@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0139",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Boom Box (one speaker still believes); 1 No. 2 Pencil (sharpened to a nub); 3 Poker Chips (taken from a casino, small heist); 2 Calculators (spelled BOOBIES upside down); 1 VHS Tape (late fees now exceed GDP of a small nation). Weight 80.4 lb. Contents may have settled.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 1 Boom Box (one speaker still believes); 1 No. 2 Pencil (sharpened to a nub); 3 Poker Chips (taken from a casino, small heist); 2 Calculators (spelled BOOBIES upside down); 1 VHS Tape (Blockbusted rental, never returned). Weight 80.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0139.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",

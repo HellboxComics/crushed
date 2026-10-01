@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0537",
- "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Burned CDs (coaster now); 3 Magazines (read for the articles); 2 Scratch Tickets (scratched with a house key); 1 Cheap Sunglasses (one lens popped out). Weight 23.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like Myspace Glitter. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Burned CDs (coaster now); 3 Magazines (read for the articles); 2 Scratch Tickets (scratched with a house key); 1 Cheap Sunglasses (one lens popped out). Weight 23.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0537.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Myspace Glitter"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

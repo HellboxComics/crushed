@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0672",
- "description": "Recovered from Estate of a Collector. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (held together with tape); 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Pager (last page: 911 (it was not)); 1 Matchbook (from a gentlemen's club, reportedly); 1 Poker Chip (never cashed out). Weight 33.7 lb. Crushed it.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 TV Remotes (held together with tape); 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Pager (last page: 911 (it was not)); 1 Matchbook (from a gentlemen's club, reportedly); 1 Poker Chip (never cashed out). Weight 33.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0672.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "A Blackberried Office Drawer"
   },
   {
    "trait_type": "Tape",

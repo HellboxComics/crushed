@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0013",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 Roller Skates (the rink smell is still in there); 3 AA Batteries (licked to test); 1 Pager (clipped to jeans for status only); 1 Poker Chip (a stack of ambition). Weight 89.8 lb. Contents may have settled.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Cabbage Patch Plastic. Contents (partial): 1 VHS Tape (taped over a wedding); 2 Roller Skates (the rink smell is still in there); 3 AA Batteries (taken out of the smoke detector); 1 Pager (clipped to jeans for status only); 1 Poker Chip (a stack of ambition). Weight 89.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0013.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Cabbage Patch Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0764",
- "description": "Recovered from Estate of a Collector. Smells like Vegas carpet. Contents (partial): 3 Power Banks (10000 mAh of dead weight); 1 VR Headset (worn twice); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (exam week casualty); 1 Tablet (used once as a cutting board). Weight 27.6 lb. Nobody made you keep this.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like DoorDashed Fries, Cold. Contents (partial): 3 Power Banks (10000 mAh of dead weight); 1 VR Headset (worn twice); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (Moonster, the whole case); 1 Tablet (used once as a cutting board). Weight 27.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0764.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "DoorDashed Fries, Cold"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

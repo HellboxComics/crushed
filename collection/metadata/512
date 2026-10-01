@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0512",
- "description": "Recovered from Grandma's Attic. Smells like wet cardboard. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 No. 2 Pencil (never saw a scantron it liked); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Poker Chip (taken from a casino, small heist). Weight 69.6 lb. We kept the important shit.",
+ "description": "Recovered from The Mall Fountain. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 No. 2 Pencil (never saw a scantron it liked); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Poker Chip (taken from a casino, small heist). Weight 69.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0512.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Mall Fountain"
   },
   {
    "trait_type": "Tape",

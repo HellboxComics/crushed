@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0477",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Corded Phone (cord stretched to the bathroom); 1 Virtual Pet (reincarnated 40 times); 2 Pagers (clipped to jeans for status only); 3 Game Controllers (stick drift since day one). Weight 73.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like cigarette in a jacket. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Corded Phone (cord stretched to the bathroom); 1 Virtual Pet (reincarnated 40 times); 2 Pagers (clipped to jeans for status only); 3 Game Controllers (stick drift since day one). Weight 73.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0477.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

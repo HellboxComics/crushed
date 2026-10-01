@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0305",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (took 10 D batteries); 2 Pagers (last page: 143); 1 CRT Monitor (screen burn-in reads LOADING); 1 Slap Bracelet (banned by the school); 3 Cassette Tapes (a mix for someone who never listened). Weight 91.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Pagers (last page: 143); 1 CRT Monitor (screen burn-in reads LOADING); 1 Slap Bracelet (banned by the school); 3 Cassette Tapes (TDKay SA-90, the good tape). Weight 91.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0305.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Surj Spilled on the Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0878",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (the eyes in every mirror selfie); 3 Sneakers (was in the dryer); 2 Laptop Chargers (warm to the touch, somehow); 2 Disposable Cameras (never developed). Weight 33.0 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (the eyes in every mirror selfie); 3 Sneakers (was in the dryer); 2 Laptop Chargers (warm to the touch, somehow); 2 Disposable Cameras (never developed). Weight 33.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0878.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0276",
- "description": "Recovered from Estate of a Collector. Smells like victory. Contents (partial): 1 Gold 9999-in-1 Handheld (why); 2 Yo-Yos (string tied to a finger for 3 years); 2 Soda Cans (shaken as a prank); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Burned CD (coaster now); 1 Paper Hand (folded under light pressure). Weight 29.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Mall Arcade. Smells like Crystal Peppy. Contents (partial): 1 Gold 9999-in-1 Handheld (why); 2 Yo-Yos (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Burned CD (coaster now); 1 Paper Hand (folded under light pressure). Weight 29.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0276.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Victory"
+   "value": "Crystal Peppy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

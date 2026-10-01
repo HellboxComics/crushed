@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0879",
- "description": "Recovered from A Very Specific Ditch. Smells like hot dust on a CRT. Contents (partial): 1 Drone (over the neighbor's fence); 1 Laptop Charger (fits nothing else in the house); 1 Tissue Box (there was a reason it lived on the nightstand); 3 Soda Cans (tab kept for charity); 1 TV Remote (found in the couch). Weight 27.7 lb. Still heavier than it looks.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like mall food court. Contents (partial): 1 Drone (over the neighbor's fence); 1 Laptop Charger (fits nothing else in the house); 1 Tissue Box (there was a reason it lived on the nightstand); 3 Soda Cans (Surj, the can that started a fight); 1 TV Remote (found in the couch). Weight 27.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0879.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

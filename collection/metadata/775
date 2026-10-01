@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0775",
- "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Sneakers (left only); 1 Disposable Camera (27 exposures of a thumb); 1 Ring Light (one bulb out, one ego intact); 1 Shot Glass (souvenir of a night nobody recalls); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 30.5 lb. We kept the important shit.",
+ "description": "Recovered from The Bachelor Pad. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Sneakers (left only); 1 Disposable Camera (27 exposures of a thumb); 1 Ring Light (one bulb out, one ego intact); 1 Shot Glass (souvenir of a night nobody recalls); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 30.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0775.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hand Sanitizer, Everywhere"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

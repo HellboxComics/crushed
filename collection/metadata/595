@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0595",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 Gold Game Controller (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (says ROAD TRIP in marker); 1 Beer Can (warm, sadly); 2 Memory Cards (corrupted during a birthday). Weight 21.5 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Gold Game Controller (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (says ROAD TRIP in marker); 1 Beer Can (Natty Lightweight, 30-rack); 2 Memory Cards (corrupted during a birthday). Weight 21.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0595.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

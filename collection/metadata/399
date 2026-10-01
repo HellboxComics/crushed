@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0399",
- "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 1 Tissue Box (one for every mood); 3 Pagers (last page: 911 (it was not)); 1 Film Canister (holds one quarter); 2 AA Batteries (taken out of the smoke detector); 3 Skate Wheels (rolled into a storm drain once). Weight 76.8 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Tissue Box (one for every mood); 3 Pagers (last page: 911 (it was not)); 1 Film Canister (holds one quarter); 2 AA Batteries (Durasmell, lasted till Christmas noon); 3 Skate Wheels (rolled into a storm drain once). Weight 76.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0399.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",

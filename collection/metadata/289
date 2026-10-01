@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0289",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Sneakers (untied since 1989); 1 Digital Camera (2 megapixels of truth); 2 Soda Cans (flat); 2 Game Cartridges (save file erased by a sibling); 2 Centerfolds (left open to the wrong page). Weight 56.7 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 2 Sneakers (untied since 1989); 1 Digital Camera (2 megapixels of truth); 2 Soda Cans (flat); 2 Game Cartridges (rented from Blockbusted, never rewound); 2 Centerfolds (left open to the wrong page). Weight 56.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0289.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

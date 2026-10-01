@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0061",
- "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 1 Boom Box (one speaker still believes); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly); 3 Tissue Boxes (one for every mood). Weight 92.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Cabbage Patch Plastic. Contents (partial): 1 Boom Box (one speaker still believes); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly); 3 Tissue Boxes (one for every mood). Weight 92.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0061.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Cabbage Patch Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

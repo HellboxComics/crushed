@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0107",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 2 Soda Cans (tab kept for charity); 3 Game Cartridges (save file erased by a sibling); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Joysticks (suction cups gave up); 2 Yo-Yos (string tied to a finger for 3 years). Weight 77.2 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (Surj, the can that started a fight); 3 Game Cartridges (blew on it, Nintendont said no); 2 VHS Tapes (Blockbusted rental, never returned); 2 Joysticks (suction cups gave up); 2 Yo-Yos (string tied to a finger for 3 years). Weight 77.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0107.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",

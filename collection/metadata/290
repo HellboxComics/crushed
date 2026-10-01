@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0290",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Three-Ring Binders (velcro screams when opened); 1 Webcam (pointed at the ceiling forever); 1 Puzzle Cube (solved once, stickers moved); 1 Brick Phone (snake high score intact). Weight 72.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Bar. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Three-Ring Binders (velcro screams when opened); 1 Webcam (pointed at the ceiling forever); 1 Puzzle Cube (solved once, stickers moved); 1 Brick Phone (snake high score intact). Weight 72.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0290.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

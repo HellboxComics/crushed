@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0652",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Sneaker (smells like 1989); 3 Energy Drinks (third one that night); 1 Pizza Crust (found behind the couch); 2 Flip Phones (snapped shut dramatically); 1 USB Stick (never ejected safely). Weight 22.5 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Sneaker (smells like 1989); 3 Energy Drinks (third one that night); 1 Pizza Crust (found behind the couch); 2 Flip Phones (snapped shut dramatically); 1 USB Stick (never ejected safely). Weight 22.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0652.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

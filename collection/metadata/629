@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0629",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Disposable Vape (mango, mostly); 1 Skate Wheel (flat spot from a power slide); 3 Digital Cameras (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours). Weight 28.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Skate Wheel (flat spot from a power slide); 3 Digital Cameras (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours). Weight 28.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0629.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",

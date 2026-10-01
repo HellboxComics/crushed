@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0217",
- "description": "Recovered from Behind the Bar. Smells like blue raspberry. Contents (partial): 1 Sneaker (left only); 1 Clear Lighter (out of fluid); 1 Shot Glass (from a trip to Vegas); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 68.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Sneaker (left only); 1 Clear Lighter (out of fluid); 1 Shot Glass (from a trip to Vegas); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 68.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0217.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Spencer's-ish Back Room"
   },
   {
    "trait_type": "Tape",

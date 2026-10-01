@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0526",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Brick Phone (unbreakable until today); 1 Matchbook (matches missing, reasons unclear); 2 Skate Wheels (rolled into a storm drain once); 2 Game Controllers (thrown during a boss fight); 2 No. 2 Pencils (chewed). Weight 72.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Brick Phone (unbreakable until today); 1 Matchbook (matches missing, reasons unclear); 2 Skate Wheels (rolled into a storm drain once); 2 Game Controllers (thrown during a boss fight); 2 No. 2 Pencils (chewed). Weight 72.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0526.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

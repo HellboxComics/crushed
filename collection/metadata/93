@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0093",
- "description": "Recovered from Storage Unit (Auctioned). Smells like cigarette in a jacket. Contents (partial): 3 Magazines (found in a dad's truck); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Beer Cans (last one in the fridge); 2 Cassette Tapes (labeled MIX 4 U). Weight 76.7 lb. Nobody made you keep this.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Magazines (found in a dad's truck); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Beer Cans (PBJ, the hipster one); 2 Cassette Tapes (rewound with a pencil). Weight 76.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0093.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",

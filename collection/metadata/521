@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0521",
- "description": "Recovered from Mom's Minivan. Smells like basement. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 1 Shot Glass (from a trip to Vegas); 3 Burned CDs (track 7 skips); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 72.9 lb. Contents may have settled.",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 1 Shot Glass (from a trip to Vegas); 3 Burned CDs (track 7 skips); 2 VHS Tapes (the unmarked one, from the back of the closet). Weight 72.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0521.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

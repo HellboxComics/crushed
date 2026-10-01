@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0202",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Sneaker (light-up heel, dead); 1 VHS Tape (taped over a wedding); 3 Shot Glasses (from a trip to Vegas); 1 Metal Lunchbox (thermos missing); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 39.1 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like CK Won. Contents (partial): 1 Sneaker (light-up heel, dead); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Shot Glasses (from a trip to Vegas); 1 Metal Lunchbox (thermos missing); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 39.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0202.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",

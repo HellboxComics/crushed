@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0844",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 TV Remotes (found in the couch); 1 Fidget Spinner (banned by the school); 2 Bluetooth Speakers (lost, found, lost); 2 Game Controllers (stick drift since day one); 2 Spiral Notebooks (spiral unwound halfway). Weight 35.8 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Couch. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 TV Remotes (found in the couch); 1 Fidget Spinner (banned by the school); 2 Bluetooth Speakers (lost, found, lost); 2 Game Controllers (stick drift since day one); 2 Spiral Notebooks (spiral unwound halfway). Weight 35.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0844.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",

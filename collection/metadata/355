@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0355",
- "description": "Recovered from Ex's Garage. Smells like arcade carpet. Contents (partial): 1 Beer Can (12 of 12); 2 No. 2 Pencils (chewed); 1 Jewel Case (insert is from a different album); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 32.1 lb. Still heavier than it looks.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like blue raspberry. Contents (partial): 1 Beer Can (12 of 12); 2 No. 2 Pencils (chewed); 1 Jewel Case (insert is from a different album); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 32.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0355.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Columbia House-ish Box, Unopened"
   },
   {
    "trait_type": "Tape",

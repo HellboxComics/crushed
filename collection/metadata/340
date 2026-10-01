@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0340",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Pagers (last page from a number nobody called back); 1 Skate Wheel (rolled into a storm drain once); 2 16-Bit Controllers (the B button is sticky); 1 Shot Glass (chipped rim). Weight 41.4 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Pagers (last page from a number nobody called back); 1 Skate Wheel (rolled into a storm drain once); 2 16-Bit Controllers (the B button is sticky); 1 Shot Glass (chipped rim). Weight 41.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0340.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Surj Spilled on the Carpet"
   },
   {
    "trait_type": "Recovered From",

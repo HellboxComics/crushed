@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0617",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (untied since 1989); 2 Scratch Tickets ($2 for hope); 1 Magazine (read for the articles); 3 Spiral Notebooks (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 28.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Scratch Tickets ($2 for hope); 1 Magazine (read for the articles); 3 Spiral Notebooks (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 28.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0617.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0586",
- "description": "Recovered from Ex's Garage. Smells like Grandma's couch. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Pager (clipped to jeans for status only); 3 Pizza Crusts (from a sleepover); 1 Handheld Console (screen scratched from a pocket with keys); 3 Flip Phones (snapped shut dramatically). Weight 24.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Frat House Couch. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Pager (clipped to jeans for status only); 3 Pizza Crusts (from a sleepover); 1 Handheld Console (screen scratched from a pocket with keys); 3 Flip Phones (snapped shut dramatically). Weight 24.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0586.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0130",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Film Canisters (holds one quarter); 1 Shot Glass (chipped rim); 2 Joysticks (suction cups gave up). Weight 38.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Mom's Minivan. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Film Canisters (holds one quarter); 1 Shot Glass (chipped rim); 2 Joysticks (suction cups gave up). Weight 38.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0130.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

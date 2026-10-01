@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0040",
- "description": "Recovered from A Very Specific Ditch. Smells like basement. Contents (partial): 2 Sneakers (untied since 1989); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 TV Remotes (held together with tape); 3 Game Cartridges (blown into 400 times); 2 Pizza Crusts (from a sleepover). Weight 28.8 lb. Still heavier than it looks.",
+ "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 2 Sneakers (untied since 1989); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 TV Remotes (held together with tape); 3 Game Cartridges (blown into 400 times); 2 Pizza Crusts (from a sleepover). Weight 28.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0040.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

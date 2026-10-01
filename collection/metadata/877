@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0877",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Drone (40 seconds of freedom); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (untied since 1989); 2 Scratch Tickets (scratched with a house key); 2 Energy Drinks (tastes like a battery). Weight 36.6 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Drone (40 seconds of freedom); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (untied since 1989); 2 Scratch Tickets (scratched with a house key); 2 Energy Drinks (exam week casualty). Weight 36.6 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0877.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

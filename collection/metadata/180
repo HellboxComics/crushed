@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0180",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 1 Floppy Disk (contains one (1) virus); 1 CRT Monitor (still warm); 1 Jewel Case (hinge broken on arrival); 1 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 71.9 lb. Crushed it.",
+ "description": "Recovered from The Bachelor Pad. Smells like Blockbusted New Release Wall. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 1 Floppy Disk (save icon, but real); 1 CRT Monitor (still warm); 1 Jewel Case (hinge broken on arrival); 1 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 71.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0180.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

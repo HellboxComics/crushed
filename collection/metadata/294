@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0294",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Disposable Cameras (27 exposures of a thumb); 2 Floppy Disks (DISK 2 of 7); 1 Toy Slime (stuck in the carpet); 2 Tissue Boxes (nearly empty). Weight 41.1 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Crystal Peppy. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Disposable Cameras (27 exposures of a thumb); 2 Floppy Disks (says DO NOT FORMAT); 1 Toy Slime (stuck in the carpet); 2 Tissue Boxes (nearly empty). Weight 41.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0294.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Crystal Peppy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

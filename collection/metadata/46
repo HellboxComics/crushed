@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0046",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 2 Soda Cans (tab kept for charity); 2 Three-Ring Binders (covered in band names); 2 16-Bit Controllers (the B button is sticky); 2 No. 2 Pencils (never saw a scantron it liked); 1 Ball Mouse (cord chewed by a dog). Weight 71.3 lb. Some assembly was removed.",
+ "description": "Recovered from School Lost & Found. Smells like Drakkar Noire-ish. Contents (partial): 2 Soda Cans (New Koak, 79 days only); 2 Three-Ring Binders (covered in band names); 2 16-Bit Controllers (the B button is sticky); 2 No. 2 Pencils (never saw a scantron it liked); 1 Ball Mouse (cord chewed by a dog). Weight 71.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0046.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Drakkar Noire-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

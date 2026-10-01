@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0163",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 2 Floppy Disks (save icon, but real); 1 Cassette Tape (someone's voicemail greeting); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Spiral Notebooks (spiral unwound halfway). Weight 79.8 lb. Handle with both hands.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like arcade carpet. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Spiral Notebooks (spiral unwound halfway). Weight 79.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0163.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Tupperware-ish Party"
   },
   {
    "trait_type": "Tape",

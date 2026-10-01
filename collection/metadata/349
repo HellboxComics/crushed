@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0349",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Beer Can (crushed on a forehead); 3 Magazines (for the interviews, obviously); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cassette Tape (labeled MIX 4 U); 1 TV Remote (found in the couch). Weight 46.3 lb. Some assembly was removed.",
+ "description": "Recovered from The Bachelor Pad. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Beer Can (crushed on a forehead); 3 Magazines (for the interviews, obviously); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cassette Tape (rewound with a pencil); 1 TV Remote (found in the couch). Weight 46.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0349.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Surj Spilled on the Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0146",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 CRT Monitor (still warm); 1 Joystick (fire button pressed 40 million times); 2 TV Remotes (found in the couch); 2 Floppy Disks (save icon, but real). Weight 91.0 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 CRT Monitor (still warm); 1 Joystick (fire button pressed 40 million times); 2 TV Remotes (found in the couch); 2 Floppy Disks (Iomegalodon would have held it all). Weight 91.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0146.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

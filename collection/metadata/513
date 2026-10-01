@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0513",
- "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Webcams (240p of pure confidence); 1 Corded Phone (cord stretched to the bathroom); 1 Tissue Box (nearly empty). Weight 77.8 lb. Some assembly was removed.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Webcams (240p of pure confidence); 1 Corded Phone (cord stretched to the bathroom); 1 Tissue Box (nearly empty). Weight 77.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0513.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0874",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Tissue Box (one for every mood); 1 Selfie Stick (mid-trip, mid-ocean); 3 TV Remotes (held together with tape); 2 Clear Lighters (for incense, obviously); 2 Glow Sticks (cracked at a school dance). Weight 31.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Ex's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Tissue Box (one for every mood); 1 Selfie Stick (mid-trip, mid-ocean); 3 TV Remotes (held together with tape); 2 Clear Lighters (for incense, obviously); 2 Glow Sticks (cracked at a school dance). Weight 31.5 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0874.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "DoorDashed Fries, Cold"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

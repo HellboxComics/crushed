@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0577",
- "description": "Recovered from Behind the Science Wing. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 1 Burned CD (track 7 skips); 1 Beer Can (last one in the fridge); 2 Tissue Boxes (nearly empty); 3 Centerfolds (staples removed, an attempt was made); 1 Paper Hand (sold at the bottom). Weight 25.1 lb. Crushed it.",
+ "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 1 Burned CD (track 7 skips); 1 Beer Can (Milwaukee's Worst, on sale); 2 Tissue Boxes (nearly empty); 3 Centerfolds (staples removed, an attempt was made); 1 Paper Hand (sold at the bottom). Weight 25.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0577.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Science Wing"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

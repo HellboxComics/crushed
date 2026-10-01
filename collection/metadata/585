@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0585",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Handheld Console (screen scratched from a pocket with keys); 2 Power Strips (overloaded on purpose); 2 Disposable Cameras (27 exposures of a thumb); 2 Burned CDs (says ROAD TRIP in marker). Weight 24.0 lb. We kept the important shit.",
+ "description": "Recovered from Estate of a Collector. Smells like rink snack bar. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Handheld Console (screen scratched from a pocket with keys); 2 Power Strips (overloaded on purpose); 2 Disposable Cameras (27 exposures of a thumb); 2 Burned CDs (says ROAD TRIP in marker). Weight 24.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0585.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

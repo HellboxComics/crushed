@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0020",
- "description": "Recovered from Ex's Garage. Smells like cigarette in a jacket. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Spiral Notebooks (spiral unwound halfway); 2 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (contains one (1) virus); 3 VHS Tapes (taped over a wedding). Weight 90.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Spiral Notebooks (spiral unwound halfway); 2 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (AOHell trial, 500 free hours); 3 VHS Tapes (label says DO NOT TAPE OVER). Weight 90.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0020.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Behind the Arcade Cabinets"
   },
   {
    "trait_type": "Tape",

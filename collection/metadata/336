@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0336",
- "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Puzzle Cube (solved once, stickers moved); 1 Game Cartridge (save file erased by a sibling); 2 16-Bit Controllers (the B button is sticky); 2 Clear Lighters (borrowed in 1997, never returned). Weight 37.9 lb. Crushed it.",
+ "description": "Recovered from Lollapaloser Lost & Found. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Puzzle Cube (solved once, stickers moved); 1 Game Cartridge (rented from Blockbusted, never rewound); 2 16-Bit Controllers (the B button is sticky); 2 Clear Lighters (borrowed in 1997, never returned). Weight 37.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0336.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Surj Spilled on the Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Lollapaloser Lost & Found"
   },
   {
    "trait_type": "Tape",

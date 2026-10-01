@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0213",
- "description": "Recovered from Behind the Bar. Smells like arcade carpet. Contents (partial): 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Puzzle Cubes (solved once, stickers moved); 1 VHS Tape (BE KIND REWIND (they did not)); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Centerfold (folded out, then folded back in a hurry). Weight 34.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Grandma's couch. Contents (partial): 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Puzzle Cubes (solved once, stickers moved); 1 VHS Tape (BE KIND REWIND (they did not)); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Centerfold (folded out, then folded back in a hurry). Weight 34.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0213.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Bar"
+   "value": "Spencer's-ish Back Room"
   },
   {
    "trait_type": "Tape",

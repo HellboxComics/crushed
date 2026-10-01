@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0777",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Sneakers (was in the dryer); 3 Dice (blown on for luck); 1 No. 2 Pencil (chewed); 2 Disposable Cameras (27 exposures of a thumb); 2 TV Remotes (the volume button worn smooth). Weight 30.3 lb. Handle with both hands.",
+ "description": "Recovered from A Buddy's Basement. Smells like cheap cologne. Contents (partial): 2 Sneakers (was in the dryer); 3 Dice (blown on for luck); 1 No. 2 Pencil (chewed); 2 Disposable Cameras (27 exposures of a thumb); 2 TV Remotes (the volume button worn smooth). Weight 30.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0777.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0523",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Sneakers (left only); 1 Corded Phone (was on the line when mom picked up); 3 Flip Phones (snapped shut dramatically); 2 Memory Cards (8MB, full); 1 MP3 Player (shuffle picked the same song 6 times). Weight 37.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 3 Sneakers (left only); 1 Corded Phone (was on the line when mom picked up); 3 Flip Phones (snapped shut dramatically); 2 Memory Cards (8MB, full); 1 MP3 Player (shuffle picked the same song 6 times). Weight 37.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0523.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

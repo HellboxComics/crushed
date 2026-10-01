@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0833",
- "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 2 Selfie Sticks (mid-trip, mid-ocean); 1 Bluetooth Speaker (lost, found, lost); 2 Power Strips (daisy-chained into three more); 1 Disposable Camera (never developed); 1 Beer Can (warm, sadly). Weight 37.5 lb. Crushed it.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Moonster and Desperation. Contents (partial): 2 Selfie Sticks (mid-trip, mid-ocean); 1 Bluetooth Speaker (lost, found, lost); 2 Power Strips (daisy-chained into three more); 1 Disposable Camera (never developed); 1 Beer Can (Natty Lightweight, 30-rack). Weight 37.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0833.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

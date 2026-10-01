@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0068",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Spiral Notebooks (note says 'check YES or NO'); 3 No. 2 Pencils (sharpened to a nub); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 3 Floppy Disks (DISK 2 of 7). Weight 39.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like arcade carpet. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Spiral Notebooks (note says 'check YES or NO'); 3 No. 2 Pencils (sharpened to a nub); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 3 Floppy Disks (says DO NOT FORMAT). Weight 39.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0068.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

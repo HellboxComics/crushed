@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0056",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 2 Army Man Squads (melted with a magnifying glass); 1 Boom Box (one speaker still believes); 3 Cassette Tapes (rewound with a pencil); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 86.0 lb. Still heavier than it looks.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 2 Army Man Squads (melted with a magnifying glass); 1 Boom Box (one speaker still believes); 3 Cassette Tapes (a mix for someone who never listened); 1 VHS Tape (Blockbusted rental, never returned). Weight 86.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0056.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0768",
- "description": "Recovered from Ex's Garage. Smells like Grandma's couch. Contents (partial): 3 Smartphones (1% battery, forever); 1 Dice (loaded, rumor says); 1 Disposable Camera (never developed); 2 Soda Cans (shaken as a prank); 2 Scratch Tickets (scratched with a house key). Weight 31.3 lb. Crushed it.",
+ "description": "Recovered from Mom's Basement (Again). Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Smartphones (cracked in the first week); 1 Dice (loaded, rumor says); 1 Disposable Camera (never developed); 2 Soda Cans (tab kept for charity); 2 Scratch Tickets (scratched with a house key). Weight 31.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0768.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

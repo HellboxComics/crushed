@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0619",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Beer Can (12 of 12); 1 Disposable Camera (27 exposures of a thumb); 3 AA Batteries (taken out of the smoke detector); 1 Handheld Console (screen scratched from a pocket with keys); 1 Game Controller (thrown during a boss fight). Weight 26.1 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Beer Can (last one in the fridge); 1 Disposable Camera (27 exposures of a thumb); 3 AA Batteries (mixed old and new, like animals); 1 Handheld Console (screen scratched from a pocket with keys); 1 Game Controller (thrown during a boss fight). Weight 26.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0619.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

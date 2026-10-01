@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0467",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Flip Phone (snapped shut dramatically); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (BE KIND REWIND (they did not)); 3 Dice (loaded, rumor says). Weight 80.0 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Flip Phone (snapped shut dramatically); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (taped over a wedding); 3 Dice (loaded, rumor says). Weight 80.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0467.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

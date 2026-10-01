@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0729",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 1 Earbud Case (one bud present); 3 Energy Drinks (tastes like a battery); 3 Pizza Crusts (found behind the couch); 2 Cheap Sunglasses (one lens popped out); 3 Spiral Notebooks (spiral unwound halfway). Weight 27.6 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 Earbud Case (one bud present); 3 Energy Drinks (exam week casualty); 3 Pizza Crusts (found behind the couch); 2 Cheap Sunglasses (one lens popped out); 3 Spiral Notebooks (spiral unwound halfway). Weight 27.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0729.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

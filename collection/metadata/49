@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0049",
- "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Sneakers (left only); 2 Army Man Squads (the one with the radio survived); 2 Pizza Crusts (from a sleepover); 3 Power Strips (overloaded on purpose); 1 Paper Hand (sold at the bottom). Weight 81.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Sneakers (left only); 2 Army Man Squads (the one with the radio survived); 2 Pizza Crusts (from a sleepover); 3 Power Strips (overloaded on purpose); 1 Paper Hand (sold at the bottom). Weight 81.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0049.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

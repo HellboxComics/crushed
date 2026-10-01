@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0835",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 2 Disposable Vapes (zero nicotine, allegedly); 3 Sneakers (was in the dryer); 1 Glow Stick (still glowing a little, somehow); 3 AA Batteries (taken out of the smoke detector); 3 Beer Cans (12 of 12). Weight 35.1 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Disposable Vapes (Jool pod, found in a gym bag); 3 Sneakers (was in the dryer); 1 Glow Stick (still glowing a little, somehow); 3 AA Batteries (mixed old and new, like animals); 3 Beer Cans (warm, sadly). Weight 35.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0835.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

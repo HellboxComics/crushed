@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0773",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 Hand Sanitizers (half empty, half crusty); 1 Sneaker (worn to one (1) very bad decision); 2 Bluetooth Speakers (paired with the wrong phone); 1 Dice (blown on for luck); 1 Drone (flew once, into a tree). Weight 30.0 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Hand Sanitizers (half empty, half crusty); 1 Sneaker (worn to one (1) very bad decision); 2 Bluetooth Speakers (paired with the wrong phone); 1 Dice (blown on for luck); 1 Drone (flew once, into a tree). Weight 30.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0773.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

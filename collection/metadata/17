@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0017",
- "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 3 Joysticks (suction cups gave up); 1 Milk Caps (won in a bet); 3 Soda Cans (flat); 1 Cassette Tape (rewound with a pencil); 3 Game Cartridges (blown into 400 times). Weight 84.3 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 3 Joysticks (suction cups gave up); 1 Milk Caps (won in a bet); 3 Soda Cans (flat); 1 Cassette Tape (a mix for someone who never listened); 3 Game Cartridges (blown into 400 times). Weight 84.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0017.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

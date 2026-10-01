@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0353",
- "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 No. 2 Pencil (chewed); 1 Scratch Ticket (scratched with a house key); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Power Strip (daisy-chained into three more). Weight 83.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like CK Won. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 No. 2 Pencil (chewed); 1 Scratch Ticket (scratched with a house key); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Power Strip (daisy-chained into three more). Weight 83.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0353.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Columbia House-ish Box, Unopened"
   },
   {
    "trait_type": "Tape",

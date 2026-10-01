@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0500",
- "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Jewel Case (hinge broken on arrival); 2 Power Strips (overloaded on purpose); 2 Flip Phones (ringtone composed by hand); 2 Game Controllers (stick drift since day one). Weight 79.8 lb. Nobody made you keep this.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Jewel Case (hinge broken on arrival); 2 Power Strips (overloaded on purpose); 2 Flip Phones (ringtone composed by hand); 2 Game Controllers (stick drift since day one). Weight 79.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0500.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

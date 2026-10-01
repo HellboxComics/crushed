@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0188",
- "description": "Recovered from The Bachelor Pad. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Bull (flipped). Weight 65.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like CK Won. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (labeled MIX 4 U); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Bull (flipped). Weight 65.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0188.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "CK Won"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

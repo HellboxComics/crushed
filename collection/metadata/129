@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0129",
- "description": "Recovered from Flooded Basement. Smells like arcade carpet. Contents (partial): 1 Beer Can (warm, sadly); 1 Boom Box (shoulder-mounted in its prime); 2 Keyboards (Partial) (F, J and the crumbs); 3 Poker Chips (never cashed out); 2 Calculators (spelled BOOBIES upside down). Weight 81.5 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like wet cardboard. Contents (partial): 1 Beer Can (Natty Lightweight, 30-rack); 1 Boom Box (shoulder-mounted in its prime); 2 Keyboards (Partial) (F, J and the crumbs); 3 Poker Chips (never cashed out); 2 Calculators (spelled BOOBIES upside down). Weight 81.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0129.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "A Blockbusted Drop Box"
   },
   {
    "trait_type": "Tape",

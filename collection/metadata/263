@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0263",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Floppy Disks (DISK 2 of 7); 3 Slap Bracelets (cut someone, probably); 1 Toy Slime (stuck in the carpet). Weight 37.3 lb. Contents may have settled.",
+ "description": "Recovered from The Mall Fountain. Smells like Grandma's couch. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Floppy Disks (DISK 2 of 7); 3 Slap Bracelets (cut someone, probably); 1 Toy Slime (stuck in the carpet). Weight 37.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0263.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "The Mall Fountain"
   },
   {
    "trait_type": "Tape",

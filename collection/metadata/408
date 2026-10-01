@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0408",
- "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Ball Mouse (cord chewed by a dog); 2 Magazines (found in a dad's truck); 1 Portable CD Player (anti-skip lied); 2 Dice (snake eyes, twice); 1 Suspicious Rectangle (PIN forgotten). Weight 75.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Back of the Closet. Smells like Y2K Bunker Canned Food. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Ball Mouse (cord chewed by a dog); 2 Magazines (found in a dad's truck); 1 Portable CD Player (anti-skip lied); 2 Dice (snake eyes, twice); 1 Suspicious Rectangle (PIN forgotten). Weight 75.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0408.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",

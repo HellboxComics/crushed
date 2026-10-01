@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0131",
- "description": "Recovered from The Bachelor Pad. Smells like rink snack bar. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (tab kept for charity); 2 Army Man Squads (melted with a magnifying glass); 2 Spiral Notebooks (doodles in the margins); 3 Cassette Tapes (side B only). Weight 82.5 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (Surj, the can that started a fight); 2 Army Man Squads (melted with a magnifying glass); 2 Spiral Notebooks (doodles in the margins); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 82.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0131.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0479",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 3 Disposable Cameras (27 exposures of a thumb); 2 Poker Chips (never cashed out); 2 Energy Drinks (exam week casualty); 2 Pagers (clipped to jeans for status only). Weight 71.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 1 Foam Headphones (orange foam, allegedly); 3 Disposable Cameras (27 exposures of a thumb); 2 Poker Chips (never cashed out); 2 Energy Drinks (Moonster, the whole case); 2 Pagers (clipped to jeans for status only). Weight 71.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0479.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

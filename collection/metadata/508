@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0508",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Ball Mice (ball removed as a prank); 1 Digital Camera (memory full, 14 photos); 1 Foam Headphones (one ear works if you hold it); 2 Flip Phones (12 texts left this month). Weight 38.2 lb. Contents may have settled.",
+ "description": "Recovered from Nobody Knows. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Ball Mice (ball removed as a prank); 1 Digital Camera (memory full, 14 photos); 1 Foam Headphones (one ear works if you hold it); 2 Flip Phones (12 texts left this month). Weight 38.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0508.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Nobody Knows"
   },
   {
    "trait_type": "Tape",

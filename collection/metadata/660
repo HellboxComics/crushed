@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0660",
- "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 1 Pizza Crust (found behind the couch); 1 Magazine (found in a dad's truck); 1 Soda Can (shaken as a prank); 1 Spiral Notebook (spiral unwound halfway). Weight 25.1 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like Hot Razr Battery. Contents (partial): 2 Sneakers (was in the dryer); 1 Pizza Crust (found behind the couch); 1 Magazine (found in a dad's truck); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Spiral Notebook (spiral unwound halfway). Weight 25.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0660.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

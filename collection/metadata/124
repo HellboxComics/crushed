@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0124",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 VHS Tapes (taped over a wedding); 1 Army Man Squad (the one with the radio survived); 2 Calculators (spelled BOOBIES upside down); 3 Cheap Sunglasses (one lens popped out); 1 Puzzle Cube (solved once, stickers moved). Weight 27.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 2 VHS Tapes (label says DO NOT TAPE OVER); 1 Army Man Squad (the one with the radio survived); 2 Calculators (spelled BOOBIES upside down); 3 Cheap Sunglasses (one lens popped out); 1 Puzzle Cube (solved once, stickers moved). Weight 27.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0124.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

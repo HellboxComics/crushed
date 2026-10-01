@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0341",
- "description": "Recovered from Grandma's Attic. Smells like basement. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Skateboard (griptape ate a pair of jeans); 3 Magazines (read for the articles); 1 Disposable Camera (never developed); 3 Scratch Tickets (not a winner). Weight 77.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Mall Fountain. Smells like basement. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Skateboard (griptape ate a pair of jeans); 3 Magazines (read for the articles); 1 Disposable Camera (never developed); 3 Scratch Tickets (not a winner). Weight 77.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0341.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Mall Fountain"
   },
   {
    "trait_type": "Tape",

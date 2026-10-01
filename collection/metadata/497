@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0497",
- "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Cassette Tapes (someone's voicemail greeting); 1 AA Batteries (mixed old and new, like animals); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Burned CDs (burned at 1x, 4 hours). Weight 75.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Cassette Tapes (a mix for someone who never listened); 1 AA Batteries (Neveready, as advertised); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Burned CDs (burned at 1x, 4 hours). Weight 75.5 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0497.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

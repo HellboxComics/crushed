@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0741",
- "description": "Recovered from Grandma's Attic. Smells like melted crayon. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 1 Beer Can (warm, sadly); 3 Dice (snake eyes, twice); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Power Bank (dead when needed). Weight 34.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Ring Light Heat. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 1 Beer Can (Natty Lightweight, 30-rack); 3 Dice (snake eyes, twice); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Power Bank (dead when needed). Weight 34.5 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0741.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Melted Crayon"
+   "value": "Ring Light Heat"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0763",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Sneakers (light-up heel, dead); 1 VR Headset (the walls were real and they were hit); 1 Energy Drink (tastes like a battery); 1 No. 2 Pencil (never saw a scantron it liked); 3 Earbud Cases (both buds gone, case still charges nothing). Weight 31.8 lb. Nobody made you keep this.",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 3 Sneakers (light-up heel, dead); 1 VR Headset (the walls were real and they were hit); 1 Energy Drink (Jolted, twice the caffeine); 1 No. 2 Pencil (never saw a scantron it liked); 3 Earbud Cases (both buds gone, case still charges nothing). Weight 31.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0763.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

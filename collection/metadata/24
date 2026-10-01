@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0024",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Matchbooks (from a gentlemen's club, reportedly); 2 No. 2 Pencils (never saw a scantron it liked); 2 Tissue Boxes (nearly empty); 1 Magazine (the staples are doing the work); 1 Emergency Ramen (the whole strategy). Weight 87.7 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Matchbooks (from a gentlemen's club, reportedly); 2 No. 2 Pencils (never saw a scantron it liked); 2 Tissue Boxes (nearly empty); 1 Magazine (the staples are doing the work); 1 Emergency Ramen (the whole strategy). Weight 87.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0024.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0630",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 TV Remotes (found in the couch); 3 Sneakers (light-up heel, dead); 3 Burned CDs (coaster now); 1 Dice (blown on for luck); 3 Beer Cans (warm, sadly). Weight 34.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Hot Razr Battery. Contents (partial): 3 TV Remotes (found in the couch); 3 Sneakers (light-up heel, dead); 3 Burned CDs (coaster now); 1 Dice (blown on for luck); 3 Beer Cans (Natty Lightweight, 30-rack). Weight 34.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0630.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

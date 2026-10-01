@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0490",
- "description": "Recovered from A Very Specific Ditch. Smells like cigarette in a jacket. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Flip Phone (snapped shut dramatically); 1 Beer Can (12 of 12); 2 Burned CDs (burned at 1x, 4 hours); 2 MP3 Players (shuffle picked the same song 6 times). Weight 23.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A LAN Party Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Flip Phone (snapped shut dramatically); 1 Beer Can (warm, sadly); 2 Burned CDs (burned at 1x, 4 hours); 2 MP3 Players (shuffle picked the same song 6 times). Weight 23.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0490.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

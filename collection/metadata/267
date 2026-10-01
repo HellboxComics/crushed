@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0267",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Poker Chips (never cashed out); 2 Burned CDs (coaster now); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (melted with a magnifying glass). Weight 78.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Poker Chips (never cashed out); 2 Burned CDs (coaster now); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (melted with a magnifying glass). Weight 78.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0267.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",

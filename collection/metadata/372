@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0372",
- "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 2 TV Remotes (found in the couch); 2 VHS Tapes (taped over a wedding); 2 No. 2 Pencils (sharpened to a nub); 1 Toy Slime (was in the hair of a sibling); 1 Pizza Crust (found behind the couch). Weight 74.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Ballz Energy. Contents (partial): 2 TV Remotes (found in the couch); 2 VHS Tapes (taped over a wedding); 2 No. 2 Pencils (sharpened to a nub); 1 Toy Slime (was in the hair of a sibling); 1 Pizza Crust (found behind the couch). Weight 74.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0372.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Ballz Energy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0802",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 Dice (loaded, rumor says). Weight 35.4 lb. Still heavier than it looks.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like arcade carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 Dice (loaded, rumor says). Weight 35.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0802.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

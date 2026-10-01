@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0499",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Burned CDs (says ROAD TRIP in marker); 1 No. 2 Pencil (never saw a scantron it liked); 2 Beer Cans (12 of 12); 2 Tissue Boxes (nearly empty). Weight 71.3 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Burned CDs (says ROAD TRIP in marker); 1 No. 2 Pencil (never saw a scantron it liked); 2 Beer Cans (12 of 12); 2 Tissue Boxes (nearly empty). Weight 71.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0499.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0493",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Floppy Disks (DISK 2 of 7); 1 Webcam (240p of pure confidence); 1 TV Remote (found in the couch); 3 Tissue Boxes (one for every mood). Weight 72.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Floppy Disks (says DO NOT FORMAT); 1 Webcam (240p of pure confidence); 1 TV Remote (found in the couch); 3 Tissue Boxes (one for every mood). Weight 72.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0493.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",

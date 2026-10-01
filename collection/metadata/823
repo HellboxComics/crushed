@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0823",
- "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 1 VR Headset (the walls were real and they were hit); 2 Sneakers (light-up heel, dead); 3 Pizza Crusts (still better than most portfolios); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 AA Batteries (licked to test). Weight 29.7 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like Fidget Spinner Bearings. Contents (partial): 1 VR Headset (the walls were real and they were hit); 2 Sneakers (light-up heel, dead); 3 Pizza Crusts (still better than most portfolios); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 AA Batteries (taken out of the smoke detector). Weight 29.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0823.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Fidget Spinner Bearings"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0320",
- "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 3 Burned CDs (coaster now); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Milk Caps (the slammer is chipped). Weight 38.8 lb. Nobody made you keep this.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like arcade carpet. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 3 Burned CDs (coaster now); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Milk Caps (the slammer is chipped). Weight 38.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0320.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

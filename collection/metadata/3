@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0003",
- "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 3 Yo-Yos (walked the dog one time); 1 Army Man Squad (melted with a magnifying glass); 1 Keyboard (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 2 Calculators (solar panel covered by a sticker). Weight 46.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 3 Yo-Yos (walked the dog one time); 1 Army Man Squad (melted with a magnifying glass); 1 Keyboard (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 2 Calculators (solar panel covered by a sticker). Weight 46.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0003.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

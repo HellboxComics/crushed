@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0251",
- "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway). Weight 78.0 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Crystal Peppy. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway). Weight 78.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0251.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Crystal Peppy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",

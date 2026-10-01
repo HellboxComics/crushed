@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0388",
- "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Floppy Disks (DISK 2 of 7); 1 CRT Monitor (screen burn-in reads LOADING); 2 Game Controllers (stick drift since day one); 1 Beer Can (last one in the fridge). Weight 83.0 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Floppy Disks (DISK 2 of 7); 1 CRT Monitor (screen burn-in reads LOADING); 2 Game Controllers (stick drift since day one); 1 Beer Can (PBJ, the hipster one). Weight 83.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0388.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

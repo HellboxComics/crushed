@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0593",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (coaster now); 1 Glow Stick (still glowing a little, somehow); 1 Poker Chip (never cashed out); 3 Jewel Cases (insert is from a different album). Weight 27.3 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (coaster now); 1 Glow Stick (still glowing a little, somehow); 1 Poker Chip (never cashed out); 3 Jewel Cases (insert is from a different album). Weight 27.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0593.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0864",
- "description": "Recovered from A Very Specific Ditch. Smells like cheap cologne. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Clear Lighters (for incense, obviously); 2 Bluetooth Speakers (lost, found, lost); 2 Power Strips (overloaded on purpose). Weight 36.1 lb. We kept the important shit.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Moonster and Desperation. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Clear Lighters (for incense, obviously); 2 Bluetooth Speakers (lost, found, lost); 2 Power Strips (overloaded on purpose). Weight 36.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0864.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "An Amazon Basically Return Pile"
   },
   {
    "trait_type": "Tape",

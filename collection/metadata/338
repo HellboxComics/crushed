@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0338",
- "description": "Recovered from A Buddy's Basement. Smells like scratch-n-sniff sticker. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Ball Mouse (cord chewed by a dog); 1 Scratch Ticket (scratched with a house key); 1 Army Man Squad (melted with a magnifying glass); 1 Corded Phone (was on the line when mom picked up). Weight 84.0 lb. Handle with both hands.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Blockbusted New Release Wall. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Ball Mouse (cord chewed by a dog); 1 Scratch Ticket (scratched with a house key); 1 Army Man Squad (melted with a magnifying glass); 1 Corded Phone (was on the line when mom picked up). Weight 84.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0338.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

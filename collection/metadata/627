@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0627",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Virtual Pet (fed 0 times); 2 Disposable Cameras (never developed); 3 TV Remotes (found in the couch). Weight 36.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Virtual Pet (fed 0 times); 2 Disposable Cameras (never developed); 3 TV Remotes (found in the couch). Weight 36.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0627.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Juicy Couture-ish Tracksuit"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Hot Topic-ish Bag"
   },
   {
    "trait_type": "Tape",

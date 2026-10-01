@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0182",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Spiral Notebooks (spiral unwound halfway); 2 Keyboards (Partial) (F, J and the crumbs); 3 Slap Bracelets (cut someone, probably); 1 No. 2 Pencil (sharpened to a nub). Weight 76.0 lb. Handle with both hands.",
+ "description": "Recovered from The Mall Arcade. Smells like mall food court. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Spiral Notebooks (spiral unwound halfway); 2 Keyboards (Partial) (F, J and the crumbs); 3 Slap Bracelets (cut someone, probably); 1 No. 2 Pencil (sharpened to a nub). Weight 76.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0182.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

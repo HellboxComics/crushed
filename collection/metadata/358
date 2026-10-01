@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0358",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Beer Cans (warm, sadly); 2 Cheap Sunglasses (one lens popped out); 3 TV Remotes (the volume button worn smooth); 2 Soda Cans (shaken as a prank); 1 Corded Phone (someone is still on hold). Weight 34.2 lb. Contents may have settled.",
+ "description": "Recovered from A LAN Party Basement. Smells like new plastic. Contents (partial): 2 Beer Cans (Natty Lightweight, 30-rack); 2 Cheap Sunglasses (one lens popped out); 3 TV Remotes (the volume button worn smooth); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Corded Phone (someone is still on hold). Weight 34.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0358.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

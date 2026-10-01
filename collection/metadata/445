@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0445",
- "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Centerfold (staples removed, an attempt was made); 1 Jewel Case (hinge broken on arrival); 1 Memory Card (corrupted during a birthday); 2 Tissue Boxes (nearly empty). Weight 76.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Hot Pentium. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Centerfold (staples removed, an attempt was made); 1 Jewel Case (hinge broken on arrival); 1 Memory Card (corrupted during a birthday); 2 Tissue Boxes (nearly empty). Weight 76.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0445.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Hot Pentium"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0746",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Soda Cans (flat); 1 AA Batteries (probably dead); 3 Power Banks (10000 mAh of dead weight); 1 VR Headset (watched one (1) movie). Weight 30.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Soda Cans (flat); 1 AA Batteries (licked to test); 3 Power Banks (10000 mAh of dead weight); 1 VR Headset (watched one (1) movie). Weight 30.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0746.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Crypto Bro's Garage"
   },
   {
    "trait_type": "Tape",

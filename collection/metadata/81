@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0081",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Three-Ring Binders (velcro screams when opened); 3 Beer Cans (warm, sadly); 2 AA Batteries (mixed old and new, like animals). Weight 71.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Cassette Tapes (labeled MIX 4 U); 2 Three-Ring Binders (velcro screams when opened); 3 Beer Cans (Milwaukee's Worst, on sale); 2 AA Batteries (Neveready, as advertised). Weight 71.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0081.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0464",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Sneakers (light-up heel, dead); 1 Keyboard (Partial) (F, J and the crumbs); 3 Clear Lighters (borrowed in 1997, never returned); 2 Webcams (240p of pure confidence). Weight 28.9 lb. Crushed it.",
+ "description": "Recovered from A LAN Party Basement. Smells like hot dust on a CRT. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Sneakers (light-up heel, dead); 1 Keyboard (Partial) (F, J and the crumbs); 3 Clear Lighters (borrowed in 1997, never returned); 2 Webcams (240p of pure confidence). Weight 28.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0464.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

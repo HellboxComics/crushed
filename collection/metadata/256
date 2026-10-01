@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0256",
- "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 1 Magazine (the staples are doing the work); 1 CRT Monitor (screen burn-in reads LOADING); 2 AA Batteries (taken out of the smoke detector); 1 Beer Can (crushed on a forehead); 2 Cassette Tapes (labeled MIX 4 U). Weight 73.7 lb. Nobody made you keep this.",
+ "description": "Recovered from A Buddy's Basement. Smells like Blockbusted New Release Wall. Contents (partial): 1 Magazine (the staples are doing the work); 1 CRT Monitor (screen burn-in reads LOADING); 2 AA Batteries (mixed old and new, like animals); 1 Beer Can (crushed on a forehead); 2 Cassette Tapes (rewound with a pencil). Weight 73.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0256.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Blockbusted New Release Wall"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",

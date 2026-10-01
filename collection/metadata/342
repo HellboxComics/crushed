@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0342",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 1 Boom Box (one speaker still believes); 1 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed); 1 Shot Glass (chipped rim); 1 Film Canister (holds one quarter). Weight 84.9 lb. Contents may have settled.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Grunge Flannel. Contents (partial): 1 Boom Box (one speaker still believes); 1 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed); 1 Shot Glass (chipped rim); 1 Film Canister (holds one quarter). Weight 84.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0342.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Grunge Flannel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Sleepover, Never Picked Up"
   },
   {
    "trait_type": "Tape",

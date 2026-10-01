@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0487",
- "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Brick Phones (unbreakable until today); 1 AA Batteries (probably dead); 1 Tiny Red Candle (one of many). Weight 69.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Y2K Bunker. Smells like blue raspberry. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Brick Phones (unbreakable until today); 1 AA Batteries (licked to test); 1 Tiny Red Candle (one of many). Weight 69.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0487.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "The Y2K Bunker"
   },
   {
    "trait_type": "Tape",

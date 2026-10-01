@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0277",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Ball Mouse (rollers caked with 1998); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Clear Lighter (out of fluid). Weight 79.4 lb. Contents may have settled.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Crystal Peppy. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Ball Mouse (rollers caked with 1998); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Clear Lighter (out of fluid). Weight 79.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0277.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Crystal Peppy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

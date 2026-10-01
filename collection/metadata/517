@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0517",
- "description": "Recovered from Ex's Garage. Smells like Grandma's couch. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Dice (snake eyes, twice); 3 Pagers (last page from a number nobody called back); 3 Game Controllers (thrown during a boss fight); 1 Cassette Tape (a mix for someone who never listened). Weight 28.9 lb. Handle with both hands.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Dice (snake eyes, twice); 3 Pagers (last page from a number nobody called back); 3 Game Controllers (thrown during a boss fight); 1 Cassette Tape (TDKay SA-90, the good tape). Weight 28.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0517.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Circuit City-ish Return Counter"
   },
   {
    "trait_type": "Tape",

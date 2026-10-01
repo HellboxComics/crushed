@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0410",
- "description": "Recovered from Ex's Garage. Smells like Vegas carpet. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Burned CD (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth); 1 Floppy Disk (contains one (1) virus); 1 Broken Rocket (didn't make it). Weight 77.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 VHS Tape (the unmarked one, from the back of the closet); 1 Burned CD (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth); 1 Floppy Disk (save icon, but real); 1 Broken Rocket (didn't make it). Weight 77.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0410.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Napstered Dorm Room"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0489",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Disposable Camera (27 exposures of a thumb); 2 Dice (blown on for luck); 1 Shot Glass (chipped rim); 2 Scratch Tickets (scratched with a house key). Weight 75.9 lb. Some assembly was removed.",
+ "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Disposable Camera (27 exposures of a thumb); 2 Dice (blown on for luck); 1 Shot Glass (chipped rim); 2 Scratch Tickets (scratched with a house key). Weight 75.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0489.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

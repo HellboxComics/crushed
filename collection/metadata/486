@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0486",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Spiral Notebooks (spiral unwound halfway); 1 TV Remote (found in the couch); 2 Brick Phones (unbreakable until today); 3 Dice (loaded, rumor says). Weight 30.5 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like Hot Pentium. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Spiral Notebooks (spiral unwound halfway); 1 TV Remote (found in the couch); 2 Brick Phones (unbreakable until today); 3 Dice (loaded, rumor says). Weight 30.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0486.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Hot Pentium"
   },
   {
    "trait_type": "Recovered From",

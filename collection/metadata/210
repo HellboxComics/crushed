@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0210",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Calculators (spelled BOOBIES upside down); 3 Spiral Notebooks (spiral unwound halfway); 1 Burned CD (track 7 skips). Weight 46.1 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Calculators (spelled BOOBIES upside down); 3 Spiral Notebooks (spiral unwound halfway); 1 Burned CD (track 7 skips). Weight 46.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0210.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

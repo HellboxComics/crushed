@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0360",
- "description": "Recovered from Estate of a Collector. Smells like mall food court. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Scratch Ticket (scratched with a house key); 1 Toy Slime (was in the hair of a sibling); 2 Portable CD Players (anti-skip lied); 2 Pizza Crusts (petrified). Weight 32.5 lb. Handle with both hands.",
+ "description": "Recovered from The Y2K Bunker. Smells like rink snack bar. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Scratch Ticket (scratched with a house key); 1 Toy Slime (was in the hair of a sibling); 2 Portable CD Players (anti-skip lied); 2 Pizza Crusts (petrified). Weight 32.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0360.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "The Y2K Bunker"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0438",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 1 Sneaker (smells like 1989); 2 AA Batteries (licked to test); 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 81.5 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Sneaker (smells like 1989); 2 AA Batteries (taken out of the smoke detector); 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 VHS Tape (Blockbusted rental, never returned). Weight 81.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0438.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Ax-ish Body Spray, Entire Can"
   },
   {
    "trait_type": "Recovered From",

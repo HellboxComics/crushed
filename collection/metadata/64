@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0064",
- "description": "Recovered from Vegas Hotel Room. Smells like body spray cloud. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (string tied to a finger for 3 years); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Soda Cans (tab kept for charity); 1 VHS Tape (late fees now exceed GDP of a small nation). Weight 85.2 lb. Handle with both hands.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (string tied to a finger for 3 years); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Soda Cans (New Koak, 79 days only); 1 VHS Tape (Blockbusted rental, never returned). Weight 85.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0064.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Tupperware-ish Party"
   },
   {
    "trait_type": "Tape",

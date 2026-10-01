@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0545",
- "description": "Recovered from A Very Specific Ditch. Smells like Vegas carpet. Contents (partial): 3 Soda Cans (shaken as a prank); 3 Energy Drinks (third one that night); 2 Spiral Notebooks (spiral unwound halfway); 2 Flip Phones (snapped shut dramatically); 2 TV Remotes (found in the couch). Weight 29.5 lb. Crushed it.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Soda Cans (tab kept for charity); 3 Energy Drinks (third one that night); 2 Spiral Notebooks (spiral unwound halfway); 2 Flip Phones (snapped shut dramatically); 2 TV Remotes (found in the couch). Weight 29.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0545.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Myspace Top 8 Breakup Box"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0364",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Soda Cans (shaken as a prank); 2 Ball Mice (cord chewed by a dog); 1 Skateboard (one ollie, lifetime); 3 Magazines (found in a dad's truck). Weight 80.4 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Tissue Boxes (one for every mood); 2 Soda Cans (tab kept for charity); 2 Ball Mice (cord chewed by a dog); 1 Skateboard (one ollie, lifetime); 3 Magazines (found in a dad's truck). Weight 80.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0364.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

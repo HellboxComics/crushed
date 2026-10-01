@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0579",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 1 Flip Phone (12 texts left this month); 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Energy Drink (tastes like a battery); 1 Matchbook (matches missing, reasons unclear); 1 Soda Can (tab kept for charity); 1 Bull (dead). Weight 35.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 1 Flip Phone (12 texts left this month); 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Energy Drink (exam week casualty); 1 Matchbook (matches missing, reasons unclear); 1 Soda Can (Surj, the can that started a fight); 1 Bull (dead). Weight 35.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0579.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0444",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Beer Can (warm, sadly); 1 AA Batteries (mixed old and new, like animals); 3 Flip Phones (12 texts left this month); 2 Pizza Crusts (still better than most portfolios); 1 Digital Camera (2 megapixels of truth). Weight 71.6 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like blue raspberry. Contents (partial): 1 Beer Can (Natty Lightweight, 30-rack); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Flip Phones (12 texts left this month); 2 Pizza Crusts (still better than most portfolios); 1 Digital Camera (2 megapixels of truth). Weight 71.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0444.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

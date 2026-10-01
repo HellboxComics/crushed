@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0681",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 3 Magazines (found in a dad's truck); 1 Spiral Notebook (doodles in the margins); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Tablet (one thumbprint of juice); 1 Centerfold (left open to the wrong page). Weight 34.9 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 3 Magazines (found in a dad's truck); 1 Spiral Notebook (doodles in the margins); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Tablet (one thumbprint of juice); 1 Centerfold (left open to the wrong page). Weight 34.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0681.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

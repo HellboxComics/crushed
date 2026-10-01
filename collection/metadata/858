@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0858",
- "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Spiral Notebooks (spiral unwound halfway); 2 Disposable Vapes (5000 puffs, 4999 regrets); 3 Soda Cans (shaken as a prank); 1 Power Strip (daisy-chained into three more). Weight 26.4 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Spiral Notebooks (spiral unwound halfway); 2 Disposable Vapes (5000 puffs, 4999 regrets); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Power Strip (daisy-chained into three more). Weight 26.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0858.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "DoorDashed Fries, Cold"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

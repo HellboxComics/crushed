@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0482",
- "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (a mix for someone who never listened); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times); 1 Bear (thriving). Weight 33.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Ballz Energy. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (TDKay SA-90, the good tape); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times); 1 Bear (thriving). Weight 33.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0482.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Ballz Energy"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Radio Shacked Clearance Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0463",
- "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Ball Mouse (ball removed as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Virtual Pets (reincarnated 40 times); 2 Poker Chips (taken from a casino, small heist). Weight 64.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Y2K Bunker Canned Food. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Ball Mouse (ball removed as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Virtual Pets (reincarnated 40 times); 2 Poker Chips (taken from a casino, small heist). Weight 64.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0463.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Y2K Bunker Canned Food"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

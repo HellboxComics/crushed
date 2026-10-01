@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0252",
- "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Calculators (spelled BOOBIES upside down); 2 Slap Bracelets (banned by the school); 2 AA Batteries (taken out of the smoke detector); 1 Shot Glass (souvenir of a night nobody recalls). Weight 79.2 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like Vegas carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Calculators (spelled BOOBIES upside down); 2 Slap Bracelets (banned by the school); 2 AA Batteries (mixed old and new, like animals); 1 Shot Glass (souvenir of a night nobody recalls). Weight 79.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0252.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0105",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Dice (snake eyes, twice); 3 Portable Tape Players (auto-reverse broke in 1991); 1 TV Remote (the volume button worn smooth); 2 AA Batteries (mixed old and new, like animals). Weight 68.2 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Drakkar Noire-ish. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Dice (snake eyes, twice); 3 Portable Tape Players (auto-reverse broke in 1991); 1 TV Remote (the volume button worn smooth); 2 AA Batteries (Neveready, as advertised). Weight 68.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0105.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Drakkar Noire-ish"
   },
   {
    "trait_type": "Recovered From",

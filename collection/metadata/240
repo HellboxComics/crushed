@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0240",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Metal Lunchbox (thermos missing); 3 Power Strips (overloaded on purpose); 2 AA Batteries (licked to test); 2 Pagers (last page from a number nobody called back). Weight 46.0 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Metal Lunchbox (thermos missing); 3 Power Strips (overloaded on purpose); 2 AA Batteries (taken out of the smoke detector); 2 Pagers (last page from a number nobody called back). Weight 46.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0240.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0772",
- "description": "Recovered from Nobody Knows. Smells like new plastic. Contents (partial): 1 Gold Pizza Crust (why); 1 VR Headset (watched one (1) movie); 2 Power Strips (daisy-chained into three more); 2 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (one bulb out, one ego intact). Weight 29.6 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Basement (Again). Smells like hot dust on a CRT. Contents (partial): 1 Gold Pizza Crust (why); 1 VR Headset (watched one (1) movie); 2 Power Strips (daisy-chained into three more); 2 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (one bulb out, one ego intact). Weight 29.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0772.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

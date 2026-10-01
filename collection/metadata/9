@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0009",
- "description": "Recovered from Ex's Garage. Smells like Vegas carpet. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 3 Yo-Yos (walked the dog one time); 2 Cassette Tapes (someone's voicemail greeting); 2 Tissue Boxes (one for every mood); 2 Poker Chips (taken from a casino, small heist). Weight 43.2 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like New Koak. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 3 Yo-Yos (walked the dog one time); 2 Cassette Tapes (a mix for someone who never listened); 2 Tissue Boxes (one for every mood); 2 Poker Chips (taken from a casino, small heist). Weight 43.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0009.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "New Koak"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Behind the Arcade Cabinets"
   },
   {
    "trait_type": "Tape",

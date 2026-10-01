@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0613",
- "description": "Recovered from The Bachelor Pad. Smells like cigarette in a jacket. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Spiral Notebooks (note says 'check YES or NO'); 1 No. 2 Pencil (chewed); 3 Burned CDs (coaster now). Weight 28.5 lb. Some assembly was removed.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Spiral Notebooks (note says 'check YES or NO'); 1 No. 2 Pencil (chewed); 3 Burned CDs (coaster now). Weight 28.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0613.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "The Ed Hardy-ish Era"
   },
   {
    "trait_type": "Tape",

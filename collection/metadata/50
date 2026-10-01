@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0050",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Cassette Tapes (rewound with a pencil); 1 Corded Phone (cord stretched to the bathroom); 1 Army Man Squad (the one with the radio survived); 2 VHS Tapes (the unmarked one, from the back of the closet). Weight 28.9 lb. Crushed it.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like rink snack bar. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Cassette Tapes (someone's voicemail greeting); 1 Corded Phone (cord stretched to the bathroom); 1 Army Man Squad (the one with the radio survived); 2 VHS Tapes (taped off HBOH, commercials and all). Weight 28.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0050.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",

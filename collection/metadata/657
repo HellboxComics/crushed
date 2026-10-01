@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0657",
- "description": "Recovered from A Very Specific Ditch. Smells like hot dust on a CRT. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Jewel Case (hinge broken on arrival); 3 MP3 Players (shuffle picked the same song 6 times); 2 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 25.9 lb. Contents may have settled.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like blue raspberry. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Jewel Case (hinge broken on arrival); 3 MP3 Players (shuffle picked the same song 6 times); 2 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 25.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0657.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "A Myspace Top 8 Breakup Box"
   },
   {
    "trait_type": "Tape",

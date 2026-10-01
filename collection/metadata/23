@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0023",
- "description": "Recovered from Grandma's Attic. Smells like cigarette in a jacket. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Dice (snake eyes, twice); 3 Spiral Notebooks (spiral unwound halfway); 1 Pizza Crust (petrified); 1 Poker Chip (taken from a casino, small heist). Weight 79.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Bachelor Pad. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Dice (snake eyes, twice); 3 Spiral Notebooks (spiral unwound halfway); 1 Pizza Crust (petrified); 1 Poker Chip (taken from a casino, small heist). Weight 79.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0023.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Pizza Hut-ish Book It! Night"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

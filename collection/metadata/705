@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0705",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Poker Chips (a stack of ambition); 3 Energy Drinks (tastes like a battery); 1 Dice (loaded, rumor says); 3 Pizza Crusts (from a sleepover). Weight 27.0 lb. Still heavier than it looks.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like cigarette in a jacket. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Poker Chips (a stack of ambition); 3 Energy Drinks (Jolted, twice the caffeine); 1 Dice (loaded, rumor says); 3 Pizza Crusts (from a sleepover). Weight 27.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0705.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "The Ed Hardy-ish Era"
   },
   {
    "trait_type": "Tape",

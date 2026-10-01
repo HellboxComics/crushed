@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0048",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Pizza Crust (found behind the couch); 2 VHS Tapes (taped over a wedding); 2 Army Man Squads (the one with the radio survived). Weight 52.8 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Pizza Crust (found behind the couch); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Army Man Squads (the one with the radio survived). Weight 52.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0048.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",

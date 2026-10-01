@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0666",
- "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 TV Remote (the volume button worn smooth); 2 Tissue Boxes (there was a reason it lived on the nightstand); 2 Poker Chips (never cashed out); 2 No. 2 Pencils (sharpened to a nub). Weight 25.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 TV Remote (the volume button worn smooth); 2 Tissue Boxes (there was a reason it lived on the nightstand); 2 Poker Chips (never cashed out); 2 No. 2 Pencils (sharpened to a nub). Weight 25.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0666.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Ed Hardy-ish Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

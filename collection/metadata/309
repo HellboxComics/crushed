@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0309",
- "description": "Recovered from Vegas Hotel Room. Smells like burnt popcorn. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 2 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (from a sleepover); 1 Ball Mouse (rollers caked with 1998); 2 Sneakers (smells like 1989). Weight 72.3 lb. Some assembly was removed.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 2 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (from a sleepover); 1 Ball Mouse (rollers caked with 1998); 2 Sneakers (smells like 1989). Weight 72.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0309.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Columbia House-ish Box, Unopened"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0195",
- "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Dice (snake eyes, twice); 1 TV Remote (the volume button worn smooth); 2 Game Cartridges (blown into 400 times); 2 Pagers (last page: 143). Weight 29.3 lb. Handle with both hands.",
+ "description": "Recovered from The Bachelor Pad. Smells like Gak-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Dice (snake eyes, twice); 1 TV Remote (the volume button worn smooth); 2 Game Cartridges (blown into 400 times); 2 Pagers (last page: 143). Weight 29.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0195.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Gak-ish"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",

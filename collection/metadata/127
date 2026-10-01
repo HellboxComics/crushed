@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0127",
- "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 2 Centerfolds (staples removed, an attempt was made); 1 Cassette Tape (someone's voicemail greeting); 2 Matchbooks (from a gentlemen's club, reportedly); 2 Foam Headphones (orange foam, allegedly). Weight 81.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Jean Jacket. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 2 Centerfolds (staples removed, an attempt was made); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 Matchbooks (from a gentlemen's club, reportedly); 2 Foam Headphones (orange foam, allegedly). Weight 81.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0127.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Jean Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

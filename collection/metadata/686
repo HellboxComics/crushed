@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0686",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (tastes like a battery); 1 Corded Phone (someone is still on hold); 1 Soda Can (shaken as a prank); 1 Memory Card (corrupted during a birthday). Weight 28.7 lb. Still heavier than it looks.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Hot Razr Battery. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (exam week casualty); 1 Corded Phone (someone is still on hold); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Memory Card (corrupted during a birthday). Weight 28.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0686.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Hot Topic-ish Bag"
   },
   {
    "trait_type": "Tape",

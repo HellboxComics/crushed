@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0606",
- "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Beer Cans (warm, sadly); 2 Soda Cans (flat); 2 Burned CDs (coaster now); 1 Dice (blown on for luck). Weight 22.7 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like Hot Razr Battery. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Beer Cans (last one in the fridge); 2 Soda Cans (flat); 2 Burned CDs (coaster now); 1 Dice (blown on for luck). Weight 22.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0606.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

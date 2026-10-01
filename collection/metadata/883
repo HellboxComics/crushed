@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0883",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like body spray cloud. Contents (partial): 1 Disposable Camera (never developed); 3 AA Batteries (taken out of the smoke detector); 2 Energy Drinks (tastes like a battery); 3 Smartphones (cracked in the first week); 3 Beer Cans (last one in the fridge). Weight 27.8 lb. Handle with both hands.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like White Paw, Warm. Contents (partial): 1 Disposable Camera (never developed); 3 AA Batteries (Durasmell, lasted till Christmas noon); 2 Energy Drinks (exam week casualty); 3 Smartphones (last text: read, no reply); 3 Beer Cans (PBJ, the hipster one). Weight 27.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0883.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "White Paw, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Crypto Bro's Garage"
   },
   {
    "trait_type": "Tape",

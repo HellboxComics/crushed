@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0132",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Beer Can (last one in the fridge); 2 Game Cartridges (blown into 400 times); 2 Soda Cans (shaken as a prank); 2 No. 2 Pencils (chewed); 1 Matchbook (matches missing, reasons unclear). Weight 39.9 lb. Crushed it.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Grandma's couch. Contents (partial): 1 Beer Can (PBJ, the hipster one); 2 Game Cartridges (save file erased by a sibling); 2 Soda Cans (tab kept for charity); 2 No. 2 Pencils (chewed); 1 Matchbook (matches missing, reasons unclear). Weight 39.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0132.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

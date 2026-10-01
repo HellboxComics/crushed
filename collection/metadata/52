@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0052",
- "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 TV Remotes (the volume button worn smooth); 1 Three-Ring Binder (covered in band names); 2 Army Man Squads (melted with a magnifying glass); 1 Calculator (solar panel covered by a sticker). Weight 73.3 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like New Koak. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 TV Remotes (the volume button worn smooth); 1 Three-Ring Binder (covered in band names); 2 Army Man Squads (melted with a magnifying glass); 1 Calculator (solar panel covered by a sticker). Weight 73.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0052.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "New Koak"
   },
   {
    "trait_type": "Recovered From",

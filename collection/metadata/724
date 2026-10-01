@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0724",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 2 No. 2 Pencils (sharpened to a nub); 3 AA Batteries (probably dead); 3 Earbud Cases (both buds gone, case still charges nothing); 2 Tissue Boxes (nearly empty). Weight 33.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 2 No. 2 Pencils (sharpened to a nub); 3 AA Batteries (licked to test); 3 Earbud Cases (both buds gone, case still charges nothing); 2 Tissue Boxes (nearly empty). Weight 33.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0724.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",

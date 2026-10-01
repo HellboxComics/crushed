@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0368",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Skate Wheel (rolled into a storm drain once); 1 Foam Headphones (orange foam, allegedly); 1 Pizza Crust (still better than most portfolios); 1 Ball Mouse (rollers caked with 1998). Weight 73.3 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Skate Wheel (rolled into a storm drain once); 1 Foam Headphones (orange foam, allegedly); 1 Pizza Crust (still better than most portfolios); 1 Ball Mouse (rollers caked with 1998). Weight 73.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0368.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

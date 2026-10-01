@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0481",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Ball Mice (rollers caked with 1998); 1 Portable CD Player (anti-skip lied); 1 Scratch Ticket (not a winner); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Soda Cans (tab kept for charity). Weight 34.6 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 2 Ball Mice (rollers caked with 1998); 1 Portable CD Player (anti-skip lied); 1 Scratch Ticket (not a winner); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Soda Cans (New Koak, 79 days only). Weight 34.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0481.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

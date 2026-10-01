@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0327",
- "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 3 Burned CDs (track 7 skips); 2 AA Batteries (taken out of the smoke detector); 1 Foam Headphones (one ear works if you hold it); 2 No. 2 Pencils (chewed). Weight 30.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like gym bag, forgotten. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 3 Burned CDs (track 7 skips); 2 AA Batteries (Durasmell, lasted till Christmas noon); 1 Foam Headphones (one ear works if you hold it); 2 No. 2 Pencils (chewed). Weight 30.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0327.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

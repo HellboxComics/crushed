@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0461",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 No. 2 Pencil (sharpened to a nub); 2 VHS Tapes (the unmarked one, from the back of the closet); 2 AA Batteries (probably dead); 2 Pagers (last page: 143). Weight 84.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 No. 2 Pencil (sharpened to a nub); 2 VHS Tapes (taped off HBOH, commercials and all); 2 AA Batteries (probably dead); 2 Pagers (last page: 143). Weight 84.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0461.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",

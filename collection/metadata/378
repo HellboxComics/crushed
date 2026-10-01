@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0378",
- "description": "Recovered from The Bachelor Pad. Smells like arcade carpet. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Beer Cans (crushed on a forehead); 2 Soda Cans (shaken as a prank); 3 VHS Tapes (the unmarked one, from the back of the closet); 1 Skate Wheel (flat spot from a power slide). Weight 45.1 lb. We kept the important shit.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Beer Cans (crushed on a forehead); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (Blockbusted rental, never returned); 1 Skate Wheel (flat spot from a power slide). Weight 45.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0378.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

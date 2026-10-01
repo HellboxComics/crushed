@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0543",
- "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Dice (blown on for luck); 1 Pizza Crust (found behind the couch); 3 Burned CDs (track 7 skips); 2 Tissue Boxes (nearly empty). Weight 30.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Frat House Couch. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Dice (blown on for luck); 1 Pizza Crust (found behind the couch); 3 Burned CDs (track 7 skips); 2 Tissue Boxes (nearly empty). Weight 30.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0543.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

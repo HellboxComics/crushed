@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0389",
- "description": "Recovered from Estate of a Collector. Smells like victory. Contents (partial): 1 Gold Calculator (why); 1 Sneaker (untied since 1989); 1 Foam Headphones (orange foam, allegedly); 2 Dice (snake eyes, twice); 1 Energy Drink (third one that night). Weight 34.3 lb. Crushed it.",
+ "description": "Recovered from A LAN Party Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Gold Calculator (why); 1 Sneaker (untied since 1989); 1 Foam Headphones (orange foam, allegedly); 2 Dice (snake eyes, twice); 1 Energy Drink (tastes like a battery). Weight 34.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0389.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Victory"
+   "value": "Spencer's-ish Gifts Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "A LAN Party Basement"
   },
   {
    "trait_type": "Tape",

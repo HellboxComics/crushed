@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0122",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Soda Cans (tab kept for charity); 1 Game Cartridge (blown into 400 times); 1 Scratch Ticket (not a winner); 1 16-Bit Controller (the B button is sticky); 1 AA Batteries (probably dead). Weight 78.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Soda Cans (Surj, the can that started a fight); 1 Game Cartridge (blown into 400 times); 1 Scratch Ticket (not a winner); 1 16-Bit Controller (the B button is sticky); 1 AA Batteries (probably dead). Weight 78.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0122.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0091",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Joysticks (suction cups gave up); 2 VHS Tapes (the unmarked one, from the back of the closet); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Magazines (found in a dad's truck); 2 Pizza Crusts (petrified). Weight 84.5 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Joysticks (suction cups gave up); 2 VHS Tapes (taped off HBOH, commercials and all); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Magazines (found in a dad's truck); 2 Pizza Crusts (petrified). Weight 84.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0091.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0055",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like gym bag, forgotten. Contents (partial): 3 VHS Tapes (taped over a wedding); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Matchbook (from a gentlemen's club, reportedly); 1 Dice (blown on for luck); 2 AA Batteries (mixed old and new, like animals). Weight 73.7 lb. Crushed it.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Smoke-Filled Bowling Alley. Contents (partial): 3 VHS Tapes (taped over a wedding); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Matchbook (from a gentlemen's club, reportedly); 1 Dice (blown on for luck); 2 AA Batteries (Neveready, as advertised). Weight 73.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0055.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Smoke-Filled Bowling Alley"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

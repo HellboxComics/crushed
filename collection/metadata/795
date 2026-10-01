@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0795",
- "description": "Recovered from Storage Unit (Auctioned). Smells like rink snack bar. Contents (partial): 1 Disposable Vape (zero nicotine, allegedly); 3 Disposable Cameras (never developed); 1 Face Mask (worn below the nose); 1 Laptop Charger (warm to the touch, somehow); 2 Energy Drinks (third one that night). Weight 27.4 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Fidget Spinner Bearings. Contents (partial): 1 Disposable Vape (Jool pod, found in a gym bag); 3 Disposable Cameras (never developed); 1 Face Mask (worn below the nose); 1 Laptop Charger (warm to the touch, somehow); 2 Energy Drinks (third one that night). Weight 27.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0795.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Fidget Spinner Bearings"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",

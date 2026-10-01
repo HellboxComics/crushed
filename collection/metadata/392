@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0392",
- "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Magazine (read for the articles); 1 Dice (blown on for luck); 3 Beer Cans (warm, sadly); 1 Floppy Disk (save icon, but real); 2 AA Batteries (taken out of the smoke detector). Weight 72.6 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Dial-Up Modem Heat. Contents (partial): 1 Magazine (read for the articles); 1 Dice (blown on for luck); 3 Beer Cans (last one in the fridge); 1 Floppy Disk (Iomegalodon would have held it all); 2 AA Batteries (mixed old and new, like animals). Weight 72.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0392.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Dial-Up Modem Heat"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

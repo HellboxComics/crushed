@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0665",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (untied since 1989); 3 Clear Lighters (borrowed in 1997, never returned); 1 Jewel Case (insert is from a different album); 2 Power Strips (overloaded on purpose); 2 Pizza Crusts (petrified). Weight 26.5 lb. Contents may have settled.",
+ "description": "Recovered from Grandma's Attic. Smells like Red Bullish and Regret. Contents (partial): 3 Sneakers (untied since 1989); 3 Clear Lighters (borrowed in 1997, never returned); 1 Jewel Case (insert is from a different album); 2 Power Strips (overloaded on purpose); 2 Pizza Crusts (petrified). Weight 26.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0665.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Red Bullish and Regret"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

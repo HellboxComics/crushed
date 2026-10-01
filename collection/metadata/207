@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0207",
- "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (coaster now). Weight 75.2 lb. Some assembly was removed.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (coaster now). Weight 75.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0207.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Buddy's Basement"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

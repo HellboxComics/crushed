@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0725",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Earbud Cases (both buds gone, case still charges nothing); 1 Drone (over the neighbor's fence); 2 Poker Chips (a stack of ambition); 2 Soda Cans (shaken as a prank). Weight 34.3 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Earbud Cases (both buds gone, case still charges nothing); 1 Drone (over the neighbor's fence); 2 Poker Chips (a stack of ambition); 2 Soda Cans (tab kept for charity). Weight 34.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0725.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",

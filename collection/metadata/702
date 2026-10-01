@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0702",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Burned CDs (burned at 1x, 4 hours); 2 Magazines (for the interviews, obviously); 2 Game Controllers (stick drift since day one); 2 Cheap Sunglasses (mall kiosk special). Weight 21.3 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Burned CDs (burned at 1x, 4 hours); 2 Magazines (for the interviews, obviously); 2 Game Controllers (stick drift since day one); 2 Cheap Sunglasses (mall kiosk special). Weight 21.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0702.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

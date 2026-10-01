@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0592",
- "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 1 Energy Drink (exam week casualty); 1 Tablet (bought for the kids, taken back by dad); 1 Portable CD Player (anti-skip lied); 2 Scratch Tickets (scratched with a house key). Weight 25.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Frat House Couch. Smells like scratch-n-sniff sticker. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 1 Energy Drink (Red Bullish, gave it wings, took them back); 1 Tablet (bought for the kids, taken back by dad); 1 Portable CD Player (anti-skip lied); 2 Scratch Tickets (scratched with a house key). Weight 25.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0592.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0709",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 Energy Drinks (exam week casualty); 1 Sneaker (left only); 2 Power Strips (daisy-chained into three more); 3 Dice (loaded, rumor says). Weight 29.3 lb. Some assembly was removed.",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Sneaker (left only); 2 Power Strips (daisy-chained into three more); 3 Dice (loaded, rumor says). Weight 29.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0709.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",

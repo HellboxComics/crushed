@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0471",
- "description": "Recovered from Vegas Hotel Room. Smells like arcade carpet. Contents (partial): 1 Disposable Camera (never developed); 2 Matchbooks (matches missing, reasons unclear); 2 Shot Glasses (from a trip to Vegas); 3 Soda Cans (tab kept for charity); 3 Power Strips (overloaded on purpose). Weight 29.0 lb. Contents may have settled.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Grandma's couch. Contents (partial): 1 Disposable Camera (never developed); 2 Matchbooks (matches missing, reasons unclear); 2 Shot Glasses (from a trip to Vegas); 3 Soda Cans (New Koak, 79 days only); 3 Power Strips (overloaded on purpose). Weight 29.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0471.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "Napstered Dorm Room"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0794",
- "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 3 Smartphones (cracked in the first week); 2 Earbud Cases (both buds gone, case still charges nothing); 2 Centerfolds (left open to the wrong page); 2 Soda Cans (shaken as a prank); 1 Game Controller (stick drift since day one). Weight 26.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like Ring Light Heat. Contents (partial): 3 Smartphones (last text: read, no reply); 2 Earbud Cases (both buds gone, case still charges nothing); 2 Centerfolds (left open to the wrong page); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Game Controller (stick drift since day one). Weight 26.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0794.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Ring Light Heat"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

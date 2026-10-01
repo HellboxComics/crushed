@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0114",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cheap cologne. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 2 Shot Glasses (chipped rim); 2 Power Strips (daisy-chained into three more); 3 Floppy Disks (save icon, but real); 3 Joysticks (fire button pressed 40 million times). Weight 46.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Jean Jacket. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Shot Glasses (chipped rim); 2 Power Strips (daisy-chained into three more); 3 Floppy Disks (AOHell trial, 500 free hours); 3 Joysticks (fire button pressed 40 million times). Weight 46.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0114.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Jean Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Waldenbooks-ish Bargain Bin"
   },
   {
    "trait_type": "Tape",

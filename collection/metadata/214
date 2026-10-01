@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0214",
- "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Pagers (clipped to jeans for status only); 3 16-Bit Controllers (the B button is sticky); 1 Boom Box (shoulder-mounted in its prime); 1 Jewel Case (hinge broken on arrival). Weight 87.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Mall Arcade. Smells like Lunchables-ish Crackers. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Pagers (clipped to jeans for status only); 3 16-Bit Controllers (the B button is sticky); 1 Boom Box (shoulder-mounted in its prime); 1 Jewel Case (hinge broken on arrival). Weight 87.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0214.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Lunchables-ish Crackers"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Mall Arcade"
   },
   {
    "trait_type": "Tape",

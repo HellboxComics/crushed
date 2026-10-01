@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0531",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Virtual Pets (fed 0 times); 2 Sneakers (light-up heel, dead); 1 Dice (snake eyes, twice); 3 No. 2 Pencils (sharpened to a nub). Weight 29.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Virtual Pets (fed 0 times); 2 Sneakers (light-up heel, dead); 1 Dice (snake eyes, twice); 3 No. 2 Pencils (sharpened to a nub). Weight 29.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0531.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0857",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Energy Drinks (tastes like a battery); 1 Laptop Charger (warm to the touch, somehow); 2 AA Batteries (taken out of the smoke detector); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Cheap Sunglasses (mall kiosk special). Weight 33.5 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Energy Drinks (Jolted, twice the caffeine); 1 Laptop Charger (warm to the touch, somehow); 2 AA Batteries (mixed old and new, like animals); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Cheap Sunglasses (mall kiosk special). Weight 33.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0857.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0344",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Gold Puzzle Cube (why); 2 Calculators (spelled BOOBIES upside down); 1 Keyboard (Partial) (F, J and the crumbs); 2 Film Canisters (undeveloped, forever); 3 AA Batteries (mixed old and new, like animals). Weight 84.6 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 1 Gold Puzzle Cube (why); 2 Calculators (spelled BOOBIES upside down); 1 Keyboard (Partial) (F, J and the crumbs); 2 Film Canisters (undeveloped, forever); 3 AA Batteries (Durasmell, lasted till Christmas noon). Weight 84.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0344.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",

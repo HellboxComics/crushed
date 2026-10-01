@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0215",
- "description": "Recovered from Mom's Minivan. Smells like wet cardboard. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Puzzle Cube (two stickers peeled); 2 Power Strips (daisy-chained into three more); 3 Slap Bracelets (cut someone, probably); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 50.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Grandma's Attic. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Puzzle Cube (two stickers peeled); 2 Power Strips (daisy-chained into three more); 3 Slap Bracelets (cut someone, probably); 1 VHS Tape (Blockbusted rental, never returned). Weight 50.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0215.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

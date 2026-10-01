@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0025",
- "description": "Recovered from Ex's Garage. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Three-Ring Binders (covered in band names); 2 Yo-Yos (string tied to a finger for 3 years); 1 Beer Can (crushed on a forehead); 1 TV Remote (held together with tape). Weight 83.9 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Jean Jacket. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Three-Ring Binders (covered in band names); 2 Yo-Yos (string tied to a finger for 3 years); 1 Beer Can (crushed on a forehead); 1 TV Remote (held together with tape). Weight 83.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0025.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Jean Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Behind the Arcade Cabinets"
   },
   {
    "trait_type": "Tape",

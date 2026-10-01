@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0057",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Joysticks (suction cups gave up); 1 Power Strip (overloaded on purpose); 2 Poker Chips (taken from a casino, small heist); 2 Centerfolds (folded out, then folded back in a hurry). Weight 50.4 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Joysticks (suction cups gave up); 1 Power Strip (overloaded on purpose); 2 Poker Chips (taken from a casino, small heist); 2 Centerfolds (folded out, then folded back in a hurry). Weight 50.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0057.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",

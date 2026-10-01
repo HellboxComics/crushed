@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0875",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 3 TV Remotes (held together with tape); 1 No. 2 Pencil (never saw a scantron it liked); 3 Power Banks (dead when needed); 1 Magazine (for the interviews, obviously). Weight 28.1 lb. Handle with both hands.",
+ "description": "Recovered from A Lambo-Shaped Hole. Smells like blue raspberry. Contents (partial): 1 Disposable Vape (mango, mostly); 3 TV Remotes (held together with tape); 1 No. 2 Pencil (never saw a scantron it liked); 3 Power Banks (dead when needed); 1 Magazine (for the interviews, obviously). Weight 28.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0875.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Lambo-Shaped Hole"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0765",
- "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (shaken as a prank); 1 Selfie Stick (banned at the museum); 1 Disposable Vape (zero nicotine, allegedly); 3 TV Remotes (found in the couch). Weight 33.7 lb. Contents may have settled.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like melted crayon. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Selfie Stick (banned at the museum); 1 Disposable Vape (Jool pod, found in a gym bag); 3 TV Remotes (found in the couch). Weight 33.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0765.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Melted Crayon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A WeWork-ish Desk, Abandoned"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0691",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Beer Cans (last one in the fridge); 1 Pizza Crust (petrified); 1 Disposable Camera (27 exposures of a thumb); 1 Energy Drink (tastes like a battery); 2 Burned CDs (says ROAD TRIP in marker). Weight 27.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like Hot Razr Battery. Contents (partial): 3 Beer Cans (PBJ, the hipster one); 1 Pizza Crust (petrified); 1 Disposable Camera (27 exposures of a thumb); 1 Energy Drink (Jolted, twice the caffeine); 2 Burned CDs (says ROAD TRIP in marker). Weight 27.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0691.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Hot Razr Battery"
   },
   {
    "trait_type": "Recovered From",

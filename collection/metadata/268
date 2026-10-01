@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0268",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Ball Mice (ball removed as a prank); 1 Game Cartridge (save file erased by a sibling); 1 Floppy Disk (contains one (1) virus). Weight 38.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 VHS Tapes (the unmarked one, from the back of the closet); 3 Ball Mice (ball removed as a prank); 1 Game Cartridge (blew on it, Nintendont said no); 1 Floppy Disk (save icon, but real). Weight 38.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0268.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",

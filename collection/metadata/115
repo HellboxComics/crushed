@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0115",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Joysticks (fire button pressed 40 million times); 1 Centerfold (staples removed, an attempt was made); 2 Game Cartridges (blown into 400 times); 3 Roller Skates (toe stop worn to nothing); 2 Yo-Yos (string tied to a finger for 3 years). Weight 39.9 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Joysticks (fire button pressed 40 million times); 1 Centerfold (staples removed, an attempt was made); 2 Game Cartridges (blown into 400 times); 3 Roller Skates (toe stop worn to nothing); 2 Yo-Yos (string tied to a finger for 3 years). Weight 39.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0115.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Aqua Not-Net Hairspray"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",

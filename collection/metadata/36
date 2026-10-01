@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0036",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Roller Skate (the rink smell is still in there); 1 Game Cartridge (save file erased by a sibling); 1 Boom Box (took 10 D batteries); 2 Joysticks (suction cups gave up); 1 Metal Lunchbox (the smell stays). Weight 51.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Roller Skate (the rink smell is still in there); 1 Game Cartridge (blew on it, Nintendont said no); 1 Boom Box (took 10 D batteries); 2 Joysticks (suction cups gave up); 1 Metal Lunchbox (the smell stays). Weight 51.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0036.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",

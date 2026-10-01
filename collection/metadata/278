@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0278",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 Beer Cans (last one in the fridge); 1 Pager (last page from a number nobody called back); 3 Cassette Tapes (a mix for someone who never listened); 2 16-Bit Controllers (the B button is sticky). Weight 80.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 Beer Cans (Milwaukee's Worst, on sale); 1 Pager (last page from a number nobody called back); 3 Cassette Tapes (TDKay SA-90, the good tape); 2 16-Bit Controllers (the B button is sticky). Weight 80.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0278.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Bath & Body Works-ish Cucumber Melon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "A Blockbusted Return Slot"
   },
   {
    "trait_type": "Tape",

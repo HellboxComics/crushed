@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0043",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Roller Skates (toe stop worn to nothing); 2 Cheap Sunglasses (one lens popped out); 3 Joysticks (fire button pressed 40 million times); 1 Shot Glass (chipped rim). Weight 48.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Roller Skates (toe stop worn to nothing); 2 Cheap Sunglasses (one lens popped out); 3 Joysticks (fire button pressed 40 million times); 1 Shot Glass (chipped rim). Weight 48.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0043.png",
  "attributes": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0668",
- "description": "Recovered from The Bachelor Pad. Smells like cigarette in a jacket. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Burned CDs (burned at 1x, 4 hours); 3 Jewel Cases (insert is from a different album); 1 Magazine (for the interviews, obviously); 1 Disposable Camera (never developed). Weight 26.0 lb. Contents may have settled.",
+ "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Burned CDs (burned at 1x, 4 hours); 3 Jewel Cases (insert is from a different album); 1 Magazine (for the interviews, obviously); 1 Disposable Camera (never developed). Weight 26.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0668.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

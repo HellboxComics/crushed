@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0841",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 2 Disposable Vapes (zero nicotine, allegedly); 1 VR Headset (worn twice); 3 Scratch Tickets (scratched with a house key); 1 Memory Card (corrupted during a birthday); 2 Poker Chips (never cashed out). Weight 30.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Disposable Vapes (Jool pod, found in a gym bag); 1 VR Headset (worn twice); 3 Scratch Tickets (scratched with a house key); 1 Memory Card (corrupted during a birthday); 2 Poker Chips (never cashed out). Weight 30.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0841.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Vape Cloud, Blue Razz Ice"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",

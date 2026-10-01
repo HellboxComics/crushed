@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0362",
- "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 3 Digital Cameras (memory full, 14 photos); 1 Centerfold (staples removed, an attempt was made); 1 Corded Phone (was on the line when mom picked up); 1 Beer Can (crushed on a forehead). Weight 81.7 lb. Nobody made you keep this.",
+ "description": "Recovered from An AOHell CD Pile. Smells like cheap cologne. Contents (partial): 1 VHS Tape (taped off HBOH, commercials and all); 3 Digital Cameras (memory full, 14 photos); 1 Centerfold (staples removed, an attempt was made); 1 Corded Phone (was on the line when mom picked up); 1 Beer Can (12 of 12). Weight 81.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0362.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

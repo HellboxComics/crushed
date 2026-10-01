@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0750",
- "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 2 Smartphones (1% battery, forever); 1 Memory Card (corrupted during a birthday); 2 Earbud Cases (survived the wash); 1 Flip Phone (ringtone composed by hand); 2 Fidget Spinners (banned by the school). Weight 30.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like Moonster and Desperation. Contents (partial): 2 Smartphones (1% battery, forever); 1 Memory Card (corrupted during a birthday); 2 Earbud Cases (survived the wash); 1 Flip Phone (ringtone composed by hand); 2 Fidget Spinners (banned by the school). Weight 30.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0750.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cheap Cologne"
+   "value": "Moonster and Desperation"
   },
   {
    "trait_type": "Recovered From",

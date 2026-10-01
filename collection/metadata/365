@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0365",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Sneaker (light-up heel, dead); 2 Game Controllers (thrown during a boss fight); 1 Beer Can (last one in the fridge); 2 Burned CDs (track 7 skips). Weight 72.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like Abercrombie-ish Store Entrance. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Sneaker (light-up heel, dead); 2 Game Controllers (thrown during a boss fight); 1 Beer Can (PBJ, the hipster one); 2 Burned CDs (track 7 skips). Weight 72.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0365.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Abercrombie-ish Store Entrance"
   },
   {
    "trait_type": "Recovered From",

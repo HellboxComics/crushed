@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0113",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Magazines (for the interviews, obviously); 3 Soda Cans (shaken as a prank); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Floppy Disk (save icon, but real). Weight 75.2 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Jean Jacket. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Magazines (for the interviews, obviously); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Floppy Disk (Iomegalodon would have held it all). Weight 75.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0113.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Jean Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Truck, Glovebox"
+   "value": "Dad's Camaro Trunk"
   },
   {
    "trait_type": "Tape",

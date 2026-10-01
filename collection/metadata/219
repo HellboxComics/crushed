@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0219",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 Disposable Cameras (27 exposures of a thumb); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Milk Caps (won in a bet); 2 Calculators (spelled BOOBIES upside down). Weight 42.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 Disposable Cameras (27 exposures of a thumb); 3 VHS Tapes (the unmarked one, from the back of the closet); 1 Milk Caps (won in a bet); 2 Calculators (spelled BOOBIES upside down). Weight 42.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0219.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",

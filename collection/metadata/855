@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0855",
- "description": "Recovered from Ex's Garage. Smells like arcade carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Shot Glasses (chipped rim); 1 Disposable Camera (never developed); 1 Tablet (used once as a cutting board); 1 Clear Lighter (for incense, obviously). Weight 35.3 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Basement (Again). Smells like wet cardboard. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Shot Glasses (chipped rim); 1 Disposable Camera (never developed); 1 Tablet (used once as a cutting board); 1 Clear Lighter (for incense, obviously). Weight 35.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0855.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Ex's Garage"
+   "value": "Mom's Basement (Again)"
   },
   {
    "trait_type": "Tape",

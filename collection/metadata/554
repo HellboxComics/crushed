@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0554",
- "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 3 Energy Drinks (exam week casualty); 3 Beer Cans (crushed on a forehead); 3 TV Remotes (found in the couch); 3 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 23.1 lb. Crushed it.",
+ "description": "Recovered from A Frat House Couch. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (Moonster, the whole case); 3 Beer Cans (crushed on a forehead); 3 TV Remotes (found in the couch); 3 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 23.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0554.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Cigarette in a Jacket"
+   "value": "Smirkoff Ice, Warm"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Frat House Couch"
   },
   {
    "trait_type": "Tape",

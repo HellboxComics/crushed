@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0800",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Poker Chips (a stack of ambition); 1 No. 2 Pencil (never saw a scantron it liked); 3 Fidget Spinners (banned by the school); 2 Soda Cans (tab kept for charity). Weight 33.8 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Ring Light Heat. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Poker Chips (a stack of ambition); 1 No. 2 Pencil (never saw a scantron it liked); 3 Fidget Spinners (banned by the school); 2 Soda Cans (New Koak, 79 days only). Weight 33.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0800.png",
  "attributes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Ring Light Heat"
   },
   {
    "trait_type": "Recovered From",

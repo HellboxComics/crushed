@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0412",
- "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Virtual Pet (fed 0 times); 1 Corded Phone (cord stretched to the bathroom); 2 Tissue Boxes (one for every mood); 2 Dice (snake eyes, twice); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 28.3 lb. Handle with both hands.",
+ "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 1 Virtual Pet (fed 0 times); 1 Corded Phone (cord stretched to the bathroom); 2 Tissue Boxes (one for every mood); 2 Dice (snake eyes, twice); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 28.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0412.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Bachelor Pad"
+   "value": "An AOHell CD Pile"
   },
   {
    "trait_type": "Tape",

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0509",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 2 Virtual Pets (reincarnated 40 times); 1 Jewel Case (insert is from a different album); 1 Game Cartridge (save file erased by a sibling); 3 Portable CD Players (anti-skip lied); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Broken Rocket (didn't make it). Weight 73.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Frosted Tips Gel. Contents (partial): 2 Virtual Pets (reincarnated 40 times); 1 Jewel Case (insert is from a different album); 1 Game Cartridge (blew on it, Nintendont said no); 3 Portable CD Players (anti-skip lied); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Broken Rocket (didn't make it). Weight 73.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0509.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Frosted Tips Gel"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",

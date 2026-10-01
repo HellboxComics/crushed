@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0535",
- "description": "Recovered from Behind the Couch. Smells like Vegas carpet. Contents (partial): 3 Sneakers (was in the dryer); 3 Energy Drinks (exam week casualty); 2 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 2 Beer Cans (warm, sadly). Weight 32.8 lb. We kept the important shit.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Sneakers (was in the dryer); 3 Energy Drinks (Moonster, the whole case); 2 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 2 Beer Cans (last one in the fridge). Weight 32.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0535.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Vegas Carpet"
+   "value": "Guitar Hero-ish Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "A Myspace Top 8 Breakup Box"
   },
   {
    "trait_type": "Tape",

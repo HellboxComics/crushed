@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0172",
- "description": "Recovered from Vegas Hotel Room. Smells like scratch-n-sniff sticker. Contents (partial): 1 Joystick (suction cups gave up); 2 Cheap Sunglasses (mall kiosk special); 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (never saw a scantron it liked); 2 Calculators (spelled BOOBIES upside down). Weight 74.4 lb. We kept the important shit.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Arcade Tokens. Contents (partial): 1 Joystick (suction cups gave up); 2 Cheap Sunglasses (mall kiosk special); 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (never saw a scantron it liked); 2 Calculators (spelled BOOBIES upside down). Weight 74.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0172.png",
  "attributes": [
   {
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Arcade Tokens"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Vegas Hotel Room"
+   "value": "A Tupperware-ish Party"
   },
   {
    "trait_type": "Tape",
