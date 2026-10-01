@@ -32,7 +32,7 @@ contract CrushedItTest is Test {
     address owner = address(0xA11CE);
     address team = address(0x7EA0);
     address[4] gifts = [address(0x101), address(0x102), address(0x103), address(0x104)];
-    uint16[4] giftRecipes = [240, 718, 813, 796];
+    uint16[4] giftRecipes = [813, 718, 796, 836];
     bytes32 secret = keccak256("the secret nobody sees until reveal");
     bytes32 commit = keccak256(abi.encodePacked(keccak256("the secret nobody sees until reveal")));
 
@@ -155,7 +155,7 @@ contract CrushedItTest is Test {
         _teamMint(t);
         vm.expectRevert(CrushedIt.NotRevealed.selector);
         t.recipeOf(1);
-        assertEq(t.recipeOf(41), 240);
+        assertEq(t.recipeOf(41), 813);
     }
 
     function test_sealedURIBeforeReveal() public {

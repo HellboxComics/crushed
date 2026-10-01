@@ -46,9 +46,11 @@ NAMES = {
     "piggy_bank": "Piggy Bank", "stock_cert": "Share Certificate", "ticker_tape": "Ticker Tape",
     "necktie": "Necktie",
     "clay_bull": "Clay Bull", "clay_bear": "Clay Bear", "clay_pig": "Clay Pig", "clay_frog": "Clay Frog",
-    "clay_coin": "Clay Coin", "clay_candle": "Clay Candle", "clay_blob": "Leftover Clay",
+    "clay_coin": "Clay Coin", "clay_candle": "Clay Candle", "clay_blob": "Leftover Clay", "clay_steak": "Clay Cut", "clay_cleaver": "Clay Cleaver",
     "lava_lamp": "Lava Lamp", "skull_candle": "Skull Candle", "black_cat": "Black Cat Figurine",
-    "mushroom_cluster": "Mushrooms", "mini_arcade": "Mini Arcade Cabinet",
+    "mushroom_cluster": "Mushrooms", "mini_arcade": "Mini Arcade Cabinet", "hooded_figure": "Hooded Figure",
+    "pixel_frame": "Framed Pixel Art", "potted_plant": "Potted Plant", "couch_cushion": "Couch Cushion",
+    "bookshelf_slice": "Shelf of Books",
 }
 
 # the parenthetical in the evidence inventory; picked per token
@@ -199,11 +201,18 @@ NOTES = {
     "clay_frog": ["wide mouth, no comment", "squat and smug", "molded in one sitting"],
     "clay_coin": ["worth one lump of clay", "stamped with a thumbnail"],
     "clay_candle": ["green, for once", "red, like always", "molded by hand, like the chart"],
+    "clay_steak": ["fresh cuts, fresh clay", "please do not ask what the cut is", "from behind the counter"],
+    "clay_cleaver": ["the butcher's, allegedly", "clean, for a cleaver", "went through a bear market"],
     "lava_lamp": ["warm since 1996", "the only light in the room", "blob still rising, slowly"],
     "skull_candle": ["burned down to the eyebrows", "lit for every session", "smells like a record store"],
     "black_cat": ["sat on the keyboard, on purpose", "eyes still glowing", "knocked one thing off the desk"],
     "mushroom_cluster": ["decorative, allegedly", "grew out of the carpet", "glowing a little"],
     "mini_arcade": ["high score: nobody", "INSERT COIN, forever", "one working button"],
+    "hooded_figure": ["hood up, face down, lights off", "has not left the desk since 2021", "eyes glowing, allegedly"],
+    "pixel_frame": ["hung crooked, on purpose", "the good one, from the wall", "sixteen by sixteen, framed"],
+    "potted_plant": ["watered by vibes", "mostly alive", "leaning toward the monitor"],
+    "couch_cushion": ["the good spot", "a decade of sitting", "purple, like the rug"],
+    "bookshelf_slice": ["nothing on it has been read", "alphabetized once, in 2019", "spines facing in"],
 }
 # a few extra lines on the old favorites, same voice
 NOTES["sneaker"] += ["smells like 1989", "worn to one (1) very bad decision"]
@@ -296,7 +305,7 @@ ONE_OF_ONES = {
     "UNDER THE MATTRESS": "It was under the mattress. Everyone's mother knew. Nobody said a word.",
     "LOW RES": "A bedroom studio at three in the morning: purple light, acid green, a lava lamp, a cat on the keys. Low res and loud.",
     "CCFF00": "One color, three shapes, zero apologies. Squares, diamonds and cubes, 204 255 000 all the way down.",
-    "CLAY DAY": "Bulls, bears, pigs and frogs, all squeezed out of clay by hand, then squeezed again by a crusher.",
+    "CLAY DAY": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher.",
     "STOP THE PRESSES": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties.",
 }
 

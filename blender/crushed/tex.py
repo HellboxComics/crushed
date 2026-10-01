@@ -927,6 +927,24 @@ def tie_print(rng, name):
     return c.image(name)
 
 
+def pixel_art(rng, name):
+    """A tiny pixel picture in a room's palette: purple ground, a lime something in the middle, a few stars."""
+    c = Canvas(64, 64, (0.1, 0.03, 0.18, 1))
+    n = 16
+    px = 1.0 / n
+    for _ in range(int(rng.integers(3, 7))):
+        i, j = int(rng.integers(0, n)), int(rng.integers(0, n))
+        c.rect(i * px, j * px, (i + 1) * px, (j + 1) * px, (0.9, 0.9, 1.0))
+    col = tuple(rng.choice([(0.55, 1.0, 0.1), (0.45, 0.15, 0.75), (0.9, 0.3, 0.6)]))
+    shape = int(rng.integers(0, 3))
+    cells = {0: [(7, 4), (8, 4), (6, 5), (9, 5), (6, 6), (9, 6), (7, 7), (8, 7), (5, 8), (10, 8), (7, 9), (8, 9)],   # a bug
+             1: [(6, 5), (9, 5), (5, 6), (6, 6), (7, 6), (8, 6), (9, 6), (10, 6), (5, 7), (10, 7), (6, 8), (7, 8), (8, 8), (9, 8), (7, 9), (8, 9)],  # a heart
+             2: [(x, y) for x in range(5, 11) for y in range(5, 11) if (x + y) % 2 == 0]}[shape]   # a checker
+    for i, j in cells:
+        c.rect(i * px, j * px, (i + 1) * px, (j + 1) * px, col)
+    return c.image(name)
+
+
 # -- drop-in art slots -----------------------------------------------------------------------------
 # Every printed surface above is a slot. Put a PNG named after the slot in assets/slots/ (slot.png, or
 # slot_anything.png for several variants, dealt per object) and it is used instead of the procedural one.
@@ -941,7 +959,7 @@ SLOT_NAMES = ["sticker", "keypad", "notebook", "chart", "pcb", "can_print", "ram
               "cd_marker", "app_grid", "lockscreen", "vape_print", "mag_cover", "poster", "tissue_print", "foil_print",
               "scratch_print", "beer_print", "matchbook_print", "mug_print", "sun_label", "hdd_label", "street_sign",
               "newspaper", "play_money", "card_print", "badge_print", "spectrum_print", "sock_print", "watch_face",
-              "sanitizer_label", "gas_label"]
+              "sanitizer_label", "gas_label", "pixel_art", "neon_tile", "stock_cert", "ticker_tape", "tie_print"]
 
 
 def slot_files(slot):

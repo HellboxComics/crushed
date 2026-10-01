@@ -26,7 +26,8 @@ from crushed import build, recipe, stage, tex  # noqa: E402
 ROOT = os.path.dirname(HERE)
 
 
-GIFT_RECIPES = [240, 718, 813, 796]     # tokens 41..44: LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
+GIFT_RECIPES = [813, 718, 796, 836]     # tokens 41..44: LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
+GIFT_NAMES = ["LOW RES", "CCFF00", "STOP THE PRESSES", "CLAY DAY"]
 FIRST_GIFT = 41
 
 

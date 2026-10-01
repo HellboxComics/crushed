@@ -45,6 +45,13 @@ def main(seeds=6):
     for tid in range(1, recipe.SUPPLY + 1):
         r = recipe.recipe(tid)
         recipe.metadata(r, "x")
+    # the gift recipe ids the contract pins must be the ids the deck actually dealt
+    import generate
+    conds, _ = recipe.deck()
+    for rid, name in zip(generate.GIFT_RECIPES, generate.GIFT_NAMES):
+        if conds[rid - 1] != name:
+            fails += 1
+            print(f"FAIL gift {name}: deck has it at {conds.index(name) + 1}, generate.GIFT_RECIPES says {rid}")
     print(f"selftest: {len(reg)} objects x {seeds} seeds, {recipe.SUPPLY} recipes, {fails} failures")
     return fails
 

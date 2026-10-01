@@ -105,17 +105,18 @@ MONOCULTURES = {   # one-of-ones that are made of one idea
                     ("pager", 3), ("vhs", 4), ("walkman", 1)],
     "UNDER THE MATTRESS": [("magazine", 14), ("centerfold", 9), ("tissue_box", 5), ("tissues", 12), ("flashlight", 3),
                            ("sock", 4), ("foil_packet", 4)],
-    "LOW RES": [("pixel_hoodie", 4), ("lava_lamp", 5), ("black_cat", 3), ("skull_candle", 5), ("mini_arcade", 4),
-                ("mushroom_cluster", 6), ("studio_headphones", 4), ("synth_keys", 3), ("cassette", 8),
-                ("ribbon_cable", 6), ("crt", 2), ("game_cart", 4), ("controller_16bit", 2)],
+    "LOW RES": [("hooded_figure", 4), ("pixel_frame", 10), ("lava_lamp", 4), ("black_cat", 3), ("skull_candle", 4),
+                ("mini_arcade", 3), ("mushroom_cluster", 5), ("potted_plant", 5), ("bookshelf_slice", 4),
+                ("couch_cushion", 3), ("pixel_hoodie", 2), ("studio_headphones", 2), ("synth_keys", 2),
+                ("ribbon_cable", 3)],
     "CCFF00": [("neon_square_big", 1), ("neon_square", 16), ("neon_diamond", 9), ("neon_cube", 8),
                ("neon_stack", 3), ("neon_frame", 4)],
     "STOP THE PRESSES": [("piggy_bank", 14), ("stock_cert", 5), ("ticker_tape", 4), ("necktie", 4), ("bull", 3),
                          ("bear", 3), ("corded_phone", 2), ("calculator", 2), ("newspaper", 3), ("street_sign", 1),
                          ("microphone", 1), ("press_badge", 2), ("play_money", 3), ("poker_chip", 2),
                          ("gold_coin", 2), ("neon_square", 2)],
-    "CLAY DAY": [("clay_bull", 8), ("clay_bear", 7), ("clay_pig", 7), ("clay_frog", 6), ("clay_coin", 6),
-                 ("clay_candle", 8)],
+    "CLAY DAY": [("clay_bull", 7), ("clay_bear", 6), ("clay_pig", 6), ("clay_frog", 5), ("clay_steak", 5),
+                 ("clay_cleaver", 2), ("clay_coin", 4), ("clay_candle", 6)],
 }
 
 # one-of-ones whose gaps are packed with their own kind of debris
@@ -132,7 +133,7 @@ ONE_FILLERS = {
 }
 
 # one-of-ones whose contents get crushed gently (flat tiles should stay tiles)
-ONE_SOFT = {"CCFF00": 0.25, "STOP THE PRESSES": 0.5, "CLAY DAY": 0.3}
+ONE_SOFT = {"CCFF00": 0.25, "STOP THE PRESSES": 0.5, "CLAY DAY": 0.3, "LOW RES": 0.35}
 
 # one-of-ones whose dense core (the mass behind everything) is not the era's junk
 ONE_CORE = {
@@ -171,7 +172,7 @@ ONE_OF_ONE_FLAVOR = {  # (smell, recovered from, headliner)
     "COLD STORAGE": ("Freezer Burn", "The Back of the Freezer", "Hardware Wallet"),
     "SLOW MOTION": ("Coconut Sunscreen", "The Beach, in Slow Motion", "Rescue Can"),
     "UNDER THE MATTRESS": ("Shame", "Under the Mattress", "Magazine"),
-    "LOW RES": ("Warm Amplifier and Incense", "A Bedroom Studio, 3 A.M.", "Lava Lamp"),
+    "LOW RES": ("Warm Amplifier and Incense", "A Pixel Room, 3 A.M.", "Hooded Figure"),
     "CCFF00": ("Hot Plastic and Ozone", "The Neon Aisle", "Big Neon Square"),
     "STOP THE PRESSES": ("Bacon and Newsprint", "The Trading Floor, After the Bell", "Piggy Bank"),
     "CLAY DAY": ("Warm Plasticine", "A Desk, Mid-Pump", "Clay Bull"),
@@ -207,7 +208,7 @@ def _weighted(rng, table, cond):
 ONE_ERA = {
     "MIXTAPE": {0, 1}, "SCREEN TIME": {2, 3}, "LANDFILL DRIVE": {3, 4}, "BLOW ON IT": {1}, "STILL ALIVE": {2, 3},
     "GAS FEES": {2, 3, 4}, "SAVE ICON": {0, 1, 2}, "COASTERS": {1, 2, 3}, "GM": {4}, "COLD STORAGE": {3, 4},
-    "SLOW MOTION": {1}, "UNDER THE MATTRESS": {0, 1, 2, 3}, "LOW RES": {1}, "CCFF00": {4},
+    "SLOW MOTION": {1}, "UNDER THE MATTRESS": {0, 1, 2, 3}, "LOW RES": {4}, "CCFF00": {4},
     "STOP THE PRESSES": {4}, "CLAY DAY": {4},
 }
 

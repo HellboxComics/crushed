@@ -209,7 +209,7 @@ def _clay_head(b, rng, kind, specs):
     shades and a shirt collar under it. kind: bull | bear | pig | frog. Face points -Y."""
     R = 0.055
     cols = {"bull": [(0.6, 0.3, 0.14), (0.22, 0.14, 0.1), (0.8, 0.78, 0.74), (0.95, 0.55, 0.3)],
-            "bear": [(0.36, 0.22, 0.13), (0.14, 0.1, 0.09), (0.62, 0.48, 0.32), (0.95, 0.95, 0.93)],
+            "bear": [(0.36, 0.22, 0.13), (0.26, 0.15, 0.1), (0.45, 0.3, 0.18), (0.2, 0.12, 0.09)],
             "pig": [(0.96, 0.55, 0.68), (0.9, 0.42, 0.52), (0.96, 0.78, 0.82), (0.75, 0.3, 0.4)],
             "frog": [(0.3, 0.7, 0.2), (0.18, 0.5, 0.22), (0.75, 1.0, 0.1), (0.25, 0.35, 0.75)]}
     skin = tuple(cols[kind][int(rng.integers(0, 4))])
@@ -217,7 +217,7 @@ def _clay_head(b, rng, kind, specs):
     # head and neck + shirt collar
     b.sphere(R, loc=(0, 0, 0.02), scale=(1.0, 0.95, 1.0 if kind != "frog" else 0.8), mat="skin", seg=32)
     b.cyl(R * 0.55, 0.04, loc=(0, 0.005, -0.045), mat="skin", seg=20)
-    b.sphere(R * 1.05, loc=(0, 0.01, -0.075), scale=(1.15, 0.9, 0.5), mat="shirt", seg=24)
+    b.sphere(R * 0.95, loc=(0, 0.01, -0.07), scale=(1.1, 0.8, 0.4), mat="shirt", seg=24)
     shirt = tuple(rng.choice([(0.95, 0.95, 0.93), (0.1, 0.1, 0.12), (0.9, 0.15, 0.15), (0.2, 0.45, 0.95), (0.8, 1.0, 0.0), (0.2, 0.75, 0.65)]))
     specs["shirt"] = CL(shirt, skin)
     f = -R * 0.98          # the face plane, toward the camera
@@ -262,7 +262,10 @@ def _clay_head(b, rng, kind, specs):
         b.box((R * 0.2, R * 0.08, R * 0.08), loc=(0, ey, ez + R * 0.1), mat="dark")
         b.torus(R * 0.33, R * 0.03, loc=(-R * 0.4, ey, ez), rot=(math.pi / 2, 0, 0), mat="gold", seg=16, rseg=5)
         b.torus(R * 0.33, R * 0.03, loc=(R * 0.4, ey, ez), rot=(math.pi / 2, 0, 0), mat="gold", seg=16, rseg=5)
-        specs["lens"] = ("plastic", {"color": (0.04, 0.04, 0.05), "rough": 0.12, "coat": 1.0})
+        if rng.random() < 0.4:      # the chart lens: green candles going up, reflected in the shades
+            specs["lens"] = ("plastic", {"color": (0.05, 0.3, 0.12), "rough": 0.1, "coat": 1.0, "glow": 0.4})
+        else:
+            specs["lens"] = ("plastic", {"color": (0.04, 0.04, 0.05), "rough": 0.12, "coat": 1.0})
         specs["gold"] = ("gold", {"rough": 0.3})
     elif e == 1:
         b.box((R * 1.7, R * 0.12, R * 0.5), loc=(0, ey, ez), mat="visor", bevel=R * 0.05)
@@ -442,3 +445,92 @@ def mini_arcade(b, rng, pal):
             "marquee": PR(tex.lcd(rng, "mq", str(rng.choice(["LOW RES", "INSERT COIN", "HI SCORE", "PLAYER 1"])),
                                   bg=(0.15, 0.02, 0.25), ink=ACID), 0.2, glow=1.5),
             "panel": P((0.08, 0.08, 0.09), 0.4), "stick": P(BLACK, 0.5), "ball": P((0.9, 0.1, 0.2), 0.2), "btn": P(ACID, 0.3)}
+
+
+@obj("clay_steak", mass=0.08, weight=1.0, **G)
+def clay_steak(b, rng, pal):
+    """From the butcher shop: a clay cut of meat with a fat rim and a bone."""
+    pts = [(-0.04, 0.0), (-0.03, 0.025), (0.0, 0.032), (0.035, 0.024), (0.045, 0.0), (0.03, -0.028), (-0.01, -0.03), (-0.035, -0.02)]
+    b.extrude(pts, 0.012, mat="meat", bevel=0.003)
+    b.extrude([(x * 1.12, y * 1.12) for x, y in pts], 0.011, mat="fat", bevel=0.003)
+    b.extrude(pts, 0.0122, scale=(0.98, 0.98, 1), mat="meat", bevel=0.003)
+    b.cyl(0.006, 0.013, loc=(0.03, 0.0, 0), mat="bone", seg=10)
+    return {"meat": CL((0.75, 0.12, 0.14), (0.95, 0.5, 0.5)), "fat": CL((0.96, 0.9, 0.8)), "bone": CL((0.95, 0.93, 0.85))}
+
+
+@obj("clay_cleaver", mass=0.1, weight=1.0, **G)
+def clay_cleaver(b, rng, pal):
+    b.box((0.075, 0.05, 0.004), loc=(0.02, 0, 0), mat="blade", bevel=0.001)
+    b.box((0.05, 0.016, 0.012), loc=(-0.045, 0.012, 0), mat="handle", bevel=0.003)
+    b.cyl(0.004, 0.005, loc=(0.045, 0.018, 0), mat="handle", seg=10)
+    return {"blade": CL((0.72, 0.74, 0.78), (0.5, 0.5, 0.55)), "handle": CL((0.25, 0.15, 0.1))}
+
+
+# -- LOW RES, the room itself: the pieces a Pixel Hood room is made of ---------------------------
+
+@obj("hooded_figure", mass=0.2, weight=1.0, hero=(0, -1, 0), **G)
+def hooded_figure(b, rng, pal):
+    """A small blocky figure in a green hoodie, hood up, face in shadow. Built from steps so it reads as pixels."""
+    s = 0.009
+    b.box((6 * s, 4 * s, 7 * s), loc=(0, 0, 0), mat="hood", bevel=0.0006)                 # torso
+    b.box((5 * s, 4.5 * s, 5 * s), loc=(0, 0, 6 * s), mat="hood", bevel=0.0006)           # hood
+    b.box((3.4 * s, 0.6 * s, 3 * s), loc=(0, -2.3 * s, 5.6 * s), mat="void", bevel=0.0004)  # the face: dark
+    for sx in (-1, 1):
+        b.box((0.7 * s, 0.4 * s, 0.7 * s), loc=(sx * 0.9 * s, -2.65 * s, 5.8 * s), mat="eye")
+        b.box((2 * s, 3.6 * s, 6 * s), loc=(sx * 4 * s, 0, -0.5 * s), mat="hood", bevel=0.0006)   # arms
+        b.box((2.4 * s, 3.8 * s, 4 * s), loc=(sx * 1.4 * s, 0, -5.5 * s), mat="pants", bevel=0.0006)
+        b.box((2.6 * s, 4.6 * s, 1.4 * s), loc=(sx * 1.4 * s, -0.3 * s, -8.2 * s), mat="shoe", bevel=0.0006)
+    b.box((4.5 * s, 0.5 * s, 2 * s), loc=(0, -2.25 * s, -1.5 * s), mat="pocket", bevel=0.0004)
+    green = tuple(rng.choice([(0.35, 0.85, 0.2), (0.55, 1.0, 0.1), (0.2, 0.6, 0.25)]))
+    return {"hood": ("fabric", {"color": green}), "void": P((0.01, 0.01, 0.015), 0.9), "eye": P(ACID, 0.2, glow=3.0),
+            "pants": ("fabric", {"color": (0.08, 0.08, 0.1)}), "shoe": P((0.95, 0.95, 0.93), 0.5),
+            "pocket": ("fabric", {"color": tuple(x * 0.75 for x in green)})}
+
+
+@obj("pixel_frame", mass=0.15, weight=1.0, **G)
+def pixel_frame(b, rng, pal):
+    """A framed picture off the wall: black frame, a pixel-art square inside (the frames a room hangs its NFTs in)."""
+    w, h = 0.09, 0.09
+    b.box((w, h, 0.008), mat="frame", bevel=0.001)
+    b.plane(w * 0.82, h * 0.82, loc=(0, 0, 0.0042), mat="art", cuts=2)
+    glow = rng.random() < 0.5
+    return {"frame": P((0.05, 0.05, 0.06), 0.5), "art": PR(tex.pixel_art(rng, "px"), 0.4, keep=True, glow=0.8 if glow else 0.0)}
+
+
+@obj("potted_plant", mass=0.3, weight=1.0, **G)
+def potted_plant(b, rng, pal):
+    b.lathe([(0.0, 0.0), (0.025, 0.0), (0.03, 0.045), (0.034, 0.05), (0.0, 0.05)], loc=(0, 0, -0.05), mat="pot", seg=18)
+    for i in range(int(rng.integers(5, 9))):
+        a = 2 * math.pi * i / 7 + float(rng.normal(0, 0.3))
+        L = float(rng.uniform(0.05, 0.09))
+        pts = [(0.012 * math.cos(a) * t, 0.012 * math.sin(a) * t, 0.0 + L * t) for t in (0, 0.5, 1)]
+        pts = [(x + 0.03 * math.cos(a) * (k / 2) ** 2 * 1.5, y + 0.03 * math.sin(a) * (k / 2) ** 2 * 1.5, z - 0.02 * (k / 2) ** 2)
+               for k, (x, y, z) in enumerate(pts)]
+        b.tube(pts, 0.0022, mat="stem", seg=6)
+        b.sphere(0.02, loc=pts[-1], scale=(1.6, 0.5, 0.25), rot=(0, 0, a), mat="leaf", seg=10)
+    return {"pot": P(tuple(rng.choice([PURPLE, (0.06, 0.06, 0.07), (0.3, 0.08, 0.45)])), 0.5),
+            "stem": P((0.15, 0.45, 0.15), 0.6), "leaf": P(tuple(rng.choice([(0.2, 0.7, 0.25), ACID, (0.1, 0.5, 0.2)])), 0.55)}
+
+
+@obj("couch_cushion", mass=0.3, weight=1.0, **G)
+def couch_cushion(b, rng, pal):
+    b.box((0.1, 0.1, 0.035), mat="cloth", bevel=0.012, seg=4)
+    b.box((0.1, 0.028, 0.06), loc=(0, 0.045, 0.02), mat="cloth", bevel=0.01, seg=4)
+    return {"cloth": ("fabric", {"color": tuple(rng.choice([PURPLE, (0.06, 0.06, 0.08), (0.3, 0.08, 0.45)]))})}
+
+
+@obj("bookshelf_slice", mass=0.4, weight=1.0, hero=(0, -1, 0), **G)
+def bookshelf_slice(b, rng, pal):
+    b.box((0.12, 0.05, 0.012), loc=(0, 0, -0.03), mat="wood", bevel=0.001)
+    b.box((0.12, 0.05, 0.012), loc=(0, 0, 0.03), mat="wood", bevel=0.001)
+    x = -0.055
+    specs = {"wood": P((0.08, 0.08, 0.09), 0.6)}
+    k = 0
+    while x < 0.05:
+        w = float(rng.uniform(0.008, 0.016))
+        h = float(rng.uniform(0.04, 0.052))
+        b.box((w, 0.04, h), loc=(x + w / 2, 0, -0.024 + h / 2), rot=(0, float(rng.normal(0, 0.03)), 0), mat=f"b{k}", bevel=0.0006)
+        specs[f"b{k}"] = P(tuple(rng.choice([PURPLE, ACID, (0.9, 0.9, 0.88), (0.1, 0.1, 0.12), (0.5, 0.2, 0.7), (0.2, 0.7, 0.3)])), 0.5)
+        x += w + 0.001
+        k += 1
+    return specs
