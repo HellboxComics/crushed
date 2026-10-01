@@ -17,20 +17,53 @@
 </head>
 <body class="home">
 <main>
-  <model-viewer id="cube" poster="cube/0044.webp" alt="A crushed cube. Drag to turn it."
+  <model-viewer id="cube" poster="cube/0529.webp" alt="A crushed cube. Drag to turn it."
     camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none"
     disable-zoom disable-pan touch-action="pan-y" shadow-intensity="1.1" shadow-softness="0.6"
     exposure="1.05" environment-image="neutral" tone-mapping="agx" camera-orbit="35deg 72deg auto"
     field-of-view="22deg" min-camera-orbit="auto 20deg auto" max-camera-orbit="auto 100deg auto"></model-viewer>
+  <p class="now" id="now">TRICK OR TREAT <span>1 OF 1</span></p>
+
   <h1>WE KEPT THE IMPORTANT SHIT.</h1>
-  <p class="cta teaser">888 CUBES. 12 INCHES. ROBINHOOD CHAIN. SOON.</p>
+
+  <section class="joke">
+    <p>Every craze had a buzz.</p>
+    <p>The milk caps. The virtual pets. The pager on the belt. The bean bag animals in the plastic case.
+       The coin you bought at the top.</p>
+    <p>The buzz wore off. The stuff didn't.</p>
+    <p class="punch">So we crushed it.</p>
+  </section>
+
+  <p class="stats">888 CUBES &middot; 12 INCHES &middot; 5 ERAS, 1985&ndash;2026 &middot; <b>30 ONE-OF-ONES</b> &middot; FREE MINT &middot; ROBINHOOD CHAIN &middot; SOON</p>
+
+  <nav class="ones" id="ones" aria-label="One-of-ones">
+    <button data-id="0529" data-name="TRICK OR TREAT" class="on"><img src="cube/0529.webp" alt=""><span>TRICK OR TREAT</span></button>
+    <button data-id="0008" data-name="SOLID GOLD"><img src="cube/0008.webp" alt=""><span>SOLID GOLD</span></button>
+    <button data-id="0282" data-name="UNDER THE MATTRESS"><img src="cube/0282.webp" alt=""><span>UNDER THE MATTRESS</span></button>
+    <button data-id="0324" data-name="MIXTAPE"><img src="cube/0324.webp" alt=""><span>MIXTAPE</span></button>
+    <button data-id="0344" data-name="BE MINE"><img src="cube/0344.webp" alt=""><span>BE MINE</span></button>
+    <button data-id="0527" data-name="EGG HUNT"><img src="cube/0527.webp" alt=""><span>EGG HUNT</span></button>
+    <button data-id="0552" data-name="STILL ALIVE"><img src="cube/0552.webp" alt=""><span>STILL ALIVE</span></button>
+    <button data-id="0718" data-name="CCFF00"><img src="cube/0718.webp" alt=""><span>CCFF00</span></button>
+  </nav>
+  <p class="more">8 of the 30 shown. The other 22 stay in the pile.</p>
 </main>
 <script type="module">
   import "./vendor/model-viewer.min.js";
+  const cube = document.getElementById("cube");
+  const now = document.getElementById("now");
   customElements.whenDefined("model-viewer").then(() => {
-    const MV = customElements.get("model-viewer");
-    MV.dracoDecoderLocation = new URL("vendor/draco/", location.href).href;   // served from this site, nothing outside
-    document.getElementById("cube").src = "cube/0044.glb";                     // load only after the decoder is set
+    customElements.get("model-viewer").dracoDecoderLocation = new URL("vendor/draco/", location.href).href;
+    cube.src = "cube/0529.glb";                     // load only after the decoder is set
+  });
+  document.getElementById("ones").addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    document.querySelectorAll("#ones button").forEach((x) => x.classList.toggle("on", x === b));
+    cube.poster = `cube/${b.dataset.id}.webp`;
+    cube.src = `cube/${b.dataset.id}.glb`;
+    now.firstChild.textContent = b.dataset.name + " ";
+    cube.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 </script>
 </body>
