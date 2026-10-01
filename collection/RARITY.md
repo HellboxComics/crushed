@@ -252,10 +252,10 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| Concerning | 350 | 39.4% |
-| Several | 340 | 38.3% |
+| Concerning | 348 | 39.2% |
+| Several | 338 | 38.1% |
 | A Few | 186 | 20.9% |
-| None | 12 | 1.4% |
+| None | 16 | 1.8% |
 
 ## One of One
 
@@ -316,23 +316,23 @@
 | 1 | #0811 | EMPTY | Nothing | None |
 | 2 | #0534 | UNCRUSHED | Everything | None |
 | 3 | #0229 | SLOW MOTION | Rescue Can | None |
-| 4 | #0796 | STOP THE PRESSES | Piggy Bank | None |
-| 5 | #0815 | GM | Coffee Mug | None |
-| 6 | #0836 | CLAY DAY | Clay Bull | None |
-| 7 | #0886 | GAS FEES | Gas Can | None |
-| 8 | #0598 | COASTERS | Burned CD | None |
-| 9 | #0319 | BULL TRAP | Dead Bull | None |
-| 10 | #0324 | MIXTAPE | Cassette Tape | None |
+| 4 | #0718 | CCFF00 | Big Neon Square | None |
+| 5 | #0796 | STOP THE PRESSES | Piggy Bank | None |
+| 6 | #0813 | LOW RES | Hooded Clan Member | None |
+| 7 | #0815 | GM | Coffee Mug | None |
+| 8 | #0836 | CLAY DAY | Clay Bull | None |
+| 9 | #0886 | GAS FEES | Gas Can | None |
+| 10 | #0598 | COASTERS | Burned CD | None |
 | 11 | #0397 | SAVE ICON | Floppy Disk | None |
-| 12 | #0718 | CCFF00 | Big Neon Square | None |
-| 13 | #0745 | LANDFILL DRIVE | Hard Drive | None |
-| 14 | #0813 | LOW RES | Hooded Clan Member | None |
+| 12 | #0319 | BULL TRAP | Dead Bull | None |
+| 13 | #0324 | MIXTAPE | Cassette Tape | None |
+| 14 | #0745 | LANDFILL DRIVE | Hard Drive | None |
 | 15 | #0582 | COLD STORAGE | Hardware Wallet | None |
 | 16 | #0244 | BLOW ON IT | Game Cartridge | None |
 | 17 | #0552 | STILL ALIVE | Virtual Pet | None |
 | 18 | #0282 | UNDER THE MATTRESS | Magazine | None |
-| 19 | #0801 | LEFTOVERS | Pizza Crust | None |
-| 20 | #0520 | DOUBLE A | AA Batteries | None |
+| 19 | #0520 | DOUBLE A | AA Batteries | None |
+| 20 | #0801 | LEFTOVERS | Pizza Crust | None |
 | 21 | #0571 | SCREEN TIME | CRT Monitor | None |
 | 22 | #0008 | SOLID GOLD | Sneaker | None |
 | 23 | #0276 | GOLD | Yo-Yo | Paper Hand |

@@ -8,6 +8,7 @@ from mathutils import Euler, Vector
 from . import crush, dressing, mat, stage, tex
 from .geo import Builder
 from .objects import PALETTES, Palette, load
+from .recipe import WIRED
 from .stage import H
 
 LIFT = H + 0.004           # center height of the block above the floor
@@ -89,6 +90,7 @@ def build_block(r, coll, rng):
     crush.STRAPS = r["straps"]
     faces = Faces(rng)
     objs = []
+    anchors = []            # where the corded things ended up: loose wires come out there
 
     # the dense undifferentiated mass behind everything
     core_pal = list(PALETTES[era]["body"]) + list(PALETTES[era]["loud"])
@@ -138,6 +140,8 @@ def build_block(r, coll, rng):
         v = crush.compact(v, layer, r["seed"] + rank, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)
+        if d.name in WIRED:
+            anchors.append(tuple(v.mean(axis=0)))
 
     if r["crypto"]:
         d = reg[r["crypto"]]
@@ -180,7 +184,7 @@ def build_block(r, coll, rng):
     top = []
     if r["tape_loops"]:
         top.append(dressing.tape_ribbon(coll, rng, r["tape_loops"]))
-    top.append(dressing.wires(coll, rng, r["wires"]))
+    top.append(dressing.wires(coll, rng, r["wires"], anchors=anchors))
     if r["condition"] == "BIOHAZARD":
         top.append(dressing.goo(coll, rng, int(rng.integers(6, 12))))
     if r["condition"] == "SOAKED":

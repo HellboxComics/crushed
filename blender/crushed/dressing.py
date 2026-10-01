@@ -143,13 +143,22 @@ def tape_ribbon(coll, rng, loops=2, loose=True):
     return ob
 
 
-def wires(coll, rng, count, faces=("-Y", "+X", "+Z", "+Y", "-X")):
+def wires(coll, rng, count, faces=("-Y", "+X", "+Z", "+Y", "-X"), anchors=None):
+    """Loose wires. With `anchors` (points on the block where corded objects sit) every wire comes out next
+    to one of them, so a wire always belongs to something."""
     b = Builder("wires")
     cols = ["w0", "w1", "w2", "w3"]
     for k in range(count):
-        f = faces[rng.integers(0, len(faces))]
-        nrm, t1, t2 = crush.FACES[f]
-        u, v = rng.uniform(-0.8, 0.8, 2) * H
+        if anchors:
+            a = Vector(anchors[int(rng.integers(0, len(anchors)))])
+            f = max(faces, key=lambda name: a.dot(crush.FACES[name][0]))
+            nrm, t1, t2 = crush.FACES[f]
+            u = float(np.clip(a.dot(t1) + rng.normal(0, 0.02), -0.8 * H, 0.8 * H))
+            v = float(np.clip(a.dot(t2) + rng.normal(0, 0.02), -0.8 * H, 0.8 * H))
+        else:
+            f = faces[rng.integers(0, len(faces))]
+            nrm, t1, t2 = crush.FACES[f]
+            u, v = rng.uniform(-0.8, 0.8, 2) * H
         base = nrm * H + t1 * u + t2 * v
         pts = [base - nrm * 0.03, base]
         p = base.copy()

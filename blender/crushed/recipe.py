@@ -130,6 +130,7 @@ ONE_FILLERS = {
     "CCFF00": ("neon_bit",),
     "STOP THE PRESSES": ("receipt", "crumpled_paper", "bottle_cap"),
     "CLAY DAY": ("clay_blob",),
+    "LOW RES": ("fabric_scrap", "plastic_shard", "crumpled_paper", "packaging", "foam_chunk"),
 }
 
 # one-of-ones whose contents get crushed gently (flat tiles should stay tiles)
@@ -144,7 +145,15 @@ ONE_CORE = {
 
 # whole-block finishes for one-of-ones that are a single material
 # one-of-ones made of paper, cloth or glass: loose electrical wire has no business on them
-NO_WIRES = {"CLAY DAY", "UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
+# objects with a cord, a cable or a wiring loom inside: the only source of loose wire in a block
+WIRED = {"boombox", "headphones", "portable_cd", "corded_phone", "crt", "keyboard_chunk", "mouse", "webcam",
+         "charger_brick", "controller_16bit", "controller_modern", "joystick", "extension_cord", "walkman",
+         "digital_camera", "mp3_player", "handheld", "brick_game", "calculator", "pager", "flip_phone",
+         "candybar_phone", "smartphone", "tablet", "vr_headset", "drone", "ring_light", "bluetooth_speaker",
+         "power_bank", "selfie_stick", "ribbon_cable", "synth_keys", "studio_headphones", "hdd", "cold_wallet",
+         "hardware_wallet", "mini_arcade", "lava_lamp", "neon_tube", "microphone"}
+
+NO_WIRES = {"CLAY DAY", "LOW RES", "CCFF00", "UNDER THE MATTRESS", "SLOW MOTION", "GM", "GAS FEES", "STOP THE PRESSES", "COASTERS", "LEFTOVERS",
             "UNCRUSHED", "EMPTY", "BULL TRAP", "SOLID GOLD"}
 
 ONE_FINISH = {
@@ -290,9 +299,13 @@ def recipe(token_id):
 
     crypto = contaminants.get(token_id)
 
+    # loose wire and circuit-board debris only come out of things that have wires in them
+    corded = sum(1 for h in heroes if h in WIRED)
     fp = pool(era, "filler")
     if one in ONE_FILLERS:
         fp = [d for d in fp if d.name in ONE_FILLERS[one]]
+    if corded < 3 or one in NO_WIRES:
+        fp = [d for d in fp if d.name not in ("wire_bit", "pcb_chunk", "spring")]
     fw = np.array([d.weight for d in fp])
     n_fill = int(rng.integers(60, 80) + round(inten * 30))
     fillers = [fp[i].name for i in rng.choice(len(fp), n_fill, p=fw / fw.sum())]
@@ -308,7 +321,8 @@ def recipe(token_id):
         tape = int(rng.choice([1, 2, 3, 4, 5, 6], p=[0.25, 0.25, 0.2, 0.15, 0.1, 0.05]))
     if one == "MIXTAPE":
         tape = 8
-    wires = int(rng.integers(1, 6) + round(inten * 2.5))
+    # the more corded junk, the more loose wire
+    wires = int(rng.integers(1, 6) + round(inten * 2.5)) if corded >= 3 else (int(rng.integers(0, 2)) if corded else 0)
     if one in NO_WIRES:
         wires = 0
     gold_index = _gold(rng, heroes) if cond == "GOLD" else None
