@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0718",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Spiral Notebook (spiral unwound halfway); 1 Pager (last page: 911 (it was not)); 3 Power Strips (daisy-chained into three more); 2 Disposable Cameras (never developed). Weight 34.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0718.png",
+ "name": "CRUSHED IT #0042: CCFF00",
+ "description": "One color, three shapes, zero apologies. Squares, diamonds and cubes, 204 255 000 all the way down. Recovered from The Neon Aisle. Smells like hot plastic and ozone. Contents (partial): 1 Big Neon Square (one color, all the attitude); 4 Hollow Squares (all edge, no filling); 16 Neon Squares (a square that knows exactly what it is); 9 Neon Diamonds (turned, just to be different); 8 Neon Cubes (six sides, one color). Weight 15.2 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0718.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "CCFF00"
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Big Neon Square"
   },
   {
    "trait_type": "Contaminant",
@@ -25,28 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Hot Plastic and Ozone"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "The Neon Aisle"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "One of One",
+   "value": "CCFF00"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0718"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 34.6,
+   "value": 15.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 41,
    "display_type": "number"
   }
  ]

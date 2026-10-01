@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0730",
- "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 2 TV Remotes (found in the couch); 2 Spiral Notebooks (spiral unwound halfway); 1 Clear Lighter (for incense, obviously); 1 USB Stick (never ejected safely); 2 No. 2 Pencils (never saw a scantron it liked). Weight 31.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0730.png",
+ "name": "CRUSHED IT #0730",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 2 Face Masks (worn below the nose); 2 Tablets (one thumbprint of juice); 1 Shot Glass (souvenir of a night nobody recalls); 2 Pizza Crusts (found behind the couch); 2 Smartwatches (still counting steps in the dryer). Weight 31.4 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0730.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Face Mask"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0730"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.5,
+   "value": 31.4,
    "display_type": "number"
   },
   {

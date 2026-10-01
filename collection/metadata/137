@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0137",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Sneaker (left only); 2 Pizza Crusts (found behind the couch); 3 AA Batteries (licked to test); 2 Floppy Disks (DISK 2 of 7); 1 Three-Ring Binder (covered in band names). Weight 91.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0137.png",
+ "name": "CRUSHED IT #0137",
+ "description": "Recovered from Mom's Minivan. Smells like cigarette in a jacket. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Scratch Ticket (scratched with a house key); 2 Film Canisters (undeveloped, forever); 3 Puzzle Cubes (solved once, stickers moved); 2 Pizza Crusts (found behind the couch). Weight 48.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0137.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0137"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.8,
+   "value": 48.1,
    "display_type": "number"
   },
   {

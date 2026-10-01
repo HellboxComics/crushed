@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0160",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (held together with tape); 1 Cheap Sunglasses (mall kiosk special); 3 Cassette Tapes (side B only); 3 Three-Ring Binders (velcro screams when opened); 3 Spiral Notebooks (spiral unwound halfway). Weight 85.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0160.png",
+ "name": "CRUSHED IT #0160",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 1 Magazine (found in a dad's truck); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (mall kiosk special); 1 Toy Slime (stuck in the carpet); 3 TV Remotes (held together with tape). Weight 65.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0160.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0160"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.6,
+   "value": 65.0,
    "display_type": "number"
   },
   {

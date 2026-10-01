@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0355",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like arcade carpet. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Clear Lighter (out of fluid); 3 Sneakers (left only); 2 Game Cartridges (blown into 400 times). Weight 84.4 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0355.png",
+ "name": "CRUSHED IT #0355",
+ "description": "Recovered from Ex's Garage. Smells like arcade carpet. Contents (partial): 1 Beer Can (12 of 12); 2 No. 2 Pencils (chewed); 1 Jewel Case (insert is from a different album); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 32.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0355.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0355"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 84.4,
+   "value": 32.1,
    "display_type": "number"
   },
   {

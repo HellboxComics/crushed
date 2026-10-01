@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0656",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 1 Game Controller (stick drift since day one); 3 AA Batteries (probably dead); 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 Glow Sticks (still glowing a little, somehow); 1 Handheld Console (screen scratched from a pocket with keys). Weight 37.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0656.png",
+ "name": "CRUSHED IT #0656",
+ "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 3 Soda Cans (flat); 3 Memory Cards (corrupted during a birthday); 3 Shot Glasses (souvenir of a night nobody recalls); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (probably dead). Weight 22.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0656.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0656"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 37.0,
+   "value": 22.3,
    "display_type": "number"
   },
   {

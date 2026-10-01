@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0692",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 MP3 Players (shuffle picked the same song 6 times); 1 Burned CD (track 7 skips); 2 TV Remotes (held together with tape); 1 Floppy Disk (contains one (1) virus). Weight 41.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0692.png",
+ "name": "CRUSHED IT #0692",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 3 USB Sticks (never ejected safely); 3 Sneakers (light-up heel, dead); 1 Jewel Case (insert is from a different album); 2 Disposable Cameras (never developed). Weight 26.2 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0692.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0692"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.1,
+   "value": 26.2,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0282",
- "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Gold 16-Bit Controllers (why); 1 Skateboard (griptape ate a pair of jeans); 1 Slap Bracelet (cut someone, probably); 2 Jewel Cases (hinge broken on arrival); 3 Sneakers (was in the dryer). Weight 48.9 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0282.png",
+ "name": "CRUSHED IT #0282: UNDER THE MATTRESS",
+ "description": "It was under the mattress. Everyone's mother knew. Nobody said a word. Recovered from Under the Mattress. Smells like shame. Contents (partial): 14 Magazines (for the interviews, obviously); 9 Centerfolds (folded out, then folded back in a hurry); 4 Tube Socks (gym sock, past tense); 3 Flashlights (batteries gone, guilt remains); 12 Tissues (found in a coat pocket). Weight 26.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0282.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "UNDER THE MATTRESS"
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,32 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Shame"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Under the Mattress"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "16-Bit Controller"
+   "trait_type": "One of One",
+   "value": "UNDER THE MATTRESS"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0282"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.9,
+   "value": 26.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 51,
    "display_type": "number"
   }
  ]

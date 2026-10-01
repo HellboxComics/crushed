@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0338",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Spiral Notebooks (spiral unwound halfway); 1 Disposable Camera (never developed); 1 9999-in-1 Handheld (HI SCORE 00000); 1 CRT Monitor (screen burn-in reads LOADING). Weight 76.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0338.png",
+ "name": "CRUSHED IT #0338",
+ "description": "Recovered from A Buddy's Basement. Smells like scratch-n-sniff sticker. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Ball Mouse (cord chewed by a dog); 1 Scratch Ticket (scratched with a house key); 1 Army Man Squad (melted with a magnifying glass); 1 Corded Phone (was on the line when mom picked up). Weight 84.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0338.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Pager"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0338"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 84.0,
    "display_type": "number"
   },
   {

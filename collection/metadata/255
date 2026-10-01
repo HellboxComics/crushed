@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0255",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Flip Phone (snapped shut dramatically); 3 AA Batteries (mixed old and new, like animals); 3 Army Man Squads (melted with a magnifying glass); 3 Clear Lighters (out of fluid). Weight 47.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0255.png",
+ "name": "CRUSHED IT #0255",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived); 2 Film Canisters (holds one quarter); 3 Spiral Notebooks (spiral unwound halfway); 2 Shot Glasses (from a trip to Vegas); 1 Bull (trapped). Weight 72.4 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0255.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0255"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.0,
+   "value": 72.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

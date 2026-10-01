@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0789",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 3 Flip Phones (12 texts left this month); 2 Digital Cameras (memory full, 14 photos); 2 Spiral Notebooks (doodles in the margins); 2 Clear Lighters (out of fluid). Weight 39.2 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0789.png",
+ "name": "CRUSHED IT #0789",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Disposable Vapes (5000 puffs, 4999 regrets); 2 Fidget Spinners (bearing went missing); 2 Sneakers (was in the dryer); 3 No. 2 Pencils (chewed); 2 Earbud Cases (both buds gone, case still charges nothing). Weight 31.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0789.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0789"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 31.0,
    "display_type": "number"
   },
   {

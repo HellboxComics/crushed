@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0143",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 Sneakers (was in the dryer); 3 No. 2 Pencils (chewed); 3 TV Remotes (the volume button worn smooth); 3 Calculators (spelled BOOBIES upside down); 2 Army Man Squads (melted with a magnifying glass). Weight 87.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0143.png",
+ "name": "CRUSHED IT #0143",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 3 Tissue Boxes (nearly empty); 1 Pizza Crust (still better than most portfolios); 3 Game Cartridges (blown into 400 times); 1 Spiral Notebook (spiral unwound halfway). Weight 82.5 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0143.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Roller Skate"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0143"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.2,
+   "value": 82.5,
    "display_type": "number"
   },
   {

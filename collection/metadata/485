@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0485",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Soda Cans (flat); 3 TV Remotes (the volume button worn smooth); 1 Puzzle Cube (solved once, stickers moved); 2 Film Canisters (undeveloped, forever); 3 Memory Cards (corrupted during a birthday). Weight 74.2 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0485.png",
+ "name": "CRUSHED IT #0485",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Clear Lighters (out of fluid); 2 Sneakers (untied since 1989); 2 Film Canisters (undeveloped, forever); 1 Cheap Sunglasses (one lens popped out). Weight 63.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0485.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0485"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.2,
+   "value": 63.5,
    "display_type": "number"
   },
   {

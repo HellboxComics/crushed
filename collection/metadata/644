@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0644",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 3 Flip Phones (snapped shut dramatically); 2 Clear Lighters (out of fluid); 3 Brick Phones (faceplate swapped 4 times); 1 Burned CD (burned at 1x, 4 hours). Weight 75.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0644.png",
+ "name": "CRUSHED IT #0644",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Magazines (found in a dad's truck); 3 Sneakers (left only); 2 Matchbooks (matches missing, reasons unclear); 3 Handheld Consoles (battery cover lost immediately); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 33.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0644.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0644"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.8,
+   "value": 33.1,
    "display_type": "number"
   },
   {

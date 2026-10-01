@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0275",
- "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Ball Mouse (ball removed as a prank); 3 Burned CDs (burned at 1x, 4 hours); 3 Cassette Tapes (someone's voicemail greeting); 1 Clear Lighter (out of fluid). Weight 80.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0275.png",
+ "name": "CRUSHED IT #0275",
+ "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Floppy Disk (DISK 2 of 7); 3 Jewel Cases (hinge broken on arrival); 2 Cassette Tapes (a mix for someone who never listened); 1 Beer Can (warm, sadly). Weight 35.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0275.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0275"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.1,
+   "value": 35.6,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0152",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Spiral Notebooks (spiral unwound halfway); 3 Cheap Sunglasses (mall kiosk special); 3 Calculators (solar panel covered by a sticker); 2 Floppy Disks (DISK 2 of 7). Weight 43.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0152.png",
+ "name": "CRUSHED IT #0152",
+ "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 Roller Skates (toe stop worn to nothing); 2 Three-Ring Binders (velcro screams when opened); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Joystick (fire button pressed 40 million times). Weight 81.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0152.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0152"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.3,
+   "value": 81.3,
    "display_type": "number"
   },
   {

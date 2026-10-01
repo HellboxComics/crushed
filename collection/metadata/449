@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0449",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 CRT Monitor (still warm); 3 Flip Phones (snapped shut dramatically); 2 No. 2 Pencils (sharpened to a nub); 1 Sneaker (was in the dryer); 1 Film Canister (undeveloped, forever). Weight 79.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0449.png",
+ "name": "CRUSHED IT #0449",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like basement. Contents (partial): 1 CRT Monitor (still warm); 1 Burned CD (burned at 1x, 4 hours); 1 Floppy Disk (says DO NOT FORMAT); 1 Foam Headphones (one ear works if you hold it); 2 Magazines (read for the articles). Weight 75.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0449.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Basement"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0449"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.5,
+   "value": 75.3,
    "display_type": "number"
   },
   {

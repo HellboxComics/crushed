@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0642",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Cassette Tapes (someone's voicemail greeting); 2 Foam Headphones (one ear works if you hold it); 1 Pizza Crust (from a sleepover); 1 Jewel Case (insert is from a different album). Weight 68.0 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0642.png",
+ "name": "CRUSHED IT #0642",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Clear Lighters (borrowed in 1997, never returned); 2 Flip Phones (ringtone composed by hand); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times); 1 Emergency Ramen (for emergencies). Weight 24.1 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0642.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0642"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 68.0,
+   "value": 24.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

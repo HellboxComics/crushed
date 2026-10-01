@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0859",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 2 Game Controllers (thrown during a boss fight); 2 Power Strips (daisy-chained into three more); 1 USB Stick (contains homework_FINAL_final2.doc); 2 TV Remotes (held together with tape). Weight 37.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0859.png",
+ "name": "CRUSHED IT #0859",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Energy Drinks (tastes like a battery); 2 Disposable Vapes (zero nicotine, allegedly); 1 Pizza Crust (from a sleepover); 1 Ring Light (the eyes in every mirror selfie); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 36.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0859.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0859"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 36.5,
    "display_type": "number"
   },
   {

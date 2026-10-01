@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0843",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (was in the dryer); 2 Flip Phones (snapped shut dramatically); 1 Ball Mouse (cord chewed by a dog); 3 TV Remotes (found in the couch); 1 Disposable Camera (never developed). Weight 67.6 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0843.png",
+ "name": "CRUSHED IT #0843",
+ "description": "Recovered from A Very Specific Ditch. Smells like basement. Contents (partial): 1 Fidget Spinner (bearing went missing); 3 Sneakers (light-up heel, dead); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Selfie Sticks (banned at the museum); 1 Flip Phone (12 texts left this month). Weight 31.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0843.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Fidget Spinner"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Basement"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0843"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 67.6,
+   "value": 31.9,
    "display_type": "number"
   },
   {

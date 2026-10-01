@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0109",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (DISK 2 of 7); 2 Game Cartridges (blown into 400 times); 1 Three-Ring Binder (velcro screams when opened); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 74.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0109.png",
+ "name": "CRUSHED IT #0109",
+ "description": "Recovered from A Buddy's Basement. Smells like scratch-n-sniff sticker. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Foam Headphones (orange foam, allegedly); 1 Scratch Ticket (not a winner); 1 Corded Phone (someone is still on hold). Weight 84.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0109.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0109"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.6,
+   "value": 84.0,
    "display_type": "number"
   },
   {

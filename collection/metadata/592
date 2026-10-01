@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0592",
- "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 1 No. 2 Pencil (never saw a scantron it liked); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Boom Box (shoulder-mounted in its prime); 1 Film Canister (holds one quarter). Weight 50.3 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0592.png",
+ "name": "CRUSHED IT #0592",
+ "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 1 Energy Drink (exam week casualty); 1 Tablet (bought for the kids, taken back by dad); 1 Portable CD Player (anti-skip lied); 2 Scratch Tickets (scratched with a house key). Weight 25.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0592.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0592"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 50.3,
+   "value": 25.4,
    "display_type": "number"
   },
   {

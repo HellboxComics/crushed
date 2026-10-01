@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0709",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 TV Remotes (held together with tape); 1 Laptop Charger (fits nothing else in the house); 3 Spiral Notebooks (note says 'check YES or NO'); 3 Energy Drinks (exam week casualty). Weight 30.9 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0709.png",
+ "name": "CRUSHED IT #0709",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 Energy Drinks (exam week casualty); 1 Sneaker (left only); 2 Power Strips (daisy-chained into three more); 3 Dice (loaded, rumor says). Weight 29.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0709.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0709"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.9,
+   "value": 29.3,
    "display_type": "number"
   },
   {

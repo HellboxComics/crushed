@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0482",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Pager (clipped to jeans for status only); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (track 7 skips); 1 Floppy Disk (save icon, but real); 1 Paper Hand (folded under light pressure). Weight 77.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0482.png",
+ "name": "CRUSHED IT #0482",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Cassette Tapes (a mix for someone who never listened); 1 No. 2 Pencil (chewed); 1 Sneaker (untied since 1989); 1 Virtual Pet (reincarnated 40 times). Weight 32.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0482.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0482"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.8,
+   "value": 32.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0423",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Army Man Squad (melted with a magnifying glass); 2 Calculators (solar panel covered by a sticker); 1 Foam Headphones (one ear works if you hold it); 2 Slap Bracelets (cut someone, probably). Weight 49.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0423.png",
+ "name": "CRUSHED IT #0423",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 MP3 Player (shuffle picked the same song 6 times); 1 Calculator (solar panel covered by a sticker); 1 Burned CD (coaster now); 1 Ball Mouse (cord chewed by a dog). Weight 36.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0423.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0423"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.0,
+   "value": 36.3,
    "display_type": "number"
   },
   {

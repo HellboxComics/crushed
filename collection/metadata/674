@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0674",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Laptop Chargers (fits nothing else in the house); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Handheld Console (battery cover lost immediately); 3 Burned CDs (burned at 1x, 4 hours). Weight 33.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0674.png",
+ "name": "CRUSHED IT #0674",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Game Controller (stick drift since day one); 3 Sneakers (untied since 1989); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 No. 2 Pencils (never saw a scantron it liked); 3 Burned CDs (burned at 1x, 4 hours). Weight 26.7 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0674.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0674"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 26.7,
    "display_type": "number"
   },
   {

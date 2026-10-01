@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0868",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 2 Disposable Cameras (never developed); 3 Energy Drinks (third one that night); 3 Memory Cards (corrupted during a birthday); 1 Digital Camera (memory full, 14 photos); 3 Handheld Consoles (battery cover lost immediately). Weight 30.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0868.png",
+ "name": "CRUSHED IT #0868",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Beer Can (last one in the fridge); 3 Tissue Boxes (nearly empty); 1 VR Headset (worn twice); 3 TV Remotes (held together with tape); 3 Selfie Sticks (the person holding it is not in the photo). Weight 39.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0868.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0868"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.0,
+   "value": 39.5,
    "display_type": "number"
   },
   {

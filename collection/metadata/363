@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0363",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Skate Wheel (rolled into a storm drain once); 2 MP3 Players (shuffle picked the same song 6 times); 1 Milk Caps (won in a bet); 1 Metal Lunchbox (the smell stays). Weight 39.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0363.png",
+ "name": "CRUSHED IT #0363",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 2 Magazines (for the interviews, obviously); 2 TV Remotes (the volume button worn smooth); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (labeled MIX 4 U); 1 16-Bit Controller (the B button is sticky). Weight 26.9 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0363.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0363"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.7,
+   "value": 26.9,
    "display_type": "number"
   },
   {

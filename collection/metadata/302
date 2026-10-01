@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0302",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Ball Mouse (ball removed as a prank); 2 Portable CD Players (anti-skip lied); 3 Army Man Squads (melted with a magnifying glass); 1 Corded Phone (was on the line when mom picked up); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 33.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0302.png",
+ "name": "CRUSHED IT #0302",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 3 Burned CDs (burned at 1x, 4 hours); 3 Slap Bracelets (cut someone, probably); 1 Pager (last page from a number nobody called back); 1 VHS Tape (taped over a wedding). Weight 36.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0302.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0302"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.9,
+   "value": 36.1,
    "display_type": "number"
   },
   {

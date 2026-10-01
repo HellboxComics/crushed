@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0678",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 3 Digital Cameras (2 megapixels of truth); 3 No. 2 Pencils (chewed); 1 Cassette Tape (someone's voicemail greeting); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 Disposable Cameras (never developed). Weight 27.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0678.png",
+ "name": "CRUSHED IT #0678",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Disposable Cameras (27 exposures of a thumb); 1 Cassette Tape (a mix for someone who never listened); 3 AA Batteries (licked to test); 3 Pizza Crusts (found behind the couch); 1 Bear (doing fine actually). Weight 24.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0678.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0678"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.7,
+   "value": 24.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

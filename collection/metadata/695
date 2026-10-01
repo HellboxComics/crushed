@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0695",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 3 TV Remotes (found in the couch); 3 Clear Lighters (for incense, obviously); 1 Laptop Charger (warm to the touch, somehow); 3 AA Batteries (mixed old and new, like animals). Weight 39.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0695.png",
+ "name": "CRUSHED IT #0695",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Energy Drinks (third one that night); 3 Glow Sticks (cracked at a school dance); 1 Beer Can (last one in the fridge); 2 Matchbooks (matches missing, reasons unclear). Weight 73.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0695.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0695"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.0,
+   "value": 73.8,
    "display_type": "number"
   },
   {

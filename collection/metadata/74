@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0074",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 VHS Tape (taped over a wedding); 1 Boom Box (took 10 D batteries); 2 Pizza Crusts (found behind the couch); 1 CRT Monitor (degaussed one last time); 3 Cassette Tapes (labeled MIX 4 U). Weight 88.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0074.png",
+ "name": "CRUSHED IT #0074",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Poker Chips (a stack of ambition); 3 Cassette Tapes (labeled MIX 4 U); 2 Pizza Crusts (still better than most portfolios). Weight 31.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0074.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0074"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 31.3,
    "display_type": "number"
   },
   {

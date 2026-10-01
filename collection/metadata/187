@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0187",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Three-Ring Binders (velcro screams when opened); 2 Foam Headphones (one ear works if you hold it); 1 AA Batteries (licked to test); 2 Power Strips (overloaded on purpose). Weight 88.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0187.png",
+ "name": "CRUSHED IT #0187",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 2 VHS Tapes (taped over a wedding); 1 Cassette Tape (rewound with a pencil); 1 Corded Phone (someone is still on hold); 3 Game Cartridges (save file erased by a sibling). Weight 30.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0187.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "16-Bit Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0187"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 30.8,
    "display_type": "number"
   },
   {

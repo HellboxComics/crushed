@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0286",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Sneaker (was in the dryer); 3 Portable CD Players (45-second buffer, 2-second attention span); 1 Slap Bracelet (cut someone, probably); 2 Skate Wheels (flat spot from a power slide); 1 Toy Slime (stuck in the carpet). Weight 52.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0286.png",
+ "name": "CRUSHED IT #0286",
+ "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 Ball Mice (rollers caked with 1998); 3 Floppy Disks (contains one (1) virus); 1 Portable CD Player (anti-skip lied); 1 Power Strip (daisy-chained into three more). Weight 88.8 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0286.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0286"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 52.2,
+   "value": 88.8,
    "display_type": "number"
   },
   {

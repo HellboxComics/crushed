@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0497",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 3 Portable CD Players (45-second buffer, 2-second attention span); 3 Cassette Tapes (rewound with a pencil); 2 Cheap Sunglasses (one lens popped out); 1 Game Controller (thrown during a boss fight); 3 TV Remotes (found in the couch). Weight 83.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0497.png",
+ "name": "CRUSHED IT #0497",
+ "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Cassette Tapes (someone's voicemail greeting); 1 AA Batteries (mixed old and new, like animals); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Burned CDs (burned at 1x, 4 hours). Weight 75.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0497.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0497"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.4,
+   "value": 75.5,
    "display_type": "number"
   },
   {

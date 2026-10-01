@@ -1,23 +1,23 @@
 {
- "name": "CRUSHED #0802",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 3 Flip Phones (12 texts left this month); 3 Burned CDs (track 7 skips); 3 Digital Cameras (2 megapixels of truth); 1 Pizza Crust (still better than most portfolios); 1 Energy Drink (exam week casualty). Weight 36.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0802.png",
+ "name": "CRUSHED IT #0802",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 Dice (loaded, rumor says); 1 Emergency Ramen (for emergencies). Weight 35.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0802.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "New Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "BONE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0802"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.0,
+   "value": 35.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 45,
    "display_type": "number"
   }
  ]

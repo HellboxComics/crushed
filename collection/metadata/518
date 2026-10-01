@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0518",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Webcams (pointed at the ceiling forever); 1 TV Remote (the volume button worn smooth); 1 Virtual Pet (reincarnated 40 times); 3 AA Batteries (probably dead); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Dead Bull (trapped). Weight 75.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0518.png",
+ "name": "CRUSHED IT #0518",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 2 Pagers (clipped to jeans for status only); 1 No. 2 Pencil (never saw a scantron it liked); 1 Soda Can (flat); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 72.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0518.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Webcam"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0518"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.3,
+   "value": 72.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

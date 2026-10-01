@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0401",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Floppy Disks (contains one (1) virus); 2 Pizza Crusts (found behind the couch); 2 Game Cartridges (blown into 400 times); 3 Disposable Cameras (never developed); 1 Gold Coin (bought the top). Weight 73.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0401.png",
+ "name": "CRUSHED IT #0401",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Webcam (240p of pure confidence); 2 Tissue Boxes (one for every mood); 1 Memory Card (8MB, full). Weight 70.5 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0401.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0401"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.2,
+   "value": 70.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

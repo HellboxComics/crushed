@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0536",
- "description": "Recovered from Nobody Knows. Smells like body spray cloud. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Sneakers (left only); 3 MP3 Players (shuffle picked the same song 6 times); 3 Pagers (clipped to jeans for status only); 3 Burned CDs (burned at 1x, 4 hours). Weight 83.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0536.png",
+ "name": "CRUSHED IT #0536",
+ "description": "Recovered from Behind the Bar. Smells like cheap cologne. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Digital Camera (2 megapixels of truth); 3 AA Batteries (taken out of the smoke detector); 1 Power Strip (overloaded on purpose); 2 Beer Cans (crushed on a forehead). Weight 27.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0536.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0536"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 83.3,
+   "value": 27.1,
    "display_type": "number"
   },
   {

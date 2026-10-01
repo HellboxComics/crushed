@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0386",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Foam Headphones (one ear works if you hold it); 2 Three-Ring Binders (velcro screams when opened); 1 Sneaker (was in the dryer); 1 TV Remote (found in the couch). Weight 37.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0386.png",
+ "name": "CRUSHED IT #0386",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Glow Sticks (still glowing a little, somehow); 3 Pizza Crusts (from a sleepover); 1 No. 2 Pencil (never saw a scantron it liked); 1 Clear Lighter (for incense, obviously). Weight 65.7 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0386.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0386"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.8,
+   "value": 65.7,
    "display_type": "number"
   },
   {

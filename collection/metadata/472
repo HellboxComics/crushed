@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0472",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 3 Pizza Crusts (petrified); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Virtual Pet (died during math class); 3 Burned CDs (says ROAD TRIP in marker). Weight 74.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0472.png",
+ "name": "CRUSHED IT #0472",
+ "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Tissue Boxes (nearly empty); 2 Floppy Disks (save icon, but real); 1 No. 2 Pencil (chewed); 1 Jewel Case (insert is from a different album). Weight 34.2 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0472.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0472"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 34.2,
    "display_type": "number"
   },
   {

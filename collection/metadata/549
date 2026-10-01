@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0549",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Disposable Cameras (27 exposures of a thumb); 1 Corded Phone (someone is still on hold); 1 CRT Monitor (degaussed one last time); 2 Digital Cameras (memory full, 14 photos). Weight 79.1 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0549.png",
+ "name": "CRUSHED IT #0549",
+ "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 2 Energy Drinks (tastes like a battery); 3 Beer Cans (crushed on a forehead); 1 Memory Card (8MB, full); 1 Cheap Sunglasses (one lens popped out); 1 Sneaker (worn to one (1) very bad decision). Weight 27.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0549.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0549"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.1,
+   "value": 27.6,
    "display_type": "number"
   },
   {

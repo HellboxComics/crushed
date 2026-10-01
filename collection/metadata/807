@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0807",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Sneakers (untied since 1989); 3 Burned CDs (coaster now); 3 TV Remotes (held together with tape); 1 Glow Stick (cracked at a school dance). Weight 30.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0807.png",
+ "name": "CRUSHED IT #0807",
+ "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 3 Earbud Cases (both buds gone, case still charges nothing); 2 Smartphones (cracked in the first week); 1 Game Controller (thrown during a boss fight); 2 Energy Drinks (exam week casualty); 2 Centerfolds (folded out, then folded back in a hurry). Weight 30.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0807.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Earbud Case"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0807"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.5,
+   "value": 30.9,
    "display_type": "number"
   },
   {

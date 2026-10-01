@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0070",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 3 Army Man Squads (melted with a magnifying glass); 2 Joysticks (suction cups gave up); 2 Foam Headphones (orange foam, allegedly); 3 No. 2 Pencils (never saw a scantron it liked). Weight 76.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0070.png",
+ "name": "CRUSHED IT #0070",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 Pizza Crust (still better than most portfolios); 1 No. 2 Pencil (never saw a scantron it liked); 1 Shot Glass (souvenir of a night nobody recalls); 1 Calculator (solar panel covered by a sticker). Weight 76.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0070.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0070"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.1,
+   "value": 76.9,
    "display_type": "number"
   },
   {

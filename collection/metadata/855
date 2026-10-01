@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0855",
- "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 3 Clear Lighters (out of fluid); 2 Disposable Cameras (never developed); 3 Sneakers (light-up heel, dead); 3 Digital Cameras (2 megapixels of truth); 1 Suspicious Rectangle (PIN forgotten). Weight 31.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0855.png",
+ "name": "CRUSHED IT #0855",
+ "description": "Recovered from Ex's Garage. Smells like arcade carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Shot Glasses (chipped rim); 1 Disposable Camera (never developed); 1 Tablet (used once as a cutting board); 1 Clear Lighter (for incense, obviously). Weight 35.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0855.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0855"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.6,
+   "value": 35.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

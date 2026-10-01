@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0580",
- "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 2 TV Remotes (held together with tape); 2 Flip Phones (12 texts left this month); 2 Ball Mouses (ball removed as a prank); 1 Jewel Case (hinge broken on arrival); 3 Skate Wheels (rolled into a storm drain once). Weight 87.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0580.png",
+ "name": "CRUSHED IT #0580",
+ "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Game Controller (thrown during a boss fight); 3 Cheap Sunglasses (mall kiosk special); 3 AA Batteries (licked to test); 1 Burned CD (says ROAD TRIP in marker). Weight 29.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0580.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0580"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.9,
+   "value": 29.1,
    "display_type": "number"
   },
   {

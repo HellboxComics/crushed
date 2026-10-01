@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0884",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Game Controllers (stick drift since day one); 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Flip Phones (ringtone composed by hand); 1 VHS Tape (label says DO NOT TAPE OVER). Weight 83.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0884.png",
+ "name": "CRUSHED IT #0884",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 2 Tablets (bought for the kids, taken back by dad); 1 Energy Drink (tastes like a battery); 3 No. 2 Pencils (chewed); 3 Beer Cans (12 of 12); 1 Burned CD (says ROAD TRIP in marker). Weight 36.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0884.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Tablet"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0884"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.1,
+   "value": 36.7,
    "display_type": "number"
   },
   {

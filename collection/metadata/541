@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0541",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Webcam (pointed at the ceiling forever); 2 Pagers (last page: 143); 1 Floppy Disk (contains one (1) virus); 2 TV Remotes (the volume button worn smooth); 2 Soda Cans (tab kept for charity). Weight 73.6 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0541.png",
+ "name": "CRUSHED IT #0541",
+ "description": "Recovered from Mom's Minivan. Smells like science lab. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition). Weight 70.4 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0541.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Webcam"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Science Lab"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0541"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.6,
+   "value": 70.4,
    "display_type": "number"
   },
   {

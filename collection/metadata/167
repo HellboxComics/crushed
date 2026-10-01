@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0167",
- "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Power Strips (daisy-chained into three more); 1 CRT Monitor (weighs more than the desk); 3 Cassette Tapes (rewound with a pencil); 1 No. 2 Pencil (never saw a scantron it liked). Weight 90.1 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0167.png",
+ "name": "CRUSHED IT #0167",
+ "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Shot Glasses (from a trip to Vegas); 1 Ball Mouse (cord chewed by a dog); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Magazine (the staples are doing the work). Weight 52.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0167.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0167"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.1,
+   "value": 52.4,
    "display_type": "number"
   },
   {

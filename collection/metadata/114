@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0114",
- "description": "Recovered from Storage Unit (Auctioned). Smells like gym bag, forgotten. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 3 Cheap Sunglasses (one lens popped out); 3 Floppy Disks (says DO NOT FORMAT); 1 CRT Monitor (weighs more than the desk); 1 Metal Lunchbox (thermos missing). Weight 98.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0114.png",
+ "name": "CRUSHED IT #0114",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like cheap cologne. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 2 Shot Glasses (chipped rim); 2 Power Strips (daisy-chained into three more); 3 Floppy Disks (save icon, but real); 3 Joysticks (fire button pressed 40 million times). Weight 46.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0114.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0114"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 98.8,
+   "value": 46.2,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0088",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Boom Box (one speaker still believes); 1 Soda Can (shaken as a prank); 1 Toy Slime (stuck in the carpet); 3 Pizza Crusts (petrified); 2 Three-Ring Binders (covered in band names). Weight 53.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0088.png",
+ "name": "CRUSHED IT #0088",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 1 Boom Box (one speaker still believes); 3 Power Strips (daisy-chained into three more); 1 CRT Monitor (degaussed one last time); 3 Floppy Disks (DISK 2 of 7); 3 Cassette Tapes (rewound with a pencil). Weight 92.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0088.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0088"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.0,
+   "value": 92.3,
    "display_type": "number"
   },
   {

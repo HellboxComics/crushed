@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0115",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Cheap Sunglasses (mall kiosk special); 3 Army Man Squads (the one with the radio survived); 2 Joysticks (suction cups gave up); 1 Roller Skate (toe stop worn to nothing). Weight 87.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0115.png",
+ "name": "CRUSHED IT #0115",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Joysticks (fire button pressed 40 million times); 1 Centerfold (staples removed, an attempt was made); 2 Game Cartridges (blown into 400 times); 3 Roller Skates (toe stop worn to nothing); 2 Yo-Yos (string tied to a finger for 3 years). Weight 39.9 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0115.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0115"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.0,
+   "value": 39.9,
    "display_type": "number"
   },
   {

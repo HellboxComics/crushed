@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0332",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Cheap Sunglasses (mall kiosk special); 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Soda Cans (shaken as a prank); 1 AA Batteries (taken out of the smoke detector). Weight 80.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0332.png",
+ "name": "CRUSHED IT #0332",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Three-Ring Binders (velcro screams when opened); 3 Ball Mice (cord chewed by a dog); 2 Shot Glasses (from a trip to Vegas); 1 Game Cartridge (save file erased by a sibling). Weight 84.0 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0332.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Skateboard"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0332"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.8,
+   "value": 84.0,
    "display_type": "number"
   },
   {

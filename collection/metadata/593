@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0593",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 VHS Tapes (taped over a wedding); 3 Cassette Tapes (someone's voicemail greeting); 1 Skateboard (griptape ate a pair of jeans); 3 Soda Cans (shaken as a prank); 1 Memory Card (8MB, full). Weight 82.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0593.png",
+ "name": "CRUSHED IT #0593",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Burned CDs (coaster now); 1 Glow Stick (still glowing a little, somehow); 1 Poker Chip (never cashed out); 3 Jewel Cases (insert is from a different album). Weight 27.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0593.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "VHS Tape"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0593"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.7,
+   "value": 27.3,
    "display_type": "number"
   },
   {

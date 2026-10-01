@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0201",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Spiral Notebooks (spiral unwound halfway); 2 Film Canisters (undeveloped, forever); 1 TV Remote (the volume button worn smooth); 1 Cassette Tape (someone's voicemail greeting). Weight 47.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0201.png",
+ "name": "CRUSHED IT #0201",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 AA Batteries (mixed old and new, like animals); 2 Soda Cans (flat); 1 9999-in-1 Handheld (HI SCORE 00000); 1 16-Bit Controller (the B button is sticky). Weight 80.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0201.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0201"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 47.7,
+   "value": 80.4,
    "display_type": "number"
   },
   {

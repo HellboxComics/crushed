@@ -1,15 +1,15 @@
 {
- "name": "CRUSHED #0436",
- "description": "Recovered from Nobody Knows. Smells like arcade carpet. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Toy Slime (stuck in the carpet); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 9999-in-1 Handhelds (HI SCORE 00000); 3 AA Batteries (taken out of the smoke detector); 1 Crumpled Chart (printed out for emotional reasons). Weight 49.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0436.png",
+ "name": "CRUSHED IT #0436",
+ "description": "Recovered from Nobody Knows. Smells like body spray cloud. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Game Controller (stick drift since day one); 3 Cassette Tapes (labeled MIX 4 U); 1 Pizza Crust (found behind the couch); 2 Glow Sticks (still glowing a little, somehow). Weight 29.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0436.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
@@ -33,24 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
-   "trait_type": "Finish",
-   "value": "ICE"
+   "trait_type": "Serial",
+   "value": "0436"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.0,
+   "value": 29.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 40,
    "display_type": "number"
   }
  ]

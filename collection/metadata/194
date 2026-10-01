@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0194",
- "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Army Man Squads (melted with a magnifying glass); 2 TV Remotes (the volume button worn smooth); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Pizza Crusts (found behind the couch). Weight 88.2 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0194.png",
+ "name": "CRUSHED IT #0194",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Spiral Notebooks (spiral unwound halfway); 2 Magazines (for the interviews, obviously); 1 Dice (loaded, rumor says); 2 Beer Cans (last one in the fridge). Weight 77.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0194.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0194"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 88.2,
+   "value": 77.1,
    "display_type": "number"
   },
   {

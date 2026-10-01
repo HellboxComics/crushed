@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0887",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Spiral Notebooks (note says 'check YES or NO'); 1 AA Batteries (taken out of the smoke detector); 2 Burned CDs (says ROAD TRIP in marker); 2 Game Controllers (stick drift since day one). Weight 33.6 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0887.png",
+ "name": "CRUSHED IT #0887",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 2 TV Remotes (held together with tape); 2 Tablets (bought for the kids, taken back by dad); 1 VR Headset (the walls were real and they were hit); 1 Laptop Charger (warm to the touch, somehow); 1 Energy Drink (third one that night). Weight 37.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0887.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0887"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.6,
+   "value": 37.6,
    "display_type": "number"
   },
   {

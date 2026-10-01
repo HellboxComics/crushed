@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0613",
- "description": "Recovered from Behind the Couch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Pagers (last page: 911 (it was not)); 1 Flip Phone (ringtone composed by hand); 3 No. 2 Pencils (sharpened to a nub); 1 Webcam (pointed at the ceiling forever); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 86.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0613.png",
+ "name": "CRUSHED IT #0613",
+ "description": "Recovered from The Bachelor Pad. Smells like cigarette in a jacket. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Spiral Notebooks (note says 'check YES or NO'); 1 No. 2 Pencil (chewed); 3 Burned CDs (coaster now). Weight 28.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0613.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0613"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.3,
+   "value": 28.5,
    "display_type": "number"
   },
   {

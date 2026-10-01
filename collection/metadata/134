@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0134",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (someone is still on hold); 2 AA Batteries (mixed old and new, like animals); 1 Keyboard (Partial) (F, J and the crumbs); 1 Sneaker (left only); 2 Three-Ring Binders (covered in band names). Weight 35.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0134.png",
+ "name": "CRUSHED IT #0134",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Magazines (found in a dad's truck); 3 Calculators (spelled BOOBIES upside down); 1 No. 2 Pencil (chewed); 2 Pizza Crusts (found behind the couch). Weight 78.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0134.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "CRT Monitor"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0134"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.3,
+   "value": 78.3,
    "display_type": "number"
   },
   {

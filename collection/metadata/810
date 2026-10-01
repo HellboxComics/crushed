@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0810",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Game Controllers (thrown during a boss fight); 1 Energy Drink (exam week casualty); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Digital Cameras (memory full, 14 photos); 1 Gold Coin (real, probably). Weight 34.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0810.png",
+ "name": "CRUSHED IT #0810",
+ "description": "Recovered from Vegas Hotel Room. Smells like arcade carpet. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 3 Energy Drinks (exam week casualty); 1 Power Bank (10000 mAh of dead weight); 1 Glow Stick (cracked at a school dance); 1 Handheld Console (battery cover lost immediately); 1 Emergency Ramen (for emergencies). Weight 34.2 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0810.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Ring Light"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0810"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 34.2,
    "display_type": "number"
   },
   {

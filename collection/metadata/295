@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0295",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 2 Milk Caps (the slammer is chipped); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Sneakers (untied since 1989); 2 Soda Cans (tab kept for charity). Weight 87.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0295.png",
+ "name": "CRUSHED IT #0295",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Shot Glass (chipped rim); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 No. 2 Pencil (never saw a scantron it liked); 2 Skate Wheels (rolled into a storm drain once); 1 Bull (dead). Weight 82.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0295.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Portable CD Player"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0295"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.0,
+   "value": 82.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

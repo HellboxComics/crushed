@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0228",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Keyboards (Partial) (F, J and the crumbs); 1 Slap Bracelet (banned by the school); 2 Pizza Crusts (from a sleepover); 2 Puzzle Cubes (solved once, stickers moved); 2 Soda Cans (tab kept for charity). Weight 37.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0228.png",
+ "name": "CRUSHED IT #0228",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 2 Ball Mice (rollers caked with 1998); 2 Floppy Disks (DISK 2 of 7); 1 Toy Slime (stuck in the carpet); 1 Game Cartridge (blown into 400 times); 1 Dice (loaded, rumor says). Weight 77.8 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0228.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0228"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.8,
+   "value": 77.8,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0596",
- "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 Skate Wheels (flat spot from a power slide); 1 Game Controller (thrown during a boss fight); 2 Burned CDs (track 7 skips); 1 Soda Can (tab kept for charity). Weight 29.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0596.png",
+ "name": "CRUSHED IT #0596",
+ "description": "Recovered from The Mall Fountain. Smells like cheap cologne. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Clear Lighters (for incense, obviously); 2 TV Remotes (held together with tape); 2 Poker Chips (never cashed out); 3 Spiral Notebooks (spiral unwound halfway). Weight 25.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0596.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Mall Fountain"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0596"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.5,
+   "value": 25.3,
    "display_type": "number"
   },
   {

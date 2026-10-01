@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0696",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Sneakers (was in the dryer); 2 Clear Lighters (for incense, obviously); 2 Burned CDs (says ROAD TRIP in marker); 3 Game Controllers (thrown during a boss fight); 1 Flip Phone (ringtone composed by hand). Weight 35.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0696.png",
+ "name": "CRUSHED IT #0696",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Sneakers (smells like 1989); 1 Matchbook (from a gentlemen's club, reportedly); 1 Jewel Case (insert is from a different album); 3 Glow Sticks (still glowing a little, somehow); 1 Digital Camera (2 megapixels of truth). Weight 25.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0696.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0696"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 25.1,
    "display_type": "number"
   },
   {

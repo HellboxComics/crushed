@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0490",
- "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 3 TV Remotes (found in the couch); 1 Jewel Case (hinge broken on arrival); 1 Glow Stick (cracked at a school dance); 3 Burned CDs (burned at 1x, 4 hours); 2 Game Controllers (thrown during a boss fight); 1 Dead Bull (flipped). Weight 70.3 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0490.png",
+ "name": "CRUSHED IT #0490",
+ "description": "Recovered from A Very Specific Ditch. Smells like cigarette in a jacket. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Flip Phone (snapped shut dramatically); 1 Beer Can (12 of 12); 2 Burned CDs (burned at 1x, 4 hours); 2 MP3 Players (shuffle picked the same song 6 times). Weight 23.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0490.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0490"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.3,
+   "value": 23.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0035",
- "description": "Recovered from Flooded Basement. Smells like hot dust on a CRT. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 2 Sneakers (was in the dryer); 3 Cassette Tapes (someone's voicemail greeting); 3 Army Man Squads (melted with a magnifying glass); 3 TV Remotes (held together with tape). Weight 81.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0035.png",
+ "name": "CRUSHED IT #0035",
+ "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Metal Lunchbox (the smell stays); 2 VHS Tapes (the unmarked one, from the back of the closet); 3 Floppy Disks (save icon, but real); 1 Roller Skate (toe stop worn to nothing). Weight 74.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0035.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "New Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0035"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.4,
+   "value": 74.2,
    "display_type": "number"
   },
   {

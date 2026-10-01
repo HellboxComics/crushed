@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0745",
- "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 1 Gold Digital Cameras (why); 3 Game Controllers (thrown during a boss fight); 3 Energy Drinks (exam week casualty); 3 AA Batteries (mixed old and new, like animals); 2 Pizza Crusts (found behind the couch). Weight 33.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0745.png",
+ "name": "CRUSHED IT #0745: LANDFILL DRIVE",
+ "description": "Every drive that held something that mattered. All of it is in the dump now. Recovered from Under Forty Feet of Garbage. Smells like wet landfill. Contents (partial): 28 Hard Drives (backed up nothing); 4 USB Sticks (never ejected safely); 6 Gold Coins (bought the top); 3 Laptop Chargers (warm to the touch, somehow); 3 Floppy Disks (save icon, but real). Weight 78.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0745.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "LANDFILL DRIVE"
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Hard Drive"
   },
   {
    "trait_type": "Contaminant",
@@ -25,32 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Wet Landfill"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Under Forty Feet of Garbage"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Digital Camera"
+   "trait_type": "One of One",
+   "value": "LANDFILL DRIVE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0745"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.8,
+   "value": 78.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 44,
    "display_type": "number"
   }
  ]

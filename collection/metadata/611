@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0611",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 Webcam (240p of pure confidence); 3 Disposable Cameras (27 exposures of a thumb); 1 Soda Can (tab kept for charity); 2 MP3 Players (shuffle picked the same song 6 times); 3 Pagers (clipped to jeans for status only). Weight 45.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0611.png",
+ "name": "CRUSHED IT #0611",
+ "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 2 Sneakers (was in the dryer); 2 TV Remotes (found in the couch); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 AA Batteries (mixed old and new, like animals); 3 Laptop Chargers (warm to the touch, somehow). Weight 24.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0611.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Webcam"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0611"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 45.3,
+   "value": 24.1,
    "display_type": "number"
   },
   {

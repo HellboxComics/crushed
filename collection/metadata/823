@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0823",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 3 Sneakers (untied since 1989); 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 USB Sticks (never ejected safely); 2 Jewel Cases (hinge broken on arrival); 2 AA Batteries (licked to test); 1 Tiny Red Candle (lit). Weight 27.9 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0823.png",
+ "name": "CRUSHED IT #0823",
+ "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 1 VR Headset (the walls were real and they were hit); 2 Sneakers (light-up heel, dead); 3 Pizza Crusts (still better than most portfolios); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 AA Batteries (licked to test). Weight 29.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0823.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "VR Headset"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0823"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.9,
+   "value": 29.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

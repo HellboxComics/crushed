@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0561",
- "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Portable CD Players (45-second buffer, 2-second attention span); 2 No. 2 Pencils (never saw a scantron it liked); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Webcams (240p of pure confidence). Weight 36.9 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0561.png",
+ "name": "CRUSHED IT #0561",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Vegas carpet. Contents (partial): 2 Magazines (read for the articles); 1 Poker Chip (never cashed out); 2 Energy Drinks (exam week casualty); 3 AA Batteries (licked to test); 2 Shot Glasses (chipped rim). Weight 21.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0561.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0561"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.9,
+   "value": 21.7,
    "display_type": "number"
   },
   {

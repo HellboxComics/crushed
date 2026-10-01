@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0185",
- "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 1 Roller Skate (toe stop worn to nothing); 3 Game Cartridges (save file erased by a sibling); 3 Army Man Squads (the one with the radio survived); 1 Film Canister (undeveloped, forever); 1 AA Batteries (probably dead). Weight 86.5 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0185.png",
+ "name": "CRUSHED IT #0185",
+ "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 1 TV Remote (the volume button worn smooth); 2 Yo-Yos (string tied to a finger for 3 years); 1 Spiral Notebook (doodles in the margins); 1 Shot Glass (souvenir of a night nobody recalls); 1 Film Canister (undeveloped, forever); 1 Bull (dead). Weight 28.0 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0185.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Roller Skate"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0185"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 86.5,
+   "value": 28.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 34,
    "display_type": "number"
   }
  ]

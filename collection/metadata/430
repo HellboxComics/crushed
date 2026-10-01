@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0430",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 1 Calculator (spelled BOOBIES upside down); 2 Pagers (clipped to jeans for status only); 1 Yo-Yo (walked the dog one time); 3 Army Man Squads (the one with the radio survived). Weight 48.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0430.png",
+ "name": "CRUSHED IT #0430",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Webcams (pointed at the ceiling forever); 1 MP3 Player (shuffle picked the same song 6 times); 2 Brick Phones (unbreakable until today); 2 Film Canisters (undeveloped, forever). Weight 76.8 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0430.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0430"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.3,
+   "value": 76.8,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0601",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Skateboard (one ollie, lifetime); 2 Power Strips (overloaded on purpose); 3 MP3 Players (shuffle picked the same song 6 times); 3 Digital Cameras (2 megapixels of truth); 2 AA Batteries (mixed old and new, like animals). Weight 39.2 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0601.png",
+ "name": "CRUSHED IT #0601",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 2 Magazines (read for the articles); 2 Burned CDs (coaster now); 3 AA Batteries (mixed old and new, like animals); 1 Fidget Spinner (banned by the school); 2 Poker Chips (a stack of ambition). Weight 23.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0601.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0601"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 23.9,
    "display_type": "number"
   },
   {

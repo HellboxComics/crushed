@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0102",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Calculators (solar panel covered by a sticker); 1 Disposable Camera (27 exposures of a thumb); 2 Game Cartridges (save file erased by a sibling); 1 Roller Skate (the rink smell is still in there); 3 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 79.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0102.png",
+ "name": "CRUSHED IT #0102",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 Joysticks (suction cups gave up); 1 Beer Can (12 of 12); 2 Army Man Squads (melted with a magnifying glass); 2 Game Cartridges (blown into 400 times); 1 Metal Lunchbox (the smell stays). Weight 79.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0102.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0102"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 79.0,
+   "value": 79.9,
    "display_type": "number"
   },
   {

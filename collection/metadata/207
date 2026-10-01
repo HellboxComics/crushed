@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0207",
- "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Roller Skates (toe stop worn to nothing); 2 Joysticks (suction cups gave up); 3 Army Man Squads (the one with the radio survived); 2 Spiral Notebooks (spiral unwound halfway). Weight 63.6 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0207.png",
+ "name": "CRUSHED IT #0207",
+ "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (coaster now). Weight 75.2 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0207.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0207"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 63.6,
+   "value": 75.2,
    "display_type": "number"
   },
   {

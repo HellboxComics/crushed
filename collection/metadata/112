@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0112",
- "description": "Recovered from Flooded Basement. Smells like blue raspberry. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Sneaker (was in the dryer); 3 Cassette Tapes (labeled MIX 4 U); 2 TV Remotes (held together with tape); 1 Cheap Sunglasses (one lens popped out). Weight 91.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0112.png",
+ "name": "CRUSHED IT #0112",
+ "description": "Recovered from Vegas Hotel Room. Smells like burnt popcorn. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 VHS Tapes (the unmarked one, from the back of the closet); 3 Sneakers (untied since 1989); 2 Cassette Tapes (a mix for someone who never listened); 2 Floppy Disks (contains one (1) virus). Weight 49.8 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0112.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Burnt Popcorn"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0112"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.2,
+   "value": 49.8,
    "display_type": "number"
   },
   {

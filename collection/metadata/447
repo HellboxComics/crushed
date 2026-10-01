@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0447",
- "description": "Recovered from Estate of a Collector. Smells like gym bag, forgotten. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Soda Can (shaken as a prank); 2 TV Remotes (found in the couch); 1 Pizza Crust (found behind the couch); 2 Skate Wheels (rolled into a storm drain once); 1 Paper Hand (sold at the bottom). Weight 33.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0447.png",
+ "name": "CRUSHED IT #0447",
+ "description": "Recovered from Behind the Bar. Smells like cheap cologne. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 No. 2 Pencil (sharpened to a nub); 2 Clear Lighters (for incense, obviously); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Paper Hand (sold at the bottom). Weight 35.4 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0447.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0447"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.9,
+   "value": 35.4,
    "display_type": "number"
   },
   {

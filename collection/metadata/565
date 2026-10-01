@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0565",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 3 Skate Wheels (rolled into a storm drain once); 2 Game Controllers (thrown during a boss fight); 2 Flip Phones (ringtone composed by hand); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 80.1 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0565.png",
+ "name": "CRUSHED IT #0565",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Clear Lighters (out of fluid); 2 Handheld Consoles (battery cover lost immediately); 3 Sneakers (was in the dryer); 1 Cheap Sunglasses (mall kiosk special). Weight 30.1 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0565.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "VHS Tape"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0565"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.1,
+   "value": 30.1,
    "display_type": "number"
   },
   {

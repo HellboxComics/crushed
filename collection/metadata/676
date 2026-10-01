@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0676",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Sneakers (left only); 3 Energy Drinks (tastes like a battery); 2 AA Batteries (licked to test); 2 TV Remotes (held together with tape); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 34.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0676.png",
+ "name": "CRUSHED IT #0676",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 TV Remotes (found in the couch); 2 Dice (blown on for luck); 1 Soda Can (flat); 3 Energy Drinks (exam week casualty); 2 Tissue Boxes (nearly empty). Weight 24.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0676.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0676"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.1,
+   "value": 24.5,
    "display_type": "number"
   },
   {

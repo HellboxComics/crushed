@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0084",
- "description": "Recovered from Dad's Junk Drawer. Smells like victory. Contents (partial): 1 Gold Floppy Disks (why); 3 Puzzle Cubes (two stickers peeled); 3 Soda Cans (shaken as a prank); 2 VHS Tapes (taped over a wedding); 1 Keyboard (Partial) (the W key is missing, for obvious reasons). Weight 52.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0084.png",
+ "name": "CRUSHED IT #0084",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 2 Sneakers (left only); 1 Clear Lighter (borrowed in 1997, never returned); 1 Power Strip (overloaded on purpose); 1 Calculator (spelled BOOBIES upside down); 1 AA Batteries (taken out of the smoke detector). Weight 47.8 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0084.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,27 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Victory"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Floppy Disk"
+   "trait_type": "Serial",
+   "value": "0084"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 52.6,
+   "value": 47.8,
    "display_type": "number"
   },
   {

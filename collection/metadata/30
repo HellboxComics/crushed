@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0030",
- "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 3 Joysticks (suction cups gave up); 1 Roller Skate (toe stop worn to nothing); 2 Sneakers (left only); 1 Cassette Tape (side B only); 1 Three-Ring Binder (velcro screams when opened). Weight 48.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0030.png",
+ "name": "CRUSHED IT #0030",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 1 Poker Chip (never cashed out); 1 Cassette Tape (side B only); 2 Calculators (spelled BOOBIES upside down); 2 Roller Skates (the rink smell is still in there). Weight 82.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0030.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0030"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 48.5,
+   "value": 82.2,
    "display_type": "number"
   },
   {

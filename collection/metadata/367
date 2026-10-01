@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0367",
- "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 2 Yo-Yos (walked the dog one time); 1 Power Strip (overloaded on purpose); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom); 3 Cassette Tapes (labeled MIX 4 U). Weight 88.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0367.png",
+ "name": "CRUSHED IT #0367",
+ "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Centerfold (staples removed, an attempt was made); 3 Foam Headphones (orange foam, allegedly); 1 Pager (last page: 911 (it was not)); 1 Clear Lighter (out of fluid). Weight 32.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0367.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0367"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 32.1,
    "display_type": "number"
   },
   {

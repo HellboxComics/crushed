@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0707",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 3 TV Remotes (the volume button worn smooth); 3 No. 2 Pencils (sharpened to a nub); 3 AA Batteries (licked to test); 2 Memory Cards (corrupted during a birthday). Weight 67.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0707.png",
+ "name": "CRUSHED IT #0707",
+ "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 1 Sneaker (untied since 1989); 2 Digital Cameras (memory full, 14 photos); 3 Pizza Crusts (still better than most portfolios); 3 Soda Cans (shaken as a prank); 1 No. 2 Pencil (chewed). Weight 28.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0707.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0707"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 67.5,
+   "value": 28.7,
    "display_type": "number"
   },
   {

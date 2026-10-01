@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0469",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 2 Power Strips (overloaded on purpose); 1 Cheap Sunglasses (one lens popped out); 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 Jewel Cases (insert is from a different album). Weight 33.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0469.png",
+ "name": "CRUSHED IT #0469",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (mixed old and new, like animals); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989). Weight 27.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0469.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0469"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.8,
+   "value": 27.6,
    "display_type": "number"
   },
   {

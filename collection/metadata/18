@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0018",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Spiral Notebook (note says 'check YES or NO'); 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Boom Box (took 10 D batteries); 2 AA Batteries (probably dead). Weight 87.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0018.png",
+ "name": "CRUSHED IT #0018",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Tissue Boxes (one for every mood); 1 Boom Box (took 10 D batteries); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Film Canisters (undeveloped, forever). Weight 78.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0018.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0018"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.5,
+   "value": 78.7,
    "display_type": "number"
   },
   {

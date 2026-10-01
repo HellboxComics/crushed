@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0157",
- "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 3 Power Strips (daisy-chained into three more); 2 Film Canisters (holds one quarter); 3 Army Man Squads (the one with the radio survived); 1 AA Batteries (mixed old and new, like animals). Weight 99.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0157.png",
+ "name": "CRUSHED IT #0157",
+ "description": "Recovered from Behind the Couch. Smells like cigarette in a jacket. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Dice (blown on for luck); 2 Pizza Crusts (still better than most portfolios); 2 Power Strips (daisy-chained into three more); 1 AA Batteries (mixed old and new, like animals). Weight 80.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0157.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0157"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 99.2,
+   "value": 80.6,
    "display_type": "number"
   },
   {

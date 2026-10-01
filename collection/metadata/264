@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0264",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (left only); 1 Portable Tape Player (auto-reverse broke in 1991); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Burned CDs (coaster now); 2 Army Man Squads (the one with the radio survived). Weight 49.1 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0264.png",
+ "name": "CRUSHED IT #0264",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 Pizza Crusts (petrified); 3 Matchbooks (matches missing, reasons unclear); 1 CRT Monitor (weighs more than the desk); 1 Slap Bracelet (banned by the school). Weight 73.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0264.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0264"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 49.1,
+   "value": 73.0,
    "display_type": "number"
   },
   {

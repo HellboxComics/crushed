@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0393",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 2 VHS Tapes (label says DO NOT TAPE OVER); 2 No. 2 Pencils (chewed); 1 Film Canister (undeveloped, forever); 1 Corded Phone (was on the line when mom picked up); 1 Disposable Camera (never developed). Weight 79.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0393.png",
+ "name": "CRUSHED IT #0393",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 Sneaker (left only); 1 Soda Can (flat); 1 Flip Phone (12 texts left this month); 2 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 77.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0393.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0393"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 77.9,
    "display_type": "number"
   },
   {

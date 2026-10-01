@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0756",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Digital Cameras (2 megapixels of truth); 2 Disposable Cameras (never developed); 3 Energy Drinks (third one that night); 3 MP3 Players (shuffle picked the same song 6 times). Weight 24.4 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0756.png",
+ "name": "CRUSHED IT #0756",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 Game Controller (thrown during a boss fight); 1 Power Strip (daisy-chained into three more); 1 Dice (blown on for luck); 1 Tissue Box (nearly empty); 3 AA Batteries (mixed old and new, like animals). Weight 31.4 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0756.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0756"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 24.4,
+   "value": 31.4,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0492",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 2 Power Strips (overloaded on purpose); 1 CRT Monitor (weighs more than the desk); 3 Pagers (last page: 143); 2 Virtual Pets (reincarnated 40 times). Weight 75.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0492.png",
+ "name": "CRUSHED IT #0492",
+ "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 2 Magazines (found in a dad's truck); 2 Ball Mice (cord chewed by a dog); 2 Flip Phones (snapped shut dramatically); 2 No. 2 Pencils (never saw a scantron it liked). Weight 79.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0492.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0492"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.6,
+   "value": 79.3,
    "display_type": "number"
   },
   {

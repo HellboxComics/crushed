@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0136",
- "description": "Recovered from A Very Specific Ditch. Smells like gym bag, forgotten. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Metal Lunchbox (thermos missing); 2 Three-Ring Binders (covered in band names); 3 Power Strips (overloaded on purpose); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 50.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0136.png",
+ "name": "CRUSHED IT #0136",
+ "description": "Recovered from Flooded Basement. Smells like hot tub. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Soda Cans (shaken as a prank); 1 Magazine (found in a dad's truck); 1 Puzzle Cube (two stickers peeled); 3 Tissue Boxes (one for every mood). Weight 92.9 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0136.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Hot Tub"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0136"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.3,
+   "value": 92.9,
    "display_type": "number"
   },
   {

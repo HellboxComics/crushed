@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0111",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Army Man Squads (melted with a magnifying glass); 1 Portable Tape Player (auto-reverse broke in 1991); 3 Calculators (solar panel covered by a sticker); 1 CRT Monitor (screen burn-in reads LOADING). Weight 86.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0111.png",
+ "name": "CRUSHED IT #0111",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Roller Skate (toe stop worn to nothing); 3 Sneakers (left only); 3 Game Cartridges (save file erased by a sibling); 3 Floppy Disks (contains one (1) virus). Weight 79.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0111.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0111"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 86.7,
+   "value": 79.7,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0199",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Power Strip (overloaded on purpose); 3 AA Batteries (mixed old and new, like animals); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Three-Ring Binder (covered in band names). Weight 88.6 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0199.png",
+ "name": "CRUSHED IT #0199",
+ "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Centerfold (staples removed, an attempt was made); 3 Disposable Cameras (never developed); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Game Cartridge (save file erased by a sibling). Weight 74.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0199.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Portable CD Player"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0199"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 88.6,
+   "value": 74.7,
    "display_type": "number"
   },
   {

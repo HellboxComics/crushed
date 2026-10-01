@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0874",
- "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 3 Disposable Cameras (never developed); 3 Game Controllers (stick drift since day one); 3 Memory Cards (8MB, full); 3 Sneakers (left only); 1 Skateboard (one ollie, lifetime). Weight 45.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0874.png",
+ "name": "CRUSHED IT #0874",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Tissue Box (one for every mood); 1 Selfie Stick (mid-trip, mid-ocean); 3 TV Remotes (held together with tape); 2 Clear Lighters (for incense, obviously); 2 Glow Sticks (cracked at a school dance). Weight 31.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0874.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0874"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.1,
+   "value": 31.5,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0411",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Cassette Tapes (side B only); 2 Foam Headphones (orange foam, allegedly); 3 VHS Tapes (BE KIND REWIND (they did not)); 3 Army Man Squads (the one with the radio survived); 2 No. 2 Pencils (never saw a scantron it liked). Weight 34.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0411.png",
+ "name": "CRUSHED IT #0411",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Cassette Tapes (side B only); 2 Burned CDs (track 7 skips); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Spiral Notebooks (note says 'check YES or NO'); 2 TV Remotes (held together with tape); 1 Tiny Red Candle (one of many). Weight 33.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0411.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0411"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 34.3,
+   "value": 33.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

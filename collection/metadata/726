@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0726",
- "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Sneakers (light-up heel, dead); 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 TV Remotes (found in the couch); 3 No. 2 Pencils (chewed). Weight 33.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0726.png",
+ "name": "CRUSHED IT #0726",
+ "description": "Recovered from Behind the Bar. Smells like Grandma's couch. Contents (partial): 3 Smartphones (cracked in the first week); 2 Soda Cans (shaken as a prank); 1 Spiral Notebook (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never). Weight 38.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0726.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Smartphone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0726"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.7,
+   "value": 38.2,
    "display_type": "number"
   },
   {

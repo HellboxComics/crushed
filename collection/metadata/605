@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0605",
- "description": "Recovered from Nobody Knows. Smells like gym bag, forgotten. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 1 Pager (clipped to jeans for status only); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Game Controller (stick drift since day one); 3 Burned CDs (burned at 1x, 4 hours). Weight 74.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0605.png",
+ "name": "CRUSHED IT #0605",
+ "description": "Recovered from Nobody Knows. Smells like cheap cologne. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Flip Phones (12 texts left this month); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Power Strips (daisy-chained into three more); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 30.2 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0605.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0605"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 30.2,
    "display_type": "number"
   },
   {

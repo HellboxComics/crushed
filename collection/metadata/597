@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0597",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Digital Camera (2 megapixels of truth); 2 AA Batteries (probably dead); 2 Glow Sticks (cracked at a school dance); 2 Keyboards (Partial) (F, J and the crumbs); 1 Army Man Squad (the one with the radio survived). Weight 81.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0597.png",
+ "name": "CRUSHED IT #0597",
+ "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Laptop Charger (fits nothing else in the house); 2 Sneakers (light-up heel, dead); 2 Jewel Cases (hinge broken on arrival); 2 No. 2 Pencils (sharpened to a nub). Weight 69.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0597.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0597"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.5,
+   "value": 69.0,
    "display_type": "number"
   },
   {

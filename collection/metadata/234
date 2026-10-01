@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0234",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Game Controller (stick drift since day one); 1 Virtual Pet (fed 0 times); 3 Army Man Squads (the one with the radio survived); 1 Jewel Case (insert is from a different album); 1 Crumpled Chart (printed out for emotional reasons). Weight 69.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0234.png",
+ "name": "CRUSHED IT #0234",
+ "description": "Recovered from A Buddy's Basement. Smells like rink snack bar. Contents (partial): 2 Beer Cans (crushed on a forehead); 1 Tissue Box (nearly empty); 2 No. 2 Pencils (sharpened to a nub); 3 Slap Bracelets (banned by the school); 1 Corded Phone (someone is still on hold). Weight 34.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0234.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0234"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 69.2,
+   "value": 34.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 40,
    "display_type": "number"
   }
  ]

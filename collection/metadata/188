@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0188",
- "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 3 Sneakers (light-up heel, dead); 1 Three-Ring Binder (velcro screams when opened); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Boom Box (shoulder-mounted in its prime); 2 Soda Cans (shaken as a prank). Weight 87.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0188.png",
+ "name": "CRUSHED IT #0188",
+ "description": "Recovered from The Bachelor Pad. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 No. 2 Pencil (chewed); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Jewel Case (hinge broken on arrival); 1 Scratch Ticket ($2 for hope); 1 Paper Hand (sold at the bottom). Weight 64.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0188.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0188"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.9,
+   "value": 64.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

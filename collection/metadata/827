@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0827",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Flip Phones (ringtone composed by hand); 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 AA Batteries (licked to test); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 74.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0827.png",
+ "name": "CRUSHED IT #0827",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 2 Cheap Sunglasses (one lens popped out); 2 AA Batteries (licked to test); 1 Drone (flew once, into a tree); 1 USB Stick (contains homework_FINAL_final2.doc); 1 Emergency Ramen (for emergencies). Weight 32.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0827.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0827"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 32.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 43,
    "display_type": "number"
   }
  ]

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0663",
- "description": "Recovered from Nobody Knows. Smells like arcade carpet. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Burned CDs (coaster now); 1 Flip Phone (ringtone composed by hand); 2 Jewel Cases (hinge broken on arrival); 2 Cheap Sunglasses (mall kiosk special). Weight 74.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0663.png",
+ "name": "CRUSHED IT #0663",
+ "description": "Recovered from Nobody Knows. Smells like arcade carpet. Contents (partial): 2 Magazines (read for the articles); 2 MP3 Players (shuffle picked the same song 6 times); 2 Digital Cameras (2 megapixels of truth); 3 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 36.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0663.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0663"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.5,
+   "value": 36.0,
    "display_type": "number"
   },
   {

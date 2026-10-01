@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0392",
- "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 1 TV Remote (found in the couch); 1 Metal Lunchbox (the smell stays); 1 Cheap Sunglasses (one lens popped out); 2 Sneakers (was in the dryer); 1 Slap Bracelet (cut someone, probably). Weight 69.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0392.png",
+ "name": "CRUSHED IT #0392",
+ "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Magazine (read for the articles); 1 Dice (blown on for luck); 3 Beer Cans (warm, sadly); 1 Floppy Disk (save icon, but real); 2 AA Batteries (taken out of the smoke detector). Weight 72.6 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0392.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0392"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.1,
+   "value": 72.6,
    "display_type": "number"
   },
   {

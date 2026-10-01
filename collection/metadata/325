@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0325",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 2 Pizza Crusts (petrified); 3 Cassette Tapes (labeled MIX 4 U); 1 Spiral Notebook (doodles in the margins); 3 Game Cartridges (blown into 400 times). Weight 86.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0325.png",
+ "name": "CRUSHED IT #0325",
+ "description": "Recovered from Behind the Couch. Smells like wet cardboard. Contents (partial): 1 Soda Can (shaken as a prank); 2 Centerfolds (folded out, then folded back in a hurry); 3 Cassette Tapes (rewound with a pencil); 1 TV Remote (found in the couch); 3 Yo-Yos (walked the dog one time). Weight 79.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0325.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0325"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 86.9,
+   "value": 79.1,
    "display_type": "number"
   },
   {

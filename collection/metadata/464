@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0464",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Film Canisters (undeveloped, forever); 3 Game Controllers (stick drift since day one); 2 AA Batteries (mixed old and new, like animals); 2 Brick Phones (faceplate swapped 4 times). Weight 36.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0464.png",
+ "name": "CRUSHED IT #0464",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Sneakers (light-up heel, dead); 1 Keyboard (Partial) (F, J and the crumbs); 3 Clear Lighters (borrowed in 1997, never returned); 2 Webcams (240p of pure confidence). Weight 28.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0464.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Brick Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0464"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 28.9,
    "display_type": "number"
   },
   {

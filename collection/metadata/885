@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0885",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 2 Laptop Chargers (warm to the touch, somehow); 1 Jewel Case (hinge broken on arrival); 3 No. 2 Pencils (chewed); 3 Glow Sticks (cracked at a school dance). Weight 33.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0885.png",
+ "name": "CRUSHED IT #0885",
+ "description": "Recovered from A Very Specific Ditch. Smells like body spray cloud. Contents (partial): 1 Tissue Box (nearly empty); 1 Soda Can (shaken as a prank); 1 Handheld Console (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never); 3 Beer Cans (12 of 12). Weight 32.0 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0885.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0885"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 32.0,
    "display_type": "number"
   },
   {

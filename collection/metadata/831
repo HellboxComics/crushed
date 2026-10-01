@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0831",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Energy Drinks (third one that night); 3 Clear Lighters (for incense, obviously); 1 AA Batteries (mixed old and new, like animals); 2 Laptop Chargers (fits nothing else in the house); 1 Power Strip (overloaded on purpose). Weight 29.2 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0831.png",
+ "name": "CRUSHED IT #0831",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 2 Power Banks (at 4%, like all of them); 3 Beer Cans (12 of 12); 1 VR Headset (watched one (1) movie); 2 Soda Cans (flat); 1 Pizza Crust (still better than most portfolios). Weight 27.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0831.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Power Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0831"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 29.2,
+   "value": 27.5,
    "display_type": "number"
   },
   {

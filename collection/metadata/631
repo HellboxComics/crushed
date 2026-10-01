@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0631",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 3 Power Strips (overloaded on purpose); 2 Floppy Disks (says DO NOT FORMAT); 1 Brick Phone (faceplate swapped 4 times); 3 Disposable Cameras (27 exposures of a thumb). Weight 32.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0631.png",
+ "name": "CRUSHED IT #0631",
+ "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Dice (blown on for luck); 1 No. 2 Pencil (sharpened to a nub); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Handheld Console (screen scratched from a pocket with keys). Weight 25.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0631.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0631"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.7,
+   "value": 25.6,
    "display_type": "number"
   },
   {

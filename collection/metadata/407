@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0407",
- "description": "Recovered from Estate of a Collector. Smells like Grandma's couch. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 16-Bit Controllers (the B button is sticky); 3 Cassette Tapes (labeled MIX 4 U); 2 Calculators (spelled BOOBIES upside down); 2 Cheap Sunglasses (mall kiosk special). Weight 70.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0407.png",
+ "name": "CRUSHED IT #0407",
+ "description": "Recovered from Behind the Bar. Smells like fresh batteries (licked). Contents (partial): 2 Pagers (clipped to jeans for status only); 3 MP3 Players (shuffle picked the same song 6 times); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Keyboards (Partial) (F, J and the crumbs); 1 Skateboard (one ollie, lifetime); 1 Bear (doing fine actually). Weight 74.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0407.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Pager"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0407"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.7,
+   "value": 74.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

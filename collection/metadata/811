@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0811",
+ "name": "CRUSHED IT #0811: EMPTY",
  "description": "We kept the important shit. There wasn't any. Weight 4.2 lb.",
- "image": "ipfs://IMAGES_CID/0811.png",
+ "image": "ipfs://<images-cid>/0811.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -42,6 +42,10 @@
   {
    "trait_type": "One of One",
    "value": "EMPTY"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0811"
   },
   {
    "trait_type": "Weight (lb)",

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0233",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Slap Bracelet (cut someone, probably); 1 Spiral Notebook (doodles in the margins); 1 CRT Monitor (screen burn-in reads LOADING); 3 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 89.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0233.png",
+ "name": "CRUSHED IT #0233",
+ "description": "Recovered from A Very Specific Ditch. Smells like mall food court. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Toy Slime (was in the hair of a sibling); 1 Portable CD Player (anti-skip lied); 1 Ball Mouse (rollers caked with 1998); 3 Floppy Disks (contains one (1) virus). Weight 85.7 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0233.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0233"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 89.1,
+   "value": 85.7,
    "display_type": "number"
   },
   {

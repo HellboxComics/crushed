@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0711",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 2 Pizza Crusts (still better than most portfolios); 3 Burned CDs (track 7 skips); 2 Jewel Cases (hinge broken on arrival); 1 Game Controller (stick drift since day one). Weight 27.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0711.png",
+ "name": "CRUSHED IT #0711",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Magazine (the staples are doing the work); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Flip Phones (snapped shut dramatically); 1 Spiral Notebook (doodles in the margins). Weight 29.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0711.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0711"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 27.1,
+   "value": 29.1,
    "display_type": "number"
   },
   {

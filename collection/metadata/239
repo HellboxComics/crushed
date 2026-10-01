@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0239",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 TV Remotes (held together with tape); 2 Soda Cans (tab kept for charity); 2 Toy Slime (stuck in the carpet); 2 Clear Lighters (for incense, obviously); 1 Power Strip (daisy-chained into three more). Weight 32.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0239.png",
+ "name": "CRUSHED IT #0239",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 1 Magazine (the staples are doing the work); 2 Dice (loaded, rumor says); 2 Power Strips (daisy-chained into three more); 3 Beer Cans (crushed on a forehead); 2 Yo-Yos (walked the dog one time). Weight 71.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0239.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0239"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 32.8,
+   "value": 71.0,
    "display_type": "number"
   },
   {

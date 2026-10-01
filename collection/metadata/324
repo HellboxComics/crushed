@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0324",
- "description": "Forty cassettes and every inch of their tape. Recovered from Every Car Glovebox. Smells like magnetic tape. Contents (partial): 30 Cassette Tapes (someone's voicemail greeting); 3 Portable Tape Players (belt clip snapped at a bus stop); 4 VHS Tapes (taped over a wedding); 1 Boom Box (one speaker still believes). Weight 33.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0324.png",
+ "name": "CRUSHED IT #0324: MIXTAPE",
+ "description": "Forty cassettes and every inch of their tape. Recovered from Every Car Glovebox. Smells like magnetic tape. Contents (partial): 40 Cassette Tapes (a mix for someone who never listened); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (one speaker still believes). Weight 32.3 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0324.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -44,13 +44,17 @@
    "value": "MIXTAPE"
   },
   {
+   "trait_type": "Serial",
+   "value": "0324"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.7,
+   "value": 32.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 44,
    "display_type": "number"
   }
  ]

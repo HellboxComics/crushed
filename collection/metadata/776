@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0776",
- "description": "Recovered from Estate of a Collector. Smells like arcade carpet. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Flip Phones (snapped shut dramatically); 2 Sneakers (light-up heel, dead); 3 MP3 Players (shuffle picked the same song 6 times); 3 No. 2 Pencils (chewed). Weight 70.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0776.png",
+ "name": "CRUSHED IT #0776",
+ "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 1 Disposable Camera (never developed); 2 Cheap Sunglasses (mall kiosk special); 3 Pizza Crusts (from a sleepover); 1 Smartphone (cracked in the first week); 1 Earbud Case (one bud present). Weight 31.2 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0776.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0776"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.4,
+   "value": 31.2,
    "display_type": "number"
   },
   {

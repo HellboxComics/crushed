@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0713",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 Energy Drinks (third one that night); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Pizza Crust (petrified); 3 Clear Lighters (out of fluid); 3 AA Batteries (licked to test). Weight 29.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0713.png",
+ "name": "CRUSHED IT #0713",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Soda Cans (flat); 2 Smartphones (last text: read, no reply); 1 Disposable Vape (mango, mostly). Weight 30.1 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0713.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Hand Sanitizer"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0713"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.0,
+   "value": 30.1,
    "display_type": "number"
   },
   {

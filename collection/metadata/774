@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0774",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Jewel Cases (hinge broken on arrival); 3 Pizza Crusts (still better than most portfolios); 3 Memory Cards (corrupted during a birthday); 3 Digital Cameras (memory full, 14 photos). Weight 32.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0774.png",
+ "name": "CRUSHED IT #0774",
+ "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 2 Smartphones (last text: read, no reply); 1 Game Controller (stick drift since day one); 3 Hand Sanitizers (60% alcohol, 40% anxiety); 2 Clear Lighters (for incense, obviously); 1 Magazine (found in a dad's truck). Weight 32.0 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0774.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Smartphone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0774"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 32.0,
    "display_type": "number"
   },
   {

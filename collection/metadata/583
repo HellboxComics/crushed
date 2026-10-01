@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0583",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Power Strip (daisy-chained into three more); 1 Virtual Pet (died during math class); 3 Sneakers (left only); 1 Memory Card (corrupted during a birthday). Weight 80.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0583.png",
+ "name": "CRUSHED IT #0583",
+ "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Tissue Boxes (one for every mood); 3 Pizza Crusts (petrified); 1 TV Remote (found in the couch); 1 Pager (last page: 911 (it was not)). Weight 21.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0583.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0583"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.4,
+   "value": 21.3,
    "display_type": "number"
   },
   {

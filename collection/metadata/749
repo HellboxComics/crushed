@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0749",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 2 TV Remotes (found in the couch); 3 Glow Sticks (cracked at a school dance); 1 Memory Card (corrupted during a birthday); 3 Flip Phones (snapped shut dramatically); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 31.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0749.png",
+ "name": "CRUSHED IT #0749",
+ "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 2 Disposable Vapes (5000 puffs, 4999 regrets); 3 Spiral Notebooks (doodles in the margins); 2 Power Strips (daisy-chained into three more); 1 Clear Lighter (for incense, obviously); 3 Scratch Tickets ($2 for hope). Weight 34.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0749.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0749"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.7,
+   "value": 34.6,
    "display_type": "number"
   },
   {

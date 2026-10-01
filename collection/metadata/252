@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0252",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Pizza Crust (petrified); 2 Disposable Cameras (27 exposures of a thumb); 1 16-Bit Controller (the B button is sticky); 1 Cheap Sunglasses (mall kiosk special). Weight 89.2 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0252.png",
+ "name": "CRUSHED IT #0252",
+ "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Calculators (spelled BOOBIES upside down); 2 Slap Bracelets (banned by the school); 2 AA Batteries (taken out of the smoke detector); 1 Shot Glass (souvenir of a night nobody recalls). Weight 79.2 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0252.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "CRT Monitor"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0252"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.2,
+   "value": 79.2,
    "display_type": "number"
   },
   {

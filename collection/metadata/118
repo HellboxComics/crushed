@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0118",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 TV Remotes (found in the couch); 2 Joysticks (fire button pressed 40 million times); 3 Roller Skates (the rink smell is still in there); 2 Army Man Squads (melted with a magnifying glass); 3 Game Cartridges (save file erased by a sibling). Weight 99.3 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0118.png",
+ "name": "CRUSHED IT #0118",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Magazine (read for the articles); 2 Yo-Yos (walked the dog one time); 2 Spiral Notebooks (doodles in the margins); 2 Roller Skates (toe stop worn to nothing); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 90.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0118.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0118"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 99.3,
+   "value": 90.4,
    "display_type": "number"
   },
   {

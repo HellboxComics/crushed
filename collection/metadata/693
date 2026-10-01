@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0693",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Burned CDs (burned at 1x, 4 hours); 3 No. 2 Pencils (chewed); 3 Energy Drinks (tastes like a battery); 2 Handheld Consoles (battery cover lost immediately). Weight 29.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0693.png",
+ "name": "CRUSHED IT #0693",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Jewel Case (hinge broken on arrival); 2 Spiral Notebooks (doodles in the margins); 2 Flip Phones (ringtone composed by hand); 2 Dice (loaded, rumor says). Weight 22.7 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0693.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0693"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.7,
+   "value": 22.7,
    "display_type": "number"
   },
   {

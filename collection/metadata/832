@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0832",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 TV Remotes (held together with tape); 1 Ball Mouse (cord chewed by a dog); 2 Burned CDs (coaster now); 3 Energy Drinks (third one that night). Weight 30.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0832.png",
+ "name": "CRUSHED IT #0832",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Power Strip (overloaded on purpose); 2 Energy Drinks (exam week casualty); 1 Matchbook (matches missing, reasons unclear); 3 Power Banks (at 4%, like all of them). Weight 32.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0832.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0832"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.1,
+   "value": 32.8,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0141",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Portable Tape Player (auto-reverse broke in 1991); 3 VHS Tapes (label says DO NOT TAPE OVER); 3 No. 2 Pencils (chewed); 1 CRT Monitor (weighs more than the desk). Weight 76.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0141.png",
+ "name": "CRUSHED IT #0141",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Cassette Tapes (side B only); 1 Floppy Disk (contains one (1) virus); 1 Dice (snake eyes, twice); 1 No. 2 Pencil (never saw a scantron it liked); 1 Tiny Red Candle (one of many). Weight 77.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0141.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0141"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 77.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0238",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Pagers (last page: 911 (it was not)); 3 9999-in-1 Handhelds (HI SCORE 00000); 1 AA Batteries (licked to test); 1 Skate Wheel (flat spot from a power slide). Weight 31.2 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0238.png",
+ "name": "CRUSHED IT #0238",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 3 Army Man Squads (melted with a magnifying glass); 2 Soda Cans (tab kept for charity); 1 Metal Lunchbox (thermos missing); 1 Three-Ring Binder (velcro screams when opened). Weight 73.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0238.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Poker Chip"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0238"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.2,
+   "value": 73.5,
    "display_type": "number"
   },
   {

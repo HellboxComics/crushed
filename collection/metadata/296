@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0296",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 Sneaker (was in the dryer); 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Floppy Disks (contains one (1) virus); 2 No. 2 Pencils (chewed); 1 Power Strip (overloaded on purpose). Weight 95.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0296.png",
+ "name": "CRUSHED IT #0296",
+ "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Yo-Yo (string tied to a finger for 3 years); 1 16-Bit Controller (the B button is sticky); 2 Clear Lighters (for incense, obviously); 2 Floppy Disks (contains one (1) virus). Weight 47.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0296.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Skateboard"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0296"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 95.1,
+   "value": 47.3,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0178",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Foam Headphones (orange foam, allegedly); 3 Sneakers (left only); 3 Yo-Yos (string tied to a finger for 3 years); 2 Pizza Crusts (found behind the couch). Weight 89.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0178.png",
+ "name": "CRUSHED IT #0178",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cheap cologne. Contents (partial): 1 Sneaker (was in the dryer); 1 CRT Monitor (degaussed one last time); 1 No. 2 Pencil (chewed); 3 Three-Ring Binders (covered in band names); 2 Poker Chips (a stack of ambition). Weight 85.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0178.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0178"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.8,
+   "value": 85.4,
    "display_type": "number"
   },
   {

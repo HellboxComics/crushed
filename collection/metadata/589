@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0589",
- "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 2 Flip Phones (12 texts left this month); 1 Foam Headphones (orange foam, allegedly); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Disposable Camera (never developed); 1 CRT Monitor (weighs more than the desk). Weight 72.6 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0589.png",
+ "name": "CRUSHED IT #0589",
+ "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 Cheap Sunglasses (mall kiosk special); 1 Beer Can (warm, sadly); 3 Energy Drinks (tastes like a battery); 2 Memory Cards (8MB, full). Weight 24.6 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0589.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0589"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.6,
+   "value": 24.6,
    "display_type": "number"
   },
   {

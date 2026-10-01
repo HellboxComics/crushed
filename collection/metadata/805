@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0805",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Flip Phones (snapped shut dramatically); 1 Memory Card (corrupted during a birthday); 3 Pizza Crusts (still better than most portfolios); 3 Clear Lighters (out of fluid). Weight 27.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0805.png",
+ "name": "CRUSHED IT #0805",
+ "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 2 Earbud Cases (one bud present); 2 Beer Cans (crushed on a forehead); 1 TV Remote (found in the couch); 3 Bluetooth Speakers (played one song, too loud); 1 Shot Glass (chipped rim). Weight 30.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0805.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Earbud Case"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0805"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 27.7,
+   "value": 30.5,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0315",
- "description": "Recovered from Storage Unit (Auctioned). Smells like mall food court. Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 1 Clear Lighter (out of fluid); 2 Toy Slime (was in the hair of a sibling); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Keyboards (Partial) (F, J and the crumbs); 1 Emergency Ramen (for emergencies). Weight 80.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0315.png",
+ "name": "CRUSHED IT #0315",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Cassette Tapes (a mix for someone who never listened); 1 Shot Glass (chipped rim); 1 TV Remote (held together with tape); 1 VHS Tape (taped over a wedding); 3 Floppy Disks (says DO NOT FORMAT). Weight 40.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0315.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0315"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.5,
+   "value": 40.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

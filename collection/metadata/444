@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0444",
- "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 2 Disposable Cameras (never developed); 1 Spiral Notebook (spiral unwound halfway); 1 Calculator (solar panel covered by a sticker); 2 Pizza Crusts (still better than most portfolios); 2 Floppy Disks (says DO NOT FORMAT). Weight 84.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0444.png",
+ "name": "CRUSHED IT #0444",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Beer Can (warm, sadly); 1 AA Batteries (mixed old and new, like animals); 3 Flip Phones (12 texts left this month); 2 Pizza Crusts (still better than most portfolios); 1 Digital Camera (2 megapixels of truth). Weight 71.6 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0444.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0444"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.3,
+   "value": 71.6,
    "display_type": "number"
   },
   {

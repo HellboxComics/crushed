@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0643",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Game Controller (thrown during a boss fight); 1 Slap Bracelet (banned by the school); 1 Power Strip (daisy-chained into three more); 2 Pagers (last page: 143); 1 CRT Monitor (degaussed one last time). Weight 81.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0643.png",
+ "name": "CRUSHED IT #0643",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 3 Energy Drinks (exam week casualty); 1 Skate Wheel (flat spot from a power slide); 1 Disposable Vape (mango, mostly); 1 Game Controller (stick drift since day one); 1 Burned CD (track 7 skips). Weight 31.2 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0643.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0643"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.5,
+   "value": 31.2,
    "display_type": "number"
   },
   {

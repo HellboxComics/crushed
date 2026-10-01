@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0647",
- "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 2 Disposable Cameras (never developed); 1 Virtual Pet (died during math class); 1 CRT Monitor (screen burn-in reads LOADING); 1 Floppy Disk (save icon, but real); 1 Pager (clipped to jeans for status only). Weight 82.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0647.png",
+ "name": "CRUSHED IT #0647",
+ "description": "Recovered from Behind the Couch. Smells like cheap cologne. Contents (partial): 3 Beer Cans (last one in the fridge); 1 Pizza Crust (petrified); 1 Sneaker (was in the dryer); 1 Spiral Notebook (spiral unwound halfway); 1 USB Stick (never ejected safely). Weight 24.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0647.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0647"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.4,
+   "value": 24.8,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0839",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys); 1 No. 2 Pencil (sharpened to a nub); 3 Burned CDs (track 7 skips). Weight 69.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0839.png",
+ "name": "CRUSHED IT #0839",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Power Banks (10000 mAh of dead weight); 1 Poker Chip (taken from a casino, small heist); 1 Energy Drink (third one that night); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Laptop Charger (fits nothing else in the house). Weight 34.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0839.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Power Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0839"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.6,
+   "value": 34.7,
    "display_type": "number"
   },
   {

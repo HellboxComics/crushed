@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0607",
- "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 3 Virtual Pets (reincarnated 40 times); 3 Floppy Disks (says DO NOT FORMAT); 3 AA Batteries (probably dead); 2 Glow Sticks (cracked at a school dance); 3 Pagers (last page: 143). Weight 69.1 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0607.png",
+ "name": "CRUSHED IT #0607",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 2 Energy Drinks (exam week casualty); 2 Shot Glasses (from a trip to Vegas); 1 Clear Lighter (for incense, obviously); 2 Flip Phones (ringtone composed by hand); 2 Sneakers (light-up heel, dead). Weight 76.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0607.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Virtual Pet"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0607"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.1,
+   "value": 76.3,
    "display_type": "number"
   },
   {

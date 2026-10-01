@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0632",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 AA Batteries (probably dead); 2 Brick Phones (unbreakable until today); 3 Clear Lighters (out of fluid); 1 No. 2 Pencil (sharpened to a nub). Weight 75.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0632.png",
+ "name": "CRUSHED IT #0632",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 Sneakers (was in the dryer); 1 Magazine (read for the articles); 3 Laptop Chargers (fits nothing else in the house); 2 Disposable Cameras (never developed); 2 AA Batteries (taken out of the smoke detector). Weight 70.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0632.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0632"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.2,
+   "value": 70.1,
    "display_type": "number"
   },
   {

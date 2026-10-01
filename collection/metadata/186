@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0186",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 2 Cheap Sunglasses (one lens popped out); 2 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 3 Floppy Disks (contains one (1) virus). Weight 43.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0186.png",
+ "name": "CRUSHED IT #0186",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Sneakers (smells like 1989); 2 Game Cartridges (blown into 400 times); 1 Matchbook (matches missing, reasons unclear); 1 Floppy Disk (contains one (1) virus). Weight 32.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0186.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0186"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.3,
+   "value": 32.8,
    "display_type": "number"
   },
   {

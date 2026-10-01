@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0020",
- "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 3 TV Remotes (held together with tape); 2 Foam Headphones (one ear works if you hold it); 3 Puzzle Cubes (two stickers peeled); 3 Yo-Yos (walked the dog one time). Weight 91.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0020.png",
+ "name": "CRUSHED IT #0020",
+ "description": "Recovered from Ex's Garage. Smells like cigarette in a jacket. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Spiral Notebooks (spiral unwound halfway); 2 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (contains one (1) virus); 3 VHS Tapes (taped over a wedding). Weight 90.8 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0020.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0020"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 91.2,
+   "value": 90.8,
    "display_type": "number"
   },
   {

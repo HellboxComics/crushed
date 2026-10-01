@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0664",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Webcams (240p of pure confidence); 2 Sneakers (light-up heel, dead); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Clear Lighter (for incense, obviously). Weight 74.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0664.png",
+ "name": "CRUSHED IT #0664",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Flip Phones (snapped shut dramatically); 2 USB Sticks (never ejected safely); 2 Soda Cans (flat); 2 Burned CDs (burned at 1x, 4 hours); 1 Memory Card (corrupted during a birthday). Weight 27.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0664.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "VHS Tape"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0664"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.8,
+   "value": 27.1,
    "display_type": "number"
   },
   {

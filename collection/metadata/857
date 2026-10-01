@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0857",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 AA Batteries (taken out of the smoke detector); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Burned CD (track 7 skips); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 33.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0857.png",
+ "name": "CRUSHED IT #0857",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Energy Drinks (tastes like a battery); 1 Laptop Charger (warm to the touch, somehow); 2 AA Batteries (taken out of the smoke detector); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Cheap Sunglasses (mall kiosk special). Weight 33.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0857.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0857"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.9,
+   "value": 33.5,
    "display_type": "number"
   },
   {

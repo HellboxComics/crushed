@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0394",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 1 No. 2 Pencil (chewed); 1 Yo-Yo (string tied to a finger for 3 years); 1 Milk Caps (the slammer is chipped); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 44.2 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0394.png",
+ "name": "CRUSHED IT #0394",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 2 No. 2 Pencils (chewed); 3 Pagers (clipped to jeans for status only); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times). Weight 66.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0394.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Boom Box"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0394"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 44.2,
+   "value": 66.1,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0331",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 1 Calculator (spelled BOOBIES upside down); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (the one with the radio survived); 1 Boom Box (shoulder-mounted in its prime). Weight 47.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0331.png",
+ "name": "CRUSHED IT #0331",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 2 Yo-Yos (walked the dog one time); 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 TV Remotes (the volume button worn smooth); 2 Foam Headphones (orange foam, allegedly); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 87.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0331.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0331"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.3,
+   "value": 87.0,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0372",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Digital Camera (2 megapixels of truth); 1 Webcam (240p of pure confidence); 3 Cheap Sunglasses (one lens popped out); 1 Toy Slime (was in the hair of a sibling). Weight 83.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0372.png",
+ "name": "CRUSHED IT #0372",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 2 TV Remotes (found in the couch); 2 VHS Tapes (taped over a wedding); 2 No. 2 Pencils (sharpened to a nub); 1 Toy Slime (was in the hair of a sibling); 1 Pizza Crust (found behind the couch). Weight 74.4 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0372.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0372"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 83.0,
+   "value": 74.4,
    "display_type": "number"
   },
   {

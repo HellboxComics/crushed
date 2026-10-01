@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0017",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Joysticks (fire button pressed 40 million times); 2 TV Remotes (found in the couch); 3 Cassette Tapes (rewound with a pencil); 1 Film Canister (undeveloped, forever). Weight 49.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0017.png",
+ "name": "CRUSHED IT #0017",
+ "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 3 Joysticks (suction cups gave up); 1 Milk Caps (won in a bet); 3 Soda Cans (flat); 1 Cassette Tape (rewound with a pencil); 3 Game Cartridges (blown into 400 times). Weight 84.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0017.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0017"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 49.7,
+   "value": 84.3,
    "display_type": "number"
   },
   {

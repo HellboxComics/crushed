@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0149",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Boom Box (took 10 D batteries); 3 Floppy Disks (says DO NOT FORMAT); 3 Cheap Sunglasses (mall kiosk special); 2 Calculators (spelled BOOBIES upside down). Weight 83.0 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0149.png",
+ "name": "CRUSHED IT #0149",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Boom Box (took 10 D batteries); 3 Game Cartridges (blown into 400 times); 2 Three-Ring Binders (velcro screams when opened); 3 Centerfolds (folded out, then folded back in a hurry); 1 Broken Rocket (didn't make it). Weight 85.5 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0149.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0149"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.0,
+   "value": 85.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

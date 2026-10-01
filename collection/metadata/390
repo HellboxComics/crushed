@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0390",
- "description": "Recovered from Estate of a Collector. Smells like mall food court. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Game Cartridge (save file erased by a sibling); 1 Calculator (solar panel covered by a sticker); 1 Three-Ring Binder (velcro screams when opened); 1 Memory Card (corrupted during a birthday). Weight 87.2 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0390.png",
+ "name": "CRUSHED IT #0390",
+ "description": "Recovered from Ex's Garage. Smells like blue raspberry. Contents (partial): 2 Flip Phones (12 texts left this month); 1 Beer Can (last one in the fridge); 1 Soda Can (tab kept for charity); 1 Sneaker (untied since 1989); 2 Cassette Tapes (side B only). Weight 71.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0390.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0390"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.2,
+   "value": 71.1,
    "display_type": "number"
   },
   {

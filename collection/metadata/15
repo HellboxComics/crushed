@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0015",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 Cheap Sunglasses (one lens popped out); 3 Portable Tape Players (auto-reverse broke in 1991); 3 Spiral Notebooks (doodles in the margins); 1 Puzzle Cube (two stickers peeled); 1 Dead Bull (flipped). Weight 97.0 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0015.png",
+ "name": "CRUSHED IT #0015",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 2 Poker Chips (never cashed out); 1 Floppy Disk (save icon, but real); 2 Power Strips (daisy-chained into three more); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 TV Remotes (held together with tape); 1 Bear (doing fine actually). Weight 85.6 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0015.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Poker Chip"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0015"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 97.0,
+   "value": 85.6,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0871",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Energy Drinks (third one that night); 3 Power Strips (overloaded on purpose); 3 Pizza Crusts (from a sleepover); 3 MP3 Players (shuffle picked the same song 6 times); 1 Tiny Red Candle (lit). Weight 28.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0871.png",
+ "name": "CRUSHED IT #0871",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Selfie Stick (mid-trip, mid-ocean); 1 Energy Drink (third one that night); 2 Fidget Spinners (bearing went missing); 2 Bluetooth Speakers (played one song, too loud); 1 Disposable Vape (zero nicotine, allegedly). Weight 30.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0871.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Selfie Stick"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0871"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.1,
+   "value": 30.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

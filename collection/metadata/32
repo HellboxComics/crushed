@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0032",
- "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Sneakers (left only); 1 Corded Phone (was on the line when mom picked up); 2 Spiral Notebooks (spiral unwound halfway); 3 AA Batteries (licked to test). Weight 78.8 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0032.png",
+ "name": "CRUSHED IT #0032",
+ "description": "Recovered from A Very Specific Ditch. Smells like Vegas carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 2 Film Canisters (holds one quarter); 2 TV Remotes (held together with tape); 3 Magazines (for the interviews, obviously). Weight 67.2 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0032.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0032"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 78.8,
+   "value": 67.2,
    "display_type": "number"
   },
   {

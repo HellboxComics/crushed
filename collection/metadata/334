@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0334",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Soda Cans (shaken as a prank); 1 Toy Slime (stuck in the carpet); 2 Spiral Notebooks (spiral unwound halfway); 2 Army Man Squads (the one with the radio survived); 1 Power Strip (daisy-chained into three more). Weight 73.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0334.png",
+ "name": "CRUSHED IT #0334",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Tissue Box (one for every mood); 1 Slap Bracelet (banned by the school); 1 Skateboard (griptape ate a pair of jeans); 2 Dice (snake eyes, twice); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 39.8 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0334.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0334"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 73.3,
+   "value": 39.8,
    "display_type": "number"
   },
   {

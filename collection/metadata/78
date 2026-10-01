@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0078",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 2 Yo-Yos (string tied to a finger for 3 years); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Metal Lunchbox (thermos missing); 2 AA Batteries (mixed old and new, like animals). Weight 45.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0078.png",
+ "name": "CRUSHED IT #0078",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Puzzle Cubes (two stickers peeled); 3 Foam Headphones (orange foam, allegedly); 1 Soda Can (shaken as a prank); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 74.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0078.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0078"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.4,
+   "value": 74.7,
    "display_type": "number"
   },
   {

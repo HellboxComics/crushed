@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0058",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 3 Sneakers (left only); 1 Pizza Crust (found behind the couch); 2 Foam Headphones (orange foam, allegedly); 1 Corded Phone (someone is still on hold); 3 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 52.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0058.png",
+ "name": "CRUSHED IT #0058",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 1 Boom Box (shoulder-mounted in its prime); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Calculators (solar panel covered by a sticker). Weight 47.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0058.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0058"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 52.6,
+   "value": 47.3,
    "display_type": "number"
   },
   {

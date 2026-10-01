@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0370",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Pagers (clipped to jeans for status only); 1 Corded Phone (cord stretched to the bathroom); 1 Portable CD Player (anti-skip lied); 1 Milk Caps (the slammer is chipped). Weight 80.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0370.png",
+ "name": "CRUSHED IT #0370",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 MP3 Players (shuffle picked the same song 6 times); 2 Flip Phones (snapped shut dramatically); 2 Burned CDs (track 7 skips); 1 Matchbook (matches missing, reasons unclear). Weight 68.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0370.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Portable CD Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,31 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "ICE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0370"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.0,
+   "value": 68.6,
    "display_type": "number"
   },
   {

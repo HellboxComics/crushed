@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0558",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 2 Portable CD Players (anti-skip lied); 2 Calculators (solar panel covered by a sticker); 1 Disposable Camera (never developed); 1 Corded Phone (was on the line when mom picked up); 2 Soda Cans (shaken as a prank). Weight 40.5 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0558.png",
+ "name": "CRUSHED IT #0558",
+ "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Webcam (240p of pure confidence); 1 Pizza Crust (found behind the couch); 1 Glow Stick (still glowing a little, somehow); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 20.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0558.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0558"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 40.5,
+   "value": 20.4,
    "display_type": "number"
   },
   {

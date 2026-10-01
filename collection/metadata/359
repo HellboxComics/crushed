@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0359",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 AA Batteries (mixed old and new, like animals); 1 Milk Caps (won in a bet); 3 Foam Headphones (orange foam, allegedly); 2 Skate Wheels (flat spot from a power slide). Weight 39.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0359.png",
+ "name": "CRUSHED IT #0359",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 1 Sneaker (smells like 1989); 3 Disposable Cameras (never developed); 1 Matchbook (from a gentlemen's club, reportedly); 3 Burned CDs (burned at 1x, 4 hours); 1 Film Canister (undeveloped, forever). Weight 28.0 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0359.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0359"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.1,
+   "value": 28.0,
    "display_type": "number"
   },
   {

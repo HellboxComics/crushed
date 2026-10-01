@@ -49,8 +49,9 @@ contract CrushedItTest is Test {
         allowed[0] = address(sd);
         for (uint256 r = 1; r <= 8; r++) {
             images.push(abi.encodePacked("JPEG", r, new bytes(30_000)));          // 30 KB, so it needs 2 chunks
-            metas.push(abi.encodePacked('{"name":"CRUSHED IT #', vm.toString(r), '","attributes":[]'));
-            leaves.push(keccak256(abi.encodePacked(uint256(r), sha256(images[r - 1]), keccak256(metas[r - 1]))));
+            metas.push(abi.encodePacked(',"description":"block ', vm.toString(r), '","attributes":[]'));
+            leaves.push(keccak256(abi.encodePacked(uint256(r), sha256(images[r - 1]), keccak256(metas[r - 1]),
+                                                   keccak256(bytes(r == 3 ? "SOLID GOLD" : "")))));
         }
         root = m.getRoot(leaves);
         vm.startPrank(owner);
@@ -223,7 +224,7 @@ contract CrushedItTest is Test {
             for (uint256 k = 0; k < len; k++) chunk[k] = img[off + k];
             c.sealChunk(id, n++, chunk);
         }
-        c.sealFinish(id, metas[recipe - 1], m.getProof(leaves, recipe - 1));
+        c.sealFinish(id, metas[recipe - 1], recipe == 3 ? "SOLID GOLD" : "", m.getProof(leaves, recipe - 1));
     }
 
     function test_sealRoundTrip() public {
@@ -237,6 +238,25 @@ contract CrushedItTest is Test {
         string memory uri = h.tokenURI(id);
         assertEq(bytes(uri).length > 40_000, true);
         assertEq(_startsWith(uri, "data:application/json;base64,"), true);
+        assertEq(h.nameOf(id, "SOLID GOLD"), string(abi.encodePacked("CRUSHED IT #", _pad(id), ": SOLID GOLD")));
+        assertEq(h.nameOf(7, ""), "CRUSHED IT #0007");
+        assertEq(h.nameOf(888, ""), "CRUSHED IT #0888");
+    }
+
+    function test_wrongSubtitleFails() public {
+        _sellOut(h);
+        h.forceReveal(5);
+        uint256 id = _tokenFor(h, 3);
+        bytes32[] memory proof = m.getProof(leaves, 2);
+        h.sealChunk(id, 0, _head(images[2]));
+        vm.expectRevert(CrushedIt.BadProof.selector);
+        h.sealFinish(id, metas[2], "SOLID SILVER", proof);
+    }
+
+    function _pad(uint256 v) internal pure returns (string memory) {
+        bytes memory b = bytes(vm.toString(v));
+        while (b.length < 4) b = abi.encodePacked("0", b);
+        return string(b);
     }
 
     function test_sealGiftBeforeReveal() public {
@@ -246,7 +266,7 @@ contract CrushedItTest is Test {
         bytes32[] memory proof = m.getProof(leaves, 0);
         h.sealChunk(41, 0, _head(images[0]));
         vm.expectRevert(CrushedIt.BadProof.selector);
-        h.sealFinish(41, metas[0], proof);
+        h.sealFinish(41, metas[0], "", proof);
     }
 
     function test_sealWrongImageFails() public {
@@ -256,7 +276,7 @@ contract CrushedItTest is Test {
         bytes32[] memory proof = m.getProof(leaves, 1);
         h.sealChunk(id, 0, _head(images[4]));   // recipe 5's picture on recipe 2's token
         vm.expectRevert(CrushedIt.BadProof.selector);
-        h.sealFinish(id, metas[1], proof);
+        h.sealFinish(id, metas[1], "", proof);
         assertFalse(h.isSealed(id));
     }
 
@@ -267,7 +287,7 @@ contract CrushedItTest is Test {
         bytes32[] memory proof = m.getProof(leaves, 1);
         h.sealChunk(id, 0, _head(images[1]));
         vm.expectRevert(CrushedIt.BadProof.selector);
-        h.sealFinish(id, bytes('{"name":"forged"'), proof);
+        h.sealFinish(id, bytes(',"description":"forged"'), "", proof);
     }
 
     function test_sealOnlyOnce() public {
@@ -288,7 +308,7 @@ contract CrushedItTest is Test {
         vm.expectRevert(CrushedIt.NothingPending.selector);
         h.sealChunk(id, 1, head);               // index 1 before index 0
         vm.expectRevert(CrushedIt.NothingPending.selector);
-        h.sealFinish(id, metas[0], proof);
+        h.sealFinish(id, metas[0], "", proof);
         vm.expectRevert(CrushedIt.ChunkTooBig.selector);
         h.sealChunk(id, 0, new bytes(24_001));
     }

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0040",
- "description": "Recovered from Grandma's Attic. Smells like basement. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Soda Cans (tab kept for charity); 2 Spiral Notebooks (spiral unwound halfway); 3 Calculators (spelled BOOBIES upside down); 3 Pizza Crusts (from a sleepover). Weight 84.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0040.png",
+ "name": "CRUSHED IT #0040",
+ "description": "Recovered from A Very Specific Ditch. Smells like basement. Contents (partial): 2 Sneakers (untied since 1989); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 TV Remotes (held together with tape); 3 Game Cartridges (blown into 400 times); 2 Pizza Crusts (from a sleepover). Weight 28.8 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0040.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0040"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.1,
+   "value": 28.8,
    "display_type": "number"
   },
   {

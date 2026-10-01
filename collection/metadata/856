@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0856",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 1 TV Remote (the volume button worn smooth); 3 Pizza Crusts (from a sleepover); 3 Power Strips (daisy-chained into three more); 2 Flip Phones (ringtone composed by hand). Weight 29.1 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0856.png",
+ "name": "CRUSHED IT #0856",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 3 Earbud Cases (one bud present); 1 Selfie Stick (mid-trip, mid-ocean); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Ring Light (the eyes in every mirror selfie); 1 Sneaker (untied since 1989). Weight 31.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0856.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Earbud Case"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0856"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 29.1,
+   "value": 31.3,
    "display_type": "number"
   },
   {

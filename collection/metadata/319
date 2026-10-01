@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0319",
- "description": "They all bought the top. Recovered from The Top. Smells like capitulation. Contents (partial): 22 Bulls (flipped); 12 Tiny Red Candles (lit); 4 Crumpled Charts (it went up, then it went down); 1 Bear (doing fine actually); 3 Paper Hands (sold at the bottom). Weight 35.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0319.png",
+ "name": "CRUSHED IT #0319: BULL TRAP",
+ "description": "They all bought the top. Recovered from The Top. Smells like capitulation. Contents (partial): 22 Bulls (flipped); 12 Tiny Red Candles (lit); 4 Crumpled Charts (it went up, then it went down); 1 Bear (doing fine actually); 3 Paper Hands (sold at the bottom). Weight 34.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0319.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -37,15 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
   },
   {
    "trait_type": "One of One",
    "value": "BULL TRAP"
   },
   {
+   "trait_type": "Serial",
+   "value": "0319"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 35.3,
+   "value": 34.3,
    "display_type": "number"
   },
   {

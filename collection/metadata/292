@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0292",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 9999-in-1 Handheld (HI SCORE 00000); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Skate Wheels (flat spot from a power slide); 3 Pizza Crusts (from a sleepover). Weight 80.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0292.png",
+ "name": "CRUSHED IT #0292",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Army Man Squad (melted with a magnifying glass); 2 Burned CDs (burned at 1x, 4 hours); 2 Floppy Disks (DISK 2 of 7); 2 Soda Cans (shaken as a prank). Weight 75.6 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0292.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0292"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.6,
+   "value": 75.6,
    "display_type": "number"
   },
   {

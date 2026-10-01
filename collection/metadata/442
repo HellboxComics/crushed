@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0442",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Ball Mouses (cord chewed by a dog); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Clear Lighter (out of fluid); 1 Puzzle Cube (two stickers peeled); 3 Calculators (spelled BOOBIES upside down). Weight 45.6 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0442.png",
+ "name": "CRUSHED IT #0442",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Webcams (240p of pure confidence); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Pizza Crust (still better than most portfolios); 1 Beer Can (last one in the fridge); 1 Cheap Sunglasses (mall kiosk special); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 67.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0442.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Webcam"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Suspicious Rectangle"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0442"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.6,
+   "value": 67.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

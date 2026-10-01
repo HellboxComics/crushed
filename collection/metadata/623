@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0623",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Flip Phones (ringtone composed by hand); 1 Power Strip (overloaded on purpose); 2 Glow Sticks (still glowing a little, somehow); 3 Skate Wheels (flat spot from a power slide); 3 Burned CDs (says ROAD TRIP in marker). Weight 77.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0623.png",
+ "name": "CRUSHED IT #0623",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 3 Game Controllers (stick drift since day one); 1 AA Batteries (taken out of the smoke detector); 1 Shot Glass (from a trip to Vegas); 2 Glow Sticks (cracked at a school dance); 1 USB Stick (never ejected safely). Weight 24.1 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0623.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0623"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.6,
+   "value": 24.1,
    "display_type": "number"
   },
   {

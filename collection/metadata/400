@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0400",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Ball Mouse (ball removed as a prank); 1 Spiral Notebook (spiral unwound halfway); 2 Keyboards (Partial) (F, J and the crumbs); 1 Portable CD Player (anti-skip lied); 1 Three-Ring Binder (covered in band names). Weight 54.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0400.png",
+ "name": "CRUSHED IT #0400",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 1 Webcam (pointed at the ceiling forever); 1 AA Batteries (mixed old and new, like animals); 1 Power Strip (daisy-chained into three more); 1 Clear Lighter (for incense, obviously); 2 Portable CD Players (45-second buffer, 2-second attention span). Weight 70.2 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0400.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Webcam"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0400"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 54.7,
+   "value": 70.2,
    "display_type": "number"
   },
   {

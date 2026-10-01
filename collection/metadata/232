@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0232",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Power Strips (daisy-chained into three more); 1 Ball Mouse (cord chewed by a dog); 1 Skate Wheel (rolled into a storm drain once); 3 Pizza Crusts (found behind the couch). Weight 48.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0232.png",
+ "name": "CRUSHED IT #0232",
+ "description": "Recovered from Behind the Couch. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Magazines (read for the articles); 3 Jewel Cases (insert is from a different album); 1 Soda Can (shaken as a prank); 2 Scratch Tickets (scratched with a house key). Weight 43.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0232.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0232"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 48.8,
+   "value": 43.0,
    "display_type": "number"
   },
   {

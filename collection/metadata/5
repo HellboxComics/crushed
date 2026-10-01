@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0005",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 TV Remote (held together with tape); 1 Film Canister (undeveloped, forever); 3 Cheap Sunglasses (one lens popped out); 3 Army Man Squads (the one with the radio survived); 1 Floppy Disk (DISK 2 of 7). Weight 37.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0005.png",
+ "name": "CRUSHED IT #0005",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (from a gentlemen's club, reportedly); 3 AA Batteries (taken out of the smoke detector); 2 Game Cartridges (blown into 400 times); 2 Keyboards (Partial) (F, J and the crumbs). Weight 84.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0005.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0005"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.7,
+   "value": 84.9,
    "display_type": "number"
   },
   {

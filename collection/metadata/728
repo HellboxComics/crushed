@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0728",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Digital Cameras (2 megapixels of truth); 1 Soda Can (tab kept for charity); 1 Disposable Camera (never developed); 1 Game Controller (stick drift since day one); 3 Sneakers (left only). Weight 27.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0728.png",
+ "name": "CRUSHED IT #0728",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (untied since 1989); 3 AA Batteries (mixed old and new, like animals); 3 Poker Chips (never cashed out); 3 Smartphones (1% battery, forever); 1 Soda Can (flat). Weight 36.6 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0728.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0728"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 27.5,
+   "value": 36.6,
    "display_type": "number"
   },
   {

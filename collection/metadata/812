@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0812",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 1 Brick Phone (faceplate swapped 4 times); 2 Power Strips (daisy-chained into three more); 3 Laptop Chargers (warm to the touch, somehow); 1 Memory Card (8MB, full). Weight 31.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0812.png",
+ "name": "CRUSHED IT #0812",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Tablet (one thumbprint of juice); 1 Handheld Console (battery cover lost immediately); 2 Disposable Vapes (5000 puffs, 4999 regrets); 1 USB Stick (never ejected safely); 1 TV Remote (held together with tape). Weight 27.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0812.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Tablet"
   },
   {
    "trait_type": "Contaminant",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0812"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.7,
+   "value": 27.8,
    "display_type": "number"
   },
   {

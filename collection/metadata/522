@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0522",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Brick Phones (unbreakable until today); 2 Power Strips (overloaded on purpose); 1 Virtual Pet (died during math class); 1 Corded Phone (someone is still on hold); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 82.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0522.png",
+ "name": "CRUSHED IT #0522",
+ "description": "Recovered from A Buddy's Basement. Smells like scratch-n-sniff sticker. Contents (partial): 1 Brick Phone (unbreakable until today); 2 Magazines (found in a dad's truck); 1 No. 2 Pencil (chewed); 3 AA Batteries (licked to test); 1 Pager (last page: 911 (it was not)). Weight 45.4 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0522.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0522"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 45.4,
    "display_type": "number"
   },
   {

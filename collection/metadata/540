@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0540",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Foam Headphones (one ear works if you hold it); 2 Skate Wheels (flat spot from a power slide); 3 AA Batteries (licked to test); 1 Virtual Pet (reincarnated 40 times); 1 VHS Tape (label says DO NOT TAPE OVER). Weight 75.0 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0540.png",
+ "name": "CRUSHED IT #0540",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 2 Clear Lighters (out of fluid); 2 Spiral Notebooks (doodles in the margins); 1 Pizza Crust (still better than most portfolios); 1 Jewel Case (insert is from a different album). Weight 29.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0540.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0540"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.0,
+   "value": 29.6,
    "display_type": "number"
   },
   {

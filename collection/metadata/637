@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0637",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Pager (last page: 143); 1 Disposable Camera (27 exposures of a thumb); 3 Cassette Tapes (labeled MIX 4 U); 1 Glow Stick (still glowing a little, somehow). Weight 27.6 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0637.png",
+ "name": "CRUSHED IT #0637",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Brick Phone (unbreakable until today); 2 Beer Cans (12 of 12); 3 Burned CDs (says ROAD TRIP in marker); 2 Energy Drinks (exam week casualty). Weight 25.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0637.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0637"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.6,
+   "value": 25.6,
    "display_type": "number"
   },
   {

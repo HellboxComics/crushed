@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0337",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 2 16-Bit Controllers (the B button is sticky); 2 Film Canisters (undeveloped, forever); 1 Pager (last page: 911 (it was not)); 2 Milk Caps (won in a bet); 1 No. 2 Pencil (sharpened to a nub). Weight 37.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0337.png",
+ "name": "CRUSHED IT #0337",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 9999-in-1 Handheld (HI SCORE 00000); 2 Disposable Cameras (27 exposures of a thumb); 1 Flip Phone (ringtone composed by hand); 1 Puzzle Cube (solved once, stickers moved); 1 Skate Wheel (flat spot from a power slide). Weight 73.3 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0337.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "9999-in-1 Handheld"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0337"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.3,
+   "value": 73.3,
    "display_type": "number"
   },
   {

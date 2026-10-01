@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0069",
- "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 1 Joystick (suction cups gave up); 1 CRT Monitor (degaussed one last time); 3 Game Cartridges (save file erased by a sibling); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Roller Skate (the rink smell is still in there). Weight 91.2 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0069.png",
+ "name": "CRUSHED IT #0069",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Floppy Disks (says DO NOT FORMAT); 1 Yo-Yo (string tied to a finger for 3 years); 2 Soda Cans (shaken as a prank); 2 Centerfolds (folded out, then folded back in a hurry). Weight 41.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0069.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0069"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.2,
+   "value": 41.1,
    "display_type": "number"
   },
   {

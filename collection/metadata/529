@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0529",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Pagers (clipped to jeans for status only); 1 Corded Phone (was on the line when mom picked up); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Floppy Disk (says DO NOT FORMAT); 1 Yo-Yo (walked the dog one time); 1 Crumpled Chart (it went up, then it went down). Weight 74.2 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0529.png",
+ "name": "CRUSHED IT #0529",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 Gold TV Remote (why); 3 Flip Phones (12 texts left this month); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Corded Phone (someone is still on hold); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 74.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0529.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,15 +9,15 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0529"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.2,
+   "value": 74.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

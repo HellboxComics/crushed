@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0480",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Digital Cameras (memory full, 14 photos); 3 Portable CD Players (45-second buffer, 2-second attention span); 3 Brick Phones (snake high score intact). Weight 81.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0480.png",
+ "name": "CRUSHED IT #0480",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 1 Ball Mouse (rollers caked with 1998); 2 Foam Headphones (one ear works if you hold it); 2 Game Controllers (thrown during a boss fight); 1 Memory Card (8MB, full); 3 Keyboards (Partial) (F, J and the crumbs). Weight 28.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0480.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0480"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 81.6,
+   "value": 28.7,
    "display_type": "number"
   },
   {

@@ -6,10 +6,12 @@ THE SEAL TREE -- the Merkle root the contract checks when a holder puts a block 
     python3 scripts/seal_tree.py proof 718        the calldata for sealing recipe 718: chunks, meta, proof
     python3 scripts/seal_tree.py check            every leaf recomputes from the files on disk
 
-Leaf = keccak256(abi.encodePacked(uint256 recipeId, sha256(jpeg), keccak256(metaJson))), where the JPEG is
-the final 1024px image at quality 90 (progressive, 4:4:4) and metaJson is the token's metadata JSON with
-the closing brace and the "image" field removed (the contract adds the image itself). Pairs are hashed
-sorted, odd nodes paired with zero: the same scheme as the murky library the tests use.
+Leaf = keccak256(abi.encodePacked(uint256 recipeId, sha256(jpeg), keccak256(meta), keccak256(subtitle))).
+The JPEG is the final 1024px image at quality 90 (progressive, 4:4:4). `meta` is the metadata JSON with the
+braces, the name and the image removed: it starts with `,"description":` and ends after the attributes,
+because the contract writes the name itself from the token number (CRUSHED IT #0044) and adds the image.
+`subtitle` is the one-of-one's name ("CCFF00") or empty. Pairs are hashed sorted, odd nodes paired with
+zero: the same scheme as the murky library the tests use.
 
 This freezes the art. Run it once, after the final render, and put the root in the deploy.
 """
@@ -56,17 +58,19 @@ def jpeg_bytes(recipe):
 
 
 def meta_bytes(recipe):
-    """The metadata JSON minus the image field and the closing brace, as the contract expects it."""
-    m = json.load(open(os.path.join(META, f"{recipe}.json")))
+    """(meta fragment, subtitle) as the contract expects them: no braces, no name, no image."""
+    m = json.load(open(os.path.join(META, str(recipe))))
+    name = m.pop("name")
+    subtitle = name.split(": ", 1)[1] if ": " in name else ""
     m.pop("image", None)
     m.pop("animation_url", None)
     s = json.dumps(m, separators=(",", ":"), ensure_ascii=False)
-    assert s.endswith("}")
-    return s[:-1].encode()
+    assert s.startswith("{") and s.endswith("}")
+    return ("," + s[1:-1]).encode(), subtitle
 
 
-def leaf(recipe, img, meta):
-    return k(recipe.to_bytes(32, "big") + hashlib.sha256(img).digest() + k(meta))
+def leaf(recipe, img, meta, subtitle):
+    return k(recipe.to_bytes(32, "big") + hashlib.sha256(img).digest() + k(meta) + k(subtitle.encode()))
 
 
 def tree(leaves):
@@ -95,8 +99,8 @@ def build():
         sys.exit(f"{len(missing)} renders missing (first: {missing[0]:04d}); render everything first")
     leaves, sizes = [], {}
     for r in range(1, SUPPLY + 1):
-        img, meta = jpeg_bytes(r), meta_bytes(r)
-        leaves.append(leaf(r, img, meta))
+        img, (meta, sub) = jpeg_bytes(r), meta_bytes(r)
+        leaves.append(leaf(r, img, meta, sub))
         sizes[r] = len(img)
         if r % 100 == 0:
             print(f"[{r}/{SUPPLY}] {int(100 * r / SUPPLY)}%", flush=True)
@@ -113,18 +117,20 @@ def show_proof(recipe):
     doc = json.load(open(OUT))
     leaves = [bytes.fromhex(x[2:]) for x in doc["leaves"]]
     levels = tree(leaves)
-    img, meta = jpeg_bytes(recipe), meta_bytes(recipe)
-    assert leaf(recipe, img, meta) == leaves[recipe - 1], "the files on disk no longer match the frozen tree"
+    img, (meta, sub) = jpeg_bytes(recipe), meta_bytes(recipe)
+    assert leaf(recipe, img, meta, sub) == leaves[recipe - 1], "the files on disk no longer match the frozen tree"
     chunks = [img[i:i + CHUNK] for i in range(0, len(img), CHUNK)]
     print(json.dumps({"recipe": recipe, "chunks": ["0x" + c.hex() for c in chunks], "meta": meta.decode(),
-                      "proof": ["0x" + p.hex() for p in proof(levels, recipe - 1)], "root": doc["root"]}, indent=1))
+                      "subtitle": sub, "proof": ["0x" + p.hex() for p in proof(levels, recipe - 1)],
+                      "root": doc["root"]}, indent=1))
 
 
 def check():
     doc = json.load(open(OUT))
     bad = 0
     for r in range(1, SUPPLY + 1):
-        if "0x" + leaf(r, jpeg_bytes(r), meta_bytes(r)).hex() != doc["leaves"][r - 1]:
+        meta, sub = meta_bytes(r)
+        if "0x" + leaf(r, jpeg_bytes(r), meta, sub).hex() != doc["leaves"][r - 1]:
             bad += 1
             print(f"recipe {r}: leaf changed")
     root = "0x" + tree([bytes.fromhex(x[2:]) for x in doc["leaves"]])[-1][0].hex()

@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0357",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 9999-in-1 Handheld (HI SCORE 00000); 3 Milk Caps (won in a bet); 3 Film Canisters (holds one quarter); 1 Ball Mouse (cord chewed by a dog); 1 Skateboard (one ollie, lifetime). Weight 49.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0357.png",
+ "name": "CRUSHED IT #0357",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Gold Beer Can (why); 2 Game Controllers (stick drift since day one); 3 Shot Glasses (from a trip to Vegas); 3 Matchbooks (matches missing, reasons unclear); 2 VHS Tapes (taped over a wedding). Weight 33.7 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0357.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
-   "value": "9999-in-1 Handheld"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Beer Can"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0357"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.3,
+   "value": 33.7,
    "display_type": "number"
   },
   {

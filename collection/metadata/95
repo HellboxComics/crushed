@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0095",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 3 VHS Tapes (taped over a wedding); 1 AA Batteries (taken out of the smoke detector); 1 Soda Can (tab kept for charity); 2 No. 2 Pencils (chewed). Weight 93.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0095.png",
+ "name": "CRUSHED IT #0095",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (shoulder-mounted in its prime); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (says DO NOT FORMAT); 1 Bull (dead). Weight 84.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0095.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0095"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 93.6,
+   "value": 84.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 34,
    "display_type": "number"
   }
  ]

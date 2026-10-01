@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0268",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Sneakers (light-up heel, dead); 2 VHS Tapes (label says DO NOT TAPE OVER); 1 CRT Monitor (still warm); 1 Floppy Disk (contains one (1) virus); 1 Keyboard (Partial) (the W key is missing, for obvious reasons). Weight 89.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0268.png",
+ "name": "CRUSHED IT #0268",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Ball Mice (ball removed as a prank); 1 Game Cartridge (save file erased by a sibling); 1 Floppy Disk (contains one (1) virus). Weight 38.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0268.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0268"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.6,
+   "value": 38.5,
    "display_type": "number"
   },
   {

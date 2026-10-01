@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0414",
- "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Foam Headphones (one ear works if you hold it); 3 Cassette Tapes (labeled MIX 4 U); 1 Film Canister (holds one quarter); 1 Soda Can (shaken as a prank); 1 Tiny Red Candle (one of many). Weight 74.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0414.png",
+ "name": "CRUSHED IT #0414",
+ "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 3 Burned CDs (coaster now); 3 Cassette Tapes (rewound with a pencil); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 76.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0414.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0414"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.8,
+   "value": 76.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

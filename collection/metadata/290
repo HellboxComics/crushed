@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0290",
- "description": "Recovered from Behind the Couch. Smells like wet cardboard. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 3 Sneakers (left only); 1 Keyboard (Partial) (F, J and the crumbs); 2 Toy Slime (stuck in the carpet); 3 Burned CDs (says ROAD TRIP in marker); 1 Tiny Green Candle (rarest thing in here). Weight 79.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0290.png",
+ "name": "CRUSHED IT #0290",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 2 Three-Ring Binders (velcro screams when opened); 1 Webcam (pointed at the ceiling forever); 1 Puzzle Cube (solved once, stickers moved); 1 Brick Phone (snake high score intact). Weight 72.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0290.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,15 +9,15 @@
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "9999-in-1 Handheld"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Green Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Burnt Popcorn"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "House Fire (Everyone's Fine)"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0290"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.1,
+   "value": 72.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

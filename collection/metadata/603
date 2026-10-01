@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0603",
- "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 3 Ball Mouses (ball removed as a prank); 3 Cheap Sunglasses (mall kiosk special); 1 Pizza Crust (from a sleepover); 2 Flip Phones (snapped shut dramatically); 1 Brick Phone (unbreakable until today). Weight 75.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0603.png",
+ "name": "CRUSHED IT #0603",
+ "description": "Recovered from A Very Specific Ditch. Smells like cheap cologne. Contents (partial): 2 Sneakers (left only); 2 Flip Phones (snapped shut dramatically); 1 Dice (snake eyes, twice); 3 Game Controllers (stick drift since day one); 1 TV Remote (found in the couch). Weight 26.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0603.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0603"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.9,
+   "value": 26.9,
    "display_type": "number"
   },
   {

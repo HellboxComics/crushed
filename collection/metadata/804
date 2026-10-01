@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0804",
- "description": "Recovered from Nobody Knows. Smells like Grandma's couch. Contents (partial): 3 Sneakers (untied since 1989); 2 Memory Cards (8MB, full); 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Energy Drinks (exam week casualty); 1 Burned CD (burned at 1x, 4 hours); 1 Bear (Thriving) (thriving). Weight 74.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0804.png",
+ "name": "CRUSHED IT #0804",
+ "description": "Recovered from Behind the Bar. Smells like fresh batteries (licked). Contents (partial): 1 VR Headset (watched one (1) movie); 2 TV Remotes (held together with tape); 3 No. 2 Pencils (sharpened to a nub); 3 Bluetooth Speakers (lost, found, lost); 1 Clear Lighter (for incense, obviously). Weight 33.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0804.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "VR Headset"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0804"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.7,
+   "value": 33.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

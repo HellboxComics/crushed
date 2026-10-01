@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0744",
- "description": "Recovered from A Very Specific Ditch. Smells like fresh batteries (licked). Contents (partial): 2 TV Remotes (held together with tape); 3 Spiral Notebooks (spiral unwound halfway); 1 VHS Tape (label says DO NOT TAPE OVER); 2 AA Batteries (probably dead); 2 Power Strips (daisy-chained into three more); 1 Tiny Red Candle (one of many). Weight 32.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0744.png",
+ "name": "CRUSHED IT #0744",
+ "description": "Recovered from Ex's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Disposable Vapes (zero nicotine, allegedly); 1 Tablet (one thumbprint of juice); 1 Jewel Case (insert is from a different album); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Soda Can (flat). Weight 29.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0744.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0744"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 32.6,
+   "value": 29.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0119",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 2 Sneakers (left only); 2 Floppy Disks (DISK 2 of 7); 1 Power Strip (overloaded on purpose); 1 Foam Headphones (orange foam, allegedly). Weight 71.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0119.png",
+ "name": "CRUSHED IT #0119",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 2 No. 2 Pencils (chewed); 3 Puzzle Cubes (solved once, stickers moved); 1 Three-Ring Binder (covered in band names); 1 Calculator (spelled BOOBIES upside down). Weight 32.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0119.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0119"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.3,
+   "value": 32.1,
    "display_type": "number"
   },
   {

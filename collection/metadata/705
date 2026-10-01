@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0705",
- "description": "Recovered from A Very Specific Ditch. Smells like hot dust on a CRT. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 1 Film Canister (holds one quarter); 3 AA Batteries (taken out of the smoke detector); 1 Soda Can (tab kept for charity); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 30.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0705.png",
+ "name": "CRUSHED IT #0705",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Grandma's couch. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Poker Chips (a stack of ambition); 3 Energy Drinks (tastes like a battery); 1 Dice (loaded, rumor says); 3 Pizza Crusts (from a sleepover). Weight 27.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0705.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -37,15 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
-   "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
+   "trait_type": "Serial",
+   "value": "0705"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.5,
+   "value": 27.0,
    "display_type": "number"
   },
   {

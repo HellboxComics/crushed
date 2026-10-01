@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0734",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Energy Drinks (tastes like a battery); 3 AA Batteries (probably dead); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 No. 2 Pencils (sharpened to a nub); 1 Corded Phone (was on the line when mom picked up). Weight 35.6 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0734.png",
+ "name": "CRUSHED IT #0734",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (exam week casualty); 1 Broken Rocket (didn't make it). Weight 43.2 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0734.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Bluetooth Speaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
@@ -40,13 +40,17 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0734"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 35.6,
+   "value": 43.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

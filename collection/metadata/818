@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0818",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 AA Batteries (licked to test); 3 Jewel Cases (hinge broken on arrival); 2 Memory Cards (corrupted during a birthday); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 33.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0818.png",
+ "name": "CRUSHED IT #0818",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 2 Energy Drinks (third one that night); 3 Soda Cans (flat); 1 Game Controller (stick drift since day one); 2 TV Remotes (found in the couch); 3 Sneakers (left only). Weight 30.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0818.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0818"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 30.5,
    "display_type": "number"
   },
   {

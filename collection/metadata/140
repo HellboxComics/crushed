@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0140",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Soda Cans (flat); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 VHS Tapes (taped over a wedding); 2 Pizza Crusts (found behind the couch). Weight 88.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0140.png",
+ "name": "CRUSHED IT #0140",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 2 Calculators (solar panel covered by a sticker); 3 Magazines (read for the articles); 2 Cassette Tapes (labeled MIX 4 U); 3 Floppy Disks (says DO NOT FORMAT); 2 Scratch Tickets (scratched with a house key). Weight 41.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0140.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0140"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.8,
+   "value": 41.5,
    "display_type": "number"
   },
   {

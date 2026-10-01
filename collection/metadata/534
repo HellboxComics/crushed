@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0534",
- "description": "The pile, as it was, the minute before. Weight 76.6 lb.",
- "image": "ipfs://IMAGES_CID/0534.png",
+ "name": "CRUSHED IT #0534: UNCRUSHED",
+ "description": "The pile, as it was, the minute before. Weight 29.6 lb.",
+ "image": "ipfs://<images-cid>/0534.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -33,19 +33,23 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
   },
   {
    "trait_type": "One of One",
    "value": "UNCRUSHED"
   },
   {
+   "trait_type": "Serial",
+   "value": "0534"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 76.6,
+   "value": 29.6,
    "display_type": "number"
   },
   {

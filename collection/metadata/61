@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0061",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (one speaker still believes); 1 Pizza Crust (still better than most portfolios); 1 Metal Lunchbox (thermos missing); 2 Spiral Notebooks (doodles in the margins); 2 Game Cartridges (save file erased by a sibling). Weight 46.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0061.png",
+ "name": "CRUSHED IT #0061",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 1 Boom Box (one speaker still believes); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly); 3 Tissue Boxes (one for every mood). Weight 92.9 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0061.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0061"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.7,
+   "value": 92.9,
    "display_type": "number"
   },
   {

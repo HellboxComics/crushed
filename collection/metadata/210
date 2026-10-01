@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0210",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 No. 2 Pencils (never saw a scantron it liked); 1 Keyboard (Partial) (F, J and the crumbs); 3 Power Strips (overloaded on purpose); 3 Floppy Disks (says DO NOT FORMAT). Weight 82.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0210.png",
+ "name": "CRUSHED IT #0210",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Calculators (spelled BOOBIES upside down); 3 Spiral Notebooks (spiral unwound halfway); 1 Burned CD (track 7 skips). Weight 46.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0210.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0210"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 46.1,
    "display_type": "number"
   },
   {

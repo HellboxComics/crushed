@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0585",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Cassette Tapes (side B only); 1 Portable CD Player (anti-skip lied); 3 Burned CDs (says ROAD TRIP in marker); 2 No. 2 Pencils (sharpened to a nub); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Bear (Thriving) (thriving). Weight 74.9 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0585.png",
+ "name": "CRUSHED IT #0585",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Handheld Console (screen scratched from a pocket with keys); 2 Power Strips (overloaded on purpose); 2 Disposable Cameras (27 exposures of a thumb); 2 Burned CDs (says ROAD TRIP in marker). Weight 24.0 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0585.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Cassette Tape"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0585"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.9,
+   "value": 24.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

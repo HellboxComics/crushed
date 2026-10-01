@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0617",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Soda Cans (shaken as a prank); 1 AA Batteries (probably dead); 3 Floppy Disks (says DO NOT FORMAT); 2 Brick Phones (unbreakable until today). Weight 74.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0617.png",
+ "name": "CRUSHED IT #0617",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (untied since 1989); 2 Scratch Tickets ($2 for hope); 1 Magazine (read for the articles); 3 Spiral Notebooks (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Crumpled Chart (it went up, then it went down). Weight 28.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0617.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0617"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.0,
+   "value": 28.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

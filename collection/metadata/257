@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0257",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Pagers (clipped to jeans for status only); 1 VHS Tape (label says DO NOT TAPE OVER); 3 TV Remotes (found in the couch); 1 Sneaker (untied since 1989). Weight 51.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0257.png",
+ "name": "CRUSHED IT #0257",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Floppy Disks (save icon, but real); 2 Sneakers (was in the dryer); 3 Milk Caps (won in a bet); 2 Centerfolds (left open to the wrong page). Weight 84.1 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0257.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0257"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 51.7,
+   "value": 84.1,
    "display_type": "number"
   },
   {

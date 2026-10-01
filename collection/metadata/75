@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0075",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Roller Skate (the rink smell is still in there); 3 Army Man Squads (melted with a magnifying glass); 2 Foam Headphones (one ear works if you hold it); 3 Joysticks (fire button pressed 40 million times); 3 Cassette Tapes (labeled MIX 4 U); 1 Gold Coin (real, probably). Weight 86.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0075.png",
+ "name": "CRUSHED IT #0075",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 2 TV Remotes (found in the couch); 1 Spiral Notebook (spiral unwound halfway); 1 Corded Phone (someone is still on hold); 2 Joysticks (fire button pressed 40 million times); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 42.9 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0075.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Roller Skate"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0075"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.1,
+   "value": 42.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0463",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 2 Power Strips (daisy-chained into three more); 3 VHS Tapes (taped over a wedding); 2 MP3 Players (shuffle picked the same song 6 times); 2 Glow Sticks (cracked at a school dance). Weight 29.8 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0463.png",
+ "name": "CRUSHED IT #0463",
+ "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Ball Mouse (ball removed as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Virtual Pets (reincarnated 40 times); 2 Poker Chips (taken from a casino, small heist). Weight 64.9 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0463.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "CRT Monitor"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0463"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 29.8,
+   "value": 64.9,
    "display_type": "number"
   },
   {

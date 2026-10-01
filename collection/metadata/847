@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0847",
- "description": "Recovered from Nobody Knows. Smells like rink snack bar. Contents (partial): 3 Sneakers (untied since 1989); 1 Cassette Tape (labeled MIX 4 U); 3 No. 2 Pencils (sharpened to a nub); 3 Energy Drinks (third one that night); 3 Pizza Crusts (found behind the couch); 1 Paper Hand (folded under light pressure). Weight 30.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0847.png",
+ "name": "CRUSHED IT #0847",
+ "description": "Recovered from Nobody Knows. Smells like Vegas carpet. Contents (partial): 1 VR Headset (the walls were real and they were hit); 1 Burned CD (track 7 skips); 2 Energy Drinks (tastes like a battery); 2 Bluetooth Speakers (paired with the wrong phone); 2 Face Masks (one of 400 in a coat pocket). Weight 32.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0847.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "VR Headset"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0847"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.3,
+   "value": 32.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 44,
    "display_type": "number"
   }
  ]

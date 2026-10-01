@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0537",
- "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 1 Pager (last page: 911 (it was not)); 3 Floppy Disks (save icon, but real); 3 AA Batteries (probably dead); 1 Flip Phone (12 texts left this month); 1 Ball Mouse (rollers caked with 1998). Weight 28.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0537.png",
+ "name": "CRUSHED IT #0537",
+ "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Burned CDs (coaster now); 3 Magazines (read for the articles); 2 Scratch Tickets (scratched with a house key); 1 Cheap Sunglasses (one lens popped out). Weight 23.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0537.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0537"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 28.8,
+   "value": 23.0,
    "display_type": "number"
   },
   {

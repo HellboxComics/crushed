@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0582",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 2 Portable CD Players (anti-skip lied); 2 Clear Lighters (for incense, obviously); 1 Ball Mouse (cord chewed by a dog); 1 TV Remote (held together with tape). Weight 32.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0582.png",
+ "name": "CRUSHED IT #0582: COLD STORAGE",
+ "description": "Every hardware wallet, frozen solid. Do not ask where the seed phrases are. Recovered from The Back of the Freezer. Smells like freezer burn. Contents (partial): 40 Hardware Wallets (backed up on a napkin); 8 Suspicious Rectangles (seed phrase written on the back of a receipt); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 21.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0582.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "COLD STORAGE"
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Hardware Wallet"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Freezer Burn"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "The Back of the Freezer"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "COLD STORAGE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0582"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.6,
+   "value": 21.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 51,
    "display_type": "number"
   }
  ]

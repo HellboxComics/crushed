@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0828",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Sneakers (left only); 1 Digital Camera (memory full, 14 photos); 3 TV Remotes (held together with tape); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 33.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0828.png",
+ "name": "CRUSHED IT #0828",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 2 Smartphones (cracked in the first week); 2 Selfie Sticks (banned at the museum); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ring Light (one bulb out, one ego intact); 1 Earbud Case (survived the wash). Weight 34.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0828.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Smartphone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0828"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.4,
+   "value": 34.2,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0361",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Sneaker (light-up heel, dead); 1 Yo-Yo (walked the dog one time); 2 Foam Headphones (orange foam, allegedly); 1 Army Man Squad (melted with a magnifying glass); 1 VHS Tape (late fees now exceed GDP of a small nation). Weight 85.8 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0361.png",
+ "name": "CRUSHED IT #0361",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Sneaker (untied since 1989); 2 Burned CDs (track 7 skips); 3 Cassette Tapes (rewound with a pencil); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 72.8 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0361.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0361"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 85.8,
+   "value": 72.8,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0426",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 Disposable Cameras (never developed); 3 Cheap Sunglasses (one lens popped out); 2 9999-in-1 Handhelds (HI SCORE 00000); 3 Toy Slime (stuck in the carpet); 1 Burned CD (says ROAD TRIP in marker). Weight 89.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0426.png",
+ "name": "CRUSHED IT #0426",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 3 Beer Cans (warm, sadly); 2 Brick Phones (faceplate swapped 4 times); 1 Game Controller (thrown during a boss fight); 3 Pizza Crusts (petrified); 2 Digital Cameras (memory full, 14 photos). Weight 73.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0426.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0426"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 89.0,
+   "value": 73.3,
    "display_type": "number"
   },
   {

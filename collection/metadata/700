@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0700",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 AA Batteries (probably dead); 2 Sneakers (untied since 1989); 2 MP3 Players (shuffle picked the same song 6 times); 3 Pizza Crusts (still better than most portfolios). Weight 73.9 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0700.png",
+ "name": "CRUSHED IT #0700",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Clear Lighter (for incense, obviously); 3 Centerfolds (staples removed, an attempt was made); 2 Matchbooks (matches missing, reasons unclear); 3 Magazines (the staples are doing the work). Weight 24.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0700.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0700"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.9,
+   "value": 24.1,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0563",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Ball Mouse (ball removed as a prank); 1 Handheld Console (battery cover lost immediately); 3 Power Strips (overloaded on purpose); 1 Digital Camera (memory full, 14 photos); 1 Tiny Red Candle (one of many). Weight 50.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0563.png",
+ "name": "CRUSHED IT #0563",
+ "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (mall kiosk special); 2 Glow Sticks (still glowing a little, somehow); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 AA Batteries (taken out of the smoke detector); 1 Crumpled Chart (it went up, then it went down). Weight 23.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0563.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Poker Chip"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0563"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 50.7,
+   "value": 23.1,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0353",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 1 Sneaker (light-up heel, dead); 1 Film Canister (holds one quarter); 1 Toy Slime (was in the hair of a sibling); 2 VHS Tapes (BE KIND REWIND (they did not)). Weight 75.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0353.png",
+ "name": "CRUSHED IT #0353",
+ "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 No. 2 Pencil (chewed); 1 Scratch Ticket (scratched with a house key); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Power Strip (daisy-chained into three more). Weight 83.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0353.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "OBSIDIAN"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0353"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.8,
+   "value": 83.3,
    "display_type": "number"
   },
   {

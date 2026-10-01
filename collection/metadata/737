@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0737",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Sneaker (untied since 1989); 3 Memory Cards (8MB, full); 1 AA Batteries (licked to test); 2 USB Sticks (never ejected safely); 3 Pizza Crusts (petrified). Weight 26.7 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0737.png",
+ "name": "CRUSHED IT #0737",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Fidget Spinner (spins for four seconds, like the trend); 2 Selfie Sticks (mid-trip, mid-ocean); 3 Smartwatches (10,000 steps, never); 2 TV Remotes (held together with tape); 1 Sneaker (light-up heel, dead); 1 Bull (trapped). Weight 28.0 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0737.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Fidget Spinner"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0737"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 26.7,
+   "value": 28.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

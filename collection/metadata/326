@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0326",
- "description": "Recovered from Nobody Knows. Smells like gym bag, forgotten. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 No. 2 Pencils (chewed); 1 Soda Can (tab kept for charity); 2 Ball Mouses (ball removed as a prank); 1 Toy Slime (was in the hair of a sibling). Weight 72.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0326.png",
+ "name": "CRUSHED IT #0326",
+ "description": "Recovered from Nobody Knows. Smells like cheap cologne. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Keyboards (Partial) (F, J and the crumbs); 1 Skate Wheel (rolled into a storm drain once); 2 Floppy Disks (DISK 2 of 7); 1 Power Strip (overloaded on purpose). Weight 30.9 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0326.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Cassette Tape"
+   "value": "VHS Tape"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -41,11 +41,15 @@
   },
   {
    "trait_type": "Finish",
-   "value": "GRAPE"
+   "value": "ICE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0326"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.2,
+   "value": 30.9,
    "display_type": "number"
   },
   {

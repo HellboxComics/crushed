@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0570",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 1 Skate Wheel (rolled into a storm drain once); 3 TV Remotes (held together with tape); 2 VHS Tapes (label says DO NOT TAPE OVER); 1 Spiral Notebook (note says 'check YES or NO'). Weight 71.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0570.png",
+ "name": "CRUSHED IT #0570",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 Beer Can (12 of 12); 1 Clear Lighter (borrowed in 1997, never returned); 1 Centerfold (left open to the wrong page); 1 Flip Phone (ringtone composed by hand); 1 Bluetooth Speaker (played one song, too loud). Weight 24.6 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0570.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0570"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.5,
+   "value": 24.6,
    "display_type": "number"
   },
   {

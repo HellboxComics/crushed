@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0416",
- "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Film Canisters (undeveloped, forever); 1 Burned CD (burned at 1x, 4 hours); 1 Yo-Yo (walked the dog one time); 2 Foam Headphones (orange foam, allegedly); 1 Paper Hand (folded under light pressure). Weight 38.4 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0416.png",
+ "name": "CRUSHED IT #0416",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Poker Chips (taken from a casino, small heist); 2 Scratch Tickets (not a winner); 1 Pager (last page: 143); 1 Cheap Sunglasses (mall kiosk special); 1 Burned CD (track 7 skips). Weight 27.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0416.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Poker Chip"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0416"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.4,
+   "value": 27.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 40,
    "display_type": "number"
   }
  ]

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0769",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Energy Drinks (third one that night); 2 Laptop Chargers (warm to the touch, somehow); 3 Jewel Cases (hinge broken on arrival); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 72.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0769.png",
+ "name": "CRUSHED IT #0769",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Hand Sanitizer (was in every pocket in 2020); 2 Handheld Consoles (battery cover lost immediately); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Pizza Crust (from a sleepover). Weight 34.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0769.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Hand Sanitizer"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0769"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 72.4,
+   "value": 34.8,
    "display_type": "number"
   },
   {

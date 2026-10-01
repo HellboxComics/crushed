@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0721",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Flip Phones (12 texts left this month); 3 Memory Cards (corrupted during a birthday); 3 Energy Drinks (third one that night); 2 Burned CDs (says ROAD TRIP in marker); 3 Sneakers (untied since 1989). Weight 66.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0721.png",
+ "name": "CRUSHED IT #0721",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 TV Remotes (found in the couch); 2 Bluetooth Speakers (paired with the wrong phone); 1 VR Headset (the walls were real and they were hit); 2 Smartphones (cracked in the first week); 1 Broken Rocket (didn't make it). Weight 32.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0721.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0721"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 66.3,
+   "value": 32.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

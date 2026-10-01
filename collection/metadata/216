@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0216",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Roller Skates (toe stop worn to nothing); 2 Yo-Yos (walked the dog one time); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Metal Lunchbox (thermos missing). Weight 86.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0216.png",
+ "name": "CRUSHED IT #0216",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Metal Lunchbox (the smell stays); 3 Cheap Sunglasses (mall kiosk special); 3 Burned CDs (coaster now); 2 Soda Cans (flat). Weight 73.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0216.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0216"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 86.4,
+   "value": 73.5,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0179",
- "description": "Recovered from School Lost & Found. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Joysticks (suction cups gave up); 3 Game Cartridges (save file erased by a sibling); 2 Sneakers (was in the dryer); 1 Calculator (spelled BOOBIES upside down). Weight 92.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0179.png",
+ "name": "CRUSHED IT #0179",
+ "description": "Recovered from A Very Specific Ditch. Smells like cigarette in a jacket. Contents (partial): 2 Pagers (last page: 143); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Floppy Disks (save icon, but real); 1 Corded Phone (was on the line when mom picked up); 1 Game Controller (stick drift since day one). Weight 83.8 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0179.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Pager"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0179"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.9,
+   "value": 83.8,
    "display_type": "number"
   },
   {

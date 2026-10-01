@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0879",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (left only); 2 Glow Sticks (cracked at a school dance); 2 Pizza Crusts (still better than most portfolios); 1 Flip Phone (12 texts left this month); 2 AA Batteries (probably dead). Weight 29.3 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0879.png",
+ "name": "CRUSHED IT #0879",
+ "description": "Recovered from A Very Specific Ditch. Smells like hot dust on a CRT. Contents (partial): 1 Drone (over the neighbor's fence); 1 Laptop Charger (fits nothing else in the house); 1 Tissue Box (there was a reason it lived on the nightstand); 3 Soda Cans (tab kept for charity); 1 TV Remote (found in the couch). Weight 27.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0879.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0879"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.3,
+   "value": 27.7,
    "display_type": "number"
   },
   {

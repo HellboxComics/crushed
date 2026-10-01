@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0481",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Burned CDs (burned at 1x, 4 hours); 1 Flip Phone (snapped shut dramatically); 2 Game Controllers (stick drift since day one); 3 Skate Wheels (rolled into a storm drain once). Weight 81.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0481.png",
+ "name": "CRUSHED IT #0481",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Ball Mice (rollers caked with 1998); 1 Portable CD Player (anti-skip lied); 1 Scratch Ticket (not a winner); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Soda Cans (tab kept for charity). Weight 34.6 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0481.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0481"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 81.5,
+   "value": 34.6,
    "display_type": "number"
   },
   {

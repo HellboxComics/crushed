@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0172",
- "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Yo-Yos (walked the dog one time); 1 Cheap Sunglasses (one lens popped out); 2 Sneakers (was in the dryer); 3 Floppy Disks (says DO NOT FORMAT). Weight 80.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0172.png",
+ "name": "CRUSHED IT #0172",
+ "description": "Recovered from Vegas Hotel Room. Smells like scratch-n-sniff sticker. Contents (partial): 1 Joystick (suction cups gave up); 2 Cheap Sunglasses (mall kiosk special); 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (never saw a scantron it liked); 2 Calculators (spelled BOOBIES upside down). Weight 74.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0172.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0172"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.3,
+   "value": 74.4,
    "display_type": "number"
   },
   {

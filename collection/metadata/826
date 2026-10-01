@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0826",
- "description": "Recovered from Behind the Couch. Smells like basement. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 3 Power Strips (overloaded on purpose); 2 Disposable Cameras (never developed); 3 Pizza Crusts (found behind the couch); 2 TV Remotes (held together with tape). Weight 35.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0826.png",
+ "name": "CRUSHED IT #0826",
+ "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Disposable Vapes (mango, mostly); 1 Sneaker (smells like 1989); 2 Scratch Tickets (scratched with a house key); 1 Selfie Stick (the person holding it is not in the photo); 1 Tiny Red Candle (lit). Weight 27.1 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0826.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Smartwatch"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0826"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 27.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 44,
    "display_type": "number"
   }
  ]

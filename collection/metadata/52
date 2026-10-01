@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0052",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 1 Joystick (suction cups gave up); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Game Cartridges (save file erased by a sibling); 3 TV Remotes (the volume button worn smooth); 3 Pizza Crusts (still better than most portfolios). Weight 87.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0052.png",
+ "name": "CRUSHED IT #0052",
+ "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 TV Remotes (the volume button worn smooth); 1 Three-Ring Binder (covered in band names); 2 Army Man Squads (melted with a magnifying glass); 1 Calculator (solar panel covered by a sticker). Weight 73.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0052.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0052"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.1,
+   "value": 73.3,
    "display_type": "number"
   },
   {

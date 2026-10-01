@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0163",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like hot dust on a CRT. Contents (partial): 1 Joystick (fire button pressed 40 million times); 1 CRT Monitor (weighs more than the desk); 3 Cassette Tapes (rewound with a pencil); 3 Puzzle Cubes (two stickers peeled); 3 Army Man Squads (melted with a magnifying glass). Weight 79.4 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0163.png",
+ "name": "CRUSHED IT #0163",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 2 Floppy Disks (save icon, but real); 1 Cassette Tape (someone's voicemail greeting); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Spiral Notebooks (spiral unwound halfway). Weight 79.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0163.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0163"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.4,
+   "value": 79.8,
    "display_type": "number"
   },
   {

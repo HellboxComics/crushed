@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0200",
- "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (the volume button worn smooth); 1 16-Bit Controller (cord pulled the console off the shelf); 2 Foam Headphones (one ear works if you hold it); 3 Cheap Sunglasses (mall kiosk special); 1 Roller Skate (toe stop worn to nothing). Weight 75.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0200.png",
+ "name": "CRUSHED IT #0200",
+ "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 1 Magazine (the staples are doing the work); 1 Pizza Crust (petrified); 2 No. 2 Pencils (sharpened to a nub); 1 Metal Lunchbox (thermos missing); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 67.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0200.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,16 @@
    "value": "Several"
   },
   {
+   "trait_type": "Finish",
+   "value": "GRAPE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0200"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.4,
+   "value": 67.1,
    "display_type": "number"
   },
   {

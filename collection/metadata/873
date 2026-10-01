@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0873",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 3 Sneakers (left only); 3 Spiral Notebooks (spiral unwound halfway); 1 Clear Lighter (for incense, obviously); 3 TV Remotes (the volume button worn smooth); 2 Power Strips (overloaded on purpose). Weight 31.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0873.png",
+ "name": "CRUSHED IT #0873",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Drone (over the neighbor's fence); 3 Smartphones (last text: read, no reply); 2 Smartwatches (says STAND, does not); 2 Selfie Sticks (mid-trip, mid-ocean); 1 Disposable Vape (zero nicotine, allegedly). Weight 36.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0873.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0873"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 36.7,
    "display_type": "number"
   },
   {

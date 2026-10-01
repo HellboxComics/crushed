@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0755",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Disposable Cameras (never developed); 2 Spiral Notebooks (doodles in the margins); 3 Power Strips (daisy-chained into three more); 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Energy Drinks (tastes like a battery). Weight 33.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0755.png",
+ "name": "CRUSHED IT #0755",
+ "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 Gold TV Remote (why); 3 Beer Cans (crushed on a forehead); 1 Soda Can (flat); 1 Power Strip (daisy-chained into three more); 2 Disposable Vapes (mango, mostly). Weight 32.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0755.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "TV Remote"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0755"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.7,
+   "value": 32.4,
    "display_type": "number"
   },
   {

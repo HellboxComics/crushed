@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0347",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Slap Bracelet (cut someone, probably); 1 16-Bit Controller (the B button is sticky); 3 Foam Headphones (one ear works if you hold it); 1 Three-Ring Binder (velcro screams when opened). Weight 76.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0347.png",
+ "name": "CRUSHED IT #0347",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Puzzle Cube (two stickers peeled); 2 Jewel Cases (insert is from a different album); 1 AA Batteries (taken out of the smoke detector); 1 Slap Bracelet (banned by the school). Weight 68.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0347.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0347"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.5,
+   "value": 68.5,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0189",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Puzzle Cube (solved once, stickers moved); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Metal Lunchbox (the smell stays); 1 Keyboard (Partial) (the W key is missing, for obvious reasons). Weight 83.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0189.png",
+ "name": "CRUSHED IT #0189",
+ "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Sneaker (left only); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Soda Can (tab kept for charity); 1 Ball Mouse (cord chewed by a dog); 1 Broken Rocket (was going to the moon). Weight 45.4 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0189.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Portable CD Player"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0189"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 83.8,
+   "value": 45.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 43,
    "display_type": "number"
   }
  ]

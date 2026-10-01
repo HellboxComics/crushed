@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0240",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Gold 16-Bit Controllers (why); 1 Corded Phone (someone is still on hold); 3 Toy Slime (was in the hair of a sibling); 1 Roller Skate (the rink smell is still in there); 2 Milk Caps (the slammer is chipped). Weight 87.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0240.png",
+ "name": "CRUSHED IT #0041: LOW RES",
+ "description": "A bedroom studio at three in the morning: purple light, acid green, a lava lamp, a cat on the keys. Low res and loud. Recovered from A Bedroom Studio, 3 A.M. Smells like warm amplifier and incense. Contents (partial): 4 Pixel Hoodies (soft from 400 washes); 5 Skull Candles (burned down to the eyebrows); 8 Cassette Tapes (recorded off the radio, DJ talks over every intro); 4 Mini Arcade Cabinets (INSERT COIN, forever); 4 Game Cartridges (blown into 400 times). Weight 139.2 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0240.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "LOW RES"
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Lava Lamp"
   },
   {
    "trait_type": "Contaminant",
@@ -25,32 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Warm Amplifier and Incense"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "A Bedroom Studio, 3 A.M."
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
-   "trait_type": "Gilded",
-   "value": "16-Bit Controller"
+   "trait_type": "One of One",
+   "value": "LOW RES"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0240"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.8,
+   "value": 139.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 56,
    "display_type": "number"
   }
  ]

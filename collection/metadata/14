@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0014",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Game Cartridge (save file erased by a sibling); 2 TV Remotes (held together with tape); 1 Pizza Crust (still better than most portfolios); 3 Army Man Squads (the one with the radio survived). Weight 79.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0014.png",
+ "name": "CRUSHED IT #0014",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 TV Remotes (held together with tape); 1 Yo-Yo (string tied to a finger for 3 years); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Foam Headphones (one ear works if you hold it); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 53.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0014.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0014"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.6,
+   "value": 53.7,
    "display_type": "number"
   },
   {

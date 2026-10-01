@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0312",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Soda Cans (flat); 2 AA Batteries (taken out of the smoke detector); 1 Pager (last page: 143); 2 Burned CDs (burned at 1x, 4 hours). Weight 47.4 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0312.png",
+ "name": "CRUSHED IT #0312",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 Yo-Yo (walked the dog one time); 2 Film Canisters (holds one quarter); 3 VHS Tapes (taped over a wedding); 1 Soda Can (flat). Weight 37.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0312.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
@@ -41,11 +41,15 @@
   },
   {
    "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
+   "value": "OBSIDIAN"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0312"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.4,
+   "value": 37.6,
    "display_type": "number"
   },
   {

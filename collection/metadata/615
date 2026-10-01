@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0615",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 TV Remote (found in the couch); 1 Memory Card (corrupted during a birthday); 1 Power Strip (daisy-chained into three more); 1 Digital Camera (2 megapixels of truth); 1 Spiral Notebook (spiral unwound halfway). Weight 79.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0615.png",
+ "name": "CRUSHED IT #0615",
+ "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 Spiral Notebook (doodles in the margins); 2 Laptop Chargers (fits nothing else in the house); 1 Energy Drink (exam week casualty). Weight 31.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0615.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0615"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.4,
+   "value": 31.6,
    "display_type": "number"
   },
   {

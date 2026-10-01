@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0377",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 16-Bit Controllers (the B button is sticky); 3 Clear Lighters (for incense, obviously); 2 Cheap Sunglasses (mall kiosk special); 1 Calculator (spelled BOOBIES upside down). Weight 78.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0377.png",
+ "name": "CRUSHED IT #0377",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Shot Glasses (chipped rim); 2 Pizza Crusts (petrified); 1 Disposable Camera (27 exposures of a thumb); 1 Magazine (read for the articles). Weight 70.8 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0377.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0377"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.1,
+   "value": 70.8,
    "display_type": "number"
   },
   {

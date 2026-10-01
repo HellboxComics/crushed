@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0204",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 3 Sneakers (left only); 2 Floppy Disks (save icon, but real); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Pizza Crust (still better than most portfolios). Weight 87.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0204.png",
+ "name": "CRUSHED IT #0204",
+ "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 1 Beer Can (crushed on a forehead); 1 Puzzle Cube (two stickers peeled); 1 Flip Phone (12 texts left this month); 1 Dice (loaded, rumor says). Weight 79.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0204.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0204"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.2,
+   "value": 79.1,
    "display_type": "number"
   },
   {

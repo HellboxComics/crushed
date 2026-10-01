@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0763",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 3 Digital Cameras (2 megapixels of truth); 2 Disposable Cameras (never developed); 2 Game Controllers (thrown during a boss fight); 1 MP3 Player (shuffle picked the same song 6 times); 3 No. 2 Pencils (never saw a scantron it liked). Weight 36.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0763.png",
+ "name": "CRUSHED IT #0763",
+ "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 3 Sneakers (light-up heel, dead); 1 VR Headset (the walls were real and they were hit); 1 Energy Drink (tastes like a battery); 1 No. 2 Pencil (never saw a scantron it liked); 3 Earbud Cases (both buds gone, case still charges nothing). Weight 31.8 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0763.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0763"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.1,
+   "value": 31.8,
    "display_type": "number"
   },
   {

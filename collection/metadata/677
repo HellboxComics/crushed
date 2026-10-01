@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0677",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 3 Sneakers (untied since 1989); 1 Clear Lighter (for incense, obviously); 1 TV Remote (held together with tape); 2 Burned CDs (track 7 skips); 3 Energy Drinks (exam week casualty). Weight 34.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0677.png",
+ "name": "CRUSHED IT #0677",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Memory Card (corrupted during a birthday); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Energy Drinks (third one that night); 2 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 32.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0677.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0677"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 32.3,
    "display_type": "number"
   },
   {

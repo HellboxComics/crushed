@@ -1,15 +1,15 @@
 {
- "name": "CRUSHED #0417",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Sneakers (left only); 1 Film Canister (holds one quarter); 3 Burned CDs (says ROAD TRIP in marker); 3 Jewel Cases (hinge broken on arrival); 3 VHS Tapes (taped over a wedding). Weight 51.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0417.png",
+ "name": "CRUSHED IT #0417",
+ "description": "Recovered from School Lost & Found. Smells like wet cardboard. Contents (partial): 2 Sneakers (left only); 3 Magazines (the staples are doing the work); 3 Flip Phones (12 texts left this month); 2 Pagers (last page: 911 (it was not)); 3 VHS Tapes (taped over a wedding). Weight 32.6 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0417.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0417"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.6,
+   "value": 32.6,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0881",
- "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 3 Energy Drinks (exam week casualty); 3 USB Sticks (contains homework_FINAL_final2.doc); 3 Jewel Cases (insert is from a different album); 3 Power Strips (daisy-chained into three more); 1 AA Batteries (licked to test). Weight 34.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0881.png",
+ "name": "CRUSHED IT #0881",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Power Strips (daisy-chained into three more); 2 Game Controllers (thrown during a boss fight); 3 Disposable Vapes (mango, mostly); 1 VR Headset (the walls were real and they were hit). Weight 34.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0881.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Power Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0881"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 34.6,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0638",
- "description": "Recovered from A Very Specific Ditch. Smells like body spray cloud. Contents (partial): 3 Brick Phones (unbreakable until today); 1 Cassette Tape (side B only); 2 Spiral Notebooks (doodles in the margins); 1 Game Controller (thrown during a boss fight); 1 Corded Phone (someone is still on hold). Weight 81.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0638.png",
+ "name": "CRUSHED IT #0638",
+ "description": "Recovered from Ex's Garage. Smells like scratch-n-sniff sticker. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Glow Stick (cracked at a school dance); 2 Disposable Cameras (27 exposures of a thumb); 2 Pizza Crusts (found behind the couch); 2 Energy Drinks (tastes like a battery). Weight 21.9 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0638.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0638"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.2,
+   "value": 21.9,
    "display_type": "number"
   },
   {

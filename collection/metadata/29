@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0029",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Foam Headphones (one ear works if you hold it); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Metal Lunchbox (thermos missing); 3 Game Cartridges (save file erased by a sibling). Weight 79.7 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0029.png",
+ "name": "CRUSHED IT #0029",
+ "description": "Recovered from Vegas Hotel Room. Smells like new plastic. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Corded Phone (was on the line when mom picked up); 3 Army Man Squads (the one with the radio survived); 2 Soda Cans (flat); 3 TV Remotes (the volume button worn smooth). Weight 43.3 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0029.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0029"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 43.3,
    "display_type": "number"
   },
   {

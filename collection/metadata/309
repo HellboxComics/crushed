@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0309",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 9999-in-1 Handhelds (HI SCORE 00000); 1 Skateboard (one ollie, lifetime); 1 CRT Monitor (degaussed one last time); 1 MP3 Player (shuffle picked the same song 6 times); 1 Tiny Red Candle (one of many). Weight 79.7 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0309.png",
+ "name": "CRUSHED IT #0309",
+ "description": "Recovered from Vegas Hotel Room. Smells like burnt popcorn. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 2 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (from a sleepover); 1 Ball Mouse (rollers caked with 1998); 2 Sneakers (smells like 1989). Weight 72.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0309.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0309"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 72.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

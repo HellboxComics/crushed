@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0166",
- "description": "Recovered from Nobody Knows. Smells like Grandma's couch. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 3 Joysticks (suction cups gave up); 3 VHS Tapes (taped over a wedding); 1 CRT Monitor (degaussed one last time); 3 Cassette Tapes (labeled MIX 4 U). Weight 88.9 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0166.png",
+ "name": "CRUSHED IT #0166",
+ "description": "Recovered from Behind the Bar. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Puzzle Cubes (two stickers peeled); 3 Joysticks (fire button pressed 40 million times); 2 Floppy Disks (says DO NOT FORMAT); 1 No. 2 Pencil (sharpened to a nub); 1 Gold Coin (real, probably). Weight 75.4 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0166.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0166"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 75.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0173",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Pizza Crusts (found behind the couch); 1 Three-Ring Binder (covered in band names); 2 Sneakers (light-up heel, dead); 3 Game Cartridges (blown into 400 times). Weight 83.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0173.png",
+ "name": "CRUSHED IT #0173",
+ "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 3 Floppy Disks (contains one (1) virus); 2 No. 2 Pencils (sharpened to a nub); 2 Army Man Squads (the one with the radio survived). Weight 87.5 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0173.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0173"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.0,
+   "value": 87.5,
    "display_type": "number"
   },
   {

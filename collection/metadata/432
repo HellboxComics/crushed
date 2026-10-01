@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0432",
- "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 2 Ball Mouses (rollers caked with 1998); 3 Toy Slime (was in the hair of a sibling); 2 Cheap Sunglasses (one lens popped out); 1 Jewel Case (hinge broken on arrival); 1 Spiral Notebook (note says 'check YES or NO'). Weight 80.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0432.png",
+ "name": "CRUSHED IT #0432",
+ "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Webcam (pointed at the ceiling forever); 2 Flip Phones (12 texts left this month); 1 Skateboard (griptape ate a pair of jeans); 3 Poker Chips (taken from a casino, small heist); 1 Game Controller (thrown during a boss fight); 1 Paper Hand (sold at the bottom). Weight 36.2 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0432.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Webcam"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0432"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.2,
+   "value": 36.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

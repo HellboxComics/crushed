@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0343",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 TV Remotes (found in the couch); 1 Foam Headphones (orange foam, allegedly); 3 Cheap Sunglasses (one lens popped out); 2 Game Cartridges (save file erased by a sibling); 2 Cassette Tapes (labeled MIX 4 U). Weight 80.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0343.png",
+ "name": "CRUSHED IT #0343",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 1 Portable CD Player (anti-skip lied); 1 Toy Slime (was in the hair of a sibling); 2 Three-Ring Binders (covered in band names); 2 Yo-Yos (string tied to a finger for 3 years). Weight 74.2 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0343.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0343"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.1,
+   "value": 74.2,
    "display_type": "number"
   },
   {

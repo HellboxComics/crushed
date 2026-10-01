@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0322",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Toy Slime (was in the hair of a sibling); 1 Jewel Case (hinge broken on arrival); 2 Power Strips (daisy-chained into three more); 1 Portable CD Player (anti-skip lied). Weight 42.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0322.png",
+ "name": "CRUSHED IT #0322",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 Power Strips (overloaded on purpose); 1 Corded Phone (cord stretched to the bathroom); 2 Magazines (for the interviews, obviously); 2 Burned CDs (track 7 skips). Weight 39.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0322.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0322"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 42.0,
+   "value": 39.5,
    "display_type": "number"
   },
   {

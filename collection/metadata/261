@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0261",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 Skate Wheels (flat spot from a power slide); 2 Toy Slime (stuck in the carpet); 3 Burned CDs (track 7 skips); 1 CRT Monitor (degaussed one last time). Weight 87.7 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0261.png",
+ "name": "CRUSHED IT #0261",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Magazines (the staples are doing the work); 2 TV Remotes (found in the couch); 3 Power Strips (daisy-chained into three more); 1 Soda Can (flat); 1 Spiral Notebook (note says 'check YES or NO'). Weight 48.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0261.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0261"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.7,
+   "value": 48.3,
    "display_type": "number"
   },
   {

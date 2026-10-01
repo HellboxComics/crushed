@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0404",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (was in the dryer); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 16-Bit Controllers (cord pulled the console off the shelf); 2 Pagers (last page: 143); 1 Jewel Case (hinge broken on arrival). Weight 48.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0404.png",
+ "name": "CRUSHED IT #0404",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (held together with tape); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 CRT Monitor (still warm); 1 Pager (last page: 911 (it was not)). Weight 73.0 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0404.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0404"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.4,
+   "value": 73.0,
    "display_type": "number"
   },
   {

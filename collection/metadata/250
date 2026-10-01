@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0250",
- "description": "Recovered from Back of the Closet. Smells like wet cardboard. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Jewel Case (hinge broken on arrival); 2 Game Cartridges (save file erased by a sibling); 1 Portable Tape Player (auto-reverse broke in 1991); 2 AA Batteries (probably dead). Weight 72.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0250.png",
+ "name": "CRUSHED IT #0250",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Ball Mouse (ball removed as a prank); 2 TV Remotes (the volume button worn smooth); 1 Power Strip (daisy-chained into three more); 2 Pizza Crusts (petrified). Weight 72.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0250.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Wet Cardboard"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0250"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 72.8,
+   "value": 72.6,
    "display_type": "number"
   },
   {

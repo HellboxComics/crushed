@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0051",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 3 Pizza Crusts (still better than most portfolios); 3 TV Remotes (the volume button worn smooth); 1 CRT Monitor (degaussed one last time); 2 Spiral Notebooks (doodles in the margins). Weight 83.4 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0051.png",
+ "name": "CRUSHED IT #0051",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 3 Poker Chips (a stack of ambition); 1 Clear Lighter (out of fluid); 1 Ball Mouse (rollers caked with 1998); 2 TV Remotes (found in the couch). Weight 82.5 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0051.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0051"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 83.4,
+   "value": 82.5,
    "display_type": "number"
   },
   {

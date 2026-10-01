@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0815",
- "description": "Recovered from Estate of a Collector. Smells like hot dust on a CRT. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 AA Batteries (taken out of the smoke detector); 1 Glow Stick (cracked at a school dance); 3 No. 2 Pencils (sharpened to a nub); 3 Pizza Crusts (found behind the couch). Weight 27.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0815.png",
+ "name": "CRUSHED IT #0815: GM",
+ "description": "Good morning. Good morning. Good morning. Good morning. Recovered from Every Timeline, 6 A.M. Smells like burnt coffee. Contents (partial): 32 Coffee Mugs (cold since 6 A.M.); 8 Gold Coins (bought the top); 5 Energy Drinks (third one that night); 3 Smartphones (1% battery, forever). Weight 52.4 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0815.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "GM"
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Coffee Mug"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Burnt Coffee"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Every Timeline, 6 A.M."
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "GM"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0815"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.0,
+   "value": 52.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 48,
    "display_type": "number"
   }
  ]

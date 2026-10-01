@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0486",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Spiral Notebooks (spiral unwound halfway); 1 Flip Phone (snapped shut dramatically); 3 Soda Cans (flat); 2 Glow Sticks (still glowing a little, somehow). Weight 36.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0486.png",
+ "name": "CRUSHED IT #0486",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Spiral Notebooks (spiral unwound halfway); 1 TV Remote (found in the couch); 2 Brick Phones (unbreakable until today); 3 Dice (loaded, rumor says). Weight 30.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0486.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0486"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 30.5,
    "display_type": "number"
   },
   {

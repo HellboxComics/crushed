@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0145",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 3 Pizza Crusts (still better than most portfolios); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Game Cartridges (save file erased by a sibling); 1 Calculator (spelled BOOBIES upside down). Weight 81.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0145.png",
+ "name": "CRUSHED IT #0145",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Poker Chips (never cashed out); 3 Army Man Squads (the one with the radio survived); 3 Puzzle Cubes (two stickers peeled); 1 Scratch Ticket ($2 for hope). Weight 37.4 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0145.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0145"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 81.8,
+   "value": 37.4,
    "display_type": "number"
   },
   {

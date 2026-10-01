@@ -1,15 +1,15 @@
 {
- "name": "CRUSHED #0389",
- "description": "Recovered from Storage Unit (Auctioned). Do not smell it. Contents (partial): 3 Sneakers (left only); 1 Cheap Sunglasses (mall kiosk special); 2 Soda Cans (flat); 1 Spiral Notebook (doodles in the margins); 1 Metal Lunchbox (thermos missing); 1 Suspicious Rectangle (PIN forgotten). Weight 43.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0389.png",
+ "name": "CRUSHED IT #0389",
+ "description": "Recovered from Estate of a Collector. Smells like victory. Contents (partial): 1 Gold Calculator (why); 1 Sneaker (untied since 1989); 1 Foam Headphones (orange foam, allegedly); 2 Dice (snake eyes, twice); 1 Energy Drink (third one that night). Weight 34.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0389.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Suspicious Rectangle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Don't"
+   "value": "Victory"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Calculator"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0389"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.7,
+   "value": 34.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

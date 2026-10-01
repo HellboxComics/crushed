@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0242",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 CRT Monitor (weighs more than the desk); 1 Yo-Yo (string tied to a finger for 3 years); 1 Disposable Camera (27 exposures of a thumb); 1 Film Canister (undeveloped, forever). Weight 76.5 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0242.png",
+ "name": "CRUSHED IT #0242",
+ "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Portable Tape Player (belt clip snapped at a bus stop); 1 AA Batteries (taken out of the smoke detector); 1 Boom Box (took 10 D batteries); 1 No. 2 Pencil (chewed). Weight 81.7 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0242.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0242"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.5,
+   "value": 81.7,
    "display_type": "number"
   },
   {

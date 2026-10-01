@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0619",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Soda Can (shaken as a prank); 1 USB Stick (contains homework_FINAL_final2.doc); 1 TV Remote (the volume button worn smooth); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (one lens popped out). Weight 39.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0619.png",
+ "name": "CRUSHED IT #0619",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Beer Can (12 of 12); 1 Disposable Camera (27 exposures of a thumb); 3 AA Batteries (taken out of the smoke detector); 1 Handheld Console (screen scratched from a pocket with keys); 1 Game Controller (thrown during a boss fight). Weight 26.1 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0619.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0619"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 26.1,
    "display_type": "number"
   },
   {

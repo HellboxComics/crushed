@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0289",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 2 Floppy Disks (says DO NOT FORMAT); 2 Skate Wheels (flat spot from a power slide); 3 Calculators (solar panel covered by a sticker); 1 Power Strip (overloaded on purpose). Weight 80.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0289.png",
+ "name": "CRUSHED IT #0289",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Sneakers (untied since 1989); 1 Digital Camera (2 megapixels of truth); 2 Soda Cans (flat); 2 Game Cartridges (save file erased by a sibling); 2 Centerfolds (left open to the wrong page). Weight 56.7 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0289.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0289"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.4,
+   "value": 56.7,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0825",
- "description": "Recovered from Nobody Knows. Smells like scratch-n-sniff sticker. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Floppy Disks (contains one (1) virus); 1 TV Remote (found in the couch); 1 Disposable Camera (27 exposures of a thumb); 2 Spiral Notebooks (note says 'check YES or NO'). Weight 25.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0825.png",
+ "name": "CRUSHED IT #0825",
+ "description": "Recovered from Nobody Knows. Smells like cigarette in a jacket. Contents (partial): 2 Earbud Cases (one bud present); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Ring Light (the eyes in every mirror selfie); 1 Cheap Sunglasses (one lens popped out); 1 Smartphone (1% battery, forever). Weight 31.4 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0825.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Earbud Case"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0825"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 25.1,
+   "value": 31.4,
    "display_type": "number"
   },
   {

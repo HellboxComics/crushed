@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0033",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Army Man Squads (the one with the radio survived); 1 Corded Phone (someone is still on hold); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Three-Ring Binders (velcro screams when opened). Weight 77.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0033.png",
+ "name": "CRUSHED IT #0033",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Spiral Notebooks (doodles in the margins); 1 CRT Monitor (degaussed one last time); 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived). Weight 76.3 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0033.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0033"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.8,
+   "value": 76.3,
    "display_type": "number"
   },
   {

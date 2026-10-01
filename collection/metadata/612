@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0612",
- "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Sneaker (was in the dryer); 2 Ball Mouses (rollers caked with 1998); 3 Game Controllers (thrown during a boss fight); 1 16-Bit Controller (the B button is sticky); 1 Spiral Notebook (note says 'check YES or NO'). Weight 70.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0612.png",
+ "name": "CRUSHED IT #0612",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like new plastic. Contents (partial): 3 Disposable Cameras (never developed); 2 Cheap Sunglasses (one lens popped out); 3 Power Strips (overloaded on purpose); 1 Energy Drink (exam week casualty); 3 Game Controllers (stick drift since day one). Weight 28.8 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0612.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0612"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.3,
+   "value": 28.8,
    "display_type": "number"
   },
   {

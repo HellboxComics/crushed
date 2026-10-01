@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0097",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 1 AA Batteries (taken out of the smoke detector); 1 VHS Tape (taped over a wedding); 2 TV Remotes (found in the couch); 1 Dead Bull (trapped). Weight 76.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0097.png",
+ "name": "CRUSHED IT #0097",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 TV Remotes (found in the couch); 1 Magazine (the staples are doing the work); 2 Puzzle Cubes (solved once, stickers moved); 1 Power Strip (daisy-chained into three more); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 80.9 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0097.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "Suspicious Rectangle"
   },
   {
    "trait_type": "Pressure",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0097"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 80.9,
    "display_type": "number"
   },
   {

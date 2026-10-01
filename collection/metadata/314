@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0314",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 TV Remotes (found in the couch); 1 Pizza Crust (found behind the couch); 2 Cheap Sunglasses (one lens popped out); 3 Toy Slime (was in the hair of a sibling). Weight 91.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0314.png",
+ "name": "CRUSHED IT #0314",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 No. 2 Pencils (chewed); 1 Centerfold (left open to the wrong page); 1 Metal Lunchbox (the smell stays); 3 Power Strips (overloaded on purpose). Weight 88.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0314.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0314"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.8,
+   "value": 88.4,
    "display_type": "number"
   },
   {

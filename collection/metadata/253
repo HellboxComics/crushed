@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0253",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Disposable Cameras (never developed); 2 Army Man Squads (the one with the radio survived); 1 Toy Slime (was in the hair of a sibling); 3 Soda Cans (flat); 2 Pizza Crusts (found behind the couch). Weight 87.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0253.png",
+ "name": "CRUSHED IT #0253",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Three-Ring Binder (velcro screams when opened); 2 16-Bit Controllers (the B button is sticky); 1 Spiral Notebook (doodles in the margins); 2 TV Remotes (held together with tape). Weight 36.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0253.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0253"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.8,
+   "value": 36.2,
    "display_type": "number"
   },
   {

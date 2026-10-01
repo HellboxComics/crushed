@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0066",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 Boom Box (one speaker still believes); 1 Ball Mouse (cord chewed by a dog); 2 No. 2 Pencils (sharpened to a nub); 2 Sneakers (was in the dryer); 3 VHS Tapes (BE KIND REWIND (they did not)). Weight 48.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0066.png",
+ "name": "CRUSHED IT #0066",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Boom Box (one speaker still believes); 2 Floppy Disks (save icon, but real); 2 Cheap Sunglasses (one lens popped out); 2 Three-Ring Binders (covered in band names); 2 Power Strips (daisy-chained into three more). Weight 85.1 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0066.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0066"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.4,
+   "value": 85.1,
    "display_type": "number"
   },
   {

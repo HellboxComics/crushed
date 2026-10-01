@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0801",
- "description": "A block of pizza crust. Only pizza crust. One sleepover's worth. Recovered from Behind the Couch. Smells like friday night. Contents (partial): 42 Pizza Crusts (petrified). Weight 17.2 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0801.png",
+ "name": "CRUSHED IT #0801: LEFTOVERS",
+ "description": "A block of pizza crust. Only pizza crust. One sleepover's worth. Recovered from Behind the Couch. Smells like friday night. Contents (partial): 42 Pizza Crusts (petrified). Weight 17.6 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0801.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -37,15 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "None"
   },
   {
    "trait_type": "One of One",
    "value": "LEFTOVERS"
   },
   {
+   "trait_type": "Serial",
+   "value": "0801"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 17.2,
+   "value": 17.6,
    "display_type": "number"
   },
   {

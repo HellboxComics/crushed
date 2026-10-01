@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0842",
- "description": "Recovered from Behind the Couch. Smells like gym bag, forgotten. Contents (partial): 1 Sneaker (light-up heel, dead); 2 Digital Cameras (memory full, 14 photos); 3 AA Batteries (probably dead); 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Burned CDs (track 7 skips). Weight 30.6 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0842.png",
+ "name": "CRUSHED IT #0842",
+ "description": "Recovered from Vegas Hotel Room. Smells like cheap cologne. Contents (partial): 1 Drone (flew once, into a tree); 1 Earbud Case (both buds gone, case still charges nothing); 1 Dice (snake eyes, twice); 1 AA Batteries (licked to test); 2 Scratch Tickets ($2 for hope). Weight 29.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0842.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0842"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.6,
+   "value": 29.2,
    "display_type": "number"
   },
   {

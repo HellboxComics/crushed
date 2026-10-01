@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0604",
- "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 3 Virtual Pets (died during math class); 3 Flip Phones (snapped shut dramatically); 1 Burned CD (track 7 skips); 3 Disposable Cameras (27 exposures of a thumb); 3 Skate Wheels (flat spot from a power slide). Weight 33.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0604.png",
+ "name": "CRUSHED IT #0604",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 3 Energy Drinks (third one that night); 3 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 3 Beer Cans (crushed on a forehead); 3 Clear Lighters (for incense, obviously). Weight 22.2 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0604.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Virtual Pet"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0604"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 22.2,
    "display_type": "number"
   },
   {

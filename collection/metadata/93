@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0093",
- "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 3 TV Remotes (held together with tape); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries); 1 Three-Ring Binder (covered in band names); 3 Soda Cans (shaken as a prank). Weight 51.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0093.png",
+ "name": "CRUSHED IT #0093",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like cigarette in a jacket. Contents (partial): 3 Magazines (found in a dad's truck); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Beer Cans (last one in the fridge); 2 Cassette Tapes (labeled MIX 4 U). Weight 76.7 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0093.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0093"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.2,
+   "value": 76.7,
    "display_type": "number"
   },
   {

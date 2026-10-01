@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0303",
- "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 Ball Mouse (ball removed as a prank); 1 No. 2 Pencil (chewed); 1 Corded Phone (cord stretched to the bathroom); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Power Strip (daisy-chained into three more); 1 Crumpled Chart (it went up, then it went down). Weight 44.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0303.png",
+ "name": "CRUSHED IT #0303",
+ "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 1 16-Bit Controller (cord pulled the console off the shelf); 1 AA Batteries (licked to test); 2 Pagers (last page: 143); 3 Cheap Sunglasses (one lens popped out); 1 Pizza Crust (from a sleepover). Weight 41.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0303.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "16-Bit Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0303"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.5,
+   "value": 41.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

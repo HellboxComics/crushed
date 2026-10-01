@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0012",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Cheap Sunglasses (mall kiosk special); 1 TV Remote (the volume button worn smooth); 1 AA Batteries (licked to test); 3 Foam Headphones (orange foam, allegedly). Weight 44.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0012.png",
+ "name": "CRUSHED IT #0012",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 CRT Monitor (degaussed one last time); 1 Tissue Box (one for every mood); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom). Weight 76.8 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0012.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0012"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 44.5,
+   "value": 76.8,
    "display_type": "number"
   },
   {

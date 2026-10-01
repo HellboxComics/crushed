@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0479",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 3 Virtual Pets (fed 0 times); 2 Film Canisters (undeveloped, forever); 1 Cassette Tape (someone's voicemail greeting); 1 Corded Phone (someone is still on hold). Weight 27.9 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0479.png",
+ "name": "CRUSHED IT #0479",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 3 Disposable Cameras (27 exposures of a thumb); 2 Poker Chips (never cashed out); 2 Energy Drinks (exam week casualty); 2 Pagers (clipped to jeans for status only). Weight 71.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0479.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0479"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 27.9,
+   "value": 71.7,
    "display_type": "number"
   },
   {

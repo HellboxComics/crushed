@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0080",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Cassette Tapes (rewound with a pencil); 1 CRT Monitor (screen burn-in reads LOADING); 3 VHS Tapes (taped over a wedding); 2 No. 2 Pencils (never saw a scantron it liked). Weight 87.0 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0080.png",
+ "name": "CRUSHED IT #0080",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (contains one (1) virus); 1 Tissue Box (one for every mood); 1 Pizza Crust (found behind the couch). Weight 94.0 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0080.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0080"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.0,
+   "value": 94.0,
    "display_type": "number"
   },
   {

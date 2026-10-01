@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0045",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 AA Batteries (licked to test); 1 Yo-Yo (walked the dog one time); 2 Calculators (solar panel covered by a sticker); 2 Puzzle Cubes (solved once, stickers moved). Weight 95.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0045.png",
+ "name": "CRUSHED IT #0045",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 2 Spiral Notebooks (doodles in the margins); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (contains one (1) virus); 1 CRT Monitor (degaussed one last time). Weight 85.4 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0045.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0045"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.6,
+   "value": 85.4,
    "display_type": "number"
   },
   {

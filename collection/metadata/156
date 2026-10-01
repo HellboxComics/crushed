@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0156",
- "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 3 Keyboards (Partial) (F, J and the crumbs); 2 Game Cartridges (save file erased by a sibling); 2 Power Strips (overloaded on purpose); 2 Roller Skates (toe stop worn to nothing); 1 CRT Monitor (weighs more than the desk). Weight 98.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0156.png",
+ "name": "CRUSHED IT #0156",
+ "description": "Recovered from Ex's Garage. Smells like blue raspberry. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 2 Army Man Squads (melted with a magnifying glass); 2 Dice (blown on for luck); 3 Floppy Disks (contains one (1) virus); 3 AA Batteries (mixed old and new, like animals). Weight 42.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0156.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0156"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 98.5,
+   "value": 42.0,
    "display_type": "number"
   },
   {

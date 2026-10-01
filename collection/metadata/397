@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0397",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Gold Calculator (why); 1 Foam Headphones (one ear works if you hold it); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Keyboard (Partial) (F, J and the crumbs); 2 Burned CDs (track 7 skips). Weight 49.1 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0397.png",
+ "name": "CRUSHED IT #0397: SAVE ICON",
+ "description": "Sixty-four floppy disks. The save icon, before it became a joke. Recovered from Every School Computer Lab. Smells like static electricity. Contents (partial): 64 Floppy Disks (says DO NOT FORMAT); 1 USB Stick (never ejected safely). Weight 14.9 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0397.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "SAVE ICON"
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Floppy Disk"
   },
   {
    "trait_type": "Contaminant",
@@ -25,32 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Static Electricity"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Every School Computer Lab"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Calculator"
+   "trait_type": "One of One",
+   "value": "SAVE ICON"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0397"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.1,
+   "value": 14.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 65,
    "display_type": "number"
   }
  ]

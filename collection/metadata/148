@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0148",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 Soda Can (tab kept for charity); 2 AA Batteries (licked to test); 1 Cheap Sunglasses (mall kiosk special); 3 Yo-Yos (walked the dog one time); 1 Boom Box (shoulder-mounted in its prime). Weight 90.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0148.png",
+ "name": "CRUSHED IT #0148",
+ "description": "Recovered from School Lost & Found. Smells like cheap cologne. Contents (partial): 2 Poker Chips (a stack of ambition); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Toy Slime (stuck in the carpet); 3 Cheap Sunglasses (one lens popped out); 3 Roller Skates (toe stop worn to nothing). Weight 33.4 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0148.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Poker Chip"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0148"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.7,
+   "value": 33.4,
    "display_type": "number"
   },
   {

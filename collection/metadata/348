@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0348",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 3 Pagers (last page: 143); 1 Skate Wheel (rolled into a storm drain once); 2 Clear Lighters (for incense, obviously); 3 AA Batteries (probably dead). Weight 39.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0348.png",
+ "name": "CRUSHED IT #0348",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Army Man Squad (the one with the radio survived); 2 Sneakers (smells like 1989); 2 Soda Cans (flat); 1 Calculator (spelled BOOBIES upside down). Weight 84.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0348.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0348"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.7,
+   "value": 84.2,
    "display_type": "number"
   },
   {

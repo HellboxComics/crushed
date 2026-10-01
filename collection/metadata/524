@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0524",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Flip Phone (12 texts left this month); 2 Film Canisters (undeveloped, forever); 1 TV Remote (the volume button worn smooth); 2 Spiral Notebooks (doodles in the margins); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 68.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0524.png",
+ "name": "CRUSHED IT #0524",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Poker Chips (taken from a casino, small heist); 3 Floppy Disks (says DO NOT FORMAT); 1 Digital Camera (2 megapixels of truth); 1 Glow Stick (cracked at a school dance); 1 Emergency Ramen (for emergencies). Weight 22.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0524.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0524"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 68.5,
+   "value": 22.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

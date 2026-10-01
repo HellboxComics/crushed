@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0106",
- "description": "Recovered from Behind the Couch. Smells like basement. Contents (partial): 1 Joystick (fire button pressed 40 million times); 3 Sneakers (untied since 1989); 3 Yo-Yos (string tied to a finger for 3 years); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Foam Headphones (one ear works if you hold it). Weight 44.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0106.png",
+ "name": "CRUSHED IT #0106",
+ "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 No. 2 Pencils (never saw a scantron it liked); 3 Cheap Sunglasses (one lens popped out); 1 Pager (last page from a number nobody called back); 1 Corded Phone (was on the line when mom picked up). Weight 84.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0106.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0106"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 44.5,
+   "value": 84.0,
    "display_type": "number"
   },
   {

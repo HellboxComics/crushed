@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0059",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Army Man Squad (the one with the radio survived); 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Pizza Crusts (still better than most portfolios); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 89.0 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0059.png",
+ "name": "CRUSHED IT #0059",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 1 Spiral Notebook (doodles in the margins); 3 Foam Headphones (one ear works if you hold it); 3 Scratch Tickets ($2 for hope); 2 TV Remotes (the volume button worn smooth). Weight 32.0 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0059.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Boom Box"
+   "value": "Portable Tape Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0059"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.0,
+   "value": 32.0,
    "display_type": "number"
   },
   {

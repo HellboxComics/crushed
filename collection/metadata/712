@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0712",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Disposable Cameras (27 exposures of a thumb); 3 Burned CDs (burned at 1x, 4 hours); 3 Power Strips (overloaded on purpose); 3 MP3 Players (shuffle picked the same song 6 times). Weight 31.9 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0712.png",
+ "name": "CRUSHED IT #0712",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 1 Tablet (used once as a cutting board); 1 Tissue Box (nearly empty); 2 Power Strips (daisy-chained into three more); 2 USB Sticks (never ejected safely); 3 AA Batteries (mixed old and new, like animals). Weight 32.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0712.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Tablet"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0712"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.9,
+   "value": 32.8,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0661",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Virtual Pets (reincarnated 40 times); 2 Cassette Tapes (someone's voicemail greeting); 1 AA Batteries (licked to test); 1 Brick Phone (unbreakable until today); 1 Flip Phone (12 texts left this month). Weight 36.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0661.png",
+ "name": "CRUSHED IT #0661",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 2 Energy Drinks (exam week casualty); 2 Burned CDs (coaster now); 1 Clear Lighter (out of fluid); 1 Handheld Console (screen scratched from a pocket with keys); 2 Disposable Cameras (never developed). Weight 27.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0661.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Virtual Pet"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0661"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.3,
+   "value": 27.4,
    "display_type": "number"
   },
   {

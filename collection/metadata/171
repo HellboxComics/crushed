@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0171",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Calculator (solar panel covered by a sticker); 1 VHS Tape (label says DO NOT TAPE OVER); 1 AA Batteries (licked to test); 3 No. 2 Pencils (never saw a scantron it liked); 1 Metal Lunchbox (the smell stays). Weight 53.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0171.png",
+ "name": "CRUSHED IT #0171",
+ "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 3 Joysticks (suction cups gave up); 1 VHS Tape (label says DO NOT TAPE OVER); 1 Cheap Sunglasses (one lens popped out); 1 Boom Box (one speaker still believes); 1 Roller Skate (toe stop worn to nothing). Weight 91.4 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0171.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0171"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 53.9,
+   "value": 91.4,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0822",
- "description": "Recovered from Storage Unit (Auctioned). Smells like body spray cloud. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 2 Energy Drinks (exam week casualty); 1 TV Remote (held together with tape); 3 Game Controllers (thrown during a boss fight); 3 Burned CDs (coaster now). Weight 31.4 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0822.png",
+ "name": "CRUSHED IT #0822",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like rink snack bar. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 Disposable Vapes (zero nicotine, allegedly); 1 Selfie Stick (the person holding it is not in the photo); 2 TV Remotes (the volume button worn smooth); 1 Spiral Notebook (spiral unwound halfway). Weight 29.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0822.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0822"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.4,
+   "value": 29.6,
    "display_type": "number"
   },
   {

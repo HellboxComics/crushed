@@ -31,7 +31,7 @@ contract CrushedIt is ERC721SeaDrop {
 
     /// keccak256(abi.encodePacked(secret)), fixed at deploy. The secret opens the reveal.
     bytes32 public immutable REVEAL_COMMIT;
-    /// Merkle root over leaves keccak256(abi.encodePacked(recipeId, sha256(image), keccak256(metadataJson))).
+    /// Merkle root over leaves keccak256(abi.encodePacked(recipeId, sha256(image), keccak256(meta), keccak256(subtitle))).
     bytes32 public immutable IMAGE_ROOT;
     /// After this timestamp anyone can reveal even if the mint has not sold out.
     uint256 public immutable REVEAL_DEADLINE;
@@ -46,7 +46,8 @@ contract CrushedIt is ERC721SeaDrop {
 
     struct Seal {
         address[] image;        // SSTORE2 chunks, in order
-        address meta;           // SSTORE2 pointer to the metadata JSON (without the image field)
+        address meta;           // SSTORE2 pointer to the metadata JSON fragment (see sealFinish)
+        string subtitle;        // the one-of-one's name, empty for the other 866
         bool done;
     }
     mapping(uint256 => Seal) private _seals;            // by recipe id
@@ -192,16 +193,30 @@ contract CrushedIt is ERC721SeaDrop {
         if (!revealed && !gift) return sealedURI;
         uint256 recipe = recipeOf(tokenId);
         Seal storage s = _seals[recipe];
-        if (s.done) return _onChainURI(s);
+        if (s.done) return _onChainURI(tokenId, s);
         return string(abi.encodePacked(_baseURI(), _toString(recipe)));
     }
 
-    function _onChainURI(Seal storage s) internal view returns (string memory) {
-        bytes memory meta = SSTORE2.read(s.meta);       // '{"name":...,"attributes":[...]' with no closing brace
+    /// @notice The name a token carries: CRUSHED IT #0044, or CRUSHED IT #0718: CCFF00 once its subtitle is sealed.
+    function nameOf(uint256 tokenId, string memory subtitle) public pure returns (string memory) {
+        bytes memory n = abi.encodePacked("CRUSHED IT #", _pad4(tokenId));
+        if (bytes(subtitle).length != 0) n = abi.encodePacked(n, ": ", subtitle);
+        return string(n);
+    }
+
+    function _pad4(uint256 v) internal pure returns (string memory) {
+        bytes memory b = bytes(_toString(v));
+        while (b.length < 4) b = abi.encodePacked("0", b);
+        return string(b);
+    }
+
+    function _onChainURI(uint256 tokenId, Seal storage s) internal view returns (string memory) {
+        bytes memory meta = SSTORE2.read(s.meta);       // ',"description":"...","attributes":[...]' no braces
         bytes memory img = _readChunks(s.image);
         return string(abi.encodePacked(
             "data:application/json;base64,",
-            _base64(abi.encodePacked(meta, ',"image":"data:image/jpeg;base64,', _base64(img), '"}'))
+            _base64(abi.encodePacked('{"name":"', nameOf(tokenId, s.subtitle), '"', meta,
+                                     ',"image":"data:image/jpeg;base64,', _base64(img), '"}'))
         ));
     }
 
@@ -220,19 +235,24 @@ contract CrushedIt is ERC721SeaDrop {
         p.push(SSTORE2.write(data));
     }
 
-    /// @notice Finish the seal: the metadata JSON (without its closing brace and without an image field)
-    ///         plus a Merkle proof that (recipe, sha256(image), keccak256(meta)) is in IMAGE_ROOT.
-    function sealFinish(uint256 tokenId, bytes calldata meta, bytes32[] calldata proof) external {
+    /// @notice Finish the seal. `meta` is the metadata JSON without its braces, name or image: it starts with
+    ///         `,"description":` and ends after the attributes. `subtitle` is the one-of-one's name or "".
+    ///         The proof shows (recipe, sha256(image), keccak256(meta), keccak256(subtitle)) is in IMAGE_ROOT.
+    function sealFinish(uint256 tokenId, bytes calldata meta, string calldata subtitle, bytes32[] calldata proof)
+        external
+    {
         uint256 recipe = recipeOf(tokenId);
         Seal storage s = _seals[recipe];
         if (s.done) revert AlreadySealed();
         address[] storage p = _pending[recipe];
         if (p.length == 0) revert NothingPending();
         bytes memory img = _readChunks(p);
-        bytes32 leaf = keccak256(abi.encodePacked(uint256(recipe), sha256(img), keccak256(meta)));
+        bytes32 leaf = keccak256(abi.encodePacked(uint256(recipe), sha256(img), keccak256(meta),
+                                                  keccak256(bytes(subtitle))));
         if (!_verify(proof, IMAGE_ROOT, leaf)) revert BadProof();
         s.image = p;
         s.meta = SSTORE2.write(meta);
+        s.subtitle = subtitle;
         s.done = true;
         delete _pending[recipe];
         emit Sealed(tokenId, recipe, img.length + meta.length);

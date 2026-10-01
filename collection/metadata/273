@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0273",
- "description": "Recovered from Estate of a Collector. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (took 10 D batteries); 3 AA Batteries (taken out of the smoke detector); 1 Skateboard (griptape ate a pair of jeans); 1 Toy Slime (stuck in the carpet); 1 Power Strip (overloaded on purpose). Weight 87.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0273.png",
+ "name": "CRUSHED IT #0273",
+ "description": "Recovered from Ex's Garage. Smells like gym bag, forgotten. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 1 Metal Lunchbox (the smell stays); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Clear Lighters (borrowed in 1997, never returned). Weight 76.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0273.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Boom Box"
+   "value": "Portable Tape Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0273"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.8,
+   "value": 76.1,
    "display_type": "number"
   },
   {

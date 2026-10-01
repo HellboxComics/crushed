@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0793",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Cheap Sunglasses (one lens popped out); 2 USB Sticks (never ejected safely); 3 TV Remotes (held together with tape); 3 Disposable Cameras (27 exposures of a thumb). Weight 28.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0793.png",
+ "name": "CRUSHED IT #0793",
+ "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 Soda Cans (shaken as a prank); 3 Smartphones (cracked in the first week); 1 Fidget Spinner (bearing went missing); 2 Dice (loaded, rumor says); 3 No. 2 Pencils (chewed). Weight 29.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0793.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0793"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 28.7,
+   "value": 29.2,
    "display_type": "number"
   },
   {

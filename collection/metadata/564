@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0564",
- "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 TV Remote (the volume button worn smooth); 1 Foam Headphones (orange foam, allegedly); 1 Corded Phone (cord stretched to the bathroom); 2 Game Controllers (stick drift since day one). Weight 30.1 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0564.png",
+ "name": "CRUSHED IT #0564",
+ "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 1 Scratch Ticket ($2 for hope). Weight 20.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0564.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0564"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 30.1,
+   "value": 20.9,
    "display_type": "number"
   },
   {

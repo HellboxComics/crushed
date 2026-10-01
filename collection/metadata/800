@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0800",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 3 TV Remotes (held together with tape); 3 Burned CDs (coaster now); 2 Laptop Chargers (fits nothing else in the house); 2 Pizza Crusts (found behind the couch). Weight 34.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0800.png",
+ "name": "CRUSHED IT #0800",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Poker Chips (a stack of ambition); 1 No. 2 Pencil (never saw a scantron it liked); 3 Fidget Spinners (banned by the school); 2 Soda Cans (tab kept for charity). Weight 33.8 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0800.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0800"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 34.0,
+   "value": 33.8,
    "display_type": "number"
   },
   {

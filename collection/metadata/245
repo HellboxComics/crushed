@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0245",
- "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Soda Can (shaken as a prank); 2 Foam Headphones (orange foam, allegedly); 1 Skate Wheel (rolled into a storm drain once); 1 Pager (last page: 143). Weight 35.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0245.png",
+ "name": "CRUSHED IT #0245",
+ "description": "Recovered from Vegas Hotel Room. Smells like gym bag, forgotten. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Dice (blown on for luck); 1 Film Canister (undeveloped, forever); 1 CRT Monitor (screen burn-in reads LOADING); 3 Foam Headphones (orange foam, allegedly). Weight 75.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0245.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0245"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 75.4,
    "display_type": "number"
   },
   {

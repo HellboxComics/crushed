@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0265",
- "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 2 Soda Cans (shaken as a prank); 3 Milk Caps (won in a bet); 1 Three-Ring Binder (velcro screams when opened); 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Sneakers (was in the dryer). Weight 39.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0265.png",
+ "name": "CRUSHED IT #0265",
+ "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 Tissue Box (one for every mood); 3 Matchbooks (from a gentlemen's club, reportedly); 1 Pizza Crust (petrified); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 No. 2 Pencils (never saw a scantron it liked). Weight 82.8 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0265.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0265"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.8,
+   "value": 82.8,
    "display_type": "number"
   },
   {

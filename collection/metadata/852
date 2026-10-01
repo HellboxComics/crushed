@@ -1,23 +1,23 @@
 {
- "name": "CRUSHED #0852",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Spiral Notebooks (doodles in the margins); 1 VHS Tape (BE KIND REWIND (they did not)); 2 Game Controllers (stick drift since day one); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 32.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0852.png",
+ "name": "CRUSHED IT #0852",
+ "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 2 TV Remotes (the volume button worn smooth); 3 Tablets (used once as a cutting board); 1 Jewel Case (hinge broken on arrival); 1 Disposable Camera (27 exposures of a thumb); 3 Energy Drinks (tastes like a battery); 1 Tiny Red Candle (one of many). Weight 34.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0852.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,20 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
-   "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
+   "trait_type": "Serial",
+   "value": "0852"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.7,
+   "value": 34.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 44,
    "display_type": "number"
   }
  ]

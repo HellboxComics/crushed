@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0875",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 3 Memory Cards (8MB, full); 2 Digital Cameras (memory full, 14 photos); 3 Energy Drinks (tastes like a battery); 3 AA Batteries (licked to test). Weight 30.1 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0875.png",
+ "name": "CRUSHED IT #0875",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 3 TV Remotes (held together with tape); 1 No. 2 Pencil (never saw a scantron it liked); 3 Power Banks (dead when needed); 1 Magazine (for the interviews, obviously). Weight 28.1 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0875.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0875"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.1,
+   "value": 28.1,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0653",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Game Controllers (stick drift since day one); 1 Sneaker (untied since 1989); 1 Brick Phone (unbreakable until today); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Energy Drink (tastes like a battery). Weight 78.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0653.png",
+ "name": "CRUSHED IT #0653",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Soda Can (shaken as a prank); 3 Energy Drinks (tastes like a battery); 2 Flip Phones (snapped shut dramatically); 1 Jewel Case (insert is from a different album); 2 Tissue Boxes (one for every mood). Weight 27.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0653.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0653"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 78.9,
+   "value": 27.7,
    "display_type": "number"
   },
   {

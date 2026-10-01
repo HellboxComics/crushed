@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0087",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 3 Pizza Crusts (still better than most portfolios); 2 AA Batteries (licked to test); 1 Clear Lighter (out of fluid); 2 Puzzle Cubes (solved once, stickers moved). Weight 81.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0087.png",
+ "name": "CRUSHED IT #0087",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Beer Cans (12 of 12); 1 Scratch Ticket ($2 for hope); 2 Sneakers (untied since 1989). Weight 71.2 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0087.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Roller Skate"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,15 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Finish",
-   "value": "ICE"
+   "value": "BONE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0087"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.8,
+   "value": 71.2,
    "display_type": "number"
   },
   {

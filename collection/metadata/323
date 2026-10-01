@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0323",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 Pizza Crusts (still better than most portfolios); 1 CRT Monitor (screen burn-in reads LOADING); 1 Yo-Yo (string tied to a finger for 3 years); 3 Pagers (last page: 143). Weight 72.6 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0323.png",
+ "name": "CRUSHED IT #0323",
+ "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 VHS Tape (taped over a wedding); 1 Disposable Camera (never developed); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Cheap Sunglasses (one lens popped out); 1 Corded Phone (cord stretched to the bathroom). Weight 80.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0323.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0323"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 72.6,
+   "value": 80.8,
    "display_type": "number"
   },
   {

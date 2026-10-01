@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0523",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Virtual Pet (died during math class); 2 Glow Sticks (still glowing a little, somehow); 3 Soda Cans (flat); 1 Disposable Camera (never developed); 2 Pagers (last page: 911 (it was not)). Weight 37.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0523.png",
+ "name": "CRUSHED IT #0523",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Sneakers (left only); 1 Corded Phone (was on the line when mom picked up); 3 Flip Phones (snapped shut dramatically); 2 Memory Cards (8MB, full); 1 MP3 Player (shuffle picked the same song 6 times). Weight 37.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0523.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Virtual Pet"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0523"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 37.7,
+   "value": 37.9,
    "display_type": "number"
   },
   {

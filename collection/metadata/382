@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0382",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 1 Puzzle Cube (two stickers peeled); 1 Cassette Tape (someone's voicemail greeting); 2 AA Batteries (licked to test); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 16-Bit Controller (the B button is sticky). Weight 35.0 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0382.png",
+ "name": "CRUSHED IT #0382",
+ "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 1 Virtual Pet (reincarnated 40 times); 1 Cassette Tape (a mix for someone who never listened); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet); 1 MP3 Player (shuffle picked the same song 6 times). Weight 22.8 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0382.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Virtual Pet"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0382"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 22.8,
    "display_type": "number"
   },
   {

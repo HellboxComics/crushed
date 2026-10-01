@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0340",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Three-Ring Binders (covered in band names); 1 No. 2 Pencil (never saw a scantron it liked); 2 Floppy Disks (save icon, but real); 1 Milk Caps (the slammer is chipped). Weight 81.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0340.png",
+ "name": "CRUSHED IT #0340",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Pagers (last page from a number nobody called back); 1 Skate Wheel (rolled into a storm drain once); 2 16-Bit Controllers (the B button is sticky); 1 Shot Glass (chipped rim). Weight 41.4 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0340.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0340"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 81.2,
+   "value": 41.4,
    "display_type": "number"
   },
   {

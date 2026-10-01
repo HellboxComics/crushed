@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0493",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Pagers (last page: 143); 3 Film Canisters (undeveloped, forever); 2 TV Remotes (held together with tape); 3 Jewel Cases (hinge broken on arrival); 1 Skate Wheel (rolled into a storm drain once). Weight 68.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0493.png",
+ "name": "CRUSHED IT #0493",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Floppy Disks (DISK 2 of 7); 1 Webcam (240p of pure confidence); 1 TV Remote (found in the couch); 3 Tissue Boxes (one for every mood). Weight 72.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0493.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0493"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 68.5,
+   "value": 72.7,
    "display_type": "number"
   },
   {

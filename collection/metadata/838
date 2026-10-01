@@ -1,23 +1,23 @@
 {
- "name": "CRUSHED #0838",
- "description": "Recovered from School Lost & Found. Smells like basement. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 2 Game Controllers (thrown during a boss fight); 1 USB Stick (contains homework_FINAL_final2.doc); 3 Burned CDs (track 7 skips); 3 Digital Cameras (memory full, 14 photos). Weight 31.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0838.png",
+ "name": "CRUSHED IT #0838",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Laptop Charger (fits nothing else in the house); 3 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean); 1 Paper Hand (folded under light pressure). Weight 30.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0838.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0838"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 30.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

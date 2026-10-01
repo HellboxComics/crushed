@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0853",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Sneakers (was in the dryer); 3 Laptop Chargers (fits nothing else in the house); 3 AA Batteries (mixed old and new, like animals); 2 Pizza Crusts (found behind the couch); 3 Burned CDs (coaster now). Weight 34.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0853.png",
+ "name": "CRUSHED IT #0853",
+ "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 1 Drone (40 seconds of freedom); 3 Soda Cans (flat); 1 AA Batteries (mixed old and new, like animals); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Disposable Vapes (zero nicotine, allegedly). Weight 27.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0853.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0853"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.8,
+   "value": 27.5,
    "display_type": "number"
   },
   {

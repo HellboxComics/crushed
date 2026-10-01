@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0396",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Three-Ring Binder (covered in band names); 2 VHS Tapes (label says DO NOT TAPE OVER); 1 Power Strip (overloaded on purpose); 3 No. 2 Pencils (chewed). Weight 74.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0396.png",
+ "name": "CRUSHED IT #0396",
+ "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 3 TV Remotes (found in the couch); 2 Memory Cards (8MB, full); 2 Jewel Cases (insert is from a different album); 2 Power Strips (overloaded on purpose); 3 Pagers (last page: 911 (it was not)). Weight 72.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0396.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0396"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.8,
+   "value": 72.5,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0457",
- "description": "Recovered from Estate of a Collector. Smells like mall food court. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Pizza Crusts (found behind the couch); 2 Digital Cameras (memory full, 14 photos); 2 Foam Headphones (orange foam, allegedly); 1 Sneaker (untied since 1989). Weight 75.9 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0457.png",
+ "name": "CRUSHED IT #0457",
+ "description": "Recovered from Behind the Bar. Smells like mall food court. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Digital Cameras (memory full, 14 photos); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Beer Can (12 of 12); 3 Soda Cans (tab kept for charity). Weight 31.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0457.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0457"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.9,
+   "value": 31.2,
    "display_type": "number"
   },
   {

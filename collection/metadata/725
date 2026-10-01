@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0725",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (held together with tape); 3 Sneakers (untied since 1989); 3 AA Batteries (probably dead); 1 Clear Lighter (out of fluid); 3 Energy Drinks (tastes like a battery). Weight 35.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0725.png",
+ "name": "CRUSHED IT #0725",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Earbud Cases (both buds gone, case still charges nothing); 1 Drone (over the neighbor's fence); 2 Poker Chips (a stack of ambition); 2 Soda Cans (shaken as a prank). Weight 34.3 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0725.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Ring Light"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0725"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.7,
+   "value": 34.3,
    "display_type": "number"
   },
   {

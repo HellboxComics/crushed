@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0562",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 1 Sneaker (left only); 1 Disposable Camera (never developed); 1 VHS Tape (taped over a wedding); 1 Webcam (pointed at the ceiling forever); 1 Power Strip (overloaded on purpose). Weight 71.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0562.png",
+ "name": "CRUSHED IT #0562",
+ "description": "Recovered from Under the Bed. Smells like cigarette in a jacket. Contents (partial): 2 Energy Drinks (third one that night); 1 Beer Can (warm, sadly); 3 Burned CDs (track 7 skips); 3 Game Controllers (stick drift since day one); 3 Sneakers (worn to one (1) very bad decision). Weight 32.2 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0562.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0562"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 71.9,
+   "value": 32.2,
    "display_type": "number"
   },
   {

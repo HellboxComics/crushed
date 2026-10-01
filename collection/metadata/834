@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0834",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 1 Virtual Pet (fed 0 times); 1 Power Strip (overloaded on purpose); 3 Sneakers (untied since 1989); 2 Disposable Cameras (never developed). Weight 35.6 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0834.png",
+ "name": "CRUSHED IT #0834",
+ "description": "Recovered from A Very Specific Ditch. Smells like Grandma's couch. Contents (partial): 1 Sneaker (untied since 1989); 1 Pizza Crust (from a sleepover); 1 Disposable Vape (zero nicotine, allegedly); 2 Clear Lighters (borrowed in 1997, never returned); 2 AA Batteries (mixed old and new, like animals). Weight 35.4 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0834.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0834"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.6,
+   "value": 35.4,
    "display_type": "number"
   },
   {

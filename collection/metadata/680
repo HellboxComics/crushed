@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0680",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Energy Drinks (third one that night); 2 Clear Lighters (out of fluid); 3 No. 2 Pencils (sharpened to a nub); 2 Flip Phones (snapped shut dramatically); 1 Emergency Ramen (for emergencies). Weight 28.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0680.png",
+ "name": "CRUSHED IT #0680",
+ "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Soda Cans (flat); 2 Dice (snake eyes, twice); 1 Shot Glass (chipped rim); 2 TV Remotes (the volume button worn smooth); 3 Pizza Crusts (petrified). Weight 27.0 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0680.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0680"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 28.8,
+   "value": 27.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

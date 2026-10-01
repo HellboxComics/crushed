@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0071",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Sneaker (left only); 1 Corded Phone (someone is still on hold); 2 AA Batteries (mixed old and new, like animals); 1 Boom Box (shoulder-mounted in its prime); 1 Calculator (spelled BOOBIES upside down). Weight 95.9 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0071.png",
+ "name": "CRUSHED IT #0071",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 1 Sneaker (left only); 1 Keyboard (Partial) (F, J and the crumbs); 2 Magazines (found in a dad's truck); 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (blown into 400 times). Weight 53.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0071.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0071"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.9,
+   "value": 53.3,
    "display_type": "number"
   },
   {

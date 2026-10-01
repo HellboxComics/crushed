@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0376",
- "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 1 Skateboard (one ollie, lifetime); 2 Burned CDs (burned at 1x, 4 hours); 2 No. 2 Pencils (sharpened to a nub); 1 Boom Box (shoulder-mounted in its prime); 1 CRT Monitor (degaussed one last time). Weight 84.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0376.png",
+ "name": "CRUSHED IT #0376",
+ "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom); 3 AA Batteries (taken out of the smoke detector); 1 Portable CD Player (anti-skip lied); 2 Keyboards (Partial) (F, J and the crumbs). Weight 70.9 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0376.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0376"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.7,
+   "value": 70.9,
    "display_type": "number"
   },
   {

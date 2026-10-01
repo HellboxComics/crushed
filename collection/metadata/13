@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0013",
- "description": "Recovered from Storage Unit (Auctioned). Smells like scratch-n-sniff sticker. Contents (partial): 3 VHS Tapes (BE KIND REWIND (they did not)); 3 Yo-Yos (walked the dog one time); 2 Cheap Sunglasses (mall kiosk special); 1 Corded Phone (was on the line when mom picked up); 2 Power Strips (overloaded on purpose). Weight 100.6 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0013.png",
+ "name": "CRUSHED IT #0013",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 Roller Skates (the rink smell is still in there); 3 AA Batteries (licked to test); 1 Pager (clipped to jeans for status only); 1 Poker Chip (a stack of ambition). Weight 89.8 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0013.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0013"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 100.6,
+   "value": 89.8,
    "display_type": "number"
   },
   {

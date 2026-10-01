@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0446",
- "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Cheap Sunglasses (one lens popped out); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Sneakers (left only). Weight 77.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0446.png",
+ "name": "CRUSHED IT #0446",
+ "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (spiral unwound halfway); 2 AA Batteries (probably dead); 3 Foam Headphones (orange foam, allegedly); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 33.2 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0446.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0446"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 77.8,
+   "value": 33.2,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0203",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Keyboards (Partial) (F, J and the crumbs); 2 Pizza Crusts (from a sleepover); 1 Slap Bracelet (banned by the school); 2 Three-Ring Binders (velcro screams when opened). Weight 50.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0203.png",
+ "name": "CRUSHED IT #0203",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Keyboard (Partial) (F, J and the crumbs); 1 Clear Lighter (out of fluid); 1 Skate Wheel (flat spot from a power slide); 2 Power Strips (daisy-chained into three more). Weight 47.4 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0203.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0203"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.2,
+   "value": 47.4,
    "display_type": "number"
   },
   {

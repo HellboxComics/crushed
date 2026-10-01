@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0211",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Joysticks (suction cups gave up); 1 Pizza Crust (from a sleepover); 3 Game Cartridges (blown into 400 times); 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Three-Ring Binder (velcro screams when opened). Weight 90.6 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0211.png",
+ "name": "CRUSHED IT #0211",
+ "description": "Recovered from A Buddy's Basement. Smells like body spray cloud. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 VHS Tapes (taped over a wedding); 1 Joystick (fire button pressed 40 million times); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Pizza Crust (petrified). Weight 72.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0211.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "16-Bit Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0211"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 90.6,
+   "value": 72.0,
    "display_type": "number"
   },
   {

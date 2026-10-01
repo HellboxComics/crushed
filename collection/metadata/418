@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0418",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Yo-Yo (walked the dog one time); 3 Pizza Crusts (petrified); 3 Cassette Tapes (rewound with a pencil); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (save icon, but real). Weight 38.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0418.png",
+ "name": "CRUSHED IT #0418",
+ "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Sneaker (left only); 3 Tissue Boxes (nearly empty); 3 Cassette Tapes (someone's voicemail greeting); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ball Mouse (cord chewed by a dog). Weight 69.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0418.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0418"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.1,
+   "value": 69.7,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0021",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Puzzle Cubes (two stickers peeled); 3 No. 2 Pencils (sharpened to a nub); 1 16-Bit Controller (cord pulled the console off the shelf); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 74.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0021.png",
+ "name": "CRUSHED IT #0021",
+ "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Sneakers (was in the dryer); 1 CRT Monitor (degaussed one last time); 1 Pizza Crust (from a sleepover); 2 Power Strips (overloaded on purpose). Weight 89.3 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0021.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0021"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.6,
+   "value": 89.3,
    "display_type": "number"
   },
   {

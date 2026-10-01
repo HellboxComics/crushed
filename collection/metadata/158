@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0158",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Pizza Crusts (still better than most portfolios); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Puzzle Cube (two stickers peeled); 3 Floppy Disks (says DO NOT FORMAT). Weight 45.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0158.png",
+ "name": "CRUSHED IT #0158",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (save file erased by a sibling); 1 Cheap Sunglasses (one lens popped out); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 43.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0158.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0158"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 45.0,
+   "value": 43.7,
    "display_type": "number"
   },
   {

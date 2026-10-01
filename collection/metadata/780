@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0780",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 TV Remote (held together with tape); 2 Game Controllers (stick drift since day one); 2 Memory Cards (corrupted during a birthday); 1 Disposable Camera (27 exposures of a thumb). Weight 32.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0780.png",
+ "name": "CRUSHED IT #0780",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 2 Spiral Notebooks (spiral unwound halfway); 1 Shot Glass (from a trip to Vegas); 2 TV Remotes (found in the couch); 3 Bluetooth Speakers (paired with the wrong phone). Weight 37.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0780.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0780"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.2,
+   "value": 37.9,
    "display_type": "number"
   },
   {

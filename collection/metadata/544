@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0544",
- "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Skate Wheels (flat spot from a power slide); 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 Floppy Disk (contains one (1) virus); 3 Ball Mouses (cord chewed by a dog). Weight 76.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0544.png",
+ "name": "CRUSHED IT #0544",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like cheap cologne. Contents (partial): 1 Beer Can (crushed on a forehead); 2 Clear Lighters (for incense, obviously); 1 Jewel Case (insert is from a different album); 1 Spiral Notebook (spiral unwound halfway); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 24.5 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0544.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0544"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 24.5,
    "display_type": "number"
   },
   {

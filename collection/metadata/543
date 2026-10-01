@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0543",
- "description": "Recovered from Behind the Couch. Smells like scratch-n-sniff sticker. Contents (partial): 1 Flip Phone (ringtone composed by hand); 3 Pizza Crusts (from a sleepover); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Cassette Tapes (labeled MIX 4 U); 3 Game Controllers (stick drift since day one). Weight 72.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0543.png",
+ "name": "CRUSHED IT #0543",
+ "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Dice (blown on for luck); 1 Pizza Crust (found behind the couch); 3 Burned CDs (track 7 skips); 2 Tissue Boxes (nearly empty); 1 Paper Hand (folded under light pressure). Weight 30.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0543.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0543"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 72.3,
+   "value": 30.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 43,
    "display_type": "number"
   }
  ]

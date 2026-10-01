@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0717",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 USB Sticks (never ejected safely); 3 AA Batteries (probably dead); 3 TV Remotes (held together with tape); 1 Glow Stick (cracked at a school dance). Weight 31.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0717.png",
+ "name": "CRUSHED IT #0717",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (smells like 1989); 1 Poker Chip (a stack of ambition); 1 Soda Can (flat); 1 Smartphone (cracked in the first week); 1 Hand Sanitizer (was in every pocket in 2020). Weight 32.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0717.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0717"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.2,
+   "value": 32.1,
    "display_type": "number"
   },
   {

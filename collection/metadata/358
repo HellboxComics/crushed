@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0358",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Disposable Cameras (never developed); 3 Yo-Yos (walked the dog one time); 2 No. 2 Pencils (sharpened to a nub); 1 Metal Lunchbox (the smell stays); 2 Burned CDs (track 7 skips). Weight 74.2 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0358.png",
+ "name": "CRUSHED IT #0358",
+ "description": "Recovered from Behind the Couch. Smells like new plastic. Contents (partial): 2 Beer Cans (warm, sadly); 2 Cheap Sunglasses (one lens popped out); 3 TV Remotes (the volume button worn smooth); 2 Soda Cans (shaken as a prank); 1 Corded Phone (someone is still on hold). Weight 34.2 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0358.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0358"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.2,
+   "value": 34.2,
    "display_type": "number"
   },
   {

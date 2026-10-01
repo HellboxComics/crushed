@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0057",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 Floppy Disks (save icon, but real); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Power Strip (daisy-chained into three more); 1 AA Batteries (probably dead). Weight 84.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0057.png",
+ "name": "CRUSHED IT #0057",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Joysticks (suction cups gave up); 1 Power Strip (overloaded on purpose); 2 Poker Chips (taken from a casino, small heist); 2 Centerfolds (folded out, then folded back in a hurry). Weight 50.4 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0057.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0057"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 50.4,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0259",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 2 AA Batteries (probably dead); 2 Army Man Squads (the one with the radio survived); 2 VHS Tapes (taped over a wedding); 2 Soda Cans (tab kept for charity). Weight 42.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0259.png",
+ "name": "CRUSHED IT #0259",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 2 Ball Mice (ball removed as a prank); 3 Soda Cans (flat); 1 Foam Headphones (orange foam, allegedly); 2 Three-Ring Binders (velcro screams when opened); 2 Dice (loaded, rumor says). Weight 78.4 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0259.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0259"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.4,
+   "value": 78.4,
    "display_type": "number"
   },
   {

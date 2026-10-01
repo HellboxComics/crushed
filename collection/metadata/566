@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0566",
- "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 3 TV Remotes (held together with tape); 2 AA Batteries (taken out of the smoke detector); 2 Cassette Tapes (labeled MIX 4 U); 2 Ball Mouses (rollers caked with 1998); 1 Handheld Console (battery cover lost immediately). Weight 77.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0566.png",
+ "name": "CRUSHED IT #0566",
+ "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Handheld Consoles (battery cover lost immediately); 1 Cassette Tape (labeled MIX 4 U); 1 Cheap Sunglasses (one lens popped out); 1 Glow Stick (still glowing a little, somehow). Weight 26.4 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0566.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0566"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.7,
+   "value": 26.4,
    "display_type": "number"
   },
   {

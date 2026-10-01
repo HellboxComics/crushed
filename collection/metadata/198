@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0198",
- "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Power Strips (overloaded on purpose); 2 Sneakers (left only); 2 Film Canisters (holds one quarter); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 87.9 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0198.png",
+ "name": "CRUSHED IT #0198",
+ "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 1 Three-Ring Binder (velcro screams when opened); 2 Game Cartridges (save file erased by a sibling); 2 Pagers (last page from a number nobody called back). Weight 42.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0198.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0198"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 87.9,
+   "value": 42.4,
    "display_type": "number"
   },
   {

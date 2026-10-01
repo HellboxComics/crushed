@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0512",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 1 Portable CD Player (anti-skip lied); 2 VHS Tapes (late fees now exceed GDP of a small nation); 3 Disposable Cameras (never developed); 2 Film Canisters (undeveloped, forever); 2 Soda Cans (flat). Weight 68.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0512.png",
+ "name": "CRUSHED IT #0512",
+ "description": "Recovered from Grandma's Attic. Smells like wet cardboard. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 No. 2 Pencil (never saw a scantron it liked); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Poker Chip (taken from a casino, small heist). Weight 69.6 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0512.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0512"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 68.1,
+   "value": 69.6,
    "display_type": "number"
   },
   {

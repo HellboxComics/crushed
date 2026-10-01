@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0274",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like gym bag, forgotten. Contents (partial): 1 VHS Tape (taped over a wedding); 2 TV Remotes (found in the couch); 2 Pagers (clipped to jeans for status only); 3 Pizza Crusts (still better than most portfolios); 2 9999-in-1 Handhelds (HI SCORE 00000). Weight 73.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0274.png",
+ "name": "CRUSHED IT #0274",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like cheap cologne. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 2 Dice (snake eyes, twice); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Centerfolds (staples removed, an attempt was made); 1 Skateboard (griptape ate a pair of jeans). Weight 73.4 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0274.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0274"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 73.7,
+   "value": 73.4,
    "display_type": "number"
   },
   {

@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0886",
- "description": "Recovered from Garage Sale Free Bin. Smells like victory. Contents (partial): 1 Gold Pizza Crusts (why); 2 TV Remotes (found in the couch); 3 Clear Lighters (out of fluid); 2 Burned CDs (says ROAD TRIP in marker); 2 Jewel Cases (insert is from a different album). Weight 31.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0886.png",
+ "name": "CRUSHED IT #0886: GAS FEES",
+ "description": "A block of gas cans and receipts. You paid it. You'd pay it again. Recovered from The Pump, 3 A.M. Smells like gasoline. Contents (partial): 28 Gas Cans (empty, like the wallet); 4 Gold Coins (real, probably); 5 Clear Lighters (for incense, obviously). Weight 41.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0886.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "GAS FEES"
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Gas Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Victory"
+   "value": "Gasoline"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "The Pump, 3 A.M."
   },
   {
    "trait_type": "Tape",
@@ -37,20 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Pizza Crust"
+   "trait_type": "One of One",
+   "value": "GAS FEES"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0886"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 41.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

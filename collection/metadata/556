@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0556",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 2 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Cassette Tapes (labeled MIX 4 U); 2 Memory Cards (corrupted during a birthday). Weight 70.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0556.png",
+ "name": "CRUSHED IT #0556",
+ "description": "Recovered from The Mall Fountain. Smells like wet cardboard. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (third one that night); 3 Dice (blown on for luck); 2 Burned CDs (track 7 skips); 1 Tablet (used once as a cutting board). Weight 29.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0556.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "The Mall Fountain"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0556"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.9,
+   "value": 29.0,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0360",
- "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 1 Sneaker (light-up heel, dead); 1 Corded Phone (was on the line when mom picked up); 3 Floppy Disks (save icon, but real); 2 Cassette Tapes (side B only); 1 Metal Lunchbox (thermos missing). Weight 40.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0360.png",
+ "name": "CRUSHED IT #0360",
+ "description": "Recovered from Estate of a Collector. Smells like mall food court. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Scratch Ticket (scratched with a house key); 1 Toy Slime (was in the hair of a sibling); 2 Portable CD Players (anti-skip lied); 2 Pizza Crusts (petrified). Weight 32.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0360.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Skateboard"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Estate of a Collector"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0360"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 40.0,
+   "value": 32.5,
    "display_type": "number"
   },
   {

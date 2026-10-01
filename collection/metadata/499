@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0499",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Burned CDs (says ROAD TRIP in marker); 1 Handheld Console (battery cover lost immediately); 1 Pizza Crust (from a sleepover); 2 Soda Cans (flat). Weight 32.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0499.png",
+ "name": "CRUSHED IT #0499",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Burned CDs (says ROAD TRIP in marker); 1 No. 2 Pencil (never saw a scantron it liked); 2 Beer Cans (12 of 12); 2 Tissue Boxes (nearly empty). Weight 71.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0499.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0499"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 71.3,
    "display_type": "number"
   },
   {

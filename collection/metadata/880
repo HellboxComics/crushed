@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0880",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 3 Sneakers (was in the dryer); 3 Burned CDs (burned at 1x, 4 hours); 2 Jewel Cases (insert is from a different album); 2 Laptop Chargers (fits nothing else in the house); 3 Flip Phones (snapped shut dramatically). Weight 77.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0880.png",
+ "name": "CRUSHED IT #0880",
+ "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Drone (40 seconds of freedom); 2 Glow Sticks (cracked at a school dance); 3 Clear Lighters (borrowed in 1997, never returned); 2 Disposable Vapes (mango, mostly); 1 Hand Sanitizer (was in every pocket in 2020). Weight 30.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0880.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0880"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.8,
+   "value": 30.1,
    "display_type": "number"
   },
   {

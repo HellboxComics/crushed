@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0351",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Ball Mouses (rollers caked with 1998); 1 Disposable Camera (never developed); 1 Calculator (solar panel covered by a sticker); 1 CRT Monitor (weighs more than the desk); 2 AA Batteries (probably dead). Weight 76.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0351.png",
+ "name": "CRUSHED IT #0351",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 1 Cassette Tape (someone's voicemail greeting); 2 AA Batteries (taken out of the smoke detector); 2 Ball Mice (cord chewed by a dog); 2 Disposable Cameras (27 exposures of a thumb); 1 Paper Hand (folded under light pressure). Weight 42.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0351.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0351"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.9,
+   "value": 42.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

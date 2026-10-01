@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0237",
- "description": "Recovered from Garage Sale Free Bin. Smells like burnt popcorn. Contents (partial): 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Spiral Notebooks (note says 'check YES or NO'); 3 AA Batteries (taken out of the smoke detector); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Corded Phone (cord stretched to the bathroom). Weight 50.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0237.png",
+ "name": "CRUSHED IT #0237",
+ "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 2 AA Batteries (taken out of the smoke detector); 1 Poker Chip (a stack of ambition); 3 Burned CDs (says ROAD TRIP in marker); 1 Boom Box (took 10 D batteries). Weight 48.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0237.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
@@ -25,23 +25,31 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "CHROME"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0237"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.4,
+   "value": 48.3,
    "display_type": "number"
   },
   {

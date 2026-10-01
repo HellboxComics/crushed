@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0231",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (BE KIND REWIND (they did not)); 2 Sneakers (light-up heel, dead); 3 9999-in-1 Handhelds (HI SCORE 00000); 3 Floppy Disks (says DO NOT FORMAT). Weight 46.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0231.png",
+ "name": "CRUSHED IT #0231",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (taped over a wedding); 1 Spiral Notebook (note says 'check YES or NO'); 3 Army Man Squads (melted with a magnifying glass); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 43.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0231.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0231"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 46.7,
+   "value": 43.3,
    "display_type": "number"
   },
   {

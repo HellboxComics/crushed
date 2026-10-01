@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0098",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 TV Remotes (found in the couch); 3 VHS Tapes (taped over a wedding); 3 Spiral Notebooks (doodles in the margins); 2 Floppy Disks (DISK 2 of 7). Weight 97.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0098.png",
+ "name": "CRUSHED IT #0098",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Centerfolds (folded out, then folded back in a hurry); 3 Shot Glasses (souvenir of a night nobody recalls); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Roller Skates (the rink smell is still in there). Weight 51.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0098.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0098"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 97.7,
+   "value": 51.0,
    "display_type": "number"
   },
   {

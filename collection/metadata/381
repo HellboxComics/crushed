@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0381",
- "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Corded Phone (was on the line when mom picked up); 3 Pizza Crusts (found behind the couch); 1 Portable CD Player (anti-skip lied); 2 TV Remotes (found in the couch). Weight 47.2 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0381.png",
+ "name": "CRUSHED IT #0381",
+ "description": "Recovered from Behind the Bar. Smells like Grandma's couch. Contents (partial): 1 Sneaker (smells like 1989); 1 Army Man Squad (melted with a magnifying glass); 2 Pagers (last page from a number nobody called back); 1 Dice (snake eyes, twice); 2 Clear Lighters (for incense, obviously). Weight 71.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0381.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0381"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.2,
+   "value": 71.7,
    "display_type": "number"
   },
   {

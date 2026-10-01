@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0445",
- "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Pizza Crusts (from a sleepover); 1 Burned CD (track 7 skips); 1 TV Remote (found in the couch); 3 Flip Phones (snapped shut dramatically). Weight 35.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0445.png",
+ "name": "CRUSHED IT #0445",
+ "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Centerfold (staples removed, an attempt was made); 1 Jewel Case (hinge broken on arrival); 1 Memory Card (corrupted during a birthday); 2 Tissue Boxes (nearly empty). Weight 76.1 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0445.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0445"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 76.1,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0768",
- "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 3 Game Controllers (stick drift since day one); 2 Disposable Cameras (never developed); 2 Power Strips (overloaded on purpose); 2 Handheld Consoles (screen scratched from a pocket with keys); 3 Laptop Chargers (warm to the touch, somehow). Weight 39.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0768.png",
+ "name": "CRUSHED IT #0768",
+ "description": "Recovered from Ex's Garage. Smells like Grandma's couch. Contents (partial): 3 Smartphones (1% battery, forever); 1 Dice (loaded, rumor says); 1 Disposable Camera (never developed); 2 Soda Cans (shaken as a prank); 2 Scratch Tickets (scratched with a house key). Weight 31.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0768.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Smartphone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0768"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 31.3,
    "display_type": "number"
   },
   {

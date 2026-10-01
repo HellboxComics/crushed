@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0634",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Brick Phones (unbreakable until today); 1 Virtual Pet (fed 0 times); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Soda Can (flat); 3 Jewel Cases (hinge broken on arrival). Weight 72.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0634.png",
+ "name": "CRUSHED IT #0634",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Power Strips (daisy-chained into three more); 1 Burned CD (track 7 skips); 2 Poker Chips (taken from a casino, small heist); 1 Floppy Disk (says DO NOT FORMAT). Weight 31.4 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0634.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0634"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.5,
+   "value": 31.4,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0155",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Cassette Tapes (labeled MIX 4 U); 1 Foam Headphones (one ear works if you hold it); 1 Boom Box (one speaker still believes). Weight 88.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0155.png",
+ "name": "CRUSHED IT #0155",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Floppy Disks (contains one (1) virus); 3 Cassette Tapes (labeled MIX 4 U); 1 Corded Phone (was on the line when mom picked up); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 92.9 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0155.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0155"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 92.9,
    "display_type": "number"
   },
   {

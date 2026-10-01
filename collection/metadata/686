@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0686",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 Flip Phones (12 texts left this month); 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Glow Sticks (still glowing a little, somehow); 2 Cheap Sunglasses (one lens popped out); 3 Clear Lighters (for incense, obviously); 1 Tiny Red Candle (lit). Weight 29.7 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0686.png",
+ "name": "CRUSHED IT #0686",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (tastes like a battery); 1 Corded Phone (someone is still on hold); 1 Soda Can (shaken as a prank); 1 Memory Card (corrupted during a birthday). Weight 28.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0686.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0686"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 29.7,
+   "value": 28.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 43,
    "display_type": "number"
   }
  ]

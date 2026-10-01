@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0609",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 3 Portable CD Players (45-second buffer, 2-second attention span); 2 VHS Tapes (taped over a wedding); 1 Clear Lighter (out of fluid); 1 Burned CD (burned at 1x, 4 hours); 3 Pagers (last page: 143). Weight 78.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0609.png",
+ "name": "CRUSHED IT #0609",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 No. 2 Pencil (sharpened to a nub); 2 Shot Glasses (chipped rim); 2 Laptop Chargers (fits nothing else in the house); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 29.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0609.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "BONE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0609"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.7,
+   "value": 29.1,
    "display_type": "number"
   },
   {

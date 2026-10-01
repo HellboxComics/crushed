@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0294",
- "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 1 Corded Phone (someone is still on hold); 2 AA Batteries (probably dead); 2 Keyboards (Partial) (F, J and the crumbs); 2 Cheap Sunglasses (mall kiosk special); 2 Pizza Crusts (petrified). Weight 55.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0294.png",
+ "name": "CRUSHED IT #0294",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Disposable Cameras (27 exposures of a thumb); 2 Floppy Disks (DISK 2 of 7); 1 Toy Slime (stuck in the carpet); 2 Tissue Boxes (nearly empty). Weight 41.1 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0294.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0294"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 55.5,
+   "value": 41.1,
    "display_type": "number"
   },
   {

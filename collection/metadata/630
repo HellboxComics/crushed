@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0630",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Pizza Crusts (from a sleepover); 2 Film Canisters (holds one quarter). Weight 77.3 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0630.png",
+ "name": "CRUSHED IT #0630",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Grandma's couch. Contents (partial): 3 TV Remotes (found in the couch); 3 Sneakers (light-up heel, dead); 3 Burned CDs (coaster now); 1 Dice (blown on for luck); 3 Beer Cans (warm, sadly). Weight 34.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0630.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0630"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.3,
+   "value": 34.3,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0308",
- "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Burned CDs (track 7 skips); 3 AA Batteries (probably dead); 1 Puzzle Cube (solved once, stickers moved); 2 Foam Headphones (orange foam, allegedly). Weight 82.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0308.png",
+ "name": "CRUSHED IT #0308",
+ "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 1 16-Bit Controller (the B button is sticky); 2 Jewel Cases (hinge broken on arrival); 3 Game Cartridges (blown into 400 times); 2 Film Canisters (undeveloped, forever); 2 Ball Mice (ball removed as a prank). Weight 30.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0308.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "16-Bit Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0308"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.0,
+   "value": 30.0,
    "display_type": "number"
   },
   {

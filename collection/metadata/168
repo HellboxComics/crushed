@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0168",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Puzzle Cubes (two stickers peeled); 3 Roller Skates (toe stop worn to nothing); 2 Floppy Disks (save icon, but real); 2 Pizza Crusts (still better than most portfolios). Weight 98.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0168.png",
+ "name": "CRUSHED IT #0168",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 TV Remote (held together with tape); 3 Sneakers (worn to one (1) very bad decision); 2 Army Man Squads (melted with a magnifying glass); 2 Joysticks (suction cups gave up); 1 Poker Chip (a stack of ambition). Weight 40.1 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0168.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0168"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 98.3,
+   "value": 40.1,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0369",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 2 Three-Ring Binders (covered in band names); 2 Pagers (last page: 143); 1 Floppy Disk (save icon, but real); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 86.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0369.png",
+ "name": "CRUSHED IT #0369",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 2 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time); 1 Floppy Disk (save icon, but real); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Crumpled Chart (it went up, then it went down). Weight 73.3 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0369.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0369"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.6,
+   "value": 73.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

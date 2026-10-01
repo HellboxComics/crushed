@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0478",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 1 CRT Monitor (screen burn-in reads LOADING); 3 Cassette Tapes (someone's voicemail greeting); 1 Corded Phone (someone is still on hold); 2 Cheap Sunglasses (mall kiosk special). Weight 75.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0478.png",
+ "name": "CRUSHED IT #0478",
+ "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Floppy Disks (contains one (1) virus); 1 Jewel Case (insert is from a different album); 3 Pagers (clipped to jeans for status only); 3 AA Batteries (probably dead). Weight 74.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0478.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0478"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.5,
+   "value": 74.8,
    "display_type": "number"
   },
   {

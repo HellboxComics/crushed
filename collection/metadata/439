@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0439",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Yo-Yo (string tied to a finger for 3 years); 2 Floppy Disks (contains one (1) virus); 1 Three-Ring Binder (covered in band names); 1 Power Strip (daisy-chained into three more). Weight 82.2 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0439.png",
+ "name": "CRUSHED IT #0439",
+ "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Sneakers (worn to one (1) very bad decision); 1 Floppy Disk (contains one (1) virus); 1 Memory Card (8MB, full); 1 Centerfold (staples removed, an attempt was made). Weight 75.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0439.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0439"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.2,
+   "value": 75.8,
    "display_type": "number"
   },
   {

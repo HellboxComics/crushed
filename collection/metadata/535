@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0535",
- "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 1 Webcam (240p of pure confidence); 3 Spiral Notebooks (spiral unwound halfway); 1 Flip Phone (snapped shut dramatically); 1 Burned CD (burned at 1x, 4 hours); 1 Film Canister (holds one quarter). Weight 79.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0535.png",
+ "name": "CRUSHED IT #0535",
+ "description": "Recovered from Behind the Couch. Smells like Vegas carpet. Contents (partial): 3 Sneakers (was in the dryer); 3 Energy Drinks (exam week casualty); 2 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 2 Beer Cans (warm, sadly). Weight 32.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0535.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Webcam"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0535"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 79.8,
+   "value": 32.8,
    "display_type": "number"
   },
   {

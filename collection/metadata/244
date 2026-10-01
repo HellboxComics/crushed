@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0244",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Gold Sneakers (why); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Power Strip (overloaded on purpose); 2 AA Batteries (taken out of the smoke detector); 2 Calculators (spelled BOOBIES upside down). Weight 85.5 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0244.png",
+ "name": "CRUSHED IT #0244: BLOW ON IT",
+ "description": "Forty-four cartridges, all blown on. It never helped. You did it anyway. Recovered from The Bottom of the Toy Box. Smells like hot breath. Contents (partial): 44 Game Cartridges (blown into 400 times); 3 16-Bit Controllers (the B button is sticky); 2 Game Controllers (thrown during a boss fight). Weight 23.4 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0244.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "BLOW ON IT"
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "Game Cartridge"
   },
   {
    "trait_type": "Contaminant",
@@ -25,32 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Breath"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "The Bottom of the Toy Box"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Sneaker"
+   "trait_type": "One of One",
+   "value": "BLOW ON IT"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0244"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.5,
+   "value": 23.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

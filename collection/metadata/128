@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0128",
- "description": "Recovered from Estate of a Collector. Smells like Grandma's couch. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 3 Soda Cans (shaken as a prank); 1 No. 2 Pencil (sharpened to a nub); 2 Puzzle Cubes (solved once, stickers moved); 2 TV Remotes (held together with tape). Weight 86.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0128.png",
+ "name": "CRUSHED IT #0128",
+ "description": "Recovered from The Bachelor Pad. Smells like science lab. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Beer Cans (12 of 12); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (says DO NOT FORMAT); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 68.8 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0128.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -25,27 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Science Lab"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
-   "trait_type": "Finish",
-   "value": "GRAPE"
+   "trait_type": "Serial",
+   "value": "0128"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.7,
+   "value": 68.8,
    "display_type": "number"
   },
   {

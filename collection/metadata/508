@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0508",
- "description": "Recovered from Garage Sale Free Bin. Smells like rink snack bar. Contents (partial): 1 Corded Phone (someone is still on hold); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Webcam (240p of pure confidence); 1 Portable Tape Player (belt clip snapped at a bus stop); 2 TV Remotes (held together with tape). Weight 80.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0508.png",
+ "name": "CRUSHED IT #0508",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Vegas carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Ball Mice (ball removed as a prank); 1 Digital Camera (memory full, 14 photos); 1 Foam Headphones (one ear works if you hold it); 2 Flip Phones (12 texts left this month). Weight 38.2 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0508.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0508"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.3,
+   "value": 38.2,
    "display_type": "number"
   },
   {

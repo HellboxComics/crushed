@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0829",
- "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 TV Remotes (held together with tape); 3 Pizza Crusts (still better than most portfolios); 2 Game Controllers (thrown during a boss fight); 2 Memory Cards (corrupted during a birthday). Weight 29.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0829.png",
+ "name": "CRUSHED IT #0829",
+ "description": "Recovered from School Lost & Found. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Handheld Console (battery cover lost immediately); 1 Smartwatch (says STAND, does not); 3 Hand Sanitizers (half empty, half crusty); 2 Pizza Crusts (from a sleepover); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 32.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0829.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Suspicious Rectangle"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0829"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.9,
+   "value": 32.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 45,
    "display_type": "number"
   }
  ]

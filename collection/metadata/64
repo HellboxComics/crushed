@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0064",
- "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 Boom Box (one speaker still believes); 1 Joystick (suction cups gave up); 3 Yo-Yos (string tied to a finger for 3 years); 1 Metal Lunchbox (the smell stays); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Emergency Ramen (for emergencies). Weight 48.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0064.png",
+ "name": "CRUSHED IT #0064",
+ "description": "Recovered from Vegas Hotel Room. Smells like body spray cloud. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (string tied to a finger for 3 years); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Soda Cans (tab kept for charity); 1 VHS Tape (late fees now exceed GDP of a small nation). Weight 85.2 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0064.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0064"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 48.4,
+   "value": 85.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

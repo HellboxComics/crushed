@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0675",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Sneakers (was in the dryer); 2 Burned CDs (says ROAD TRIP in marker); 3 TV Remotes (found in the couch); 3 Digital Cameras (memory full, 14 photos); 2 Pizza Crusts (from a sleepover). Weight 36.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0675.png",
+ "name": "CRUSHED IT #0675",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 2 Laptop Chargers (warm to the touch, somehow); 3 Energy Drinks (third one that night); 1 Disposable Camera (never developed); 3 MP3 Players (128MB, 30 songs, 29 skipped). Weight 28.8 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0675.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0675"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.0,
+   "value": 28.8,
    "display_type": "number"
   },
   {

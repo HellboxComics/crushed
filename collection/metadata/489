@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0489",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 AA Batteries (licked to test); 2 Soda Cans (shaken as a prank); 1 Glow Stick (still glowing a little, somehow); 2 Disposable Cameras (never developed). Weight 74.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0489.png",
+ "name": "CRUSHED IT #0489",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Disposable Camera (27 exposures of a thumb); 2 Dice (blown on for luck); 1 Shot Glass (chipped rim); 2 Scratch Tickets (scratched with a house key). Weight 75.9 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0489.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0489"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 75.9,
    "display_type": "number"
   },
   {

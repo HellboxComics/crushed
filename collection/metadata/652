@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0652",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Webcams (240p of pure confidence); 1 Power Strip (daisy-chained into three more); 1 Sneaker (was in the dryer); 1 Foam Headphones (orange foam, allegedly); 1 Corded Phone (was on the line when mom picked up). Weight 35.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0652.png",
+ "name": "CRUSHED IT #0652",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Sneaker (smells like 1989); 3 Energy Drinks (third one that night); 1 Pizza Crust (found behind the couch); 2 Flip Phones (snapped shut dramatically); 1 USB Stick (never ejected safely). Weight 22.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0652.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Webcam"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0652"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 22.5,
    "display_type": "number"
   },
   {

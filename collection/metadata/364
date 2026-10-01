@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0364",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 Soda Can (shaken as a prank); 3 TV Remotes (the volume button worn smooth); 2 Ball Mouses (cord chewed by a dog); 1 Cheap Sunglasses (mall kiosk special); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 46.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0364.png",
+ "name": "CRUSHED IT #0364",
+ "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Tissue Boxes (one for every mood); 2 Soda Cans (shaken as a prank); 2 Ball Mice (cord chewed by a dog); 1 Skateboard (one ollie, lifetime); 3 Magazines (found in a dad's truck). Weight 80.4 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0364.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0364"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.1,
+   "value": 80.4,
    "display_type": "number"
   },
   {

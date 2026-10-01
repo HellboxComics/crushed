@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0266",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Ball Mouses (cord chewed by a dog); 2 Power Strips (overloaded on purpose); 1 Skate Wheel (rolled into a storm drain once); 2 AA Batteries (probably dead); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 86.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0266.png",
+ "name": "CRUSHED IT #0266",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 3 Calculators (solar panel covered by a sticker); 1 Magazine (found in a dad's truck); 1 Milk Caps (the slammer is chipped); 1 Corded Phone (cord stretched to the bathroom); 2 Foam Headphones (one ear works if you hold it). Weight 74.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0266.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0266"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 86.3,
+   "value": 74.0,
    "display_type": "number"
   },
   {

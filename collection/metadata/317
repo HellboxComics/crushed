@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0317",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 1 Boom Box (took 10 D batteries); 1 Toy Slime (was in the hair of a sibling); 1 Milk Caps (won in a bet); 1 CRT Monitor (still warm); 3 Pagers (last page: 143). Weight 90.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0317.png",
+ "name": "CRUSHED IT #0317",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 1 Power Strip (overloaded on purpose); 1 Shot Glass (from a trip to Vegas); 1 Ball Mouse (ball removed as a prank); 2 Keyboards (Partial) (F, J and the crumbs); 1 Bear (thriving). Weight 88.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0317.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0317"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 90.8,
+   "value": 88.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

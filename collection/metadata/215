@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0215",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 2 Calculators (solar panel covered by a sticker); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 No. 2 Pencils (chewed); 2 Game Cartridges (save file erased by a sibling); 2 Floppy Disks (save icon, but real). Weight 55.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0215.png",
+ "name": "CRUSHED IT #0215",
+ "description": "Recovered from Mom's Minivan. Smells like wet cardboard. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Puzzle Cube (two stickers peeled); 2 Power Strips (daisy-chained into three more); 3 Slap Bracelets (cut someone, probably); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 50.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0215.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "16-Bit Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0215"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 55.3,
+   "value": 50.6,
    "display_type": "number"
   },
   {

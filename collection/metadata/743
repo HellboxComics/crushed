@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0743",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 2 Clear Lighters (out of fluid); 1 Flip Phone (ringtone composed by hand); 2 TV Remotes (the volume button worn smooth); 3 Memory Cards (8MB, full). Weight 26.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0743.png",
+ "name": "CRUSHED IT #0743",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 2 Earbud Cases (one bud present); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Cheap Sunglasses (one lens popped out); 2 Selfie Sticks (mid-trip, mid-ocean); 3 TV Remotes (held together with tape). Weight 29.7 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0743.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Earbud Case"
   },
   {
    "trait_type": "Contaminant",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0743"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 26.5,
+   "value": 29.7,
    "display_type": "number"
   },
   {

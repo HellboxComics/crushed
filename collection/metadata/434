@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0434",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 Ball Mouses (cord chewed by a dog); 3 Spiral Notebooks (spiral unwound halfway); 1 Keyboard (Partial) (F, J and the crumbs); 3 Burned CDs (track 7 skips); 2 Pagers (clipped to jeans for status only). Weight 45.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0434.png",
+ "name": "CRUSHED IT #0434",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 1 Disposable Camera (never developed); 1 Keyboard (Partial) (F, J and the crumbs); 2 Pagers (last page: 911 (it was not)); 1 Foam Headphones (one ear works if you hold it). Weight 36.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0434.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0434"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.4,
+   "value": 36.5,
    "display_type": "number"
   },
   {

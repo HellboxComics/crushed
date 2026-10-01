@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0217",
- "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 AA Batteries (taken out of the smoke detector); 2 No. 2 Pencils (sharpened to a nub); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Game Cartridges (blown into 400 times). Weight 88.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0217.png",
+ "name": "CRUSHED IT #0217",
+ "description": "Recovered from Behind the Bar. Smells like blue raspberry. Contents (partial): 1 Sneaker (left only); 1 Clear Lighter (out of fluid); 1 Shot Glass (from a trip to Vegas); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 68.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0217.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0217"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 68.1,
    "display_type": "number"
   },
   {

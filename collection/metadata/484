@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0484",
- "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 1 CRT Monitor (screen burn-in reads LOADING); 1 AA Batteries (licked to test); 1 Memory Card (8MB, full); 1 Skateboard (griptape ate a pair of jeans). Weight 79.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0484.png",
+ "name": "CRUSHED IT #0484",
+ "description": "Recovered from Grandma's Attic. Smells like wet cardboard. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 2 Pagers (clipped to jeans for status only); 1 Energy Drink (third one that night); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Magazine (found in a dad's truck); 1 Bull (trapped). Weight 66.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0484.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,15 +9,15 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
-   "value": "VHS Tape"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Dead Bull"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0484"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 79.4,
+   "value": 66.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

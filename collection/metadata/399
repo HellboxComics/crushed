@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0399",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 2 Soda Cans (shaken as a prank); 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Slap Bracelets (cut someone, probably); 3 Power Strips (overloaded on purpose); 2 Yo-Yos (string tied to a finger for 3 years). Weight 81.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0399.png",
+ "name": "CRUSHED IT #0399",
+ "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 1 Tissue Box (one for every mood); 3 Pagers (last page: 911 (it was not)); 1 Film Canister (holds one quarter); 2 AA Batteries (taken out of the smoke detector); 3 Skate Wheels (rolled into a storm drain once). Weight 76.8 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0399.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0399"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.9,
+   "value": 76.8,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0683",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Game Controllers (thrown during a boss fight); 1 Cheap Sunglasses (one lens popped out); 2 Digital Cameras (memory full, 14 photos); 3 No. 2 Pencils (chewed). Weight 31.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0683.png",
+ "name": "CRUSHED IT #0683",
+ "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 2 Sneakers (left only); 3 Spiral Notebooks (spiral unwound halfway); 3 AA Batteries (taken out of the smoke detector); 2 MP3 Players (shuffle picked the same song 6 times); 1 Earbud Case (one bud present). Weight 29.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0683.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0683"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.7,
+   "value": 29.9,
    "display_type": "number"
   },
   {

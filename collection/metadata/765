@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0765",
- "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 3 Laptop Chargers (warm to the touch, somehow); 2 TV Remotes (found in the couch); 1 Power Strip (overloaded on purpose); 3 Memory Cards (corrupted during a birthday). Weight 28.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0765.png",
+ "name": "CRUSHED IT #0765",
+ "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (shaken as a prank); 1 Selfie Stick (banned at the museum); 1 Disposable Vape (zero nicotine, allegedly); 3 TV Remotes (found in the couch). Weight 33.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0765.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Basement"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Flooded Basement"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0765"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.9,
+   "value": 33.7,
    "display_type": "number"
   },
   {

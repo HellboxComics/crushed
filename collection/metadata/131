@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0131",
- "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 1 Metal Lunchbox (the smell stays); 2 Game Cartridges (save file erased by a sibling); 1 Army Man Squad (the one with the radio survived); 2 Sneakers (left only). Weight 85.2 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0131.png",
+ "name": "CRUSHED IT #0131",
+ "description": "Recovered from The Bachelor Pad. Smells like rink snack bar. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (tab kept for charity); 2 Army Man Squads (melted with a magnifying glass); 2 Spiral Notebooks (doodles in the margins); 3 Cassette Tapes (side B only). Weight 82.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0131.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0131"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 85.2,
+   "value": 82.5,
    "display_type": "number"
   },
   {

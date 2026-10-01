@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0368",
- "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Portable Tape Player (auto-reverse broke in 1991); 1 Game Cartridge (save file erased by a sibling); 1 Memory Card (corrupted during a birthday); 1 Metal Lunchbox (the smell stays); 1 Ball Mouse (rollers caked with 1998). Weight 28.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0368.png",
+ "name": "CRUSHED IT #0368",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Skate Wheel (rolled into a storm drain once); 1 Foam Headphones (orange foam, allegedly); 1 Pizza Crust (still better than most portfolios); 1 Ball Mouse (rollers caked with 1998). Weight 73.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0368.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Portable CD Player"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0368"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.3,
+   "value": 73.3,
    "display_type": "number"
   },
   {

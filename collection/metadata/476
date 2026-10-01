@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0476",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Puzzle Cube (two stickers peeled); 1 No. 2 Pencil (chewed); 1 Disposable Camera (27 exposures of a thumb); 3 Clear Lighters (out of fluid). Weight 67.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0476.png",
+ "name": "CRUSHED IT #0476",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Sneakers (smells like 1989); 1 Pizza Crust (petrified); 2 Beer Cans (12 of 12); 2 Matchbooks (matches missing, reasons unclear). Weight 70.3 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0476.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0476"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 67.2,
+   "value": 70.3,
    "display_type": "number"
   },
   {

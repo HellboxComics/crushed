@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0305",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 1 Floppy Disk (DISK 2 of 7); 1 Clear Lighter (out of fluid); 3 TV Remotes (the volume button worn smooth); 1 Ball Mouse (cord chewed by a dog). Weight 47.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0305.png",
+ "name": "CRUSHED IT #0305",
+ "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (took 10 D batteries); 2 Pagers (last page: 143); 1 CRT Monitor (screen burn-in reads LOADING); 1 Slap Bracelet (banned by the school); 3 Cassette Tapes (a mix for someone who never listened); 1 Paper Hand (folded under light pressure). Weight 91.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0305.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0305"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.0,
+   "value": 91.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

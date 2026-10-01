@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0461",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Virtual Pet (fed 0 times); 1 Cassette Tape (someone's voicemail greeting); 2 Spiral Notebooks (doodles in the margins); 1 Corded Phone (cord stretched to the bathroom); 1 Paper Hand (folded under light pressure). Weight 75.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0461.png",
+ "name": "CRUSHED IT #0461",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 No. 2 Pencil (sharpened to a nub); 2 VHS Tapes (the unmarked one, from the back of the closet); 2 AA Batteries (probably dead); 2 Pagers (last page: 143). Weight 84.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0461.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0461"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.7,
+   "value": 84.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

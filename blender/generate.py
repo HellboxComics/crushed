@@ -26,18 +26,51 @@ from crushed import build, recipe, stage, tex  # noqa: E402
 ROOT = os.path.dirname(HERE)
 
 
-def token(tid, offset=0):
-    """Token id -> its recipe. Before reveal offset is 0 and they're the same thing;
-    after reveal the contract's offset decides (the contract's recipeOf)."""
-    rid = ((tid - 1 + offset) % recipe.SUPPLY) + 1
-    r = recipe.recipe(rid)
-    r["id"] = tid
-    r["name"] = f"CRUSHED IT #{tid:04d}"
+GIFT_RECIPES = [240, 718, 813, 796]     # tokens 41..44: LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
+FIRST_GIFT = 41
+
+
+def recipe_of(tid, offset):
+    """The contract's recipeOf(), mirrored exactly: gifts pinned, the other 884 tokens shifted by the offset
+    over the 884 non-gift recipes."""
+    if FIRST_GIFT <= tid < FIRST_GIFT + len(GIFT_RECIPES):
+        return GIFT_RECIPES[tid - FIRST_GIFT]
+    shuffled = recipe.SUPPLY - len(GIFT_RECIPES)
+    rank = tid - 1 if tid < FIRST_GIFT else tid - 1 - len(GIFT_RECIPES)
+    r = (rank + offset) % shuffled + 1
+    for g in sorted(GIFT_RECIPES):
+        if g <= r:
+            r += 1
     return r
 
 
-def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=0, look="studio"):
-    r = token(tid, offset)
+def token_of(rid, offset):
+    """Inverse of recipe_of: which token shows recipe `rid`. Before the reveal (offset None) only the gifts
+    are known; everything else is reported by its serial."""
+    if rid in GIFT_RECIPES:
+        return FIRST_GIFT + GIFT_RECIPES.index(rid)
+    if offset is None:
+        return rid
+    for tid in range(1, recipe.SUPPLY + 1):
+        if recipe_of(tid, offset) == rid:
+            return tid
+    raise ValueError(rid)
+
+
+def token(rid, offset=None):
+    """Recipe id (the serial stamped on the strap and in every file name) -> the block, named for the token
+    that shows it. Renders never depend on the offset; names and metadata do."""
+    r = recipe.recipe(rid)
+    tid = token_of(rid, offset)
+    one = r["one_of_one"]
+    r["token_id"] = tid
+    r["name"] = f"CRUSHED IT #{tid:04d}" + (f": {one}" if one else "")
+    r["traits"] = r["traits"] + [("Serial", f"{rid:04d}")]
+    return r
+
+
+def render_token(tid, out, res, samples, turntable=0, save_blend=False, offset=None, look="studio"):
+    r = token(tid)
     stale = os.path.join(out, f"{tid:04d}.part.png")
     if os.path.exists(stale):
         os.remove(stale)
@@ -131,14 +164,14 @@ def write_rarity(out, rows):
         f.write("\n".join(lines) + "\n")
 
 
-def write_metadata(out, base_image_uri, base_anim_uri=None, offset=0):
-    """One JSON file per token, named by token id (tokenURI = baseURI + id)."""
+def write_metadata(out, base_image_uri, base_anim_uri=None, offset=None):
+    """One JSON file per recipe, named by its serial (the contract's tokenURI is baseURI + recipeOf(token))."""
     os.makedirs(out, exist_ok=True)
-    for tid in range(1, recipe.SUPPLY + 1):
-        r = token(tid, offset)
-        anim = f"{base_anim_uri}/{tid:04d}.mp4" if base_anim_uri else None
-        with open(os.path.join(out, str(tid)), "w") as f:
-            json.dump(recipe.metadata(r, f"{base_image_uri}/{tid:04d}.png", anim), f, indent=1)
+    for rid in range(1, recipe.SUPPLY + 1):
+        r = token(rid, offset)
+        anim = f"{base_anim_uri}/{rid:04d}.mp4" if base_anim_uri else None
+        with open(os.path.join(out, str(rid)), "w") as f:
+            json.dump(recipe.metadata(r, f"{base_image_uri.rstrip('/')}/{rid:04d}.png", anim), f, indent=1)
     print(f"metadata: {recipe.SUPPLY} files -> {out}")
 
 
@@ -160,7 +193,7 @@ def main():
     ap.add_argument("--device", default="auto", choices=["auto", "cpu", "gpu"],
                     help="auto uses a GPU if Cycles finds one; cpu forces the processor")
     ap.add_argument("--look", default="studio", choices=["classic", "studio", "showroom", "daylight"], help="stage look (lights and floor only); studio is the release look")
-    ap.add_argument("--offset", type=int, default=0, help="the contract's reveal offset (post-reveal only)")
+    ap.add_argument("--offset", type=int, default=None, help="the contract's reveal offset (post-reveal only)")
     ap.add_argument("--sealed", action="store_true", help="render the pre-reveal image (renders/sealed.png)")
     ap.add_argument("--showcase", action="store_true", help="the 100 blocks shown on the site's pile page")
     a = ap.parse_args(argv)

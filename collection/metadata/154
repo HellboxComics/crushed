@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0154",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Calculator (spelled BOOBIES upside down); 3 Army Man Squads (the one with the radio survived); 2 Power Strips (overloaded on purpose); 2 Roller Skates (toe stop worn to nothing). Weight 40.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0154.png",
+ "name": "CRUSHED IT #0154",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Game Cartridge (blown into 400 times); 1 Cassette Tape (labeled MIX 4 U); 1 Dice (blown on for luck); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 86.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0154.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0154"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 40.3,
+   "value": 86.5,
    "display_type": "number"
   },
   {

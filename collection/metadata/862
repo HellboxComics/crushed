@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0862",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 3 Game Controllers (thrown during a boss fight); 1 VHS Tape (late fees now exceed GDP of a small nation); 3 No. 2 Pencils (sharpened to a nub); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 32.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0862.png",
+ "name": "CRUSHED IT #0862",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Beer Cans (crushed on a forehead); 3 Energy Drinks (tastes like a battery); 2 Soda Cans (tab kept for charity); 1 Smartwatch (says STAND, does not); 2 Pizza Crusts (petrified). Weight 31.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0862.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0862"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.1,
+   "value": 31.2,
    "display_type": "number"
   },
   {

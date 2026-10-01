@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0560",
- "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 1 Digital Camera (memory full, 14 photos); 2 Disposable Cameras (27 exposures of a thumb); 3 Sneakers (left only); 3 Brick Phones (snake high score intact); 1 Glow Stick (still glowing a little, somehow). Weight 76.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0560.png",
+ "name": "CRUSHED IT #0560",
+ "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 1 TV Remote (held together with tape); 3 Beer Cans (12 of 12); 3 Soda Cans (flat); 3 Handheld Consoles (battery cover lost immediately); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 25.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0560.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0560"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.4,
+   "value": 25.6,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0649",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Clear Lighters (for incense, obviously); 1 Memory Card (8MB, full); 1 Foam Headphones (one ear works if you hold it); 1 Floppy Disk (contains one (1) virus); 1 Crumpled Chart (it went up, then it went down). Weight 23.2 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0649.png",
+ "name": "CRUSHED IT #0649",
+ "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 3 Matchbooks (from a gentlemen's club, reportedly); 2 TV Remotes (held together with tape); 2 Flip Phones (12 texts left this month); 2 No. 2 Pencils (never saw a scantron it liked). Weight 25.0 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0649.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0649"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.2,
+   "value": 25.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

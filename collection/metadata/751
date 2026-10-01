@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0751",
- "description": "Recovered from A Very Specific Ditch. Smells like fresh batteries (licked). Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Handheld Consoles (battery cover lost immediately); 3 Game Controllers (thrown during a boss fight); 1 AA Batteries (taken out of the smoke detector); 3 Burned CDs (says ROAD TRIP in marker). Weight 37.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0751.png",
+ "name": "CRUSHED IT #0751",
+ "description": "Recovered from Ex's Garage. Smells like body spray cloud. Contents (partial): 2 TV Remotes (found in the couch); 1 Disposable Camera (never developed); 1 Smartphone (cracked in the first week); 3 Tissue Boxes (one for every mood); 1 Power Bank (10000 mAh of dead weight). Weight 32.7 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0751.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0751"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 32.7,
    "display_type": "number"
   },
   {

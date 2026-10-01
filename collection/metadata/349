@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0349",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 2 Film Canisters (undeveloped, forever); 2 Milk Caps (won in a bet); 1 Ball Mouse (rollers caked with 1998); 2 Spiral Notebooks (doodles in the margins). Weight 56.2 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0349.png",
+ "name": "CRUSHED IT #0349",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Beer Can (crushed on a forehead); 3 Magazines (for the interviews, obviously); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cassette Tape (labeled MIX 4 U); 1 TV Remote (found in the couch). Weight 46.3 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0349.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0349"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 56.2,
+   "value": 46.3,
    "display_type": "number"
   },
   {

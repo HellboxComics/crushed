@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0865",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 USB Sticks (never ejected safely); 1 Power Strip (daisy-chained into three more); 3 No. 2 Pencils (never saw a scantron it liked); 3 Clear Lighters (out of fluid); 1 Emergency Ramen (for emergencies). Weight 26.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0865.png",
+ "name": "CRUSHED IT #0865",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 3 Soda Cans (shaken as a prank); 1 Pizza Crust (still better than most portfolios); 2 Tablets (used once as a cutting board); 3 Smartwatches (still counting steps in the dryer); 3 Beer Cans (warm, sadly). Weight 23.2 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0865.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0865"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.9,
+   "value": 23.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

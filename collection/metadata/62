@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0062",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 3 Sneakers (left only); 3 Calculators (spelled BOOBIES upside down); 2 Pizza Crusts (still better than most portfolios); 1 Film Canister (holds one quarter); 1 Joystick (suction cups gave up). Weight 95.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0062.png",
+ "name": "CRUSHED IT #0062",
+ "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Puzzle Cubes (solved once, stickers moved); 1 Scratch Ticket (scratched with a house key); 2 VHS Tapes (label says DO NOT TAPE OVER); 1 Yo-Yo (string tied to a finger for 3 years). Weight 48.0 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0062.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Roller Skate"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0062"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.4,
+   "value": 48.0,
    "display_type": "number"
   },
   {

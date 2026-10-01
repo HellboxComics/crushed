@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0548",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 3 Film Canisters (undeveloped, forever); 1 Spiral Notebook (note says 'check YES or NO'); 1 Disposable Camera (never developed); 1 Cheap Sunglasses (one lens popped out). Weight 49.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0548.png",
+ "name": "CRUSHED IT #0548",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Earbud Case (one bud present); 1 Tissue Box (one for every mood); 1 Cheap Sunglasses (one lens popped out); 2 Pizza Crusts (found behind the couch). Weight 26.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0548.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0548"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.1,
+   "value": 26.3,
    "display_type": "number"
   },
   {

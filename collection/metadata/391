@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0391",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 3 Floppy Disks (DISK 2 of 7); 2 Burned CDs (says ROAD TRIP in marker); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Puzzle Cubes (solved once, stickers moved). Weight 85.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0391.png",
+ "name": "CRUSHED IT #0391",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Power Strip (daisy-chained into three more); 1 Digital Camera (memory full, 14 photos); 1 Skateboard (one ollie, lifetime); 1 CRT Monitor (still warm). Weight 74.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0391.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0391"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.1,
+   "value": 74.8,
    "display_type": "number"
   },
   {

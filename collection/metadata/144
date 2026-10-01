@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0144",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Spiral Notebooks (spiral unwound halfway); 1 Puzzle Cube (two stickers peeled); 3 TV Remotes (the volume button worn smooth); 1 Cassette Tape (rewound with a pencil); 1 Paper Hand (folded under light pressure). Weight 36.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0144.png",
+ "name": "CRUSHED IT #0144",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 TV Remotes (held together with tape); 1 Sneaker (smells like 1989); 1 Tissue Box (one for every mood); 2 Centerfolds (staples removed, an attempt was made). Weight 42.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0144.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0144"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.8,
+   "value": 42.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 32,
    "display_type": "number"
   }
  ]

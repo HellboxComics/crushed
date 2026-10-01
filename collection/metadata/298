@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0298",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down); 1 Toy Slime (stuck in the carpet); 2 Cassette Tapes (labeled MIX 4 U); 1 CRT Monitor (weighs more than the desk); 1 Paper Hand (folded under light pressure). Weight 64.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0298.png",
+ "name": "CRUSHED IT #0298",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 2 Sneakers (untied since 1989); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Ball Mouse (ball removed as a prank); 1 Cassette Tape (labeled MIX 4 U); 1 Spiral Notebook (spiral unwound halfway). Weight 75.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0298.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Paper Hand"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0298"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 64.7,
+   "value": 75.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 35,
    "display_type": "number"
   }
  ]

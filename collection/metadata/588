@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0588",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Sneakers (light-up heel, dead); 2 TV Remotes (held together with tape); 2 Ball Mouses (cord chewed by a dog); 3 Burned CDs (says ROAD TRIP in marker); 3 Skate Wheels (rolled into a storm drain once). Weight 35.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0588.png",
+ "name": "CRUSHED IT #0588",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Centerfold (left open to the wrong page); 2 TV Remotes (the volume button worn smooth); 1 Face Mask (one of 400 in a coat pocket). Weight 19.4 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0588.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,15 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Finish",
-   "value": "GRAPE"
+   "value": "BONE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0588"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 19.4,
    "display_type": "number"
   },
   {

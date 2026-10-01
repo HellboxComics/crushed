@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0685",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Energy Drink (tastes like a battery); 2 Cheap Sunglasses (one lens popped out); 2 Power Strips (overloaded on purpose); 3 Clear Lighters (out of fluid); 1 Game Controller (stick drift since day one). Weight 29.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0685.png",
+ "name": "CRUSHED IT #0685",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 3 Magazines (the staples are doing the work); 2 Clear Lighters (borrowed in 1997, never returned); 2 Shot Glasses (chipped rim); 1 Spiral Notebook (spiral unwound halfway); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 32.0 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0685.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0685"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.8,
+   "value": 32.0,
    "display_type": "number"
   },
   {

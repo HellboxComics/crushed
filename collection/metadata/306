@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0306",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 Burned CDs (coaster now); 3 Ball Mouses (rollers caked with 1998); 2 Power Strips (overloaded on purpose); 2 Disposable Cameras (never developed). Weight 74.1 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0306.png",
+ "name": "CRUSHED IT #0306",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Puzzle Cube (two stickers peeled); 1 Corded Phone (was on the line when mom picked up); 2 Calculators (solar panel covered by a sticker); 2 Ball Mice (cord chewed by a dog); 2 Beer Cans (warm, sadly). Weight 29.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0306.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0306"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 29.6,
    "display_type": "number"
   },
   {

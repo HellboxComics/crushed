@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0509",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 Game Controllers (thrown during a boss fight); 2 Floppy Disks (save icon, but real); 3 Foam Headphones (one ear works if you hold it); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 Pagers (last page: 911 (it was not)). Weight 73.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0509.png",
+ "name": "CRUSHED IT #0509",
+ "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 2 Virtual Pets (reincarnated 40 times); 1 Jewel Case (insert is from a different album); 1 Game Cartridge (save file erased by a sibling); 3 Portable CD Players (anti-skip lied); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 72.9 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0509.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Virtual Pet"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0509"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 73.0,
+   "value": 72.9,
    "display_type": "number"
   },
   {

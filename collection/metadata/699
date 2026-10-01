@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0699",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Jewel Cases (hinge broken on arrival); 3 Pizza Crusts (found behind the couch); 2 USB Sticks (never ejected safely); 3 Memory Cards (8MB, full). Weight 27.4 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0699.png",
+ "name": "CRUSHED IT #0699",
+ "description": "Recovered from Ex's Garage. Smells like new plastic. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Corded Phone (cord stretched to the bathroom); 2 Flip Phones (12 texts left this month); 1 Centerfold (left open to the wrong page); 2 Handheld Consoles (battery cover lost immediately); 1 Broken Rocket (was going to the moon). Weight 28.7 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0699.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0699"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.4,
+   "value": 28.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

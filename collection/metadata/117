@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0117",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 3 VHS Tapes (taped over a wedding); 3 Army Man Squads (the one with the radio survived); 3 Roller Skates (the rink smell is still in there); 1 Cassette Tape (labeled MIX 4 U); 1 Game Cartridge (blown into 400 times). Weight 94.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0117.png",
+ "name": "CRUSHED IT #0117",
+ "description": "Recovered from Flooded Basement. Smells like basement. Contents (partial): 3 VHS Tapes (taped over a wedding); 1 Magazine (read for the articles); 3 Cheap Sunglasses (one lens popped out); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Corded Phone (cord stretched to the bathroom). Weight 43.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0117.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Basement"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0117"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 94.0,
+   "value": 43.6,
    "display_type": "number"
   },
   {

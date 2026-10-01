@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0320",
- "description": "Recovered from A Very Specific Ditch. Smells like new plastic. Contents (partial): 3 Ball Mouses (ball removed as a prank); 1 Burned CD (coaster now); 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Portable CD Players (45-second buffer, 2-second attention span); 2 TV Remotes (held together with tape). Weight 78.9 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0320.png",
+ "name": "CRUSHED IT #0320",
+ "description": "Recovered from The Bachelor Pad. Smells like new plastic. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 3 Burned CDs (coaster now); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Milk Caps (the slammer is chipped). Weight 38.8 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0320.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -44,8 +44,12 @@
    "value": "GRAPE"
   },
   {
+   "trait_type": "Serial",
+   "value": "0320"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 78.9,
+   "value": 38.8,
    "display_type": "number"
   },
   {

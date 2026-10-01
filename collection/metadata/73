@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0073",
- "description": "Recovered from A Very Specific Ditch. Smells like rink snack bar. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 AA Batteries (mixed old and new, like animals); 3 Game Cartridges (save file erased by a sibling); 1 Puzzle Cube (solved once, stickers moved); 2 Soda Cans (flat). Weight 85.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0073.png",
+ "name": "CRUSHED IT #0073",
+ "description": "Recovered from Ex's Garage. Smells like Vegas carpet. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (still better than most portfolios); 1 Shot Glass (souvenir of a night nobody recalls); 1 Power Strip (daisy-chained into three more); 1 Paper Hand (folded under light pressure). Weight 86.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0073.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0073"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.6,
+   "value": 86.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 35,
    "display_type": "number"
   }
  ]

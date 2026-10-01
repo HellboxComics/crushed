@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0333",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 16-Bit Controller (cord pulled the console off the shelf); 3 Puzzle Cubes (two stickers peeled); 2 Milk Caps (won in a bet). Weight 70.4 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0333.png",
+ "name": "CRUSHED IT #0333",
+ "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 3 Pagers (last page: 143); 3 Soda Cans (tab kept for charity); 1 Portable CD Player (anti-skip lied); 2 Cheap Sunglasses (one lens popped out); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 26.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0333.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Pager"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0333"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.4,
+   "value": 26.7,
    "display_type": "number"
   },
   {

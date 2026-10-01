@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0878",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 2 TV Remotes (found in the couch); 3 Burned CDs (track 7 skips); 2 USB Sticks (never ejected safely); 3 Clear Lighters (out of fluid); 1 Handheld Console (battery cover lost immediately). Weight 34.2 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0878.png",
+ "name": "CRUSHED IT #0878",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 3 Disposable Vapes (5000 puffs, 4999 regrets); 1 Ring Light (the eyes in every mirror selfie); 3 Sneakers (was in the dryer); 2 Laptop Chargers (warm to the touch, somehow); 2 Disposable Cameras (never developed). Weight 33.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0878.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0878"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.2,
+   "value": 33.0,
    "display_type": "number"
   },
   {

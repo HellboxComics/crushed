@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0092",
- "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 Yo-Yos (walked the dog one time); 2 AA Batteries (taken out of the smoke detector); 2 TV Remotes (held together with tape); 1 Boom Box (one speaker still believes). Weight 86.8 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0092.png",
+ "name": "CRUSHED IT #0092",
+ "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Magazines (read for the articles); 1 Beer Can (warm, sadly); 1 Boom Box (one speaker still believes); 1 Corded Phone (was on the line when mom picked up). Weight 52.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0092.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0092"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.8,
+   "value": 52.3,
    "display_type": "number"
   },
   {

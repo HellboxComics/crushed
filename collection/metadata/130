@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0130",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 Boom Box (took 10 D batteries); 1 Film Canister (undeveloped, forever); 1 Yo-Yo (string tied to a finger for 3 years); 1 Soda Can (tab kept for charity); 2 Floppy Disks (save icon, but real). Weight 83.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0130.png",
+ "name": "CRUSHED IT #0130",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Film Canisters (holds one quarter); 1 Shot Glass (chipped rim); 2 Joysticks (suction cups gave up). Weight 38.6 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0130.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0130"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 83.0,
+   "value": 38.6,
    "display_type": "number"
   },
   {

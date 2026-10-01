@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0775",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 3 Digital Cameras (2 megapixels of truth); 2 Sneakers (left only); 2 Power Strips (overloaded on purpose); 1 Clear Lighter (for incense, obviously); 3 Burned CDs (track 7 skips). Weight 76.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0775.png",
+ "name": "CRUSHED IT #0775",
+ "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Sneakers (left only); 1 Disposable Camera (27 exposures of a thumb); 1 Ring Light (one bulb out, one ego intact); 1 Shot Glass (souvenir of a night nobody recalls); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 30.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0775.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0775"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.4,
+   "value": 30.5,
    "display_type": "number"
   },
   {

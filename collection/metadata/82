@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0082",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Army Man Squads (the one with the radio survived); 1 Soda Can (tab kept for charity); 2 Roller Skates (the rink smell is still in there); 1 Film Canister (undeveloped, forever). Weight 49.6 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0082.png",
+ "name": "CRUSHED IT #0082",
+ "description": "Recovered from Ex's Garage. Smells like mall food court. Contents (partial): 3 Joysticks (suction cups gave up); 3 Puzzle Cubes (solved once, stickers moved); 1 Beer Can (warm, sadly); 3 Roller Skates (the rink smell is still in there); 3 Floppy Disks (DISK 2 of 7). Weight 54.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0082.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,31 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "House Fire (Everyone's Fine)"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0082"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.6,
+   "value": 54.5,
    "display_type": "number"
   },
   {

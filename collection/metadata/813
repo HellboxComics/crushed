@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0813",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 TV Remote (the volume button worn smooth); 3 Power Strips (daisy-chained into three more); 2 AA Batteries (taken out of the smoke detector); 3 Burned CDs (track 7 skips). Weight 36.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0813.png",
+ "name": "CRUSHED IT #0043: STOP THE PRESSES",
+ "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (a boar doing a pig's job); 4 Ticker Tapes (PIG +420%, allegedly); 2 Calculators (solar panel covered by a sticker); 3 Bulls (dead); 2 Poker Chips (taken from a casino, small heist). Weight 50.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0813.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "STOP THE PRESSES"
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Piggy Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Bacon and Newsprint"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "The Trading Floor, After the Bell"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "STOP THE PRESSES"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0813"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.9,
+   "value": 50.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 53,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0042",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Keyboard (Partial) (F, J and the crumbs); 1 Burned CD (coaster now); 1 Sneaker (light-up heel, dead); 1 Joystick (fire button pressed 40 million times). Weight 47.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0042.png",
+ "name": "CRUSHED IT #0042",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Calculators (spelled BOOBIES upside down); 1 Jewel Case (insert is from a different album); 2 Three-Ring Binders (velcro screams when opened); 2 Puzzle Cubes (solved once, stickers moved). Weight 90.8 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0042.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Boom Box"
+   "value": "Portable Tape Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0042"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 47.8,
+   "value": 90.8,
    "display_type": "number"
   },
   {

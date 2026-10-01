@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0475",
- "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 AA Batteries (taken out of the smoke detector); 2 Cheap Sunglasses (one lens popped out); 3 No. 2 Pencils (chewed); 2 Pizza Crusts (from a sleepover). Weight 71.9 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0475.png",
+ "name": "CRUSHED IT #0475",
+ "description": "Recovered from Behind the Science Wing. Smells like body spray cloud. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Film Canister (holds one quarter); 2 AA Batteries (taken out of the smoke detector); 3 TV Remotes (found in the couch); 2 Pagers (last page: 911 (it was not)); 1 Gold Coin (real, probably). Weight 75.7 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0475.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Behind the Science Wing"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0475"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.9,
+   "value": 75.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

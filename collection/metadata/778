@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0778",
- "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 1 Energy Drink (exam week casualty); 3 Burned CDs (says ROAD TRIP in marker); 1 Spiral Notebook (doodles in the margins); 3 Jewel Cases (insert is from a different album); 3 No. 2 Pencils (sharpened to a nub). Weight 73.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0778.png",
+ "name": "CRUSHED IT #0778",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 1 Bluetooth Speaker (lost, found, lost); 1 Face Mask (from 2020, still fresh); 1 USB Stick (contains homework_FINAL_final2.doc); 2 Earbud Cases (survived the wash); 2 Laptop Chargers (warm to the touch, somehow); 1 Emergency Ramen (for emergencies). Weight 30.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0778.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Bluetooth Speaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0778"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.0,
+   "value": 30.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

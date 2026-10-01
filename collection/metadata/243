@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0243",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Burned CD (coaster now); 1 Corded Phone (was on the line when mom picked up); 1 Metal Lunchbox (thermos missing); 1 Portable CD Player (anti-skip lied). Weight 73.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0243.png",
+ "name": "CRUSHED IT #0243",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 1 Jewel Case (insert is from a different album); 1 CRT Monitor (screen burn-in reads LOADING); 2 TV Remotes (found in the couch); 1 Burned CD (burned at 1x, 4 hours). Weight 77.9 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0243.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0243"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 73.7,
+   "value": 77.9,
    "display_type": "number"
   },
   {

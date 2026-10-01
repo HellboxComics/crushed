@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0060",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 3 Calculators (solar panel covered by a sticker); 2 Puzzle Cubes (two stickers peeled); 2 No. 2 Pencils (sharpened to a nub); 1 Pager (clipped to jeans for status only); 3 Floppy Disks (DISK 2 of 7). Weight 79.4 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0060.png",
+ "name": "CRUSHED IT #0060",
+ "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 3 Joysticks (suction cups gave up); 3 Magazines (the staples are doing the work); 2 Power Strips (overloaded on purpose); 1 AA Batteries (mixed old and new, like animals); 3 Calculators (spelled BOOBIES upside down). Weight 84.0 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0060.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Joystick"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0060"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.4,
+   "value": 84.0,
    "display_type": "number"
   },
   {

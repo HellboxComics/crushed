@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0462",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Flip Phones (ringtone composed by hand); 3 Cheap Sunglasses (mall kiosk special); 2 Glow Sticks (cracked at a school dance); 3 Sneakers (untied since 1989). Weight 42.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0462.png",
+ "name": "CRUSHED IT #0462",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Film Canisters (holds one quarter); 3 AA Batteries (probably dead); 1 Shot Glass (souvenir of a night nobody recalls); 1 Skateboard (griptape ate a pair of jeans). Weight 73.4 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0462.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0462"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 42.8,
+   "value": 73.4,
    "display_type": "number"
   },
   {

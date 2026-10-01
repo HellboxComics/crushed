@@ -1,15 +1,15 @@
 {
- "name": "CRUSHED #0402",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 3 Floppy Disks (save icon, but real); 3 Soda Cans (tab kept for charity); 3 Power Strips (daisy-chained into three more); 1 Ball Mouse (rollers caked with 1998). Weight 39.9 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0402.png",
+ "name": "CRUSHED IT #0402",
+ "description": "Recovered from Mom's Minivan. Smells like hot tub. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 Webcam (240p of pure confidence); 2 Ball Mice (cord chewed by a dog); 3 Centerfolds (folded out, then folded back in a hurry); 2 MP3 Players (shuffle picked the same song 6 times). Weight 22.7 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0402.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Hot Tub"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0402"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 39.9,
+   "value": 22.7,
    "display_type": "number"
   },
   {

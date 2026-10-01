@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0413",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 2 Calculators (spelled BOOBIES upside down); 2 Cassette Tapes (rewound with a pencil); 2 Yo-Yos (string tied to a finger for 3 years); 2 Milk Caps (the slammer is chipped); 3 VHS Tapes (taped over a wedding). Weight 37.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0413.png",
+ "name": "CRUSHED IT #0413",
+ "description": "Recovered from School Lost & Found. Smells like body spray cloud. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Glow Sticks (still glowing a little, somehow); 1 Sneaker (smells like 1989); 1 Skateboard (griptape ate a pair of jeans); 3 VHS Tapes (label says DO NOT TAPE OVER). Weight 38.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0413.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0413"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.7,
+   "value": 38.6,
    "display_type": "number"
   },
   {

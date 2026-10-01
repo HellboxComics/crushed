@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0552",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Gold AA Batteries (why); 1 Corded Phone (was on the line when mom picked up); 3 Spiral Notebooks (doodles in the margins); 3 Burned CDs (says ROAD TRIP in marker); 1 No. 2 Pencil (sharpened to a nub). Weight 77.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0552.png",
+ "name": "CRUSHED IT #0552: STILL ALIVE",
+ "description": "Thirty-eight virtual pets. One is still alive. Nobody has fed it since 1997. Recovered from A Drawer, Still Beeping. Smells like warm plastic. Contents (partial): 38 Virtual Pets (reincarnated 40 times); 3 9999-in-1 Handhelds (9999 games, 4 real ones); 3 Handheld Consoles (screen scratched from a pocket with keys); 4 AA Batteries (licked to test). Weight 19.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0552.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "STILL ALIVE"
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Virtual Pet"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Warm Plastic"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "A Drawer, Still Beeping"
   },
   {
    "trait_type": "Tape",
@@ -37,20 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
-   "trait_type": "Gilded",
-   "value": "AA Batteries"
+   "trait_type": "One of One",
+   "value": "STILL ALIVE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0552"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.7,
+   "value": 19.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 48,
    "display_type": "number"
   }
  ]

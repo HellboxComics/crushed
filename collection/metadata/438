@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0438",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Pagers (last page: 911 (it was not)); 2 Pizza Crusts (petrified); 2 Skate Wheels (flat spot from a power slide); 1 AA Batteries (mixed old and new, like animals). Weight 40.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0438.png",
+ "name": "CRUSHED IT #0438",
+ "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 1 Sneaker (smells like 1989); 2 AA Batteries (licked to test); 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 81.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0438.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0438"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 40.8,
+   "value": 81.5,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0526",
- "description": "Recovered from School Lost & Found. Smells like burnt popcorn. Contents (partial): 3 Flip Phones (snapped shut dramatically); 3 VHS Tapes (late fees now exceed GDP of a small nation); 3 Sneakers (untied since 1989); 2 Cassette Tapes (labeled MIX 4 U); 2 Virtual Pets (died during math class). Weight 84.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0526.png",
+ "name": "CRUSHED IT #0526",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Brick Phone (unbreakable until today); 1 Matchbook (matches missing, reasons unclear); 2 Skate Wheels (rolled into a storm drain once); 2 Game Controllers (thrown during a boss fight); 2 No. 2 Pencils (chewed). Weight 72.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0526.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Brick Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,31 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Finish",
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0526"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 84.0,
+   "value": 72.5,
    "display_type": "number"
   },
   {

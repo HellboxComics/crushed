@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0107",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (belt clip snapped at a bus stop); 1 Boom Box (one speaker still believes); 2 Game Cartridges (save file erased by a sibling); 1 Broken Rocket (was going to the moon). Weight 54.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0107.png",
+ "name": "CRUSHED IT #0107",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 2 Soda Cans (tab kept for charity); 3 Game Cartridges (save file erased by a sibling); 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Joysticks (suction cups gave up); 2 Yo-Yos (string tied to a finger for 3 years). Weight 77.2 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0107.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0107"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 54.3,
+   "value": 77.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0086",
- "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 1 Soda Can (flat); 1 Film Canister (undeveloped, forever); 3 Army Man Squads (the one with the radio survived); 3 AA Batteries (taken out of the smoke detector). Weight 87.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0086.png",
+ "name": "CRUSHED IT #0086",
+ "description": "Recovered from The Bachelor Pad. Smells like rink snack bar. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Three-Ring Binders (velcro screams when opened); 1 Shot Glass (from a trip to Vegas); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Roller Skate (toe stop worn to nothing). Weight 88.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0086.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0086"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.7,
+   "value": 88.8,
    "display_type": "number"
   },
   {

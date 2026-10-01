@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0076",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Pizza Crusts (found behind the couch); 1 Yo-Yo (walked the dog one time); 2 Sneakers (was in the dryer). Weight 77.3 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0076.png",
+ "name": "CRUSHED IT #0076",
+ "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Pizza Crusts (from a sleepover); 3 Floppy Disks (save icon, but real); 2 Army Man Squads (the one with the radio survived); 2 No. 2 Pencils (never saw a scantron it liked). Weight 52.3 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0076.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0076"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.3,
+   "value": 52.3,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0175",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 3 TV Remotes (held together with tape); 1 Corded Phone (cord stretched to the bathroom); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Ball Mouse (rollers caked with 1998). Weight 85.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0175.png",
+ "name": "CRUSHED IT #0175",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 3 Calculators (solar panel covered by a sticker); 1 CRT Monitor (still warm); 1 Army Man Squad (the one with the radio survived); 1 Game Cartridge (save file erased by a sibling). Weight 83.3 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0175.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0175"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.1,
+   "value": 83.3,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0027",
- "description": "Recovered from Mom's Minivan. Smells like rink snack bar. Contents (partial): 2 Joysticks (fire button pressed 40 million times); 2 Foam Headphones (orange foam, allegedly); 1 Power Strip (overloaded on purpose); 2 Three-Ring Binders (covered in band names); 1 Floppy Disk (says DO NOT FORMAT). Weight 92.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0027.png",
+ "name": "CRUSHED IT #0027",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Vegas carpet. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (cord stretched to the bathroom); 2 Shot Glasses (chipped rim); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 AA Batteries (licked to test). Weight 36.6 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0027.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0027"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.3,
+   "value": 36.6,
    "display_type": "number"
   },
   {

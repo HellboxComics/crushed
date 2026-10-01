@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0579",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 3 Brick Phones (unbreakable until today); 1 Spiral Notebook (note says 'check YES or NO'); 1 Cheap Sunglasses (one lens popped out); 2 Virtual Pets (reincarnated 40 times). Weight 35.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0579.png",
+ "name": "CRUSHED IT #0579",
+ "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 1 Flip Phone (12 texts left this month); 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Energy Drink (tastes like a battery); 1 Matchbook (matches missing, reasons unclear); 1 Soda Can (tab kept for charity); 1 Paper Hand (folded under light pressure). Weight 34.2 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0579.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Cassette Tape"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0579"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 34.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

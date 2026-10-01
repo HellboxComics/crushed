@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0440",
- "description": "Recovered from Mom's Minivan. Smells like scratch-n-sniff sticker. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 Disposable Cameras (27 exposures of a thumb); 1 Three-Ring Binder (velcro screams when opened); 1 AA Batteries (licked to test); 3 Pagers (clipped to jeans for status only). Weight 31.3 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0440.png",
+ "name": "CRUSHED IT #0440",
+ "description": "Recovered from Garage Sale Free Bin. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Scratch Ticket ($2 for hope); 2 Film Canisters (undeveloped, forever); 1 Magazine (for the interviews, obviously); 1 CRT Monitor (weighs more than the desk). Weight 82.7 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0440.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0440"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 82.7,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0388",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 1 Floppy Disk (DISK 2 of 7); 2 Pagers (clipped to jeans for status only); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Soda Can (tab kept for charity). Weight 34.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0388.png",
+ "name": "CRUSHED IT #0388",
+ "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Floppy Disks (DISK 2 of 7); 1 CRT Monitor (screen burn-in reads LOADING); 2 Game Controllers (stick drift since day one); 1 Beer Can (last one in the fridge). Weight 83.0 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0388.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0388"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 34.1,
+   "value": 83.0,
    "display_type": "number"
   },
   {

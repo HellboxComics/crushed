@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0267",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Jewel Case (insert is from a different album); 2 Burned CDs (coaster now); 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Game Cartridges (save file erased by a sibling). Weight 80.0 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0267.png",
+ "name": "CRUSHED IT #0267",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Poker Chips (never cashed out); 2 Burned CDs (coaster now); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (melted with a magnifying glass). Weight 78.0 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0267.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "CRT Monitor"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0267"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.0,
+   "value": 78.0,
    "display_type": "number"
   },
   {

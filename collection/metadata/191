@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0191",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Cheap Sunglasses (one lens popped out); 3 AA Batteries (licked to test); 1 TV Remote (found in the couch); 2 Puzzle Cubes (two stickers peeled). Weight 76.3 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0191.png",
+ "name": "CRUSHED IT #0191",
+ "description": "Recovered from Dad's Junk Drawer. Smells like gym bag, forgotten. Contents (partial): 1 Ball Mouse (rollers caked with 1998); 3 AA Batteries (mixed old and new, like animals); 1 Disposable Camera (27 exposures of a thumb); 3 Shot Glasses (souvenir of a night nobody recalls); 2 Film Canisters (holds one quarter). Weight 68.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0191.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0191"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 68.1,
    "display_type": "number"
   },
   {

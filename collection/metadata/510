@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0510",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 Corded Phone (someone is still on hold); 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 Clear Lighters (out of fluid); 3 AA Batteries (mixed old and new, like animals); 2 Keyboards (Partial) (F, J and the crumbs). Weight 31.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0510.png",
+ "name": "CRUSHED IT #0510",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Sneakers (untied since 1989); 1 Matchbook (matches missing, reasons unclear); 3 Disposable Cameras (never developed); 1 Floppy Disk (DISK 2 of 7); 1 Bear (doing fine actually). Weight 35.6 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0510.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0510"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.2,
+   "value": 35.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

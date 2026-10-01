@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0174",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 Sneakers (untied since 1989); 3 Keyboards (Partial) (F, J and the crumbs); 3 Puzzle Cubes (two stickers peeled); 1 Spiral Notebook (doodles in the margins); 1 TV Remote (the volume button worn smooth). Weight 53.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0174.png",
+ "name": "CRUSHED IT #0174",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Boom Box (one speaker still believes); 1 Spiral Notebook (doodles in the margins); 2 Pizza Crusts (from a sleepover). Weight 88.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0174.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Metal Lunchbox"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0174"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.0,
+   "value": 88.7,
    "display_type": "number"
   },
   {

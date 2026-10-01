@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0227",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Pizza Crusts (petrified); 1 Portable Tape Player (auto-reverse broke in 1991); 1 Boom Box (one speaker still believes); 2 Power Strips (overloaded on purpose). Weight 91.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0227.png",
+ "name": "CRUSHED IT #0227",
+ "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Tissue Box (nearly empty); 1 Digital Camera (2 megapixels of truth); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Army Man Squads (melted with a magnifying glass). Weight 42.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0227.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0227"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 91.7,
+   "value": 42.6,
    "display_type": "number"
   },
   {

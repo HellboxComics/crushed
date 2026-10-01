@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0284",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 2 Portable CD Players (anti-skip lied); 2 Skate Wheels (rolled into a storm drain once); 3 Cassette Tapes (someone's voicemail greeting); 1 Metal Lunchbox (thermos missing); 1 9999-in-1 Handheld (9999 games, 4 real ones). Weight 74.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0284.png",
+ "name": "CRUSHED IT #0284",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Skate Wheel (rolled into a storm drain once); 1 TV Remote (held together with tape); 2 Clear Lighters (for incense, obviously); 3 Cassette Tapes (side B only). Weight 26.5 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0284.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0284"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.5,
+   "value": 26.5,
    "display_type": "number"
   },
   {

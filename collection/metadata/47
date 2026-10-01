@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0047",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Boom Box (one speaker still believes); 1 Metal Lunchbox (the smell stays); 3 Three-Ring Binders (covered in band names); 1 Soda Can (shaken as a prank); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 56.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0047.png",
+ "name": "CRUSHED IT #0047",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Soda Cans (shaken as a prank); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Matchbook (from a gentlemen's club, reportedly); 1 Foam Headphones (one ear works if you hold it). Weight 87.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0047.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Boom Box"
+   "value": "Portable Tape Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0047"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 56.4,
+   "value": 87.4,
    "display_type": "number"
   },
   {

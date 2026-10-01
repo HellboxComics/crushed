@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0846",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 2 Game Controllers (stick drift since day one); 2 Burned CDs (burned at 1x, 4 hours); 1 USB Stick (contains homework_FINAL_final2.doc); 2 Laptop Chargers (fits nothing else in the house); 2 Jewel Cases (hinge broken on arrival). Weight 32.6 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0846.png",
+ "name": "CRUSHED IT #0846",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Smartphones (1% battery, forever); 1 Laptop Charger (fits nothing else in the house); 1 Power Strip (daisy-chained into three more); 2 Soda Cans (flat); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 34.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0846.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Smartphone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0846"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 32.6,
+   "value": 34.5,
    "display_type": "number"
   },
   {

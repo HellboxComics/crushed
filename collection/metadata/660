@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0660",
- "description": "Recovered from Dad's Junk Drawer. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Sneakers (was in the dryer); 2 AA Batteries (mixed old and new, like animals); 1 Webcam (240p of pure confidence); 2 Floppy Disks (save icon, but real). Weight 80.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0660.png",
+ "name": "CRUSHED IT #0660",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 1 Pizza Crust (found behind the couch); 1 Magazine (found in a dad's truck); 1 Soda Can (shaken as a prank); 1 Spiral Notebook (spiral unwound halfway). Weight 25.1 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0660.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0660"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.5,
+   "value": 25.1,
    "display_type": "number"
   },
   {

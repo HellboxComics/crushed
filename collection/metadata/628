@@ -1,23 +1,23 @@
 {
- "name": "CRUSHED #0628",
- "description": "Recovered from Nobody Knows. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Pizza Crust (found behind the couch); 1 Memory Card (corrupted during a birthday); 1 Skateboard (griptape ate a pair of jeans). Weight 77.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0628.png",
+ "name": "CRUSHED IT #0628",
+ "description": "Recovered from Nobody Knows. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Burned CD (burned at 1x, 4 hours); 1 Sneaker (smells like 1989); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Glow Stick (still glowing a little, somehow); 1 Broken Rocket (was going to the moon). Weight 23.9 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0628.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0628"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.7,
+   "value": 23.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

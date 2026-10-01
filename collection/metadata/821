@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0821",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 Energy Drinks (tastes like a battery); 1 Ball Mouse (rollers caked with 1998); 2 Glow Sticks (cracked at a school dance); 3 Digital Cameras (memory full, 14 photos); 3 USB Sticks (never ejected safely). Weight 33.6 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0821.png",
+ "name": "CRUSHED IT #0821",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 Cheap Sunglasses (one lens popped out); 2 Beer Cans (crushed on a forehead); 1 No. 2 Pencil (sharpened to a nub); 2 Power Strips (overloaded on purpose). Weight 34.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0821.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Bluetooth Speaker"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0821"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.6,
+   "value": 34.0,
    "display_type": "number"
   },
   {

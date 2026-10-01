@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0792",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 TV Remotes (the volume button worn smooth); 1 Ball Mouse (rollers caked with 1998); 2 Handheld Consoles (battery cover lost immediately); 2 Spiral Notebooks (doodles in the margins); 1 Tiny Red Candle (lit). Weight 31.0 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0792.png",
+ "name": "CRUSHED IT #0792",
+ "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 1 Disposable Camera (never developed); 1 Ring Light (the eyes in every mirror selfie); 2 Cheap Sunglasses (one lens popped out); 3 Energy Drinks (tastes like a battery); 1 Glow Stick (cracked at a school dance); 1 Diamond (hands not included). Weight 28.5 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0792.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "Diamond"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0792"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 28.5,
    "display_type": "number"
   },
   {

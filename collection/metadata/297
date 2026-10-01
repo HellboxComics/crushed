@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0297",
- "description": "Recovered from Under the Bed. Smells like rink snack bar. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Pager (last page: 911 (it was not)); 1 No. 2 Pencil (chewed); 1 Film Canister (undeveloped, forever); 1 CRT Monitor (degaussed one last time). Weight 89.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0297.png",
+ "name": "CRUSHED IT #0297",
+ "description": "Recovered from Under the Bed. Smells like Vegas carpet. Contents (partial): 3 16-Bit Controllers (the B button is sticky); 1 CRT Monitor (degaussed one last time); 1 Skate Wheel (flat spot from a power slide); 1 Poker Chip (taken from a casino, small heist); 1 Floppy Disk (says DO NOT FORMAT). Weight 85.3 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0297.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0297"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 89.4,
+   "value": 85.3,
    "display_type": "number"
   },
   {

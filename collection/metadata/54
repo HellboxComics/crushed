@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0054",
- "description": "Recovered from Behind the Couch. Smells like body spray cloud. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Power Strip (overloaded on purpose); 3 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (undeveloped, forever); 2 Pizza Crusts (still better than most portfolios); 1 Emergency Ramen (the whole strategy). Weight 85.4 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0054.png",
+ "name": "CRUSHED IT #0054",
+ "description": "Recovered from Vegas Hotel Room. Smells like rink snack bar. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Game Cartridges (save file erased by a sibling); 2 Magazines (read for the articles); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cheap Sunglasses (one lens popped out). Weight 96.1 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0054.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0054"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 85.4,
+   "value": 96.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 41,
    "display_type": "number"
   }
  ]

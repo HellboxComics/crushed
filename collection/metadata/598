@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0598",
- "description": "Recovered from Estate of a Collector. Smells like scratch-n-sniff sticker. Contents (partial): 2 Brick Phones (unbreakable until today); 1 CRT Monitor (still warm); 3 Skate Wheels (flat spot from a power slide); 1 Skateboard (one ollie, lifetime); 1 9999-in-1 Handheld (9999 games, 4 real ones). Weight 83.3 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0598.png",
+ "name": "CRUSHED IT #0598: COASTERS",
+ "description": "Every burned CD that ended up under a drink. Recovered from Every Coffee Table. Smells like stale beer. Contents (partial): 56 Burned CDs (track 7 skips); 10 Jewel Cases (hinge broken on arrival); 2 Shot Glasses (from a trip to Vegas); 6 Beer Cans (crushed on a forehead). Weight 12.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0598.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "COASTERS"
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "Burned CD"
   },
   {
    "trait_type": "Contaminant",
@@ -25,28 +25,36 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Stale Beer"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Every Coffee Table"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "COASTERS"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0598"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.3,
+   "value": 12.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 74,
    "display_type": "number"
   }
  ]

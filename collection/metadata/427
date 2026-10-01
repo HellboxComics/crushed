@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0427",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (someone is still on hold); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Jewel Cases (hinge broken on arrival); 1 Clear Lighter (out of fluid); 2 Toy Slime (was in the hair of a sibling). Weight 88.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0427.png",
+ "name": "CRUSHED IT #0427",
+ "description": "Recovered from Dad's Junk Drawer. Smells like body spray cloud. Contents (partial): 2 Flip Phones (ringtone composed by hand); 2 Memory Cards (8MB, full); 2 Disposable Cameras (27 exposures of a thumb); 2 Clear Lighters (out of fluid); 1 Webcam (240p of pure confidence). Weight 64.7 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0427.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0427"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 88.5,
+   "value": 64.7,
    "display_type": "number"
   },
   {

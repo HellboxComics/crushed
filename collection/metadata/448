@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0448",
- "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 1 Brick Phone (snake high score intact); 1 TV Remote (the volume button worn smooth); 1 CRT Monitor (still warm); 1 Power Strip (daisy-chained into three more); 1 Disposable Camera (27 exposures of a thumb). Weight 70.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0448.png",
+ "name": "CRUSHED IT #0448",
+ "description": "Recovered from Ex's Garage. Smells like cigarette in a jacket. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Magazine (for the interviews, obviously); 3 Pagers (last page: 143); 3 Tissue Boxes (nearly empty); 1 Corded Phone (cord stretched to the bathroom). Weight 74.7 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0448.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "CRT Monitor"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0448"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.3,
+   "value": 74.7,
    "display_type": "number"
   },
   {

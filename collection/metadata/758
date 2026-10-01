@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0758",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 USB Sticks (never ejected safely); 2 Burned CDs (coaster now); 2 Digital Cameras (memory full, 14 photos); 2 Clear Lighters (for incense, obviously). Weight 36.4 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0758.png",
+ "name": "CRUSHED IT #0758",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Poker Chip (taken from a casino, small heist); 1 Pizza Crust (found behind the couch); 1 USB Stick (never ejected safely); 3 Smartphones (last text: read, no reply); 1 Game Controller (stick drift since day one); 1 Paper Hand (sold at the bottom). Weight 31.7 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0758.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Poker Chip"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0758"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.4,
+   "value": 31.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 45,
    "display_type": "number"
   }
  ]

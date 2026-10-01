@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0488",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Sneaker (was in the dryer); 2 Skate Wheels (flat spot from a power slide); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Flip Phones (snapped shut dramatically); 3 Ball Mouses (cord chewed by a dog). Weight 45.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0488.png",
+ "name": "CRUSHED IT #0488",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (flat); 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Keyboard (Partial) (F, J and the crumbs); 2 Digital Cameras (memory full, 14 photos); 1 Paper Hand (sold at the bottom). Weight 73.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0488.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Paper Hand"
   },
   {
    "trait_type": "Pressure",
@@ -29,24 +29,28 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0488"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.9,
+   "value": 73.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

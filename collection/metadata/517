@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0517",
- "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 1 Flip Phone (snapped shut dramatically); 2 Webcams (pointed at the ceiling forever); 2 AA Batteries (mixed old and new, like animals); 3 Pagers (clipped to jeans for status only); 3 TV Remotes (held together with tape). Weight 79.1 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0517.png",
+ "name": "CRUSHED IT #0517",
+ "description": "Recovered from Ex's Garage. Smells like Grandma's couch. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Dice (snake eyes, twice); 3 Pagers (last page from a number nobody called back); 3 Game Controllers (thrown during a boss fight); 1 Cassette Tape (a mix for someone who never listened). Weight 28.9 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0517.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0517"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.1,
+   "value": 28.9,
    "display_type": "number"
   },
   {

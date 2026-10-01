@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0575",
- "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Toy Slime (stuck in the carpet); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Clear Lighters (out of fluid); 1 Floppy Disk (says DO NOT FORMAT); 1 Tiny Red Candle (lit). Weight 36.4 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0575.png",
+ "name": "CRUSHED IT #0575",
+ "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Soda Can (flat); 2 Disposable Cameras (27 exposures of a thumb); 1 USB Stick (never ejected safely); 1 Flip Phone (ringtone composed by hand). Weight 22.8 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0575.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Corded Phone"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -41,16 +41,20 @@
   },
   {
    "trait_type": "Finish",
-   "value": "BONE"
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0575"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.4,
+   "value": 22.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0546",
- "description": "Recovered from The Mall Fountain. Smells like body spray cloud. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 Ball Mouses (ball removed as a prank); 1 Power Strip (overloaded on purpose); 1 Brick Phone (snake high score intact); 3 Pizza Crusts (petrified). Weight 34.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0546.png",
+ "name": "CRUSHED IT #0546",
+ "description": "Recovered from A Buddy's Basement. Smells like cheap cologne. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Cheap Sunglasses (mall kiosk special); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Power Strips (daisy-chained into three more); 1 Dice (snake eyes, twice). Weight 30.7 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0546.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "SOAKED"
+   "value": "BURNT"
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "The Mall Fountain"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0546"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.1,
+   "value": 30.7,
    "display_type": "number"
   },
   {

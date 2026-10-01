@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0049",
- "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 1 TV Remote (found in the couch); 2 Game Cartridges (blown into 400 times); 1 Cheap Sunglasses (mall kiosk special); 3 No. 2 Pencils (never saw a scantron it liked). Weight 81.2 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0049.png",
+ "name": "CRUSHED IT #0049",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Sneakers (left only); 2 Army Man Squads (the one with the radio survived); 2 Pizza Crusts (from a sleepover); 3 Power Strips (overloaded on purpose); 1 Crumpled Chart (it went up, then it went down). Weight 81.8 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0049.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0049"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.2,
+   "value": 81.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

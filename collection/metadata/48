@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0048",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Sneakers (untied since 1989); 3 Puzzle Cubes (two stickers peeled); 1 Cheap Sunglasses (one lens popped out); 3 VHS Tapes (taped over a wedding); 3 Game Cartridges (blown into 400 times). Weight 82.5 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0048.png",
+ "name": "CRUSHED IT #0048",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Pizza Crust (found behind the couch); 2 VHS Tapes (taped over a wedding); 2 Army Man Squads (the one with the radio survived). Weight 52.8 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0048.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Roller Skate"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0048"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.5,
+   "value": 52.8,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0398",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 TV Remote (the volume button worn smooth); 2 Slap Bracelets (cut someone, probably); 2 Power Strips (overloaded on purpose); 3 Disposable Cameras (never developed); 1 Three-Ring Binder (velcro screams when opened). Weight 37.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0398.png",
+ "name": "CRUSHED IT #0398",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 2 Disposable Cameras (never developed); 2 Skate Wheels (rolled into a storm drain once); 2 USB Sticks (never ejected safely); 1 Beer Can (last one in the fridge); 2 Power Strips (daisy-chained into three more). Weight 31.9 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0398.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0398"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.0,
+   "value": 31.9,
    "display_type": "number"
   },
   {

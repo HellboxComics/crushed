@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0083",
- "description": "Recovered from Nobody Knows. Smells like blue raspberry. Contents (partial): 1 CRT Monitor (still warm); 3 Spiral Notebooks (spiral unwound halfway); 1 Puzzle Cube (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down); 1 Three-Ring Binder (covered in band names). Weight 80.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0083.png",
+ "name": "CRUSHED IT #0083",
+ "description": "Recovered from Behind the Bar. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (still warm); 3 TV Remotes (held together with tape); 1 Sneaker (left only); 1 Game Cartridge (blown into 400 times); 1 Pizza Crust (still better than most portfolios). Weight 81.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0083.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0083"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 80.8,
+   "value": 81.5,
    "display_type": "number"
   },
   {

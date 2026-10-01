@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0371",
- "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 2 Cassette Tapes (someone's voicemail greeting); 3 Portable Tape Players (belt clip snapped at a bus stop); 3 Army Man Squads (the one with the radio survived); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Spiral Notebook (note says 'check YES or NO'). Weight 36.2 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0371.png",
+ "name": "CRUSHED IT #0371",
+ "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 1 Cassette Tape (a mix for someone who never listened); 2 Portable CD Players (45-second buffer, 2-second attention span); 2 Cheap Sunglasses (mall kiosk special); 2 Virtual Pets (died during math class); 1 AA Batteries (licked to test). Weight 28.8 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0371.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0371"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.2,
+   "value": 28.8,
    "display_type": "number"
   },
   {

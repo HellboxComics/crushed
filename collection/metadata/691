@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0691",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 Disposable Cameras (never developed); 2 No. 2 Pencils (chewed); 2 TV Remotes (found in the couch); 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Glow Sticks (still glowing a little, somehow). Weight 30.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0691.png",
+ "name": "CRUSHED IT #0691",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Beer Cans (last one in the fridge); 1 Pizza Crust (petrified); 1 Disposable Camera (27 exposures of a thumb); 1 Energy Drink (tastes like a battery); 2 Burned CDs (says ROAD TRIP in marker). Weight 27.0 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0691.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Disposable Camera"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0691"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.5,
+   "value": 27.0,
    "display_type": "number"
   },
   {

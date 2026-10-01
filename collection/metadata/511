@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0511",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Soda Can (tab kept for charity); 1 Skateboard (griptape ate a pair of jeans); 1 Ball Mouse (ball removed as a prank); 2 Disposable Cameras (27 exposures of a thumb); 2 Sneakers (was in the dryer). Weight 75.8 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0511.png",
+ "name": "CRUSHED IT #0511",
+ "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 2 Pizza Crusts (still better than most portfolios); 3 Soda Cans (flat); 2 Skate Wheels (flat spot from a power slide); 2 Floppy Disks (save icon, but real). Weight 73.6 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0511.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0511"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.8,
+   "value": 73.6,
    "display_type": "number"
   },
   {

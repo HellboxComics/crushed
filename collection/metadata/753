@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0753",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 2 Spiral Notebooks (spiral unwound halfway); 3 Memory Cards (8MB, full); 3 Burned CDs (track 7 skips); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 29.3 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0753.png",
+ "name": "CRUSHED IT #0753",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 1 Tablet (one thumbprint of juice); 2 AA Batteries (mixed old and new, like animals); 2 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 33.3 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0753.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0753"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.3,
+   "value": 33.3,
    "display_type": "number"
   },
   {

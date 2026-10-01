@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0223",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Puzzle Cubes (two stickers peeled); 2 Toy Slime (was in the hair of a sibling); 1 VHS Tape (taped over a wedding); 1 Cassette Tape (recorded off the radio, DJ talks over every intro). Weight 49.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0223.png",
+ "name": "CRUSHED IT #0223",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Sneaker (untied since 1989); 1 Cassette Tape (recorded off the radio, DJ talks over every intro). Weight 44.6 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0223.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0223"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 49.1,
+   "value": 44.6,
    "display_type": "number"
   },
   {

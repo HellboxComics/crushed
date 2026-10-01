@@ -1,15 +1,15 @@
 {
- "name": "CRUSHED #0415",
- "description": "Recovered from School Lost & Found. Smells like science lab. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 3 Floppy Disks (contains one (1) virus); 2 Milk Caps (won in a bet); 3 TV Remotes (held together with tape); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 50.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0415.png",
+ "name": "CRUSHED IT #0415",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like cigarette in a jacket. Contents (partial): 1 Gold Flip Phone (why); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Floppy Disk (DISK 2 of 7); 3 Clear Lighters (borrowed in 1997, never returned); 2 Magazines (for the interviews, obviously). Weight 34.9 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0415.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
@@ -25,23 +25,31 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Science Lab"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Gilded",
+   "value": "Flip Phone"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0415"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.9,
+   "value": 34.9,
    "display_type": "number"
   },
   {

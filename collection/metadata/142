@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0142",
- "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Game Cartridge (blown into 400 times); 1 Power Strip (overloaded on purpose); 2 Puzzle Cubes (solved once, stickers moved); 3 Pizza Crusts (found behind the couch). Weight 94.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0142.png",
+ "name": "CRUSHED IT #0142",
+ "description": "Recovered from The Bachelor Pad. Smells like hot dust on a CRT. Contents (partial): 1 Boom Box (one speaker still believes); 1 Army Man Squad (the one with the radio survived); 3 Film Canisters (holds one quarter); 2 TV Remotes (found in the couch); 2 Poker Chips (a stack of ambition). Weight 51.2 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0142.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "VHS Tape"
+   "value": "Boom Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Hot Dust on a CRT"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0142"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 94.5,
+   "value": 51.2,
    "display_type": "number"
   },
   {

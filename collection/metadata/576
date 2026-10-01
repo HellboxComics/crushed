@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0576",
- "description": "Recovered from Behind the Couch. Smells like rink snack bar. Contents (partial): 1 Brick Phone (snake high score intact); 3 Floppy Disks (contains one (1) virus); 1 Pizza Crust (found behind the couch); 1 Film Canister (undeveloped, forever); 2 Webcams (240p of pure confidence); 1 Broken Rocket (didn't make it). Weight 33.3 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0576.png",
+ "name": "CRUSHED IT #0576",
+ "description": "Recovered from The Bachelor Pad. Smells like Vegas carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Dice (loaded, rumor says); 3 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (sharpened to a nub). Weight 28.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0576.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Brick Phone"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0576"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 28.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 39,
    "display_type": "number"
   }
  ]

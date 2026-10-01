@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0090",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 1 Boom Box (one speaker still believes); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 AA Batteries (mixed old and new, like animals); 3 Floppy Disks (says DO NOT FORMAT). Weight 55.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0090.png",
+ "name": "CRUSHED IT #0090",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like new plastic. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (walked the dog one time); 1 Calculator (solar panel covered by a sticker); 2 Film Canisters (holds one quarter); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 84.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0090.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0090"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 55.6,
+   "value": 84.5,
    "display_type": "number"
   },
   {

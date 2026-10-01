@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0089",
- "description": "Recovered from Garage Sale Free Bin. Smells like blue raspberry. Contents (partial): 1 Joystick (suction cups gave up); 2 Puzzle Cubes (two stickers peeled); 2 Power Strips (overloaded on purpose); 3 Cassette Tapes (side B only); 3 Floppy Disks (DISK 2 of 7). Weight 88.2 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0089.png",
+ "name": "CRUSHED IT #0089",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Sneakers (was in the dryer); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (side B only); 1 Boom Box (took 10 D batteries). Weight 47.2 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0089.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Joystick"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0089"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 88.2,
+   "value": 47.2,
    "display_type": "number"
   },
   {

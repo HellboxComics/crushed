@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0182",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 3 Portable Tape Players (belt clip snapped at a bus stop); 3 AA Batteries (probably dead); 2 Sneakers (untied since 1989); 2 Spiral Notebooks (note says 'check YES or NO'). Weight 101.5 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0182.png",
+ "name": "CRUSHED IT #0182",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Spiral Notebooks (spiral unwound halfway); 2 Keyboards (Partial) (F, J and the crumbs); 3 Slap Bracelets (cut someone, probably); 1 No. 2 Pencil (sharpened to a nub). Weight 76.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0182.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0182"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 101.5,
+   "value": 76.0,
    "display_type": "number"
   },
   {

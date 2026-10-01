@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0837",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Burned CDs (says ROAD TRIP in marker); 2 Digital Cameras (memory full, 14 photos); 2 AA Batteries (mixed old and new, like animals); 3 No. 2 Pencils (never saw a scantron it liked). Weight 31.0 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0837.png",
+ "name": "CRUSHED IT #0837",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 TV Remote (the volume button worn smooth); 1 USB Stick (never ejected safely); 1 Spiral Notebook (spiral unwound halfway); 1 VR Headset (watched one (1) movie); 1 Game Controller (thrown during a boss fight). Weight 31.6 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0837.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0837"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 31.6,
    "display_type": "number"
   },
   {

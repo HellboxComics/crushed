@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0254",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 2 Ball Mouses (cord chewed by a dog); 3 No. 2 Pencils (sharpened to a nub); 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Soda Cans (flat); 1 VHS Tape (label says DO NOT TAPE OVER). Weight 75.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0254.png",
+ "name": "CRUSHED IT #0254",
+ "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 2 Calculators (solar panel covered by a sticker); 2 Skate Wheels (rolled into a storm drain once); 1 Foam Headphones (one ear works if you hold it); 1 AA Batteries (probably dead); 1 Dice (blown on for luck). Weight 64.8 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0254.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0254"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.1,
+   "value": 64.8,
    "display_type": "number"
   },
   {

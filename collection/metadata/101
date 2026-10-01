@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0101",
- "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Sneakers (light-up heel, dead); 3 Joysticks (fire button pressed 40 million times); 2 Film Canisters (undeveloped, forever); 1 Corded Phone (someone is still on hold). Weight 82.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0101.png",
+ "name": "CRUSHED IT #0101",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 No. 2 Pencil (chewed); 2 Yo-Yos (walked the dog one time); 3 Floppy Disks (DISK 2 of 7); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 73.2 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0101.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0101"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 82.6,
+   "value": 73.2,
    "display_type": "number"
   },
   {

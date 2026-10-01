@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0819",
- "description": "Recovered from Dad's Junk Drawer. Smells like scratch-n-sniff sticker. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Webcam (240p of pure confidence); 3 No. 2 Pencils (chewed); 2 Game Controllers (stick drift since day one); 1 Sneaker (light-up heel, dead); 1 Gold Coin (bought the top). Weight 69.5 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0819.png",
+ "name": "CRUSHED IT #0819",
+ "description": "Recovered from Mom's Minivan. Smells like cigarette in a jacket. Contents (partial): 3 Soda Cans (shaken as a prank); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Disposable Camera (27 exposures of a thumb). Weight 28.4 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0819.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Gold Coin"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0819"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.5,
+   "value": 28.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 38,
    "display_type": "number"
   }
  ]

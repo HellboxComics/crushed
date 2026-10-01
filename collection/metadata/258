@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0258",
- "description": "Recovered from Mom's Minivan. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Soda Can (flat); 1 Sneaker (was in the dryer); 2 Milk Caps (won in a bet); 2 Army Man Squads (melted with a magnifying glass); 1 Tiny Red Candle (lit). Weight 47.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0258.png",
+ "name": "CRUSHED IT #0258",
+ "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Dice (snake eyes, twice); 3 Three-Ring Binders (covered in band names); 1 Pizza Crust (from a sleepover); 2 Slap Bracelets (cut someone, probably). Weight 87.0 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0258.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -17,7 +17,7 @@
   },
   {
    "trait_type": "Contaminant",
-   "value": "Tiny Red Candle"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0258"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.1,
+   "value": 87.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 36,
    "display_type": "number"
   }
  ]

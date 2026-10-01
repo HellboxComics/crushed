@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0741",
- "description": "Recovered from Garage Sale Free Bin. Smells like burnt popcorn. Contents (partial): 2 TV Remotes (found in the couch); 3 Energy Drinks (exam week casualty); 2 Pizza Crusts (petrified); 3 Burned CDs (track 7 skips); 2 Power Strips (daisy-chained into three more). Weight 32.5 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0741.png",
+ "name": "CRUSHED IT #0741",
+ "description": "Recovered from Grandma's Attic. Smells like melted crayon. Contents (partial): 1 Disposable Vape (5000 puffs, 4999 regrets); 1 Beer Can (warm, sadly); 3 Dice (snake eyes, twice); 2 USB Sticks (contains homework_FINAL_final2.doc); 1 Power Bank (dead when needed). Weight 34.5 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0741.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Burnt Popcorn"
+   "value": "Melted Crayon"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0741"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 34.5,
    "display_type": "number"
   },
   {

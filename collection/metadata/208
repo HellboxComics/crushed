@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0208",
- "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Metal Lunchbox (thermos missing); 2 Soda Cans (shaken as a prank); 3 Cassette Tapes (rewound with a pencil); 1 Foam Headphones (orange foam, allegedly). Weight 49.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0208.png",
+ "name": "CRUSHED IT #0208",
+ "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 1 Boom Box (shoulder-mounted in its prime); 1 Beer Can (12 of 12); 2 Cassette Tapes (rewound with a pencil); 1 Scratch Ticket ($2 for hope). Weight 37.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0208.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Rink Snack Bar"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0208"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.5,
+   "value": 37.5,
    "display_type": "number"
   },
   {

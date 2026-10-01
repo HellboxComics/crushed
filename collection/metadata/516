@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0516",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Ball Mouses (cord chewed by a dog); 2 Cassette Tapes (rewound with a pencil); 1 Flip Phone (ringtone composed by hand); 3 Spiral Notebooks (doodles in the margins); 2 Skate Wheels (flat spot from a power slide). Weight 80.6 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0516.png",
+ "name": "CRUSHED IT #0516",
+ "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 1 Webcam (240p of pure confidence); 1 Cassette Tape (rewound with a pencil); 1 CRT Monitor (screen burn-in reads LOADING); 3 TV Remotes (found in the couch); 2 Soda Cans (flat). Weight 76.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0516.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Ball Mouse"
+   "value": "Webcam"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Estate of a Collector"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0516"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.6,
+   "value": 76.4,
    "display_type": "number"
   },
   {

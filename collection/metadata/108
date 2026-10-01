@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0108",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Roller Skates (the rink smell is still in there); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Spiral Notebook (spiral unwound halfway); 3 Power Strips (daisy-chained into three more); 3 Soda Cans (tab kept for charity). Weight 98.8 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0108.png",
+ "name": "CRUSHED IT #0108",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Roller Skates (the rink smell is still in there); 3 Beer Cans (last one in the fridge). Weight 39.0 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0108.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Roller Skate"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0108"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 98.8,
+   "value": 39.0,
    "display_type": "number"
   },
   {

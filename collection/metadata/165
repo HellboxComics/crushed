@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0165",
- "description": "Recovered from Back of the Closet. Smells like Grandma's couch. Contents (partial): 3 Soda Cans (shaken as a prank); 3 Portable Tape Players (belt clip snapped at a bus stop); 2 TV Remotes (found in the couch); 2 Floppy Disks (contains one (1) virus); 1 CRT Monitor (still warm). Weight 91.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0165.png",
+ "name": "CRUSHED IT #0165",
+ "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 2 Beer Cans (12 of 12); 1 Corded Phone (someone is still on hold); 3 Calculators (spelled BOOBIES upside down); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (DISK 2 of 7); 1 Emergency Ramen (the whole strategy). Weight 79.0 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0165.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Emergency Ramen"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0165"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.9,
+   "value": 79.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

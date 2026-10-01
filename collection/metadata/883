@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0883",
- "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 2 Game Controllers (thrown during a boss fight); 3 MP3 Players (shuffle picked the same song 6 times); 3 Sneakers (light-up heel, dead); 2 Pizza Crusts (still better than most portfolios); 1 Corded Phone (was on the line when mom picked up). Weight 32.5 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0883.png",
+ "name": "CRUSHED IT #0883",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like body spray cloud. Contents (partial): 1 Disposable Camera (never developed); 3 AA Batteries (taken out of the smoke detector); 2 Energy Drinks (tastes like a battery); 3 Smartphones (cracked in the first week); 3 Beer Cans (last one in the fridge). Weight 27.8 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0883.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0883"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 27.8,
    "display_type": "number"
   },
   {

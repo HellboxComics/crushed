@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0235",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 1 Floppy Disk (DISK 2 of 7); 3 Game Controllers (stick drift since day one); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Disposable Camera (never developed). Weight 85.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0235.png",
+ "name": "CRUSHED IT #0235",
+ "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 3 Sneakers (untied since 1989); 1 16-Bit Controller (cord pulled the console off the shelf); 3 Spiral Notebooks (doodles in the margins); 1 Army Man Squad (melted with a magnifying glass); 1 Scratch Ticket (scratched with a house key). Weight 85.5 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0235.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0235"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.1,
+   "value": 85.5,
    "display_type": "number"
   },
   {

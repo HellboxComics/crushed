@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0814",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 3 Energy Drinks (tastes like a battery); 1 Game Controller (thrown during a boss fight); 3 No. 2 Pencils (sharpened to a nub); 1 Floppy Disk (DISK 2 of 7); 2 Disposable Cameras (27 exposures of a thumb). Weight 31.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0814.png",
+ "name": "CRUSHED IT #0814",
+ "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 2 Power Banks (dead when needed); 1 Bluetooth Speaker (lost, found, lost); 2 Smartwatches (says STAND, does not); 3 Spiral Notebooks (doodles in the margins); 3 Tissue Boxes (one for every mood). Weight 27.9 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0814.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Power Bank"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0814"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.8,
+   "value": 27.9,
    "display_type": "number"
   },
   {

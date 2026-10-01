@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0031",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Boom Box (one speaker still believes); 2 Spiral Notebooks (note says 'check YES or NO'); 2 AA Batteries (probably dead); 3 VHS Tapes (label says DO NOT TAPE OVER). Weight 91.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0031.png",
+ "name": "CRUSHED IT #0031",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 1 Portable Tape Player (belt clip snapped at a bus stop); 1 Puzzle Cube (solved once, stickers moved); 1 Centerfold (folded out, then folded back in a hurry); 2 Shot Glasses (chipped rim). Weight 83.7 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0031.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0031"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 91.8,
+   "value": 83.7,
    "display_type": "number"
   },
   {

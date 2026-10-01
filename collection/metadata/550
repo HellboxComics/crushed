@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0550",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Foam Headphones (orange foam, allegedly); 1 Floppy Disk (says DO NOT FORMAT); 3 Portable CD Players (anti-skip lied); 2 Burned CDs (says ROAD TRIP in marker). Weight 69.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0550.png",
+ "name": "CRUSHED IT #0550",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Flip Phones (snapped shut dramatically); 3 Dice (blown on for luck); 3 Scratch Tickets ($2 for hope); 2 Digital Cameras (memory full, 14 photos); 1 Bear (doing fine actually). Weight 25.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0550.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Bear (Thriving)"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0550"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.5,
+   "value": 25.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

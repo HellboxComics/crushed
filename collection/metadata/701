@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0701",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 3 Burned CDs (burned at 1x, 4 hours); 3 AA Batteries (taken out of the smoke detector); 2 No. 2 Pencils (chewed); 2 Power Strips (overloaded on purpose). Weight 30.6 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0701.png",
+ "name": "CRUSHED IT #0701",
+ "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Burned CDs (burned at 1x, 4 hours); 2 Soda Cans (shaken as a prank); 2 Pizza Crusts (petrified); 2 Glow Sticks (still glowing a little, somehow). Weight 25.2 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0701.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Wet Cardboard"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Flooded Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0701"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 30.6,
+   "value": 25.2,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0043",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Puzzle Cube (two stickers peeled); 2 Army Man Squads (melted with a magnifying glass); 3 Yo-Yos (walked the dog one time); 3 Floppy Disks (says DO NOT FORMAT); 1 Boom Box (one speaker still believes). Weight 90.0 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0043.png",
+ "name": "CRUSHED IT #0043",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Roller Skates (toe stop worn to nothing); 2 Cheap Sunglasses (one lens popped out); 3 Joysticks (fire button pressed 40 million times); 1 Shot Glass (chipped rim). Weight 48.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0043.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -44,8 +44,12 @@
    "value": "BONE"
   },
   {
+   "trait_type": "Serial",
+   "value": "0043"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 90.0,
+   "value": 48.5,
    "display_type": "number"
   },
   {

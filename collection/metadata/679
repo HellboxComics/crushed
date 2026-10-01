@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0679",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 3 Game Controllers (stick drift since day one); 2 Handheld Consoles (battery cover lost immediately); 3 Energy Drinks (exam week casualty); 1 Corded Phone (someone is still on hold). Weight 30.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0679.png",
+ "name": "CRUSHED IT #0679",
+ "description": "Recovered from A Very Specific Ditch. Smells like blue raspberry. Contents (partial): 3 MP3 Players (shuffle picked the same song 6 times); 1 Spiral Notebook (note says 'check YES or NO'); 2 No. 2 Pencils (never saw a scantron it liked); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Pager (clipped to jeans for status only). Weight 21.1 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0679.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "A Very Specific Ditch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0679"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.6,
+   "value": 21.1,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0304",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Boom Box (took 10 D batteries); 1 Metal Lunchbox (thermos missing); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Disposable Camera (27 exposures of a thumb); 2 No. 2 Pencils (chewed). Weight 41.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0304.png",
+ "name": "CRUSHED IT #0304",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Boom Box (took 10 D batteries); 2 TV Remotes (the volume button worn smooth); 1 Milk Caps (the slammer is chipped); 1 Beer Can (12 of 12); 1 AA Batteries (probably dead). Weight 33.2 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0304.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
@@ -25,27 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "New Plastic"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
-   "trait_type": "Finish",
-   "value": "OBSIDIAN"
+   "trait_type": "Serial",
+   "value": "0304"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.7,
+   "value": 33.2,
    "display_type": "number"
   },
   {

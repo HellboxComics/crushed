@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0310",
- "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 3 Power Strips (daisy-chained into three more); 2 Toy Slime (was in the hair of a sibling); 2 Disposable Cameras (27 exposures of a thumb); 1 Spiral Notebook (doodles in the margins). Weight 46.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0310.png",
+ "name": "CRUSHED IT #0310",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like gym bag, forgotten. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Centerfolds (folded out, then folded back in a hurry); 2 Power Strips (overloaded on purpose); 1 Scratch Ticket (not a winner); 1 Skateboard (one ollie, lifetime). Weight 74.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0310.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Yo-Yo"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0310"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 46.5,
+   "value": 74.6,
    "display_type": "number"
   },
   {

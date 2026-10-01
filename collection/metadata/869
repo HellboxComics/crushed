@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0869",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 3 Pizza Crusts (still better than most portfolios); 3 Sneakers (untied since 1989); 3 Energy Drinks (exam week casualty); 3 Game Controllers (stick drift since day one). Weight 36.1 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0869.png",
+ "name": "CRUSHED IT #0869",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 TV Remote (held together with tape); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 2 Smartphones (cracked in the first week); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 No. 2 Pencils (chewed). Weight 32.4 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0869.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0869"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.1,
+   "value": 32.4,
    "display_type": "number"
   },
   {

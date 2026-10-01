@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0330",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 1 Three-Ring Binder (velcro screams when opened); 1 Skateboard (one ollie, lifetime); 2 Pizza Crusts (found behind the couch); 1 Floppy Disk (save icon, but real). Weight 38.7 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0330.png",
+ "name": "CRUSHED IT #0330",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Cassette Tape (side B only); 2 TV Remotes (the volume button worn smooth); 1 Ball Mouse (cord chewed by a dog); 1 Calculator (solar panel covered by a sticker). Weight 45.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0330.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "16-Bit Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0330"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 38.7,
+   "value": 45.5,
    "display_type": "number"
   },
   {

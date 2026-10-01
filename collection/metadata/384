@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0384",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 16-Bit Controllers (the B button is sticky); 2 Puzzle Cubes (two stickers peeled); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Slap Bracelet (banned by the school). Weight 72.6 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0384.png",
+ "name": "CRUSHED IT #0384",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 MP3 Players (shuffle picked the same song 6 times); 3 Sneakers (worn to one (1) very bad decision); 2 AA Batteries (licked to test); 1 Skate Wheel (flat spot from a power slide). Weight 73.4 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0384.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0384"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 72.6,
+   "value": 73.4,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0872",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 3 Sneakers (left only); 3 Energy Drinks (exam week casualty); 3 Pizza Crusts (from a sleepover); 3 Power Strips (overloaded on purpose); 3 Jewel Cases (hinge broken on arrival). Weight 31.8 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0872.png",
+ "name": "CRUSHED IT #0872",
+ "description": "Recovered from Grandma's Attic. Smells like mall food court. Contents (partial): 1 VR Headset (worn twice); 3 Scratch Tickets (scratched with a house key); 2 Hand Sanitizers (60% alcohol, 40% anxiety); 1 Disposable Camera (never developed); 1 Face Mask (from 2020, still fresh). Weight 30.5 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0872.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "VR Headset"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0872"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 31.8,
+   "value": 30.5,
    "display_type": "number"
   },
   {

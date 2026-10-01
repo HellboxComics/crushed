@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0761",
- "description": "Recovered from School Lost & Found. Smells like victory. Contents (partial): 1 Gold Pizza Crusts (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Digital Cameras (memory full, 14 photos); 3 No. 2 Pencils (chewed); 3 Flip Phones (snapped shut dramatically). Weight 30.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0761.png",
+ "name": "CRUSHED IT #0761",
+ "description": "Recovered from Behind the Couch. Smells like Vegas carpet. Contents (partial): 2 Smartwatches (10,000 steps, never); 2 No. 2 Pencils (chewed); 1 Disposable Camera (never developed); 2 Sneakers (light-up heel, dead); 1 Shot Glass (souvenir of a night nobody recalls). Weight 28.1 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0761.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "GOLD"
+   "value": "JUNK"
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Smartwatch"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Victory"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,15 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
-   "trait_type": "Gilded",
-   "value": "Pizza Crust"
+   "trait_type": "Serial",
+   "value": "0761"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.2,
+   "value": 28.1,
    "display_type": "number"
   },
   {

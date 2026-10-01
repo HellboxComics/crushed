@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0840",
- "description": "Recovered from Back of the Closet. Smells like fresh batteries (licked). Contents (partial): 3 Sneakers (light-up heel, dead); 3 Glow Sticks (cracked at a school dance); 1 Game Controller (stick drift since day one); 3 Burned CDs (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth). Weight 29.9 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0840.png",
+ "name": "CRUSHED IT #0840",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 1 Drone (flew once, into a tree); 3 Scratch Tickets (not a winner); 1 Bluetooth Speaker (played one song, too loud); 3 Game Controllers (thrown during a boss fight); 2 No. 2 Pencils (sharpened to a nub). Weight 33.0 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0840.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0840"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.9,
+   "value": 33.0,
    "display_type": "number"
   },
   {

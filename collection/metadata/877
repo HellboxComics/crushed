@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0877",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (was in the dryer); 3 Digital Cameras (2 megapixels of truth); 1 Flip Phone (ringtone composed by hand); 3 Glow Sticks (still glowing a little, somehow); 1 Film Canister (undeveloped, forever); 1 Dead Bull (dead). Weight 39.2 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0877.png",
+ "name": "CRUSHED IT #0877",
+ "description": "Recovered from Dad's Junk Drawer. Smells like hot dust on a CRT. Contents (partial): 1 Drone (40 seconds of freedom); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (untied since 1989); 2 Scratch Tickets (scratched with a house key); 2 Energy Drinks (tastes like a battery). Weight 36.6 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0877.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0877"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 36.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 46,
+   "value": 45,
    "display_type": "number"
   }
  ]

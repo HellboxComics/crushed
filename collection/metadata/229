@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0229",
- "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 3 9999-in-1 Handhelds (9999 games, 4 real ones); 1 CRT Monitor (still warm); 2 Power Strips (daisy-chained into three more); 1 Skateboard (griptape ate a pair of jeans); 2 Portable CD Players (anti-skip lied). Weight 82.1 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0229.png",
+ "name": "CRUSHED IT #0229: SLOW MOTION",
+ "description": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous. Recovered from The Beach, in Slow Motion. Smells like coconut sunscreen. Contents (partial): 10 Rescue Cans (a torpedo with no torpedo); 8 Red Swimsuits (drying since the nineties); 6 Cheap Sunglasses (one lens popped out); 1 Portable Tape Player (auto-reverse broke in 1991); 6 Lifeguard Whistles (sounds like authority). Weight 35.2 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0229.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SLOW MOTION"
   },
   {
    "trait_type": "Headliner",
-   "value": "9999-in-1 Handheld"
+   "value": "Rescue Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Coconut Sunscreen"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "The Beach, in Slow Motion"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,24 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "None"
+  },
+  {
+   "trait_type": "One of One",
+   "value": "SLOW MOTION"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0229"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 35.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 46,
    "display_type": "number"
   }
  ]

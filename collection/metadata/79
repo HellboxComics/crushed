@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0079",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Pizza Crusts (still better than most portfolios); 2 No. 2 Pencils (chewed); 2 Joysticks (suction cups gave up); 2 Film Canisters (undeveloped, forever). Weight 76.4 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0079.png",
+ "name": "CRUSHED IT #0079",
+ "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Calculators (solar panel covered by a sticker); 2 Army Man Squads (the one with the radio survived); 1 Spiral Notebook (note says 'check YES or NO'); 2 Floppy Disks (DISK 2 of 7). Weight 70.8 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0079.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0079"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.4,
+   "value": 70.8,
    "display_type": "number"
   },
   {

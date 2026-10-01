@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0595",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Cassette Tapes (side B only); 1 Film Canister (holds one quarter); 1 Corded Phone (was on the line when mom picked up); 3 Burned CDs (track 7 skips). Weight 78.0 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0595.png",
+ "name": "CRUSHED IT #0595",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 1 Gold Game Controller (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (says ROAD TRIP in marker); 1 Beer Can (warm, sadly); 2 Memory Cards (corrupted during a birthday). Weight 21.5 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0595.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,31 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Gilded",
+   "value": "Game Controller"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0595"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 78.0,
+   "value": 21.5,
    "display_type": "number"
   },
   {

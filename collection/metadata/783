@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0783",
- "description": "Recovered from Nobody Knows. Smells like blue raspberry. Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 2 MP3 Players (shuffle picked the same song 6 times); 1 No. 2 Pencil (sharpened to a nub); 3 Game Controllers (thrown during a boss fight); 3 Pizza Crusts (from a sleepover). Weight 27.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0783.png",
+ "name": "CRUSHED IT #0783",
+ "description": "Recovered from Behind the Bar. Smells like Grandma's couch. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 2 AA Batteries (mixed old and new, like animals); 1 Earbud Case (survived the wash); 3 Energy Drinks (exam week casualty); 1 Face Mask (from 2020, still fresh); 1 Tiny Red Candle (lit). Weight 28.5 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0783.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Handheld Console"
+   "value": "Smartwatch"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Nobody Knows"
+   "value": "Behind the Bar"
   },
   {
    "trait_type": "Tape",
@@ -37,16 +37,20 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0783"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.5,
+   "value": 28.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 36,
    "display_type": "number"
   }
  ]

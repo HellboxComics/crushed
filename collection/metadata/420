@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0420",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Portable CD Players (45-second buffer, 2-second attention span); 1 Boom Box (took 10 D batteries); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Cassette Tapes (rewound with a pencil); 2 Pagers (last page: 143). Weight 51.4 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0420.png",
+ "name": "CRUSHED IT #0420",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 Pagers (last page from a number nobody called back); 2 Game Controllers (stick drift since day one); 1 VHS Tape (label says DO NOT TAPE OVER); 2 Cassette Tapes (rewound with a pencil); 2 Flip Phones (snapped shut dramatically). Weight 27.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0420.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable CD Player"
+   "value": "Pager"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0420"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.4,
+   "value": 27.1,
    "display_type": "number"
   },
   {

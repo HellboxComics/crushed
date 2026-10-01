@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0164",
- "description": "Recovered from A Very Specific Ditch. Smells like scratch-n-sniff sticker. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Spiral Notebooks (spiral unwound halfway); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Pizza Crusts (from a sleepover); 1 AA Batteries (taken out of the smoke detector). Weight 80.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0164.png",
+ "name": "CRUSHED IT #0164",
+ "description": "Recovered from Ex's Garage. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 16-Bit Controller (the B button is sticky); 2 Poker Chips (never cashed out); 2 Beer Cans (warm, sadly). Weight 84.7 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0164.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0164"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.8,
+   "value": 84.7,
    "display_type": "number"
   },
   {

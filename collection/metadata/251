@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0251",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (degaussed one last time); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Foam Headphones (orange foam, allegedly); 2 Army Man Squads (melted with a magnifying glass). Weight 86.1 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0251.png",
+ "name": "CRUSHED IT #0251",
+ "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Clear Lighter (for incense, obviously); 3 Dice (loaded, rumor says); 1 Portable CD Player (anti-skip lied); 2 Spiral Notebooks (spiral unwound halfway); 1 Gold Coin (bought the top). Weight 78.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0251.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Skateboard"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Gold Coin"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Rink Snack Bar"
+   "value": "Vegas Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0251"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.1,
+   "value": 78.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 42,
    "display_type": "number"
   }
  ]

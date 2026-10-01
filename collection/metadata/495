@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0495",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 2 TV Remotes (held together with tape); 2 Floppy Disks (contains one (1) virus); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Digital Cameras (memory full, 14 photos); 3 Burned CDs (coaster now); 1 Emergency Ramen (for emergencies). Weight 69.4 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0495.png",
+ "name": "CRUSHED IT #0495",
+ "description": "Recovered from A Buddy's Basement. Smells like arcade carpet. Contents (partial): 1 Disposable Camera (never developed); 2 Shot Glasses (from a trip to Vegas); 2 Foam Headphones (orange foam, allegedly); 1 Digital Camera (memory full, 14 photos); 3 Burned CDs (coaster now). Weight 71.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0495.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Camera"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Emergency Ramen"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0495"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 69.4,
+   "value": 71.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 34,
    "display_type": "number"
   }
  ]

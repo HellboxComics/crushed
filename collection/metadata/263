@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0263",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 16-Bit Controller (cord pulled the console off the shelf); 3 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 1 Floppy Disk (contains one (1) virus); 1 Slap Bracelet (banned by the school). Weight 86.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0263.png",
+ "name": "CRUSHED IT #0263",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Floppy Disks (DISK 2 of 7); 3 Slap Bracelets (cut someone, probably); 1 Toy Slime (stuck in the carpet). Weight 37.3 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0263.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,11 +9,11 @@
   },
   {
    "trait_type": "Condition",
-   "value": "JUNK"
+   "value": "SOAKED"
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "9999-in-1 Handheld"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0263"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 86.3,
+   "value": 37.3,
    "display_type": "number"
   },
   {

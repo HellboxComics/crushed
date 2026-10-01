@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0458",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Film Canister (holds one quarter); 2 Spiral Notebooks (note says 'check YES or NO'); 3 Clear Lighters (for incense, obviously); 1 Cassette Tape (someone's voicemail greeting). Weight 36.4 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0458.png",
+ "name": "CRUSHED IT #0458",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Dice (loaded, rumor says); 1 TV Remote (the volume button worn smooth); 1 AA Batteries (probably dead); 1 CRT Monitor (weighs more than the desk). Weight 73.0 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0458.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Storage Unit (Auctioned)"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0458"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.4,
+   "value": 73.0,
    "display_type": "number"
   },
   {

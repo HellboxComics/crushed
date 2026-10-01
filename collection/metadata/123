@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0123",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 1 Foam Headphones (orange foam, allegedly); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Calculators (solar panel covered by a sticker); 3 Army Man Squads (melted with a magnifying glass); 3 Puzzle Cubes (two stickers peeled). Weight 77.8 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0123.png",
+ "name": "CRUSHED IT #0123",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 1 Corded Phone (was on the line when mom picked up); 2 Game Cartridges (save file erased by a sibling); 2 Pizza Crusts (still better than most portfolios); 3 Sneakers (was in the dryer). Weight 84.1 lb. Contents may have settled.",
+ "image": "ipfs://<images-cid>/0123.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0123"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.8,
+   "value": 84.1,
    "display_type": "number"
   },
   {

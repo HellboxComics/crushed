@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0788",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 3 Flip Phones (12 texts left this month); 2 Sneakers (left only); 3 AA Batteries (taken out of the smoke detector); 3 Energy Drinks (exam week casualty); 1 Webcam (240p of pure confidence). Weight 72.7 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0788.png",
+ "name": "CRUSHED IT #0788",
+ "description": "Recovered from Behind the Couch. Smells like arcade carpet. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Smartphones (screen protector did nothing); 3 Fidget Spinners (spins for four seconds, like the trend); 2 Power Banks (10000 mAh of dead weight); 1 No. 2 Pencil (never saw a scantron it liked). Weight 42.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0788.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0788"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 72.7,
+   "value": 42.6,
    "display_type": "number"
   },
   {

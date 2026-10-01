@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0036",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Sneaker (left only); 1 Calculator (solar panel covered by a sticker); 1 Cassette Tape (side B only); 2 Floppy Disks (contains one (1) virus); 3 Cheap Sunglasses (one lens popped out). Weight 70.0 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0036.png",
+ "name": "CRUSHED IT #0036",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 1 Roller Skate (the rink smell is still in there); 1 Game Cartridge (save file erased by a sibling); 1 Boom Box (took 10 D batteries); 2 Joysticks (suction cups gave up); 1 Metal Lunchbox (the smell stays). Weight 51.2 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0036.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Roller Skate"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0036"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.0,
+   "value": 51.2,
    "display_type": "number"
   },
   {

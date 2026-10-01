@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0121",
- "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 2 Power Strips (overloaded on purpose); 1 Three-Ring Binder (velcro screams when opened); 3 No. 2 Pencils (chewed); 1 Yo-Yo (walked the dog one time). Weight 56.9 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0121.png",
+ "name": "CRUSHED IT #0121",
+ "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 1 TV Remote (held together with tape); 2 Shot Glasses (chipped rim); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Game Cartridge (blown into 400 times); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Crumpled Chart (it went up, then it went down). Weight 85.1 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0121.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Roller Skate"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0121"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 56.9,
+   "value": 85.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 37,
    "display_type": "number"
   }
  ]

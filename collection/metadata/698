@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0698",
- "description": "Recovered from Storage Unit (Auctioned). Smells like fresh batteries (licked). Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 2 No. 2 Pencils (sharpened to a nub); 1 Digital Camera (memory full, 14 photos); 3 Laptop Chargers (fits nothing else in the house); 3 Disposable Cameras (27 exposures of a thumb). Weight 33.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0698.png",
+ "name": "CRUSHED IT #0698",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like gym bag, forgotten. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Pizza Crust (from a sleepover); 1 Jewel Case (insert is from a different album); 3 Power Strips (daisy-chained into three more); 3 Sneakers (light-up heel, dead). Weight 31.3 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0698.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0698"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 33.2,
+   "value": 31.3,
    "display_type": "number"
   },
   {

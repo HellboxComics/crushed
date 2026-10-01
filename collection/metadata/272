@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0272",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Army Man Squads (the one with the radio survived); 3 Game Cartridges (blown into 400 times); 2 No. 2 Pencils (sharpened to a nub). Weight 87.6 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0272.png",
+ "name": "CRUSHED IT #0272",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Puzzle Cube (two stickers peeled); 3 Cassette Tapes (labeled MIX 4 U); 1 Slap Bracelet (banned by the school); 3 Calculators (spelled BOOBIES upside down); 3 Skate Wheels (flat spot from a power slide). Weight 46.9 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0272.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "Puzzle Cube"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0272"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.6,
+   "value": 46.9,
    "display_type": "number"
   },
   {

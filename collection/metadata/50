@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0050",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Cassette Tapes (labeled MIX 4 U); 1 Soda Can (flat); 1 Floppy Disk (says DO NOT FORMAT); 1 Game Cartridge (save file erased by a sibling); 1 Bear (Thriving) (doing fine actually). Weight 54.6 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0050.png",
+ "name": "CRUSHED IT #0050",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Cassette Tapes (rewound with a pencil); 1 Corded Phone (cord stretched to the bathroom); 1 Army Man Squad (the one with the radio survived); 2 VHS Tapes (the unmarked one, from the back of the closet). Weight 28.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0050.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Calculator"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Bear (Thriving)"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Garage Sale Free Bin"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0050"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 54.6,
+   "value": 28.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 32,
    "display_type": "number"
   }
  ]

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0365",
- "description": "Recovered from Under the Bed. Smells like fresh batteries (licked). Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 Portable CD Players (anti-skip lied); 2 Game Cartridges (save file erased by a sibling); 1 Disposable Camera (never developed); 2 16-Bit Controllers (cord pulled the console off the shelf). Weight 83.7 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0365.png",
+ "name": "CRUSHED IT #0365",
+ "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Sneaker (light-up heel, dead); 2 Game Controllers (thrown during a boss fight); 1 Beer Can (last one in the fridge); 2 Burned CDs (track 7 skips). Weight 72.1 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0365.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0365"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.7,
+   "value": 72.1,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0483",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 USB Sticks (never ejected safely); 2 Clear Lighters (out of fluid); 2 Film Canisters (holds one quarter); 2 Cassette Tapes (someone's voicemail greeting). Weight 69.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0483.png",
+ "name": "CRUSHED IT #0483",
+ "description": "Recovered from The Bachelor Pad. Smells like blue raspberry. Contents (partial): 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Spiral Notebook (spiral unwound halfway); 1 Skate Wheel (rolled into a storm drain once); 1 Shot Glass (chipped rim); 1 Jewel Case (insert is from a different album). Weight 33.9 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0483.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Keyboard (Partial)"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0483"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.2,
+   "value": 33.9,
    "display_type": "number"
   },
   {

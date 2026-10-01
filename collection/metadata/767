@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0767",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 TV Remotes (the volume button worn smooth); 3 Laptop Chargers (fits nothing else in the house); 3 USB Sticks (never ejected safely); 3 Flip Phones (ringtone composed by hand); 3 Game Controllers (thrown during a boss fight); 1 Dead Bull (flipped). Weight 30.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0767.png",
+ "name": "CRUSHED IT #0767",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Disposable Vape (mango, mostly); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (chipped rim); 2 Energy Drinks (tastes like a battery); 2 Power Banks (dead when needed). Weight 30.7 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0767.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Disposable Vape"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Dead Bull"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0767"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 30.3,
+   "value": 30.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 42,
    "display_type": "number"
   }
  ]

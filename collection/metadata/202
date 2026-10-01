@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0202",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 3 Film Canisters (holds one quarter); 3 Cheap Sunglasses (mall kiosk special); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 92.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0202.png",
+ "name": "CRUSHED IT #0202",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Sneaker (light-up heel, dead); 1 VHS Tape (taped over a wedding); 3 Shot Glasses (from a trip to Vegas); 1 Metal Lunchbox (thermos missing); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 39.1 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0202.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Yo-Yo"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Body Spray Cloud"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0202"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.3,
+   "value": 39.1,
    "display_type": "number"
   },
   {

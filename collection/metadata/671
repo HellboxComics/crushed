@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0671",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Flip Phones (ringtone composed by hand); 1 Handheld Console (screen scratched from a pocket with keys); 2 Jewel Cases (insert is from a different album); 3 AA Batteries (probably dead). Weight 24.7 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0671.png",
+ "name": "CRUSHED IT #0671",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (stick drift since day one); 2 Digital Cameras (memory full, 14 photos); 3 Burned CDs (burned at 1x, 4 hours); 2 Flip Phones (12 texts left this month); 2 Energy Drinks (third one that night); 1 Crumpled Chart (it went up, then it went down). Weight 25.4 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0671.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0671"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 24.7,
+   "value": 25.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 38,
    "display_type": "number"
   }
  ]

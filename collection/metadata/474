@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0474",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Keyboards (Partial) (F, J and the crumbs); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Flip Phones (12 texts left this month); 1 Memory Card (corrupted during a birthday); 2 Floppy Disks (DISK 2 of 7); 1 Broken Rocket (didn't make it). Weight 82.1 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0474.png",
+ "name": "CRUSHED IT #0474",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Magazines (for the interviews, obviously); 2 Shot Glasses (chipped rim); 1 Sneaker (light-up heel, dead); 1 Skate Wheel (flat spot from a power slide). Weight 69.8 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0474.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Keyboard (Partial)"
+   "value": "Ball Mouse"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Broken Rocket"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0474"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 69.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

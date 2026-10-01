@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0104",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 Cheap Sunglasses (mall kiosk special); 1 Portable Tape Player (auto-reverse broke in 1991); 3 Foam Headphones (orange foam, allegedly); 1 Spiral Notebook (note says 'check YES or NO'). Weight 94.9 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0104.png",
+ "name": "CRUSHED IT #0104",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 Centerfold (folded out, then folded back in a hurry); 1 Foam Headphones (orange foam, allegedly); 1 Beer Can (12 of 12); 1 Yo-Yo (walked the dog one time). Weight 87.6 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0104.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0104"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 94.9,
+   "value": 87.6,
    "display_type": "number"
   },
   {

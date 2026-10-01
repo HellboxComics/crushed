@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0385",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 1 No. 2 Pencil (chewed); 2 Pagers (clipped to jeans for status only); 2 Game Cartridges (save file erased by a sibling); 2 Puzzle Cubes (solved once, stickers moved). Weight 44.9 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0385.png",
+ "name": "CRUSHED IT #0385",
+ "description": "Recovered from Under the Bed. Smells like scratch-n-sniff sticker. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (faceplate swapped 4 times); 2 Virtual Pets (fed 0 times); 1 Clear Lighter (for incense, obviously). Weight 30.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0385.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Calculator"
+   "value": "Digital Camera"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0385"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.9,
+   "value": 30.6,
    "display_type": "number"
   },
   {

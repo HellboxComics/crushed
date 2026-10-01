@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0006",
- "description": "Recovered from Back of the Closet. Smells like gym bag, forgotten. Contents (partial): 1 Cassette Tape (labeled MIX 4 U); 2 AA Batteries (mixed old and new, like animals); 1 Metal Lunchbox (thermos missing); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Army Man Squads (melted with a magnifying glass). Weight 78.6 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0006.png",
+ "name": "CRUSHED IT #0006",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 1 Cassette Tape (labeled MIX 4 U); 1 Film Canister (holds one quarter); 1 Soda Can (flat); 1 Skateboard (one ollie, lifetime); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 49.7 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0006.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Back of the Closet"
+   "value": "Dad's Junk Drawer"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0006"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.6,
+   "value": 49.7,
    "display_type": "number"
   },
   {

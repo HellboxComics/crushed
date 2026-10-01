@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0362",
- "description": "Recovered from Behind the Couch. Smells like mall food court. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 3 Calculators (solar panel covered by a sticker); 1 Power Strip (overloaded on purpose); 2 Burned CDs (says ROAD TRIP in marker); 1 Disposable Camera (27 exposures of a thumb). Weight 46.3 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0362.png",
+ "name": "CRUSHED IT #0362",
+ "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 3 Digital Cameras (memory full, 14 photos); 1 Centerfold (staples removed, an attempt was made); 1 Corded Phone (was on the line when mom picked up); 1 Beer Can (crushed on a forehead). Weight 81.7 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0362.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0362"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 46.3,
+   "value": 81.7,
    "display_type": "number"
   },
   {

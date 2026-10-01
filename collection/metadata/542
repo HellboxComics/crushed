@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0542",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 1 Pager (last page: 143); 3 TV Remotes (the volume button worn smooth); 2 Disposable Cameras (never developed); 1 Memory Card (8MB, full); 1 Burned CD (track 7 skips). Weight 81.3 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0542.png",
+ "name": "CRUSHED IT #0542",
+ "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Tissue Box (one for every mood); 2 Sneakers (smells like 1989); 1 Pizza Crust (still better than most portfolios); 2 Memory Cards (corrupted during a birthday). Weight 20.2 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0542.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Pager"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0542"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 81.3,
+   "value": 20.2,
    "display_type": "number"
   },
   {

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0704",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 1 Game Controller (stick drift since day one); 2 Clear Lighters (for incense, obviously); 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Spiral Notebooks (doodles in the margins); 2 Burned CDs (burned at 1x, 4 hours). Weight 31.0 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0704.png",
+ "name": "CRUSHED IT #0704",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Matchbook (from a gentlemen's club, reportedly); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 Power Strips (daisy-chained into three more); 2 Soda Cans (flat). Weight 26.3 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0704.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0704"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 26.3,
    "display_type": "number"
   },
   {

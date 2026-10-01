@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0706",
- "description": "Recovered from Under the Bed. Smells like gym bag, forgotten. Contents (partial): 3 Energy Drinks (exam week casualty); 2 Spiral Notebooks (doodles in the margins); 2 Glow Sticks (still glowing a little, somehow); 1 Handheld Console (screen scratched from a pocket with keys); 3 Power Strips (overloaded on purpose). Weight 84.4 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0706.png",
+ "name": "CRUSHED IT #0706",
+ "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 TV Remotes (found in the couch); 1 No. 2 Pencil (sharpened to a nub); 2 Glow Sticks (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet). Weight 24.5 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0706.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Energy Drink"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0706"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 84.4,
+   "value": 24.5,
    "display_type": "number"
   },
   {

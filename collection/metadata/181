@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0181",
- "description": "Recovered from A Very Specific Ditch. Smells like arcade carpet. Contents (partial): 2 TV Remotes (the volume button worn smooth); 3 VHS Tapes (late fees now exceed GDP of a small nation); 2 Portable Tape Players (auto-reverse broke in 1991); 2 Calculators (spelled BOOBIES upside down); 2 Game Cartridges (save file erased by a sibling). Weight 83.8 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0181.png",
+ "name": "CRUSHED IT #0181",
+ "description": "Recovered from Ex's Garage. Smells like arcade carpet. Contents (partial): 1 Magazine (the staples are doing the work); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Game Cartridge (blown into 400 times); 2 TV Remotes (found in the couch); 1 16-Bit Controller (the B button is sticky). Weight 82.1 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0181.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "A Very Specific Ditch"
+   "value": "Ex's Garage"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0181"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.8,
+   "value": 82.1,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0863",
- "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Sneakers (left only); 1 Glow Stick (cracked at a school dance); 3 TV Remotes (found in the couch); 1 CRT Monitor (screen burn-in reads LOADING). Weight 75.3 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0863.png",
+ "name": "CRUSHED IT #0863",
+ "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 2 Smartphones (screen protector did nothing); 3 Tissue Boxes (nearly empty); 3 Fidget Spinners (banned by the school); 1 Ring Light (the eyes in every mirror selfie); 2 Glow Sticks (still glowing a little, somehow). Weight 32.5 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0863.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Game Controller"
+   "value": "Smartphone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0863"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.3,
+   "value": 32.5,
    "display_type": "number"
   },
   {

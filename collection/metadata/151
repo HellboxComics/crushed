@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0151",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 1 Foam Headphones (one ear works if you hold it); 1 Metal Lunchbox (the smell stays); 1 Keyboard (Partial) (F, J and the crumbs); 3 Film Canisters (holds one quarter); 1 VHS Tape (BE KIND REWIND (they did not)). Weight 50.8 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0151.png",
+ "name": "CRUSHED IT #0151",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Soda Cans (tab kept for charity); 1 Calculator (spelled BOOBIES upside down); 3 Matchbooks (matches missing, reasons unclear); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Crumpled Chart (it went up, then it went down). Weight 43.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0151.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Foam Headphones"
+   "value": "Corded Phone"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Crumpled Chart"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -33,20 +33,24 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0151"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.8,
+   "value": 43.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 39,
    "display_type": "number"
   }
  ]

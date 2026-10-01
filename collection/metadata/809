@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0809",
- "description": "Recovered from Dad's Junk Drawer. Smells like fresh batteries (licked). Contents (partial): 3 Sneakers (left only); 2 Pizza Crusts (petrified); 2 Energy Drinks (exam week casualty); 3 Power Strips (daisy-chained into three more); 2 AA Batteries (probably dead). Weight 73.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0809.png",
+ "name": "CRUSHED IT #0809",
+ "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 1 VR Headset (worn twice); 1 Dice (snake eyes, twice); 1 Poker Chip (a stack of ambition); 2 Sneakers (left only); 2 Soda Cans (flat). Weight 26.2 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0809.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
-   "value": "BURNT"
+   "value": "CLEAN"
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "VR Headset"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,19 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Finish",
+   "value": "SAFETY ORANGE"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0809"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.7,
+   "value": 26.2,
    "display_type": "number"
   },
   {

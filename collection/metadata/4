@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0004",
- "description": "Recovered from Dad's Junk Drawer. Smells like arcade carpet. Contents (partial): 3 Roller Skates (the rink smell is still in there); 2 Pizza Crusts (found behind the couch); 3 AA Batteries (licked to test); 1 Joystick (suction cups gave up); 3 Yo-Yos (string tied to a finger for 3 years). Weight 57.7 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0004.png",
+ "name": "CRUSHED IT #0004",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 AA Batteries (mixed old and new, like animals); 3 Poker Chips (never cashed out); 3 Cheap Sunglasses (one lens popped out); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 83.2 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0004.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Roller Skate"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0004"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 57.7,
+   "value": 83.2,
    "display_type": "number"
   },
   {

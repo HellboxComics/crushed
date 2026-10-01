@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0720",
- "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 3 Sneakers (was in the dryer); 1 VHS Tape (taped over a wedding); 2 TV Remotes (the volume button worn smooth); 1 Corded Phone (was on the line when mom picked up); 1 Cheap Sunglasses (one lens popped out). Weight 34.7 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0720.png",
+ "name": "CRUSHED IT #0720",
+ "description": "Recovered from Under the Bed. Smells like new plastic. Contents (partial): 1 Fidget Spinner (bearing went missing); 2 Bluetooth Speakers (played one song, too loud); 1 USB Stick (never ejected safely); 3 Earbud Cases (both buds gone, case still charges nothing); 1 AA Batteries (taken out of the smoke detector). Weight 25.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0720.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Fidget Spinner"
   },
   {
    "trait_type": "Contaminant",
@@ -33,15 +33,19 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0720"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.7,
+   "value": 25.4,
    "display_type": "number"
   },
   {

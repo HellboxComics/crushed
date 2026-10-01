@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0867",
- "description": "Recovered from Garage Sale Free Bin. Smells like melted crayon. Contents (partial): 2 TV Remotes (held together with tape); 3 No. 2 Pencils (never saw a scantron it liked); 3 Pizza Crusts (petrified); 3 Game Controllers (thrown during a boss fight); 1 Brick Phone (unbreakable until today). Weight 25.2 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0867.png",
+ "name": "CRUSHED IT #0867",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (exam week casualty); 3 Power Strips (daisy-chained into three more). Weight 34.3 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0867.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Face Mask"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Melted Crayon"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0867"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 25.2,
+   "value": 34.3,
    "display_type": "number"
   },
   {

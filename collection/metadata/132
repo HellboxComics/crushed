@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0132",
- "description": "Recovered from Storage Unit (Auctioned). Smells like hot dust on a CRT. Contents (partial): 1 Soda Can (tab kept for charity); 3 Calculators (spelled BOOBIES upside down); 2 Three-Ring Binders (velcro screams when opened); 2 AA Batteries (probably dead); 2 Film Canisters (holds one quarter). Weight 82.5 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0132.png",
+ "name": "CRUSHED IT #0132",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Beer Can (last one in the fridge); 2 Game Cartridges (blown into 400 times); 2 Soda Cans (shaken as a prank); 2 No. 2 Pencils (chewed); 1 Matchbook (matches missing, reasons unclear). Weight 39.9 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0132.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Soda Can"
+   "value": "Beer Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Storage Unit (Auctioned)"
+   "value": "Dad's Truck, Glovebox"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0132"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 82.5,
+   "value": 39.9,
    "display_type": "number"
   },
   {

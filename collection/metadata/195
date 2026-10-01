@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0195",
- "description": "Recovered from Garage Sale Free Bin. Smells like gym bag, forgotten. Contents (partial): 1 Boom Box (one speaker still believes); 3 Pizza Crusts (petrified); 1 No. 2 Pencil (sharpened to a nub); 3 Joysticks (fire button pressed 40 million times); 3 Game Cartridges (blown into 400 times); 1 Crumpled Chart (printed out for emotional reasons). Weight 53.8 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0195.png",
+ "name": "CRUSHED IT #0195",
+ "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Dice (snake eyes, twice); 1 TV Remote (the volume button worn smooth); 2 Game Cartridges (blown into 400 times); 2 Pagers (last page: 143). Weight 29.3 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0195.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1985-1990"
+   "value": "1991-1996"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Boom Box"
+   "value": "Portable Tape Player"
   },
   {
    "trait_type": "Contaminant",
-   "value": "Crumpled Chart"
+   "value": "None"
   },
   {
    "trait_type": "Pressure",
@@ -25,28 +25,32 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0195"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.8,
+   "value": 29.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 37,
    "display_type": "number"
   }
  ]

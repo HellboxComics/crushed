@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0662",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Flip Phone (snapped shut dramatically); 1 Pizza Crust (from a sleepover); 1 Virtual Pet (reincarnated 40 times); 3 Memory Cards (8MB, full); 1 Foam Headphones (one ear works if you hold it). Weight 82.2 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0662.png",
+ "name": "CRUSHED IT #0662",
+ "description": "Recovered from Behind the Couch. Smells like Grandma's couch. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Scratch Tickets (not a winner); 1 Pizza Crust (found behind the couch); 1 Flip Phone (ringtone composed by hand); 3 USB Sticks (never ejected safely). Weight 24.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0662.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Flip Phone"
+   "value": "Game Controller"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0662"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.2,
+   "value": 24.3,
    "display_type": "number"
   },
   {

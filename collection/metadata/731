@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0731",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Digital Cameras (2 megapixels of truth); 3 Memory Cards (8MB, full); 2 Pizza Crusts (from a sleepover); 2 Glow Sticks (cracked at a school dance); 3 Burned CDs (burned at 1x, 4 hours). Weight 35.9 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0731.png",
+ "name": "CRUSHED IT #0731",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Sneakers (untied since 1989); 3 No. 2 Pencils (never saw a scantron it liked); 2 Disposable Vapes (mango, mostly); 1 Scratch Ticket (not a winner); 2 Spiral Notebooks (doodles in the margins); 1 Broken Rocket (was going to the moon). Weight 30.3 lb. Nobody made you keep this.",
+ "image": "ipfs://<images-cid>/0731.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Digital Camera"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Broken Rocket"
   },
   {
    "trait_type": "Pressure",
@@ -40,13 +40,17 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0731"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 35.9,
+   "value": 30.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 41,
    "display_type": "number"
   }
  ]

@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0122",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Cheap Sunglasses (mall kiosk special); 1 TV Remote (found in the couch); 3 Floppy Disks (save icon, but real); 2 Cassette Tapes (side B only). Weight 75.9 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0122.png",
+ "name": "CRUSHED IT #0122",
+ "description": "Recovered from Mom's Minivan. Smells like blue raspberry. Contents (partial): 3 Soda Cans (tab kept for charity); 1 Game Cartridge (blown into 400 times); 1 Scratch Ticket (not a winner); 1 16-Bit Controller (the B button is sticky); 1 AA Batteries (probably dead). Weight 78.7 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0122.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Metal Lunchbox"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Mall Food Court"
+   "value": "Blue Raspberry"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "A Few"
   },
   {
+   "trait_type": "Serial",
+   "value": "0122"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 75.9,
+   "value": 78.7,
    "display_type": "number"
   },
   {

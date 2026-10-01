@@ -1,19 +1,19 @@
 {
- "name": "CRUSHED #0616",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 TV Remotes (found in the couch); 3 VHS Tapes (taped over a wedding); 1 Corded Phone (someone is still on hold); 2 AA Batteries (licked to test). Weight 78.0 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0616.png",
+ "name": "CRUSHED IT #0616",
+ "description": "Recovered from Behind the Science Wing. Smells like science lab. Contents (partial): 2 Magazines (for the interviews, obviously); 2 Centerfolds (folded out, then folded back in a hurry); 1 Poker Chip (never cashed out); 1 Memory Card (8MB, full); 2 Clear Lighters (out of fluid). Weight 28.7 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0616.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
-   "value": "CLEAN"
+   "value": "BIOHAZARD"
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Science Lab"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "Behind the Science Wing"
   },
   {
    "trait_type": "Tape",
@@ -40,12 +40,12 @@
    "value": "Several"
   },
   {
-   "trait_type": "Finish",
-   "value": "ICE"
+   "trait_type": "Serial",
+   "value": "0616"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.0,
+   "value": 28.7,
    "display_type": "number"
   },
   {

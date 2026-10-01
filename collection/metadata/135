@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0135",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 1 TV Remote (found in the couch); 1 VHS Tape (taped over a wedding); 1 Game Cartridge (save file erased by a sibling); 3 Cassette Tapes (rewound with a pencil); 3 Pizza Crusts (petrified). Weight 80.9 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0135.png",
+ "name": "CRUSHED IT #0135",
+ "description": "Recovered from Behind the Couch. Smells like fresh batteries (licked). Contents (partial): 2 Tissue Boxes (nearly empty); 3 Cassette Tapes (labeled MIX 4 U); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Poker Chip (a stack of ambition); 1 Calculator (spelled BOOBIES upside down). Weight 71.6 lb. Handle with both hands.",
+ "image": "ipfs://<images-cid>/0135.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "TV Remote"
+   "value": "Tissue Box"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Grandma's Couch"
+   "value": "Fresh Batteries (Licked)"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0135"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.9,
+   "value": 71.6,
    "display_type": "number"
   },
   {

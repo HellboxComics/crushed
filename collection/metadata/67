@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0067",
- "description": "Recovered from Behind the Couch. Smells like arcade carpet. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (someone is still on hold); 3 No. 2 Pencils (chewed); 3 Game Cartridges (save file erased by a sibling); 3 Floppy Disks (save icon, but real). Weight 84.9 lb. Handle with both hands.",
- "image": "ipfs://IMAGES_CID/0067.png",
+ "name": "CRUSHED IT #0067",
+ "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 3 Sneakers (untied since 1989); 1 CRT Monitor (screen burn-in reads LOADING); 3 Power Strips (daisy-chained into three more); 3 Floppy Disks (contains one (1) virus); 2 Joysticks (suction cups gave up). Weight 81.4 lb. Still heavier than it looks.",
+ "image": "ipfs://<images-cid>/0067.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Puzzle Cube"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "Vegas Hotel Room"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Concerning"
   },
   {
+   "trait_type": "Serial",
+   "value": "0067"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 81.4,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0574",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 Ball Mouse (cord chewed by a dog); 1 MP3 Player (shuffle picked the same song 6 times); 2 Clear Lighters (out of fluid); 2 Virtual Pets (fed 0 times). Weight 36.2 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0574.png",
+ "name": "CRUSHED IT #0574",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Magazines (read for the articles); 2 Centerfolds (left open to the wrong page); 2 Shot Glasses (from a trip to Vegas); 1 Skateboard (griptape ate a pair of jeans); 2 Beer Cans (12 of 12). Weight 31.3 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0574.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "Magazine"
   },
   {
    "trait_type": "Contaminant",
@@ -29,19 +29,23 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0574"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 36.2,
+   "value": 31.3,
    "display_type": "number"
   },
   {

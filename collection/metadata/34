@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0034",
- "description": "Recovered from Under the Bed. Smells like arcade carpet. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Sneakers (untied since 1989); 3 No. 2 Pencils (never saw a scantron it liked); 2 Three-Ring Binders (velcro screams when opened). Weight 78.5 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0034.png",
+ "name": "CRUSHED IT #0034",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 3 Pizza Crusts (still better than most portfolios); 3 Floppy Disks (contains one (1) virus); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time). Weight 80.4 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0034.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Portable Tape Player"
+   "value": "Foam Headphones"
   },
   {
    "trait_type": "Contaminant",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Arcade Carpet"
+   "value": "Mall Food Court"
   },
   {
    "trait_type": "Recovered From",
@@ -37,11 +37,15 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0034"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.5,
+   "value": 80.4,
    "display_type": "number"
   },
   {

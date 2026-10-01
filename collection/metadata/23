@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0023",
- "description": "Recovered from Garage Sale Free Bin. Smells like scratch-n-sniff sticker. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Skateboard (one ollie, lifetime); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries); 2 Floppy Disks (DISK 2 of 7). Weight 57.2 lb. Still heavier than it looks.",
- "image": "ipfs://IMAGES_CID/0023.png",
+ "name": "CRUSHED IT #0023",
+ "description": "Recovered from Grandma's Attic. Smells like cigarette in a jacket. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Dice (snake eyes, twice); 3 Spiral Notebooks (spiral unwound halfway); 1 Pizza Crust (petrified); 1 Poker Chip (taken from a casino, small heist). Weight 79.4 lb. Do not attempt to uncrush.",
+ "image": "ipfs://<images-cid>/0023.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Scratch-n-Sniff Sticker"
+   "value": "Cigarette in a Jacket"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Garage Sale Free Bin"
+   "value": "Grandma's Attic"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0023"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 57.2,
+   "value": 79.4,
    "display_type": "number"
   },
   {

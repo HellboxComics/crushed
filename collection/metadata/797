@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0797",
- "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (untied since 1989); 3 Pizza Crusts (petrified); 2 Skate Wheels (flat spot from a power slide); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 TV Remotes (the volume button worn smooth). Weight 26.6 lb. Do not attempt to uncrush.",
- "image": "ipfs://IMAGES_CID/0797.png",
+ "name": "CRUSHED IT #0797",
+ "description": "Recovered from Behind the Couch. Smells like cheap cologne. Contents (partial): 1 Drone (flew once, into a tree); 3 Smartphones (screen protector did nothing); 1 Face Mask (worn below the nose); 2 Clear Lighters (for incense, obviously); 1 AA Batteries (licked to test). Weight 33.9 lb. Some assembly was removed.",
+ "image": "ipfs://<images-cid>/0797.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Sneaker"
+   "value": "Drone"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Gym Bag, Forgotten"
+   "value": "Cheap Cologne"
   },
   {
    "trait_type": "Recovered From",
-   "value": "School Lost & Found"
+   "value": "Behind the Couch"
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0797"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 26.6,
+   "value": 33.9,
    "display_type": "number"
   },
   {

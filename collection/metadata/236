@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0236",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 2 16-Bit Controllers (the B button is sticky); 3 Army Man Squads (melted with a magnifying glass); 3 9999-in-1 Handhelds (HI SCORE 00000); 3 AA Batteries (probably dead). Weight 91.7 lb. No refunds. No returns. No explanation.",
- "image": "ipfs://IMAGES_CID/0236.png",
+ "name": "CRUSHED IT #0236",
+ "description": "Recovered from Back of the Closet. Smells like scratch-n-sniff sticker. Contents (partial): 3 TV Remotes (held together with tape); 1 Puzzle Cube (two stickers peeled); 2 Slap Bracelets (cut someone, probably); 3 Army Man Squads (melted with a magnifying glass); 1 Boom Box (took 10 D batteries). Weight 94.1 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0236.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "Skateboard"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Contaminant",
@@ -25,11 +25,11 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Body Spray Cloud"
+   "value": "Scratch-n-Sniff Sticker"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Under the Bed"
+   "value": "Back of the Closet"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0236"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 91.7,
+   "value": 94.1,
    "display_type": "number"
   },
   {

@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0738",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 3 Energy Drinks (third one that night); 3 Burned CDs (burned at 1x, 4 hours); 2 Flip Phones (ringtone composed by hand); 1 Floppy Disk (says DO NOT FORMAT). Weight 27.4 lb. Contents may have settled.",
- "image": "ipfs://IMAGES_CID/0738.png",
+ "name": "CRUSHED IT #0738",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 Power Bank (at 4%, like all of them); 3 Game Controllers (stick drift since day one); 1 Bluetooth Speaker (played one song, too loud); 3 Pizza Crusts (from a sleepover); 1 Tiny Red Candle (one of many). Weight 30.6 lb. No refunds. No returns. No explanation.",
+ "image": "ipfs://<images-cid>/0738.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "2003-2008"
+   "value": "2009-2026"
   },
   {
    "trait_type": "Condition",
@@ -13,11 +13,11 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "MP3 Player"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Contaminant",
-   "value": "None"
+   "value": "Tiny Red Candle"
   },
   {
    "trait_type": "Pressure",
@@ -25,7 +25,7 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Blue Raspberry"
+   "value": "Grandma's Couch"
   },
   {
    "trait_type": "Recovered From",
@@ -40,13 +40,17 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0738"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 27.4,
+   "value": 30.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 40,
    "display_type": "number"
   }
  ]

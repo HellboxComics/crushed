@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0590",
- "description": "Recovered from Grandma's Attic. Smells like fresh batteries (licked). Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Disposable Cameras (27 exposures of a thumb); 1 Brick Phone (faceplate swapped 4 times); 3 Virtual Pets (fed 0 times); 2 Flip Phones (12 texts left this month). Weight 73.6 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0590.png",
+ "name": "CRUSHED IT #0590",
+ "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Beer Cans (crushed on a forehead); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Pizza Crusts (from a sleepover); 1 TV Remote (held together with tape). Weight 30.6 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0590.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1997-2002"
+   "value": "2003-2008"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "CRT Monitor"
+   "value": "Handheld Console"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Fresh Batteries (Licked)"
+   "value": "Gym Bag, Forgotten"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Grandma's Attic"
+   "value": "A Buddy's Basement"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0590"
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.6,
+   "value": 30.6,
    "display_type": "number"
   },
   {

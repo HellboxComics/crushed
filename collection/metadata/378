@@ -1,11 +1,11 @@
 {
- "name": "CRUSHED #0378",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 2 16-Bit Controllers (the B button is sticky); 1 Disposable Camera (27 exposures of a thumb); 2 Sneakers (untied since 1989); 1 Three-Ring Binder (covered in band names); 1 Game Cartridge (blown into 400 times). Weight 48.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0378.png",
+ "name": "CRUSHED IT #0378",
+ "description": "Recovered from The Bachelor Pad. Smells like arcade carpet. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Beer Cans (crushed on a forehead); 2 Soda Cans (shaken as a prank); 3 VHS Tapes (the unmarked one, from the back of the closet); 1 Skate Wheel (flat spot from a power slide). Weight 45.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0378.png",
  "attributes": [
   {
    "trait_type": "Era",
-   "value": "1991-1996"
+   "value": "1997-2002"
   },
   {
    "trait_type": "Condition",
@@ -13,7 +13,7 @@
   },
   {
    "trait_type": "Headliner",
-   "value": "16-Bit Controller"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Contaminant",
@@ -25,23 +25,27 @@
   },
   {
    "trait_type": "Smell",
-   "value": "Hot Dust on a CRT"
+   "value": "Arcade Carpet"
   },
   {
    "trait_type": "Recovered From",
-   "value": "Behind the Couch"
+   "value": "The Bachelor Pad"
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0378"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 48.5,
+   "value": 45.1,
    "display_type": "number"
   },
   {

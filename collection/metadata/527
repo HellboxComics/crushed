@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0527",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Cheap Sunglasses (one lens popped out); 2 Digital Cameras (2 megapixels of truth); 2 TV Remotes (found in the couch); 1 Webcam (240p of pure confidence). Weight 82.5 lb. We kept the important shit.",
- "image": "ipfs://IMAGES_CID/0527.png",
+ "name": "CRUSHED IT #0527",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Gold Sneaker (why); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 AA Batteries (licked to test); 2 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid). Weight 36.1 lb. We kept the important shit.",
+ "image": "ipfs://<images-cid>/0527.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -9,7 +9,7 @@
   },
   {
    "trait_type": "Condition",
-   "value": "BIOHAZARD"
+   "value": "GOLD"
   },
   {
    "trait_type": "Headliner",
@@ -29,19 +29,27 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Dad's Junk Drawer"
+   "value": "Mom's Minivan"
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
    "value": "Concerning"
   },
   {
+   "trait_type": "Gilded",
+   "value": "Sneaker"
+  },
+  {
+   "trait_type": "Serial",
+   "value": "0527"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 82.5,
+   "value": 36.1,
    "display_type": "number"
   },
   {

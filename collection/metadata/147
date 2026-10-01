@@ -1,7 +1,7 @@
 {
- "name": "CRUSHED #0147",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Milk Caps (the slammer is chipped); 1 Game Cartridge (blown into 400 times); 1 Corded Phone (someone is still on hold). Weight 43.3 lb. Some assembly was removed.",
- "image": "ipfs://IMAGES_CID/0147.png",
+ "name": "CRUSHED IT #0147",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 1 Corded Phone (cord stretched to the bathroom); 2 Shot Glasses (chipped rim); 1 Army Man Squad (the one with the radio survived); 1 CRT Monitor (degaussed one last time). Weight 88.8 lb. Crushed it.",
+ "image": "ipfs://<images-cid>/0147.png",
  "attributes": [
   {
    "trait_type": "Era",
@@ -29,7 +29,7 @@
   },
   {
    "trait_type": "Recovered From",
-   "value": "Mom's Minivan"
+   "value": "School Lost & Found"
   },
   {
    "trait_type": "Tape",
@@ -40,8 +40,12 @@
    "value": "Several"
   },
   {
+   "trait_type": "Serial",
+   "value": "0147"
+  },
+  {
    "trait_type": "Weight (lb)",
-   "value": 43.3,
+   "value": 88.8,
    "display_type": "number"
   },
   {
