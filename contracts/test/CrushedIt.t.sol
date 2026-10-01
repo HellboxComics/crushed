@@ -90,8 +90,8 @@ contract CrushedItTest is Test {
         _teamMint(t);
         assertEq(t.balanceOf(team), 40);
         for (uint256 i = 0; i < 4; i++) {
-            assertEq(t.ownerOf(41 + i), gifts[i]);
-            assertEq(t.recipeOf(41 + i), giftRecipes[i]);     // readable before the reveal
+            assertEq(t.ownerOf(1 + i), gifts[i]);
+            assertEq(t.recipeOf(1 + i), giftRecipes[i]);     // readable before the reveal
         }
         assertEq(t.totalSupply(), 44);
     }
@@ -154,15 +154,15 @@ contract CrushedItTest is Test {
     function test_recipeHiddenBeforeReveal() public {
         _teamMint(t);
         vm.expectRevert(CrushedIt.NotRevealed.selector);
-        t.recipeOf(1);
-        assertEq(t.recipeOf(41), 813);
+        t.recipeOf(5);
+        assertEq(t.recipeOf(1), 813);
     }
 
     function test_sealedURIBeforeReveal() public {
         _teamMint(t);
         vm.prank(owner);
         t.setSealedURI("ipfs://sealed");
-        assertEq(t.tokenURI(1), "ipfs://sealed");
+        assertEq(t.tokenURI(5), "ipfs://sealed");
         vm.prank(owner);
         t.freezeURI();
         vm.prank(owner);
@@ -182,11 +182,11 @@ contract CrushedItTest is Test {
             seen[r] = true;
         }
         for (uint256 i = 0; i < 4; i++) {
-            assertEq(h.recipeOf(41 + i), giftRecipes[i]);
+            assertEq(h.recipeOf(1 + i), giftRecipes[i]);
         }
         // no non-gift token ever lands on a gift recipe
         for (uint256 id = 1; id <= 888; id++) {
-            if (id >= 41 && id <= 44) continue;
+            if (id >= 1 && id <= 4) continue;
             uint256 r = h.recipeOf(id);
             for (uint256 i = 0; i < 4; i++) assertTrue(r != giftRecipes[i], "gift leaked");
         }
@@ -264,9 +264,9 @@ contract CrushedItTest is Test {
         vm.prank(gifts[0]);
         // gift 0 is recipe 240, outside our tiny tree, so the proof must fail; that is the point:
         bytes32[] memory proof = m.getProof(leaves, 0);
-        h.sealChunk(41, 0, _head(images[0]));
+        h.sealChunk(1, 0, _head(images[0]));
         vm.expectRevert(CrushedIt.BadProof.selector);
-        h.sealFinish(41, metas[0], "", proof);
+        h.sealFinish(1, metas[0], "", proof);
     }
 
     function test_sealWrongImageFails() public {
@@ -316,7 +316,7 @@ contract CrushedItTest is Test {
     function test_sealBeforeRevealFails() public {
         _teamMint(t);
         vm.expectRevert(CrushedIt.NotRevealed.selector);
-        t.sealChunk(1, 0, images[0]);
+        t.sealChunk(5, 0, images[0]);
     }
 
     function test_restartUploadWithIndexZero() public {

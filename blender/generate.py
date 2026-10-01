@@ -28,7 +28,7 @@ ROOT = os.path.dirname(HERE)
 
 GIFT_RECIPES = [813, 718, 796, 836]     # tokens 41..44: LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY
 GIFT_NAMES = ["LOW RES", "CCFF00", "STOP THE PRESSES", "CLAY DAY"]
-FIRST_GIFT = 41
+FIRST_GIFT = 1
 
 
 def recipe_of(tid, offset):

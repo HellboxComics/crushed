@@ -14,7 +14,7 @@ import { SSTORE2 } from "solmate/utils/SSTORE2.sol";
 ///
 ///      Which token gets which recipe is decided by `reveal()` after the mint closes, with a secret committed
 ///      at deploy plus a block hash nobody controls, so no mint can be aimed at a one-of-one. The four gift
-///      blocks are the exception: token ids 41 to 44 are pinned to their recipes and minted to the people
+///      blocks are the exception: token ids 1 to 4 are pinned to their recipes and minted to the people
 ///      they were made for, as part of the team's 44, before anyone else can mint.
 ///
 ///      Minting goes through OpenSea's SeaDrop (free mint; limits and timing are configured there).
@@ -23,7 +23,7 @@ contract CrushedIt is ERC721SeaDrop {
     uint256 public constant SUPPLY = 888;
     uint256 public constant TEAM = 44;          // 40 random blocks for the team + the 4 gifts
     uint256 public constant GIFTS = 4;
-    uint256 public constant FIRST_GIFT = 41;    // token ids 41..44 are the gifts
+    uint256 public constant FIRST_GIFT = 1;     // token ids 1..4 are the gifts
     uint256 public constant SHUFFLED = SUPPLY - GIFTS;
 
     /// The recipes pinned to tokens 41..44, in order: LOW RES, CCFF00, STOP THE PRESSES, CLAY DAY.
@@ -93,17 +93,17 @@ contract CrushedIt is ERC721SeaDrop {
 
     // -- the team's 44 ------------------------------------------------------------------------------
 
-    /// @notice Mint the team's 44 before anyone else: 40 to the team wallet, then the 4 gifts, so the gift
-    ///         tokens are exactly ids 41..44. Can only happen once, and only while nothing has been minted.
+    /// @notice Mint the team's 44 before anyone else: the 4 gifts first, so they are exactly tokens #1..#4,
+    ///         then 40 to the team wallet. Can only happen once, and only while nothing has been minted.
     function mintTeam(address team, address[GIFTS] calldata gifts) external onlyOwner {
         if (teamMinted) revert TeamAlreadyMinted();
         if (_totalMinted() != 0) revert TeamMustMintFirst();
         teamMinted = true;
-        _safeMint(team, TEAM - GIFTS);
         for (uint256 i = 0; i < GIFTS; ) {
             _mint(gifts[i], 1);
             unchecked { ++i; }
         }
+        _safeMint(team, TEAM - GIFTS);
         emit TeamMinted(team, gifts);
     }
 

@@ -139,7 +139,7 @@ Preview the site with `python3 -m http.server -d site 8000`. It's fully static.
 2. Render all 888, then `python3 scripts/seal_tree.py build`: the Merkle root over every final JPEG and its
    metadata goes into the deploy as `IMAGE_ROOT`.
 3. Pick a secret, commit `keccak256(secret)`, deploy with the provenance hash and the image root. All immutable.
-4. `mintTeam`: 40 random blocks to the team, the 4 gifts to their people as tokens 41–44. Then SeaDrop opens the
+4. `mintTeam`: 40 random blocks to the team, the 4 gifts to their people as tokens 1–4. Then SeaDrop opens the
    free public mint.
 5. Sold out (or the deadline passes): anyone calls `reveal(secret)`. The offset mixes the secret with a block
    hash; `recipeOf(t)` is the on-chain mapping. Gifts are pinned, the other 884 are shuffled.
