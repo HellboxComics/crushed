@@ -116,7 +116,7 @@ MONOCULTURES = {   # one-of-ones that are made of one idea
                          ("microphone", 1), ("press_badge", 2), ("play_money", 3), ("poker_chip", 2),
                          ("gold_coin", 2), ("neon_square", 2)],
     "CLAY DAY": [("clay_bull", 7), ("clay_bear", 6), ("clay_pig", 6), ("clay_frog", 5), ("clay_steak", 5),
-                 ("clay_cleaver", 2), ("clay_coin", 4), ("clay_candle", 6)],
+                 ("clay_cleaver", 2), ("clay_gem", 4), ("clay_coin", 3), ("clay_candle", 5)],
 }
 
 # one-of-ones whose gaps are packed with their own kind of debris

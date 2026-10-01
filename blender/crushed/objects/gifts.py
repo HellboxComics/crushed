@@ -534,3 +534,15 @@ def bookshelf_slice(b, rng, pal):
         x += w + 0.001
         k += 1
     return specs
+
+
+@obj("clay_gem", mass=0.15, weight=1.0, hero=(0, -1, 0), **G)
+def clay_gem(b, rng, pal):
+    """The purple gem from the shelf: a hand-cut clay diamond, flat top, a crown of facets, a point below."""
+    R = 0.045
+    top = [(R * 0.55 * math.cos(2 * math.pi * i / 8 + math.pi / 8), R * 0.55 * math.sin(2 * math.pi * i / 8 + math.pi / 8), R * 0.75) for i in range(8)]
+    girdle = [(R * math.cos(2 * math.pi * i / 8), R * math.sin(2 * math.pi * i / 8), R * 0.2) for i in range(8)]
+    point = [(R * 0.02 * math.cos(2 * math.pi * i / 8), R * 0.02 * math.sin(2 * math.pi * i / 8), -R * 0.95) for i in range(8)]
+    b.loft([point, girdle, top], mat="gem", closed=True, cap=True)
+    col = tuple(rng.choice([(0.5, 0.25, 0.85), (0.42, 0.18, 0.75), (0.6, 0.35, 0.9)]))
+    return {"gem": CL(col, tuple(min(1, x * 1.3 + 0.1) for x in col))}
