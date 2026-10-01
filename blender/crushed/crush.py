@@ -155,6 +155,20 @@ def place(v, q, normal, uv, t1, t2, poke, depth_max):
 
 # -- compaction ------------------------------------------------------------------------
 
+def ram(v, normal, t1, kz, keep_center=True):
+    """The baler's ram comes down from the top: whatever sits on a side gets pressed flat top-to-bottom and
+    squeezed out sideways along that face (roughly keeping its volume). Things on top are already pressed by
+    place(); this is for the four sides."""
+    if abs(normal[2]) > 0.5 or kz >= 0.999:
+        return v
+    c = v.mean(axis=0)
+    out = v.copy()
+    out[:, 2] = c[2] + (v[:, 2] - c[2]) * kz
+    t = np.array(t1, dtype=np.float64)
+    lat = (v - c) @ t
+    out = out + np.outer(lat * (kz ** -0.35 - 1), t)
+    return out
+
 def soft_clamp(x, lim, m):
     ax = np.abs(x)
     over = ax > lim - m

@@ -66,19 +66,22 @@ def strap(coll, rng, x, cond, stamp_text=None, name="strap", empty=False):
     X = Vector((1, 0, 0))
     for p, n in zip(pts, nrm):
         rings.append([p - X * w / 2, p + X * w / 2, p + X * w / 2 + n * STRAP_T, p - X * w / 2 + n * STRAP_T])
+    rings.append([p.copy() for p in rings[0]])      # close the loop: no loose end at the seam
     b = Builder(name)
-    b.loft(rings, mat="steel")
-    # crimp seal on the front face
+    b.loft(rings, mat="steel", cap=False)
+    # the crimp seal: a thin sleeve that hugs the strap, two shallow crimps pressed into it. Nothing sticks out.
     seal_z = rng.uniform(-0.06, 0.06)
-    b.box((w + 0.006, 0.006, 0.05), loc=(x, -half - 0.003, seal_z), mat="seal", bevel=0.001)
-    for dz in (-0.013, 0.013):
-        b.box((w + 0.008, 0.0035, 0.006), loc=(x, -half - 0.0065, seal_z + dz), mat="seal", bevel=0.0008)
+    b.box((w + 0.0016, 0.0016, 0.042), loc=(x, -half - STRAP_T - 0.0008, seal_z), mat="seal", bevel=0.0004)
+    for dz in (-0.012, 0.012):
+        b.box((w + 0.0018, 0.0006, 0.004), loc=(x, -half - STRAP_T - 0.0019, seal_z + dz), mat="seal", bevel=0.0002)
     slots = ["steel", "seal"]
     specs = {"steel": ("rust", {"amount": 0.12 if cond == "CLEAN" else 0.9 if cond == "SOAKED" else 0.6,
                                 "base": (0.2, 0.18, 0.2) if cond == "BURNT" else (0.42, 0.42, 0.44)}),
              "seal": ("rust", {"amount": 0.3, "base": (0.5, 0.5, 0.52)})}
     if stamp_text:
-        b.plane(0.04, 0.012, loc=(x, -half - 0.0061, seal_z), rot=(math.pi / 2, 0, math.pi / 2), mat="stamp", cuts=2)
+        # the number plate lies flat on the face of the seal, between its two crimps (it used to stand edge-on and
+        # stick out sideways like a loose tab)
+        b.plane(0.03, 0.0075, loc=(x, -half - STRAP_T - 0.0018, seal_z), rot=(math.pi / 2, 0, 0), mat="stamp", cuts=2)
         slots.append("stamp")
         specs["stamp"] = ("printed", {"image": tex.stamp(rng, "stamp", stamp_text), "rough": 0.35, "metal": 1.0})
     ob = b.build(coll)
@@ -227,4 +230,59 @@ def droplets(coll, rng, count):
     ob = b.build(coll)
     ob.data.materials.append(mat.get(("water", {}), rng))
     crush.store_rest(ob.data, crush.verts(ob.data))
+    return ob
+
+
+SIDES = {"-Y": ((1, 0), (0, -1)), "+Y": ((-1, 0), (0, 1)), "+X": ((0, 1), (1, 0)), "-X": ((0, -1), (-1, 0))}
+
+
+def strata(coll, rng, pal, seed, inten=1.0, per_side=56, prints=(), borrow=(), borrow_share=0.0):
+    """What a baler does to everything that isn't a recognizable object: presses it into thin flat layers stacked
+    top to bottom. On every side of the bale you see their edges, a stripe per layer. This is what makes a bale
+    read as crushed instead of stuffed."""
+    from .objects import MET, P, PR, T
+    b = Builder("strata")
+    papers = [(0.93, 0.92, 0.86), (0.86, 0.8, 0.62), (0.95, 0.88, 0.42), (0.8, 0.84, 0.92), (0.95, 0.95, 0.95)]
+    specs = {"card": ("cardboard", {}), "card2": ("cardboard", {}),
+             "paper": ("paper", {"color": tuple(papers[int(rng.integers(len(papers)))])}),
+             "paper2": ("paper", {"color": tuple(papers[int(rng.integers(len(papers)))])}),
+             "film": T((0.25, 0.25, 0.27), 0.2), "foil": MET((0.78, 0.78, 0.8), 0.25),
+             "pl1": pal.body(loud=0.6), "pl2": pal.body(loud=0.6), "pl3": P(pal.color("loud"), 0.45),
+             "dark": P((0.08, 0.08, 0.09), 0.55)}
+    for i, img in enumerate(prints[:3]):
+        specs[f"pr{i}"] = PR(img, 0.5)
+    keys = list(specs)
+    weights = np.array([2.2 if k.startswith("card") else 1.6 if k.startswith("paper") else 1.2 if k.startswith("pr")
+                        else 0.8 if k == "dark" else 1.0 for k in keys])
+    weights /= weights.sum()
+    picks = [borrow[int(i)] for i in rng.permutation(len(borrow))[:12]] if borrow else []
+    for side, ((tx, ty), (nx, ny)) in SIDES.items():
+        n = int(per_side * rng.uniform(0.85, 1.15))
+        for _ in range(n):
+            w = rng.uniform(0.05, 0.24)
+            d = rng.uniform(0.02, 0.06)
+            t = rng.uniform(0.0015, 0.006)
+            u = rng.uniform(-H, H)
+            z = rng.uniform(-H + 0.004, H - 0.004)
+            poke = rng.uniform(-0.004, 0.003)
+            cx = tx * u + nx * (H - d / 2 + poke)
+            cy = ty * u + ny * (H - d / 2 + poke)
+            rot = (0, 0, 0) if tx else (0, 0, math.pi / 2)
+            if picks and rng.random() < borrow_share:
+                key = f"own{int(rng.integers(len(picks)))}"
+            else:
+                key = str(rng.choice(keys, p=weights))
+            b.box((w, d, t), loc=(cx, cy, z), rot=rot, mat=key)
+    ob = b.build(coll)
+    me = ob.data
+    crush.densify(me, 0.011)
+    v = crush.verts(me)
+    crush.store_rest(me, v)
+    # pressed, not cut: the layers ripple, droop and crumple a little where they were squeezed out the sides
+    v = v + noise.fbm_vec(v, 1.0 / 0.03, 3, seed) * np.array([0.002, 0.002, 0.0045]) * (0.6 + 0.6 * inten)
+    v = crush.compact(v, rng.uniform(-0.0015, 0.0005), seed + 7, margin=0.006, strength=inten)
+    crush.set_verts(me, v)
+    me.set_sharp_from_angle(angle=math.radians(40))
+    for key in b.slots:
+        me.materials.append(picks[int(key[3:])] if key.startswith("own") else mat.get(specs[key], rng))
     return ob

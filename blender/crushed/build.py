@@ -13,6 +13,11 @@ from .stage import H
 
 LIFT = H + 0.004           # center height of the block above the floor
 
+# how much of a baler it is: strata = how many pressed layers show on the sides, ram = how flat the top-down press
+# squashes things on the sides, borrow = how many of the layers are made of this block's own stuff (its wrappers,
+# its plastics) instead of plain card and paper. 0/0 is the old "pressed into the core" look.
+BALE = {"strata": 0.55, "ram": 0.6, "borrow": 0.75}      # option C, pending the pick
+
 # every side but the bottom gets covered: the block turns in 3D, so there is no back
 FACE_WEIGHTS = {"-Y": 0.23, "+X": 0.22, "+Z": 0.21, "+Y": 0.17, "-X": 0.17}
 VISIBLE = ("-Y", "+X", "+Z")
@@ -86,7 +91,6 @@ class Faces:
 def build_block(r, coll, rng):
     reg = load()
     era = r["era_index"]
-    inten = r["intensity"]
     pal = Palette(era, rng)
     crush.STRAPS = r["straps"]
     faces = Faces(rng)
@@ -102,6 +106,13 @@ def build_block(r, coll, rng):
     if r.get("core"):
         core_pal = [tuple(c) for c in r["core"]]
     objs.append(dressing.core(coll, rng, core_pal, r["seed"]))
+    soft = r.get("soft", 1.0)
+    inten = r["intensity"]
+
+    def kz_for(lo, hi, floor=0.3):
+        """How flat the ram presses a thing on a side: harder in the later, more crushed blocks."""
+        k = rng.uniform(lo, hi) - 0.18 * (inten - 0.75)
+        return float(np.clip(1 - (1 - k) * soft * BALE["ram"], floor, 1.0))
 
     # the headliner goes front and center; then big things (the back layer); then the rest
     rest = sorted(range(1, len(r["heroes"])), key=lambda i: not reg[r["heroes"][i]].big)
@@ -139,7 +150,8 @@ def build_block(r, coll, rng):
         if override:
             poke, layer = rng.uniform(0.0, 0.008), 0.005
         v = crush.place(v, q, nrm, uv, t1, t2, poke, depth)
-        v = crush.compact(v, layer, r["seed"] + rank, strength=inten)
+        v = crush.ram(v, nrm, t1, kz_for(0.62, 0.8, 0.6) if head or override else kz_for(0.42, 0.66))
+        v = crush.compact(v, layer, r["seed"] + rank, margin=0.008, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)
         if d.name in WIRED:
@@ -178,10 +190,24 @@ def build_block(r, coll, rng):
         q = crush.orient(rng, (0, 0, 1), nrm, tilt=0.5) if sheet else q
         poke = rng.uniform(0.006, 0.02) if sheet else rng.uniform(-0.008, 0.012)
         v = crush.place(v, q, nrm, uv, t1, t2, poke, 0.06)
+        v = crush.ram(v, nrm, t1, kz_for(0.32, 0.55, 0.25))
         layer = rng.uniform(-0.003, 0.001) if sheet else rng.uniform(-0.002, 0.003)     # on top of the base, not under it
         v = crush.compact(v, layer, r["seed"] + 500 + k, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)
+
+    # the layers a baler leaves: everything unnameable pressed into stacked sheets, edge-on at every side. Most of
+    # them are this block's own stuff (its wrappers, its plastics), the rest plain card and paper.
+    if BALE["strata"] > 0 and not r["clean"] and r.get("one_of_one") not in ("CCFF00", "SOLID GOLD"):
+        own = []
+        for ob in objs[1:]:
+            for m in ob.data.materials:
+                if m and m not in own and not m.name.startswith(("core", "gold")):
+                    own.append(m)
+        prints = [tex.can_print(rng, "st_a"), tex.sticker(rng, "st_b", lines=3), tex.notebook(rng, "st_c")]
+        objs.append(dressing.strata(coll, rng, pal, r["seed"] + 77, inten,
+                                    per_side=int((46 + 26 * inten) * BALE["strata"]), prints=prints,
+                                    borrow=own, borrow_share=BALE["borrow"]))
 
     top = []
     if r["tape_loops"]:
