@@ -355,7 +355,7 @@ def recipe(token_id):
     return {
         "id": token_id,
         "recipe_id": token_id,
-        "name": f"CRUSHED IT #{token_id:04d}",
+        "name": f"CRUSHED IT #{token_id:04d}" + (f": {one}" if one else ""),
         "era": ERAS[era],
         "era_index": era,
         "condition": cond,
