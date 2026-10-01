@@ -105,8 +105,9 @@ MONOCULTURES = {   # one-of-ones that are made of one idea
                     ("pager", 3), ("vhs", 4), ("walkman", 1)],
     "UNDER THE MATTRESS": [("magazine", 14), ("centerfold", 9), ("tissue_box", 5), ("tissues", 12), ("flashlight", 3),
                            ("sock", 4), ("foil_packet", 4)],
-    "LOW RES": [("pixel_hoodie", 6), ("studio_headphones", 5), ("synth_keys", 4), ("cassette", 10), ("floppy", 6),
-                ("ribbon_cable", 8), ("crt", 2), ("game_cart", 4), ("controller_16bit", 2)],
+    "LOW RES": [("pixel_hoodie", 4), ("lava_lamp", 5), ("black_cat", 3), ("skull_candle", 5), ("mini_arcade", 4),
+                ("mushroom_cluster", 6), ("studio_headphones", 4), ("synth_keys", 3), ("cassette", 8),
+                ("ribbon_cable", 6), ("crt", 2), ("game_cart", 4), ("controller_16bit", 2)],
     "CCFF00": [("neon_square_big", 1), ("neon_square", 16), ("neon_diamond", 9), ("neon_cube", 8),
                ("neon_stack", 3), ("neon_frame", 4)],
     "STOP THE PRESSES": [("piggy_bank", 14), ("stock_cert", 5), ("ticker_tape", 4), ("necktie", 4), ("bull", 3),
@@ -137,6 +138,7 @@ ONE_SOFT = {"CCFF00": 0.25, "STOP THE PRESSES": 0.5, "CLAY DAY": 0.3}
 ONE_CORE = {
     "CCFF00": [(0.012, 0.012, 0.014), (0.02, 0.02, 0.022), (0.03, 0.03, 0.032)],
     "CLAY DAY": [(0.03, 0.03, 0.035), (0.95, 0.95, 0.93), (0.8, 1.0, 0.0), (0.96, 0.55, 0.68)],
+    "LOW RES": [(0.42, 0.12, 0.65), (0.2, 0.05, 0.3), (0.55, 1.0, 0.1), (0.05, 0.05, 0.07)],
 }
 
 # whole-block finishes for one-of-ones that are a single material
@@ -169,7 +171,7 @@ ONE_OF_ONE_FLAVOR = {  # (smell, recovered from, headliner)
     "COLD STORAGE": ("Freezer Burn", "The Back of the Freezer", "Hardware Wallet"),
     "SLOW MOTION": ("Coconut Sunscreen", "The Beach, in Slow Motion", "Rescue Can"),
     "UNDER THE MATTRESS": ("Shame", "Under the Mattress", "Magazine"),
-    "LOW RES": ("Warm Amplifier", "A Bedroom Studio, 3 A.M.", "Pixel Hoodie"),
+    "LOW RES": ("Warm Amplifier and Incense", "A Bedroom Studio, 3 A.M.", "Lava Lamp"),
     "CCFF00": ("Hot Plastic and Ozone", "The Neon Aisle", "Big Neon Square"),
     "STOP THE PRESSES": ("Bacon and Newsprint", "The Trading Floor, After the Bell", "Piggy Bank"),
     "CLAY DAY": ("Warm Plasticine", "A Desk, Mid-Pump", "Clay Bull"),

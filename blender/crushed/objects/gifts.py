@@ -357,3 +357,93 @@ def clay_blob(b, rng, pal):
     col = tuple(rng.choice([(0.96, 0.55, 0.68), (0.55, 0.25, 0.12), (0.3, 0.7, 0.2), (0.8, 1.0, 0.0), (0.35, 0.22, 0.14),
                             (0.95, 0.95, 0.93), (0.03, 0.03, 0.035)]))
     return {"clay": CL(col)}
+
+
+# -- LOW RES (the Pixelord gift) -----------------------------------------------------------------
+# A bedroom studio at 3 A.M.: purple and acid green, a lava lamp, a skull candle, a black cat, mushrooms,
+# a tiny arcade cabinet. All original props; the only tribute is the mood.
+
+PURPLE = (0.42, 0.12, 0.65)
+ACID = (0.55, 1.0, 0.1)
+
+
+@obj("lava_lamp", mass=0.6, weight=1.0, hero=(0, -1, 0), **G)
+def lava_lamp(b, rng, pal):
+    b.lathe([(0.0, 0.0), (0.028, 0.0), (0.042, 0.05), (0.03, 0.17), (0.02, 0.2), (0.0, 0.2)], loc=(0, 0, -0.1),
+            mat="glass", seg=28)
+    b.lathe([(0.0, 0.0), (0.046, 0.0), (0.03, 0.075), (0.0, 0.075)], loc=(0, 0, -0.175), mat="base", seg=28)
+    b.cyl(0.019, 0.028, loc=(0, 0, 0.112), mat="base", seg=20, r2=0.012)
+    for z, r in ((-0.075, 0.02), (-0.03, 0.016), (0.02, 0.014), (0.06, 0.011)):
+        b.sphere(r, loc=(float(rng.normal(0, 0.004)), float(rng.normal(0, 0.004)), z), scale=(1, 1, 1.5), mat="wax", seg=14)
+    goo, liq = (tuple(rng.choice([ACID, (1.0, 0.3, 0.6), (1.0, 0.5, 0.1)])), tuple(rng.choice([PURPLE, (0.1, 0.3, 0.8), (0.15, 0.05, 0.3)])))
+    return {"glass": ("glass", {"color": liq, "trans": 1.0, "rough": 0.03}),
+            "base": MET((0.85, 0.75, 0.4), 0.3), "wax": P(goo, 0.25, glow=2.5)}
+
+
+@obj("skull_candle", mass=0.2, weight=1.0, hero=(0, -1, 0), **G)
+def skull_candle(b, rng, pal):
+    """A skull-shaped candle, face toward -Y: cranium, brow, two deep sockets, a nose hole, a row of teeth."""
+    b.sphere(0.034, loc=(0, 0.004, 0.012), scale=(1.0, 1.1, 1.0), mat="bone", seg=24)
+    b.box((0.046, 0.034, 0.03), loc=(0, -0.006, -0.02), mat="bone", bevel=0.007)
+    for sx in (-1, 1):
+        b.sphere(0.0115, loc=(sx * 0.0135, -0.024, 0.01), scale=(1, 0.7, 1), mat="socket", seg=12)
+    b.sphere(0.0055, loc=(0, -0.027, -0.008), scale=(1, 0.6, 1.5), mat="socket", seg=10)
+    b.box((0.038, 0.004, 0.002), loc=(0, -0.0245, -0.026), mat="socket")
+    for i in range(7):
+        b.box((0.0042, 0.005, 0.009), loc=((i - 3) * 0.0056, -0.0245, -0.031), mat="bone", bevel=0.0006)
+    b.cyl(0.004, 0.012, loc=(0, 0, 0.049), mat="wick", seg=8)
+    b.sphere(0.006, loc=(0, 0, 0.06), scale=(1, 1, 1.8), mat="flame", seg=10)
+    for _ in range(3):
+        a = float(rng.uniform(0, 6.28))
+        b.tube([(0.012 * math.cos(a), 0.012 * math.sin(a), 0.042),
+                (0.03 * math.cos(a), 0.03 * math.sin(a), float(rng.uniform(-0.01, 0.025)))], 0.003, mat="bone", seg=6)
+    col = tuple(rng.choice([(0.95, 0.93, 0.85), PURPLE, (0.06, 0.06, 0.07), ACID]))
+    return {"bone": ("wax", {"color": col}), "socket": P((0.02, 0.01, 0.03), 0.7), "wick": P(BLACK, 0.8),
+            "flame": P((1.0, 0.6, 0.15), 0.3, glow=6.0)}
+
+
+@obj("black_cat", mass=0.3, weight=1.0, hero=(0, -1, 0), **G)
+def black_cat(b, rng, pal):
+    """A sitting cat figurine: tall, slim, ears up, tail wrapped around the front."""
+    b.lathe([(0.0, 0.0), (0.036, 0.0), (0.03, 0.05), (0.02, 0.1), (0.0, 0.1)], loc=(0, 0, -0.06), mat="fur", seg=22)
+    b.sphere(0.024, loc=(0.0, 0, 0.055), scale=(1, 1, 0.95), mat="fur", seg=20)
+    for sy in (-1, 1):
+        b.cyl(0.009, 0.02, loc=(0, sy * 0.014, 0.078), rot=(-sy * 0.3, 0, 0), mat="fur", seg=8, r2=0.0005)
+        b.sphere(0.004, loc=(0.02, sy * 0.009, 0.058), scale=(0.5, 1, 1.3), mat="eye", seg=8)
+    b.tube([(0.02, -0.03, -0.055), (0.035, 0.0, -0.058), (0.02, 0.03, -0.055), (-0.01, 0.038, -0.05)], 0.006, mat="fur", seg=8)
+    b.torus(0.022, 0.0025, loc=(0, 0, 0.034), mat="collar", seg=18, rseg=6)
+    return {"fur": P((0.03, 0.03, 0.035), 0.55), "eye": P(ACID, 0.2, glow=3.0), "collar": P(PURPLE, 0.3)}
+
+
+@obj("mushroom_cluster", mass=0.08, weight=1.0, **G)
+def mushroom_cluster(b, rng, pal):
+    for i in range(int(rng.integers(2, 5))):
+        x, y = (float(v) for v in rng.normal(0, 0.018, 2))
+        h = float(rng.uniform(0.03, 0.06))
+        r = h * float(rng.uniform(0.4, 0.6))
+        b.cyl(r * 0.3, h, loc=(x, y, h / 2 - 0.02), mat="stem", seg=10, r2=r * 0.22)
+        b.sphere(r, loc=(x, y, h - 0.02), scale=(1, 1, 0.65), mat="cap", seg=16)
+        for _ in range(4):
+            a = float(rng.uniform(0, 6.28))
+            b.sphere(r * 0.18, loc=(x + r * 0.6 * math.cos(a), y + r * 0.6 * math.sin(a), h - 0.02 + r * 0.42), mat="spot", seg=8)
+    cap = tuple(rng.choice([PURPLE, ACID, (0.9, 0.15, 0.2), (0.1, 0.6, 0.9)]))
+    return {"stem": P((0.92, 0.9, 0.82), 0.6), "cap": P(cap, 0.35, glow=0.6 if cap == ACID else 0.0), "spot": P(WHITE, 0.5)}
+
+
+@obj("mini_arcade", mass=0.35, weight=1.0, hero=(0, -1, 0), **G)
+def mini_arcade(b, rng, pal):
+    b.extrude([(-0.03, -0.045), (0.03, -0.045), (0.03, -0.015), (0.045, -0.015), (0.045, 0.04), (0.03, 0.05),
+               (0.03, 0.065), (-0.03, 0.065), (-0.03, 0.05), (-0.045, 0.04), (-0.045, -0.015), (-0.03, -0.015)],
+              0.055, rot=(math.pi / 2, 0, 0), mat="cab", bevel=0.001)
+    b.plane(0.052, 0.04, loc=(0, -0.0282, 0.022), rot=(math.pi / 2, 0, 0), mat="screen", cuts=3)
+    b.plane(0.056, 0.012, loc=(0, -0.0282, 0.056), rot=(math.pi / 2, 0, 0), mat="marquee", cuts=2)
+    b.box((0.056, 0.02, 0.004), loc=(0, -0.034, -0.006), mat="panel", bevel=0.0008)
+    b.cyl(0.0025, 0.014, loc=(-0.015, -0.034, 0.002), mat="stick", seg=8)
+    b.sphere(0.005, loc=(-0.015, -0.034, 0.011), mat="ball", seg=10)
+    for i in range(2):
+        b.cyl(0.004, 0.003, loc=(0.008 + i * 0.012, -0.034, -0.0025), mat="btn", seg=10)
+    cab = tuple(rng.choice([PURPLE, (0.06, 0.06, 0.07), ACID]))
+    return {"cab": P(cab, 0.35), "screen": ("screen", {"image": tex.screen(rng, "arc", kind="game"), "glow": 2.0}),
+            "marquee": PR(tex.lcd(rng, "mq", str(rng.choice(["LOW RES", "INSERT COIN", "HI SCORE", "PLAYER 1"])),
+                                  bg=(0.15, 0.02, 0.25), ink=ACID), 0.2, glow=1.5),
+            "panel": P((0.08, 0.08, 0.09), 0.4), "stick": P(BLACK, 0.5), "ball": P((0.9, 0.1, 0.2), 0.2), "btn": P(ACID, 0.3)}

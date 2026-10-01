@@ -80,8 +80,8 @@ def lava_lamp(b, rng, pal):
 
 Build these next, in this order. Each is a gift block's prop or a regular-deal object.
 
-LOW RES (the Pixelord gift, purple and acid green): `lava_lamp`, `skull_candle`, `black_cat_figurine`,
-`potted_plant`, `mini_arcade`, `mushroom_cluster`, `server_rack_slice`, `pixel_heart`.
+LOW RES (the Pixelord gift, purple and acid green): `potted_plant`, `server_rack_slice`, `pixel_heart`,
+`incense_holder`, `beanbag_chair`, `midi_pad`.
 Regular deal, 2009-2026: `gaming_mouse`, `rgb_fan`, `energy_shot`, `air_pods_single`, `phone_grip`,
 `sticker_sheet`, `ring_box_empty`, `hot_sauce_bottle`.
 Regular deal, 1985-2002: `view_finder`, `trapper_binder`, `scrunchie`, `pogs_tube`, `lite_brite_peg_sheet`,

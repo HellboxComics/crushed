@@ -312,6 +312,13 @@ def screen(rng, name, kind=None):
         for i in range(9):
             c.text("".join(rng.choice(list("ABCDEF0123456789 ")) for _ in range(12)), 0.05, 0.95 - i * 0.1,
                    0.06, (0.2, 0.9, 0.3))
+    elif kind == "game":
+        c = Canvas(128, 96, (0.08, 0.02, 0.14, 1))
+        for i in range(5):
+            c.rect(0.05 + i * 0.19, 0.1, 0.17 + i * 0.19, 0.1 + float(rng.uniform(0.1, 0.5)), (0.55, 1.0, 0.1))
+        c.rect(0.45, 0.62, 0.55, 0.72, (1.0, 0.95, 0.2))
+        c.text("1UP", 0.05, 0.95, 0.12, (1, 1, 1), bold=True)
+        c.text(str(int(rng.integers(100, 99999))), 0.5, 0.95, 0.12, (1, 1, 1), bold=True)
     elif kind == "static":
         c = Canvas(128, 96, (0.2, 0.2, 0.2, 1))
         c.noise(rng, 0.35)

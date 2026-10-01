@@ -47,6 +47,8 @@ NAMES = {
     "necktie": "Necktie",
     "clay_bull": "Clay Bull", "clay_bear": "Clay Bear", "clay_pig": "Clay Pig", "clay_frog": "Clay Frog",
     "clay_coin": "Clay Coin", "clay_candle": "Clay Candle", "clay_blob": "Leftover Clay",
+    "lava_lamp": "Lava Lamp", "skull_candle": "Skull Candle", "black_cat": "Black Cat Figurine",
+    "mushroom_cluster": "Mushrooms", "mini_arcade": "Mini Arcade Cabinet",
 }
 
 # the parenthetical in the evidence inventory; picked per token
@@ -197,6 +199,11 @@ NOTES = {
     "clay_frog": ["wide mouth, no comment", "squat and smug", "molded in one sitting"],
     "clay_coin": ["worth one lump of clay", "stamped with a thumbnail"],
     "clay_candle": ["green, for once", "red, like always", "molded by hand, like the chart"],
+    "lava_lamp": ["warm since 1996", "the only light in the room", "blob still rising, slowly"],
+    "skull_candle": ["burned down to the eyebrows", "lit for every session", "smells like a record store"],
+    "black_cat": ["sat on the keyboard, on purpose", "eyes still glowing", "knocked one thing off the desk"],
+    "mushroom_cluster": ["decorative, allegedly", "grew out of the carpet", "glowing a little"],
+    "mini_arcade": ["high score: nobody", "INSERT COIN, forever", "one working button"],
 }
 # a few extra lines on the old favorites, same voice
 NOTES["sneaker"] += ["smells like 1989", "worn to one (1) very bad decision"]
@@ -287,7 +294,7 @@ ONE_OF_ONES = {
     "COLD STORAGE": "Every hardware wallet, frozen solid. Do not ask where the seed phrases are.",
     "SLOW MOTION": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous.",
     "UNDER THE MATTRESS": "It was under the mattress. Everyone's mother knew. Nobody said a word.",
-    "LOW RES": "Made in a hoodie and a pair of headphones at three in the morning. Low res and loud.",
+    "LOW RES": "A bedroom studio at three in the morning: purple light, acid green, a lava lamp, a cat on the keys. Low res and loud.",
     "CCFF00": "One color, three shapes, zero apologies. Squares, diamonds and cubes, 204 255 000 all the way down.",
     "CLAY DAY": "Bulls, bears, pigs and frogs, all squeezed out of clay by hand, then squeezed again by a crusher.",
     "STOP THE PRESSES": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties.",

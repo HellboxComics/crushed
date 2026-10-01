@@ -133,9 +133,10 @@ def pixel_hoodie(b, rng, pal):
     b.box((6 * s, 0.6 * s, 2.6 * s), loc=(0, -1.3 * s, -2.8 * s), mat="pocket", bevel=0.0006)
     for sx in (-1, 1):
         b.box((0.45 * s, 0.45 * s, 3.4 * s), loc=(sx * 1.3 * s, -1.3 * s, 2.6 * s), mat="string")
-    return {"cloth": P(tuple(rng.choice([(0.1, 0.1, 0.12), (0.35, 0.1, 0.55), (0.08, 0.2, 0.42)])), 0.85),
-            "cuff": P((0.22, 0.22, 0.25), 0.85), "void": P((0.01, 0.01, 0.015), 0.9),
-            "pocket": P((0.16, 0.16, 0.18), 0.85), "string": P((0.9, 0.9, 0.9), 0.7)}
+    cloth = [(0.42, 0.12, 0.65), (0.08, 0.08, 0.1), (0.25, 0.08, 0.4)][int(rng.choice(3, p=[0.6, 0.15, 0.25]))]
+    return {"cloth": ("fabric", {"color": cloth}), "cuff": ("fabric", {"color": (0.55, 1.0, 0.1)}),
+            "void": P((0.01, 0.01, 0.015), 0.9), "pocket": ("fabric", {"color": tuple(x * 0.7 for x in cloth)}),
+            "string": P((0.55, 1.0, 0.1), 0.7)}
 
 
 @obj("studio_headphones", mass=0.25, weight=1.0, hero=(0, -1, 0), **S)
