@@ -52,6 +52,7 @@ h1 {
   padding-left: 0.32em;
 }
 
+.cta.teaser { border: 0; color: var(--dim); margin: 0; }
 .cta {
   font-size: 12px;
   letter-spacing: 0.42em;
