@@ -1,8 +1,8 @@
 {
- "name": "CRUSHED",
- "description": "888 perfect 12-inch cubes of crushed nostalgic shit. We kept the important shit.",
+ "name": "CRUSHED IT",
+ "description": "888 perfect 12-inch cubes of crushed nostalgic shit. Five eras, twenty-two one-of-ones, straps on top. We kept the important shit.",
  "image": "ipfs://<site-cid>/og.jpg",
  "external_link": "https://<your-domain>",
- "seller_fee_basis_points": 500,
+ "seller_fee_basis_points": 599,
  "fee_recipient": "0x<royalty-receiver>"
 }
