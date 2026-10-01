@@ -28,9 +28,10 @@ def font(weight, px):
 
 
 class Cut:
-    def __init__(self, src, scale):
+    def __init__(self, src, scale, square=False):
         self.src = src
-        self.w, self.h = round(plan.W * scale), round(plan.H * scale)
+        self.fw, self.h = round(plan.W * scale), round(plan.H * scale)    # the rendered frame
+        self.w = self.h if square else self.fw                            # the square cut keeps the middle
         self.cache = {}
         self.rng = np.random.default_rng(888)
         yy, xx = np.mgrid[0:self.h, 0:self.w].astype(np.float32)
@@ -48,8 +49,11 @@ class Cut:
             if len(self.cache) > 40:
                 self.cache.clear()
             im = Image.open(p).convert("RGB")
-            if im.size != (self.w, self.h):
-                im = im.resize((self.w, self.h), Image.LANCZOS)
+            if im.size != (self.fw, self.h):
+                im = im.resize((self.fw, self.h), Image.LANCZOS)
+            if self.w != self.fw:
+                x0 = (self.fw - self.w) // 2
+                im = im.crop((x0, 0, x0 + self.w, self.h))
             self.cache[p] = np.asarray(im, dtype=np.float32) / 255
         return self.cache[p].copy()
 
@@ -74,6 +78,12 @@ class Cut:
         widths = [f.getlength(ch) for ch in s]
         gap = px * track
         total = sum(widths) + gap * (len(s) - 1)
+        if total > self.w * 0.88:                       # too wide for this frame (the square cut): shrink to fit
+            px = max(8, int(px * self.w * 0.88 / total))
+            f = font(weight, px)
+            widths = [f.getlength(ch) for ch in s]
+            gap = px * track
+            total = sum(widths) + gap * (len(s) - 1)
         layer = Image.new("L", (self.w, self.h), 0)
         d = ImageDraw.Draw(layer)
         x = (self.w - total) / 2
@@ -183,7 +193,7 @@ def ending(c):
         img = c.text(img, "crushed.buzz", 0.115, plan.LIME, min(1.0, (i + 1) / 6), y=0.45, weight="Bold",
                      track=0.04, glow=0.9)
         if i >= 14:
-            img = c.text(img, "888 CUBES  ·  30 ONE-OF-ONES  ·  SOON", 0.026, plan.DIM, min(1.0, (i - 13) / 6),
+            img = c.text(img, "888 CUBES  ·  30 ONE-OF-ONES  ·  SOON", 0.026, (170, 166, 158), min(1.0, (i - 13) / 6),
                          y=0.6, track=0.3)
         yield img
     for i in range(e["button"] + e["fade"]):
@@ -208,9 +218,10 @@ def main():
     ap.add_argument("--out", default="renders/crushed_buzz_hero.mp4")
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--stills", help="also save these frame numbers as PNGs here (storyboard)", default=None)
+    ap.add_argument("--square", action="store_true", help="the 1:1 cut for phones (the middle of the frame)")
     ap.add_argument("--silent", action="store_true", help="leave the sound off")
     a = ap.parse_args()
-    c = Cut(a.src, a.scale)
+    c = Cut(a.src, a.scale, a.square)
     pick = set(range(0, 576, 24)) if a.stills else set()
     if a.stills:
         os.makedirs(a.stills, exist_ok=True)

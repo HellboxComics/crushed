@@ -12,6 +12,7 @@ nohup caffeinate -i bash -c "
   .venv/bin/python film/render.py --out '$OUT' --samples ${SAMPLES:-64} --device auto 2>&1 | grep --line-buffered '\[film\]' &&
   .venv/bin/python film/sound.py &&
   .venv/bin/python film/cut.py --src '$OUT' --out ~/Desktop/crushed_buzz_hero.mp4 --stills ~/Desktop/crushed_buzz_hero_frames &&
+  .venv/bin/python film/cut.py --src '$OUT' --out ~/Desktop/crushed_buzz_hero_square.mp4 --square &&
   open ~/Desktop/crushed_buzz_hero.mp4
 " > ~/crushed-render/film.log 2>&1 &
 echo "film is rendering in the background. Watch: tail -f ~/crushed-render/film.log"

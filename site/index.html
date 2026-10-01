@@ -16,6 +16,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="home">
+<div id="intro" hidden>
+  <video id="film" muted playsinline preload="auto" aria-label="crushed.buzz teaser film"></video>
+  <button id="sound" type="button" aria-pressed="false">SOUND ON</button>
+  <button id="skip" type="button">SKIP</button>
+</div>
 <main>
   <img id="cube" src="cube/0529.webp" width="1024" height="1024" alt="TRICK OR TREAT, a crushed.buzz cube. One of one.">
   <p class="now" id="now">TRICK OR TREAT <span>1 OF 1</span></p>
@@ -45,6 +50,37 @@
   <p class="more">8 of the 30 shown. The other 22 stay in the pile.</p>
 </main>
 <script>
+  // ---- the film opens the page once per visitor: silent until they tap SOUND ON (browsers only let a page play
+  // sound after a tap), SKIP jumps straight to the cube. Phones and tall screens get the square cut.
+  (function () {
+    const intro = document.getElementById("intro"), film = document.getElementById("film");
+    let seen = false;
+    try { seen = localStorage.getItem("crushed_seen_film") === "1"; } catch (e) {}
+    const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (seen || calm) return;
+    const done = () => {
+      if (intro.classList.contains("out")) return;
+      intro.classList.add("out");
+      document.body.classList.remove("filming");
+      try { localStorage.setItem("crushed_seen_film", "1"); } catch (e) {}
+      setTimeout(() => { film.pause(); film.removeAttribute("src"); film.load(); intro.remove(); }, 900);
+    };
+    film.src = matchMedia("(max-aspect-ratio: 4/3)").matches ? "film/hero_square.mp4" : "film/hero_wide.mp4";
+    intro.hidden = false;
+    document.body.classList.add("filming");
+    film.addEventListener("ended", done);
+    film.addEventListener("error", done);
+    document.getElementById("skip").addEventListener("click", done);
+    const sound = document.getElementById("sound");
+    sound.addEventListener("click", () => {
+      film.muted = !film.muted;
+      sound.textContent = film.muted ? "SOUND ON" : "SOUND OFF";
+      sound.setAttribute("aria-pressed", String(!film.muted));
+    });
+    const p = film.play();
+    if (p && p.catch) p.catch(done);          // a browser that won't play it at all just shows the site
+  })();
+
   // one rendered picture per cube, swapped on tap. (The spinning 3D version comes back when it matches the renders.)
   const cube = document.getElementById("cube");
   const now = document.getElementById("now");
