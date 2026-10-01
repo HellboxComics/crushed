@@ -5,6 +5,7 @@ built-in 5x7 bitmap font, which is exactly the right look for LCDs, stamped
 steel and cheap labels anyway.
 """
 import math
+import os
 
 import numpy as np
 import bpy
@@ -593,12 +594,45 @@ def bunny_head(c, cx, cy, r, col):
             (cx + r * 0.55 / asp, cy - r * 1.55), (cx, cy - r * 1.35), (cx - r * 0.55 / asp, cy - r * 1.55)], col)
 
 
+FIG_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "assets",
+                       "figures")
+
+
+def photo_figure(c, rng, cx, y0, h):
+    """The cover model: one of the posed, rendered figures in assets/figures/ (made by blender/pose_cover_figure.py),
+    cut out and stood on the cover, feet at y0, h tall. False if there are none, so the drawn pin-up stands in."""
+    import glob as _g
+    files = sorted(_g.glob(os.path.join(FIG_DIR, "*.png")))
+    if not files:
+        return False
+    from PIL import Image
+    im = Image.open(files[int(rng.integers(0, len(files)))]).convert("RGBA")
+    im = im.crop(im.getbbox())
+    if rng.random() < 0.5:
+        im = im.transpose(Image.FLIP_LEFT_RIGHT)
+    ph = max(8, int(h * c.h))
+    pw = max(4, int(im.width * ph / im.height))
+    im = im.resize((pw, ph), Image.LANCZOS)
+    a = np.asarray(im, dtype=np.float32) / 255.0
+    x0 = int(cx * c.w - pw / 2)
+    y1 = int((1 - y0) * c.h)
+    ya, yb = max(0, y1 - ph), min(c.h, y1)
+    xa, xb = max(0, x0), min(c.w, x0 + pw)
+    if ya >= yb or xa >= xb:
+        return False
+    src = a[ya - (y1 - ph):yb - (y1 - ph), xa - x0:xb - x0]
+    m = src[..., 3:4]
+    c.a[ya:yb, xa:xb, :3] = c.a[ya:yb, xa:xb, :3] * (1 - m) + src[..., :3] * m
+    return True
+
+
 def mag_cover(rng, name):
-    c = Canvas(192, 256)
+    c = Canvas(384, 512)
     c.gradient(*BACKGROUNDS[int(rng.integers(0, len(BACKGROUNDS)))])
     c.circle(0.5, 0.5, 0.36, (1.0, 0.9, 0.5, 0.28))
     c.circle(0.5, 0.5, 0.27, (1.0, 0.9, 0.5, 0.22))
-    figure(c, 0.5, 0.2, 0.67, rng, outfit=str(rng.choice(["bunny", "bunny", "bikini", "swim"])))
+    if not photo_figure(c, rng, 0.5, 0.17, 0.74):
+        figure(c, 0.5, 0.2, 0.67, rng, outfit=str(rng.choice(["bunny", "bunny", "bikini", "swim"])))
     mh = MASTHEADS[int(rng.integers(0, len(MASTHEADS)))]
     c.text_fit(mh, 0.06, 0.975, 0.72, 0.1, (1, 1, 1), bold=True, spacing=1.05)
     bunny_head(c, 0.9, 0.925, 0.055, (1, 1, 1))
@@ -1391,12 +1425,13 @@ def slot_files(slot):
 
 
 def slot_hashes():
-    """{filename: sha256} of every slot file: part of the collection's provenance."""
+    """{filename: sha256} of every slot file and every cover figure: part of the collection's provenance."""
     out = {}
-    if os.path.isdir(SLOT_DIR):
-        for f in sorted(glob.glob(os.path.join(SLOT_DIR, "*.png"))):
-            with open(f, "rb") as fh:
-                out[os.path.basename(f)] = hashlib.sha256(fh.read()).hexdigest()
+    for d, prefix in ((SLOT_DIR, ""), (FIG_DIR, "figures/")):
+        if os.path.isdir(d):
+            for f in sorted(glob.glob(os.path.join(d, "*.png"))):
+                with open(f, "rb") as fh:
+                    out[prefix + os.path.basename(f)] = hashlib.sha256(fh.read()).hexdigest()
     return out
 
 

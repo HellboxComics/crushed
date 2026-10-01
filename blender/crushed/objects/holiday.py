@@ -384,3 +384,37 @@ def pin_button(b, rng, pal):
     b.cyl(0.028, 0.004, mat="rim", seg=24)
     b.plane(0.05, 0.05, loc=(0, 0, 0.0021), mat="face", cuts=2)
     return {"rim": MET((0.8, 0.8, 0.82), 0.3), "face": PR(tex.pin_print(rng, "pin"), 0.3)}
+
+
+# -- UNDER THE MATTRESS ----------------------------------------------------------------------------
+
+def _ear(lean, s, n=14):
+    """One tall rabbit ear as an outline: narrow at the head, round at the tip, leaning out by `lean` radians."""
+    pts = []
+    for i in range(n + 1):                                   # up the outer edge and round the tip
+        t = i / n
+        a = math.pi * t
+        x, y = 0.22 * s * math.cos(a), 1.55 * s + 0.22 * s * math.sin(a)
+        pts.append((x, y))
+    pts += [(-0.16 * s, 0.25 * s), (0.16 * s, 0.25 * s)]     # down to the base
+    c, sn = math.cos(lean), math.sin(lean)
+    return [(x * c - y * sn, x * sn + y * c) for x, y in pts]
+
+
+@obj("bunny_charm", mass=0.03, weight=1.0, hero=(0, 0, 1), tags=("upright",), **G)
+def bunny_charm(b, rng, pal):
+    """Our rabbit (the same one on the magazine covers), as a glossy black keepsake: round head, two tall ears
+    leaning apart, one eye, a bow tie. Nobody's logo; everybody's bunny."""
+    s = float(rng.uniform(0.026, 0.034))
+    d = 0.009
+    head = [(s * math.cos(2 * math.pi * i / 32), s * math.sin(2 * math.pi * i / 32)) for i in range(32)]
+    b.extrude(head, d, mat="black", bevel=0.0015)
+    for lean, dx in ((0.38, -0.012), (-0.16, 0.012)):
+        b.extrude(_ear(lean, s), d * 0.85, loc=(dx * s / 0.03, 0, 0), mat="black", bevel=0.0012)
+    bow = [(-0.75 * s, -1.05 * s), (0, -1.2 * s), (0.75 * s, -1.05 * s), (0.75 * s, -1.6 * s), (0, -1.42 * s),
+           (-0.75 * s, -1.6 * s)]
+    b.extrude(bow, d * 0.7, mat="black", bevel=0.001)
+    b.cyl(0.13 * s, 0.002, loc=(0.32 * s, 0.12 * s, d / 2 + 0.0004), mat="eye", seg=16)
+    if rng.random() < 0.5:                                   # some were keychains
+        b.tube([(0, s * 1.05, 0), (0.004, s * 1.35, 0), (0, s * 1.6, 0)], 0.0012, mat="ring", seg=6)
+    return {"black": P((0.012, 0.012, 0.014), 0.1), "eye": P((0.92, 0.92, 0.9), 0.3), "ring": CHROME()}

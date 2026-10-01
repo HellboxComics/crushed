@@ -261,10 +261,10 @@ def strata(coll, rng, pal, seed, inten=1.0, per_side=56, prints=(), borrow=(), b
         for _ in range(n):
             w = rng.uniform(0.05, 0.24)
             d = rng.uniform(0.02, 0.06)
-            t = rng.uniform(0.0015, 0.006)
+            t = rng.uniform(0.0015, 0.0045)
             u = rng.uniform(-H, H)
             z = rng.uniform(-H + 0.004, H - 0.004)
-            poke = rng.uniform(-0.004, 0.003)
+            poke = rng.uniform(-0.009, -0.002)
             cx = tx * u + nx * (H - d / 2 + poke)
             cy = ty * u + ny * (H - d / 2 + poke)
             rot = (0, 0, 0) if tx else (0, 0, math.pi / 2)
@@ -280,7 +280,7 @@ def strata(coll, rng, pal, seed, inten=1.0, per_side=56, prints=(), borrow=(), b
     crush.store_rest(me, v)
     # pressed, not cut: the layers ripple, droop and crumple a little where they were squeezed out the sides
     v = v + noise.fbm_vec(v, 1.0 / 0.03, 3, seed) * np.array([0.002, 0.002, 0.0045]) * (0.6 + 0.6 * inten)
-    v = crush.compact(v, rng.uniform(-0.0015, 0.0005), seed + 7, margin=0.006, strength=inten)
+    v = crush.compact(v, rng.uniform(-0.006, -0.003), seed + 7, margin=0.006, strength=inten)
     crush.set_verts(me, v)
     me.set_sharp_from_angle(angle=math.radians(40))
     for key in b.slots:

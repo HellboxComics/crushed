@@ -16,7 +16,7 @@ LIFT = H + 0.004           # center height of the block above the floor
 # how much of a baler it is: strata = how many pressed layers show on the sides, ram = how flat the top-down press
 # squashes things on the sides, borrow = how many of the layers are made of this block's own stuff (its wrappers,
 # its plastics) instead of plain card and paper. 0/0 is the old "pressed into the core" look.
-BALE = {"strata": 0.55, "ram": 0.6, "borrow": 0.75}      # option C, pending the pick
+BALE = {"strata": 1.0, "ram": 1.0, "borrow": 0.6}       # "full bale", picked 2026-10-01
 
 # every side but the bottom gets covered: the block turns in 3D, so there is no back
 FACE_WEIGHTS = {"-Y": 0.23, "+X": 0.22, "+Z": 0.21, "+Y": 0.17, "-X": 0.17}
@@ -122,9 +122,9 @@ def build_block(r, coll, rng):
         head = i == 0
         override = ("gold", {}) if r["gold_index"] == i else None
         ob = make_object(d, rng, pal, coll, override)
-        limit = rng.uniform(0.15, 0.21) if d.big else 0.17
+        limit = rng.uniform(0.17, 0.23) if d.big else 0.19     # big enough to name from a fragment
         if head or override:
-            limit = 0.21 if d.big else 0.19
+            limit = 0.23 if d.big else 0.21
         v = prepare(ob, limit, rng)
         if v is None:
             continue
@@ -147,10 +147,13 @@ def build_block(r, coll, rng):
             poke, depth, layer = rng.uniform(0.01, 0.04), rng.uniform(0.05, 0.08), rng.uniform(-0.003, 0.0)
         else:
             poke, depth, layer = rng.uniform(0.003, 0.012), rng.uniform(0.04, 0.09), rng.uniform(0.0, 0.003)
+            if rng.random() < 0.3:          # half crushed, still sticking out of the bale
+                poke, depth, layer = rng.uniform(0.015, 0.03), rng.uniform(0.06, 0.1), rng.uniform(0.008, 0.02)
         if override:
             poke, layer = rng.uniform(0.0, 0.008), 0.005
         v = crush.place(v, q, nrm, uv, t1, t2, poke, depth)
-        v = crush.ram(v, nrm, t1, kz_for(0.62, 0.8, 0.6) if head or override else kz_for(0.42, 0.66))
+        # pressed, not erased: you still have to be able to tell what it was
+        v = crush.ram(v, nrm, t1, kz_for(0.85, 0.95, 0.8) if head or override else kz_for(0.68, 0.88, 0.6))
         v = crush.compact(v, layer, r["seed"] + rank, margin=0.008, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)
@@ -202,9 +205,10 @@ def build_block(r, coll, rng):
         own = []
         for ob in objs[1:]:
             for m in ob.data.materials:
-                if m and m not in own and not m.name.startswith(("core", "gold")):
+                if m and m not in own and not m.name.startswith(("core", "gold")) and not (
+                        m.node_tree and any(n.type == "TEX_IMAGE" for n in m.node_tree.nodes)):
                     own.append(m)
-        prints = [tex.can_print(rng, "st_a"), tex.sticker(rng, "st_b", lines=3), tex.notebook(rng, "st_c")]
+        prints = []
         objs.append(dressing.strata(coll, rng, pal, r["seed"] + 77, inten,
                                     per_side=int((46 + 26 * inten) * BALE["strata"]), prints=prints,
                                     borrow=own, borrow_share=BALE["borrow"]))
