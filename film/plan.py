@@ -23,7 +23,7 @@ SHOTS = [
     dict(name="concept", cube=HERO, frames=144, rig="silhouette",
          cam=(((1.05, -1.75, 0.22), (0, 0, 0.17), 24), ((0.80, -1.33, 0.20), (0, 0, 0.17), 24))),
     # 0:09 lights on: the Halloween block, low and turning
-    dict(name="reveal", cube=HERO, frames=120, rig="halloween", orbit=(-28, 52, 1.15, (0.09, 0.16)),
+    dict(name="reveal", cube=HERO, frames=120, rig="halloween", orbit=(-28, 52, 1.15, (0.09, 0.16)), shift=0.075,
          cam=(None, (0, 0, 0.16), 30)),
 ]
 
@@ -56,9 +56,9 @@ def montage_holds():
 
 # ---- the words. (first frame, last frame, text, size as a share of the frame height, color)
 CARDS = [
-    (82, 112, "EVERY CRAZE HAD A BUZZ.", 0.052, BONE),
-    (118, 148, "THEN THE BUZZ WORE OFF.", 0.052, BONE),
-    (154, 182, "THE STUFF DIDN'T.", 0.052, BONE),
-    (188, 214, "SO WE CRUSHED IT.", 0.062, LIME),
+    (82, 112, "EVERY CRAZE HAD A BUZZ.", 0.064, BONE),
+    (118, 148, "THEN THE BUZZ WORE OFF.", 0.064, BONE),
+    (154, 182, "THE STUFF DIDN'T.", 0.064, BONE),
+    (188, 214, "SO WE CRUSHED IT.", 0.076, LIME),
 ]
 END = dict(black=6, title=54, button=30, fade=6)   # 576 frames = 24.0 s in all

@@ -156,8 +156,8 @@ def reveal(c):
             img = img * 0.4 + np.array([1.0, 0.55, 0.15], np.float32) * (0.6 if i == 0 else 0.3)   # lights slam on
         al = fade(i, 46, 119, fin=8, fout=1)
         if al:
-            img = c.text(img, "TRICK OR TREAT", 0.05, plan.BONE, al, y=0.12, weight="Bold", track=0.2)
-            img = c.text(img, "ONE OF ONE  ·  01/30", 0.022, plan.LIME, al, y=0.185, track=0.3)
+            img = c.text(img, "TRICK OR TREAT", 0.05, plan.BONE, al, y=0.085, weight="Bold", track=0.2)
+            img = c.text(img, "ONE OF ONE  ·  01/30", 0.024, plan.LIME, al, y=0.15, track=0.3)
         yield img
 
 
@@ -169,8 +169,8 @@ def montage(c):
             img = c.push(c.shot(f"m_{cube:04d}", 1), 1.0 + 0.05 * (i + 1) / hold)
             if k >= late and i == 0:
                 img = img * 0.5 + 0.5                  # the last cuts hit with a white flash
-            img = c.text(img, plan.NAMES[cube], 0.034, plan.BONE, 1.0, y=0.12, weight="Bold", track=0.2)
-            img = c.text(img, f"{k + 2:02d}/30", 0.02, plan.LIME, 1.0, y=0.18, track=0.3)
+            img = c.text(img, plan.NAMES[cube], 0.04, plan.BONE, 1.0, y=0.085, weight="Bold", track=0.2)
+            img = c.text(img, f"ONE OF ONE  ·  {k + 2:02d}/30", 0.024, plan.LIME, 1.0, y=0.15, track=0.3)
             yield img
 
 

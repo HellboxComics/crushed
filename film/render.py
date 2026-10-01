@@ -69,13 +69,13 @@ def rig(sc, kind):
         area(sc, "rim_p", (0.75, 0.55, 0.42), 0.25, 85, PURPLE)
     elif kind == "halloween":
         world_strength(sc, 0.18)
-        area(sc, "key", (-0.9, -1.0, 0.55), 0.6, 120, ORANGE)
-        area(sc, "fill", (1.0, -0.7, 0.25), 0.6, 18, (0.7, 0.8, 1.0))
+        area(sc, "key", (-0.9, -1.0, 0.55), 0.6, 70, ORANGE)
+        area(sc, "fill", (1.0, -0.7, 0.25), 0.6, 30, (0.85, 0.9, 1.0))
         area(sc, "rim_p", (0.8, 1.0, 0.6), 0.4, 260, PURPLE)
-        area(sc, "rim_g", (-1.0, 0.8, 0.3), 0.4, 60, (0.45, 1.0, 0.1))     # a little slime green from behind
+        area(sc, "rim_g", (-1.0, 0.8, 0.3), 0.4, 30, (0.45, 1.0, 0.1))     # a little slime green from behind
         area(sc, "top", (0.0, 0.0, 1.3), 0.6, 18, (1, 1, 1))
         s = bpy.data.lights.new("pool", "SPOT")
-        s.energy = 30
+        s.energy = 14
         s.spot_size = math.radians(40)
         s.spot_blend = 1.0
         s.color = ORANGE
@@ -105,8 +105,8 @@ def key_camera(ob, frame, loc, aim, vfov, dof=None):
     ob.keyframe_insert("location", frame=frame)
     ob.keyframe_insert("rotation_euler", frame=frame)
     ob.data.keyframe_insert("lens", frame=frame)
+    ob.data.dof.use_dof = bool(dof)        # the camera is shared between shots: switch focus blur off again
     if dof:
-        ob.data.dof.use_dof = True
         ob.data.dof.focus_distance = (Vector(aim) - Vector(loc)).length
         ob.data.dof.aperture_fstop = dof
         ob.data.dof.keyframe_insert("focus_distance", frame=frame)
@@ -124,6 +124,7 @@ def smooth(ob):
 def setup_shot(sc, shot):
     rig(sc, shot["rig"])
     ob = perspective(sc)
+    ob.data.shift_y = shot.get("shift", 0.0)
     n = shot["frames"]
     if "orbit" in shot:
         a0, a1, r, (z0, z1) = shot["orbit"]
@@ -132,9 +133,9 @@ def setup_shot(sc, shot):
         for f in range(1, n + 1, max(1, n // 12)):
             t = (f - 1) / (n - 1)
             a = math.radians(a0 + (a1 - a0) * t)
-            rr = r * (1 - 0.12 * t)                       # a slow push in while it turns
+            rr = r * (1 - 0.06 * t)                       # a slow push in while it turns
             key_camera(ob, f, (math.sin(a) * rr, -math.cos(a) * rr, z0 + (z1 - z0) * t), aim, vfov)
-        key_camera(ob, n, (math.sin(math.radians(a1)) * r * 0.88, -math.cos(math.radians(a1)) * r * 0.88, z1),
+        key_camera(ob, n, (math.sin(math.radians(a1)) * r * 0.94, -math.cos(math.radians(a1)) * r * 0.94, z1),
                    aim, vfov)
         for fc in build._fcurves(ob):
             for kp in fc.keyframe_points:
@@ -153,7 +154,8 @@ def montage_camera(sc):
     cam = sc.camera.data
     cam.type = "ORTHO"
     cam.sensor_fit = "VERTICAL"
-    cam.ortho_scale = 0.60
+    cam.ortho_scale = 0.62
+    cam.shift_y = 0.07                       # sit the cube a little low, leaving the top for its name
     sc.frame_start = sc.frame_end = 1
 
 
