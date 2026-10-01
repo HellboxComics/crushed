@@ -197,6 +197,7 @@ def main():
     ap.add_argument("--offset", type=int, default=None, help="the contract's reveal offset (post-reveal only)")
     ap.add_argument("--sealed", action="store_true", help="render the pre-reveal image (renders/sealed.png)")
     ap.add_argument("--showcase", action="store_true", help="the 100 blocks shown on the site's pile page")
+    ap.add_argument("--ones", action="store_true", help="the 22 one-of-ones (put first, so they render first)")
     a = ap.parse_args(argv)
     stage.DEVICE["want"] = a.device
 
@@ -214,6 +215,9 @@ def main():
         sc.render.filepath = os.path.abspath(os.path.join(a.out, "sealed.png"))
         bpy.ops.render.render(write_still=True)
     ids = list(a.token or [])
+    if a.ones:
+        conds, _ = recipe.deck()
+        ids += [i + 1 for i, c in enumerate(conds) if c in recipe.ONE_OF_ONES]
     if a.range:
         ids += list(range(a.range[0], a.range[1] + 1))
     if a.showcase:
@@ -221,6 +225,8 @@ def main():
     bad = [t for t in ids if not 1 <= t <= recipe.SUPPLY]
     if bad:
         ap.error(f"token ids must be 1..{recipe.SUPPLY}: {bad}")
+    seen = set()
+    ids = [t for t in ids if not (t in seen or seen.add(t))]      # one-of-ones first, then the rest, no repeats
     for tid in ids:
         if a.skip_existing and os.path.exists(os.path.join(a.out, f"{tid:04d}.png")):
             continue
