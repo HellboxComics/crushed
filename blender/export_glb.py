@@ -22,6 +22,46 @@ from crushed import build, stage  # noqa: E402
 import generate  # noqa: E402
 
 
+def cull_hidden(ob):
+    """Delete every face nobody can see from outside. A crushed block is layers on layers pressed into the same
+    few millimeters; a game-style viewer draws those as flicker (two surfaces fighting for the same pixel).
+    A face stays only if a ray from it escapes the block in at least one of a few directions around its normal."""
+    import bmesh
+    from mathutils import Vector
+    from mathutils.bvhtree import BVHTree
+    me = ob.data
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    bm.faces.ensure_lookup_table()
+    tree = BVHTree.FromBMesh(bm, epsilon=0.0)
+    dead = []
+    for f in bm.faces:
+        n = f.normal
+        if n.length < 1e-9:
+            dead.append(f)
+            continue
+        c = f.calc_center_median()
+        side = n.orthogonal().normalized()
+        side2 = n.cross(side)
+        seen = False
+        for base in (n, -n):
+            for d in (base, (base + side * 0.6).normalized(), (base - side * 0.6).normalized(),
+                      (base + side2 * 0.6).normalized(), (base - side2 * 0.6).normalized()):
+                hit = tree.ray_cast(c + d * 0.0002, d, 2.0)
+                if hit[0] is None:
+                    seen = True
+                    break
+            if seen:
+                break
+        if not seen:
+            dead.append(f)
+    before = len(bm.faces)
+    bmesh.ops.delete(bm, geom=dead, context="FACES")
+    bm.to_mesh(me)
+    bm.free()
+    print(f"[glb] hidden faces removed: {len(dead)} of {before}")
+
+
 def export(tid, out, size=4096, samples=16, device="auto"):
     r = generate.token(tid)
     t0 = time.time()
@@ -40,6 +80,7 @@ def export(tid, out, size=4096, samples=16, device="auto"):
     bpy.ops.object.join()
     ob = bpy.context.view_layer.objects.active
     ob.name = f"crushed_{tid:04d}"
+    cull_hidden(ob)
     bake_uv = ob.data.uv_layers.new(name="bake")
     ob.data.uv_layers.active = bake_uv
     bpy.ops.object.mode_set(mode="EDIT")
@@ -65,6 +106,22 @@ def export(tid, out, size=4096, samples=16, device="auto"):
         return im
 
     sc.render.bake.margin = 6
+    # metals and glass have no "diffuse" color, so a plain color bake turns gold black. Take their metal and
+    # see-through settings off for the color bake, and bake how metal each spot is into its own map.
+    metal_src = {}
+    for slot in ob.material_slots:
+        m = slot.material
+        if not m or not m.node_tree:
+            continue
+        bs = next((n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
+        if not bs:
+            continue
+        sock = bs.inputs["Metallic"]
+        metal_src[m.name] = (sock.links[0].from_socket if sock.links else None, sock.default_value)
+        for name in ("Metallic", "Transmission Weight"):
+            for l in list(bs.inputs[name].links):
+                m.node_tree.links.remove(l)
+            bs.inputs[name].default_value = 0.0
     # 1. the surface color itself, no light in it: the viewer lights it live, so it reads as a real object
     col = target("color")
     sc.render.bake.use_pass_direct = False
@@ -74,6 +131,23 @@ def export(tid, out, size=4096, samples=16, device="auto"):
     # 2. how shiny each spot is
     rough = target("rough", non_color=True)
     bpy.ops.object.bake(type="ROUGHNESS", use_clear=True)
+    # 2b. how metal each spot is: route each material's metal value into its glow and bake the glow
+    metal = target("metal", non_color=True)
+    for slot in ob.material_slots:
+        m = slot.material
+        if not m or m.name not in metal_src:
+            continue
+        nt_ = m.node_tree
+        bs = next(n for n in nt_.nodes if n.type == "BSDF_PRINCIPLED")
+        src, val = metal_src[m.name]
+        for l in list(bs.inputs["Emission Color"].links):
+            nt_.links.remove(l)
+        if src is not None:
+            nt_.links.new(src, bs.inputs["Emission Color"])
+        else:
+            bs.inputs["Emission Color"].default_value = (val, val, val, 1.0)
+        bs.inputs["Emission Strength"].default_value = 1.0
+    bpy.ops.object.bake(type="EMIT", use_clear=True)
     # 3. the crevices: how buried each spot is, multiplied into the color so the crush keeps its depth
     ao = target("ao", non_color=True)
     bpy.ops.object.bake(type="AO", use_clear=True)
@@ -99,7 +173,10 @@ def export(tid, out, size=4096, samples=16, device="auto"):
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
     nt.links.new(tc.outputs["Color"], bsdf.inputs["Base Color"])
     nt.links.new(tr.outputs["Color"], bsdf.inputs["Roughness"])
-    bsdf.inputs["Metallic"].default_value = 0.0
+    tm = nt.nodes.new("ShaderNodeTexImage")
+    tm.image = metal
+    nt.links.new(uvn.outputs["UV"], tm.inputs["Vector"])
+    nt.links.new(tm.outputs["Color"], bsdf.inputs["Metallic"])
     outn = nt.nodes.new("ShaderNodeOutputMaterial")
     nt.links.new(bsdf.outputs[0], outn.inputs["Surface"])
     ob.data.materials.clear()

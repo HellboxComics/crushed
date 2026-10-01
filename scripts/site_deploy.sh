@@ -4,7 +4,7 @@
 (
 set -e
 cd ~/crushed-render/repo && git pull -q
-FREEZE=$(cut -c3-12 collection/provenance.txt)
+FREEZE="$(cut -c3-12 collection/provenance.txt)-$(shasum blender/export_glb.py | cut -c1-8)"   # rebuild when the art or the exporter changes
 STAMP="site/cube/.freeze"
 if [ "$(cat "$STAMP" 2>/dev/null)" != "$FREEZE" ]; then
   # the eight cubes on the teaser: 529 is the default, the rest are one tap away
