@@ -69,37 +69,53 @@ def cull_hidden(ob):
     print(f"[glb] hidden faces removed: {len(dead)} of {before}")
 
 
-def export(tid, out, size=4096, samples=16, device="auto"):
-    r = generate.token(tid)
-    t0 = time.time()
-    sc = build.build(r, res=256, samples=samples)
-    if device != "cpu":
-        stage.use_gpu(sc)
-    sc.cycles.samples = samples
-    coll = bpy.data.collections["block"]
-    objs = [o for o in coll.objects if o.type == "MESH" and len(o.data.polygons)]
+GROUP_NAMES = ["core", "straps", "items_a", "items_b", "items_c"]
+
+
+def _area(o):
+    return sum(p.area for p in o.data.polygons) * max(o.scale) ** 2
+
+
+def _part(src, g, coll):
+    """A copy of the joined block holding only the faces of group g."""
+    import bmesh
+    me = src.data.copy()
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    lay = bm.faces.layers.int.get("grp")
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if f[lay] != g], context="FACES")
+    n = len(bm.faces)
+    bm.to_mesh(me)
+    bm.free()
+    if not n:
+        bpy.data.meshes.remove(me)
+        return None
+    ob = bpy.data.objects.new(GROUP_NAMES[g], me)
+    ob.matrix_world = src.matrix_world
+    coll.objects.link(ob)
+    me.attributes.remove(me.attributes["grp"])
+    return ob
+
+
+def _bake_part(sc, ob, size):
+    """Bake one part's color (crevices darkened), roughness and metal into its own texture sheet."""
+    import numpy as np
     for o in bpy.data.objects:
         o.select_set(False)
-    # one mesh, one UV layout for the bake. Mark the core first so the hidden-face cut leaves it whole.
-    for o in objs:
-        a = o.data.attributes.get("keep") or o.data.attributes.new("keep", "INT", "FACE")
-        a.data.foreach_set("value", [1 if o.name.startswith("core") else 0] * len(o.data.polygons))
-    for o in objs:
-        o.select_set(True)
-    bpy.context.view_layer.objects.active = objs[0]
-    bpy.ops.object.join()
-    ob = bpy.context.view_layer.objects.active
-    ob.name = f"crushed_{tid:04d}"
-    cull_hidden(ob)
-    ob.data.attributes.remove(ob.data.attributes["keep"])
-    bake_uv = ob.data.uv_layers.new(name="bake")
-    ob.data.uv_layers.active = bake_uv
+    ob.select_set(True)
+    bpy.context.view_layer.objects.active = ob
+    ob.data.uv_layers.active = ob.data.uv_layers.new(name="bake")
     bpy.ops.object.mode_set(mode="EDIT")
     bpy.ops.mesh.select_all(action="SELECT")
-    bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0.002)
+    bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0.001)
+    try:
+        bpy.ops.uv.pack_islands(rotate=True, margin=0.001)
+    except (TypeError, RuntimeError):
+        pass
     bpy.ops.object.mode_set(mode="OBJECT")
+
     def target(name, non_color=False):
-        im = bpy.data.images.new(name, size, size, alpha=False)
+        im = bpy.data.images.new(f"{ob.name}_{name}", size, size, alpha=False)
         if non_color:
             im.colorspace_settings.name = "Non-Color"
         for slot in ob.material_slots:
@@ -116,96 +132,118 @@ def export(tid, out, size=4096, samples=16, device="auto"):
             m.node_tree.nodes.active = n
         return im
 
-    sc.render.bake.margin = 6
-    # metals and glass have no "diffuse" color, so a plain color bake turns gold black. Take their metal and
-    # see-through settings off for the color bake, and bake how metal each spot is into its own map.
-    metal_src = {}
-    for slot in ob.material_slots:
-        m = slot.material
-        if not m or not m.node_tree:
-            continue
-        bs = next((n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
-        if not bs:
-            continue
-        sock = bs.inputs["Metallic"]
-        metal_src[m.name] = (sock.links[0].from_socket if sock.links else None, sock.default_value)
-        for name in ("Metallic", "Transmission Weight"):
-            for l in list(bs.inputs[name].links):
-                m.node_tree.links.remove(l)
-            bs.inputs[name].default_value = 0.0
-    # 1. the surface color itself, no light in it: the viewer lights it live, so it reads as a real object
     col = target("color")
-    sc.render.bake.use_pass_direct = False
-    sc.render.bake.use_pass_indirect = False
-    sc.render.bake.use_pass_color = True
     bpy.ops.object.bake(type="DIFFUSE", pass_filter={"COLOR"}, use_clear=True)
-    # 2. how shiny each spot is
     rough = target("rough", non_color=True)
     bpy.ops.object.bake(type="ROUGHNESS", use_clear=True)
-    # 2b. how metal each spot is: route each material's metal value into its glow and bake the glow
     metal = target("metal", non_color=True)
-    for slot in ob.material_slots:
-        m = slot.material
-        if not m or m.name not in metal_src:
-            continue
-        nt_ = m.node_tree
-        bs = next(n for n in nt_.nodes if n.type == "BSDF_PRINCIPLED")
-        src, val = metal_src[m.name]
-        for l in list(bs.inputs["Emission Color"].links):
-            nt_.links.remove(l)
-        if src is not None:
-            nt_.links.new(src, bs.inputs["Emission Color"])
-        else:
-            bs.inputs["Emission Color"].default_value = (val, val, val, 1.0)
-        bs.inputs["Emission Strength"].default_value = 1.0
-    bpy.ops.object.bake(type="EMIT", use_clear=True)
-    # 3. the crevices: how buried each spot is, multiplied into the color so the crush keeps its depth
+    bpy.ops.object.bake(type="EMIT", use_clear=True)      # the materials' glow carries their metal value here
     ao = target("ao", non_color=True)
     bpy.ops.object.bake(type="AO", use_clear=True)
-    import numpy as np
     c = np.array(col.pixels[:], dtype=np.float32).reshape(-1, 4)
     o = np.array(ao.pixels[:], dtype=np.float32).reshape(-1, 4)
     c[:, :3] *= (0.25 + 0.75 * o[:, :1])
     col.pixels.foreach_set(c.ravel())
-    t1 = time.time()
-    # one real material: color + roughness, lit by the viewer
-    um = bpy.data.materials.new("baked")
+    um = bpy.data.materials.new(f"{ob.name}_baked")
     um.use_nodes = True
     nt = um.node_tree
     nt.nodes.clear()
     uvn = nt.nodes.new("ShaderNodeUVMap")
     uvn.uv_map = "bake"
-    tc = nt.nodes.new("ShaderNodeTexImage")
-    tc.image = col
-    tr = nt.nodes.new("ShaderNodeTexImage")
-    tr.image = rough
-    for t_ in (tc, tr):
-        nt.links.new(uvn.outputs["UV"], t_.inputs["Vector"])
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
-    nt.links.new(tc.outputs["Color"], bsdf.inputs["Base Color"])
-    nt.links.new(tr.outputs["Color"], bsdf.inputs["Roughness"])
-    tm = nt.nodes.new("ShaderNodeTexImage")
-    tm.image = metal
-    nt.links.new(uvn.outputs["UV"], tm.inputs["Vector"])
-    nt.links.new(tm.outputs["Color"], bsdf.inputs["Metallic"])
+    for im, sock in ((col, "Base Color"), (rough, "Roughness"), (metal, "Metallic")):
+        t_ = nt.nodes.new("ShaderNodeTexImage")
+        t_.image = im
+        nt.links.new(uvn.outputs["UV"], t_.inputs["Vector"])
+        nt.links.new(t_.outputs["Color"], bsdf.inputs[sock])
     outn = nt.nodes.new("ShaderNodeOutputMaterial")
     nt.links.new(bsdf.outputs[0], outn.inputs["Surface"])
-    ob.data.materials.clear()
-    ob.data.materials.append(um)
-    for uv in [u for u in ob.data.uv_layers if u.name == "UVMap"]:
-        ob.data.uv_layers.remove(uv)
-    ob.parent = None
-    ob.location = (0, 0, 0)
+    return um
+
+
+def export(tid, out, size=4096, samples=16, device="auto"):
+    """The block is baked as five parts, each with its own texture sheet (the core, the straps, and the items
+    split three ways), so every surface gets about five times the pixels one shared sheet could give it."""
+    r = generate.token(tid)
+    t0 = time.time()
+    sc = build.build(r, res=256, samples=samples)
+    if device != "cpu":
+        stage.use_gpu(sc)
+    sc.cycles.samples = samples
+    sc.render.bake.margin = 4
+    coll = bpy.data.collections["block"]
+    objs = [o for o in coll.objects if o.type == "MESH" and len(o.data.polygons)]
+    for o in bpy.data.objects:
+        o.select_set(False)
+    # which sheet each object goes on; items are dealt by size so the three item sheets fill evenly
+    load = [0.0, 0.0, 0.0]
+    grp = {}
+    for o in sorted(objs, key=_area, reverse=True):
+        if o.name.startswith("core"):
+            grp[o.name] = 0
+        elif o.name.startswith(("strap", "crimp", "seal")):
+            grp[o.name] = 1
+        else:
+            k = load.index(min(load))
+            load[k] += _area(o)
+            grp[o.name] = 2 + k
+    for o in objs:
+        n = len(o.data.polygons)
+        a = o.data.attributes.get("keep") or o.data.attributes.new("keep", "INT", "FACE")
+        a.data.foreach_set("value", [1 if grp[o.name] == 0 else 0] * n)
+        g = o.data.attributes.get("grp") or o.data.attributes.new("grp", "INT", "FACE")
+        g.data.foreach_set("value", [grp[o.name]] * n)
+    print("[glb] sheets:", {GROUP_NAMES[k]: sum(1 for v in grp.values() if v == k) for k in range(5)})
+    for o in objs:
+        o.select_set(True)
+    bpy.context.view_layer.objects.active = objs[0]
+    bpy.ops.object.join()
+    ob = bpy.context.view_layer.objects.active
+    # the hidden-face cut needs the whole block at once (a face is hidden by its neighbors, whatever sheet they're on)
+    cull_hidden(ob)
+    ob.data.attributes.remove(ob.data.attributes["keep"])
+    parts = [p for p in (_part(ob, g, coll) for g in range(5)) if p]
+    bpy.data.objects.remove(ob, do_unlink=True)
+
+    # metals and glass have no "diffuse" color, so a plain color bake turns gold black. Take their metal and
+    # see-through settings off for the color bake, and send how metal each spot is out through the glow.
+    for m in {s.material for p in parts for s in p.material_slots if s.material and s.material.node_tree}:
+        nt_ = m.node_tree
+        bs = next((n for n in nt_.nodes if n.type == "BSDF_PRINCIPLED"), None)
+        if not bs:
+            continue
+        sock = bs.inputs["Metallic"]
+        src, val = (sock.links[0].from_socket if sock.links else None), sock.default_value
+        for name in ("Metallic", "Transmission Weight", "Emission Color"):
+            for l in list(bs.inputs[name].links):
+                nt_.links.remove(l)
+        bs.inputs["Metallic"].default_value = 0.0
+        bs.inputs["Transmission Weight"].default_value = 0.0
+        if src is not None:
+            nt_.links.new(src, bs.inputs["Emission Color"])
+        else:
+            bs.inputs["Emission Color"].default_value = (val, val, val, 1.0)
+        bs.inputs["Emission Strength"].default_value = 1.0
+    baked = [(p, _bake_part(sc, p, size // 2 if p.name == "straps" else size)) for p in parts]
+    t1 = time.time()
+    for p, um in baked:
+        p.data.materials.clear()
+        p.data.materials.append(um)
+        for uv in [u for u in p.data.uv_layers if u.name != "bake"]:
+            p.data.uv_layers.remove(uv)
+        p.name = f"crushed_{tid:04d}_{p.name}"
+        p.location.z -= build.LIFT              # the block's center at the origin, like before
     os.makedirs(out, exist_ok=True)
     path = os.path.abspath(os.path.join(out, f"{tid:04d}.glb"))
     for o in bpy.data.objects:
-        o.select_set(o == ob)
+        o.select_set(any(o == p for p, _ in baked))
     bpy.ops.export_scene.gltf(filepath=path, export_format="GLB", use_selection=True, export_apply=True,
-                              export_image_format="JPEG", export_jpeg_quality=88, export_materials="EXPORT",
+                              export_image_format="JPEG", export_jpeg_quality=90, export_materials="EXPORT",
                               export_yup=True, export_draco_mesh_compression_enable=True,
                               export_draco_mesh_compression_level=6)
+    faces = sum(len(p.data.polygons) for p, _ in baked)
     print(f"[glb] #{tid:04d} bake {t1 - t0:.0f}s export {time.time() - t1:.0f}s -> {path} "
-          f"({os.path.getsize(path) / 1e6:.1f} MB, {len(ob.data.polygons)} faces)")
+          f"({os.path.getsize(path) / 1e6:.1f} MB, {faces} faces, {len(baked)} sheets)")
     return path
 
 

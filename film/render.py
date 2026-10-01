@@ -61,8 +61,8 @@ def rig(sc, kind):
     clear_lights()
     if kind == "dark":
         world_strength(sc, 0.04)
-        point(sc, "bulb", (-0.22, -0.42, 0.42), 9, (1.0, 0.62, 0.3), 0.01)    # a bare bulb, front-left, low power
-        area(sc, "edge", (0.5, 0.7, 0.35), 0.3, 25, PURPLE)
+        point(sc, "bulb", (-0.22, -0.42, 0.42), 7, (1.0, 0.55, 0.22), 0.01)    # a bare bulb, front-left, low power
+        area(sc, "edge", (0.5, 0.7, 0.35), 0.3, 6, PURPLE)
     elif kind == "silhouette":
         world_strength(sc, 0.0)
         area(sc, "rim_o", (-0.55, 0.75, 0.32), 0.25, 70, ORANGE)
@@ -141,7 +141,7 @@ def setup_shot(sc, shot):
                 kp.interpolation = "LINEAR"
     else:
         (l0, a0, v0), (l1, a1, v1) = shot["cam"]
-        dof = 2.8 if shot["rig"] == "dark" else None      # shallow focus on the close-ups
+        dof = 5.6 if shot["rig"] == "dark" else None      # shallow focus on the close-ups
         key_camera(ob, 1, l0, a0, v0, dof)
         key_camera(ob, n, l1, a1, v1, dof)
         smooth(ob)
