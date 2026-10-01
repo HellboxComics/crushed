@@ -37,7 +37,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPTS = os.path.join(ROOT, "ai", "remaster", "prompts")
 PENDING = os.path.join(ROOT, "assets", "models_pending")
 MODELS = os.path.join(ROOT, "assets", "models")
-WORK = os.path.expanduser("~/crushed-render/remaster")
+WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DROP = os.path.expanduser("~/3D Drop")
 DRAW_PY = os.path.expanduser(os.environ.get("CRUSHED_DRAW", "~/Desktop/AI/draw.py"))
 TRASH = os.path.expanduser("~/Desktop/_to delete/remaster")
@@ -98,6 +98,23 @@ def sculpt(name, sheet, timeout=3600):
     return None
 
 
+def step(name, what):
+    """Say what's happening right now, for the progress page."""
+    os.makedirs(WORK, exist_ok=True)
+    json.dump({"name": name, "step": what, "since": time.time()}, open(os.path.join(WORK, "now.json"), "w"))
+    page()
+
+
+def record(name, result):
+    p = os.path.join(WORK, "results.json")
+    try:
+        r = json.load(open(p))
+    except Exception:
+        r = {}
+    r[name] = {"result": result, "at": time.time()}
+    json.dump(r, open(p, "w"), indent=1)
+
+
 def remaster(name, redo=False):
     out = os.path.join(PENDING, name)
     if os.path.exists(os.path.join(out, "model.glb")) and not redo:
@@ -106,19 +123,91 @@ def remaster(name, redo=False):
         trash(out)
     os.makedirs(WORK, exist_ok=True)
     sheet = os.path.join(WORK, name + "_sheet.png")
+    step(name, "1/4 painting the reference sheet")
     if not draw_sheet(name, sheet):
         return "the drawing room did not answer (is ComfyUI open?)"
+    step(name, "2/4 the sculptor is making the shape (the slow part)")
     shape = sculpt(name, sheet)
     if not shape:
         return "the sculptor could not make a shape (see ~/3D Drop/_PROBLEM.txt)"
     inside = os.path.join(WORK, name + "_inside.png")
+    step(name, "3/4 painting the inside")
     extra = ["--inside", inside] if draw_inside(name, inside) else []
+    step(name, "4/4 Blender: sizing, painting it on, review pictures")
     r = subprocess.run([PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", name, "--shape", shape,
                         "--sheet", sheet, "--out", PENDING] + extra, capture_output=True, text=True)
     if r.returncode or not os.path.exists(os.path.join(out, "model.glb")):
         return "Blender pass failed: " + (r.stderr.strip().splitlines() or ["?"])[-1]
     shutil.copy(sheet, os.path.join(out, "reference.png"))
+    if extra:
+        shutil.copy(inside, os.path.join(out, "inside.png"))
     return "ok"
+
+
+def page():
+    """~/crushed-render/remaster/index.html: what's being made right now, and every result so far, newest first,
+    with its pictures and prompts. Refreshes itself every 20 seconds."""
+    import html
+    os.makedirs(WORK, exist_ok=True)
+    rel = lambda p: os.path.relpath(p, WORK)
+    try:
+        now = json.load(open(os.path.join(WORK, "now.json")))
+    except Exception:
+        now = None
+    try:
+        results = json.load(open(os.path.join(WORK, "results.json")))
+    except Exception:
+        results = {}
+    verdicts = {}
+    vp = os.path.join(ROOT, "ai", "remaster", "verdicts.txt")
+    if os.path.exists(vp):
+        for line in open(vp):
+            if line.strip():
+                k, _, v = line.strip().partition(" ")
+                verdicts[k] = v
+    all_ = names()
+    appr = {n for n in all_ if os.path.exists(os.path.join(MODELS, n, "model.glb"))}
+    pend = {n for n in all_ if os.path.exists(os.path.join(PENDING, n, "model.glb"))}
+
+    def txt(n, ext=".txt"):
+        p = os.path.join(PROMPTS, n + ext)
+        return html.escape(open(p).read().strip()) if os.path.exists(p) else ""
+
+    def card(n):
+        d = os.path.join(MODELS if n in appr else PENDING, n)
+        state = "APPROVED" if n in appr else "WAITING FOR YOU" if n in pend else results.get(n, {}).get("result", "")
+        imgs = "".join(f'<figure><img src="{rel(os.path.join(d, f))}" loading="lazy"><figcaption>{c}</figcaption></figure>'
+                       for f, c in (("review.png", "new (top) vs now (bottom)"), ("reference.png", "reference"),
+                                    ("inside.png", "inside")) if os.path.exists(os.path.join(d, f)))
+        v = verdicts.get(n, "")
+        return (f'<section><h2>{html.escape(n)} <span class="st">{html.escape(state)}</span>'
+                f'{f" <span class=v>AI says: {html.escape(v)}</span>" if v else ""}</h2><div class=imgs>{imgs}</div>'
+                f'<p><b>outside</b> {txt(n)}</p><p><b>inside</b> {txt(n, ".inside.txt")}</p>'
+                f'<p class=fix>wrong direction? edit <code>ai/remaster/prompts/{n}.txt</code>, then '
+                f'<code>.venv/bin/python ai/remaster.py --only {n} --redo</code></p></section>')
+
+    done = sorted(results, key=lambda n: -results[n]["at"])
+    nowhtml = ""
+    if now and time.time() - now["since"] < 3 * 3600 and now["name"] not in done[:1]:
+        sh = os.path.join(WORK, now["name"] + "_sheet.png")
+        mins = (time.time() - now["since"]) / 60
+        nowhtml = (f'<section class=now><h2>making now: {html.escape(now["name"])}</h2><p>{html.escape(now["step"])} '
+                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if os.path.exists(sh) else "") +
+                   f'<p><b>outside</b> {txt(now["name"])}</p></section>')
+    queue = [n for n in all_ if n not in appr and n not in pend and n not in results][:15]
+    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} approved &middot; {len(pend)} waiting for you '
+            f'&middot; {len(all_) - len(appr) - len(pend)} to go &middot; updated {time.strftime("%-I:%M %p")}</p>'
+            + nowhtml + "".join(card(n) for n in done) +
+            f'<p class=q>next up: {", ".join(queue)}</p>')
+    open(os.path.join(WORK, "index.html"), "w").write(
+        '<!doctype html><meta charset=utf-8><meta http-equiv=refresh content=20><title>remaster</title><style>'
+        'body{background:#0b0b0b;color:#e9e6df;font:14px/1.5 ui-monospace,Menlo,monospace;margin:0;padding:18px}'
+        'h1{color:#ccff00;font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:0 0 8px}.count{color:#999}'
+        'section{border:1px solid #2a2926;padding:14px;margin:14px 0;border-radius:6px}.now{border-color:#ccff00}'
+        '.st{color:#ccff00;font-size:12px;margin-left:8px}.v{color:#f90;font-size:12px}'
+        '.imgs{display:flex;gap:10px;flex-wrap:wrap}figure{margin:0}figure img{max-width:100%;height:auto;'
+        'max-height:300px;border:1px solid #333}figcaption{color:#888;font-size:11px}.now img{max-width:420px;width:100%}'
+        'code{background:#1b1b1b;padding:1px 5px}.fix{color:#999;font-size:12px}.q{color:#777}</style>' + body)
 
 
 def status():
@@ -161,7 +250,7 @@ def sheet():
     out = Image.new("RGB", (720 * cols, h * ((len(tiles) + cols - 1) // cols)), (30, 30, 30))
     for i, t in enumerate(tiles):
         out.paste(t, ((i % cols) * 720, (i // cols) * h))
-    p = os.path.expanduser("~/Desktop/crushed remaster review.png")
+    p = os.path.join(WORK, "review sheet.png")      # background jobs can't write to the Desktop
     out.save(p)
     say(f"review sheet: {p}  (top row of each = remaster, bottom row = code version)")
 
@@ -176,7 +265,7 @@ def main():
     ap.add_argument("--status", action="store_true")
     a = ap.parse_args()
     if a.status:
-        status(); return
+        status(); page(); return
     if a.sheet:
         sheet(); return
     if a.approve:
@@ -190,10 +279,12 @@ def main():
     for i, n in enumerate(todo[:a.limit] if not a.only else todo):
         t0 = time.time()
         res = remaster(n, a.redo)
+        record(n, res)
         say(f"[{i + 1}/{len(todo)}] {n}: {res} ({time.time() - t0:.0f}s)")
         if res.startswith("the drawing room"):
             break
     status()
+    page()
 
 
 if __name__ == "__main__":
