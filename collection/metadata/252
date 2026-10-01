@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0252",
- "description": "Recovered from Behind the Bar. Smells like Vegas carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Calculators (spelled BOOBIES upside down); 2 Slap Bracelets (banned by the school); 2 AA Batteries (mixed old and new, like animals); 1 Shot Glass (souvenir of a night nobody recalls). Weight 79.2 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like Vegas carpet. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Calculators (spelled BOOBIES upside down); 2 Slap Bracelets (banned by the school); 2 AA Batteries (mixed old and new, like animals); 1 Shot Glass (souvenir of a night nobody recalls). Weight 84.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0252.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.2,
+   "value": 84.1,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0592",
- "description": "Recovered from A Frat House Couch. Smells like scratch-n-sniff sticker. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 1 Energy Drink (Red Bullish, gave it wings, took them back); 1 Tablet (bought for the kids, taken back by dad); 1 Portable CD Player (anti-skip lied); 2 Scratch Tickets (scratched with a house key). Weight 25.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Frat House Couch. Smells like scratch-n-sniff sticker. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 1 Energy Drink (Red Bullish, gave it wings, took them back); 1 Tablet (bought for the kids, taken back by dad); 1 Portable CD Player (anti-skip lied); 2 Scratch Tickets (scratched with a house key). Weight 30.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0592.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.4,
+   "value": 30.9,
    "display_type": "number"
   },
   {

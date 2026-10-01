@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0395",
- "description": "Recovered from Behind the Bar. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Glow Stick (still glowing a little, somehow); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (smells like 1989). Weight 74.2 lb. Nobody made you keep this.",
+ "description": "Recovered from Behind the Bar. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 MP3 Player (128MB, 30 songs, 29 skipped); 1 Glow Stick (still glowing a little, somehow); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (smells like 1989). Weight 80.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0395.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.2,
+   "value": 80.0,
    "display_type": "number"
   },
   {

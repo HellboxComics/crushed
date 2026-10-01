@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0494",
- "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Gold Flip Phone (why); 3 Pagers (last page: 143); 3 No. 2 Pencils (chewed); 1 Floppy Disk (save icon, but real); 1 Scratch Ticket (scratched with a house key). Weight 70.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Gold Cheap Sunglasses (why); 3 Pagers (last page: 143); 3 No. 2 Pencils (chewed); 1 Floppy Disk (save icon, but real); 1 Scratch Ticket (scratched with a house key). Weight 75.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0494.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Gilded",
-   "value": "Flip Phone"
+   "value": "Cheap Sunglasses"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.5,
+   "value": 75.3,
    "display_type": "number"
   },
   {

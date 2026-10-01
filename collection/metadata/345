@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0345",
- "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (one lens popped out); 2 AA Batteries (probably dead); 1 16-Bit Controller (the B button is sticky); 3 Game Cartridges (blew on it, Nintendont said no). Weight 71.7 lb. Contents may have settled.",
+ "description": "Recovered from A Buddy's Basement. Smells like gym bag, forgotten. Contents (partial): 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (one lens popped out); 2 AA Batteries (probably dead); 1 16-Bit Controller (the B button is sticky); 3 Game Cartridges (blew on it, Nintendont said no). Weight 77.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0345.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.7,
+   "value": 77.7,
    "display_type": "number"
   },
   {

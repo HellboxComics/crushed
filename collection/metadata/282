@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0282: UNDER THE MATTRESS",
- "description": "It was under the mattress. Everyone's mother knew. Nobody said a word. Recovered from Under the Mattress. Smells like shame. Contents (partial): 14 Magazines (for the interviews, obviously); 9 Centerfolds (folded out, then folded back in a hurry); 4 Tube Socks (gym sock, past tense); 3 Flashlights (batteries gone, guilt remains); 12 Tissues (found in a coat pocket). Weight 26.4 lb. We kept the important shit.",
+ "description": "It was under the mattress. Everyone's mother knew. Nobody said a word. Recovered from Under the Mattress. Smells like shame. Contents (partial): 14 Magazines (for the interviews, obviously); 9 Centerfolds (folded out, then folded back in a hurry); 4 Tube Socks (gym sock, past tense); 3 Flashlights (batteries gone, guilt remains); 12 Tissues (found in a coat pocket). Weight 28.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0282.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.4,
+   "value": 28.6,
    "display_type": "number"
   },
   {

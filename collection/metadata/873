@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0873",
- "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 1 Drone (over the neighbor's fence); 3 Smartphones (Venmoan request: 'gas money'); 2 Smartwatches (says STAND, does not); 2 Selfie Sticks (mid-trip, mid-ocean); 1 Disposable Vape (Puff Barf, Banana Regret flavor). Weight 36.7 lb. Contents may have settled.",
+ "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 1 Drone (over the neighbor's fence); 3 Smartphones (Venmoan request: 'gas money'); 2 Smartwatches (says STAND, does not); 2 Selfie Sticks (mid-trip, mid-ocean); 1 Disposable Vape (Puff Barf, Banana Regret flavor). Weight 43.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0873.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.7,
+   "value": 43.0,
    "display_type": "number"
   },
   {

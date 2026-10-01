@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0136",
- "description": "Recovered from A Blockbusted Drop Box. Smells like Cabbage Patch Plastic. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Soda Cans (tab kept for charity); 1 Magazine (found in a dad's truck); 1 Puzzle Cube (two stickers peeled); 3 Tissue Boxes (one for every mood). Weight 92.9 lb. We kept the important shit.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like Cabbage Patch Plastic. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Soda Cans (tab kept for charity); 1 Magazine (found in a dad's truck); 1 Puzzle Cube (two stickers peeled); 3 Tissue Boxes (one for every mood). Weight 97.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0136.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.9,
+   "value": 97.9,
    "display_type": "number"
   },
   {

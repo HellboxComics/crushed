@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0355",
- "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like blue raspberry. Contents (partial): 1 Beer Can (12 of 12); 2 No. 2 Pencils (chewed); 1 Jewel Case (insert is from a different album); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 32.1 lb. Still heavier than it looks.",
+ "description": "Recovered from A Columbia House-ish Box, Unopened. Smells like blue raspberry. Contents (partial): 1 Beer Can (12 of 12); 2 No. 2 Pencils (chewed); 1 Jewel Case (insert is from a different album); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Army Man Squad (the one with the radio survived). Weight 36.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0355.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.1,
+   "value": 36.9,
    "display_type": "number"
   },
   {

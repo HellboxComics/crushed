@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0045",
- "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 2 Spiral Notebooks (doodles in the margins); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (AOHell trial, 500 free hours); 1 CRT Monitor (degaussed one last time). Weight 85.4 lb. Handle with both hands.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like arcade carpet. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 2 Spiral Notebooks (doodles in the margins); 1 Cheap Sunglasses (one lens popped out); 2 Floppy Disks (AOHell trial, 500 free hours); 1 CRT Monitor (degaussed one last time). Weight 91.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0045.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.4,
+   "value": 91.2,
    "display_type": "number"
   },
   {

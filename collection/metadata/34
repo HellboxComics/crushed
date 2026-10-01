@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0034",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 3 Pizza Crusts (still better than most portfolios); 3 Floppy Disks (save icon, but real); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time). Weight 80.4 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Foam Headphones (orange foam, allegedly); 3 Pizza Crusts (still better than most portfolios); 3 Floppy Disks (save icon, but real); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time). Weight 85.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0034.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.4,
+   "value": 85.6,
    "display_type": "number"
   },
   {

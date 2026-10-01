@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0686",
- "description": "Recovered from A Hot Topic-ish Bag. Smells like Hot Razr Battery. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (exam week casualty); 1 Corded Phone (someone is still on hold); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Memory Card (corrupted during a birthday). Weight 28.7 lb. Still heavier than it looks.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Hot Razr Battery. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Energy Drink (exam week casualty); 1 Corded Phone (someone is still on hold); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Memory Card (corrupted during a birthday). Weight 34.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0686.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.7,
+   "value": 34.2,
    "display_type": "number"
   },
   {

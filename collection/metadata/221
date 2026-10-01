@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0221",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 AA Batteries (probably dead); 1 Calculator (spelled BOOBIES upside down); 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Foam Headphones (orange foam, allegedly). Weight 36.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 AA Batteries (probably dead); 1 Calculator (spelled BOOBIES upside down); 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Foam Headphones (orange foam, allegedly). Weight 42.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0221.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.4,
+   "value": 42.2,
    "display_type": "number"
   },
   {

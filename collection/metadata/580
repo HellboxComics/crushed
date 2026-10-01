@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0580",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Hot Razr Battery. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Game Controller (thrown during a boss fight); 3 Cheap Sunglasses (mall kiosk special); 3 AA Batteries (taken out of the smoke detector); 1 Burned CD (says ROAD TRIP in marker). Weight 29.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Hot Razr Battery. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Game Controller (thrown during a boss fight); 3 Cheap Sunglasses (mall kiosk special); 3 AA Batteries (taken out of the smoke detector); 1 Burned CD (says ROAD TRIP in marker). Weight 35.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0580.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.1,
+   "value": 35.3,
    "display_type": "number"
   },
   {

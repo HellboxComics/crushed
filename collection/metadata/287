@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0287",
- "description": "Recovered from Spencer's-ish Back Room. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 Film Canisters (undeveloped, forever); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Pagers (last page: 911 (it was not)); 1 Centerfold (staples removed, an attempt was made). Weight 67.1 lb. Some assembly was removed.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 Film Canisters (undeveloped, forever); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Pagers (last page: 911 (it was not)); 1 Centerfold (staples removed, an attempt was made). Weight 72.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0287.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 67.1,
+   "value": 72.4,
    "display_type": "number"
   },
   {

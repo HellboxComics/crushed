@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0262",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet); 3 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down). Weight 72.0 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet); 3 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down). Weight 76.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0262.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.0,
+   "value": 76.1,
    "display_type": "number"
   },
   {

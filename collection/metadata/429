@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0429",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 1 Cassette Tape (side B only); 1 Power Strip (overloaded on purpose); 3 Pagers (last page from a number nobody called back); 3 Clear Lighters (out of fluid); 2 Portable CD Players (anti-skip lied). Weight 78.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like cigarette in a jacket. Contents (partial): 1 Cassette Tape (side B only); 1 Power Strip (overloaded on purpose); 3 Pagers (last page from a number nobody called back); 3 Clear Lighters (out of fluid); 2 Portable CD Players (anti-skip lied). Weight 84.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0429.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.8,
+   "value": 84.8,
    "display_type": "number"
   },
   {

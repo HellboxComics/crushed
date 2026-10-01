@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0551",
- "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 Digital Cameras (2 megapixels of truth); 2 Burned CDs (coaster now); 2 Scratch Tickets (scratched with a house key); 2 Flip Phones (12 texts left this month). Weight 23.0 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like blue raspberry. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 Digital Cameras (2 megapixels of truth); 2 Burned CDs (coaster now); 2 Scratch Tickets (scratched with a house key); 2 Flip Phones (12 texts left this month). Weight 27.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0551.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.0,
+   "value": 27.9,
    "display_type": "number"
   },
   {

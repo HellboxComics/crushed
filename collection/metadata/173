@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0173",
- "description": "Recovered from The Roller Rink Coat Check. Smells like blue raspberry. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 3 Floppy Disks (save icon, but real); 2 No. 2 Pencils (sharpened to a nub); 2 Army Man Squads (the one with the radio survived). Weight 87.5 lb. Still heavier than it looks.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like blue raspberry. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 3 Floppy Disks (save icon, but real); 2 No. 2 Pencils (sharpened to a nub); 2 Army Man Squads (the one with the radio survived). Weight 92.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0173.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.5,
+   "value": 92.4,
    "display_type": "number"
   },
   {

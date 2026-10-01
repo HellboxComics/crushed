@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0396",
- "description": "Recovered from Napstered Dorm Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Memory Cards (8MB, full); 2 Jewel Cases (insert is from a different album); 2 Power Strips (overloaded on purpose); 3 Pagers (last page: 911 (it was not)). Weight 72.5 lb. Handle with both hands.",
+ "description": "Recovered from Napstered Dorm Room. Smells like hot dust on a CRT. Contents (partial): 3 TV Remotes (found in the couch); 2 Memory Cards (8MB, full); 2 Jewel Cases (insert is from a different album); 2 Power Strips (overloaded on purpose); 3 Pagers (last page: 911 (it was not)). Weight 77.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0396.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.5,
+   "value": 77.3,
    "display_type": "number"
   },
   {

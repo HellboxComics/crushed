@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0072",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Sneaker (smells like 1989); 2 Poker Chips (never cashed out); 1 Soda Can (Surj, the can that started a fight); 1 Dice (loaded, rumor says); 1 Army Man Squad (melted with a magnifying glass). Weight 80.9 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 1 Sneaker (smells like 1989); 2 Poker Chips (never cashed out); 1 Soda Can (Surj, the can that started a fight); 1 Dice (loaded, rumor says); 1 Army Man Squad (melted with a magnifying glass). Weight 86.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0072.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.9,
+   "value": 86.5,
    "display_type": "number"
   },
   {

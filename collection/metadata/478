@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0478",
- "description": "Recovered from The Y2K Bunker. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Jewel Case (insert is from a different album); 3 Pagers (clipped to jeans for status only); 3 AA Batteries (licked to test). Weight 74.8 lb. We kept the important shit.",
+ "description": "Recovered from The Y2K Bunker. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Jewel Case (insert is from a different album); 3 Pagers (clipped to jeans for status only); 3 AA Batteries (licked to test). Weight 79.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0478.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.8,
+   "value": 79.8,
    "display_type": "number"
   },
   {

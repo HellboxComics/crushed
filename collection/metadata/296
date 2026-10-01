@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0296",
- "description": "Recovered from The Mall Arcade. Smells like Lunchables-ish Crackers. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Yo-Yo (string tied to a finger for 3 years); 1 16-Bit Controller (the B button is sticky); 2 Clear Lighters (for incense, obviously); 2 Floppy Disks (save icon, but real). Weight 47.3 lb. Some assembly was removed.",
+ "description": "Recovered from The Mall Arcade. Smells like Lunchables-ish Crackers. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Yo-Yo (string tied to a finger for 3 years); 1 16-Bit Controller (the B button is sticky); 2 Clear Lighters (for incense, obviously); 2 Floppy Disks (save icon, but real). Weight 52.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0296.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.3,
+   "value": 52.5,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0787",
- "description": "Recovered from Behind the Couch. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 VR Headset (the walls were real and they were hit); 1 Dice (loaded, rumor says); 3 Energy Drinks (Jolted, twice the caffeine); 1 Sneaker (left only); 2 Earbud Cases (both buds gone, case still charges nothing). Weight 31.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Behind the Couch. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 VR Headset (the walls were real and they were hit); 1 Dice (loaded, rumor says); 3 Energy Drinks (Jolted, twice the caffeine); 1 Sneaker (left only); 2 Earbud Cases (both buds gone, case still charges nothing). Weight 37.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0787.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 37.4,
    "display_type": "number"
   },
   {

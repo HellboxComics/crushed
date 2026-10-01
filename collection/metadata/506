@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0506",
- "description": "Recovered from Dad's Junk Drawer. Smells like Frosted Tips Gel. Contents (partial): 1 Magazine (for the interviews, obviously); 3 Cassette Tapes (rewound with a pencil); 1 Shot Glass (from a trip to Vegas); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Pizza Crusts (petrified). Weight 75.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Frosted Tips Gel. Contents (partial): 1 Magazine (for the interviews, obviously); 3 Cassette Tapes (rewound with a pencil); 1 Shot Glass (from a trip to Vegas); 1 MP3 Player (128MB, 30 songs, 29 skipped); 3 Pizza Crusts (petrified). Weight 81.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0506.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.8,
+   "value": 81.4,
    "display_type": "number"
   },
   {

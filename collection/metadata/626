@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0626",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Myspace Glitter. Contents (partial): 3 Sneakers (light-up heel, dead); 2 Pizza Crusts (petrified); 2 USB Sticks (contains homework_FINAL_final2.doc); 3 Shot Glasses (souvenir of a night nobody recalls); 1 No. 2 Pencil (sharpened to a nub); 1 Emergency Ramen (for emergencies). Weight 28.6 lb. Handle with both hands.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Myspace Glitter. Contents (partial): 3 Sneakers (light-up heel, dead); 2 Pizza Crusts (petrified); 2 USB Sticks (contains homework_FINAL_final2.doc); 3 Shot Glasses (souvenir of a night nobody recalls); 1 No. 2 Pencil (sharpened to a nub); 1 Emergency Ramen (for emergencies). Weight 35.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0626.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.6,
+   "value": 35.1,
    "display_type": "number"
   },
   {

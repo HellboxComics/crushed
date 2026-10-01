@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0036",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Roller Skate (the rink smell is still in there); 1 Game Cartridge (blew on it, Nintendont said no); 1 Boom Box (took 10 D batteries); 2 Joysticks (suction cups gave up); 1 Metal Lunchbox (the smell stays). Weight 51.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Roller Skate (the rink smell is still in there); 1 Game Cartridge (blew on it, Nintendont said no); 1 Boom Box (took 10 D batteries); 2 Joysticks (suction cups gave up); 1 Metal Lunchbox (the smell stays). Weight 56.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0036.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.2,
+   "value": 56.4,
    "display_type": "number"
   },
   {

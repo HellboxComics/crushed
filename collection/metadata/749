@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0749",
- "description": "Recovered from Mom's Minivan. Smells like Prime Time Hype. Contents (partial): 2 Disposable Vapes (mango, mostly); 3 Spiral Notebooks (doodles in the margins); 2 Power Strips (daisy-chained into three more); 1 Clear Lighter (for incense, obviously); 3 Scratch Tickets ($2 for hope). Weight 34.6 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Minivan. Smells like Prime Time Hype. Contents (partial): 2 Disposable Vapes (mango, mostly); 3 Spiral Notebooks (doodles in the margins); 2 Power Strips (daisy-chained into three more); 1 Clear Lighter (for incense, obviously); 3 Scratch Tickets ($2 for hope). Weight 40.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0749.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.6,
+   "value": 40.3,
    "display_type": "number"
   },
   {

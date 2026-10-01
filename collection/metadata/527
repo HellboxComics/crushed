@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0527",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Gold Sneaker (why); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 AA Batteries (licked to test); 2 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid). Weight 36.1 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Gold Flip Phone (why); 2 Portable CD Players (45-second buffer, 2-second attention span); 1 AA Batteries (licked to test); 2 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid). Weight 42.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0527.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Gilded",
-   "value": "Sneaker"
+   "value": "Flip Phone"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.1,
+   "value": 42.0,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0356",
- "description": "Recovered from A Blockbusted Return Slot. Smells like mall food court. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Burned CDs (coaster now); 2 Pagers (last page: 911 (it was not)); 2 Pizza Crusts (still better than most portfolios); 3 AA Batteries (taken out of the smoke detector). Weight 66.6 lb. Contents may have settled.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like mall food court. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Burned CDs (coaster now); 2 Pagers (last page: 911 (it was not)); 2 Pizza Crusts (still better than most portfolios); 3 AA Batteries (taken out of the smoke detector). Weight 70.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0356.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 66.6,
+   "value": 70.3,
    "display_type": "number"
   },
   {

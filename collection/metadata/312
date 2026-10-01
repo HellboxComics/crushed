@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0312",
- "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 Yo-Yo (walked the dog one time); 2 Film Canisters (holds one quarter); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Soda Can (flat). Weight 37.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 Yo-Yo (walked the dog one time); 2 Film Canisters (holds one quarter); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Soda Can (flat). Weight 43.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0312.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.6,
+   "value": 43.0,
    "display_type": "number"
   },
   {

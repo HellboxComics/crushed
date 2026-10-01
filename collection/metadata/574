@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0574",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 Magazines (read for the articles); 2 Centerfolds (left open to the wrong page); 2 Shot Glasses (from a trip to Vegas); 1 Skateboard (griptape ate a pair of jeans); 2 Beer Cans (last one in the fridge). Weight 31.3 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 3 Magazines (read for the articles); 2 Centerfolds (left open to the wrong page); 2 Shot Glasses (from a trip to Vegas); 1 Skateboard (griptape ate a pair of jeans); 2 Beer Cans (last one in the fridge). Weight 37.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0574.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 37.2,
    "display_type": "number"
   },
   {

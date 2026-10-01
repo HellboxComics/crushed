@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0194",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Spiral Notebooks (spiral unwound halfway); 2 Magazines (for the interviews, obviously); 1 Dice (loaded, rumor says); 2 Beer Cans (Milwaukee's Worst, on sale). Weight 77.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Spiral Notebooks (spiral unwound halfway); 2 Magazines (for the interviews, obviously); 1 Dice (loaded, rumor says); 2 Beer Cans (Milwaukee's Worst, on sale). Weight 82.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0194.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.1,
+   "value": 82.3,
    "display_type": "number"
   },
   {

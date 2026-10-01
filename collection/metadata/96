@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0096",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 1 Sneaker (smells like 1989); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Poker Chip (never cashed out); 1 Magazine (found in a dad's truck). Weight 89.7 lb. Contents may have settled.",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 1 Sneaker (smells like 1989); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Poker Chip (never cashed out); 1 Magazine (found in a dad's truck). Weight 94.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0096.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.7,
+   "value": 94.9,
    "display_type": "number"
   },
   {

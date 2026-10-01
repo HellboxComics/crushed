@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0100",
- "description": "Recovered from A Buddy's Basement. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 CRT Monitor (still warm); 2 TV Remotes (found in the couch); 1 Calculator (solar panel covered by a sticker); 3 Sneakers (light-up heel, dead); 2 Three-Ring Binders (velcro screams when opened). Weight 87.8 lb. Some assembly was removed.",
+ "description": "Recovered from A Buddy's Basement. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 CRT Monitor (still warm); 2 TV Remotes (found in the couch); 1 Calculator (solar panel covered by a sticker); 3 Sneakers (light-up heel, dead); 2 Three-Ring Binders (velcro screams when opened). Weight 93.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0100.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.8,
+   "value": 93.3,
    "display_type": "number"
   },
   {

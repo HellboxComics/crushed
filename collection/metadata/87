@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0087",
- "description": "Recovered from A Buddy's Basement. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Beer Cans (12 of 12); 1 Scratch Ticket ($2 for hope); 2 Sneakers (untied since 1989). Weight 71.2 lb. Some assembly was removed.",
+ "description": "Recovered from A Buddy's Basement. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Beer Cans (12 of 12); 1 Scratch Ticket ($2 for hope); 2 Sneakers (untied since 1989). Weight 76.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0087.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Finish",
-   "value": "BONE"
+   "value": "CHROME"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.2,
+   "value": 76.8,
    "display_type": "number"
   },
   {

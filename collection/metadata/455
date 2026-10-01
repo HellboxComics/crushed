@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0455",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 3 Sneakers (untied since 1989); 1 Foam Headphones (one ear works if you hold it); 2 Poker Chips (never cashed out); 2 Soda Cans (flat); 3 Brick Phones (unbreakable until today). Weight 33.7 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 3 Sneakers (untied since 1989); 1 Foam Headphones (one ear works if you hold it); 2 Poker Chips (never cashed out); 2 Soda Cans (flat); 3 Brick Phones (unbreakable until today). Weight 38.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0455.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.7,
+   "value": 38.8,
    "display_type": "number"
   },
   {

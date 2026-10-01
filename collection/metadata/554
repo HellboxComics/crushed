@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0554",
- "description": "Recovered from A Frat House Couch. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (Moonster, the whole case); 3 Beer Cans (crushed on a forehead); 3 TV Remotes (found in the couch); 3 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 23.1 lb. Crushed it.",
+ "description": "Recovered from A Frat House Couch. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (Moonster, the whole case); 3 Beer Cans (crushed on a forehead); 3 TV Remotes (found in the couch); 3 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 27.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0554.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.1,
+   "value": 27.7,
    "display_type": "number"
   },
   {

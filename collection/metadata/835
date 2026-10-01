@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0835",
- "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Disposable Vapes (Jool pod, found in a gym bag); 3 Sneakers (was in the dryer); 1 Glow Stick (still glowing a little, somehow); 3 AA Batteries (mixed old and new, like animals); 3 Beer Cans (warm, sadly). Weight 35.1 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like mall food court. Contents (partial): 2 Disposable Vapes (Jool pod, found in a gym bag); 3 Sneakers (was in the dryer); 1 Glow Stick (still glowing a little, somehow); 3 AA Batteries (mixed old and new, like animals); 3 Beer Cans (warm, sadly). Weight 40.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0835.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.1,
+   "value": 40.5,
    "display_type": "number"
   },
   {

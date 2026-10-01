@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0659",
- "description": "Recovered from A Hot Topic-ish Bag. Smells like cigarette in a jacket. Contents (partial): 1 Game Controller (stick drift since day one); 1 Dice (loaded, rumor says); 1 Bluetooth Speaker (lost, found, lost); 3 Energy Drinks (Moonster, the whole case); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 23.1 lb. Crushed it.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like cigarette in a jacket. Contents (partial): 1 Game Controller (stick drift since day one); 1 Dice (loaded, rumor says); 1 Bluetooth Speaker (lost, found, lost); 3 Energy Drinks (Moonster, the whole case); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 29.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0659.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.1,
+   "value": 29.0,
    "display_type": "number"
   },
   {

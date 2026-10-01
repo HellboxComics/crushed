@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0469",
- "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (Neveready, as advertised); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989); 1 Gold Coin (bought the top). Weight 27.7 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like cheap cologne. Contents (partial): 3 Disposable Cameras (never developed); 2 Magazines (the staples are doing the work); 1 AA Batteries (Neveready, as advertised); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Sneakers (smells like 1989); 1 Gold Coin (bought the top). Weight 32.7 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0469.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.7,
+   "value": 32.7,
    "display_type": "number"
   },
   {

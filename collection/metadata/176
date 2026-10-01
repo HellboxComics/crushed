@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0176",
- "description": "Recovered from A Blockbusted Drop Box. Smells like blue raspberry. Contents (partial): 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Game Cartridges (save file erased by a sibling); 3 Centerfolds (staples removed, an attempt was made); 2 Three-Ring Binders (covered in band names); 2 Floppy Disks (DISK 2 of 7). Weight 34.5 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like blue raspberry. Contents (partial): 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Game Cartridges (save file erased by a sibling); 3 Centerfolds (staples removed, an attempt was made); 2 Three-Ring Binders (covered in band names); 2 Floppy Disks (DISK 2 of 7). Weight 40.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0176.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 40.7,
    "display_type": "number"
   },
   {

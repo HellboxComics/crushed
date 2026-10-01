@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0254",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like cigarette in a jacket. Contents (partial): 2 Calculators (solar panel covered by a sticker); 2 Skate Wheels (rolled into a storm drain once); 1 Foam Headphones (one ear works if you hold it); 1 AA Batteries (licked to test); 1 Dice (blown on for luck). Weight 64.8 lb. Some assembly was removed.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like cigarette in a jacket. Contents (partial): 2 Calculators (solar panel covered by a sticker); 2 Skate Wheels (rolled into a storm drain once); 1 Foam Headphones (one ear works if you hold it); 1 AA Batteries (licked to test); 1 Dice (blown on for luck). Weight 70.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0254.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 64.8,
+   "value": 70.3,
    "display_type": "number"
   },
   {

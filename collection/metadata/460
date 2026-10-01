@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0460",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Pagers (last page from a number nobody called back); 1 Sneaker (was in the dryer); 2 Scratch Tickets ($2 for hope); 2 No. 2 Pencils (sharpened to a nub); 3 Burned CDs (says ROAD TRIP in marker). Weight 82.4 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 3 Pagers (last page from a number nobody called back); 1 Sneaker (was in the dryer); 2 Scratch Tickets ($2 for hope); 2 No. 2 Pencils (sharpened to a nub); 3 Burned CDs (says ROAD TRIP in marker). Weight 88.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0460.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.4,
+   "value": 88.3,
    "display_type": "number"
   },
   {

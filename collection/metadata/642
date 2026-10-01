@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0642",
- "description": "Recovered from Dad's Junk Drawer. Smells like Ed Hardy-ish Cologne. Contents (partial): 3 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Clear Lighters (borrowed in 1997, never returned); 2 Flip Phones (ringtone composed by hand); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times). Weight 23.7 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Ed Hardy-ish Cologne. Contents (partial): 3 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Clear Lighters (borrowed in 1997, never returned); 2 Flip Phones (ringtone composed by hand); 1 Dice (blown on for luck); 3 MP3 Players (shuffle picked the same song 6 times). Weight 29.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0642.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.7,
+   "value": 29.3,
    "display_type": "number"
   },
   {

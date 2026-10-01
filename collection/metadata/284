@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0284",
- "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Skate Wheel (rolled into a storm drain once); 1 TV Remote (held together with tape); 2 Clear Lighters (for incense, obviously); 3 Cassette Tapes (side B only). Weight 26.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Skate Wheel (rolled into a storm drain once); 1 TV Remote (held together with tape); 2 Clear Lighters (for incense, obviously); 3 Cassette Tapes (side B only). Weight 32.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0284.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.5,
+   "value": 32.7,
    "display_type": "number"
   },
   {

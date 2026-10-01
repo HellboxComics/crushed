@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0770",
- "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 VR Headset (worn twice); 2 Energy Drinks (Moonster, the whole case); 2 Game Controllers (stick drift since day one); 1 AA Batteries (taken out of the smoke detector); 1 TV Remote (the volume button worn smooth). Weight 35.2 lb. Contents may have settled.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 VR Headset (worn twice); 2 Energy Drinks (Moonster, the whole case); 2 Game Controllers (stick drift since day one); 1 AA Batteries (taken out of the smoke detector); 1 TV Remote (the volume button worn smooth). Weight 40.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0770.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 40.4,
    "display_type": "number"
   },
   {

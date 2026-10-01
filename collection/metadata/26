@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0026",
- "description": "Recovered from A Buddy's Basement. Smells like Vegas carpet. Contents (partial): 2 Beer Cans (PBJ, the hipster one); 1 Joystick (suction cups gave up); 1 Puzzle Cube (two stickers peeled); 2 No. 2 Pencils (sharpened to a nub); 2 Magazines (the staples are doing the work). Weight 95.3 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like Vegas carpet. Contents (partial): 2 Beer Cans (PBJ, the hipster one); 1 Joystick (suction cups gave up); 1 Puzzle Cube (two stickers peeled); 2 No. 2 Pencils (sharpened to a nub); 2 Magazines (the staples are doing the work). Weight 100.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0026.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.3,
+   "value": 100.2,
    "display_type": "number"
   },
   {

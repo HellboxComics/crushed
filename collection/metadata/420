@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0420",
- "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 Pagers (last page from a number nobody called back); 2 Game Controllers (stick drift since day one); 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Cassette Tapes (someone's voicemail greeting); 2 Flip Phones (snapped shut dramatically). Weight 27.1 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 2 Pagers (last page from a number nobody called back); 2 Game Controllers (stick drift since day one); 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Cassette Tapes (someone's voicemail greeting); 2 Flip Phones (snapped shut dramatically). Weight 32.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0420.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.1,
+   "value": 32.5,
    "display_type": "number"
   },
   {

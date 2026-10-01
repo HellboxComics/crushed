@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0190",
- "description": "Recovered from Ex's Garage. Smells like scratch-n-sniff sticker. Contents (partial): 2 TV Remotes (held together with tape); 1 Skateboard (one ollie, lifetime); 1 Clear Lighter (borrowed in 1997, never returned); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Puzzle Cube (solved once, stickers moved); 1 Broken Rocket (didn't make it). Weight 43.9 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like scratch-n-sniff sticker. Contents (partial): 2 TV Remotes (held together with tape); 1 Skateboard (one ollie, lifetime); 1 Clear Lighter (borrowed in 1997, never returned); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Puzzle Cube (solved once, stickers moved); 1 Broken Rocket (didn't make it). Weight 48.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0190.png",
  "attributes": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
+   "value": "BONE"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.9,
+   "value": 48.9,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0109",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Arcade Tokens. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Foam Headphones (orange foam, allegedly); 1 Scratch Ticket (not a winner); 1 Corded Phone (someone is still on hold). Weight 84.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Arcade Tokens. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Foam Headphones (orange foam, allegedly); 1 Scratch Ticket (not a winner); 1 Corded Phone (someone is still on hold). Weight 88.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0109.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.0,
+   "value": 88.7,
    "display_type": "number"
   },
   {

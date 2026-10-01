@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0448",
- "description": "Recovered from Napstered Dorm Room. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Magazine (for the interviews, obviously); 3 Pagers (last page: 143); 3 Tissue Boxes (nearly empty); 1 Corded Phone (cord stretched to the bathroom). Weight 74.7 lb. We kept the important shit.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Magazine (for the interviews, obviously); 3 Pagers (last page: 143); 3 Tissue Boxes (nearly empty); 1 Corded Phone (cord stretched to the bathroom). Weight 80.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0448.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.7,
+   "value": 80.0,
    "display_type": "number"
   },
   {

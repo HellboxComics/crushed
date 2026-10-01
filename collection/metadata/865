@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0865",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Soda Cans (tab kept for charity); 1 Pizza Crust (still better than most portfolios); 2 Tablets (used once as a cutting board); 3 Smartwatches (still counting steps in the dryer); 3 Beer Cans (last one in the fridge). Weight 23.2 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Soda Cans (tab kept for charity); 1 Pizza Crust (still better than most portfolios); 2 Tablets (used once as a cutting board); 3 Smartwatches (still counting steps in the dryer); 3 Beer Cans (last one in the fridge). Weight 28.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0865.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.2,
+   "value": 28.7,
    "display_type": "number"
   },
   {

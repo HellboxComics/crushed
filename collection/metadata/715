@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0715",
- "description": "Recovered from School Lost & Found. Smells like Moonster and Desperation. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 2 Power Banks (10000 mAh of dead weight); 3 TV Remotes (found in the couch); 2 USB Sticks (never ejected safely); 2 AA Batteries (licked to test). Weight 29.9 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like Moonster and Desperation. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 2 Power Banks (10000 mAh of dead weight); 3 TV Remotes (found in the couch); 2 USB Sticks (never ejected safely); 2 AA Batteries (licked to test). Weight 35.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0715.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.9,
+   "value": 35.2,
    "display_type": "number"
   },
   {

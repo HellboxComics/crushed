@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0692",
- "description": "Recovered from A Frat House Couch. Smells like mall food court. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 3 USB Sticks (never ejected safely); 3 Sneakers (light-up heel, dead); 1 Jewel Case (insert is from a different album); 2 Disposable Cameras (never developed). Weight 26.2 lb. Still heavier than it looks.",
+ "description": "Recovered from A Frat House Couch. Smells like mall food court. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 3 USB Sticks (never ejected safely); 3 Sneakers (light-up heel, dead); 1 Jewel Case (insert is from a different album); 2 Disposable Cameras (never developed). Weight 31.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0692.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.2,
+   "value": 31.9,
    "display_type": "number"
   },
   {

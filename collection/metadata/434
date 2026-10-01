@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0434",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 1 Disposable Camera (never developed); 1 Keyboard (Partial) (F, J and the crumbs); 2 Pagers (last page: 911 (it was not)); 1 Foam Headphones (one ear works if you hold it). Weight 36.5 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 1 Disposable Camera (never developed); 1 Keyboard (Partial) (F, J and the crumbs); 2 Pagers (last page: 911 (it was not)); 1 Foam Headphones (one ear works if you hold it). Weight 42.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0434.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 42.0,
    "display_type": "number"
   },
   {

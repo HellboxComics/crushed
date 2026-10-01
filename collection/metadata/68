@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0068",
- "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like arcade carpet. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Spiral Notebooks (note says 'check YES or NO'); 3 No. 2 Pencils (sharpened to a nub); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 3 Floppy Disks (says DO NOT FORMAT). Weight 39.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like arcade carpet. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Spiral Notebooks (note says 'check YES or NO'); 3 No. 2 Pencils (sharpened to a nub); 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 3 Floppy Disks (says DO NOT FORMAT). Weight 43.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0068.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.4,
+   "value": 43.9,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0392",
- "description": "Recovered from An AOHell CD Pile. Smells like Dial-Up Modem Heat. Contents (partial): 1 Magazine (read for the articles); 1 Dice (blown on for luck); 3 Beer Cans (last one in the fridge); 1 Floppy Disk (Iomegalodon would have held it all); 2 AA Batteries (mixed old and new, like animals). Weight 72.6 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Dial-Up Modem Heat. Contents (partial): 1 Magazine (read for the articles); 1 Dice (blown on for luck); 3 Beer Cans (last one in the fridge); 1 Floppy Disk (Iomegalodon would have held it all); 2 AA Batteries (mixed old and new, like animals). Weight 78.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0392.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.6,
+   "value": 78.0,
    "display_type": "number"
   },
   {

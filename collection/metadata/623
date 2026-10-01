@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0623",
- "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 3 Game Controllers (stick drift since day one); 1 AA Batteries (mixed old and new, like animals); 1 Shot Glass (from a trip to Vegas); 2 Glow Sticks (cracked at a school dance); 1 USB Stick (never ejected safely). Weight 24.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 3 Game Controllers (stick drift since day one); 1 AA Batteries (mixed old and new, like animals); 1 Shot Glass (from a trip to Vegas); 2 Glow Sticks (cracked at a school dance); 1 USB Stick (never ejected safely). Weight 29.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0623.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 24.1,
+   "value": 29.0,
    "display_type": "number"
   },
   {

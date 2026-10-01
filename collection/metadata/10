@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0010",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Cheap Sunglasses (mall kiosk special); 2 Pizza Crusts (from a sleepover); 1 CRT Monitor (degaussed one last time). Weight 78.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like arcade carpet. Contents (partial): 1 Corded Phone (someone is still on hold); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Cheap Sunglasses (mall kiosk special); 2 Pizza Crusts (from a sleepover); 1 CRT Monitor (degaussed one last time). Weight 83.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0010.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.0,
+   "value": 83.4,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0405",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Flip Phones (ringtone composed by hand); 1 Jewel Case (hinge broken on arrival); 1 Floppy Disk (says DO NOT FORMAT); 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 CRT Monitor (still warm); 1 Paper Hand (folded under light pressure). Weight 84.7 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 3 Flip Phones (ringtone composed by hand); 1 Jewel Case (hinge broken on arrival); 1 Floppy Disk (says DO NOT FORMAT); 2 VHS Tapes (late fees now exceed GDP of a small nation); 1 CRT Monitor (still warm); 1 Paper Hand (folded under light pressure). Weight 90.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0405.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.7,
+   "value": 90.7,
    "display_type": "number"
   },
   {

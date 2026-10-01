@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0342",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like Grunge Flannel. Contents (partial): 1 Boom Box (one speaker still believes); 1 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed); 1 Shot Glass (chipped rim); 1 Film Canister (holds one quarter). Weight 84.9 lb. Contents may have settled.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Grunge Flannel. Contents (partial): 1 Boom Box (one speaker still believes); 1 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed); 1 Shot Glass (chipped rim); 1 Film Canister (holds one quarter). Weight 89.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0342.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 89.7,
    "display_type": "number"
   },
   {

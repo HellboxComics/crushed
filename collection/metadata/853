@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0853",
- "description": "Recovered from Under the Bed. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Drone (40 seconds of freedom); 3 Soda Cans (flat); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Disposable Vapes (Jool pod, found in a gym bag). Weight 27.5 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Drone (40 seconds of freedom); 3 Soda Cans (flat); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Disposable Vapes (Jool pod, found in a gym bag). Weight 33.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0853.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.5,
+   "value": 33.0,
    "display_type": "number"
   },
   {

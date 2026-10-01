@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0753",
- "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 1 Tablet (one thumbprint of juice); 2 AA Batteries (Neveready, as advertised); 2 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 33.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like new plastic. Contents (partial): 1 Disposable Camera (27 exposures of a thumb); 1 Tablet (one thumbprint of juice); 2 AA Batteries (Neveready, as advertised); 2 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 39.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0753.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 39.3,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0488",
- "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (shaken as a prank); 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Keyboard (Partial) (F, J and the crumbs); 2 Digital Cameras (memory full, 14 photos). Weight 73.0 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (shaken as a prank); 3 VHS Tapes (BE KIND REWIND (they did not)); 1 Keyboard (Partial) (F, J and the crumbs); 2 Digital Cameras (memory full, 14 photos). Weight 78.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0488.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.0,
+   "value": 78.5,
    "display_type": "number"
   },
   {

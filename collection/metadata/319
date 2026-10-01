@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0319: BULL TRAP",
- "description": "They all bought the top. Recovered from The Top. Smells like capitulation. Contents (partial): 22 Bulls (flipped); 12 Tiny Red Candles (lit); 4 Crumpled Charts (it went up, then it went down); 1 Bear (doing fine actually); 3 Paper Hands (sold at the bottom). Weight 34.5 lb. Crushed it.",
+ "description": "They all bought the top. Recovered from The Top. Smells like capitulation. Contents (partial): 22 Bulls (flipped); 12 Tiny Red Candles (lit); 4 Crumpled Charts (it went up, then it went down); 1 Bear (doing fine actually); 3 Paper Hands (sold at the bottom). Weight 39.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0319.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 39.4,
    "display_type": "number"
   },
   {

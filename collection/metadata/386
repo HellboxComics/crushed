@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0386",
- "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Soda Cans (tab kept for charity); 2 Glow Sticks (still glowing a little, somehow); 3 Pizza Crusts (from a sleepover); 1 No. 2 Pencil (never saw a scantron it liked); 1 Clear Lighter (for incense, obviously). Weight 65.7 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like rink snack bar. Contents (partial): 2 Soda Cans (tab kept for charity); 2 Glow Sticks (still glowing a little, somehow); 3 Pizza Crusts (from a sleepover); 1 No. 2 Pencil (never saw a scantron it liked); 1 Clear Lighter (for incense, obviously). Weight 71.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0386.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 65.7,
+   "value": 71.5,
    "display_type": "number"
   },
   {

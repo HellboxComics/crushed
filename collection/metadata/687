@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0687",
- "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (found in the couch); 3 Game Controllers (thrown during a boss fight); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Sneakers (smells like 1989); 2 Burned CDs (burned at 1x, 4 hours). Weight 31.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (found in the couch); 3 Game Controllers (thrown during a boss fight); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Sneakers (smells like 1989); 2 Burned CDs (burned at 1x, 4 hours). Weight 36.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0687.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 36.4,
    "display_type": "number"
   },
   {

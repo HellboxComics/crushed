@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0837",
- "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (the volume button worn smooth); 1 USB Stick (never ejected safely); 1 Spiral Notebook (spiral unwound halfway); 1 VR Headset (watched one (1) movie); 1 Game Controller (thrown during a boss fight); 1 Bear (doing fine actually). Weight 32.6 lb. Nobody made you keep this.",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 1 TV Remote (the volume button worn smooth); 1 USB Stick (never ejected safely); 1 Spiral Notebook (spiral unwound halfway); 1 VR Headset (watched one (1) movie); 1 Game Controller (thrown during a boss fight); 1 Bear (doing fine actually). Weight 38.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0837.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.6,
+   "value": 38.3,
    "display_type": "number"
   },
   {

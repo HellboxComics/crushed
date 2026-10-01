@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0868",
- "description": "Recovered from Behind the Science Wing. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 Beer Can (PBJ, the hipster one); 3 Tissue Boxes (nearly empty); 1 VR Headset (worn twice); 3 TV Remotes (held together with tape); 3 Selfie Sticks (the person holding it is not in the photo). Weight 39.5 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Science Wing. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 Beer Can (PBJ, the hipster one); 3 Tissue Boxes (nearly empty); 1 VR Headset (worn twice); 3 TV Remotes (held together with tape); 3 Selfie Sticks (the person holding it is not in the photo). Weight 45.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0868.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.5,
+   "value": 45.9,
    "display_type": "number"
   },
   {

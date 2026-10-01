@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0227",
- "description": "Recovered from A Blockbusted Return Slot. Smells like blue raspberry. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Tissue Box (nearly empty); 1 Digital Camera (2 megapixels of truth); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Army Man Squads (melted with a magnifying glass). Weight 42.6 lb. Contents may have settled.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like blue raspberry. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Tissue Box (nearly empty); 1 Digital Camera (2 megapixels of truth); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Army Man Squads (melted with a magnifying glass). Weight 48.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0227.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.6,
+   "value": 48.0,
    "display_type": "number"
   },
   {

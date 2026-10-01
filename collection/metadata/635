@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0635",
- "description": "Recovered from A Hot Topic-ish Bag. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (stick drift since day one); 2 Centerfolds (folded out, then folded back in a hurry); 3 Burned CDs (burned at 1x, 4 hours); 1 Memory Card (corrupted during a birthday); 2 Power Strips (daisy-chained into three more). Weight 26.8 lb. Contents may have settled.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (stick drift since day one); 2 Centerfolds (folded out, then folded back in a hurry); 3 Burned CDs (burned at 1x, 4 hours); 1 Memory Card (corrupted during a birthday); 2 Power Strips (daisy-chained into three more). Weight 31.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0635.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.8,
+   "value": 31.8,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0851",
- "description": "Recovered from A Crypto Bro's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (found in the couch); 2 Glow Sticks (cracked at a school dance); 3 Disposable Cameras (27 exposures of a thumb); 1 Fidget Spinner (bearing went missing); 1 Clear Lighter (for incense, obviously); 1 Tiny Green Candle (rarest thing in here). Weight 26.0 lb. Still heavier than it looks.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (found in the couch); 2 Glow Sticks (cracked at a school dance); 3 Disposable Cameras (27 exposures of a thumb); 1 Fidget Spinner (bearing went missing); 1 Clear Lighter (for incense, obviously); 1 Tiny Green Candle (rarest thing in here). Weight 31.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0851.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.0,
+   "value": 31.8,
    "display_type": "number"
   },
   {

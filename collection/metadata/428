@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0428",
- "description": "Recovered from Mom's Minivan. Smells like Hot Pentium. Contents (partial): 1 Disposable Camera (never developed); 1 Brick Phone (faceplate swapped 4 times); 3 Dice (blown on for luck); 3 Soda Cans (tab kept for charity); 3 VHS Tapes (BE KIND REWIND (they did not)). Weight 74.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Mom's Minivan. Smells like Hot Pentium. Contents (partial): 1 Disposable Camera (never developed); 1 Brick Phone (faceplate swapped 4 times); 3 Dice (blown on for luck); 3 Soda Cans (tab kept for charity); 3 VHS Tapes (BE KIND REWIND (they did not)). Weight 80.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0428.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 80.1,
    "display_type": "number"
   },
   {

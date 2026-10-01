@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0330",
- "description": "Recovered from Grandma's Attic. Smells like Vegas carpet. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Cassette Tape (side B only); 2 TV Remotes (the volume button worn smooth); 1 Ball Mouse (cord chewed by a dog); 1 Calculator (solar panel covered by a sticker). Weight 45.5 lb. Handle with both hands.",
+ "description": "Recovered from Grandma's Attic. Smells like Vegas carpet. Contents (partial): 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Cassette Tape (side B only); 2 TV Remotes (the volume button worn smooth); 1 Ball Mouse (cord chewed by a dog); 1 Calculator (solar panel covered by a sticker). Weight 51.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0330.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.5,
+   "value": 51.7,
    "display_type": "number"
   },
   {

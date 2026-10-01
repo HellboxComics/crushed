@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0831",
- "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 2 Power Banks (at 4%, like all of them); 3 Beer Cans (warm, sadly); 1 VR Headset (watched one (1) movie); 2 Soda Cans (shaken as a prank); 1 Pizza Crust (still better than most portfolios). Weight 27.5 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 2 Power Banks (at 4%, like all of them); 3 Beer Cans (warm, sadly); 1 VR Headset (watched one (1) movie); 2 Soda Cans (shaken as a prank); 1 Pizza Crust (still better than most portfolios). Weight 33.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0831.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.5,
+   "value": 33.8,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0719",
- "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Hand Sanitizer (half empty, half crusty); 2 Laptop Chargers (warm to the touch, somehow); 1 Smartphone (last text: read, no reply); 1 Fidget Spinner (bearing went missing); 3 AA Batteries (probably dead); 1 Tiny Red Candle (lit). Weight 37.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like scratch-n-sniff sticker. Contents (partial): 1 Hand Sanitizer (half empty, half crusty); 2 Laptop Chargers (warm to the touch, somehow); 1 Smartphone (last text: read, no reply); 1 Fidget Spinner (bearing went missing); 3 AA Batteries (probably dead); 1 Tiny Red Candle (lit). Weight 43.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0719.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 43.2,
    "display_type": "number"
   },
   {

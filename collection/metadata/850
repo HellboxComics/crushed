@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0850",
- "description": "Recovered from The Bachelor Pad. Smells like Ring Light Heat. Contents (partial): 1 Soda Can (Surj, the can that started a fight); 2 Beer Cans (Natty Lightweight, 30-rack); 1 Pizza Crust (found behind the couch); 2 Power Banks (dead when needed); 1 AA Batteries (Neveready, as advertised); 1 Emergency Ramen (the whole strategy). Weight 32.3 lb. Some assembly was removed.",
+ "description": "Recovered from The Bachelor Pad. Smells like Ring Light Heat. Contents (partial): 1 Soda Can (Surj, the can that started a fight); 2 Beer Cans (Natty Lightweight, 30-rack); 1 Pizza Crust (found behind the couch); 2 Power Banks (dead when needed); 1 AA Batteries (Neveready, as advertised); 1 Emergency Ramen (the whole strategy). Weight 38.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0850.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 38.1,
    "display_type": "number"
   },
   {

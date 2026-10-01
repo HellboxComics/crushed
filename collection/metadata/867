@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0867",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like Prime Time Hype. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (Moonster, the whole case); 3 Power Strips (daisy-chained into three more). Weight 34.3 lb. Still heavier than it looks.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Prime Time Hype. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (Moonster, the whole case); 3 Power Strips (daisy-chained into three more). Weight 40.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0867.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.3,
+   "value": 40.1,
    "display_type": "number"
   },
   {

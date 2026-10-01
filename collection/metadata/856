@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0856",
- "description": "Recovered from Garage Sale Free Bin. Smells like Moonster and Desperation. Contents (partial): 3 Earbud Cases (one bud present); 1 Selfie Stick (mid-trip, mid-ocean); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Ring Light (the eyes in every mirror selfie); 1 Sneaker (untied since 1989). Weight 31.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Moonster and Desperation. Contents (partial): 3 Earbud Cases (one bud present); 1 Selfie Stick (mid-trip, mid-ocean); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Ring Light (the eyes in every mirror selfie); 1 Sneaker (untied since 1989). Weight 37.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0856.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 37.7,
    "display_type": "number"
   },
   {

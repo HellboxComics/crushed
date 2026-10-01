@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0781",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like Fidget Spinner Bearings. Contents (partial): 2 Power Banks (at 4%, like all of them); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (mixed old and new, like animals); 2 Tablets (one thumbprint of juice); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Crumpled Chart (it went up, then it went down). Weight 34.0 lb. Still heavier than it looks.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Fidget Spinner Bearings. Contents (partial): 2 Power Banks (at 4%, like all of them); 1 Cheap Sunglasses (one lens popped out); 3 AA Batteries (mixed old and new, like animals); 2 Tablets (one thumbprint of juice); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Crumpled Chart (it went up, then it went down). Weight 39.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0781.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.0,
+   "value": 39.7,
    "display_type": "number"
   },
   {

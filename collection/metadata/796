@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0043: STOP THE PRESSES",
- "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (a boar doing a pig's job); 3 Newspapers (yesterday's news); 3 Play Money (no cash value, ever); 2 Corded Phones (was on the line when mom picked up); 4 Neckties (worn once, to a funeral for a portfolio). Weight 50.3 lb. Still heavier than it looks.",
+ "name": "CRUSHED IT #0003: STOP THE PRESSES",
+ "description": "Bulls make money. Bears make money. Pigs get slaughtered. This block is all three, plus the ties. Recovered from The Trading Floor, After the Bell. Smells like bacon and newsprint. Contents (partial): 14 Piggy Banks (a boar doing a pig's job); 3 Newspapers (yesterday's news); 3 Play Money (no cash value, ever); 2 Corded Phones (was on the line when mom picked up); 4 Neckties (worn once, to a funeral for a portfolio). Weight 51.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0796.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.3,
+   "value": 51.6,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0720",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Fidget Spinner (bearing went missing); 2 Bluetooth Speakers (played one song, too loud); 1 USB Stick (never ejected safely); 3 Earbud Cases (both buds gone, case still charges nothing); 1 AA Batteries (mixed old and new, like animals). Weight 25.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Fidget Spinner (bearing went missing); 2 Bluetooth Speakers (played one song, too loud); 1 USB Stick (never ejected safely); 3 Earbud Cases (both buds gone, case still charges nothing); 1 AA Batteries (mixed old and new, like animals). Weight 31.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0720.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.4,
+   "value": 31.5,
    "display_type": "number"
   },
   {

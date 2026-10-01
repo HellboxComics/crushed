@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0886: GAS FEES",
- "description": "A block of gas cans and receipts. You paid it. You'd pay it again. Recovered from The Pump, 3 A.M. Smells like gasoline. Contents (partial): 28 Gas Cans (empty, like the wallet); 4 Gold Coins (real, probably); 5 Clear Lighters (for incense, obviously). Weight 41.0 lb. Still heavier than it looks.",
+ "description": "A block of gas cans and receipts. You paid it. You'd pay it again. Recovered from The Pump, 3 A.M. Smells like gasoline. Contents (partial): 28 Gas Cans (empty, like the wallet); 4 Gold Coins (real, probably); 5 Clear Lighters (for incense, obviously). Weight 42.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0886.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.0,
+   "value": 42.2,
    "display_type": "number"
   },
   {

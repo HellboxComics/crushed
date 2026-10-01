@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0160",
- "description": "Recovered from Vegas Hotel Room. Smells like Arcade Tokens. Contents (partial): 1 Magazine (found in a dad's truck); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (mall kiosk special); 1 Toy Slime (stuck in the carpet); 3 TV Remotes (held together with tape). Weight 65.0 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Arcade Tokens. Contents (partial): 1 Magazine (found in a dad's truck); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (mall kiosk special); 1 Toy Slime (stuck in the carpet); 3 TV Remotes (held together with tape). Weight 69.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0160.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 65.0,
+   "value": 69.9,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0783",
- "description": "Recovered from Mom's Basement (Again). Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 2 AA Batteries (Neveready, as advertised); 1 Earbud Case (survived the wash); 3 Energy Drinks (Moonster, the whole case); 1 Face Mask (from 2020, still fresh). Weight 28.4 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Basement (Again). Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 2 AA Batteries (Neveready, as advertised); 1 Earbud Case (survived the wash); 3 Energy Drinks (Moonster, the whole case); 1 Face Mask (from 2020, still fresh). Weight 34.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0783.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.4,
+   "value": 34.8,
    "display_type": "number"
   },
   {

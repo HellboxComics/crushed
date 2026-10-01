@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0062",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Drakkar Noire-ish. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Puzzle Cubes (solved once, stickers moved); 1 Scratch Ticket (scratched with a house key); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Yo-Yo (string tied to a finger for 3 years). Weight 48.0 lb. Contents may have settled.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Drakkar Noire-ish. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Puzzle Cubes (solved once, stickers moved); 1 Scratch Ticket (scratched with a house key); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Yo-Yo (string tied to a finger for 3 years). Weight 53.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0062.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.0,
+   "value": 53.5,
    "display_type": "number"
   },
   {

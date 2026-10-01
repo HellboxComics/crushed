@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0805",
- "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 2 Earbud Cases (one bud present); 2 Beer Cans (12 of 12); 1 TV Remote (found in the couch); 3 Bluetooth Speakers (played one song, too loud); 1 Shot Glass (chipped rim). Weight 30.5 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like fresh batteries (licked). Contents (partial): 2 Earbud Cases (one bud present); 2 Beer Cans (12 of 12); 1 TV Remote (found in the couch); 3 Bluetooth Speakers (played one song, too loud); 1 Shot Glass (chipped rim). Weight 36.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0805.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.5,
+   "value": 36.3,
    "display_type": "number"
   },
   {

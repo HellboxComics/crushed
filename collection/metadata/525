@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0525",
- "description": "Recovered from Behind the Science Wing. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Magazine (for the interviews, obviously); 2 Film Canisters (undeveloped, forever); 2 VHS Tapes (taped off HBOH, commercials and all); 2 Energy Drinks (tastes like a battery); 1 Corded Phone (cord stretched to the bathroom). Weight 38.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Science Wing. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Magazine (for the interviews, obviously); 2 Film Canisters (undeveloped, forever); 2 VHS Tapes (taped off HBOH, commercials and all); 2 Energy Drinks (tastes like a battery); 1 Corded Phone (cord stretched to the bathroom). Weight 45.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0525.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.8,
+   "value": 45.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0276",
- "description": "Recovered from The Mall Arcade. Smells like Crystal Peppy. Contents (partial): 1 Gold 9999-in-1 Handheld (why); 2 Yo-Yos (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Burned CD (coaster now); 1 Paper Hand (folded under light pressure). Weight 29.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Mall Arcade. Smells like Crystal Peppy. Contents (partial): 1 Gold 9999-in-1 Handheld (why); 2 Yo-Yos (string tied to a finger for 3 years); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Burned CD (coaster now); 1 Paper Hand (folded under light pressure). Weight 35.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0276.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Gilded",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.3,
+   "value": 35.0,
    "display_type": "number"
   },
   {

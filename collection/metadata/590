@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0590",
- "description": "Recovered from A Blackberried Office Drawer. Smells like Red Bullish and Regret. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Beer Cans (crushed on a forehead); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Pizza Crusts (from a sleepover); 1 TV Remote (held together with tape). Weight 30.6 lb. Crushed it.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like Red Bullish and Regret. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 2 Beer Cans (crushed on a forehead); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Pizza Crusts (from a sleepover); 1 TV Remote (held together with tape). Weight 34.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0590.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.6,
+   "value": 34.8,
    "display_type": "number"
   },
   {

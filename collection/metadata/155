@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0155",
- "description": "Recovered from Dad's Camaro Trunk. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Floppy Disks (save icon, but real); 3 Cassette Tapes (rewound with a pencil); 1 Corded Phone (was on the line when mom picked up); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 92.9 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like scratch-n-sniff sticker. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Floppy Disks (save icon, but real); 3 Cassette Tapes (rewound with a pencil); 1 Corded Phone (was on the line when mom picked up); 1 Portable Tape Player (belt clip snapped at a bus stop). Weight 97.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0155.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.9,
+   "value": 97.6,
    "display_type": "number"
   },
   {

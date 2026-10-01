@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0581",
- "description": "Recovered from School Lost & Found. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 2 Burned CDs (says ROAD TRIP in marker); 3 Disposable Cameras (27 exposures of a thumb); 2 Pizza Crusts (found behind the couch); 1 Cheap Sunglasses (mall kiosk special). Weight 28.6 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 2 Burned CDs (says ROAD TRIP in marker); 3 Disposable Cameras (27 exposures of a thumb); 2 Pizza Crusts (found behind the couch); 1 Cheap Sunglasses (mall kiosk special). Weight 34.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0581.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.6,
+   "value": 34.5,
    "display_type": "number"
   },
   {

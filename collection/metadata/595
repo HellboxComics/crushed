@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0595",
- "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Gold Game Controller (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (says ROAD TRIP in marker); 1 Beer Can (Natty Lightweight, 30-rack); 2 Memory Cards (corrupted during a birthday). Weight 21.5 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 1 Gold Energy Drink (why); 1 Handheld Console (screen scratched from a pocket with keys); 2 Burned CDs (says ROAD TRIP in marker); 1 Beer Can (Natty Lightweight, 30-rack); 2 Memory Cards (corrupted during a birthday). Weight 27.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0595.png",
  "attributes": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Gilded",
-   "value": "Game Controller"
+   "value": "Energy Drink"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 21.5,
+   "value": 27.1,
    "display_type": "number"
   },
   {

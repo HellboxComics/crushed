@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0005",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (from a gentlemen's club, reportedly); 3 AA Batteries (mixed old and new, like animals); 2 Game Cartridges (blown into 400 times); 2 Keyboards (Partial) (F, J and the crumbs). Weight 84.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (from a gentlemen's club, reportedly); 3 AA Batteries (mixed old and new, like animals); 2 Game Cartridges (blown into 400 times); 2 Keyboards (Partial) (F, J and the crumbs). Weight 89.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0005.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 89.5,
    "display_type": "number"
   },
   {

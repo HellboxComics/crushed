@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0344",
- "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 1 Gold Puzzle Cube (why); 2 Calculators (spelled BOOBIES upside down); 1 Keyboard (Partial) (F, J and the crumbs); 2 Film Canisters (undeveloped, forever); 3 AA Batteries (Durasmell, lasted till Christmas noon). Weight 84.6 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 1 Gold Dice (why); 2 Calculators (spelled BOOBIES upside down); 3 Puzzle Cubes (solved once, stickers moved); 1 Keyboard (Partial) (F, J and the crumbs); 2 Film Canisters (holds one quarter). Weight 91.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0344.png",
  "attributes": [
   {
@@ -33,15 +33,15 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Gilded",
-   "value": "Puzzle Cube"
+   "value": "Dice"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.6,
+   "value": 91.3,
    "display_type": "number"
   },
   {

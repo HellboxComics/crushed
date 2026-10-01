@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0047",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Matchbook (from a gentlemen's club, reportedly); 1 Foam Headphones (one ear works if you hold it). Weight 87.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Matchbook (from a gentlemen's club, reportedly); 1 Foam Headphones (one ear works if you hold it). Weight 92.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0047.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.4,
+   "value": 92.9,
    "display_type": "number"
   },
   {

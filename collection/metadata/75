@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0075",
- "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 2 TV Remotes (found in the couch); 1 Spiral Notebook (spiral unwound halfway); 1 Corded Phone (someone is still on hold); 2 Joysticks (fire button pressed 40 million times); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 42.9 lb. We kept the important shit.",
+ "description": "Recovered from A Buddy's Basement. Smells like mall food court. Contents (partial): 2 TV Remotes (found in the couch); 1 Spiral Notebook (spiral unwound halfway); 1 Corded Phone (someone is still on hold); 2 Joysticks (fire button pressed 40 million times); 2 VHS Tapes (label says DO NOT TAPE OVER). Weight 48.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0075.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.9,
+   "value": 48.6,
    "display_type": "number"
   },
   {

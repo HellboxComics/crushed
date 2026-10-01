@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0877",
- "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Drone (40 seconds of freedom); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (untied since 1989); 2 Scratch Tickets (scratched with a house key); 2 Energy Drinks (exam week casualty). Weight 36.6 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like blue raspberry. Contents (partial): 1 Drone (40 seconds of freedom); 3 Spiral Notebooks (doodles in the margins); 2 Sneakers (untied since 1989); 2 Scratch Tickets (scratched with a house key); 2 Energy Drinks (exam week casualty). Weight 42.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0877.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.6,
+   "value": 42.4,
    "display_type": "number"
   },
   {

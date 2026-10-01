@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0014",
- "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 TV Remotes (held together with tape); 1 Yo-Yo (string tied to a finger for 3 years); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Foam Headphones (one ear works if you hold it); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 53.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like mall food court. Contents (partial): 2 TV Remotes (held together with tape); 1 Yo-Yo (string tied to a finger for 3 years); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Foam Headphones (one ear works if you hold it); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 59.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0014.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.7,
+   "value": 59.3,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0541",
- "description": "Recovered from School Lost & Found. Smells like Red Bullish and Regret. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition); 1 Emergency Ramen (the whole strategy). Weight 70.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Red Bullish and Regret. Contents (partial): 2 Sneakers (untied since 1989); 1 CRT Monitor (still warm); 2 No. 2 Pencils (never saw a scantron it liked); 2 Centerfolds (staples removed, an attempt was made); 2 Poker Chips (a stack of ambition); 1 Emergency Ramen (the whole strategy). Weight 75.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0541.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.7,
+   "value": 75.2,
    "display_type": "number"
   },
   {

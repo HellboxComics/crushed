@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0083",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Drakkar Noire-ish. Contents (partial): 1 CRT Monitor (still warm); 3 TV Remotes (held together with tape); 1 Sneaker (left only); 1 Game Cartridge (save file erased by a sibling); 1 Pizza Crust (still better than most portfolios). Weight 81.5 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Drakkar Noire-ish. Contents (partial): 1 CRT Monitor (still warm); 3 TV Remotes (held together with tape); 1 Sneaker (left only); 1 Game Cartridge (save file erased by a sibling); 1 Pizza Crust (still better than most portfolios). Weight 86.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0083.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.5,
+   "value": 86.8,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0416",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Dial-Up Modem Heat. Contents (partial): 2 Poker Chips (taken from a casino, small heist); 2 Scratch Tickets (not a winner); 1 Pager (last page: 143); 1 Cheap Sunglasses (mall kiosk special); 1 Burned CD (track 7 skips). Weight 27.0 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Dial-Up Modem Heat. Contents (partial): 2 Poker Chips (taken from a casino, small heist); 2 Scratch Tickets (not a winner); 1 Pager (last page: 143); 1 Cheap Sunglasses (mall kiosk special); 1 Burned CD (track 7 skips). Weight 32.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0416.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.0,
+   "value": 32.5,
    "display_type": "number"
   },
   {

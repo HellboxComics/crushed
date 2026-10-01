@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0696",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Sneakers (smells like 1989); 1 Matchbook (from a gentlemen's club, reportedly); 1 Jewel Case (insert is from a different album); 3 Glow Sticks (still glowing a little, somehow); 1 Digital Camera (2 megapixels of truth). Weight 25.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Sneakers (smells like 1989); 1 Matchbook (from a gentlemen's club, reportedly); 1 Jewel Case (insert is from a different album); 3 Glow Sticks (still glowing a little, somehow); 1 Digital Camera (2 megapixels of truth). Weight 30.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0696.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.1,
+   "value": 30.4,
    "display_type": "number"
   },
   {

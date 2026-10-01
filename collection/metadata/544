@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0544",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like Myspace Glitter. Contents (partial): 1 Beer Can (crushed on a forehead); 2 Clear Lighters (for incense, obviously); 1 Jewel Case (insert is from a different album); 1 Spiral Notebook (spiral unwound halfway); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 24.5 lb. Contents may have settled.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Myspace Glitter. Contents (partial): 1 Beer Can (crushed on a forehead); 2 Clear Lighters (for incense, obviously); 1 Jewel Case (insert is from a different album); 1 Spiral Notebook (spiral unwound halfway); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 30.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0544.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 24.5,
+   "value": 30.8,
    "display_type": "number"
   },
   {

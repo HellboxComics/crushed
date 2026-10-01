@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0332",
- "description": "Recovered from Vegas Hotel Room. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Three-Ring Binders (velcro screams when opened); 3 Ball Mice (cord chewed by a dog); 2 Shot Glasses (from a trip to Vegas); 1 Game Cartridge (blew on it, Nintendont said no). Weight 84.0 lb. We kept the important shit.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Three-Ring Binders (velcro screams when opened); 3 Ball Mice (cord chewed by a dog); 2 Shot Glasses (from a trip to Vegas); 1 Game Cartridge (blew on it, Nintendont said no). Weight 89.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0332.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.0,
+   "value": 89.0,
    "display_type": "number"
   },
   {

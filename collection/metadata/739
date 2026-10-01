@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0739",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Face Mask (one of 400 in a coat pocket); 2 AA Batteries (probably dead); 3 Spiral Notebooks (doodles in the margins); 2 Smartphones (last text: read, no reply). Weight 32.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Face Mask (one of 400 in a coat pocket); 2 AA Batteries (probably dead); 3 Spiral Notebooks (doodles in the margins); 2 Smartphones (last text: read, no reply). Weight 37.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0739.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.4,
+   "value": 37.6,
    "display_type": "number"
   },
   {

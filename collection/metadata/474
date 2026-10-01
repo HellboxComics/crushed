@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0474",
- "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Magazines (for the interviews, obviously); 2 Shot Glasses (chipped rim); 1 Sneaker (light-up heel, dead); 1 Skate Wheel (flat spot from a power slide). Weight 69.8 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like cheap cologne. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Magazines (for the interviews, obviously); 2 Shot Glasses (chipped rim); 1 Sneaker (light-up heel, dead); 1 Skate Wheel (flat spot from a power slide). Weight 75.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0474.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.8,
+   "value": 75.4,
    "display_type": "number"
   },
   {

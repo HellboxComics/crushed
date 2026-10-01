@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0680",
- "description": "Recovered from A Blackberried Office Drawer. Smells like blue raspberry. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Dice (snake eyes, twice); 1 Shot Glass (chipped rim); 2 TV Remotes (the volume button worn smooth); 3 Pizza Crusts (petrified). Weight 27.0 lb. We kept the important shit.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like blue raspberry. Contents (partial): 2 Soda Cans (shaken as a prank); 2 Dice (snake eyes, twice); 1 Shot Glass (chipped rim); 2 TV Remotes (the volume button worn smooth); 3 Pizza Crusts (petrified). Weight 32.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0680.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.0,
+   "value": 32.7,
    "display_type": "number"
   },
   {

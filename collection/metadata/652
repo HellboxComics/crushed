@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0652",
- "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Sneaker (smells like 1989); 3 Energy Drinks (third one that night); 1 Pizza Crust (found behind the couch); 2 Flip Phones (snapped shut dramatically); 1 USB Stick (never ejected safely). Weight 22.5 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like fresh batteries (licked). Contents (partial): 1 Sneaker (smells like 1989); 3 Energy Drinks (third one that night); 1 Pizza Crust (found behind the couch); 2 Flip Phones (snapped shut dramatically); 1 USB Stick (never ejected safely). Weight 28.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0652.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 22.5,
+   "value": 28.1,
    "display_type": "number"
   },
   {

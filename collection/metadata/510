@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0510",
- "description": "Recovered from Back of the Closet. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Sneakers (untied since 1989); 1 Matchbook (matches missing, reasons unclear); 3 Disposable Cameras (never developed); 1 Floppy Disk (DISK 2 of 7). Weight 34.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Back of the Closet. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Sneakers (untied since 1989); 1 Matchbook (matches missing, reasons unclear); 3 Disposable Cameras (never developed); 1 Floppy Disk (DISK 2 of 7). Weight 40.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0510.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 40.6,
    "display_type": "number"
   },
   {

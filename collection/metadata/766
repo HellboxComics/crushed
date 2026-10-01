@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0766",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Smartwatches (still counting steps in the dryer); 2 Glow Sticks (still glowing a little, somehow); 3 Selfie Sticks (mid-trip, mid-ocean); 1 Handheld Console (battery cover lost immediately); 3 Bluetooth Speakers (paired with the wrong phone). Weight 36.7 lb. Contents may have settled.",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 3 Smartwatches (still counting steps in the dryer); 2 Glow Sticks (still glowing a little, somehow); 3 Selfie Sticks (mid-trip, mid-ocean); 1 Handheld Console (battery cover lost immediately); 3 Bluetooth Speakers (paired with the wrong phone). Weight 42.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0766.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.7,
+   "value": 42.4,
    "display_type": "number"
   },
   {

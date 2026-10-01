@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0817",
- "description": "Recovered from Grandma's Attic. Smells like Ring Light Heat. Contents (partial): 2 TV Remotes (held together with tape); 2 Sneakers (was in the dryer); 1 Hand Sanitizer (was in every pocket in 2020); 1 VR Headset (the walls were real and they were hit); 3 Energy Drinks (third one that night). Weight 30.4 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like Ring Light Heat. Contents (partial): 2 TV Remotes (held together with tape); 2 Sneakers (was in the dryer); 1 Hand Sanitizer (was in every pocket in 2020); 1 VR Headset (the walls were real and they were hit); 3 Energy Drinks (third one that night). Weight 36.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0817.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.4,
+   "value": 36.4,
    "display_type": "number"
   },
   {

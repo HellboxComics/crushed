@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0433",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Digital Camera (2 megapixels of truth); 1 Pager (clipped to jeans for status only); 1 Burned CD (burned at 1x, 4 hours); 2 Cassette Tapes (someone's voicemail greeting). Weight 72.7 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like mall food court. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Digital Camera (2 megapixels of truth); 1 Pager (clipped to jeans for status only); 1 Burned CD (burned at 1x, 4 hours); 2 Cassette Tapes (someone's voicemail greeting). Weight 78.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0433.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.7,
+   "value": 78.8,
    "display_type": "number"
   },
   {

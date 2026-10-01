@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0223",
- "description": "Recovered from Vegas Hotel Room. Smells like Lunchables-ish Crackers. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Sneaker (untied since 1989); 1 Cassette Tape (labeled MIX 4 U). Weight 44.6 lb. We kept the important shit.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Lunchables-ish Crackers. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Sneaker (untied since 1989); 1 Cassette Tape (labeled MIX 4 U). Weight 49.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0223.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.6,
+   "value": 49.8,
    "display_type": "number"
   },
   {

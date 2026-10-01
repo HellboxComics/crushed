@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0682",
- "description": "Recovered from Dad's Junk Drawer. Smells like Hollister-ish Store Fog. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 2 Energy Drinks (exam week casualty); 2 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean); 3 Game Controllers (thrown during a boss fight). Weight 30.0 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Hollister-ish Store Fog. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 2 Energy Drinks (exam week casualty); 2 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean); 3 Game Controllers (thrown during a boss fight). Weight 35.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0682.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.0,
+   "value": 35.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0827",
- "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 2 Cheap Sunglasses (one lens popped out); 2 AA Batteries (taken out of the smoke detector); 1 Drone (flew once, into a tree); 1 USB Stick (contains homework_FINAL_final2.doc); 1 Emergency Ramen (for emergencies). Weight 32.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like hot dust on a CRT. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 2 Cheap Sunglasses (one lens popped out); 2 AA Batteries (taken out of the smoke detector); 1 Drone (flew once, into a tree); 1 USB Stick (contains homework_FINAL_final2.doc); 1 Emergency Ramen (for emergencies). Weight 39.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0827.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.7,
+   "value": 39.2,
    "display_type": "number"
   },
   {

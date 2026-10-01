@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0745: LANDFILL DRIVE",
- "description": "Every drive that held something that mattered. All of it is in the dump now. Recovered from Under Forty Feet of Garbage. Smells like wet landfill. Contents (partial): 28 Hard Drives (backed up nothing); 4 USB Sticks (never ejected safely); 6 Gold Coins (bought the top); 3 Laptop Chargers (warm to the touch, somehow); 3 Floppy Disks (Iomegalodon would have held it all). Weight 78.1 lb. We kept the important shit.",
+ "description": "Every drive that held something that mattered. All of it is in the dump now. Recovered from Under Forty Feet of Garbage. Smells like wet landfill. Contents (partial): 28 Hard Drives (backed up nothing); 4 USB Sticks (never ejected safely); 6 Gold Coins (bought the top); 3 Laptop Chargers (warm to the touch, somehow); 3 Floppy Disks (Iomegalodon would have held it all). Weight 83.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0745.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.1,
+   "value": 83.7,
    "display_type": "number"
   },
   {

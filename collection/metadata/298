@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0298",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Sneakers (untied since 1989); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Ball Mouse (ball removed as a prank); 1 Cassette Tape (rewound with a pencil); 1 Spiral Notebook (spiral unwound halfway); 1 Paper Hand (folded under light pressure). Weight 75.7 lb. Some assembly was removed.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 Sneakers (untied since 1989); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Ball Mouse (ball removed as a prank); 1 Cassette Tape (rewound with a pencil); 1 Spiral Notebook (spiral unwound halfway); 1 Paper Hand (folded under light pressure). Weight 80.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0298.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.7,
+   "value": 80.2,
    "display_type": "number"
   },
   {

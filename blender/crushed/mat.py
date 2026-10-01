@@ -509,9 +509,10 @@ def core(g, p, rng):
     Nearly black, with just enough glint to read as more crushed stuff."""
     pal = p["palette"]
     n = g.noise(60.0, 8.0, 0.75)
-    stops = [(i / len(pal), tuple(x * 0.05 for x in _lin(c))) for i, c in enumerate(pal)]
+    stops = [(i / len(pal), tuple(x * 0.85 for x in _lin(c))) for i, c in enumerate(pal)]
     col = g.ramp(g.voronoi(45.0, "F1").outputs["Color"], stops, "CONSTANT")
-    col = g.mix(g.maprange(n.outputs["Fac"], 0.45, 0.7), (0.0, 0.0, 0.0), col)
+    # packed tight: the base color, darker down in the cracks, never black
+    col = g.mix(g.maprange(n.outputs["Fac"], 0.45, 0.7, 0.0, 0.55), col, g.mix(0.5, col, (0.0, 0.0, 0.0)))
     return {"color": col, "rough": g.maprange(n.outputs["Fac"], 0.3, 0.7, 0.6, 0.95), "spec": 0.12,
             "normal": g.bump(n.outputs["Fac"], 1.0, 0.004)}
 

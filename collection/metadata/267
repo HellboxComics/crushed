@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0267",
- "description": "Recovered from Back of the Closet. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Poker Chips (never cashed out); 2 Burned CDs (coaster now); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (melted with a magnifying glass). Weight 78.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Poker Chips (never cashed out); 2 Burned CDs (coaster now); 1 Foam Headphones (one ear works if you hold it); 1 Army Man Squad (melted with a magnifying glass). Weight 82.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0267.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.0,
+   "value": 82.6,
    "display_type": "number"
   },
   {

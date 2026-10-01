@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0320",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like arcade carpet. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 3 Burned CDs (coaster now); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Milk Caps (the slammer is chipped). Weight 38.8 lb. Nobody made you keep this.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like arcade carpet. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 3 Burned CDs (coaster now); 1 Cheap Sunglasses (one lens popped out); 1 Poker Chip (a stack of ambition); 1 Milk Caps (the slammer is chipped). Weight 44.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0320.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Finish",
-   "value": "GRAPE"
+   "value": "BONE"
   },
   {
    "trait_type": "Serial",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.8,
+   "value": 44.9,
    "display_type": "number"
   },
   {

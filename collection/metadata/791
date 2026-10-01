@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0791",
- "description": "Recovered from Garage Sale Free Bin. Smells like White Paw, Warm. Contents (partial): 3 Smartphones (Venmoan request: 'gas money'); 1 Selfie Stick (mid-trip, mid-ocean); 1 Laptop Charger (fits nothing else in the house); 1 Pizza Crust (from a sleepover); 1 Disposable Vape (5000 puffs, 4999 regrets). Weight 36.0 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like White Paw, Warm. Contents (partial): 3 Smartphones (Venmoan request: 'gas money'); 1 Selfie Stick (mid-trip, mid-ocean); 1 Laptop Charger (fits nothing else in the house); 1 Pizza Crust (from a sleepover); 1 Disposable Vape (5000 puffs, 4999 regrets). Weight 42.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0791.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.0,
+   "value": 42.1,
    "display_type": "number"
   },
   {

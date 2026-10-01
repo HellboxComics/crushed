@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0587",
- "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 3 Energy Drinks (tastes like a battery); 2 Dice (blown on for luck); 1 Tissue Box (one for every mood); 1 Poker Chip (a stack of ambition); 2 Clear Lighters (borrowed in 1997, never returned). Weight 20.3 lb. We kept the important shit.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Grandma's couch. Contents (partial): 3 Energy Drinks (tastes like a battery); 2 Dice (blown on for luck); 1 Tissue Box (one for every mood); 1 Poker Chip (a stack of ambition); 2 Clear Lighters (borrowed in 1997, never returned). Weight 25.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0587.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 20.3,
+   "value": 25.5,
    "display_type": "number"
   },
   {

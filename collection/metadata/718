@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0042: CCFF00",
- "description": "One color, three shapes, zero apologies. Squares, diamonds and cubes, 204 255 000 all the way down. Recovered from The Neon Aisle. Smells like hot plastic and ozone. Contents (partial): 1 Big Neon Square (one color, all the attitude); 4 Hollow Squares (all edge, no filling); 16 Neon Squares (a square that knows exactly what it is); 9 Neon Diamonds (turned, just to be different); 8 Neon Cubes (six sides, one color). Weight 15.2 lb. Crushed it.",
+ "name": "CRUSHED IT #0002: CCFF00",
+ "description": "One color, three shapes, zero apologies. Squares, diamonds and cubes, 204 255 000 all the way down. Recovered from The Neon Aisle. Smells like hot plastic and ozone. Contents (partial): 1 Big Neon Square (one color, all the attitude); 4 Hollow Squares (all edge, no filling); 16 Neon Squares (a square that knows exactly what it is); 9 Neon Diamonds (turned, just to be different); 8 Neon Cubes (six sides, one color). Weight 16.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0718.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 15.2,
+   "value": 16.6,
    "display_type": "number"
   },
   {

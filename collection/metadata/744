@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0744",
- "description": "Recovered from Mom's Basement (Again). Smells like White Paw, Warm. Contents (partial): 2 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Tablet (one thumbprint of juice); 1 Jewel Case (insert is from a different album); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Soda Can (shaken as a prank). Weight 29.1 lb. Crushed it.",
+ "description": "Recovered from Mom's Basement (Again). Smells like White Paw, Warm. Contents (partial): 2 Disposable Vapes (Puff Barf, Banana Regret flavor); 1 Tablet (one thumbprint of juice); 1 Jewel Case (insert is from a different album); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Soda Can (shaken as a prank). Weight 35.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0744.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.1,
+   "value": 35.5,
    "display_type": "number"
   },
   {

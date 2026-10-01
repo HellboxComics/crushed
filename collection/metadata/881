@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0881",
- "description": "Recovered from A Crypto Bro's Garage. Smells like blue raspberry. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Power Strips (daisy-chained into three more); 2 Game Controllers (thrown during a boss fight); 3 Disposable Vapes (zero nicotine, allegedly); 1 VR Headset (the walls were real and they were hit). Weight 34.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like blue raspberry. Contents (partial): 1 Power Bank (10000 mAh of dead weight); 3 Power Strips (daisy-chained into three more); 2 Game Controllers (thrown during a boss fight); 3 Disposable Vapes (zero nicotine, allegedly); 1 VR Headset (the walls were real and they were hit). Weight 40.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0881.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.6,
+   "value": 40.2,
    "display_type": "number"
   },
   {

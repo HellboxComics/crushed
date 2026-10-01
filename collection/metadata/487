@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0487",
- "description": "Recovered from The Y2K Bunker. Smells like blue raspberry. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Brick Phones (unbreakable until today); 1 AA Batteries (licked to test); 1 Tiny Red Candle (one of many). Weight 69.6 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Y2K Bunker. Smells like blue raspberry. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Spiral Notebooks (doodles in the margins); 3 TV Remotes (the volume button worn smooth); 2 Brick Phones (unbreakable until today); 1 AA Batteries (licked to test); 1 Tiny Red Candle (one of many). Weight 75.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0487.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 69.6,
+   "value": 75.2,
    "display_type": "number"
   },
   {

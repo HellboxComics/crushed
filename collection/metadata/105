@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0105",
- "description": "Recovered from Under the Bed. Smells like Drakkar Noire-ish. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Dice (snake eyes, twice); 3 Portable Tape Players (auto-reverse broke in 1991); 1 TV Remote (the volume button worn smooth); 2 AA Batteries (Neveready, as advertised). Weight 68.2 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Drakkar Noire-ish. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Dice (snake eyes, twice); 3 Portable Tape Players (auto-reverse broke in 1991); 1 TV Remote (the volume button worn smooth); 2 AA Batteries (Neveready, as advertised). Weight 71.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0105.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 68.2,
+   "value": 71.6,
    "display_type": "number"
   },
   {

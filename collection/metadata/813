@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0041: LOW RES",
- "description": "The whole hood, hoods up, smushed into a room: minis, the clan, the frames off the wall, the lava lamp, the cat. Low res and loud. Recovered from A Pixel Room, 3 A.M. Smells like warm amplifier and incense. Contents (partial): 8 Hooded Clan Members (chain on, mask up); 3 Mini Arcade Cabinets (INSERT COIN, forever); 8 Framed Pixel Arts (sixteen by sixteen, framed); 4 Mushrooms (grew out of the carpet); 4 Potted Plants (leaning toward the monitor). Weight 56.3 lb. Nobody made you keep this.",
+ "name": "CRUSHED IT #0001: LOW RES",
+ "description": "The whole hood, hoods up, smushed into a room: minis, the clan, the frames off the wall, the lava lamp, the cat. Low res and loud. Recovered from A Pixel Room, 3 A.M. Smells like warm amplifier and incense. Contents (partial): 8 Hooded Clan Members (chain on, mask up); 3 Mini Arcade Cabinets (INSERT COIN, forever); 8 Framed Pixel Arts (sixteen by sixteen, framed); 4 Mushrooms (grew out of the carpet); 4 Potted Plants (leaning toward the monitor). Weight 60.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0813.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 56.3,
+   "value": 60.0,
    "display_type": "number"
   },
   {

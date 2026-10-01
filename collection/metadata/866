@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0866",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like Grandma's couch. Contents (partial): 2 Bluetooth Speakers (lost, found, lost); 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (mall kiosk special); 3 USB Sticks (contains homework_FINAL_final2.doc); 1 Disposable Camera (never developed). Weight 30.2 lb. We kept the important shit.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Grandma's couch. Contents (partial): 2 Bluetooth Speakers (lost, found, lost); 2 Poker Chips (a stack of ambition); 1 Cheap Sunglasses (mall kiosk special); 3 USB Sticks (contains homework_FINAL_final2.doc); 1 Disposable Camera (never developed). Weight 36.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0866.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.2,
+   "value": 36.5,
    "display_type": "number"
   },
   {

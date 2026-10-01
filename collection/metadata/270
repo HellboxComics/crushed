@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0270",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Blockbusted New Release Wall. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Jewel Case (insert is from a different album); 2 Game Cartridges (blew on it, Nintendont said no); 2 Burned CDs (says ROAD TRIP in marker); 2 No. 2 Pencils (sharpened to a nub). Weight 70.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Blockbusted New Release Wall. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 Jewel Case (insert is from a different album); 2 Game Cartridges (blew on it, Nintendont said no); 2 Burned CDs (says ROAD TRIP in marker); 2 No. 2 Pencils (sharpened to a nub). Weight 76.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0270.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.0,
+   "value": 76.0,
    "display_type": "number"
   },
   {

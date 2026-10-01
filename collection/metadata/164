@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0164",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 16-Bit Controller (the B button is sticky); 2 Poker Chips (never cashed out); 2 Beer Cans (Natty Lightweight, 30-rack). Weight 84.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 16-Bit Controller (the B button is sticky); 2 Poker Chips (never cashed out); 2 Beer Cans (Natty Lightweight, 30-rack). Weight 89.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0164.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.7,
+   "value": 89.8,
    "display_type": "number"
   },
   {

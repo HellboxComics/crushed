@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0832",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Power Strip (overloaded on purpose); 2 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Matchbook (matches missing, reasons unclear); 3 Power Banks (at 4%, like all of them). Weight 32.8 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Power Strip (overloaded on purpose); 2 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Matchbook (matches missing, reasons unclear); 3 Power Banks (at 4%, like all of them). Weight 39.6 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0832.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.8,
+   "value": 39.6,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0369",
- "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time); 1 Floppy Disk (Iomegalodon would have held it all); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 73.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 1 CRT Monitor (degaussed one last time); 1 Floppy Disk (Iomegalodon would have held it all); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 78.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0369.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.3,
+   "value": 78.5,
    "display_type": "number"
   },
   {

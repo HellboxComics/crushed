@@ -13,7 +13,8 @@ from .stage import H
 
 LIFT = H + 0.004           # center height of the block above the floor
 
-FACE_WEIGHTS = {"-Y": 0.32, "+X": 0.26, "+Z": 0.24, "+Y": 0.09, "-X": 0.09}
+# every side but the bottom gets covered: the block turns in 3D, so there is no back
+FACE_WEIGHTS = {"-Y": 0.23, "+X": 0.22, "+Z": 0.21, "+Y": 0.17, "-X": 0.17}
 VISIBLE = ("-Y", "+X", "+Z")
 
 
@@ -93,7 +94,8 @@ def build_block(r, coll, rng):
     anchors = []            # where the corded things ended up: loose wires come out there
 
     # the dense undifferentiated mass behind everything
-    core_pal = list(PALETTES[era]["body"]) + list(PALETTES[era]["loud"])
+    # the base everything is crushed into: CCFF00, so a gap reads as the brand, never as a hole
+    core_pal = [(0.8, 1.0, 0.0), (0.62, 0.8, 0.0), (0.7, 0.9, 0.0), (0.5, 0.66, 0.0)]
     if r["clean"]:
         c = r["clean"][1][1].get("color", (1.0, 0.78, 0.34) if r["clean"][1][0] == "gold" else (0.8, 0.8, 0.8))
         core_pal = [tuple(x * k for x in c) for k in (0.5, 0.7, 0.85, 1.0)]
@@ -157,11 +159,11 @@ def build_block(r, coll, rng):
         crush.set_verts(ob.data, v)
         objs.append(ob)
 
-    fill_faces = {"-Y": 1.0, "+X": 1.0, "+Z": 1.0, "+Y": 0.7, "-X": 0.7}
+    fill_faces = {"-Y": 1.0, "+X": 1.0, "+Z": 1.0, "+Y": 0.9, "-X": 0.9}
     for k, name in enumerate(r["fillers"]):
         d = reg[name]
         ob = make_object(d, rng, pal, coll)
-        v = prepare(ob, 0.09, rng)
+        v = prepare(ob, 0.12, rng)
         if v is None:
             continue
         brittle = name in ("glass_shard", "bottle_cap", "spring")
@@ -176,7 +178,7 @@ def build_block(r, coll, rng):
         q = crush.orient(rng, (0, 0, 1), nrm, tilt=0.5) if sheet else q
         poke = rng.uniform(0.006, 0.02) if sheet else rng.uniform(-0.008, 0.012)
         v = crush.place(v, q, nrm, uv, t1, t2, poke, 0.06)
-        layer = rng.uniform(-0.008, -0.002) if sheet else rng.uniform(-0.005, 0.002)
+        layer = rng.uniform(-0.003, 0.001) if sheet else rng.uniform(-0.002, 0.003)     # on top of the base, not under it
         v = crush.compact(v, layer, r["seed"] + 500 + k, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)

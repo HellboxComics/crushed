@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0582: COLD STORAGE",
- "description": "Every hardware wallet, frozen solid. Do not ask where the seed phrases are. Recovered from The Back of the Freezer. Smells like freezer burn. Contents (partial): 40 Hardware Wallets (backed up on a napkin); 8 Suspicious Rectangles (seed phrase written on the back of a receipt); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 21.3 lb. Some assembly was removed.",
+ "description": "Every hardware wallet, frozen solid. Do not ask where the seed phrases are. Recovered from The Back of the Freezer. Smells like freezer burn. Contents (partial): 40 Hardware Wallets (backed up on a napkin); 8 Suspicious Rectangles (seed phrase written on the back of a receipt); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 27.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0582.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 21.3,
+   "value": 27.2,
    "display_type": "number"
   },
   {

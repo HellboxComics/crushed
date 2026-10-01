@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0245",
- "description": "Recovered from Lollapaloser Lost & Found. Smells like Lunchables-ish Crackers. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Dice (blown on for luck); 1 Film Canister (undeveloped, forever); 1 CRT Monitor (screen burn-in reads LOADING); 3 Foam Headphones (orange foam, allegedly). Weight 75.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Lollapaloser Lost & Found. Smells like Lunchables-ish Crackers. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Dice (blown on for luck); 1 Film Canister (undeveloped, forever); 1 CRT Monitor (screen burn-in reads LOADING); 3 Foam Headphones (orange foam, allegedly). Weight 81.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0245.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.4,
+   "value": 81.5,
    "display_type": "number"
   },
   {

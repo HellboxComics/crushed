@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0216",
- "description": "Recovered from Behind the Couch. Smells like Grunge Flannel. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Metal Lunchbox (the smell stays); 3 Cheap Sunglasses (mall kiosk special); 3 Burned CDs (coaster now); 2 Soda Cans (flat). Weight 73.5 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Couch. Smells like Grunge Flannel. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Metal Lunchbox (the smell stays); 3 Cheap Sunglasses (mall kiosk special); 3 Burned CDs (coaster now); 2 Soda Cans (flat). Weight 79.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0216.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.5,
+   "value": 79.8,
    "display_type": "number"
   },
   {

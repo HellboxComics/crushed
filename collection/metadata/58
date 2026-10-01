@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0058",
- "description": "Recovered from Dad's Junk Drawer. Smells like Cabbage Patch Plastic. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 1 Boom Box (shoulder-mounted in its prime); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Calculators (solar panel covered by a sticker). Weight 47.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Cabbage Patch Plastic. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 1 Boom Box (shoulder-mounted in its prime); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Calculators (solar panel covered by a sticker). Weight 52.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0058.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.3,
+   "value": 52.2,
    "display_type": "number"
   },
   {

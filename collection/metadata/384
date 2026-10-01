@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0384",
- "description": "Recovered from An AOHell CD Pile. Smells like fresh batteries (licked). Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 MP3 Players (shuffle picked the same song 6 times); 3 Sneakers (worn to one (1) very bad decision); 2 AA Batteries (taken out of the smoke detector); 1 Skate Wheel (flat spot from a power slide). Weight 73.4 lb. We kept the important shit.",
+ "description": "Recovered from An AOHell CD Pile. Smells like fresh batteries (licked). Contents (partial): 1 VHS Tape (BE KIND REWIND (they did not)); 2 MP3 Players (shuffle picked the same song 6 times); 3 Sneakers (worn to one (1) very bad decision); 2 AA Batteries (taken out of the smoke detector); 1 Skate Wheel (flat spot from a power slide). Weight 78.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0384.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.4,
+   "value": 78.8,
    "display_type": "number"
   },
   {

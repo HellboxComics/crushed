@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0520: DOUBLE A",
- "description": "Every AA battery that ever went missing from a remote. Recovered from Every Remote in the House. Smells like fresh batteries (licked). Contents (partial): 44 AA Batteries (mixed old and new, like animals); 4 TV Remotes (held together with tape). Weight 28.8 lb. Crushed it.",
+ "description": "Every AA battery that ever went missing from a remote. Recovered from Every Remote in the House. Smells like fresh batteries (licked). Contents (partial): 44 AA Batteries (mixed old and new, like animals); 4 TV Remotes (held together with tape). Weight 34.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0520.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.8,
+   "value": 34.2,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0348",
- "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Army Man Squad (the one with the radio survived); 2 Sneakers (smells like 1989); 2 Soda Cans (flat); 1 Calculator (spelled BOOBIES upside down). Weight 84.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Army Man Squad (the one with the radio survived); 2 Sneakers (smells like 1989); 2 Soda Cans (flat); 1 Calculator (spelled BOOBIES upside down). Weight 89.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0348.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.2,
+   "value": 89.2,
    "display_type": "number"
   },
   {

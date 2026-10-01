@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0885",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like White Paw, Warm. Contents (partial): 1 Tissue Box (nearly empty); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Handheld Console (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never); 3 Beer Cans (warm, sadly). Weight 32.0 lb. Contents may have settled.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like White Paw, Warm. Contents (partial): 1 Tissue Box (nearly empty); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Handheld Console (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never); 3 Beer Cans (warm, sadly). Weight 37.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0885.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.0,
+   "value": 37.9,
    "display_type": "number"
   },
   {

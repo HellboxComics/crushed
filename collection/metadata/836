@@ -1,6 +1,6 @@
 {
- "name": "CRUSHED IT #0044: CLAY DAY",
- "description": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 7 Clay Bulls (molded at the top); 6 Clay Pigs (fattest lump on the desk); 5 Clay Cuts (fresh cuts, fresh clay); 5 Clay Frogs (squat and smug); 5 Clay Candles (green, for once). Weight 37.0 lb. Some assembly was removed.",
+ "name": "CRUSHED IT #0004: CLAY DAY",
+ "description": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 7 Clay Bulls (molded at the top); 6 Clay Pigs (fattest lump on the desk); 5 Clay Cuts (fresh cuts, fresh clay); 5 Clay Frogs (squat and smug); 5 Clay Candles (green, for once). Weight 40.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0836.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.0,
+   "value": 40.3,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0314",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 No. 2 Pencils (chewed); 1 Centerfold (left open to the wrong page); 1 Metal Lunchbox (the smell stays); 3 Power Strips (overloaded on purpose). Weight 88.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 No. 2 Pencils (chewed); 1 Centerfold (left open to the wrong page); 1 Metal Lunchbox (the smell stays); 3 Power Strips (overloaded on purpose). Weight 94.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0314.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.4,
+   "value": 94.0,
    "display_type": "number"
   },
   {

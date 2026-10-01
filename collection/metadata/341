@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0341",
- "description": "Recovered from The Mall Fountain. Smells like basement. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Skateboard (griptape ate a pair of jeans); 3 Magazines (read for the articles); 1 Disposable Camera (never developed); 3 Scratch Tickets (not a winner). Weight 77.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Mall Fountain. Smells like basement. Contents (partial): 1 16-Bit Controller (the B button is sticky); 1 Skateboard (griptape ate a pair of jeans); 3 Magazines (read for the articles); 1 Disposable Camera (never developed); 3 Scratch Tickets (not a winner). Weight 82.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0341.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.0,
+   "value": 82.4,
    "display_type": "number"
   },
   {

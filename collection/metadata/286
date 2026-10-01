@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0286",
- "description": "Recovered from A Blockbusted Return Slot. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 Ball Mice (rollers caked with 1998); 3 Floppy Disks (save icon, but real); 1 Portable CD Player (anti-skip lied); 1 Power Strip (daisy-chained into three more); 1 Tiny Red Candle (lit). Weight 88.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 Ball Mice (rollers caked with 1998); 3 Floppy Disks (save icon, but real); 1 Portable CD Player (anti-skip lied); 1 Power Strip (daisy-chained into three more); 1 Tiny Red Candle (lit). Weight 95.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0286.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 95.0,
    "display_type": "number"
   },
   {

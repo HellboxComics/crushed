@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0845",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Smartphones (screen protector did nothing); 2 Pizza Crusts (from a sleepover); 3 Laptop Chargers (fits nothing else in the house); 2 AA Batteries (probably dead); 1 Bluetooth Speaker (lost, found, lost). Weight 33.5 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 3 Smartphones (screen protector did nothing); 2 Pizza Crusts (from a sleepover); 3 Laptop Chargers (fits nothing else in the house); 2 AA Batteries (probably dead); 1 Bluetooth Speaker (lost, found, lost). Weight 38.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0845.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.5,
+   "value": 38.9,
    "display_type": "number"
   },
   {

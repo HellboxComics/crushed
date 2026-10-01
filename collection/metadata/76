@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0076",
- "description": "Recovered from Behind the Couch. Smells like cigarette in a jacket. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Pizza Crusts (from a sleepover); 3 Floppy Disks (Iomegalodon would have held it all); 2 Army Man Squads (the one with the radio survived); 2 No. 2 Pencils (never saw a scantron it liked). Weight 52.3 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Couch. Smells like cigarette in a jacket. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Pizza Crusts (from a sleepover); 3 Floppy Disks (Iomegalodon would have held it all); 2 Army Man Squads (the one with the radio survived); 2 No. 2 Pencils (never saw a scantron it liked). Weight 57.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0076.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 52.3,
+   "value": 57.2,
    "display_type": "number"
   },
   {

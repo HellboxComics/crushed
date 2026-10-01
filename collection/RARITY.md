@@ -311,20 +311,20 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| None | 447 | 50.3% |
-| Loose Ends | 211 | 23.8% |
-| Wrapped | 164 | 18.5% |
-| Mummified | 65 | 7.3% |
+| None | 454 | 51.1% |
+| Loose Ends | 219 | 24.7% |
+| Wrapped | 138 | 15.5% |
+| Mummified | 76 | 8.6% |
 | Fully Mixtaped | 1 | 0.1% |
 
 ## Loose Wires
 
 | Value | Count | % |
 |---|---:|---:|
-| Concerning | 348 | 39.2% |
-| Several | 338 | 38.1% |
-| A Few | 186 | 20.9% |
-| None | 16 | 1.8% |
+| Several | 357 | 40.2% |
+| Concerning | 329 | 37.0% |
+| A Few | 185 | 20.8% |
+| None | 17 | 1.9% |
 
 ## One of One
 
@@ -357,26 +357,27 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| SAFETY ORANGE | 9 | 1.0% |
-| BONE | 7 | 0.8% |
-| ICE | 4 | 0.5% |
-| OBSIDIAN | 3 | 0.3% |
+| BONE | 6 | 0.7% |
+| ICE | 6 | 0.7% |
+| SAFETY ORANGE | 5 | 0.6% |
+| OBSIDIAN | 4 | 0.5% |
+| CHROME | 4 | 0.5% |
 | GRAPE | 2 | 0.2% |
-| CHROME | 2 | 0.2% |
 
 ## Gilded
 
 | Value | Count | % |
 |---|---:|---:|
-| Flip Phone | 2 | 0.2% |
-| TV Remote | 2 | 0.2% |
+| AA Batteries | 2 | 0.2% |
 | 9999-in-1 Handheld | 1 | 0.1% |
-| Puzzle Cube | 1 | 0.1% |
+| Dice | 1 | 0.1% |
 | Beer Can | 1 | 0.1% |
-| Calculator | 1 | 0.1% |
-| Sneaker | 1 | 0.1% |
+| Cheap Sunglasses | 1 | 0.1% |
+| Flip Phone | 1 | 0.1% |
+| Cassette Tape | 1 | 0.1% |
+| Energy Drink | 1 | 0.1% |
 | Game Controller | 1 | 0.1% |
-| Pizza Crust | 1 | 0.1% |
+| TV Remote | 1 | 0.1% |
 
 ## Top 25
 
@@ -396,8 +397,8 @@
 | 12 | #0319 | BULL TRAP | Dead Bull | None |
 | 13 | #0324 | MIXTAPE | Cassette Tape | None |
 | 14 | #0745 | LANDFILL DRIVE | Hard Drive | None |
-| 15 | #0582 | COLD STORAGE | Hardware Wallet | None |
-| 16 | #0244 | BLOW ON IT | Game Cartridge | None |
+| 15 | #0244 | BLOW ON IT | Game Cartridge | None |
+| 16 | #0582 | COLD STORAGE | Hardware Wallet | None |
 | 17 | #0552 | STILL ALIVE | Virtual Pet | None |
 | 18 | #0801 | LEFTOVERS | Pizza Crust | None |
 | 19 | #0520 | DOUBLE A | AA Batteries | None |
@@ -405,5 +406,5 @@
 | 21 | #0008 | SOLID GOLD | Sneaker | None |
 | 22 | #0571 | SCREEN TIME | CRT Monitor | None |
 | 23 | #0276 | GOLD | Yo-Yo | Paper Hand |
-| 24 | #0772 | GOLD | VR Headset | None |
-| 25 | #0389 | GOLD | Sneaker | None |
+| 24 | #0755 | GOLD | Beer Can | Suspicious Rectangle |
+| 25 | #0772 | GOLD | VR Headset | None |

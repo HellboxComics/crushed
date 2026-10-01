@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0765",
- "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like melted crayon. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Selfie Stick (banned at the museum); 1 Disposable Vape (Jool pod, found in a gym bag); 3 TV Remotes (found in the couch). Weight 33.7 lb. Contents may have settled.",
+ "description": "Recovered from A WeWork-ish Desk, Abandoned. Smells like melted crayon. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Selfie Stick (banned at the museum); 1 Disposable Vape (Jool pod, found in a gym bag); 3 TV Remotes (found in the couch). Weight 39.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0765.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.7,
+   "value": 39.6,
    "display_type": "number"
   },
   {

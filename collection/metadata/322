@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0322",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Lunchables-ish Crackers. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 Power Strips (overloaded on purpose); 1 Corded Phone (cord stretched to the bathroom); 2 Magazines (for the interviews, obviously); 2 Burned CDs (track 7 skips). Weight 39.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Lunchables-ish Crackers. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 Power Strips (overloaded on purpose); 1 Corded Phone (cord stretched to the bathroom); 2 Magazines (for the interviews, obviously); 2 Burned CDs (track 7 skips). Weight 45.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0322.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.5,
+   "value": 45.3,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0231",
- "description": "Recovered from Grandma's Attic. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (taped over a wedding); 1 Spiral Notebook (note says 'check YES or NO'); 3 Army Man Squads (melted with a magnifying glass); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 43.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (taped over a wedding); 1 Spiral Notebook (note says 'check YES or NO'); 3 Army Man Squads (melted with a magnifying glass); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 49.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0231.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.3,
+   "value": 49.2,
    "display_type": "number"
   },
   {

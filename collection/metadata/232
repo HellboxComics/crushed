@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0232",
- "description": "Recovered from Behind the Bar. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (someone is still on hold); 3 Magazines (read for the articles); 3 Jewel Cases (insert is from a different album); 1 Soda Can (Crystal Peppy, discontinued for a reason); 2 Scratch Tickets (scratched with a house key). Weight 43.0 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like fresh batteries (licked). Contents (partial): 1 Corded Phone (someone is still on hold); 3 Magazines (read for the articles); 3 Jewel Cases (insert is from a different album); 1 Soda Can (Crystal Peppy, discontinued for a reason); 2 Scratch Tickets (scratched with a house key). Weight 48.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0232.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.0,
+   "value": 48.8,
    "display_type": "number"
   },
   {

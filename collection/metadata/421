@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0421",
- "description": "Recovered from A Circuit City-ish Return Counter. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Beer Can (warm, sadly); 1 Corded Phone (was on the line when mom picked up); 1 Clear Lighter (borrowed in 1997, never returned); 1 Portable CD Player (anti-skip lied). Weight 32.3 lb. Contents may have settled.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Beer Can (warm, sadly); 1 Corded Phone (was on the line when mom picked up); 1 Clear Lighter (borrowed in 1997, never returned); 1 Portable CD Player (anti-skip lied). Weight 37.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0421.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 37.5,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0612",
- "description": "Recovered from The Ed Hardy-ish Era. Smells like hot dust on a CRT. Contents (partial): 3 Disposable Cameras (never developed); 2 Cheap Sunglasses (one lens popped out); 3 Power Strips (overloaded on purpose); 1 Energy Drink (Moonster, the whole case); 3 Game Controllers (stick drift since day one). Weight 28.8 lb. Contents may have settled.",
+ "description": "Recovered from The Ed Hardy-ish Era. Smells like hot dust on a CRT. Contents (partial): 3 Disposable Cameras (never developed); 2 Cheap Sunglasses (one lens popped out); 3 Power Strips (overloaded on purpose); 1 Energy Drink (Moonster, the whole case); 3 Game Controllers (stick drift since day one). Weight 34.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0612.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.8,
+   "value": 34.7,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0012",
- "description": "Recovered from Vegas Hotel Room. Smells like Drakkar Noire-ish. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 1 CRT Monitor (degaussed one last time); 1 Tissue Box (one for every mood); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom). Weight 76.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Drakkar Noire-ish. Contents (partial): 3 Cassette Tapes (a mix for someone who never listened); 1 CRT Monitor (degaussed one last time); 1 Tissue Box (one for every mood); 1 Disposable Camera (27 exposures of a thumb); 1 Corded Phone (cord stretched to the bathroom). Weight 81.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0012.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.8,
+   "value": 81.8,
    "display_type": "number"
   },
   {

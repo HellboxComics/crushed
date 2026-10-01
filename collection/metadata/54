@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0054",
- "description": "Recovered from A Tupperware-ish Party. Smells like Jean Jacket. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Game Cartridges (blew on it, Nintendont said no); 2 Magazines (read for the articles); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cheap Sunglasses (one lens popped out). Weight 96.1 lb. Contents may have settled.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Jean Jacket. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Game Cartridges (blew on it, Nintendont said no); 2 Magazines (read for the articles); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cheap Sunglasses (one lens popped out). Weight 102.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0054.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 96.1,
+   "value": 102.7,
    "display_type": "number"
   },
   {

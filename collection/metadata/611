@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0611",
- "description": "Recovered from Behind the Bar. Smells like Red Bullish and Regret. Contents (partial): 2 Sneakers (was in the dryer); 2 TV Remotes (found in the couch); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 AA Batteries (Neveready, as advertised); 3 Laptop Chargers (warm to the touch, somehow). Weight 24.1 lb. Crushed it.",
+ "description": "Recovered from Behind the Bar. Smells like Red Bullish and Regret. Contents (partial): 2 Sneakers (was in the dryer); 2 TV Remotes (found in the couch); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 AA Batteries (Neveready, as advertised); 3 Laptop Chargers (warm to the touch, somehow). Weight 29.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0611.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 24.1,
+   "value": 29.3,
    "display_type": "number"
   },
   {

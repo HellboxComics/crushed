@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0721",
- "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 TV Remotes (found in the couch); 2 Bluetooth Speakers (paired with the wrong phone); 1 VR Headset (the walls were real and they were hit); 2 Smartphones (last text: read, no reply). Weight 31.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like hot dust on a CRT. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 TV Remotes (found in the couch); 2 Bluetooth Speakers (paired with the wrong phone); 1 VR Headset (the walls were real and they were hit); 2 Smartphones (last text: read, no reply). Weight 37.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0721.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 37.2,
    "display_type": "number"
   },
   {

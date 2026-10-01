@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0397: SAVE ICON",
- "description": "Sixty-four floppy disks. The save icon, before it became a joke. Recovered from Every School Computer Lab. Smells like static electricity. Contents (partial): 64 Floppy Disks (says DO NOT FORMAT); 1 USB Stick (never ejected safely). Weight 14.7 lb. Still heavier than it looks.",
+ "description": "Sixty-four floppy disks. The save icon, before it became a joke. Recovered from Every School Computer Lab. Smells like static electricity. Contents (partial): 64 Floppy Disks (says DO NOT FORMAT); 1 USB Stick (never ejected safely). Weight 21.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0397.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 14.7,
+   "value": 21.3,
    "display_type": "number"
   },
   {

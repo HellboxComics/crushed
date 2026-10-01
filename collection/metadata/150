@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0150",
- "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Portable Tape Players (belt clip snapped at a bus stop); 3 Army Man Squads (the one with the radio survived); 1 Yo-Yo (walked the dog one time). Weight 75.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Portable Tape Players (belt clip snapped at a bus stop); 3 Army Man Squads (the one with the radio survived); 1 Yo-Yo (walked the dog one time). Weight 80.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0150.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.9,
+   "value": 80.8,
    "display_type": "number"
   },
   {

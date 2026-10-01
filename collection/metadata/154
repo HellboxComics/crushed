@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0154",
- "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 2 VHS Tapes (taped over a wedding); 1 Game Cartridge (blown into 400 times); 1 Cassette Tape (rewound with a pencil); 1 Dice (blown on for luck); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 86.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 2 VHS Tapes (taped over a wedding); 1 Game Cartridge (blown into 400 times); 1 Cassette Tape (rewound with a pencil); 1 Dice (blown on for luck); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 91.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0154.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.5,
+   "value": 91.8,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0758",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Ring Light Heat. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 1 Pizza Crust (found behind the couch); 1 USB Stick (never ejected safely); 3 Smartphones (Venmoan request: 'gas money'); 1 Game Controller (stick drift since day one). Weight 31.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Ring Light Heat. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 1 Pizza Crust (found behind the couch); 1 USB Stick (never ejected safely); 3 Smartphones (Venmoan request: 'gas money'); 1 Game Controller (stick drift since day one). Weight 36.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0758.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.6,
+   "value": 36.3,
    "display_type": "number"
   },
   {

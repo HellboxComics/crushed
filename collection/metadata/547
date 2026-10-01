@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0547",
- "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 VR Headset (watched one (1) movie); 3 AA Batteries (mixed old and new, like animals); 3 Burned CDs (burned at 1x, 4 hours); 1 Shot Glass (souvenir of a night nobody recalls). Weight 25.6 lb. Contents may have settled.",
+ "description": "Recovered from Grandma's Attic. Smells like new plastic. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 VR Headset (watched one (1) movie); 3 AA Batteries (mixed old and new, like animals); 3 Burned CDs (burned at 1x, 4 hours); 1 Shot Glass (souvenir of a night nobody recalls). Weight 31.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0547.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.6,
+   "value": 31.7,
    "display_type": "number"
   },
   {

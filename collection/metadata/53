@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0053",
- "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 Soda Cans (New Koak, 79 days only); 2 Poker Chips (taken from a casino, small heist); 3 Tissue Boxes (nearly empty); 1 Beer Can (warm, sadly); 1 CRT Monitor (still warm); 1 Tiny Red Candle (one of many). Weight 81.3 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like body spray cloud. Contents (partial): 3 Soda Cans (New Koak, 79 days only); 2 Poker Chips (taken from a casino, small heist); 3 Tissue Boxes (nearly empty); 1 Beer Can (warm, sadly); 1 CRT Monitor (still warm); 1 Tiny Red Candle (one of many). Weight 87.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0053.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.3,
+   "value": 87.0,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0378",
- "description": "Recovered from An AOHell CD Pile. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Beer Cans (crushed on a forehead); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (Blockbusted rental, never returned); 1 Skate Wheel (flat spot from a power slide). Weight 45.1 lb. We kept the important shit.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Grandma's couch. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Beer Cans (crushed on a forehead); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (Blockbusted rental, never returned); 1 Skate Wheel (flat spot from a power slide). Weight 51.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0378.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.1,
+   "value": 51.2,
    "display_type": "number"
   },
   {

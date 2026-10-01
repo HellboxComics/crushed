@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0838",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Laptop Charger (fits nothing else in the house); 3 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean). Weight 30.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like burnt popcorn. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Laptop Charger (fits nothing else in the house); 3 Spiral Notebooks (doodles in the margins); 1 Selfie Stick (mid-trip, mid-ocean). Weight 35.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0838.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.3,
+   "value": 35.4,
    "display_type": "number"
   },
   {

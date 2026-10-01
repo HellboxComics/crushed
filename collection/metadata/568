@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0568",
- "description": "Recovered from Garage Sale Free Bin. Smells like Red Bullish and Regret. Contents (partial): 3 Energy Drinks (exam week casualty); 3 Burned CDs (burned at 1x, 4 hours); 2 Glow Sticks (still glowing a little, somehow); 3 Sneakers (untied since 1989); 1 Jewel Case (insert is from a different album); 1 Bull (flipped). Weight 27.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Red Bullish and Regret. Contents (partial): 3 Energy Drinks (exam week casualty); 3 Burned CDs (burned at 1x, 4 hours); 2 Glow Sticks (still glowing a little, somehow); 3 Sneakers (untied since 1989); 1 Jewel Case (insert is from a different album); 1 Bull (flipped). Weight 33.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0568.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.9,
+   "value": 33.0,
    "display_type": "number"
   },
   {

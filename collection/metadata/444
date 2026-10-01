@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0444",
- "description": "Recovered from An AOHell CD Pile. Smells like blue raspberry. Contents (partial): 1 Beer Can (Natty Lightweight, 30-rack); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Flip Phones (12 texts left this month); 2 Pizza Crusts (still better than most portfolios); 1 Digital Camera (2 megapixels of truth). Weight 71.6 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like blue raspberry. Contents (partial): 1 Beer Can (Natty Lightweight, 30-rack); 1 AA Batteries (Durasmell, lasted till Christmas noon); 3 Flip Phones (12 texts left this month); 2 Pizza Crusts (still better than most portfolios); 1 Digital Camera (2 megapixels of truth). Weight 77.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0444.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.6,
+   "value": 77.3,
    "display_type": "number"
   },
   {

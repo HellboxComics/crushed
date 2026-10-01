@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0450",
- "description": "Recovered from The Y2K Bunker. Smells like arcade carpet. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Foam Headphones (orange foam, allegedly); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (matches missing, reasons unclear); 1 Sneaker (left only). Weight 74.3 lb. Nobody made you keep this.",
+ "description": "Recovered from The Y2K Bunker. Smells like arcade carpet. Contents (partial): 2 Soda Cans (tab kept for charity); 1 Foam Headphones (orange foam, allegedly); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Matchbook (matches missing, reasons unclear); 1 Sneaker (left only). Weight 80.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0450.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.3,
+   "value": 80.2,
    "display_type": "number"
   },
   {

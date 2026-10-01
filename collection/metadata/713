@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0713",
- "description": "Recovered from Vegas Hotel Room. Smells like Ring Light Heat. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Soda Cans (flat); 2 Smartphones (Instagrampa open, 900 unread); 1 Disposable Vape (zero nicotine, allegedly). Weight 30.1 lb. Handle with both hands.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Ring Light Heat. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Soda Cans (flat); 2 Smartphones (Instagrampa open, 900 unread); 1 Disposable Vape (zero nicotine, allegedly). Weight 36.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0713.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.1,
+   "value": 36.0,
    "display_type": "number"
   },
   {

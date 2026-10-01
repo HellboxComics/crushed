@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0406",
- "description": "Recovered from Dad's Junk Drawer. Smells like Vegas carpet. Contents (partial): 2 Pagers (last page: 911 (it was not)); 2 AA Batteries (Neveready, as advertised); 2 Magazines (read for the articles); 2 Game Controllers (thrown during a boss fight); 1 Foam Headphones (one ear works if you hold it). Weight 33.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Vegas carpet. Contents (partial): 2 Pagers (last page: 911 (it was not)); 2 AA Batteries (Neveready, as advertised); 2 Magazines (read for the articles); 2 Game Controllers (thrown during a boss fight); 1 Foam Headphones (one ear works if you hold it). Weight 39.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0406.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Mummified"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.8,
+   "value": 39.3,
    "display_type": "number"
   },
   {

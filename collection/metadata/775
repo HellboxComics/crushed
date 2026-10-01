@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0775",
- "description": "Recovered from The Bachelor Pad. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Sneakers (left only); 1 Disposable Camera (27 exposures of a thumb); 1 Ring Light (one bulb out, one ego intact); 1 Shot Glass (souvenir of a night nobody recalls); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 30.5 lb. We kept the important shit.",
+ "description": "Recovered from The Bachelor Pad. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Sneakers (left only); 1 Disposable Camera (27 exposures of a thumb); 1 Ring Light (one bulb out, one ego intact); 1 Shot Glass (souvenir of a night nobody recalls); 3 USB Sticks (contains homework_FINAL_final2.doc). Weight 35.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0775.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.5,
+   "value": 35.4,
    "display_type": "number"
   },
   {

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0638",
- "description": "Recovered from A Frat House Couch. Smells like Red Bullish and Regret. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Glow Stick (cracked at a school dance); 2 Disposable Cameras (27 exposures of a thumb); 2 Pizza Crusts (found behind the couch); 2 Energy Drinks (Jolted, twice the caffeine). Weight 21.9 lb. Some assembly was removed.",
+ "description": "Recovered from A Frat House Couch. Smells like Red Bullish and Regret. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Glow Stick (cracked at a school dance); 2 Disposable Cameras (27 exposures of a thumb); 2 Pizza Crusts (found behind the couch); 2 Energy Drinks (Jolted, twice the caffeine). Weight 26.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0638.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 21.9,
+   "value": 26.4,
    "display_type": "number"
   },
   {

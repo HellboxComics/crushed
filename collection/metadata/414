@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0414",
- "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 3 VHS Tapes (taped off HBOH, commercials and all); 3 Burned CDs (coaster now); 3 Cassette Tapes (someone's voicemail greeting); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 76.0 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like gym bag, forgotten. Contents (partial): 3 VHS Tapes (taped off HBOH, commercials and all); 3 Burned CDs (coaster now); 3 Cassette Tapes (someone's voicemail greeting); 3 Webcams (240p of pure confidence); 1 Shot Glass (from a trip to Vegas). Weight 81.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0414.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Mummified"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.0,
+   "value": 81.6,
    "display_type": "number"
   },
   {

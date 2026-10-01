@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0103",
- "description": "Recovered from School Lost & Found. Smells like Cabbage Patch Plastic. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Floppy Disks (save icon, but real); 3 Pizza Crusts (petrified); 2 AA Batteries (probably dead); 1 CRT Monitor (degaussed one last time). Weight 68.5 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like Cabbage Patch Plastic. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Floppy Disks (save icon, but real); 3 Pizza Crusts (petrified); 2 AA Batteries (probably dead); 1 CRT Monitor (degaussed one last time). Weight 73.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0103.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "Wrapped"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 68.5,
+   "value": 73.5,
    "display_type": "number"
   },
   {

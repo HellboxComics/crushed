@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0490",
- "description": "Recovered from A LAN Party Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Flip Phone (snapped shut dramatically); 1 Beer Can (warm, sadly); 2 Burned CDs (burned at 1x, 4 hours); 2 MP3 Players (shuffle picked the same song 6 times). Weight 23.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A LAN Party Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Flip Phone (snapped shut dramatically); 1 Beer Can (warm, sadly); 2 Burned CDs (burned at 1x, 4 hours); 2 MP3 Players (shuffle picked the same song 6 times). Weight 29.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0490.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Wrapped"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 23.5,
+   "value": 29.7,
    "display_type": "number"
   },
   {

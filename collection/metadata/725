@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0725",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Earbud Cases (both buds gone, case still charges nothing); 1 Drone (over the neighbor's fence); 2 Poker Chips (a stack of ambition); 2 Soda Cans (tab kept for charity). Weight 34.3 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Earbud Cases (both buds gone, case still charges nothing); 1 Drone (over the neighbor's fence); 2 Poker Chips (a stack of ambition); 2 Soda Cans (tab kept for charity). Weight 41.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0725.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.3,
+   "value": 41.1,
    "display_type": "number"
   },
   {

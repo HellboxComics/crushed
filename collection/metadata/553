@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0553",
- "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 3 Sneakers (was in the dryer); 2 Cheap Sunglasses (mall kiosk special); 2 Shot Glasses (chipped rim); 3 Glow Sticks (cracked at a school dance); 3 TV Remotes (the volume button worn smooth). Weight 33.1 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like mall food court. Contents (partial): 3 Sneakers (was in the dryer); 2 Cheap Sunglasses (mall kiosk special); 2 Shot Glasses (chipped rim); 3 Glow Sticks (cracked at a school dance); 3 TV Remotes (the volume button worn smooth). Weight 37.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0553.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 37.9,
    "display_type": "number"
   },
   {

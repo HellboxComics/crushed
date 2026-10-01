@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0229: SLOW MOTION",
- "description": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous. Recovered from The Beach, in Slow Motion. Smells like coconut sunscreen. Contents (partial): 10 Rescue Cans (a torpedo with no torpedo); 8 Red Swimsuits (drying since the nineties); 6 Cheap Sunglasses (one lens popped out); 1 Portable Tape Player (auto-reverse broke in 1991); 6 Lifeguard Whistles (sounds like authority). Weight 35.2 lb. Nobody made you keep this.",
+ "description": "Everyone you ever watched run toward the water. Nobody arrived. It was gorgeous. Recovered from The Beach, in Slow Motion. Smells like coconut sunscreen. Contents (partial): 10 Rescue Cans (a torpedo with no torpedo); 8 Red Swimsuits (drying since the nineties); 6 Cheap Sunglasses (one lens popped out); 1 Portable Tape Player (auto-reverse broke in 1991); 6 Lifeguard Whistles (sounds like authority). Weight 36.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0229.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 36.7,
    "display_type": "number"
   },
   {

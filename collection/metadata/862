@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0862",
- "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 Beer Cans (crushed on a forehead); 3 Energy Drinks (Jolted, twice the caffeine); 2 Soda Cans (Surj, the can that started a fight); 1 Smartwatch (says STAND, does not); 2 Pizza Crusts (petrified). Weight 31.2 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like arcade carpet. Contents (partial): 3 Beer Cans (crushed on a forehead); 3 Energy Drinks (Jolted, twice the caffeine); 2 Soda Cans (Surj, the can that started a fight); 1 Smartwatch (says STAND, does not); 2 Pizza Crusts (petrified). Weight 38.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0862.png",
  "attributes": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.2,
+   "value": 38.1,
    "display_type": "number"
   },
   {
