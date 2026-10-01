@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0722",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Moonster and Desperation. Contents (partial): 1 Gold Disposable Vape (why); 1 Handheld Console (screen scratched from a pocket with keys); 1 Poker Chip (a stack of ambition); 3 Laptop Chargers (warm to the touch, somehow); 1 Beer Can (Natty Lightweight, 30-rack). Weight 39.6 lb. Crushed it.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Moonster and Desperation. Contents (partial): 1 Gold TV Remote (why); 1 Handheld Console (screen scratched from a pocket with keys); 1 Poker Chip (a stack of ambition); 3 Laptop Chargers (warm to the touch, somehow); 1 Beer Can (Natty Lightweight, 30-rack). Weight 39.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0722.png",
  "attributes": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Gilded",
-   "value": "Disposable Vape"
+   "value": "TV Remote"
   },
   {
    "trait_type": "Serial",

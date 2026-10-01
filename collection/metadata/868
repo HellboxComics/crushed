@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0868",
- "description": "Recovered from Estate of a Collector. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 Gold Smartphone (why); 1 Beer Can (warm, sadly); 3 Tissue Boxes (nearly empty); 1 VR Headset (watched one (1) movie); 3 TV Remotes (held together with tape). Weight 43.8 lb. Handle with both hands.",
+ "description": "Recovered from Estate of a Collector. Smells like Hand Sanitizer, Everywhere. Contents (partial): 1 Gold Soda Can (why); 1 Beer Can (warm, sadly); 3 Tissue Boxes (nearly empty); 1 VR Headset (watched one (1) movie); 3 TV Remotes (held together with tape). Weight 43.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0868.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Gilded",
-   "value": "Smartphone"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Serial",

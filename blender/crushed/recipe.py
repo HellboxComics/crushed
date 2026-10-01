@@ -357,9 +357,13 @@ def recipe(token_id):
     if one in ONE_FINISH:
         clean = ONE_FINISH[one]
 
+    # loose cassette tape only comes off cassettes: a few of them, a loop or two; MIXTAPE is the only one wrapped
     tape = 0
-    if any(h in CASSETTEY for h in heroes) and cond != "CLEAN" and rng.random() < 0.85:
-        tape = int(rng.choice([1, 2, 3, 4, 5, 6], p=[0.25, 0.25, 0.2, 0.15, 0.1, 0.05]))
+    tapes = sum(1 for h in heroes if h in CASSETTEY)
+    roll = rng.random()            # always drawn, so the rest of the recipe keeps its random sequence
+    pick = int(rng.choice([1, 2, 3, 4, 5, 6], p=[0.25, 0.25, 0.2, 0.15, 0.1, 0.05]))
+    if tapes >= 3 and cond != "CLEAN" and roll < 0.6:
+        tape = min(pick, 2)
     if one == "MIXTAPE":
         tape = 8
     # the more corded junk, the more loose wire

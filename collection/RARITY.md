@@ -343,19 +343,17 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| None | 453 | 51.0% |
-| Loose Ends | 223 | 25.1% |
-| Wrapped | 137 | 15.4% |
-| Mummified | 74 | 8.3% |
+| None | 692 | 77.9% |
+| Loose Ends | 195 | 22.0% |
 | Fully Mixtaped | 1 | 0.1% |
 
 ## Loose Wires
 
 | Value | Count | % |
 |---|---:|---:|
-| Several | 354 | 39.9% |
-| Concerning | 325 | 36.6% |
-| A Few | 186 | 20.9% |
+| Several | 350 | 39.4% |
+| Concerning | 334 | 37.6% |
+| A Few | 181 | 20.4% |
 | None | 23 | 2.6% |
 
 ## One of One
@@ -408,15 +406,13 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| AA Batteries | 2 | 0.2% |
+| AA Batteries | 3 | 0.3% |
+| Beer Can | 2 | 0.2% |
 | Dice | 2 | 0.2% |
 | 16-Bit Controller | 1 | 0.1% |
-| Beer Can | 1 | 0.1% |
 | Pager | 1 | 0.1% |
-| MP3 Player | 1 | 0.1% |
-| Sneaker | 1 | 0.1% |
-| Disposable Vape | 1 | 0.1% |
-| Smartphone | 1 | 0.1% |
+| TV Remote | 1 | 0.1% |
+| Soda Can | 1 | 0.1% |
 
 ## Top 25
 
@@ -424,20 +420,20 @@
 |---:|---|---|---|---|
 | 1 | #0811 | EMPTY | Nothing | None |
 | 2 | #0534 | UNCRUSHED | Everything | None |
-| 3 | #0595 | LIGHT THE FUSE | Firework | None |
-| 4 | #0228 | SLOW MOTION | Rescue Can | None |
-| 5 | #0718 | CCFF00 | Big Neon Square | None |
-| 6 | #0797 | STOP THE PRESSES | Piggy Bank | None |
-| 7 | #0813 | LOW RES | Hooded Clan Member | None |
-| 8 | #0815 | GM | Coffee Mug | None |
-| 9 | #0837 | CLAY DAY | Clay Bull | None |
-| 10 | #0886 | GAS FEES | Gas Can | None |
-| 11 | #0529 | TRICK OR TREAT | Pumpkin Pail | None |
-| 12 | #0772 | GREEN BEER | Green Bowler | None |
-| 13 | #0344 | BE MINE | Heart-Shaped Box | None |
-| 14 | #0599 | COASTERS | Burned CD | None |
-| 15 | #0397 | SAVE ICON | Floppy Disk | None |
-| 16 | #0527 | EGG HUNT | Chocolate Bunny | None |
+| 3 | #0718 | CCFF00 | Big Neon Square | None |
+| 4 | #0797 | STOP THE PRESSES | Piggy Bank | None |
+| 5 | #0813 | LOW RES | Hooded Clan Member | None |
+| 6 | #0815 | GM | Coffee Mug | None |
+| 7 | #0837 | CLAY DAY | Clay Bull | None |
+| 8 | #0886 | GAS FEES | Gas Can | None |
+| 9 | #0529 | TRICK OR TREAT | Pumpkin Pail | None |
+| 10 | #0772 | GREEN BEER | Green Bowler | None |
+| 11 | #0344 | BE MINE | Heart-Shaped Box | None |
+| 12 | #0595 | LIGHT THE FUSE | Firework | None |
+| 13 | #0599 | COASTERS | Burned CD | None |
+| 14 | #0397 | SAVE ICON | Floppy Disk | None |
+| 15 | #0527 | EGG HUNT | Chocolate Bunny | None |
+| 16 | #0228 | SLOW MOTION | Rescue Can | None |
 | 17 | #0276 | HAND TURKEY | Hand Turkey | None |
 | 18 | #0319 | BULL TRAP | Dead Bull | None |
 | 19 | #0324 | MIXTAPE | Cassette Tape | None |
