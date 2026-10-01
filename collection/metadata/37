@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0037",
- "description": "Recovered from The Bachelor Pad. Smells like Smoke-Filled Bowling Alley. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 1 Magazine (read for the articles); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Power Strip (daisy-chained into three more); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Crumpled Chart (printed out for emotional reasons). Weight 79.7 lb. Contents may have settled.",
+ "description": "Recovered from The Bachelor Pad. Smells like Smoke-Filled Bowling Alley. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 1 Magazine (the staples are doing the work); 3 Scratch Tickets (not a winner); 2 TV Remotes (the volume button worn smooth); 1 Pizza Crust (from a sleepover); 1 Crumpled Chart (it went up, then it went down). Weight 95.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0037.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 95.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 47,
    "display_type": "number"
   }
  ]

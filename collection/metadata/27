@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0027",
- "description": "Recovered from Behind the Couch. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (cord stretched to the bathroom); 2 Shot Glasses (chipped rim); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 AA Batteries (taken out of the smoke detector). Weight 39.4 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Couch. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Puzzle Cubes (solved once, stickers moved); 3 Army Man Squads (melted with a magnifying glass); 1 Centerfold (folded out, then folded back in a hurry); 3 Soda Cans (tab kept for charity); 2 AA Batteries (mixed old and new, like animals). Weight 51.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0027.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.4,
+   "value": 51.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0048",
- "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Pizza Crust (found behind the couch); 2 VHS Tapes (label says DO NOT TAPE OVER); 2 Army Man Squads (the one with the radio survived). Weight 55.9 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like body spray cloud. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Pizza Crusts (petrified); 2 Puzzle Cubes (two stickers peeled); 3 Floppy Disks (save icon, but real). Weight 68.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0048.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 55.9,
+   "value": 68.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0207",
- "description": "Recovered from A Blockbusted Return Slot. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (coaster now). Weight 78.3 lb. Some assembly was removed.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 3 Pagers (last page: 143); 2 Sneakers (light-up heel, dead). Weight 90.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0207.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.3,
+   "value": 90.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

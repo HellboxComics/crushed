@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0410",
- "description": "Recovered from Napstered Dorm Room. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 VHS Tape (the unmarked one, from the back of the closet); 1 Burned CD (says ROAD TRIP in marker); 3 Digital Cameras (2 megapixels of truth); 1 Floppy Disk (save icon, but real). Weight 80.5 lb. We kept the important shit.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 1 Sneaker (light-up heel, dead); 1 Skateboard (one ollie, lifetime); 3 Spiral Notebooks (doodles in the margins); 2 Disposable Cameras (never developed). Weight 93.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0410.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.5,
+   "value": 93.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

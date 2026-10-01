@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0088",
- "description": "Recovered from Dad's Junk Drawer. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Boom Box (one speaker still believes); 3 Power Strips (daisy-chained into three more); 1 CRT Monitor (degaussed one last time); 3 Floppy Disks (DISK 2 of 7); 3 Cassette Tapes (someone's voicemail greeting). Weight 96.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Smoke-Filled Bowling Alley. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 3 Keyboards (Partial) (F, J and the crumbs); 2 TV Remotes (held together with tape); 3 Power Strips (overloaded on purpose); 3 Poker Chips (a stack of ambition). Weight 104.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0088.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 96.5,
+   "value": 104.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

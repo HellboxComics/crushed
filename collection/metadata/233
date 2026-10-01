@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0233",
- "description": "Recovered from The Mall Arcade. Smells like body spray cloud. Contents (partial): 2 TV Remotes (the volume button worn smooth); 1 Toy Slime (was in the hair of a sibling); 1 Portable CD Player (anti-skip lied); 1 Ball Mouse (rollers caked with 1998); 3 Floppy Disks (AOHell trial, 500 free hours). Weight 90.0 lb. Crushed it.",
+ "description": "Recovered from The Mall Arcade. Smells like body spray cloud. Contents (partial): 3 TV Remotes (held together with tape); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (track 7 skips); 2 Cheap Sunglasses (mall kiosk special); 2 Scratch Tickets ($2 for hope). Weight 99.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0233.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.0,
+   "value": 99.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

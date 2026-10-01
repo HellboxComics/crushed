@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0829",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Handheld Console (battery cover lost immediately); 1 Smartwatch (says STAND, does not); 3 Hand Sanitizers (half empty, half crusty); 2 Pizza Crusts (from a sleepover). Weight 35.5 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (found in the couch); 2 Shot Glasses (chipped rim); 3 Beer Cans (Natty Lightweight, 30-rack); 2 Smartphones (Venmoan request: 'gas money'); 1 Poker Chip (taken from a casino, small heist). Weight 47.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0829.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 47.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

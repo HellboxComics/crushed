@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0567",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Sneakers (light-up heel, dead); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Cheap Sunglasses (mall kiosk special); 3 Disposable Cameras (never developed); 1 Game Controller (stick drift since day one). Weight 33.9 lb. We kept the important shit.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Sneakers (left only); 1 USB Stick (contains homework_FINAL_final2.doc); 2 Poker Chips (taken from a casino, small heist); 1 Tissue Box (there was a reason it lived on the nightstand); 3 Burned CDs (burned at 1x, 4 hours). Weight 41.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0567.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.9,
+   "value": 41.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

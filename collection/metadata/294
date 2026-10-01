@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0294",
- "description": "Recovered from Ex's Garage. Smells like Crystal Peppy. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Disposable Cameras (27 exposures of a thumb); 2 Floppy Disks (says DO NOT FORMAT); 1 Toy Slime (stuck in the carpet); 2 Tissue Boxes (nearly empty). Weight 45.7 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Crystal Peppy. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Scratch Tickets ($2 for hope); 2 Disposable Cameras (never developed); 3 Spiral Notebooks (doodles in the margins); 1 Milk Caps (the slammer is chipped). Weight 60.5 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0294.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.7,
+   "value": 60.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

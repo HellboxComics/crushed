@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0127",
- "description": "Recovered from School Lost & Found. Smells like Jean Jacket. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 2 Centerfolds (staples removed, an attempt was made); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 Matchbooks (from a gentlemen's club, reportedly); 2 Foam Headphones (orange foam, allegedly). Weight 86.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from School Lost & Found. Smells like Jean Jacket. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 3 Roller Skates (toe stop worn to nothing); 3 Army Man Squads (melted with a magnifying glass); 3 Pizza Crusts (from a sleepover); 3 Centerfolds (left open to the wrong page). Weight 97.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0127.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.7,
+   "value": 97.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

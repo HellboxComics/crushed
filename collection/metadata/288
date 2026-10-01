@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0288",
- "description": "Recovered from Under the Bed. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 2 Disposable Cameras (never developed); 1 CRT Monitor (degaussed one last time); 1 Floppy Disk (Iomegalodon would have held it all); 3 Burned CDs (burned at 1x, 4 hours); 1 Magazine (read for the articles). Weight 72.9 lb. Contents may have settled.",
+ "description": "Recovered from Under the Bed. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 2 Disposable Cameras (never developed); 2 Pizza Crusts (found behind the couch); 3 AA Batteries (probably dead); 1 Portable CD Player (anti-skip lied); 2 Centerfolds (staples removed, an attempt was made). Weight 82.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0288.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.9,
+   "value": 82.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

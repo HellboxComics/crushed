@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0818",
- "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 2 Energy Drinks (tastes like a battery); 3 Soda Cans (shaken as a prank); 1 Game Controller (stick drift since day one); 2 TV Remotes (found in the couch); 3 Sneakers (left only). Weight 35.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 2 Energy Drinks (third one that night); 3 Disposable Cameras (never developed); 3 Soda Cans (flat); 2 Laptop Chargers (warm to the touch, somehow); 1 VR Headset (watched one (1) movie). Weight 41.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0818.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 41.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

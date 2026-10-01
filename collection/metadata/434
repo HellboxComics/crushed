@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0434",
- "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 1 Disposable Camera (never developed); 1 Keyboard (Partial) (F, J and the crumbs); 2 Pagers (last page: 911 (it was not)); 1 Foam Headphones (one ear works if you hold it). Weight 40.8 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like mall food court. Contents (partial): 1 Ball Mouse (ball removed as a prank); 2 Centerfolds (folded out, then folded back in a hurry); 3 Portable CD Players (45-second buffer, 2-second attention span); 2 TV Remotes (held together with tape); 2 Memory Cards (8MB, full). Weight 90.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0434.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.8,
+   "value": 90.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

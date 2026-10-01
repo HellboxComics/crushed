@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0171",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Joysticks (suction cups gave up); 1 VHS Tape (the unmarked one, from the back of the closet); 1 Cheap Sunglasses (one lens popped out); 1 Boom Box (one speaker still believes); 1 Roller Skate (toe stop worn to nothing). Weight 96.8 lb. Some assembly was removed.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Joysticks (suction cups gave up); 3 Power Strips (daisy-chained into three more); 1 Cheap Sunglasses (mall kiosk special); 1 CRT Monitor (screen burn-in reads LOADING); 3 Portable Tape Players (auto-reverse broke in 1991). Weight 112.5 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0171.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 96.8,
+   "value": 112.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

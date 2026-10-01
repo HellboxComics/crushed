@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0079",
- "description": "Recovered from The Roller Rink Coat Check. Smells like rink snack bar. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Calculators (solar panel covered by a sticker); 2 Army Man Squads (the one with the radio survived); 1 Spiral Notebook (note says 'check YES or NO'); 2 Floppy Disks (says DO NOT FORMAT). Weight 75.1 lb. Contents may have settled.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like rink snack bar. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Cheap Sunglasses (one lens popped out); 3 Scratch Tickets (not a winner); 3 Calculators (solar panel covered by a sticker); 3 Beer Cans (12 of 12). Weight 86.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0079.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.1,
+   "value": 86.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

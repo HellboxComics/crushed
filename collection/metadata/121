@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0121",
- "description": "Recovered from The Bachelor Pad. Smells like Cabbage Patch Plastic. Contents (partial): 1 TV Remote (held together with tape); 2 Shot Glasses (chipped rim); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Game Cartridge (blown into 400 times); 3 Portable Tape Players (auto-reverse broke in 1991). Weight 89.3 lb. Crushed it.",
+ "description": "Recovered from The Bachelor Pad. Smells like Cabbage Patch Plastic. Contents (partial): 1 TV Remote (held together with tape); 1 CRT Monitor (degaussed one last time); 2 Game Cartridges (rented from Blockbusted, never rewound); 1 Scratch Ticket (not a winner); 3 Film Canisters (holds one quarter). Weight 101.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0121.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.3,
+   "value": 101.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

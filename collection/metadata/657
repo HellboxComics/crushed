@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0657",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like blue raspberry. Contents (partial): 3 Flip Phones (snapped shut dramatically); 1 Jewel Case (hinge broken on arrival); 3 MP3 Players (shuffle picked the same song 6 times); 2 Dice (loaded, rumor says); 1 Digital Camera (2 megapixels of truth). Weight 29.5 lb. Contents may have settled.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like blue raspberry. Contents (partial): 3 Flip Phones (snapped shut dramatically); 2 Cheap Sunglasses (mall kiosk special); 2 Beer Cans (Milwaukee's Worst, on sale); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Soda Cans (New Koak, 79 days only). Weight 40.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0657.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.5,
+   "value": 40.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

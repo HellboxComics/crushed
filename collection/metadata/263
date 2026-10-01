@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0263",
- "description": "Recovered from The Mall Fountain. Smells like Grandma's couch. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Floppy Disks (DISK 2 of 7); 3 Slap Bracelets (cut someone, probably); 1 Toy Slime (stuck in the carpet). Weight 41.8 lb. Contents may have settled.",
+ "description": "Recovered from The Mall Fountain. Smells like Grandma's couch. Contents (partial): 1 9999-in-1 Handheld (9999 games, 4 real ones); 3 Pizza Crusts (from a sleepover); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Poker Chips (taken from a casino, small heist); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 54.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0263.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.8,
+   "value": 54.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

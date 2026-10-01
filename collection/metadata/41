@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0041",
- "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 1 TV Remote (held together with tape); 2 VHS Tapes (taped over a wedding); 2 Army Man Squads (melted with a magnifying glass); 2 Cassette Tapes (side B only); 1 No. 2 Pencil (sharpened to a nub). Weight 76.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Arcade Tokens. Contents (partial): 2 TV Remotes (found in the couch); 3 Film Canisters (undeveloped, forever); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Yo-Yos (string tied to a finger for 3 years). Weight 87.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0041.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.7,
+   "value": 87.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

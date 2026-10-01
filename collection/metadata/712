@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0712",
- "description": "Recovered from Grandma's Attic. Smells like cigarette in a jacket. Contents (partial): 1 Tablet (used once as a cutting board); 1 Tissue Box (nearly empty); 2 Power Strips (daisy-chained into three more); 2 USB Sticks (never ejected safely); 3 AA Batteries (Neveready, as advertised). Weight 37.5 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like cigarette in a jacket. Contents (partial): 3 Tablets (used once as a cutting board); 2 Dice (blown on for luck); 3 Laptop Chargers (fits nothing else in the house); 3 Disposable Vapes (mango, mostly); 2 Game Controllers (stick drift since day one). Weight 52.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0712.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.5,
+   "value": 52.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

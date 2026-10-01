@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0044",
- "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 3 Sneakers (smells like 1989); 2 Three-Ring Binders (velcro screams when opened); 2 Game Cartridges (rented from Blockbusted, never rewound); 1 Tissue Box (nearly empty); 1 Burned CD (coaster now). Weight 53.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like body spray cloud. Contents (partial): 3 Sneakers (light-up heel, dead); 2 Power Strips (overloaded on purpose); 1 Boom Box (one speaker still believes); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Cassette Tape (side B only). Weight 61.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0044.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.6,
+   "value": 61.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 48,
    "display_type": "number"
   }
  ]

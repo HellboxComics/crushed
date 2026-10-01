@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0518",
- "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 1 Digital Camera (2 megapixels of truth); 2 Pagers (clipped to jeans for status only); 1 No. 2 Pencil (never saw a scantron it liked); 1 Soda Can (shaken as a prank); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 75.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Buddy's Basement. Smells like new plastic. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 MP3 Player (shuffle picked the same song 6 times); 2 Ball Mice (ball removed as a prank); 3 Floppy Disks (Iomegalodon would have held it all); 1 Scratch Ticket (not a winner). Weight 90.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0518.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.2,
+   "value": 90.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

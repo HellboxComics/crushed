@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0604",
- "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (third one that night); 3 Game Controllers (stick drift since day one); 1 Digital Camera (2 megapixels of truth); 3 Beer Cans (12 of 12); 3 Clear Lighters (for incense, obviously). Weight 25.1 lb. Contents may have settled.",
+ "description": "Recovered from A Hot Topic-ish Bag. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (Moonster, the whole case); 2 Burned CDs (says ROAD TRIP in marker); 3 AA Batteries (mixed old and new, like animals); 1 VHS Tape (the unmarked one, from the back of the closet); 1 Disposable Camera (27 exposures of a thumb). Weight 36.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0604.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.1,
+   "value": 36.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

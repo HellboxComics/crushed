@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0141",
- "description": "Recovered from Dad's Camaro Trunk. Smells like blue raspberry. Contents (partial): 3 TV Remotes (found in the couch); 2 Cassette Tapes (side B only); 1 Floppy Disk (save icon, but real); 1 Dice (snake eyes, twice); 1 No. 2 Pencil (never saw a scantron it liked). Weight 81.7 lb. Crushed it.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like blue raspberry. Contents (partial): 3 TV Remotes (held together with tape); 3 Power Strips (daisy-chained into three more); 1 Sneaker (light-up heel, dead); 1 Poker Chip (taken from a casino, small heist); 1 Metal Lunchbox (the smell stays). Weight 92.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0141.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.7,
+   "value": 92.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

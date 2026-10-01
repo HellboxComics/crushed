@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0440",
- "description": "Recovered from Estate of a Collector. Smells like Ballz Energy. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 1 Scratch Ticket ($2 for hope); 2 Film Canisters (undeveloped, forever); 1 Magazine (for the interviews, obviously); 1 CRT Monitor (weighs more than the desk). Weight 86.9 lb. Crushed it.",
+ "description": "Recovered from Estate of a Collector. Smells like Ballz Energy. Contents (partial): 1 Sneaker (smells like 1989); 3 Game Controllers (stick drift since day one); 2 Tissue Boxes (one for every mood); 1 Toy Slime (stuck in the carpet); 2 Digital Cameras (2 megapixels of truth). Weight 96.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0440.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.9,
+   "value": 96.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

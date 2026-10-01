@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0757",
- "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Disposable Vapes (zero nicotine, allegedly); 2 Game Controllers (thrown during a boss fight); 1 Fidget Spinner (bearing went missing); 3 Laptop Chargers (fits nothing else in the house); 3 Beer Cans (PBJ, the hipster one). Weight 40.8 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like Grandma's couch. Contents (partial): 3 Disposable Vapes (Puff Barf, Banana Regret flavor); 3 Energy Drinks (Jolted, twice the caffeine); 2 Fidget Spinners (spins for four seconds, like the trend); 3 Glow Sticks (cracked at a school dance); 3 Sneakers (worn to one (1) very bad decision). Weight 53.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0757.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.8,
+   "value": 53.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

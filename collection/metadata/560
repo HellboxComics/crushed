@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0560",
- "description": "Recovered from Behind the Couch. Smells like Red Bullish and Regret. Contents (partial): 1 TV Remote (held together with tape); 3 Beer Cans (12 of 12); 3 Soda Cans (flat); 3 Handheld Consoles (battery cover lost immediately); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 28.9 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Couch. Smells like Red Bullish and Regret. Contents (partial): 1 TV Remote (the volume button worn smooth); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Poker Chips (never cashed out); 2 No. 2 Pencils (never saw a scantron it liked); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 37.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0560.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.9,
+   "value": 37.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

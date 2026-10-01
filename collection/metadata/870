@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0870",
- "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Sneakers (was in the dryer); 1 No. 2 Pencil (chewed); 1 Pizza Crust (found behind the couch); 2 Tablets (bought for the kids, taken back by dad). Weight 39.0 lb. Contents may have settled.",
+ "description": "Recovered from Mom's Minivan. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (stick drift since day one); 2 Glow Sticks (still glowing a little, somehow); 1 Matchbook (matches missing, reasons unclear); 2 Disposable Cameras (27 exposures of a thumb); 3 Sneakers (was in the dryer). Weight 46.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0870.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.0,
+   "value": 46.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

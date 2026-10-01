@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0242",
- "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 2 Ball Mice (cord chewed by a dog); 1 Portable Tape Player (belt clip snapped at a bus stop); 1 AA Batteries (Durasmell, lasted till Christmas noon); 1 Boom Box (took 10 D batteries); 1 No. 2 Pencil (chewed). Weight 86.0 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 3 Ball Mice (cord chewed by a dog); 1 VHS Tape (taped off HBOH, commercials and all); 3 Tissue Boxes (nearly empty); 1 Disposable Camera (never developed); 2 9999-in-1 Handhelds (HI SCORE 00000). Weight 94.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0242.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.0,
+   "value": 94.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0186",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Sneakers (smells like 1989); 2 Game Cartridges (save file erased by a sibling); 1 Matchbook (matches missing, reasons unclear); 1 Floppy Disk (AOHell trial, 500 free hours); 1 Bull (dead). Weight 37.4 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 1 Cassette Tape (rewound with a pencil); 1 Matchbook (from a gentlemen's club, reportedly); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Shot Glass (chipped rim); 1 Bull (dead). Weight 45.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0186.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.4,
+   "value": 45.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0030",
- "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like rink snack bar. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 1 Poker Chip (never cashed out); 1 Cassette Tape (side B only); 2 Calculators (spelled BOOBIES upside down); 2 Roller Skates (the rink smell is still in there). Weight 86.8 lb. We kept the important shit.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like rink snack bar. Contents (partial): 3 Puzzle Cubes (two stickers peeled); 1 Shot Glass (chipped rim); 3 Calculators (solar panel covered by a sticker); 2 Magazines (found in a dad's truck); 2 Cassette Tapes (rewound with a pencil). Weight 97.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0030.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.8,
+   "value": 97.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

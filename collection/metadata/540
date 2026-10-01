@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0540",
- "description": "Recovered from Dad's Junk Drawer. Smells like Red Bullish and Regret. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 2 Clear Lighters (out of fluid); 2 Spiral Notebooks (doodles in the margins); 1 Pizza Crust (still better than most portfolios); 1 Jewel Case (insert is from a different album). Weight 34.4 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Red Bullish and Regret. Contents (partial): 3 Digital Cameras (memory full, 14 photos); 1 Jewel Case (insert is from a different album); 2 Power Strips (daisy-chained into three more); 2 Game Controllers (stick drift since day one); 3 Clear Lighters (out of fluid). Weight 42.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0540.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.4,
+   "value": 42.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

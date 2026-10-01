@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0303",
- "description": "Recovered from Lollapaloser Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 16-Bit Controller (cord pulled the console off the shelf); 1 AA Batteries (licked to test); 2 Pagers (last page: 143); 3 Cheap Sunglasses (one lens popped out); 1 Pizza Crust (from a sleepover). Weight 45.5 lb. Contents may have settled.",
+ "description": "Recovered from Lollapaloser Lost & Found. Smells like hot dust on a CRT. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 1 Yo-Yo (string tied to a finger for 3 years); 1 Poker Chip (never cashed out); 1 Centerfold (left open to the wrong page); 2 Tissue Boxes (nearly empty). Weight 54.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0303.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.5,
+   "value": 54.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

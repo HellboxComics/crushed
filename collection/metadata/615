@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0615",
- "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 Spiral Notebook (doodles in the margins); 2 Laptop Chargers (fits nothing else in the house); 1 Energy Drink (Moonster, the whole case); 1 Tiny Red Candle (one of many). Weight 36.6 lb. Crushed it.",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like new plastic. Contents (partial): 2 Tissue Boxes (one for every mood); 2 USB Sticks (never ejected safely); 3 Power Strips (overloaded on purpose); 3 Laptop Chargers (warm to the touch, somehow); 3 Shot Glasses (from a trip to Vegas); 1 Tiny Red Candle (one of many). Weight 49.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0615.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.6,
+   "value": 49.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

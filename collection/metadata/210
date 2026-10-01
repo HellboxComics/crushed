@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0210",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 1 Ball Mouse (cord chewed by a dog); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Calculators (spelled BOOBIES upside down); 3 Spiral Notebooks (spiral unwound halfway); 1 Burned CD (track 7 skips). Weight 52.3 lb. Crushed it.",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Floppy Disks (DISK 2 of 7); 1 Yo-Yo (string tied to a finger for 3 years); 1 Pager (last page from a number nobody called back); 1 Beer Can (Natty Lightweight, 30-rack). Weight 60.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0210.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 52.3,
+   "value": 60.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

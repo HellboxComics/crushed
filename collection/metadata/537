@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0537",
- "description": "Recovered from Grandma's Attic. Smells like Myspace Glitter. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Burned CDs (coaster now); 3 Magazines (read for the articles); 2 Scratch Tickets (scratched with a house key); 1 Cheap Sunglasses (one lens popped out). Weight 25.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like Myspace Glitter. Contents (partial): 3 Game Controllers (stick drift since day one); 3 AA Batteries (Neveready, as advertised); 3 Burned CDs (says ROAD TRIP in marker); 3 Magazines (the staples are doing the work); 3 MP3 Players (128MB, 30 songs, 29 skipped). Weight 39.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0537.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.8,
+   "value": 39.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

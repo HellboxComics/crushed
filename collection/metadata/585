@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0585",
- "description": "Recovered from Estate of a Collector. Smells like rink snack bar. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Handheld Console (screen scratched from a pocket with keys); 2 Power Strips (overloaded on purpose); 2 Disposable Cameras (27 exposures of a thumb); 2 Burned CDs (says ROAD TRIP in marker). Weight 29.7 lb. We kept the important shit.",
+ "description": "Recovered from Estate of a Collector. Smells like rink snack bar. Contents (partial): 3 Flip Phones (12 texts left this month); 3 Power Strips (daisy-chained into three more); 2 Pizza Crusts (from a sleepover); 3 USB Sticks (never ejected safely); 3 Game Controllers (stick drift since day one). Weight 40.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0585.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.7,
+   "value": 40.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0884",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 2 Tablets (bought for the kids, taken back by dad); 1 Energy Drink (exam week casualty); 3 No. 2 Pencils (chewed); 3 Beer Cans (warm, sadly); 1 Burned CD (says ROAD TRIP in marker). Weight 40.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 3 Tablets (used once as a cutting board); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Drone (40 seconds of freedom); 3 No. 2 Pencils (sharpened to a nub); 3 Sneakers (left only). Weight 52.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0884.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.9,
+   "value": 52.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

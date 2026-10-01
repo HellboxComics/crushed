@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0555",
- "description": "Recovered from A Blackberried Office Drawer. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Soda Cans (tab kept for charity); 2 Shot Glasses (souvenir of a night nobody recalls); 3 AA Batteries (probably dead); 3 Spiral Notebooks (spiral unwound halfway); 1 Cheap Sunglasses (one lens popped out). Weight 35.9 lb. Contents may have settled.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Soda Cans (tab kept for charity); 3 Handheld Consoles (screen scratched from a pocket with keys); 2 Shot Glasses (chipped rim); 3 Beer Cans (12 of 12); 3 Spiral Notebooks (spiral unwound halfway). Weight 44.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0555.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.9,
+   "value": 44.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

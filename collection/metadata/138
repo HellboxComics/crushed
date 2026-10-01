@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0138",
- "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Arcade Tokens. Contents (partial): 1 TV Remote (the volume button worn smooth); 3 Army Man Squads (the one with the radio survived); 1 Magazine (read for the articles); 1 Spiral Notebook (doodles in the margins); 1 Cheap Sunglasses (one lens popped out). Weight 46.8 lb. Crushed it.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Arcade Tokens. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 AA Batteries (probably dead); 1 Dice (snake eyes, twice); 1 Magazine (the staples are doing the work); 3 Army Man Squads (melted with a magnifying glass). Weight 65.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0138.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.8,
+   "value": 65.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

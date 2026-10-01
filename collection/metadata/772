@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0772: GREEN BEER",
- "description": "Everybody was Irish for one day. The beads, the hats, the cups and the buttons stayed. Recovered from An Irish Pub, Allegedly. Smells like green beer. Contents (partial): 6 Green Bowlers (lost at noon); 10 Red Party Cups (beer pong veteran); 8 Beer Cans (12 of 12); 10 Pin Buttons (KISS ME, sort of); 8 Gold Coins (bought the top). Weight 16.8 lb. No refunds. No returns. No explanation.",
+ "description": "Everybody was Irish for one day. The beads, the hats, the cups and the buttons stayed. Recovered from An Irish Pub, Allegedly. Smells like green beer. Contents (partial): 6 Green Bowlers (lost at noon); 10 Red Party Cups (beer pong veteran); 8 Beer Cans (12 of 12); 10 Pin Buttons (KISS ME, sort of); 8 Gold Coins (bought the top). Weight 18.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0772.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 16.8,
+   "value": 18.4,
    "display_type": "number"
   },
   {

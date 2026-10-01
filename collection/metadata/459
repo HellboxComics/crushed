@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0459",
- "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Burned CD (track 7 skips); 1 Skate Wheel (flat spot from a power slide); 1 Pager (clipped to jeans for status only); 2 Memory Cards (corrupted during a birthday). Weight 39.8 lb. Some assembly was removed.",
+ "description": "Recovered from A LAN Party Basement. Smells like Frosted Tips Gel. Contents (partial): 2 Brick Phones (snake high score intact); 1 USB Stick (never ejected safely); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Film Canisters (undeveloped, forever); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 93.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0459.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.8,
+   "value": 93.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

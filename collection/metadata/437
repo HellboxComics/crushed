@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0437",
- "description": "Recovered from An AOHell CD Pile. Smells like Hot Pentium. Contents (partial): 1 TV Remote (held together with tape); 3 Magazines (found in a dad's truck); 1 Spiral Notebook (doodles in the margins); 1 CRT Monitor (screen burn-in reads LOADING); 1 Dice (blown on for luck). Weight 71.9 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Hot Pentium. Contents (partial): 1 TV Remote (the volume button worn smooth); 1 Jewel Case (hinge broken on arrival); 1 Sneaker (untied since 1989); 1 Cassette Tape (a mix for someone who never listened); 2 Burned CDs (track 7 skips). Weight 86.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0437.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.9,
+   "value": 86.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0500",
- "description": "Recovered from An AOHell CD Pile. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Brick Phone (faceplate swapped 4 times); 1 Jewel Case (hinge broken on arrival); 2 Power Strips (overloaded on purpose); 2 Flip Phones (ringtone composed by hand); 2 Game Controllers (stick drift since day one); 1 Paper Hand (sold at the bottom). Weight 84.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Spencer's-ish Gifts Incense. Contents (partial): 3 Brick Phones (snake high score intact); 1 Skateboard (one ollie, lifetime); 3 Cassette Tapes (labeled MIX 4 U); 1 Keyboard (Partial) (F, J and the crumbs); 3 Virtual Pets (fed 0 times); 1 Paper Hand (sold at the bottom). Weight 96.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0500.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 96.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

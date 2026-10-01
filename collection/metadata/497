@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0497",
- "description": "Recovered from A Buddy's Basement. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Cassette Tapes (a mix for someone who never listened); 1 AA Batteries (Neveready, as advertised); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Burned CDs (burned at 1x, 4 hours). Weight 79.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Buddy's Basement. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Cassette Tapes (someone's voicemail greeting); 2 Pizza Crusts (from a sleepover); 3 Skate Wheels (rolled into a storm drain once); 3 TV Remotes (held together with tape). Weight 89.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0497.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.3,
+   "value": 89.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

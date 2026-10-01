@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0512",
- "description": "Recovered from The Mall Fountain. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 No. 2 Pencil (never saw a scantron it liked); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (BE KIND REWIND (they did not)); 1 Poker Chip (taken from a casino, small heist). Weight 74.1 lb. We kept the important shit.",
+ "description": "Recovered from The Mall Fountain. Smells like scratch-n-sniff sticker. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Webcam (240p of pure confidence); 2 Game Controllers (stick drift since day one); 3 Scratch Tickets (not a winner); 3 Beer Cans (last one in the fridge). Weight 86.6 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0512.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.1,
+   "value": 86.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

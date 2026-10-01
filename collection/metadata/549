@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0549",
- "description": "Recovered from Garage Sale Free Bin. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Energy Drinks (exam week casualty); 3 Beer Cans (12 of 12); 1 Memory Card (8MB, full); 1 Cheap Sunglasses (one lens popped out); 1 Sneaker (worn to one (1) very bad decision). Weight 30.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Energy Drinks (Jolted, twice the caffeine); 2 Glow Sticks (still glowing a little, somehow); 3 Jewel Cases (hinge broken on arrival); 3 AA Batteries (probably dead); 2 Power Strips (overloaded on purpose). Weight 42.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0549.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.6,
+   "value": 42.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

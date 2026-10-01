@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0808",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 2 Power Banks (dead when needed); 2 Tablets (bought for the kids, taken back by dad); 3 Soda Cans (New Koak, 79 days only); 2 Clear Lighters (borrowed in 1997, never returned); 1 Smartphone (Instagrampa open, 900 unread). Weight 42.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 2 Power Banks (10000 mAh of dead weight); 1 VR Headset (watched one (1) movie); 1 Hand Sanitizer (was in every pocket in 2020); 3 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (third one that night). Weight 55.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0808.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.4,
+   "value": 55.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

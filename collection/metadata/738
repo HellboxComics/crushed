@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0738",
- "description": "Recovered from Back of the Closet. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 Power Bank (at 4%, like all of them); 3 Game Controllers (stick drift since day one); 1 Bluetooth Speaker (played one song, too loud); 3 Pizza Crusts (from a sleepover). Weight 34.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Sneakers (was in the dryer); 3 Game Controllers (thrown during a boss fight); 3 Shot Glasses (from a trip to Vegas); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Poker Chips (taken from a casino, small heist). Weight 48.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0738.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 48.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

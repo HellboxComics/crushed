@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0471",
- "description": "Recovered from Napstered Dorm Room. Smells like Grandma's couch. Contents (partial): 1 Disposable Camera (never developed); 2 Matchbooks (matches missing, reasons unclear); 2 Shot Glasses (from a trip to Vegas); 3 Soda Cans (New Koak, 79 days only); 3 Power Strips (overloaded on purpose). Weight 33.0 lb. Contents may have settled.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Grandma's couch. Contents (partial): 1 Disposable Camera (never developed); 1 Corded Phone (cord stretched to the bathroom); 1 TV Remote (held together with tape); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 1 Flip Phone (12 texts left this month). Weight 44.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0471.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.0,
+   "value": 44.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

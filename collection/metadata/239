@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0239",
- "description": "Recovered from Behind the Bar. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Magazine (the staples are doing the work); 2 Dice (loaded, rumor says); 2 Power Strips (daisy-chained into three more); 3 Beer Cans (crushed on a forehead); 2 Yo-Yos (walked the dog one time). Weight 75.7 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Bar. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 2 Magazines (for the interviews, obviously); 1 Matchbook (matches missing, reasons unclear); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Power Strips (daisy-chained into three more); 2 Burned CDs (coaster now). Weight 93.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0239.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.7,
+   "value": 93.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

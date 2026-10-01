@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0156",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 Calculator (spelled BOOBIES upside down); 2 Army Man Squads (melted with a magnifying glass); 2 Dice (blown on for luck); 3 Floppy Disks (save icon, but real); 3 AA Batteries (Neveready, as advertised). Weight 45.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Film Canisters (undeveloped, forever); 3 Sneakers (worn to one (1) very bad decision); 1 Cheap Sunglasses (mall kiosk special); 2 Cassette Tapes (side B only). Weight 98.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0156.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.2,
+   "value": 98.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0780",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 2 Sneakers (was in the dryer); 2 Spiral Notebooks (spiral unwound halfway); 1 Shot Glass (from a trip to Vegas); 2 TV Remotes (found in the couch); 3 Bluetooth Speakers (paired with the wrong phone). Weight 41.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Sneakers (untied since 1989); 2 Pizza Crusts (from a sleepover); 1 Face Mask (one of 400 in a coat pocket); 2 Power Banks (dead when needed); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 52.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0780.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.6,
+   "value": 52.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

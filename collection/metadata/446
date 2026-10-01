@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0446",
- "description": "Recovered from The Y2K Bunker. Smells like cigarette in a jacket. Contents (partial): 1 Sneaker (light-up heel, dead); 3 Spiral Notebooks (spiral unwound halfway); 2 AA Batteries (licked to test); 3 Foam Headphones (orange foam, allegedly); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 37.6 lb. Some assembly was removed.",
+ "description": "Recovered from The Y2K Bunker. Smells like cigarette in a jacket. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 1 No. 2 Pencil (chewed); 1 Corded Phone (cord stretched to the bathroom); 2 Game Controllers (stick drift since day one); 3 Virtual Pets (died during math class). Weight 48.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0446.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.6,
+   "value": 48.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

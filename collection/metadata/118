@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0118",
- "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 1 Magazine (read for the articles); 2 Yo-Yos (walked the dog one time); 2 Spiral Notebooks (doodles in the margins); 2 Roller Skates (toe stop worn to nothing); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 95.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Buddy's Basement. Smells like cigarette in a jacket. Contents (partial): 1 Magazine (for the interviews, obviously); 1 TV Remote (the volume button worn smooth); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Soda Cans (flat); 3 No. 2 Pencils (sharpened to a nub). Weight 106.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0118.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 95.7,
+   "value": 106.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

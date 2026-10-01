@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0461",
- "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 No. 2 Pencil (sharpened to a nub); 2 VHS Tapes (taped off HBOH, commercials and all); 2 AA Batteries (probably dead); 2 Pagers (last page: 143). Weight 88.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like mall food court. Contents (partial): 1 CRT Monitor (still warm); 3 TV Remotes (held together with tape); 2 Pagers (last page from a number nobody called back); 2 VHS Tapes (BE KIND REWIND (they did not)); 2 Webcams (240p of pure confidence). Weight 95.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0461.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 95.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

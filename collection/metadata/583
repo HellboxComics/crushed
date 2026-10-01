@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0583",
- "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Tissue Boxes (one for every mood); 3 Pizza Crusts (petrified); 1 TV Remote (found in the couch); 1 Pager (last page: 911 (it was not)). Weight 25.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Disposable Camera (27 exposures of a thumb); 2 Burned CDs (says ROAD TRIP in marker); 1 Cassette Tape (Maxhell, the one that blew your hair back). Weight 31.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0583.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.0,
+   "value": 31.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

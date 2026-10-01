@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0029",
- "description": "Recovered from A Tupperware-ish Party. Smells like hot dust on a CRT. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Corded Phone (was on the line when mom picked up); 3 Army Man Squads (the one with the radio survived); 2 Soda Cans (flat); 3 TV Remotes (the volume button worn smooth). Weight 47.5 lb. Contents may have settled.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like hot dust on a CRT. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Yo-Yos (string tied to a finger for 3 years); 3 TV Remotes (held together with tape); 1 Game Cartridge (save file erased by a sibling); 2 Calculators (solar panel covered by a sticker). Weight 54.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0029.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.5,
+   "value": 54.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

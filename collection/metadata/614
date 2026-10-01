@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0614",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like new plastic. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 3 Glow Sticks (cracked at a school dance); 2 No. 2 Pencils (sharpened to a nub); 3 TV Remotes (the volume button worn smooth); 2 Magazines (read for the articles). Weight 33.1 lb. Still heavier than it looks.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like new plastic. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 1 Clear Lighter (borrowed in 1997, never returned); 3 TV Remotes (held together with tape); 2 No. 2 Pencils (chewed); 1 Matchbook (from a gentlemen's club, reportedly). Weight 42.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0614.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 42.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

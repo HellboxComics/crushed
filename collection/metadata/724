@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0724",
- "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 2 Hand Sanitizers (was in every pocket in 2020); 2 No. 2 Pencils (sharpened to a nub); 3 AA Batteries (licked to test); 3 Earbud Cases (both buds gone, case still charges nothing); 2 Tissue Boxes (nearly empty). Weight 39.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Mom's Minivan. Smells like Grandma's couch. Contents (partial): 2 Hand Sanitizers (60% alcohol, 40% anxiety); 3 Earbud Cases (both buds gone, case still charges nothing); 1 Fidget Spinner (banned by the school); 3 Game Controllers (stick drift since day one); 3 Handheld Consoles (screen scratched from a pocket with keys). Weight 43.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0724.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.0,
+   "value": 43.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

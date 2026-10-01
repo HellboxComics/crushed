@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0595: LIGHT THE FUSE",
- "description": "Bought across the state line. Lit in a field. Half of them actually went off. Recovered from A Field Behind the Gas Station. Smells like gunpowder and lighter fluid. Contents (partial): 22 Fireworks (bought across the state line); 3 Cheap Sunglasses (mall kiosk special); 6 Beer Cans (12 of 12); 8 Red Party Cups (line two means a shot); 8 Little Flags (faded in one summer). Weight 33.0 lb. Nobody made you keep this.",
+ "description": "Bought across the state line. Lit in a field. Half of them actually went off. Recovered from A Field Behind the Gas Station. Smells like gunpowder and lighter fluid. Contents (partial): 22 Fireworks (bought across the state line); 3 Cheap Sunglasses (mall kiosk special); 6 Beer Cans (12 of 12); 8 Red Party Cups (line two means a shot); 8 Little Flags (faded in one summer). Weight 33.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0595.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.0,
+   "value": 33.7,
    "display_type": "number"
   },
   {

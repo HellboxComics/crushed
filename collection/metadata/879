@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0879",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like mall food court. Contents (partial): 1 Drone (over the neighbor's fence); 1 Laptop Charger (fits nothing else in the house); 1 Tissue Box (there was a reason it lived on the nightstand); 3 Soda Cans (Surj, the can that started a fight); 1 TV Remote (found in the couch). Weight 30.3 lb. Still heavier than it looks.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like mall food court. Contents (partial): 1 Drone (flew once, into a tree); 2 No. 2 Pencils (sharpened to a nub); 2 Tissue Boxes (nearly empty); 2 Power Strips (daisy-chained into three more); 2 Laptop Chargers (fits nothing else in the house). Weight 43.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0879.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.3,
+   "value": 43.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

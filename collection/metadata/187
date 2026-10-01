@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0187",
- "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 2 VHS Tapes (label says DO NOT TAPE OVER); 1 Cassette Tape (a mix for someone who never listened); 1 Corded Phone (someone is still on hold); 3 Game Cartridges (rented from Blockbusted, never rewound). Weight 35.1 lb. We kept the important shit.",
+ "description": "Recovered from Back of the Closet. Smells like Vegas carpet. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 2 Sneakers (was in the dryer); 1 Yo-Yo (walked the dog one time); 3 Floppy Disks (save icon, but real); 3 VHS Tapes (the unmarked one, from the back of the closet). Weight 59.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0187.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.1,
+   "value": 59.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

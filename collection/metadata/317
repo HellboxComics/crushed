@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0317",
- "description": "Recovered from Vegas Hotel Room. Smells like cheap cologne. Contents (partial): 1 Boom Box (took 10 D batteries); 1 Power Strip (overloaded on purpose); 1 Shot Glass (from a trip to Vegas); 1 Ball Mouse (ball removed as a prank); 2 Keyboards (Partial) (F, J and the crumbs). Weight 90.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Vegas Hotel Room. Smells like cheap cologne. Contents (partial): 1 Boom Box (took 10 D batteries); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Floppy Disks (save icon, but real); 1 Calculator (solar panel covered by a sticker); 2 9999-in-1 Handhelds (HI SCORE 00000). Weight 98.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0317.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.1,
+   "value": 98.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

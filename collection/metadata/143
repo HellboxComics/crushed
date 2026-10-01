@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0143",
- "description": "Recovered from Behind the Couch. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 3 Tissue Boxes (nearly empty); 1 Pizza Crust (still better than most portfolios); 3 Game Cartridges (save file erased by a sibling); 1 Spiral Notebook (spiral unwound halfway). Weight 85.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Couch. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Roller Skates (the rink smell is still in there); 3 Game Cartridges (blown into 400 times); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Floppy Disks (DISK 2 of 7). Weight 105.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0143.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.3,
+   "value": 105.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

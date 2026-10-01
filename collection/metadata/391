@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0391",
- "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Power Strip (daisy-chained into three more); 1 Digital Camera (memory full, 14 photos); 1 Skateboard (one ollie, lifetime); 1 CRT Monitor (still warm). Weight 78.8 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like new plastic. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Sneakers (worn to one (1) very bad decision); 3 Webcams (240p of pure confidence); 1 CRT Monitor (weighs more than the desk); 3 Burned CDs (coaster now). Weight 88.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0391.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.8,
+   "value": 88.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

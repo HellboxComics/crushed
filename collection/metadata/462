@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0462",
- "description": "Recovered from Napstered Dorm Room. Smells like mall food court. Contents (partial): 3 Game Controllers (thrown during a boss fight); 3 Film Canisters (holds one quarter); 3 AA Batteries (licked to test); 1 Shot Glass (souvenir of a night nobody recalls); 1 Skateboard (griptape ate a pair of jeans). Weight 80.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Napstered Dorm Room. Smells like mall food court. Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Power Strip (overloaded on purpose); 3 Spiral Notebooks (doodles in the margins); 3 Beer Cans (12 of 12); 1 Skate Wheel (flat spot from a power slide). Weight 92.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0462.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.2,
+   "value": 92.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

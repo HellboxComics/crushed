@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0409",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like gym bag, forgotten. Contents (partial): 2 Sneakers (smells like 1989); 1 Foam Headphones (orange foam, allegedly); 2 Soda Cans (flat); 1 Keyboard (Partial) (F, J and the crumbs); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 91.5 lb. Crushed it.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like gym bag, forgotten. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Soda Cans (flat); 2 Magazines (found in a dad's truck); 2 MP3 Players (shuffle picked the same song 6 times); 3 Film Canisters (holds one quarter). Weight 100.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0409.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.5,
+   "value": 100.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

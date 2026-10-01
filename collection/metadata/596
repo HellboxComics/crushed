@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0596",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Red Bullish and Regret. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Clear Lighters (for incense, obviously); 2 TV Remotes (held together with tape); 2 Poker Chips (never cashed out); 3 Spiral Notebooks (spiral unwound halfway). Weight 31.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Red Bullish and Regret. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Digital Camera (memory full, 14 photos); 2 AA Batteries (licked to test); 1 Power Strip (overloaded on purpose); 3 TV Remotes (the volume button worn smooth). Weight 39.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0596.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 39.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

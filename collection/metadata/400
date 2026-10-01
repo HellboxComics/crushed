@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0400",
- "description": "Recovered from Under the Bed. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Webcam (pointed at the ceiling forever); 1 AA Batteries (Neveready, as advertised); 1 Power Strip (daisy-chained into three more); 1 Clear Lighter (for incense, obviously); 2 Portable CD Players (45-second buffer, 2-second attention span). Weight 72.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Y2K Bunker Canned Food. Contents (partial): 3 Webcams (pointed at the ceiling forever); 2 Ball Mice (ball removed as a prank); 1 Spiral Notebook (spiral unwound halfway); 2 TV Remotes (found in the couch); 1 Matchbook (from a gentlemen's club, reportedly). Weight 80.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0400.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.8,
+   "value": 80.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

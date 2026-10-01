@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0093",
- "description": "Recovered from A Buddy's Basement. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Magazines (found in a dad's truck); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Beer Cans (PBJ, the hipster one); 2 Cassette Tapes (rewound with a pencil). Weight 82.0 lb. Nobody made you keep this.",
+ "description": "Recovered from A Buddy's Basement. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Magazines (for the interviews, obviously); 3 Beer Cans (Milwaukee's Worst, on sale); 3 Pizza Crusts (found behind the couch); 2 Soda Cans (tab kept for charity); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 93.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0093.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Finish",
-   "value": "BONE"
+   "value": "CHROME"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.0,
+   "value": 93.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

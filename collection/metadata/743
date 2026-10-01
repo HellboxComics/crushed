@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0743",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Earbud Cases (one bud present); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Cheap Sunglasses (one lens popped out); 2 Selfie Sticks (mid-trip, mid-ocean); 3 TV Remotes (held together with tape). Weight 35.4 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Earbud Cases (both buds gone, case still charges nothing); 3 Bluetooth Speakers (played one song, too loud); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Pizza Crusts (from a sleepover); 1 Smartphone (cracked in the first week). Weight 48.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0743.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.4,
+   "value": 48.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

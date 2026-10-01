@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0004: CLAY DAY",
- "description": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 7 Clay Bulls (thumbprints still in the horns); 2 Clay Cleavers (the butcher's, allegedly); 6 Clay Pigs (snout pressed on with one thumb); 3 Clay Coins (stamped with a thumbnail); 6 Clay Bears (shades on, thriving). Weight 40.3 lb. Handle with both hands.",
+ "description": "Bulls, bears, pigs and frogs, hats and shades, fresh cuts and fresh clay. Fingerprints included. Then the crusher. Recovered from A Desk, Mid-Pump. Smells like warm plasticine. Contents (partial): 7 Clay Bulls (thumbprints still in the horns); 2 Clay Cleavers (the butcher's, allegedly); 6 Clay Pigs (snout pressed on with one thumb); 3 Clay Coins (stamped with a thumbnail); 6 Clay Bears (shades on, thriving). Weight 41.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0837.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.3,
+   "value": 41.1,
    "display_type": "number"
   },
   {

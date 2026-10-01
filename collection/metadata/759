@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0759",
- "description": "Recovered from Dad's Junk Drawer. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Game Controllers (thrown during a boss fight); 1 VR Headset (watched one (1) movie); 2 Power Strips (daisy-chained into three more); 2 TV Remotes (held together with tape); 1 Face Mask (worn below the nose). Weight 39.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Digital Cameras (2 megapixels of truth); 3 USB Sticks (never ejected safely). Weight 48.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0759.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.0,
+   "value": 48.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

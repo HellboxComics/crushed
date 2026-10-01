@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0530",
- "description": "Recovered from A Buddy's Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Skateboard (one ollie, lifetime); 1 Floppy Disk (save icon, but real); 2 VHS Tapes (label says DO NOT TAPE OVER); 3 Cassette Tapes (labeled MIX 4 U). Weight 48.8 lb. Handle with both hands.",
+ "description": "Recovered from A Buddy's Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Corded Phone (someone is still on hold); 2 No. 2 Pencils (chewed); 2 Virtual Pets (reincarnated 40 times); 2 Power Strips (overloaded on purpose); 1 Matchbook (matches missing, reasons unclear). Weight 57.6 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0530.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.8,
+   "value": 57.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

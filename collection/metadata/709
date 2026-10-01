@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0709",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Digital Camera (memory full, 14 photos); 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Sneaker (left only); 2 Power Strips (daisy-chained into three more); 3 Dice (loaded, rumor says). Weight 32.8 lb. Some assembly was removed.",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 1 Digital Camera (2 megapixels of truth); 2 No. 2 Pencils (sharpened to a nub); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Soda Can (tab kept for charity); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 40.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0709.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.8,
+   "value": 40.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

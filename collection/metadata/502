@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0502",
- "description": "Recovered from Storage Unit (Auctioned). Smells like cheap cologne. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Pizza Crusts (petrified); 2 Poker Chips (taken from a casino, small heist); 2 No. 2 Pencils (sharpened to a nub); 3 Skate Wheels (flat spot from a power slide). Weight 32.0 lb. Contents may have settled.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like cheap cologne. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 TV Remote (found in the couch); 3 Cheap Sunglasses (one lens popped out); 1 Yo-Yo (string tied to a finger for 3 years); 3 Disposable Cameras (27 exposures of a thumb). Weight 41.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0502.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.0,
+   "value": 41.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

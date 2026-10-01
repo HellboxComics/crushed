@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0655",
- "description": "Recovered from Behind the Bar. Smells like cheap cologne. Contents (partial): 2 Poker Chips (taken from a casino, small heist); 1 Clear Lighter (out of fluid); 1 Selfie Stick (banned at the museum); 2 Power Strips (daisy-chained into three more); 3 Flip Phones (12 texts left this month). Weight 36.0 lb. Some assembly was removed.",
+ "description": "Recovered from Behind the Bar. Smells like cheap cologne. Contents (partial): 3 Poker Chips (a stack of ambition); 2 USB Sticks (never ejected safely); 2 Clear Lighters (borrowed in 1997, never returned); 3 TV Remotes (held together with tape); 2 Digital Cameras (memory full, 14 photos). Weight 45.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0655.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.0,
+   "value": 45.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

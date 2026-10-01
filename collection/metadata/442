@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0442",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Webcams (240p of pure confidence); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Pizza Crust (still better than most portfolios); 1 Beer Can (Milwaukee's Worst, on sale); 1 Cheap Sunglasses (mall kiosk special). Weight 70.9 lb. We kept the important shit.",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Webcams (pointed at the ceiling forever); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Magazines (found in a dad's truck); 3 Brick Phones (unbreakable until today); 1 Jewel Case (insert is from a different album). Weight 96.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0442.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.9,
+   "value": 96.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

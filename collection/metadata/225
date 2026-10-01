@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0225",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Dice (loaded, rumor says); 1 Pizza Crust (found behind the couch); 1 Puzzle Cube (solved once, stickers moved); 1 Shot Glass (souvenir of a night nobody recalls). Weight 39.8 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Puzzle Cubes (solved once, stickers moved); 1 Ball Mouse (cord chewed by a dog); 2 16-Bit Controllers (cord pulled the console off the shelf); 2 Soda Cans (shaken as a prank). Weight 48.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0225.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.8,
+   "value": 48.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

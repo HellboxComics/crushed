@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0149",
- "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Boom Box (took 10 D batteries); 3 Game Cartridges (save file erased by a sibling); 2 Three-Ring Binders (velcro screams when opened); 3 Centerfolds (folded out, then folded back in a hurry). Weight 89.1 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like mall food court. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Centerfolds (staples removed, an attempt was made); 3 Three-Ring Binders (velcro screams when opened); 1 Soda Can (New Koak, 79 days only); 3 Power Strips (daisy-chained into three more). Weight 99.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0149.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.1,
+   "value": 99.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

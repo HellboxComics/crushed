@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0707",
- "description": "Recovered from A Blackberried Office Drawer. Smells like body spray cloud. Contents (partial): 1 Sneaker (untied since 1989); 2 Digital Cameras (memory full, 14 photos); 3 Pizza Crusts (still better than most portfolios); 3 Soda Cans (tab kept for charity); 1 No. 2 Pencil (chewed). Weight 35.7 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like body spray cloud. Contents (partial): 1 Sneaker (was in the dryer); 1 Poker Chip (a stack of ambition); 1 TV Remote (the volume button worn smooth); 3 Magazines (the staples are doing the work); 2 Centerfolds (staples removed, an attempt was made). Weight 42.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0707.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.7,
+   "value": 42.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0851",
- "description": "Recovered from A Crypto Bro's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (found in the couch); 2 Glow Sticks (cracked at a school dance); 3 Disposable Cameras (27 exposures of a thumb); 1 Fidget Spinner (bearing went missing); 1 Clear Lighter (for incense, obviously). Weight 29.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 3 TV Remotes (found in the couch); 2 Tablets (bought for the kids, taken back by dad); 2 Glow Sticks (still glowing a little, somehow); 3 Spiral Notebooks (note says 'check YES or NO'); 3 Game Controllers (thrown during a boss fight). Weight 43.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0851.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.8,
+   "value": 43.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

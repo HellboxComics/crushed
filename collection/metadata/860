@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0860",
- "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 3 Sneakers (light-up heel, dead); 1 Ring Light (one bulb out, one ego intact); 1 No. 2 Pencil (never saw a scantron it liked); 1 Face Mask (one of 400 in a coat pocket). Weight 39.2 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like blue raspberry. Contents (partial): 2 Disposable Cameras (never developed); 2 Spiral Notebooks (doodles in the margins); 2 Energy Drinks (Moonster, the whole case); 1 Ring Light (one bulb out, one ego intact); 2 No. 2 Pencils (never saw a scantron it liked). Weight 47.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0860.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.2,
+   "value": 47.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 67,
    "display_type": "number"
   }
  ]

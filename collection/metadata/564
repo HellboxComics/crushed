@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0564",
- "description": "Recovered from Behind the Couch. Smells like Red Bullish and Regret. Contents (partial): 3 TV Remotes (held together with tape); 1 Centerfold (staples removed, an attempt was made); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 1 Scratch Ticket ($2 for hope). Weight 25.4 lb. Crushed it.",
+ "description": "Recovered from Behind the Couch. Smells like Red Bullish and Regret. Contents (partial): 3 TV Remotes (found in the couch); 1 Laptop Charger (warm to the touch, somehow); 1 Spiral Notebook (note says 'check YES or NO'); 3 Poker Chips (taken from a casino, small heist); 1 Handheld Console (battery cover lost immediately). Weight 38.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0564.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.4,
+   "value": 38.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

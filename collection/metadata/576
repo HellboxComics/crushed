@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0576",
- "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Handheld Console (battery cover lost immediately); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Dice (loaded, rumor says); 3 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (sharpened to a nub); 1 Paper Hand (folded under light pressure). Weight 31.9 lb. Nobody made you keep this.",
+ "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Handheld Console (screen scratched from a pocket with keys); 3 No. 2 Pencils (never saw a scantron it liked); 2 Tissue Boxes (one for every mood); 2 AA Batteries (taken out of the smoke detector); 2 Sneakers (light-up heel, dead); 1 Paper Hand (folded under light pressure). Weight 42.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0576.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.9,
+   "value": 42.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 59,
    "display_type": "number"
   }
  ]

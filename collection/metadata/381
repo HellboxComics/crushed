@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0381",
- "description": "Recovered from A Circuit City-ish Return Counter. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Sneaker (smells like 1989); 1 Army Man Squad (melted with a magnifying glass); 2 Pagers (last page from a number nobody called back); 1 Dice (snake eyes, twice); 2 Clear Lighters (for incense, obviously). Weight 75.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Sneaker (smells like 1989); 1 Skateboard (one ollie, lifetime); 3 VHS Tapes (taped off HBOH, commercials and all); 1 Memory Card (8MB, full); 3 Burned CDs (coaster now). Weight 87.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0381.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.8,
+   "value": 87.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

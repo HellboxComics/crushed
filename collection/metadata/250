@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0250",
- "description": "Recovered from Dad's Junk Drawer. Smells like Lunchables-ish Crackers. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Ball Mouse (ball removed as a prank); 2 TV Remotes (the volume button worn smooth); 1 Power Strip (daisy-chained into three more); 2 Pizza Crusts (petrified). Weight 76.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Lunchables-ish Crackers. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Puzzle Cube (solved once, stickers moved); 2 Toy Slime (stuck in the carpet); 3 AA Batteries (taken out of the smoke detector); 2 Scratch Tickets ($2 for hope). Weight 84.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0250.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 84.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

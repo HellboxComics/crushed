@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0323",
- "description": "Recovered from Mom's Minivan. Smells like Blockbusted New Release Wall. Contents (partial): 1 VHS Tape (taped over a wedding); 1 Disposable Camera (never developed); 1 9999-in-1 Handheld (HI SCORE 00000); 1 Cheap Sunglasses (one lens popped out); 1 Corded Phone (cord stretched to the bathroom). Weight 84.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Mom's Minivan. Smells like Blockbusted New Release Wall. Contents (partial): 1 VHS Tape (label says DO NOT TAPE OVER); 1 16-Bit Controller (the B button is sticky); 1 Shot Glass (souvenir of a night nobody recalls); 3 Soda Cans (New Koak, 79 days only); 3 TV Remotes (the volume button worn smooth). Weight 90.7 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0323.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.3,
+   "value": 90.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

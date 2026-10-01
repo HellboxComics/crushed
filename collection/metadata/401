@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0401",
- "description": "Recovered from Behind the Couch. Smells like victory. Contents (partial): 1 Gold Pager (why); 1 Sneaker (was in the dryer); 3 Spiral Notebooks (spiral unwound halfway); 1 Webcam (pointed at the ceiling forever); 2 Tissue Boxes (there was a reason it lived on the nightstand). Weight 74.7 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Couch. Smells like victory. Contents (partial): 1 Gold Cassette Tape (why); 2 Sneakers (light-up heel, dead); 3 Scratch Tickets (not a winner); 1 Memory Card (8MB, full); 3 Floppy Disks (AOHell trial, 500 free hours). Weight 85.2 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0401.png",
  "attributes": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Gilded",
-   "value": "Pager"
+   "value": "Cassette Tape"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.7,
+   "value": 85.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

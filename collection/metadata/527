@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0527: EGG HUNT",
- "description": "Every plastic egg nobody found, the bunny with no ears, and the grass that got everywhere. Recovered from Grandma's Backyard, Still Hidden. Smells like plastic grass and jelly beans. Contents (partial): 4 Chocolate Bunnys (ears first, always); 28 Plastic Eggs (two halves that never match); 4 Candy Hearts (says TEXT ME); 10 Marshmallow Chicks (stale on purpose); 4 Fun Size Bars (traded for two candy corns). Weight 10.3 lb. We kept the important shit.",
+ "description": "Every plastic egg nobody found, the bunny with no ears, and the grass that got everywhere. Recovered from Grandma's Backyard, Still Hidden. Smells like plastic grass and jelly beans. Contents (partial): 4 Chocolate Bunnys (ears first, always); 28 Plastic Eggs (two halves that never match); 4 Candy Hearts (says TEXT ME); 10 Marshmallow Chicks (stale on purpose); 4 Fun Size Bars (traded for two candy corns). Weight 10.9 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0527.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 10.3,
+   "value": 10.9,
    "display_type": "number"
   },
   {

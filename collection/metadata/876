@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0876",
- "description": "Recovered from Mom's Minivan. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 1 Poker Chip (never cashed out); 1 Sneaker (smells like 1989); 1 Tablet (bought for the kids, taken back by dad); 2 Earbud Cases (one bud present). Weight 35.7 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Minivan. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Smartwatch (10,000 steps, never); 2 Soda Cans (flat); 3 AA Batteries (mixed old and new, like animals); 1 Laptop Charger (warm to the touch, somehow); 1 Pizza Crust (found behind the couch). Weight 48.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0876.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.7,
+   "value": 48.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

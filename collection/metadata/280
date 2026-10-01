@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0280",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 No. 2 Pencils (sharpened to a nub); 1 TV Remote (the volume button worn smooth); 2 Toy Slime (stuck in the carpet); 1 Burned CD (burned at 1x, 4 hours). Weight 50.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Game Cartridge (save file erased by a sibling); 2 Sneakers (untied since 1989); 2 Magazines (for the interviews, obviously); 2 Floppy Disks (DISK 2 of 7). Weight 57.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0280.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.1,
+   "value": 57.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

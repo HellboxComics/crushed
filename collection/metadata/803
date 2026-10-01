@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0803",
- "description": "Recovered from Estate of a Collector. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Selfie Sticks (the person holding it is not in the photo); 2 Power Strips (daisy-chained into three more); 2 Soda Cans (tab kept for charity); 1 Scratch Ticket ($2 for hope); 1 Smartphone (1% battery, forever). Weight 40.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Estate of a Collector. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Selfie Sticks (mid-trip, mid-ocean); 3 TV Remotes (the volume button worn smooth); 3 Fidget Spinners (bearing went missing); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 AA Batteries (mixed old and new, like animals). Weight 50.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0803.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.7,
+   "value": 50.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

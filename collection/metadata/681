@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0681",
- "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 3 Magazines (found in a dad's truck); 1 Spiral Notebook (doodles in the margins); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Tablet (one thumbprint of juice); 1 Centerfold (left open to the wrong page). Weight 39.8 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Bar. Smells like hot dust on a CRT. Contents (partial): 3 Magazines (for the interviews, obviously); 1 Laptop Charger (fits nothing else in the house); 1 Centerfold (left open to the wrong page); 3 Cheap Sunglasses (one lens popped out); 3 Clear Lighters (borrowed in 1997, never returned). Weight 50.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0681.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.8,
+   "value": 50.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

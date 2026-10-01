@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0779",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Moonster and Desperation. Contents (partial): 1 Smartwatch (says STAND, does not); 3 Selfie Sticks (mid-trip, mid-ocean); 1 VR Headset (worn twice); 2 TV Remotes (the volume button worn smooth); 1 Earbud Case (one bud present). Weight 42.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Moonster and Desperation. Contents (partial): 1 Smartwatch (10,000 steps, never); 2 Shot Glasses (chipped rim); 3 Game Controllers (thrown during a boss fight); 3 Tissue Boxes (nearly empty); 2 Earbud Cases (both buds gone, case still charges nothing). Weight 58.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0779.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.2,
+   "value": 58.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

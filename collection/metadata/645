@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0645",
- "description": "Recovered from Dad's Junk Drawer. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 Sneaker (was in the dryer); 1 Poker Chip (taken from a casino, small heist); 1 Cassette Tape (rewound with a pencil); 2 Game Controllers (thrown during a boss fight). Weight 30.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 3 Pizza Crusts (still better than most portfolios); 3 Beer Cans (crushed on a forehead); 1 Flip Phone (ringtone composed by hand); 1 Portable CD Player (anti-skip lied). Weight 39.9 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0645.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.9,
+   "value": 39.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0167",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Arcade Tokens. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Shot Glasses (from a trip to Vegas); 1 Ball Mouse (cord chewed by a dog); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Magazine (the staples are doing the work). Weight 56.3 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Arcade Tokens. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Yo-Yos (walked the dog one time); 2 Shot Glasses (souvenir of a night nobody recalls); 3 Cassette Tapes (labeled MIX 4 U); 2 Tissue Boxes (nearly empty). Weight 70.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0167.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 56.3,
+   "value": 70.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

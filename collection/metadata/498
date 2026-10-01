@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0498",
- "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Sneakers (smells like 1989); 1 Jewel Case (hinge broken on arrival); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 35.5 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Couch. Smells like blue raspberry. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Skate Wheels (rolled into a storm drain once); 3 Disposable Cameras (never developed); 1 Poker Chip (taken from a casino, small heist); 2 AA Batteries (taken out of the smoke detector). Weight 44.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0498.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 44.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

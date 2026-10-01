@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0315",
- "description": "Recovered from A Blockbusted Return Slot. Smells like rink snack bar. Contents (partial): 2 Cassette Tapes (TDKay SA-90, the good tape); 1 Shot Glass (chipped rim); 1 TV Remote (held together with tape); 1 VHS Tape (taped over a wedding); 3 Floppy Disks (contains one (1) virus). Weight 43.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like rink snack bar. Contents (partial): 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Yo-Yos (walked the dog one time); 3 Tissue Boxes (one for every mood); 1 Pizza Crust (from a sleepover); 3 TV Remotes (found in the couch). Weight 52.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0315.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.1,
+   "value": 52.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

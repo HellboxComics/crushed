@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0211",
- "description": "Recovered from A Blockbusted Return Slot. Smells like CK Won. Contents (partial): 1 16-Bit Controller (the B button is sticky); 3 VHS Tapes (label says DO NOT TAPE OVER); 1 Joystick (fire button pressed 40 million times); 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Pizza Crust (petrified). Weight 74.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like CK Won. Contents (partial): 2 16-Bit Controllers (the B button is sticky); 1 Centerfold (staples removed, an attempt was made); 1 No. 2 Pencil (chewed); 1 Pager (last page: 911 (it was not)); 3 Poker Chips (taken from a casino, small heist). Weight 81.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0211.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 74.4,
+   "value": 81.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

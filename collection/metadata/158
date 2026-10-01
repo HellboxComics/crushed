@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0158",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (blew on it, Nintendont said no); 1 Cheap Sunglasses (one lens popped out); 2 Scratch Tickets ($2 for hope); 2 VHS Tapes (late fees now exceed GDP of a small nation). Weight 47.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 1 Boom Box (took 10 D batteries); 3 Sneakers (left only); 3 AA Batteries (licked to test); 2 Scratch Tickets (not a winner); 2 Cassette Tapes (someone's voicemail greeting). Weight 59.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0158.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.0,
+   "value": 59.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0439",
- "description": "Recovered from An AOHell CD Pile. Smells like cigarette in a jacket. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Sneakers (worn to one (1) very bad decision); 1 Floppy Disk (AOHell trial, 500 free hours); 1 Memory Card (8MB, full); 1 Centerfold (staples removed, an attempt was made). Weight 80.3 lb. Handle with both hands.",
+ "description": "Recovered from An AOHell CD Pile. Smells like cigarette in a jacket. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 1 Ball Mouse (rollers caked with 1998); 3 Pagers (clipped to jeans for status only); 1 Disposable Camera (never developed); 3 Floppy Disks (contains one (1) virus). Weight 86.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0439.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.3,
+   "value": 86.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

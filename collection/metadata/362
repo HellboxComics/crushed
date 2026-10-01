@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0362",
- "description": "Recovered from An AOHell CD Pile. Smells like cheap cologne. Contents (partial): 1 VHS Tape (taped off HBOH, commercials and all); 3 Digital Cameras (memory full, 14 photos); 1 Centerfold (staples removed, an attempt was made); 1 Corded Phone (was on the line when mom picked up); 1 Beer Can (12 of 12). Weight 84.8 lb. Nobody made you keep this.",
+ "description": "Recovered from An AOHell CD Pile. Smells like cheap cologne. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 3 AA Batteries (mixed old and new, like animals); 1 Corded Phone (someone is still on hold); 3 Soda Cans (shaken as a prank); 3 Magazines (found in a dad's truck). Weight 92.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0362.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.8,
+   "value": 92.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

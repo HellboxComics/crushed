@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0557",
- "description": "Recovered from A Frat House Couch. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (smells like 1989); 3 Burned CDs (track 7 skips); 1 Memory Card (corrupted during a birthday); 2 Glow Sticks (still glowing a little, somehow); 2 MP3 Players (shuffle picked the same song 6 times). Weight 36.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Frat House Couch. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (smells like 1989); 3 Soda Cans (Surj, the can that started a fight); 3 Flip Phones (snapped shut dramatically); 3 Spiral Notebooks (note says 'check YES or NO'); 1 Centerfold (staples removed, an attempt was made). Weight 42.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0557.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 42.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

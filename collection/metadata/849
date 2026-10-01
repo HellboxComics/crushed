@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0849",
- "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 3 Tablets (used once as a cutting board); 1 Tissue Box (there was a reason it lived on the nightstand); 2 Selfie Sticks (banned at the museum); 1 Drone (40 seconds of freedom); 3 Dice (loaded, rumor says). Weight 34.5 lb. Crushed it.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like arcade carpet. Contents (partial): 3 Tablets (one thumbprint of juice); 2 Sneakers (untied since 1989); 1 Drone (flew once, into a tree); 1 TV Remote (found in the couch); 2 Energy Drinks (Jolted, twice the caffeine). Weight 44.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0849.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 44.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

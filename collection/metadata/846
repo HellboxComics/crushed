@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0846",
- "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 2 Smartphones (cracked in the first week); 1 Laptop Charger (fits nothing else in the house); 1 Power Strip (daisy-chained into three more); 2 Soda Cans (shaken as a prank); 2 Handheld Consoles (screen scratched from a pocket with keys). Weight 38.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Behind the Couch. Smells like hot dust on a CRT. Contents (partial): 2 Smartphones (cracked in the first week); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Dice (blown on for luck); 3 Selfie Sticks (mid-trip, mid-ocean); 3 No. 2 Pencils (chewed). Weight 47.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0846.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.5,
+   "value": 47.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

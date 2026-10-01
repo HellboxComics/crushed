@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0260",
- "description": "Recovered from A Blockbusted Return Slot. Smells like CK Won. Contents (partial): 1 Portable CD Player (anti-skip lied); 1 Pizza Crust (still better than most portfolios); 1 Cassette Tape (Maxhell, the one that blew your hair back); 1 Puzzle Cube (solved once, stickers moved); 1 CRT Monitor (weighs more than the desk). Weight 93.1 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like CK Won. Contents (partial): 2 Portable CD Players (anti-skip lied); 3 Poker Chips (never cashed out); 2 Burned CDs (burned at 1x, 4 hours); 2 Milk Caps (won in a bet); 1 Disposable Camera (never developed). Weight 98.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0260.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 93.1,
+   "value": 98.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

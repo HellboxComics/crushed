@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0036",
- "description": "Recovered from Dad's Junk Drawer. Smells like basement. Contents (partial): 1 Roller Skate (the rink smell is still in there); 1 Game Cartridge (blew on it, Nintendont said no); 1 Boom Box (took 10 D batteries); 2 Joysticks (suction cups gave up); 1 Metal Lunchbox (the smell stays). Weight 54.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like basement. Contents (partial): 2 Roller Skates (toe stop worn to nothing); 1 VHS Tape (taped off HBOH, commercials and all); 3 Power Strips (daisy-chained into three more); 1 Scratch Ticket ($2 for hope); 2 Floppy Disks (contains one (1) virus). Weight 65.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0036.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 54.1,
+   "value": 65.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

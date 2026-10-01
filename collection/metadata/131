@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0131",
- "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Soda Cans (Surj, the can that started a fight); 2 Army Man Squads (melted with a magnifying glass); 2 Spiral Notebooks (doodles in the margins); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro). Weight 86.9 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Soda Cans (tab kept for charity); 2 Power Strips (overloaded on purpose); 3 Foam Headphones (orange foam, allegedly); 1 Boom Box (took 10 D batteries). Weight 110.8 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0131.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.9,
+   "value": 110.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

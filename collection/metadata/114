@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0114",
- "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Jean Jacket. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 2 Shot Glasses (chipped rim); 2 Power Strips (daisy-chained into three more); 3 Floppy Disks (AOHell trial, 500 free hours); 3 Joysticks (fire button pressed 40 million times). Weight 50.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Waldenbooks-ish Bargain Bin. Smells like Jean Jacket. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 3 AA Batteries (mixed old and new, like animals); 2 Film Canisters (undeveloped, forever); 2 Portable Tape Players (auto-reverse broke in 1991); 3 TV Remotes (the volume button worn smooth). Weight 59.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0114.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.7,
+   "value": 59.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

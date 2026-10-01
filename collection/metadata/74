@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0074",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Big Red-ish Gum. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Portable Tape Players (auto-reverse broke in 1991); 3 Poker Chips (a stack of ambition); 3 Cassette Tapes (rewound with a pencil); 2 Pizza Crusts (still better than most portfolios). Weight 33.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Big Red-ish Gum. Contents (partial): 2 VHS Tapes (taped over a wedding); 3 Poker Chips (a stack of ambition); 3 Joysticks (suction cups gave up); 3 Magazines (read for the articles); 3 Cassette Tapes (labeled MIX 4 U). Weight 60.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0074.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.8,
+   "value": 60.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

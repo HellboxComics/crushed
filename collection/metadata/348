@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0348",
- "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Army Man Squad (the one with the radio survived); 2 Sneakers (smells like 1989); 2 Soda Cans (flat); 1 Calculator (spelled BOOBIES upside down); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 89.2 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Blockbusted New Release Wall. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 2 Pizza Crusts (from a sleepover); 3 Disposable Cameras (27 exposures of a thumb); 2 Centerfolds (folded out, then folded back in a hurry); 1 Poker Chip (taken from a casino, small heist); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 98.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0348.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.2,
+   "value": 98.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0701",
- "description": "Recovered from Behind the Bar. Smells like Vegas carpet. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Burned CDs (burned at 1x, 4 hours); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 2 Pizza Crusts (petrified); 2 Glow Sticks (still glowing a little, somehow). Weight 29.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Behind the Bar. Smells like Vegas carpet. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Jewel Cases (hinge broken on arrival); 3 Sneakers (worn to one (1) very bad decision); 3 TV Remotes (held together with tape); 3 Magazines (the staples are doing the work). Weight 42.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0701.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.2,
+   "value": 42.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

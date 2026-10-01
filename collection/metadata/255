@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0255",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived); 2 Film Canisters (holds one quarter); 3 Spiral Notebooks (spiral unwound halfway); 2 Shot Glasses (from a trip to Vegas). Weight 77.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 Clear Lighters (out of fluid); 2 Milk Caps (the slammer is chipped); 1 Soda Can (tab kept for charity); 2 Keyboards (Partial) (F, J and the crumbs). Weight 87.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0255.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.4,
+   "value": 87.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

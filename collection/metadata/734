@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0734",
- "description": "Recovered from Back of the Closet. Smells like Prime Time Hype. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 1 VR Headset (worn twice); 3 Sneakers (untied since 1989); 2 Smartwatches (says STAND, does not); 1 Energy Drink (Moonster, the whole case); 1 Emergency Ramen (for emergencies). Weight 47.8 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like Prime Time Hype. Contents (partial): 2 Bluetooth Speakers (paired with the wrong phone); 3 Sneakers (worn to one (1) very bad decision); 2 Soda Cans (flat); 3 Smartwatches (still counting steps in the dryer); 1 Shot Glass (souvenir of a night nobody recalls); 1 Emergency Ramen (for emergencies). Weight 52.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0734.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.8,
+   "value": 52.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

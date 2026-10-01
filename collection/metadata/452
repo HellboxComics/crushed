@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0452",
- "description": "Recovered from Napstered Dorm Room. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Tissue Box (nearly empty); 1 Memory Card (corrupted during a birthday); 1 No. 2 Pencil (chewed); 1 TV Remote (held together with tape); 1 16-Bit Controller (cord pulled the console off the shelf). Weight 80.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Y2K Bunker Canned Food. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Ball Mice (cord chewed by a dog); 3 Burned CDs (track 7 skips); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 TV Remote (held together with tape). Weight 85.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0452.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.1,
+   "value": 85.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

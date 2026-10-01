@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0801: LEFTOVERS",
- "description": "A block of pizza crust. Only pizza crust. One sleepover's worth. Recovered from Behind the Couch. Smells like friday night. Contents (partial): 42 Pizza Crusts (petrified). Weight 20.7 lb. We kept the important shit.",
+ "description": "A block of pizza crust. Only pizza crust. One sleepover's worth. Recovered from Behind the Couch. Smells like friday night. Contents (partial): 42 Pizza Crusts (petrified). Weight 21.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0801.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 20.7,
+   "value": 21.8,
    "display_type": "number"
   },
   {

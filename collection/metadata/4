@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0004",
- "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 AA Batteries (Durasmell, lasted till Christmas noon); 3 Poker Chips (never cashed out); 3 Cheap Sunglasses (one lens popped out); 2 Portable Tape Players (belt clip snapped at a bus stop). Weight 86.2 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like gym bag, forgotten. Contents (partial): 2 TV Remotes (held together with tape); 1 VHS Tape (the unmarked one, from the back of the closet); 3 Portable Tape Players (belt clip snapped at a bus stop); 3 Poker Chips (a stack of ambition); 2 Yo-Yos (walked the dog one time). Weight 99.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0004.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.2,
+   "value": 99.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

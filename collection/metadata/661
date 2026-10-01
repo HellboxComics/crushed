@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0661",
- "description": "Recovered from Under the Bed. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Energy Drinks (Moonster, the whole case); 2 Burned CDs (coaster now); 1 Clear Lighter (out of fluid); 1 Handheld Console (screen scratched from a pocket with keys); 2 Disposable Cameras (never developed). Weight 31.3 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Energy Drinks (Jolted, twice the caffeine); 2 Game Controllers (stick drift since day one); 3 Burned CDs (coaster now); 3 Handheld Consoles (battery cover lost immediately); 3 Disposable Cameras (27 exposures of a thumb). Weight 46.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0661.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.3,
+   "value": 46.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

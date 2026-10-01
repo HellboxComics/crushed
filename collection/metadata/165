@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0165",
- "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 2 Beer Cans (last one in the fridge); 1 Corded Phone (someone is still on hold); 3 Calculators (spelled BOOBIES upside down); 2 Spiral Notebooks (spiral unwound halfway); 1 Floppy Disk (DISK 2 of 7); 1 Tiny Red Candle (one of many). Weight 82.1 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Big Red-ish Gum. Contents (partial): 3 Beer Cans (crushed on a forehead); 1 Ball Mouse (ball removed as a prank); 1 Keyboard (Partial) (F, J and the crumbs); 2 Centerfolds (left open to the wrong page); 1 Pizza Crust (still better than most portfolios); 1 Tiny Red Candle (lit). Weight 93.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0165.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 93.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

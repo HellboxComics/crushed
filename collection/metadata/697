@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0697",
- "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Matchbook (matches missing, reasons unclear); 1 Poker Chip (a stack of ambition); 2 No. 2 Pencils (sharpened to a nub); 3 Flip Phones (snapped shut dramatically). Weight 28.8 lb. Crushed it.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cheap cologne. Contents (partial): 3 Sneakers (left only); 2 Cheap Sunglasses (one lens popped out); 3 Flip Phones (ringtone composed by hand); 3 No. 2 Pencils (never saw a scantron it liked); 3 Game Controllers (stick drift since day one). Weight 37.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0697.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.8,
+   "value": 37.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

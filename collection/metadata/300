@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0300",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Ball Mice (ball removed as a prank); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Cassette Tapes (a mix for someone who never listened); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly). Weight 49.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Ball Mice (ball removed as a prank); 3 Cassette Tapes (labeled MIX 4 U); 1 Cheap Sunglasses (one lens popped out); 3 Spiral Notebooks (doodles in the margins); 3 Centerfolds (folded out, then folded back in a hurry). Weight 57.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0300.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 49.0,
+   "value": 57.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

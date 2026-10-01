@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0077",
- "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 1 Three-Ring Binder (velcro screams when opened); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 3 Soda Cans (Surj, the can that started a fight). Weight 82.5 lb. Crushed it.",
+ "description": "Recovered from Vegas Hotel Room. Smells like hot dust on a CRT. Contents (partial): 2 Yo-Yos (walked the dog one time); 2 Film Canisters (holds one quarter); 2 Matchbooks (from a gentlemen's club, reportedly); 3 Soda Cans (flat); 3 Army Man Squads (melted with a magnifying glass). Weight 89.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0077.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.5,
+   "value": 89.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

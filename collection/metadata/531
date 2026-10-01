@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0531",
- "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 VHS Tapes (late fees now exceed GDP of a small nation); 2 Virtual Pets (fed 0 times); 2 Sneakers (light-up heel, dead); 1 Dice (snake eyes, twice); 3 No. 2 Pencils (sharpened to a nub). Weight 36.4 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like new plastic. Contents (partial): 2 VHS Tapes (BE KIND REWIND (they did not)); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Burned CDs (track 7 skips); 2 Spiral Notebooks (note says 'check YES or NO'); 3 Game Controllers (thrown during a boss fight). Weight 44.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0531.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.4,
+   "value": 44.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

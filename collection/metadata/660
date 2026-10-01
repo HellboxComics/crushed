@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0660",
- "description": "Recovered from Grandma's Attic. Smells like Hot Razr Battery. Contents (partial): 2 Sneakers (was in the dryer); 1 Pizza Crust (found behind the couch); 1 Magazine (found in a dad's truck); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Spiral Notebook (spiral unwound halfway). Weight 29.1 lb. Crushed it.",
+ "description": "Recovered from Grandma's Attic. Smells like Hot Razr Battery. Contents (partial): 2 Sneakers (was in the dryer); 3 Spiral Notebooks (doodles in the margins); 2 Jewel Cases (insert is from a different album); 3 No. 2 Pencils (chewed); 2 Memory Cards (corrupted during a birthday). Weight 42.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0660.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.1,
+   "value": 42.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0848",
- "description": "Recovered from The Bachelor Pad. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 2 Tablets (one thumbprint of juice); 3 Game Controllers (stick drift since day one); 2 Power Strips (overloaded on purpose); 1 Glow Stick (still glowing a little, somehow); 1 Face Mask (one of 400 in a coat pocket); 1 Bull (trapped). Weight 46.1 lb. Some assembly was removed.",
+ "description": "Recovered from The Bachelor Pad. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Tablets (used once as a cutting board); 3 Game Controllers (thrown during a boss fight); 1 Laptop Charger (warm to the touch, somehow); 3 Energy Drinks (third one that night); 1 VR Headset (worn twice); 1 Bull (flipped). Weight 59.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0848.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.1,
+   "value": 59.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

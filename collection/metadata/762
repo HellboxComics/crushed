@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0762",
- "description": "Recovered from A DoorDashed Doorstep. Smells like White Paw, Warm. Contents (partial): 1 Smartwatch (still counting steps in the dryer); 1 Laptop Charger (fits nothing else in the house); 3 Tissue Boxes (there was a reason it lived on the nightstand); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Energy Drinks (Red Bullish, gave it wings, took them back). Weight 31.1 lb. Crushed it.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like White Paw, Warm. Contents (partial): 1 Smartwatch (says STAND, does not); 1 Face Mask (one of 400 in a coat pocket); 3 Clear Lighters (out of fluid); 3 Disposable Cameras (27 exposures of a thumb); 2 Game Controllers (thrown during a boss fight). Weight 43.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0762.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.1,
+   "value": 43.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

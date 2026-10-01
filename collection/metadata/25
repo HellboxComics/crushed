@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0025",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Jean Jacket. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Three-Ring Binders (covered in band names); 2 Yo-Yos (string tied to a finger for 3 years); 1 Beer Can (crushed on a forehead); 1 TV Remote (held together with tape). Weight 87.5 lb. We kept the important shit.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Jean Jacket. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Army Man Squads (melted with a magnifying glass); 1 Matchbook (from a gentlemen's club, reportedly); 2 Power Strips (overloaded on purpose); 1 Sneaker (light-up heel, dead). Weight 96.2 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0025.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.5,
+   "value": 96.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

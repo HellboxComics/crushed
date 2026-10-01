@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0669",
- "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Flip Phone (12 texts left this month); 2 Game Controllers (thrown during a boss fight); 1 Laptop Charger (warm to the touch, somehow); 2 Jewel Cases (insert is from a different album); 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Diamond (held through everything). Weight 35.0 lb. Contents may have settled.",
+ "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 3 Flip Phones (ringtone composed by hand); 1 TV Remote (found in the couch); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Game Controllers (stick drift since day one); 3 Magazines (found in a dad's truck); 1 Diamond (hands not included). Weight 41.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0669.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 41.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 65,
    "display_type": "number"
   }
  ]

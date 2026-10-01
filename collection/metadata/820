@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0820",
- "description": "Recovered from Mom's Basement (Again). Smells like new plastic. Contents (partial): 3 Tablets (one thumbprint of juice); 3 Smartwatches (still counting steps in the dryer); 3 Smartphones (screen protector did nothing); 1 Drone (40 seconds of freedom); 1 Hand Sanitizer (60% alcohol, 40% anxiety). Weight 41.2 lb. Handle with both hands.",
+ "description": "Recovered from Mom's Basement (Again). Smells like new plastic. Contents (partial): 3 Tablets (bought for the kids, taken back by dad); 3 Smartwatches (10,000 steps, never); 1 Earbud Case (one bud present); 2 TV Remotes (found in the couch); 3 Bluetooth Speakers (lost, found, lost). Weight 49.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0820.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.2,
+   "value": 49.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0726",
- "description": "Recovered from Mom's Basement (Again). Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Smartphones (Instagrampa open, 900 unread); 2 Soda Cans (tab kept for charity); 1 Spiral Notebook (doodles in the margins); 2 Handheld Consoles (screen scratched from a pocket with keys); 2 Smartwatches (10,000 steps, never). Weight 40.2 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Basement (Again). Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Smartphones (Instagrampa open, 900 unread); 3 Tablets (bought for the kids, taken back by dad); 3 Soda Cans (New Koak, 79 days only); 2 Scratch Tickets (scratched with a house key); 3 Handheld Consoles (battery cover lost immediately). Weight 49.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0726.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.2,
+   "value": 49.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

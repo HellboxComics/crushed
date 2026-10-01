@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0168",
- "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 TV Remote (held together with tape); 3 Sneakers (worn to one (1) very bad decision); 2 Army Man Squads (melted with a magnifying glass); 2 Joysticks (suction cups gave up); 1 Poker Chip (a stack of ambition). Weight 44.8 lb. Contents may have settled.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like hot dust on a CRT. Contents (partial): 1 TV Remote (the volume button worn smooth); 3 Poker Chips (taken from a casino, small heist); 3 Army Man Squads (melted with a magnifying glass); 3 Sneakers (light-up heel, dead); 3 VHS Tapes (late fees now exceed GDP of a small nation). Weight 77.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0168.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Finish",
-   "value": "ICE"
+   "value": "OBSIDIAN"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.8,
+   "value": 77.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

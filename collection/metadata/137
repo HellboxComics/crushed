@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0137",
- "description": "Recovered from Grandma's Attic. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Scratch Ticket (scratched with a house key); 2 Film Canisters (undeveloped, forever); 3 Puzzle Cubes (solved once, stickers moved); 2 Pizza Crusts (found behind the couch). Weight 50.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Metal Lunchbox (thermos missing); 3 Pizza Crusts (still better than most portfolios); 2 Centerfolds (staples removed, an attempt was made); 2 Scratch Tickets ($2 for hope); 3 Film Canisters (undeveloped, forever). Weight 59.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0137.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.9,
+   "value": 59.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

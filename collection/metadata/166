@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0166",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Big Red-ish Gum. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 3 Puzzle Cubes (two stickers peeled); 3 Joysticks (fire button pressed 40 million times); 2 Floppy Disks (says DO NOT FORMAT); 1 No. 2 Pencil (sharpened to a nub). Weight 78.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Big Red-ish Gum. Contents (partial): 3 Sneakers (left only); 1 Spiral Notebook (note says 'check YES or NO'); 2 Beer Cans (PBJ, the hipster one); 1 Disposable Camera (27 exposures of a thumb); 3 Puzzle Cubes (solved once, stickers moved). Weight 90.9 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0166.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.9,
+   "value": 90.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

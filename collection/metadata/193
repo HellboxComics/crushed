@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0193",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grunge Flannel. Contents (partial): 1 Boom Box (one speaker still believes); 1 TV Remote (held together with tape); 3 Pagers (clipped to jeans for status only); 1 Ball Mouse (ball removed as a prank); 1 Beer Can (warm, sadly). Weight 82.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grunge Flannel. Contents (partial): 1 Boom Box (took 10 D batteries); 3 Shot Glasses (chipped rim); 2 Poker Chips (a stack of ambition); 2 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Three-Ring Binder (velcro screams when opened). Weight 87.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0193.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.5,
+   "value": 87.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0417",
- "description": "Recovered from The Mall Fountain. Smells like hot tub. Contents (partial): 2 Sneakers (left only); 3 Magazines (the staples are doing the work); 3 Flip Phones (12 texts left this month); 2 Pagers (last page: 911 (it was not)); 3 VHS Tapes (taped over a wedding). Weight 36.9 lb. Handle with both hands.",
+ "description": "Recovered from The Mall Fountain. Smells like hot tub. Contents (partial): 3 Sneakers (left only); 3 TV Remotes (found in the couch); 1 AA Batteries (mixed old and new, like animals); 3 Pagers (last page: 911 (it was not)); 2 Jewel Cases (hinge broken on arrival). Weight 48.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0417.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.9,
+   "value": 48.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

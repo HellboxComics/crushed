@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0479",
- "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 1 Foam Headphones (orange foam, allegedly); 3 Disposable Cameras (27 exposures of a thumb); 2 Poker Chips (never cashed out); 2 Energy Drinks (Moonster, the whole case); 2 Pagers (clipped to jeans for status only). Weight 77.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Bachelor Pad. Smells like fresh batteries (licked). Contents (partial): 1 Foam Headphones (orange foam, allegedly); 2 Energy Drinks (tastes like a battery); 1 Pizza Crust (from a sleepover); 2 Burned CDs (says ROAD TRIP in marker); 3 Shot Glasses (souvenir of a night nobody recalls). Weight 87.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0479.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.5,
+   "value": 87.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

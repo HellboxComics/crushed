@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0608",
- "description": "Recovered from Behind the Science Wing. Smells like Hot Razr Battery. Contents (partial): 3 Energy Drinks (tastes like a battery); 2 Flip Phones (12 texts left this month); 2 Clear Lighters (out of fluid); 3 Tissue Boxes (nearly empty); 2 USB Sticks (contains homework_FINAL_final2.doc). Weight 36.5 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Science Wing. Smells like Hot Razr Battery. Contents (partial): 3 Energy Drinks (tastes like a battery); 3 Clear Lighters (for incense, obviously); 1 No. 2 Pencil (chewed); 3 Shot Glasses (from a trip to Vegas); 3 Burned CDs (coaster now). Weight 47.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0608.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 47.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

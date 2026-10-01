@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0162",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Arcade Tokens. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 Floppy Disks (Iomegalodon would have held it all); 2 VHS Tapes (taped over a wedding); 1 Spiral Notebook (note says 'check YES or NO'); 3 Tissue Boxes (there was a reason it lived on the nightstand). Weight 87.8 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Arcade Tokens. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 2 Soda Cans (Surj, the can that started a fight); 2 Three-Ring Binders (covered in band names); 2 Shot Glasses (from a trip to Vegas); 3 VHS Tapes (the unmarked one, from the back of the closet). Weight 99.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0162.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.8,
+   "value": 99.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0195",
- "description": "Recovered from The Bachelor Pad. Smells like Gak-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Dice (snake eyes, twice); 1 TV Remote (the volume button worn smooth); 2 Game Cartridges (blown into 400 times); 2 Pagers (last page: 143). Weight 33.5 lb. Handle with both hands.",
+ "description": "Recovered from The Bachelor Pad. Smells like Gak-ish. Contents (partial): 1 Portable Tape Player (belt clip snapped at a bus stop); 2 Foam Headphones (one ear works if you hold it); 2 Milk Caps (won in a bet); 3 Floppy Disks (DISK 2 of 7); 2 Dice (loaded, rumor says). Weight 91.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0195.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.5,
+   "value": 91.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

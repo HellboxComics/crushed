@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0494: Y2K",
- "description": "Midnight, 1999. The computers were going to end the world. They did not. The glasses survived. Recovered from The Bunker, 11:59 P.M. Smells like cheap champagne and panic. Contents (partial): 8 2000 Glasses (the zeros are the lenses); 6 Floppy Disks (DISK 2 of 7); 4 Burned CDs (track 7 skips); 10 Noisemakers (unrolls, rolls back, forever); 10 Party Hats (elastic under the chin). Weight 61.3 lb. Contents may have settled.",
+ "description": "Midnight, 1999. The computers were going to end the world. They did not. The glasses survived. Recovered from The Bunker, 11:59 P.M. Smells like cheap champagne and panic. Contents (partial): 8 2000 Glasses (the zeros are the lenses); 6 Floppy Disks (DISK 2 of 7); 4 Burned CDs (track 7 skips); 10 Noisemakers (unrolls, rolls back, forever); 10 Party Hats (elastic under the chin). Weight 61.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0494.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 61.3,
+   "value": 61.7,
    "display_type": "number"
   },
   {

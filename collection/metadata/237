@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0237",
- "description": "Recovered from Estate of a Collector. Smells like CK Won. Contents (partial): 1 VHS Tape (Blockbusted rental, never returned); 2 AA Batteries (mixed old and new, like animals); 1 Poker Chip (a stack of ambition); 3 Burned CDs (says ROAD TRIP in marker); 1 Boom Box (took 10 D batteries). Weight 51.4 lb. Some assembly was removed.",
+ "description": "Recovered from Estate of a Collector. Smells like CK Won. Contents (partial): 1 VHS Tape (late fees now exceed GDP of a small nation); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 2 Three-Ring Binders (velcro screams when opened); 1 No. 2 Pencil (sharpened to a nub). Weight 64.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0237.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Finish",
-   "value": "CHROME"
+   "value": "OBSIDIAN"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.4,
+   "value": 64.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

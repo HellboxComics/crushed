@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0062",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Drakkar Noire-ish. Contents (partial): 1 Roller Skate (the rink smell is still in there); 2 Puzzle Cubes (solved once, stickers moved); 1 Scratch Ticket (scratched with a house key); 2 VHS Tapes (the unmarked one, from the back of the closet); 1 Yo-Yo (string tied to a finger for 3 years); 1 Crumpled Chart (it went up, then it went down). Weight 51.7 lb. Nobody made you keep this.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Drakkar Noire-ish. Contents (partial): 3 Roller Skates (toe stop worn to nothing); 3 Portable Tape Players (belt clip snapped at a bus stop); 3 Beer Cans (12 of 12); 1 Centerfold (left open to the wrong page); 2 Cassette Tapes (someone's voicemail greeting); 1 Crumpled Chart (printed out for emotional reasons). Weight 75.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0062.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.7,
+   "value": 75.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 62,
    "display_type": "number"
   }
  ]

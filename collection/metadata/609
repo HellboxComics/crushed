@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0609",
- "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 No. 2 Pencil (sharpened to a nub); 2 Shot Glasses (chipped rim); 2 Laptop Chargers (fits nothing else in the house); 1 USB Stick (contains homework_FINAL_final2.doc). Weight 35.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Estate of a Collector. Smells like new plastic. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 3 Pizza Crusts (still better than most portfolios); 2 Flip Phones (ringtone composed by hand); 3 Laptop Chargers (fits nothing else in the house); 2 Sneakers (was in the dryer). Weight 43.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0609.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Finish",
-   "value": "GRAPE"
+   "value": "SAFETY ORANGE"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.4,
+   "value": 43.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

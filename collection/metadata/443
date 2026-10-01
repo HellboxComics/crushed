@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0443",
- "description": "Recovered from Ex's Garage. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 VHS Tape (BE KIND REWIND (they did not)); 1 Brick Phone (faceplate swapped 4 times); 1 Foam Headphones (orange foam, allegedly); 1 Spiral Notebook (spiral unwound halfway); 1 Tiny Red Candle (lit). Weight 38.9 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 3 Cassette Tapes (TDKay SA-90, the good tape); 1 Digital Camera (2 megapixels of truth); 1 Foam Headphones (orange foam, allegedly); 3 Cheap Sunglasses (mall kiosk special); 1 Disposable Camera (27 exposures of a thumb); 1 Tiny Red Candle (lit). Weight 47.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0443.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.9,
+   "value": 47.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0839",
- "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 3 Power Banks (10000 mAh of dead weight); 1 Poker Chip (taken from a casino, small heist); 1 Energy Drink (tastes like a battery); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Laptop Charger (fits nothing else in the house). Weight 38.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like cheap cologne. Contents (partial): 3 Power Banks (10000 mAh of dead weight); 3 Tissue Boxes (nearly empty); 1 Magazine (read for the articles); 3 Laptop Chargers (warm to the touch, somehow); 2 AA Batteries (mixed old and new, like animals). Weight 47.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0839.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.5,
+   "value": 47.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

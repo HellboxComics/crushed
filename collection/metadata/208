@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0208",
- "description": "Recovered from A Buddy's Basement. Smells like Blockbusted New Release Wall. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 1 Boom Box (shoulder-mounted in its prime); 1 Beer Can (warm, sadly); 2 Cassette Tapes (someone's voicemail greeting); 1 Scratch Ticket ($2 for hope). Weight 42.2 lb. We kept the important shit.",
+ "description": "Recovered from A Buddy's Basement. Smells like Blockbusted New Release Wall. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 TV Remotes (held together with tape); 2 Burned CDs (coaster now); 1 Spiral Notebook (note says 'check YES or NO'); 3 Sneakers (untied since 1989). Weight 53.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0208.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.2,
+   "value": 53.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

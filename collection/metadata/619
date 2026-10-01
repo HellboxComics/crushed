@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0619",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Beer Can (last one in the fridge); 1 Disposable Camera (27 exposures of a thumb); 3 AA Batteries (mixed old and new, like animals); 1 Handheld Console (screen scratched from a pocket with keys); 1 Game Controller (thrown during a boss fight). Weight 29.5 lb. Handle with both hands.",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 1 Beer Can (Milwaukee's Worst, on sale); 3 Flip Phones (ringtone composed by hand); 3 Matchbooks (matches missing, reasons unclear); 2 Power Strips (overloaded on purpose); 3 TV Remotes (the volume button worn smooth). Weight 79.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0619.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.5,
+   "value": 79.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

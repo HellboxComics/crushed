@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0570",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like scratch-n-sniff sticker. Contents (partial): 1 Beer Can (warm, sadly); 1 Clear Lighter (borrowed in 1997, never returned); 1 Centerfold (left open to the wrong page); 1 Flip Phone (ringtone composed by hand); 1 Bluetooth Speaker (played one song, too loud). Weight 27.9 lb. Some assembly was removed.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like scratch-n-sniff sticker. Contents (partial): 1 Beer Can (PBJ, the hipster one); 2 Digital Cameras (memory full, 14 photos); 1 Clear Lighter (borrowed in 1997, never returned); 1 Dice (blown on for luck); 3 Spiral Notebooks (note says 'check YES or NO'). Weight 38.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0570.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.9,
+   "value": 38.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

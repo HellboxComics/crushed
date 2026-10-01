@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0641",
- "description": "Recovered from A Blackberried Office Drawer. Smells like blue raspberry. Contents (partial): 1 Disposable Camera (never developed); 1 Hand Sanitizer (was in every pocket in 2020); 2 Flip Phones (ringtone composed by hand); 2 Centerfolds (folded out, then folded back in a hurry); 2 Game Controllers (thrown during a boss fight). Weight 79.7 lb. Contents may have settled.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like blue raspberry. Contents (partial): 1 Disposable Camera (never developed); 3 Laptop Chargers (warm to the touch, somehow); 1 Matchbook (from a gentlemen's club, reportedly); 1 Glow Stick (cracked at a school dance); 3 Power Strips (daisy-chained into three more). Weight 89.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0641.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 89.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

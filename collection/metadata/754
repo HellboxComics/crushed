@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0754",
- "description": "Recovered from Mom's Basement (Again). Smells like gym bag, forgotten. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 2 Beer Cans (last one in the fridge); 3 Face Masks (one of 400 in a coat pocket); 3 Bluetooth Speakers (lost, found, lost); 1 Disposable Vape (Jool pod, found in a gym bag); 1 Suspicious Rectangle (PIN forgotten). Weight 32.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Mom's Basement (Again). Smells like gym bag, forgotten. Contents (partial): 1 Poker Chip (never cashed out); 3 Face Masks (one of 400 in a coat pocket); 3 Soda Cans (New Koak, 79 days only); 2 Smartwatches (10,000 steps, never); 1 VR Headset (watched one (1) movie); 1 Suspicious Rectangle (seed phrase written on the back of a receipt). Weight 45.5 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0754.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.5,
+   "value": 45.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

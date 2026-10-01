@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0021",
- "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Sneakers (was in the dryer); 1 CRT Monitor (degaussed one last time); 1 Pizza Crust (from a sleepover); 2 Power Strips (overloaded on purpose). Weight 94.0 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like blue raspberry. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 TV Remotes (found in the couch); 3 Sneakers (was in the dryer); 2 VHS Tapes (taped over a wedding); 1 Poker Chip (a stack of ambition). Weight 104.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0021.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 94.0,
+   "value": 104.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 48,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0047",
- "description": "Recovered from The Roller Rink Coat Check. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (late fees now exceed GDP of a small nation); 1 Matchbook (from a gentlemen's club, reportedly); 1 Foam Headphones (one ear works if you hold it). Weight 90.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (belt clip snapped at a bus stop); 3 Pizza Crusts (petrified); 3 Floppy Disks (contains one (1) virus); 1 Three-Ring Binder (velcro screams when opened); 1 CRT Monitor (degaussed one last time). Weight 99.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0047.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.8,
+   "value": 99.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

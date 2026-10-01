@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0427",
- "description": "Recovered from School Lost & Found. Smells like Frosted Tips Gel. Contents (partial): 2 Flip Phones (ringtone composed by hand); 2 Memory Cards (8MB, full); 2 Disposable Cameras (27 exposures of a thumb); 2 Clear Lighters (out of fluid); 1 Webcam (240p of pure confidence). Weight 68.8 lb. Nobody made you keep this.",
+ "description": "Recovered from School Lost & Found. Smells like Frosted Tips Gel. Contents (partial): 2 Flip Phones (12 texts left this month); 1 Handheld Console (battery cover lost immediately); 2 Game Controllers (thrown during a boss fight); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Webcams (pointed at the ceiling forever). Weight 83.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0427.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 68.8,
+   "value": 83.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

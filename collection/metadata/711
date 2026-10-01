@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0711",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Magazine (the staples are doing the work); 2 USB Sticks (contains homework_FINAL_final2.doc); 2 Flip Phones (snapped shut dramatically); 1 Spiral Notebook (doodles in the margins). Weight 32.3 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (stick drift since day one); 1 Clear Lighter (out of fluid); 2 Power Strips (daisy-chained into three more); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Glow Sticks (cracked at a school dance). Weight 40.7 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0711.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 40.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

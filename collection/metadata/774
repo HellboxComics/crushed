@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0774",
- "description": "Recovered from A DoorDashed Doorstep. Smells like scratch-n-sniff sticker. Contents (partial): 2 Smartphones (Venmoan request: 'gas money'); 1 Game Controller (stick drift since day one); 3 Hand Sanitizers (60% alcohol, 40% anxiety); 2 Clear Lighters (for incense, obviously); 1 Magazine (found in a dad's truck). Weight 35.0 lb. Some assembly was removed.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like scratch-n-sniff sticker. Contents (partial): 2 Smartphones (last text: read, no reply); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Bluetooth Speakers (paired with the wrong phone); 1 Selfie Stick (the person holding it is not in the photo); 3 Power Banks (10000 mAh of dead weight). Weight 49.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0774.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 49.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

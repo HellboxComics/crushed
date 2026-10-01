@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0358",
- "description": "Recovered from A LAN Party Basement. Smells like new plastic. Contents (partial): 2 Beer Cans (Natty Lightweight, 30-rack); 2 Cheap Sunglasses (one lens popped out); 3 TV Remotes (the volume button worn smooth); 2 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Corded Phone (someone is still on hold). Weight 38.7 lb. Contents may have settled.",
+ "description": "Recovered from A LAN Party Basement. Smells like new plastic. Contents (partial): 2 Beer Cans (crushed on a forehead); 2 Burned CDs (says ROAD TRIP in marker); 1 Tissue Box (nearly empty); 1 Floppy Disk (save icon, but real); 1 Game Controller (stick drift since day one). Weight 88.4 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0358.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.7,
+   "value": 88.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

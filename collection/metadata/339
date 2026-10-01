@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0339",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 1 Tissue Box (one for every mood); 1 Glow Stick (cracked at a school dance); 1 Boom Box (shoulder-mounted in its prime); 1 Cassette Tape (side B only). Weight 86.2 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 2 Foam Headphones (one ear works if you hold it); 3 Burned CDs (track 7 skips); 1 Three-Ring Binder (velcro screams when opened); 1 Floppy Disk (contains one (1) virus); 3 Film Canisters (undeveloped, forever). Weight 92.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0339.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.2,
+   "value": 92.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

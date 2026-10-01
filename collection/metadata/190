@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0190",
- "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 2 TV Remotes (held together with tape); 1 Skateboard (one ollie, lifetime); 1 Clear Lighter (borrowed in 1997, never returned); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Puzzle Cube (solved once, stickers moved). Weight 47.1 lb. Handle with both hands.",
+ "description": "Recovered from Vegas Hotel Room. Smells like cigarette in a jacket. Contents (partial): 3 TV Remotes (found in the couch); 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Portable CD Players (anti-skip lied); 3 Yo-Yos (walked the dog one time); 1 Puzzle Cube (two stickers peeled). Weight 61.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0190.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.1,
+   "value": 61.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

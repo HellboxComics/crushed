@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0033",
- "description": "Recovered from Behind the Couch. Smells like Cabbage Patch Plastic. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Spiral Notebooks (doodles in the margins); 1 CRT Monitor (degaussed one last time); 1 Corded Phone (someone is still on hold); 2 Army Man Squads (the one with the radio survived). Weight 81.2 lb. Handle with both hands.",
+ "description": "Recovered from Behind the Couch. Smells like Cabbage Patch Plastic. Contents (partial): 3 Yo-Yos (walked the dog one time); 2 Three-Ring Binders (covered in band names); 1 Poker Chip (a stack of ambition); 1 Corded Phone (was on the line when mom picked up); 3 Soda Cans (New Koak, 79 days only). Weight 87.5 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0033.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.2,
+   "value": 87.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

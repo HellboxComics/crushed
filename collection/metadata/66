@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0066",
- "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 1 Boom Box (one speaker still believes); 2 Floppy Disks (Iomegalodon would have held it all); 2 Cheap Sunglasses (one lens popped out); 2 Three-Ring Binders (covered in band names); 2 Power Strips (daisy-chained into three more). Weight 89.2 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like body spray cloud. Contents (partial): 1 Boom Box (took 10 D batteries); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Joysticks (fire button pressed 40 million times); 3 Power Strips (overloaded on purpose); 1 Metal Lunchbox (thermos missing). Weight 99.0 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0066.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.2,
+   "value": 99.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

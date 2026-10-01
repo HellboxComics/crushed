@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0148",
- "description": "Recovered from Estate of a Collector. Smells like Jean Jacket. Contents (partial): 2 Poker Chips (a stack of ambition); 3 Portable Tape Players (auto-reverse broke in 1991); 1 Toy Slime (stuck in the carpet); 3 Cheap Sunglasses (one lens popped out); 3 Roller Skates (toe stop worn to nothing); 1 Emergency Ramen (the whole strategy). Weight 36.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like Jean Jacket. Contents (partial): 2 Poker Chips (taken from a casino, small heist); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 3 Roller Skates (the rink smell is still in there); 2 Calculators (spelled BOOBIES upside down); 3 Floppy Disks (AOHell trial, 500 free hours); 1 Emergency Ramen (the whole strategy). Weight 91.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0148.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.1,
+   "value": 91.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 56,
    "display_type": "number"
   }
  ]

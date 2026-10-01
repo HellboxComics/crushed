@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0097",
- "description": "Recovered from Mom's Minivan. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 TV Remotes (found in the couch); 1 Magazine (the staples are doing the work); 2 Puzzle Cubes (solved once, stickers moved); 1 Power Strip (daisy-chained into three more). Weight 85.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Mom's Minivan. Smells like Aqua Not-Net Hairspray. Contents (partial): 1 CRT Monitor (weighs more than the desk); 3 VHS Tapes (late fees now exceed GDP of a small nation); 3 TV Remotes (the volume button worn smooth); 2 AA Batteries (Durasmell, lasted till Christmas noon); 1 Power Strip (daisy-chained into three more). Weight 94.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0097.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.4,
+   "value": 94.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

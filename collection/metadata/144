@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0144",
- "description": "Recovered from Under the Bed. Smells like Jean Jacket. Contents (partial): 1 Metal Lunchbox (thermos missing); 2 TV Remotes (held together with tape); 1 Sneaker (smells like 1989); 1 Tissue Box (one for every mood); 2 Centerfolds (staples removed, an attempt was made). Weight 46.1 lb. We kept the important shit.",
+ "description": "Recovered from Under the Bed. Smells like Jean Jacket. Contents (partial): 1 Metal Lunchbox (the smell stays); 3 Beer Cans (PBJ, the hipster one); 3 AA Batteries (licked to test); 3 Puzzle Cubes (two stickers peeled); 2 Spiral Notebooks (spiral unwound halfway). Weight 56.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0144.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.1,
+   "value": 56.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 48,
    "display_type": "number"
   }
  ]

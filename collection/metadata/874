@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0874",
- "description": "Recovered from Ex's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Tissue Box (one for every mood); 1 Selfie Stick (mid-trip, mid-ocean); 3 TV Remotes (held together with tape); 2 Clear Lighters (for incense, obviously); 2 Glow Sticks (cracked at a school dance). Weight 36.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Ex's Garage. Smells like DoorDashed Fries, Cold. Contents (partial): 1 Tissue Box (nearly empty); 2 Spiral Notebooks (doodles in the margins); 1 VR Headset (the walls were real and they were hit); 3 Tablets (bought for the kids, taken back by dad); 1 Drone (over the neighbor's fence). Weight 50.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0874.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.2,
+   "value": 50.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

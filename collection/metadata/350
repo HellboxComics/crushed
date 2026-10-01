@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0350",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Sneakers (worn to one (1) very bad decision); 3 Soda Cans (New Koak, 79 days only); 2 Magazines (the staples are doing the work); 1 Disposable Camera (never developed). Weight 35.0 lb. Contents may have settled.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like new plastic. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Cheap Sunglasses (mall kiosk special); 2 Burned CDs (coaster now); 3 Soda Cans (shaken as a prank); 2 Skate Wheels (rolled into a storm drain once). Weight 44.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0350.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.0,
+   "value": 44.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

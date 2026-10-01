@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0392",
- "description": "Recovered from An AOHell CD Pile. Smells like Dial-Up Modem Heat. Contents (partial): 1 Magazine (read for the articles); 1 Dice (blown on for luck); 3 Beer Cans (last one in the fridge); 1 Floppy Disk (Iomegalodon would have held it all); 2 AA Batteries (mixed old and new, like animals); 1 Tiny Red Candle (lit). Weight 77.3 lb. Crushed it.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Dial-Up Modem Heat. Contents (partial): 1 Magazine (the staples are doing the work); 2 Ball Mice (cord chewed by a dog); 2 Game Controllers (thrown during a boss fight); 2 AA Batteries (Neveready, as advertised); 2 No. 2 Pencils (sharpened to a nub); 1 Tiny Red Candle (one of many). Weight 85.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0392.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.3,
+   "value": 85.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

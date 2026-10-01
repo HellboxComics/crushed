@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0501",
- "description": "Recovered from A LAN Party Basement. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Game Controller (stick drift since day one); 1 AA Batteries (Neveready, as advertised); 3 Magazines (found in a dad's truck); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Webcam (240p of pure confidence). Weight 51.1 lb. Nobody made you keep this.",
+ "description": "Recovered from A LAN Party Basement. Smells like Y2K Bunker Canned Food. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Webcam (240p of pure confidence); 1 Skateboard (one ollie, lifetime); 3 Spiral Notebooks (note says 'check YES or NO'); 1 CRT Monitor (weighs more than the desk). Weight 100.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0501.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.1,
+   "value": 100.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

@@ -343,18 +343,18 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| None | 692 | 77.9% |
-| Loose Ends | 195 | 22.0% |
+| None | 612 | 68.9% |
+| Loose Ends | 275 | 31.0% |
 | Fully Mixtaped | 1 | 0.1% |
 
 ## Loose Wires
 
 | Value | Count | % |
 |---|---:|---:|
-| Several | 350 | 39.4% |
-| Concerning | 334 | 37.6% |
-| A Few | 181 | 20.4% |
-| None | 23 | 2.6% |
+| Several | 345 | 38.9% |
+| Concerning | 330 | 37.2% |
+| A Few | 191 | 21.5% |
+| None | 22 | 2.5% |
 
 ## One of One
 
@@ -395,24 +395,26 @@
 
 | Value | Count | % |
 |---|---:|---:|
-| ICE | 9 | 1.0% |
-| BONE | 5 | 0.6% |
-| CHROME | 4 | 0.5% |
-| OBSIDIAN | 3 | 0.3% |
-| SAFETY ORANGE | 3 | 0.3% |
-| GRAPE | 3 | 0.3% |
+| GRAPE | 8 | 0.9% |
+| CHROME | 6 | 0.7% |
+| SAFETY ORANGE | 4 | 0.5% |
+| OBSIDIAN | 4 | 0.5% |
+| BONE | 4 | 0.5% |
+| ICE | 1 | 0.1% |
 
 ## Gilded
 
 | Value | Count | % |
 |---|---:|---:|
-| AA Batteries | 3 | 0.3% |
-| Beer Can | 2 | 0.2% |
-| Dice | 2 | 0.2% |
-| 16-Bit Controller | 1 | 0.1% |
-| Pager | 1 | 0.1% |
-| TV Remote | 1 | 0.1% |
+| Sneaker | 2 | 0.2% |
+| Game Controller | 2 | 0.2% |
 | Soda Can | 1 | 0.1% |
+| Foam Headphones | 1 | 0.1% |
+| MP3 Player | 1 | 0.1% |
+| Cassette Tape | 1 | 0.1% |
+| Pager | 1 | 0.1% |
+| Dice | 1 | 0.1% |
+| AA Batteries | 1 | 0.1% |
 
 ## Top 25
 
@@ -438,8 +440,8 @@
 | 18 | #0319 | BULL TRAP | Dead Bull | None |
 | 19 | #0324 | MIXTAPE | Cassette Tape | None |
 | 20 | #0755 | SOME ASSEMBLY REQUIRED | Present | None |
-| 21 | #0745 | LANDFILL DRIVE | Hard Drive | None |
-| 22 | #0494 | Y2K | 2000 Glasses | None |
-| 23 | #0244 | BLOW ON IT | Game Cartridge | None |
+| 21 | #0244 | BLOW ON IT | Game Cartridge | None |
+| 22 | #0745 | LANDFILL DRIVE | Hard Drive | None |
+| 23 | #0494 | Y2K | 2000 Glasses | None |
 | 24 | #0582 | COLD STORAGE | Hardware Wallet | None |
 | 25 | #0552 | STILL ALIVE | Virtual Pet | None |

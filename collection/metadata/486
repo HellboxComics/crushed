@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0486",
- "description": "Recovered from Under the Bed. Smells like Hot Pentium. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 2 Spiral Notebooks (spiral unwound halfway); 1 TV Remote (found in the couch); 2 Brick Phones (unbreakable until today); 3 Dice (loaded, rumor says). Weight 34.0 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like Hot Pentium. Contents (partial): 3 Sneakers (smells like 1989); 3 Dice (loaded, rumor says); 2 Tissue Boxes (there was a reason it lived on the nightstand); 2 Game Controllers (thrown during a boss fight); 1 Film Canister (holds one quarter). Weight 41.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0486.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.0,
+   "value": 41.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

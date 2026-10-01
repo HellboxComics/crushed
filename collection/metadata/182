@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0182",
- "description": "Recovered from The Mall Arcade. Smells like mall food court. Contents (partial): 1 Corded Phone (someone is still on hold); 3 Spiral Notebooks (spiral unwound halfway); 2 Keyboards (Partial) (F, J and the crumbs); 3 Slap Bracelets (cut someone, probably); 1 No. 2 Pencil (sharpened to a nub). Weight 79.7 lb. Handle with both hands.",
+ "description": "Recovered from The Mall Arcade. Smells like mall food court. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 Burned CDs (burned at 1x, 4 hours); 2 AA Batteries (Neveready, as advertised); 3 Slap Bracelets (banned by the school); 2 Foam Headphones (orange foam, allegedly). Weight 87.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0182.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.7,
+   "value": 87.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

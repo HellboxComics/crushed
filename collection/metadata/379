@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0379",
- "description": "Recovered from Ex's Garage. Smells like cheap cologne. Contents (partial): 3 Virtual Pets (fed 0 times); 1 VHS Tape (late fees now exceed GDP of a small nation); 1 Portable CD Player (anti-skip lied); 2 Dice (blown on for luck); 2 Power Strips (daisy-chained into three more). Weight 81.9 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like cheap cologne. Contents (partial): 3 Virtual Pets (died during math class); 3 Poker Chips (taken from a casino, small heist); 2 Memory Cards (corrupted during a birthday); 2 TV Remotes (found in the couch); 1 Brick Phone (unbreakable until today). Weight 92.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0379.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.9,
+   "value": 92.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

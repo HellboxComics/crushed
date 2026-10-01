@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0649",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like hot dust on a CRT. Contents (partial): 1 Game Controller (stick drift since day one); 3 Matchbooks (from a gentlemen's club, reportedly); 2 TV Remotes (held together with tape); 2 Flip Phones (12 texts left this month); 2 No. 2 Pencils (never saw a scantron it liked). Weight 30.7 lb. Nobody made you keep this.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like hot dust on a CRT. Contents (partial): 3 Game Controllers (stick drift since day one); 1 Cheap Sunglasses (one lens popped out); 1 Shot Glass (from a trip to Vegas); 3 TV Remotes (the volume button worn smooth); 3 Matchbooks (from a gentlemen's club, reportedly). Weight 40.0 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0649.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.7,
+   "value": 40.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0070",
- "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 1 Pizza Crust (still better than most portfolios); 1 No. 2 Pencil (never saw a scantron it liked); 1 Shot Glass (souvenir of a night nobody recalls); 1 Calculator (solar panel covered by a sticker). Weight 80.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Joysticks (fire button pressed 40 million times); 2 Game Cartridges (blown into 400 times); 1 Disposable Camera (27 exposures of a thumb); 1 No. 2 Pencil (chewed). Weight 91.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0070.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.9,
+   "value": 91.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

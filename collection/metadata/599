@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0599: COASTERS",
- "description": "Every burned CD that ended up under a drink. Recovered from Every Coffee Table. Smells like stale beer. Contents (partial): 56 Burned CDs (says ROAD TRIP in marker); 6 Beer Cans (warm, sadly); 10 Jewel Cases (insert is from a different album); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 13.4 lb. No refunds. No returns. No explanation.",
+ "description": "Every burned CD that ended up under a drink. Recovered from Every Coffee Table. Smells like stale beer. Contents (partial): 56 Burned CDs (says ROAD TRIP in marker); 6 Beer Cans (warm, sadly); 10 Jewel Cases (insert is from a different album); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 13.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0599.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 13.4,
+   "value": 13.6,
    "display_type": "number"
   },
   {

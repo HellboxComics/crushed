@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0756",
- "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 1 Game Controller (thrown during a boss fight); 1 Power Strip (daisy-chained into three more); 1 Dice (blown on for luck); 1 Tissue Box (nearly empty); 3 AA Batteries (Neveready, as advertised); 1 Emergency Ramen (for emergencies). Weight 36.1 lb. Some assembly was removed.",
+ "description": "Recovered from Under the Bed. Smells like Grandma's couch. Contents (partial): 2 Game Controllers (thrown during a boss fight); 2 Shot Glasses (chipped rim); 1 Handheld Console (battery cover lost immediately); 1 Ring Light (the eyes in every mirror selfie); 3 Laptop Chargers (warm to the touch, somehow); 1 Emergency Ramen (for emergencies). Weight 48.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0756.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.1,
+   "value": 48.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 59,
    "display_type": "number"
   }
  ]

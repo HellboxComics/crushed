@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0206",
- "description": "Recovered from The Mall Arcade. Smells like Blockbusted New Release Wall. Contents (partial): 1 Beer Can (crushed on a forehead); 1 Digital Camera (2 megapixels of truth); 1 Sneaker (was in the dryer); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Tissue Boxes (one for every mood). Weight 84.6 lb. Some assembly was removed.",
+ "description": "Recovered from The Mall Arcade. Smells like Blockbusted New Release Wall. Contents (partial): 2 Beer Cans (Milwaukee's Worst, on sale); 3 Skate Wheels (flat spot from a power slide); 1 Power Strip (overloaded on purpose); 1 Film Canister (holds one quarter); 3 Floppy Disks (DISK 2 of 7). Weight 90.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0206.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.6,
+   "value": 90.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

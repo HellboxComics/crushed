@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0091",
- "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Joysticks (suction cups gave up); 2 VHS Tapes (taped off HBOH, commercials and all); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 2 Magazines (found in a dad's truck); 2 Pizza Crusts (petrified). Weight 88.9 lb. Contents may have settled.",
+ "description": "Recovered from Back of the Closet. Smells like mall food court. Contents (partial): 3 Joysticks (fire button pressed 40 million times); 1 Spiral Notebook (note says 'check YES or NO'); 3 Cassette Tapes (rewound with a pencil); 1 Boom Box (took 10 D batteries); 2 Yo-Yos (walked the dog one time). Weight 100.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0091.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 88.9,
+   "value": 100.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 48,
    "display_type": "number"
   }
  ]

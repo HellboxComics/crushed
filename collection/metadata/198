@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0198",
- "description": "Recovered from A Very Specific Ditch. Smells like Blockbusted New Release Wall. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Centerfold (left open to the wrong page); 1 Three-Ring Binder (velcro screams when opened); 2 Game Cartridges (blew on it, Nintendont said no); 2 Pagers (last page from a number nobody called back). Weight 46.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Blockbusted New Release Wall. Contents (partial): 3 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Calculators (spelled BOOBIES upside down); 3 Magazines (the staples are doing the work); 1 No. 2 Pencil (never saw a scantron it liked); 1 Pizza Crust (still better than most portfolios). Weight 61.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0198.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.6,
+   "value": 61.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

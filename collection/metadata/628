@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0628",
- "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Burned CD (burned at 1x, 4 hours); 1 Sneaker (smells like 1989); 1 Hand Sanitizer (60% alcohol, 40% anxiety); 1 Glow Stick (still glowing a little, somehow). Weight 27.3 lb. Nobody made you keep this.",
+ "description": "Recovered from An Ebay-ish Box, Never Shipped. Smells like fresh batteries (licked). Contents (partial): 3 Game Controllers (thrown during a boss fight); 1 Shot Glass (from a trip to Vegas); 3 Energy Drinks (Jolted, twice the caffeine); 2 Jewel Cases (hinge broken on arrival); 2 Disposable Cameras (27 exposures of a thumb). Weight 40.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0628.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Finish",
-   "value": "CHROME"
+   "value": "GRAPE"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.3,
+   "value": 40.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0209",
- "description": "Recovered from The Mall Arcade. Smells like wet cardboard. Contents (partial): 1 Boom Box (one speaker still believes); 1 Yo-Yo (string tied to a finger for 3 years); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Dice (blown on for luck); 3 Army Man Squads (the one with the radio survived). Weight 83.1 lb. Contents may have settled.",
+ "description": "Recovered from The Mall Arcade. Smells like wet cardboard. Contents (partial): 1 Boom Box (took 10 D batteries); 2 Tissue Boxes (nearly empty); 2 Burned CDs (says ROAD TRIP in marker); 1 Slap Bracelet (cut someone, probably); 3 Portable Tape Players (belt clip snapped at a bus stop). Weight 96.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0209.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.1,
+   "value": 96.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

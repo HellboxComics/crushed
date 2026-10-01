@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0786",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like blue raspberry. Contents (partial): 2 Smartphones (Instagrampa open, 900 unread); 1 Handheld Console (battery cover lost immediately); 1 Tablet (used once as a cutting board); 1 USB Stick (never ejected safely); 3 Poker Chips (a stack of ambition). Weight 30.8 lb. We kept the important shit.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like blue raspberry. Contents (partial): 3 Smartphones (cracked in the first week); 3 No. 2 Pencils (sharpened to a nub); 2 Power Strips (daisy-chained into three more); 1 Fidget Spinner (spins for four seconds, like the trend); 2 Bluetooth Speakers (paired with the wrong phone). Weight 43.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0786.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.8,
+   "value": 43.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

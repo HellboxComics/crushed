@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0751",
- "description": "Recovered from Mom's Basement (Again). Smells like White Paw, Warm. Contents (partial): 2 TV Remotes (found in the couch); 1 Disposable Camera (never developed); 1 Smartphone (last text: read, no reply); 3 Tissue Boxes (one for every mood); 1 Power Bank (10000 mAh of dead weight). Weight 36.8 lb. We kept the important shit.",
+ "description": "Recovered from Mom's Basement (Again). Smells like White Paw, Warm. Contents (partial): 3 TV Remotes (found in the couch); 3 Face Masks (worn below the nose); 2 Disposable Cameras (never developed); 1 Spiral Notebook (doodles in the margins); 3 Clear Lighters (for incense, obviously). Weight 46.9 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0751.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.8,
+   "value": 46.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

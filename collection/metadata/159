@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0159",
- "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 2 Yo-Yos (string tied to a finger for 3 years); 3 Keyboards (Partial) (F, J and the crumbs); 1 Game Cartridge (blew on it, Nintendont said no); 2 AA Batteries (mixed old and new, like animals); 2 Film Canisters (undeveloped, forever). Weight 42.4 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Bar. Smells like new plastic. Contents (partial): 3 Yo-Yos (walked the dog one time); 1 Burned CD (coaster now); 3 AA Batteries (Durasmell, lasted till Christmas noon); 3 Cassette Tapes (TDKay SA-90, the good tape); 1 Metal Lunchbox (the smell stays). Weight 73.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0159.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.4,
+   "value": 73.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

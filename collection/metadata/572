@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0572",
- "description": "Recovered from Dad's Junk Drawer. Smells like Ed Hardy-ish Cologne. Contents (partial): 1 Sneaker (untied since 1989); 3 AA Batteries (Durasmell, lasted till Christmas noon); 1 Cassette Tape (recorded off the radio, DJ talks over every intro); 1 Cheap Sunglasses (mall kiosk special); 1 USB Stick (never ejected safely). Weight 30.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Sneakers (left only); 2 Magazines (the staples are doing the work); 3 Spiral Notebooks (spiral unwound halfway); 2 Shot Glasses (chipped rim); 2 Flip Phones (ringtone composed by hand). Weight 41.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0572.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.4,
+   "value": 41.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

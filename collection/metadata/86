@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0086",
- "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Three-Ring Binders (velcro screams when opened); 1 Shot Glass (from a trip to Vegas); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Roller Skate (toe stop worn to nothing). Weight 93.2 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like Arcade Tokens. Contents (partial): 3 Sneakers (untied since 1989); 1 Boom Box (one speaker still believes); 2 Pizza Crusts (still better than most portfolios); 1 Portable Tape Player (auto-reverse broke in 1991); 2 Spiral Notebooks (spiral unwound halfway). Weight 104.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0086.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 93.2,
+   "value": 104.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0415",
- "description": "Recovered from The Bachelor Pad. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Gold AA Batteries (why); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Floppy Disk (DISK 2 of 7); 3 Clear Lighters (borrowed in 1997, never returned); 2 Magazines (for the interviews, obviously). Weight 40.0 lb. Handle with both hands.",
+ "description": "Recovered from The Bachelor Pad. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Gold Sneaker (why); 1 Keyboard (Partial) (F, J and the crumbs); 3 Shot Glasses (chipped rim); 2 Burned CDs (coaster now); 1 Floppy Disk (says DO NOT FORMAT). Weight 52.3 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0415.png",
  "attributes": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Gilded",
-   "value": "AA Batteries"
+   "value": "Sneaker"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.0,
+   "value": 52.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

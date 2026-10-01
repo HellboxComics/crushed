@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0773",
- "description": "Recovered from Ex's Garage. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Hand Sanitizers (half empty, half crusty); 1 Sneaker (worn to one (1) very bad decision); 2 Bluetooth Speakers (paired with the wrong phone); 1 Dice (blown on for luck); 1 Drone (flew once, into a tree). Weight 33.3 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Hand Sanitizers (60% alcohol, 40% anxiety); 2 Power Banks (at 4%, like all of them); 3 Handheld Consoles (battery cover lost immediately); 3 Cheap Sunglasses (mall kiosk special); 1 Pizza Crust (found behind the couch). Weight 46.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0773.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.3,
+   "value": 46.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

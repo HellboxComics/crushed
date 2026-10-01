@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0108",
- "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 TV Remotes (the volume button worn smooth); 2 VHS Tapes (Blockbusted rental, never returned); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Roller Skates (the rink smell is still in there); 3 Beer Cans (PBJ, the hipster one). Weight 43.4 lb. Crushed it.",
+ "description": "Recovered from Mom's Minivan. Smells like hot dust on a CRT. Contents (partial): 2 TV Remotes (found in the couch); 3 Beer Cans (last one in the fridge); 2 Three-Ring Binders (velcro screams when opened); 3 Floppy Disks (says DO NOT FORMAT); 2 Calculators (spelled BOOBIES upside down). Weight 95.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0108.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.4,
+   "value": 95.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

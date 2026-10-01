@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0262",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (the unmarked one, from the back of the closet); 3 Puzzle Cubes (solved once, stickers moved); 2 Calculators (spelled BOOBIES upside down). Weight 75.7 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 TV Remote (held together with tape); 1 Three-Ring Binder (velcro screams when opened); 3 Floppy Disks (DISK 2 of 7); 1 No. 2 Pencil (never saw a scantron it liked). Weight 89.5 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0262.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 75.7,
+   "value": 89.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

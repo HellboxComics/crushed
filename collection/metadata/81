@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0081",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 3 Cassette Tapes (labeled MIX 4 U); 2 Three-Ring Binders (velcro screams when opened); 3 Beer Cans (Milwaukee's Worst, on sale); 2 AA Batteries (Neveready, as advertised). Weight 76.1 lb. Nobody made you keep this.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Aqua Not-Net Hairspray. Contents (partial): 3 Yo-Yos (string tied to a finger for 3 years); 2 Centerfolds (left open to the wrong page); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Toy Slime (stuck in the carpet). Weight 99.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0081.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.1,
+   "value": 99.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

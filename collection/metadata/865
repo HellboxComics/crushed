@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0865",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Soda Cans (tab kept for charity); 1 Pizza Crust (still better than most portfolios); 2 Tablets (used once as a cutting board); 3 Smartwatches (still counting steps in the dryer); 3 Beer Cans (last one in the fridge). Weight 28.2 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Hand Sanitizer, Everywhere. Contents (partial): 3 Soda Cans (shaken as a prank); 3 Beer Cans (Milwaukee's Worst, on sale); 3 No. 2 Pencils (sharpened to a nub); 1 Clear Lighter (out of fluid); 3 Face Masks (from 2020, still fresh). Weight 36.3 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0865.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.2,
+   "value": 36.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

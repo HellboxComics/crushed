@@ -316,6 +316,7 @@ def recipe(token_id):
     headliner = hp[int(rng.choice(len(hp), p=hw / hw.sum()))]
 
     n_hero = int(rng.integers(26, 36) + round(inten * 10))
+    n_hero = int(n_hero * 1.5)                 # trash compactor, not playdough: half again as much stuff
     heroes = [headliner]
     counts = {headliner: 1}
     tries = 0
@@ -348,7 +349,7 @@ def recipe(token_id):
     if corded < 3 or one in NO_WIRES:
         fp = [d for d in fp if d.name not in ("wire_bit", "pcb_chunk", "spring")]
     fw = np.array([d.weight for d in fp])
-    n_fill = int(rng.integers(130, 160) + round(inten * 50))     # enough debris to bury the base on every side
+    n_fill = int(rng.integers(150, 180) + round(inten * 50))     # enough debris to bury the base on every side
     fillers = [fp[i].name for i in rng.choice(len(fp), n_fill, p=fw / fw.sum())]
 
     clean = None

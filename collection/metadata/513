@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0513",
- "description": "Recovered from An AOHell CD Pile. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 CRT Monitor (degaussed one last time); 1 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Webcams (240p of pure confidence); 1 Corded Phone (cord stretched to the bathroom); 1 Tissue Box (nearly empty). Weight 81.9 lb. Some assembly was removed.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Poker Chip (never cashed out); 1 Skateboard (one ollie, lifetime); 3 Sneakers (worn to one (1) very bad decision); 1 Cassette Tape (a mix for someone who never listened). Weight 92.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0513.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 81.9,
+   "value": 92.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

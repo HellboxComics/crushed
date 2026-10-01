@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0371",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Frosted Tips Gel. Contents (partial): 1 Cassette Tape (TDKay SA-90, the good tape); 2 Portable CD Players (45-second buffer, 2-second attention span); 2 Cheap Sunglasses (mall kiosk special); 2 Virtual Pets (died during math class); 1 AA Batteries (taken out of the smoke detector). Weight 33.6 lb. Nobody made you keep this.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Frosted Tips Gel. Contents (partial): 2 Cassette Tapes (a mix for someone who never listened); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Tissue Box (nearly empty); 2 Digital Cameras (2 megapixels of truth); 1 Brick Phone (snake high score intact). Weight 46.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0371.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.6,
+   "value": 46.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0032",
- "description": "Recovered from A Blockbusted Drop Box. Smells like New Koak. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Spiral Notebooks (doodles in the margins); 2 Film Canisters (holds one quarter); 2 TV Remotes (held together with tape); 3 Magazines (for the interviews, obviously). Weight 71.7 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like New Koak. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 3 Spiral Notebooks (doodles in the margins); 1 Poker Chip (a stack of ambition); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Yo-Yos (string tied to a finger for 3 years). Weight 84.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0032.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.7,
+   "value": 84.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

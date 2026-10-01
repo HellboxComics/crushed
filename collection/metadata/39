@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0039",
- "description": "Recovered from The Roller Rink Coat Check. Smells like new plastic. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 VHS Tapes (Blockbusted rental, never returned); 2 Calculators (spelled BOOBIES upside down); 1 Foam Headphones (one ear works if you hold it); 3 AA Batteries (taken out of the smoke detector). Weight 41.4 lb. Contents may have settled.",
+ "description": "Recovered from The Roller Rink Coat Check. Smells like new plastic. Contents (partial): 1 Corded Phone (someone is still on hold); 3 AA Batteries (licked to test); 1 Dice (loaded, rumor says); 3 Calculators (spelled BOOBIES upside down); 2 Matchbooks (matches missing, reasons unclear). Weight 51.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0039.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.4,
+   "value": 51.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 31,
+   "value": 46,
    "display_type": "number"
   }
  ]

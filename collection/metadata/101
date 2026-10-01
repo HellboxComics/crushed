@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0101",
- "description": "Recovered from Estate of a Collector. Smells like Drakkar Noire-ish. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 No. 2 Pencil (chewed); 2 Yo-Yos (walked the dog one time); 3 Floppy Disks (DISK 2 of 7); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 76.6 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like Drakkar Noire-ish. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 3 Puzzle Cubes (two stickers peeled); 2 Roller Skates (the rink smell is still in there); 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Three-Ring Binders (velcro screams when opened). Weight 101.9 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0101.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "None"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.6,
+   "value": 101.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

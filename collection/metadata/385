@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0385",
- "description": "Recovered from Under the Bed. Smells like Hot Pentium. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (faceplate swapped 4 times); 2 Virtual Pets (fed 0 times); 1 Clear Lighter (for incense, obviously). Weight 34.1 lb. Crushed it.",
+ "description": "Recovered from Under the Bed. Smells like Hot Pentium. Contents (partial): 2 Digital Cameras (memory full, 14 photos); 1 Centerfold (folded out, then folded back in a hurry); 3 Pagers (last page: 911 (it was not)); 3 Brick Phones (unbreakable until today); 3 Soda Cans (flat). Weight 89.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0385.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.1,
+   "value": 89.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

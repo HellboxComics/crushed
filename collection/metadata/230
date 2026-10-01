@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0230",
- "description": "Recovered from Ex's Garage. Smells like Blockbusted New Release Wall. Contents (partial): 1 Metal Lunchbox (thermos missing); 1 Power Strip (overloaded on purpose); 2 16-Bit Controllers (cord pulled the console off the shelf); 1 Burned CD (burned at 1x, 4 hours); 2 Ball Mice (cord chewed by a dog). Weight 45.9 lb. Some assembly was removed.",
+ "description": "Recovered from Ex's Garage. Smells like Blockbusted New Release Wall. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Sneaker (worn to one (1) very bad decision); 2 16-Bit Controllers (cord pulled the console off the shelf); 3 VHS Tapes (Blockbusted rental, never returned); 2 Milk Caps (the slammer is chipped). Weight 54.5 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0230.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.9,
+   "value": 54.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0126",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Drakkar Noire-ish. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 No. 2 Pencils (chewed); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Floppy Disks (says DO NOT FORMAT); 2 Magazines (found in a dad's truck). Weight 51.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Drakkar Noire-ish. Contents (partial): 3 Calculators (solar panel covered by a sticker); 3 Yo-Yos (string tied to a finger for 3 years); 3 Game Cartridges (rented from Blockbusted, never rewound); 3 Floppy Disks (save icon, but real); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 62.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0126.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.7,
+   "value": 62.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

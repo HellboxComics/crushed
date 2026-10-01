@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0203",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (someone is still on hold); 1 Keyboard (Partial) (F, J and the crumbs); 1 Clear Lighter (out of fluid); 1 Skate Wheel (flat spot from a power slide); 2 Power Strips (daisy-chained into three more). Weight 53.6 lb. Still heavier than it looks.",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Puzzle Cube (solved once, stickers moved); 3 Centerfolds (left open to the wrong page); 1 Foam Headphones (orange foam, allegedly); 3 Sneakers (untied since 1989). Weight 69.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0203.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 53.6,
+   "value": 69.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

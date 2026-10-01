@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0258",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Blockbusted New Release Wall. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Dice (snake eyes, twice); 3 Three-Ring Binders (covered in band names); 1 Pizza Crust (from a sleepover); 2 Slap Bracelets (cut someone, probably). Weight 91.1 lb. Handle with both hands.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Blockbusted New Release Wall. Contents (partial): 1 Boom Box (one speaker still believes); 3 Floppy Disks (DISK 2 of 7); 1 CRT Monitor (screen burn-in reads LOADING); 3 TV Remotes (the volume button worn smooth); 2 Slap Bracelets (banned by the school). Weight 101.0 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0258.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.1,
+   "value": 101.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

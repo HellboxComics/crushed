@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0467",
- "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Flip Phone (snapped shut dramatically); 1 Glow Stick (cracked at a school dance); 1 VHS Tape (taped over a wedding); 3 Dice (loaded, rumor says). Weight 82.1 lb. Crushed it.",
+ "description": "Recovered from Back of the Closet. Smells like new plastic. Contents (partial): 1 Game Controller (stick drift since day one); 1 Slap Bracelet (banned by the school); 3 Sneakers (worn to one (1) very bad decision); 3 Clear Lighters (for incense, obviously); 3 Dice (loaded, rumor says). Weight 89.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0467.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.1,
+   "value": 89.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

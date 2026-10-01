@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0646",
- "description": "Recovered from Grandma's Attic. Smells like Hot Razr Battery. Contents (partial): 1 Magazine (found in a dad's truck); 1 Matchbook (matches missing, reasons unclear); 3 Jewel Cases (hinge broken on arrival); 2 Clear Lighters (for incense, obviously); 2 Power Strips (daisy-chained into three more). Weight 40.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Hot Razr Battery. Contents (partial): 3 Magazines (read for the articles); 2 Digital Cameras (2 megapixels of truth); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Disposable Cameras (never developed); 3 Flip Phones (12 texts left this month). Weight 51.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0646.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.7,
+   "value": 51.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

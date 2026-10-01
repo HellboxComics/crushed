@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0001",
- "description": "Recovered from Ex's Garage. Smells like Arcade Tokens. Contents (partial): 1 TV Remote (found in the couch); 3 AA Batteries (licked to test); 3 Puzzle Cubes (solved once, stickers moved); 1 Corded Phone (someone is still on hold); 1 Three-Ring Binder (covered in band names); 1 Gold Coin (bought the top). Weight 45.9 lb. Crushed it.",
+ "description": "Recovered from Ex's Garage. Smells like Arcade Tokens. Contents (partial): 2 TV Remotes (held together with tape); 3 Army Man Squads (melted with a magnifying glass); 3 AA Batteries (Durasmell, lasted till Christmas noon); 3 Yo-Yos (walked the dog one time); 2 Three-Ring Binders (velcro screams when opened); 1 Gold Coin (real, probably). Weight 62.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0001.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.9,
+   "value": 62.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 56,
    "display_type": "number"
   }
  ]

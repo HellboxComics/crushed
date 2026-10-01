@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0407",
- "description": "Recovered from A Circuit City-ish Return Counter. Smells like Dial-Up Modem Heat. Contents (partial): 2 Pagers (clipped to jeans for status only); 3 MP3 Players (shuffle picked the same song 6 times); 1 VHS Tape (label says DO NOT TAPE OVER); 3 Keyboards (Partial) (F, J and the crumbs); 1 Skateboard (one ollie, lifetime). Weight 77.3 lb. Crushed it.",
+ "description": "Recovered from A Circuit City-ish Return Counter. Smells like Dial-Up Modem Heat. Contents (partial): 3 Pagers (last page from a number nobody called back); 3 No. 2 Pencils (never saw a scantron it liked); 1 Virtual Pet (reincarnated 40 times); 2 Cheap Sunglasses (one lens popped out); 2 Jewel Cases (hinge broken on arrival). Weight 86.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0407.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.3,
+   "value": 86.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

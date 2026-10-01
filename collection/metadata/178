@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0178",
- "description": "Recovered from A Very Specific Ditch. Smells like Jean Jacket. Contents (partial): 1 Sneaker (was in the dryer); 1 CRT Monitor (degaussed one last time); 1 No. 2 Pencil (chewed); 3 Three-Ring Binders (covered in band names); 2 Poker Chips (a stack of ambition). Weight 89.2 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Jean Jacket. Contents (partial): 2 Sneakers (was in the dryer); 3 Centerfolds (folded out, then folded back in a hurry); 1 Scratch Ticket ($2 for hope); 1 Soda Can (shaken as a prank); 2 Floppy Disks (says DO NOT FORMAT). Weight 99.6 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0178.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.2,
+   "value": 99.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

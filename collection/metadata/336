@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0336",
- "description": "Recovered from Lollapaloser Lost & Found. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 1 Puzzle Cube (solved once, stickers moved); 1 Game Cartridge (rented from Blockbusted, never rewound); 2 16-Bit Controllers (the B button is sticky); 2 Clear Lighters (borrowed in 1997, never returned). Weight 43.1 lb. Crushed it.",
+ "description": "Recovered from Lollapaloser Lost & Found. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 2 Ball Mice (rollers caked with 1998); 2 Jewel Cases (insert is from a different album); 2 16-Bit Controllers (the B button is sticky); 3 Cheap Sunglasses (mall kiosk special). Weight 53.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0336.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.1,
+   "value": 53.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

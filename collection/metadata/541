@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0541",
- "description": "Recovered from Garage Sale Free Bin. Smells like Ed Hardy-ish Cologne. Contents (partial): 1 Gold AA Batteries (why); 2 Sneakers (left only); 1 CRT Monitor (screen burn-in reads LOADING); 2 No. 2 Pencils (sharpened to a nub); 2 Centerfolds (left open to the wrong page); 1 Emergency Ramen (the whole strategy). Weight 72.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Ed Hardy-ish Cologne. Contents (partial): 1 Gold Dice (why); 2 Sneakers (untied since 1989); 1 Webcam (pointed at the ceiling forever); 3 Handheld Consoles (battery cover lost immediately); 3 Centerfolds (staples removed, an attempt was made); 1 Emergency Ramen (for emergencies). Weight 81.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0541.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Gilded",
-   "value": "AA Batteries"
+   "value": "Dice"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 72.8,
+   "value": 81.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

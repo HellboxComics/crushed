@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0310",
- "description": "Recovered from Vegas Hotel Room. Smells like Lunchables-ish Crackers. Contents (partial): 1 Yo-Yo (string tied to a finger for 3 years); 2 Centerfolds (folded out, then folded back in a hurry); 2 Power Strips (overloaded on purpose); 1 Scratch Ticket (not a winner); 1 Skateboard (one ollie, lifetime). Weight 79.4 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Lunchables-ish Crackers. Contents (partial): 1 Yo-Yo (walked the dog one time); 1 Disposable Camera (27 exposures of a thumb); 2 Sneakers (smells like 1989); 1 16-Bit Controller (cord pulled the console off the shelf); 1 Scratch Ticket ($2 for hope). Weight 94.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0310.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.4,
+   "value": 94.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

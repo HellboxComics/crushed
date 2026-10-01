@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0618",
- "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 1 Energy Drink (third one that night); 2 Power Strips (daisy-chained into three more); 3 Sneakers (worn to one (1) very bad decision); 3 Centerfolds (staples removed, an attempt was made); 2 TV Remotes (the volume button worn smooth); 1 Tiny Red Candle (lit). Weight 34.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Myspace Glitter. Contents (partial): 3 Energy Drinks (exam week casualty); 3 Burned CDs (track 7 skips); 1 Film Canister (holds one quarter); 3 Poker Chips (never cashed out); 1 Soda Can (flat); 1 Tiny Red Candle (one of many). Weight 41.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0618.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.5,
+   "value": 41.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

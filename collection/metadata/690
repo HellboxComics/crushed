@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0690",
- "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Hollister-ish Store Fog. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 2 Spiral Notebooks (spiral unwound halfway); 1 VR Headset (worn twice); 2 Beer Cans (warm, sadly); 1 Tissue Box (there was a reason it lived on the nightstand). Weight 25.3 lb. Nobody made you keep this.",
+ "description": "Recovered from A Myspace Top 8 Breakup Box. Smells like Hollister-ish Store Fog. Contents (partial): 2 MP3 Players (shuffle picked the same song 6 times); 2 Scratch Tickets ($2 for hope); 3 No. 2 Pencils (never saw a scantron it liked); 3 Beer Cans (warm, sadly); 3 Magazines (found in a dad's truck). Weight 74.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0690.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.3,
+   "value": 74.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

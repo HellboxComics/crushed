@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0538",
- "description": "Recovered from Vegas Hotel Room. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 1 Game Controller (thrown during a boss fight); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (from a trip to Vegas); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Scratch Ticket (not a winner). Weight 31.9 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Juicy Couture-ish Tracksuit. Contents (partial): 1 Game Controller (stick drift since day one); 3 Disposable Cameras (never developed); 1 Glow Stick (still glowing a little, somehow); 2 Spiral Notebooks (doodles in the margins); 2 Energy Drinks (exam week casualty). Weight 42.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0538.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.9,
+   "value": 42.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

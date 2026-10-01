@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0402",
- "description": "Recovered from Grandma's Attic. Smells like Spencer's-ish Gifts Incense. Contents (partial): 2 VHS Tapes (Blockbusted rental, never returned); 1 Webcam (240p of pure confidence); 2 Ball Mice (cord chewed by a dog); 3 Centerfolds (folded out, then folded back in a hurry); 2 MP3 Players (shuffle picked the same song 6 times). Weight 27.3 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like Spencer's-ish Gifts Incense. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 3 Centerfolds (folded out, then folded back in a hurry); 3 Floppy Disks (AOHell trial, 500 free hours); 3 Burned CDs (coaster now); 3 Beer Cans (Natty Lightweight, 30-rack). Weight 87.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0402.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.3,
+   "value": 87.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0588",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Disposable Cameras (27 exposures of a thumb); 2 Tissue Boxes (there was a reason it lived on the nightstand); 1 Centerfold (left open to the wrong page); 2 TV Remotes (the volume button worn smooth); 1 Face Mask (one of 400 in a coat pocket). Weight 22.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 3 Disposable Cameras (never developed); 3 TV Remotes (the volume button worn smooth); 3 Glow Sticks (cracked at a school dance); 3 Clear Lighters (for incense, obviously); 3 Matchbooks (matches missing, reasons unclear). Weight 30.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0588.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 22.5,
+   "value": 30.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

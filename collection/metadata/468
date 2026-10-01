@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0468",
- "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 2 Jewel Cases (hinge broken on arrival); 1 Pizza Crust (found behind the couch); 3 Burned CDs (burned at 1x, 4 hours); 1 Game Controller (thrown during a boss fight). Weight 77.7 lb. We kept the important shit.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Grandma's couch. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Pizza Crust (from a sleepover); 2 Jewel Cases (insert is from a different album); 2 Poker Chips (a stack of ambition); 1 Shot Glass (souvenir of a night nobody recalls). Weight 86.4 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0468.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.7,
+   "value": 86.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

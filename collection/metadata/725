@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0725",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Earbud Cases (both buds gone, case still charges nothing); 1 Drone (over the neighbor's fence); 2 Poker Chips (a stack of ambition); 2 Soda Cans (tab kept for charity). Weight 38.7 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like blue raspberry. Contents (partial): 1 Ring Light (one bulb out, one ego intact); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Hand Sanitizers (half empty, half crusty); 1 Energy Drink (tastes like a battery); 2 Power Banks (10000 mAh of dead weight). Weight 50.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0725.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.7,
+   "value": 50.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

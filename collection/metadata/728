@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0728",
- "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Sneakers (untied since 1989); 3 AA Batteries (Durasmell, lasted till Christmas noon); 3 Poker Chips (never cashed out); 3 Smartphones (cracked in the first week); 1 Soda Can (flat). Weight 39.9 lb. Some assembly was removed.",
+ "description": "Recovered from Grandma's Attic. Smells like arcade carpet. Contents (partial): 3 Sneakers (worn to one (1) very bad decision); 3 USB Sticks (never ejected safely); 2 Scratch Tickets (scratched with a house key); 1 Energy Drink (Red Bullish, gave it wings, took them back); 3 AA Batteries (Neveready, as advertised). Weight 48.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0728.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 39.9,
+   "value": 48.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0061",
- "description": "Recovered from Garage Sale Free Bin. Smells like Cabbage Patch Plastic. Contents (partial): 1 Boom Box (one speaker still believes); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Metal Lunchbox (thermos missing); 1 Matchbook (from a gentlemen's club, reportedly); 3 Tissue Boxes (one for every mood). Weight 96.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Cabbage Patch Plastic. Contents (partial): 1 Boom Box (shoulder-mounted in its prime); 1 Roller Skate (toe stop worn to nothing); 2 Beer Cans (Milwaukee's Worst, on sale); 3 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer). Weight 108.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0061.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 96.8,
+   "value": 108.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

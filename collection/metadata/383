@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0383",
- "description": "Recovered from Napstered Dorm Room. Smells like Hot Pentium. Contents (partial): 1 Digital Camera (2 megapixels of truth); 1 Scratch Ticket ($2 for hope); 1 Memory Card (corrupted during a birthday); 2 Magazines (for the interviews, obviously); 2 Brick Phones (snake high score intact). Weight 30.9 lb. Handle with both hands.",
+ "description": "Recovered from Napstered Dorm Room. Smells like Hot Pentium. Contents (partial): 1 Digital Camera (2 megapixels of truth); 3 Magazines (read for the articles); 1 Floppy Disk (save icon, but real); 3 Cheap Sunglasses (one lens popped out); 3 Scratch Tickets (scratched with a house key). Weight 80.9 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0383.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 30.9,
+   "value": 80.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

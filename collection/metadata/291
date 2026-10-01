@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0291",
- "description": "Recovered from Under the Bed. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Sneaker (worn to one (1) very bad decision); 2 Beer Cans (12 of 12); 1 Floppy Disk (save icon, but real); 1 Joystick (suction cups gave up); 2 Poker Chips (taken from a casino, small heist). Weight 35.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Sneaker (untied since 1989); 2 Beer Cans (PBJ, the hipster one); 1 Corded Phone (someone is still on hold); 2 Foam Headphones (orange foam, allegedly); 2 Game Cartridges (blew on it, Nintendont said no). Weight 45.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0291.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.5,
+   "value": 45.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

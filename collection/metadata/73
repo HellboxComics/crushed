@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0073",
- "description": "Recovered from A Tupperware-ish Party. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Army Man Squads (melted with a magnifying glass); 2 Pizza Crusts (still better than most portfolios); 1 Shot Glass (souvenir of a night nobody recalls); 1 Power Strip (daisy-chained into three more); 1 Gold Coin (real, probably). Weight 91.6 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Shot Glasses (from a trip to Vegas); 3 Army Man Squads (melted with a magnifying glass); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Roller Skates (toe stop worn to nothing); 1 Gold Coin (bought the top). Weight 108.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0073.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 91.6,
+   "value": 108.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

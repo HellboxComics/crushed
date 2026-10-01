@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0562",
- "description": "Recovered from Under the Bed. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Energy Drinks (tastes like a battery); 1 Beer Can (Milwaukee's Worst, on sale); 3 Burned CDs (track 7 skips); 3 Game Controllers (stick drift since day one); 3 Sneakers (worn to one (1) very bad decision). Weight 34.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Energy Drinks (tastes like a battery); 3 Spiral Notebooks (doodles in the margins); 3 Pizza Crusts (still better than most portfolios); 3 Handheld Consoles (screen scratched from a pocket with keys); 3 Matchbooks (from a gentlemen's club, reportedly). Weight 42.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0562.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 34.7,
+   "value": 42.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

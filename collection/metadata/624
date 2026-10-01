@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0624",
- "description": "Recovered from A Frat House Couch. Smells like new plastic. Contents (partial): 2 Tissue Boxes (nearly empty); 1 Energy Drink (Jolted, twice the caffeine); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 Beer Can (12 of 12); 1 TV Remote (found in the couch). Weight 26.1 lb. Some assembly was removed.",
+ "description": "Recovered from A Frat House Couch. Smells like new plastic. Contents (partial): 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Burned CDs (track 7 skips); 2 Laptop Chargers (warm to the touch, somehow); 3 Centerfolds (left open to the wrong page); 3 Energy Drinks (exam week casualty). Weight 37.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0624.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.1,
+   "value": 37.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

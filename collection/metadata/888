@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0888",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like Fidget Spinner Bearings. Contents (partial): 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Handheld Console (screen scratched from a pocket with keys); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Shot Glasses (souvenir of a night nobody recalls); 3 Cheap Sunglasses (mall kiosk special). Weight 43.3 lb. Crushed it.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Fidget Spinner Bearings. Contents (partial): 2 Disposable Vapes (mango, mostly); 1 Beer Can (crushed on a forehead); 1 Earbud Case (one bud present); 2 AA Batteries (licked to test); 3 Game Controllers (thrown during a boss fight). Weight 53.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0888.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.3,
+   "value": 53.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 45,
+   "value": 67,
    "display_type": "number"
   }
  ]

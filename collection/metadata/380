@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0380",
- "description": "Recovered from A LAN Party Basement. Smells like arcade carpet. Contents (partial): 2 Cassette Tapes (TDKay SA-90, the good tape); 2 Sneakers (worn to one (1) very bad decision); 2 Disposable Cameras (27 exposures of a thumb); 1 AA Batteries (probably dead); 2 Burned CDs (track 7 skips). Weight 94.0 lb. Some assembly was removed.",
+ "description": "Recovered from A LAN Party Basement. Smells like arcade carpet. Contents (partial): 3 Cassette Tapes (labeled MIX 4 U); 1 Boom Box (took 10 D batteries); 2 Pagers (last page: 911 (it was not)); 2 Burned CDs (says ROAD TRIP in marker); 3 VHS Tapes (taped off HBOH, commercials and all). Weight 100.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0380.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 94.0,
+   "value": 100.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

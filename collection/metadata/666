@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0666",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 1 TV Remote (the volume button worn smooth); 2 Tissue Boxes (there was a reason it lived on the nightstand); 2 Poker Chips (never cashed out); 2 No. 2 Pencils (sharpened to a nub). Weight 28.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Ed Hardy-ish Cologne. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Scratch Ticket ($2 for hope); 3 Glow Sticks (cracked at a school dance); 2 Pizza Crusts (still better than most portfolios); 3 Magazines (read for the articles). Weight 36.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0666.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.7,
+   "value": 36.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

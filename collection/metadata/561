@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0561",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Myspace Glitter. Contents (partial): 2 Magazines (read for the articles); 1 Poker Chip (never cashed out); 2 Energy Drinks (Red Bullish, gave it wings, took them back); 3 AA Batteries (licked to test); 2 Shot Glasses (chipped rim); 1 Broken Rocket (didn't make it). Weight 28.3 lb. Contents may have settled.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Myspace Glitter. Contents (partial): 3 Magazines (found in a dad's truck); 2 Poker Chips (taken from a casino, small heist); 2 MP3 Players (128MB, 30 songs, 29 skipped); 2 Portable CD Players (45-second buffer, 2-second attention span); 3 Energy Drinks (third one that night); 1 Broken Rocket (didn't make it). Weight 42.3 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0561.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.3,
+   "value": 42.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 62,
    "display_type": "number"
   }
  ]

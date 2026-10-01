@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0431",
- "description": "Recovered from Nobody Knows. Smells like mall food court. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 2 Disposable Cameras (27 exposures of a thumb); 1 CRT Monitor (degaussed one last time); 2 Film Canisters (holds one quarter); 2 Floppy Disks (contains one (1) virus). Weight 84.0 lb. Some assembly was removed.",
+ "description": "Recovered from Nobody Knows. Smells like mall food court. Contents (partial): 1 MP3 Player (shuffle picked the same song 6 times); 3 Cheap Sunglasses (one lens popped out); 1 CRT Monitor (screen burn-in reads LOADING); 3 Scratch Tickets ($2 for hope); 1 Energy Drink (exam week casualty). Weight 93.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0431.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.0,
+   "value": 93.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

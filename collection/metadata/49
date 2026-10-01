@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0049",
- "description": "Recovered from Dad's Junk Drawer. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Sneakers (left only); 2 Army Man Squads (the one with the radio survived); 2 Pizza Crusts (from a sleepover); 3 Power Strips (overloaded on purpose); 1 Paper Hand (sold at the bottom). Weight 84.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 1 Three-Ring Binder (covered in band names); 2 Dice (blown on for luck); 1 Portable Tape Player (belt clip snapped at a bus stop); 3 Army Man Squads (melted with a magnifying glass); 1 Paper Hand (sold at the bottom). Weight 93.1 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0049.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 93.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 53,
    "display_type": "number"
   }
  ]

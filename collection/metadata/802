@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0802",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like arcade carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 2 Selfie Sticks (mid-trip, mid-ocean); 2 Cheap Sunglasses (mall kiosk special); 3 Sneakers (was in the dryer); 2 Dice (loaded, rumor says). Weight 40.9 lb. Still heavier than it looks.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like arcade carpet. Contents (partial): 1 Handheld Console (battery cover lost immediately); 1 Tissue Box (one for every mood); 3 Glow Sticks (cracked at a school dance); 1 Flip Phone (ringtone composed by hand); 1 Energy Drink (tastes like a battery). Weight 52.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0802.png",
  "attributes": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "trait_type": "Finish",
-   "value": "BONE"
+   "value": "GRAPE"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.9,
+   "value": 52.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

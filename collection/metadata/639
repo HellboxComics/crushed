@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0639",
- "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 2 TV Remotes (found in the couch); 2 Pizza Crusts (still better than most portfolios); 1 AA Batteries (taken out of the smoke detector); 3 Soda Cans (Surj, the can that started a fight); 1 No. 2 Pencil (never saw a scantron it liked). Weight 32.2 lb. Still heavier than it looks.",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Glow Stick (still glowing a little, somehow); 1 Ring Light (the eyes in every mirror selfie); 1 AA Batteries (taken out of the smoke detector); 1 Jewel Case (hinge broken on arrival). Weight 39.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0639.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.2,
+   "value": 39.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0292",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Lunchables-ish Crackers. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 1 Army Man Squad (melted with a magnifying glass); 2 Burned CDs (burned at 1x, 4 hours); 2 Floppy Disks (DISK 2 of 7); 2 Soda Cans (tab kept for charity); 1 Tiny Red Candle (lit). Weight 79.8 lb. Crushed it.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Lunchables-ish Crackers. Contents (partial): 1 Corded Phone (cord stretched to the bathroom); 3 Centerfolds (staples removed, an attempt was made); 3 Floppy Disks (says DO NOT FORMAT); 2 Tissue Boxes (nearly empty); 3 AA Batteries (Neveready, as advertised); 1 Tiny Red Candle (lit). Weight 86.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0292.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.8,
+   "value": 86.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 62,
    "display_type": "number"
   }
  ]

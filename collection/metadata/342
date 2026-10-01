@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0342",
- "description": "Recovered from A Sleepover, Never Picked Up. Smells like Grunge Flannel. Contents (partial): 1 Gold 16-Bit Controller (why); 1 Boom Box (one speaker still believes); 1 Foam Headphones (one ear works if you hold it); 2 Disposable Cameras (never developed); 1 Shot Glass (chipped rim). Weight 89.2 lb. Contents may have settled.",
+ "description": "Recovered from A Sleepover, Never Picked Up. Smells like Grunge Flannel. Contents (partial): 1 Gold Soda Can (why); 1 Boom Box (took 10 D batteries); 2 Jewel Cases (insert is from a different album); 1 Film Canister (undeveloped, forever); 3 Power Strips (overloaded on purpose). Weight 102.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0342.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Gilded",
-   "value": "16-Bit Controller"
+   "value": "Soda Can"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.2,
+   "value": 102.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

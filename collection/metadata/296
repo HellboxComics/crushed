@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0296",
- "description": "Recovered from The Mall Arcade. Smells like Lunchables-ish Crackers. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 1 Yo-Yo (string tied to a finger for 3 years); 1 16-Bit Controller (the B button is sticky); 2 Clear Lighters (for incense, obviously); 2 Floppy Disks (save icon, but real); 1 Paper Hand (sold at the bottom). Weight 50.5 lb. Contents may have settled.",
+ "description": "Recovered from The Mall Arcade. Smells like Lunchables-ish Crackers. Contents (partial): 1 Skateboard (griptape ate a pair of jeans); 3 Pizza Crusts (from a sleepover); 3 Army Man Squads (melted with a magnifying glass); 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Calculators (solar panel covered by a sticker); 1 Paper Hand (folded under light pressure). Weight 65.8 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0296.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.5,
+   "value": 65.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 65,
    "display_type": "number"
   }
  ]

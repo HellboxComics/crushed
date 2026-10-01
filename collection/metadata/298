@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0298",
- "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (untied since 1989); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 1 Ball Mouse (ball removed as a prank); 1 Cassette Tape (rewound with a pencil); 1 Spiral Notebook (spiral unwound halfway). Weight 79.8 lb. Still heavier than it looks.",
+ "description": "Recovered from School Lost & Found. Smells like hot dust on a CRT. Contents (partial): 3 Sneakers (smells like 1989); 1 Cassette Tape (rewound with a pencil); 2 Burned CDs (coaster now); 1 Milk Caps (won in a bet); 3 16-Bit Controllers (the B button is sticky). Weight 90.9 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0298.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 79.8,
+   "value": 90.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

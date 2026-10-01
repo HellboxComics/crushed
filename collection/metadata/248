@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0248",
- "description": "Recovered from The Mall Arcade. Smells like hot dust on a CRT. Contents (partial): 2 9999-in-1 Handhelds (HI SCORE 00000); 2 Poker Chips (a stack of ambition); 2 TV Remotes (found in the couch); 2 Milk Caps (the slammer is chipped); 3 Puzzle Cubes (two stickers peeled); 1 Bear (doing fine actually). Weight 87.5 lb. Contents may have settled.",
+ "description": "Recovered from The Mall Arcade. Smells like hot dust on a CRT. Contents (partial): 2 9999-in-1 Handhelds (HI SCORE 00000); 2 Beer Cans (12 of 12); 3 Soda Cans (Surj, the can that started a fight); 2 Cheap Sunglasses (mall kiosk special); 3 Milk Caps (the slammer is chipped); 1 Bear (thriving). Weight 97.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0248.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 87.5,
+   "value": 97.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

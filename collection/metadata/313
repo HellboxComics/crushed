@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0313",
- "description": "Recovered from House Fire (Everyone's Fine). Smells like Lunchables-ish Crackers. Contents (partial): 1 Magazine (the staples are doing the work); 1 Tissue Box (nearly empty); 1 9999-in-1 Handheld (9999 games, 4 real ones); 1 Army Man Squad (the one with the radio survived); 2 Poker Chips (never cashed out). Weight 44.2 lb. Handle with both hands.",
+ "description": "Recovered from House Fire (Everyone's Fine). Smells like Lunchables-ish Crackers. Contents (partial): 2 Magazines (found in a dad's truck); 3 Beer Cans (PBJ, the hipster one); 1 VHS Tape (the unmarked one, from the back of the closet); 2 Power Strips (daisy-chained into three more); 1 Three-Ring Binder (covered in band names). Weight 98.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0313.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 44.2,
+   "value": 98.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

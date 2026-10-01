@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0058",
- "description": "Recovered from Dad's Junk Drawer. Smells like Cabbage Patch Plastic. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Poker Chip (a stack of ambition); 1 Boom Box (shoulder-mounted in its prime); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Calculators (solar panel covered by a sticker). Weight 50.7 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Cabbage Patch Plastic. Contents (partial): 3 Sneakers (smells like 1989); 2 Beer Cans (last one in the fridge); 3 Cheap Sunglasses (mall kiosk special); 3 Joysticks (suction cups gave up); 1 Dice (loaded, rumor says). Weight 66.0 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0058.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 50.7,
+   "value": 66.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

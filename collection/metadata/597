@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0597",
- "description": "Recovered from Garage Sale Free Bin. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Laptop Charger (fits nothing else in the house); 2 Sneakers (light-up heel, dead); 2 Jewel Cases (hinge broken on arrival); 2 No. 2 Pencils (sharpened to a nub). Weight 73.5 lb. Handle with both hands.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Vegas carpet. Contents (partial): 3 TV Remotes (found in the couch); 1 Centerfold (left open to the wrong page); 3 Sneakers (light-up heel, dead); 2 Burned CDs (burned at 1x, 4 hours); 2 Memory Cards (corrupted during a birthday). Weight 85.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0597.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.5,
+   "value": 85.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

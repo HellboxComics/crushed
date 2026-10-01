@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0145",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Aqua Not-Net Hairspray. Contents (partial): 3 VHS Tapes (the unmarked one, from the back of the closet); 2 Poker Chips (never cashed out); 3 Army Man Squads (the one with the radio survived); 3 Puzzle Cubes (two stickers peeled); 1 Scratch Ticket ($2 for hope). Weight 42.1 lb. Still heavier than it looks.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Aqua Not-Net Hairspray. Contents (partial): 3 VHS Tapes (label says DO NOT TAPE OVER); 2 Joysticks (fire button pressed 40 million times); 3 Cheap Sunglasses (mall kiosk special); 2 Poker Chips (never cashed out); 2 Magazines (the staples are doing the work). Weight 93.6 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0145.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 42.1,
+   "value": 93.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

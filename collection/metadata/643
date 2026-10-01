@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0643",
- "description": "Recovered from Mom's Minivan. Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (Red Bullish, gave it wings, took them back); 1 Skate Wheel (flat spot from a power slide); 1 Disposable Vape (mango, mostly); 1 Game Controller (stick drift since day one); 1 Burned CD (track 7 skips). Weight 35.6 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like Vegas carpet. Contents (partial): 3 Energy Drinks (Red Bullish, gave it wings, took them back); 2 Soda Cans (New Koak, 79 days only); 2 Centerfolds (staples removed, an attempt was made); 1 Tablet (used once as a cutting board); 3 Glow Sticks (still glowing a little, somehow). Weight 46.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0643.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.6,
+   "value": 46.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

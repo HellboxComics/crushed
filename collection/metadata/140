@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0140",
- "description": "Recovered from A Blockbusted Drop Box. Smells like body spray cloud. Contents (partial): 2 Calculators (solar panel covered by a sticker); 3 Magazines (read for the articles); 2 Cassette Tapes (labeled MIX 4 U); 3 Floppy Disks (says DO NOT FORMAT); 2 Scratch Tickets (scratched with a house key). Weight 46.0 lb. Crushed it.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like body spray cloud. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 3 Scratch Tickets (not a winner); 1 Sneaker (worn to one (1) very bad decision); 3 Floppy Disks (save icon, but real); 3 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 104.9 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0140.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.0,
+   "value": 104.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

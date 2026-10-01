@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0445",
- "description": "Recovered from Grandma's Attic. Smells like Hot Pentium. Contents (partial): 3 TV Remotes (the volume button worn smooth); 1 Centerfold (staples removed, an attempt was made); 1 Jewel Case (hinge broken on arrival); 1 Memory Card (corrupted during a birthday); 2 Tissue Boxes (nearly empty). Weight 80.4 lb. Nobody made you keep this.",
+ "description": "Recovered from Grandma's Attic. Smells like Hot Pentium. Contents (partial): 3 TV Remotes (found in the couch); 3 No. 2 Pencils (chewed); 3 Tissue Boxes (nearly empty); 3 Matchbooks (matches missing, reasons unclear); 1 Centerfold (left open to the wrong page). Weight 87.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0445.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.4,
+   "value": 87.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

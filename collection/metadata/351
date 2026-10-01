@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0351",
- "description": "Recovered from Under the Bed. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 AA Batteries (mixed old and new, like animals); 2 Ball Mice (cord chewed by a dog); 2 Disposable Cameras (27 exposures of a thumb). Weight 48.4 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Bath & Body Works-ish Cucumber Melon. Contents (partial): 3 Calculators (spelled BOOBIES upside down); 2 Ball Mice (rollers caked with 1998); 2 Pagers (clipped to jeans for status only); 1 Film Canister (undeveloped, forever); 2 Puzzle Cubes (two stickers peeled). Weight 53.0 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0351.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 48.4,
+   "value": 53.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0438",
- "description": "Recovered from Back of the Closet. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 1 Sneaker (smells like 1989); 2 AA Batteries (taken out of the smoke detector); 2 Tissue Boxes (nearly empty); 2 Disposable Cameras (27 exposures of a thumb); 1 VHS Tape (Blockbusted rental, never returned); 1 Paper Hand (sold at the bottom). Weight 85.4 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like Ax-ish Body Spray, Entire Can. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 Game Controllers (thrown during a boss fight); 1 Skateboard (griptape ate a pair of jeans); 1 MP3 Player (shuffle picked the same song 6 times); 2 Brick Phones (faceplate swapped 4 times); 1 Paper Hand (sold at the bottom). Weight 94.7 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0438.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.4,
+   "value": 94.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 56,
    "display_type": "number"
   }
  ]

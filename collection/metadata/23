@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0023",
- "description": "Recovered from The Bachelor Pad. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 1 Dice (snake eyes, twice); 3 Spiral Notebooks (spiral unwound halfway); 1 Pizza Crust (petrified); 1 Poker Chip (taken from a casino, small heist). Weight 82.0 lb. Do not attempt to uncrush.",
+ "description": "Recovered from The Bachelor Pad. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 3 Army Man Squads (the one with the radio survived); 3 AA Batteries (taken out of the smoke detector); 2 Shot Glasses (souvenir of a night nobody recalls); 1 Centerfold (folded out, then folded back in a hurry). Weight 92.2 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0023.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.0,
+   "value": 92.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

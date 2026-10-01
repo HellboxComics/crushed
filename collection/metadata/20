@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0020",
- "description": "Recovered from Behind the Arcade Cabinets. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 2 Spiral Notebooks (spiral unwound halfway); 2 Yo-Yos (string tied to a finger for 3 years); 2 Floppy Disks (AOHell trial, 500 free hours); 3 VHS Tapes (label says DO NOT TAPE OVER). Weight 94.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Behind the Arcade Cabinets. Smells like Pizza Hut-ish Book It! Night. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 3 Cassette Tapes (a mix for someone who never listened); 3 Roller Skates (toe stop worn to nothing); 3 Yo-Yos (walked the dog one time); 1 Film Canister (holds one quarter). Weight 108.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0020.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 94.5,
+   "value": 108.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

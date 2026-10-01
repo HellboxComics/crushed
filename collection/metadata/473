@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0473",
- "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Webcam (pointed at the ceiling forever); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Magazines (found in a dad's truck); 1 Corded Phone (someone is still on hold); 3 Cassette Tapes (a mix for someone who never listened). Weight 76.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like arcade carpet. Contents (partial): 1 Webcam (pointed at the ceiling forever); 1 Yo-Yo (string tied to a finger for 3 years); 1 Scratch Ticket (not a winner); 1 CRT Monitor (weighs more than the desk); 1 Corded Phone (was on the line when mom picked up). Weight 87.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0473.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.3,
+   "value": 87.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

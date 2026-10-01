@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0704",
- "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 Matchbook (from a gentlemen's club, reportedly); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 Power Strips (daisy-chained into three more); 2 Soda Cans (flat). Weight 31.6 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like fresh batteries (licked). Contents (partial): 3 Handheld Consoles (battery cover lost immediately); 3 Shot Glasses (chipped rim); 1 Memory Card (8MB, full); 3 Clear Lighters (for incense, obviously); 3 Disposable Cameras (never developed). Weight 43.1 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0704.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.6,
+   "value": 43.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

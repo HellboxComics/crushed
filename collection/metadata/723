@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0723",
- "description": "Recovered from A Lambo-Shaped Hole. Smells like Moonster and Desperation. Contents (partial): 2 Soda Cans (flat); 3 Shot Glasses (souvenir of a night nobody recalls); 1 MP3 Player (128MB, 30 songs, 29 skipped); 2 Dice (snake eyes, twice); 1 Pizza Crust (from a sleepover). Weight 38.5 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from A Lambo-Shaped Hole. Smells like Moonster and Desperation. Contents (partial): 3 Soda Cans (Surj, the can that started a fight); 3 Shot Glasses (from a trip to Vegas); 2 Power Strips (overloaded on purpose); 3 TV Remotes (the volume button worn smooth); 2 Dice (loaded, rumor says). Weight 49.4 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0723.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.5,
+   "value": 49.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0085",
- "description": "Recovered from A Buddy's Basement. Smells like Cabbage Patch Plastic. Contents (partial): 1 TV Remote (found in the couch); 3 AA Batteries (licked to test); 2 Tissue Boxes (there was a reason it lived on the nightstand); 3 Game Cartridges (save file erased by a sibling); 1 Cheap Sunglasses (mall kiosk special). Weight 96.6 lb. Contents may have settled.",
+ "description": "Recovered from A Buddy's Basement. Smells like Cabbage Patch Plastic. Contents (partial): 1 TV Remote (held together with tape); 3 Game Cartridges (save file erased by a sibling); 3 VHS Tapes (taped over a wedding); 3 AA Batteries (Neveready, as advertised); 1 Joystick (fire button pressed 40 million times). Weight 106.8 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0085.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 96.6,
+   "value": 106.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0600",
- "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Digital Camera (memory full, 14 photos); 1 Magazine (the staples are doing the work); 3 Glow Sticks (cracked at a school dance); 2 TV Remotes (held together with tape); 2 No. 2 Pencils (chewed). Weight 20.7 lb. Handle with both hands.",
+ "description": "Recovered from A Frat House Couch. Smells like Guitar Hero-ish Plastic. Contents (partial): 1 Digital Camera (memory full, 14 photos); 2 Game Controllers (thrown during a boss fight); 2 Soda Cans (flat); 1 Centerfold (folded out, then folded back in a hurry); 3 Shot Glasses (souvenir of a night nobody recalls). Weight 29.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0600.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 20.7,
+   "value": 29.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

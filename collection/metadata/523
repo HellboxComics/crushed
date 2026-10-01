@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0523",
- "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 3 Sneakers (left only); 1 Corded Phone (was on the line when mom picked up); 3 Flip Phones (snapped shut dramatically); 2 Memory Cards (8MB, full); 1 MP3 Player (shuffle picked the same song 6 times). Weight 41.8 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like rink snack bar. Contents (partial): 3 Sneakers (untied since 1989); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Burned CDs (track 7 skips); 3 Flip Phones (ringtone composed by hand); 3 Beer Cans (PBJ, the hipster one). Weight 46.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0523.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.8,
+   "value": 46.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0552: STILL ALIVE",
- "description": "Thirty-eight virtual pets. One is still alive. Nobody has fed it since 1997. Recovered from A Drawer, Still Beeping. Smells like warm plastic. Contents (partial): 38 Virtual Pets (reincarnated 40 times); 3 9999-in-1 Handhelds (9999 games, 4 real ones); 3 Handheld Consoles (screen scratched from a pocket with keys); 4 AA Batteries (taken out of the smoke detector). Weight 25.6 lb. We kept the important shit.",
+ "description": "Thirty-eight virtual pets. One is still alive. Nobody has fed it since 1997. Recovered from A Drawer, Still Beeping. Smells like warm plastic. Contents (partial): 38 Virtual Pets (reincarnated 40 times); 3 9999-in-1 Handhelds (9999 games, 4 real ones); 3 Handheld Consoles (screen scratched from a pocket with keys); 4 AA Batteries (taken out of the smoke detector). Weight 25.7 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0552.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "One of One",
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 25.6,
+   "value": 25.7,
    "display_type": "number"
   },
   {

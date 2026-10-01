@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0352",
- "description": "Recovered from Dad's Junk Drawer. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Metal Lunchbox (thermos missing); 3 Burned CDs (says ROAD TRIP in marker); 2 Jewel Cases (hinge broken on arrival); 3 Dice (snake eyes, twice); 2 Spiral Notebooks (spiral unwound halfway). Weight 76.2 lb. Some assembly was removed.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Metal Lunchbox (the smell stays); 1 Yo-Yo (string tied to a finger for 3 years); 1 Virtual Pet (died during math class); 2 Three-Ring Binders (velcro screams when opened); 1 Pizza Crust (from a sleepover). Weight 81.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0352.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.2,
+   "value": 81.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

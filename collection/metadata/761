@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0761",
- "description": "Recovered from Nobody Knows. Smells like DoorDashed Fries, Cold. Contents (partial): 2 Smartwatches (10,000 steps, never); 2 No. 2 Pencils (chewed); 1 Disposable Camera (never developed); 2 Sneakers (light-up heel, dead); 1 Shot Glass (souvenir of a night nobody recalls). Weight 32.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Nobody Knows. Smells like DoorDashed Fries, Cold. Contents (partial): 3 Smartwatches (10,000 steps, never); 2 Shot Glasses (from a trip to Vegas); 3 Clear Lighters (out of fluid); 2 Soda Cans (Surj, the can that started a fight); 3 Energy Drinks (Moonster, the whole case). Weight 39.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0761.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.2,
+   "value": 39.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

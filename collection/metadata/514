@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0514",
- "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 1 Flip Phone (snapped shut dramatically); 3 TV Remotes (found in the couch); 1 No. 2 Pencil (sharpened to a nub); 2 Scratch Tickets (scratched with a house key). Weight 32.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like rink snack bar. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 3 TV Remotes (found in the couch); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 2 Skate Wheels (flat spot from a power slide); 3 Game Controllers (thrown during a boss fight). Weight 39.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0514.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 39.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

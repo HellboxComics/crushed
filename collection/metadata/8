@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0008: SOLID GOLD",
- "description": "Every single thing in here is gold. Nobody can explain it. Recovered from Estate of a Collector. Smells like victory. Contents (partial): 2 Sneakers (light-up heel, dead); 1 Tissue Box (there was a reason it lived on the nightstand); 1 Pizza Crust (still better than most portfolios); 1 Pager (last page from a number nobody called back); 1 Boom Box (one speaker still believes). Weight 51.6 lb. Do not attempt to uncrush.",
+ "description": "Every single thing in here is gold. Nobody can explain it. Recovered from Estate of a Collector. Smells like victory. Contents (partial): 3 Sneakers (light-up heel, dead); 2 Film Canisters (holds one quarter); 2 Cassette Tapes (side B only); 3 Keyboards (Partial) (F, J and the crumbs); 1 Corded Phone (cord stretched to the bathroom). Weight 59.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0008.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.6,
+   "value": 59.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

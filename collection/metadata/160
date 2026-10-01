@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0160",
- "description": "Recovered from Vegas Hotel Room. Smells like Arcade Tokens. Contents (partial): 1 Magazine (found in a dad's truck); 2 Pizza Crusts (from a sleepover); 1 Cheap Sunglasses (mall kiosk special); 1 Toy Slime (stuck in the carpet); 3 TV Remotes (held together with tape). Weight 68.8 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Vegas Hotel Room. Smells like Arcade Tokens. Contents (partial): 1 Magazine (for the interviews, obviously); 1 Shot Glass (chipped rim); 1 Dice (blown on for luck); 1 Cassette Tape (TDKay SA-90, the good tape); 3 Keyboards (Partial) (the W key is missing, for obvious reasons). Weight 84.1 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0160.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 68.8,
+   "value": 84.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0685",
- "description": "Recovered from A Blackberried Office Drawer. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Magazines (the staples are doing the work); 2 Clear Lighters (borrowed in 1997, never returned); 2 Shot Glasses (chipped rim); 1 Spiral Notebook (spiral unwound halfway); 1 MP3 Player (128MB, 30 songs, 29 skipped). Weight 37.1 lb. We kept the important shit.",
+ "description": "Recovered from A Blackberried Office Drawer. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Magazines (for the interviews, obviously); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 1 TV Remote (found in the couch); 3 No. 2 Pencils (sharpened to a nub); 2 Burned CDs (says ROAD TRIP in marker). Weight 47.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0685.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.1,
+   "value": 47.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

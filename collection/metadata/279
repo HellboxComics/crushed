@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0279",
- "description": "Recovered from The Bachelor Pad. Smells like Surj Spilled on the Carpet. Contents (partial): 3 Cassette Tapes (rewound with a pencil); 1 Pizza Crust (still better than most portfolios); 2 Slap Bracelets (banned by the school); 1 Tissue Box (nearly empty); 3 Sneakers (was in the dryer). Weight 86.5 lb. Contents may have settled.",
+ "description": "Recovered from The Bachelor Pad. Smells like Surj Spilled on the Carpet. Contents (partial): 3 Cassette Tapes (someone's voicemail greeting); 2 Tissue Boxes (one for every mood); 3 Burned CDs (coaster now); 3 Film Canisters (holds one quarter); 1 Skateboard (one ollie, lifetime). Weight 96.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0279.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 86.5,
+   "value": 96.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0347",
- "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Puzzle Cube (two stickers peeled); 2 Jewel Cases (insert is from a different album); 1 AA Batteries (mixed old and new, like animals); 1 Slap Bracelet (banned by the school). Weight 73.5 lb. We kept the important shit.",
+ "description": "Recovered from School Lost & Found. Smells like new plastic. Contents (partial): 3 Portable CD Players (anti-skip lied); 1 Slap Bracelet (banned by the school); 1 Toy Slime (stuck in the carpet); 3 Tissue Boxes (there was a reason it lived on the nightstand); 2 Foam Headphones (one ear works if you hold it). Weight 81.2 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0347.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.5,
+   "value": 81.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

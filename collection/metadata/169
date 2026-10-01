@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0169",
- "description": "Recovered from A Tupperware-ish Party. Smells like gym bag, forgotten. Contents (partial): 2 Beer Cans (warm, sadly); 2 Soda Cans (Surj, the can that started a fight); 2 No. 2 Pencils (chewed); 3 AA Batteries (Neveready, as advertised); 1 Magazine (the staples are doing the work). Weight 76.2 lb. We kept the important shit.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like gym bag, forgotten. Contents (partial): 3 Beer Cans (12 of 12); 1 Shot Glass (souvenir of a night nobody recalls); 2 Roller Skates (the rink smell is still in there); 3 Cassette Tapes (TDKay SA-90, the good tape); 3 Puzzle Cubes (two stickers peeled). Weight 97.3 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0169.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 76.2,
+   "value": 97.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

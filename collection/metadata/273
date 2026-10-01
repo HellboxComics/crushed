@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0273",
- "description": "Recovered from Spencer's-ish Back Room. Smells like Lunchables-ish Crackers. Contents (partial): 2 Portable Tape Players (auto-reverse broke in 1991); 2 Film Canisters (holds one quarter); 1 Metal Lunchbox (the smell stays); 3 Spiral Notebooks (note says 'check YES or NO'); 2 Clear Lighters (borrowed in 1997, never returned); 1 Paper Hand (folded under light pressure). Weight 80.5 lb. Still heavier than it looks.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Lunchables-ish Crackers. Contents (partial): 3 Portable Tape Players (auto-reverse broke in 1991); 3 VHS Tapes (the unmarked one, from the back of the closet); 3 Spiral Notebooks (doodles in the margins); 2 Film Canisters (holds one quarter); 2 Sneakers (left only); 1 Paper Hand (folded under light pressure). Weight 88.2 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0273.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.5,
+   "value": 88.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

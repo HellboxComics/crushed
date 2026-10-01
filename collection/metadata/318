@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0318",
- "description": "Recovered from A Blockbusted Return Slot. Smells like rink snack bar. Contents (partial): 3 16-Bit Controllers (the B button is sticky); 1 Magazine (found in a dad's truck); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 1 Joystick (suction cups gave up); 1 AA Batteries (mixed old and new, like animals). Weight 29.3 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like rink snack bar. Contents (partial): 3 16-Bit Controllers (cord pulled the console off the shelf); 3 Floppy Disks (Iomegalodon would have held it all); 2 Magazines (read for the articles); 1 Joystick (suction cups gave up); 1 Soda Can (tab kept for charity). Weight 40.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0318.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.3,
+   "value": 40.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

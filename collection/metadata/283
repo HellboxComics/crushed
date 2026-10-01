@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0283",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 9999-in-1 Handhelds (HI SCORE 00000); 1 Boom Box (one speaker still believes); 1 16-Bit Controller (cord pulled the console off the shelf); 2 Beer Cans (Milwaukee's Worst, on sale); 1 Skateboard (one ollie, lifetime). Weight 54.3 lb. Nobody made you keep this.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 3 9999-in-1 Handhelds (9999 games, 4 real ones); 3 Soda Cans (Surj, the can that started a fight); 1 Skateboard (griptape ate a pair of jeans); 2 Scratch Tickets (scratched with a house key); 2 AA Batteries (probably dead). Weight 63.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0283.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 54.3,
+   "value": 63.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

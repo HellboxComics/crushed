@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0249",
- "description": "Recovered from Flooded Basement. Smells like rink snack bar. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 2 Yo-Yos (walked the dog one time); 2 Game Cartridges (blew on it, Nintendont said no); 1 Poker Chip (taken from a casino, small heist); 2 Army Man Squads (the one with the radio survived). Weight 83.7 lb. Nobody made you keep this.",
+ "description": "Recovered from Flooded Basement. Smells like rink snack bar. Contents (partial): 1 Corded Phone (was on the line when mom picked up); 3 TV Remotes (found in the couch); 3 Army Man Squads (the one with the radio survived); 2 Spiral Notebooks (note says 'check YES or NO'); 2 Yo-Yos (walked the dog one time). Weight 90.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0249.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.7,
+   "value": 90.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0147",
- "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 VHS Tape (the unmarked one, from the back of the closet); 1 Corded Phone (cord stretched to the bathroom); 2 Shot Glasses (chipped rim); 1 Army Man Squad (the one with the radio survived); 1 CRT Monitor (degaussed one last time). Weight 92.3 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like blue raspberry. Contents (partial): 1 VHS Tape (taped off HBOH, commercials and all); 1 Pizza Crust (still better than most portfolios); 2 Puzzle Cubes (two stickers peeled); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Spiral Notebook (doodles in the margins). Weight 105.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0147.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.3,
+   "value": 105.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 48,
    "display_type": "number"
   }
  ]

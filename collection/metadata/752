@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0752",
- "description": "Recovered from A Very Specific Ditch. Smells like Moonster and Desperation. Contents (partial): 2 Bluetooth Speakers (played one song, too loud); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Burned CD (track 7 skips); 2 Disposable Vapes (5000 puffs, 4999 regrets); 1 Clear Lighter (borrowed in 1997, never returned). Weight 28.8 lb. Nobody made you keep this.",
+ "description": "Recovered from A Very Specific Ditch. Smells like Moonster and Desperation. Contents (partial): 3 Bluetooth Speakers (played one song, too loud); 2 Disposable Vapes (zero nicotine, allegedly); 3 Pizza Crusts (from a sleepover); 2 Handheld Consoles (screen scratched from a pocket with keys); 1 Fidget Spinner (bearing went missing). Weight 43.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0752.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.8,
+   "value": 43.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

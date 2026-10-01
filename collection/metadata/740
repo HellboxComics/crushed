@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0740",
- "description": "Recovered from A DoorDashed Doorstep. Smells like new plastic. Contents (partial): 3 Game Controllers (stick drift since day one); 2 Smartphones (screen protector did nothing); 2 Cheap Sunglasses (worn indoors at 2 A.M.); 3 Tablets (used once as a cutting board); 3 Scratch Tickets (not a winner). Weight 36.1 lb. Crushed it.",
+ "description": "Recovered from A DoorDashed Doorstep. Smells like new plastic. Contents (partial): 3 Game Controllers (stick drift since day one); 3 Face Masks (one of 400 in a coat pocket); 2 Spiral Notebooks (spiral unwound halfway); 3 Smartwatches (10,000 steps, never); 2 Soda Cans (Crystal Peppy, discontinued for a reason). Weight 47.3 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0740.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.1,
+   "value": 47.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

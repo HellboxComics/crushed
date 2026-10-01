@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0601",
- "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 2 Magazines (read for the articles); 2 Burned CDs (coaster now); 3 AA Batteries (Durasmell, lasted till Christmas noon); 1 Fidget Spinner (banned by the school); 2 Poker Chips (a stack of ambition). Weight 27.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from The Bachelor Pad. Smells like gym bag, forgotten. Contents (partial): 3 Magazines (found in a dad's truck); 1 USB Stick (never ejected safely); 3 Beer Cans (Milwaukee's Worst, on sale); 1 Scratch Ticket (not a winner); 2 Digital Cameras (memory full, 14 photos). Weight 81.8 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0601.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 27.1,
+   "value": 81.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

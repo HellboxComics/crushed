@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0426",
- "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 3 Beer Cans (last one in the fridge); 2 Brick Phones (faceplate swapped 4 times); 1 Game Controller (thrown during a boss fight); 3 Pizza Crusts (petrified); 2 Digital Cameras (memory full, 14 photos). Weight 78.5 lb. Still heavier than it looks.",
+ "description": "Recovered from An AOHell CD Pile. Smells like mall food court. Contents (partial): 3 Beer Cans (Natty Lightweight, 30-rack); 3 Portable CD Players (45-second buffer, 2-second attention span); 3 Digital Cameras (memory full, 14 photos); 3 VHS Tapes (BE KIND REWIND (they did not)); 2 Soda Cans (flat). Weight 89.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0426.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.5,
+   "value": 89.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0067",
- "description": "Recovered from Dad's Camaro Trunk. Smells like scratch-n-sniff sticker. Contents (partial): 3 Sneakers (untied since 1989); 1 CRT Monitor (screen burn-in reads LOADING); 3 Power Strips (daisy-chained into three more); 3 Floppy Disks (save icon, but real); 2 Joysticks (suction cups gave up). Weight 85.9 lb. Still heavier than it looks.",
+ "description": "Recovered from Dad's Camaro Trunk. Smells like scratch-n-sniff sticker. Contents (partial): 3 Sneakers (untied since 1989); 3 Keyboards (Partial) (F, J and the crumbs); 2 No. 2 Pencils (chewed); 3 Cassette Tapes (someone's voicemail greeting); 3 Power Strips (overloaded on purpose). Weight 109.1 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0067.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.9,
+   "value": 109.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

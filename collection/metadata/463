@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0463",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like Y2K Bunker Canned Food. Contents (partial): 1 CRT Monitor (weighs more than the desk); 1 Ball Mouse (ball removed as a prank); 1 Foam Headphones (orange foam, allegedly); 2 Virtual Pets (reincarnated 40 times); 2 Poker Chips (taken from a casino, small heist). Weight 70.2 lb. Nobody made you keep this.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like Y2K Bunker Canned Food. Contents (partial): 1 CRT Monitor (degaussed one last time); 2 Scratch Tickets ($2 for hope); 3 Magazines (for the interviews, obviously); 3 VHS Tapes (taped off HBOH, commercials and all); 2 Flip Phones (snapped shut dramatically). Weight 92.5 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0463.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 70.2,
+   "value": 92.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

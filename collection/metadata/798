@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0798",
- "description": "Recovered from Back of the Closet. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Smartphones (Venmoan request: 'gas money'); 2 Soda Cans (New Koak, 79 days only); 3 Glow Sticks (cracked at a school dance); 2 Spiral Notebooks (doodles in the margins); 1 Poker Chip (a stack of ambition). Weight 35.2 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Smartphones (cracked in the first week); 3 Spiral Notebooks (doodles in the margins); 2 Soda Cans (New Koak, 79 days only); 3 Earbud Cases (one bud present); 3 Energy Drinks (third one that night). Weight 46.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0798.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 35.2,
+   "value": 46.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

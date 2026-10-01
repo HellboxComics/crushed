@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0769",
- "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Hand Sanitizer (was in every pocket in 2020); 2 Handheld Consoles (battery cover lost immediately); 2 Game Controllers (stick drift since day one); 1 AA Batteries (probably dead); 1 Pizza Crust (from a sleepover). Weight 37.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Under the Bed. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Hand Sanitizer (half empty, half crusty); 1 VR Headset (worn twice); 3 Fidget Spinners (bearing went missing); 2 Spiral Notebooks (spiral unwound halfway); 2 Beer Cans (12 of 12). Weight 47.6 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0769.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.3,
+   "value": 47.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

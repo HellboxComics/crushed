@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0349",
- "description": "Recovered from The Bachelor Pad. Smells like Surj Spilled on the Carpet. Contents (partial): 1 Beer Can (crushed on a forehead); 3 Magazines (for the interviews, obviously); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cassette Tape (rewound with a pencil); 1 TV Remote (found in the couch); 1 Bear (doing fine actually). Weight 51.1 lb. Nobody made you keep this.",
+ "description": "Recovered from The Bachelor Pad. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Beer Cans (12 of 12); 2 Clear Lighters (for incense, obviously); 2 Puzzle Cubes (two stickers peeled); 2 Sneakers (smells like 1989); 1 Portable CD Player (anti-skip lied); 1 Bear (thriving). Weight 100.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0349.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.1,
+   "value": 100.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 59,
    "display_type": "number"
   }
  ]

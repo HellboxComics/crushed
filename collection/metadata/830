@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0830",
- "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 3 Smartphones (screen protector did nothing); 1 Fidget Spinner (bearing went missing); 2 Shot Glasses (chipped rim); 2 Bluetooth Speakers (played one song, too loud); 1 Beer Can (PBJ, the hipster one). Weight 33.5 lb. Nobody made you keep this.",
+ "description": "Recovered from Estate of a Collector. Smells like body spray cloud. Contents (partial): 3 Smartphones (cracked in the first week); 3 Energy Drinks (tastes like a battery); 3 TV Remotes (held together with tape); 3 Sneakers (untied since 1989); 3 Disposable Cameras (never developed). Weight 46.2 lb. We kept the important shit.",
  "image": "ipfs://<images-cid>/0830.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.5,
+   "value": 46.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

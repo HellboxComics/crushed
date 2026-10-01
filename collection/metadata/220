@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0220",
- "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (Blockbusted rental, never returned); 2 Cassette Tapes (someone's voicemail greeting); 3 Sneakers (left only); 2 Floppy Disks (contains one (1) virus); 2 Beer Cans (PBJ, the hipster one). Weight 37.3 lb. Do not attempt to uncrush.",
+ "description": "Recovered from School Lost & Found. Smells like arcade carpet. Contents (partial): 3 VHS Tapes (taped off HBOH, commercials and all); 1 Clear Lighter (for incense, obviously); 2 TV Remotes (the volume button worn smooth); 2 No. 2 Pencils (chewed); 2 Burned CDs (burned at 1x, 4 hours). Weight 44.4 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0220.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.3,
+   "value": 44.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

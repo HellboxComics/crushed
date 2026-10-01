@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0529: TRICK OR TREAT",
- "description": "The whole haul, dumped on the floor and sorted: fun size, candy corn, a mask with the elastic snapped. Recovered from The Bottom of a Pillowcase. Smells like rubber mask breath. Contents (partial): 2 Pumpkin Pails (still smells like candy); 2 Flashlights (for reading under the covers); 24 Fun Size Bars (the size of a regret); 10 Candy Corns (every year anyway); 5 Glow Sticks (still glowing a little, somehow). Weight 16.6 lb. Nobody made you keep this.",
+ "description": "The whole haul, dumped on the floor and sorted: fun size, candy corn, a mask with the elastic snapped. Recovered from The Bottom of a Pillowcase. Smells like rubber mask breath. Contents (partial): 2 Pumpkin Pails (still smells like candy); 2 Flashlights (for reading under the covers); 24 Fun Size Bars (the size of a regret); 10 Candy Corns (every year anyway); 5 Glow Sticks (still glowing a little, somehow). Weight 17.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0529.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 16.6,
+   "value": 17.8,
    "display_type": "number"
   },
   {

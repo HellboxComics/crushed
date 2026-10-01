@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0269",
- "description": "Recovered from Under the Bed. Smells like Grunge Flannel. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 1 Milk Caps (the slammer is chipped); 3 Portable Tape Players (belt clip snapped at a bus stop); 1 Burned CD (burned at 1x, 4 hours); 2 Three-Ring Binders (covered in band names). Weight 77.3 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Grunge Flannel. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 3 Soda Cans (shaken as a prank); 3 Burned CDs (says ROAD TRIP in marker); 1 CRT Monitor (screen burn-in reads LOADING); 1 Cheap Sunglasses (one lens popped out). Weight 89.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0269.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.3,
+   "value": 89.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

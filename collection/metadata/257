@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0257",
- "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 1 Portable CD Player (45-second buffer, 2-second attention span); 2 Floppy Disks (AOHell trial, 500 free hours); 2 Sneakers (was in the dryer); 3 Milk Caps (won in a bet); 2 Centerfolds (left open to the wrong page). Weight 89.4 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 2 Portable CD Players (anti-skip lied); 1 Spiral Notebook (note says 'check YES or NO'); 2 TV Remotes (the volume button worn smooth); 2 AA Batteries (Durasmell, lasted till Christmas noon); 1 Calculator (spelled BOOBIES upside down). Weight 95.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0257.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 89.4,
+   "value": 95.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

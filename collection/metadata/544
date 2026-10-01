@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0544",
- "description": "Recovered from A Buddy's Basement. Smells like Myspace Glitter. Contents (partial): 1 Beer Can (crushed on a forehead); 2 Clear Lighters (for incense, obviously); 1 Jewel Case (insert is from a different album); 1 Spiral Notebook (spiral unwound halfway); 3 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 29.9 lb. Contents may have settled.",
+ "description": "Recovered from A Buddy's Basement. Smells like Myspace Glitter. Contents (partial): 2 Beer Cans (warm, sadly); 3 Burned CDs (burned at 1x, 4 hours); 1 USB Stick (never ejected safely); 1 Energy Drink (Moonster, the whole case); 3 Clear Lighters (out of fluid). Weight 39.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0544.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Finish",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.9,
+   "value": 39.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0054",
- "description": "Recovered from A Tupperware-ish Party. Smells like Jean Jacket. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Game Cartridges (blew on it, Nintendont said no); 2 Magazines (read for the articles); 2 Matchbooks (from a gentlemen's club, reportedly); 1 Cheap Sunglasses (one lens popped out). Weight 101.4 lb. Contents may have settled.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like Jean Jacket. Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 3 Magazines (for the interviews, obviously); 3 Shot Glasses (souvenir of a night nobody recalls); 2 VHS Tapes (taped off HBOH, commercials and all); 2 Pizza Crusts (found behind the couch). Weight 108.9 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0054.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 101.4,
+   "value": 108.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

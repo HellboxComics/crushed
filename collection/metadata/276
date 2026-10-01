@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0276: HAND TURKEY",
- "description": "The hand turkey on the fridge, the paper hats, the can-shaped cranberry. Nobody threw any of it away. Recovered from The Fridge Door, 1993. Smells like gravy and construction paper. Contents (partial): 10 Hand Turkeys (I AM THANKFUL FOR MY MOM); 6 Pilgrim Hats (construction paper, second grade); 3 TV Remotes (the volume button worn smooth); 6 Drumsticks (the dog got the bone); 3 Spiral Notebooks (doodles in the margins). Weight 21.0 lb. Contents may have settled.",
+ "description": "The hand turkey on the fridge, the paper hats, the can-shaped cranberry. Nobody threw any of it away. Recovered from The Fridge Door, 1993. Smells like gravy and construction paper. Contents (partial): 10 Hand Turkeys (I AM THANKFUL FOR MY MOM); 6 Pilgrim Hats (construction paper, second grade); 3 TV Remotes (the volume button worn smooth); 6 Drumsticks (the dog got the bone); 3 Spiral Notebooks (doodles in the margins). Weight 22.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0276.png",
  "attributes": [
   {
@@ -49,7 +49,7 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 21.0,
+   "value": 22.0,
    "display_type": "number"
   },
   {

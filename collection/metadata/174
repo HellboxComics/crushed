@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0174",
- "description": "Recovered from Mom's Minivan. Smells like Drakkar Noire-ish. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Portable Tape Players (auto-reverse broke in 1991); 1 Boom Box (one speaker still believes); 1 Spiral Notebook (doodles in the margins); 2 Pizza Crusts (from a sleepover). Weight 92.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Mom's Minivan. Smells like Drakkar Noire-ish. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 AA Batteries (Durasmell, lasted till Christmas noon); 3 Pizza Crusts (still better than most portfolios); 3 Army Man Squads (the one with the radio survived); 2 TV Remotes (held together with tape). Weight 102.3 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0174.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.0,
+   "value": 102.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

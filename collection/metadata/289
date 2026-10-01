@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0289",
- "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 2 Sneakers (untied since 1989); 1 Digital Camera (2 megapixels of truth); 2 Soda Cans (flat); 2 Game Cartridges (rented from Blockbusted, never rewound); 2 Centerfolds (left open to the wrong page). Weight 61.2 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like body spray cloud. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Poker Chips (never cashed out); 1 Skate Wheel (flat spot from a power slide); 1 Floppy Disk (save icon, but real); 2 VHS Tapes (taped off HBOH, commercials and all). Weight 72.2 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0289.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 61.2,
+   "value": 72.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

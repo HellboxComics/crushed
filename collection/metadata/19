@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0019",
- "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Metal Lunchbox (thermos missing); 3 Cheap Sunglasses (one lens popped out); 1 Soda Can (flat); 1 Foam Headphones (one ear works if you hold it); 3 Floppy Disks (Iomegalodon would have held it all). Weight 85.0 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Truck, Glovebox. Smells like arcade carpet. Contents (partial): 1 Metal Lunchbox (the smell stays); 2 Keyboards (Partial) (F, J and the crumbs); 1 Pizza Crust (from a sleepover); 1 Poker Chip (a stack of ambition); 1 Centerfold (left open to the wrong page). Weight 96.2 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0019.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 85.0,
+   "value": 96.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

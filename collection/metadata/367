@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0367",
- "description": "Recovered from An AOHell CD Pile. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Sneakers (light-up heel, dead); 1 Centerfold (staples removed, an attempt was made); 3 Foam Headphones (orange foam, allegedly); 1 Pager (last page: 911 (it was not)); 1 Clear Lighter (out of fluid). Weight 37.9 lb. Do not attempt to uncrush.",
+ "description": "Recovered from An AOHell CD Pile. Smells like Abercrombie-ish Store Entrance. Contents (partial): 3 Sneakers (smells like 1989); 2 Pagers (last page from a number nobody called back); 3 Foam Headphones (orange foam, allegedly); 2 Spiral Notebooks (note says 'check YES or NO'); 1 Scratch Ticket (scratched with a house key). Weight 89.8 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0367.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.9,
+   "value": 89.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0667",
- "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 3 Flip Phones (12 texts left this month); 1 AA Batteries (probably dead); 1 USB Stick (contains homework_FINAL_final2.doc); 1 No. 2 Pencil (chewed); 3 Magazines (the staples are doing the work). Weight 31.0 lb. Crushed it.",
+ "description": "Recovered from A Buddy's Basement. Smells like Grandma's couch. Contents (partial): 3 Flip Phones (ringtone composed by hand); 3 Burned CDs (track 7 skips); 2 No. 2 Pencils (never saw a scantron it liked); 3 Sneakers (was in the dryer); 3 Game Controllers (thrown during a boss fight). Weight 41.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0667.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 31.0,
+   "value": 41.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

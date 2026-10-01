@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0125",
- "description": "Recovered from A Blockbusted Drop Box. Smells like body spray cloud. Contents (partial): 3 Sneakers (untied since 1989); 3 VHS Tapes (taped over a wedding); 3 Poker Chips (a stack of ambition); 1 Film Canister (holds one quarter); 1 Calculator (solar panel covered by a sticker). Weight 84.1 lb. Nobody made you keep this.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like body spray cloud. Contents (partial): 3 Sneakers (untied since 1989); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 3 VHS Tapes (taped off HBOH, commercials and all); 3 Soda Cans (Crystal Peppy, discontinued for a reason); 1 Cheap Sunglasses (worn indoors at 2 A.M.). Weight 94.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0125.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Finish",
-   "value": "SAFETY ORANGE"
+   "value": "CHROME"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.1,
+   "value": 94.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

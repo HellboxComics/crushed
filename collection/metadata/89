@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0089",
- "description": "Recovered from Ex's Garage. Smells like Drakkar Noire-ish. Contents (partial): 2 Puzzle Cubes (two stickers peeled); 2 Sneakers (was in the dryer); 2 Shot Glasses (chipped rim); 2 Cassette Tapes (side B only); 1 Boom Box (took 10 D batteries). Weight 51.7 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Ex's Garage. Smells like Drakkar Noire-ish. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 1 Three-Ring Binder (covered in band names); 3 Floppy Disks (AOHell trial, 500 free hours); 3 Sneakers (smells like 1989); 3 Portable Tape Players (belt clip snapped at a bus stop). Weight 104.6 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0089.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 51.7,
+   "value": 104.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0389",
- "description": "Recovered from A LAN Party Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Gold Beer Can (why); 1 Sneaker (untied since 1989); 1 Foam Headphones (orange foam, allegedly); 2 Dice (snake eyes, twice); 1 Energy Drink (tastes like a battery). Weight 38.8 lb. Crushed it.",
+ "description": "Recovered from A LAN Party Basement. Smells like Spencer's-ish Gifts Incense. Contents (partial): 1 Gold MP3 Player (why); 2 Sneakers (worn to one (1) very bad decision); 3 Game Controllers (thrown during a boss fight); 3 Film Canisters (holds one quarter); 3 Pizza Crusts (still better than most portfolios). Weight 91.6 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0389.png",
  "attributes": [
   {
@@ -33,15 +33,15 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Gilded",
-   "value": "Beer Can"
+   "value": "MP3 Player"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.8,
+   "value": 91.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

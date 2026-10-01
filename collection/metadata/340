@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0340",
- "description": "Recovered from Under the Bed. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 3 Pagers (last page from a number nobody called back); 1 Skate Wheel (rolled into a storm drain once); 2 16-Bit Controllers (the B button is sticky); 1 Shot Glass (chipped rim). Weight 46.6 lb. Handle with both hands.",
+ "description": "Recovered from Under the Bed. Smells like Surj Spilled on the Carpet. Contents (partial): 2 Keyboards (Partial) (the W key is missing, for obvious reasons); 2 Floppy Disks (contains one (1) virus); 1 Cheap Sunglasses (one lens popped out); 2 Power Strips (daisy-chained into three more); 2 Soda Cans (New Koak, 79 days only). Weight 55.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0340.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 46.6,
+   "value": 55.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

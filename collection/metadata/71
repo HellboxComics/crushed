@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0071",
- "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 1 Sneaker (left only); 1 Keyboard (Partial) (F, J and the crumbs); 2 Magazines (found in a dad's truck); 1 Boom Box (shoulder-mounted in its prime); 2 Game Cartridges (save file erased by a sibling). Weight 57.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like new plastic. Contents (partial): 3 Sneakers (light-up heel, dead); 3 Floppy Disks (AOHell trial, 500 free hours); 3 Power Strips (overloaded on purpose); 1 Calculator (spelled BOOBIES upside down); 2 Army Man Squads (the one with the radio survived). Weight 114.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0071.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 57.5,
+   "value": 114.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0418",
- "description": "Recovered from Dad's Junk Drawer. Smells like Frosted Tips Gel. Contents (partial): 1 Sneaker (left only); 3 Tissue Boxes (nearly empty); 3 Cassette Tapes (Maxhell, the one that blew your hair back); 1 No. 2 Pencil (never saw a scantron it liked); 1 Ball Mouse (cord chewed by a dog). Weight 73.0 lb. Contents may have settled.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like Frosted Tips Gel. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 Magazines (for the interviews, obviously); 3 Portable CD Players (anti-skip lied); 2 Floppy Disks (says DO NOT FORMAT); 1 TV Remote (held together with tape). Weight 83.0 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0418.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 73.0,
+   "value": 83.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0441",
- "description": "Recovered from Garage Sale Free Bin. Smells like Abercrombie-ish Store Entrance. Contents (partial): 1 Digital Camera (2 megapixels of truth); 1 Corded Phone (someone is still on hold); 2 Cheap Sunglasses (mall kiosk special); 2 Brick Phones (snake high score intact); 1 Power Strip (overloaded on purpose). Weight 78.7 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Abercrombie-ish Store Entrance. Contents (partial): 2 Digital Cameras (2 megapixels of truth); 3 Cheap Sunglasses (mall kiosk special); 2 Game Controllers (stick drift since day one); 3 VHS Tapes (the unmarked one, from the back of the closet); 1 Floppy Disk (DISK 2 of 7). Weight 87.4 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0441.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 78.7,
+   "value": 87.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 33,
+   "value": 49,
    "display_type": "number"
   }
  ]

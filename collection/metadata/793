@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0793",
- "description": "Recovered from Storage Unit (Auctioned). Smells like Ring Light Heat. Contents (partial): 3 Soda Cans (Crystal Peppy, discontinued for a reason); 3 Smartphones (Instagrampa open, 900 unread); 1 Fidget Spinner (bearing went missing); 2 Dice (loaded, rumor says); 3 No. 2 Pencils (chewed); 1 Crumpled Chart (printed out for emotional reasons). Weight 32.3 lb. Crushed it.",
+ "description": "Recovered from Storage Unit (Auctioned). Smells like Ring Light Heat. Contents (partial): 3 Soda Cans (Crystal Peppy, discontinued for a reason); 3 Fidget Spinners (spins for four seconds, like the trend); 3 Tablets (one thumbprint of juice); 2 Spiral Notebooks (spiral unwound halfway); 2 Disposable Cameras (27 exposures of a thumb); 1 Crumpled Chart (printed out for emotional reasons). Weight 42.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0793.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.3,
+   "value": 42.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

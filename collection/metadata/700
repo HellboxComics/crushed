@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0700",
- "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 3 Energy Drinks (Jolted, twice the caffeine); 1 Clear Lighter (for incense, obviously); 3 Centerfolds (staples removed, an attempt was made); 2 Matchbooks (matches missing, reasons unclear); 3 Magazines (the staples are doing the work). Weight 28.2 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Flooded Basement. Smells like wet cardboard. Contents (partial): 3 Energy Drinks (third one that night); 3 Jewel Cases (insert is from a different album); 3 Burned CDs (burned at 1x, 4 hours); 2 Digital Cameras (2 megapixels of truth); 2 Matchbooks (matches missing, reasons unclear). Weight 41.8 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0700.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 28.2,
+   "value": 41.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

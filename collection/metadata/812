@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0812",
- "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Tablet (one thumbprint of juice); 1 Handheld Console (battery cover lost immediately); 2 Disposable Vapes (mango, mostly); 1 USB Stick (never ejected safely); 1 TV Remote (held together with tape); 1 Paper Hand (folded under light pressure). Weight 33.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like hot dust on a CRT. Contents (partial): 1 Tablet (used once as a cutting board); 2 Dice (snake eyes, twice); 1 Clear Lighter (for incense, obviously); 3 Shot Glasses (chipped rim); 3 Scratch Tickets (scratched with a house key); 1 Paper Hand (folded under light pressure). Weight 38.7 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0812.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.0,
+   "value": 38.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 62,
    "display_type": "number"
   }
  ]

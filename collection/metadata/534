@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0534: UNCRUSHED",
- "description": "The pile, as it was, the minute before. Weight 32.6 lb.",
+ "description": "The pile, as it was, the minute before. Weight 46.9 lb.",
  "image": "ipfs://<images-cid>/0534.png",
  "attributes": [
   {
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.6,
+   "value": 46.9,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0238",
- "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 1 Poker Chip (taken from a casino, small heist); 3 Army Man Squads (melted with a magnifying glass); 2 Soda Cans (New Koak, 79 days only); 1 Metal Lunchbox (thermos missing); 1 Three-Ring Binder (velcro screams when opened). Weight 77.2 lb. Crushed it.",
+ "description": "Recovered from Dad's Junk Drawer. Smells like cigarette in a jacket. Contents (partial): 3 Poker Chips (a stack of ambition); 2 No. 2 Pencils (sharpened to a nub); 3 VHS Tapes (late fees now exceed GDP of a small nation); 3 Burned CDs (coaster now); 3 Army Man Squads (the one with the radio survived). Weight 86.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0238.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.2,
+   "value": 86.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

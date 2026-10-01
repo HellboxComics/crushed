@@ -205,4 +205,5 @@ def core_mesh(me_verts, seed):
     n = noise.fbm(v, 1.0 / 0.03, 4, seed)
     r = np.abs(v).max(axis=1, keepdims=True)
     dirn = v / (np.linalg.norm(v, axis=1, keepdims=True) + 1e-9)
-    return v - dirn * (0.008 + np.abs(n)[:, None] * 0.02) * (r / H)
+    # pushed well back behind the debris: it is the mortar in the cracks, not the face of the block
+    return v - dirn * (0.022 + np.abs(n)[:, None] * 0.02) * (r / H)

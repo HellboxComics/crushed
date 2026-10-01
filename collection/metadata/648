@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0648",
- "description": "Recovered from Behind the Bar. Smells like Smirkoff Ice, Warm. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Clear Lighters (for incense, obviously); 1 Skateboard (griptape ate a pair of jeans); 1 Cheap Sunglasses (one lens popped out); 2 Power Strips (overloaded on purpose). Weight 38.7 lb. Contents may have settled.",
+ "description": "Recovered from Behind the Bar. Smells like Smirkoff Ice, Warm. Contents (partial): 3 Handheld Consoles (screen scratched from a pocket with keys); 1 USB Stick (never ejected safely); 3 Laptop Chargers (fits nothing else in the house); 2 Sneakers (light-up heel, dead); 3 Flip Phones (ringtone composed by hand). Weight 49.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0648.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "A Few"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.7,
+   "value": 49.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

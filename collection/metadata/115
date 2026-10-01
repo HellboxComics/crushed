@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0115",
- "description": "Recovered from Back of the Closet. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Joysticks (fire button pressed 40 million times); 1 Centerfold (staples removed, an attempt was made); 2 Game Cartridges (blown into 400 times); 3 Roller Skates (toe stop worn to nothing); 2 Yo-Yos (string tied to a finger for 3 years). Weight 43.8 lb. Handle with both hands.",
+ "description": "Recovered from Back of the Closet. Smells like Aqua Not-Net Hairspray. Contents (partial): 2 Joysticks (fire button pressed 40 million times); 3 Roller Skates (toe stop worn to nothing); 3 Game Cartridges (blown into 400 times); 2 Cassette Tapes (a mix for someone who never listened); 3 Yo-Yos (string tied to a finger for 3 years). Weight 67.5 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0115.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 43.8,
+   "value": 67.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

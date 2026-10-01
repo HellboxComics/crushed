@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0519",
- "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 2 Burned CDs (track 7 skips); 3 Beer Cans (12 of 12); 1 Centerfold (left open to the wrong page); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Crumpled Chart (printed out for emotional reasons). Weight 71.5 lb. Nobody made you keep this.",
+ "description": "Recovered from A Radio Shacked Clearance Bin. Smells like Grandma's couch. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Scratch Ticket (not a winner); 3 Poker Chips (a stack of ambition); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Spiral Notebook (note says 'check YES or NO'); 1 Crumpled Chart (printed out for emotional reasons). Weight 91.0 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0519.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.5,
+   "value": 91.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 53,
    "display_type": "number"
   }
  ]

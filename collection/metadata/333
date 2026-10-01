@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0333",
- "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 3 Pagers (last page: 143); 3 Soda Cans (Surj, the can that started a fight); 1 Portable CD Player (anti-skip lied); 2 Cheap Sunglasses (one lens popped out); 2 Matchbooks (from a gentlemen's club, reportedly). Weight 29.6 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like Blockbusted New Release Wall. Contents (partial): 3 Pagers (last page: 143); 2 Cheap Sunglasses (mall kiosk special); 2 Matchbooks (matches missing, reasons unclear); 1 Jewel Case (insert is from a different album); 1 Shot Glass (souvenir of a night nobody recalls). Weight 44.4 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0333.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 29.6,
+   "value": 44.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0129",
- "description": "Recovered from A Blockbusted Drop Box. Smells like wet cardboard. Contents (partial): 1 Beer Can (Natty Lightweight, 30-rack); 1 Boom Box (shoulder-mounted in its prime); 2 Keyboards (Partial) (F, J and the crumbs); 3 Poker Chips (never cashed out); 2 Calculators (spelled BOOBIES upside down). Weight 84.9 lb. Still heavier than it looks.",
+ "description": "Recovered from A Blockbusted Drop Box. Smells like wet cardboard. Contents (partial): 1 Beer Can (warm, sadly); 2 AA Batteries (taken out of the smoke detector); 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Magazine (for the interviews, obviously); 3 Poker Chips (taken from a casino, small heist). Weight 94.3 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0129.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 84.9,
+   "value": 94.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 32,
+   "value": 48,
    "display_type": "number"
   }
  ]

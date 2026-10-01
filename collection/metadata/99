@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0099",
- "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Sneakers (light-up heel, dead); 3 Cassette Tapes (a mix for someone who never listened); 3 Cheap Sunglasses (worn indoors at 2 A.M.); 2 Roller Skates (the rink smell is still in there); 2 Army Man Squads (the one with the radio survived). Weight 82.7 lb. Do not attempt to uncrush.",
+ "description": "Recovered from Grandma's Attic. Smells like Grandma's couch. Contents (partial): 2 Sneakers (was in the dryer); 3 Cassette Tapes (a mix for someone who never listened); 3 Army Man Squads (the one with the radio survived); 1 Milk Caps (won in a bet); 1 Poker Chip (never cashed out). Weight 96.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0099.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.7,
+   "value": 96.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

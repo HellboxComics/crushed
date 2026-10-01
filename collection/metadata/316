@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0316",
- "description": "Recovered from Mom's Minivan. Smells like Grunge Flannel. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 2 Floppy Disks (DISK 2 of 7); 3 Army Man Squads (the one with the radio survived); 1 Skate Wheel (flat spot from a power slide); 3 AA Batteries (Neveready, as advertised). Weight 59.1 lb. Some assembly was removed.",
+ "description": "Recovered from Mom's Minivan. Smells like Grunge Flannel. Contents (partial): 2 Calculators (spelled BOOBIES upside down); 3 Portable CD Players (anti-skip lied); 3 Sneakers (was in the dryer); 1 Soda Can (Crystal Peppy, discontinued for a reason); 3 VHS Tapes (the unmarked one, from the back of the closet). Weight 69.2 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0316.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 59.1,
+   "value": 69.2,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

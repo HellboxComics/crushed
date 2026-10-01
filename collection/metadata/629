@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0629",
- "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Flip Phones (snapped shut dramatically); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 1 Skate Wheel (flat spot from a power slide); 3 Digital Cameras (2 megapixels of truth); 3 Burned CDs (burned at 1x, 4 hours). Weight 32.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Under the Bed. Smells like blue raspberry. Contents (partial): 2 Flip Phones (snapped shut dramatically); 3 Burned CDs (says ROAD TRIP in marker); 3 Handheld Consoles (battery cover lost immediately); 1 Tissue Box (one for every mood); 3 Laptop Chargers (warm to the touch, somehow). Weight 40.3 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0629.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.2,
+   "value": 40.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

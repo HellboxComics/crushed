@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0107",
- "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (Surj, the can that started a fight); 3 Game Cartridges (blew on it, Nintendont said no); 2 VHS Tapes (Blockbusted rental, never returned); 2 Joysticks (suction cups gave up); 2 Yo-Yos (string tied to a finger for 3 years). Weight 82.3 lb. Some assembly was removed.",
+ "description": "Recovered from Back of the Closet. Smells like cigarette in a jacket. Contents (partial): 2 Soda Cans (Crystal Peppy, discontinued for a reason); 3 Game Cartridges (save file erased by a sibling); 3 AA Batteries (mixed old and new, like animals); 1 Slap Bracelet (banned by the school); 3 Portable Tape Players (auto-reverse broke in 1991). Weight 95.4 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0107.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.3,
+   "value": 95.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

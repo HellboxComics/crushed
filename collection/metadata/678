@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0678",
- "description": "Recovered from Back of the Closet. Smells like melted crayon. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 3 Disposable Cameras (27 exposures of a thumb); 1 Cassette Tape (TDKay SA-90, the good tape); 3 AA Batteries (taken out of the smoke detector); 3 Pizza Crusts (found behind the couch). Weight 26.9 lb. Nobody made you keep this.",
+ "description": "Recovered from Back of the Closet. Smells like melted crayon. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Keyboard (Partial) (the W key is missing, for obvious reasons); 3 Pizza Crusts (found behind the couch); 3 AA Batteries (probably dead); 3 Game Controllers (stick drift since day one). Weight 36.1 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0678.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 26.9,
+   "value": 36.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

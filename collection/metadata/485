@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0485",
- "description": "Recovered from Nobody Knows. Smells like cheap cologne. Contents (partial): 2 Tissue Boxes (nearly empty); 2 Clear Lighters (out of fluid); 2 Sneakers (untied since 1989); 2 Film Canisters (undeveloped, forever); 1 Cheap Sunglasses (one lens popped out). Weight 67.4 lb. Handle with both hands.",
+ "description": "Recovered from Nobody Knows. Smells like cheap cologne. Contents (partial): 3 Tissue Boxes (there was a reason it lived on the nightstand); 1 Glow Stick (cracked at a school dance); 3 Poker Chips (never cashed out); 2 Dice (snake eyes, twice); 1 Webcam (240p of pure confidence). Weight 85.7 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0485.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 67.4,
+   "value": 85.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

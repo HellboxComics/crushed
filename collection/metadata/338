@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0338",
- "description": "Recovered from A Blockbusted Return Slot. Smells like Blockbusted New Release Wall. Contents (partial): 2 Pagers (last page: 911 (it was not)); 1 Ball Mouse (cord chewed by a dog); 1 Scratch Ticket (scratched with a house key); 1 Army Man Squad (melted with a magnifying glass); 1 Corded Phone (was on the line when mom picked up). Weight 90.6 lb. Handle with both hands.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like Blockbusted New Release Wall. Contents (partial): 3 Pagers (clipped to jeans for status only); 2 Magazines (found in a dad's truck); 2 Pizza Crusts (found behind the couch); 1 Tissue Box (nearly empty); 2 Shot Glasses (souvenir of a night nobody recalls). Weight 98.7 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0338.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 90.6,
+   "value": 98.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]

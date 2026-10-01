@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0760",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like Moonster and Desperation. Contents (partial): 2 Disposable Cameras (never developed); 2 Clear Lighters (borrowed in 1997, never returned); 2 Cheap Sunglasses (one lens popped out); 1 Handheld Console (battery cover lost immediately); 3 Power Strips (daisy-chained into three more). Weight 37.0 lb. Handle with both hands.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Moonster and Desperation. Contents (partial): 2 Disposable Cameras (27 exposures of a thumb); 3 Dice (snake eyes, twice); 3 USB Sticks (contains homework_FINAL_final2.doc); 2 Flip Phones (ringtone composed by hand); 2 Clear Lighters (for incense, obviously). Weight 46.5 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0760.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 37.0,
+   "value": 46.5,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

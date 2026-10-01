@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0423",
- "description": "Recovered from Back of the Closet. Smells like Y2K Bunker Canned Food. Contents (partial): 1 Keyboard (Partial) (F, J and the crumbs); 1 MP3 Player (shuffle picked the same song 6 times); 1 Calculator (solar panel covered by a sticker); 1 Burned CD (coaster now); 1 Ball Mouse (cord chewed by a dog). Weight 41.2 lb. Still heavier than it looks.",
+ "description": "Recovered from Back of the Closet. Smells like Y2K Bunker Canned Food. Contents (partial): 2 Keyboards (Partial) (F, J and the crumbs); 1 Scratch Ticket (scratched with a house key); 2 Shot Glasses (souvenir of a night nobody recalls); 2 Dice (loaded, rumor says); 1 Foam Headphones (one ear works if you hold it). Weight 52.4 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0423.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 41.2,
+   "value": 52.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 41,
+   "value": 61,
    "display_type": "number"
   }
  ]

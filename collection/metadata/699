@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0699",
- "description": "Recovered from A Frat House Couch. Smells like hot dust on a CRT. Contents (partial): 2 MP3 Players (128MB, 30 songs, 29 skipped); 1 Corded Phone (cord stretched to the bathroom); 2 Flip Phones (12 texts left this month); 1 Centerfold (left open to the wrong page); 2 Handheld Consoles (battery cover lost immediately). Weight 33.1 lb. Some assembly was removed.",
+ "description": "Recovered from A Frat House Couch. Smells like hot dust on a CRT. Contents (partial): 3 MP3 Players (128MB, 30 songs, 29 skipped); 3 Flip Phones (snapped shut dramatically); 2 Handheld Consoles (battery cover lost immediately); 1 Corded Phone (cord stretched to the bathroom); 3 Game Controllers (stick drift since day one). Weight 42.8 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0699.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 33.1,
+   "value": 42.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

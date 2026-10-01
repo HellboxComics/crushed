@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0489",
- "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Disposable Camera (27 exposures of a thumb); 2 Dice (blown on for luck); 1 Shot Glass (chipped rim); 2 Scratch Tickets (scratched with a house key). Weight 80.1 lb. Some assembly was removed.",
+ "description": "Recovered from School Lost & Found. Smells like rink snack bar. Contents (partial): 1 CRT Monitor (weighs more than the desk); 2 Cassette Tapes (labeled MIX 4 U); 1 Skateboard (one ollie, lifetime); 3 Power Strips (daisy-chained into three more); 3 Burned CDs (track 7 skips). Weight 93.1 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0489.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 80.1,
+   "value": 93.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 38,
+   "value": 57,
    "display_type": "number"
   }
  ]

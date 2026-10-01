@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0664",
- "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 2 Flip Phones (snapped shut dramatically); 2 USB Sticks (never ejected safely); 2 Soda Cans (shaken as a prank); 2 Burned CDs (burned at 1x, 4 hours); 1 Memory Card (corrupted during a birthday). Weight 32.1 lb. No refunds. No returns. No explanation.",
+ "description": "Recovered from Under the Bed. Smells like cheap cologne. Contents (partial): 3 Flip Phones (12 texts left this month); 3 TV Remotes (found in the couch); 2 Soda Cans (Surj, the can that started a fight); 2 Centerfolds (staples removed, an attempt was made); 3 USB Sticks (never ejected safely). Weight 42.4 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0664.png",
  "attributes": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 32.1,
+   "value": 42.4,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 40,
+   "value": 60,
    "display_type": "number"
   }
  ]

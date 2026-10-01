@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0163",
- "description": "Recovered from A Tupperware-ish Party. Smells like new plastic. Contents (partial): 1 Puzzle Cube (solved once, stickers moved); 2 Floppy Disks (AOHell trial, 500 free hours); 1 Cassette Tape (Maxhell, the one that blew your hair back); 2 Portable Tape Players (belt clip snapped at a bus stop); 2 Spiral Notebooks (spiral unwound halfway); 1 Emergency Ramen (for emergencies). Weight 82.5 lb. Do not attempt to uncrush.",
+ "description": "Recovered from A Tupperware-ish Party. Smells like new plastic. Contents (partial): 2 Puzzle Cubes (solved once, stickers moved); 2 Power Strips (overloaded on purpose); 2 Joysticks (suction cups gave up); 2 Spiral Notebooks (spiral unwound halfway); 3 Matchbooks (matches missing, reasons unclear); 1 Emergency Ramen (the whole strategy). Weight 102.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0163.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Finish",
-   "value": "GRAPE"
+   "value": "CHROME"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 82.5,
+   "value": 102.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 53,
    "display_type": "number"
   }
  ]

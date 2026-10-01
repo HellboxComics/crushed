@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0247",
- "description": "Recovered from Spencer's-ish Back Room. Smells like Gak-ish. Contents (partial): 1 CRT Monitor (screen burn-in reads LOADING); 1 Ball Mouse (ball removed as a prank); 2 Power Strips (overloaded on purpose); 2 Clear Lighters (out of fluid); 1 Portable CD Player (45-second buffer, 2-second attention span). Weight 83.4 lb. Contents may have settled.",
+ "description": "Recovered from Spencer's-ish Back Room. Smells like Gak-ish. Contents (partial): 1 CRT Monitor (degaussed one last time); 3 Yo-Yos (string tied to a finger for 3 years); 2 Cheap Sunglasses (one lens popped out); 3 Power Strips (daisy-chained into three more); 3 Dice (loaded, rumor says). Weight 93.7 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0247.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 83.4,
+   "value": 93.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

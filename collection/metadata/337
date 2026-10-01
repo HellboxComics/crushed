@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0337",
- "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 1 9999-in-1 Handheld (HI SCORE 00000); 2 Disposable Cameras (27 exposures of a thumb); 1 Flip Phone (ringtone composed by hand); 1 Puzzle Cube (solved once, stickers moved); 1 Skate Wheel (flat spot from a power slide). Weight 77.5 lb. Contents may have settled.",
+ "description": "Recovered from Ex's Garage. Smells like fresh batteries (licked). Contents (partial): 2 9999-in-1 Handhelds (HI SCORE 00000); 1 Puzzle Cube (two stickers peeled); 2 Pagers (last page: 143); 2 Magazines (for the interviews, obviously); 3 Game Cartridges (save file erased by a sibling). Weight 87.0 lb. No refunds. No returns. No explanation.",
  "image": "ipfs://<images-cid>/0337.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 77.5,
+   "value": 87.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 34,
+   "value": 51,
    "display_type": "number"
   }
  ]

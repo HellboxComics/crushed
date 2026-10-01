@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0424",
- "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 1 No. 2 Pencil (chewed); 2 Burned CDs (burned at 1x, 4 hours); 1 Soda Can (Surj, the can that started a fight); 2 Film Canisters (holds one quarter). Weight 47.6 lb. Still heavier than it looks.",
+ "description": "Recovered from The Bachelor Pad. Smells like Grandma's couch. Contents (partial): 1 Skateboard (one ollie, lifetime); 3 Burned CDs (burned at 1x, 4 hours); 2 Foam Headphones (orange foam, allegedly); 3 Ball Mice (rollers caked with 1998); 3 Sneakers (light-up heel, dead). Weight 54.1 lb. Some assembly was removed.",
  "image": "ipfs://<images-cid>/0424.png",
  "attributes": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.6,
+   "value": 54.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 36,
+   "value": 54,
    "display_type": "number"
   }
  ]

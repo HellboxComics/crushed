@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0788",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like body spray cloud. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 2 Smartphones (screen protector did nothing); 3 Fidget Spinners (spins for four seconds, like the trend); 2 Power Banks (10000 mAh of dead weight); 1 No. 2 Pencil (never saw a scantron it liked). Weight 45.6 lb. Crushed it.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like body spray cloud. Contents (partial): 2 Handheld Consoles (battery cover lost immediately); 3 Fidget Spinners (bearing went missing); 2 Disposable Vapes (zero nicotine, allegedly); 3 Earbud Cases (survived the wash); 3 Power Banks (dead when needed). Weight 57.3 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0788.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.6,
+   "value": 57.3,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

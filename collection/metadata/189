@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0189",
- "description": "Recovered from A Blockbusted Return Slot. Smells like fresh batteries (licked). Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 1 Sneaker (left only); 3 Cassette Tapes (recorded off the radio, DJ talks over every intro); 1 Soda Can (New Koak, 79 days only); 1 Ball Mouse (cord chewed by a dog). Weight 47.4 lb. Crushed it.",
+ "description": "Recovered from A Blockbusted Return Slot. Smells like fresh batteries (licked). Contents (partial): 2 Portable CD Players (45-second buffer, 2-second attention span); 2 Pagers (last page: 143); 1 Milk Caps (the slammer is chipped); 1 Three-Ring Binder (covered in band names); 3 Poker Chips (taken from a casino, small heist). Weight 56.1 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0189.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 47.4,
+   "value": 56.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 42,
+   "value": 63,
    "display_type": "number"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0314",
- "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (worn to one (1) very bad decision); 2 No. 2 Pencils (chewed); 1 Centerfold (left open to the wrong page); 1 Metal Lunchbox (the smell stays); 3 Power Strips (overloaded on purpose); 1 Tiny Red Candle (lit). Weight 92.5 lb. We kept the important shit.",
+ "description": "Recovered from Grandma's Attic. Smells like hot dust on a CRT. Contents (partial): 2 Sneakers (untied since 1989); 3 16-Bit Controllers (cord pulled the console off the shelf); 1 Three-Ring Binder (velcro screams when opened); 3 Calculators (spelled BOOBIES upside down); 3 Floppy Disks (save icon, but real); 1 Tiny Red Candle (one of many). Weight 98.7 lb. Nobody made you keep this.",
  "image": "ipfs://<images-cid>/0314.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "Loose Ends"
+   "value": "None"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Concerning"
+   "value": "Several"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 92.5,
+   "value": 98.7,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 43,
+   "value": 64,
    "display_type": "number"
   }
  ]

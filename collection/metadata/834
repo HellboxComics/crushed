@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0834",
- "description": "Recovered from An Amazon Basically Return Pile. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 1 Sneaker (untied since 1989); 1 Pizza Crust (from a sleepover); 1 Disposable Vape (Puff Barf, Banana Regret flavor); 2 Clear Lighters (borrowed in 1997, never returned); 2 AA Batteries (Neveready, as advertised). Weight 40.0 lb. Some assembly was removed.",
+ "description": "Recovered from An Amazon Basically Return Pile. Smells like Vape Cloud, Blue Razz Ice. Contents (partial): 3 Sneakers (left only); 1 Glow Stick (cracked at a school dance); 3 Selfie Sticks (banned at the museum); 1 No. 2 Pencil (sharpened to a nub); 3 Soda Cans (tab kept for charity). Weight 55.1 lb. Do not attempt to uncrush.",
  "image": "ipfs://<images-cid>/0834.png",
  "attributes": [
   {
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 40.0,
+   "value": 55.1,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 44,
+   "value": 66,
    "display_type": "number"
   }
  ]

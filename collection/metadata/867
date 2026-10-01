@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0867",
- "description": "Recovered from Estate of a Collector. Smells like Prime Time Hype. Contents (partial): 2 Face Masks (one of 400 in a coat pocket); 1 Earbud Case (both buds gone, case still charges nothing); 2 Bluetooth Speakers (paired with the wrong phone); 3 Energy Drinks (Moonster, the whole case); 3 Power Strips (daisy-chained into three more). Weight 38.0 lb. Still heavier than it looks.",
+ "description": "Recovered from Estate of a Collector. Smells like Prime Time Hype. Contents (partial): 3 Face Masks (worn below the nose); 1 Beer Can (last one in the fridge); 3 AA Batteries (Durasmell, lasted till Christmas noon); 3 Energy Drinks (tastes like a battery); 2 TV Remotes (held together with tape). Weight 47.8 lb. Still heavier than it looks.",
  "image": "ipfs://<images-cid>/0867.png",
  "attributes": [
   {
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 38.0,
+   "value": 47.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 39,
+   "value": 58,
    "display_type": "number"
   }
  ]

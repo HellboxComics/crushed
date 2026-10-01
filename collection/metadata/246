@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0246",
- "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 Foam Headphones (orange foam, allegedly); 1 Portable CD Player (45-second buffer, 2-second attention span); 3 Cassette Tapes (labeled MIX 4 U); 1 Dice (snake eyes, twice); 1 Soda Can (tab kept for charity). Weight 45.8 lb. Crushed it.",
+ "description": "Recovered from Garage Sale Free Bin. Smells like Grandma's couch. Contents (partial): 3 Foam Headphones (one ear works if you hold it); 2 Poker Chips (a stack of ambition); 1 Beer Can (12 of 12); 1 Soda Can (Crystal Peppy, discontinued for a reason); 1 Tissue Box (nearly empty). Weight 56.8 lb. Handle with both hands.",
  "image": "ipfs://<images-cid>/0246.png",
  "attributes": [
   {
@@ -33,11 +33,11 @@
   },
   {
    "trait_type": "Tape",
-   "value": "None"
+   "value": "Loose Ends"
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "Concerning"
   },
   {
    "trait_type": "Serial",
@@ -45,12 +45,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 45.8,
+   "value": 56.8,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

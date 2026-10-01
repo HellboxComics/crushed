@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0200",
- "description": "Recovered from The Mall Arcade. Smells like rink snack bar. Contents (partial): 1 Magazine (the staples are doing the work); 1 Pizza Crust (petrified); 2 No. 2 Pencils (sharpened to a nub); 1 Metal Lunchbox (thermos missing); 1 9999-in-1 Handheld (HI SCORE 00000). Weight 71.4 lb. We kept the important shit.",
+ "description": "Recovered from The Mall Arcade. Smells like rink snack bar. Contents (partial): 3 Magazines (read for the articles); 2 9999-in-1 Handhelds (9999 games, 4 real ones); 3 Burned CDs (coaster now); 3 No. 2 Pencils (never saw a scantron it liked); 3 16-Bit Controllers (cord pulled the console off the shelf). Weight 79.6 lb. Crushed it.",
  "image": "ipfs://<images-cid>/0200.png",
  "attributes": [
   {
@@ -37,11 +37,11 @@
   },
   {
    "trait_type": "Loose Wires",
-   "value": "Several"
+   "value": "A Few"
   },
   {
    "trait_type": "Finish",
-   "value": "GRAPE"
+   "value": "CHROME"
   },
   {
    "trait_type": "Serial",
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 71.4,
+   "value": 79.6,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 35,
+   "value": 52,
    "display_type": "number"
   }
  ]

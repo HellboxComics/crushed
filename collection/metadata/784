@@ -1,6 +1,6 @@
 {
  "name": "CRUSHED IT #0784",
- "description": "Recovered from A Crypto Bro's Garage. Smells like mall food court. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Scratch Tickets (not a winner); 1 Smartwatch (says STAND, does not); 1 Cheap Sunglasses (mall kiosk special); 3 Sneakers (worn to one (1) very bad decision). Weight 36.5 lb. We kept the important shit.",
+ "description": "Recovered from A Crypto Bro's Garage. Smells like mall food court. Contents (partial): 2 Game Controllers (stick drift since day one); 3 Poker Chips (a stack of ambition); 2 Smartwatches (says STAND, does not); 1 Tissue Box (nearly empty); 3 Soda Cans (Surj, the can that started a fight). Weight 44.0 lb. Contents may have settled.",
  "image": "ipfs://<images-cid>/0784.png",
  "attributes": [
   {
@@ -49,12 +49,12 @@
   },
   {
    "trait_type": "Weight (lb)",
-   "value": 36.5,
+   "value": 44.0,
    "display_type": "number"
   },
   {
    "trait_type": "Item Count",
-   "value": 37,
+   "value": 55,
    "display_type": "number"
   }
  ]
