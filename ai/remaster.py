@@ -103,6 +103,62 @@ def step(name, what):
     os.makedirs(WORK, exist_ok=True)
     json.dump({"name": name, "step": what, "since": time.time()}, open(os.path.join(WORK, "now.json"), "w"))
     page()
+    publish()
+
+
+PROJECT = "crushed-remaster"          # the phone page: https://crushed-remaster.pages.dev
+
+
+def _npx():
+    for p in (shutil.which("npx"), "/opt/homebrew/bin/npx", "/usr/local/bin/npx"):
+        if p and os.path.exists(p):
+            return p
+    return None
+
+
+def publish(force=False):
+    """Put the progress page online (Cloudflare Pages, free) so it opens on the phone. At most every 90 seconds."""
+    import re
+    stamp = os.path.join(WORK, ".published")
+    if not force and os.path.exists(stamp) and time.time() - os.path.getmtime(stamp) < 90:
+        return
+    npx = _npx()
+    if not npx:
+        return
+    site = os.path.join(WORK, "site")
+    shutil.rmtree(site, ignore_errors=True)
+    os.makedirs(os.path.join(site, "img"))
+    html_ = open(os.path.join(WORK, "index.html")).read()
+    from PIL import Image
+
+    def swap(m):
+        src = os.path.normpath(os.path.join(WORK, m.group(1)))
+        if not os.path.exists(src):
+            return m.group(0)
+        name = re.sub(r"[^a-z0-9_]+", "_", os.path.relpath(src, os.path.dirname(WORK)).lower()) + ".jpg"
+        im = Image.open(src).convert("RGB")
+        im.thumbnail((900, 900))
+        im.save(os.path.join(site, "img", name), quality=80)
+        return f'src="img/{name}"'
+    html_ = re.sub(r'src="([^"]+)"', swap, html_)
+    html_ = html_.replace("<meta charset=utf-8>", "<meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>"
+                          "<meta name=robots content=noindex>")
+    open(os.path.join(site, "index.html"), "w").write(html_)
+    r = subprocess.run([npx, "--yes", "wrangler@3", "pages", "deploy", site, "--project-name", PROJECT, "--branch", "main",
+                        "--commit-dirty=true"], capture_output=True, text=True)
+    open(stamp, "w").write(r.stdout[-500:] + r.stderr[-500:])
+
+
+def publish_setup():
+    npx = _npx()
+    if not npx:
+        say("STOP: Node isn't installed (https://nodejs.org, LTS button).")
+        return
+    subprocess.run([npx, "--yes", "wrangler@3", "pages", "project", "create", PROJECT, "--production-branch", "main"],
+                   capture_output=True, text=True)
+    page()
+    publish(force=True)
+    say(f"phone page: https://{PROJECT}.pages.dev  (updates itself while the remaster works)")
 
 
 def record(name, result):
@@ -263,7 +319,10 @@ def main():
     ap.add_argument("--sheet", action="store_true")
     ap.add_argument("--approve", nargs="*")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--publish-setup", action="store_true", help="make the phone page and print its link")
     a = ap.parse_args()
+    if a.publish_setup:
+        publish_setup(); return
     if a.status:
         status(); page(); return
     if a.sheet:
@@ -285,6 +344,7 @@ def main():
             break
     status()
     page()
+    publish(force=True)
 
 
 if __name__ == "__main__":
