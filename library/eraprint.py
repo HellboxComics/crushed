@@ -29,6 +29,11 @@ Answer ONLY JSON:
  "upc_first11": "03800031810",
  "back_headline": "short line in the era's ad style",
  "back_body": "two short sentences in the era's ad style",
+ "back_steps": ["three short numbered how-to or fun-fact lines printed on the back"],
+ "back_promo": "one short promo or offer line typical of that era's boxes (no real people's names)",
+ "instructions": "the preparation / heating directions printed on the box",
+ "storage": "storage / freshness line",
+ "consumer_line": "the 'questions or comments' consumer line with the maker's phone number as printed",
  "bottom_lines": ["short printed lines found on the bottom, e.g. a code date line"]}}
 (The example numbers are only the shape - use the real ones for this product.)"""
 
@@ -195,6 +200,21 @@ def _feather(im, frac=0.05):
     return Image.fromarray(np.dstack([a, alpha * 255]).astype(np.uint8), "RGBA")
 
 
+def promo(s, W):
+    """An offer burst in a box, the way 90s boxes printed them."""
+    px = int(W / 16)
+    lines = _wrap(s, px, W - 4 * px, "black")
+    H = int(len(lines) * px * 1.3 + 2 * px)
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([2, 2, W - 3, H - 3], radius=px, fill=(255, 214, 40), outline=(200, 30, 45), width=max(3, px // 6))
+    y = px
+    for line in lines:
+        _text(d, (W / 2, y), line, px, "black", fill=(200, 30, 45), anchor="ma")
+        y += px * 1.3
+    return img
+
+
 def panel(side, c, front, logo_box, photo_box, w, h, paper):
     """One rebuilt side as a w x h picture."""
     img = Image.new("RGB", (w, h), tuple(int(v) for v in paper))
@@ -202,19 +222,27 @@ def panel(side, c, front, logo_box, photo_box, w, h, paper):
     crop = lambda b: front.crop((int(b[0] * fw), int(b[1] * fh), int(b[2] * fw), int(b[3] * fh)))
     m = int(0.06 * min(w, h))
     blocks = []
-    if side == "left":                                   # Nutrition Facts on top, ingredients under it
+    small = max(12, int(w / 30))
+    if side == "left":                                   # a real nutrition side: packed top to bottom
         blocks = [nutrition(c.get("nutrition", {}), w - 2 * m),
-                  paragraph(c.get("ingredients", ""), w - 2 * m, px=max(12, int(w / 34)))]
-    elif side == "right":
+                  paragraph(c.get("ingredients", ""), w - 2 * m, px=small),
+                  paragraph(c.get("storage", ""), w - 2 * m, px=small, weight="bold")]
+    elif side == "right":                                # the logo running up, directions, the maker
         lg = _knock(crop(logo_box), paper).rotate(90, expand=True) if logo_box else None
-        blocks = ([lg] if lg else []) + [paragraph(" ".join(c.get("maker", [])), w - 2 * m, px=max(12, int(w / 26)))]
+        blocks = ([lg] if lg else []) + \
+                 [paragraph("DIRECTIONS", w - 2 * m, px=int(small * 1.4), weight="black", color=(200, 30, 45)),
+                  paragraph(c.get("instructions", ""), w - 2 * m, px=small),
+                  paragraph(c.get("consumer_line", ""), w - 2 * m, px=small, weight="bold"),
+                  paragraph(" ".join(c.get("maker", [])), w - 2 * m, px=small)]
     elif side == "back":
         lg = _knock(crop(logo_box), paper) if logo_box else None
         ph = _feather(crop(photo_box)) if photo_box else None
         blocks = ([lg] if lg else []) + \
                  [paragraph(c.get("back_headline", ""), w - 2 * m, px=max(18, int(w / 16)), weight="black",
                             color=(200, 30, 45))] + \
-                 ([ph] if ph else []) + [paragraph(c.get("back_body", ""), w - 2 * m, px=max(14, int(w / 30)))]
+                 ([ph] if ph else []) + [paragraph(c.get("back_body", ""), w - 2 * m, px=max(14, int(w / 26)))] + \
+                 [paragraph(st, w - 2 * m, px=max(14, int(w / 28)), weight="bold") for st in c.get("back_steps", [])[:3]] + \
+                 ([promo(c["back_promo"], w - 2 * m)] if c.get("back_promo") else [])
     elif side == "bottom":
         blocks = [upc(c.get("upc_first11", "03800000000"), int(min(w * 0.4, h * 1.2))),
                   paragraph("  ".join(c.get("bottom_lines", []) + c.get("maker", [])), int(w * 0.5), px=max(12, int(h / 14)))]

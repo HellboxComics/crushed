@@ -280,7 +280,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     finish_files(cid, d)
     pend = os.path.join(ROOT, "assets", "models_pending", cid)       # so the phone page can spin it in 3D right away
     os.makedirs(pend, exist_ok=True)
-    shutil.copy(glb, os.path.join(pend, "model.glb"))
+    web = os.path.join(mdir, cid + "_web.glb")
+    shutil.copy(web if os.path.exists(web) else glb, os.path.join(pend, "model.glb"))
 
     # 6. CHECK: four sides against your photo
     status(cid, step="6/7 pictures from four sides and the judge's check")
@@ -306,6 +307,12 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         status(cid, verdict=verdict, views=os.path.relpath(shots, WORK),
                ref=os.path.relpath(picked["file"], WORK))
         file_away(cid, d)
+        return
+    if not verdict.get("pass"):                                  # never shown to you as finished when it isn't
+        failed = ", ".join(verdict.get("failed", [])) or "the judge's check"
+        status(cid, step=f"failed the realism check ({failed}) - not sent to you; it gets fixed and rebuilt",
+               ok=False, verdict=verdict, views=os.path.relpath(shots, WORK), ref=os.path.relpath(picked["file"], WORK))
+        say(f"[check] {cid}: not sent to your phone - failed: {failed}")
         return
     sent = askfirst.ask_review(cid, product, shots, note[:600])
     if not sent:
@@ -494,6 +501,9 @@ def finish_files(cid, d):
             if line.startswith("[exports]"):
                 say(line)
     glb = os.path.join(mdir, cid + ".glb")
+    if os.path.exists(blend):                              # the phone page's light copy (its host refuses > 25 MB)
+        subprocess.run([PY, os.path.join(HERE, "webglb.py"), "--", blend, os.path.join(mdir, cid + "_web.glb")],
+                       capture_output=True, text=True)
     if os.path.exists(glb):
         cut = os.path.join(d, "check", "cutaway.png")
         os.makedirs(os.path.dirname(cut), exist_ok=True)
@@ -559,8 +569,9 @@ def file_away(cid, d):
         "programs open the .fbx directly.\n")
     pend = os.path.join(ROOT, "assets", "models_pending", cid)
     os.makedirs(pend, exist_ok=True)
-    if os.path.exists(os.path.join(mdir, cid + ".glb")):
-        shutil.copy(os.path.join(mdir, cid + ".glb"), os.path.join(pend, "model.glb"))
+    web = os.path.join(mdir, cid + "_web.glb")
+    if os.path.exists(web) or os.path.exists(os.path.join(mdir, cid + ".glb")):
+        shutil.copy(web if os.path.exists(web) else os.path.join(mdir, cid + ".glb"), os.path.join(pend, "model.glb"))
     status(cid, step="done - kept in your Asset Library", ok=True, note=dst)
     say(f"[keep] {cid} -> {dst}")
 
@@ -922,7 +933,7 @@ def _state(v, cid="", picks=None, ap=None):
         if picks and cid in picks:
             return "line", "your pick is in - next up", 2
         return "you", "your photo pick", 0
-    if step.startswith(("stopped", "3 rounds", "no usable", "you said none")):
+    if step.startswith(("stopped", "3 rounds", "no usable", "you said none", "failed")):
         return "bad", "needs attention", 1
     if step.startswith("in line"):
         return "line", "in line", 4
@@ -1013,7 +1024,7 @@ def queue(n):
         step = st.get(cid, {}).get("step", "")
         if step.startswith("in line") and asking >= 5:
             continue
-        if step.startswith(("done", "stopped", "3 rounds", "no usable")):
+        if step.startswith(("done", "stopped", "3 rounds", "no usable", "failed")):
             continue
         if step.startswith("waiting for your pick") and cid not in picks:
             continue
@@ -1092,7 +1103,7 @@ if __name__ == "__main__":
                     import traceback
                     traceback.print_exc()
                     status(cid, step=f"stopped: {e}"[:300], ok=False)
-            busy = [c for c in todo if not jload(STATUS, {}).get(c, {}).get("step", "").startswith(("waiting", "done", "stopped", "3 rounds", "in line", "no usable"))]
+            busy = [c for c in todo if not jload(STATUS, {}).get(c, {}).get("step", "").startswith(("waiting", "done", "stopped", "3 rounds", "in line", "no usable", "failed"))]
             quiet = 0 if busy else quiet + 1
             time.sleep(0 if busy else 30)
         sys.exit(0)
