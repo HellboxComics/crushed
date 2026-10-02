@@ -696,14 +696,26 @@ def inspect(sheet, photo, product, use, card=None, close=None):
     mats = ", ".join(f"{L.get('part')}: {L.get('material', '').replace('_', ' ')}" for L in c.get("layers", [])) or "as the photo shows"
     closeups = "; ".join(c.get("closeups", [])) or "the small real details visible in the photo"
     lines = "\n".join(f' "{k}": {v.format(mats=mats, closeups=closeups)}' for k, v in CHECKS.items())
-    pics = [sheet] + ([close] if close else []) + [photo]
+    def grid(f):                                           # a long row of 4 views -> 2 x 2, so each view is
+        from PIL import Image                              # read bigger for the same reading time
+        im = Image.open(f).convert("RGB")
+        if im.width < 3 * im.height:
+            return f
+        w4 = im.width // 4
+        g = Image.new("RGB", (2 * w4, 2 * im.height))
+        for i in range(4):
+            g.paste(im.crop((i * w4, 0, (i + 1) * w4, im.height)), ((i % 2) * w4, (i // 2) * im.height))
+        out = f[:-4] + "_grid.jpg"
+        g.save(out, quality=90)
+        return out
+    pics = [grid(sheet)] + ([grid(close)] if close else []) + [photo]
     what = ("Picture 1 shows the 3D model all around" + ("; picture 2 shows it up close (ends, seams, edges)" if close
             else "") + f"; the last picture is a real photo.")
     q = (f"{what} The product: {product}. A professional, photoreal product model must pass ALL of these checks. "
          f"Answer each one true or false:\n{lines}\nAnswer ONLY JSON: {{" +
          ", ".join(f'"{k}": true/false' for k in CHECKS) + ', "problems": ["short and specific, for each false"]}')
     try:
-        v = V.ask(use, q, pics)
+        v = V.ask(use, q, pics, side=1024)                 # (bigger pictures cost minutes of reading per item)
     except Exception as e:
         return {"pass": False, "problems": f"could not inspect: {e}"}
     failed = [k for k in CHECKS if v.get(k) is not True]

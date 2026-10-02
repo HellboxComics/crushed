@@ -81,17 +81,17 @@ def _img(path, side=1280):
     return base64.b64encode(b.getvalue()).decode()
 
 
-def ask(use, text, images, think=True):
+def ask(use, text, images, think=True, side=1280):
     """One question to a vision model, answer as JSON. Thinking on gives better judgment; if a model can't think,
     ask again without it rather than failing."""
     body = {"model": use, "stream": False, "format": "json", "think": think, "options": {"temperature": 0},
             "messages": [{"role": "user", "content": text,
-                          "images": [_img(p) for p in images]}]}
+                          "images": [_img(p, side) for p in images]}]}
     try:
         txt = _call("/api/chat", body).get("message", {}).get("content", "{}")
     except urllib.error.HTTPError as e:
         if think and e.code == 400:
-            return ask(use, text, images, think=False)
+            return ask(use, text, images, think=False, side=side)
         raise
     return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
 
