@@ -3589,6 +3589,16 @@
 0.0104
 ]
 },
+"burger_king_kids_crown_1998": {
+"hard": 0.06,
+"how": "fold",
+"mat": "card",
+"size": [
+0.22,
+0.001,
+0.15
+]
+},
 "burlap_krampus_sack_1998": {
 "hard": 0.08,
 "how": "fold",
@@ -3769,6 +3779,16 @@
 0.05
 ]
 },
+"campbells_chicken_noodle_soup_can_1998": {
+"hard": 0.52,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.07,
+0.07,
+0.105
+]
+},
 "campbells_chunky_soup_can_1999": {
 "hard": 0.5,
 "how": "dent",
@@ -3777,6 +3797,16 @@
 0.085,
 0.085,
 0.115
+]
+},
+"campbells_soup_bowl_white_1998": {
+"hard": 0.62,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.16,
+0.06,
+0.16
 ]
 },
 "campfire_marshmallow_roasting_stick_1998": {
@@ -3797,6 +3827,16 @@
 0.07,
 0.035,
 0.07
+]
+},
+"canada_dry_ginger_ale_12oz_can_1998": {
+"hard": 0.36,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
 ]
 },
 "candied_winter_melon_tray_piece_1998": {
@@ -6379,6 +6419,16 @@
 0.0675
 ]
 },
+"cough_syrup_dosing_cup_clear_1998": {
+"hard": 0.14,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.04,
+0.045
+]
+},
 "country_crock_margarine_tub_reused_1998": {
 "hard": 0.22,
 "how": "squish",
@@ -6500,6 +6550,16 @@
 ]
 },
 "crayola_crayon_loose_assorted_1998": {
+"hard": 0.1,
+"how": "snap",
+"mat": "wax",
+"size": [
+0.008,
+0.008,
+0.09
+]
+},
+"crayola_red_crayon_fast_food_1998": {
 "hard": 0.1,
 "how": "snap",
 "mat": "wax",
@@ -6917,6 +6977,16 @@
 0.22,
 0.05,
 0.16
+]
+},
+"daytime_tv_remote_gray_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.025,
+0.18
 ]
 },
 "dc_lynx_black_white_1998": {
@@ -8579,6 +8649,36 @@
 0.0163
 ]
 },
+"fast_food_birthday_invitation_1998": {
+"hard": 0.05,
+"how": "fold",
+"mat": "card",
+"size": [
+0.1,
+0.0005,
+0.15
+]
+},
+"fast_food_cookie_bag_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.08,
+0.02,
+0.11
+]
+},
+"fast_food_playground_sock_white_1998": {
+"hard": 0.02,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.08,
+0.01,
+0.28
+]
+},
 "fellowes_3_5_floppy_storage_box_1998": {
 "hard": 0.46,
 "how": "snap",
@@ -8797,6 +8897,16 @@
 0.024,
 0.024,
 0.0321
+]
+},
+"flintstones_complete_vitamin_bottle_1998": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.11
 ]
 },
 "flip_flop_blue_thailand_2002": {
@@ -10129,6 +10239,16 @@
 0.14
 ]
 },
+"ginger_ale_glass_with_straw_1998": {
+"hard": 0.62,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.08,
+0.08,
+0.1
+]
+},
 "ginsu_knife_set_box_1984": {
 "hard": 0.3,
 "how": "fold",
@@ -10949,6 +11069,26 @@
 0.2
 ]
 },
+"halls_cherry_wrapped_drop_1998": {
+"hard": 0.1,
+"how": "snap",
+"mat": "candy",
+"size": [
+0.03,
+0.01,
+0.05
+]
+},
+"halls_mentholyptus_cherry_bag_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.13,
+0.03,
+0.18
+]
+},
 "halo2_xbox_2004": {
 "hard": 0.48,
 "how": "squish",
@@ -11459,6 +11599,16 @@
 0.1344
 ]
 },
+"heating_pad_sunbeam_blue_1998": {
+"hard": 0.16,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.3,
+0.03,
+0.4
+]
+},
 "heineken_330ml_can_1998": {
 "hard": 0.36,
 "how": "dent",
@@ -11467,6 +11617,16 @@
 0.066,
 0.066,
 0.115
+]
+},
+"heinz_ketchup_packet_1998": {
+"hard": 0.04,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.05,
+0.003,
+0.06
 ]
 },
 "helix_shatterproof_ruler_1998": {
@@ -15669,6 +15829,96 @@
 0.12
 ]
 },
+"mcdonalds_apple_pie_box_1998": {
+"hard": 0.12,
+"how": "fold",
+"mat": "card",
+"size": [
+0.07,
+0.03,
+0.13
+]
+},
+"mcdonalds_birthday_party_hat_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.18,
+0.18,
+0.25
+]
+},
+"mcdonalds_cheeseburger_wrapper_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.25,
+0.0005,
+0.25
+]
+},
+"mcdonalds_french_fry_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.008,
+0.008,
+0.08
+]
+},
+"mcdonalds_happy_meal_box_1998": {
+"hard": 0.22,
+"how": "fold",
+"mat": "card",
+"size": [
+0.16,
+0.1,
+0.2
+]
+},
+"mcdonalds_happy_meal_toy_bag_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.11,
+0.03,
+0.16
+]
+},
+"mcdonalds_happy_meal_toy_instruction_sheet_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
+0.14
+]
+},
+"mcdonalds_hot_wheels_happy_meal_car_1998": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.03,
+0.08
+]
+},
+"mcdonalds_kids_soda_cup_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.08,
+0.055,
+0.12
+]
+},
 "mcdonalds_mcboo_vinyl_treat_bag_1991": {
 "hard": 0.12,
 "how": "fold",
@@ -15709,6 +15959,66 @@
 0.23
 ]
 },
+"mcdonalds_napkin_brown_1998": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.16,
+0.0003,
+0.16
+]
+},
+"mcdonalds_paper_carry_bag_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.22,
+0.12,
+0.32
+]
+},
+"mcdonalds_playplace_wristband_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.24
+]
+},
+"mcdonalds_red_plastic_straw_1998": {
+"hard": 0.05,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.007,
+0.007,
+0.21
+]
+},
+"mcdonalds_small_fry_carton_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.08,
+0.04,
+0.11
+]
+},
+"mcdonalds_straw_wrapper_1998": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.21
+]
+},
 "mcdonalds_teenie_beanie_baby_sealed_1997": {
 "hard": 0.06,
 "how": "crumple",
@@ -15727,6 +16037,16 @@
 0.32,
 0.18,
 0.24
+]
+},
+"mcdonalds_tray_liner_activity_sheet_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.28,
+0.0005,
+0.4
 ]
 },
 "mcr_black_parade_cd_2006": {
@@ -20339,6 +20659,16 @@
 0.002
 ]
 },
+"plastic_sick_bucket_blue_1998": {
+"hard": 0.22,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.27,
+0.27,
+0.25
+]
+},
 "plastic_spider_ring_black_1998": {
 "hard": 0.14,
 "how": "snap",
@@ -20689,6 +21019,26 @@
 0.0411
 ]
 },
+"popsicle_cherry_single_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.04,
+0.02,
+0.13
+]
+},
+"popsicle_wrapper_red_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.06,
+0.0005,
+0.18
+]
+},
 "poptarts_brown_sugar_cinnamon_1997": {
 "hard": 0.32,
 "how": "fold",
@@ -20817,6 +21167,26 @@
 0.22,
 0.018,
 0.065
+]
+},
+"premium_saltine_cracker_1998": {
+"hard": 0.03,
+"how": "snap",
+"mat": "food",
+"size": [
+0.05,
+0.004,
+0.05
+]
+},
+"premium_saltine_crackers_box_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.13,
+0.1,
+0.24
 ]
 },
 "preparation_h_ointment_1oz_1998": {
@@ -22329,6 +22699,16 @@
 0.2
 ]
 },
+"robitussin_dm_cough_syrup_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.06,
+0.14
+]
+},
 "robo_car": {
 "hard": 0.85,
 "how": "dent",
@@ -22827,6 +23207,16 @@
 0.03,
 0.02,
 0.05
+]
+},
+"saltine_sleeve_wrapper_open_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.07,
+0.04,
+0.22
 ]
 },
 "sam_goody_cd_jewel_case_1999": {
@@ -26159,6 +26549,16 @@
 0.72
 ]
 },
+"sunbeam_heating_pad_controller_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.03,
+0.12
+]
+},
 "sunflower_seeds_david_original_1998": {
 "hard": 0.05,
 "how": "crumple",
@@ -27237,6 +27637,16 @@
 0.08,
 0.02,
 0.16
+]
+},
+"tiger_electronic_solitaire_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.025,
+0.14
 ]
 },
 "tiger_furby_baby_blue_1999": {
@@ -28449,6 +28859,16 @@
 0.009
 ]
 },
+"used_facial_tissue_white_1998": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.005,
+0.08
+]
+},
 "usher_confessions_cd_2004": {
 "hard": 0.68,
 "how": "snap",
@@ -28637,6 +29057,26 @@
 0.112,
 0.03,
 0.192
+]
+},
+"vicks_speedread_digital_thermometer_1998": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.02,
+0.015,
+0.13
+]
+},
+"vicks_vaporub_jar_1998": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.07
 ]
 },
 "victorinox_classic_sd_red_1998": {

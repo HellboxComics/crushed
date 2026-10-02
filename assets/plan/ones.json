@@ -6707,6 +6707,117 @@
 "no_wires": true,
 "theme": "Grandma's house where the butter-cookie tin contained anything except butter cookies"
 },
+"SICK DAY": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"menthol, chicken soup, ginger ale, tissues, electric heating pad and cherry cough syrup",
+"beside the living-room couch after the fever finally broke",
+"robitussin_dm_cough_syrup_1998"
+],
+"lore": "The thermometer said stay home, the handheld game said stay awake, and the soup went cold during daytime television.",
+"mix": [
+[
+"robitussin_dm_cough_syrup_1998",
+2
+],
+[
+"cough_syrup_dosing_cup_clear_1998",
+4
+],
+[
+"premium_saltine_crackers_box_1998",
+1
+],
+[
+"premium_saltine_cracker_1998",
+10
+],
+[
+"canada_dry_ginger_ale_12oz_can_1998",
+3
+],
+[
+"campbells_chicken_noodle_soup_can_1998",
+3
+],
+[
+"campbells_soup_bowl_white_1998",
+2
+],
+[
+"vicks_speedread_digital_thermometer_1998",
+2
+],
+[
+"flintstones_complete_vitamin_bottle_1998",
+1
+],
+[
+"kleenex_tissue_box_1998",
+2
+],
+[
+"used_facial_tissue_white_1998",
+10
+],
+[
+"tiger_electronic_solitaire_1998",
+1
+],
+[
+"heating_pad_sunbeam_blue_1998",
+1
+],
+[
+"sunbeam_heating_pad_controller_1998",
+1
+],
+[
+"plastic_sick_bucket_blue_1998",
+1
+],
+[
+"popsicle_cherry_single_1998",
+4
+],
+[
+"popsicle_wrapper_red_1998",
+4
+],
+[
+"halls_mentholyptus_cherry_bag_1998",
+2
+],
+[
+"halls_cherry_wrapped_drop_1998",
+6
+],
+[
+"vicks_vaporub_jar_1998",
+1
+],
+[
+"ginger_ale_glass_with_straw_1998",
+2
+],
+[
+"saltine_sleeve_wrapper_open_1998",
+3
+],
+[
+"daytime_tv_remote_gray_1998",
+1
+]
+],
+"no_wires": true,
+"theme": "cough syrup, crackers, ginger ale and everything stationed beside the couch when school was somebody else's problem"
+},
 "SLEEPOVER": {
 "era": [
 0,
@@ -8445,6 +8556,113 @@
 ],
 "no_wires": true,
 "theme": "red neon, lace, bike hardware and tourist trash from a night beside the canal"
+},
+"WITH A TOY": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"fryer oil, ketchup, waxed paper, soda syrup, plastic playground tubes and new-toy vinyl",
+"beneath a fast-food booth after the birthday group left for the playground",
+"mcdonalds_happy_meal_box_1998"
+],
+"lore": "The fries were cold before the toy bag was open, and the paper crown somehow survived longer than the meal.",
+"mix": [
+[
+"mcdonalds_happy_meal_box_1998",
+3
+],
+[
+"mcdonalds_happy_meal_toy_bag_1998",
+5
+],
+[
+"mcdonalds_hot_wheels_happy_meal_car_1998",
+4
+],
+[
+"mcdonalds_happy_meal_toy_instruction_sheet_1998",
+5
+],
+[
+"mcdonalds_small_fry_carton_1998",
+4
+],
+[
+"mcdonalds_french_fry_1998",
+12
+],
+[
+"mcdonalds_kids_soda_cup_1998",
+4
+],
+[
+"mcdonalds_straw_wrapper_1998",
+8
+],
+[
+"mcdonalds_red_plastic_straw_1998",
+6
+],
+[
+"heinz_ketchup_packet_1998",
+8
+],
+[
+"mcdonalds_cheeseburger_wrapper_1998",
+4
+],
+[
+"mcdonalds_napkin_brown_1998",
+8
+],
+[
+"burger_king_kids_crown_1998",
+2
+],
+[
+"fast_food_playground_sock_white_1998",
+3
+],
+[
+"mcdonalds_playplace_wristband_1998",
+4
+],
+[
+"mcdonalds_apple_pie_box_1998",
+2
+],
+[
+"fast_food_cookie_bag_1998",
+3
+],
+[
+"mcdonalds_birthday_party_hat_1998",
+2
+],
+[
+"fast_food_birthday_invitation_1998",
+3
+],
+[
+"mcdonalds_tray_liner_activity_sheet_1998",
+3
+],
+[
+"crayola_red_crayon_fast_food_1998",
+4
+],
+[
+"mcdonalds_paper_carry_bag_1998",
+2
+]
+],
+"no_wires": true,
+"theme": "Happy Meal boxes, bagged premiums and the fast-food debris nobody cared about once the toy came out"
 },
 "Y2K": {
 "era": [

@@ -6826,6 +6826,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"burger_king_kids_crown_1998": {
+"display": "Burger King paper crown, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Burger King paper crown, circa 1998"
+],
+"product": "Burger King paper crown, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.001,
+0.15
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
 "burlap_krampus_sack_1998": {
 "display": "Rough burlap costume sack, circa",
 "eras": [
@@ -7178,6 +7200,28 @@
 "themes": "SUMMER CAMP",
 "weight": 1.0
 },
+"campbells_chicken_noodle_soup_can_1998": {
+"display": "Campbell's Chicken Noodle Soup 10.75 oz can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.36,
+"notes": [
+"Campbell's Chicken Noodle Soup 10.75 oz can, circa 1998"
+],
+"product": "Campbell's Chicken Noodle Soup 10.75 oz can, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.105
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "campbells_chunky_soup_can_1999": {
 "display": "Campbell's Chunky Soup can, circa",
 "eras": [
@@ -7198,6 +7242,28 @@
 0.115
 ],
 "themes": "Y2K",
+"weight": 1.0
+},
+"campbells_soup_bowl_white_1998": {
+"display": "White ceramic soup bowl, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.591,
+"notes": [
+"White ceramic soup bowl, circa 1998"
+],
+"product": "White ceramic soup bowl, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.06,
+0.16
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "campfire_marshmallow_roasting_stick_1998": {
@@ -7242,6 +7308,28 @@
 0.07
 ],
 "themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"canada_dry_ginger_ale_12oz_can_1998": {
+"display": "Canada Dry Ginger Ale 12 oz can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.372,
+"notes": [
+"Canada Dry Ginger Ale 12 oz can, circa 1998"
+],
+"product": "Canada Dry Ginger Ale 12 oz can, circa 1998",
+"role": "main",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "candied_winter_melon_tray_piece_1998": {
@@ -11771,6 +11859,28 @@
 "themes": "PROM NIGHT",
 "weight": 1.0
 },
+"cough_syrup_dosing_cup_clear_1998": {
+"display": "Clear plastic medicine dosing cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.013,
+"notes": [
+"Clear plastic medicine dosing cup, circa 1998"
+],
+"product": "Clear plastic medicine dosing cup, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.045
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "country_crock_margarine_tub_reused_1998": {
 "display": "Shedd's Spread Country Crock margarine tub reused for leftovers, circa",
 "eras": [
@@ -11989,6 +12099,28 @@
 0.09
 ],
 "themes": "LOST AND FOUND",
+"weight": 1.0
+},
+"crayola_red_crayon_fast_food_1998": {
+"display": "Red Crayola crayon from kids' activity pack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Red Crayola crayon from kids' activity pack, circa 1998"
+],
+"product": "Red Crayola crayon from kids' activity pack, circa 1998",
+"role": "main",
+"size": [
+0.008,
+0.008,
+0.09
+],
+"themes": "WITH A TOY",
 "weight": 1.0
 },
 "crayola_school_scissors_1998": {
@@ -12731,6 +12863,28 @@
 0.16
 ],
 "themes": "EIDI",
+"weight": 1.0
+},
+"daytime_tv_remote_gray_1998": {
+"display": "Gray television remote control, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.047,
+"notes": [
+"Gray television remote control, circa 1998"
+],
+"product": "Gray television remote control, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.025,
+0.18
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "dc_lynx_black_white_1998": {
@@ -15872,6 +16026,72 @@
 "themes": "COASTERS; KICKFLIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"fast_food_birthday_invitation_1998": {
+"display": "Fast-food birthday-party invitation, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Fast-food birthday-party invitation, circa 1998"
+],
+"product": "Fast-food birthday-party invitation, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.15
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"fast_food_cookie_bag_1998": {
+"display": "Kids'-meal cookie packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.025,
+"notes": [
+"Kids'-meal cookie packet, circa 1998"
+],
+"product": "Kids'-meal cookie packet, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.02,
+0.11
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"fast_food_playground_sock_white_1998": {
+"display": "Single white children's playground sock, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.016,
+"notes": [
+"Single white children's playground sock, circa 1998"
+],
+"product": "Single white children's playground sock, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.01,
+0.28
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
 "fellowes_3_5_floppy_storage_box_1998": {
 "display": "Fellowes 3.5-inch floppy disk storage box, circa",
 "eras": [
@@ -16134,6 +16354,28 @@
 0.17
 ],
 "themes": "UNDER THE MATTRESS; SICK DAY; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"flintstones_complete_vitamin_bottle_1998": {
+"display": "Bayer Flintstones Complete children's multivitamins bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.094,
+"notes": [
+"Bayer Flintstones Complete children's multivitamins bottle, circa 1998"
+],
+"product": "Bayer Flintstones Complete children's multivitamins bottle, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.11
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "flip_flop_blue_thailand_2002": {
@@ -18444,6 +18686,28 @@
 "themes": "SLOW MOTION",
 "weight": 1.0
 },
+"ginger_ale_glass_with_straw_1998": {
+"display": "Small clear tumbler of ginger ale residue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.269,
+"notes": [
+"Small clear tumbler of ginger ale residue, circa 1998"
+],
+"product": "Small clear tumbler of ginger ale residue, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.1
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "ginsu_knife_set_box_1984": {
 "display": "Ginsu knife set retail box, circa",
 "eras": [
@@ -19829,6 +20093,50 @@
 "themes": "TRICK OR TREAT",
 "weight": 1.0
 },
+"halls_cherry_wrapped_drop_1998": {
+"display": "Individually wrapped Halls Cherry cough drop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Individually wrapped Halls Cherry cough drop, circa 1998"
+],
+"product": "Individually wrapped Halls Cherry cough drop, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.01,
+0.05
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
+"halls_mentholyptus_cherry_bag_1998": {
+"display": "Halls Mentho-Lyptus cough drops, Cherry, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.098,
+"notes": [
+"Halls Mentho-Lyptus cough drops, Cherry, circa 1998"
+],
+"product": "Halls Mentho-Lyptus cough drops, Cherry, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.03,
+0.18
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "halo2_xbox_2004": {
 "display": "Halo 2 original Xbox game",
 "eras": [
@@ -20773,6 +21081,28 @@
 "themes": "KRAMPUSNACHT",
 "weight": 1.0
 },
+"heating_pad_sunbeam_blue_1998": {
+"display": "Sunbeam electric heating pad, Blue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.252,
+"notes": [
+"Sunbeam electric heating pad, Blue, circa 1998"
+],
+"product": "Sunbeam electric heating pad, Blue, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.03,
+0.4
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "heineken_330ml_can_1998": {
 "display": "Heineken 330 ml aluminum can, circa",
 "eras": [
@@ -20793,6 +21123,28 @@
 0.115
 ],
 "themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"heinz_ketchup_packet_1998": {
+"display": "Heinz ketchup packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Heinz ketchup packet, circa 1998"
+],
+"product": "Heinz ketchup packet, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.003,
+0.06
+],
+"themes": "WITH A TOY",
 "weight": 1.0
 },
 "helix_shatterproof_ruler_1998": {
@@ -24359,7 +24711,7 @@
 0.12,
 0.13
 ],
-"themes": "SEWING KIT",
+"themes": "SICK DAY",
 "weight": 0.12
 },
 "knex_70model_set_1997": {
@@ -29174,6 +29526,204 @@
 "themes": "PICK 'N' MIX",
 "weight": 1.0
 },
+"mcdonalds_apple_pie_box_1998": {
+"display": "McDonald's baked/fried apple pie carton, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.029,
+"notes": [
+"McDonald's baked/fried apple pie carton, circa 1998"
+],
+"product": "McDonald's baked/fried apple pie carton, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.03,
+0.13
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_birthday_party_hat_1998": {
+"display": "McDonald's-style birthday party cone hat, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.851,
+"notes": [
+"McDonald's-style birthday party cone hat, circa 1998"
+],
+"product": "McDonald's-style birthday party cone hat, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.18,
+0.25
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_cheeseburger_wrapper_1998": {
+"display": "McDonald's cheeseburger paper wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"McDonald's cheeseburger paper wrapper, circa 1998"
+],
+"product": "McDonald's cheeseburger paper wrapper, circa 1998",
+"role": "main",
+"size": [
+0.25,
+0.0005,
+0.25
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_french_fry_1998": {
+"display": "McDonald's french fries, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"McDonald's french fries, circa 1998"
+],
+"product": "McDonald's french fries, circa 1998",
+"role": "main",
+"size": [
+0.008,
+0.008,
+0.08
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_happy_meal_box_1998": {
+"display": "McDonald's Happy Meal box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.336,
+"notes": [
+"McDonald's Happy Meal box, circa 1998"
+],
+"product": "McDonald's Happy Meal box, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.1,
+0.2
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_happy_meal_toy_bag_1998": {
+"display": "McDonald's Happy Meal sealed toy bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.074,
+"notes": [
+"McDonald's Happy Meal sealed toy bag, circa 1998"
+],
+"product": "McDonald's Happy Meal sealed toy bag, circa 1998",
+"role": "main",
+"size": [
+0.11,
+0.03,
+0.16
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_happy_meal_toy_instruction_sheet_1998": {
+"display": "Happy Meal toy instruction insert, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Happy Meal toy instruction insert, circa 1998"
+],
+"product": "Happy Meal toy instruction insert, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.14
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_hot_wheels_happy_meal_car_1998": {
+"display": "McDonald's Hot Wheels Happy Meal toy car, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"McDonald's Hot Wheels Happy Meal toy car, circa 1998"
+],
+"product": "McDonald's Hot Wheels Happy Meal toy car, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.03,
+0.08
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_kids_soda_cup_1998": {
+"display": "McDonald's small kids' soda cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.055,
+"notes": [
+"McDonald's small kids' soda cup, circa 1998"
+],
+"product": "McDonald's small kids' soda cup, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.055,
+0.12
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
 "mcdonalds_mcboo_vinyl_treat_bag_1991": {
 "display": "McDonald's McBoo glow-in-the-dark vinyl Halloween treat bag",
 "eras": [
@@ -29262,6 +29812,138 @@
 "themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"mcdonalds_napkin_brown_1998": {
+"display": "McDonald's brown paper napkin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"McDonald's brown paper napkin, circa 1998"
+],
+"product": "McDonald's brown paper napkin, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.0003,
+0.16
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_paper_carry_bag_1998": {
+"display": "McDonald's paper carry bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.183,
+"notes": [
+"McDonald's paper carry bag, circa 1998"
+],
+"product": "McDonald's paper carry bag, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.12,
+0.32
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_playplace_wristband_1998": {
+"display": "McDonald's PlayPlace-style paper wristband, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"McDonald's PlayPlace-style paper wristband, circa 1998"
+],
+"product": "McDonald's PlayPlace-style paper wristband, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.24
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_red_plastic_straw_1998": {
+"display": "Red plastic fast-food straw, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Red plastic fast-food straw, circa 1998"
+],
+"product": "Red plastic fast-food straw, circa 1998",
+"role": "main",
+"size": [
+0.007,
+0.007,
+0.21
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_small_fry_carton_1998": {
+"display": "McDonald's small fries carton, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.037,
+"notes": [
+"McDonald's small fries carton, circa 1998"
+],
+"product": "McDonald's small fries carton, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.04,
+0.11
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
+"mcdonalds_straw_wrapper_1998": {
+"display": "McDonald's paper straw wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"McDonald's paper straw wrapper, circa 1998"
+],
+"product": "McDonald's paper straw wrapper, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.21
+],
+"themes": "WITH A TOY",
+"weight": 1.0
+},
 "mcdonalds_teenie_beanie_baby_sealed_1997": {
 "display": "McDonald's Teenie Beanie Babies Happy Meal toy, sealed package",
 "eras": [
@@ -29304,6 +29986,28 @@
 0.24
 ],
 "themes": "RETIREMENT PLAN",
+"weight": 1.0
+},
+"mcdonalds_tray_liner_activity_sheet_1998": {
+"display": "McDonald's kids' activity tray liner, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"McDonald's kids' activity tray liner, circa 1998"
+],
+"product": "McDonald's kids' activity tray liner, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.0005,
+0.4
+],
+"themes": "WITH A TOY",
 "weight": 1.0
 },
 "mcr_black_parade_cd_2006": {
@@ -37656,6 +38360,28 @@
 "themes": "MOONCAKE",
 "weight": 1.0
 },
+"plastic_sick_bucket_blue_1998": {
+"display": "Blue plastic bedside bucket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.189,
+"notes": [
+"Blue plastic bedside bucket, circa 1998"
+],
+"product": "Blue plastic bedside bucket, circa 1998",
+"role": "main",
+"size": [
+0.27,
+0.27,
+0.25
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "plastic_spider_ring_black_1998": {
 "display": "Black plastic spider ring arcade prize, circa",
 "eras": [
@@ -38228,6 +38954,50 @@
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
+"popsicle_cherry_single_1998": {
+"display": "Cherry ice pop on wooden stick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.022,
+"notes": [
+"Cherry ice pop on wooden stick, circa 1998"
+],
+"product": "Cherry ice pop on wooden stick, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.13
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
+"popsicle_wrapper_red_1998": {
+"display": "Red ice-pop wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Red ice-pop wrapper, circa 1998"
+],
+"product": "Red ice-pop wrapper, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.18
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "poptarts_brown_sugar_cinnamon_1997": {
 "display": "Kellogg's Pop-Tarts Frosted Brown Sugar Cinnamon toaster pastries, circa",
 "eras": [
@@ -38443,6 +39213,50 @@
 0.065
 ],
 "themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"premium_saltine_cracker_1998": {
+"display": "Premium Saltine cracker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Premium Saltine cracker, circa 1998"
+],
+"product": "Premium Saltine cracker, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.004,
+0.05
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
+"premium_saltine_crackers_box_1998": {
+"display": "Nabisco Premium Saltine Crackers box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.328,
+"notes": [
+"Nabisco Premium Saltine Crackers box, circa 1998"
+],
+"product": "Nabisco Premium Saltine Crackers box, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.1,
+0.24
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "preparation_h_ointment_1oz_1998": {
@@ -41280,6 +42094,28 @@
 "themes": "HAND TURKEY",
 "weight": 1.0
 },
+"robitussin_dm_cough_syrup_1998": {
+"display": "Robitussin DM cough syrup bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.088,
+"notes": [
+"Robitussin DM cough syrup bottle, circa 1998"
+],
+"product": "Robitussin DM cough syrup bottle, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.14
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "rockford_fosgate_punch_12_subwoofer_2001": {
 "display": "Rockford Fosgate Punch 12-inch car subwoofer, circa",
 "eras": [
@@ -42290,6 +43126,28 @@
 0.05
 ],
 "themes": "BOARDWALK",
+"weight": 1.0
+},
+"saltine_sleeve_wrapper_open_1998": {
+"display": "Open Premium Saltines inner cracker sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.086,
+"notes": [
+"Open Premium Saltines inner cracker sleeve, circa 1998"
+],
+"product": "Open Premium Saltines inner cracker sleeve, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.04,
+0.22
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "sam_goody_cd_jewel_case_1999": {
@@ -48510,6 +49368,28 @@
 "themes": "SUMMER CAMP",
 "weight": 1.0
 },
+"sunbeam_heating_pad_controller_1998": {
+"display": "Sunbeam heating-pad hand controller, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.038,
+"notes": [
+"Sunbeam heating-pad hand controller, circa 1998"
+],
+"product": "Sunbeam heating-pad hand controller, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.03,
+0.12
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "sunflower_seeds_david_original_1998": {
 "display": "DAVID Original Sunflower Seeds bag, circa",
 "eras": [
@@ -50375,6 +51255,28 @@
 0.16
 ],
 "themes": "STILL ALIVE",
+"weight": 1.0
+},
+"tiger_electronic_solitaire_1998": {
+"display": "Tiger Electronics Electronic Solitaire handheld game, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.049,
+"notes": [
+"Tiger Electronics Electronic Solitaire handheld game, circa 1998"
+],
+"product": "Tiger Electronics Electronic Solitaire handheld game, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.025,
+0.14
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "tiger_furby_baby_blue_1999": {
@@ -52663,6 +53565,28 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"used_facial_tissue_white_1998": {
+"display": "Crumpled white facial tissues, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Crumpled white facial tissues, circa 1998"
+],
+"product": "Crumpled white facial tissues, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.005,
+0.08
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
 "usher_confessions_cd_2004": {
 "display": "Usher Confessions CD in jewel case",
 "eras": [
@@ -53013,6 +53937,50 @@
 0.192
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"vicks_speedread_digital_thermometer_1998": {
+"display": "Vicks digital thermometer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Vicks digital thermometer, circa 1998"
+],
+"product": "Vicks digital thermometer, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.13
+],
+"themes": "SICK DAY",
+"weight": 1.0
+},
+"vicks_vaporub_jar_1998": {
+"display": "Vicks VapoRub jar, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.06,
+"notes": [
+"Vicks VapoRub jar, circa 1998"
+],
+"product": "Vicks VapoRub jar, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.07
+],
+"themes": "SICK DAY",
 "weight": 1.0
 },
 "victorinox_classic_sd_red_1998": {
