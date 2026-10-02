@@ -200,6 +200,9 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
                     "0.3" if route == "flat" else "0.6")
     else:
+        st = jload(os.path.join(WORK, "selftest.json"), {})
+        if not st.get("hunyuan_ok", True):
+            raise RuntimeError("Hunyuan3D is not working on this Mac yet: " + str(st.get("hunyuan_note", ""))[-200:])
         ref = reference(picked, d)
         status(cid, step="5/7 Hunyuan3D makes the shape and paint from your photo")
         make_room("drawing")
@@ -567,7 +570,10 @@ if __name__ == "__main__":
             sys.exit(0)
         import selftest
         last = jload(os.path.join(WORK, "selftest.json"), {})
-        fresh = last.get("ok") and time.time() - last.get("at", 0) < 6 * 3600
+        age = time.time() - last.get("at", 0)
+        if not last.get("ok", True) and age < 3600:     # it failed lately: no rerun (and no phone alarm) for an hour
+            sys.exit(0)
+        fresh = last.get("ok") and age < 6 * 3600
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
             say("self-test failed - nothing run (the reason is on your phone)")
             sys.exit(1)

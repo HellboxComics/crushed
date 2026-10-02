@@ -145,19 +145,22 @@ def run_all(quiet_phone=False):
              ("Hunyuan3D loads", t_hunyuan, 200),
              ("Google Images browser", t_google, 90)]
     for name, fn, limit in order:
-        if not check(name, fn, limit):
+        if not check(name, fn, limit) and name != "Hunyuan3D loads":   # Hunyuan only blocks free-form items
             break
     try:
         import turnaround as T
         T.free_room()
     except Exception:
         pass
-    ok = all(r["ok"] for r in RESULTS) and len(RESULTS) == len(order)
+    core = [r for r in RESULTS if r["piece"] != "Hunyuan3D loads"]
+    ok = all(r["ok"] for r in core) and len(core) == len(order) - 1
+    hy = next((r for r in RESULTS if r["piece"] == "Hunyuan3D loads"), {"ok": False, "note": "not checked"})
     work = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
     os.makedirs(work, exist_ok=True)
-    json.dump({"ok": ok, "at": time.time(), "results": RESULTS}, open(os.path.join(work, "selftest.json"), "w"), indent=1)
+    json.dump({"ok": ok, "hunyuan_ok": hy["ok"], "hunyuan_note": hy["note"], "at": time.time(), "results": RESULTS},
+              open(os.path.join(work, "selftest.json"), "w"), indent=1)
     if not ok and not quiet_phone:
-        bad = next(r for r in RESULTS if not r["ok"])
+        bad = next(r for r in RESULTS if not r["ok"] and r["piece"] != "Hunyuan3D loads")
         try:
             import hart as H
             H.send(f"Asset maker self-test FAILED at: {bad['piece']}\n{bad['note']}\nNothing was run. Send this to Claude.")
