@@ -176,6 +176,15 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
             spec = outline.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
             spec = outline.apply_construction(spec, card)          # its real layers, seam, lips, metal ends
+            try:                                                       # what's inside, from the family's recipe
+                sys.path.insert(0, os.path.join(HERE, "factory"))
+                import factory
+                rec = factory.recipe_for(card, model=use, log=say)
+                spec["recipe_inline"] = {"inside": rec.get("inside", []),
+                                         "outside": {}, "shell_mm": {}}
+                spec["family"] = rec.get("family")
+            except Exception as e:
+                say(f"[factory] recipe skipped ({e})")
             sp = os.path.join(d, "shape.json")
             json.dump(spec, open(sp, "w"), indent=1)
         along, around = skin.label_size(spec)

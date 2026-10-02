@@ -196,8 +196,8 @@ for name in parts:
 # crumbles the cathode and lets the gel ooze, and the right things are inside when it splits open.
 HERE_LIB = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHYS = json.load(open(os.path.join(HERE_LIB, "factory", "physics.json")))
-recipe = {}
-if spec.get("recipe"):
+recipe = spec.get("recipe_inline") or {}
+if spec.get("recipe") and not recipe:
     rp = os.path.join(HERE_LIB, "factory", "recipes", spec["recipe"] + ".json")
     recipe = json.load(open(rp)) if os.path.exists(rp) else {}
 ref = recipe.get("reference_size_mm") or {}
@@ -281,7 +281,41 @@ def revolve(name, poly, segs=96):
     return o2
 
 
+def relative_poly(q):
+    """A recipe part described against the outside (wall / fill / core) turned into an outline at this item's size."""
+    side = [pt for p in spec["profile"] if p["part"] == "label" for pt in p["pts"]] or \
+        max((p["pts"] for p in spec["profile"]), key=len)
+    side = sorted(side, key=lambda pt: pt[1])
+    z0, z1 = side[0][1], side[-1][1]
+    shape = q.get("shape")
+    if shape == "wall":
+        t = max(q.get("thickness_mm") or 0.2, 0.05)
+        out = [[max(r - 0.1, 0.01), z] for r, z in side]
+        return out + [[max(r - t, 0.0), z] for r, z in reversed(out)]
+    if shape == "fill":
+        top = z0 + (z1 - z0) * min(max(q.get("fraction") or 0.9, 0.05), 0.99)
+        pts = [[max(r - 0.4, 0.01), z] for r, z in side if z <= top]
+        above = [pt for pt in side if pt[1] > top]
+        if pts and above:                                 # the liquid's surface, exactly at its height
+            (ra, za), (rb, zb) = [pts[-1][0] + 0.4, pts[-1][1]], above[0]
+            k = (top - za) / max(zb - za, 1e-9)
+            pts.append([max(ra + (rb - ra) * k - 0.4, 0.01), top])
+        return [[0.0, pts[0][1]]] + pts + [[0.0, pts[-1][1]]] if len(pts) > 1 else None
+    if shape == "core":
+        rr = max(r for r, z in side) * min(max(q.get("radius_fraction") or 0.3, 0.02), 0.95)
+        return [[0.0, z0 + 0.5], [rr, z0 + 0.5], [rr, z1 - 0.5], [0.0, z1 - 0.5]]
+    return None
+
+
 for q in recipe.get("inside", []):
+    if "poly" not in q:                                   # a researched recipe: parts relative to the outside
+        if not ref:
+            poly = relative_poly(q)
+            if not poly:
+                continue
+            q = dict(q, poly=poly)
+        else:
+            continue
     polys = [q["poly"]]
     if q["part"] == "cathode" and recipe.get("cathode_pellets", 1) > 1:       # pressed as separate pellets
         (r0, z0), (r1, _), (_, z1), _ = q["poly"]
