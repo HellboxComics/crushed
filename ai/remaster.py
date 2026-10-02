@@ -172,7 +172,7 @@ def publish(force=False):
         for g in glob.glob(os.path.join(base, "*", "model.glb")):
             n = os.path.basename(os.path.dirname(g))
             dst = os.path.join(site, "models", n + ".glb")
-            if not os.path.exists(dst):
+            if not os.path.exists(dst) and os.path.getsize(g) < 24 * 1024 * 1024:   # the host takes 25 MB a file
                 shutil.copy(g, dst)
     r = subprocess.run([npx, "--yes", "wrangler@3", "pages", "deploy", site, "--project-name", PROJECT, "--branch", "main",
                         "--commit-dirty=true"], capture_output=True, text=True)
@@ -236,6 +236,35 @@ def expected():
     p = os.path.join(ROOT, "ai", "remaster", "expected.txt")
     ex = [l.strip() for l in open(p) if l.strip()] if os.path.exists(p) else []
     return sorted(set(ex) | set(names()))
+
+
+def refit_big(limit_mb=24):
+    """Models made before the mesh slimming (hundreds of MB): redo only the Blender step, from the sheet, shape and
+    inside picture already made. Minutes each, no drawing or sculpting again."""
+    for g in glob.glob(os.path.join(PENDING, "*", "model.glb")):
+        if os.path.getsize(g) < limit_mb * 1024 * 1024:
+            continue
+        n = os.path.basename(os.path.dirname(g))
+        tag = f"remaster_{n}"
+        shape = os.path.join(DROP, "done", tag, tag + ".glb")
+        sheet = os.path.join(WORK, n + "_sheet.png")
+        inside = os.path.join(WORK, n + "_inside.png")
+        if not (os.path.exists(shape) and os.path.exists(sheet)):
+            continue
+        say(f"slimming {n} ({os.path.getsize(g) // (1024 * 1024)} MB)")
+        tmp = os.path.join(WORK, "_refit")
+        shutil.rmtree(tmp, ignore_errors=True)
+        r = subprocess.run([PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", n, "--shape", shape,
+                            "--sheet", sheet, "--out", tmp] + (["--inside", inside] if os.path.exists(inside) else []),
+                           capture_output=True, text=True)
+        new = os.path.join(tmp, n)
+        if r.returncode == 0 and os.path.exists(os.path.join(new, "model.glb")):
+            for f in ("reference.png", "inside.png"):
+                if os.path.exists(os.path.join(PENDING, n, f)):
+                    shutil.copy(os.path.join(PENDING, n, f), os.path.join(new, f))
+            trash(os.path.join(PENDING, n))
+            shutil.move(new, os.path.join(PENDING, n))
+            say(f"  {n}: now {os.path.getsize(os.path.join(PENDING, n, 'model.glb')) // (1024 * 1024)} MB")
 
 
 def page():
@@ -422,13 +451,14 @@ def main():
     ap.add_argument("--publish-setup", action="store_true", help="make the phone page and print its link")
     a = ap.parse_args()
     if a.publish_setup:
-        publish_setup(); return
+        refit_big(); publish_setup(); return
     if a.status:
         status(); page(); return
     if a.sheet:
         sheet(); return
     if a.approve:
         approve(a.approve); return
+    refit_big()
     # an object is ready once its prompts are written: the inside prompt is the last one the AI writes
     todo = a.only or [n for n in names() if not os.path.exists(os.path.join(PENDING, n, "model.glb"))
                       and not os.path.exists(os.path.join(MODELS, n, "model.glb"))

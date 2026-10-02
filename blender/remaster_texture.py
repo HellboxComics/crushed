@@ -70,6 +70,24 @@ def import_shape(path):
     return ob
 
 
+MAX_FACES = 60000      # the sculptor's raw mesh is millions of faces (250 MB); a crushed bale needs a fraction of that
+
+
+def slim(ob, max_faces=MAX_FACES):
+    """Cut the sculptor's mesh down to a sane size without losing its shape (Blender's collapse decimation)."""
+    n = len(ob.data.polygons)
+    if n <= max_faces:
+        return
+    if not ob.users_collection:
+        bpy.context.scene.collection.objects.link(ob)
+    m = ob.modifiers.new("slim", "DECIMATE")
+    m.decimate_type = "COLLAPSE"
+    m.ratio = max_faces / n
+    with bpy.context.temp_override(object=ob, active_object=ob, selected_objects=[ob], selected_editable_objects=[ob]):
+        bpy.ops.object.modifier_apply(modifier=m.name)
+    print(f"[remaster] slimmed {n} -> {len(ob.data.polygons)} faces")
+
+
 def fit(ob, target):
     """Center, keep the sculptor's up as up, turn 90 degrees if its footprint runs the wrong way, scale to size."""
     me = ob.data
@@ -218,6 +236,7 @@ def main():
     if real:
         target = np.array([float(x) for x in real])
     ob = import_shape(a.shape)
+    slim(ob)
     fit(ob, target)
     project(ob, a.sheet)
     if a.inside:
