@@ -355,6 +355,10 @@ def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, ju
     import turnaround as T
     import vet as V
     os.makedirs(out_dir, exist_ok=True)
+    done = os.path.join(out_dir, f"{side}.png")
+    if os.path.exists(done):                   # finished before a restart: kept, never drawn again (a Redo starts clean)
+        log(f"[texture] {side}: already finished - kept")
+        return done
     w, h = canvas(w_mm, h_mm, mp=1.2e6)
     imgs = []
     if photo is not None:

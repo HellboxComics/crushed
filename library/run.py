@@ -640,11 +640,13 @@ def hunyuan_paint(ref, out, bare=None):
     hy = hunyuan.home()
     if not hy:
         raise RuntimeError("Hunyuan3D is not installed yet - run the setup paste")
+    glb = os.path.join(out, "textured.glb")
+    if os.path.exists(glb):                     # made before a restart: kept (a Redo moves the model folder away first)
+        return glb
     cmd = [os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), ref, out]
     if bare:
         cmd += ["--paint", bare]
     r = subprocess.run(cmd, capture_output=True, text=True)
-    glb = os.path.join(out, "textured.glb")
     if r.returncode != 0 or not os.path.exists(glb):
         raise RuntimeError("Hunyuan3D did not finish: " + (r.stderr or r.stdout)[-400:])
     return glb
