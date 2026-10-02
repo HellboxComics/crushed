@@ -133,14 +133,46 @@ def draw(description, out, seed=None, steps=None, timeout=3600):
 
 
 def to_white(im):
-    """The grey studio background to pure white, so every later step sees only the object."""
+    """The studio background (grey, often a gradient with a soft shadow) to pure white, so every later step sees
+    only the object. Flood-fills from the edges through light, low-color pixels, stepping neighbor to neighbor, so a
+    gradient is followed but the object (darker or colored) stops it."""
     import numpy as np
+    from collections import deque
     from PIL import Image
-    a = np.asarray(im.convert("RGB")).astype(int)
-    bg = np.median(np.concatenate([a[:6].reshape(-1, 3), a[-6:].reshape(-1, 3), a[:, :6].reshape(-1, 3),
-                                   a[:, -6:].reshape(-1, 3)]), axis=0)
-    close = np.abs(a - bg).sum(-1) < 36
-    a[close] = 255
+    a = np.asarray(im.convert("RGB")).astype(np.int16)
+    h, w = a.shape[:2]
+    lum = a.mean(-1)
+    sat = a.max(-1) - a.min(-1)
+    bgish = (lum > 110) & (sat < 28)
+    seen = np.zeros((h, w), bool)
+    q = deque()
+    for x in range(w):
+        for y in (0, h - 1):
+            if bgish[y, x] and not seen[y, x]:
+                seen[y, x] = True
+                q.append((y, x))
+    for y in range(h):
+        for x in (0, w - 1):
+            if bgish[y, x] and not seen[y, x]:
+                seen[y, x] = True
+                q.append((y, x))
+    while q:
+        y, x = q.popleft()
+        for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            ny, nx = y + dy, x + dx
+            if 0 <= ny < h and 0 <= nx < w and not seen[ny, nx] and bgish[ny, nx] \
+                    and abs(int(lum[ny, nx]) - int(lum[y, x])) < 12:
+                seen[ny, nx] = True
+                q.append((ny, nx))
+    a[seen] = 255
+    ink = (a.min(-1) < 200)                   # thin divider lines along the cell edges (the model draws some): erased
+    e = max(4, int(min(h, w) * 0.08))
+    for x in list(range(e)) + list(range(w - e, w)):
+        if ink[:, x].mean() > 0.6:
+            a[:, x] = 255
+    for y in list(range(e)) + list(range(h - e, h)):
+        if ink[y, :].mean() > 0.6:
+            a[y, :] = 255
     return Image.fromarray(a.astype("uint8"))
 
 
@@ -148,7 +180,9 @@ def split(turn_png):
     from PIL import Image
     im = Image.open(turn_png).convert("RGB")
     w, h = im.width // 3, im.height // 2
-    return {k: im.crop(((i % 3) * w, (i // 3) * h, (i % 3 + 1) * w, (i // 3 + 1) * h)) for i, k in enumerate(ORDER)}
+    m = int(min(w, h) * 0.02)               # skip the thin divider lines the model sometimes draws between views
+    return {k: im.crop(((i % 3) * w + m, (i // 3) * h + m, (i % 3 + 1) * w - m, (i // 3 + 1) * h - m))
+            for i, k in enumerate(ORDER)}
 
 
 def sheet2x2(cells, out):
@@ -167,5 +201,11 @@ def sheet2x2(cells, out):
 def atlas(turn_png, out):
     """The whole turnaround on white: the texture the model is painted from."""
     from PIL import Image
-    to_white(Image.open(turn_png)).save(out)
+    im = Image.open(turn_png).convert("RGB")
+    sheet = Image.new("RGB", im.size, (255, 255, 255))
+    w, h = im.width // 3, im.height // 2
+    for i, (k, c) in enumerate(split(turn_png).items()):        # each view cleaned on its own, dividers dropped
+        c = to_white(c)
+        sheet.paste(c, ((i % 3) * w + (w - c.width) // 2, (i // 3) * h + (h - c.height) // 2))
+    sheet.save(out)
     return out

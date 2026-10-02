@@ -105,8 +105,17 @@ def sculpt(name, sheet, timeout=3600):
     """Hand the sheet to the sculptor and wait for the shape."""
     tag = f"remaster_{name}"
     os.makedirs(DROP, exist_ok=True)
-    shutil.copy(sheet, os.path.join(DROP, tag + ".png"))
     done = os.path.join(DROP, "done", tag, tag + ".glb")
+    # an older shape or an older failure must not be mistaken for this one: both moved aside first, never deleted
+    stamp = time.strftime("%Y%m%d-%H%M%S")
+    if os.path.isdir(os.path.dirname(done)):
+        old = os.path.join(DROP, "done", "_older versions")
+        os.makedirs(old, exist_ok=True)
+        shutil.move(os.path.dirname(done), os.path.join(old, f"{tag}-{stamp}"))
+    bad = os.path.join(DROP, "_problem", tag + ".png")
+    if os.path.exists(bad):
+        shutil.move(bad, os.path.join(DROP, "_problem", f"{tag}-{stamp}.png"))
+    shutil.copy(sheet, os.path.join(DROP, tag + ".png"))
     t0 = time.time()
     while time.time() - t0 < timeout:
         if os.path.exists(done):
@@ -227,7 +236,10 @@ def turnaround_sheet(name, redo=False):
     # a written description is kept on a redo (redo = make the model again); delete <name>.turn.txt to rewrite it
     desc = T.describe(name, cat.get("display", name), cat.get("years", ""), cat.get("notes", ""), seed)
     turn = os.path.join(WORK, name + "_turn.png")
-    T.draw(desc, turn)
+    tp = os.path.join(PROMPTS, name + ".turn.txt")
+    fresh = os.path.exists(turn) and os.path.exists(tp) and os.path.getmtime(turn) > os.path.getmtime(tp)
+    if not fresh:                         # a drawing newer than its words is reused; delete the png to draw again
+        T.draw(desc, turn)
     cells = T.split(turn)
     sheet = T.sheet2x2(cells, os.path.join(WORK, name + "_sheet.png"))
     atlas = T.atlas(turn, os.path.join(WORK, name + "_atlas.png"))
