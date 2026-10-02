@@ -372,6 +372,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
+"airport_duty_free_bag_1998": {
+"display": "Airport duty-free shopping bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Airport duty-free shopping bag, circa 1998"
+],
+"product": "Airport duty-free shopping bag, circa 1998",
+"role": "main",
+"size": [
+0.32,
+0.001,
+0.42
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
 "airwalk_one_black_white_1995": {
 "display": "Airwalk One skate shoes, black and white, circa",
 "eras": [
@@ -1946,6 +1968,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"baeksul_canola_oil_500ml_2002": {
+"display": "Beksul/Baeksul Canola Oil 500 ml gift-set bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.147,
+"notes": [
+"Beksul/Baeksul Canola Oil 500 ml gift-set bottle, circa 2002"
+],
+"product": "Beksul/Baeksul Canola Oil 500 ml gift-set bottle, circa 2002",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.24
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
 "bagel_bites_cheese_pepperoni_1997": {
 "display": "Bagel Bites Cheese & Pepperoni mini bagel pizzas, circa",
 "eras": [
@@ -2035,26 +2079,26 @@
 "weight": 1.0
 },
 "bandai_gashapon_capsule_48mm_blue_clear_1998": {
-"display": "Bandai-style 48 mm gachapon capsule, translucent clear/blue halves, circa",
+"display": "Bandai-style 48 mm gachapon capsule, blue/clear, circa",
 "eras": [
 2,
 3
 ],
 "family": "one-of-one",
-"group": "special",
+"group": "era",
 "mass": 0.019,
 "notes": [
 "Bandai-style 48 mm gachapon capsule, translucent clear/blue halves, circa 1998"
 ],
-"product": "Bandai-style 48 mm gachapon capsule, translucent clear/blue halves, circa 1998",
+"product": "Bandai-style 48 mm gachapon capsule, blue/clear, circa 1998",
 "role": "main",
 "size": [
 0.048,
 0.048,
 0.048
 ],
-"themes": "GACHAPON",
-"weight": 1.0
+"themes": "SURPRISE INSIDE",
+"weight": 0.12
 },
 "bandai_gashapon_capsule_65mm_red_clear_1998": {
 "display": "Bandai-style 65 mm gachapon capsule, translucent clear/red halves, circa",
@@ -3395,6 +3439,28 @@
 0.12
 ],
 "themes": "HOME_JUNK_DRAWER_MISC; SCHOOL_JUNK; Y2K; regular cubes",
+"weight": 1.0
+},
+"binggrae_banana_flavored_milk_2002": {
+"display": "Binggrae Banana Flavored Milk bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.103,
+"notes": [
+"Binggrae Banana Flavored Milk bottle, circa 2002"
+],
+"product": "Binggrae Banana Flavored Milk bottle, circa 2002",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.12
+],
+"themes": "SPAM GIFT SET",
 "weight": 1.0
 },
 "bitbox02_2019": {
@@ -4802,6 +4868,28 @@
 "themes": "Y2K",
 "weight": 1.0
 },
+"candied_winter_melon_tray_piece_1998": {
+"display": "Candied winter melon from Lunar New Year candy tray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Candied winter melon from Lunar New Year candy tray, circa 1998"
+],
+"product": "Candied winter melon from Lunar New Year candy tray, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.05
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
 "canned_cranberry_cylinder_prop_1998": {
 "display": "Jellied cranberry-sauce cylinder removed from can, circa",
 "eras": [
@@ -5042,6 +5130,28 @@
 0.28
 ],
 "themes": "LIGHT THE FUSE",
+"weight": 1.0
+},
+"cardboard_milk_cap_pog_assorted_1995": {
+"display": "Assorted cardboard milk-cap-style Pogs, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Assorted cardboard milk-cap-style Pogs, circa 1995"
+],
+"product": "Assorted cardboard milk-cap-style Pogs, circa 1995",
+"role": "main",
+"size": [
+0.041,
+0.0015,
+0.041
+],
+"themes": "TAZOS",
 "weight": 1.0
 },
 "carefree_original_pantiliners_1998": {
@@ -6009,6 +6119,28 @@
 "themes": "TRICK OR TREAT",
 "weight": 1.0
 },
+"cheetos_crunchy_cheese_1996": {
+"display": "Cheetos Crunchy cheese-flavored snacks bag, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.353,
+"notes": [
+"Cheetos Crunchy cheese-flavored snacks bag, circa 1996"
+],
+"product": "Cheetos Crunchy cheese-flavored snacks bag, circa 1996",
+"role": "main",
+"size": [
+0.18,
+0.05,
+0.28
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
 "cheetos_paws_1993": {
 "display": "Cheetos Paws cheese-flavored snacks, circa",
 "eras": [
@@ -6095,6 +6227,28 @@
 0.45
 ],
 "themes": "MINT CONDITION",
+"weight": 1.0
+},
+"chinese_knot_red_double_coin_1998": {
+"display": "Red decorative Chinese knot with double-coin pattern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Red decorative Chinese knot with double-coin pattern, circa 1998"
+],
+"product": "Red decorative Chinese knot with double-coin pattern, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.01,
+0.4
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 },
 "chinese_red_envelope_6pack_1999": {
@@ -6293,6 +6447,160 @@
 0.025
 ],
 "themes": "PRIZE COUNTER; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"chuseok_bojagi_wrapping_cloth_2002": {
+"display": "Chuseok bojagi-style gift wrapping cloth, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.069,
+"notes": [
+"Chuseok bojagi-style gift wrapping cloth, circa 2002"
+],
+"product": "Chuseok bojagi-style gift wrapping cloth, circa 2002",
+"role": "main",
+"size": [
+0.7,
+0.002,
+0.7
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"chuseok_department_store_gift_tag_2002": {
+"display": "Korean department-store Chuseok gift tag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Korean department-store Chuseok gift tag, circa 2002"
+],
+"product": "Korean department-store Chuseok gift tag, circa 2002",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.1
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"chuseok_fruit_gift_net_foam_2002": {
+"display": "White foam fruit-protection net sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"White foam fruit-protection net sleeve, circa 2002"
+],
+"product": "White foam fruit-protection net sleeve, circa 2002",
+"role": "main",
+"size": [
+0.1,
+0.01,
+0.16
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"chuseok_gift_ribbon_red_gold_2002": {
+"display": "Red-and-gold Chuseok gift ribbon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Red-and-gold Chuseok gift ribbon, circa 2002"
+],
+"product": "Red-and-gold Chuseok gift ribbon, circa 2002",
+"role": "main",
+"size": [
+0.8,
+0.002,
+0.02
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"chuseok_songpyeon_halfmoon_ricecake_2002": {
+"display": "Songpyeon half-moon rice cakes, Chuseok, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Songpyeon half-moon rice cakes, Chuseok, circa 2002"
+],
+"product": "Songpyeon half-moon rice cakes, Chuseok, circa 2002",
+"role": "main",
+"size": [
+0.05,
+0.03,
+0.025
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"cj_spam_chuseok_gift_set_2002": {
+"display": "CJ SPAM Chuseok canned-ham gift set, Korea, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.183,
+"notes": [
+"CJ SPAM Chuseok canned-ham gift set, Korea, circa 2002"
+],
+"product": "CJ SPAM Chuseok canned-ham gift set, Korea, circa 2002",
+"role": "main",
+"size": [
+0.44,
+0.08,
+0.32
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"cj_spam_classic_340g_korea_2002": {
+"display": "CJ SPAM Classic 340 g can, Korea, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.308,
+"notes": [
+"CJ SPAM Classic 340 g can, Korea, circa 2002"
+],
+"product": "CJ SPAM Classic 340 g can, Korea, circa 2002",
+"role": "main",
+"size": [
+0.1,
+0.055,
+0.08
+],
+"themes": "SPAM GIFT SET",
 "weight": 1.0
 },
 "clay_diya_lamp_1998": {
@@ -10242,6 +10550,50 @@
 "themes": "BULL TRAP",
 "weight": 1.0
 },
+"european_airline_baggage_tag_1998": {
+"display": "European airline checked-baggage tag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"European airline checked-baggage tag, circa 1998"
+],
+"product": "European airline checked-baggage tag, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.001,
+0.35
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"european_supermarket_plastic_bag_1998": {
+"display": "European supermarket carrier bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.013,
+"notes": [
+"European supermarket carrier bag, circa 1998"
+],
+"product": "European supermarket carrier bag, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.0005,
+0.55
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
 "eurorack_patch_cable_neon_2020": {
 "display": "Eurorack 3.5 mm patch cable, neon assorted colors, circa",
 "eras": [
@@ -10524,6 +10876,50 @@
 0.11
 ],
 "themes": "SAVE ICON; DIAL-UP; HOME_JUNK_DRAWER_MISC; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"ferrero_kinder_surprise_20g_1998": {
+"display": "Ferrero Kinder Surprise 20 g chocolate egg, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Ferrero Kinder Surprise 20 g chocolate egg, circa 1998"
+],
+"product": "Ferrero Kinder Surprise 20 g chocolate egg, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.045,
+0.065
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"ferrero_kinder_surprise_3pack_carton_1998": {
+"display": "Kinder Surprise three-egg retail carton, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.069,
+"notes": [
+"Kinder Surprise three-egg retail carton, circa 1998"
+],
+"product": "Kinder Surprise three-egg retail carton, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.055,
+0.08
+],
+"themes": "SURPRISE INSIDE",
 "weight": 1.0
 },
 "fhm_us_1999_issue": {
@@ -13711,6 +14107,28 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"hard_shell_suitcase_gray_1998": {
+"display": "Gray hard-shell travel suitcase, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 15.246,
+"notes": [
+"Gray hard-shell travel suitcase, circa 1998"
+],
+"product": "Gray hard-shell travel suitcase, circa 1998",
+"role": "main",
+"size": [
+0.55,
+0.22,
+0.72
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
 "haribo_fried_egg_gummy_1997": {
 "display": "HARIBO Fried Eggs gummy sweet, circa",
 "eras": [
@@ -14750,6 +15168,50 @@
 "themes": "UNDER THE MATTRESS; WINDOW SHOPPING; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"hwatu_flower_card_stack_2002": {
+"display": "Korean Hwatu flower cards, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Korean Hwatu flower cards, circa 2002"
+],
+"product": "Korean Hwatu flower cards, circa 2002",
+"role": "main",
+"size": [
+0.035,
+0.0015,
+0.055
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"hwatu_red_storage_case_2002": {
+"display": "Red plastic Hwatu card case, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.021,
+"notes": [
+"Red plastic Hwatu card case, circa 2002"
+],
+"product": "Red plastic Hwatu card case, circa 2002",
+"role": "main",
+"size": [
+0.06,
+0.02,
+0.1
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
 "ibm_3_5_floppy_blue_1997": {
 "display": "IBM 3.5-inch 2HD 1.44 MB floppy disk, circa",
 "eras": [
@@ -15366,6 +15828,28 @@
 "themes": "PURIKURA",
 "weight": 1.0
 },
+"jarritos_mandarin_370ml_1998": {
+"display": "Jarritos Mandarin 370 ml glass bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.383,
+"notes": [
+"Jarritos Mandarin 370 ml glass bottle, circa 1998"
+],
+"product": "Jarritos Mandarin 370 ml glass bottle, circa 1998",
+"role": "main",
+"size": [
+0.063,
+0.063,
+0.23
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
 "jayz_blueprint_cd_2001": {
 "display": "Jay-Z The Blueprint CD in jewel case",
 "eras": [
@@ -15783,6 +16267,314 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"kinder_bueno_2bar_pack_1998": {
+"display": "Ferrero Kinder Bueno two-bar pack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.033,
+"notes": [
+"Ferrero Kinder Bueno two-bar pack, circa 1998"
+],
+"product": "Ferrero Kinder Bueno two-bar pack, circa 1998",
+"role": "main",
+"size": [
+0.065,
+0.02,
+0.18
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_chocolate_8bar_pack_1998": {
+"display": "Ferrero Kinder Chocolate 8-bar pack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.05,
+"notes": [
+"Ferrero Kinder Chocolate 8-bar pack, circa 1998"
+],
+"product": "Ferrero Kinder Chocolate 8-bar pack, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.02,
+0.2
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_happy_hippo_1998": {
+"display": "Kinder Happy Hippo wafer snack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.018,
+"notes": [
+"Kinder Happy Hippo wafer snack, circa 1998"
+],
+"product": "Kinder Happy Hippo wafer snack, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.025,
+0.05
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_joy_egg_2001": {
+"display": "Ferrero Kinder Joy two-compartment egg, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.028,
+"notes": [
+"Ferrero Kinder Joy two-compartment egg, circa 2001"
+],
+"product": "Ferrero Kinder Joy two-compartment egg, circa 2001",
+"role": "main",
+"size": [
+0.048,
+0.048,
+0.07
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_airplane_toy_blue_1998": {
+"display": "Kinder Surprise miniature blue airplane toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Kinder Surprise miniature blue airplane toy, circa 1998"
+],
+"product": "Kinder Surprise miniature blue airplane toy, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.055,
+0.025
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_animal_figure_green_1998": {
+"display": "Kinder Surprise small green animal figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Kinder Surprise small green animal figure, circa 1998"
+],
+"product": "Kinder Surprise small green animal figure, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.025,
+0.045
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_car_toy_red_1998": {
+"display": "Kinder Surprise miniature red car toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Kinder Surprise miniature red car toy, circa 1998"
+],
+"product": "Kinder Surprise miniature red car toy, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.025,
+0.025
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_collection_leaflet_1998": {
+"display": "Kinder Surprise collectible-series leaflet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Kinder Surprise collectible-series leaflet, circa 1998"
+],
+"product": "Kinder Surprise collectible-series leaflet, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.14
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_foil_wrapper_flattened_1998": {
+"display": "Flattened Kinder Surprise foil wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Flattened Kinder Surprise foil wrapper, circa 1998"
+],
+"product": "Flattened Kinder Surprise foil wrapper, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0002,
+0.12
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_instruction_slip_1998": {
+"display": "Kinder Surprise toy assembly instruction slip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Kinder Surprise toy assembly instruction slip, circa 1998"
+],
+"product": "Kinder Surprise toy assembly instruction slip, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.0003,
+0.1
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_open_chocolate_shell_1998": {
+"display": "Opened Kinder Surprise chocolate egg shell, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.023,
+"notes": [
+"Opened Kinder Surprise chocolate egg shell, circa 1998"
+],
+"product": "Opened Kinder Surprise chocolate egg shell, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.025,
+0.065
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_puzzle_toy_1998": {
+"display": "Kinder Surprise tiny interlocking puzzle toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Kinder Surprise tiny interlocking puzzle toy, circa 1998"
+],
+"product": "Kinder Surprise tiny interlocking puzzle toy, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.015,
+0.05
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_spinning_top_toy_1998": {
+"display": "Kinder Surprise miniature spinning-top toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.013,
+"notes": [
+"Kinder Surprise miniature spinning-top toy, circa 1998"
+],
+"product": "Kinder Surprise miniature spinning-top toy, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.045
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
+"kinder_surprise_yellow_capsule_1998": {
+"display": "Kinder Surprise yellow toy capsule, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.011,
+"notes": [
+"Kinder Surprise yellow toy capsule, circa 1998"
+],
+"product": "Kinder Surprise yellow toy capsule, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.05
+],
+"themes": "SURPRISE INSIDE",
+"weight": 1.0
+},
 "kingston_datatraveler_1gb_2005": {
 "display": "Kingston DataTraveler 1 GB USB flash drive, circa",
 "eras": [
@@ -15890,6 +16682,28 @@
 0.057
 ],
 "themes": "GREEN BEER",
+"weight": 1.0
+},
+"kitchen_tile_chocolate_smear_scrap_1998": {
+"display": "White kitchen-floor vinyl tile fragment with chocolate smears, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"White kitchen-floor vinyl tile fragment with chocolate smears, circa 1998"
+],
+"product": "White kitchen-floor vinyl tile fragment with chocolate smears, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.003,
+0.2
+],
+"themes": "SURPRISE INSIDE",
 "weight": 1.0
 },
 "kleenex_boutique_tissue_box_blue_1998": {
@@ -16198,6 +17012,116 @@
 0.09
 ],
 "themes": "PRIZE COUNTER; SUMMER CAMP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"korean_gift_message_card_chuseok_2002": {
+"display": "Chuseok gift message card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Chuseok gift message card, circa 2002"
+],
+"product": "Chuseok gift message card, circa 2002",
+"role": "main",
+"size": [
+0.09,
+0.001,
+0.14
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"korean_green_tea_teabag_envelope_2002": {
+"display": "Korean green-tea bag envelope, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Korean green-tea bag envelope, circa 2002"
+],
+"product": "Korean green-tea bag envelope, circa 2002",
+"role": "main",
+"size": [
+0.06,
+0.005,
+0.07
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"korean_newspaper_gift_wrap_2002": {
+"display": "Korean newspaper gift-packing sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.015,
+"notes": [
+"Korean newspaper gift-packing sheet, circa 2002"
+],
+"product": "Korean newspaper gift-packing sheet, circa 2002",
+"role": "main",
+"size": [
+0.4,
+0.0005,
+0.55
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"korean_persimmon_dangam_2002": {
+"display": "Korean sweet persimmon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.094,
+"notes": [
+"Korean sweet persimmon, circa 2002"
+],
+"product": "Korean sweet persimmon, circa 2002",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.07
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"korean_singo_pear_large_2002": {
+"display": "Korean Singo/Nashi pear, large, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.254,
+"notes": [
+"Korean Singo/Nashi pear, large, circa 2002"
+],
+"product": "Korean Singo/Nashi pear, large, circa 2002",
+"role": "main",
+"size": [
+0.11,
+0.11,
+0.1
+],
+"themes": "SPAM GIFT SET",
 "weight": 1.0
 },
 "koss_porta_pro_1984": {
@@ -17514,6 +18438,204 @@
 "themes": "GACHAPON",
 "weight": 1.0
 },
+"lotte_choco_pie_original_2002": {
+"display": "Lotte Choco Pie Original, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.028,
+"notes": [
+"Lotte Choco Pie Original, circa 2002"
+],
+"product": "Lotte Choco Pie Original, circa 2002",
+"role": "main",
+"size": [
+0.09,
+0.025,
+0.09
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"lotte_pepero_original_2002": {
+"display": "Lotte Pepero Original chocolate biscuit sticks, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.043,
+"notes": [
+"Lotte Pepero Original chocolate biscuit sticks, circa 2002"
+],
+"product": "Lotte Pepero Original chocolate biscuit sticks, circa 2002",
+"role": "main",
+"size": [
+0.085,
+0.03,
+0.16
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"lunar_new_year_door_couplet_pair_1998": {
+"display": "Red Lunar New Year door couplet pair, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Red Lunar New Year door couplet pair, circa 1998"
+],
+"product": "Red Lunar New Year door couplet pair, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.0005,
+1.0
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"lunar_new_year_gold_coin_chocolate_1998": {
+"display": "Gold-foil chocolate coin from Lunar New Year candy tray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Gold-foil chocolate coin from Lunar New Year candy tray, circa 1998"
+],
+"product": "Gold-foil chocolate coin from Lunar New Year candy tray, circa 1998",
+"role": "main",
+"size": [
+0.038,
+0.005,
+0.038
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"lunar_new_year_hongbao_gold_foil_1998": {
+"display": "Traditional red Lunar New Year hongbao envelope with gold-foil blessing, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Traditional red Lunar New Year hongbao envelope with gold-foil blessing, circa 1998"
+],
+"product": "Traditional red Lunar New Year hongbao envelope with gold-foil blessing, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.001,
+0.165
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"lunar_new_year_horizontal_couplet_banner_1998": {
+"display": "Horizontal Lunar New Year doorway banner, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Horizontal Lunar New Year doorway banner, circa 1998"
+],
+"product": "Horizontal Lunar New Year doorway banner, circa 1998",
+"role": "main",
+"size": [
+0.7,
+0.0005,
+0.15
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"lunar_new_year_mandarin_orange_1998": {
+"display": "Mandarin orange with leaf, Lunar New Year table fruit, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Mandarin orange with leaf, Lunar New Year table fruit, circa 1998"
+],
+"product": "Mandarin orange with leaf, Lunar New Year table fruit, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.065
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"lunar_new_year_red_tissue_paper_1998": {
+"display": "Red gift tissue paper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.015,
+"notes": [
+"Red gift tissue paper, circa 1998"
+],
+"product": "Red gift tissue paper, circa 1998",
+"role": "main",
+"size": [
+0.5,
+0.0003,
+0.7
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"lunar_new_year_zodiac_hongbao_1998": {
+"display": "Zodiac-themed red envelope, Year of the Tiger style, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Zodiac-themed red envelope, Year of the Tiger style, circa 1998"
+],
+"product": "Zodiac-themed red envelope, Year of the Tiger style, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.001,
+0.165
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
 "lunchables_ham_cheddar_cracker_stackers_1995": {
 "display": "Oscar Mayer Lunchables Ham + Cheddar with Crackers, circa",
 "eras": [
@@ -17688,6 +18810,28 @@
 0.3
 ],
 "themes": "MALL RAT; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"mandarin_leaf_cluster_1998": {
+"display": "Loose mandarin leaf and stem cluster, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose mandarin leaf and stem cluster, circa 1998"
+],
+"product": "Loose mandarin leaf and stem cluster, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.002,
+0.09
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 },
 "manila_private_envelope_1998": {
@@ -17952,6 +19096,50 @@
 0.188
 ],
 "themes": "BE KIND REWIND; Y2K; DIAL-UP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"matutano_cheetos_tazos_bag_1995": {
+"display": "Matutano Cheetos promotional snack bag with Tazo offer, Spain, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.42,
+"notes": [
+"Matutano Cheetos promotional snack bag with Tazo offer, Spain, circa 1995"
+],
+"product": "Matutano Cheetos promotional snack bag with Tazo offer, Spain, circa 1995",
+"role": "main",
+"size": [
+0.2,
+0.05,
+0.3
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"matutano_looney_tunes_tazo_1995": {
+"display": "Matutano Looney Tunes Tazo promotional disc, Spain, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Matutano Looney Tunes Tazo promotional disc, Spain, circa 1995"
+],
+"product": "Matutano Looney Tunes Tazo promotional disc, Spain, circa 1995",
+"role": "main",
+"size": [
+0.04,
+0.0016,
+0.04
+],
+"themes": "TAZOS",
 "weight": 1.0
 },
 "maxell_cassette_label_sheet_partial_1997": {
@@ -19095,6 +20283,28 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"mexico_two_peso_coin_1996": {
+"display": "Mexican two-peso coin, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Mexican two-peso coin, circa 1996"
+],
+"product": "Mexican two-peso coin, circa 1996",
+"role": "main",
+"size": [
+0.023,
+0.002,
+0.023
+],
+"themes": "TAZOS",
 "weight": 1.0
 },
 "micro_machines_5pack_1995": {
@@ -20830,6 +22040,28 @@
 0.12
 ],
 "themes": "MINT CONDITION",
+"weight": 1.0
+},
+"nian_gao_round_rice_cake_1998": {
+"display": "Round nian gao Lunar New Year rice cake, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.272,
+"notes": [
+"Round nian gao Lunar New Year rice cake, circa 1998"
+],
+"product": "Round nian gao Lunar New Year rice cake, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.04,
+0.18
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 },
 "nickelodeon_floam_green_1994": {
@@ -22570,6 +23802,28 @@
 "themes": "SCREEN TIME; BLOW ON IT; DOUBLE A; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"orion_choco_pie_original_2002": {
+"display": "Orion Choco Pie Original, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.028,
+"notes": [
+"Orion Choco Pie Original, circa 2002"
+],
+"product": "Orion Choco Pie Original, circa 2002",
+"role": "main",
+"size": [
+0.09,
+0.025,
+0.09
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
 "oscar_mayer_lunchables_crackers_ham_cheese_1995": {
 "display": "Oscar Mayer Lunchables Cracker Stackers Ham & American, circa",
 "eras": [
@@ -23457,7 +24711,7 @@
 3
 ],
 "family": "one-of-one",
-"group": "special",
+"group": "era",
 "mass": 0.021,
 "notes": [
 "Hinged two-piece plastic Easter egg, small, circa 1998"
@@ -23469,8 +24723,8 @@
 0.045,
 0.06
 ],
-"themes": "EGG HUNT",
-"weight": 1.0
+"themes": "SURPRISE INSIDE",
+"weight": 0.12
 },
 "pastel_plastic_easter_eggs_24pack_1998": {
 "display": "Pastel hinged plastic Easter eggs 24-pack, circa",
@@ -23800,6 +25054,28 @@
 0.115
 ],
 "themes": "GOLAZO",
+"weight": 1.0
+},
+"pepsi_355ml_can_mexico_1998": {
+"display": "Pepsi 355 ml aluminum can, Mexico, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.372,
+"notes": [
+"Pepsi 355 ml aluminum can, Mexico, circa 1998"
+],
+"product": "Pepsi 355 ml aluminum can, Mexico, circa 1998",
+"role": "main",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "TAZOS",
 "weight": 1.0
 },
 "pepsi_blue_20oz_2002": {
@@ -26078,6 +27354,50 @@
 "themes": "GM",
 "weight": 1.0
 },
+"red_candy_tray_clear_lid_1998": {
+"display": "Clear lid from Lunar New Year candy tray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.315,
+"notes": [
+"Clear lid from Lunar New Year candy tray, circa 1998"
+],
+"product": "Clear lid from Lunar New Year candy tray, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.02,
+0.3
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"red_candy_tray_eight_compartment_1998": {
+"display": "Eight-compartment Lunar New Year candy tray with lid, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.102,
+"notes": [
+"Eight-compartment Lunar New Year candy tray with lid, circa 1998"
+],
+"product": "Eight-compartment Lunar New Year candy tray with lid, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.07,
+0.3
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
 "red_chart_candle_1999": {
 "display": "Small red paraffin chart-candle prop, circa",
 "eras": [
@@ -26166,6 +27486,28 @@
 "themes": "ROAD TRIP; PROM NIGHT; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"red_lantern_gold_tassel_1998": {
+"display": "Detached red-and-gold lantern tassel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.011,
+"notes": [
+"Detached red-and-gold lantern tassel, circa 1998"
+],
+"product": "Detached red-and-gold lantern tassel, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.03,
+0.18
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
 "red_lifeguard_onepiece_swimsuit_1994": {
 "display": "Red lifeguard one-piece swimsuit, circa",
 "eras": [
@@ -26208,6 +27550,28 @@
 0.48
 ],
 "themes": "SLOW MOTION",
+"weight": 1.0
+},
+"red_paper_lantern_round_1998": {
+"display": "Small round red paper lantern with gold trim, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.68,
+"notes": [
+"Small round red paper lantern with gold trim, circa 1998"
+],
+"product": "Small round red paper lantern with gold trim, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.2,
+0.3
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 },
 "red_party_cup_football_watch_1998": {
@@ -26319,6 +27683,28 @@
 ],
 "themes": "CONSOLE WARS",
 "weight": 0.12
+},
+"red_wrapped_sesame_candy_1998": {
+"display": "Sesame brittle candy in red wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Sesame brittle candy in red wrapper, circa 1998"
+],
+"product": "Sesame brittle candy in red wrapper, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.01,
+0.06
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
 },
 "reeses_easter_peanut_butter_egg_1998": {
 "display": "Reese's Peanut Butter Egg, circa",
@@ -27352,6 +28738,72 @@
 0.12
 ],
 "themes": "SPACE OPERA",
+"weight": 1.0
+},
+"sabritas_looney_tunes_tazo_1994": {
+"display": "Sabritas Looney Tunes Tazo promotional disc, Mexico, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Sabritas Looney Tunes Tazo promotional disc, Mexico, circa 1994"
+],
+"product": "Sabritas Looney Tunes Tazo promotional disc, Mexico, circa 1994",
+"role": "main",
+"size": [
+0.04,
+0.0016,
+0.04
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"sabritas_original_chips_tazos_bag_1994": {
+"display": "Sabritas Original potato chips promotional bag with Tazos callout, Mexico, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.42,
+"notes": [
+"Sabritas Original potato chips promotional bag with Tazos callout, Mexico, circa 1994"
+],
+"product": "Sabritas Original potato chips promotional bag with Tazos callout, Mexico, circa 1994",
+"role": "main",
+"size": [
+0.2,
+0.05,
+0.3
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"sabritas_pokemon_tazo_2000": {
+"display": "Sabritas Pok\u00e9mon Tazo promotional disc, Mexico, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Sabritas Pok\u00e9mon Tazo promotional disc, Mexico, circa 2000"
+],
+"product": "Sabritas Pok\u00e9mon Tazo promotional disc, Mexico, circa 2000",
+"role": "main",
+"size": [
+0.04,
+0.0016,
+0.04
+],
+"themes": "TAZOS",
 "weight": 1.0
 },
 "sacagawea_dollar_2000": {
@@ -29019,6 +30471,28 @@
 0.03
 ],
 "themes": "DRESS CODE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sliced_nian_gao_piece_1998": {
+"display": "Sliced nian gao pieces, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.015,
+"notes": [
+"Sliced nian gao pieces, circa 1998"
+],
+"product": "Sliced nian gao pieces, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.02,
+0.05
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 },
 "slim_cd_jewel_case_assorted_2003": {
@@ -31022,6 +32496,50 @@
 "themes": "LOW RES",
 "weight": 1.0
 },
+"spent_red_firecracker_casing_1998": {
+"display": "Individual spent red firecracker casing, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Individual spent red firecracker casing, circa 1998"
+],
+"product": "Individual spent red firecracker casing, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.01,
+0.045
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"spent_red_firecracker_string_lunar_new_year_1998": {
+"display": "Inert spent Lunar New Year firecracker string, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.336,
+"notes": [
+"Inert spent Lunar New Year firecracker string, circa 1998"
+],
+"product": "Inert spent Lunar New Year firecracker string, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.06,
+0.5
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
 "spent_sparkler_wire_bundle_1998": {
 "display": "Spent steel sparkler wires, circa",
 "eras": [
@@ -32117,6 +33635,182 @@
 0.3
 ],
 "themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"tazo_number_checklist_sheet_1996": {
+"display": "Printed Tazo collection checklist, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Printed Tazo collection checklist, circa 1996"
+],
+"product": "Printed Tazo collection checklist, circa 1996",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_collector_board_1996": {
+"display": "Tazos collector/display board, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.092,
+"notes": [
+"Tazos collector/display board, circa 1996"
+],
+"product": "Tazos collector/display board, circa 1996",
+"role": "main",
+"size": [
+0.35,
+0.005,
+0.5
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_collector_tube_clear_blue_1996": {
+"display": "Tazos collector storage tube, translucent blue, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.088,
+"notes": [
+"Tazos collector storage tube, translucent blue, circa 1996"
+],
+"product": "Tazos collector storage tube, translucent blue, circa 1996",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.2
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_doubles_rubber_band_stack_1996": {
+"display": "Rubber-banded stack of duplicate Tazos, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.011,
+"notes": [
+"Rubber-banded stack of duplicate Tazos, circa 1996"
+],
+"product": "Rubber-banded stack of duplicate Tazos, circa 1996",
+"role": "main",
+"size": [
+0.045,
+0.03,
+0.045
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_metal_slammer_1996": {
+"display": "Heavy metal Tazo slammer disc, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Heavy metal Tazo slammer disc, circa 1996"
+],
+"product": "Heavy metal Tazo slammer disc, circa 1996",
+"role": "main",
+"size": [
+0.042,
+0.0025,
+0.042
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_playground_trade_note_1996": {
+"display": "Handwritten Tazo trade list, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handwritten Tazo trade list, circa 1996"
+],
+"product": "Handwritten Tazo trade list, circa 1996",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.15
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_schoolyard_drawstring_bag_1996": {
+"display": "Nylon drawstring gym bag used for Tazos, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.094,
+"notes": [
+"Nylon drawstring gym bag used for Tazos, circa 1996"
+],
+"product": "Nylon drawstring gym bag used for Tazos, circa 1996",
+"role": "main",
+"size": [
+0.32,
+0.01,
+0.42
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"tazos_swap_zip_bag_1996": {
+"display": "Clear zip-top bag of Tazo swaps, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.038,
+"notes": [
+"Clear zip-top bag of Tazo swaps, circa 1996"
+],
+"product": "Clear zip-top bag of Tazo swaps, circa 1996",
+"role": "main",
+"size": [
+0.15,
+0.01,
+0.18
+],
+"themes": "TAZOS",
 "weight": 1.0
 },
 "tdk_cd_r_50_spindle_2001": {
@@ -35172,6 +36866,50 @@
 "themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"walkers_star_wars_tazo_1996": {
+"display": "Walkers Star Wars Tazo promotional disc, United Kingdom, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Walkers Star Wars Tazo promotional disc, United Kingdom, circa 1996"
+],
+"product": "Walkers Star Wars Tazo promotional disc, United Kingdom, circa 1996",
+"role": "main",
+"size": [
+0.04,
+0.0016,
+0.04
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
+"walkers_star_wars_tazos_crisps_bag_1996": {
+"display": "Walkers crisps promotional bag with Star Wars Tazos offer, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.353,
+"notes": [
+"Walkers crisps promotional bag with Star Wars Tazos offer, circa 1996"
+],
+"product": "Walkers crisps promotional bag with Star Wars Tazos offer, circa 1996",
+"role": "main",
+"size": [
+0.18,
+0.05,
+0.28
+],
+"themes": "TAZOS",
+"weight": 1.0
+},
 "wall_street_business_card_bundle_1999": {
 "display": "Generic brokerage business cards, circa",
 "eras": [
@@ -35544,6 +37282,50 @@
 0.76
 ],
 "themes": "TRICK OR TREAT",
+"weight": 1.0
+},
+"white_rabbit_candy_bag_1998": {
+"display": "White Rabbit Creamy Candy retail bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.215,
+"notes": [
+"White Rabbit Creamy Candy retail bag, circa 1998"
+],
+"product": "White Rabbit Creamy Candy retail bag, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.24
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"white_rabbit_cream_candy_1998": {
+"display": "White Rabbit Creamy Candy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"White Rabbit Creamy Candy, circa 1998"
+],
+"product": "White Rabbit Creamy Candy, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.05
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 },
 "white_tube_sock_pair_1998": {
@@ -36468,6 +38250,50 @@
 "themes": "GOT GOT NEED; MINT CONDITION; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
+"yutnori_game_mat_2002": {
+"display": "Folded Yutnori game board/mat, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Folded Yutnori game board/mat, circa 2002"
+],
+"product": "Folded Yutnori game board/mat, circa 2002",
+"role": "main",
+"size": [
+0.4,
+0.003,
+0.4
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"yutnori_yut_stick_wood_2002": {
+"display": "Traditional Yutnori throwing stick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.023,
+"notes": [
+"Traditional Yutnori throwing stick, circa 2002"
+],
+"product": "Traditional Yutnori throwing stick, circa 2002",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.18
+],
+"themes": "SPAM GIFT SET",
+"weight": 1.0
+},
 "zebra_mildliner_yellow_1999": {
 "display": "Zebra fluorescent yellow highlighter, circa",
 "eras": [
@@ -36554,6 +38380,50 @@
 0.09
 ],
 "themes": "LEFTOVERS; ROAD TRIP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"zodiac_dragon_gold_figurine_2000": {
+"display": "Gold-colored zodiac dragon figurine",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.087,
+"notes": [
+"Gold-colored zodiac dragon figurine, 2000"
+],
+"product": "Gold-colored zodiac dragon figurine, 2000",
+"role": "main",
+"size": [
+0.09,
+0.05,
+0.11
+],
+"themes": "RED ENVELOPE",
+"weight": 1.0
+},
+"zodiac_tiger_ceramic_figurine_1998": {
+"display": "Small ceramic zodiac tiger figurine",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.108,
+"notes": [
+"Small ceramic zodiac tiger figurine, 1998"
+],
+"product": "Small ceramic zodiac tiger figurine, 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.08
+],
+"themes": "RED ENVELOPE",
 "weight": 1.0
 }
 }

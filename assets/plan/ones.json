@@ -3252,6 +3252,117 @@
 "no_wires": true,
 "theme": "Shibuya schoolbag photo stickers, phone charms and stationery spilled across the floor"
 },
+"RED ENVELOPE": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"mandarin peel, wax candy paper, incense smoke, rice cake, paper lantern glue and fresh citrus leaves",
+"the family dining table the morning after Lunar New Year",
+"lunar_new_year_hongbao_gold_foil_1998"
+],
+"lore": "The money left the envelopes first; the red paper, candy wrappers, lanterns and oranges stayed until somebody finally cleared the table.",
+"mix": [
+[
+"lunar_new_year_hongbao_gold_foil_1998",
+12
+],
+[
+"lunar_new_year_zodiac_hongbao_1998",
+6
+],
+[
+"spent_red_firecracker_string_lunar_new_year_1998",
+2
+],
+[
+"spent_red_firecracker_casing_1998",
+8
+],
+[
+"lunar_new_year_mandarin_orange_1998",
+6
+],
+[
+"mandarin_leaf_cluster_1998",
+4
+],
+[
+"red_paper_lantern_round_1998",
+3
+],
+[
+"red_lantern_gold_tassel_1998",
+3
+],
+[
+"nian_gao_round_rice_cake_1998",
+2
+],
+[
+"sliced_nian_gao_piece_1998",
+4
+],
+[
+"chinese_knot_red_double_coin_1998",
+2
+],
+[
+"red_candy_tray_eight_compartment_1998",
+1
+],
+[
+"white_rabbit_cream_candy_1998",
+8
+],
+[
+"white_rabbit_candy_bag_1998",
+2
+],
+[
+"candied_winter_melon_tray_piece_1998",
+4
+],
+[
+"red_wrapped_sesame_candy_1998",
+4
+],
+[
+"zodiac_tiger_ceramic_figurine_1998",
+1
+],
+[
+"zodiac_dragon_gold_figurine_2000",
+1
+],
+[
+"lunar_new_year_door_couplet_pair_1998",
+2
+],
+[
+"lunar_new_year_horizontal_couplet_banner_1998",
+1
+],
+[
+"lunar_new_year_red_tissue_paper_1998",
+4
+],
+[
+"lunar_new_year_gold_coin_chocolate_1998",
+4
+],
+[
+"red_candy_tray_clear_lid_1998",
+1
+]
+],
+"no_wires": true,
+"theme": "Lunar New Year red paper, mandarins, candy and decorations saved long after the money was gone"
+},
 "RETIREMENT PLAN": {
 "era": [
 1,
@@ -4006,6 +4117,107 @@
 "no_wires": true,
 "theme": "unopened figures, plastic laser swords and the trilogy that kept getting remastered"
 },
+"SPAM GIFT SET": {
+"era": [
+1,
+2,
+3
+],
+"flavor": [
+"canned ham, sesame oil, rice cake, ripe pear, persimmon and glossy gift-box cardboard",
+"beside the front door after the Chuseok gifts were opened and the good box was saved because it was too nice to throw away",
+"cj_spam_chuseok_gift_set_2002"
+],
+"lore": "Chuseok, the harvest holiday, when canned ham is the gift you give your boss: eight tins in a box with a handle and a bottle of oil.",
+"mix": [
+[
+"cj_spam_chuseok_gift_set_2002",
+1
+],
+[
+"cj_spam_classic_340g_korea_2002",
+8
+],
+[
+"baeksul_canola_oil_500ml_2002",
+1
+],
+[
+"chuseok_songpyeon_halfmoon_ricecake_2002",
+8
+],
+[
+"korean_persimmon_dangam_2002",
+3
+],
+[
+"korean_singo_pear_large_2002",
+2
+],
+[
+"hwatu_flower_card_stack_2002",
+10
+],
+[
+"hwatu_red_storage_case_2002",
+1
+],
+[
+"yutnori_yut_stick_wood_2002",
+4
+],
+[
+"yutnori_game_mat_2002",
+1
+],
+[
+"lotte_choco_pie_original_2002",
+4
+],
+[
+"binggrae_banana_flavored_milk_2002",
+3
+],
+[
+"lotte_pepero_original_2002",
+2
+],
+[
+"orion_choco_pie_original_2002",
+3
+],
+[
+"chuseok_bojagi_wrapping_cloth_2002",
+2
+],
+[
+"chuseok_gift_ribbon_red_gold_2002",
+4
+],
+[
+"korean_gift_message_card_chuseok_2002",
+3
+],
+[
+"chuseok_department_store_gift_tag_2002",
+4
+],
+[
+"korean_green_tea_teabag_envelope_2002",
+4
+],
+[
+"chuseok_fruit_gift_net_foam_2002",
+4
+],
+[
+"korean_newspaper_gift_wrap_2002",
+3
+]
+],
+"no_wires": true,
+"theme": "Chuseok canned-ham gift boxes, fruit, sweets and family-game pieces"
+},
 "STILL ALIVE": {
 "era": [
 2,
@@ -4224,6 +4436,216 @@
 ],
 "no_wires": true,
 "theme": "HoodStreet market floor, media desk, bulls, bears, pigs and ties"
+},
+"SURPRISE INSIDE": {
+"era": [
+0,
+1,
+2,
+3
+],
+"flavor": [
+"milk chocolate, hazelnut wafer, thin foil, warm suitcase fabric and fresh injection-molded plastic",
+"a kitchen floor beside an open suitcase after customs was already somebody else's problem",
+"ferrero_kinder_surprise_20g_1998"
+],
+"lore": "Contraband under American law: forty chocolate eggs with a toy inside, smuggled home in a suitcase and opened on the kitchen floor.",
+"mix": [
+[
+"ferrero_kinder_surprise_20g_1998",
+30
+],
+[
+"kinder_surprise_open_chocolate_shell_1998",
+10
+],
+[
+"kinder_surprise_yellow_capsule_1998",
+10
+],
+[
+"kinder_surprise_car_toy_red_1998",
+2
+],
+[
+"kinder_surprise_airplane_toy_blue_1998",
+2
+],
+[
+"kinder_surprise_animal_figure_green_1998",
+2
+],
+[
+"kinder_surprise_spinning_top_toy_1998",
+2
+],
+[
+"kinder_surprise_puzzle_toy_1998",
+2
+],
+[
+"kinder_surprise_instruction_slip_1998",
+8
+],
+[
+"kinder_surprise_collection_leaflet_1998",
+2
+],
+[
+"kinder_surprise_foil_wrapper_flattened_1998",
+8
+],
+[
+"kinder_bueno_2bar_pack_1998",
+2
+],
+[
+"kinder_chocolate_8bar_pack_1998",
+1
+],
+[
+"kinder_joy_egg_2001",
+3
+],
+[
+"kinder_happy_hippo_1998",
+2
+],
+[
+"ferrero_kinder_surprise_3pack_carton_1998",
+2
+],
+[
+"european_supermarket_plastic_bag_1998",
+2
+],
+[
+"airport_duty_free_bag_1998",
+1
+],
+[
+"hard_shell_suitcase_gray_1998",
+1
+],
+[
+"european_airline_baggage_tag_1998",
+3
+],
+[
+"kitchen_tile_chocolate_smear_scrap_1998",
+2
+],
+[
+"pastel_plastic_easter_egg_small_1998",
+3
+],
+[
+"bandai_gashapon_capsule_48mm_blue_clear_1998",
+2
+]
+],
+"no_wires": true,
+"theme": "forty chocolate eggs, yellow capsules and a kitchen floor full of tiny assembly instructions"
+},
+"TAZOS": {
+"era": [
+1,
+2
+],
+"flavor": [
+"cheese powder, warm plastic, corn chips, soda syrup and schoolyard dust",
+"the bottom of a backpack beside a rubber-banded stack marked doubles",
+"sabritas_looney_tunes_tazo_1994"
+],
+"lore": "Bought for the disc, not the chips: a year of recess from Madrid to Monterrey to Buenos Aires, slammed flat on the patio.",
+"mix": [
+[
+"sabritas_looney_tunes_tazo_1994",
+12
+],
+[
+"matutano_looney_tunes_tazo_1995",
+8
+],
+[
+"walkers_star_wars_tazo_1996",
+6
+],
+[
+"sabritas_pokemon_tazo_2000",
+6
+],
+[
+"sabritas_original_chips_tazos_bag_1994",
+3
+],
+[
+"matutano_cheetos_tazos_bag_1995",
+2
+],
+[
+"walkers_star_wars_tazos_crisps_bag_1996",
+2
+],
+[
+"tazos_collector_tube_clear_blue_1996",
+2
+],
+[
+"tazos_collector_board_1996",
+1
+],
+[
+"tazos_metal_slammer_1996",
+2
+],
+[
+"jarritos_mandarin_370ml_1998",
+3
+],
+[
+"pepsi_355ml_can_mexico_1998",
+3
+],
+[
+"cardboard_milk_cap_pog_assorted_1995",
+6
+],
+[
+"doritos_3d_nacho_cheesier_1998",
+2
+],
+[
+"cheetos_crunchy_cheese_1996",
+2
+],
+[
+"tazos_doubles_rubber_band_stack_1996",
+3
+],
+[
+"tazos_swap_zip_bag_1996",
+2
+],
+[
+"mexico_two_peso_coin_1996",
+2
+],
+[
+"tazos_playground_trade_note_1996",
+3
+],
+[
+"tazo_number_checklist_sheet_1996",
+2
+],
+[
+"tazos_schoolyard_drawstring_bag_1996",
+1
+]
+],
+"no_wires": true,
+"theme": "playground discs, chip bags and the swaps pile that mattered more than the snack"
 },
 "TRICK OR TREAT": {
 "era": [

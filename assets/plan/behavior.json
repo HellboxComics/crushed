@@ -189,6 +189,16 @@
 0.18
 ]
 },
+"airport_duty_free_bag_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.32,
+0.001,
+0.42
+]
+},
 "airwalk_one_black_white_1995": {
 "hard": 0.48,
 "how": "fold",
@@ -977,6 +987,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"baeksul_canola_oil_500ml_2002": {
+"hard": 0.22,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.07,
+0.05,
+0.24
 ]
 },
 "bagel_bites_cheese_pepperoni_1997": {
@@ -1879,6 +1899,16 @@
 0.12
 ]
 },
+"binggrae_banana_flavored_milk_2002": {
+"hard": 0.16,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.12
+]
+},
 "bitbox02_2019": {
 "hard": 0.46,
 "how": "snap",
@@ -2689,6 +2719,16 @@
 0.115
 ]
 },
+"candied_winter_melon_tray_piece_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "candy",
+"size": [
+0.02,
+0.015,
+0.05
+]
+},
 "candy_cane": {
 "hard": 0.15,
 "how": "crumple",
@@ -2887,6 +2927,16 @@
 0.38,
 0.12,
 0.28
+]
+},
+"cardboard_milk_cap_pog_assorted_1995": {
+"hard": 0.16,
+"how": "fold",
+"mat": "card",
+"size": [
+0.041,
+0.0015,
+0.041
 ]
 },
 "cardboard_scrap": {
@@ -3449,6 +3499,16 @@
 0.24
 ]
 },
+"cheetos_crunchy_cheese_1996": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.18,
+0.05,
+0.28
+]
+},
 "cheetos_paws_1993": {
 "hard": 0.12,
 "how": "crumple",
@@ -3507,6 +3567,16 @@
 0.15,
 0.003,
 0.45
+]
+},
+"chinese_knot_red_double_coin_1998": {
+"hard": 0.05,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.12,
+0.01,
+0.4
 ]
 },
 "chinese_red_envelope_6pack_1999": {
@@ -3647,6 +3717,76 @@
 0.025,
 0.0018,
 0.025
+]
+},
+"chuseok_bojagi_wrapping_cloth_2002": {
+"hard": 0.05,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.7,
+0.002,
+0.7
+]
+},
+"chuseok_department_store_gift_tag_2002": {
+"hard": 0.05,
+"how": "fold",
+"mat": "card",
+"size": [
+0.06,
+0.0005,
+0.1
+]
+},
+"chuseok_fruit_gift_net_foam_2002": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "foam",
+"size": [
+0.1,
+0.01,
+0.16
+]
+},
+"chuseok_gift_ribbon_red_gold_2002": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.8,
+0.002,
+0.02
+]
+},
+"chuseok_songpyeon_halfmoon_ricecake_2002": {
+"hard": 0.05,
+"how": "squish",
+"mat": "food",
+"size": [
+0.05,
+0.03,
+0.025
+]
+},
+"cj_spam_chuseok_gift_set_2002": {
+"hard": 0.42,
+"how": "fold",
+"mat": "card",
+"size": [
+0.44,
+0.08,
+0.32
+]
+},
+"cj_spam_classic_340g_korea_2002": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.1,
+0.055,
+0.08
 ]
 },
 "clay_bear": {
@@ -5949,6 +6089,26 @@
 0.279
 ]
 },
+"european_airline_baggage_tag_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.05,
+0.001,
+0.35
+]
+},
+"european_supermarket_plastic_bag_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.35,
+0.0005,
+0.55
+]
+},
 "eurorack_patch_cable_neon_2020": {
 "hard": 0.14,
 "how": "fold",
@@ -6157,6 +6317,26 @@
 0.3303,
 0.104,
 0.004
+]
+},
+"ferrero_kinder_surprise_20g_1998": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.045,
+0.045,
+0.065
+]
+},
+"ferrero_kinder_surprise_3pack_carton_1998": {
+"hard": 0.22,
+"how": "fold",
+"mat": "card",
+"size": [
+0.15,
+0.055,
+0.08
 ]
 },
 "fhm_us_1999_issue": {
@@ -8199,6 +8379,16 @@
 0.23
 ]
 },
+"hard_shell_suitcase_gray_1998": {
+"hard": 0.58,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.55,
+0.22,
+0.72
+]
+},
 "hardware_wallet": {
 "hard": 0.35,
 "how": "fold",
@@ -8799,6 +8989,26 @@
 0.0089
 ]
 },
+"hwatu_flower_card_stack_2002": {
+"hard": 0.22,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.035,
+0.0015,
+0.055
+]
+},
+"hwatu_red_storage_case_2002": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.02,
+0.1
+]
+},
 "ibm_3_5_floppy_blue_1997": {
 "hard": 0.46,
 "how": "snap",
@@ -9119,6 +9329,16 @@
 0.05
 ]
 },
+"jarritos_mandarin_370ml_1998": {
+"hard": 0.74,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.063,
+0.063,
+0.23
+]
+},
 "jayz_blueprint_cd_2001": {
 "hard": 0.68,
 "how": "snap",
@@ -9399,6 +9619,146 @@
 0.125
 ]
 },
+"kinder_bueno_2bar_pack_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.065,
+0.02,
+0.18
+]
+},
+"kinder_chocolate_8bar_pack_1998": {
+"hard": 0.2,
+"how": "fold",
+"mat": "card",
+"size": [
+0.12,
+0.02,
+0.2
+]
+},
+"kinder_happy_hippo_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.1,
+0.025,
+0.05
+]
+},
+"kinder_joy_egg_2001": {
+"hard": 0.18,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.048,
+0.048,
+0.07
+]
+},
+"kinder_surprise_airplane_toy_blue_1998": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.055,
+0.025
+]
+},
+"kinder_surprise_animal_figure_green_1998": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.025,
+0.045
+]
+},
+"kinder_surprise_car_toy_red_1998": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.025,
+0.025
+]
+},
+"kinder_surprise_collection_leaflet_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
+0.14
+]
+},
+"kinder_surprise_foil_wrapper_flattened_1998": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.1,
+0.0002,
+0.12
+]
+},
+"kinder_surprise_instruction_slip_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.07,
+0.0003,
+0.1
+]
+},
+"kinder_surprise_open_chocolate_shell_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "chocolate",
+"size": [
+0.045,
+0.025,
+0.065
+]
+},
+"kinder_surprise_puzzle_toy_1998": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.015,
+0.05
+]
+},
+"kinder_surprise_spinning_top_toy_1998": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.04,
+0.045
+]
+},
+"kinder_surprise_yellow_capsule_1998": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.035,
+0.035,
+0.05
+]
+},
 "kingston_datatraveler_1gb_2005": {
 "hard": 0.46,
 "how": "snap",
@@ -9457,6 +9817,16 @@
 0.057,
 0.005,
 0.057
+]
+},
+"kitchen_tile_chocolate_smear_scrap_1998": {
+"hard": 0.3,
+"how": "fold",
+"mat": "soft_plastic",
+"size": [
+0.2,
+0.003,
+0.2
 ]
 },
 "kleenex_boutique_tissue_box_blue_1998": {
@@ -9597,6 +9967,56 @@
 0.09,
 0.09,
 0.09
+]
+},
+"korean_gift_message_card_chuseok_2002": {
+"hard": 0.06,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.001,
+0.14
+]
+},
+"korean_green_tea_teabag_envelope_2002": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.06,
+0.005,
+0.07
+]
+},
+"korean_newspaper_gift_wrap_2002": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.4,
+0.0005,
+0.55
+]
+},
+"korean_persimmon_dangam_2002": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.08,
+0.08,
+0.07
+]
+},
+"korean_singo_pear_large_2002": {
+"hard": 0.14,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.11,
+0.11,
+0.1
 ]
 },
 "koss_porta_pro_1984": {
@@ -10299,6 +10719,96 @@
 0.11
 ]
 },
+"lotte_choco_pie_original_2002": {
+"hard": 0.08,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.09,
+0.025,
+0.09
+]
+},
+"lotte_pepero_original_2002": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.03,
+0.16
+]
+},
+"lunar_new_year_door_couplet_pair_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.12,
+0.0005,
+1.0
+]
+},
+"lunar_new_year_gold_coin_chocolate_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.038,
+0.005,
+0.038
+]
+},
+"lunar_new_year_hongbao_gold_foil_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.09,
+0.001,
+0.165
+]
+},
+"lunar_new_year_horizontal_couplet_banner_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.7,
+0.0005,
+0.15
+]
+},
+"lunar_new_year_mandarin_orange_1998": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.07,
+0.07,
+0.065
+]
+},
+"lunar_new_year_red_tissue_paper_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.5,
+0.0003,
+0.7
+]
+},
+"lunar_new_year_zodiac_hongbao_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.09,
+0.001,
+0.165
+]
+},
 "lunch_tray": {
 "hard": 0.6,
 "how": "snap",
@@ -10417,6 +10927,16 @@
 0.46,
 0.07,
 0.3
+]
+},
+"mandarin_leaf_cluster_1998": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.002,
+0.09
 ]
 },
 "manila_private_envelope_1998": {
@@ -10567,6 +11087,26 @@
 0.105,
 0.027,
 0.188
+]
+},
+"matutano_cheetos_tazos_bag_1995": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.2,
+0.05,
+0.3
+]
+},
+"matutano_looney_tunes_tazo_1995": {
+"hard": 0.24,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.04,
+0.0016,
+0.04
 ]
 },
 "maxell_cassette_label_sheet_partial_1997": {
@@ -11117,6 +11657,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"mexico_two_peso_coin_1996": {
+"hard": 0.96,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.023,
+0.002,
+0.023
 ]
 },
 "micro_cars": {
@@ -12269,6 +12819,16 @@
 0.0159
 ]
 },
+"nian_gao_round_rice_cake_1998": {
+"hard": 0.08,
+"how": "squish",
+"mat": "food",
+"size": [
+0.18,
+0.04,
+0.18
+]
+},
 "nickelodeon_floam_green_1994": {
 "hard": 0.12,
 "how": "squish",
@@ -13219,6 +13779,16 @@
 0.148
 ]
 },
+"orion_choco_pie_original_2002": {
+"hard": 0.08,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.09,
+0.025,
+0.09
+]
+},
 "ornament": {
 "hard": 0.7,
 "how": "snap",
@@ -13887,6 +14457,16 @@
 0.066,
 0.066,
 0.115
+]
+},
+"pepsi_355ml_can_mexico_1998": {
+"hard": 0.36,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
 ]
 },
 "pepsi_blue_20oz_2002": {
@@ -15329,6 +15909,26 @@
 0.0744
 ]
 },
+"red_candy_tray_clear_lid_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.3,
+0.02,
+0.3
+]
+},
+"red_candy_tray_eight_compartment_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.3,
+0.07,
+0.3
+]
+},
 "red_chart_candle_1999": {
 "hard": 0.16,
 "how": "fold",
@@ -15369,6 +15969,16 @@
 0.09
 ]
 },
+"red_lantern_gold_tassel_1998": {
+"hard": 0.03,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.03,
+0.03,
+0.18
+]
+},
 "red_lifeguard_onepiece_swimsuit_1994": {
 "hard": 0.08,
 "how": "fold",
@@ -15387,6 +15997,16 @@
 0.4,
 0.01,
 0.48
+]
+},
+"red_paper_lantern_round_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.2,
+0.2,
+0.3
 ]
 },
 "red_party_cup_football_watch_1998": {
@@ -15437,6 +16057,16 @@
 1.8,
 0.005,
 0.005
+]
+},
+"red_wrapped_sesame_candy_1998": {
+"hard": 0.18,
+"how": "snap",
+"mat": "candy",
+"size": [
+0.03,
+0.01,
+0.06
 ]
 },
 "reeses_easter_peanut_butter_egg_1998": {
@@ -16037,6 +16667,36 @@
 0.32,
 0.24,
 0.12
+]
+},
+"sabritas_looney_tunes_tazo_1994": {
+"hard": 0.24,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.04,
+0.0016,
+0.04
+]
+},
+"sabritas_original_chips_tazos_bag_1994": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.2,
+0.05,
+0.3
+]
+},
+"sabritas_pokemon_tazo_2000": {
+"hard": 0.24,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.04,
+0.0016,
+0.04
 ]
 },
 "sacagawea_dollar_2000": {
@@ -16957,6 +17617,16 @@
 0.23,
 0.004,
 0.03
+]
+},
+"sliced_nian_gao_piece_1998": {
+"hard": 0.06,
+"how": "squish",
+"mat": "food",
+"size": [
+0.07,
+0.02,
+0.05
 ]
 },
 "slim_cd_jewel_case_assorted_2003": {
@@ -18059,6 +18729,26 @@
 0.12
 ]
 },
+"spent_red_firecracker_casing_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.01,
+0.01,
+0.045
+]
+},
+"spent_red_firecracker_string_lunar_new_year_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.06,
+0.5
+]
+},
 "spent_sparkler_wire_bundle_1998": {
 "hard": 0.28,
 "how": "fold",
@@ -18859,6 +19549,16 @@
 0.2349
 ]
 },
+"tazo_number_checklist_sheet_1996": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.21
+]
+},
 "tazo_tube": {
 "hard": 0.35,
 "how": "fold",
@@ -18867,6 +19567,76 @@
 0.126,
 0.046,
 0.046
+]
+},
+"tazos_collector_board_1996": {
+"hard": 0.2,
+"how": "fold",
+"mat": "card",
+"size": [
+0.35,
+0.005,
+0.5
+]
+},
+"tazos_collector_tube_clear_blue_1996": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.05,
+0.2
+]
+},
+"tazos_doubles_rubber_band_stack_1996": {
+"hard": 0.3,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.045,
+0.03,
+0.045
+]
+},
+"tazos_metal_slammer_1996": {
+"hard": 0.76,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.042,
+0.0025,
+0.042
+]
+},
+"tazos_playground_trade_note_1996": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
+0.15
+]
+},
+"tazos_schoolyard_drawstring_bag_1996": {
+"hard": 0.07,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.32,
+0.01,
+0.42
+]
+},
+"tazos_swap_zip_bag_1996": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.15,
+0.01,
+0.18
 ]
 },
 "tdk_cd_r_50_spindle_2001": {
@@ -20569,6 +21339,26 @@
 0.28
 ]
 },
+"walkers_star_wars_tazo_1996": {
+"hard": 0.24,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.04,
+0.0016,
+0.04
+]
+},
+"walkers_star_wars_tazos_crisps_bag_1996": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.18,
+0.05,
+0.28
+]
+},
 "walkman": {
 "hard": 0.7,
 "how": "snap",
@@ -20797,6 +21587,26 @@
 0.51,
 0.01,
 0.76
+]
+},
+"white_rabbit_candy_bag_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.16,
+0.04,
+0.24
+]
+},
+"white_rabbit_cream_candy_1998": {
+"hard": 0.08,
+"how": "squish",
+"mat": "paper",
+"size": [
+0.02,
+0.015,
+0.05
 ]
 },
 "white_tube_sock_pair_1998": {
@@ -21309,6 +22119,26 @@
 0.0168
 ]
 },
+"yutnori_game_mat_2002": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.4,
+0.003,
+0.4
+]
+},
+"yutnori_yut_stick_wood_2002": {
+"hard": 0.42,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.03,
+0.02,
+0.18
+]
+},
 "zebra_mildliner_yellow_1999": {
 "hard": 0.32,
 "how": "snap",
@@ -21347,6 +22177,26 @@
 0.2,
 0.06,
 0.09
+]
+},
+"zodiac_dragon_gold_figurine_2000": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.05,
+0.11
+]
+},
+"zodiac_tiger_ceramic_figurine_1998": {
+"hard": 0.66,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.07,
+0.05,
+0.08
 ]
 }
 }
