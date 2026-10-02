@@ -900,6 +900,17 @@ document.getElementById("m").src = "models/" + id + ".glb?v=" + (q.get("v") || D
 </script>"""
 
 
+def newer_version():
+    """Is there a newer version of the asset maker than the one running? (checked between items, never mid-item)"""
+    try:
+        subprocess.run(["git", "fetch", "-q"], cwd=ROOT, capture_output=True, timeout=60)
+        r = subprocess.run(["git", "rev-list", "--count", "HEAD..@{u}"], cwd=ROOT, capture_output=True, text=True,
+                           timeout=30)
+        return r.returncode == 0 and int(r.stdout.strip() or 0) > 0
+    except Exception:
+        return False
+
+
 def queue(n):
     """The next n items to make, in the order of library/queue.txt (one item per line), skipping ones done and
     ones waiting on you (a pick or a Keep/Redo you haven't given yet)."""
@@ -974,6 +985,9 @@ if __name__ == "__main__":
                 say(f"[phone] resend skipped: {e}")
             todo = queue(a.queue or 3)
             for cid in todo:
+                if newer_version():                     # between items: a fix was pushed - finish here, so the
+                    say("[update] a newer version is ready - stopping between items so the clock starts it")
+                    sys.exit(0)                         # clock starts the newest version within 5 minutes
                 try:
                     pipeline(cid, False)
                 except Exception as e:
