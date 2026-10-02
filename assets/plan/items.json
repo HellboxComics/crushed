@@ -1,4 +1,48 @@
 {
+"3com_etherlink_iii_3c509b_1995": {
+"display": "3Com EtherLink III 3C509B ISA Ethernet adapter, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.066,
+"notes": [
+"3Com EtherLink III 3C509B ISA Ethernet adapter, circa 1995"
+],
+"product": "3Com EtherLink III 3C509B ISA Ethernet adapter, circa 1995",
+"role": "support",
+"size": [
+0.175,
+0.02,
+0.107
+],
+"themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; regular cubes",
+"weight": 1.0
+},
+"3dfx_voodoo2_12mb_1998": {
+"display": "3dfx Voodoo2 12 MB PCI 3D accelerator card",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.082,
+"notes": [
+"3dfx Voodoo2 12 MB PCI 3D accelerator card, 1998"
+],
+"product": "3dfx Voodoo2 12 MB PCI 3D accelerator card, 1998",
+"role": "hero",
+"size": [
+0.22,
+0.02,
+0.107
+],
+"themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
 "aladdin_vhs_1993": {
 "display": "Aladdin VHS Walt Disney Classics clamshell",
 "eras": [
@@ -65,6 +109,28 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"altec_lansing_acs45_1_1999": {
+"display": "Altec Lansing ACS45.1 satellite computer speaker",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.315,
+"notes": [
+"Altec Lansing ACS45.1 satellite computer speaker, 1999"
+],
+"product": "Altec Lansing ACS45.1 satellite computer speaker, 1999",
+"role": "support",
+"size": [
+0.1,
+0.1,
+0.18
+],
+"themes": "DIAL-UP; BLACKLIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
 "american_pie_vhs_2000": {
 "display": "American Pie VHS",
 "eras": [
@@ -107,6 +173,182 @@
 0.125
 ],
 "themes": "COASTERS; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"aol_2_5_floppy_1994": {
+"display": "America Online 2.5 promotional 3.5-inch floppy disk, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"America Online 2.5 promotional 3.5-inch floppy disk, circa 1994"
+],
+"product": "America Online 2.5 promotional 3.5-inch floppy disk, circa 1994",
+"role": "hero",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "DIAL-UP; SAVE ICON; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"aol_4_0_free_trial_cd_1998": {
+"display": "AOL 4.0 free-trial CD-ROM mailer",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"AOL 4.0 free-trial CD-ROM mailer, 1998"
+],
+"product": "AOL 4.0 free-trial CD-ROM mailer, 1998",
+"role": "hero",
+"size": [
+0.126,
+0.002,
+0.126
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"aol_6_0_trial_cd_2000": {
+"display": "AOL 6.0 free Internet trial CD-ROM",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"AOL 6.0 free Internet trial CD-ROM, 2000"
+],
+"product": "AOL 6.0 free Internet trial CD-ROM, 2000",
+"role": "hero",
+"size": [
+0.126,
+0.002,
+0.126
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"apc_backups_500_2000": {
+"display": "APC Back-UPS 500 uninterruptible power supply, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 1.276,
+"notes": [
+"APC Back-UPS 500 uninterruptible power supply, circa 2000"
+],
+"product": "APC Back-UPS 500 uninterruptible power supply, circa 2000",
+"role": "hero",
+"size": [
+0.13,
+0.33,
+0.17
+],
+"themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
+"apple_imac_g3_bondi_1998": {
+"display": "Apple iMac G3 Bondi Blue",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 11.704,
+"notes": [
+"Apple iMac G3 Bondi Blue, 1998"
+],
+"product": "Apple iMac G3 Bondi Blue, 1998",
+"role": "hero",
+"size": [
+0.38,
+0.44,
+0.4
+],
+"themes": "DIAL-UP; SCREEN TIME; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"apple_powermac_g3_bluewhite_1999": {
+"display": "Apple Power Macintosh G3 Blue & White",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 7.979,
+"notes": [
+"Apple Power Macintosh G3 Blue & White, 1999"
+],
+"product": "Apple Power Macintosh G3 Blue & White, 1999",
+"role": "hero",
+"size": [
+0.226,
+0.467,
+0.432
+],
+"themes": "DIAL-UP; Y2K; LANDFILL DRIVE; regular cubes",
+"weight": 1.0
+},
+"apple_usb_keyboard_bondi_1998": {
+"display": "Apple USB Keyboard M2452, Bondi Blue",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.379,
+"notes": [
+"Apple USB Keyboard M2452, Bondi Blue, 1998"
+],
+"product": "Apple USB Keyboard M2452, Bondi Blue, 1998",
+"role": "hero",
+"size": [
+0.415,
+0.149,
+0.035
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
+"weight": 1.0
+},
+"apple_usb_mouse_hockeypuck_1998": {
+"display": "Apple USB Mouse M4848 \u201cHockey Puck,\u201d Bondi Blue",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"Apple USB Mouse M4848 \u201cHockey Puck,\u201d Bondi Blue, 1998"
+],
+"product": "Apple USB Mouse M4848 \u201cHockey Puck,\u201d Bondi Blue, 1998",
+"role": "hero",
+"size": [
+0.08,
+0.08,
+0.038
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
 "weight": 1.0
 },
 "atari2600_cartridge_1977": {
@@ -373,6 +615,50 @@
 "themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"belkin_6outlet_surge_protector_1998": {
+"display": "Belkin six-outlet surge protector power strip, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.095,
+"notes": [
+"Belkin six-outlet surge protector power strip, circa 1998"
+],
+"product": "Belkin six-outlet surge protector power strip, circa 1998",
+"role": "support",
+"size": [
+0.31,
+0.055,
+0.032
+],
+"themes": "DIAL-UP; SAVE ICON; SCREEN TIME; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"belkin_ps2_extension_cable_1998": {
+"display": "Belkin PS/2 keyboard/mouse extension cable, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.064,
+"notes": [
+"Belkin PS/2 keyboard/mouse extension cable, circa 1998"
+],
+"product": "Belkin PS/2 keyboard/mouse extension cable, circa 1998",
+"role": "filler",
+"size": [
+1.8,
+0.013,
+0.013
+],
+"themes": "DIAL-UP; SAVE ICON; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "big_lebowski_vhs_1998": {
 "display": "The Big Lebowski VHS",
 "eras": [
@@ -527,6 +813,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"canon_bjc210_1995": {
+"display": "Canon BJC-210 color bubble-jet printer",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 2.016,
+"notes": [
+"Canon BJC-210 color bubble-jet printer, 1995"
+],
+"product": "Canon BJC-210 color bubble-jet printer, 1995",
+"role": "support",
+"size": [
+0.36,
+0.2,
+0.16
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "cast_away_vhs_2001": {
 "display": "Cast Away VHS",
 "eras": [
@@ -547,6 +855,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"ch_products_flightstick_pro_1995": {
+"display": "CH Products Flightstick Pro joystick, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 1.04,
+"notes": [
+"CH Products Flightstick Pro joystick, circa 1995"
+],
+"product": "CH Products Flightstick Pro joystick, circa 1995",
+"role": "support",
+"size": [
+0.15,
+0.18,
+0.22
+],
+"themes": "DIAL-UP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "clueless_vhs_1995": {
@@ -571,6 +901,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
 "weight": 1.0
 },
+"compaq_151fs_crt_1997": {
+"display": "Compaq 151FS 15-inch CRT monitor, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 9.596,
+"notes": [
+"Compaq 151FS 15-inch CRT monitor, circa 1997"
+],
+"product": "Compaq 151FS 15-inch CRT monitor, circa 1997",
+"role": "hero",
+"size": [
+0.37,
+0.39,
+0.38
+],
+"themes": "SCREEN TIME; DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"compaq_presario_5000_2000": {
+"display": "Compaq Presario 5000 desktop tower",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 5.862,
+"notes": [
+"Compaq Presario 5000 desktop tower, 2000"
+],
+"product": "Compaq Presario 5000 desktop tower, 2000",
+"role": "hero",
+"size": [
+0.19,
+0.43,
+0.41
+],
+"themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
 "composite_av_cable_1998": {
 "display": "Three-plug RCA composite A/V cable, circa",
 "eras": [
@@ -591,6 +965,138 @@
 0.012
 ],
 "themes": "BE KIND REWIND; CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"compuserve_trial_cd_1997": {
+"display": "CompuServe free-trial Internet access CD-ROM, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"CompuServe free-trial Internet access CD-ROM, circa 1997"
+],
+"product": "CompuServe free-trial Internet access CD-ROM, circa 1997",
+"role": "support",
+"size": [
+0.126,
+0.002,
+0.126
+],
+"themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"connectix_quickcam_vc_1998": {
+"display": "Connectix QuickCam VC parallel-port webcam",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.084,
+"notes": [
+"Connectix QuickCam VC parallel-port webcam, 1998"
+],
+"product": "Connectix QuickCam VC parallel-port webcam, 1998",
+"role": "hero",
+"size": [
+0.075,
+0.075,
+0.085
+],
+"themes": "DIAL-UP; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"contra_nes_1988": {
+"display": "Contra Nintendo Entertainment System Game Pak",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Contra Nintendo Entertainment System Game Pak, 1988"
+],
+"product": "Contra Nintendo Entertainment System Game Pak, 1988",
+"role": "hero",
+"size": [
+0.12,
+0.02,
+0.135
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"crazy_taxi_dreamcast_2000": {
+"display": "Crazy Taxi Sega Dreamcast game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Crazy Taxi Sega Dreamcast game, 2000"
+],
+"product": "Crazy Taxi Sega Dreamcast game, 2000",
+"role": "hero",
+"size": [
+0.142,
+0.01,
+0.125
+],
+"themes": "CONSOLE WARS; SCREEN TIME; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"creative_pcworks_fourpoint_speakers_1998": {
+"display": "Cambridge SoundWorks PCWorks computer speaker",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.151,
+"notes": [
+"Cambridge SoundWorks PCWorks computer speaker, 1998"
+],
+"product": "Cambridge SoundWorks PCWorks computer speaker, 1998",
+"role": "support",
+"size": [
+0.09,
+0.08,
+0.12
+],
+"themes": "DIAL-UP; BLACKLIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"dell_dimension_xps_d266_1997": {
+"display": "Dell Dimension XPS D266 desktop tower",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 25.284,
+"notes": [
+"Dell Dimension XPS D266 desktop tower, 1997"
+],
+"product": "Dell Dimension XPS D266 desktop tower, 1997",
+"role": "hero",
+"size": [
+0.2,
+0.43,
+0.42
+],
+"themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; regular cubes",
 "weight": 1.0
 },
 "denon_hd8_90_1990": {
@@ -637,6 +1143,50 @@
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"diamond_suprafaxmodem_56k_1998": {
+"display": "Diamond SupraExpress 56K external modem, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.104,
+"notes": [
+"Diamond SupraExpress 56K external modem, circa 1998"
+],
+"product": "Diamond SupraExpress 56K external modem, circa 1998",
+"role": "support",
+"size": [
+0.155,
+0.11,
+0.035
+],
+"themes": "DIAL-UP; Y2K; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"diamond_viper_v770_1999": {
+"display": "Diamond Viper V770 TNT2 graphics card",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.084,
+"notes": [
+"Diamond Viper V770 TNT2 graphics card, 1999"
+],
+"product": "Diamond Viper V770 TNT2 graphics card, 1999",
+"role": "hero",
+"size": [
+0.18,
+0.025,
+0.107
+],
+"themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
 "dirty_dancing_vhs_1988": {
 "display": "Dirty Dancing VHS",
 "eras": [
@@ -679,6 +1229,72 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"donkey_kong_country_snes_1994": {
+"display": "Donkey Kong Country Super Nintendo Game Pak",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.036,
+"notes": [
+"Donkey Kong Country Super Nintendo Game Pak, 1994"
+],
+"product": "Donkey Kong Country Super Nintendo Game Pak, 1994",
+"role": "hero",
+"size": [
+0.085,
+0.019,
+0.126
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"dot_matrix_banner_happy_birthday_1994": {
+"display": "Dot-matrix computer banner printout, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Dot-matrix computer banner printout, circa 1994"
+],
+"product": "Dot-matrix computer banner printout, circa 1994",
+"role": "support",
+"size": [
+0.241,
+0.0002,
+1.2
+],
+"themes": "DIAL-UP; SLEEPOVER; PRIZE COUNTER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"dot_matrix_continuous_paper_1992": {
+"display": "Continuous-feed tractor printer paper, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Continuous-feed tractor printer paper, circa 1992"
+],
+"product": "Continuous-feed tractor printer paper, circa 1992",
+"role": "filler",
+"size": [
+0.241,
+0.0002,
+0.279
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "dr_dre_the_chronic_cassette_1992": {
@@ -791,6 +1407,50 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"earthlink_trial_cd_1999": {
+"display": "EarthLink free Internet trial CD-ROM, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"EarthLink free Internet trial CD-ROM, circa 1999"
+],
+"product": "EarthLink free Internet trial CD-ROM, circa 1999",
+"role": "support",
+"size": [
+0.126,
+0.002,
+0.126
+],
+"themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"emachines_etower_566ir_2000": {
+"display": "eMachines eTower 566ir desktop PC",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 20.707,
+"notes": [
+"eMachines eTower 566ir desktop PC, 2000"
+],
+"product": "eMachines eTower 566ir desktop PC, 2000",
+"role": "hero",
+"size": [
+0.185,
+0.41,
+0.39
+],
+"themes": "DIAL-UP; Y2K; LANDFILL DRIVE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "eminem_marshall_mathers_lp_cd_2000": {
 "display": "Eminem The Marshall Mathers LP CD in jewel case",
 "eras": [
@@ -835,6 +1495,28 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"epson_stylus_color_600_1997": {
+"display": "Epson Stylus Color 600 inkjet printer",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 3.881,
+"notes": [
+"Epson Stylus Color 600 inkjet printer, 1997"
+],
+"product": "Epson Stylus Color 600 inkjet printer, 1997",
+"role": "hero",
+"size": [
+0.44,
+0.28,
+0.18
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "et_extra_terrestrial_vhs_1988": {
 "display": "E.T. the Extra-Terrestrial VHS home-video release",
 "eras": [
@@ -855,6 +1537,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"fable_xbox_2004": {
+"display": "Fable original Xbox game",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Fable original Xbox game, 2004"
+],
+"product": "Fable original Xbox game, 2004",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; SCREEN TIME; regular cubes",
 "weight": 1.0
 },
 "fall_out_boy_cork_tree_cd_2005": {
@@ -901,6 +1605,28 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"final_fantasy_vii_ps1_1997": {
+"display": "Final Fantasy VII PlayStation three-disc game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.075,
+"notes": [
+"Final Fantasy VII PlayStation three-disc game, 1997"
+],
+"product": "Final Fantasy VII PlayStation three-disc game, 1997",
+"role": "hero",
+"size": [
+0.142,
+0.024,
+0.125
+],
+"themes": "CONSOLE WARS; SCREEN TIME; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "finding_nemo_vhs_2003": {
 "display": "Finding Nemo VHS clamshell",
 "eras": [
@@ -921,6 +1647,28 @@
 0.202
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"floppy_34wire_ribbon_cable_1997": {
+"display": "34-conductor floppy-drive ribbon cable, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"34-conductor floppy-drive ribbon cable, circa 1997"
+],
+"product": "34-conductor floppy-drive ribbon cable, circa 1997",
+"role": "filler",
+"size": [
+0.4,
+0.0015,
+0.043
+],
+"themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; regular cubes",
 "weight": 1.0
 },
 "forrest_gump_vhs_1995": {
@@ -1099,6 +1847,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"gamecube_memory_card59_2001": {
+"display": "Nintendo GameCube Memory Card 59",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Nintendo GameCube Memory Card 59, 2001"
+],
+"product": "Nintendo GameCube Memory Card 59, 2001",
+"role": "support",
+"size": [
+0.043,
+0.008,
+0.034
+],
+"themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "gameshark_pro_n64_1998": {
 "display": "InterAct GameShark Pro for Nintendo 64",
 "eras": [
@@ -1119,6 +1889,50 @@
 0.11
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"gateway2000_anykey_keyboard_1993": {
+"display": "Gateway 2000 AnyKey programmable keyboard, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.937,
+"notes": [
+"Gateway 2000 AnyKey programmable keyboard, circa 1993"
+],
+"product": "Gateway 2000 AnyKey programmable keyboard, circa 1993",
+"role": "hero",
+"size": [
+0.51,
+0.21,
+0.05
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"gateway2000_g6_200_1997": {
+"display": "Gateway 2000 G6-200 desktop tower",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 25.284,
+"notes": [
+"Gateway 2000 G6-200 desktop tower, 1997"
+],
+"product": "Gateway 2000 G6-200 desktop tower, 1997",
+"role": "hero",
+"size": [
+0.2,
+0.43,
+0.42
+],
+"themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "gba_cartridge_gray_2001": {
@@ -1275,6 +2089,72 @@
 "themes": "BE KIND REWIND; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"goldeneye_007_n64_1997": {
+"display": "GoldenEye 007 Nintendo 64 Game Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"GoldenEye 007 Nintendo 64 Game Pak, 1997"
+],
+"product": "GoldenEye 007 Nintendo 64 Game Pak, 1997",
+"role": "hero",
+"size": [
+0.116,
+0.019,
+0.075
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"gran_turismo_ps1_1998": {
+"display": "Gran Turismo PlayStation game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Gran Turismo PlayStation game, 1998"
+],
+"product": "Gran Turismo PlayStation game, 1998",
+"role": "hero",
+"size": [
+0.142,
+0.01,
+0.125
+],
+"themes": "CONSOLE WARS; SCREEN TIME; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"gravis_gamepad_pro_1996": {
+"display": "Gravis GamePad Pro PC controller",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.082,
+"notes": [
+"Gravis GamePad Pro PC controller, 1996"
+],
+"product": "Gravis GamePad Pro PC controller, 1996",
+"role": "support",
+"size": [
+0.155,
+0.032,
+0.095
+],
+"themes": "DIAL-UP; CONSOLE WARS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "green_day_american_idiot_cd_2004": {
 "display": "Green Day American Idiot CD in jewel case",
 "eras": [
@@ -1341,6 +2221,28 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"gta_san_andreas_ps2_2004": {
+"display": "Grand Theft Auto: San Andreas PlayStation 2 game",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Grand Theft Auto: San Andreas PlayStation 2 game, 2004"
+],
+"product": "Grand Theft Auto: San Andreas PlayStation 2 game, 2004",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "gta_vice_city_ps2_2002": {
 "display": "Grand Theft Auto: Vice City PlayStation 2 game",
 "eras": [
@@ -1354,6 +2256,28 @@
 "Grand Theft Auto: Vice City PlayStation 2 game, 2002"
 ],
 "product": "Grand Theft Auto: Vice City PlayStation 2 game, 2002",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; BASS BOOSTED; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"guitar_hero_ps2_2005": {
+"display": "Guitar Hero PlayStation 2 game",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Guitar Hero PlayStation 2 game, 2005"
+],
+"product": "Guitar Hero PlayStation 2 game, 2005",
 "role": "hero",
 "size": [
 0.135,
@@ -1383,6 +2307,28 @@
 0.28
 ],
 "themes": "CONSOLE WARS; SLEEPOVER; PROM NIGHT; BASS BOOSTED; regular cubes",
+"weight": 1.0
+},
+"halo2_xbox_2004": {
+"display": "Halo 2 original Xbox game",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Halo 2 original Xbox game, 2004"
+],
+"product": "Halo 2 original Xbox game, 2004",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
 "weight": 1.0
 },
 "halo_combat_evolved_xbox_2001": {
@@ -1427,6 +2373,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hayes_accura_56k_1997": {
+"display": "Hayes ACCURA 56K external modem",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.113,
+"notes": [
+"Hayes ACCURA 56K external modem, 1997"
+],
+"product": "Hayes ACCURA 56K external modem, 1997",
+"role": "hero",
+"size": [
+0.16,
+0.115,
+0.035
+],
+"themes": "DIAL-UP; Y2K; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "hollywood_video_membership_card_1999": {
@@ -1517,6 +2485,226 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
+"hp_51629a_black_ink_1996": {
+"display": "HP 51629A black inkjet cartridge, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.02,
+"notes": [
+"HP 51629A black inkjet cartridge, circa 1996"
+],
+"product": "HP 51629A black inkjet cartridge, circa 1996",
+"role": "filler",
+"size": [
+0.065,
+0.038,
+0.046
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"hp_deskjet_694c_1996": {
+"display": "HP DeskJet 694C color inkjet printer",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 4.974,
+"notes": [
+"HP DeskJet 694C color inkjet printer, 1996"
+],
+"product": "HP DeskJet 694C color inkjet printer, 1996",
+"role": "hero",
+"size": [
+0.44,
+0.34,
+0.19
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"hp_scanjet_4p_1995": {
+"display": "HP ScanJet 4p flatbed scanner",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 2.52,
+"notes": [
+"HP ScanJet 4p flatbed scanner, 1995"
+],
+"product": "HP ScanJet 4p flatbed scanner, 1995",
+"role": "hero",
+"size": [
+0.3,
+0.48,
+0.1
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"ibm_3_5_floppy_blue_1997": {
+"display": "IBM 3.5-inch 2HD 1.44 MB floppy disk, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"IBM 3.5-inch 2HD 1.44 MB floppy disk, circa 1997"
+],
+"product": "IBM 3.5-inch 2HD 1.44 MB floppy disk, circa 1997",
+"role": "filler",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; LANDFILL DRIVE; regular cubes",
+"weight": 1.0
+},
+"ibm_model_m_1391401_1987": {
+"display": "IBM Model M keyboard 1391401",
+"eras": [
+0,
+1
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.936,
+"notes": [
+"IBM Model M keyboard 1391401, 1987"
+],
+"product": "IBM Model M keyboard 1391401, 1987",
+"role": "hero",
+"size": [
+0.49,
+0.21,
+0.052
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
+"ide_40wire_ribbon_cable_1998": {
+"display": "40-conductor IDE ribbon cable with three 40-pin connectors, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"40-conductor IDE ribbon cable with three 40-pin connectors, circa 1998"
+],
+"product": "40-conductor IDE ribbon cable with three 40-pin connectors, circa 1998",
+"role": "filler",
+"size": [
+0.45,
+0.0015,
+0.051
+],
+"themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; regular cubes",
+"weight": 1.0
+},
+"imac_g3_grape_1999": {
+"display": "Apple iMac G3 Grape",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 11.704,
+"notes": [
+"Apple iMac G3 Grape, 1999"
+],
+"product": "Apple iMac G3 Grape, 1999",
+"role": "hero",
+"size": [
+0.38,
+0.44,
+0.4
+],
+"themes": "DIAL-UP; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"imac_g3_lime_1999": {
+"display": "Apple iMac G3 Lime",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 11.704,
+"notes": [
+"Apple iMac G3 Lime, 1999"
+],
+"product": "Apple iMac G3 Lime, 1999",
+"role": "hero",
+"size": [
+0.38,
+0.44,
+0.4
+],
+"themes": "DIAL-UP; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"imac_g3_tangerine_1999": {
+"display": "Apple iMac G3 Tangerine",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 11.704,
+"notes": [
+"Apple iMac G3 Tangerine, 1999"
+],
+"product": "Apple iMac G3 Tangerine, 1999",
+"role": "hero",
+"size": [
+0.38,
+0.44,
+0.4
+],
+"themes": "DIAL-UP; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"imation_superdisk_ls120_1997": {
+"display": "Imation SuperDisk LS-120 disk",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Imation SuperDisk LS-120 disk, 1997"
+],
+"product": "Imation SuperDisk LS-120 disk, 1997",
+"role": "support",
+"size": [
+0.09,
+0.005,
+0.094
+],
+"themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
 "independence_day_vhs_1997": {
 "display": "Independence Day VHS",
 "eras": [
@@ -1537,6 +2725,116 @@
 0.188
 ],
 "themes": "BE KIND REWIND; PROBED; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"iomega_zip100_disk_1995": {
+"display": "Iomega Zip 100 MB disk",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"Iomega Zip 100 MB disk, 1995"
+],
+"product": "Iomega Zip 100 MB disk, 1995",
+"role": "support",
+"size": [
+0.102,
+0.0065,
+0.098
+],
+"themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"iomega_zip100_drive_parallel_1995": {
+"display": "Iomega Zip 100 external parallel-port drive",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.247,
+"notes": [
+"Iomega Zip 100 external parallel-port drive, 1995"
+],
+"product": "Iomega Zip 100 external parallel-port drive, 1995",
+"role": "hero",
+"size": [
+0.16,
+0.21,
+0.042
+],
+"themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
+"iomega_zip100_threepack_1997": {
+"display": "Iomega Zip 100 MB three-disk retail pack, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.039,
+"notes": [
+"Iomega Zip 100 MB three-disk retail pack, circa 1997"
+],
+"product": "Iomega Zip 100 MB three-disk retail pack, circa 1997",
+"role": "support",
+"size": [
+0.105,
+0.025,
+0.14
+],
+"themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
+"iomega_zip250_disk_1998": {
+"display": "Iomega Zip 250 MB disk",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"Iomega Zip 250 MB disk, 1998"
+],
+"product": "Iomega Zip 250 MB disk, 1998",
+"role": "support",
+"size": [
+0.102,
+0.0065,
+0.098
+],
+"themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
+"iomega_zip250_usb_1999": {
+"display": "Iomega Zip 250 USB external drive",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.247,
+"notes": [
+"Iomega Zip 250 USB external drive, 1999"
+],
+"product": "Iomega Zip 250 USB external drive, 1999",
+"role": "hero",
+"size": [
+0.16,
+0.21,
+0.042
+],
+"themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
 "jayz_blueprint_cd_2001": {
@@ -1693,6 +2991,28 @@
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"labtec_verse_313_microphone_1999": {
+"display": "Labtec desktop computer microphone, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.35,
+"notes": [
+"Labtec desktop computer microphone, circa 1999"
+],
+"product": "Labtec desktop computer microphone, circa 1999",
+"role": "support",
+"size": [
+0.08,
+0.1,
+0.25
+],
+"themes": "DIAL-UP; Y2K; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
 "lady_gaga_the_fame_cd_2008": {
 "display": "Lady Gaga The Fame CD in jewel case",
 "eras": [
@@ -1735,6 +3055,50 @@
 0.125
 ],
 "themes": "COASTERS; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"legend_of_zelda_nes_1987": {
+"display": "The Legend of Zelda Nintendo Entertainment System Game Pak",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"The Legend of Zelda Nintendo Entertainment System Game Pak, 1987"
+],
+"product": "The Legend of Zelda Nintendo Entertainment System Game Pak, 1987",
+"role": "hero",
+"size": [
+0.12,
+0.02,
+0.135
+],
+"themes": "CONSOLE WARS; BLOW ON IT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"lexmark_3200_1998": {
+"display": "Lexmark 3200 Color Jetprinter",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 3.657,
+"notes": [
+"Lexmark 3200 Color Jetprinter, 1998"
+],
+"product": "Lexmark 3200 Color Jetprinter, 1998",
+"role": "support",
+"size": [
+0.43,
+0.27,
+0.18
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
 "weight": 1.0
 },
 "lil_wayne_carter_iii_cd_2008": {
@@ -1845,6 +3209,138 @@
 0.202
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"logitech_cordless_mouseman_wheel_1999": {
+"display": "Logitech Cordless MouseMan Wheel",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.062,
+"notes": [
+"Logitech Cordless MouseMan Wheel, 1999"
+],
+"product": "Logitech Cordless MouseMan Wheel, 1999",
+"role": "support",
+"size": [
+0.07,
+0.12,
+0.042
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
+"weight": 1.0
+},
+"logitech_mouseman_serial_1995": {
+"display": "Logitech MouseMan three-button serial mouse, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.045,
+"notes": [
+"Logitech MouseMan three-button serial mouse, circa 1995"
+],
+"product": "Logitech MouseMan three-button serial mouse, circa 1995",
+"role": "support",
+"size": [
+0.065,
+0.105,
+0.038
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"logitech_quickcam_home_1999": {
+"display": "Logitech QuickCam Home USB webcam",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.073,
+"notes": [
+"Logitech QuickCam Home USB webcam, 1999"
+],
+"product": "Logitech QuickCam Home USB webcam, 1999",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.085
+],
+"themes": "DIAL-UP; SCREEN TIME; Y2K; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
+"logitech_wingman_extreme_1996": {
+"display": "Logitech WingMan Extreme joystick, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 1.125,
+"notes": [
+"Logitech WingMan Extreme joystick, circa 1996"
+],
+"product": "Logitech WingMan Extreme joystick, circa 1996",
+"role": "hero",
+"size": [
+0.17,
+0.18,
+0.21
+],
+"themes": "DIAL-UP; CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"mario_kart_64_n64_1997": {
+"display": "Mario Kart 64 Nintendo 64 Game Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"Mario Kart 64 Nintendo 64 Game Pak, 1997"
+],
+"product": "Mario Kart 64 Nintendo 64 Game Pak, 1997",
+"role": "hero",
+"size": [
+0.116,
+0.019,
+0.075
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"mario_kart_double_dash_gamecube_2003": {
+"display": "Mario Kart: Double Dash!! Nintendo GameCube game",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Mario Kart: Double Dash!! Nintendo GameCube game, 2003"
+],
+"product": "Mario Kart: Double Dash!! Nintendo GameCube game, 2003",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
 "weight": 1.0
 },
 "matrix_vhs_1999": {
@@ -2067,6 +3563,28 @@
 "themes": "MIXTAPE; ROAD TRIP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"memorex_floppy_10pack_box_1997": {
+"display": "Memorex 3.5-inch 2HD floppy disk 10-pack box, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.038,
+"notes": [
+"Memorex 3.5-inch 2HD floppy disk 10-pack box, circa 1997"
+],
+"product": "Memorex 3.5-inch 2HD floppy disk 10-pack box, circa 1997",
+"role": "support",
+"size": [
+0.095,
+0.038,
+0.1
+],
+"themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "men_in_black_vhs_1997": {
 "display": "Men in Black VHS in cardboard slipcase",
 "eras": [
@@ -2087,6 +3605,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; PROBED; regular cubes",
+"weight": 1.0
+},
+"metal_gear_solid_ps1_1998": {
+"display": "Metal Gear Solid PlayStation two-disc game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.075,
+"notes": [
+"Metal Gear Solid PlayStation two-disc game, 1998"
+],
+"product": "Metal Gear Solid PlayStation two-disc game, 1998",
+"role": "hero",
+"size": [
+0.142,
+0.024,
+0.125
+],
+"themes": "CONSOLE WARS; SCREEN TIME; regular cubes",
 "weight": 1.0
 },
 "metallica_metallica_cassette_1991": {
@@ -2133,6 +3673,94 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"microsoft_intellimouse_explorer_1999": {
+"display": "Microsoft IntelliMouse Explorer",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.062,
+"notes": [
+"Microsoft IntelliMouse Explorer, 1999"
+],
+"product": "Microsoft IntelliMouse Explorer, 1999",
+"role": "support",
+"size": [
+0.068,
+0.125,
+0.042
+],
+"themes": "DIAL-UP; SAVE ICON; Y2K; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
+"microsoft_mouse_2_0_1993": {
+"display": "Microsoft Mouse 2.0",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"Microsoft Mouse 2.0, 1993"
+],
+"product": "Microsoft Mouse 2.0, 1993",
+"role": "support",
+"size": [
+0.062,
+0.105,
+0.038
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"microsoft_natural_keyboard_1994": {
+"display": "Microsoft Natural Keyboard",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 1.327,
+"notes": [
+"Microsoft Natural Keyboard, 1994"
+],
+"product": "Microsoft Natural Keyboard, 1994",
+"role": "hero",
+"size": [
+0.503,
+0.26,
+0.058
+],
+"themes": "DIAL-UP; SAVE ICON; OFFICE_JUNK; regular cubes",
+"weight": 1.0
+},
+"microsoft_sidewinder_precision_pro_1997": {
+"display": "Microsoft SideWinder Precision Pro joystick",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 1.397,
+"notes": [
+"Microsoft SideWinder Precision Pro joystick, 1997"
+],
+"product": "Microsoft SideWinder Precision Pro joystick, 1997",
+"role": "hero",
+"size": [
+0.19,
+0.2,
+0.21
+],
+"themes": "DIAL-UP; CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "microsoft_xbox_console_2001": {
 "display": "Microsoft Xbox console",
 "eras": [
@@ -2155,6 +3783,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; LANDFILL DRIVE; regular cubes",
 "weight": 1.0
 },
+"molex_4pin_power_splitter_1999": {
+"display": "4-pin Molex PC power Y-splitter cable, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"4-pin Molex PC power Y-splitter cable, circa 1999"
+],
+"product": "4-pin Molex PC power Y-splitter cable, circa 1999",
+"role": "filler",
+"size": [
+0.2,
+0.023,
+0.023
+],
+"themes": "DIAL-UP; LANDFILL DRIVE; SAVE ICON; regular cubes",
+"weight": 1.0
+},
 "monsters_inc_vhs_2002": {
 "display": "Monsters, Inc. VHS clamshell",
 "eras": [
@@ -2175,6 +3825,116 @@
 0.202
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"mortal_kombat_genesis_1993": {
+"display": "Mortal Kombat Sega Genesis cartridge",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"Mortal Kombat Sega Genesis cartridge, 1993"
+],
+"product": "Mortal Kombat Sega Genesis cartridge, 1993",
+"role": "hero",
+"size": [
+0.07,
+0.018,
+0.115
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"motorola_advisor_ii_pager_1996": {
+"display": "Motorola Advisor II alphanumeric pager, circa",
+"eras": [
+1,
+2
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.014,
+"notes": [
+"Motorola Advisor II alphanumeric pager, circa 1996"
+],
+"product": "Motorola Advisor II alphanumeric pager, circa 1996",
+"role": "hero",
+"size": [
+0.072,
+0.022,
+0.05
+],
+"themes": "SCREEN TIME; SLOW MOTION; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"motorola_bravo_pager_1990": {
+"display": "Motorola Bravo numeric pager, circa",
+"eras": [
+0,
+1
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Motorola Bravo numeric pager, circa 1990"
+],
+"product": "Motorola Bravo numeric pager, circa 1990",
+"role": "hero",
+"size": [
+0.065,
+0.02,
+0.043
+],
+"themes": "SCREEN TIME; DOUBLE A; SLOW MOTION; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"motorola_startac_8500_1996": {
+"display": "Motorola StarTAC 8500 flip phone",
+"eras": [
+1,
+2
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"Motorola StarTAC 8500 flip phone, 1996"
+],
+"product": "Motorola StarTAC 8500 flip phone, 1996",
+"role": "hero",
+"size": [
+0.057,
+0.028,
+0.094
+],
+"themes": "SCREEN TIME; ROAD TRIP; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"motorola_t900_pager_2000": {
+"display": "Motorola Talkabout T900 two-way pager",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.024,
+"notes": [
+"Motorola Talkabout T900 two-way pager, 2000"
+],
+"product": "Motorola Talkabout T900 two-way pager, 2000",
+"role": "hero",
+"size": [
+0.088,
+0.026,
+0.06
+],
+"themes": "SCREEN TIME; Y2K; DIAL-UP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "mrs_doubtfire_vhs_1994": {
@@ -2309,6 +4069,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"nba_jam_genesis_1994": {
+"display": "NBA Jam Sega Genesis cartridge",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"NBA Jam Sega Genesis cartridge, 1994"
+],
+"product": "NBA Jam Sega Genesis cartridge, 1994",
+"role": "hero",
+"size": [
+0.07,
+0.018,
+0.115
+],
+"themes": "CONSOLE WARS; BLOW ON IT; MINT CONDITION; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "nes_cartridge_gray_1985": {
 "display": "Nintendo Entertainment System Game Pak cartridge",
 "eras": [
@@ -2351,6 +4133,50 @@
 0.053
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; LEFTOVERS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"netscape_isp_trial_cd_1999": {
+"display": "Netscape Internet access trial CD-ROM, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Netscape Internet access trial CD-ROM, circa 1999"
+],
+"product": "Netscape Internet access trial CD-ROM, circa 1999",
+"role": "support",
+"size": [
+0.126,
+0.002,
+0.126
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
+"weight": 1.0
+},
+"netscape_navigator_3_box_1996": {
+"display": "Netscape Navigator 3.0 retail software box",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.252,
+"notes": [
+"Netscape Navigator 3.0 retail software box, 1996"
+],
+"product": "Netscape Navigator 3.0 retail software box, 1996",
+"role": "hero",
+"size": [
+0.2,
+0.05,
+0.24
+],
+"themes": "DIAL-UP; SAVE ICON; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "nintendo64_cartridge_1996": {
@@ -2661,6 +4487,72 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"nokia_3390_2000": {
+"display": "Nokia 3390 mobile phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"Nokia 3390 mobile phone, 2000"
+],
+"product": "Nokia 3390 mobile phone, 2000",
+"role": "hero",
+"size": [
+0.046,
+0.021,
+0.113
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"nokia_5110_1998": {
+"display": "Nokia 5110 GSM mobile phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.034,
+"notes": [
+"Nokia 5110 GSM mobile phone, 1998"
+],
+"product": "Nokia 5110 GSM mobile phone, 1998",
+"role": "hero",
+"size": [
+0.048,
+0.031,
+0.132
+],
+"themes": "SCREEN TIME; ROAD TRIP; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"norton_antivirus_2001_box": {
+"display": "Norton AntiVirus 2001 retail software box",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.234,
+"notes": [
+"Norton AntiVirus 2001 retail software box, 2000"
+],
+"product": "Norton AntiVirus 2001 retail software box, 2000",
+"role": "support",
+"size": [
+0.19,
+0.05,
+0.235
+],
+"themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
+"weight": 1.0
+},
 "nsync_no_strings_attached_cd_2000": {
 "display": "*NSYNC No Strings Attached CD in jewel case",
 "eras": [
@@ -2681,6 +4573,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
+"office97_standard_bigbox_1996": {
+"display": "Microsoft Office 97 Standard retail software box",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.284,
+"notes": [
+"Microsoft Office 97 Standard retail software box, 1996"
+],
+"product": "Microsoft Office 97 Standard retail software box, 1996",
+"role": "support",
+"size": [
+0.205,
+0.055,
+0.24
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "original_game_boy_dmg01_1989": {
@@ -2725,6 +4639,72 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"packard_bell_legend_406cd_1995": {
+"display": "Packard Bell Legend 406CD desktop computer",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 17.64,
+"notes": [
+"Packard Bell Legend 406CD desktop computer, 1995"
+],
+"product": "Packard Bell Legend 406CD desktop computer, 1995",
+"role": "hero",
+"size": [
+0.42,
+0.4,
+0.15
+],
+"themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"palm_iii_1998": {
+"display": "Palm III connected organizer",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Palm III connected organizer, 1998"
+],
+"product": "Palm III connected organizer, 1998",
+"role": "hero",
+"size": [
+0.081,
+0.018,
+0.12
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"palm_pilot_professional_1997": {
+"display": "PalmPilot Professional PDA",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"PalmPilot Professional PDA, 1997"
+],
+"product": "PalmPilot Professional PDA, 1997",
+"role": "hero",
+"size": [
+0.081,
+0.018,
+0.12
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "panasonic_pv9450_vcr_1999": {
@@ -2859,6 +4839,28 @@
 "themes": "COASTERS; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"phone_line_splitter_1997": {
+"display": "Two-way RJ-11 telephone line splitter, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Two-way RJ-11 telephone line splitter, circa 1997"
+],
+"product": "Two-way RJ-11 telephone line splitter, circa 1997",
+"role": "filler",
+"size": [
+0.035,
+0.024,
+0.021
+],
+"themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "playstation_memory_card_1995": {
 "display": "Sony PlayStation Memory Card",
 "eras": [
@@ -2881,6 +4883,50 @@
 "themes": "CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"pokemon_blue_gameboy_1998": {
+"display": "Pok\u00e9mon Blue Version Game Boy Game Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Pok\u00e9mon Blue Version Game Boy Game Pak, 1998"
+],
+"product": "Pok\u00e9mon Blue Version Game Boy Game Pak, 1998",
+"role": "hero",
+"size": [
+0.058,
+0.008,
+0.065
+],
+"themes": "BLOW ON IT; STILL ALIVE; SCREEN TIME; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"pokemon_gold_gameboy_2000": {
+"display": "Pok\u00e9mon Gold Version Game Boy Color Game Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Pok\u00e9mon Gold Version Game Boy Color Game Pak, 2000"
+],
+"product": "Pok\u00e9mon Gold Version Game Boy Color Game Pak, 2000",
+"role": "hero",
+"size": [
+0.058,
+0.008,
+0.065
+],
+"themes": "BLOW ON IT; STILL ALIVE; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
 "pretty_woman_vhs_1990": {
 "display": "Pretty Woman VHS",
 "eras": [
@@ -2901,6 +4947,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"prodigy_internet_trial_cd_1997": {
+"display": "Prodigy Internet free-trial CD-ROM, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Prodigy Internet free-trial CD-ROM, circa 1997"
+],
+"product": "Prodigy Internet free-trial CD-ROM, circa 1997",
+"role": "support",
+"size": [
+0.126,
+0.002,
+0.126
+],
+"themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "ps2_dvd_game_case_black_2000": {
@@ -2969,6 +5037,28 @@
 "themes": "BE KIND REWIND; UNDER THE MATTRESS; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"radio_shack_phone_coupler_1996": {
+"display": "RadioShack RJ-11 inline telephone coupler, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"RadioShack RJ-11 inline telephone coupler, circa 1996"
+],
+"product": "RadioShack RJ-11 inline telephone coupler, circa 1996",
+"role": "filler",
+"size": [
+0.038,
+0.022,
+0.018
+],
+"themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "radio_shack_rf_modulator_1998": {
 "display": "RadioShack RF Modulator, circa",
 "eras": [
@@ -3011,6 +5101,28 @@
 0.185
 ],
 "themes": "BE KIND REWIND; SCREEN TIME; LEFTOVERS; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"resident_evil2_ps1_1998": {
+"display": "Resident Evil 2 PlayStation two-disc game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.075,
+"notes": [
+"Resident Evil 2 PlayStation two-disc game, 1998"
+],
+"product": "Resident Evil 2 PlayStation two-disc game, 1998",
+"role": "hero",
+"size": [
+0.142,
+0.024,
+0.125
+],
+"themes": "CONSOLE WARS; TRICK OR TREAT; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "rg6_coaxial_tv_cable_1998": {
@@ -3365,6 +5477,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; TRICK OR TREAT; regular cubes",
 "weight": 1.0
 },
+"smash_bros_melee_gamecube_2001": {
+"display": "Super Smash Bros. Melee Nintendo GameCube game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Super Smash Bros. Melee Nintendo GameCube game, 2001"
+],
+"product": "Super Smash Bros. Melee Nintendo GameCube game, 2001",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
 "snes_cartridge_1991": {
 "display": "Super Nintendo Entertainment System Game Pak cartridge",
 "eras": [
@@ -3451,6 +5585,72 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sonic_2_genesis_1992": {
+"display": "Sonic the Hedgehog 2 Sega Genesis cartridge",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"Sonic the Hedgehog 2 Sega Genesis cartridge, 1992"
+],
+"product": "Sonic the Hedgehog 2 Sega Genesis cartridge, 1992",
+"role": "hero",
+"size": [
+0.07,
+0.018,
+0.115
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sonic_adventure_dreamcast_1999": {
+"display": "Sonic Adventure Sega Dreamcast game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Sonic Adventure Sega Dreamcast game, 1999"
+],
+"product": "Sonic Adventure Sega Dreamcast game, 1999",
+"role": "hero",
+"size": [
+0.142,
+0.01,
+0.125
+],
+"themes": "CONSOLE WARS; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"sony_3_5_floppy_2hd_1995": {
+"display": "Sony 3.5-inch 2HD 1.44 MB floppy disk, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Sony 3.5-inch 2HD 1.44 MB floppy disk, circa 1995"
+],
+"product": "Sony 3.5-inch 2HD 1.44 MB floppy disk, circa 1995",
+"role": "filler",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; LANDFILL DRIVE; regular cubes",
 "weight": 1.0
 },
 "sony_cfd_s22_boombox_1998": {
@@ -3561,6 +5761,28 @@
 0.095
 ],
 "themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"sony_floppy_10pack_box_1996": {
+"display": "Sony 3.5-inch 2HD floppy disk 10-pack box, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.038,
+"notes": [
+"Sony 3.5-inch 2HD floppy disk 10-pack box, circa 1996"
+],
+"product": "Sony 3.5-inch 2HD floppy disk 10-pack box, circa 1996",
+"role": "support",
+"size": [
+0.095,
+0.038,
+0.1
+],
+"themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "sony_hf90_1990": {
@@ -3761,6 +5983,28 @@
 "themes": "SCREEN TIME; ROAD TRIP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"sony_trinitron_gdm400ps_1998": {
+"display": "Sony Trinitron GDM-400PS 19-inch CRT monitor",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 17.388,
+"notes": [
+"Sony Trinitron GDM-400PS 19-inch CRT monitor, 1998"
+],
+"product": "Sony Trinitron GDM-400PS 19-inch CRT monitor, 1998",
+"role": "hero",
+"size": [
+0.45,
+0.48,
+0.46
+],
+"themes": "SCREEN TIME; DIAL-UP; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
 "sony_uxs90_1990": {
 "display": "Sony UX-S 90 Type II blank audio cassette",
 "eras": [
@@ -3803,6 +6047,28 @@
 0.085
 ],
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sound_blaster_16_ct1740_1992": {
+"display": "Creative Labs Sound Blaster 16 CT1740 ISA sound card",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.136,
+"notes": [
+"Creative Labs Sound Blaster 16 CT1740 ISA sound card, 1992"
+],
+"product": "Creative Labs Sound Blaster 16 CT1740 ISA sound card, 1992",
+"role": "hero",
+"size": [
+0.33,
+0.022,
+0.107
+],
+"themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; BLACKLIGHT; regular cubes",
 "weight": 1.0
 },
 "space_jam_vhs_1997": {
@@ -3869,6 +6135,94 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
+"street_fighter_ii_snes_1992": {
+"display": "Street Fighter II Super Nintendo Game Pak",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.036,
+"notes": [
+"Street Fighter II Super Nintendo Game Pak, 1992"
+],
+"product": "Street Fighter II Super Nintendo Game Pak, 1992",
+"role": "hero",
+"size": [
+0.085,
+0.019,
+0.126
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"super_mario_64_n64_1996": {
+"display": "Super Mario 64 Nintendo 64 Game Pak",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"Super Mario 64 Nintendo 64 Game Pak, 1996"
+],
+"product": "Super Mario 64 Nintendo 64 Game Pak, 1996",
+"role": "hero",
+"size": [
+0.116,
+0.019,
+0.075
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"super_mario_bros_3_nes_1990": {
+"display": "Super Mario Bros. 3 Nintendo Entertainment System Game Pak",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Super Mario Bros. 3 Nintendo Entertainment System Game Pak, 1990"
+],
+"product": "Super Mario Bros. 3 Nintendo Entertainment System Game Pak, 1990",
+"role": "hero",
+"size": [
+0.12,
+0.02,
+0.135
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"super_mario_world_snes_1991": {
+"display": "Super Mario World Super Nintendo Game Pak",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.036,
+"notes": [
+"Super Mario World Super Nintendo Game Pak, 1991"
+],
+"product": "Super Mario World Super Nintendo Game Pak, 1991",
+"role": "hero",
+"size": [
+0.085,
+0.019,
+0.126
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "super_nintendo_console_1991": {
@@ -4091,6 +6445,28 @@
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"tony_hawk_pro_skater2_ps1_2000": {
+"display": "Tony Hawk's Pro Skater 2 PlayStation game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Tony Hawk's Pro Skater 2 PlayStation game, 2000"
+],
+"product": "Tony Hawk's Pro Skater 2 PlayStation game, 2000",
+"role": "hero",
+"size": [
+0.142,
+0.01,
+0.125
+],
+"themes": "CONSOLE WARS; KICKFLIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "top_gun_vhs_1987": {
 "display": "Top Gun VHS",
 "eras": [
@@ -4157,6 +6533,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"umax_astra_1220u_1998": {
+"display": "UMAX Astra 1220U flatbed scanner",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 2.173,
+"notes": [
+"UMAX Astra 1220U flatbed scanner, 1998"
+],
+"product": "UMAX Astra 1220U flatbed scanner, 1998",
+"role": "hero",
+"size": [
+0.3,
+0.46,
+0.09
+],
+"themes": "DIAL-UP; SAVE ICON; Y2K; regular cubes",
+"weight": 1.0
+},
 "usher_confessions_cd_2004": {
 "display": "Usher Confessions CD in jewel case",
 "eras": [
@@ -4177,6 +6575,72 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"usrobotics_56k_pci_modem_1998": {
+"display": "U.S. Robotics 56K PCI internal modem, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.058,
+"notes": [
+"U.S. Robotics 56K PCI internal modem, circa 1998"
+],
+"product": "U.S. Robotics 56K PCI internal modem, circa 1998",
+"role": "support",
+"size": [
+0.155,
+0.02,
+0.107
+],
+"themes": "DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
+"weight": 1.0
+},
+"usrobotics_sportster_56k_1997": {
+"display": "U.S. Robotics Sportster 56K external modem",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.113,
+"notes": [
+"U.S. Robotics Sportster 56K external modem, 1997"
+],
+"product": "U.S. Robotics Sportster 56K external modem, 1997",
+"role": "hero",
+"size": [
+0.16,
+0.115,
+0.035
+],
+"themes": "DIAL-UP; SAVE ICON; Y2K; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"verbatim_datalife_floppy_red_1998": {
+"display": "Verbatim DataLife Colors 3.5-inch floppy disk, red, circa",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Verbatim DataLife Colors 3.5-inch floppy disk, red, circa 1998"
+],
+"product": "Verbatim DataLife Colors 3.5-inch floppy disk, red, circa 1998",
+"role": "filler",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; Y2K; regular cubes",
 "weight": 1.0
 },
 "verbatim_datalifeplus_cdr_2001": {
@@ -4267,6 +6731,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"viewsonic_e70f_crt_2001": {
+"display": "ViewSonic E70f 17-inch CRT monitor",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 12.657,
+"notes": [
+"ViewSonic E70f 17-inch CRT monitor, 2001"
+],
+"product": "ViewSonic E70f 17-inch CRT monitor, 2001",
+"role": "hero",
+"size": [
+0.41,
+0.42,
+0.42
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; regular cubes",
+"weight": 1.0
+},
+"wavebird_controller_2002": {
+"display": "Nintendo WaveBird Wireless Controller",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.159,
+"notes": [
+"Nintendo WaveBird Wireless Controller, 2002"
+],
+"product": "Nintendo WaveBird Wireless Controller, 2002",
+"role": "hero",
+"size": [
+0.14,
+0.1,
+0.065
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "waynes_world_vhs_1992": {
 "display": "Wayne's World VHS",
 "eras": [
@@ -4287,6 +6795,50 @@
 0.188
 ],
 "themes": "BE KIND REWIND; BASS BOOSTED; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"windows95_big_box_1995": {
+"display": "Microsoft Windows 95 retail big-box software package",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.284,
+"notes": [
+"Microsoft Windows 95 retail big-box software package, 1995"
+],
+"product": "Microsoft Windows 95 retail big-box software package, 1995",
+"role": "hero",
+"size": [
+0.205,
+0.055,
+0.24
+],
+"themes": "DIAL-UP; SAVE ICON; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"windows98_big_box_1998": {
+"display": "Microsoft Windows 98 retail big-box software package",
+"eras": [
+2,
+3
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.284,
+"notes": [
+"Microsoft Windows 98 retail big-box software package, 1998"
+],
+"product": "Microsoft Windows 98 retail big-box software package, 1998",
+"role": "hero",
+"size": [
+0.205,
+0.055,
+0.24
+],
+"themes": "DIAL-UP; SAVE ICON; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "xbox_controller_s_2002": {
@@ -4353,6 +6905,28 @@
 0.038
 ],
 "themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"zelda_ocarina_n64_1998": {
+"display": "The Legend of Zelda: Ocarina of Time Nintendo 64 Game Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"The Legend of Zelda: Ocarina of Time Nintendo 64 Game Pak, 1998"
+],
+"product": "The Legend of Zelda: Ocarina of Time Nintendo 64 Game Pak, 1998",
+"role": "hero",
+"size": [
+0.116,
+0.019,
+0.075
+],
+"themes": "CONSOLE WARS; BLOW ON IT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 }
 }

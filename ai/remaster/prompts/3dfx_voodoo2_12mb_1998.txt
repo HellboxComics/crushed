@@ -1,0 +1,1 @@
+3dfx Voodoo2 12 MB PCI 3D accelerator card, 1998. Long green or black PCI card packed with several large square 3DFX chips, rows of small memory chips, gold PCI contacts, internal SLI header and silver rear bracket with VGA input and output connectors; no cooling fan dominates the original board, leaving the dense chip layout visible

@@ -1,0 +1,1 @@
+modem board, phone-line transformer, LEDs, capacitors, controller chips, serial connector and plastic shell

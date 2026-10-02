@@ -1,0 +1,1 @@
+modem circuit board, isolation transformer, status LEDs, capacitors, modem chipset, serial hardware and RJ-11 sockets

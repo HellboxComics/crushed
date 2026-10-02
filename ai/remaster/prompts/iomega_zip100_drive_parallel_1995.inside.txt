@@ -1,0 +1,1 @@
+spindle motor, read/write head mechanism, drive rails, circuit board, connector ports, eject mechanism, power wiring and screws
