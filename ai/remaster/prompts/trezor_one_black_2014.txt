@@ -1,0 +1,1 @@
+Trezor Model One hardware wallet, 2014. Small black rounded trapezoidal hardware wallets with TREZOR identification, tiny monochrome display, two front buttons and micro-USB port along the lower edge; displays show only generic LOCKED / VERIFY messaging and no addresses or seed words

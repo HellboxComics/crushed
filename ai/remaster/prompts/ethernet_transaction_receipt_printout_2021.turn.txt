@@ -1,0 +1,1 @@
+Printed blockchain transaction receipt page, 2021, real size 21.6 x 0.05 x 27.9 cm, made of paper. Office printouts headed TRANSACTION RECEIPT with masked hexadecimal addresses, BLOCK, GAS USED, BASE FEE and STATUS fields, transaction hashes shortened with ellipses and fee totals aggressively highlighted in yellow

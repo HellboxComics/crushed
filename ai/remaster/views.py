@@ -90,10 +90,13 @@ def load(turn_png):
     import turnaround as T
     from PIL import Image
     out = {}
-    for k, cell in T.split(turn_png).items():
-        clean = np.asarray(T.to_white(cell).convert("RGB"))
-        small = np.asarray(_shrink(Image.fromarray(clean)))      # the outline is found at low size: fast, same answer
-        m = (small < 250).any(-1)
+    for k, (cell, cm) in T.cutouts(turn_png).items():
+        clean = np.asarray(cell.convert("RGB"))
+        if cm is not None:                                       # the cut-out model's mask
+            m = np.asarray(Image.fromarray(cm.astype(np.uint8) * 255).resize(_shrink(cell).size, Image.BILINEAR)) > 127
+        else:
+            small = np.asarray(_shrink(Image.fromarray(clean)))  # the outline is found at low size: fast, same answer
+            m = (small < 250).any(-1)
         parts = _components(m)
         keep = np.zeros_like(m)
         if parts:
@@ -208,15 +211,22 @@ def classify(views, words=""):
     rep.update(sides=dict(symmetric=round(sym, 3), agree=round(agree, 3), width_over_depth=round(wd, 3)),
                top_view=top or "not a straight-down view", words=said or "-")
     if sym >= 0.93 and agree >= 0.95 and (top or said) == "round":
-        p = np.mean([prof[k] for k in sides], axis=0)
-        p = np.convolve(np.pad(p, 2, mode="edge"), np.ones(5) / 5, mode="valid")    # smooth the pixel steps
+        # fine steps along the length (a battery's shoulder is a sharp step, not a slope), from the full-size
+        # outlines; a median (not an average) removes pixel noise without rounding real steps into cones
+        fine = [_resample(_widths(views[k]["mask"]) / max(1, _widths(views[k]["mask"]).max()), 320) for k in sides]
+        p = np.median(np.stack(fine), axis=0)
+        p = np.array([np.median(p[max(0, i - 2):i + 3]) for i in range(len(p))])
         return {**rep, "kind": "lathe", "profile": [round(float(x), 4) for x in p]}
     rads = {k: _corner_radius(sm[k]) for k in sides}
     fits = {k: _roundrect_iou(sm[k], rads[k]) for k in sides}
-    rep["box_fit"] = round(min(fits.values()), 3)
-    if min(fits.values()) >= 0.95 and (top or said or "box") == "box":
+    rep["box_fit"] = {k: round(v, 3) for k, v in fits.items()}
+    # the drawing model draws the front straight on but often turns the other sides a little, so a box is: a front
+    # (and back) that is a clean rectangle, sides that are roughly one, and the words or the top view saying box
+    front_ok = min(fits["front"], fits["back"]) >= 0.93
+    sides_ok = min(fits["left"], fits["right"]) >= 0.85
+    if front_ok and sides_ok and (top or said) == "box" or min(fits.values()) >= 0.95 and (top or said or "box") == "box":
         r_front = float(np.median([rads["front"], rads["back"]]))
-        return {**rep, "kind": "box", "corner_front": round(r_front if r_front > 0.04 else 0.0, 4)}
+        return {**rep, "kind": "box", "corner_front": round(r_front if r_front > 0.10 else 0.0, 4)}
     rep["why"] = "not round all the way around and not a box"
     return rep
 

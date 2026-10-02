@@ -1,0 +1,1 @@
+Coinkite Coldcard Mk3 hardware wallet, circa 2020. Calculator-like black signing devices with COLDCARD identification, small monochrome display, full numeric keypad and microSD slot, one carrying a tamper-evident bag fragment around the edges and both screens blank of any sensitive information

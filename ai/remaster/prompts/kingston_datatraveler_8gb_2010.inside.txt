@@ -1,0 +1,1 @@
+NAND memory, flash controller, PCB, USB connector and plastic housing

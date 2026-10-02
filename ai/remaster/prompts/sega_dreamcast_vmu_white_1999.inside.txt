@@ -1,0 +1,1 @@
+LCD, flash memory, microcontroller, speaker, coin cells, buttons and shell

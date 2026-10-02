@@ -1,0 +1,1 @@
+Ledger Nano S hardware wallet, 2016. Four tiny USB hardware wallets with brushed stainless swivel covers stamped LEDGER over black plastic bodies, small monochrome OLED screens, two physical buttons along the top edge and exposed USB-A plug when the metal cover rotates away; screens are dark or show generic CHECK DEVICE / PIN text with no real wallet data

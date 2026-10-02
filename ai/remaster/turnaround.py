@@ -35,7 +35,9 @@ LAYOUT = ("A professional 3D modeling reference sheet: a 3 by 2 grid of six orth
           "visible, no perspective), the BOTTOM view (camera directly underneath, perfectly flat, only the underside). The object is exactly "
           "the same size, centered in each cell, upright the same way in the four side views, with the same "
           "colors, wear and printing in every view; each view shows what really is on that side. No captions, no "
-          "labels, no text outside the object, no hands, no props, no other objects. The object: ")
+          "labels, no text outside the object, no measurements, no hands, no props, no other objects. Every view is "
+          "a flat, straight-on orthographic photo like a technical drawing: no perspective, no tilt, no corners of "
+          "the neighboring sides showing. The object: ")
 
 BRIEF = """You write reference descriptions for a 3D artist rebuilding real nostalgic products exactly as they were.
 Object: {display}
@@ -97,31 +99,79 @@ LIGHTNING = "Qwen-Image-2512-Lightning-8steps-V1.0-bf16.safetensors"     # the o
 LORA_DIR = os.path.expanduser("~/.hellbox/drawing-room/ComfyUI/models/loras")
 
 
-def draw(description, out, seed=None, steps=None, timeout=3600):
-    """One 1584x1056 turnaround from Qwen-Image 2512 (bf16), its own text encoder and VAE. With the Lightning
-    LoRA installed it takes 8 steps at guidance 1 (one pass per step) instead of 30 at guidance 4: ~7x faster."""
-    seed = seed if seed is not None else random.randint(1, 2 ** 31)
-    fast = os.path.exists(os.path.join(LORA_DIR, LIGHTNING))
-    steps = steps or (8 if fast else 30)
-    cfg = 1.0 if fast else 4.0
-    wf = {
-        "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "qwen_image_2512_bf16.safetensors", "weight_dtype": "default"}},
-        "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b.safetensors", "type": "qwen_image"}},
-        "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
-        "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["11", 0] if fast else ["1", 0], "shift": 3.1}},
-        "5": {"class_type": "CLIPTextEncode", "inputs": {"text": LAYOUT + description, "clip": ["2", 0]}},
-        "6": {"class_type": "CLIPTextEncode", "inputs": {"text": "blurry, deformed, different objects, inconsistent, "
-                                                                 "captions, watermark, hands, people", "clip": ["2", 0]}},
-        "7": {"class_type": "EmptySD3LatentImage", "inputs": {"width": W, "height": H, "batch_size": 1}},
-        "8": {"class_type": "KSampler", "inputs": {"model": ["4", 0], "positive": ["5", 0], "negative": ["6", 0],
-                                                  "latent_image": ["7", 0], "seed": seed, "steps": steps, "cfg": cfg,
-                                                  "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0}},
-        "9": {"class_type": "VAEDecode", "inputs": {"samples": ["8", 0], "vae": ["3", 0]}},
-        "10": {"class_type": "SaveImage", "inputs": {"images": ["9", 0], "filename_prefix": "crushed_turn"}},
-    }
-    if fast:
-        wf["11"] = {"class_type": "LoraLoaderModelOnly", "inputs": {"model": ["1", 0], "lora_name": LIGHTNING,
-                                                                   "strength_model": 1.0}}
+def _upload(png_bytes, name):
+    boundary = uuid.uuid4().hex
+    body = (f"--{boundary}\r\nContent-Disposition: form-data; name=\"image\"; filename=\"{name}\"\r\n"
+            f"Content-Type: image/png\r\n\r\n").encode() + png_bytes + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(ROOM + "/upload/image", data=body,
+                                 headers={"content-type": f"multipart/form-data; boundary={boundary}"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.load(r).get("name", name)
+
+
+def _run_all(wf, timeout=900):
+    """Send a workflow, wait, return {save node id: picture bytes}."""
+    body = json.dumps({"prompt": wf, "client_id": uuid.uuid4().hex}).encode()
+    req = urllib.request.Request(ROOM + "/prompt", data=body, headers={"content-type": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        pid = json.load(r)["prompt_id"]
+    t0 = time.time()
+    while time.time() - t0 < timeout:
+        time.sleep(3)
+        with urllib.request.urlopen(ROOM + "/history/" + pid, timeout=20) as r:
+            h = json.load(r)
+        if pid in h:
+            st = h[pid].get("status", {})
+            if st.get("status_str") == "error":
+                raise RuntimeError("the drawing room failed: " + json.dumps(st)[:400])
+            got = {}
+            for nid, node in h[pid].get("outputs", {}).items():
+                for im in node.get("images", []):
+                    q = urllib.parse.urlencode({"filename": im["filename"], "subfolder": im.get("subfolder", ""),
+                                                "type": im.get("type", "output")})
+                    with urllib.request.urlopen(ROOM + "/view?" + q, timeout=60) as r2:
+                        got[nid] = r2.read()
+            if got:
+                return got
+    raise RuntimeError("the drawing room took too long")
+
+
+CUTOUT = "birefnet.safetensors"          # BiRefNet (MIT), ComfyUI's own repackaging (Comfy-Org/BiRefNet)
+
+
+def masks(turn_png):
+    """Exactly what is object and what is background, in each of the six views, from a real cut-out model (BiRefNet)
+    instead of guessing by color: a grey Furby on a grey studio backdrop came apart under color guessing. Saved
+    next to the drawing as <name>_mask.png (white = object). Skipped when already made for this drawing."""
+    import io
+    from PIL import Image
+    out = turn_png[:-4] + "_mask.png"
+    if os.path.exists(out) and os.path.getmtime(out) >= os.path.getmtime(turn_png):
+        return out
+    im = Image.open(turn_png).convert("RGB")
+    w, h = im.width // 3, im.height // 2
+    wf = {"0": {"class_type": "LoadBackgroundRemovalModel", "inputs": {"bg_removal_name": CUTOUT}}}
+    for i in range(6):
+        cell = im.crop(((i % 3) * w, (i // 3) * h, (i % 3 + 1) * w, (i // 3 + 1) * h))
+        b = io.BytesIO()
+        cell.save(b, "PNG")
+        name = _upload(b.getvalue(), f"crushed_cell_{uuid.uuid4().hex[:8]}_{i}.png")
+        a = 10 * (i + 1)
+        wf[str(a)] = {"class_type": "LoadImage", "inputs": {"image": name}}
+        wf[str(a + 1)] = {"class_type": "RemoveBackground", "inputs": {"bg_removal_model": ["0", 0], "image": [str(a), 0]}}
+        wf[str(a + 2)] = {"class_type": "MaskToImage", "inputs": {"mask": [str(a + 1), 0]}}
+        wf[str(a + 3)] = {"class_type": "SaveImage", "inputs": {"images": [str(a + 2), 0], "filename_prefix": "crushed_mask"}}
+    got = _run_all(wf)
+    sheet = Image.new("L", im.size, 0)
+    for i in range(6):
+        m = Image.open(io.BytesIO(got[str(10 * (i + 1) + 3)])).convert("L").resize((w, h))
+        sheet.paste(m, ((i % 3) * w, (i // 3) * h))
+    sheet.save(out)
+    return out
+
+
+def _run(wf, out, timeout=3600):
+    """Send a workflow to the drawing room (ComfyUI), wait, save its first picture to out."""
     body = json.dumps({"prompt": wf, "client_id": uuid.uuid4().hex}).encode()
     req = urllib.request.Request(ROOM + "/prompt", data=body, headers={"content-type": "application/json"})
     with urllib.request.urlopen(req, timeout=60) as r:
@@ -145,6 +195,76 @@ def draw(description, out, seed=None, steps=None, timeout=3600):
     raise RuntimeError("the drawing room took too long")
 
 
+UPSCALER = "RealESRGAN_x4plus.pth"      # Real-ESRGAN (BSD-3), from its own GitHub release
+
+
+def upscale(png, timeout=900):
+    """The finished turnaround made twice as sharp (Real-ESRGAN 4x, then down to 2x): letters and edges crisp
+    instead of soft when the model is seen up close. Done in place; a picture already this size is left alone."""
+    from PIL import Image
+    with Image.open(png) as im:
+        if im.width >= 2 * W:
+            return png
+    name = f"crushed_up_{uuid.uuid4().hex[:8]}.png"
+    boundary = uuid.uuid4().hex
+    data = open(png, "rb").read()
+    body = (f"--{boundary}\r\nContent-Disposition: form-data; name=\"image\"; filename=\"{name}\"\r\n"
+            f"Content-Type: image/png\r\n\r\n").encode() + data + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(ROOM + "/upload/image", data=body,
+                                 headers={"content-type": f"multipart/form-data; boundary={boundary}"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        up = json.load(r)
+    wf = {
+        "1": {"class_type": "LoadImage", "inputs": {"image": up.get("name", name)}},
+        "2": {"class_type": "UpscaleModelLoader", "inputs": {"model_name": UPSCALER}},
+        "3": {"class_type": "ImageUpscaleWithModel", "inputs": {"upscale_model": ["2", 0], "image": ["1", 0]}},
+        "4": {"class_type": "ImageScaleBy", "inputs": {"image": ["3", 0], "upscale_method": "lanczos", "scale_by": 0.5}},
+        "5": {"class_type": "SaveImage", "inputs": {"images": ["4", 0], "filename_prefix": "crushed_up"}},
+    }
+    tmp = png + ".up.png"
+    _run(wf, tmp, timeout)
+    os.replace(tmp, png)
+    return png
+
+
+def for_drawing(description):
+    """The words the drawing model gets: measurements taken out (it printed '14.0 x 5.0 x 20.0 cm' right onto the
+    Pop-Tarts box). The size still sets the model's real size; it just isn't drawn."""
+    import re
+    parts = re.split(r"(?<=[,.;])\s+", description)
+    keep = [p for p in parts if not re.search(r"\d\s*(cm|mm|in\b|inch)|real size", p, re.I)]
+    text = " ".join(keep).strip()
+    return text if len(text) > 40 else description
+
+
+def draw(description, out, seed=None, steps=None, timeout=3600):
+    """One 1584x1056 turnaround from Qwen-Image 2512 (bf16), its own text encoder and VAE. With the Lightning
+    LoRA installed it takes 8 steps at guidance 1 (one pass per step) instead of 30 at guidance 4: ~7x faster."""
+    seed = seed if seed is not None else random.randint(1, 2 ** 31)
+    fast = os.path.exists(os.path.join(LORA_DIR, LIGHTNING))
+    steps = steps or (8 if fast else 30)
+    cfg = 1.0 if fast else 4.0
+    wf = {
+        "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "qwen_image_2512_bf16.safetensors", "weight_dtype": "default"}},
+        "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b.safetensors", "type": "qwen_image"}},
+        "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
+        "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["11", 0] if fast else ["1", 0], "shift": 3.1}},
+        "5": {"class_type": "CLIPTextEncode", "inputs": {"text": LAYOUT + for_drawing(description), "clip": ["2", 0]}},
+        "6": {"class_type": "CLIPTextEncode", "inputs": {"text": "blurry, deformed, different objects, inconsistent, "
+                                                                 "captions, watermark, hands, people", "clip": ["2", 0]}},
+        "7": {"class_type": "EmptySD3LatentImage", "inputs": {"width": W, "height": H, "batch_size": 1}},
+        "8": {"class_type": "KSampler", "inputs": {"model": ["4", 0], "positive": ["5", 0], "negative": ["6", 0],
+                                                  "latent_image": ["7", 0], "seed": seed, "steps": steps, "cfg": cfg,
+                                                  "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0}},
+        "9": {"class_type": "VAEDecode", "inputs": {"samples": ["8", 0], "vae": ["3", 0]}},
+        "10": {"class_type": "SaveImage", "inputs": {"images": ["9", 0], "filename_prefix": "crushed_turn"}},
+    }
+    if fast:
+        wf["11"] = {"class_type": "LoraLoaderModelOnly", "inputs": {"model": ["1", 0], "lora_name": LIGHTNING,
+                                                                   "strength_model": 1.0}}
+    return _run(wf, out, timeout)
+
+
 def to_white(im):
     """The studio background (grey, often a gradient with a soft shadow) to pure white, so every later step sees
     only the object. Flood-fills from the edges through light, low-color pixels, stepping neighbor to neighbor, so a
@@ -152,6 +272,17 @@ def to_white(im):
     import numpy as np
     from collections import deque
     from PIL import Image
+    if max(im.size) > 640:                  # a big (sharpened) picture: find the background small, apply it full size
+        big = np.asarray(im.convert("RGB")).copy()
+        s = 640 / max(im.size)
+        small = to_white(im.convert("RGB").resize((round(im.width * s), round(im.height * s)), Image.BILINEAR))
+        bgm = (np.asarray(small) == 255).all(-1)
+        bgm = np.asarray(Image.fromarray(bgm.astype(np.uint8) * 255).resize(im.size, Image.NEAREST)) > 127
+        lum = big.astype(np.int16).mean(-1)
+        sat = big.max(-1).astype(np.int16) - big.min(-1)
+        bgm &= (lum > 60) & (sat < 22)        # never whiten a real object pixel along the edge
+        big[bgm] = 255
+        return Image.fromarray(_no_dividers(big))
     a = np.asarray(im.convert("RGB")).astype(np.int16)
     h, w = a.shape[:2]
     lum = a.mean(-1)
@@ -178,7 +309,13 @@ def to_white(im):
                 seen[ny, nx] = True
                 q.append((ny, nx))
     a[seen] = 255
-    ink = (a.min(-1) < 200)                   # thin divider lines along the cell edges (the model draws some): erased
+    return Image.fromarray(_no_dividers(a).astype("uint8"))
+
+
+def _no_dividers(a):
+    """Thin divider lines along the cell edges (the drawing model draws some): erased."""
+    h, w = a.shape[:2]
+    ink = (a.min(-1) < 200)
     e = max(4, int(min(h, w) * 0.08))
     for x in list(range(e)) + list(range(w - e, w)):
         if ink[:, x].mean() > 0.6:
@@ -186,7 +323,7 @@ def to_white(im):
     for y in list(range(e)) + list(range(h - e, h)):
         if ink[y, :].mean() > 0.6:
             a[y, :] = 255
-    return Image.fromarray(a.astype("uint8"))
+    return a
 
 
 def split(turn_png):
@@ -198,13 +335,43 @@ def split(turn_png):
             for i, k in enumerate(ORDER)}
 
 
+def cutouts(turn_png):
+    """{view: (picture on pure white, object mask or None)}. Uses the cut-out model's masks when they exist
+    (<name>_mask.png), and the color guess only as a fallback."""
+    import numpy as np
+    from PIL import Image
+    mp = turn_png[:-4] + "_mask.png"
+    cells = split(turn_png)
+    if not os.path.exists(mp):
+        return {k: (to_white(c), None) for k, c in cells.items()}
+    mm = Image.open(mp).convert("L")
+    if mm.size != Image.open(turn_png).size:
+        mm = mm.resize(Image.open(turn_png).size)
+    tmp = turn_png[:-4] + "_masktmp.png"
+    mm.convert("RGB").save(tmp)
+    mcells = split(tmp)
+    os.remove(tmp)
+    out = {}
+    for k, c in cells.items():
+        m = np.asarray(mcells[k].convert("L")) > 127
+        a = np.asarray(c.convert("RGB")).copy()
+        a[~m] = 255
+        out[k] = (Image.fromarray(a), m)
+    return out
+
+
 def sheet2x2(cells, out):
-    """Front, back, left, right on white, 1024x1024, the sculptor's layout."""
+    """Front, back, left, right on white, 1024x1024, the sculptor's layout. cells: {view: picture} (cleaned here)
+    or {view: (cleaned picture, mask)} from cutouts()."""
     from PIL import Image
     S = 512
     sheet = Image.new("RGB", (1024, 1024), (255, 255, 255))
     for k, (x, y) in {"front": (0, 0), "back": (S, 0), "left": (0, S), "right": (S, S)}.items():
-        c = to_white(cells[k])
+        c = cells[k][0] if isinstance(cells[k], tuple) else to_white(cells[k])
+        if isinstance(cells[k], tuple) and cells[k][1] is not None and cells[k][1].any():
+            import numpy as np
+            ys, xs = np.nonzero(cells[k][1])
+            c = c.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
         c.thumbnail((S, S))
         sheet.paste(c, (x + (S - c.width) // 2, y + (S - c.height) // 2))
     sheet.save(out)

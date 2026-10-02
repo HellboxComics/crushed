@@ -1,0 +1,1 @@
+microcontroller, OLED display, buttons, USB connector, PCB and molded plastic shell

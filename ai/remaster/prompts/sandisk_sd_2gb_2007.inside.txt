@@ -1,1 +1,1 @@
-NAND flash memory, controller, PCB, gold contacts and plastic shell
+NAND flash, controller, PCB, gold contacts and molded housing

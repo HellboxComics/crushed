@@ -192,6 +192,13 @@ class Views:
                 rgb, m = np.rot90(rgb, rot).copy(), np.rot90(m, rot).copy()
             if k in ("top", "bottom") and not use_ends:
                 continue
+            r_ = max(2, int(min(m.shape) * 0.006))            # the outline's edge pixels are half background:
+            core = m.copy()                                    # only colors from safely inside it are used
+            for dy in range(-r_, r_ + 1):
+                for dx in range(-r_, r_ + 1):
+                    if dy * dy + dx * dx <= r_ * r_:
+                        core &= np.roll(np.roll(m, dy, 0), dx, 1)
+            core[:r_], core[-r_:], core[:, :r_], core[:, -r_:] = False, False, False, False
             k_ = max(1, int(min(m.shape) * 0.03))              # a softened copy for comparing views
             c = np.cumsum(np.cumsum(np.pad(rgb, ((k_, k_), (k_, k_), (0, 0)), mode="edge"), 0), 1)
             c = np.pad(c, ((1, 0), (1, 0), (0, 0)))
@@ -204,6 +211,21 @@ class Views:
             for c in cols:
                 r = np.nonzero(m[:, c])[0]
                 lo[c], hi[c] = r.min(), r.max()
+            # where the outline's edge would be sampled, use the nearest safely-inside color instead
+            if core.any() and (~core & m).any():
+                fill = rgb.copy()
+                have = core.copy()
+                for _ in range(r_ + 2):
+                    nb = np.zeros_like(fill)
+                    cnt = np.zeros(m.shape, np.float32)
+                    for dy, dx in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+                        h2 = np.roll(np.roll(have, dy, 0), dx, 1)
+                        nb += np.roll(np.roll(fill, dy, 0), dx, 1) * h2[..., None]
+                        cnt += h2
+                    new = (~have) & (cnt > 0)
+                    fill[new] = nb[new] / cnt[new, None]
+                    have |= new
+                rgb = np.where(have[..., None], fill, rgb)
             self.v[name] = dict(rgb=rgb, mask=m, lo=lo, hi=hi, soft=soft.astype(np.float32))
 
 
@@ -221,7 +243,7 @@ def _project(Pts, k, lo, span):
 _ZB = {}
 
 
-def _per_view(V, F, uvP, uvN, cov, views, lo, span, power, ends_fallback=True, radial=False):
+def _per_view(V, F, uvP, uvN, cov, views, lo, span, power, ends_fallback=True, radial=False, glance=False):
     """For every covered texel: each view's color, weight and whether it may be used."""
     pts, nrm = uvP[cov], uvN[cov]
     nrm = nrm / np.maximum(np.linalg.norm(nrm, axis=1, keepdims=True), 1e-9)
@@ -242,6 +264,8 @@ def _per_view(V, F, uvP, uvN, cov, views, lo, span, power, ends_fallback=True, r
         seen = dep <= np.nan_to_num(zb[iy, ix], posinf=1e9) + eps
         inmask = d["mask"][iy, ix]
         facing = np.clip(nrm @ np.array(AXES[k][0], float), 0, 1)
+        if glance:                                       # anything this camera can see at all, even edge-on
+            facing = np.clip(nrm @ np.array(AXES[k][0], float) + 0.15, 0, 1) * 0.1 + 1e-3
         wgt = facing ** power * seen * inmask
         col = _bilinear(d["rgb"], px, py)
         if ends_fallback and k in SIDES:                 # for the ends (caps, box tops) when no straight-down view
@@ -256,10 +280,14 @@ def _per_view(V, F, uvP, uvN, cov, views, lo, span, power, ends_fallback=True, r
                     qy = np.where(okc, np.clip(py, d["lo"][qi] + 2, np.maximum(d["lo"][qi] + 2, d["hi"][qi] - 2)), py)
                     fbs.append(_bilinear(d["rgb"], qx, qy))
                 fb = (fbs[0] + fbs[1]) / 2
-            else:
-                ok = d["lo"][ix] >= 0
-                cy = np.clip(py, d["lo"][ix], d["hi"][ix])
-                fb = _bilinear(d["rgb"], px, np.where(ok, cy, py))
+            else:                                        # a box end: each side's edge color, no streaks
+                top = pts[:, 2] > (lo[2] + span[2] / 2)
+                rows = d["mask"].any(1).nonzero()[0]
+                band = max(2, len(rows) // 25)
+                tr, br = rows[:band], rows[-band:]
+                ct = d["rgb"][tr][d["mask"][tr]].mean(0) if d["mask"][tr].any() else np.array([0.5, 0.5, 0.5])
+                cb = d["rgb"][br][d["mask"][br]].mean(0) if d["mask"][br].any() else np.array([0.5, 0.5, 0.5])
+                fb = np.where(top[:, None], ct[None], cb[None]).astype(np.float32)
         else:
             fb = None
         out[k] = (col, wgt, fb)
@@ -283,6 +311,37 @@ def _combine(per, n, sides_fallback=True):
     return res, have
 
 
+def _fill_from_neighbors(pts, col, seen, lo, span, n=48):
+    """Colors for unseen points from the nearest seen ones, through a coarse 3D grid grown outward step by step."""
+    g = np.clip(((pts - lo) / span * (n - 1)).round().astype(int), 0, n - 1)
+    acc = np.zeros((n, n, n, 3), np.float32)
+    cnt = np.zeros((n, n, n), np.float32)
+    np.add.at(acc, (g[seen, 0], g[seen, 1], g[seen, 2]), col[seen])
+    np.add.at(cnt, (g[seen, 0], g[seen, 1], g[seen, 2]), 1)
+    have = cnt > 0
+    acc[have] /= cnt[have, None]
+    for _ in range(n):
+        if have.all():
+            break
+        nb = np.zeros_like(acc)
+        c2 = np.zeros_like(cnt)
+        for ax in range(3):
+            for sh in (-1, 1):
+                hv = np.roll(have, sh, ax)
+                nb += np.roll(acc, sh, ax) * hv[..., None]
+                c2 += hv
+        new = (~have) & (c2 > 0)
+        acc[new] = nb[new] / c2[new, None]
+        have |= new
+    for _ in range(2):                                  # soften the grid's blocks
+        sm = acc.copy()
+        for ax in range(3):
+            sm += np.roll(acc, 1, ax) + np.roll(acc, -1, ax)
+        acc = sm / 7
+    u = ~seen
+    return acc[g[u, 0], g[u, 1], g[u, 2]]
+
+
 def mesh_arrays(ob):
     """Triangles, their UVs and smooth corner normals, from a Blender mesh."""
     me = ob.data
@@ -300,7 +359,7 @@ def mesh_arrays(ob):
     return V, F, uv[L], cn[L]
 
 
-def bake(ob, views_raw, res=2048, use_ends=False, radial=False, log=print):
+def bake(ob, views_raw, res=2048, use_ends=False, radial=False, fill3d=False, min_fit=0.0, log=print):
     """Paint ob from the turnaround. Tries the few ways the drawing model may have meant 'left' and turned the
     top view, keeps the one where neighboring views agree best, and bakes one seamless texture. Returns an image
     array (res x res x 3, 0..1) laid out on ob's active UV map."""
@@ -371,14 +430,64 @@ def bake(ob, views_raw, res=2048, use_ends=False, radial=False, log=print):
     # 2. bake at full size
     P, N, C = texels(res)
     vw = Views(views_raw, swap=s, top_rot=t, bottom_rot=b, use_ends=use_ends)
-    per = _per_view(V, F, P, N, C, vw, lo, span, power=8, radial=radial)
+    for k in list(vw.v):                  # a view whose outline isn't the model's from that side is not used:
+        d = vw.v[k]                       # the drawing model sometimes draws a three-quarter view there instead
+        h, w = d["mask"].shape
+        key = (id(V), k, w, h)
+        if key not in _ZB:
+            xr, yu, dep = _project(V, k, lo, span)
+            tri = np.stack([xr[F] * (w - 1), (1 - yu[F]) * (h - 1)], -1)
+            _ZB[key] = raster(tri, np.zeros((len(F), 3, 1), np.float32), w, h, depth=dep[F])[2]
+        cov = np.isfinite(_ZB[key])
+        iou = float((cov & d["mask"]).sum() / max(1, (cov | d["mask"]).sum()))
+        import os as _os
+        if _os.environ.get("BAKE_DEBUG"):
+            from PIL import Image as _I
+            dbg = np.zeros((h, w, 3), np.uint8)
+            dbg[..., 0] = cov * 255
+            dbg[..., 1] = d["mask"] * 255
+            _I.fromarray(dbg).save(_os.path.join(_os.environ["BAKE_DEBUG"], f"fit_{k}.png"))
+        if iou < min_fit and k != "front":
+            log(f"[bake] {k} view left out: its outline matches the model only {iou:.0%}")
+            del vw.v[k]
+        else:
+            log(f"[bake] {k} view matches the model {iou:.0%}")
+    per = _per_view(V, F, P, N, C, vw, lo, span, power=24, radial=radial)
     col, have = _combine(per, int(C.sum()))
-    if not use_ends:                                    # the ends face no drawn view: always the ring colors
+    if not use_ends and not fill3d:                     # the ends face no drawn view: ring or edge colors
         nz = N[C][:, 2] / np.maximum(np.linalg.norm(N[C], axis=1), 1e-9)
         cap = np.abs(nz) > 0.8
-        fbs = [fb for _, _, fb in per.values() if fb is not None]
+        fbs = {k: fb for k, (_, _, fb) in per.items() if fb is not None}
         if fbs and cap.any():
-            col[cap] = np.mean([fb[cap] for fb in fbs], axis=0)
+            if radial:
+                col[cap] = np.mean([fb[cap] for fb in fbs.values()], axis=0)
+            else:                                       # nearer an edge, more of that side's color
+                p = P[C][cap]
+                c0 = lo + span / 2
+                acc, ws = np.zeros((int(cap.sum()), 3), np.float32), np.zeros(int(cap.sum()), np.float32)
+                for k, fb in fbs.items():
+                    f = np.array(AXES[k][0], float)
+                    dist = np.abs((p - c0) @ f) / np.maximum(np.abs(span @ f) / 2, 1e-9)     # 0 middle .. 1 at edge
+                    wk = np.clip(dist, 0, 1) ** 4 + 1e-4
+                    acc += fb[cap] * wk[:, None]
+                    ws += wk
+                col[cap] = acc / ws[:, None]
+    if fill3d:                                          # spots no view faces squarely:
+        ws = sum(w for _, w, _ in per.values())
+        seen = ws > 1e-4
+        if (~seen).any():                               # 1. the views that see them at a glancing angle (stretched
+            per2 = _per_view(V, F, P, N, C, vw, lo, span, power=1, glance=True)   # but continuous)
+            acc = np.zeros((len(col), 3), np.float32)
+            w2 = np.zeros(len(col), np.float32)
+            for c2, wk, _ in per2.values():
+                acc += c2 * wk[:, None]
+                w2 += wk
+            ok = (~seen) & (w2 > 1e-6)
+            col[ok] = acc[ok] / w2[ok, None]
+            seen = seen | ok
+        if (~seen).any() and seen.any():                # 2. the rest (tucked-away spots) from the nearest painted
+            col[~seen] = _fill_from_neighbors(P[C], col, seen, lo, span, n=96)    # surface
+            have = np.ones(len(col), bool)
     tex = np.ones((res, res, 3), np.float32) * 0.5
     got = np.zeros((res, res), bool)
     idx = np.nonzero(C)
@@ -396,8 +505,6 @@ def silhouette_turn(V, F, views, log=print):
     span0 = np.ptp(V, axis=0)
     best = None
     for q in range(4):
-        if q % 2 and abs(math.log(max(span0[0], 1e-9) / max(span0[1], 1e-9))) > math.log(1.15):
-            continue                                   # a turn that would swap a clearly different width and depth
         c, s_ = round(math.cos(q * math.pi / 2)), round(math.sin(q * math.pi / 2))
         R = np.array([[c, -s_, 0], [s_, c, 0], [0, 0, 1]], float)
         P = V @ R.T
@@ -416,3 +523,27 @@ def silhouette_turn(V, F, views, log=print):
             best = (tot, q)
     log(f"[remaster] sculpted shape turned {best[1] * 90} deg to face like the drawing")
     return best[1]
+
+
+def rectify_box(views, size, log=print):
+    """The drawing model shows a box's sides slightly turned, so a side view also holds a thin slice of the front.
+    Each side view is cut to the width that side really has (from the real size), placed where the box's corner
+    edges are (the strongest vertical edges), so a side face carries only that side."""
+    import copy
+    W, D, H = size
+    want = {"front": W / H, "back": W / H, "left": D / H, "right": D / H}
+    out = copy.copy(views)
+    for k, ratio in want.items():
+        if k not in views:
+            continue
+        rgb, m = views[k]["rgb"], views[k]["mask"]
+        h, w = m.shape
+        we = int(round(h * ratio))
+        if we >= w * 0.96 or we < 8:
+            continue
+        g = np.abs(np.diff(rgb.astype(np.float32).mean(-1), axis=1)).mean(0)      # vertical-edge strength per column
+        g = np.concatenate([g, [0]])
+        best = max(range(0, w - we + 1), key=lambda o: g[max(0, o - 2):o + 3].max() + g[max(0, o + we - 3):o + we + 2].max())
+        out[k] = {"rgb": rgb[:, best:best + we].copy(), "mask": m[:, best:best + we].copy()}
+        log(f"[bake] {k} view cut to its real width ({w} -> {we} px)")
+    return out

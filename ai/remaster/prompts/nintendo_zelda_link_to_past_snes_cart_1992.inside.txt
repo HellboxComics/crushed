@@ -1,0 +1,1 @@
+PCB, ROM, SRAM save chip, coin-cell battery, gold contacts and plastic shell

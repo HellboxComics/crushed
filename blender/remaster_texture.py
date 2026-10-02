@@ -117,13 +117,13 @@ def slim(ob, max_faces=MAX_FACES):
     print(f"[remaster] slimmed {n} -> {len(ob.data.polygons)} faces")
 
 
-def fit(ob, target):
+def fit(ob, target, turn=True):
     """Center, keep the sculptor's up as up, turn 90 degrees if its footprint runs the wrong way, scale to size."""
     me = ob.data
     v = np.array([vt.co[:] for vt in me.vertices])
     v -= (v.min(0) + v.max(0)) / 2
     ext = np.ptp(v, axis=0)
-    if (ext[0] > ext[1]) != (target[0] > target[1]) and abs(ext[0] - ext[1]) > 0.08 * ext.max():
+    if turn and (ext[0] > ext[1]) != (target[0] > target[1]) and abs(ext[0] - ext[1]) > 0.08 * ext.max():
         v = v[:, [1, 0, 2]] * np.array([-1, 1, 1])
         ext = np.ptp(v, axis=0)
     v *= float(np.median(target / np.maximum(ext, 1e-6)))
@@ -234,12 +234,16 @@ def new_method(a, target):
         if q:
             me.transform(Matrix.Rotation(q * math.pi / 2, 4, "Z"))
             me.update()
+            fit(ob, target, turn=False)   # sized to the real size again, facing kept
     outward(ob)
     for p in ob.data.polygons:
         p.use_smooth = True
     unwrap(ob)
+    if spec["kind"] == "box":
+        views = B.rectify_box(views, size)
     tex = B.bake(ob, views, res=a.res, use_ends=spec.get("top_view") in ("round", "box"),
-                 radial=spec["kind"] == "lathe")
+                 radial=spec["kind"] == "lathe", fill3d=spec["kind"] == "sculpt",
+                 min_fit=0.8 if spec["kind"] == "sculpt" else 0.0)
     od = os.path.join(a.out, a.name)
     os.makedirs(od, exist_ok=True)
     from PIL import Image
@@ -281,9 +285,13 @@ def true_size(views, words, planned):
     wd = np.mean([sides[k][1] for k in ("front", "back") if k in sides])
     dd = np.mean([sides[k][1] for k in ("left", "right") if k in sides])
     hd = np.mean([v[0] for v in sides.values()])
-    drawn = np.log([wd, dd, hd])
-    best = min(itertools.permutations(real), key=lambda p: np.ptp(np.log(p) - drawn))
-    err = float(np.ptp(np.log(best) - drawn))
+    # the front is drawn straight on and is trustworthy; the side views are often turned a little, which makes the
+    # depth look bigger than it is. So the front's width-to-height picks which number is which; depth is the rest
+    # (and only breaks a tie between two orders whose fronts fit equally well).
+    fr = math.log(wd / hd)
+    best = min(itertools.permutations(real),
+               key=lambda p: (round(abs(math.log(p[0] / p[2]) - fr), 2), abs(math.log(p[1] / p[2]) - math.log(dd / hd))))
+    err = abs(math.log(best[0] / best[2]) - fr)
     if err > math.log(1.35):                    # the numbers can't describe this drawing: keep its proportions
         k = max(real) / max(wd, dd, hd)
         best = (wd * k, dd * k, hd * k)

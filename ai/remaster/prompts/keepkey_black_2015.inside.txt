@@ -1,0 +1,1 @@
+OLED display, microcontroller, secure storage, button, USB connector, glass/plastic front and aluminum rear housing

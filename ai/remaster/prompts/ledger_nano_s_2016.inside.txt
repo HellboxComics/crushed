@@ -1,0 +1,1 @@
+secure-element chip, microcontroller, OLED display, buttons, USB connector, PCB and plastic/steel housing

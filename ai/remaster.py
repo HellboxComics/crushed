@@ -275,7 +275,12 @@ def turnaround_sheet(name, redo=False):
     fresh = os.path.exists(turn) and os.path.exists(tp) and os.path.getmtime(turn) > os.path.getmtime(tp)
     if not fresh:                         # a drawing newer than its words is reused; delete the png to draw again
         T.draw(desc, turn)
-    cells = T.split(turn)
+    T.upscale(turn)                       # twice as sharp (once per drawing; skipped when already done)
+    try:
+        T.masks(turn)                     # exact object outlines from the cut-out model
+    except Exception as e:
+        say(f"cut-out model unavailable ({e}); outlines guessed from color")
+    cells = T.cutouts(turn)
     sheet = T.sheet2x2(cells, os.path.join(WORK, name + "_sheet.png"))
     atlas = T.atlas(turn, os.path.join(WORK, name + "_atlas.png"))
     return sheet, atlas

@@ -1,1 +1,1 @@
-transformer, rectifier and switching electronics, heat sinks, copper wire, plastic shell and insulated cables
+transformer, switching electronics, heat sinks, copper wire, insulated cable and plastic housing

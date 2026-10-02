@@ -1,0 +1,1 @@
+rewind motor, drive spindle, gears, circuit board, switch, indicator lamp and plastic housing
