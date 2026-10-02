@@ -175,6 +175,28 @@
 "themes": "ROAD TRIP; GARAGE SALE; LOST AND FOUND; Y2K; regular cubes",
 "weight": 1.0
 },
+"aaa_state_road_map_folded_1998": {
+"display": "AAA state highway map, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.031,
+"notes": [
+"AAA state highway map, circa 1998"
+],
+"product": "AAA state highway map, circa 1998",
+"role": "main",
+"size": [
+0.55,
+0.0005,
+0.8
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "ab_roller_plus_1996": {
 "display": "Ab Roller Plus exercise rocker, circa",
 "eras": [
@@ -2738,6 +2760,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"auto_bingo_cardboard_board_1998": {
+"display": "Auto Bingo roadside travel game card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Auto Bingo roadside travel game card, circa 1998"
+],
+"product": "Auto Bingo roadside travel game card, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.002,
+0.18
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "avery_1inch_binder_white_1997": {
 "display": "Avery 1-inch View Binder, White, circa",
 "eras": [
@@ -5199,6 +5243,72 @@
 "themes": "LOST AND FOUND",
 "weight": 1.0
 },
+"black_satin_bow_tie_1999": {
+"display": "Black satin pre-tied bow tie, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.015,
+"notes": [
+"Black satin pre-tied bow tie, circa 1999"
+],
+"product": "Black satin pre-tied bow tie, circa 1999",
+"role": "main",
+"size": [
+0.12,
+0.03,
+0.06
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"black_satin_cummerbund_1999": {
+"display": "Black satin tuxedo cummerbund, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"Black satin tuxedo cummerbund, circa 1999"
+],
+"product": "Black satin tuxedo cummerbund, circa 1999",
+"role": "main",
+"size": [
+0.15,
+0.01,
+0.8
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"black_satin_high_heel_single_1999": {
+"display": "Single black satin women's evening pump, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.131,
+"notes": [
+"Single black satin women's evening pump, circa 1999"
+],
+"product": "Single black satin women's evening pump, circa 1999",
+"role": "main",
+"size": [
+0.09,
+0.08,
+0.26
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
 "black_silver_party_hat_2000_1999": {
 "display": "\u201c2000\u201d cone party hat, New Year's Eve",
 "eras": [
@@ -5966,6 +6076,28 @@
 0.16
 ],
 "themes": "BOARDWALK",
+"weight": 1.0
+},
+"bobby_pin_black_1999": {
+"display": "Black bobby pins, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Black bobby pins, circa 1999"
+],
+"product": "Black bobby pins, circa 1999",
+"role": "main",
+"size": [
+0.004,
+0.001,
+0.05
+],
+"themes": "PROM NIGHT",
 "weight": 1.0
 },
 "body_glitter_silver_tube_1998": {
@@ -8539,6 +8671,28 @@
 "themes": "MOONCAKE",
 "weight": 1.0
 },
+"certs_peppermint_roll_1999": {
+"display": "Certs Peppermint breath mints roll, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Certs Peppermint breath mints roll, circa 1999"
+],
+"product": "Certs Peppermint breath mints roll, circa 1999",
+"role": "main",
+"size": [
+0.025,
+0.025,
+0.1
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
 "ch_flightstick_1992": {
 "display": "CH Products Flightstick joystick, circa",
 "eras": [
@@ -8955,6 +9109,28 @@
 0.11
 ],
 "themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
+"weight": 1.0
+},
+"chevron_gasoline_map_receipt_envelope_1998": {
+"display": "Gas-station receipt/map envelope, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Gas-station receipt/map envelope, circa 1998"
+],
+"product": "Gas-station receipt/map envelope, circa 1998",
+"role": "main",
+"size": [
+0.11,
+0.002,
+0.22
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "chia_pet_ram_1994": {
@@ -10958,6 +11134,28 @@
 "themes": "SLEEPOVER",
 "weight": 1.0
 },
+"coke_20oz_pet_bottle_1998": {
+"display": "Coca-Cola 20 oz PET bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.197,
+"notes": [
+"Coca-Cola 20 oz PET bottle, circa 1998"
+],
+"product": "Coca-Cola 20 oz PET bottle, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.23
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "coldcard_mk3_2020": {
 "display": "Coinkite Coldcard Mk3 hardware wallet, circa",
 "eras": [
@@ -11087,6 +11285,28 @@
 0.28
 ],
 "themes": "LIGHT THE FUSE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"combos_cheddar_cheese_bag_1998": {
+"display": "Combos Cheddar Cheese Pretzel snacks bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.29,
+"notes": [
+"Combos Cheddar Cheese Pretzel snacks bag, circa 1998"
+],
+"product": "Combos Cheddar Cheese Pretzel snacks bag, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.06,
+0.23
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "combos_pizzeria_pretzel_1996": {
@@ -11527,6 +11747,28 @@
 0.04
 ],
 "themes": "LEFTOVERS",
+"weight": 1.0
+},
+"corsage_ribbon_silver_blue_1999": {
+"display": "Silver-and-blue florist ribbon scraps, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Silver-and-blue florist ribbon scraps, circa 1999"
+],
+"product": "Silver-and-blue florist ribbon scraps, circa 1999",
+"role": "main",
+"size": [
+0.02,
+0.001,
+0.45
+],
+"themes": "PROM NIGHT",
 "weight": 1.0
 },
 "country_crock_margarine_tub_reused_1998": {
@@ -12445,6 +12687,28 @@
 0.1
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"dashboard_sunglasses_black_1998": {
+"display": "Black plastic gas-station sunglasses, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.052,
+"notes": [
+"Black plastic gas-station sunglasses, circa 1998"
+],
+"product": "Black plastic gas-station sunglasses, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.04,
+0.05
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "date_cardboard_box_eid_1998": {
@@ -17015,6 +17279,28 @@
 "themes": "IT'S AWAKE",
 "weight": 1.0
 },
+"fuzzy_dice_white_black_1998": {
+"display": "White fuzzy rear-view-mirror dice, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.051,
+"notes": [
+"White fuzzy rear-view-mirror dice, circa 1998"
+],
+"product": "White fuzzy rear-view-mirror dice, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.09,
+0.09
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "gachapon_capsule_half_assorted_1998": {
 "display": "Loose gachapon capsule halves, assorted colors, circa",
 "eras": [
@@ -17387,6 +17673,28 @@
 0.024
 ],
 "themes": "GARAGE SALE",
+"weight": 1.0
+},
+"gas_station_receipt_thermal_1998": {
+"display": "Gas-station fuel receipt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Gas-station fuel receipt, circa 1998"
+],
+"product": "Gas-station fuel receipt, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.0005,
+0.18
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "gateway2000_anykey_keyboard_1993": {
@@ -18288,6 +18596,28 @@
 0.165
 ],
 "themes": "PURIKURA",
+"weight": 1.0
+},
+"glitter_hair_spray_silver_1999": {
+"display": "Silver glitter hair spray aerosol, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.28,
+"notes": [
+"Silver glitter hair spray aerosol, circa 1999"
+],
+"product": "Silver glitter hair spray aerosol, circa 1999",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.16
+],
+"themes": "PROM NIGHT",
 "weight": 1.0
 },
 "gloppos_cereal_loose_rings_1994": {
@@ -21659,6 +21989,28 @@
 "themes": "GARAGE SALE",
 "weight": 1.0
 },
+"hotel_soap_small_wrapped_1998": {
+"display": "Individually wrapped motel soap bar, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.013,
+"notes": [
+"Individually wrapped motel soap bar, circa 1998"
+],
+"product": "Individually wrapped motel soap bar, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.02,
+0.08
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "hp_12c_financial_calculator_1998": {
 "display": "Hewlett-Packard 12C financial calculator, circa",
 "eras": [
@@ -24183,7 +24535,7 @@
 0.04,
 0.07
 ],
-"themes": "TIME CAPSULE",
+"themes": "PROM NIGHT",
 "weight": 1.0
 },
 "kodak_funsaver_flash_27exp_1998": {
@@ -26338,6 +26690,50 @@
 "themes": "CARNAVAL",
 "weight": 1.0
 },
+"limo_champagne_flute_plastic_1999": {
+"display": "Clear plastic limo party flute, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"Clear plastic limo party flute, circa 1999"
+],
+"product": "Clear plastic limo party flute, circa 1999",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.18
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"limousine_receipt_thermal_1999": {
+"display": "Stretch-limousine service receipt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Stretch-limousine service receipt, circa 1999"
+],
+"product": "Stretch-limousine service receipt, circa 1999",
+"role": "main",
+"size": [
+0.08,
+0.0005,
+0.2
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
 "limp_bizkit_significant_other_cd_1999": {
 "display": "Limp Bizkit Significant Other CD in jewel case",
 "eras": [
@@ -26666,6 +27062,28 @@
 0.12
 ],
 "themes": "ROAD TRIP; PROM NIGHT; MALL RAT; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"little_trees_royal_pine_air_freshener_1998": {
+"display": "Little Trees Royal Pine air freshener, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Little Trees Royal Pine air freshener, circa 1998"
+],
+"product": "Little Trees Royal Pine air freshener, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.003,
+0.12
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "little_trees_vanillaroma_1998": {
@@ -30796,6 +31214,72 @@
 0.115
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"motel_key_tag_diamond_blue_1998": {
+"display": "Blue diamond motel room key tag with metal key, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Blue diamond motel room key tag with metal key, circa 1998"
+],
+"product": "Blue diamond motel room key tag with metal key, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.005,
+0.1
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
+"motel_matchbook_1998": {
+"display": "Motel advertising matchbook, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Motel advertising matchbook, circa 1998"
+],
+"product": "Motel advertising matchbook, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.01,
+0.05
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
+"motel_postcard_generic_route66_1998": {
+"display": "Roadside motel postcard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Roadside motel postcard, circa 1998"
+],
+"product": "Roadside motel postcard, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.0005,
+0.148
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "motichoor_ladoo_1998": {
@@ -38115,6 +38599,204 @@
 "themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"prom_boutonniere_white_rose_1999": {
+"display": "White rose boutonniere with greenery, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.024,
+"notes": [
+"White rose boutonniere with greenery, circa 1999"
+],
+"product": "White rose boutonniere with greenery, circa 1999",
+"role": "main",
+"size": [
+0.07,
+0.04,
+0.12
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_corsage_clear_box_1999": {
+"display": "Clear plastic florist corsage box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.287,
+"notes": [
+"Clear plastic florist corsage box, circa 1999"
+],
+"product": "Clear plastic florist corsage box, circa 1999",
+"role": "main",
+"size": [
+0.13,
+0.07,
+0.18
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_handbag_satin_black_1999": {
+"display": "Black satin evening clutch, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Black satin evening clutch, circa 1999"
+],
+"product": "Black satin evening clutch, circa 1999",
+"role": "main",
+"size": [
+0.2,
+0.04,
+0.12
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_napkin_black_silver_1999": {
+"display": "Black-and-silver prom cocktail napkin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Black-and-silver prom cocktail napkin, circa 1999"
+],
+"product": "Black-and-silver prom cocktail napkin, circa 1999",
+"role": "main",
+"size": [
+0.13,
+0.0003,
+0.13
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_photo_folder_1999": {
+"display": "School prom photo folder with face-down prints, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"School prom photo folder with face-down prints, circa 1999"
+],
+"product": "School prom photo folder with face-down prints, circa 1999",
+"role": "main",
+"size": [
+0.13,
+0.003,
+0.18
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_photo_strip_1999": {
+"display": "Four-frame prom photo-booth strip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Four-frame prom photo-booth strip, circa 1999"
+],
+"product": "Four-frame prom photo-booth strip, circa 1999",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.18
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_table_confetti_silver_1999": {
+"display": "Silver star-and-\u201c99\u201d table confetti, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Silver star-and-\u201c99\u201d table confetti, circa 1999"
+],
+"product": "Silver star-and-\u201c99\u201d table confetti, circa 1999",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.02
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_ticket_black_silver_1999": {
+"display": "High-school prom admission ticket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"High-school prom admission ticket, circa 1999"
+],
+"product": "High-school prom admission ticket, circa 1999",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.14
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"prom_wrist_corsage_white_rose_1999": {
+"display": "White rose wrist corsage with ribbon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.06,
+"notes": [
+"White rose wrist corsage with ribbon, circa 1999"
+],
+"product": "White rose wrist corsage with ribbon, circa 1999",
+"role": "main",
+"size": [
+0.12,
+0.06,
+0.12
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
 "ps2_dvd_game_case_black_2000": {
 "display": "PlayStation 2 black DVD-style game case",
 "eras": [
@@ -38245,6 +38927,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; UNDER THE MATTRESS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"punch_cup_clear_plastic_1999": {
+"display": "Clear plastic dance punch cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Clear plastic dance punch cup, circa 1999"
+],
+"product": "Clear plastic dance punch cup, circa 1999",
+"role": "main",
+"size": [
+0.08,
+0.06,
+0.1
+],
+"themes": "PROM NIGHT",
 "weight": 1.0
 },
 "punk_incense_firework_lighter_1998": {
@@ -40202,6 +40906,50 @@
 "themes": "COASTERS; ROAD TRIP; KICKFLIP; regular cubes",
 "weight": 1.0
 },
+"rhinestone_butterfly_hair_clip_1999": {
+"display": "Rhinestone butterfly hair clip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Rhinestone butterfly hair clip, circa 1999"
+],
+"product": "Rhinestone butterfly hair clip, circa 1999",
+"role": "main",
+"size": [
+0.05,
+0.015,
+0.04
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
+"rhinestone_prom_tiara_1999": {
+"display": "Silver-tone rhinestone prom tiara, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.42,
+"notes": [
+"Silver-tone rhinestone prom tiara, circa 1999"
+],
+"product": "Silver-tone rhinestone prom tiara, circa 1999",
+"role": "main",
+"size": [
+0.15,
+0.05,
+0.08
+],
+"themes": "PROM NIGHT",
+"weight": 1.0
+},
 "rice_krispies_treats_original_1995": {
 "display": "Kellogg's Rice Krispies Treats Original bar, circa",
 "eras": [
@@ -40486,6 +41234,28 @@
 0.03
 ],
 "themes": "DIAL-UP",
+"weight": 1.0
+},
+"road_trip_postcard_rack_card_1998": {
+"display": "Assorted roadside souvenir postcards, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Assorted roadside souvenir postcards, circa 1998"
+],
+"product": "Assorted roadside souvenir postcards, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.0005,
+0.148
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "roast_turkey_drumstick_prop_1998": {
@@ -41892,6 +42662,28 @@
 0.05
 ],
 "themes": "LEFTOVERS; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"satin_elbow_glove_white_1999": {
+"display": "White satin elbow-length formal glove, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.035,
+"notes": [
+"White satin elbow-length formal glove, circa 1999"
+],
+"product": "White satin elbow-length formal glove, circa 1999",
+"role": "main",
+"size": [
+0.11,
+0.01,
+0.45
+],
+"themes": "PROM NIGHT",
 "weight": 1.0
 },
 "satya_sai_baba_nag_champa_15g_1998": {
@@ -43915,6 +44707,28 @@
 "themes": "COASTERS",
 "weight": 1.0
 },
+"slim_jim_original_1998": {
+"display": "Slim Jim Original smoked snack stick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Slim Jim Original smoked snack stick, circa 1998"
+],
+"product": "Slim Jim Original smoked snack stick, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.18
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "slime_bucket_trophy_green_1994": {
 "display": "Miniature green slime-bucket trophy, custom fictional prize",
 "eras": [
@@ -44749,6 +45563,28 @@
 0.045
 ],
 "themes": "COASTERS; MIXTAPE; ROAD TRIP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"sony_car_cassette_adapter_cpa9_1998": {
+"display": "Sony CPA-9 cassette adapter, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Sony CPA-9 cassette adapter, circa 1998"
+],
+"product": "Sony CPA-9 cassette adapter, circa 1998",
+"role": "main",
+"size": [
+0.102,
+0.012,
+0.064
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "sony_cfd_510_boombox_1994": {
@@ -45783,6 +46619,28 @@
 0.094
 ],
 "themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"souvenir_spoon_mount_rushmore_1998": {
+"display": "Mount Rushmore souvenir spoon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.038,
+"notes": [
+"Mount Rushmore souvenir spoon, circa 1998"
+],
+"product": "Mount Rushmore souvenir spoon, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.015,
+0.12
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "space_jam_vhs_1997": {
@@ -47650,6 +48508,28 @@
 0.72
 ],
 "themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"sunflower_seeds_david_original_1998": {
+"display": "DAVID Original Sunflower Seeds bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.16,
+"notes": [
+"DAVID Original Sunflower Seeds bag, circa 1998"
+],
+"product": "DAVID Original Sunflower Seeds bag, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.04,
+0.22
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "sunkist_orange_12oz_can_1998": {
@@ -49936,6 +50816,50 @@
 "themes": "SEWING KIT",
 "weight": 1.0
 },
+"toll_quarter_1998": {
+"display": "U.S. quarter for toll booth, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"U.S. quarter for toll booth, circa 1998"
+],
+"product": "U.S. quarter for toll booth, circa 1998",
+"role": "main",
+"size": [
+0.024,
+0.0018,
+0.024
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
+"toll_ticket_turnpike_1998": {
+"display": "Turnpike toll ticket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Turnpike toll ticket, circa 1998"
+],
+"product": "Turnpike toll ticket, circa 1998",
+"role": "main",
+"size": [
+0.075,
+0.0005,
+0.15
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
 "tollfree_number_notepad_1999": {
 "display": "Handwritten toll-free-number notepad sheet, circa",
 "eras": [
@@ -50484,6 +51408,50 @@
 0.053
 ],
 "themes": "TIME CAPSULE; ROAD TRIP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"travel_connect_four_compact_1998": {
+"display": "Milton Bradley Travel Connect Four, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.189,
+"notes": [
+"Milton Bradley Travel Connect Four, circa 1998"
+],
+"product": "Milton Bradley Travel Connect Four, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.04,
+0.15
+],
+"themes": "ROAD TRIP",
+"weight": 1.0
+},
+"travel_mad_libs_car_trip_1998": {
+"display": "Mad Libs road-trip activity book, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.023,
+"notes": [
+"Mad Libs road-trip activity book, circa 1998"
+],
+"product": "Mad Libs road-trip activity book, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.006,
+0.21
+],
+"themes": "ROAD TRIP",
 "weight": 1.0
 },
 "trend_scratch_sniff_sticker_sheet_1994": {

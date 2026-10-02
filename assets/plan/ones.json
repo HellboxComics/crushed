@@ -5723,6 +5723,117 @@
 "no_wires": true,
 "theme": "Area 51 souvenirs, alien toys, autopsy tapes and every blurry photograph that proved absolutely nothing"
 },
+"PROM NIGHT": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"hairspray, roses, rented-tux polyester, perfume, vinyl limousine seats and gymnasium punch",
+"beneath the banquet table after the lights came on and the DJ stopped pretending there was one more song",
+"prom_wrist_corsage_white_rose_1999"
+],
+"lore": "The limo was late, the corsage was crushed before dinner, and one shoe made it home without the other.",
+"mix": [
+[
+"prom_wrist_corsage_white_rose_1999",
+2
+],
+[
+"prom_corsage_clear_box_1999",
+2
+],
+[
+"kodak_fun_saver_27_1999",
+3
+],
+[
+"limousine_receipt_thermal_1999",
+3
+],
+[
+"black_satin_bow_tie_1999",
+3
+],
+[
+"black_satin_high_heel_single_1999",
+1
+],
+[
+"prom_ticket_black_silver_1999",
+5
+],
+[
+"black_satin_cummerbund_1999",
+2
+],
+[
+"glitter_hair_spray_silver_1999",
+2
+],
+[
+"prom_boutonniere_white_rose_1999",
+3
+],
+[
+"rhinestone_prom_tiara_1999",
+2
+],
+[
+"prom_photo_folder_1999",
+2
+],
+[
+"prom_photo_strip_1999",
+3
+],
+[
+"satin_elbow_glove_white_1999",
+2
+],
+[
+"prom_handbag_satin_black_1999",
+1
+],
+[
+"certs_peppermint_roll_1999",
+3
+],
+[
+"corsage_ribbon_silver_blue_1999",
+6
+],
+[
+"bobby_pin_black_1999",
+8
+],
+[
+"rhinestone_butterfly_hair_clip_1999",
+3
+],
+[
+"limo_champagne_flute_plastic_1999",
+3
+],
+[
+"prom_table_confetti_silver_1999",
+10
+],
+[
+"punch_cup_clear_plastic_1999",
+3
+],
+[
+"prom_napkin_black_silver_1999",
+5
+]
+],
+"no_wires": true,
+"theme": "corsage boxes, disposable cameras and one abandoned shoe from the night everybody dressed like adulthood had already started"
+},
 "PROST": {
 "era": [
 0,
@@ -6156,6 +6267,117 @@
 ],
 "no_wires": true,
 "theme": "Beanie Babies, tag protectors and the retirement fund that stayed stuffed with pellets"
+},
+"ROAD TRIP": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"vinyl upholstery, pine air freshener, warm soda, beef jerky, gasoline receipts, sunscreen and motel-room soap",
+"beneath the passenger seat after the family finally unloaded the car",
+"rand_mcnally_road_atlas_1998"
+],
+"lore": "The map was never folded right again, the motel key was supposed to be returned, and somebody yelled BINGO every time they saw a cow.",
+"mix": [
+[
+"rand_mcnally_road_atlas_1998",
+1
+],
+[
+"aaa_state_road_map_folded_1998",
+3
+],
+[
+"little_trees_royal_pine_air_freshener_1998",
+4
+],
+[
+"fuzzy_dice_white_black_1998",
+2
+],
+[
+"sony_car_cassette_adapter_cpa9_1998",
+2
+],
+[
+"auto_bingo_cardboard_board_1998",
+4
+],
+[
+"motel_key_tag_diamond_blue_1998",
+2
+],
+[
+"toll_ticket_turnpike_1998",
+6
+],
+[
+"toll_quarter_1998",
+6
+],
+[
+"slim_jim_original_1998",
+4
+],
+[
+"combos_cheddar_cheese_bag_1998",
+2
+],
+[
+"sunflower_seeds_david_original_1998",
+2
+],
+[
+"coke_20oz_pet_bottle_1998",
+3
+],
+[
+"gas_station_receipt_thermal_1998",
+5
+],
+[
+"chevron_gasoline_map_receipt_envelope_1998",
+2
+],
+[
+"travel_mad_libs_car_trip_1998",
+2
+],
+[
+"travel_connect_four_compact_1998",
+1
+],
+[
+"hotel_soap_small_wrapped_1998",
+4
+],
+[
+"motel_matchbook_1998",
+3
+],
+[
+"souvenir_spoon_mount_rushmore_1998",
+2
+],
+[
+"motel_postcard_generic_route66_1998",
+3
+],
+[
+"dashboard_sunglasses_black_1998",
+2
+],
+[
+"road_trip_postcard_rack_card_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "glovebox maps, gas-station food and everything that rattled around the back seat for eight hundred miles"
 },
 "SAVE ICON": {
 "era": [

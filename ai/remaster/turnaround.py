@@ -266,6 +266,49 @@ def draw_from_photos(description, photos, out, width=None, height=None, prefix=N
     return _run(wf, out, timeout)
 
 
+SIDES = ("A professional 3D modeling reference sheet: a 2 by 2 grid of four orthographic studio product photos of "
+         "the SAME single object standing upright exactly as in the photograph, on a plain light grey background, "
+         "evenly lit, true colors, sharp focus, the camera level with the middle of the object. Top row, left to "
+         "right: the FRONT view, the LEFT SIDE view (the object turned so the side that was on the viewer's left now "
+         "faces the camera). Bottom row, left to right: the BACK view, the RIGHT SIDE view (the side that was on the "
+         "viewer's right). Exactly the same size and upright the same way in all four; each view shows what really "
+         "is on that side, and anything that is on the underside or the very top is not seen in these four views. "
+         "No captions, no labels, no text outside the object, no measurements, no hands, no props, no other "
+         "objects, no perspective, no tilt. The object: ")
+
+ENDS = ("Picture 1 shows this exact object from the front, the left, the back and the right. Picture 2 is a real "
+        "photograph of it. Make two orthographic studio product photos side by side on the same plain light grey "
+        "background, evenly lit, the same size scale as Picture 1. LEFT half: the TOP view, the camera straight "
+        "above looking down at the top of the object as it stands upright (for a creature or figure, the top of its "
+        "head, with its ears, hair or tuft seen from above), the front of the object toward the bottom edge of the "
+        "picture. RIGHT half: the BOTTOM view, the camera straight below looking up at the surface it stands on "
+        "(its feet or base, and any battery door, label or markings that are underneath), the front toward the top "
+        "edge of the picture. Same colors, materials and surface texture as Picture 1 and the photograph. Nothing "
+        "that is underneath appears in the top view; nothing that is on top appears in the bottom view. No "
+        "captions, no text outside the object, no perspective, no other objects. The object: ")
+
+
+def draw_from_photos_six(description, photos, out, seed=None):
+    """Six views in two drawings, because one drawing of six cells kept putting the underside's battery door on
+    the top and the back: first the four side views from the photo, then the top and the bottom drawn while
+    looking at those four sides and the photo. Put together into the usual 3 by 2 sheet."""
+    from PIL import Image
+    tmp_a, tmp_b = out[:-4] + "_sides.png", out[:-4] + "_ends.png"
+    draw_from_photos(description, photos, tmp_a, width=1328, height=1328, prefix=FROM_PHOTO + SIDES, seed=seed)
+    draw_from_photos(description, [tmp_a] + list(photos[:2]), tmp_b, width=1600, height=800, prefix=ENDS, seed=seed)
+    a, b = Image.open(tmp_a).convert("RGB"), Image.open(tmp_b).convert("RGB")
+    C = H // 2
+    ha, wa, hb, wb = a.height // 2, a.width // 2, b.height, b.width // 2
+    cells = {"front": a.crop((0, 0, wa, ha)), "left": a.crop((wa, 0, 2 * wa, ha)),
+             "back": a.crop((0, ha, wa, 2 * ha)), "right": a.crop((wa, ha, 2 * wa, 2 * ha)),
+             "top": b.crop((0, 0, wb, hb)), "bottom": b.crop((wb, 0, 2 * wb, hb))}
+    sheet = Image.new("RGB", (3 * C, 2 * C), (235, 235, 235))
+    for i, k in enumerate(ORDER):
+        sheet.paste(cells[k].resize((C, C), Image.LANCZOS), ((i % 3) * C, (i // 3) * C))
+    sheet.save(out)
+    return out
+
+
 def label_size(circumference, height):
     """A drawing size with the label's real proportions (about 1.6 megapixels, multiples of 16)."""
     a = max(0.4, min(3.0, circumference / max(height, 1e-6)))
