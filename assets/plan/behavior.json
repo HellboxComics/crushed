@@ -2619,6 +2619,16 @@
 0.125
 ]
 },
+"generic_rj11_phone_cord_1996": {
+"hard": 0.18,
+"how": "fold",
+"mat": "rubber",
+"size": [
+3.0,
+0.003,
+0.002
+]
+},
 "ghostbusters_vhs_1985": {
 "hard": 0.72,
 "how": "snap",

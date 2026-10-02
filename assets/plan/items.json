@@ -2045,6 +2045,28 @@
 "themes": "COASTERS; DIAL-UP; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"generic_rj11_phone_cord_1996": {
+"display": "RJ-11 telephone modem cord, circa",
+"eras": [
+1,
+2
+],
+"family": "computers_and_dialup",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"RJ-11 telephone modem cord, circa 1996"
+],
+"product": "RJ-11 telephone modem cord, circa 1996",
+"role": "filler",
+"size": [
+3.0,
+0.003,
+0.002
+],
+"themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "ghostbusters_vhs_1985": {
 "display": "Ghostbusters VHS",
 "eras": [

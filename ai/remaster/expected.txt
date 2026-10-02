@@ -251,6 +251,7 @@ gba_sp_cobalt_2003
 gel_pens
 generic_cassette_case_1991
 generic_clear_jewel_case_1994
+generic_rj11_phone_cord_1996
 ghostbusters_vhs_1985
 giant_controller
 gift_oil_bottle

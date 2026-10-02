@@ -45,8 +45,8 @@ def main():
         if not n.replace("_", "").isalnum() or n.lower() != n:
             bad.append(f"object name '{n}': use lowercase letters, digits and _ only")
         s = it.get("size")
-        if not (isinstance(s, list) and len(s) == 3 and all(0.003 <= float(x) <= 0.6 for x in s)):
-            bad.append(f"{n}: size must be [width, depth, height] in meters, each 0.003-0.6 (a soda can is [0.066, 0.066, 0.122])")
+        if not (isinstance(s, list) and len(s) == 3 and all(0.0001 <= float(x) <= 3.0 for x in s)):
+            bad.append(f"{n}: size must be [width, depth, height] in meters, each 0.0001-3.0 (a soda can is [0.066, 0.066, 0.122])")
         if not set(it.get("eras", [0])) <= {0, 1, 2, 3, 4}:
             bad.append(f"{n}: eras must be from 0..4")
         if it.get("group", "special") not in ("special", "era"):

@@ -92,7 +92,7 @@ def main(files):
                 fam, role, themes = "one-of-one", "main", title
             oid = re.sub(r"[^a-z0-9_]", "_", oid.lower()).strip("_")
             sz = size_m(size)
-            if not sz or max(sz) > 2.0 or min(sz) <= 0:      # cables and mats run long; the renderer coils or cuts them
+            if not sz or max(sz) > 3.0 or min(sz) <= 0:      # cables and mats run long; the renderer coils or cuts them
                 probs.append(f"{oid}: size '{size}' doesn't read as W x D x H in cm")
                 continue
             mat = mat.lower().replace(" ", "_")
