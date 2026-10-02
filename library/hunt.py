@@ -183,7 +183,9 @@ def queries(words, year):
     return list(dict.fromkeys(qs))
 
 
-def run(cid, words, year=None, log=print):
+def run(cid, words, year=None, log=print, extra=()):
+    """extra: more searches to run (the collector searches after you turn every photo down). Photos found
+    before are kept; new ones are added."""
     d = os.path.join(WORK, "hunt", cid)
     os.makedirs(d, exist_ok=True)
     got = []
@@ -194,7 +196,7 @@ def run(cid, words, year=None, log=print):
     hits = []
     try:
         import google_images as G
-        for q in queries(words, year):
+        for q in (list(extra) if extra else queries(words, year)):
             hits += [(u, "", f"Google Images: {q}") for u, w, h in G.search(q, most=40, log=log)]
     except Exception as e:
         log(f"[hunt] Google Images did not work here: {e}")
@@ -222,7 +224,12 @@ def run(cid, words, year=None, log=print):
                 continue
         src = "Google Images" if title.startswith("Google") else ("eBay" if "ebay" in url else "free photo site")
         got.append({"file": p, "from": src, "url": url, "page": page, "title": title})
-    json.dump(got, open(os.path.join(d, "found.json"), "w"), indent=1)
+    fj = os.path.join(d, "found.json")
+    if extra and os.path.exists(fj):                    # a deeper round adds to what was found before
+        before = json.load(open(fj))
+        have = {g["file"] for g in before}
+        got = before + [g for g in got if g["file"] not in have]
+    json.dump(got, open(fj, "w"), indent=1)
     log(f"[hunt] {cid}: {len(got)} photos saved")
     return got
 

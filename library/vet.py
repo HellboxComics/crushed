@@ -62,6 +62,9 @@ Look at this photo and answer ONLY with JSON, no other words:
   "straight_on": true if the camera looks squarely at that side (not steeply from above or at a sharp angle),
   "sharp": true if the printing on it is in focus and readable,
   "whole": true if the whole product is in the picture (not cut off, not mostly hidden by hands or packaging),
+  "kind": "photo" if it is a real photograph of a physical item, "render" if computer-made, "ad" if an advertisement
+          or graphic with added words, "package" if the item is still inside retail packaging,
+  "printed_year": any year you can actually read printed on the item or package (expiry or date code), or null,
   "problems": "short note of anything wrong, or empty"}}"""
 
 

@@ -125,9 +125,22 @@ def pipeline(cid, redo=False):
              and f["vet"].get("sharp", True) is not False and f["vet"].get("whole", True) is not False]
     if spec:
         cands = [f for f in cands if size_ok(f, spec)]
-    cands.sort(key=lambda f: (-(f["vet"].get("era_ok") is True), -(f["vet"].get("view") == "front"),
-                              -f["vet"].get("match", 0)))
-    picked = your_pick(cid, product, cands[:6], d)
+    shown = json.load(open(os.path.join(d, "shown.json"))) if os.path.exists(os.path.join(d, "shown.json")) else []
+    cands = [f for f in cands if f["file"] not in shown]          # never show you a photo you already turned down
+    cands.sort(key=lambda f: -rank(f, year))
+    picked = your_pick(cid, product, cands[:9], d)
+    if picked == "none":                                          # you said none: dig deeper, then ask again
+        rounds = len([1 for k in os.listdir(d) if k.startswith("round_")])
+        if rounds >= 3:
+            status(cid, step="3 rounds of photos and none was right - it needs a photo of your own "
+                             "(drop one in ~/crushed-render/remaster/refs-mine named " + cid + "_1.jpg)", ok=False)
+            return
+        open(os.path.join(d, f"round_{rounds + 1}"), "w").write("")
+        status(cid, step=f"you said none fit - digging deeper (round {rounds + 2})")
+        hunt.run(cid, words, year, log=say, extra=collector_searches(product, year, use))
+        return pipeline(cid, redo=False)
+    if not picked:
+        return
     if not picked:
         return
 
@@ -185,6 +198,40 @@ def pipeline(cid, redo=False):
            ref=os.path.relpath(picked["file"], WORK), note="")
 
 
+def rank(f, year):
+    """Which photos you see first. The AI is bad at guessing a design's era, so its guess counts for little;
+    what it can see counts for more: a real photo of the thing beats an ad or a render, and a date printed on the
+    item that falls in the era is the strongest sign of all."""
+    v = f["vet"]
+    r = v.get("match", 0)
+    r += {"photo": 4, "package": 2, "render": -2, "ad": -4}.get(v.get("kind"), 0)
+    py = v.get("printed_year")
+    if year and isinstance(py, int):
+        r += 6 if abs(py - year) <= 4 else -6      # an expiry date runs a few years past when it was made
+    r += 1 if v.get("era_ok") is True else 0
+    r += 0.5 if v.get("view") == "front" else 0
+    return r
+
+
+def collector_searches(product, year, use):
+    """When you turn down every photo: the judge suggests the searches a collector would type to find this exact
+    old version (names of features that only that version had, 'vintage', 'NOS', the decade...)."""
+    import vet as V
+    q = (f"I need real photos of this exact old product: {product}. Give 6 Google Images searches a collector "
+         f"would type to find that version (not today's), using names of features or slogans only that version had "
+         f"and words like vintage, NOS, old stock, 90s. Answer ONLY JSON: {{\"searches\": [\"...\"]}}")
+    try:
+        body = {"model": use, "stream": False, "format": "json", "think": True, "options": {"temperature": 0.3},
+                "messages": [{"role": "user", "content": q}]}
+        txt = V._call("/api/chat", body).get("message", {}).get("content", "{}")
+        out = [x for x in json.loads(txt).get("searches", []) if isinstance(x, str)][:6]
+    except Exception as e:
+        say(f"[hunt] the judge could not suggest searches: {e}")
+        out = []
+    say("[hunt] collector searches: " + "; ".join(out))
+    return out
+
+
 def size_ok(f, spec, tol=0.2):
     """Round things: the photo's object must have the right length-to-width (an AA is about 3.5 to 1, a D cell
     about 1.8 to 1). Measured on the cut-out, so a wrong size can never get in."""
@@ -198,11 +245,15 @@ def size_ok(f, spec, tol=0.2):
     objs = mosaic.objects(im, m)
     if not objs:
         return False
-    mm = objs[0][1] > 0.5
-    ys, xs = np.where(mm)
-    got = (xs.max() - xs.min() + 1) / max(ys.max() - ys.min() + 1, 1)      # lying sideways: length / width
-    f["ratio"] = round(float(got), 2)
-    return abs(got - want) / want <= tol
+    ratios = []
+    for _, om in objs:
+        ys, xs = np.where(om > 0.5)
+        ratios.append((xs.max() - xs.min() + 1) / max(ys.max() - ys.min() + 1, 1))   # lying sideways: length / width
+    f["ratio"] = [round(float(r), 2) for r in ratios]
+    if any(abs(r - want) / want <= tol for r in ratios):
+        return True
+    # several touching each other can't be measured one by one: let you judge those
+    return (f["vet"].get("count") or 1) > 1 and len(objs) < (f["vet"].get("count") or 1)
 
 
 def your_pick(cid, product, cands, d):
@@ -214,8 +265,13 @@ def your_pick(cid, product, cands, d):
     if p and os.path.exists(cf):
         shown = json.load(open(cf))["files"]
         if p["pick"] == "none":
-            status(cid, step="you said none of these photos fit - it needs better photos", ok=False)
-            return None
+            sf = os.path.join(d, "shown.json")
+            old = json.load(open(sf)) if os.path.exists(sf) else []
+            json.dump(old + [x["file"] for x in shown], open(sf, "w"), indent=1)
+            os.remove(cf)
+            picks.pop(cid)
+            json.dump(picks, open(picks_f, "w"), indent=1)
+            return "none"
         f = shown[int(p["pick"]) - 1]
         return next((x for x in cands if x["file"] == f["file"]), f)
     if os.path.exists(cf):
@@ -248,7 +304,7 @@ def pick_sheet(cands, out):
     """The photos side by side, big numbers on each, for your phone."""
     from PIL import Image, ImageDraw, ImageFont
     S = 512
-    cols = 3 if len(cands) > 2 else len(cands)
+    cols = 3 if len(cands) > 2 else len(cands)        # up to 9: three rows of three
     rows = (len(cands) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * S, rows * S), "white")
     try:
@@ -281,6 +337,16 @@ def reference(f, d, upright=False):
         m = np.where(lab == k, m, 0)
     ys, xs = np.where(m > 0.5)
     y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+    n_items = int(f.get("vet", {}).get("count") or 1)
+    if upright and n_items > 1 and (y1 - y0) < 1.5 * (x1 - x0):           # wider than one standing item can be
+        # several round things standing side by side and touching: cut the blob into equal strips, one per item,
+        # and keep the fullest one
+        w = (x1 - x0) / n_items
+        best = max(range(n_items), key=lambda k: m[y0:y1, int(x0 + k * w):int(x0 + (k + 1) * w)].mean())
+        x0, x1 = int(x0 + (best + 0.06) * w), int(x0 + (best + 0.94) * w)    # trim the neighbors' edges
+        m = m.copy()
+        m[:, :x0] = 0
+        m[:, x1:] = 0
     rgba = np.dstack([np.asarray(im), (m * 255).astype(np.uint8)])[y0:y1, x0:x1]
     obj = Image.fromarray(rgba)
     if upright and obj.width > obj.height:                # round things stand up, like the shape does
