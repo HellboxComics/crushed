@@ -29,8 +29,9 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(os.path.dirname(HERE), "ai", "remaster"))
 
 FLAT = ("Picture 1 is part of the printed label of a real product, already unrolled flat from a photograph (it may "
-        "be wrinkled, shiny, dirty, faded or blurry, and it only shows the part the camera could see). Pictures 2 "
-        "and 3, when given, are more photographs of the same product. Draw the COMPLETE printed label of this product "
+        "be wrinkled, shiny, dirty, faded or blurry, and it only shows the part the camera could see). Picture 2, "
+        "when given, may be another part of the same label unrolled the same way (another side of it), or another "
+        "photograph of the same product, as may picture 3. Draw the COMPLETE printed label of this product "
         "as one perfectly flat, clean, print-ready sheet, like the original artwork file sent to the printer: it "
         "fills the whole image edge to edge, seen straight-on, no background, no object, no shadows, no glare, no "
         "wrinkles, no curvature, no perspective, no dirt or wear. Keep every word, number, logo, symbol, color and "
@@ -57,41 +58,78 @@ def label_size(spec):
     return along, around
 
 
-def one_item(f, upright=True):
-    """(photo crop, mask crop) of a single item. Several touching round things standing side by side (the cut-out
-    sees one blob) are cut into equal strips, one per item, and the fullest is kept."""
+def all_items(f, upright=True):
+    """Every single item in a photo as (photo crop, mask crop): separate items by their outlines, and several
+    round things standing side by side and touching (one blob to the cut-out) cut into equal strips, one each."""
     from scipy import ndimage
     im = Image.open(f["file"]).convert("RGB")
     m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
     lab, n = ndimage.label(m > 0.5)
-    if n > 1:
-        k = np.argmax(ndimage.sum(np.ones_like(lab), lab, range(1, n + 1))) + 1
-        m = np.where(lab == k, m, 0)
-    ys, xs = np.where(m > 0.5)
-    y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+    sizes = ndimage.sum(np.ones_like(lab), lab, range(1, n + 1)) if n else []
     n_items = int((f.get("vet") or {}).get("count") or 1)
-    if upright and n_items > 1 and (y1 - y0) < 1.5 * (x1 - x0):           # wider than one standing item can be
-        w = (x1 - x0) / n_items
-        best = max(range(n_items), key=lambda k: m[y0:y1, int(x0 + k * w):int(x0 + (k + 1) * w)].mean())
-        x0, x1 = int(x0 + (best + 0.06) * w), int(x0 + (best + 0.94) * w)  # trim the neighbors' edges
-    pad = 8
-    box = (max(x0 - pad, 0), max(y0 - pad, 0), min(x1 + pad, im.width), min(y1 + pad, im.height))
-    mm = np.zeros_like(m)
-    mm[y0:y1, x0:x1] = m[y0:y1, x0:x1]
-    return im.crop(box), mm[box[1]:box[3], box[0]:box[2]]
+    out = []
+    for k in [i + 1 for i in np.argsort(-np.asarray(sizes))]:
+        if sizes[k - 1] < 0.15 * max(sizes):
+            continue
+        mk = np.where(lab == k, m, 0)
+        ys, xs = np.where(mk > 0.5)
+        y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+        strips = [(x0, x1)]
+        if upright and n_items > 1 and (y1 - y0) < 1.5 * (x1 - x0):       # wider than one standing item can be
+            per = max(1, round(n_items / max(1, len([s for s in sizes if s >= 0.15 * max(sizes)]))))
+            w = (x1 - x0) / per
+            strips = [(int(x0 + (j + 0.06) * w), int(x0 + (j + 0.94) * w)) for j in range(per)]
+        for a0, a1 in strips:
+            mm = np.zeros_like(m)
+            mm[y0:y1, a0:a1] = mk[y0:y1, a0:a1]
+            pad = 8
+            box = (max(a0 - pad, 0), max(y0 - pad, 0), min(a1 + pad, im.width), min(y1 + pad, im.height))
+            out.append((im.crop(box), mm[box[1]:box[3], box[0]:box[2]]))
+    return out
 
 
-def flatten(f, reads="along"):
-    """The part of the label one photo can see, unrolled flat by math, in reading orientation (for a battery: the
-    plus end at the left, the words running left to right)."""
+def one_item(f, upright=True):
+    """The fullest single item in a photo (see all_items)."""
+    return max(all_items(f, upright), key=lambda x: (x[1] > 0.5).mean() * (x[1] > 0.5).sum() ** 0.5)
+
+
+def _flat(im, m, reads):
     import mosaic
-    im, m = one_item(f)
     objs = mosaic.objects(im, m)                                           # lying sideways, top end at the left
     o, om = max(objs, key=lambda x: x[1].sum())
     lab, w = mosaic.strip(o, om, 1024, 1024)
     seen = np.where(w > 0.05)[0]
     part = Image.fromarray((np.clip(lab[:, seen.min():seen.max() + 1], 0, 1) * 255).astype(np.uint8))
     return part.rotate(90, expand=True) if reads == "along" else part     # rows run along: turn to read
+
+
+def flatten(f, reads="along"):
+    """The part of the label one photo can see, unrolled flat by math, in reading orientation (for a battery: the
+    plus end at the left, the words running left to right)."""
+    return _flat(*one_item(f), reads)
+
+
+def sides(f, reads="along", most=2):
+    """A photo of several of the same item often shows different sides of the label (one turned to the front, one
+    to the back). Each item is unrolled flat; the fullest comes first, then the one that looks most different
+    from it, so the AI sees as much of the real label as the photo holds."""
+    parts = []
+    for im, m in all_items(f):
+        try:
+            parts.append(_flat(im, m, reads))
+        except Exception:
+            pass
+    if not parts:
+        return []
+    small = [np.asarray(p.convert("RGB").resize((256, 96))).astype(float) for p in parts]
+    first = 0
+    out = [parts[first]]
+    if len(parts) > 1 and most > 1:
+        diff = [np.abs(sm - small[first]).mean() for sm in small]
+        k = int(np.argmax(diff))
+        if diff[k] > 12:                                                    # really a different side
+            out.append(parts[k])
+    return out
 
 
 def cutout(f, out):
@@ -115,9 +153,11 @@ def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=3, 
     import turnaround as T
     import vet as V
     os.makedirs(out_dir, exist_ok=True)
-    part = os.path.join(out_dir, "flat_part.png")
-    flatten(photos[0], reads).save(part)
-    refs = [part] + [cutout(p, os.path.join(out_dir, f"ref_{i}.png")) for i, p in enumerate(photos[1:3], 1)]
+    refs = []
+    for i, p in enumerate(sides(photos[0], reads)):                         # your photo, every side it shows
+        refs.append(os.path.join(out_dir, f"flat_part{i + 1}.png"))
+        p.save(refs[-1])
+    refs += [cutout(p, os.path.join(out_dir, f"ref_{i}.png")) for i, p in enumerate(photos[1:], 1)][:3 - len(refs)]
     W_mm, H_mm = (along_mm, around_mm) if reads == "along" else (around_mm, along_mm)
     w, h = canvas(W_mm, H_mm)
     judge = judge or V.model()
