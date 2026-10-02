@@ -209,7 +209,14 @@ EDIT_LORA = "Qwen-Image-Edit-2511-Lightning-8steps-V1.0-bf16.safetensors"   # it
 COMFY_MODELS = os.path.expanduser("~/.hellbox/drawing-room/ComfyUI/models")
 FROM_PHOTO = ("Picture 1 is a real photograph of a real product. Make a professional 3D modeling reference sheet of "
               "EXACTLY this object, copied faithfully from the photograph: the same shape and proportions, the same "
-              "colors, materials and wear, the same logos, printed words and markings in the same places. ")
+              "colors, materials and wear, the same logos, printed words and markings in the same places. "
+              "Copy the surface texture at the same scale and softness as the photograph (short soft plush stays "
+              "short and soft, smooth plastic stays smooth); never make it spikier, shaggier or more cartoonish. "
+              "Sides the photograph does not show continue the same material plainly: do not invent panels, "
+              "stickers, barcodes or writing there, and only show words that are in the photograph or named in the "
+              "description, on the side where they really are. The TOP view looks straight down onto the highest "
+              "part of the object as it stands in the photograph (for a creature or figure, the top of its head), "
+              "and nothing that belongs underneath appears in it. ")
 
 
 def can_edit():

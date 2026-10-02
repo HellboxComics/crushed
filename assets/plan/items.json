@@ -1,4 +1,26 @@
 {
+"35mm_motion_trail_camera_1998": {
+"display": "35 mm motion-triggered trail camera, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.616,
+"notes": [
+"35 mm motion-triggered trail camera, circa 1998"
+],
+"product": "35 mm motion-triggered trail camera, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.11,
+0.2
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "3com_etherlink_iii_3c509b_1995": {
 "display": "3Com EtherLink III 3C509B ISA Ethernet adapter, circa",
 "eras": [
@@ -370,6 +392,28 @@
 1.05
 ],
 "themes": "DRESS CODE; PROM NIGHT; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"adidas_superstar_white_black_1998": {
+"display": "adidas Superstar sneaker, White/Black, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.693,
+"notes": [
+"adidas Superstar sneaker, White/Black, circa 1998"
+],
+"product": "adidas Superstar sneaker, White/Black, circa 1998",
+"role": "hero",
+"size": [
+0.11,
+0.1,
+0.3
+],
+"themes": "MALL RAT; DRESS CODE; KICKFLIP; regular cubes",
 "weight": 1.0
 },
 "adidas_tricolore_world_cup_ball_1998": {
@@ -920,6 +964,28 @@
 0.06
 ],
 "themes": "ROAD TRIP; MALL RAT; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"aluminum_camp_mug_green_1998": {
+"display": "Green enamel camp mug, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.68,
+"notes": [
+"Green enamel camp mug, circa 1998"
+],
+"product": "Green enamel camp mug, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.09,
+0.09
+],
+"themes": "CRYPTID",
 "weight": 1.0
 },
 "always_ultra_thin_regular_wings_1998": {
@@ -2121,6 +2187,28 @@
 0.19
 ],
 "themes": "ROAD TRIP; LEFTOVERS; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"army_style_canteen_green_plastic_1998": {
+"display": "Green plastic camp canteen with cloth cover, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.554,
+"notes": [
+"Green plastic camp canteen with cloth cover, circa 1998"
+],
+"product": "Green plastic camp canteen with cloth cover, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.08,
+0.22
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "arturia_keystep_32_white_2016": {
@@ -4696,6 +4784,72 @@
 "themes": "BE KIND REWIND; UNDER_THE_MATTRESS; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"bigfoot_blurry_photo_1998": {
+"display": "Blurry Bigfoot-style 4 x 6 photo print, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Blurry Bigfoot-style 4 x 6 photo print, circa 1998"
+],
+"product": "Blurry Bigfoot-style 4 x 6 photo print, circa 1998",
+"role": "main",
+"size": [
+0.102,
+0.0003,
+0.152
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
+"bigfoot_crossing_sign_yellow_1998": {
+"display": "Yellow Bigfoot crossing novelty sign, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.126,
+"notes": [
+"Yellow Bigfoot crossing novelty sign, circa 1998"
+],
+"product": "Yellow Bigfoot crossing novelty sign, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.002,
+0.3
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
+"bigfoot_plaster_footprint_cast_1998": {
+"display": "Oversized plaster footprint cast, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.455,
+"notes": [
+"Oversized plaster footprint cast, circa 1998"
+],
+"product": "Oversized plaster footprint cast, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.05,
+0.42
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "billfodl_steel_backup_2018": {
 "display": "Billfodl stainless-steel recovery backup, circa",
 "eras": [
@@ -4977,6 +5131,28 @@
 0.38
 ],
 "themes": "ROAD TRIP; PROM NIGHT; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
+"black_jelly_bracelet_stack_2003": {
+"display": "Stack of black jelly bracelets, circa",
+"eras": [
+3,
+4
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Stack of black jelly bracelets, circa 2003"
+],
+"product": "Stack of black jelly bracelets, circa 2003",
+"role": "filler",
+"size": [
+0.07,
+0.004,
+0.07
+],
+"themes": "DRESS CODE; MALL RAT; Y2K; regular cubes",
 "weight": 1.0
 },
 "black_lace_bralette_1998": {
@@ -5902,6 +6078,28 @@
 "themes": "UNDER THE MATTRESS",
 "weight": 1.0
 },
+"boy_scout_style_aluminum_mess_kit_1998": {
+"display": "Aluminum nesting camp mess kit, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.214,
+"notes": [
+"Aluminum nesting camp mess kit, circa 1998"
+],
+"product": "Aluminum nesting camp mess kit, circa 1998",
+"role": "main",
+"size": [
+0.17,
+0.06,
+0.17
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "boys_white_kurta_folded_1998": {
 "display": "New white cotton kurta, folded, circa",
 "eras": [
@@ -6010,6 +6208,28 @@
 0.28
 ],
 "themes": "BOXING DAY; LUNCH TRADE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"braided_hemp_glass_bead_necklace_1998": {
+"display": "Braided hemp necklace with glass beads, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Braided hemp necklace with glass beads, circa 1998"
+],
+"product": "Braided hemp necklace with glass beads, circa 1998",
+"role": "support",
+"size": [
+0.015,
+0.015,
+0.45
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
 "weight": 1.0
 },
 "brass_bunny_head_keychain_1998": {
@@ -6782,6 +7002,50 @@
 "themes": "GACHAPON",
 "weight": 1.0
 },
+"camp_foam_sit_upon_blue_1998": {
+"display": "Homemade blue foam \u201csit-upon\u201d camp pad, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.043,
+"notes": [
+"Homemade blue foam \u201csit-upon\u201d camp pad, circa 1998"
+],
+"product": "Homemade blue foam \u201csit-upon\u201d camp pad, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.02,
+0.35
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"camp_name_tag_plastic_1998": {
+"display": "Plastic camp bunk/name tag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Plastic camp bunk/name tag, circa 1998"
+],
+"product": "Plastic camp bunk/name tag, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.002,
+0.05
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "campbells_chunky_soup_can_1999": {
 "display": "Campbell's Chunky Soup can, circa",
 "eras": [
@@ -6802,6 +7066,50 @@
 0.115
 ],
 "themes": "Y2K",
+"weight": 1.0
+},
+"campfire_marshmallow_roasting_stick_1998": {
+"display": "Wooden marshmallow roasting stick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.033,
+"notes": [
+"Wooden marshmallow roasting stick, circa 1998"
+],
+"product": "Wooden marshmallow roasting stick, circa 1998",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.7
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"campfire_smore_1998": {
+"display": "Finished campfire s'more, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.036,
+"notes": [
+"Finished campfire s'more, circa 1998"
+],
+"product": "Finished campfire s'more, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.035,
+0.07
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "candied_winter_melon_tray_piece_1998": {
@@ -8363,6 +8671,28 @@
 "themes": "LOST AND FOUND",
 "weight": 1.0
 },
+"champion_mesh_shorts_black_1998": {
+"display": "Champion black mesh basketball shorts, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.341,
+"notes": [
+"Champion black mesh basketball shorts, circa 1998"
+],
+"product": "Champion black mesh basketball shorts, circa 1998",
+"role": "support",
+"size": [
+0.42,
+0.02,
+0.58
+],
+"themes": "DRESS CODE; sports; MALL RAT; regular cubes",
+"weight": 1.0
+},
 "champion_reverse_weave_gray_hoodie_1998": {
 "display": "Champion Reverse Weave gray pullover hoodie, circa",
 "eras": [
@@ -8537,6 +8867,28 @@
 0.24
 ],
 "themes": "TRICK OR TREAT",
+"weight": 1.0
+},
+"checkerboard_web_belt_1998": {
+"display": "Black-and-white checkerboard web belt, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Black-and-white checkerboard web belt, circa 1998"
+],
+"product": "Black-and-white checkerboard web belt, circa 1998",
+"role": "support",
+"size": [
+0.035,
+0.003,
+1.1
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; regular cubes",
 "weight": 1.0
 },
 "cheetos_crunchy_cheese_1996": {
@@ -10100,6 +10452,28 @@
 "themes": "LEFTOVERS",
 "weight": 1.0
 },
+"clear_glitter_jelly_sandal_1997": {
+"display": "Clear glitter jelly sandal, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.158,
+"notes": [
+"Clear glitter jelly sandal, circa 1997"
+],
+"product": "Clear glitter jelly sandal, circa 1997",
+"role": "support",
+"size": [
+0.09,
+0.05,
+0.25
+],
+"themes": "DRESS CODE; MALL RAT; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
 "clear_phone_neon_cords_1995": {
 "display": "Transparent corded telephone with neon internal wiring, circa",
 "eras": [
@@ -10518,6 +10892,28 @@
 "themes": "CARNAVAL",
 "weight": 1.0
 },
+"coffee_thermos_stainless_green_1998": {
+"display": "Green Stanley-style vacuum thermos, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.45,
+"notes": [
+"Green Stanley-style vacuum thermos, circa 1998"
+],
+"product": "Green Stanley-style vacuum thermos, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.35
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "coiled_phone_handset_cord_beige_1997": {
 "display": "Beige coiled telephone handset cord, circa",
 "eras": [
@@ -10583,6 +10979,28 @@
 "themes": "COLD STORAGE",
 "weight": 1.0
 },
+"coleman_fuel_lantern_style_prop_1998": {
+"display": "Coleman-style battery camp lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.96,
+"notes": [
+"Coleman-style battery camp lantern, circa 1998"
+],
+"product": "Coleman-style battery camp lantern, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.14,
+0.28
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "coleman_youth_sleeping_bag_blue_1998": {
 "display": "Coleman youth rectangular sleeping bag, Blue, circa",
 "eras": [
@@ -10603,6 +11021,28 @@
 1.7
 ],
 "themes": "SLEEPOVER",
+"weight": 1.0
+},
+"coleman_youth_sleeping_bag_green_1998": {
+"display": "Coleman youth sleeping bag, Green, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 7.14,
+"notes": [
+"Coleman youth sleeping bag, Green, circa 1998"
+],
+"product": "Coleman youth sleeping bag, Green, circa 1998",
+"role": "main",
+"size": [
+0.75,
+0.08,
+1.7
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "collapsible_umbrella_navy_1998": {
@@ -11723,6 +12163,94 @@
 "themes": "BE MINE",
 "weight": 1.0
 },
+"cryptid_field_cassette_1998": {
+"display": "Handwritten field-recording cassette, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Handwritten field-recording cassette, circa 1998"
+],
+"product": "Handwritten field-recording cassette, circa 1998",
+"role": "main",
+"size": [
+0.102,
+0.012,
+0.064
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
+"cryptid_field_notebook_1998": {
+"display": "Spiral cryptid field notebook, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.044,
+"notes": [
+"Spiral cryptid field notebook, circa 1998"
+],
+"product": "Spiral cryptid field notebook, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.01,
+0.21
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
+"cryptid_newspaper_clipping_1998": {
+"display": "Photocopied local \u201cmystery creature\u201d newspaper clipping, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Photocopied local \u201cmystery creature\u201d newspaper clipping, circa 1998"
+],
+"product": "Photocopied local \u201cmystery creature\u201d newspaper clipping, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.22
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
+"cryptid_zip_bag_hair_sample_1998": {
+"display": "Evidence-style zip bag with unidentified hair sample, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Evidence-style zip bag with unidentified hair sample, circa 1998"
+],
+"product": "Evidence-style zip bag with unidentified hair sample, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.002,
+0.15
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "cryptomnesia_framed_collage_2026": {
 "display": "Pixelord Cryptomnesia collage archival print in black frame",
 "eras": [
@@ -11939,6 +12467,28 @@
 0.16
 ],
 "themes": "EIDI",
+"weight": 1.0
+},
+"dc_lynx_black_white_1998": {
+"display": "DC Lynx skate shoe, Black/White, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.931,
+"notes": [
+"DC Lynx skate shoe, Black/White, circa 1998"
+],
+"product": "DC Lynx skate shoe, Black/White, circa 1998",
+"role": "hero",
+"size": [
+0.13,
+0.11,
+0.31
+],
+"themes": "KICKFLIP; MALL RAT; DRESS CODE; Y2K; regular cubes",
 "weight": 1.0
 },
 "decorative_stop_sign_replica_1998": {
@@ -13501,6 +14051,28 @@
 "themes": "EGG HUNT",
 "weight": 1.0
 },
+"eastpak_padded_pakr_black_1998": {
+"display": "Eastpak Padded Pak'r backpack, Black, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.512,
+"notes": [
+"Eastpak Padded Pak'r backpack, Black, circa 1998"
+],
+"product": "Eastpak Padded Pak'r backpack, Black, circa 1998",
+"role": "hero",
+"size": [
+0.3,
+0.18,
+0.4
+],
+"themes": "SCHOOL; MALL RAT; LOST AND FOUND; DRESS CODE; regular cubes",
+"weight": 1.0
+},
 "easy_bake_oven_1993": {
 "display": "Kenner Easy-Bake Oven, circa",
 "eras": [
@@ -14532,6 +15104,28 @@
 "themes": "GAS FEES",
 "weight": 1.0
 },
+"etnies_sal23_black_1995": {
+"display": "Etnies Sal 23 skate shoe, Black, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.756,
+"notes": [
+"Etnies Sal 23 skate shoe, Black, circa 1995"
+],
+"product": "Etnies Sal 23 skate shoe, Black, circa 1995",
+"role": "hero",
+"size": [
+0.12,
+0.1,
+0.3
+],
+"themes": "KICKFLIP; MALL RAT; DRESS CODE; regular cubes",
+"weight": 1.0
+},
 "etrade_trade_confirmation_1999": {
 "display": "ETRADE printed equity trade confirmation, circa",
 "eras": [
@@ -14638,6 +15232,28 @@
 0.003
 ],
 "themes": "LOW RES",
+"weight": 1.0
+},
+"eveready_d_cell_battery_1998": {
+"display": "Eveready D-cell batteries, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.049,
+"notes": [
+"Eveready D-cell batteries, circa 1998"
+],
+"product": "Eveready D-cell batteries, circa 1998",
+"role": "main",
+"size": [
+0.034,
+0.034,
+0.061
+],
+"themes": "CRYPTID",
 "weight": 1.0
 },
 "eveready_economy_flashlight_red_1997": {
@@ -15191,25 +15807,47 @@
 "weight": 1.0
 },
 "fleer_basketball_pack_1992": {
-"display": "1992-93 Fleer Basketball card pack",
+"display": "Fleer Basketball trading-card wax/foil pack, 1992-93",
 "eras": [
 1,
 2
 ],
-"family": "one-of-one",
-"group": "special",
-"mass": 0.002,
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.003,
 "notes": [
 "1992-93 Fleer Basketball card pack"
 ],
-"product": "1992-93 Fleer Basketball card pack",
-"role": "main",
+"product": "Fleer Basketball trading-card wax/foil pack, 1992-93",
+"role": "support",
 "size": [
 0.07,
 0.008,
-0.115
+0.13
 ],
-"themes": "MINT CONDITION",
+"themes": "sports; MINT CONDITION; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"fleer_ultra_basketball_pack_1992": {
+"display": "1992-93 Fleer Ultra Basketball card pack",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"1992-93 Fleer Ultra Basketball card pack"
+],
+"product": "1992-93 Fleer Ultra Basketball card pack",
+"role": "hero",
+"size": [
+0.07,
+0.008,
+0.13
+],
+"themes": "sports; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "fleet_ready_to_use_enema_1998": {
@@ -15563,6 +16201,28 @@
 "themes": "Y2K",
 "weight": 1.0
 },
+"foil_wrapped_sandwich_1998": {
+"display": "Crushed foil-wrapped peanut-butter sandwich, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.018,
+"notes": [
+"Crushed foil-wrapped peanut-butter sandwich, circa 1998"
+],
+"product": "Crushed foil-wrapped peanut-butter sandwich, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.03,
+0.13
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "folded_centerfold_insert_plain_1998": {
 "display": "Loose folded glossy magazine centerfold insert, circa",
 "eras": [
@@ -15849,6 +16509,28 @@
 "themes": "TIME CAPSULE",
 "weight": 1.0
 },
+"friendship_bracelet_neon_1995": {
+"display": "Neon embroidery-floss friendship bracelet, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Neon embroidery-floss friendship bracelet, circa 1995"
+],
+"product": "Neon embroidery-floss friendship bracelet, circa 1995",
+"role": "filler",
+"size": [
+0.02,
+0.003,
+0.22
+],
+"themes": "SUMMER CAMP; SLEEPOVER; TIME CAPSULE; DRESS CODE; regular cubes",
+"weight": 1.0
+},
 "fruit_by_the_foot_berry_tie_dye_1995": {
 "display": "Betty Crocker Fruit by the Foot Berry Tie-Dye fruit snack, circa",
 "eras": [
@@ -15979,6 +16661,28 @@
 0.22
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"fubu_05_jersey_navy_1998": {
+"display": "FUBU 05 football-style jersey, Navy, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.712,
+"notes": [
+"FUBU 05 football-style jersey, Navy, circa 1998"
+],
+"product": "FUBU 05 football-style jersey, Navy, circa 1998",
+"role": "hero",
+"size": [
+0.62,
+0.02,
+0.82
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
 "weight": 1.0
 },
 "fuji_dri90_1995": {
@@ -17254,6 +17958,28 @@
 0.002
 ],
 "themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"generra_hypercolor_blue_pink_1991": {
+"display": "Generra Hypercolor color-changing T-shirt, Blue-to-Pink",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.272,
+"notes": [
+"Generra Hypercolor color-changing T-shirt, Blue-to-Pink, 1991"
+],
+"product": "Generra Hypercolor color-changing T-shirt, Blue-to-Pink, 1991",
+"role": "hero",
+"size": [
+0.54,
+0.01,
+0.72
+],
+"themes": "DRESS CODE; MALL RAT; TIME CAPSULE; BLACKLIGHT; regular cubes",
 "weight": 1.0
 },
 "german_advent_calendar_cardboard_1998": {
@@ -19871,6 +20597,28 @@
 "themes": "BE MINE",
 "weight": 1.0
 },
+"hersheys_milk_chocolate_bar_1998": {
+"display": "Hershey's Milk Chocolate bar, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Hershey's Milk Chocolate bar, circa 1998"
+],
+"product": "Hershey's Milk Chocolate bar, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.01,
+0.14
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "hi_c_boppin_strawberry_juice_box_1996": {
 "display": "Hi-C Boppin' Strawberry juice box, circa",
 "eras": [
@@ -20397,6 +21145,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"honey_maid_graham_crackers_sleeve_1998": {
+"display": "Nabisco Honey Maid graham cracker sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.098,
+"notes": [
+"Nabisco Honey Maid graham cracker sleeve, circa 1998"
+],
+"product": "Nabisco Honey Maid graham cracker sleeve, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.2
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "hong_kong_style_mooncake_gift_tin_red_1998": {
@@ -21834,6 +22604,28 @@
 "themes": "GOT GOT NEED",
 "weight": 1.0
 },
+"jack_links_original_beef_jerky_1998": {
+"display": "Jack Link's Original beef jerky bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.269,
+"notes": [
+"Jack Link's Original beef jerky bag, circa 1998"
+],
+"product": "Jack Link's Original beef jerky bag, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.05,
+0.24
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "jamon_serrano_leg_prop_1998": {
 "display": "Serrano ham leg used as La Tomatina palo jab\u00f3n prize prop, circa",
 "eras": [
@@ -22208,6 +23000,28 @@
 "themes": "MISSING PIECES",
 "weight": 1.0
 },
+"jet_puffed_marshmallow_bag_1998": {
+"display": "Kraft Jet-Puffed Marshmallows bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.627,
+"notes": [
+"Kraft Jet-Puffed Marshmallows bag, circa 1998"
+],
+"product": "Kraft Jet-Puffed Marshmallows bag, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.08,
+0.28
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "jl_audio_12w3v2_subwoofer_2003": {
 "display": "JL Audio 12W3v2 12-inch subwoofer, circa",
 "eras": [
@@ -22426,6 +23240,28 @@
 0.05
 ],
 "themes": "DIYA",
+"weight": 1.0
+},
+"kangol_bermuda_bucket_black_1998": {
+"display": "Kangol Bermuda bucket hat, Black, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.315,
+"notes": [
+"Kangol Bermuda bucket hat, Black, circa 1998"
+],
+"product": "Kangol Bermuda bucket hat, Black, circa 1998",
+"role": "hero",
+"size": [
+0.3,
+0.05,
+0.3
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
 "weight": 1.0
 },
 "keebler_pizzarias_pizza_chips_1993": {
@@ -23305,6 +24141,28 @@
 ],
 "themes": "SCREEN TIME",
 "weight": 0.12
+},
+"kodak_fun_saver_27_1998_cryptid": {
+"display": "Kodak FunSaver disposable camera, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.059,
+"notes": [
+"Kodak FunSaver disposable camera, circa 1998"
+],
+"product": "Kodak FunSaver disposable camera, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.04,
+0.07
+],
+"themes": "CRYPTID",
+"weight": 1.0
 },
 "kodak_fun_saver_27_1999": {
 "display": "Kodak FunSaver 27-exposure disposable camera",
@@ -26402,6 +27260,28 @@
 "themes": "SPAM GIFT SET",
 "weight": 1.0
 },
+"louisville_slugger_tpx_omaha_1999": {
+"display": "Louisville Slugger TPX Omaha aluminum baseball bat, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 2.881,
+"notes": [
+"Louisville Slugger TPX Omaha aluminum baseball bat, circa 1999"
+],
+"product": "Louisville Slugger TPX Omaha aluminum baseball bat, circa 1999",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.84
+],
+"themes": "sports; MINT CONDITION; regular cubes",
+"weight": 1.0
+},
 "lunar_new_year_door_couplet_pair_1998": {
 "display": "Red Lunar New Year door couplet pair, circa",
 "eras": [
@@ -26840,6 +27720,50 @@
 0.088
 ],
 "themes": "TIME CAPSULE",
+"weight": 1.0
+},
+"maglite_2aa_red_1998": {
+"display": "Mini Maglite 2-AA flashlight, Red, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.063,
+"notes": [
+"Mini Maglite 2-AA flashlight, Red, circa 1998"
+],
+"product": "Mini Maglite 2-AA flashlight, Red, circa 1998",
+"role": "main",
+"size": [
+0.025,
+0.025,
+0.145
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"maglite_3d_black_1998": {
+"display": "Maglite 3-D-cell flashlight, Black, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.656,
+"notes": [
+"Maglite 3-D-cell flashlight, Black, circa 1998"
+],
+"product": "Maglite 3-D-cell flashlight, Black, circa 1998",
+"role": "main",
+"size": [
+0.055,
+0.055,
+0.31
+],
+"themes": "CRYPTID",
 "weight": 1.0
 },
 "magna_doodle_1995": {
@@ -29150,6 +30074,28 @@
 "themes": "LOW RES",
 "weight": 1.0
 },
+"mini_backpack_black_nylon_1997": {
+"display": "Black nylon mini backpack, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.525,
+"notes": [
+"Black nylon mini backpack, circa 1997"
+],
+"product": "Black nylon mini backpack, circa 1997",
+"role": "support",
+"size": [
+0.25,
+0.1,
+0.3
+],
+"themes": "MALL RAT; DRESS CODE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "mini_capsule_robot_key_1998": {
 "display": "Small die-cast capsule robot charm, circa",
 "eras": [
@@ -30688,6 +31634,28 @@
 "themes": "SOME ASSEMBLY REQUIRED; GARAGE SALE; HOME_JUNK_DRAWER_MISC; Y2K; regular cubes",
 "weight": 1.0
 },
+"nautica_competition_jacket_1998": {
+"display": "Nautica Competition color-block jacket, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.756,
+"notes": [
+"Nautica Competition color-block jacket, circa 1998"
+],
+"product": "Nautica Competition color-block jacket, circa 1998",
+"role": "hero",
+"size": [
+0.66,
+0.05,
+0.76
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
+"weight": 1.0
+},
 "nba_jam_genesis_1994": {
 "display": "NBA Jam Sega Genesis cartridge",
 "eras": [
@@ -30755,26 +31723,26 @@
 "weight": 1.0
 },
 "neon_fanny_pack_1991": {
-"display": "Neon nylon fanny pack, circa",
+"display": "Neon color-block waist/fanny pack, circa",
 "eras": [
 1,
 2
 ],
-"family": "one-of-one",
+"family": "clothing_and_accessories",
 "group": "era",
-"mass": 0.192,
+"mass": 0.286,
 "notes": [
 "Neon nylon fanny pack, circa 1991"
 ],
-"product": "Neon nylon fanny pack, circa 1991",
-"role": "main",
+"product": "Neon color-block waist/fanny pack, circa 1991",
+"role": "hero",
 "size": [
-0.28,
-0.07,
-0.14
+0.34,
+0.08,
+0.15
 ],
-"themes": "SLOW MOTION",
-"weight": 0.12
+"themes": "MALL RAT; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
 },
 "nerds_grape_strawberry_theater_box_1998": {
 "display": "Wonka Nerds Grape & Strawberry theater box, circa",
@@ -30952,6 +31920,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
+"nessie_plush_green_1998": {
+"display": "Loch Ness monster souvenir plush, Green, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.504,
+"notes": [
+"Loch Ness monster souvenir plush, Green, circa 1998"
+],
+"product": "Loch Ness monster souvenir plush, Green, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.1,
+0.4
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "nestle_abuelita_chocolate_tablet_1998": {
 "display": "Nestl\u00e9 Abuelita Mexican chocolate tablet, circa",
 "eras": [
@@ -31082,6 +32072,28 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"new_era_5950_fitted_cap_navy_1998": {
+"display": "New Era 59FIFTY fitted cap, Navy, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.517,
+"notes": [
+"New Era 59FIFTY fitted cap, Navy, circa 1998"
+],
+"product": "New Era 59FIFTY fitted cap, Navy, circa 1998",
+"role": "support",
+"size": [
+0.22,
+0.12,
+0.28
+],
+"themes": "MALL RAT; DRESS CODE; sports; regular cubes",
 "weight": 1.0
 },
 "new_york_yankees_felt_pennant_1995": {
@@ -31216,6 +32228,28 @@
 "themes": "SLIMED",
 "weight": 1.0
 },
+"nike_air_max95_neon_1995": {
+"display": "Nike Air Max 95 \u201cNeon,\u201d",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.832,
+"notes": [
+"Nike Air Max 95 \u201cNeon,\u201d 1995"
+],
+"product": "Nike Air Max 95 \u201cNeon,\u201d 1995",
+"role": "hero",
+"size": [
+0.12,
+0.11,
+0.3
+],
+"themes": "MALL RAT; DRESS CODE; KICKFLIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "nike_air_max_95_gray_neon_single_1998": {
 "display": "Single Nike Air Max 95-style running shoe, Gray/Neon, circa",
 "eras": [
@@ -31280,6 +32314,28 @@
 0.13
 ],
 "themes": "TIME CAPSULE",
+"weight": 1.0
+},
+"nike_swoosh_visor_white_1999": {
+"display": "Nike Swoosh visor, White, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.306,
+"notes": [
+"Nike Swoosh visor, White, circa 1999"
+],
+"product": "Nike Swoosh visor, White, circa 1999",
+"role": "support",
+"size": [
+0.26,
+0.06,
+0.28
+],
+"themes": "MALL RAT; DRESS CODE; sports; regular cubes",
 "weight": 1.0
 },
 "nintendo64_cartridge_1996": {
@@ -32162,6 +33218,28 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"no_fear_extreme_sports_tee_1995": {
+"display": "No Fear extreme-sports graphic T-shirt, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.29,
+"notes": [
+"No Fear extreme-sports graphic T-shirt, circa 1995"
+],
+"product": "No Fear extreme-sports graphic T-shirt, circa 1995",
+"role": "hero",
+"size": [
+0.56,
+0.01,
+0.74
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; regular cubes",
+"weight": 1.0
+},
 "nokia_3310_2000": {
 "display": "Nokia 3310 mobile phone",
 "eras": [
@@ -32666,6 +33744,28 @@
 0.115
 ],
 "themes": "HAND TURKEY",
+"weight": 1.0
+},
+"off_deep_woods_aerosol_1998": {
+"display": "OFF! Deep Woods insect repellent aerosol can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.503,
+"notes": [
+"OFF! Deep Woods insect repellent aerosol can, circa 1998"
+],
+"product": "OFF! Deep Woods insect repellent aerosol can, circa 1998",
+"role": "main",
+"size": [
+0.065,
+0.065,
+0.17
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "office97_standard_bigbox_1996": {
@@ -33394,6 +34494,28 @@
 "themes": "LUNCH TRADE",
 "weight": 1.0
 },
+"osiris_d3_black_silver_2001": {
+"display": "Osiris D3 2001 skate shoe, Black/Silver",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.016,
+"notes": [
+"Osiris D3 2001 skate shoe, Black/Silver, 2001"
+],
+"product": "Osiris D3 2001 skate shoe, Black/Silver, 2001",
+"role": "hero",
+"size": [
+0.13,
+0.12,
+0.31
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
 "outkast_stankonia_cd_2000": {
 "display": "OutKast Stankonia CD in jewel case",
 "eras": [
@@ -33502,6 +34624,28 @@
 0.1
 ],
 "themes": "EGG HUNT; HAND TURKEY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"pacific_northwest_topographic_map_1998": {
+"display": "Folded Pacific Northwest topographic map, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.038,
+"notes": [
+"Folded Pacific Northwest topographic map, circa 1998"
+],
+"product": "Folded Pacific Northwest topographic map, circa 1998",
+"role": "main",
+"size": [
+0.6,
+0.0005,
+0.9
+],
+"themes": "CRYPTID",
 "weight": 1.0
 },
 "packard_bell_legend_406cd_1995": {
@@ -33876,6 +35020,28 @@
 0.38
 ],
 "themes": "SCREEN TIME; BE KIND REWIND; SLEEPOVER; SICK DAY; regular cubes",
+"weight": 1.0
+},
+"panasonic_rq_l31_microcassette_recorder_1998": {
+"display": "Panasonic RQ-L31-style portable cassette voice recorder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.051,
+"notes": [
+"Panasonic RQ-L31-style portable cassette voice recorder, circa 1998"
+],
+"product": "Panasonic RQ-L31-style portable cassette voice recorder, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.035,
+0.12
+],
+"themes": "CRYPTID",
 "weight": 1.0
 },
 "panasonic_rr_dr60_1998": {
@@ -35286,6 +36452,28 @@
 "themes": "SOME ASSEMBLY REQUIRED",
 "weight": 1.0
 },
+"pinecone_camp_1998": {
+"display": "Dry pinecone from camp, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.076,
+"notes": [
+"Dry pinecone from camp, circa 1998"
+],
+"product": "Dry pinecone from camp, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.1
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "pink_feather_boa_1998": {
 "display": "Pink feather boa, circa",
 "eras": [
@@ -35764,6 +36952,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"plaster_of_paris_bag_1998": {
+"display": "Plaster of Paris craft bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.494,
+"notes": [
+"Plaster of Paris craft bag, circa 1998"
+],
+"product": "Plaster of Paris craft bag, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.07,
+0.28
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "plastic_army_man_green_1998": {
 "display": "Green plastic army men arcade prize, circa",
 "eras": [
@@ -35894,6 +37104,28 @@
 0.12
 ],
 "themes": "PRIZE COUNTER",
+"weight": 1.0
+},
+"plastic_lanyard_box_stitch_neon_1998": {
+"display": "Neon plastic box-stitch camp lanyard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.01,
+"notes": [
+"Neon plastic box-stitch camp lanyard, circa 1998"
+],
+"product": "Neon plastic box-stitch camp lanyard, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.01,
+0.35
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "plastic_pog_slammer_1994": {
@@ -36400,6 +37632,28 @@
 0.09
 ],
 "themes": "SLEEPOVER; DRESS CODE; GOT GOT NEED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"polo_sport_spellout_windbreaker_1997": {
+"display": "Polo Sport Ralph Lauren spellout windbreaker, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.29,
+"notes": [
+"Polo Sport Ralph Lauren spellout windbreaker, circa 1997"
+],
+"product": "Polo Sport Ralph Lauren spellout windbreaker, circa 1997",
+"role": "hero",
+"size": [
+0.64,
+0.04,
+0.72
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
 "weight": 1.0
 },
 "pomelo_peel_segment_1998": {
@@ -37693,6 +38947,50 @@
 0.073
 ],
 "themes": "MINT CONDITION",
+"weight": 1.0
+},
+"rawlings_rbg36_glove_1998": {
+"display": "Rawlings RBG36 baseball glove, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.361,
+"notes": [
+"Rawlings RBG36 baseball glove, circa 1998"
+],
+"product": "Rawlings RBG36 baseball glove, circa 1998",
+"role": "hero",
+"size": [
+0.23,
+0.08,
+0.28
+],
+"themes": "sports; MINT CONDITION; regular cubes",
+"weight": 1.0
+},
+"rawlings_rolb1_baseball_1998": {
+"display": "Rawlings Official League ROLB1 baseball, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.027,
+"notes": [
+"Rawlings Official League ROLB1 baseball, circa 1998"
+],
+"product": "Rawlings Official League ROLB1 baseball, circa 1998",
+"role": "support",
+"size": [
+0.073,
+0.073,
+0.073
+],
+"themes": "sports; MINT CONDITION; regular cubes",
 "weight": 1.0
 },
 "rawlings_youth_batting_helmet_1998": {
@@ -42134,6 +43432,28 @@
 "themes": "PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"silver_ball_chain_necklace_1999": {
+"display": "Silver ball-chain necklace, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Silver ball-chain necklace, circa 1999"
+],
+"product": "Silver ball-chain necklace, circa 1999",
+"role": "support",
+"size": [
+0.003,
+0.003,
+0.55
+],
+"themes": "DRESS CODE; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
 "silver_millennium_confetti_1999": {
 "display": "Metallic \u201c2000\u201d table confetti, New Year's Eve",
 "eras": [
@@ -42352,6 +43672,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; TRICK OR TREAT; regular cubes",
+"weight": 1.0
+},
+"skechers_energy_white_1999": {
+"display": "Skechers Energy platform sneaker, White, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.737,
+"notes": [
+"Skechers Energy platform sneaker, White, circa 1999"
+],
+"product": "Skechers Energy platform sneaker, White, circa 1999",
+"role": "hero",
+"size": [
+0.11,
+0.11,
+0.29
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
 "weight": 1.0
 },
 "skee_ball_redemption_ticket_strip_1998": {
@@ -43673,6 +45015,28 @@
 "themes": "SCREEN TIME",
 "weight": 0.12
 },
+"sony_handycam_nightshot_hi8_1998": {
+"display": "Sony Handycam Hi8 NightShot camcorder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.58,
+"notes": [
+"Sony Handycam Hi8 NightShot camcorder, circa 1998"
+],
+"product": "Sony Handycam Hi8 NightShot camcorder, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.12,
+0.23
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "sony_hf90_1990": {
 "display": "Sony HF 90 Type I blank audio cassette",
 "eras": [
@@ -44927,6 +46291,28 @@
 "themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
 "weight": 1.0
 },
+"spalding_nba_street_basketball_1998": {
+"display": "Spalding NBA Street outdoor basketball, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 2.903,
+"notes": [
+"Spalding NBA Street outdoor basketball, circa 1998"
+],
+"product": "Spalding NBA Street outdoor basketball, circa 1998",
+"role": "hero",
+"size": [
+0.24,
+0.24,
+0.24
+],
+"themes": "sports; BOARDWALK; MINT CONDITION; regular cubes",
+"weight": 1.0
+},
 "spalding_tf500_soccer_ball_1998": {
 "display": "Spalding recreational soccer ball, circa",
 "eras": [
@@ -45410,6 +46796,50 @@
 "themes": "MINT CONDITION",
 "weight": 1.0
 },
+"stainless_dog_tag_necklace_2001": {
+"display": "Stainless steel dog-tag necklace, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Stainless steel dog-tag necklace, circa 2001"
+],
+"product": "Stainless steel dog-tag necklace, circa 2001",
+"role": "support",
+"size": [
+0.03,
+0.002,
+0.05
+],
+"themes": "DRESS CODE; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
+"stanley_powerlock_12ft_tape_1998": {
+"display": "Stanley PowerLock 12-foot tape measure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.03,
+"notes": [
+"Stanley PowerLock 12-foot tape measure, circa 1998"
+],
+"product": "Stanley PowerLock 12-foot tape measure, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.035,
+0.07
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "stanley_powerlock_25ft_tape_1998": {
 "display": "Stanley PowerLock 25-foot tape measure, circa",
 "eras": [
@@ -45517,6 +46947,28 @@
 0.45
 ],
 "themes": "MINT CONDITION",
+"weight": 1.0
+},
+"starter_snapback_black_red_1996": {
+"display": "Starter snapback cap, Black/Red, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.517,
+"notes": [
+"Starter snapback cap, Black/Red, circa 1996"
+],
+"product": "Starter snapback cap, Black/Red, circa 1996",
+"role": "hero",
+"size": [
+0.22,
+0.12,
+0.28
+],
+"themes": "MALL RAT; DRESS CODE; sports; regular cubes",
 "weight": 1.0
 },
 "starting_lineup_baseball_figure_1995": {
@@ -45627,6 +47079,28 @@
 0.26
 ],
 "themes": "BOARDWALK",
+"weight": 1.0
+},
+"steve_madden_slinky_platform_sandal_1999": {
+"display": "Steve Madden Slinky platform sandal, Black, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.382,
+"notes": [
+"Steve Madden Slinky platform sandal, Black, circa 1999"
+],
+"product": "Steve Madden Slinky platform sandal, Black, circa 1999",
+"role": "hero",
+"size": [
+0.1,
+0.07,
+0.26
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
 "sticker_swap_checklist_notebook_1994": {
@@ -45914,6 +47388,28 @@
 "themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"stretchy_comb_headband_black_1998": {
+"display": "Black stretch-comb headband, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.039,
+"notes": [
+"Black stretch-comb headband, circa 1998"
+],
+"product": "Black stretch-comb headband, circa 1998",
+"role": "support",
+"size": [
+0.14,
+0.01,
+0.16
+],
+"themes": "DRESS CODE; MALL RAT; regular cubes",
+"weight": 1.0
+},
 "stroopwafel_paper_sleeve_1998": {
 "display": "Paper stroopwafel street-vendor sleeve, circa",
 "eras": [
@@ -45934,6 +47430,28 @@
 0.12
 ],
 "themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"studded_leather_belt_black_2001": {
+"display": "Black leather pyramid-stud belt, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Black leather pyramid-stud belt, circa 2001"
+],
+"product": "Black leather pyramid-stud belt, circa 2001",
+"role": "support",
+"size": [
+0.04,
+0.005,
+1.1
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; Y2K; regular cubes",
 "weight": 1.0
 },
 "subbuteo_football_player_blue_1992": {
@@ -46022,6 +47540,116 @@
 0.08
 ],
 "themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"summer_camp_bug_juice_cup_red_1998": {
+"display": "Red plastic camp \u201cbug juice\u201d cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.092,
+"notes": [
+"Red plastic camp \u201cbug juice\u201d cup, circa 1998"
+],
+"product": "Red plastic camp \u201cbug juice\u201d cup, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.06,
+0.11
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"summer_camp_care_package_box_1998": {
+"display": "Parent-sent cardboard camp care package, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.247,
+"notes": [
+"Parent-sent cardboard camp care package, circa 1998"
+],
+"product": "Parent-sent cardboard camp care package, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.22,
+0.18
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"summer_camp_friendship_bracelet_chevron_1998": {
+"display": "Handmade chevron friendship bracelet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handmade chevron friendship bracelet, circa 1998"
+],
+"product": "Handmade chevron friendship bracelet, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.003,
+0.22
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"summer_camp_letter_home_1998": {
+"display": "Handwritten letter home from summer camp, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Handwritten letter home from summer camp, circa 1998"
+],
+"product": "Handwritten letter home from summer camp, circa 1998",
+"role": "main",
+"size": [
+0.216,
+0.0005,
+0.279
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
+"summer_camp_tshirt_gray_1998": {
+"display": "Gray camp-logo T-shirt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.272,
+"notes": [
+"Gray camp-logo T-shirt, circa 1998"
+],
+"product": "Gray camp-logo T-shirt, circa 1998",
+"role": "main",
+"size": [
+0.54,
+0.01,
+0.72
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "sunkist_orange_12oz_can_1998": {
@@ -46331,6 +47959,28 @@
 "themes": "COLD STORAGE",
 "weight": 0.12
 },
+"suunto_style_compass_baseplate_1998": {
+"display": "Clear baseplate hiking compass, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Clear baseplate hiking compass, circa 1998"
+],
+"product": "Clear baseplate hiking compass, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.015,
+0.11
+],
+"themes": "CRYPTID",
+"weight": 1.0
+},
 "sweet_bavarian_mustard_tube_1998": {
 "display": "Tube of Bavarian sweet mustard, circa",
 "eras": [
@@ -46395,6 +48045,28 @@
 0.14
 ],
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"swim_goggles_blue_clear_1998_camp": {
+"display": "Blue-clear swim goggles, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.056,
+"notes": [
+"Blue-clear swim goggles, circa 1998"
+],
+"product": "Blue-clear swim goggles, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.05
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "swim_goggles_clear_blue_2002": {
@@ -48352,6 +50024,28 @@
 "themes": "GACHAPON",
 "weight": 1.0
 },
+"tommy_hilfiger_flag_tee_white_1997": {
+"display": "Tommy Hilfiger flag-logo T-shirt, White, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.29,
+"notes": [
+"Tommy Hilfiger flag-logo T-shirt, White, circa 1997"
+],
+"product": "Tommy Hilfiger flag-logo T-shirt, White, circa 1997",
+"role": "hero",
+"size": [
+0.56,
+0.01,
+0.74
+],
+"themes": "MALL RAT; DRESS CODE; Y2K; regular cubes",
+"weight": 1.0
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "display": "Tony Hawk's Pro Skater 2 PlayStation game",
 "eras": [
@@ -48507,25 +50201,25 @@
 "weight": 1.0
 },
 "topps_basketball_pack_1996": {
-"display": "1996-97 Topps Basketball card pack",
+"display": "Topps Basketball trading-card foil pack, 1996-97",
 "eras": [
 1,
 2
 ],
-"family": "one-of-one",
-"group": "special",
-"mass": 0.002,
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.003,
 "notes": [
 "1996-97 Topps Basketball card pack"
 ],
-"product": "1996-97 Topps Basketball card pack",
-"role": "main",
+"product": "Topps Basketball trading-card foil pack, 1996-97",
+"role": "support",
 "size": [
 0.07,
 0.008,
-0.115
+0.13
 ],
-"themes": "MINT CONDITION",
+"themes": "sports; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "topps_kobe_bryant_138_1996_toploader": {
@@ -48570,6 +50264,28 @@
 0.12
 ],
 "themes": "GOT GOT NEED; MINT CONDITION; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tortoise_claw_hair_clip_1998": {
+"display": "Tortoiseshell plastic claw hair clip, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.039,
+"notes": [
+"Tortoiseshell plastic claw hair clip, circa 1998"
+],
+"product": "Tortoiseshell plastic claw hair clip, circa 1998",
+"role": "support",
+"size": [
+0.05,
+0.05,
+0.09
+],
+"themes": "DRESS CODE; MALL RAT; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
 "totinos_pizza_rolls_pepperoni_1999": {
@@ -48702,6 +50418,28 @@
 0.12
 ],
 "themes": "OFRENDA",
+"weight": 1.0
+},
+"trail_mix_zip_bag_1998": {
+"display": "Homemade trail-mix zipper bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.151,
+"notes": [
+"Homemade trail-mix zipper bag, circa 1998"
+],
+"product": "Homemade trail-mix zipper bag, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.04,
+0.18
+],
+"themes": "CRYPTID",
 "weight": 1.0
 },
 "tram_ticket_amsterdam_1998": {
@@ -51144,6 +52882,28 @@
 "themes": "SEWING KIT",
 "weight": 1.0
 },
+"wet_camp_towel_striped_1998": {
+"display": "Striped cotton camp towel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.686,
+"notes": [
+"Striped cotton camp towel, circa 1998"
+],
+"product": "Striped cotton camp towel, circa 1998",
+"role": "main",
+"size": [
+0.7,
+0.01,
+1.4
+],
+"themes": "SUMMER CAMP",
+"weight": 1.0
+},
 "wet_n_wild_nail_polish_pink_1998": {
 "display": "Wet n Wild nail polish, Hot Pink, circa",
 "eras": [
@@ -51208,6 +52968,28 @@
 0.3
 ],
 "themes": "SUMMER CAMP; ROAD TRIP; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"whistle_green_lanyard_1998": {
+"display": "Green plastic camp whistle on neck cord, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Green plastic camp whistle on neck cord, circa 1998"
+],
+"product": "Green plastic camp whistle on neck cord, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.02,
+0.025
+],
+"themes": "SUMMER CAMP",
 "weight": 1.0
 },
 "whistle_lanyard_sunscreen_key_bundle_1994": {
@@ -51427,6 +53209,28 @@
 0.16
 ],
 "themes": "SLIMED",
+"weight": 1.0
+},
+"wilson_nfl_replica_football_1998": {
+"display": "Wilson NFL replica football, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 1.699,
+"notes": [
+"Wilson NFL replica football, circa 1998"
+],
+"product": "Wilson NFL replica football, circa 1998",
+"role": "hero",
+"size": [
+0.17,
+0.17,
+0.28
+],
+"themes": "sports; MINT CONDITION; regular cubes",
 "weight": 1.0
 },
 "wilson_peewee_football_1998": {
@@ -51977,6 +53781,28 @@
 0.33
 ],
 "themes": "SOME ASSEMBLY REQUIRED",
+"weight": 1.0
+},
+"wwjd_wristband_black_1997": {
+"display": "Black \u201cWWJD?\u201d fabric wristband, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Black \u201cWWJD?\u201d fabric wristband, circa 1997"
+],
+"product": "Black \u201cWWJD?\u201d fabric wristband, circa 1997",
+"role": "support",
+"size": [
+0.02,
+0.004,
+0.18
+],
+"themes": "DRESS CODE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "xbox_controller_s_2002": {

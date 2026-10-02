@@ -1660,6 +1660,117 @@
 "no_wires": true,
 "theme": "every playground hardware argument crushed into one cube"
 },
+"CRYPTID": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"wet pine needles, plaster dust, beef jerky, camcorder battery heat, foil and damp canvas",
+"the back of a station wagon after a weekend spent looking for something that never came back through camp",
+"bigfoot_blurry_photo_1998"
+],
+"lore": "The photo was useless, the footprint was enormous, and somehow that counted as enough evidence to stay another night.",
+"mix": [
+[
+"bigfoot_blurry_photo_1998",
+6
+],
+[
+"bigfoot_plaster_footprint_cast_1998",
+2
+],
+[
+"sony_handycam_nightshot_hi8_1998",
+1
+],
+[
+"35mm_motion_trail_camera_1998",
+1
+],
+[
+"bigfoot_crossing_sign_yellow_1998",
+1
+],
+[
+"nessie_plush_green_1998",
+2
+],
+[
+"jack_links_original_beef_jerky_1998",
+3
+],
+[
+"panasonic_rq_l31_microcassette_recorder_1998",
+1
+],
+[
+"cryptid_field_cassette_1998",
+3
+],
+[
+"foil_wrapped_sandwich_1998",
+3
+],
+[
+"kodak_fun_saver_27_1998_cryptid",
+2
+],
+[
+"maglite_3d_black_1998",
+1
+],
+[
+"eveready_d_cell_battery_1998",
+4
+],
+[
+"suunto_style_compass_baseplate_1998",
+2
+],
+[
+"cryptid_field_notebook_1998",
+2
+],
+[
+"plaster_of_paris_bag_1998",
+2
+],
+[
+"stanley_powerlock_12ft_tape_1998",
+1
+],
+[
+"pacific_northwest_topographic_map_1998",
+2
+],
+[
+"cryptid_newspaper_clipping_1998",
+4
+],
+[
+"aluminum_camp_mug_green_1998",
+2
+],
+[
+"coffee_thermos_stainless_green_1998",
+1
+],
+[
+"cryptid_zip_bag_hair_sample_1998",
+3
+],
+[
+"trail_mix_zip_bag_1998",
+3
+]
+],
+"no_wires": true,
+"theme": "blurry evidence, footprint casts and camping gear from people who definitely saw something"
+},
 "DIAL-UP": {
 "era": [
 1,
@@ -7348,6 +7459,117 @@
 ],
 "no_wires": true,
 "theme": "HoodStreet market floor, media desk, bulls, bears, pigs and ties"
+},
+"SUMMER CAMP": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"pine smoke, bug spray, lake water, powdered drink mix, canvas, marshmallows and damp socks",
+"beneath a bunk after final cabin inspection missed half of it",
+"summer_camp_friendship_bracelet_chevron_1998"
+],
+"lore": "The letter said camp was great; the second letter asked exactly how many days were left.",
+"mix": [
+[
+"summer_camp_friendship_bracelet_chevron_1998",
+8
+],
+[
+"summer_camp_bug_juice_cup_red_1998",
+5
+],
+[
+"summer_camp_care_package_box_1998",
+1
+],
+[
+"boy_scout_style_aluminum_mess_kit_1998",
+2
+],
+[
+"off_deep_woods_aerosol_1998",
+2
+],
+[
+"summer_camp_tshirt_gray_1998",
+2
+],
+[
+"plastic_lanyard_box_stitch_neon_1998",
+6
+],
+[
+"maglite_2aa_red_1998",
+2
+],
+[
+"campfire_smore_1998",
+5
+],
+[
+"army_style_canteen_green_plastic_1998",
+2
+],
+[
+"summer_camp_letter_home_1998",
+5
+],
+[
+"hersheys_milk_chocolate_bar_1998",
+4
+],
+[
+"honey_maid_graham_crackers_sleeve_1998",
+3
+],
+[
+"jet_puffed_marshmallow_bag_1998",
+3
+],
+[
+"campfire_marshmallow_roasting_stick_1998",
+5
+],
+[
+"coleman_youth_sleeping_bag_green_1998",
+1
+],
+[
+"camp_foam_sit_upon_blue_1998",
+2
+],
+[
+"coleman_fuel_lantern_style_prop_1998",
+1
+],
+[
+"whistle_green_lanyard_1998",
+3
+],
+[
+"camp_name_tag_plastic_1998",
+4
+],
+[
+"wet_camp_towel_striped_1998",
+2
+],
+[
+"swim_goggles_blue_clear_1998_camp",
+2
+],
+[
+"pinecone_camp_1998",
+6
+]
+],
+"no_wires": true,
+"theme": "friendship bracelets, bug juice and smoke-stained camp gear after a week away from home"
 },
 "SURPRISE INSIDE": {
 "era": [
