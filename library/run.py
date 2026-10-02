@@ -136,6 +136,7 @@ def pipeline(cid, redo=False):
              and f["vet"].get("sharp", True) is not False and f["vet"].get("whole", True) is not False
              and f["file"] not in shown and size_fits(f, size)]
     cands.sort(key=lambda f: -rank(f))
+    auto_pick(cid, cands[:9], d)                              # a clear winner is picked without asking you
     picked = your_pick(cid, product, cands[:9], d)
     if picked == "none":                                          # you said none: dig deeper, then ask again
         rounds = len([1 for k in os.listdir(d) if k.startswith("round_")])
@@ -256,6 +257,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     import askfirst
     probs = verdict.get("problems")
     note = ("The judge: looks right." if verdict.get("pass") else "The judge: " + (", ".join(probs) if isinstance(probs, list) else str(probs)))
+    if setting("auto_keep") and verdict.get("pass"):           # the judge passed it: filed without asking you
+        status(cid, verdict=verdict, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+               ref=os.path.relpath(picked["file"], WORK))
+        file_away(cid, d)
+        return
     askfirst.ask_review(cid, product, os.path.join(d, "views.jpg"), note[:600])
     tex = next((p for p in (os.path.join(d, "label.png"), os.path.join(d, "skin", "atlas.png"),
                             os.path.join(d, "reference.png")) if os.path.exists(p)), None)
@@ -295,6 +301,30 @@ def run_blender(script, *args):
     r = subprocess.run([PY, os.path.join(HERE, "shapes", script), "--", *args], capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError(f"Blender ({script}) failed: " + (r.stderr or r.stdout)[-400:])
+
+
+def setting(name):
+    """Your switches, in ~/crushed-render/remaster/settings.json (both on unless you turn them off):
+    auto_pick - a clear-winner photo is used without asking you; auto_keep - a judge-passed asset is filed
+    without asking you. Close calls and failures always come to your phone."""
+    return jload(os.path.join(WORK, "settings.json"), {}).get(name, True)
+
+
+def auto_pick(cid, cands, d):
+    """Pick for you only when it's clear: the top photo is a real photo showing at least 3 of the card's marks of
+    the right version, no wrong-version mark, and it beats the next one by a wide margin."""
+    pf, cf = os.path.join(HB, "picks.json"), os.path.join(d, "candidates.json")
+    picks = jload(pf, {})
+    if not setting("auto_pick") or cid in picks or os.path.exists(cf) or not cands:
+        return
+    v = cands[0].get("vet") or {}
+    lead = rank(cands[0]) - (rank(cands[1]) if len(cands) > 1 else 0)
+    if v.get("kind") == "photo" and int(v.get("seen") or 0) >= 3 and v.get("avoid_seen") is not True and lead >= 4:
+        json.dump({"files": [{"file": c["file"], "mask": c["mask"], "vet": c["vet"]} for c in cands],
+                   "asked": time.time(), "auto": True}, open(cf, "w"), indent=1)
+        picks[cid] = {"pick": "1", "at": time.time(), "auto": True}
+        json.dump(picks, open(pf, "w"), indent=1)
+        say(f"[pick] clear winner, picked by itself: {os.path.basename(cands[0]['file'])} (lead {lead:.1f})")
 
 
 def rank(f):
@@ -468,6 +498,11 @@ def your_pick(cid, product, cands, d):
     if not cands:
         status(cid, step="no usable photo found", ok=False)
         return None
+    st = jload(STATUS, {})
+    asking = [k for k, v in st.items() if str(v.get("step", "")).startswith("waiting for your pick") and k not in picks]
+    if len(asking) >= 5:                               # never more than 5 photo sets waiting on your phone
+        status(cid, step="in line for your pick (5 are already on your phone)", ok=False)
+        return None
     if cid in picks:                                   # a tap on an older photo sheet must not count for this one
         picks.pop(cid)
         json.dump(picks, open(picks_f, "w"), indent=1)
@@ -609,9 +644,12 @@ def queue(n):
     picks = jload(os.path.join(HB, "picks.json"), {})
     ap = jload(os.path.join(HB, "approvals.json"), {})
     out = []
+    asking = sum(1 for k, v in st.items() if str(v.get("step", "")).startswith("waiting for your pick") and k not in picks)
     for cid in q:
         step = st.get(cid, {}).get("step", "")
-        if step.startswith(("done", "stopped", "3 rounds")):
+        if step.startswith("in line") and asking >= 5:
+            continue
+        if step.startswith(("done", "stopped", "3 rounds", "no usable")):
             continue
         if step.startswith("waiting for your pick") and cid not in picks:
             continue
@@ -656,7 +694,7 @@ if __name__ == "__main__":
             say("self-test failed - nothing run (the reason is on your phone)")
             sys.exit(1)
         quiet = 0
-        while quiet < 360:
+        while quiet < 20:                               # 10 quiet minutes: leave, so the clock can start a fresh one
             todo = queue(a.queue or 3)
             for cid in todo:
                 try:
@@ -665,7 +703,7 @@ if __name__ == "__main__":
                     import traceback
                     traceback.print_exc()
                     status(cid, step=f"stopped: {e}"[:300], ok=False)
-            busy = [c for c in todo if not jload(STATUS, {}).get(c, {}).get("step", "").startswith(("waiting", "done", "stopped", "3 rounds"))]
+            busy = [c for c in todo if not jload(STATUS, {}).get(c, {}).get("step", "").startswith(("waiting", "done", "stopped", "3 rounds", "in line", "no usable"))]
             quiet = 0 if busy else quiet + 1
             time.sleep(0 if busy else 30)
         sys.exit(0)

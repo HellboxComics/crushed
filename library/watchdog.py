@@ -75,6 +75,22 @@ def main():
         tell(f"Asset maker: no sign of life for {idle / 60:.0f} min while '{beat.get('doing')}'. I restarted it. "
              "If this repeats, send it to Claude.")
         print(f"[watchdog] heartbeat {idle / 60:.0f} min old ({beat.get('doing')}): restarted the run")
+    # 3. a newer version is waiting and the run is idle (everything waiting on you or done): restart it so the
+    #    clock loads the new version (it never changes code under a running job)
+    try:
+        st = json.load(open(os.path.join(WORK, "library", "status.json")))
+        busy = [v for v in st.values() if not str(v.get("step", "")).startswith(
+            ("waiting", "done", "stopped", "3 rounds", "in line", "no usable"))]
+        newest = max((v.get("at", 0) for v in st.values()), default=0)
+        if not busy and time.time() - newest > 600:
+            subprocess.run(["git", "fetch", "-q"], cwd=REPO, timeout=60)
+            ahead = subprocess.run(["git", "rev-list", "--count", "HEAD..@{u}"], cwd=REPO, capture_output=True,
+                                   text=True).stdout.strip()
+            if ahead and ahead != "0":
+                subprocess.run(["pkill", "-f", "bin/python library/run.py"])
+                print(f"[watchdog] idle and {ahead} newer version(s) waiting: stopped the run so the clock loads them")
+    except Exception as e:
+        print(f"[watchdog] version check skipped: {e}")
     json.dump(w, open(STATE, "w"))
 
 
