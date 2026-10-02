@@ -413,7 +413,7 @@ def logo_box(front_png, judge=None, log=print):
     AI's answer isn't usable, the top part of the front is used."""
     try:
         import vet as V
-        b = V.ask(judge or V.model(), LOGO, [front_png], think=False)
+        b = V.ask(judge or V.model(), LOGO, [front_png], think=False, side=768)   # finding a logo needs no big picture
         x0, y0, x1, y1 = (float(b[k]) for k in ("x0", "y0", "x1", "y1"))
         if max(x0, y0, x1, y1) > 1.5:                    # answered in 0..1000 instead of fractions
             x0, y0, x1, y1 = (v / 1000 for v in (x0, y0, x1, y1))
