@@ -306,6 +306,8 @@ def say(*a):
 def status(cid, **kw):
     os.makedirs(OUT, exist_ok=True)
     s = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
+    if "product" in kw:                               # a fresh run of this item: nothing left over from the last one
+        s[cid] = {}
     s.setdefault(cid, {}).update(kw, at=time.time())
     json.dump(s, open(STATUS, "w"), indent=1)
     global _LAST
