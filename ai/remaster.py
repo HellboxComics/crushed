@@ -224,7 +224,8 @@ def turnaround_sheet(name, redo=False):
     seed = open(seedp).read().strip() if os.path.exists(seedp) else ""
     if PLACEHOLDER in seed:
         seed = ""
-    desc = T.describe(name, cat.get("display", name), cat.get("years", ""), cat.get("notes", ""), seed, redo=redo)
+    # a written description is kept on a redo (redo = make the model again); delete <name>.turn.txt to rewrite it
+    desc = T.describe(name, cat.get("display", name), cat.get("years", ""), cat.get("notes", ""), seed)
     turn = os.path.join(WORK, name + "_turn.png")
     T.draw(desc, turn)
     cells = T.split(turn)
