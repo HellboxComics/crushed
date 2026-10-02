@@ -54,9 +54,9 @@
   {
    "part": "label",
    "seam": {
-    "overlap_deg": 6,
-    "thickness_mm": 0.07,
-    "ramp_deg": 2
+    "overlap_deg": 7,
+    "thickness_mm": 0.11,
+    "ramp_deg": 1.5
    },
    "pts": [
     [
@@ -202,12 +202,12 @@
   },
   "steel": {
    "color": [
-    0.5,
-    0.5,
-    0.49
+    0.42,
+    0.42,
+    0.41
    ],
    "metallic": 1.0,
-   "roughness": 0.36,
+   "roughness": 0.42,
    "finish": "spun"
   },
   "edge": {
@@ -222,5 +222,41 @@
  },
  "label_map": "u runs once around (0.5 faces the front, -Y); v runs along the wrapper from the minus end (0) to the plus end (1)",
  "label_reads": "along",
- "layers": "steel can and end caps (spun nickel-plated steel, pressed rings); a printed plastic shrink sleeve over the can, rolled over both shoulders as a lip, its two ends overlapping at the back in a seam"
+ "layers": "steel can and end caps (spun nickel-plated steel, pressed rings); a printed plastic shrink sleeve over the can, rolled over both shoulders as a lip, its two ends overlapping at the back in a seam",
+ "construction": {
+  "layers": [
+   {
+    "part": "steel can and end caps",
+    "material": "bare_steel",
+    "on_top_of": "",
+    "details": [
+     "pressed_rings",
+     "rolled_button",
+     "can_rim"
+    ]
+   },
+   {
+    "part": "printed shrink sleeve",
+    "material": "printed_plastic_sleeve",
+    "on_top_of": "steel can and end caps",
+    "details": [
+     "sleeve_seam",
+     "rolled_lip"
+    ]
+   },
+   {
+    "part": "copper metal ink band",
+    "material": "copper",
+    "on_top_of": "printed shrink sleeve",
+    "details": []
+   }
+  ],
+  "closeups": [
+   "the sleeve's overlap seam running down the side",
+   "the sleeve rolled over both shoulders as a lip",
+   "pressed rings in the steel end caps and the raised plus button",
+   "brushed sheen on the copper ink band",
+   "glossy black sleeve with crisp white print"
+  ]
+ }
 }

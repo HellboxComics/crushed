@@ -174,6 +174,10 @@ for name in parts:
         sep = _green(mt, t2)
         L.new(sep.outputs["Green"], bsdf.inputs["Roughness"])
         L.new(sep.outputs["Blue"], bsdf.inputs["Metallic"])
+    if maps.get("normal") and name == "label" and label_mr:  # metal ink on the label: brushed foil sheen
+        metal = np.asarray(Image.open(label_mr).convert("RGB"))[..., 2].astype(np.float32) / 255
+        if metal.max() > 0.5:
+            maps["normal"] = finish.brushed(maps["normal"], metal, os.path.join(fin_dir, name + "_normal_brushed.png"))
     if maps.get("normal"):
         tn = _img(mt, maps["normal"])
         nm = mt.node_tree.nodes.new("ShaderNodeNormalMap")

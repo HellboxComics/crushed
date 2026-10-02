@@ -169,3 +169,24 @@ def box_atlas(atlas_png, L, out_dir, kind="card", name="box"):
     out["mr"] = os.path.join(out_dir, name + "_mr.png")
     Image.fromarray(mr).save(out["mr"])
     return out
+
+
+def brushed(normal_png, mask, out_png, along="u", strength=0.05):
+    """Metal ink and brushed metal: fine streaks running one way (around a can or battery: 'u'), only where
+    `mask` (0..1, same size or resized) says the surface is metal - the stretched sheen real metal foil has."""
+    n = np.asarray(Image.open(normal_png).convert("RGB")).astype(np.float32) / 127.5 - 1
+    h, w = n.shape[:2]
+    m = np.asarray(Image.fromarray((np.clip(mask, 0, 1) * 255).astype(np.uint8)).resize((w, h))).astype(np.float32) / 255
+    r = RNG.standard_normal((h, w))
+    f = np.fft.fft2(r)
+    fy = np.fft.fftfreq(h)[:, None]
+    fx = np.fft.fftfreq(w)[None, :]
+    su, sv = (60.0, 1.2) if along == "u" else (1.2, 60.0)
+    streak = np.real(np.fft.ifft2(f * np.exp(-2 * np.pi ** 2 * ((su * fx) ** 2 + (sv * fy) ** 2))))
+    streak = (streak - streak.mean()) / (streak.std() + 1e-9)
+    gy, gx = np.gradient(streak)
+    n[..., 0] += -gx * strength * m
+    n[..., 1] += gy * strength * m
+    n /= np.linalg.norm(n, axis=-1, keepdims=True)
+    Image.fromarray(((n * 0.5 + 0.5) * 255).astype(np.uint8)).save(out_png)
+    return out_png

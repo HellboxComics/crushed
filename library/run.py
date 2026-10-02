@@ -170,6 +170,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         sp = os.path.join(HERE, "shapes", "specs", fam.get("shape", "") + ".json")
         if fam.get("shape") and os.path.exists(sp):
             spec = json.load(open(sp))                                # a measured master (the AA battery)
+            if spec.get("construction"):                               # measured by hand: its build is the truth
+                card["construction"] = spec["construction"]
         else:
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
             spec = outline.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
