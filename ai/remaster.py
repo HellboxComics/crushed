@@ -346,6 +346,8 @@ def page():
             v = verdicts.get(n, "")
             return ("redo", "AI SAYS REDO") if v.startswith("REDO") else ("review", "WAITING FOR YOU")
         r = results.get(n, {}).get("result")
+        if now and now.get("name") == n and time.time() - now["since"] < 3 * 3600:
+            return "togo", "MAKING NOW"                      # an old failure doesn't count while it is being remade
         if r and r != "ok":
             return "problem", "PROBLEM: " + r
         if n not in ready:
@@ -380,10 +382,12 @@ def page():
     done_order = sorted(allx, key=lambda n: (order[state(n)[0]], -results.get(n, {}).get("at", 0), n))
     nowhtml = ""
     if now and time.time() - now["since"] < 3 * 3600:
-        sh = os.path.join(WORK, now["name"] + "_sheet.png")
+        sh = os.path.join(WORK, now["name"] + "_turn.png")       # only this run's picture, never an older one
+        if os.path.exists(sh) and os.path.getmtime(sh) < now["since"]:
+            sh = ""
         mins = (time.time() - now["since"]) / 60
         nowhtml = (f'<section class=now><h2>making now: {html.escape(now["name"])}</h2><p>{html.escape(now["step"])} '
-                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if os.path.exists(sh) else "") + '</section>')
+                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if sh and os.path.exists(sh) else "") + '</section>')
     tabs = [("all", "all", len(allx)), ("review", "waiting for you", counts.get("review", 0)),
             ("redo", "AI says redo", counts.get("redo", 0)), ("approved", "approved", counts.get("approved", 0)),
             ("togo", "in line", counts.get("togo", 0)), ("prompts", "needs prompts", counts.get("prompts", 0)),
