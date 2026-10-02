@@ -262,12 +262,40 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
                ref=os.path.relpath(picked["file"], WORK))
         file_away(cid, d)
         return
-    askfirst.ask_review(cid, product, os.path.join(d, "views.jpg"), note[:600])
+    sent = askfirst.ask_review(cid, product, os.path.join(d, "views.jpg"), note[:600])
+    if not sent:
+        say(f"[phone] {cid}: the Keep/Redo message did not reach your phone - it is sent again every minute until it does")
     tex = next((p for p in (os.path.join(d, "label.png"), os.path.join(d, "skin", "atlas.png"),
                             os.path.join(d, "reference.png")) if os.path.exists(p)), None)
     status(cid, step="waiting for your Keep or Redo on your phone", ok=bool(verdict.get("pass")), verdict=verdict,
            photos=n_found, good=n_good, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
-           label=os.path.relpath(tex, WORK) if tex else None, ref=os.path.relpath(picked["file"], WORK), note="")
+           label=os.path.relpath(tex, WORK) if tex else None, ref=os.path.relpath(picked["file"], WORK), note="",
+           sent=bool(sent))
+
+
+def resend():
+    """A Keep/Redo message that never reached your phone (Telegram hiccup) is sent again, every minute, until it
+    does - the page never says "on your phone" for something that isn't there."""
+    st = jload(STATUS, {})
+    ap = jload(os.path.join(HB, "approvals.json"), {})
+    late = [k for k, v in st.items() if str(v.get("step", "")).startswith("waiting for your Keep")
+            and v.get("sent") is False and k not in ap]
+    if not late:
+        return
+    sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
+    import askfirst
+    for cid in late:
+        v = st[cid]
+        sheet = os.path.join(WORK, v.get("views", ""))
+        if not os.path.exists(sheet):
+            continue
+        ver = v.get("verdict") or {}
+        probs = ver.get("problems")
+        note = ("The judge: looks right." if ver.get("pass") else "The judge: " +
+                (", ".join(map(str, probs)) if isinstance(probs, list) else str(probs or "")))
+        if askfirst.ask_review(cid, v.get("product", cid), sheet, note[:600]):
+            say(f"[phone] {cid}: Keep/Redo message delivered")
+            status(cid, sent=True)
 
 
 def sheet_views(paths, out, cell=(300, 400)):
@@ -677,14 +705,21 @@ FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=
          'family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">')
 
 
-def _state(v):
-    """(chip class, chip words, sort order) for one item - what it needs, at a glance."""
+def _state(v, cid="", picks=None, ap=None):
+    """(chip class, chip words, sort order) for one item - what it needs, at a glance. Only says it needs you when
+    it truly does: a tap already made shows as next up, a message that didn't arrive shows as being resent."""
     step = str(v.get("step", ""))
     if step.startswith("done"):
         return "kept", "kept", 3
     if step.startswith("waiting for your Keep"):
+        if ap and cid in ap:
+            return "line", "your tap is in - next up", 2
+        if v.get("sent") is False:
+            return "work", "resending to your phone", 2
         return "you", "your keep / redo", 0
     if step.startswith("waiting for your pick"):
+        if picks and cid in picks:
+            return "line", "your pick is in - next up", 2
         return "you", "your photo pick", 0
     if step.startswith(("stopped", "3 rounds", "no usable", "you said none")):
         return "bad", "needs attention", 1
@@ -698,9 +733,11 @@ def page():
     what's kept. Every built item has its finished 3D model to spin (the newest build, never an older one)."""
     import html
     s = jload(STATUS, {})
+    picks = jload(os.path.join(HB, "picks.json"), {})
+    ap = jload(os.path.join(HB, "approvals.json"), {})
     cards, tally = [], {"you": 0, "work": 0, "kept": 0, "bad": 0}
-    for cid, v in sorted(s.items(), key=lambda kv: (_state(kv[1])[2], -kv[1].get("at", 0))):
-        cls, words, _ = _state(v)
+    for cid, v in sorted(s.items(), key=lambda kv: (_state(kv[1], kv[0], picks, ap)[2], -kv[1].get("at", 0))):
+        cls, words, _ = _state(v, cid, picks, ap)
         tally[cls] = tally.get(cls, 0) + 1
         ver = v.get("verdict") or {}
         probs = ver.get("problems")
@@ -717,7 +754,7 @@ def page():
                     "Spin it in 3D</a>")
         cards.append(f'<section class=card><div class=top><h2>{html.escape(v.get("product", cid))}</h2>'
                      f'<span class="chip {cls}">{words}</span></div>'
-                     f'<p class=step>{html.escape(str(v.get("step", "")))}</p>{judge}{pics}</section>')
+                     f'<p class=step>{html.escape(words.capitalize() if cls == "line" or words.startswith("resending") else str(v.get("step", "")))}</p>{judge}{pics}</section>')
     t = (f'<div class=tally><div><b>{tally["you"]}</b><span>need you</span></div><div><b>{tally["work"]}</b>'
          f'<span>being made</span></div><div><b>{tally["kept"]}</b><span>kept</span></div>'
          f'<div><b>{tally["bad"]}</b><span>need attention</span></div></div>')
@@ -797,6 +834,10 @@ if __name__ == "__main__":
     beat("starting")
     _beating()
     if a.loop:
+        try:
+            resend()                                    # first: anything that never reached your phone
+        except Exception as e:
+            say(f"[phone] resend skipped: {e}")
         if not queue(a.queue or 3):                     # nothing to make right now: done in a second
             sys.exit(0)
         import selftest
@@ -810,6 +851,10 @@ if __name__ == "__main__":
             sys.exit(1)
         quiet = 0
         while quiet < 20:                               # 10 quiet minutes: leave, so the clock can start a fresh one
+            try:
+                resend()
+            except Exception as e:
+                say(f"[phone] resend skipped: {e}")
             todo = queue(a.queue or 3)
             for cid in todo:
                 try:
