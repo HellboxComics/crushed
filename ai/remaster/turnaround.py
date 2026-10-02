@@ -59,7 +59,7 @@ def describe(name, display, years, notes, seed, redo=False):
     if os.path.exists(out) and not redo:
         return open(out).read().strip()
     text = _ask().ask(WRITER, BRIEF.format(display=display, years=years, notes=notes or "-", seed=seed or "-"),
-                      kind="write")
+                      kind="write", timeout=600)
     release()                       # hand its memory back before the drawing room loads a 20B image model
     text = " ".join(str(text or "").split())
     if len(text) < 80:
