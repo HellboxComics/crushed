@@ -266,6 +266,9 @@ def remaster(name, redo=False):
             return f"waiting for its shape ({base}) to be sculpted first"
     else:
         step(name, "2/4 the sculptor is making the shape (the slow part)")
+        sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
+        import turnaround as T
+        T.free_room()                     # the drawing model out of memory while the sculptor works
         shape = sculpt(name, sheet)
     if not shape:
         return "the sculptor could not make a shape (see ~/3D Drop/_PROBLEM.txt)"

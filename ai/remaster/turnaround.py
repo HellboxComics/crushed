@@ -80,6 +80,17 @@ def release():
         pass
 
 
+def free_room():
+    """Tell the drawing room (ComfyUI) to let go of the 40 GB drawing model, so the sculptor gets the memory.
+    ComfyUI's own POST /free; the model loads again by itself on the next drawing."""
+    try:
+        body = json.dumps({"unload_models": True, "free_memory": True}).encode()
+        urllib.request.urlopen(urllib.request.Request(ROOM + "/free", data=body,
+                                                      headers={"content-type": "application/json"}), timeout=30)
+    except Exception:
+        pass
+
+
 LIGHTNING = "Qwen-Image-2512-Lightning-8steps-V1.0-bf16.safetensors"     # the official 8-step speed-up (Apache 2.0)
 LORA_DIR = os.path.expanduser("~/.hellbox/drawing-room/ComfyUI/models/loras")
 
