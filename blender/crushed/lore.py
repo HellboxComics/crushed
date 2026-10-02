@@ -456,3 +456,18 @@ def smells_like(smell):
     keep = ("Grandma's", "CRT", "Vegas")
     words = [w if any(w.startswith(k) for k in keep) else w.lower() for w in smell.split()]
     return "Smells like " + " ".join(words) + "."
+
+
+def apply_real():
+    """The real names (assets/real/*.json, written by the Mac's AI and approved by Harrow) win over the parody ones:
+    names.json {object: "Nintendo 64"}, notes.json {object: [notes]}, ones.json {one-of-one: "lore line"}."""
+    import json
+    import os
+    base = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "assets", "real")
+    for f, d, replace in (("names.json", NAMES, True), ("notes.json", NOTES, True), ("ones.json", ONE_OF_ONES, True)):
+        p = os.path.join(base, f)
+        if os.path.exists(p):
+            d.update(json.load(open(p)))
+
+
+apply_real()

@@ -351,6 +351,46 @@ ONE_ERA = {
 }
 
 
+def _merge_ones():
+    """Extra one-of-ones: the code-built crews (crushed/intl/*.py, ONES) and the Mac-designed plan
+    (assets/plan/ones.json). Each brings its mix, lore, flavor, eras, fillers, softness and wires rule."""
+    import glob
+    import importlib
+    import json
+    import os
+    here = os.path.dirname(os.path.abspath(__file__))
+    found = {}
+    for f in sorted(glob.glob(os.path.join(here, "intl", "*.py"))):
+        if not os.path.basename(f).startswith("_"):
+            found.update(getattr(importlib.import_module(f"{__package__}.intl.{os.path.basename(f)[:-3]}"), "ONES", {}))
+    plan = os.path.join(os.path.dirname(os.path.dirname(here)), "assets", "plan", "ones.json")
+    if os.path.exists(plan):
+        found.update(json.load(open(plan)))
+    for t in sorted(found):
+        o = found[t]
+        if "mix" not in o:                         # {"extra": [...]}: more objects for an existing one-of-one
+            if t in MONOCULTURES:
+                MONOCULTURES[t] = MONOCULTURES[t] + [tuple(x) for x in o.get("extra", [])]
+            continue
+        if t not in ONE_OF_ONES:
+            ONE_OF_ONES.append(t)
+        MONOCULTURES[t] = [tuple(x) for x in o["mix"]]
+        lore.ONE_OF_ONES.setdefault(t, o["lore"])
+        ONE_OF_ONE_FLAVOR[t] = tuple(o["flavor"])
+        if o.get("era"):
+            ONE_ERA[t] = set(o["era"])
+        if o.get("fillers"):
+            ONE_FILLERS[t] = tuple(o["fillers"])
+        if o.get("soft"):
+            ONE_SOFT[t] = float(o["soft"])
+        if o.get("no_wires", True):
+            NO_WIRES.add(t)
+    lore.apply_real()
+
+
+_merge_ones()
+
+
 def deck():
     rng = np.random.default_rng([COLLECTION_SEED, 0])
     conds = list(ONE_OF_ONES)

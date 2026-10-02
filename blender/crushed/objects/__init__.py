@@ -130,16 +130,17 @@ class Palette:
 
 
 def load():
-    from . import era, crypto, filler, modern, degen, special, gifts, holiday, games, toys, tech, life, room  # noqa: F401
+    from . import era, crypto, filler, modern, degen, special, gifts, holiday, games, toys, tech, life, room, planned  # noqa: F401
     import glob
     import importlib
     import os
     from .. import lore
     intl = [importlib.import_module(f"{__name__}.{os.path.basename(f)[:-3]}")      # the international crews
             for f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), "intl_*.py")))]
-    for mod in (games, toys, tech, life, room, *intl):          # these modules carry their own names and evidence-log notes
+    for mod in (games, toys, tech, life, room, planned, *intl):          # these modules carry their own names and evidence-log notes
         for k, v in getattr(mod, "LORE_NAMES", {}).items():
             lore.NAMES.setdefault(k, v)
         for k, v in getattr(mod, "LORE_NOTES", {}).items():
             lore.NOTES.setdefault(k, v)
+    lore.apply_real()
     return REG

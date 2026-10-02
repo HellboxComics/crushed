@@ -64,7 +64,24 @@ def trash(path):
 
 
 def draw_sheet(name, out):
+    """Real photos first (ai/remaster/refs.py): if any were found, the sheet is painted over them so it copies the real
+    product; if none, from the words alone."""
     prompt = SHEET_STYLE + open(os.path.join(PROMPTS, name + ".txt")).read().strip()
+    sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
+    import comfy
+    import refs
+    try:
+        refs.fetch(name)
+    except Exception:
+        pass
+    pics = refs.photos(name)
+    if pics:
+        try:
+            init = comfy.sheet_from_photos(pics, os.path.join(WORK, name + "_start.png"))
+            if comfy.draw_guided(prompt, init, out):
+                return True
+        except Exception:
+            pass
     r = subprocess.run([sys.executable, DRAW_PY, prompt, "--out", out], capture_output=True, text=True)
     return r.returncode == 0 and os.path.exists(out)
 
@@ -136,14 +153,27 @@ def publish(force=False):
         if not os.path.exists(src):
             return m.group(0)
         name = re.sub(r"[^a-z0-9_]+", "_", os.path.relpath(src, os.path.dirname(WORK)).lower()) + ".jpg"
-        im = Image.open(src).convert("RGB")
-        im.thumbnail((900, 900))
-        im.save(os.path.join(site, "img", name), quality=80)
+        cache = os.path.join(WORK, ".thumbs", name)
+        if not os.path.exists(cache) or os.path.getmtime(cache) < os.path.getmtime(src):
+            os.makedirs(os.path.dirname(cache), exist_ok=True)
+            im = Image.open(src).convert("RGB")
+            im.thumbnail((900, 900))
+            im.save(cache, quality=80)
+        shutil.copy(cache, os.path.join(site, "img", name))
         return f'src="img/{name}"'
     html_ = re.sub(r'src="([^"]+)"', swap, html_)
     html_ = html_.replace("<meta charset=utf-8>", "<meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>"
                           "<meta name=robots content=noindex>")
     open(os.path.join(site, "index.html"), "w").write(html_)
+    if os.path.exists(os.path.join(WORK, "view.html")):
+        shutil.copy(os.path.join(WORK, "view.html"), os.path.join(site, "view.html"))
+    os.makedirs(os.path.join(site, "models"))
+    for base in (MODELS, PENDING):                      # every model that exists, so any of them can be spun on the phone
+        for g in glob.glob(os.path.join(base, "*", "model.glb")):
+            n = os.path.basename(os.path.dirname(g))
+            dst = os.path.join(site, "models", n + ".glb")
+            if not os.path.exists(dst):
+                shutil.copy(g, dst)
     r = subprocess.run([npx, "--yes", "wrangler@3", "pages", "deploy", site, "--project-name", PROJECT, "--branch", "main",
                         "--commit-dirty=true"], capture_output=True, text=True)
     open(stamp, "w").write(r.stdout[-500:] + r.stderr[-500:])
@@ -179,7 +209,7 @@ def remaster(name, redo=False):
         trash(out)
     os.makedirs(WORK, exist_ok=True)
     sheet = os.path.join(WORK, name + "_sheet.png")
-    step(name, "1/4 painting the reference sheet")
+    step(name, "1/4 finding real photos, painting the reference sheet")
     if not draw_sheet(name, sheet):
         return "the drawing room did not answer (is ComfyUI open?)"
     step(name, "2/4 the sculptor is making the shape (the slow part)")
@@ -200,9 +230,18 @@ def remaster(name, redo=False):
     return "ok"
 
 
+def expected():
+    """Every object the collection needs, from ai/remaster/expected.txt (written by ai/plan_check.py from the code
+    library and the plan), plus anything that already has a prompt."""
+    p = os.path.join(ROOT, "ai", "remaster", "expected.txt")
+    ex = [l.strip() for l in open(p) if l.strip()] if os.path.exists(p) else []
+    return sorted(set(ex) | set(names()))
+
+
 def page():
-    """~/crushed-render/remaster/index.html: what's being made right now, and every result so far, newest first,
-    with its pictures and prompts. Refreshes itself every 20 seconds."""
+    """~/crushed-render/remaster/index.html, the phone page: what is being made right now, then EVERY object in the
+    collection as a card (its state, the real photos, the reference sheet, the four-side review), filterable, with a
+    tap-to-spin 3D view of every model that exists. Refreshes itself every 60 seconds."""
     import html
     os.makedirs(WORK, exist_ok=True)
     rel = lambda p: os.path.relpath(p, WORK)
@@ -221,49 +260,98 @@ def page():
             if line.strip():
                 k, _, v = line.strip().partition(" ")
                 verdicts[k] = v
-    all_ = names()
-    appr = {n for n in all_ if os.path.exists(os.path.join(MODELS, n, "model.glb"))}
-    pend = {n for n in all_ if os.path.exists(os.path.join(PENDING, n, "model.glb"))}
+    allx = expected()
+    appr = {n for n in allx if os.path.exists(os.path.join(MODELS, n, "model.glb"))}
+    pend = {n for n in allx if os.path.exists(os.path.join(PENDING, n, "model.glb"))}
+    ready = {n for n in allx if os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))}
 
     def txt(n, ext=".txt"):
         p = os.path.join(PROMPTS, n + ext)
         return html.escape(open(p).read().strip()) if os.path.exists(p) else ""
 
-    def card(n):
-        d = os.path.join(MODELS if n in appr else PENDING, n)
-        state = "APPROVED" if n in appr else "WAITING FOR YOU" if n in pend else results.get(n, {}).get("result", "")
-        imgs = "".join(f'<figure><img src="{rel(os.path.join(d, f))}" loading="lazy"><figcaption>{c}</figcaption></figure>'
-                       for f, c in (("review.png", "new (top) vs now (bottom)"), ("reference.png", "reference"),
-                                    ("inside.png", "inside")) if os.path.exists(os.path.join(d, f)))
-        v = verdicts.get(n, "")
-        return (f'<section><h2>{html.escape(n)} <span class="st">{html.escape(state)}</span>'
-                f'{f" <span class=v>AI says: {html.escape(v)}</span>" if v else ""}</h2><div class=imgs>{imgs}</div>'
-                f'<p><b>outside</b> {txt(n)}</p><p><b>inside</b> {txt(n, ".inside.txt")}</p>'
-                f'<p class=fix>wrong direction? edit <code>ai/remaster/prompts/{n}.txt</code>, then '
-                f'<code>.venv/bin/python ai/remaster.py --only {n} --redo</code></p></section>')
+    def state(n):
+        if n in appr:
+            return "approved", "APPROVED"
+        if n in pend:
+            v = verdicts.get(n, "")
+            return ("redo", "AI SAYS REDO") if v.startswith("REDO") else ("review", "WAITING FOR YOU")
+        r = results.get(n, {}).get("result")
+        if r and r != "ok":
+            return "problem", "PROBLEM: " + r
+        if n not in ready:
+            return "prompts", "NEEDS PROMPTS"
+        return "togo", "IN LINE"
 
-    done = sorted(results, key=lambda n: -results[n]["at"])
+    def card(n):
+        k, label = state(n)
+        d = os.path.join(MODELS if n in appr else PENDING, n)
+        pics = []
+        for f, c in (("review.png", "new (top) vs code (bottom)"), ("reference.png", "reference sheet"), ("inside.png", "inside")):
+            if os.path.exists(os.path.join(d, f)):
+                pics.append((os.path.join(d, f), c))
+        rd = os.path.join(WORK, "refs", n)
+        if os.path.isdir(rd):
+            pics += [(os.path.join(rd, f), "real photo") for f in sorted(os.listdir(rd)) if f.startswith("ref")]
+        imgs = "".join(f'<figure><img src="{rel(p)}" loading="lazy"><figcaption>{c}</figcaption></figure>' for p, c in pics)
+        glb = os.path.join(d, "model.glb")
+        spin = f'<a class=spin href="view.html#{n}">spin in 3D</a>' if os.path.exists(glb) else ""
+        v = verdicts.get(n, "")
+        return (f'<section class="c {k}" data-k="{k}" data-n="{html.escape(n)}"><h2>{html.escape(n)} '
+                f'<span class=st>{html.escape(label)}</span>{f" <span class=v>AI: {html.escape(v)}</span>" if v else ""}{spin}</h2>'
+                f'<div class=imgs>{imgs}</div><details><summary>prompts</summary><p><b>outside</b> {txt(n)}</p>'
+                f'<p><b>inside</b> {txt(n, ".inside.txt")}</p><p class=fix>wrong direction? edit '
+                f'<code>ai/remaster/prompts/{n}.txt</code>, then <code>.venv/bin/python ai/remaster.py --only {n} --redo</code>'
+                f'</p></details></section>')
+
+    counts = {}
+    for n in allx:
+        counts[state(n)[0]] = counts.get(state(n)[0], 0) + 1
+    order = {"review": 0, "redo": 1, "problem": 2, "approved": 3, "togo": 4, "prompts": 5}
+    done_order = sorted(allx, key=lambda n: (order[state(n)[0]], -results.get(n, {}).get("at", 0), n))
     nowhtml = ""
-    if now and time.time() - now["since"] < 3 * 3600 and now["name"] not in done[:1]:
+    if now and time.time() - now["since"] < 3 * 3600:
         sh = os.path.join(WORK, now["name"] + "_sheet.png")
         mins = (time.time() - now["since"]) / 60
         nowhtml = (f'<section class=now><h2>making now: {html.escape(now["name"])}</h2><p>{html.escape(now["step"])} '
-                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if os.path.exists(sh) else "") +
-                   f'<p><b>outside</b> {txt(now["name"])}</p></section>')
-    queue = [n for n in all_ if n not in appr and n not in pend and n not in results][:15]
-    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} approved &middot; {len(pend)} waiting for you '
-            f'&middot; {len(all_) - len(appr) - len(pend)} to go &middot; updated {time.strftime("%-I:%M %p")}</p>'
-            + nowhtml + "".join(card(n) for n in done) +
-            f'<p class=q>next up: {", ".join(queue)}</p>')
+                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if os.path.exists(sh) else "") + '</section>')
+    tabs = [("all", "all", len(allx)), ("review", "waiting for you", counts.get("review", 0)),
+            ("redo", "AI says redo", counts.get("redo", 0)), ("approved", "approved", counts.get("approved", 0)),
+            ("togo", "in line", counts.get("togo", 0)), ("prompts", "needs prompts", counts.get("prompts", 0)),
+            ("problem", "problems", counts.get("problem", 0))]
+    left = len(allx) - len(appr)
+    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} of {len(allx)} approved &middot; '
+            f'about {left * 11 / 60 / 24:.1f} days of Mac time left &middot; updated {time.strftime("%-I:%M %p")}</p>'
+            + nowhtml +
+            '<div class=tabs>' + "".join(f'<button data-t="{k}">{l} <b>{c}</b></button>' for k, l, c in tabs) +
+            '</div><input id=q type=search placeholder="search an object">' +
+            "".join(card(n) for n in done_order) +
+            '<script>let T="all";const go=()=>{const q=document.getElementById("q").value.toLowerCase();'
+            'document.querySelectorAll(".c").forEach(e=>{e.hidden=!((T=="all"||e.dataset.k==T)&&e.dataset.n.includes(q))});'
+            'document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t==T))};'
+            'document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{T=b.dataset.t;go()});'
+            'document.getElementById("q").oninput=go;go()</script>')
+    style = ('body{background:#0b0b0b;color:#e9e6df;font:14px/1.5 ui-monospace,Menlo,monospace;margin:0;padding:16px}'
+             'h1{color:#ccff00;font-size:20px;margin:0 0 4px}h2{font-size:14px;margin:0 0 8px}.count{color:#999}'
+             'section{border:1px solid #2a2926;padding:12px;margin:12px 0;border-radius:6px}.now{border-color:#ccff00}'
+             '.st{color:#ccff00;font-size:11px;margin-left:6px}.redo .st,.problem .st{color:#f90}.togo .st,.prompts .st{color:#777}'
+             '.v{color:#f90;font-size:11px}.spin{float:right;color:#ccff00;font-size:12px}'
+             '.imgs{display:flex;gap:8px;flex-wrap:wrap}figure{margin:0}figure img{max-width:100%;height:auto;max-height:240px;'
+             'border:1px solid #333}figcaption{color:#888;font-size:11px}.now img{max-width:420px;width:100%}'
+             'code{background:#1b1b1b;padding:1px 5px}.fix{color:#999;font-size:12px}summary{color:#888;cursor:pointer}'
+             '.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.tabs button{background:#151515;color:#ccc;border:1px solid #333;'
+             'padding:6px 10px;font:12px ui-monospace,monospace;border-radius:4px}.tabs button.on{border-color:#ccff00;color:#ccff00}'
+             '#q{width:100%;box-sizing:border-box;background:#151515;color:#eee;border:1px solid #333;padding:9px;font:14px ui-monospace,monospace}'
+             '[hidden]{display:none!important}')
     open(os.path.join(WORK, "index.html"), "w").write(
-        '<!doctype html><meta charset=utf-8><meta http-equiv=refresh content=20><title>remaster</title><style>'
-        'body{background:#0b0b0b;color:#e9e6df;font:14px/1.5 ui-monospace,Menlo,monospace;margin:0;padding:18px}'
-        'h1{color:#ccff00;font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:0 0 8px}.count{color:#999}'
-        'section{border:1px solid #2a2926;padding:14px;margin:14px 0;border-radius:6px}.now{border-color:#ccff00}'
-        '.st{color:#ccff00;font-size:12px;margin-left:8px}.v{color:#f90;font-size:12px}'
-        '.imgs{display:flex;gap:10px;flex-wrap:wrap}figure{margin:0}figure img{max-width:100%;height:auto;'
-        'max-height:300px;border:1px solid #333}figcaption{color:#888;font-size:11px}.now img{max-width:420px;width:100%}'
-        'code{background:#1b1b1b;padding:1px 5px}.fix{color:#999;font-size:12px}.q{color:#777}</style>' + body)
+        '<!doctype html><meta charset=utf-8><title>remaster</title><style>' + style + '</style>' + body)
+    open(os.path.join(WORK, "view.html"), "w").write(
+        '<!doctype html><meta charset=utf-8><title>model</title><meta name=viewport content="width=device-width,initial-scale=1">'
+        '<script type=module src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>'
+        '<style>body{margin:0;background:#0b0b0b;color:#ccff00;font:14px ui-monospace,monospace}model-viewer{width:100vw;height:88vh}'
+        'a{color:#ccff00;margin:12px;display:inline-block}</style><a href="index.html">&larr; all objects</a> <span id=n></span>'
+        '<model-viewer id=m camera-controls auto-rotate shadow-intensity=1 exposure=1.1></model-viewer>'
+        '<script>const n=location.hash.slice(1);document.getElementById("n").textContent=n;'
+        'document.getElementById("m").src="models/"+n+".glb"</script>')
 
 
 def status():
@@ -315,7 +403,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--redo", action="store_true")
-    ap.add_argument("--limit", type=int, default=6, help="how many to make this run (the clock calls it often)")
+    ap.add_argument("--limit", type=int, default=40, help="how many to make this run (the clock calls it often)")
     ap.add_argument("--sheet", action="store_true")
     ap.add_argument("--approve", nargs="*")
     ap.add_argument("--status", action="store_true")

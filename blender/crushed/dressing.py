@@ -1,5 +1,6 @@
 """Everything that isn't an object: the core mass, straps, tape, wires, goo."""
 import math
+import os
 
 import bmesh
 import bpy
@@ -288,11 +289,19 @@ def strata(coll, rng, pal, seed, inten=1.0, per_side=56, prints=(), borrow=(), b
     return ob
 
 
-def _label_pool(rng, borrow):
+def _label_pool(rng, borrow, era=None):
     """The printed labels this block's crushed packaging wears: mostly its own (the wrappers, covers and boxes of the
-    things in it), the rest from its era's parody shelf."""
+    things in it), the rest from its era's shelf: the real labels (assets/labels/<era>/) once approved, otherwise
+    the parody makers."""
+    from . import models
     from .objects import PR
     pool = list(borrow)
+    real = models.labels(era) if era is not None else []
+    if real:
+        for p in rng.choice(real, size=min(len(real), max(6, 12 - len(pool))), replace=False):
+            img = bpy.data.images.get(os.path.basename(p)) or bpy.data.images.load(p)
+            pool.append(mat.get(PR(img, float(rng.uniform(0.2, 0.45)), metal=float(rng.random() < 0.5)), rng))
+        return pool
     makers = [tex.can_print, tex.beer_print, tex.ramen, tex.sun_label, tex.tissue_print, tex.foil_print,
               tex.matchbook_print, tex.sanitizer_label, tex.battery, tex.vape_print, tex.sticker]
     want = max(4, 10 - len(pool))
@@ -311,7 +320,7 @@ def products(coll, rng, pal, seed, inten, n, borrow=()):
     flat with the can end showing, cartons folded in on themselves, chip bags and wrappers crumpled tight. They
     tile the whole surface between the objects, so the bale reads as stuff all the way through."""
     from .objects import MET
-    labels = _label_pool(rng, borrow)
+    labels = _label_pool(rng, borrow, getattr(pal, "era", None))
     metal_end = mat.get(MET((0.82, 0.82, 0.84), 0.22), rng)
     faces = {"-Y": 1.0, "+X": 1.0, "+Z": 1.0, "+Y": 0.85, "-X": 0.85}
     keys, w = list(faces), np.array(list(faces.values()))

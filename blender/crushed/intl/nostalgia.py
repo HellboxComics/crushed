@@ -4,7 +4,7 @@ ONES = {
     "SURPRISE INSIDE": {
         "mix": [("surprise_egg", 14), ("surprise_capsule", 8), ("surprise_toy", 8), ("surprise_slip", 5),
                 ("choc_egg_shell", 5), ("hazelnut_wafer_bar", 3), ("joy_egg", 4), ("kids_choc_bar", 5),
-                ("crumpled_paper", 2), ("gum_wrapper", 2)],
+                ("plastic_egg", 2), ("gacha_figure", 3)],
         "lore": "Contraband under American law: forty chocolate eggs with a toy inside, smuggled home in a suitcase "
                 "and opened on the kitchen floor.",
         "flavor": ("Cheap Milk Chocolate and Foil", "A Suitcase, Back From Vacation", "Kinda Surprise Egg"),
@@ -16,7 +16,7 @@ ONES = {
     "GOT GOT NEED": {
         "mix": [("sticker_album", 3), ("sticker_packet", 10), ("football_sticker", 16), ("shiny_badge", 5),
                 ("swap_stack", 4), ("flick_figure", 5), ("foam_football", 1), ("jersey_scrap", 2), ("mini_flag", 3),
-                ("crumpled_paper", 2)],
+                ("team_scarf", 2)],
         "lore": "Italia 90 to France 98 in one swap pile: the album half full, the doubles rubber-banded, the shiny "
                 "never found.",
         "flavor": ("Sticker Glue and Playground Asphalt", "A Pencil Case, Back Row", "Panetti Sticker Album"),
@@ -62,7 +62,7 @@ ONES = {
     },
     "TAZOS": {
         "mix": [("tazo", 18), ("tazo_chip_bag", 6), ("tazo_tube", 3), ("puff_bag", 4), ("tazo_board", 2),
-                ("pog_slammer", 4), ("glass_soda", 3), ("milk_caps", 3), ("bottle_cap", 4), ("crumpled_paper", 2)],
+                ("pog_slammer", 4), ("glass_soda", 3), ("milk_caps", 3), ("chip_bag_3d", 3), ("soda_can", 3)],
         "lore": "Bought for the disc, not the chips: a year of recess from Madrid to Monterrey to Buenos Aires, "
                 "slammed flat on the patio.",
         "flavor": ("Chili Lime Dust and Orange Fingers", "A Schoolyard Patio, Recess", "Taza Collector Tube"),

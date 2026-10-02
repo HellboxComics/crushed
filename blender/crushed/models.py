@@ -21,11 +21,22 @@ def path(name):
 
 
 def hashes():
+    """Every approved model, real label, and plan/real-name file, hashed: the frozen collection names its inputs."""
     out = {}
     for f in sorted(glob.glob(os.path.join(MODELS, "*", "model.glb"))):
         with open(f, "rb") as fh:
             out["models/" + os.path.basename(os.path.dirname(f))] = hashlib.sha256(fh.read()).hexdigest()
+    A = os.path.join(ROOT, "assets")
+    for f in sorted(glob.glob(os.path.join(A, "labels", "*", "*.png")) + glob.glob(os.path.join(A, "plan", "*.json"))
+                    + glob.glob(os.path.join(A, "real", "*.json"))):
+        with open(f, "rb") as fh:
+            out[os.path.relpath(f, A)] = hashlib.sha256(fh.read()).hexdigest()
     return out
+
+
+def labels(era):
+    """Approved real product labels for an era (assets/labels/<era index>/*.png), made by ai/remaster/labels.py."""
+    return sorted(glob.glob(os.path.join(ROOT, "assets", "labels", str(era), "*.png")))
 
 
 def tear(ob, rng, holes=(2, 5)):
