@@ -50,6 +50,41 @@ def rgb(c):
     return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
 
 
+def _box(t, W, H, d):
+    """Where a line of text will really land: (x0, y0, x1, y1) in pixels."""
+    hpx = t["h"] * H
+    f = font(t.get("weight", "bold"), hpx * 1.38)
+    x0, y0, x1, y1 = d.textbbox((0, 0), t["text"], font=f)
+    w = t["w"] * W if t.get("w") else (x1 - x0 + 8) * hpx / max(y1 - y0 + 8, 1)
+    if t.get("mark"):
+        w += hpx * 0.6
+    x = t["x"] * W - (w / 2 if t.get("align") == "center" else w if t.get("align") == "right" else 0)
+    return x, t["y"] * H, x + w, t["y"] * H + hpx
+
+
+def no_overlaps(texts, W, H, d, gap=0.012):
+    """No two lines of text may touch: where one would run into the line below it (overlapping side to side),
+    it is made just short enough to stop a small gap above. Shrinks only; keeps every line's top and its words."""
+    for _ in range(3):
+        boxes = [_box(t, W, H, d) for t in texts]
+        changed = False
+        for i, a in enumerate(boxes):
+            for j, b in enumerate(boxes):
+                if i == j or texts[i].get("rotate") or texts[j].get("rotate"):
+                    continue
+                side = min(a[2], b[2]) - max(a[0], b[0]) > 0
+                if side and a[1] <= b[1] < a[3]:            # line i starts above line j and runs into it
+                    new_h = (b[1] - a[1]) / H - gap
+                    if new_h > 0.01 and new_h < texts[i]["h"]:
+                        if texts[i].get("w"):
+                            texts[i]["w"] *= new_h / texts[i]["h"]    # keep its letters' proportions
+                        texts[i]["h"] = new_h
+                        changed = True
+        if not changed:
+            break
+    return texts
+
+
 def render(layout, out_dir, px=4096, name="label"):
     """-> (color png, metal/roughness png in the glTF layout: G roughness, B metallic), reading orientation."""
     os.makedirs(out_dir, exist_ok=True)
@@ -90,7 +125,8 @@ def render(layout, out_dir, px=4096, name="label"):
             d.rectangle(b, fill=fill, outline=outline, width=width)
         if s.get("metal"):
             (dm.ellipse if t == "ellipse" else dm.rectangle)(b, fill=(0, int(255 * s.get("roughness", 0.3)), 255))
-    for tx in layout.get("texts", []):
+    texts = no_overlaps([dict(t) for t in layout.get("texts", [])], W, H, d)
+    for tx in texts:
         mark = MARKS.get(tx.get("mark"), "")
         text = tx["text"]
         hpx = tx["h"] * H

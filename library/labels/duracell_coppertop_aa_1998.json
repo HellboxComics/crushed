@@ -195,8 +195,8 @@
    "text": "DURACELL",
    "x": 0.373,
    "y": 0.04,
-   "h": 0.105,
-   "w": 0.5,
+   "h": 0.088,
+   "w": 0.46,
    "color": "#f2f2f2",
    "weight": "black",
    "mark": "registered"
@@ -204,7 +204,7 @@
   {
    "text": "MN 1500   LR6   1.5 VOLTS",
    "x": 0.37,
-   "y": 0.135,
+   "y": 0.142,
    "h": 0.052,
    "w": 0.53,
    "color": "#f2f2f2",
@@ -249,9 +249,9 @@
   {
    "text": "DURACELL",
    "x": 0.355,
-   "y": 0.375,
-   "h": 0.105,
-   "w": 0.5,
+   "y": 0.378,
+   "h": 0.095,
+   "w": 0.48,
    "color": "#f2f2f2",
    "weight": "black",
    "mark": "registered"
