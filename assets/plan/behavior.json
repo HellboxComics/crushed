@@ -1,0 +1,1870 @@
+{
+"aa_batteries": {
+"hard": 0.85,
+"how": "dent"
+},
+"air_horn": {
+"hard": 0.85,
+"how": "dent"
+},
+"amp_kit": {
+"hard": 0.6,
+"how": "snap"
+},
+"army_men": {
+"hard": 0.35,
+"how": "fold"
+},
+"asian_pear": {
+"hard": 0.15,
+"how": "squish"
+},
+"audio_stickers": {
+"hard": 0.3,
+"how": "fold"
+},
+"av_cable": {
+"hard": 0.35,
+"how": "fold"
+},
+"baby_bottle_pop": {
+"hard": 0.7,
+"how": "snap"
+},
+"backpack": {
+"hard": 0.6,
+"how": "snap"
+},
+"ball_mouse": {
+"hard": 0.7,
+"how": "snap"
+},
+"banana_milk": {
+"hard": 0.15,
+"how": "squish"
+},
+"bass_knob": {
+"hard": 0.7,
+"how": "snap"
+},
+"battle_top": {
+"hard": 0.35,
+"how": "fold"
+},
+"beaded_curtain": {
+"hard": 0.6,
+"how": "snap"
+},
+"bean_bag_chunk": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_bear": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_certificate": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_display_case": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_dog": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_elephant": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_flamingo": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_frog": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_lobster": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_pig": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_price_guide": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_tag_protector": {
+"hard": 0.2,
+"how": "squish"
+},
+"beanie_teeny": {
+"hard": 0.2,
+"how": "squish"
+},
+"bear": {
+"hard": 0.6,
+"how": "snap"
+},
+"beer_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"beige_keyboard": {
+"hard": 0.2,
+"how": "squish"
+},
+"beige_tower": {
+"hard": 0.6,
+"how": "snap"
+},
+"big_x_console": {
+"hard": 0.7,
+"how": "snap"
+},
+"binder": {
+"hard": 0.6,
+"how": "snap"
+},
+"bkr_sticker": {
+"hard": 0.3,
+"how": "fold"
+},
+"black_cat": {
+"hard": 0.7,
+"how": "snap"
+},
+"blacklight": {
+"hard": 0.6,
+"how": "snap"
+},
+"blow_up_gloves": {
+"hard": 0.2,
+"how": "squish"
+},
+"bluetooth_speaker": {
+"hard": 0.7,
+"how": "snap"
+},
+"bobblehead": {
+"hard": 0.6,
+"how": "snap"
+},
+"bookshelf_slice": {
+"hard": 0.3,
+"how": "fold"
+},
+"boombox": {
+"hard": 0.3,
+"how": "fold"
+},
+"bottle_cap": {
+"hard": 0.2,
+"how": "squish"
+},
+"brick_game": {
+"hard": 0.7,
+"how": "snap"
+},
+"broken_rocket": {
+"hard": 0.6,
+"how": "snap"
+},
+"bubble_tape": {
+"hard": 0.35,
+"how": "fold"
+},
+"bug_oven": {
+"hard": 0.6,
+"how": "snap"
+},
+"bull": {
+"hard": 0.6,
+"how": "snap"
+},
+"bunny_charm": {
+"hard": 0.2,
+"how": "squish"
+},
+"calculator": {
+"hard": 0.7,
+"how": "snap"
+},
+"calpis_bottle": {
+"hard": 0.7,
+"how": "snap"
+},
+"candy_cane": {
+"hard": 0.15,
+"how": "crumple"
+},
+"candy_corn": {
+"hard": 0.15,
+"how": "squish"
+},
+"candy_heart": {
+"hard": 0.25,
+"how": "crumble"
+},
+"candy_scoop": {
+"hard": 0.35,
+"how": "fold"
+},
+"candybar_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"car_amp": {
+"hard": 0.6,
+"how": "snap"
+},
+"car_rewinder": {
+"hard": 0.6,
+"how": "snap"
+},
+"card_binder_sheet": {
+"hard": 0.3,
+"how": "fold"
+},
+"card_toploader": {
+"hard": 0.3,
+"how": "fold"
+},
+"cardboard_scrap": {
+"hard": 0.2,
+"how": "squish"
+},
+"cassette": {
+"hard": 0.7,
+"how": "snap"
+},
+"cassette_adapter": {
+"hard": 0.7,
+"how": "snap"
+},
+"cd": {
+"hard": 0.7,
+"how": "snap"
+},
+"cd_changer": {
+"hard": 0.6,
+"how": "snap"
+},
+"cdr_sharpie": {
+"hard": 0.25,
+"how": "crumble"
+},
+"cdr_spindle": {
+"hard": 0.7,
+"how": "snap"
+},
+"centerfold": {
+"hard": 0.35,
+"how": "fold"
+},
+"champagne": {
+"hard": 0.6,
+"how": "snap"
+},
+"charger_brick": {
+"hard": 0.7,
+"how": "snap"
+},
+"charm_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"chew_bar": {
+"hard": 0.2,
+"how": "squish"
+},
+"chews_trophy": {
+"hard": 0.2,
+"how": "squish"
+},
+"chip_bag_3d": {
+"hard": 0.15,
+"how": "crumple"
+},
+"choc_bunny": {
+"hard": 0.2,
+"how": "squish"
+},
+"choc_egg_shell": {
+"hard": 0.25,
+"how": "crumble"
+},
+"choco_pie_box": {
+"hard": 0.25,
+"how": "crumble"
+},
+"chocolate_box": {
+"hard": 0.25,
+"how": "crumble"
+},
+"clay_bear": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_blob": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_bull": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_candle": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_cleaver": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_coin": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_frog": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_gem": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_pig": {
+"hard": 0.2,
+"how": "squish"
+},
+"clay_steak": {
+"hard": 0.2,
+"how": "squish"
+},
+"clear_chunk": {
+"hard": 0.3,
+"how": "crumble"
+},
+"clip_player": {
+"hard": 0.35,
+"how": "fold"
+},
+"coffee_mug": {
+"hard": 0.7,
+"how": "snap"
+},
+"cola_bottles": {
+"hard": 0.2,
+"how": "squish"
+},
+"cold_wallet": {
+"hard": 0.35,
+"how": "fold"
+},
+"console_16bit": {
+"hard": 0.7,
+"how": "snap"
+},
+"console_64": {
+"hard": 0.7,
+"how": "snap"
+},
+"console_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"controller_16bit": {
+"hard": 0.2,
+"how": "squish"
+},
+"controller_modern": {
+"hard": 0.2,
+"how": "squish"
+},
+"corded_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"costume_mask": {
+"hard": 0.3,
+"how": "fold"
+},
+"couch_cushion": {
+"hard": 0.2,
+"how": "squish"
+},
+"cow_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"crackberry": {
+"hard": 0.6,
+"how": "snap"
+},
+"cranberry_log": {
+"hard": 0.6,
+"how": "snap"
+},
+"crayon_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"crt": {
+"hard": 0.7,
+"how": "snap"
+},
+"crumpled_chart": {
+"hard": 0.35,
+"how": "fold"
+},
+"crumpled_paper": {
+"hard": 0.3,
+"how": "fold"
+},
+"crystal_cola": {
+"hard": 0.6,
+"how": "snap"
+},
+"cube_console": {
+"hard": 0.7,
+"how": "snap"
+},
+"dare_flag": {
+"hard": 0.3,
+"how": "fold"
+},
+"diamond": {
+"hard": 0.35,
+"how": "fold"
+},
+"dice": {
+"hard": 0.7,
+"how": "snap"
+},
+"digital_camera": {
+"hard": 0.7,
+"how": "snap"
+},
+"disc_console": {
+"hard": 0.7,
+"how": "snap"
+},
+"disposable_camera": {
+"hard": 0.7,
+"how": "snap"
+},
+"dream_catcher": {
+"hard": 0.35,
+"how": "fold"
+},
+"drink_pouch": {
+"hard": 0.15,
+"how": "crumple"
+},
+"drone": {
+"hard": 0.6,
+"how": "snap"
+},
+"dropbox_door": {
+"hard": 0.6,
+"how": "snap"
+},
+"drumstick": {
+"hard": 0.35,
+"how": "fold"
+},
+"dual_screen_handheld": {
+"hard": 0.7,
+"how": "snap"
+},
+"duel_card": {
+"hard": 0.3,
+"how": "fold"
+},
+"dvd_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"earbuds_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"easter_grass": {
+"hard": 0.35,
+"how": "fold"
+},
+"energy_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"extension_cable": {
+"hard": 0.2,
+"how": "squish"
+},
+"extension_cord": {
+"hard": 0.6,
+"how": "snap"
+},
+"eye_pod": {
+"hard": 0.6,
+"how": "snap"
+},
+"fabric_scrap": {
+"hard": 0.2,
+"how": "squish"
+},
+"face_mask": {
+"hard": 0.3,
+"how": "fold"
+},
+"faceplate_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"famicom_cart": {
+"hard": 0.7,
+"how": "snap"
+},
+"felt_pennant": {
+"hard": 0.35,
+"how": "fold"
+},
+"fidget_spinner": {
+"hard": 0.35,
+"how": "fold"
+},
+"film_canister": {
+"hard": 0.15,
+"how": "crumple"
+},
+"finger_skateboard": {
+"hard": 0.2,
+"how": "squish"
+},
+"firework": {
+"hard": 0.35,
+"how": "fold"
+},
+"five_subject": {
+"hard": 0.3,
+"how": "fold"
+},
+"fizzy_laces": {
+"hard": 0.35,
+"how": "fold"
+},
+"flag_bunting": {
+"hard": 0.3,
+"how": "fold"
+},
+"flashlight": {
+"hard": 0.6,
+"how": "snap"
+},
+"flick_figure": {
+"hard": 0.7,
+"how": "snap"
+},
+"flip_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"flop_it": {
+"hard": 0.6,
+"how": "snap"
+},
+"floppy": {
+"hard": 0.7,
+"how": "snap"
+},
+"flying_saucers": {
+"hard": 0.35,
+"how": "fold"
+},
+"foam_bead_tub": {
+"hard": 0.2,
+"how": "squish"
+},
+"foam_chunk": {
+"hard": 0.2,
+"how": "squish"
+},
+"foam_finger": {
+"hard": 0.2,
+"how": "squish"
+},
+"foam_football": {
+"hard": 0.2,
+"how": "squish"
+},
+"foam_shrimps": {
+"hard": 0.2,
+"how": "squish"
+},
+"foil_packet": {
+"hard": 0.15,
+"how": "crumple"
+},
+"football_sticker": {
+"hard": 0.3,
+"how": "fold"
+},
+"fried_eggs": {
+"hard": 0.2,
+"how": "squish"
+},
+"frosting_dip": {
+"hard": 0.35,
+"how": "fold"
+},
+"fruit_chew": {
+"hard": 0.15,
+"how": "squish"
+},
+"fruit_computer": {
+"hard": 0.15,
+"how": "squish"
+},
+"fruit_strip": {
+"hard": 0.15,
+"how": "squish"
+},
+"fun_size_bar": {
+"hard": 0.25,
+"how": "crumble"
+},
+"fuzzy_poster": {
+"hard": 0.3,
+"how": "fold"
+},
+"gacha_capsule": {
+"hard": 0.7,
+"how": "snap"
+},
+"gacha_figure": {
+"hard": 0.7,
+"how": "snap"
+},
+"gacha_knob": {
+"hard": 0.7,
+"how": "snap"
+},
+"game_cart": {
+"hard": 0.7,
+"how": "snap"
+},
+"game_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"gas_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"gb_pocket": {
+"hard": 0.7,
+"how": "snap"
+},
+"gel_pens": {
+"hard": 0.7,
+"how": "snap"
+},
+"giant_controller": {
+"hard": 0.2,
+"how": "squish"
+},
+"gift_oil_bottle": {
+"hard": 0.15,
+"how": "crumple"
+},
+"glass_shard": {
+"hard": 0.7,
+"how": "snap"
+},
+"glass_soda": {
+"hard": 0.7,
+"how": "snap"
+},
+"glow_stars": {
+"hard": 0.35,
+"how": "fold"
+},
+"glow_stick": {
+"hard": 0.35,
+"how": "fold"
+},
+"gold_coin": {
+"hard": 0.85,
+"how": "dent"
+},
+"green_bowler": {
+"hard": 0.7,
+"how": "snap"
+},
+"green_candle": {
+"hard": 0.15,
+"how": "crumple"
+},
+"gremlin": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_baby": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_batteries": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_box": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_dictionary": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_fur": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_keychain": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_reboot": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_sling": {
+"hard": 0.2,
+"how": "squish"
+},
+"gremlin_stickers": {
+"hard": 0.2,
+"how": "squish"
+},
+"gum_wrapper": {
+"hard": 0.15,
+"how": "crumple"
+},
+"gusher_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"hand_sanitizer": {
+"hard": 0.6,
+"how": "snap"
+},
+"hand_turkey": {
+"hard": 0.85,
+"how": "dent"
+},
+"handheld": {
+"hard": 0.7,
+"how": "snap"
+},
+"hardware_wallet": {
+"hard": 0.35,
+"how": "fold"
+},
+"hazelnut_wafer_bar": {
+"hard": 0.25,
+"how": "crumble"
+},
+"hdd": {
+"hard": 0.85,
+"how": "dent"
+},
+"head_unit": {
+"hard": 0.6,
+"how": "snap"
+},
+"headphones": {
+"hard": 0.2,
+"how": "squish"
+},
+"highlighter": {
+"hard": 0.85,
+"how": "dent"
+},
+"hood_clan": {
+"hard": 0.6,
+"how": "snap"
+},
+"hood_mini": {
+"hard": 0.35,
+"how": "fold"
+},
+"hooded_figure": {
+"hard": 0.7,
+"how": "snap"
+},
+"hours_mailer": {
+"hard": 0.3,
+"how": "fold"
+},
+"housing_fragment": {
+"hard": 0.35,
+"how": "fold"
+},
+"hwatu_cards": {
+"hard": 0.3,
+"how": "fold"
+},
+"im_stickers": {
+"hard": 0.3,
+"how": "fold"
+},
+"inflatable_chair": {
+"hard": 0.2,
+"how": "squish"
+},
+"instant_camera": {
+"hard": 0.7,
+"how": "snap"
+},
+"instant_photos": {
+"hard": 0.3,
+"how": "fold"
+},
+"jelly_babies": {
+"hard": 0.2,
+"how": "squish"
+},
+"jersey_scrap": {
+"hard": 0.35,
+"how": "fold"
+},
+"jewel_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"joy_egg": {
+"hard": 0.25,
+"how": "crumble"
+},
+"joystick": {
+"hard": 0.7,
+"how": "snap"
+},
+"keitai_strap": {
+"hard": 0.7,
+"how": "snap"
+},
+"keyboard_chunk": {
+"hard": 0.2,
+"how": "squish"
+},
+"kid_blimp": {
+"hard": 0.7,
+"how": "snap"
+},
+"kids_choc_bar": {
+"hard": 0.25,
+"how": "crumble"
+},
+"kinkeshi": {
+"hard": 0.2,
+"how": "squish"
+},
+"kush_ball": {
+"hard": 0.7,
+"how": "snap"
+},
+"latefee_receipt": {
+"hard": 0.3,
+"how": "fold"
+},
+"launchables": {
+"hard": 0.35,
+"how": "fold"
+},
+"lava_lamp": {
+"hard": 0.7,
+"how": "snap"
+},
+"lava_lamp_era": {
+"hard": 0.7,
+"how": "snap"
+},
+"light_gun": {
+"hard": 0.7,
+"how": "snap"
+},
+"light_strand": {
+"hard": 0.35,
+"how": "fold"
+},
+"lighter": {
+"hard": 0.85,
+"how": "dent"
+},
+"loop_track": {
+"hard": 0.6,
+"how": "snap"
+},
+"loose_socks": {
+"hard": 0.2,
+"how": "squish"
+},
+"lunch_tray": {
+"hard": 0.6,
+"how": "snap"
+},
+"lunchbox": {
+"hard": 0.3,
+"how": "fold"
+},
+"magazine": {
+"hard": 0.3,
+"how": "fold"
+},
+"magic_wand": {
+"hard": 0.7,
+"how": "snap"
+},
+"marshmallow_chick": {
+"hard": 0.2,
+"how": "squish"
+},
+"mascot_plush": {
+"hard": 0.2,
+"how": "squish"
+},
+"matchbook": {
+"hard": 0.3,
+"how": "fold"
+},
+"memory_card": {
+"hard": 0.3,
+"how": "fold"
+},
+"memory_card_stack": {
+"hard": 0.3,
+"how": "fold"
+},
+"menko_card": {
+"hard": 0.3,
+"how": "fold"
+},
+"micro_cars": {
+"hard": 0.35,
+"how": "fold"
+},
+"microphone": {
+"hard": 0.7,
+"how": "snap"
+},
+"milk_caps": {
+"hard": 0.35,
+"how": "fold"
+},
+"mini_arcade": {
+"hard": 0.6,
+"how": "snap"
+},
+"mini_barrels": {
+"hard": 0.35,
+"how": "fold"
+},
+"mini_flag": {
+"hard": 0.3,
+"how": "fold"
+},
+"mini_helmet": {
+"hard": 0.6,
+"how": "snap"
+},
+"mini_pod": {
+"hard": 0.35,
+"how": "fold"
+},
+"modem_56k": {
+"hard": 0.7,
+"how": "snap"
+},
+"monster_card": {
+"hard": 0.3,
+"how": "fold"
+},
+"monster_cart": {
+"hard": 0.7,
+"how": "snap"
+},
+"monster_dex": {
+"hard": 0.7,
+"how": "snap"
+},
+"monster_playset": {
+"hard": 0.35,
+"how": "fold"
+},
+"mood_ring": {
+"hard": 0.85,
+"how": "dent"
+},
+"moon_shooz": {
+"hard": 0.6,
+"how": "snap"
+},
+"mouse": {
+"hard": 0.7,
+"how": "snap"
+},
+"mousepad": {
+"hard": 0.7,
+"how": "snap"
+},
+"mp3_player": {
+"hard": 0.7,
+"how": "snap"
+},
+"mushroom_cluster": {
+"hard": 0.35,
+"how": "fold"
+},
+"nano_pod": {
+"hard": 0.35,
+"how": "fold"
+},
+"necktie": {
+"hard": 0.2,
+"how": "squish"
+},
+"neon_bit": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_coin": {
+"hard": 0.95,
+"how": "dent"
+},
+"neon_cube": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_diamond": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_folder": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_frame": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_pig": {
+"hard": 0.95,
+"how": "snap"
+},
+"neon_sign": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_square": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_square_big": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_stack": {
+"hard": 0.7,
+"how": "snap"
+},
+"neon_tube": {
+"hard": 0.7,
+"how": "snap"
+},
+"nerd_blaster": {
+"hard": 0.2,
+"how": "squish"
+},
+"new_release_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"newspaper": {
+"hard": 0.3,
+"how": "fold"
+},
+"noisemaker": {
+"hard": 0.35,
+"how": "fold"
+},
+"notebook": {
+"hard": 0.3,
+"how": "fold"
+},
+"opera_carded": {
+"hard": 0.3,
+"how": "fold"
+},
+"opera_cards": {
+"hard": 0.3,
+"how": "fold"
+},
+"opera_case": {
+"hard": 0.7,
+"how": "snap"
+},
+"opera_figures": {
+"hard": 0.7,
+"how": "snap"
+},
+"opera_lunchbox": {
+"hard": 0.3,
+"how": "fold"
+},
+"opera_mailaway": {
+"hard": 0.7,
+"how": "snap"
+},
+"opera_mask": {
+"hard": 0.3,
+"how": "fold"
+},
+"opera_saber": {
+"hard": 0.7,
+"how": "snap"
+},
+"opera_ship": {
+"hard": 0.6,
+"how": "snap"
+},
+"opera_stickers": {
+"hard": 0.3,
+"how": "fold"
+},
+"opera_vhs": {
+"hard": 0.7,
+"how": "snap"
+},
+"orange_jug": {
+"hard": 0.15,
+"how": "squish"
+},
+"orange_vhs": {
+"hard": 0.15,
+"how": "squish"
+},
+"orb_bottle": {
+"hard": 0.7,
+"how": "snap"
+},
+"ornament": {
+"hard": 0.7,
+"how": "snap"
+},
+"os_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"p2p_sleeve": {
+"hard": 0.3,
+"how": "fold"
+},
+"packaging": {
+"hard": 0.35,
+"how": "fold"
+},
+"pager": {
+"hard": 0.7,
+"how": "snap"
+},
+"paper_hand": {
+"hard": 0.3,
+"how": "fold"
+},
+"party_cup": {
+"hard": 0.15,
+"how": "crumple"
+},
+"party_hat": {
+"hard": 0.2,
+"how": "squish"
+},
+"pcb_chunk": {
+"hard": 0.3,
+"how": "crumble"
+},
+"pda": {
+"hard": 0.6,
+"how": "snap"
+},
+"pencil": {
+"hard": 0.35,
+"how": "fold"
+},
+"persimmon": {
+"hard": 0.15,
+"how": "squish"
+},
+"phone_cord": {
+"hard": 0.7,
+"how": "snap"
+},
+"pick_bag": {
+"hard": 0.15,
+"how": "crumple"
+},
+"piggy_bank": {
+"hard": 0.95,
+"how": "snap"
+},
+"pilgrim_hat": {
+"hard": 0.2,
+"how": "squish"
+},
+"pin_button": {
+"hard": 0.35,
+"how": "fold"
+},
+"pixel_frame": {
+"hard": 0.6,
+"how": "snap"
+},
+"pixel_hoodie": {
+"hard": 0.2,
+"how": "squish"
+},
+"pizza_box": {
+"hard": 0.25,
+"how": "crumble"
+},
+"pizza_crust": {
+"hard": 0.25,
+"how": "crumble"
+},
+"plasma_ball": {
+"hard": 0.7,
+"how": "snap"
+},
+"plastic_egg": {
+"hard": 0.25,
+"how": "crumble"
+},
+"plastic_film": {
+"hard": 0.15,
+"how": "crumple"
+},
+"plastic_lunchbox": {
+"hard": 0.3,
+"how": "fold"
+},
+"plastic_shard": {
+"hard": 0.35,
+"how": "fold"
+},
+"play_money": {
+"hard": 0.35,
+"how": "fold"
+},
+"playing_cards": {
+"hard": 0.3,
+"how": "fold"
+},
+"pocket_diecast": {
+"hard": 0.85,
+"how": "dent"
+},
+"pocket_handheld": {
+"hard": 0.7,
+"how": "snap"
+},
+"pocket_playset": {
+"hard": 0.35,
+"how": "fold"
+},
+"pog_slammer": {
+"hard": 0.35,
+"how": "fold"
+},
+"pog_tube": {
+"hard": 0.35,
+"how": "fold"
+},
+"poker_chip": {
+"hard": 0.25,
+"how": "crumble"
+},
+"popcorn_bag": {
+"hard": 0.15,
+"how": "squish"
+},
+"portable_cd": {
+"hard": 0.7,
+"how": "snap"
+},
+"potted_plant": {
+"hard": 0.6,
+"how": "snap"
+},
+"power_bank": {
+"hard": 0.6,
+"how": "snap"
+},
+"present": {
+"hard": 0.6,
+"how": "snap"
+},
+"press_badge": {
+"hard": 0.35,
+"how": "fold"
+},
+"puff_bag": {
+"hard": 0.15,
+"how": "crumple"
+},
+"pumpkin_pail": {
+"hard": 0.6,
+"how": "snap"
+},
+"purikura_sheet": {
+"hard": 0.3,
+"how": "fold"
+},
+"push_pop": {
+"hard": 0.35,
+"how": "fold"
+},
+"putty_egg": {
+"hard": 0.2,
+"how": "squish"
+},
+"puzzle_cube": {
+"hard": 0.35,
+"how": "fold"
+},
+"ramen_packet": {
+"hard": 0.15,
+"how": "crumple"
+},
+"razor_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"rca_cables": {
+"hard": 0.6,
+"how": "snap"
+},
+"receipt": {
+"hard": 0.3,
+"how": "fold"
+},
+"red_candle": {
+"hard": 0.15,
+"how": "crumple"
+},
+"rental_card": {
+"hard": 0.3,
+"how": "fold"
+},
+"rental_game": {
+"hard": 0.7,
+"how": "snap"
+},
+"rental_vhs": {
+"hard": 0.7,
+"how": "snap"
+},
+"rescue_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"rf_switch": {
+"hard": 0.3,
+"how": "fold"
+},
+"ribbon_cable": {
+"hard": 0.2,
+"how": "squish"
+},
+"ring_candy": {
+"hard": 0.15,
+"how": "crumple"
+},
+"ring_light": {
+"hard": 0.6,
+"how": "snap"
+},
+"ripcord_launcher": {
+"hard": 0.35,
+"how": "fold"
+},
+"robo_car": {
+"hard": 0.85,
+"how": "dent"
+},
+"roller_skate": {
+"hard": 0.6,
+"how": "snap"
+},
+"rose": {
+"hard": 0.15,
+"how": "squish"
+},
+"rubber_spider": {
+"hard": 0.2,
+"how": "squish"
+},
+"satin_jacket": {
+"hard": 0.6,
+"how": "snap"
+},
+"scented_markers": {
+"hard": 0.35,
+"how": "fold"
+},
+"school_milk": {
+"hard": 0.25,
+"how": "crumble"
+},
+"scratch_ticket": {
+"hard": 0.3,
+"how": "fold"
+},
+"seal_sticker": {
+"hard": 0.25,
+"how": "crumble"
+},
+"selfie_stick": {
+"hard": 0.6,
+"how": "snap"
+},
+"shamrock_beads": {
+"hard": 0.35,
+"how": "fold"
+},
+"shiny_badge": {
+"hard": 0.35,
+"how": "fold"
+},
+"shot_glass": {
+"hard": 0.7,
+"how": "snap"
+},
+"sidekick_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"signed_baseball": {
+"hard": 0.7,
+"how": "snap"
+},
+"skate_wheel": {
+"hard": 0.35,
+"how": "fold"
+},
+"skateboard": {
+"hard": 0.2,
+"how": "squish"
+},
+"skin_printout": {
+"hard": 0.35,
+"how": "fold"
+},
+"skull_candle": {
+"hard": 0.15,
+"how": "crumple"
+},
+"slap_bracelet": {
+"hard": 0.2,
+"how": "squish"
+},
+"slim_tower_console": {
+"hard": 0.7,
+"how": "snap"
+},
+"slime": {
+"hard": 0.2,
+"how": "squish"
+},
+"slime_cereal": {
+"hard": 0.2,
+"how": "squish"
+},
+"slime_stickers": {
+"hard": 0.2,
+"how": "squish"
+},
+"slime_tub": {
+"hard": 0.2,
+"how": "squish"
+},
+"smartphone": {
+"hard": 0.7,
+"how": "snap"
+},
+"smartwatch": {
+"hard": 0.7,
+"how": "snap"
+},
+"snake_phone": {
+"hard": 0.7,
+"how": "snap"
+},
+"snapback_cap": {
+"hard": 0.2,
+"how": "squish"
+},
+"sneaker": {
+"hard": 0.2,
+"how": "squish"
+},
+"sock": {
+"hard": 0.2,
+"how": "squish"
+},
+"soda_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"soggy_blaster": {
+"hard": 0.7,
+"how": "snap"
+},
+"songpyeon": {
+"hard": 0.25,
+"how": "crumble"
+},
+"sour_pack": {
+"hard": 0.35,
+"how": "fold"
+},
+"spam_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"spam_gift_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"sparkler": {
+"hard": 0.35,
+"how": "fold"
+},
+"speaker_6x9": {
+"hard": 0.7,
+"how": "snap"
+},
+"splat_sign": {
+"hard": 0.7,
+"how": "snap"
+},
+"splurge_can": {
+"hard": 0.15,
+"how": "crumple"
+},
+"spring": {
+"hard": 0.85,
+"how": "dent"
+},
+"squeeze_buddy": {
+"hard": 0.35,
+"how": "fold"
+},
+"stereo_viewer": {
+"hard": 0.6,
+"how": "snap"
+},
+"stick_biscuit_box": {
+"hard": 0.25,
+"how": "crumble"
+},
+"sticker_album": {
+"hard": 0.3,
+"how": "fold"
+},
+"sticker_packet": {
+"hard": 0.15,
+"how": "crumple"
+},
+"stiff_cap": {
+"hard": 0.2,
+"how": "squish"
+},
+"stock_cert": {
+"hard": 0.35,
+"how": "fold"
+},
+"strategy_guide": {
+"hard": 0.3,
+"how": "fold"
+},
+"street_sign": {
+"hard": 0.7,
+"how": "snap"
+},
+"stretch_man": {
+"hard": 0.6,
+"how": "snap"
+},
+"studio_headphones": {
+"hard": 0.7,
+"how": "snap"
+},
+"subwoofer": {
+"hard": 0.6,
+"how": "snap"
+},
+"sunglasses": {
+"hard": 0.7,
+"how": "snap"
+},
+"sunscreen": {
+"hard": 0.6,
+"how": "snap"
+},
+"surprise_capsule": {
+"hard": 0.7,
+"how": "snap"
+},
+"surprise_egg": {
+"hard": 0.25,
+"how": "crumble"
+},
+"surprise_slip": {
+"hard": 0.3,
+"how": "fold"
+},
+"surprise_toy": {
+"hard": 0.7,
+"how": "snap"
+},
+"swap_stack": {
+"hard": 0.35,
+"how": "fold"
+},
+"swimsuit": {
+"hard": 0.35,
+"how": "fold"
+},
+"swirl_console": {
+"hard": 0.7,
+"how": "snap"
+},
+"synth_keys": {
+"hard": 0.85,
+"how": "dent"
+},
+"tablet": {
+"hard": 0.6,
+"how": "snap"
+},
+"tango_football": {
+"hard": 0.7,
+"how": "snap"
+},
+"tazo": {
+"hard": 0.35,
+"how": "fold"
+},
+"tazo_board": {
+"hard": 0.2,
+"how": "squish"
+},
+"tazo_chip_bag": {
+"hard": 0.15,
+"how": "crumple"
+},
+"tazo_tube": {
+"hard": 0.35,
+"how": "fold"
+},
+"team_scarf": {
+"hard": 0.2,
+"how": "squish"
+},
+"tennis_ball": {
+"hard": 0.7,
+"how": "snap"
+},
+"theater_candy": {
+"hard": 0.15,
+"how": "crumple"
+},
+"ticker_tape": {
+"hard": 0.35,
+"how": "fold"
+},
+"ticket_stubs": {
+"hard": 0.3,
+"how": "fold"
+},
+"tickle_monster": {
+"hard": 0.6,
+"how": "snap"
+},
+"tie_dye_shirt": {
+"hard": 0.2,
+"how": "squish"
+},
+"tin_lunchbox": {
+"hard": 0.3,
+"how": "fold"
+},
+"tinsel": {
+"hard": 0.15,
+"how": "crumple"
+},
+"tissue_box": {
+"hard": 0.3,
+"how": "fold"
+},
+"tissues": {
+"hard": 0.35,
+"how": "fold"
+},
+"toy_oven": {
+"hard": 0.7,
+"how": "snap"
+},
+"trapped_keeper": {
+"hard": 0.6,
+"how": "snap"
+},
+"trial_cd": {
+"hard": 0.7,
+"how": "snap"
+},
+"trial_tin": {
+"hard": 0.85,
+"how": "dent"
+},
+"trident_controller": {
+"hard": 0.2,
+"how": "squish"
+},
+"trip_it": {
+"hard": 0.6,
+"how": "snap"
+},
+"troll_doll": {
+"hard": 0.2,
+"how": "squish"
+},
+"tv_remote": {
+"hard": 0.7,
+"how": "snap"
+},
+"tweeter": {
+"hard": 0.35,
+"how": "fold"
+},
+"twin_grip_controller": {
+"hard": 0.2,
+"how": "squish"
+},
+"umaibo": {
+"hard": 0.25,
+"how": "crumble"
+},
+"underglow": {
+"hard": 0.7,
+"how": "snap"
+},
+"usb_stick": {
+"hard": 0.7,
+"how": "snap"
+},
+"valentine_card": {
+"hard": 0.3,
+"how": "fold"
+},
+"vape": {
+"hard": 0.35,
+"how": "fold"
+},
+"vhs": {
+"hard": 0.7,
+"how": "snap"
+},
+"virtual_pet": {
+"hard": 0.7,
+"how": "snap"
+},
+"vmu_controller": {
+"hard": 0.2,
+"how": "squish"
+},
+"vr_headset": {
+"hard": 0.6,
+"how": "snap"
+},
+"vuvuzela": {
+"hard": 0.35,
+"how": "fold"
+},
+"walkman": {
+"hard": 0.7,
+"how": "snap"
+},
+"wallchart": {
+"hard": 0.15,
+"how": "crumple"
+},
+"wax_pack": {
+"hard": 0.35,
+"how": "fold"
+},
+"webcam": {
+"hard": 0.35,
+"how": "fold"
+},
+"whistle": {
+"hard": 0.85,
+"how": "dent"
+},
+"white_mice": {
+"hard": 0.7,
+"how": "snap"
+},
+"wide_handheld": {
+"hard": 0.7,
+"how": "snap"
+},
+"wire_bit": {
+"hard": 0.3,
+"how": "crumble"
+},
+"wonder_ball": {
+"hard": 0.7,
+"how": "snap"
+},
+"wrestler_fig": {
+"hard": 0.7,
+"how": "snap"
+},
+"y2k_glasses": {
+"hard": 0.7,
+"how": "snap"
+},
+"yak_toy": {
+"hard": 0.7,
+"how": "snap"
+},
+"yapper_boy": {
+"hard": 0.7,
+"how": "snap"
+},
+"yoyo": {
+"hard": 0.35,
+"how": "fold"
+},
+"yut_sticks": {
+"hard": 0.35,
+"how": "fold"
+}
+}

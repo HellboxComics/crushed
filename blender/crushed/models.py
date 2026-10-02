@@ -34,6 +34,21 @@ def hashes():
     return out
 
 
+_BEHAVIOR = None
+
+
+def behavior(name):
+    """(how, hard) for an object: how it gives way when crushed (crush.HOWS) and how hard it is (0..1), from
+    assets/plan/behavior.json (written by the Mac's AI, one line per object). Unknown objects bend like before."""
+    global _BEHAVIOR
+    if _BEHAVIOR is None:
+        import json
+        p = os.path.join(ROOT, "assets", "plan", "behavior.json")
+        _BEHAVIOR = json.load(open(p)) if os.path.exists(p) else {}
+    b = _BEHAVIOR.get(name) or {}
+    return b.get("how", "fold"), float(b.get("hard", 0.4))
+
+
 def labels(era):
     """Approved real product labels for an era (assets/labels/<era index>/*.png), made by ai/remaster/labels.py."""
     return sorted(glob.glob(os.path.join(ROOT, "assets", "labels", str(era), "*.png")))

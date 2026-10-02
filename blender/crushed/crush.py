@@ -221,3 +221,118 @@ def core_mesh(me_verts, seed):
     dirn = v / (np.linalg.norm(v, axis=1, keepdims=True) + 1e-9)
     # pushed well back behind the debris: it is the mortar in the cracks, not the face of the block
     return v - dirn * (0.022 + np.abs(n)[:, None] * 0.02) * (r / H)
+
+
+# -- how a thing gives way (assets/plan/behavior.json) --------------------------------------
+# Every object crushes the way its material really does. "how" is one of:
+#   crumple  thin metal, foil, wrappers, chip bags: wrinkles all over, folds, presses very flat
+#   fold     card, paper, boxes, magazines, posters: sharp creases, bends, flattens in layers
+#   squish   plush, foam, rubber, fabric, gummy candy: squashes flat and bulges, no creases
+#   dent     solid metal, die-cast, tins, tools: dents and a slight bend, keeps its shape
+#   snap     hard plastic, ceramic, glass, cartridges, consoles: breaks into a few big pieces, barely squashes
+#   crumble  cookies, crackers, chalk, cake, chocolate: breaks into many chunks that spread apart
+# "hard" 0..1: how much force it takes (0 = gives at a touch, 1 = barely marked).
+
+HOWS = ("crumple", "fold", "squish", "dent", "snap", "crumble")
+
+
+def split(me, rng, cuts):
+    """Break a mesh into pieces: cut it through near its middle with a few random planes and separate along the
+    cuts, so each piece is its own island (the inside layer of a remastered model shows in the break)."""
+    if cuts <= 0:
+        return
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    v = np.array([x.co[:] for x in bm.verts])
+    if len(v) < 8:
+        bm.free()
+        return
+    c, ext = v.mean(axis=0), np.ptp(v, axis=0)
+    for _ in range(cuts):
+        n = rng.normal(0, 1, 3)
+        n /= np.linalg.norm(n) + 1e-9
+        co = c + rng.normal(0, 0.18, 3) * ext
+        geom = bm.verts[:] + bm.edges[:] + bm.faces[:]
+        res = bmesh.ops.bisect_plane(bm, geom=geom, dist=1e-6, plane_co=Vector(co.tolist()),
+                                     plane_no=Vector(n.tolist()))
+        cut = [e for e in res["geom_cut"] if isinstance(e, bmesh.types.BMEdge)]
+        if cut:
+            bmesh.ops.split_edges(bm, edges=cut)
+    bm.to_mesh(me)
+    bm.free()
+
+
+def islands(me):
+    """Which piece each vertex belongs to (after split)."""
+    n = len(me.vertices)
+    ed = np.zeros(len(me.edges) * 2, dtype=np.int64)
+    me.edges.foreach_get("vertices", ed)
+    ed = ed.reshape(-1, 2)
+    parent = np.arange(n)
+
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+    for a, b in ed:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+    return np.array([find(i) for i in range(n)])
+
+
+def _rot(axis, ang):
+    axis = axis / (np.linalg.norm(axis) + 1e-9)
+    K = np.array([[0, -axis[2], axis[1]], [axis[2], 0, -axis[0]], [-axis[1], axis[0], 0]])
+    return np.eye(3) + math.sin(ang) * K + (1 - math.cos(ang)) * K @ K
+
+
+def scatter(v, ids, rng, spread, turn):
+    """Pieces drift apart from the middle and turn a little, the way a snapped thing sits in a bale."""
+    out = v.copy()
+    c = v.mean(axis=0)
+    size = float(np.ptp(v, axis=0).max()) + 1e-6
+    for k in np.unique(ids):
+        m = ids == k
+        if m.sum() < 3:
+            continue
+        pc = v[m].mean(axis=0)
+        d = pc - c
+        d = d / (np.linalg.norm(d) + 1e-9) if np.linalg.norm(d) > 1e-6 else rng.normal(0, 1, 3)
+        R = _rot(rng.normal(0, 1, 3), rng.uniform(-turn, turn))
+        out[m] = (v[m] - pc) @ R.T + pc + d * size * spread * rng.uniform(0.4, 1.0)
+    return out
+
+
+def behave(v, rng, how, hard, inten, ids=None):
+    """Per-object damage by material. inten is the block's intensity (already softened for headliners)."""
+    give = float(np.clip(inten * (1.15 - hard), 0.05, 1.6))
+    if how == "crumple":
+        v = bend(v, rng, 0.5 * give)
+        v = fold(v, rng, int(rng.integers(2, 5)), 1.2 * give)
+        v = crumple(v, rng, rng.uniform(0.8, 1.6) * give)
+        return dents(v, rng, int(rng.integers(1, 4)), 0.008 * give)
+    if how == "fold":
+        v = fold(v, rng, int(rng.integers(1, 4)), 1.0 * give)
+        v = bend(v, rng, 0.45 * give)
+        return crumple(v, rng, rng.uniform(0.1, 0.35) * give)
+    if how == "squish":
+        v = bend(v, rng, 0.25 * give)
+        return crumple(v, rng, rng.uniform(0.05, 0.15) * give)        # soft lumps, never creases
+    if how == "dent":
+        v = bend(v, rng, 0.12 * give)
+        return dents(v, rng, int(rng.integers(1, 4)), rng.uniform(0.002, 0.007) * give)
+    if how in ("snap", "crumble") and ids is not None:
+        spread = (0.04 if how == "snap" else 0.09) * min(1.0, give + 0.3)
+        v = scatter(v, ids, rng, spread, 0.35 if how == "snap" else 0.7)
+        return dents(v, rng, int(rng.integers(0, 3)), 0.003 * give)
+    return dents(v, rng, int(rng.integers(0, 3)), 0.003 * give)
+
+
+def kz_how(how, hard, rng):
+    """How flat the ram leaves it: soft things press flat, hard things don't (they break instead)."""
+    lo, hi = {"crumple": (0.4, 0.65), "fold": (0.55, 0.8), "squish": (0.35, 0.6), "dent": (0.85, 0.97),
+              "snap": (0.82, 0.95), "crumble": (0.6, 0.85)}.get(how, (0.68, 0.88))
+    k = rng.uniform(lo, hi)
+    return float(k + (1 - k) * hard * 0.6)

@@ -17,7 +17,7 @@ the drawing room paints a 2x2 reference sheet OVER those photos (so it copies th
 the shape -> the inside is painted -> Blender sizes it, paints it on, adds the inside layer -> review on the page.
 An object is made once its prompts exist: prompts/<name>.txt (outside) and prompts/<name>.inside.txt (inside).
 
-## Your jobs, in this order. After every change: `.venv/bin/python ai/plan_check.py` must say ALL GOOD, then
+## Your jobs, in this order (models are always made whole and new; the renderer crushes them). After every change: `.venv/bin/python ai/plan_check.py` must say ALL GOOD, then
 ## `git add -A assets/plan assets/real ai/remaster && git commit -m "<what>" && git pull --rebase -q`.
 
 ### 1. Photo searches (fast, do first)
@@ -109,6 +109,20 @@ The 40 (title, theme, the item ideas Harrow approved; design each item properly)
 - DRESS CODE (Banned outfits): slap bracelets, color-change shirt, scrunchies, wide-leg jeans, light-up sneakers, tattoo choker, butterfly clips, trucker hat, charity band, foam clog
 - EXTINCT (Dinosaurs): bag of plastic dinosaurs, fossil dig kit, dino nuggets, glow skeleton, dino lunchbox, roaring toy, amber keychain, dino egg
 - DUCK AND COVER (Fallout shelter): gas mask, Geiger counter, canned goods, hand-crank radio, fallout shelter sign, canteen, pamphlet, powdered milk, pill box, crate
+
+### 5b. How every object crushes (assets/plan/behavior.json)
+Every model is made WHOLE and NEW, the way it looked on the shelf. The renderer does the crushing, all the objects
+pressed together in the bale, and each one gives way the way its material really does. For EVERY object (code-built
+and planned) set {"how": ..., "hard": 0..1} in assets/plan/behavior.json. A first guess from the names is already
+there; check every line and fix what's wrong.
+  crumple  thin metal, foil, wrappers, chip bags, soda cans: wrinkles everywhere, presses very flat
+  fold     card, paper, boxes, magazines, posters, tickets: sharp creases, flattens in layers
+  squish   plush, foam, rubber, fabric, fruit, gummy candy, sneakers: squashes and bulges, no creases
+  dent     solid metal, die-cast cars, tins, tools, coins, keys: dents, keeps its shape
+  snap     hard plastic, ceramic, glass, cartridges, consoles, CD cases, VHS: breaks into a few big pieces
+  crumble  cookies, crackers, chalk, cake, chocolate, pretzels, mooncakes: breaks into many chunks
+  hard     how much force it takes: a chip bag 0.1, a Game Boy 0.7, a die-cast car 0.95
+Write the inside prompt to match: a snapped cartridge shows its board, a crumbled mooncake its yolk.
 
 ### 6. The real labels (ai/remaster/labels/<era>.txt)
 The crushed cans, cartons, chip bags and wrappers packed behind the objects in every bale wear parody labels.

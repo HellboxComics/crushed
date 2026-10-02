@@ -129,6 +129,11 @@ def build_block(r, coll, rng):
         head = i == 0
         override = ("gold", {}) if r["gold_index"] == i else None
         ob = make_object(d, rng, pal, coll, override)
+        how, hard = models.behavior(d.name)
+        mild = head or override or "keep" in d.tags
+        if how in ("snap", "crumble") and not override and "keep" not in d.tags:      # breaks before it is pressed
+            crush.split(ob.data, rng, (1 if mild else int(rng.integers(1, 3))) if how == "snap"
+                        else (2 if mild else int(rng.integers(3, 6))))
         limit = rng.uniform(0.17, 0.23) if d.big else 0.19     # big enough to name from a fragment
         if head or override:
             limit = 0.23 if d.big else 0.21
@@ -136,8 +141,9 @@ def build_block(r, coll, rng):
         if v is None:
             continue
         keep = "keep" in d.tags           # signature pieces (the gift pigs) stay whole enough to name at a glance
-        v = damage(v, rng, inten * (0.6 if head or override or keep else 1.0) * r.get("soft", 1.0),
-                   keep_shape=head or override or keep or not d.big)
+        ids = crush.islands(ob.data) if how in ("snap", "crumble") else None
+        v = crush.behave(v, rng, how, hard, inten * (0.6 if head or override or keep else 1.0) * r.get("soft", 1.0),
+                         ids)
         if head:
             face = "-Y"
         elif override:
@@ -163,7 +169,11 @@ def build_block(r, coll, rng):
             poke, depth, layer = rng.uniform(0.012, 0.025), rng.uniform(0.07, 0.1), rng.uniform(0.008, 0.016)
         v = crush.place(v, q, nrm, uv, t1, t2, poke, depth)
         # pressed, not erased: you still have to be able to tell what it was
-        v = crush.ram(v, nrm, t1, kz_for(0.85, 0.95, 0.8) if head or override or keep else kz_for(0.68, 0.88, 0.6))
+        kh = crush.kz_how(how, hard, rng)                # soft things press flat, hard ones barely
+        kz = kz_for(kh, min(1.0, kh + 0.05), 0.3)
+        if head or override or keep:
+            kz = max(kz, 0.8)                           # the headliner stays nameable
+        v = crush.ram(v, nrm, t1, kz)
         v = crush.compact(v, layer, r["seed"] + rank, margin=0.008, strength=inten)
         crush.set_verts(ob.data, v)
         objs.append(ob)

@@ -52,6 +52,14 @@ def main():
             bad.append(f"{n}: group must be 'special' (one-of-ones only) or 'era' (also rare in regular cubes)")
         if not it.get("display") or not it.get("notes"):
             bad.append(f"{n}: needs a display name and 2-3 notes")
+    beh = json.load(open(os.path.join(PLAN, "behavior.json"))) if os.path.exists(os.path.join(PLAN, "behavior.json")) else {}
+    hows = ("crumple", "fold", "squish", "dent", "snap", "crumble")
+    for n, b in beh.items():
+        if b.get("how") not in hows or not 0 <= float(b.get("hard", -1)) <= 1:
+            bad.append(f"{n}: behavior needs how (one of {', '.join(hows)}) and hard 0..1")
+    for n in items:
+        if n not in beh:
+            bad.append(f"{n}: no crush behavior in assets/plan/behavior.json")
     for t, o in ones.items():
         for k in (() if "extra" in o and "mix" not in o else ("mix", "lore", "flavor", "era")):
             if k not in o:
