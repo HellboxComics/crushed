@@ -206,7 +206,7 @@ def publish(force=False):
     if os.path.exists(os.path.join(WORK, "view.html")):
         shutil.copy(os.path.join(WORK, "view.html"), os.path.join(site, "view.html"))
     os.makedirs(os.path.join(site, "models"))
-    for base in (MODELS, PENDING):                      # every model that exists, so any of them can be spun on the phone
+    for base in (PENDING, MODELS):                      # every model that exists; the newest build wins over older ones
         for g in glob.glob(os.path.join(base, "*", "model.glb")):
             n = os.path.basename(os.path.dirname(g))
             dst = os.path.join(site, "models", n + ".glb")

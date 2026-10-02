@@ -249,10 +249,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     status(cid, step="6/7 pictures from four sides and the judge's check")
     subprocess.run([PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],
                    check=True, capture_output=True)
-    sheet = Image.new("RGB", (4 * 300, 400), "white")
-    for k, a in enumerate((0, 90, 180, 270)):
-        sheet.paste(Image.open(os.path.join(d, f"view_{a:03d}.png")).convert("RGB").resize((300, 400)), (k * 300, 0))
-    sheet.save(os.path.join(d, "views.jpg"), quality=88)
+    sheet_views([os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)], os.path.join(d, "views.jpg"))
     make_room("judging")
     verdict = inspect(os.path.join(d, "views.jpg"), picked["file"], product, use)
 
@@ -271,6 +268,34 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     status(cid, step="waiting for your Keep or Redo on your phone", ok=bool(verdict.get("pass")), verdict=verdict,
            photos=n_found, good=n_good, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
            label=os.path.relpath(tex, WORK) if tex else None, ref=os.path.relpath(picked["file"], WORK), note="")
+
+
+def sheet_views(paths, out, cell=(300, 400)):
+    """The four studio pictures side by side, each cropped to the object (same crop for all four, so sizes stay
+    comparable) so it fills its picture instead of sitting small in a big gray frame."""
+    from PIL import Image
+    ims = [Image.open(p).convert("RGB") for p in paths]
+    boxes = []
+    for im in ims:
+        a = np.asarray(im).astype(int)
+        diff = np.abs(a - a[2, 2]).sum(-1) > 30                   # anything that isn't the plain backdrop
+        ys, xs = np.where(diff)
+        if len(ys):
+            boxes.append((xs.min(), ys.min(), xs.max(), ys.max()))
+    if boxes:
+        x0, y0 = min(b[0] for b in boxes), min(b[1] for b in boxes)
+        x1, y1 = max(b[2] for b in boxes), max(b[3] for b in boxes)
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        hh = (y1 - y0) * 1.12 / 2
+        hw = max((x1 - x0) * 1.12 / 2, hh * cell[0] / cell[1])
+        hh = max(hh, hw * cell[1] / cell[0])
+        crop = (int(cx - hw), int(cy - hh), int(cx + hw), int(cy + hh))
+        ims = [im.crop(crop) for im in ims]
+    sheet = Image.new("RGB", (cell[0] * len(ims), cell[1]), ims[0].getpixel((2, 2)))
+    for k, im in enumerate(ims):
+        sheet.paste(im.resize(cell, Image.LANCZOS), (k * cell[0], 0))
+    sheet.save(out, quality=90)
+    return out
 
 
 def make_room(for_what):
@@ -613,29 +638,116 @@ def inspect(sheet, photo, product, use):
         return {"pass": False, "problems": f"could not inspect: {e}"}
 
 
+PAGE_CSS = """
+:root{--bench:#16171a;--panel:#1f2125;--ink:#ece9e2;--muted:#9c988f;--line:#2d2f34;--copper:#d38945;
+ --ok:#3fae63;--bad:#d9573f;--work:#6fa3d8;--display:"Archivo Narrow","Arial Narrow",system-ui,sans-serif;
+ --body:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bench);color:var(--ink);font:15px/1.45 var(--body);padding-inline:16px;padding-block:14px 40px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px}
+h1{font:700 1.5rem/1.1 var(--display);margin:0;letter-spacing:.01em}
+.when{font:12px var(--mono);color:var(--muted)}
+.tally{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.tally div{background:var(--panel);border-radius:8px;padding:8px 12px}
+.tally b{display:block;font:700 1.4rem var(--display);font-variant-numeric:tabular-nums}
+.tally span{font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:10px;
+ grid-template-columns:minmax(0,1fr)}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+h2{font:700 1.08rem/1.2 var(--display);margin:0;flex:1 1 220px;min-width:0;text-wrap:balance}
+.chip{font:11px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:99px;border:1px solid}
+.chip.you{color:var(--copper);border-color:var(--copper)}
+.chip.kept{color:var(--ok);border-color:var(--ok)}
+.chip.work{color:var(--work);border-color:var(--work)}
+.chip.bad{color:var(--bad);border-color:var(--bad)}
+.chip.line{color:var(--muted);border-color:var(--line)}
+.step{margin:0;color:var(--muted);font-size:.9rem}
+.notes{margin:0;font-size:.85rem;color:var(--ink)}
+.notes em{font-style:normal;color:var(--muted)}
+.pics{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:8px;align-items:start}
+.pics img{width:100%;max-width:100%;border-radius:8px;display:block;background:#101113}
+.pics figure{margin:0;display:grid;gap:4px}.pics figcaption{font:10px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.spin{justify-self:start;font:600 .9rem var(--body);color:var(--bench);background:var(--copper);padding:8px 14px;
+ border-radius:8px;text-decoration:none}
+.spin:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+"""
+FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&'
+         'family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">')
+
+
+def _state(v):
+    """(chip class, chip words, sort order) for one item - what it needs, at a glance."""
+    step = str(v.get("step", ""))
+    if step.startswith("done"):
+        return "kept", "kept", 3
+    if step.startswith("waiting for your Keep"):
+        return "you", "your keep / redo", 0
+    if step.startswith("waiting for your pick"):
+        return "you", "your photo pick", 0
+    if step.startswith(("stopped", "3 rounds", "no usable", "you said none")):
+        return "bad", "needs attention", 1
+    if step.startswith("in line"):
+        return "line", "in line", 4
+    return "work", "working", 2
+
+
 def page():
+    """The phone page, https://crushed-remaster.pages.dev: what needs you first, then what's being made, then
+    what's kept. Every built item has its finished 3D model to spin (the newest build, never an older one)."""
     import html
-    s = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
-    rows = []
-    for cid, v in sorted(s.items(), key=lambda kv: -kv[1].get("at", 0)):
-        badge = "PASS" if v.get("ok") else ("working" if v.get("step") != "done" else "NEEDS WORK")
-        imgs = "".join(f'<img src="{html.escape(v[k])}">' for k in ("ref", "views", "label") if v.get(k))
-        ver = v.get("verdict", {})
-        rows.append(f"<div class=c><h3>{html.escape(v.get('product', cid))} <b class={badge.split()[0]}>{badge}</b></h3>"
-                    f"<p>{html.escape(v.get('step', ''))}</p>"
-                    f"<p>{'photos found: %s, usable: %s, label covered: %s' % (v.get('photos','-'), v.get('good','-'), format(v.get('covered',0),'.0%')) if 'covered' in v else ''}</p>"
-                    f"<p>{html.escape(v.get('note', ''))}</p>"
-                    f"<p>{html.escape(str(ver.get('problems', '')) if ver else '')}</p>{imgs}"
-                    + (f'<p><a href="view.html#{cid}">spin it in 3D</a></p>' if v.get("views") else "")
-                    + "</div>")
-    doc = ("<!doctype html><meta charset=utf-8><title>Crushed asset library</title><style>"
-           "body{font:16px system-ui;margin:12px;background:#111;color:#eee}img{width:100%;margin:4px 0;border-radius:6px}"
-           ".c{background:#1c1c1c;padding:10px;margin:10px 0;border-radius:10px}b{padding:2px 6px;border-radius:4px}"
-           ".PASS{background:#1a7f37}.NEEDS{background:#9a2a2a}.working{background:#7a5c00}a{color:#8cf}</style>"
-           f"<h2>Asset library - updated {time.strftime('%H:%M')}</h2>" + "".join(rows))
+    s = jload(STATUS, {})
+    cards, tally = [], {"you": 0, "work": 0, "kept": 0, "bad": 0}
+    for cid, v in sorted(s.items(), key=lambda kv: (_state(kv[1])[2], -kv[1].get("at", 0))):
+        cls, words, _ = _state(v)
+        tally[cls] = tally.get(cls, 0) + 1
+        ver = v.get("verdict") or {}
+        probs = ver.get("problems")
+        probs = ", ".join(map(str, probs)) if isinstance(probs, list) else str(probs or "")
+        judge = ""
+        if ver:
+            judge = "<p class=notes><em>Judge:</em> " + (html.escape(probs) if probs else "looks right") + "</p>"
+        pics = ""
+        if v.get("views"):
+            ref = (f'<figure><img src="{html.escape(v["ref"])}" alt="the photo it was made from">'
+                   '<figcaption>made from</figcaption></figure>') if v.get("ref") else ""
+            pics = (f'<div class=pics><img src="{html.escape(v["views"])}" alt="the finished 3D model from four sides">'
+                    f'{ref}</div><a class=spin href="view.html?m={html.escape(cid)}&v={int(v.get("at", 0))}">'
+                    "Spin it in 3D</a>")
+        cards.append(f'<section class=card><div class=top><h2>{html.escape(v.get("product", cid))}</h2>'
+                     f'<span class="chip {cls}">{words}</span></div>'
+                     f'<p class=step>{html.escape(str(v.get("step", "")))}</p>{judge}{pics}</section>')
+    t = (f'<div class=tally><div><b>{tally["you"]}</b><span>need you</span></div><div><b>{tally["work"]}</b>'
+         f'<span>being made</span></div><div><b>{tally["kept"]}</b><span>kept</span></div>'
+         f'<div><b>{tally["bad"]}</b><span>need attention</span></div></div>')
+    doc = (f"<!doctype html><meta charset=utf-8><title>Crushed Asset Library</title>{FONTS}<style>{PAGE_CSS}</style>"
+           f'<div class=wrap><header><h1>Crushed Asset Library</h1><span class=when>updated '
+           f'{time.strftime("%a %-I:%M %p")}</span></header>{t}{"".join(cards)}</div>')
     open(os.path.join(WORK, "index.html"), "w").write(doc)
+    open(os.path.join(WORK, "view.html"), "w").write(VIEW)
     import remaster as RM
     RM.publish(force=True)
+
+
+VIEW = """<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content=noindex><title>Spin It in 3D</title>""" + FONTS + """
+<script type=module src="https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
+<style>""" + PAGE_CSS + """
+html,body{height:100%}body{display:flex;flex-direction:column;gap:10px}
+model-viewer{flex:1;min-height:420px;width:100%;border:1px solid var(--line);border-radius:12px;
+ background:radial-gradient(circle at 50% 45%,#2b2d32 0%,var(--bench) 72%)}
+a.back{color:var(--copper);font:13px var(--mono);text-decoration:none}
+</style>
+<a class=back href="./">&larr; all items</a><h1 id=n></h1>
+<model-viewer id=m camera-controls auto-rotate rotation-per-second="18deg" shadow-intensity="1" exposure="1.05"
+ environment-image="neutral" tone-mapping="aces" interaction-prompt="none" alt="the finished 3D model"></model-viewer>
+<p class=step>Drag to turn it, pinch to zoom. This is the newest build of the file saved on your Mac.</p>
+<script>
+const q = new URLSearchParams(location.search), id = q.get("m") || location.hash.slice(1);
+document.getElementById("n").textContent = id.replace(/_/g, " ");
+document.getElementById("m").src = "models/" + id + ".glb?v=" + (q.get("v") || Date.now());
+</script>"""
 
 
 def queue(n):
