@@ -96,6 +96,8 @@ def draw_inside(name, out):
     p = os.path.join(PROMPTS, name + ".inside.txt")
     if not os.path.exists(p):
         return False
+    if os.path.exists(out) and os.path.getmtime(out) > os.path.getmtime(p):
+        return True                       # already painted from these words
     prompt = INSIDE_STYLE + open(p).read().strip()
     r = subprocess.run([sys.executable, DRAW_PY, prompt, "--out", out], capture_output=True, text=True)
     return r.returncode == 0 and os.path.exists(out)
