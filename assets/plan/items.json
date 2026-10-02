@@ -153,6 +153,28 @@
 "themes": "ROAD TRIP; GARAGE SALE; LOST AND FOUND; Y2K; regular cubes",
 "weight": 1.0
 },
+"ab_roller_plus_1996": {
+"display": "Ab Roller Plus exercise rocker, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 137.638,
+"notes": [
+"Ab Roller Plus exercise rocker, circa 1996"
+],
+"product": "Ab Roller Plus exercise rocker, circa 1996",
+"role": "main",
+"size": [
+0.65,
+0.55,
+0.55
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "ace_household_scissors_8in_1998": {
 "display": "ACE household scissors, 8 inch, circa",
 "eras": [
@@ -217,6 +239,28 @@
 0.23
 ],
 "themes": "BE KIND REWIND",
+"weight": 1.0
+},
+"action_man_toy_box_torn_1998": {
+"display": "Hasbro Action Man-style action-figure toy box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.735,
+"notes": [
+"Hasbro Action Man-style action-figure toy box, circa 1998"
+],
+"product": "Hasbro Action Man-style action-figure toy box, circa 1998",
+"role": "main",
+"size": [
+0.25,
+0.08,
+0.35
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "adidas_fevernova_world_cup_ball_2002": {
@@ -480,6 +524,182 @@
 0.125
 ],
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"alien_autopsy_vhs_black_1995": {
+"display": "\u201cAlien Autopsy\u201d home-recorded VHS cassette, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"\u201cAlien Autopsy\u201d home-recorded VHS cassette, circa 1995"
+],
+"product": "\u201cAlien Autopsy\u201d home-recorded VHS cassette, circa 1995",
+"role": "main",
+"size": [
+0.187,
+0.025,
+0.103
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"alien_autopsy_vhs_clamshell_1995": {
+"display": "Generic black VHS storage case labeled \u201cAlien Autopsy,\u201d circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.129,
+"notes": [
+"Generic black VHS storage case labeled \u201cAlien Autopsy,\u201d circa 1995"
+],
+"product": "Generic black VHS storage case labeled \u201cAlien Autopsy,\u201d circa 1995",
+"role": "main",
+"size": [
+0.12,
+0.03,
+0.205
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"alien_evidence_zip_bag_1997": {
+"display": "Clear evidence-style zip bag of alien trinkets, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.012,
+"notes": [
+"Clear evidence-style zip bag of alien trinkets, circa 1997"
+],
+"product": "Clear evidence-style zip bag of alien trinkets, circa 1997",
+"role": "main",
+"size": [
+0.18,
+0.002,
+0.24
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"alien_head_lollipop_green_1997": {
+"display": "Green alien-head lollipop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Green alien-head lollipop, circa 1997"
+],
+"product": "Green alien-head lollipop, circa 1997",
+"role": "main",
+"size": [
+0.05,
+0.02,
+0.1
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"alien_head_wall_plaque_green_1998": {
+"display": "Fluorescent green alien-head wall plaque, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.346,
+"notes": [
+"Fluorescent green alien-head wall plaque, circa 1998"
+],
+"product": "Fluorescent green alien-head wall plaque, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.03,
+0.3
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"alien_probe_gift_box_1997": {
+"display": "\u201cOfficial Alien Probe\u201d novelty gift box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.101,
+"notes": [
+"\u201cOfficial Alien Probe\u201d novelty gift box, circa 1997"
+],
+"product": "\u201cOfficial Alien Probe\u201d novelty gift box, circa 1997",
+"role": "main",
+"size": [
+0.08,
+0.05,
+0.24
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"alien_sighting_notebook_1997": {
+"display": "Handwritten UFO sighting notebook, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.044,
+"notes": [
+"Handwritten UFO sighting notebook, circa 1997"
+],
+"product": "Handwritten UFO sighting notebook, circa 1997",
+"role": "main",
+"size": [
+0.15,
+0.01,
+0.21
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"alien_sour_candy_tin_1997": {
+"display": "Alien-head sour candy tin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.112,
+"notes": [
+"Alien-head sour candy tin, circa 1997"
+],
+"product": "Alien-head sour candy tin, circa 1997",
+"role": "main",
+"size": [
+0.08,
+0.02,
+0.1
+],
+"themes": "PROBED",
 "weight": 1.0
 },
 "allsop_3_in_1_cassette_cleaner_1996": {
@@ -809,6 +1029,94 @@
 0.19
 ],
 "themes": "BE KIND REWIND",
+"weight": 1.0
+},
+"amstel_330ml_can_1998": {
+"display": "Amstel 330 ml aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.351,
+"notes": [
+"Amstel 330 ml aluminum can, circa 1998"
+],
+"product": "Amstel 330 ml aluminum can, circa 1998",
+"role": "main",
+"size": [
+0.066,
+0.066,
+0.115
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"amsterdam_canal_map_foldout_1998": {
+"display": "Amsterdam tourist canal map, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Amsterdam tourist canal map, circa 1998"
+],
+"product": "Amsterdam tourist canal map, circa 1998",
+"role": "main",
+"size": [
+0.45,
+0.0005,
+0.6
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"amsterdam_coffeeshop_menu_card_1998": {
+"display": "Amsterdam coffeeshop laminated menu card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.011,
+"notes": [
+"Amsterdam coffeeshop laminated menu card, circa 1998"
+],
+"product": "Amsterdam coffeeshop laminated menu card, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.002,
+0.21
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"amsterdam_stroopwafel_1998": {
+"display": "Dutch stroopwafel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Dutch stroopwafel, circa 1998"
+],
+"product": "Dutch stroopwafel, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.008,
+0.09
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "amy_winehouse_back_to_black_cd_2006": {
@@ -1485,6 +1793,182 @@
 "themes": "GM",
 "weight": 1.0
 },
+"april_fools_handwritten_gotcha_note_1998": {
+"display": "Handwritten April Fools \u201cGOTCHA\u201d note, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handwritten April Fools \u201cGOTCHA\u201d note, circa 1998"
+],
+"product": "Handwritten April Fools \u201cGOTCHA\u201d note, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.15
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"april_fools_prank_shop_bag_1998": {
+"display": "Novelty/prank-shop paper bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.672,
+"notes": [
+"Novelty/prank-shop paper bag, circa 1998"
+],
+"product": "Novelty/prank-shop paper bag, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.08,
+0.3
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"area51_alien_souvenir_mug_black_1997": {
+"display": "Area 51 black ceramic alien souvenir mug, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.393,
+"notes": [
+"Area 51 black ceramic alien souvenir mug, circa 1997"
+],
+"product": "Area 51 black ceramic alien souvenir mug, circa 1997",
+"role": "main",
+"size": [
+0.12,
+0.085,
+0.1
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"area51_bumper_sticker_1997": {
+"display": "Area 51 novelty bumper sticker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Area 51 novelty bumper sticker, circa 1997"
+],
+"product": "Area 51 novelty bumper sticker, circa 1997",
+"role": "main",
+"size": [
+0.25,
+0.0005,
+0.08
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"area51_keychain_alien_1997": {
+"display": "Area 51 alien-head keychain, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Area 51 alien-head keychain, circa 1997"
+],
+"product": "Area 51 alien-head keychain, circa 1997",
+"role": "main",
+"size": [
+0.04,
+0.01,
+0.09
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"area51_shot_glass_green_alien_1997": {
+"display": "Area 51 souvenir shot glass, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.074,
+"notes": [
+"Area 51 souvenir shot glass, circa 1997"
+],
+"product": "Area 51 souvenir shot glass, circa 1997",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.07
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"argos_autumn_winter_catalogue_1998": {
+"display": "Argos Autumn/Winter catalogue",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.37,
+"notes": [
+"Argos Autumn/Winter catalogue, 1998"
+],
+"product": "Argos Autumn/Winter catalogue, 1998",
+"role": "main",
+"size": [
+0.21,
+0.045,
+0.28
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"argos_toy_page_torn_1998": {
+"display": "Torn Argos toy-catalogue page",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Torn Argos toy-catalogue page, 1998"
+],
+"product": "Torn Argos toy-catalogue page, 1998",
+"role": "main",
+"size": [
+0.21,
+0.0005,
+0.28
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
 "arizona_green_tea_23oz_can_1996": {
 "display": "AriZona Green Tea with Ginseng and Honey tall can, circa",
 "eras": [
@@ -1526,6 +2010,28 @@
 0.053
 ],
 "themes": "LOW RES",
+"weight": 1.0
+},
+"as_seen_on_tv_red_sticker_2002": {
+"display": "\u201cAs Seen on TV\u201d red retail sticker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"\u201cAs Seen on TV\u201d red retail sticker, circa 2002"
+],
+"product": "\u201cAs Seen on TV\u201d red retail sticker, circa 2002",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.05
+],
+"themes": "BUT WAIT THERE'S MORE",
 "weight": 1.0
 },
 "assorted_aa_battery_doors_1998": {
@@ -1724,6 +2230,160 @@
 0.035
 ],
 "themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"atlantic_city_buffet_ticket_1998": {
+"display": "Atlantic City casino buffet admission ticket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City casino buffet admission ticket, circa 1998"
+],
+"product": "Atlantic City casino buffet admission ticket, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.15
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"atlantic_city_casino_chip_five_dollar_1998": {
+"display": "Atlantic City casino $5 clay-composite chip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City casino $5 clay-composite chip, circa 1998"
+],
+"product": "Atlantic City casino $5 clay-composite chip, circa 1998",
+"role": "main",
+"size": [
+0.039,
+0.0033,
+0.039
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"atlantic_city_casino_chip_one_dollar_1998": {
+"display": "Atlantic City casino $1 clay-composite chip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City casino $1 clay-composite chip, circa 1998"
+],
+"product": "Atlantic City casino $1 clay-composite chip, circa 1998",
+"role": "main",
+"size": [
+0.039,
+0.0033,
+0.039
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"atlantic_city_casino_chip_twentyfive_1998": {
+"display": "Atlantic City casino $25 chip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City casino $25 chip, circa 1998"
+],
+"product": "Atlantic City casino $25 chip, circa 1998",
+"role": "main",
+"size": [
+0.039,
+0.0033,
+0.039
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"atlantic_city_casino_players_card_1998": {
+"display": "Atlantic City casino player-club card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City casino player-club card, circa 1998"
+],
+"product": "Atlantic City casino player-club card, circa 1998",
+"role": "main",
+"size": [
+0.086,
+0.0008,
+0.054
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"atlantic_city_paper_drink_cup_1998": {
+"display": "Large waxed-paper Boardwalk soda cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.132,
+"notes": [
+"Large waxed-paper Boardwalk soda cup, circa 1998"
+],
+"product": "Large waxed-paper Boardwalk soda cup, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.18
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"atlantic_city_postcard_boardwalk_1998": {
+"display": "Atlantic City Boardwalk postcard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City Boardwalk postcard, circa 1998"
+],
+"product": "Atlantic City Boardwalk postcard, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.0005,
+0.148
+],
+"themes": "BOARDWALK",
 "weight": 1.0
 },
 "atlus_print_club_purikura_sheet_1999": {
@@ -2672,6 +3332,72 @@
 "themes": "SOME ASSEMBLY REQUIRED",
 "weight": 1.0
 },
+"battleship_destroyer_gray_1996": {
+"display": "Battleship gray destroyer ship piece, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Battleship gray destroyer ship piece, circa 1996"
+],
+"product": "Battleship gray destroyer ship piece, circa 1996",
+"role": "main",
+"size": [
+0.018,
+0.015,
+0.09
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"battleship_red_hit_peg_1996": {
+"display": "Milton Bradley Battleship red hit peg, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Milton Bradley Battleship red hit peg, circa 1996"
+],
+"product": "Milton Bradley Battleship red hit peg, circa 1996",
+"role": "main",
+"size": [
+0.005,
+0.005,
+0.018
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"battleship_white_miss_peg_1996": {
+"display": "Battleship white miss peg, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Battleship white miss peg, circa 1996"
+],
+"product": "Battleship white miss peg, circa 1996",
+"role": "main",
+"size": [
+0.005,
+0.005,
+0.018
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "bavarian_felt_hat_green_1998": {
 "display": "Green Bavarian-style felt hat with feather, circa",
 "eras": [
@@ -2824,6 +3550,28 @@
 0.29
 ],
 "themes": "SLOW MOTION",
+"weight": 1.0
+},
+"bead_curtain_clear_iridescent_1998": {
+"display": "Iridescent plastic bead doorway curtain, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.283,
+"notes": [
+"Iridescent plastic bead doorway curtain, circa 1998"
+],
+"product": "Iridescent plastic bead doorway curtain, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.03,
+1.8
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "beanie_acrylic_display_cube_1998": {
@@ -3044,6 +3792,94 @@
 0.275
 ],
 "themes": "GOT GOT NEED; MINT CONDITION; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"bedazzler_original_tool_1990s": {
+"display": "Bedazzler rhinestone-setting tool, circa 1990s",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.189,
+"notes": [
+"Bedazzler rhinestone-setting tool, circa 1990s"
+],
+"product": "Bedazzler rhinestone-setting tool, circa 1990s",
+"role": "main",
+"size": [
+0.12,
+0.05,
+0.18
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"bedazzler_rhinestone_stud_assorted_1990s": {
+"display": "Bedazzler decorative rhinestone/stud assortment, circa 1990s",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Bedazzler decorative rhinestone/stud assortment, circa 1990s"
+],
+"product": "Bedazzler decorative rhinestone/stud assortment, circa 1990s",
+"role": "main",
+"size": [
+0.008,
+0.003,
+0.008
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"bedazzler_stud_wheel_pack_1990s": {
+"display": "Bedazzler stud/rhinestone accessory wheel, circa 1990s",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.035,
+"notes": [
+"Bedazzler stud/rhinestone accessory wheel, circa 1990s"
+],
+"product": "Bedazzler stud/rhinestone accessory wheel, circa 1990s",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.1
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"bedroom_wall_paint_chip_offwhite_1998": {
+"display": "Off-white painted drywall chip with poster adhesive residue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Off-white painted drywall chip with poster adhesive residue, circa 1998"
+],
+"product": "Off-white painted drywall chip with poster adhesive residue, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.005,
+0.08
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "beer_ring_cardboard_coaster_2001": {
@@ -3879,6 +4715,28 @@
 "themes": "LOW RES",
 "weight": 1.0
 },
+"black_fishnet_stocking_1998": {
+"display": "Black fishnet stocking, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.079,
+"notes": [
+"Black fishnet stocking, circa 1998"
+],
+"product": "Black fishnet stocking, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.01,
+0.75
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
 "black_fuzzy_steering_wheel_cover_1999": {
 "display": "Black faux-fur steering-wheel cover, circa",
 "eras": [
@@ -3899,6 +4757,28 @@
 0.38
 ],
 "themes": "ROAD TRIP; PROM NIGHT; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
+"black_lace_bralette_1998": {
+"display": "Black lace bralette-style garment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.108,
+"notes": [
+"Black lace bralette-style garment, circa 1998"
+],
+"product": "Black lace bralette-style garment, circa 1998",
+"role": "main",
+"size": [
+0.32,
+0.02,
+0.24
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "black_silver_party_hat_2000_1999": {
@@ -4008,6 +4888,28 @@
 0.114
 ],
 "themes": "SCREEN TIME; GM; COLD STORAGE; Y2K; regular cubes",
+"weight": 1.0
+},
+"blacklight_fixture_18in_white_1998": {
+"display": "18-inch plug-in fluorescent blacklight fixture, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.273,
+"notes": [
+"18-inch plug-in fluorescent blacklight fixture, circa 1998"
+],
+"product": "18-inch plug-in fluorescent blacklight fixture, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.05,
+0.52
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "blair_witch_project_vhs_1999": {
@@ -4471,6 +5373,182 @@
 ],
 "themes": "TRICK OR TREAT",
 "weight": 0.12
+},
+"blu_tack_original_pack_1998": {
+"display": "Bostik Blu Tack retail pack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.016,
+"notes": [
+"Bostik Blu Tack retail pack, circa 1998"
+],
+"product": "Bostik Blu Tack retail pack, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.01,
+0.15
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"blu_tack_putty_1998": {
+"display": "Bostik Blu Tack reusable adhesive putty, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Bostik Blu Tack reusable adhesive putty, circa 1998"
+],
+"product": "Bostik Blu Tack reusable adhesive putty, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.01,
+0.03
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"board_game_box_lid_mixed_1996": {
+"display": "Crushed assorted board-game box lid, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.26,
+"notes": [
+"Crushed assorted board-game box lid, circa 1996"
+],
+"product": "Crushed assorted board-game box lid, circa 1996",
+"role": "main",
+"size": [
+0.4,
+0.06,
+0.5
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"board_game_instruction_booklet_mixed_1996": {
+"display": "Assorted board-game instruction booklet, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Assorted board-game instruction booklet, circa 1996"
+],
+"product": "Assorted board-game instruction booklet, circa 1996",
+"role": "main",
+"size": [
+0.14,
+0.0015,
+0.21
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"boardwalk_arcade_prize_ticket_strip_1998": {
+"display": "Boardwalk arcade redemption tickets, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Boardwalk arcade redemption tickets, circa 1998"
+],
+"product": "Boardwalk arcade redemption tickets, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.0004,
+0.03
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"boardwalk_french_fries_1998": {
+"display": "Boardwalk-style skin-on french fries, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Boardwalk-style skin-on french fries, circa 1998"
+],
+"product": "Boardwalk-style skin-on french fries, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.01,
+0.09
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"boardwalk_fries_paper_cup_1998": {
+"display": "Atlantic City Boardwalk french-fry paper cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.088,
+"notes": [
+"Atlantic City Boardwalk french-fry paper cup, circa 1998"
+],
+"product": "Atlantic City Boardwalk french-fry paper cup, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.12
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"boardwalk_paper_napkin_1998": {
+"display": "Boardwalk food-stand paper napkin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Boardwalk food-stand paper napkin, circa 1998"
+],
+"product": "Boardwalk food-stand paper napkin, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.0003,
+0.16
+],
+"themes": "BOARDWALK",
+"weight": 1.0
 },
 "body_glitter_silver_tube_1998": {
 "display": "Silver body-glitter gel tube, circa",
@@ -5176,6 +6254,28 @@
 "themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
 "weight": 1.0
 },
+"butterscotch_disc_wrapper_1998": {
+"display": "Wrapped butterscotch hard-candy disc, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Wrapped butterscotch hard-candy disc, circa 1998"
+],
+"product": "Wrapped butterscotch hard-candy disc, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.01,
+0.05
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "cadbury_creme_egg_1998": {
 "display": "Cadbury Creme Egg, circa",
 "eras": [
@@ -5220,6 +6320,50 @@
 "themes": "EGG HUNT; LUNCH TRADE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"cadbury_crunchie_bar_1998": {
+"display": "Cadbury Crunchie bar, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.02,
+"notes": [
+"Cadbury Crunchie bar, circa 1998"
+],
+"product": "Cadbury Crunchie bar, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.18
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"cadbury_dairy_milk_bar_1998": {
+"display": "Cadbury Dairy Milk bar from selection box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Cadbury Dairy Milk bar from selection box, circa 1998"
+],
+"product": "Cadbury Dairy Milk bar from selection box, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.01,
+0.14
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
 "cadbury_mini_eggs_125g_1998": {
 "display": "Cadbury Mini Eggs bag, circa",
 "eras": [
@@ -5240,6 +6384,28 @@
 0.2
 ],
 "themes": "EGG HUNT",
+"weight": 1.0
+},
+"cadbury_selection_box_1998": {
+"display": "Cadbury Christmas Selection Box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.309,
+"notes": [
+"Cadbury Christmas Selection Box, circa 1998"
+],
+"product": "Cadbury Christmas Selection Box, circa 1998",
+"role": "main",
+"size": [
+0.23,
+0.04,
+0.32
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "cafeteria_trade_note_1995": {
@@ -5880,6 +7046,28 @@
 "themes": "ROAD TRIP; MIXTAPE; Y2K; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"casino_dice_translucent_red_1998": {
+"display": "Precision-style translucent red casino die, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Precision-style translucent red casino die, circa 1998"
+],
+"product": "Precision-style translucent red casino die, circa 1998",
+"role": "main",
+"size": [
+0.019,
+0.019,
+0.019
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
 "casio_calculator_watch_ca53w_1998": {
 "display": "Casio CA-53W calculator watch, circa",
 "eras": [
@@ -6516,6 +7704,28 @@
 "themes": "CCFF00",
 "weight": 1.0
 },
+"ceiling_poster_thumbtacks_clear_1998": {
+"display": "Clear plastic push pins/thumbtacks, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Clear plastic push pins/thumbtacks, circa 1998"
+],
+"product": "Clear plastic push pins/thumbtacks, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.01,
+0.012
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
 "celsius_sparkling_orange_12oz_2021": {
 "display": "Celsius Sparkling Orange energy drink 12 oz can, circa",
 "eras": [
@@ -6623,6 +7833,28 @@
 0.12
 ],
 "themes": "MOONCAKE",
+"weight": 1.0
+},
+"ch_flightstick_1992": {
+"display": "CH Products Flightstick joystick, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.986,
+"notes": [
+"CH Products Flightstick joystick, circa 1992"
+],
+"product": "CH Products Flightstick joystick, circa 1992",
+"role": "main",
+"size": [
+0.16,
+0.16,
+0.22
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "ch_products_flightstick_pro_1995": {
@@ -6735,6 +7967,50 @@
 "themes": "SICK DAY; ROAD TRIP; HOME_JUNK_DRAWER_MISC; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"chatramue_thai_tea_mix_red_bag_2002": {
+"display": "ChaTraMue Number One Brand Thai Tea Mix red bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.336,
+"notes": [
+"ChaTraMue Number One Brand Thai Tea Mix red bag, circa 2002"
+],
+"product": "ChaTraMue Number One Brand Thai Tea Mix red bag, circa 2002",
+"role": "main",
+"size": [
+0.16,
+0.06,
+0.25
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"chattering_teeth_windup_1998": {
+"display": "Wind-up chattering teeth toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.037,
+"notes": [
+"Wind-up chattering teeth toy, circa 1998"
+],
+"product": "Wind-up chattering teeth toy, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.06
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
 "cheap_black_wrap_sunglasses_1994": {
 "display": "Black wraparound sunglasses, circa",
 "eras": [
@@ -6756,6 +8032,28 @@
 ],
 "themes": "LIGHT THE FUSE",
 "weight": 0.12
+},
+"cheap_swim_goggles_yellow_1998": {
+"display": "Yellow plastic swim goggles, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.056,
+"notes": [
+"Yellow plastic swim goggles, circa 1998"
+],
+"product": "Yellow plastic swim goggles, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.05
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
 },
 "cheap_vampire_mask_white_1998": {
 "display": "Drugstore plastic vampire mask with elastic strap, circa",
@@ -6843,6 +8141,28 @@
 0.11
 ],
 "themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
+"weight": 1.0
+},
+"chia_pet_ram_1994": {
+"display": "Joseph Enterprises Chia Pet Ram planter, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.232,
+"notes": [
+"Joseph Enterprises Chia Pet Ram planter, circa 1994"
+],
+"product": "Joseph Enterprises Chia Pet Ram planter, circa 1994",
+"role": "main",
+"size": [
+0.2,
+0.1,
+0.16
+],
+"themes": "BUT WAIT THERE'S MORE",
 "weight": 1.0
 },
 "chicago_bulls_23_replica_jersey_scrap_1996": {
@@ -7021,6 +8341,72 @@
 "themes": "KRAMPUSNACHT",
 "weight": 1.0
 },
+"christmas_cracker_joke_slip_1998": {
+"display": "Christmas cracker joke slip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Christmas cracker joke slip, circa 1998"
+],
+"product": "Christmas cracker joke slip, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.0003,
+0.1
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"christmas_cracker_red_gold_1998": {
+"display": "Red-and-gold Christmas cracker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.105,
+"notes": [
+"Red-and-gold Christmas cracker, circa 1998"
+],
+"product": "Red-and-gold Christmas cracker, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.3
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"christmas_cracker_spent_tube_1998": {
+"display": "Pulled Christmas cracker tube and wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Pulled Christmas cracker tube and wrapper, circa 1998"
+],
+"product": "Pulled Christmas cracker tube and wrapper, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.02,
+0.18
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
 "christmas_gift_bow_red_1998": {
 "display": "Red self-adhesive Christmas gift bow, circa",
 "eras": [
@@ -7043,6 +8429,28 @@
 "themes": "SOME ASSEMBLY REQUIRED",
 "weight": 1.0
 },
+"christmas_gift_tag_used_1998": {
+"display": "Used Christmas gift tag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Used Christmas gift tag, circa 1998"
+],
+"product": "Used Christmas gift tag, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.08
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
 "christmas_morning_polaroid_1998": {
 "display": "Polaroid 600 instant photograph of opened presents",
 "eras": [
@@ -7063,6 +8471,94 @@
 0.108
 ],
 "themes": "SOME ASSEMBLY REQUIRED",
+"weight": 1.0
+},
+"christmas_paper_crown_blue_1998": {
+"display": "Blue tissue-paper Christmas cracker crown, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Blue tissue-paper Christmas cracker crown, circa 1998"
+],
+"product": "Blue tissue-paper Christmas cracker crown, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.0003,
+0.12
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"christmas_paper_crown_red_1998": {
+"display": "Red tissue-paper Christmas cracker crown, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Red tissue-paper Christmas cracker crown, circa 1998"
+],
+"product": "Red tissue-paper Christmas cracker crown, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.0003,
+0.12
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"christmas_pudding_round_1998": {
+"display": "Traditional Christmas pudding, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.484,
+"notes": [
+"Traditional Christmas pudding, circa 1998"
+],
+"product": "Traditional Christmas pudding, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.09,
+0.16
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"christmas_pudding_slice_1998": {
+"display": "Slice of Christmas pudding, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.073,
+"notes": [
+"Slice of Christmas pudding, circa 1998"
+],
+"product": "Slice of Christmas pudding, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.1
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "christmas_wrapping_paper_scraps_1998": {
@@ -7107,6 +8603,28 @@
 0.16
 ],
 "themes": "ROAD TRIP; PROM NIGHT; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
+"chrome_probe_novelty_prop_1997": {
+"display": "Chrome-finish \u201calien probe\u201d novelty gag prop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.056,
+"notes": [
+"Chrome-finish \u201calien probe\u201d novelty gag prop, circa 1997"
+],
+"product": "Chrome-finish \u201calien probe\u201d novelty gag prop, circa 1997",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.2
+],
+"themes": "PROBED",
 "weight": 1.0
 },
 "chuck_e_cheese_ticket_strip_1998": {
@@ -7988,6 +9506,28 @@
 "themes": "HOME_JUNK_DRAWER_MISC; SCHOOL_JUNK; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"clear_vinyl_sofa_cover_1998": {
+"display": "Clear vinyl protective sofa cover, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 5.544,
+"notes": [
+"Clear vinyl protective sofa cover, circa 1998"
+],
+"product": "Clear vinyl protective sofa cover, circa 1998",
+"role": "main",
+"size": [
+1.8,
+0.01,
+2.2
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "clear_water_glass_ofrenda_1998": {
 "display": "Clear tumbler of water for ofrenda, circa",
 "eras": [
@@ -8098,6 +9638,50 @@
 "themes": "GAS FEES",
 "weight": 1.0
 },
+"clue_suspect_card_1996": {
+"display": "Parker Brothers Clue suspect card, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Parker Brothers Clue suspect card, circa 1996"
+],
+"product": "Parker Brothers Clue suspect card, circa 1996",
+"role": "main",
+"size": [
+0.057,
+0.0005,
+0.088
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"clue_weapon_card_1996": {
+"display": "Clue weapon card, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Clue weapon card, circa 1996"
+],
+"product": "Clue weapon card, circa 1996",
+"role": "main",
+"size": [
+0.057,
+0.0005,
+0.088
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "clueless_vhs_1995": {
 "display": "Clueless VHS",
 "eras": [
@@ -8118,6 +9702,50 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"coats_clark_dual_duty_thread_spool_white_1998": {
+"display": "Coats & Clark Dual Duty sewing thread spool, White, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.012,
+"notes": [
+"Coats & Clark Dual Duty sewing thread spool, White, circa 1998"
+],
+"product": "Coats & Clark Dual Duty sewing thread spool, White, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.055
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"coats_clark_thread_spool_assorted_1998": {
+"display": "Coats & Clark sewing thread spools, assorted colors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.012,
+"notes": [
+"Coats & Clark sewing thread spools, assorted colors, circa 1998"
+],
+"product": "Coats & Clark sewing thread spools, assorted colors, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.055
+],
+"themes": "SEWING KIT",
 "weight": 1.0
 },
 "coats_clark_thread_spool_white_1998": {
@@ -8491,6 +10119,50 @@
 0.126
 ],
 "themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"connect_four_red_disc_1995": {
+"display": "Milton Bradley Connect Four red playing disc, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Milton Bradley Connect Four red playing disc, circa 1995"
+],
+"product": "Milton Bradley Connect Four red playing disc, circa 1995",
+"role": "main",
+"size": [
+0.033,
+0.004,
+0.033
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"connect_four_yellow_disc_1995": {
+"display": "Milton Bradley Connect Four yellow playing disc, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Milton Bradley Connect Four yellow playing disc, circa 1995"
+],
+"product": "Milton Bradley Connect Four yellow playing disc, circa 1995",
+"role": "main",
+"size": [
+0.033,
+0.004,
+0.033
+],
+"themes": "MISSING PIECES",
 "weight": 1.0
 },
 "connectix_quickcam_vc_1998": {
@@ -8955,6 +10627,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
+"creative_gameport_midi_cable_1993": {
+"display": "Sound-card game-port/MIDI adapter cable, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.151,
+"notes": [
+"Sound-card game-port/MIDI adapter cable, circa 1993"
+],
+"product": "Sound-card game-port/MIDI adapter cable, circa 1993",
+"role": "main",
+"size": [
+1.8,
+0.02,
+0.02
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "creative_nomad_jukebox_2000": {
 "display": "Creative NOMAD Jukebox digital audio player",
 "eras": [
@@ -8999,6 +10693,50 @@
 "themes": "DIAL-UP; BLACKLIGHT; Y2K; regular cubes",
 "weight": 1.0
 },
+"creative_sound_blaster_16_ct1740_1992": {
+"display": "Creative Labs Sound Blaster 16 CT1740 ISA sound card",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.066,
+"notes": [
+"Creative Labs Sound Blaster 16 CT1740 ISA sound card, 1992"
+],
+"product": "Creative Labs Sound Blaster 16 CT1740 ISA sound card, 1992",
+"role": "main",
+"size": [
+0.18,
+0.02,
+0.105
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"credit_card_order_phone_pad_1999": {
+"display": "Telephone-order credit-card note pad, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Telephone-order credit-card note pad, circa 1999"
+],
+"product": "Telephone-order credit-card note pad, circa 1999",
+"role": "main",
+"size": [
+0.1,
+0.008,
+0.15
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "creepy_crawlers_thingmaker_1992": {
 "display": "ToyMax Creepy Crawlers Thingmaker",
 "eras": [
@@ -9019,6 +10757,72 @@
 0.13
 ],
 "themes": "SOME ASSEMBLY REQUIRED; TRICK OR TREAT; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"crochet_armrest_doily_white_1998": {
+"display": "Rectangular crocheted armrest doily, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.016,
+"notes": [
+"Rectangular crocheted armrest doily, circa 1998"
+],
+"product": "Rectangular crocheted armrest doily, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.004,
+0.32
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"crochet_doily_white_round_1998": {
+"display": "White crocheted cotton doily, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.022,
+"notes": [
+"White crocheted cotton doily, circa 1998"
+],
+"product": "White crocheted cotton doily, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.004,
+0.28
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"crop_circle_pamphlet_1997": {
+"display": "Crop-circle conspiracy pamphlet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Crop-circle conspiracy pamphlet, circa 1997"
+],
+"product": "Crop-circle conspiracy pamphlet, circa 1997",
+"role": "main",
+"size": [
+0.14,
+0.0015,
+0.21
+],
+"themes": "PROBED",
 "weight": 1.0
 },
 "crossfire_game_1994": {
@@ -9389,6 +11193,28 @@
 "themes": "EIDI",
 "weight": 1.0
 },
+"decorative_stop_sign_replica_1998": {
+"display": "Decorative bedroom-wall STOP sign replica, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.126,
+"notes": [
+"Decorative bedroom-wall STOP sign replica, circa 1998"
+],
+"product": "Decorative bedroom-wall STOP sign replica, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.002,
+0.3
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
 "dell_dimension_xps_d266_1997": {
 "display": "Dell Dimension XPS D266 desktop tower",
 "eras": [
@@ -9652,6 +11478,28 @@
 "themes": "STILL ALIVE; SCREEN TIME; PRIZE COUNTER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"din_sor_pong_white_powder_packet_2002": {
+"display": "Thai Din Sor Pong-style white cooling powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.042,
+"notes": [
+"Thai Din Sor Pong-style white cooling powder packet, circa 2002"
+],
+"product": "Thai Din Sor Pong-style white cooling powder packet, circa 2002",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
 "diner_coffee_mug_gm_2021": {
 "display": "Heavy white diner coffee mug with handwritten \u201cGM,\u201d circa",
 "eras": [
@@ -9893,6 +11741,50 @@
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"doom_registered_big_box_1994": {
+"display": "DOOM registered PC big-box release, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.288,
+"notes": [
+"DOOM registered PC big-box release, circa 1994"
+],
+"product": "DOOM registered PC big-box release, circa 1994",
+"role": "main",
+"size": [
+0.215,
+0.05,
+0.255
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"doom_shareware_3_5_disk_1993": {
+"display": "DOOM Shareware Episode One 3.5-inch floppy disk",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"DOOM Shareware Episode One 3.5-inch floppy disk, 1993"
+],
+"product": "DOOM Shareware Episode One 3.5-inch floppy disk, 1993",
+"role": "main",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "doritos_3d_nacho_cheesier_1998": {
 "display": "Doritos 3D's Nacho Cheesier!",
 "eras": [
@@ -9913,6 +11805,50 @@
 0.27
 ],
 "themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
+"dos_autoexec_config_printout_1993": {
+"display": "AUTOEXEC.BAT and CONFIG.SYS printout, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"AUTOEXEC.BAT and CONFIG.SYS printout, circa 1993"
+],
+"product": "AUTOEXEC.BAT and CONFIG.SYS printout, circa 1993",
+"role": "main",
+"size": [
+0.216,
+0.0005,
+0.279
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"dos_boot_disk_handwritten_1993": {
+"display": "Handwritten MS-DOS boot disk, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Handwritten MS-DOS boot disk, circa 1993"
+],
+"product": "Handwritten MS-DOS boot disk, circa 1993",
+"role": "main",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "dot_matrix_banner_happy_birthday_1994": {
@@ -10268,25 +12204,25 @@
 "weight": 1.0
 },
 "duracell_aa_4pack_blister_1998": {
-"display": "Duracell CopperTop AA 4-pack blister, circa",
+"display": "Duracell Coppertop AA four-pack blister, circa",
 "eras": [
 2,
 3
 ],
 "family": "one-of-one",
 "group": "era",
-"mass": 0.025,
+"mass": 0.038,
 "notes": [
 "Duracell CopperTop AA 4-pack blister card, circa 1998"
 ],
-"product": "Duracell CopperTop AA 4-pack blister, circa 1998",
+"product": "Duracell Coppertop AA four-pack blister, circa 1998",
 "role": "main",
 "size": [
 0.09,
 0.02,
-0.13
+0.12
 ],
-"themes": "IT'S AWAKE",
+"themes": "BOXING DAY",
 "weight": 0.12
 },
 "duracell_aa_8pack_christmas_1998": {
@@ -10400,7 +12336,7 @@
 "weight": 1.0
 },
 "duracell_coppertop_aa_1998": {
-"display": "Duracell CopperTop AA alkaline battery, circa",
+"display": "Duracell Coppertop AA alkaline battery, circa",
 "eras": [
 2,
 3
@@ -10411,14 +12347,14 @@
 "notes": [
 "Duracell CopperTop AA alkaline battery, circa 1998"
 ],
-"product": "Duracell CopperTop AA alkaline battery, circa 1998",
+"product": "Duracell Coppertop AA alkaline battery, circa 1998",
 "role": "main",
 "size": [
 0.0145,
 0.0145,
 0.0505
 ],
-"themes": "IT'S AWAKE",
+"themes": "BOXING DAY",
 "weight": 0.12
 },
 "duracell_coppertop_aaa4_1997": {
@@ -10531,6 +12467,50 @@
 "themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"durex_condom_wrapper_blue_1998": {
+"display": "Durex-style blue foil condom wrapper, unopened/empty mixed, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Durex-style blue foil condom wrapper, unopened/empty mixed, circa 1998"
+],
+"product": "Durex-style blue foil condom wrapper, unopened/empty mixed, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.003,
+0.06
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"durex_condom_wrapper_red_1998": {
+"display": "Durex-style red foil condom wrapper, unopened/empty mixed, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Durex-style red foil condom wrapper, unopened/empty mixed, circa 1998"
+],
+"product": "Durex-style red foil condom wrapper, unopened/empty mixed, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.003,
+0.06
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
 "durex_extra_sensitive_3count_1999": {
 "display": "Durex Extra Sensitive lubricated condoms 3-count box, circa",
 "eras": [
@@ -10551,6 +12531,72 @@
 0.1
 ],
 "themes": "UNDER THE MATTRESS; WINDOW SHOPPING; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"dutch_bicycle_bell_chrome_1998": {
+"display": "Chrome bicycle bell, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.085,
+"notes": [
+"Chrome bicycle bell, circa 1998"
+],
+"product": "Chrome bicycle bell, circa 1998",
+"role": "main",
+"size": [
+0.055,
+0.055,
+0.04
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"dutch_bicycle_reflector_red_1998": {
+"display": "Red rear bicycle reflector, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.01,
+"notes": [
+"Red rear bicycle reflector, circa 1998"
+],
+"product": "Red rear bicycle reflector, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.07
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"dutch_guilder_coin_2_5_1998": {
+"display": "Netherlands 2\u00bd-guilder coin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Netherlands 2\u00bd-guilder coin, circa 1998"
+],
+"product": "Netherlands 2\u00bd-guilder coin, circa 1998",
+"role": "main",
+"size": [
+0.029,
+0.002,
+0.029
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "dymo_1570_embossing_labelmaker_1997": {
@@ -10903,6 +12949,28 @@
 0.1
 ],
 "themes": "EIDI",
+"weight": 1.0
+},
+"elephant_pants_black_white_2004": {
+"display": "Black-and-white Thai elephant-print loose trousers, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.05,
+"notes": [
+"Black-and-white Thai elephant-print loose trousers, circa 2004"
+],
+"product": "Black-and-white Thai elephant-print loose trousers, circa 2004",
+"role": "main",
+"size": [
+0.5,
+0.03,
+1.0
+],
+"themes": "SONGKRAN",
 "weight": 1.0
 },
 "elfbar_bc5000_blue_razz_ice_2022": {
@@ -12000,6 +14068,138 @@
 "themes": "SLIMED",
 "weight": 1.0
 },
+"fake_dog_poop_rubber_1998": {
+"display": "Rubber fake dog poop prank, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Rubber fake dog poop prank, circa 1998"
+],
+"product": "Rubber fake dog poop prank, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.04,
+0.1
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"fake_ice_cube_fly_1998": {
+"display": "Clear fake ice cube with trapped fly, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Clear fake ice cube with trapped fly, circa 1998"
+],
+"product": "Clear fake ice cube with trapped fly, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.03,
+0.03
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"fake_ice_cube_spider_1998": {
+"display": "Clear fake ice cube with trapped spider, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Clear fake ice cube with trapped spider, circa 1998"
+],
+"product": "Clear fake ice cube with trapped spider, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.03,
+0.03
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"fake_ink_spill_black_rubber_1998": {
+"display": "Rubber fake-ink-spill prank, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Rubber fake-ink-spill prank, circa 1998"
+],
+"product": "Rubber fake-ink-spill prank, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.005,
+0.08
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"fake_lottery_ticket_prank_1998": {
+"display": "Novelty fake winning lottery scratch ticket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Novelty fake winning lottery scratch ticket, circa 1998"
+],
+"product": "Novelty fake winning lottery scratch ticket, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.0005,
+0.16
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"fake_vomit_rubber_1998": {
+"display": "Rubber fake-vomit prank, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.029,
+"notes": [
+"Rubber fake-vomit prank, circa 1998"
+],
+"product": "Rubber fake-vomit prank, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.01,
+0.1
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
 "fall_out_boy_cork_tree_cd_2005": {
 "display": "Fall Out Boy From Under the Cork Tree CD in jewel case",
 "eras": [
@@ -12264,6 +14464,28 @@
 "themes": "UNDER THE MATTRESS; SICK DAY; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"flip_flop_blue_thailand_2002": {
+"display": "Blue rubber flip-flop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"Blue rubber flip-flop, circa 2002"
+],
+"product": "Blue rubber flip-flop, circa 2002",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.27
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
 "floom_foam_slime_tub_pink_1996": {
 "display": "\u201cFloom\u201d foam-bead slime tub, custom parody sensory toy",
 "eras": [
@@ -12328,6 +14550,28 @@
 0.043
 ],
 "themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; regular cubes",
+"weight": 1.0
+},
+"floppy_disk_index_card_1993": {
+"display": "Floppy-disk box index card, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Floppy-disk box index card, circa 1993"
+],
+"product": "Floppy-disk box index card, circa 1993",
+"role": "main",
+"size": [
+0.12,
+0.0005,
+0.15
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "floppy_write_protect_tabs_1995": {
@@ -12505,6 +14749,28 @@
 "themes": "GOLAZO",
 "weight": 0.12
 },
+"foil_alien_hat_1997": {
+"display": "Homemade aluminum-foil \u201cmind-control\u201d hat, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.315,
+"notes": [
+"Homemade aluminum-foil \u201cmind-control\u201d hat, circa 1997"
+],
+"product": "Homemade aluminum-foil \u201cmind-control\u201d hat, circa 1997",
+"role": "main",
+"size": [
+0.25,
+0.2,
+0.18
+],
+"themes": "PROBED",
+"weight": 1.0
+},
 "foil_noisemaker_2000_1999": {
 "display": "Metallic New Year's Eve party blower marked \u201c2000,\u201d",
 "eras": [
@@ -12613,6 +14879,28 @@
 0.05
 ],
 "themes": "SLOW MOTION",
+"weight": 1.0
+},
+"fralingers_original_salt_water_taffy_box_1998": {
+"display": "Fralinger's Original Salt Water Taffy gift box, Atlantic City, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.137,
+"notes": [
+"Fralinger's Original Salt Water Taffy gift box, Atlantic City, circa 1998"
+],
+"product": "Fralinger's Original Salt Water Taffy gift box, Atlantic City, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.05,
+0.13
+],
+"themes": "BOARDWALK",
 "weight": 1.0
 },
 "france98_footix_plush_1998": {
@@ -13407,6 +15695,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"gameport_db15_extension_cable_1993": {
+"display": "PC DB-15 joystick extension cable, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.038,
+"notes": [
+"PC DB-15 joystick extension cable, circa 1993"
+],
+"product": "PC DB-15 joystick extension cable, circa 1993",
+"role": "main",
+"size": [
+1.8,
+0.01,
+0.01
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "gameshark_pro_n64_1998": {
 "display": "InterAct GameShark Pro for Nintendo 64",
 "eras": [
@@ -13669,6 +15979,28 @@
 0.07
 ],
 "themes": "SICK DAY; SCREEN TIME; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"ge_a19_blacklight_bulb_1998": {
+"display": "GE-style A19 blacklight incandescent bulb, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.166,
+"notes": [
+"GE-style A19 blacklight incandescent bulb, circa 1998"
+],
+"product": "GE-style A19 blacklight incandescent bulb, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.11
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "ge_c7_multicolor_christmas_lights_1998": {
@@ -14088,6 +16420,50 @@
 "themes": "SLOW MOTION",
 "weight": 1.0
 },
+"ginsu_knife_set_box_1984": {
+"display": "Ginsu knife set retail box, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.551,
+"notes": [
+"Ginsu knife set retail box, circa 1984"
+],
+"product": "Ginsu knife set retail box, circa 1984",
+"role": "main",
+"size": [
+0.42,
+0.05,
+0.25
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"ginsu_serrated_utility_knife_1984": {
+"display": "Ginsu serrated utility knife, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.088,
+"notes": [
+"Ginsu serrated utility knife, circa 1984"
+],
+"product": "Ginsu serrated utility knife, circa 1984",
+"role": "main",
+"size": [
+0.03,
+0.015,
+0.28
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "glad_sandwich_bags_50ct_1998": {
 "display": "Glad Sandwich Bags 50-count box, circa",
 "eras": [
@@ -14130,6 +16506,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"glass_hard_candy_dish_lid_1998": {
+"display": "Cut-glass covered candy dish, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.177,
+"notes": [
+"Cut-glass covered candy dish, circa 1998"
+],
+"product": "Cut-glass covered candy dish, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.18,
+0.16
+],
+"themes": "SEWING KIT",
 "weight": 1.0
 },
 "glass_prayer_candle_plain_white_1998": {
@@ -14196,6 +16594,94 @@
 0.018
 ],
 "themes": "SLIMED",
+"weight": 1.0
+},
+"glow_alien_plush_green_1997": {
+"display": "Glow-green alien plush, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.235,
+"notes": [
+"Glow-green alien plush, circa 1997"
+],
+"product": "Glow-green alien plush, circa 1997",
+"role": "main",
+"size": [
+0.15,
+0.08,
+0.28
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"glow_in_dark_planet_set_1998": {
+"display": "Glow-in-the-dark plastic planet and moon set, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.009,
+"notes": [
+"Glow-in-the-dark plastic planet and moon set, circa 1998"
+],
+"product": "Glow-in-the-dark plastic planet and moon set, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.015,
+0.06
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"glow_in_dark_star_pack_large_1998": {
+"display": "Glow-in-the-dark plastic ceiling stars, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Glow-in-the-dark plastic ceiling stars, circa 1998"
+],
+"product": "Glow-in-the-dark plastic ceiling stars, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.008,
+0.05
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"glow_skull_wall_plaque_1998": {
+"display": "Glow-in-the-dark skull wall plaque, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.294,
+"notes": [
+"Glow-in-the-dark skull wall plaque, circa 1998"
+],
+"product": "Glow-in-the-dark skull wall plaque, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.03,
+0.28
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "glow_stick_connector_clear_1998": {
@@ -14395,6 +16881,72 @@
 "themes": "CONSOLE WARS; SCREEN TIME; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"grandma_floral_tissue_box_cover_1998": {
+"display": "Crocheted tissue-box cover, Floral, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.206,
+"notes": [
+"Crocheted tissue-box cover, Floral, circa 1998"
+],
+"product": "Crocheted tissue-box cover, Floral, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.14,
+0.15
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"grandma_thimble_silver_1998": {
+"display": "Nickel-plated sewing thimble, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Nickel-plated sewing thimble, circa 1998"
+],
+"product": "Nickel-plated sewing thimble, circa 1998",
+"role": "main",
+"size": [
+0.018,
+0.018,
+0.023
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"gravis_gamepad_pc_1992": {
+"display": "Advanced Gravis PC GamePad, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.078,
+"notes": [
+"Advanced Gravis PC GamePad, circa 1992"
+],
+"product": "Advanced Gravis PC GamePad, circa 1992",
+"role": "main",
+"size": [
+0.15,
+0.035,
+0.085
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "gravis_gamepad_pro_1996": {
 "display": "Gravis GamePad Pro PC controller",
 "eras": [
@@ -14415,6 +16967,28 @@
 0.095
 ],
 "themes": "DIAL-UP; CONSOLE WARS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"green_alien_slime_tub_1997": {
+"display": "Neon-green alien slime tub, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.078,
+"notes": [
+"Neon-green alien slime tub, circa 1997"
+],
+"product": "Neon-green alien slime tub, circa 1997",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.07
+],
+"themes": "PROBED",
 "weight": 1.0
 },
 "green_day_american_idiot_cd_2004": {
@@ -14789,6 +17363,50 @@
 0.122
 ],
 "themes": "CARNAVAL",
+"weight": 1.0
+},
+"guess_who_character_door_red_1995": {
+"display": "Loose Guess Who? red flip-door frame, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose Guess Who? red flip-door frame, circa 1995"
+],
+"product": "Loose Guess Who? red flip-door frame, circa 1995",
+"role": "main",
+"size": [
+0.04,
+0.005,
+0.05
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"guess_who_red_frame_board_1995": {
+"display": "Milton Bradley Guess Who? red player board, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.407,
+"notes": [
+"Milton Bradley Guess Who? red player board, circa 1995"
+],
+"product": "Milton Bradley Guess Who? red player board, circa 1995",
+"role": "main",
+"size": [
+0.25,
+0.03,
+0.31
+],
+"themes": "MISSING PIECES",
 "weight": 1.0
 },
 "guinness_pint_glass_2001": {
@@ -16019,6 +18637,28 @@
 0.025
 ],
 "themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"heineken_330ml_can_1998": {
+"display": "Heineken 330 ml aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.351,
+"notes": [
+"Heineken 330 ml aluminum can, circa 1998"
+],
+"product": "Heineken 330 ml aluminum can, circa 1998",
+"role": "main",
+"size": [
+0.066,
+0.066,
+0.115
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "helix_shatterproof_ruler_1998": {
@@ -17258,6 +19898,50 @@
 "themes": "LUNCH TRADE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"hungry_hungry_hippos_marble_white_1995": {
+"display": "Milton Bradley Hungry Hungry Hippos white plastic marble, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Milton Bradley Hungry Hungry Hippos white plastic marble, circa 1995"
+],
+"product": "Milton Bradley Hungry Hungry Hippos white plastic marble, circa 1995",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.015
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"hungry_hungry_hippos_yellow_lever_1995": {
+"display": "Hungry Hungry Hippos yellow lever component, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Hungry Hungry Hippos yellow lever component, circa 1995"
+],
+"product": "Hungry Hungry Hippos yellow lever component, circa 1995",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.1
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "hunt_snack_pack_chocolate_1997": {
 "display": "Hunt's Snack Pack Chocolate Pudding four-pack cup, circa",
 "eras": [
@@ -17610,6 +20294,28 @@
 "themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
+"incense_boat_wood_moon_1998": {
+"display": "Wooden incense boat burner with brass moon inlay, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Wooden incense boat burner with brass moon inlay, circa 1998"
+],
+"product": "Wooden incense boat burner with brass moon inlay, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.015,
+0.25
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
 "independence_day_vhs_1997": {
 "display": "Independence Day VHS",
 "eras": [
@@ -17718,6 +20424,94 @@
 0.28
 ],
 "themes": "DIYA",
+"weight": 1.0
+},
+"inflatable_alien_green_1997": {
+"display": "Inflatable green alien novelty toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.94,
+"notes": [
+"Inflatable green alien novelty toy, circa 1997"
+],
+"product": "Inflatable green alien novelty toy, circa 1997",
+"role": "main",
+"size": [
+0.3,
+0.1,
+0.7
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"infomercial_order_form_1999": {
+"display": "Mail-order infomercial order form, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Mail-order infomercial order form, circa 1999"
+],
+"product": "Mail-order infomercial order form, circa 1999",
+"role": "main",
+"size": [
+0.216,
+0.0005,
+0.279
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"infomercial_shipping_box_2001": {
+"display": "Plain direct-response shipping carton, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.837,
+"notes": [
+"Plain direct-response shipping carton, circa 2001"
+],
+"product": "Plain direct-response shipping carton, circa 2001",
+"role": "main",
+"size": [
+0.35,
+0.25,
+0.2
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"infomercial_vhs_recording_1999": {
+"display": "Home-recorded late-night infomercial VHS tape, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"Home-recorded late-night infomercial VHS tape, circa 1999"
+],
+"product": "Home-recorded late-night infomercial VHS tape, circa 1999",
+"role": "main",
+"size": [
+0.187,
+0.025,
+0.103
+],
+"themes": "BUT WAIT THERE'S MORE",
 "weight": 1.0
 },
 "iomega_zip100_disk_1995": {
@@ -17918,6 +20712,28 @@
 "themes": "GOT GOT NEED",
 "weight": 1.0
 },
+"jamon_serrano_leg_prop_1998": {
+"display": "Serrano ham leg used as La Tomatina palo jab\u00f3n prize prop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 5.04,
+"notes": [
+"Serrano ham leg used as La Tomatina palo jab\u00f3n prize prop, circa 1998"
+],
+"product": "Serrano ham leg used as La Tomatina palo jab\u00f3n prize prop, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.16,
+0.75
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
 "jansport_right_pack_green_1997": {
 "display": "JanSport Right Pack backpack, Green, circa",
 "eras": [
@@ -18094,6 +20910,50 @@
 "themes": "TAZOS",
 "weight": 1.0
 },
+"jasmine_blossom_loose_2002": {
+"display": "Loose jasmine blossom, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose jasmine blossom, circa 2002"
+],
+"product": "Loose jasmine blossom, circa 2002",
+"role": "main",
+"size": [
+0.02,
+0.01,
+0.02
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"jasmine_garland_phuang_malai_2002": {
+"display": "Jasmine phuang malai garland, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.078,
+"notes": [
+"Jasmine phuang malai garland, circa 2002"
+],
+"product": "Jasmine phuang malai garland, circa 2002",
+"role": "main",
+"size": [
+0.1,
+0.04,
+0.28
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
 "jayz_blueprint_cd_2001": {
 "display": "Jay-Z The Blueprint CD in jewel case",
 "eras": [
@@ -18158,6 +21018,28 @@
 0.2
 ],
 "themes": "EGG HUNT",
+"weight": 1.0
+},
+"jenga_wood_block_1998": {
+"display": "Milton Bradley Jenga wooden block, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Milton Bradley Jenga wooden block, circa 1998"
+],
+"product": "Milton Bradley Jenga wooden block, circa 1998",
+"role": "main",
+"size": [
+0.075,
+0.015,
+0.025
+],
+"themes": "MISSING PIECES",
 "weight": 1.0
 },
 "jl_audio_12w3v2_subwoofer_2003": {
@@ -18268,6 +21150,28 @@
 0.24
 ],
 "themes": "Y2K; ROAD TRIP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"joy_buzzer_card_package_1998": {
+"display": "Joy buzzer blister-card package, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Joy buzzer blister-card package, circa 1998"
+],
+"product": "Joy buzzer blister-card package, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "GOTCHA",
 "weight": 1.0
 },
 "junior_mints_theater_box_1998": {
@@ -18399,6 +21303,50 @@
 0.012
 ],
 "themes": "COLD STORAGE",
+"weight": 1.0
+},
+"keno_card_atlantic_city_1998": {
+"display": "Atlantic City casino keno card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City casino keno card, circa 1998"
+],
+"product": "Atlantic City casino keno card, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"keno_crayon_black_1998": {
+"display": "Short black keno marking crayon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Short black keno marking crayon, circa 1998"
+],
+"product": "Short black keno marking crayon, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.01,
+0.08
+],
+"themes": "BOARDWALK",
 "weight": 1.0
 },
 "kenwood_kfc_6979ie_6x9_speaker_2001": {
@@ -18841,6 +21789,28 @@
 "themes": "SURPRISE INSIDE",
 "weight": 1.0
 },
+"kings_quest_vi_install_disk_1992": {
+"display": "Sierra King's Quest VI installation floppy disk",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Sierra King's Quest VI installation floppy disk, 1992"
+],
+"product": "Sierra King's Quest VI installation floppy disk, 1992",
+"role": "main",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "kingston_datatraveler_1gb_2005": {
 "display": "Kingston DataTraveler 1 GB USB flash drive, circa",
 "eras": [
@@ -18992,6 +21962,28 @@
 0.12
 ],
 "themes": "BE MINE",
+"weight": 0.12
+},
+"kleenex_tissue_box_1998": {
+"display": "Kleenex facial tissue cube box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "era",
+"mass": 0.197,
+"notes": [
+"Kleenex facial tissue cube box, circa 1998"
+],
+"product": "Kleenex facial tissue cube box, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.12,
+0.13
+],
+"themes": "SEWING KIT",
 "weight": 0.12
 },
 "knex_70model_set_1997": {
@@ -20226,6 +23218,292 @@
 "themes": "UNDER THE MATTRESS; WINDOW SHOPPING; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"la_tomatina_blue_bucket_1998": {
+"display": "Blue plastic water bucket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.312,
+"notes": [
+"Blue plastic water bucket, circa 1998"
+],
+"product": "Blue plastic water bucket, circa 1998",
+"role": "main",
+"size": [
+0.26,
+0.26,
+0.28
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_event_wristband_red_1998": {
+"display": "Red festival wristband, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Red festival wristband, circa 1998"
+],
+"product": "Red festival wristband, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.24
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_flyer_1998": {
+"display": "La Tomatina event flyer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"La Tomatina event flyer, circa 1998"
+],
+"product": "La Tomatina event flyer, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_hose_nozzle_green_1998": {
+"display": "Green plastic garden-hose spray nozzle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Green plastic garden-hose spray nozzle, circa 1998"
+],
+"product": "Green plastic garden-hose spray nozzle, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.04,
+0.16
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_red_tshirt_1998": {
+"display": "Red festival T-shirt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.49,
+"notes": [
+"Red festival T-shirt, circa 1998"
+],
+"product": "Red festival T-shirt, circa 1998",
+"role": "main",
+"size": [
+0.5,
+0.02,
+0.7
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_squashed_tomato_1998": {
+"display": "Ripe plum tomato, crushed for La Tomatina, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.035,
+"notes": [
+"Ripe plum tomato, crushed for La Tomatina, circa 1998"
+],
+"product": "Ripe plum tomato, crushed for La Tomatina, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.04,
+0.07
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_tomato_crate_red_1998": {
+"display": "Red ventilated plastic produce crate, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 8.4,
+"notes": [
+"Red ventilated plastic produce crate, circa 1998"
+],
+"product": "Red ventilated plastic produce crate, circa 1998",
+"role": "main",
+"size": [
+0.6,
+0.4,
+0.2
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_tomato_skin_scrap_1998": {
+"display": "Torn tomato skin and pulp fragment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Torn tomato skin and pulp fragment, circa 1998"
+],
+"product": "Torn tomato skin and pulp fragment, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.003,
+0.07
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_tomato_stem_green_1998": {
+"display": "Loose green tomato stem/calyx, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose green tomato stem/calyx, circa 1998"
+],
+"product": "Loose green tomato stem/calyx, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.01,
+0.04
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_water_pistol_blue_1998": {
+"display": "Blue plastic water pistol, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.123,
+"notes": [
+"Blue plastic water pistol, circa 1998"
+],
+"product": "Blue plastic water pistol, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.11
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_water_pistol_red_1998": {
+"display": "Red plastic water pistol, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.123,
+"notes": [
+"Red plastic water pistol, circa 1998"
+],
+"product": "Red plastic water pistol, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.11
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_white_towel_1998": {
+"display": "White cotton hand towel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.196,
+"notes": [
+"White cotton hand towel, circa 1998"
+],
+"product": "White cotton hand towel, circa 1998",
+"role": "main",
+"size": [
+0.4,
+0.01,
+0.7
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"la_tomatina_white_tshirt_soaked_1998": {
+"display": "White cotton T-shirt soaked and tomato-stained, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.49,
+"notes": [
+"White cotton T-shirt soaked and tomato-stained, circa 1998"
+],
+"product": "White cotton T-shirt soaked and tomato-stained, circa 1998",
+"role": "main",
+"size": [
+0.5,
+0.02,
+0.7
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
 "labtec_verse_313_microphone_1999": {
 "display": "Labtec desktop computer microphone, circa",
 "eras": [
@@ -20355,6 +23633,50 @@
 0.125
 ],
 "themes": "COASTERS; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"lava_lamp_base_silver_1998": {
+"display": "Silver lava-lamp metal base, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.26,
+"notes": [
+"Silver lava-lamp metal base, circa 1998"
+],
+"product": "Silver lava-lamp metal base, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.18
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"lava_lite_14_5in_purple_red_1998": {
+"display": "Lava Lite 14.5-inch lava lamp, purple/red, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.259,
+"notes": [
+"Lava Lite 14.5-inch lava lamp, purple/red, circa 1998"
+],
+"product": "Lava Lite 14.5-inch lava lamp, purple/red, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.09,
+0.37
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "lava_lite_purple_lava_lamp_1998": {
@@ -20639,6 +23961,28 @@
 0.012
 ],
 "themes": "COLD STORAGE",
+"weight": 1.0
+},
+"leftover_wrapping_paper_christmas_1998": {
+"display": "Torn Christmas wrapping-paper sheets, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Torn Christmas wrapping-paper sheets, circa 1998"
+],
+"product": "Torn Christmas wrapping-paper sheets, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.0003,
+0.45
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "legend_of_zelda_nes_1987": {
@@ -21256,6 +24600,50 @@
 "themes": "DRESS CODE; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"locking_5_25_disk_box_beige_1991": {
+"display": "Beige 5.25-inch floppy storage box with locking lid, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.762,
+"notes": [
+"Beige 5.25-inch floppy storage box with locking lid, circa 1991"
+],
+"product": "Beige 5.25-inch floppy storage box with locking lid, circa 1991",
+"role": "main",
+"size": [
+0.17,
+0.16,
+0.16
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"locking_floppy_disk_box_smoke_1993": {
+"display": "Smoke-clear locking 3.5-inch floppy storage box, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.567,
+"notes": [
+"Smoke-clear locking 3.5-inch floppy storage box, circa 1993"
+],
+"product": "Smoke-clear locking 3.5-inch floppy storage box, circa 1993",
+"role": "main",
+"size": [
+0.18,
+0.12,
+0.15
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "loctite_super_glue_control_1999": {
 "display": "Loctite Super Glue Control bottle, circa",
 "eras": [
@@ -21407,6 +24795,28 @@
 0.21
 ],
 "themes": "DIAL-UP; CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"loose_alien_slime_green_1997": {
+"display": "Loose neon-green novelty slime, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.05,
+"notes": [
+"Loose neon-green novelty slime, circa 1997"
+],
+"product": "Loose neon-green novelty slime, circa 1997",
+"role": "main",
+"size": [
+0.1,
+0.03,
+0.12
+],
+"themes": "PROBED",
 "weight": 1.0
 },
 "loose_body_glitter_mix_1998": {
@@ -21582,6 +24992,28 @@
 0.0065
 ],
 "themes": "COLD STORAGE",
+"weight": 1.0
+},
+"loose_songkran_white_powder_2002": {
+"display": "Loose white Songkran cooling powder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Loose white Songkran cooling powder, circa 2002"
+],
+"product": "Loose white Songkran cooling powder, circa 2002",
+"role": "main",
+"size": [
+0.08,
+0.005,
+0.08
+],
+"themes": "SONGKRAN",
 "weight": 1.0
 },
 "loose_tan_rubber_band_1994": {
@@ -22000,6 +25432,72 @@
 0.1
 ],
 "themes": "PRIZE COUNTER; SLEEPOVER; PROBED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"magic_bullet_blender_base_2003": {
+"display": "Magic Bullet blender motor base, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.454,
+"notes": [
+"Magic Bullet blender motor base, circa 2003"
+],
+"product": "Magic Bullet blender motor base, circa 2003",
+"role": "main",
+"size": [
+0.12,
+0.12,
+0.18
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"magic_bullet_blending_cup_2003": {
+"display": "Magic Bullet clear blending cup, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.198,
+"notes": [
+"Magic Bullet clear blending cup, circa 2003"
+],
+"product": "Magic Bullet clear blending cup, circa 2003",
+"role": "main",
+"size": [
+0.09,
+0.09,
+0.14
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"magic_eye_stereogram_poster_1995": {
+"display": "Magic Eye-style autostereogram wall poster, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.062,
+"notes": [
+"Magic Eye-style autostereogram wall poster, circa 1995"
+],
+"product": "Magic Eye-style autostereogram wall poster, circa 1995",
+"role": "main",
+"size": [
+0.61,
+0.0008,
+0.91
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "magic_rub_eraser_1996": {
@@ -22572,6 +26070,28 @@
 0.08
 ],
 "themes": "STILL ALIVE; TOYS_NOVELTIES_AND_ARCADE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"maxell_md2d_5_25_floppy_1991": {
+"display": "Maxell MD2-D 5.25-inch double-sided floppy disk, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Maxell MD2-D 5.25-inch double-sided floppy disk, circa 1991"
+],
+"product": "Maxell MD2-D 5.25-inch double-sided floppy disk, circa 1991",
+"role": "main",
+"size": [
+0.133,
+0.0015,
+0.133
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "maxell_mf2hd_floppy_1996": {
@@ -24069,6 +27589,28 @@
 "themes": "GREEN BEER",
 "weight": 1.0
 },
+"milton_bradley_operation_game_board_1996": {
+"display": "Milton Bradley Operation game board, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.437,
+"notes": [
+"Milton Bradley Operation game board, circa 1996"
+],
+"product": "Milton Bradley Operation game board, circa 1996",
+"role": "main",
+"size": [
+0.26,
+0.04,
+0.4
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "mini_arcade_cabinet_pixel_2026": {
 "display": "Custom tabletop mini arcade cabinet with pixel display",
 "eras": [
@@ -24198,6 +27740,28 @@
 0.22
 ],
 "themes": "KWANZAA; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"miss_america_souvenir_sash_1998": {
+"display": "Atlantic City pageant-style souvenir sash, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.063,
+"notes": [
+"Atlantic City pageant-style souvenir sash, circa 1998"
+],
+"product": "Atlantic City pageant-style souvenir sash, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.005,
+1.5
+],
+"themes": "BOARDWALK",
 "weight": 1.0
 },
 "mithai_paper_cup_fluted_1998": {
@@ -24351,6 +27915,138 @@
 0.16
 ],
 "themes": "UNDER THE MATTRESS; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"monopoly_boardwalk_title_deed_card_1995": {
+"display": "Parker Brothers Monopoly Boardwalk Title Deed card, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Parker Brothers Monopoly Boardwalk Title Deed card, circa 1995"
+],
+"product": "Parker Brothers Monopoly Boardwalk Title Deed card, circa 1995",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.09
+],
+"themes": "BOARDWALK",
+"weight": 0.12
+},
+"monopoly_car_token_1995": {
+"display": "Monopoly race-car token, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Monopoly race-car token, circa 1995"
+],
+"product": "Monopoly race-car token, circa 1995",
+"role": "main",
+"size": [
+0.028,
+0.012,
+0.01
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"monopoly_house_green_1995": {
+"display": "Monopoly green plastic house, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Monopoly green plastic house, circa 1995"
+],
+"product": "Monopoly green plastic house, circa 1995",
+"role": "main",
+"size": [
+0.012,
+0.01,
+0.01
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"monopoly_play_money_100_1995": {
+"display": "Monopoly $100 play-money note, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Monopoly $100 play-money note, circa 1995"
+],
+"product": "Monopoly $100 play-money note, circa 1995",
+"role": "main",
+"size": [
+0.1,
+0.0003,
+0.05
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"monopoly_play_money_assorted_1995": {
+"display": "Parker Brothers Monopoly play money, assorted denominations, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Parker Brothers Monopoly play money, assorted denominations, circa 1995"
+],
+"product": "Parker Brothers Monopoly play money, assorted denominations, circa 1995",
+"role": "main",
+"size": [
+0.1,
+0.0003,
+0.05
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"monopoly_top_hat_token_1995": {
+"display": "Monopoly pewter top-hat token, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Monopoly pewter top-hat token, circa 1995"
+],
+"product": "Monopoly pewter top-hat token, circa 1995",
+"role": "main",
+"size": [
+0.017,
+0.017,
+0.015
+],
+"themes": "MISSING PIECES",
 "weight": 1.0
 },
 "monster_cable_car_audio_rca_2003": {
@@ -24990,6 +28686,72 @@
 "themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
+"mousetrap_metal_ball_1995": {
+"display": "Mouse Trap steel ball, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Mouse Trap steel ball, circa 1995"
+],
+"product": "Mouse Trap steel ball, circa 1995",
+"role": "main",
+"size": [
+0.016,
+0.016,
+0.016
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"mousetrap_red_bathtub_piece_1995": {
+"display": "Milton Bradley Mouse Trap red bathtub component, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.031,
+"notes": [
+"Milton Bradley Mouse Trap red bathtub component, circa 1995"
+],
+"product": "Milton Bradley Mouse Trap red bathtub component, circa 1995",
+"role": "main",
+"size": [
+0.09,
+0.05,
+0.04
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"mousetrap_yellow_stair_piece_1995": {
+"display": "Mouse Trap yellow staircase component, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.05,
+"notes": [
+"Mouse Trap yellow staircase component, circa 1995"
+],
+"product": "Mouse Trap yellow staircase component, circa 1995",
+"role": "main",
+"size": [
+0.12,
+0.04,
+0.06
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "mr_sketch_loose_marker_assorted_1998": {
 "display": "Mr. Sketch scented marker, assorted colors, circa",
 "eras": [
@@ -25076,6 +28838,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"msdos_6_user_guide_1993": {
+"display": "Microsoft MS-DOS 6 User's Guide",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.174,
+"notes": [
+"Microsoft MS-DOS 6 User's Guide, 1993"
+],
+"product": "Microsoft MS-DOS 6 User's Guide, 1993",
+"role": "main",
+"size": [
+0.18,
+0.03,
+0.23
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "mtg_fourth_edition_starter_1995": {
@@ -25186,6 +28970,28 @@
 0.072
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; regular cubes",
+"weight": 1.0
+},
+"nag_champa_incense_stick_1998": {
+"display": "Nag Champa incense stick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Nag Champa incense stick, circa 1998"
+],
+"product": "Nag Champa incense stick, circa 1998",
+"role": "main",
+"size": [
+0.003,
+0.003,
+0.22
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "namco_guncon_1997": {
@@ -25582,6 +29388,28 @@
 0.09
 ],
 "themes": "OFRENDA",
+"weight": 1.0
+},
+"nestle_quality_street_tin_1998": {
+"display": "Nestl\u00e9 Quality Street assorted chocolate tin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.629,
+"notes": [
+"Nestl\u00e9 Quality Street assorted chocolate tin, circa 1998"
+],
+"product": "Nestl\u00e9 Quality Street assorted chocolate tin, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.09,
+0.24
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "nestle_wonder_ball_2000": {
@@ -26750,6 +30578,28 @@
 "themes": "SCREEN TIME",
 "weight": 0.12
 },
+"nokia_3310_waterlogged_2002": {
+"display": "Nokia 3310 mobile phone, Blue/Gray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.021,
+"notes": [
+"Nokia 3310 mobile phone, Blue/Gray, circa 2002"
+],
+"product": "Nokia 3310 mobile phone, Blue/Gray, circa 2002",
+"role": "main",
+"size": [
+0.048,
+0.022,
+0.113
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
 "nokia_3360_2001": {
 "display": "Nokia 3360 mobile phone",
 "eras": [
@@ -26990,6 +30840,94 @@
 0.06
 ],
 "themes": "Y2K",
+"weight": 1.0
+},
+"novelty_price_sticker_1998": {
+"display": "Fluorescent novelty-shop price sticker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Fluorescent novelty-shop price sticker, circa 1998"
+],
+"product": "Fluorescent novelty-shop price sticker, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.0005,
+0.02
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"novelty_street_sign_bedroom_1998": {
+"display": "Decorative \u201cONE WAY\u201d novelty street sign, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.095,
+"notes": [
+"Decorative \u201cONE WAY\u201d novelty street sign, circa 1998"
+],
+"product": "Decorative \u201cONE WAY\u201d novelty street sign, circa 1998",
+"role": "main",
+"size": [
+0.45,
+0.002,
+0.15
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"novelty_whoopee_cushion_pink_1998": {
+"display": "Pink rubber whoopee cushion, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.136,
+"notes": [
+"Pink rubber whoopee cushion, circa 1998"
+],
+"product": "Pink rubber whoopee cushion, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.02,
+0.18
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"novelty_whoopee_cushion_red_1998": {
+"display": "Red rubber whoopee cushion, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.136,
+"notes": [
+"Red rubber whoopee cushion, circa 1998"
+],
+"product": "Red rubber whoopee cushion, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.02,
+0.18
+],
+"themes": "GOTCHA",
 "weight": 1.0
 },
 "nsync_no_strings_attached_cd_2000": {
@@ -27432,6 +31370,50 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"operation_funny_bone_piece_1996": {
+"display": "Operation \u201cFunny Bone\u201d plastic game piece, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Operation \u201cFunny Bone\u201d plastic game piece, circa 1996"
+],
+"product": "Operation \u201cFunny Bone\u201d plastic game piece, circa 1996",
+"role": "main",
+"size": [
+0.02,
+0.006,
+0.04
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"operation_tweezers_1996": {
+"display": "Operation metal tweezers with wire lead, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.021,
+"notes": [
+"Operation metal tweezers with wire lead, circa 1996"
+],
+"product": "Operation metal tweezers with wire lead, circa 1996",
+"role": "main",
+"size": [
+0.02,
+0.01,
+0.15
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "oralb_satin_floss_1999": {
 "display": "Oral-B Satin Floss dental floss dispenser, circa",
 "eras": [
@@ -27740,6 +31722,50 @@
 "themes": "SPACE OPERA",
 "weight": 1.0
 },
+"oxiclean_blue_scoop_2001": {
+"display": "OxiClean measuring scoop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.063,
+"notes": [
+"OxiClean measuring scoop, circa 2001"
+],
+"product": "OxiClean measuring scoop, circa 2001",
+"role": "main",
+"size": [
+0.06,
+0.05,
+0.12
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"oxiclean_versatile_stain_remover_tub_2001": {
+"display": "OxiClean Versatile Stain Remover tub, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.806,
+"notes": [
+"OxiClean Versatile Stain Remover tub, circa 2001"
+],
+"product": "OxiClean Versatile Stain Remover tub, circa 2001",
+"role": "main",
+"size": [
+0.16,
+0.16,
+0.18
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "paas_classic_egg_kit_1998": {
 "display": "PAAS Classic Easter Egg Decorating Kit, circa",
 "eras": [
@@ -27894,6 +31920,28 @@
 "themes": "SCREEN TIME",
 "weight": 0.12
 },
+"palm_joy_buzzer_metal_1998": {
+"display": "Wind-up palm joy buzzer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.022,
+"notes": [
+"Wind-up palm joy buzzer, circa 1998"
+],
+"product": "Wind-up palm joy buzzer, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.04
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
 "palm_m100_2000": {
 "display": "Palm m100 handheld organizer",
 "eras": [
@@ -27958,6 +32006,28 @@
 0.115
 ],
 "themes": "SCREEN TIME; GM; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"palo_jabon_greased_pole_fragment_1998": {
+"display": "Greased wooden palo jab\u00f3n pole fragment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.89,
+"notes": [
+"Greased wooden palo jab\u00f3n pole fragment, circa 1998"
+],
+"product": "Greased wooden palo jab\u00f3n pole fragment, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.9
+],
+"themes": "LA TOMATINA",
 "weight": 1.0
 },
 "pan_de_muerto_round_1998": {
@@ -28840,6 +32910,28 @@
 "themes": "SAVE ICON",
 "weight": 1.0
 },
+"peace_sign_wall_hanging_neon_1998": {
+"display": "Neon-colored plastic peace-sign wall decoration, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.158,
+"notes": [
+"Neon-colored plastic peace-sign wall decoration, circa 1998"
+],
+"product": "Neon-colored plastic peace-sign wall decoration, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.01,
+0.3
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
 "pearl_jam_ten_cd_1991": {
 "display": "Pearl Jam Ten CD in jewel case",
 "eras": [
@@ -29170,6 +33262,28 @@
 "themes": "SLEEPOVER; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"philips_red_party_bulb_e27_1998": {
+"display": "Philips-style red E27 incandescent party bulb, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.159,
+"notes": [
+"Philips-style red E27 incandescent party bulb, circa 1998"
+],
+"product": "Philips-style red E27 incandescent party bulb, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.105
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
 "phillips_no1_screwdriver_red_1998": {
 "display": "Small No. 1 Phillips screwdriver, red handle, circa",
 "eras": [
@@ -29410,6 +33524,28 @@
 0.15
 ],
 "themes": "SOME ASSEMBLY REQUIRED",
+"weight": 1.0
+},
+"pink_feather_boa_1998": {
+"display": "Pink feather boa, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.814,
+"notes": [
+"Pink feather boa, circa 1998"
+],
+"product": "Pink feather boa, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.12,
+1.8
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "pink_pearl_eraser_1995": {
@@ -29822,6 +33958,28 @@
 0.24
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"plastic_bottle_water_500ml_spain_1998": {
+"display": "500 ml plastic bottled water, Spain, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.155,
+"notes": [
+"500 ml plastic bottled water, Spain, circa 1998"
+],
+"product": "500 ml plastic bottled water, Spain, circa 1998",
+"role": "main",
+"size": [
+0.065,
+0.065,
+0.21
+],
+"themes": "LA TOMATINA",
 "weight": 1.0
 },
 "plastic_champagne_flute_2000_1999": {
@@ -30242,6 +34400,28 @@
 "themes": "TIME CAPSULE; PROM NIGHT; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"polaroid_ufo_photo_1997": {
+"display": "Polaroid-style UFO snapshot, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Polaroid-style UFO snapshot, circa 1997"
+],
+"product": "Polaroid-style UFO snapshot, circa 1997",
+"role": "main",
+"size": [
+0.088,
+0.001,
+0.107
+],
+"themes": "PROBED",
+"weight": 1.0
+},
 "polly_pocket_compact_1993": {
 "display": "Bluebird Polly Pocket compact playset, circa",
 "eras": [
@@ -30394,6 +34574,28 @@
 0.2
 ],
 "themes": "LUNCH TRADE; SICK DAY; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"poster_corner_tape_yellowed_1998": {
+"display": "Yellowed clear poster tape strips, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Yellowed clear poster tape strips, circa 1998"
+],
+"product": "Yellowed clear poster tape strips, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.02
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "postit_buy_the_dip_note_2020": {
@@ -31007,6 +35209,72 @@
 "themes": "LUNCH TRADE; ROAD TRIP; SUMMER CAMP; regular cubes",
 "weight": 1.0
 },
+"quality_street_assorted_wrapper_mix_1998": {
+"display": "Quality Street assorted empty wrappers, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Quality Street assorted empty wrappers, circa 1998"
+],
+"product": "Quality Street assorted empty wrappers, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.0005,
+0.09
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"quality_street_green_triangle_wrapper_1998": {
+"display": "Quality Street Green Triangle wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Quality Street Green Triangle wrapper, circa 1998"
+],
+"product": "Quality Street Green Triangle wrapper, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.0005,
+0.09
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"quality_street_purple_one_wrapper_1998": {
+"display": "Quality Street \u201cThe Purple One\u201d sweet wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Quality Street \u201cThe Purple One\u201d sweet wrapper, circa 1998"
+],
+"product": "Quality Street \u201cThe Purple One\u201d sweet wrapper, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.0005,
+0.09
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
 "radio_request_phone_number_scrap_1998": {
 "display": "Handwritten radio-station request-line note",
 "eras": [
@@ -31115,6 +35383,50 @@
 0.038
 ],
 "themes": "BE KIND REWIND; CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"radio_times_christmas_double_issue_1998": {
+"display": "Radio Times Christmas double issue",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.087,
+"notes": [
+"Radio Times Christmas double issue, 1998"
+],
+"product": "Radio Times Christmas double issue, 1998",
+"role": "main",
+"size": [
+0.21,
+0.01,
+0.297
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"radio_times_tv_listing_page_folded_1998": {
+"display": "Folded television-listings page from Christmas issue",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Folded television-listings page from Christmas issue, 1998"
+],
+"product": "Folded television-listings page from Christmas issue, 1998",
+"role": "main",
+"size": [
+0.21,
+0.0005,
+0.297
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "radioshack_battery_tester_22093_1998": {
@@ -31754,6 +36066,28 @@
 "themes": "BE MINE",
 "weight": 1.0
 },
+"red_feather_boa_1998": {
+"display": "Red feather boa, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.814,
+"notes": [
+"Red feather boa, circa 1998"
+],
+"product": "Red feather boa, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.12,
+1.8
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
 "red_felt_football_pennant_1998": {
 "display": "Red felt football pennant, circa",
 "eras": [
@@ -31886,6 +36220,72 @@
 "themes": "SLOW MOTION",
 "weight": 1.0
 },
+"red_light_district_postcard_1998": {
+"display": "Amsterdam red-light-district night postcard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Amsterdam red-light-district night postcard, circa 1998"
+],
+"product": "Amsterdam red-light-district night postcard, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.0005,
+0.148
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"red_neon_glass_tube_fragment_1998": {
+"display": "Broken red neon glass tube fragments, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Broken red neon glass tube fragments, circa 1998"
+],
+"product": "Broken red neon glass tube fragments, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.02,
+0.2
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"red_neon_window_frame_amsterdam_1998": {
+"display": "Red neon window-border tubing and frame fragment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 9.072,
+"notes": [
+"Red neon window-border tubing and frame fragment, circa 1998"
+],
+"product": "Red neon window-border tubing and frame fragment, circa 1998",
+"role": "main",
+"size": [
+0.45,
+0.08,
+0.6
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
 "red_paper_lantern_round_1998": {
 "display": "Small round red paper lantern with gold trim, circa",
 "eras": [
@@ -31950,6 +36350,50 @@
 0.28
 ],
 "themes": "SLOW MOTION",
+"weight": 1.0
+},
+"red_satin_lace_garment_1998": {
+"display": "Red satin-and-lace lingerie garment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.127,
+"notes": [
+"Red satin-and-lace lingerie garment, circa 1998"
+],
+"product": "Red satin-and-lace lingerie garment, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.02,
+0.26
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
+"red_tulip_single_1998": {
+"display": "Single red tulip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.196,
+"notes": [
+"Single red tulip, circa 1998"
+],
+"product": "Single red tulip, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.4
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "red_white_blue_popsicle_wrapper_1998": {
@@ -32898,6 +37342,50 @@
 "themes": "LIGHT THE FUSE",
 "weight": 1.0
 },
+"ronco_pocket_fisherman_1974": {
+"display": "Ronco Pocket Fisherman compact rod-and-reel, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.193,
+"notes": [
+"Ronco Pocket Fisherman compact rod-and-reel, circa 1974"
+],
+"product": "Ronco Pocket Fisherman compact rod-and-reel, circa 1974",
+"role": "main",
+"size": [
+0.1,
+0.05,
+0.22
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"ronco_showtime_rotisserie_box_1998": {
+"display": "Ronco Showtime Rotisserie & BBQ retail box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 9.951,
+"notes": [
+"Ronco Showtime Rotisserie & BBQ retail box, circa 1998"
+],
+"product": "Ronco Showtime Rotisserie & BBQ retail box, circa 1998",
+"role": "main",
+"size": [
+0.58,
+0.38,
+0.43
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "rose_incense_stick_bundle_1998": {
 "display": "Rose-scented incense-stick bundle, circa",
 "eras": [
@@ -32942,6 +37430,50 @@
 "themes": "GULAL",
 "weight": 1.0
 },
+"roswell_ufo_photo_8x10_1997": {
+"display": "Blurry black-and-white UFO photograph print, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Blurry black-and-white UFO photograph print, circa 1997"
+],
+"product": "Blurry black-and-white UFO photograph print, circa 1997",
+"role": "main",
+"size": [
+0.203,
+0.0003,
+0.254
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"rotary_phone_number_card_1982": {
+"display": "Rotary-phone center number card, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Rotary-phone center number card, circa 1982"
+],
+"product": "Rotary-phone center number card, circa 1982",
+"role": "main",
+"size": [
+0.04,
+0.0005,
+0.04
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "rowntrees_fruit_pastilles_tube_1997": {
 "display": "Rowntree's Fruit Pastilles tube, circa",
 "eras": [
@@ -32962,6 +37494,28 @@
 0.14
 ],
 "themes": "PICK 'N' MIX",
+"weight": 1.0
+},
+"royal_dansk_butter_cookies_blue_tin_1998": {
+"display": "Royal Dansk Danish Butter Cookies blue tin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.863,
+"notes": [
+"Royal Dansk Danish Butter Cookies blue tin, circa 1998"
+],
+"product": "Royal Dansk Danish Butter Cookies blue tin, circa 1998",
+"role": "main",
+"size": [
+0.195,
+0.07,
+0.195
+],
+"themes": "SEWING KIT",
 "weight": 1.0
 },
 "rubber_band_ball_1998": {
@@ -33028,6 +37582,94 @@
 0.1
 ],
 "themes": "TRICK OR TREAT",
+"weight": 1.0
+},
+"rubber_chicken_yellow_1998": {
+"display": "Yellow squeaky rubber chicken, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.661,
+"notes": [
+"Yellow squeaky rubber chicken, circa 1998"
+],
+"product": "Yellow squeaky rubber chicken, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.45
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"rubber_flipflop_black_1998": {
+"display": "Cheap black rubber flip-flop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"Cheap black rubber flip-flop, circa 1998"
+],
+"product": "Cheap black rubber flip-flop, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.27
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"rubber_flipflop_red_1998": {
+"display": "Red rubber flip-flop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"Red rubber flip-flop, circa 1998"
+],
+"product": "Red rubber flip-flop, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.27
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"rubber_pencil_yellow_1998": {
+"display": "Flexible rubber pencil prank, Yellow, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Flexible rubber pencil prank, Yellow, circa 1998"
+],
+"product": "Flexible rubber pencil prank, Yellow, circa 1998",
+"role": "main",
+"size": [
+0.008,
+0.008,
+0.19
+],
+"themes": "GOTCHA",
 "weight": 1.0
 },
 "rubbermaid_drawer_organizer_gray_1998": {
@@ -33404,6 +38046,28 @@
 "themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"salt_water_taffy_wrapper_assorted_1998": {
+"display": "Individually wrapped saltwater taffy, assorted flavors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Individually wrapped saltwater taffy, assorted flavors, circa 1998"
+],
+"product": "Individually wrapped saltwater taffy, assorted flavors, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.05
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
 "samsung_galaxy_s10_black_2019": {
 "display": "Samsung Galaxy S10, Prism Black",
 "eras": [
@@ -33600,6 +38264,50 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"sangria_clear_plastic_cup_1998": {
+"display": "Clear disposable sangria cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.072,
+"notes": [
+"Clear disposable sangria cup, circa 1998"
+],
+"product": "Clear disposable sangria cup, circa 1998",
+"role": "main",
+"size": [
+0.085,
+0.055,
+0.11
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"sangria_orange_slice_1998": {
+"display": "Orange slice from sangria, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Orange slice from sangria, circa 1998"
+],
+"product": "Orange slice from sangria, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.008,
+0.06
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
 "sanrio_hello_kitty_pencil_case_2002": {
 "display": "Sanrio Hello Kitty zip pencil case, circa",
 "eras": [
@@ -33686,6 +38394,50 @@
 0.05
 ],
 "themes": "LEFTOVERS; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"satya_sai_baba_nag_champa_15g_1998": {
+"display": "Satya Sai Baba Nag Champa incense, 15 g box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.023,
+"notes": [
+"Satya Sai Baba Nag Champa incense, 15 g box, circa 1998"
+],
+"product": "Satya Sai Baba Nag Champa incense, 15 g box, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.02,
+0.22
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
+"scalextric_car_box_torn_1998": {
+"display": "Scalextric slot-car accessory box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"Scalextric slot-car accessory box, circa 1998"
+],
+"product": "Scalextric slot-car accessory box, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.06,
+0.1
+],
+"themes": "BOXING DAY",
 "weight": 1.0
 },
 "scepter_5gal_gas_can_2008": {
@@ -33908,6 +38660,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; BLACKLIGHT; regular cubes",
 "weight": 1.0
 },
+"scrabble_wood_letter_tile_1995": {
+"display": "Milton Bradley/Selchow-style Scrabble wooden letter tile, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Milton Bradley/Selchow-style Scrabble wooden letter tile, circa 1995"
+],
+"product": "Milton Bradley/Selchow-style Scrabble wooden letter tile, circa 1995",
+"role": "main",
+"size": [
+0.019,
+0.005,
+0.019
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "scratch_off_lottery_ticket_2005": {
 "display": "Gas-station scratch-off lottery ticket, circa",
 "eras": [
@@ -33974,6 +38748,28 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"seagull_feather_boardwalk_1998": {
+"display": "Herring-gull-style wing feather, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Herring-gull-style wing feather, circa 1998"
+],
+"product": "Herring-gull-style wing feather, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.005,
+0.28
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
 "sealed_silver_condom_packet_1998": {
 "display": "Unopened silver foil condom packet, circa",
 "eras": [
@@ -33994,6 +38790,50 @@
 0.055
 ],
 "themes": "UNDER THE MATTRESS",
+"weight": 1.0
+},
+"seam_ripper_red_handle_1998": {
+"display": "Red-handled seam ripper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Red-handled seam ripper, circa 1998"
+],
+"product": "Red-handled seam ripper, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.12
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"secret_of_monkey_island_dial_a_pirate_1990": {
+"display": "Lucasfilm Games The Secret of Monkey Island \u201cDial-A-Pirate\u201d code wheel",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Lucasfilm Games The Secret of Monkey Island \u201cDial-A-Pirate\u201d code wheel, 1990"
+],
+"product": "Lucasfilm Games The Secret of Monkey Island \u201cDial-A-Pirate\u201d code wheel, 1990",
+"role": "main",
+"size": [
+0.14,
+0.003,
+0.14
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "sega_aladdin_genesis_cart_1993": {
@@ -34414,6 +39254,28 @@
 "themes": "OFRENDA",
 "weight": 1.0
 },
+"sewing_button_mix_grandma_1998": {
+"display": "Assorted sewing buttons from household button tin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Assorted sewing buttons from household button tin, circa 1998"
+],
+"product": "Assorted sewing buttons from household button tin, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.004,
+0.02
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "shamrock_bar_coaster_2001": {
 "display": "Green shamrock pulpboard bar coaster, circa",
 "eras": [
@@ -34478,6 +39340,94 @@
 0.15
 ],
 "themes": "GREEN BEER",
+"weight": 1.0
+},
+"shamwow_blue_towel_2007": {
+"display": "ShamWow blue absorbent towel, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.037,
+"notes": [
+"ShamWow blue absorbent towel, circa 2007"
+],
+"product": "ShamWow blue absorbent towel, circa 2007",
+"role": "main",
+"size": [
+0.35,
+0.003,
+0.5
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"shamwow_orange_towel_2007": {
+"display": "ShamWow orange absorbent towel, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.037,
+"notes": [
+"ShamWow orange absorbent towel, circa 2007"
+],
+"product": "ShamWow orange absorbent towel, circa 2007",
+"role": "main",
+"size": [
+0.35,
+0.003,
+0.5
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
+"shareware_catalog_booklet_1993": {
+"display": "Shareware software catalog booklet, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.012,
+"notes": [
+"Shareware software catalog booklet, circa 1993"
+],
+"product": "Shareware software catalog booklet, circa 1993",
+"role": "main",
+"size": [
+0.14,
+0.003,
+0.21
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"shareware_mailer_disk_envelope_1993": {
+"display": "Mail-order shareware disk mailer, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.015,
+"notes": [
+"Mail-order shareware disk mailer, circa 1993"
+],
+"product": "Mail-order shareware disk mailer, circa 1993",
+"role": "main",
+"size": [
+0.12,
+0.005,
+0.18
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "shark_bites_fruit_snacks_1995": {
@@ -34743,6 +39693,28 @@
 "themes": "STOP THE PRESSES",
 "weight": 1.0
 },
+"sierra_kings_quest_vi_hint_book_1992": {
+"display": "Sierra King's Quest VI hint book, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.025,
+"notes": [
+"Sierra King's Quest VI hint book, circa 1992"
+],
+"product": "Sierra King's Quest VI hint book, circa 1992",
+"role": "main",
+"size": [
+0.14,
+0.006,
+0.215
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "silica_gel_packet_5g_1998": {
 "display": "Silica gel desiccant packet, circa",
 "eras": [
@@ -34828,6 +39800,116 @@
 0.015
 ],
 "themes": "Y2K",
+"weight": 1.0
+},
+"silver_ufo_friction_toy_1997": {
+"display": "Silver plastic flying-saucer friction toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.101,
+"notes": [
+"Silver plastic flying-saucer friction toy, circa 1997"
+],
+"product": "Silver plastic flying-saucer friction toy, circa 1997",
+"role": "main",
+"size": [
+0.12,
+0.12,
+0.04
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"simcity_2000_big_box_pc_1993": {
+"display": "Maxis SimCity 2000 PC big-box release",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.288,
+"notes": [
+"Maxis SimCity 2000 PC big-box release, 1993"
+],
+"product": "Maxis SimCity 2000 PC big-box release, 1993",
+"role": "main",
+"size": [
+0.215,
+0.05,
+0.255
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"simcity_2000_manual_1993": {
+"display": "Maxis SimCity 2000 user manual",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.07,
+"notes": [
+"Maxis SimCity 2000 user manual, 1993"
+],
+"product": "Maxis SimCity 2000 user manual, 1993",
+"role": "main",
+"size": [
+0.18,
+0.012,
+0.23
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
+"singer_sewing_needle_packet_1998": {
+"display": "Singer household hand-sewing needle packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Singer household hand-sewing needle packet, circa 1998"
+],
+"product": "Singer household hand-sewing needle packet, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.003,
+0.09
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"singer_tape_measure_yellow_1998": {
+"display": "Flexible yellow sewing tape measure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Flexible yellow sewing tape measure, circa 1998"
+],
+"product": "Flexible yellow sewing tape measure, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.001,
+1.5
+],
+"themes": "SEWING KIT",
 "weight": 1.0
 },
 "singer_travel_sewing_kit_1998": {
@@ -35093,6 +40175,50 @@
 "themes": "PRIZE COUNTER; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"slot_machine_coin_cup_clear_smoke_1998": {
+"display": "Smoke-clear plastic slot-machine coin cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.159,
+"notes": [
+"Smoke-clear plastic slot-machine coin cup, circa 1998"
+],
+"product": "Smoke-clear plastic slot-machine coin cup, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.13
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
+"slot_token_atlantic_city_1998": {
+"display": "Atlantic City slot token, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Atlantic City slot token, circa 1998"
+],
+"product": "Atlantic City slot token, circa 1998",
+"role": "main",
+"size": [
+0.029,
+0.002,
+0.029
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
 "small_american_flag_wood_stick_1998": {
 "display": "Small United States handheld flag on wood stick, circa",
 "eras": [
@@ -35159,6 +40285,28 @@
 "themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
 "weight": 1.0
 },
+"smiley_face_tapestry_yellow_black_1998": {
+"display": "Yellow smiley-face bedroom tapestry, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.17,
+"notes": [
+"Yellow smiley-face bedroom tapestry, circa 1998"
+],
+"product": "Yellow smiley-face bedroom tapestry, circa 1998",
+"role": "main",
+"size": [
+0.9,
+0.003,
+0.9
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
 "snackwells_devils_food_cookie_cakes_1993": {
 "display": "Nabisco SnackWell's Devil's Food Cookie Cakes, circa",
 "eras": [
@@ -35179,6 +40327,50 @@
 0.23
 ],
 "themes": "SICK DAY; TIME CAPSULE; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"snake_in_peanut_brittle_can_1998": {
+"display": "Spring-snake peanut brittle prank can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.84,
+"notes": [
+"Spring-snake peanut brittle prank can, circa 1998"
+],
+"product": "Spring-snake peanut brittle prank can, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.12
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"snap_gum_prank_pack_1998": {
+"display": "Spring-snap chewing-gum prank pack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Spring-snap chewing-gum prank pack, circa 1998"
+],
+"product": "Spring-snap chewing-gum prank pack, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.015,
+0.09
+],
+"themes": "GOTCHA",
 "weight": 1.0
 },
 "snapple_elements_rain_1999": {
@@ -35313,6 +40505,28 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"snuggie_original_blue_2008": {
+"display": "Original Snuggie sleeved blanket, Blue",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.654,
+"notes": [
+"Original Snuggie sleeved blanket, Blue, 2008"
+],
+"product": "Original Snuggie sleeved blanket, Blue, 2008",
+"role": "main",
+"size": [
+1.45,
+0.02,
+1.8
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "sobe_lizard_fuel_2000": {
 "display": "SoBe Lizard Fuel fruit drink, circa",
 "eras": [
@@ -35399,6 +40613,226 @@
 0.125
 ],
 "themes": "COASTERS",
+"weight": 1.0
+},
+"songkran_bucket_blue_2002": {
+"display": "Blue plastic utility bucket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 4.116,
+"notes": [
+"Blue plastic utility bucket, circa 2002"
+],
+"product": "Blue plastic utility bucket, circa 2002",
+"role": "main",
+"size": [
+0.28,
+0.28,
+0.3
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_bucket_red_2002": {
+"display": "Red plastic water bucket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.621,
+"notes": [
+"Red plastic water bucket, circa 2002"
+],
+"product": "Red plastic water bucket, circa 2002",
+"role": "main",
+"size": [
+0.24,
+0.24,
+0.26
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_flower_shirt_button_loose_2002": {
+"display": "Loose white shirt button, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose white shirt button, circa 2002"
+],
+"product": "Loose white shirt button, circa 2002",
+"role": "main",
+"size": [
+0.012,
+0.002,
+0.012
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_hawaiian_shirt_blue_2002": {
+"display": "Blue floral Songkran shirt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.577,
+"notes": [
+"Blue floral Songkran shirt, circa 2002"
+],
+"product": "Blue floral Songkran shirt, circa 2002",
+"role": "main",
+"size": [
+0.55,
+0.02,
+0.75
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_pump_water_gun_neon_2002": {
+"display": "Large neon pump-action Songkran water gun, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.386,
+"notes": [
+"Large neon pump-action Songkran water gun, circa 2002"
+],
+"product": "Large neon pump-action Songkran water gun, circa 2002",
+"role": "main",
+"size": [
+0.18,
+0.08,
+0.55
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_silver_water_bowl_2002": {
+"display": "Thai silver-colored ceremonial water bowl, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.814,
+"notes": [
+"Thai silver-colored ceremonial water bowl, circa 2002"
+],
+"product": "Thai silver-colored ceremonial water bowl, circa 2002",
+"role": "main",
+"size": [
+0.18,
+0.08,
+0.18
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_small_aluminum_bowl_2002": {
+"display": "Small aluminum water bowl, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.504,
+"notes": [
+"Small aluminum water bowl, circa 2002"
+],
+"product": "Small aluminum water bowl, circa 2002",
+"role": "main",
+"size": [
+0.12,
+0.05,
+0.12
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_small_water_pistol_blue_2002": {
+"display": "Small blue plastic water pistol, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.105,
+"notes": [
+"Small blue plastic water pistol, circa 2002"
+],
+"product": "Small blue plastic water pistol, circa 2002",
+"role": "main",
+"size": [
+0.15,
+0.04,
+0.1
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_water_tank_backpack_2004": {
+"display": "Backpack-style water reservoir for festival water gun, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.075,
+"notes": [
+"Backpack-style water reservoir for festival water gun, circa 2004"
+],
+"product": "Backpack-style water reservoir for festival water gun, circa 2004",
+"role": "main",
+"size": [
+0.24,
+0.1,
+0.32
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"songkran_waterproof_money_bag_2002": {
+"display": "Clear zip pouch for cash and coins, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Clear zip pouch for cash and coins, circa 2002"
+],
+"product": "Clear zip pouch for cash and coins, circa 2002",
+"role": "main",
+"size": [
+0.13,
+0.005,
+0.09
+],
+"themes": "SONGKRAN",
 "weight": 1.0
 },
 "sonic_2_genesis_1992": {
@@ -36457,6 +41891,28 @@
 "themes": "DIAL-UP; SAVE ICON; LANDFILL DRIVE; BLACKLIGHT; regular cubes",
 "weight": 1.0
 },
+"sound_blaster_driver_disk_1992": {
+"display": "Creative Sound Blaster 16 installation/driver floppy, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Creative Sound Blaster 16 installation/driver floppy, circa 1992"
+],
+"product": "Creative Sound Blaster 16 installation/driver floppy, circa 1992",
+"role": "main",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "INSERT DISK 2",
+"weight": 1.0
+},
 "space_jam_vhs_1997": {
 "display": "Space Jam VHS",
 "eras": [
@@ -37050,6 +42506,50 @@
 "themes": "LOW RES",
 "weight": 1.0
 },
+"speedo_swim_goggles_clear_blue_1998": {
+"display": "Speedo-style clear/blue swim goggles, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.056,
+"notes": [
+"Speedo-style clear/blue swim goggles, circa 1998"
+],
+"product": "Speedo-style clear/blue swim goggles, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.05
+],
+"themes": "LA TOMATINA",
+"weight": 1.0
+},
+"spencer_gifts_flocked_blacklight_poster_1998": {
+"display": "Spencer Gifts-style flocked fluorescent blacklight poster, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.062,
+"notes": [
+"Spencer Gifts-style flocked fluorescent blacklight poster, circa 1998"
+],
+"product": "Spencer Gifts-style flocked fluorescent blacklight poster, circa 1998",
+"role": "main",
+"size": [
+0.61,
+0.0008,
+0.91
+],
+"themes": "BLACKLIGHT",
+"weight": 1.0
+},
 "spent_red_firecracker_casing_1998": {
 "display": "Individual spent red firecracker casing, circa",
 "eras": [
@@ -37226,6 +42726,28 @@
 "themes": "LIGHT THE FUSE",
 "weight": 1.0
 },
+"spring_snake_green_1998": {
+"display": "Cloth-covered spring snake from prank can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.788,
+"notes": [
+"Cloth-covered spring snake from prank can, circa 1998"
+],
+"product": "Cloth-covered spring snake from prank can, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.45
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
 "sprite_12oz_can_1998": {
 "display": "Sprite 12 fl oz aluminum can, circa",
 "eras": [
@@ -37268,6 +42790,50 @@
 0.16
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"squirting_flower_bulb_1998": {
+"display": "Rubber squeeze bulb for squirting flower, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.029,
+"notes": [
+"Rubber squeeze bulb for squirting flower, circa 1998"
+],
+"product": "Rubber squeeze bulb for squirting flower, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.04,
+0.07
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"squirting_flower_red_1998": {
+"display": "Red clown-style squirting flower prank, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Red clown-style squirting flower prank, circa 1998"
+],
+"product": "Red clown-style squirting flower prank, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.03,
+0.09
+],
+"themes": "GOTCHA",
 "weight": 1.0
 },
 "stadium_giveaway_bobblehead_1996": {
@@ -37489,6 +43055,28 @@
 "themes": "GULAL",
 "weight": 1.0
 },
+"steel_pier_taffy_paper_bag_1998": {
+"display": "Atlantic City saltwater-taffy shop paper bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.524,
+"notes": [
+"Atlantic City saltwater-taffy shop paper bag, circa 1998"
+],
+"product": "Atlantic City saltwater-taffy shop paper bag, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.08,
+0.26
+],
+"themes": "BOARDWALK",
+"weight": 1.0
+},
 "sticker_swap_checklist_notebook_1994": {
 "display": "Handwritten football sticker \u201cGOT / GOT / NEED\u201d checklist, circa",
 "eras": [
@@ -37596,6 +43184,28 @@
 0.3
 ],
 "themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"strawberry_bonbon_hard_candy_1998": {
+"display": "Strawberry-filled hard candy in strawberry wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.009,
+"notes": [
+"Strawberry-filled hard candy in strawberry wrapper, circa 1998"
+],
+"product": "Strawberry-filled hard candy in strawberry wrapper, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.05
+],
+"themes": "SEWING KIT",
 "weight": 1.0
 },
 "street_fighter_ii_snes_1992": {
@@ -37706,6 +43316,28 @@
 0.38
 ],
 "themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"stroopwafel_paper_sleeve_1998": {
+"display": "Paper stroopwafel street-vendor sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Paper stroopwafel street-vendor sleeve, circa 1998"
+],
+"product": "Paper stroopwafel street-vendor sleeve, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.002,
+0.12
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "subbuteo_football_player_blue_1992": {
@@ -38147,6 +43779,28 @@
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
+"swim_goggles_clear_blue_2002": {
+"display": "Clear-blue swim goggles, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.056,
+"notes": [
+"Clear-blue swim goggles, circa 2002"
+],
+"product": "Clear-blue swim goggles, circa 2002",
+"role": "main",
+"size": [
+0.16,
+0.04,
+0.05
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
 "swingline_standard_staples_5000_1997": {
 "display": "Swingline Standard Staples 5000-count box, circa",
 "eras": [
@@ -38211,6 +43865,28 @@
 0.09
 ],
 "themes": "PICK 'N' MIX",
+"weight": 1.0
+},
+"sylvania_f15t8_blb_blacklight_tube_1998": {
+"display": "Sylvania F15T8/BLB 18-inch blacklight fluorescent tube, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.13,
+"notes": [
+"Sylvania F15T8/BLB 18-inch blacklight fluorescent tube, circa 1998"
+],
+"product": "Sylvania F15T8/BLB 18-inch blacklight fluorescent tube, circa 1998",
+"role": "main",
+"size": [
+0.026,
+0.026,
+0.457
+],
+"themes": "BLACKLIGHT",
 "weight": 1.0
 },
 "takara_cardcaptor_sakura_clow_staff_1998": {
@@ -38939,6 +44615,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"terrys_chocolate_orange_milk_1998": {
+"display": "Terry's Chocolate Orange Milk, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.077,
+"notes": [
+"Terry's Chocolate Orange Milk, circa 1998"
+],
+"product": "Terry's Chocolate Orange Milk, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.09,
+0.09
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
+"terrys_chocolate_orange_segment_1998": {
+"display": "Terry's Chocolate Orange milk-chocolate segment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Terry's Chocolate Orange milk-chocolate segment, circa 1998"
+],
+"product": "Terry's Chocolate Orange milk-chocolate segment, circa 1998",
+"role": "main",
+"size": [
+0.025,
+0.01,
+0.06
+],
+"themes": "BOXING DAY",
+"weight": 1.0
+},
 "texas_instruments_ti83": {
 "display": "Texas Instruments TI-83 graphing calculator",
 "eras": [
@@ -38981,6 +44701,50 @@
 0.186
 ],
 "themes": "SCREEN TIME; SCHOOL_JUNK; TIME CAPSULE; COLD STORAGE; regular cubes",
+"weight": 1.0
+},
+"thai_iced_tea_plastic_bag_2002": {
+"display": "Thai iced tea in tied clear takeaway bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.345,
+"notes": [
+"Thai iced tea in tied clear takeaway bag, circa 2002"
+],
+"product": "Thai iced tea in tied clear takeaway bag, circa 2002",
+"role": "main",
+"size": [
+0.14,
+0.08,
+0.22
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
+"thai_iced_tea_straw_red_2002": {
+"display": "Long red plastic drink straw, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Long red plastic drink straw, circa 2002"
+],
+"product": "Long red plastic drink straw, circa 2002",
+"role": "main",
+"size": [
+0.007,
+0.007,
+0.25
+],
+"themes": "SONGKRAN",
 "weight": 1.0
 },
 "thandai_glass_steel_1998": {
@@ -39178,6 +44942,28 @@
 0.18
 ],
 "themes": "LEFTOVERS",
+"weight": 1.0
+},
+"thighmaster_gray_pink_1992": {
+"display": "ThighMaster exercise device, Gray/Pink, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 17.01,
+"notes": [
+"ThighMaster exercise device, Gray/Pink, circa 1992"
+],
+"product": "ThighMaster exercise device, Gray/Pink, circa 1992",
+"role": "main",
+"size": [
+0.45,
+0.12,
+0.45
+],
+"themes": "BUT WAIT THERE'S MORE",
 "weight": 1.0
 },
 "three_in_one_oil_3oz_1998": {
@@ -39728,6 +45514,72 @@
 "themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"toilet_paper_roll_under_doll_1998": {
+"display": "White toilet-paper roll under doll cover, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.202,
+"notes": [
+"White toilet-paper roll under doll cover, circa 1998"
+],
+"product": "White toilet-paper roll under doll cover, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.12,
+0.1
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"toilet_roll_doll_cover_pink_1998": {
+"display": "Crocheted toilet-roll doll cover, Pink, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.084,
+"notes": [
+"Crocheted toilet-roll doll cover, Pink, circa 1998"
+],
+"product": "Crocheted toilet-roll doll cover, Pink, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.22,
+0.32
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"tollfree_number_notepad_1999": {
+"display": "Handwritten toll-free-number notepad sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handwritten toll-free-number notepad sheet, circa 1999"
+],
+"product": "Handwritten toll-free-number notepad sheet, circa 1999",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.15
+],
+"themes": "BUT WAIT THERE'S MORE",
+"weight": 1.0
+},
 "tomato_pincushion_strawberry_1998": {
 "display": "Tomato pincushion with emery strawberry, circa",
 "eras": [
@@ -40146,6 +45998,28 @@
 "themes": "OFRENDA",
 "weight": 1.0
 },
+"tram_ticket_amsterdam_1998": {
+"display": "Amsterdam public-transport ticket strip/card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Amsterdam public-transport ticket strip/card, circa 1998"
+],
+"product": "Amsterdam public-transport ticket strip/card, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.12
+],
+"themes": "WINDOW SHOPPING",
+"weight": 1.0
+},
 "translucent_35mm_film_canister_1998": {
 "display": "Translucent 35 mm film storage canister with snap lid, circa",
 "eras": [
@@ -40277,6 +46151,50 @@
 "themes": "DRESS CODE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"trouble_popomatic_dome_clear_1995": {
+"display": "Milton Bradley Trouble Pop-O-Matic clear dome assembly, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.07,
+"notes": [
+"Milton Bradley Trouble Pop-O-Matic clear dome assembly, circa 1995"
+],
+"product": "Milton Bradley Trouble Pop-O-Matic clear dome assembly, circa 1995",
+"role": "main",
+"size": [
+0.1,
+0.04,
+0.1
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
+"trouble_red_pawn_1995": {
+"display": "Trouble red plastic pawn, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Trouble red plastic pawn, circa 1995"
+],
+"product": "Trouble red plastic pawn, circa 1995",
+"role": "main",
+"size": [
+0.018,
+0.018,
+0.025
+],
+"themes": "MISSING PIECES",
+"weight": 1.0
+},
 "trunk_gray_carpet_scrap_2002": {
 "display": "Gray automotive trunk carpet scrap, circa",
 "eras": [
@@ -40343,6 +46261,28 @@
 "themes": "HAND TURKEY",
 "weight": 1.0
 },
+"tv_guide_magazine_1998": {
+"display": "TV Guide digest magazine, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.029,
+"notes": [
+"TV Guide digest magazine, circa 1998"
+],
+"product": "TV Guide digest magazine, circa 1998",
+"role": "main",
+"size": [
+0.135,
+0.008,
+0.195
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "tv_guide_weekly_1998": {
 "display": "TV Guide weekly digest magazine, circa",
 "eras": [
@@ -40385,6 +46325,28 @@
 0.095
 ],
 "themes": "HOME_JUNK_DRAWER_MISC; LOST AND FOUND; SICK DAY; regular cubes",
+"weight": 1.0
+},
+"twister_spinner_board_1996": {
+"display": "Milton Bradley Twister spinner board, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Milton Bradley Twister spinner board, circa 1996"
+],
+"product": "Milton Bradley Twister spinner board, circa 1996",
+"role": "main",
+"size": [
+0.2,
+0.004,
+0.2
+],
+"themes": "MISSING PIECES",
 "weight": 1.0
 },
 "twister_vhs_1997": {
@@ -40760,6 +46722,50 @@
 ],
 "themes": "RETIREMENT PLAN",
 "weight": 0.12
+},
+"ufo_conference_flyer_1997": {
+"display": "UFO conference flyer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"UFO conference flyer, circa 1997"
+],
+"product": "UFO conference flyer, circa 1997",
+"role": "main",
+"size": [
+0.216,
+0.0005,
+0.279
+],
+"themes": "PROBED",
+"weight": 1.0
+},
+"ufo_pullback_toy_green_lights_1997": {
+"display": "Pull-back UFO toy with green dome, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.07,
+"notes": [
+"Pull-back UFO toy with green dome, circa 1997"
+],
+"product": "Pull-back UFO toy with green dome, circa 1997",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.04
+],
+"themes": "PROBED",
+"weight": 1.0
 },
 "uk_one_pound_coin_1997": {
 "display": "United Kingdom one-pound coin",
@@ -41353,6 +47359,28 @@
 0.094
 ],
 "themes": "SAVE ICON",
+"weight": 1.0
+},
+"verbatim_datalife_5_25_floppy_1990": {
+"display": "Verbatim DataLife 5.25-inch floppy disk, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Verbatim DataLife 5.25-inch floppy disk, circa 1990"
+],
+"product": "Verbatim DataLife 5.25-inch floppy disk, circa 1990",
+"role": "main",
+"size": [
+0.133,
+0.0015,
+0.133
+],
+"themes": "INSERT DISK 2",
 "weight": 1.0
 },
 "verbatim_datalife_floppy_red_1998": {
@@ -41970,6 +47998,28 @@
 "themes": "EGG HUNT",
 "weight": 0.12
 },
+"waterproof_phone_pouch_clear_blue_2006": {
+"display": "Clear waterproof mobile-phone pouch with blue neck cord, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Clear waterproof mobile-phone pouch with blue neck cord, circa 2006"
+],
+"product": "Clear waterproof mobile-phone pouch with blue neck cord, circa 2006",
+"role": "main",
+"size": [
+0.12,
+0.01,
+0.2
+],
+"themes": "SONGKRAN",
+"weight": 1.0
+},
 "wavebird_controller_2002": {
 "display": "Nintendo WaveBird Wireless Controller",
 "eras": [
@@ -42058,6 +48108,28 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"weekly_pill_organizer_clear_1998": {
+"display": "Seven-day plastic pill organizer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.036,
+"notes": [
+"Seven-day plastic pill organizer, circa 1998"
+],
+"product": "Seven-day plastic pill organizer, circa 1998",
+"role": "main",
+"size": [
+0.17,
+0.03,
+0.04
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "weisswurst_cut_piece_1998": {
 "display": "Cut Weisswurst sausage piece, circa",
 "eras": [
@@ -42102,6 +48174,50 @@
 "themes": "PROST",
 "weight": 1.0
 },
+"werthers_original_bag_1998": {
+"display": "Werther's Original hard candies bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.185,
+"notes": [
+"Werther's Original hard candies bag, circa 1998"
+],
+"product": "Werther's Original hard candies bag, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.04,
+0.22
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
+"werthers_original_wrapped_1998": {
+"display": "Werther's Original hard caramel candy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Werther's Original hard caramel candy, circa 1998"
+],
+"product": "Werther's Original hard caramel candy, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.01,
+0.05
+],
+"themes": "SEWING KIT",
+"weight": 1.0
+},
 "westcott_12inch_clear_ruler_1997": {
 "display": "Westcott 12-inch clear plastic ruler, circa",
 "eras": [
@@ -42144,6 +48260,28 @@
 0.147
 ],
 "themes": "LANDFILL DRIVE",
+"weight": 1.0
+},
+"western_electric_rotary_phone_beige_1982": {
+"display": "Western Electric-style beige rotary telephone, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.186,
+"notes": [
+"Western Electric-style beige rotary telephone, circa 1982"
+],
+"product": "Western Electric-style beige rotary telephone, circa 1982",
+"role": "main",
+"size": [
+0.22,
+0.22,
+0.14
+],
+"themes": "SEWING KIT",
 "weight": 1.0
 },
 "wham_o_slip_n_slide_1995": {
@@ -42517,6 +48655,28 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"wooden_clog_keychain_yellow_1998": {
+"display": "Mini yellow wooden-clog souvenir keychain, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Mini yellow wooden-clog souvenir keychain, circa 1998"
+],
+"product": "Mini yellow wooden-clog souvenir keychain, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.06
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "wooden_dreidel_blue_1998": {
@@ -42980,6 +49140,50 @@
 "themes": "STOP THE PRESSES",
 "weight": 1.0
 },
+"xray_specs_comic_ad_clipping_1998": {
+"display": "Comic-book novelty-ad clipping for X-Ray Specs, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Comic-book novelty-ad clipping for X-Ray Specs, circa 1998"
+],
+"product": "Comic-book novelty-ad clipping for X-Ray Specs, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
+"xrayspecs_cardboard_glasses_1998": {
+"display": "Novelty \u201cX-Ray Specs\u201d cardboard/plastic glasses, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.022,
+"notes": [
+"Novelty \u201cX-Ray Specs\u201d cardboard/plastic glasses, circa 1998"
+],
+"product": "Novelty \u201cX-Ray Specs\u201d cardboard/plastic glasses, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.03,
+0.05
+],
+"themes": "GOTCHA",
+"weight": 1.0
+},
 "y2k_bug_newspaper_1999": {
 "display": "Millennium/Y2K newspaper front section, December",
 "eras": [
@@ -43110,6 +49314,28 @@
 0.15
 ],
 "themes": "GACHAPON",
+"weight": 1.0
+},
+"yellow_tulip_single_1998": {
+"display": "Single yellow tulip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.196,
+"notes": [
+"Single yellow tulip, circa 1998"
+],
+"product": "Single yellow tulip, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.4
+],
+"themes": "WINDOW SHOPPING",
 "weight": 1.0
 },
 "yikes_pencil_5pack_1996": {

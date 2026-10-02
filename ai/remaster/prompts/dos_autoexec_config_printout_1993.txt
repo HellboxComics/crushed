@@ -1,0 +1,1 @@
+AUTOEXEC.BAT and CONFIG.SYS printout, circa 1993. Dot-matrix or laser printed pages filled with DEVICE=, SET BLASTER=, PATH= and memory-manager command lines, monospaced black text across front, rear blank and margins covered with handwritten IRQ/DMA experiments

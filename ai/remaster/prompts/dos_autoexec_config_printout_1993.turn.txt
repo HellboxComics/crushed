@@ -1,0 +1,1 @@
+AUTOEXEC.BAT and CONFIG.SYS printout, circa 1993, real size 21.6 x 0.05 x 27.9 cm, made of paper. Dot-matrix or laser printed pages filled with DEVICE=, SET BLASTER=, PATH= and memory-manager command lines, monospaced black text across front, rear blank and margins covered with handwritten IRQ/DMA experiments

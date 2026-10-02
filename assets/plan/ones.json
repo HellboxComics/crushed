@@ -343,6 +343,118 @@
 "no_wires": true,
 "theme": "classroom valentines, drugstore candy and one heart box with only three chocolates left"
 },
+"BLACKLIGHT": {
+"era": [
+1,
+2
+],
+"flavor": [
+"Nag Champa smoke, hot lamp dust, vinyl poster ink, old carpet and warm adhesive putty",
+"a teenage bedroom wall stripped bare before the family moved",
+"sylvania_f15t8_blb_blacklight_tube_1998"
+],
+"lore": "The room looked incredible after dark and like a fire-code violation the second somebody turned the ceiling light back on.",
+"mix": [
+[
+"sylvania_f15t8_blb_blacklight_tube_1998",
+3
+],
+[
+"blacklight_fixture_18in_white_1998",
+2
+],
+[
+"ge_a19_blacklight_bulb_1998",
+3
+],
+[
+"spencer_gifts_flocked_blacklight_poster_1998",
+3
+],
+[
+"magic_eye_stereogram_poster_1995",
+2
+],
+[
+"glow_in_dark_star_pack_large_1998",
+12
+],
+[
+"glow_in_dark_planet_set_1998",
+6
+],
+[
+"satya_sai_baba_nag_champa_15g_1998",
+3
+],
+[
+"nag_champa_incense_stick_1998",
+10
+],
+[
+"incense_boat_wood_moon_1998",
+2
+],
+[
+"blu_tack_putty_1998",
+8
+],
+[
+"blu_tack_original_pack_1998",
+2
+],
+[
+"lava_lite_14_5in_purple_red_1998",
+1
+],
+[
+"lava_lamp_base_silver_1998",
+1
+],
+[
+"bead_curtain_clear_iridescent_1998",
+4
+],
+[
+"smiley_face_tapestry_yellow_black_1998",
+1
+],
+[
+"peace_sign_wall_hanging_neon_1998",
+2
+],
+[
+"glow_skull_wall_plaque_1998",
+2
+],
+[
+"decorative_stop_sign_replica_1998",
+1
+],
+[
+"novelty_street_sign_bedroom_1998",
+1
+],
+[
+"alien_head_wall_plaque_green_1998",
+2
+],
+[
+"ceiling_poster_thumbtacks_clear_1998",
+8
+],
+[
+"poster_corner_tape_yellowed_1998",
+8
+],
+[
+"bedroom_wall_paint_chip_offwhite_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "late-90s bedroom-wall glow, posters, incense and adhesive putty"
+},
 "BLOW ON IT": {
 "era": [
 1
@@ -450,6 +562,240 @@
 "no_wires": true,
 "theme": "forty-four game cartridges, controllers and the ritual that never actually fixed anything"
 },
+"BOARDWALK": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"fryer oil, saltwater taffy, cigarette smoke, ocean air, cardboard cups and casino carpet",
+"beneath a Boardwalk bench after the casinos emptied into the morning fog",
+"atlantic_city_casino_chip_one_dollar_1998"
+],
+"lore": "The chips went first, the fries went cold, and somebody still carried the Boardwalk deed card home like it had appreciated.",
+"mix": [
+[
+"atlantic_city_casino_chip_one_dollar_1998",
+12
+],
+[
+"atlantic_city_casino_chip_five_dollar_1998",
+8
+],
+[
+"atlantic_city_casino_chip_twentyfive_1998",
+4
+],
+[
+"slot_machine_coin_cup_clear_smoke_1998",
+3
+],
+[
+"slot_token_atlantic_city_1998",
+10
+],
+[
+"fralingers_original_salt_water_taffy_box_1998",
+2
+],
+[
+"salt_water_taffy_wrapper_assorted_1998",
+12
+],
+[
+"steel_pier_taffy_paper_bag_1998",
+2
+],
+[
+"boardwalk_fries_paper_cup_1998",
+4
+],
+[
+"boardwalk_french_fries_1998",
+10
+],
+[
+"monopoly_boardwalk_title_deed_card_1995",
+2
+],
+[
+"monopoly_play_money_100_1995",
+6
+],
+[
+"casino_dice_translucent_red_1998",
+4
+],
+[
+"atlantic_city_buffet_ticket_1998",
+4
+],
+[
+"keno_card_atlantic_city_1998",
+5
+],
+[
+"keno_crayon_black_1998",
+3
+],
+[
+"seagull_feather_boardwalk_1998",
+4
+],
+[
+"miss_america_souvenir_sash_1998",
+1
+],
+[
+"atlantic_city_postcard_boardwalk_1998",
+4
+],
+[
+"atlantic_city_casino_players_card_1998",
+3
+],
+[
+"boardwalk_arcade_prize_ticket_strip_1998",
+12
+],
+[
+"atlantic_city_paper_drink_cup_1998",
+3
+],
+[
+"boardwalk_paper_napkin_1998",
+8
+]
+],
+"no_wires": true,
+"theme": "casino chips, taffy, fries and Atlantic City paper debris after the money ran out"
+},
+"BOXING DAY": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"chocolate, paper crown ink, Christmas pudding, tea, cardboard, plastic toys and cold roast leftovers",
+"the living-room floor on Boxing Day while everybody argued over what was on television",
+"nestle_quality_street_tin_1998"
+],
+"lore": "The good chocolates were gone, the television guide was folded open, and the toy box looked like somebody had entered it through the side.",
+"mix": [
+[
+"nestle_quality_street_tin_1998",
+2
+],
+[
+"quality_street_purple_one_wrapper_1998",
+8
+],
+[
+"quality_street_green_triangle_wrapper_1998",
+6
+],
+[
+"quality_street_assorted_wrapper_mix_1998",
+12
+],
+[
+"terrys_chocolate_orange_milk_1998",
+3
+],
+[
+"terrys_chocolate_orange_segment_1998",
+10
+],
+[
+"cadbury_selection_box_1998",
+3
+],
+[
+"cadbury_dairy_milk_bar_1998",
+3
+],
+[
+"cadbury_crunchie_bar_1998",
+2
+],
+[
+"christmas_cracker_red_gold_1998",
+6
+],
+[
+"christmas_cracker_spent_tube_1998",
+6
+],
+[
+"christmas_paper_crown_red_1998",
+5
+],
+[
+"christmas_paper_crown_blue_1998",
+4
+],
+[
+"christmas_cracker_joke_slip_1998",
+8
+],
+[
+"christmas_pudding_round_1998",
+1
+],
+[
+"christmas_pudding_slice_1998",
+4
+],
+[
+"radio_times_christmas_double_issue_1998",
+3
+],
+[
+"radio_times_tv_listing_page_folded_1998",
+4
+],
+[
+"argos_autumn_winter_catalogue_1998",
+2
+],
+[
+"argos_toy_page_torn_1998",
+5
+],
+[
+"action_man_toy_box_torn_1998",
+1
+],
+[
+"scalextric_car_box_torn_1998",
+1
+],
+[
+"duracell_coppertop_aa_1998",
+6
+],
+[
+"duracell_aa_4pack_blister_1998",
+2
+],
+[
+"leftover_wrapping_paper_christmas_1998",
+8
+],
+[
+"christmas_gift_tag_used_1998",
+6
+]
+],
+"no_wires": true,
+"theme": "Quality Street wrappers, catalogues, paper crowns and torn toy packaging after UK Christmas"
+},
 "BULL TRAP": {
 "era": [
 0,
@@ -552,6 +898,117 @@
 ],
 "no_wires": true,
 "theme": "market junk from buying the top and holding through the drop"
+},
+"BUT WAIT THERE'S MORE": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cardboard, terrycloth, detergent powder, warm plastic, machine oil and late-night coffee",
+"the hall closet shelf where every As Seen on TV purchase went after the second week",
+"snuggie_original_blue_2008"
+],
+"lore": "Everything promised to change your life for $19.95, and somehow the shipping always cost almost as much as the miracle.",
+"mix": [
+[
+"snuggie_original_blue_2008",
+1
+],
+[
+"shamwow_orange_towel_2007",
+6
+],
+[
+"shamwow_blue_towel_2007",
+4
+],
+[
+"chia_pet_ram_1994",
+1
+],
+[
+"thighmaster_gray_pink_1992",
+1
+],
+[
+"ginsu_knife_set_box_1984",
+1
+],
+[
+"ginsu_serrated_utility_knife_1984",
+1
+],
+[
+"ab_roller_plus_1996",
+1
+],
+[
+"oxiclean_versatile_stain_remover_tub_2001",
+1
+],
+[
+"oxiclean_blue_scoop_2001",
+2
+],
+[
+"magic_bullet_blender_base_2003",
+1
+],
+[
+"magic_bullet_blending_cup_2003",
+2
+],
+[
+"ronco_pocket_fisherman_1974",
+1
+],
+[
+"ronco_showtime_rotisserie_box_1998",
+1
+],
+[
+"bedazzler_original_tool_1990s",
+1
+],
+[
+"bedazzler_rhinestone_stud_assorted_1990s",
+16
+],
+[
+"bedazzler_stud_wheel_pack_1990s",
+2
+],
+[
+"infomercial_order_form_1999",
+4
+],
+[
+"as_seen_on_tv_red_sticker_2002",
+6
+],
+[
+"infomercial_vhs_recording_1999",
+2
+],
+[
+"tollfree_number_notepad_1999",
+4
+],
+[
+"infomercial_shipping_box_2001",
+2
+],
+[
+"credit_card_order_phone_pad_1999",
+2
+]
+],
+"no_wires": true,
+"theme": "late-night infomercial miracles, shipping-and-handling regret and products demonstrated against problems nobody knew they had"
 },
 "CARNAVAL": {
 "era": [
@@ -2394,6 +2851,117 @@
 "no_wires": true,
 "theme": "half-filled albums, rubber-banded doubles and the shiny badge that never turned up"
 },
+"GOTCHA": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cheap rubber, novelty-store plastic, machine oil, cardboard packaging and the faint chemical smell of things made only to annoy somebody",
+"the junk drawer after April Fools when nobody trusted anything that looked like food",
+"novelty_whoopee_cushion_red_1998"
+],
+"lore": "The snake can worked twice, the joy buzzer worked on everyone, and the fake dog poop somehow survived longer than the friendship.",
+"mix": [
+[
+"novelty_whoopee_cushion_red_1998",
+6
+],
+[
+"novelty_whoopee_cushion_pink_1998",
+3
+],
+[
+"palm_joy_buzzer_metal_1998",
+4
+],
+[
+"joy_buzzer_card_package_1998",
+2
+],
+[
+"fake_vomit_rubber_1998",
+4
+],
+[
+"snake_in_peanut_brittle_can_1998",
+3
+],
+[
+"spring_snake_green_1998",
+4
+],
+[
+"rubber_chicken_yellow_1998",
+3
+],
+[
+"xrayspecs_cardboard_glasses_1998",
+5
+],
+[
+"fake_dog_poop_rubber_1998",
+4
+],
+[
+"chattering_teeth_windup_1998",
+4
+],
+[
+"squirting_flower_red_1998",
+4
+],
+[
+"squirting_flower_bulb_1998",
+3
+],
+[
+"rubber_pencil_yellow_1998",
+5
+],
+[
+"fake_ice_cube_fly_1998",
+8
+],
+[
+"fake_ice_cube_spider_1998",
+5
+],
+[
+"fake_ink_spill_black_rubber_1998",
+4
+],
+[
+"snap_gum_prank_pack_1998",
+3
+],
+[
+"fake_lottery_ticket_prank_1998",
+4
+],
+[
+"xray_specs_comic_ad_clipping_1998",
+3
+],
+[
+"april_fools_prank_shop_bag_1998",
+2
+],
+[
+"april_fools_handwritten_gotcha_note_1998",
+4
+],
+[
+"novelty_price_sticker_1998",
+6
+]
+],
+"no_wires": true,
+"theme": "whoopee cushions, fake vomit and every prank-shop purchase funny exactly once"
+},
 "GREEN BEER": {
 "era": [
 0,
@@ -2715,6 +3283,118 @@
 "no_wires": true,
 "theme": "school crafts, football junk and the Thanksgiving leftovers nobody threw away"
 },
+"INSERT DISK 2": {
+"era": [
+0,
+1
+],
+"flavor": [
+"warm beige plastic, cardboard manuals, floppy-disk vinyl, printer toner and electronics dust",
+"the bottom drawer of a computer desk beside a joystick nobody had calibrated since 1994",
+"creative_sound_blaster_16_ct1740_1992"
+],
+"lore": "The first disk installed fine; the second one disappeared sometime before Windows 95 and the box stayed on the shelf anyway.",
+"mix": [
+[
+"creative_sound_blaster_16_ct1740_1992",
+2
+],
+[
+"maxell_md2d_5_25_floppy_1991",
+10
+],
+[
+"verbatim_datalife_5_25_floppy_1990",
+8
+],
+[
+"sony_3_5_floppy_2hd_1995",
+10
+],
+[
+"doom_shareware_3_5_disk_1993",
+3
+],
+[
+"kings_quest_vi_install_disk_1992",
+3
+],
+[
+"simcity_2000_big_box_pc_1993",
+1
+],
+[
+"doom_registered_big_box_1994",
+1
+],
+[
+"shareware_mailer_disk_envelope_1993",
+6
+],
+[
+"shareware_catalog_booklet_1993",
+3
+],
+[
+"ch_flightstick_1992",
+2
+],
+[
+"gravis_gamepad_pc_1992",
+2
+],
+[
+"sierra_kings_quest_vi_hint_book_1992",
+2
+],
+[
+"secret_of_monkey_island_dial_a_pirate_1990",
+2
+],
+[
+"simcity_2000_manual_1993",
+2
+],
+[
+"msdos_6_user_guide_1993",
+1
+],
+[
+"locking_floppy_disk_box_smoke_1993",
+1
+],
+[
+"locking_5_25_disk_box_beige_1991",
+1
+],
+[
+"floppy_disk_index_card_1993",
+4
+],
+[
+"sound_blaster_driver_disk_1992",
+3
+],
+[
+"creative_gameport_midi_cable_1993",
+2
+],
+[
+"gameport_db15_extension_cable_1993",
+2
+],
+[
+"dos_boot_disk_handwritten_1993",
+4
+],
+[
+"dos_autoexec_config_printout_1993",
+4
+]
+],
+"no_wires": true,
+"theme": "DOS big boxes, floppy stacks and the hardware required to make any of it run"
+},
 "IT'S AWAKE": {
 "era": [
 2
@@ -3035,6 +3715,113 @@
 ],
 "no_wires": true,
 "theme": "mkeka, kinara, corn, fruit and handmade gifts gathered around one table"
+},
+"LA TOMATINA": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"crushed tomato, wet cotton, warm pavement, sangria, rubber sandals and hose water",
+"the street in Bu\u00f1ol after the tomato trucks and water hoses had moved on",
+"la_tomatina_squashed_tomato_1998"
+],
+"lore": "The ham was still above the crowd when the tomatoes arrived, and after that nobody cared about anything except keeping their eyes open.",
+"mix": [
+[
+"la_tomatina_squashed_tomato_1998",
+20
+],
+[
+"la_tomatina_tomato_skin_scrap_1998",
+12
+],
+[
+"la_tomatina_tomato_stem_green_1998",
+8
+],
+[
+"speedo_swim_goggles_clear_blue_1998",
+4
+],
+[
+"cheap_swim_goggles_yellow_1998",
+3
+],
+[
+"la_tomatina_white_tshirt_soaked_1998",
+3
+],
+[
+"la_tomatina_red_tshirt_1998",
+2
+],
+[
+"rubber_flipflop_black_1998",
+3
+],
+[
+"rubber_flipflop_red_1998",
+2
+],
+[
+"jamon_serrano_leg_prop_1998",
+1
+],
+[
+"palo_jabon_greased_pole_fragment_1998",
+1
+],
+[
+"sangria_clear_plastic_cup_1998",
+5
+],
+[
+"sangria_orange_slice_1998",
+6
+],
+[
+"la_tomatina_water_pistol_blue_1998",
+3
+],
+[
+"la_tomatina_water_pistol_red_1998",
+2
+],
+[
+"la_tomatina_blue_bucket_1998",
+2
+],
+[
+"la_tomatina_tomato_crate_red_1998",
+1
+],
+[
+"la_tomatina_event_wristband_red_1998",
+6
+],
+[
+"la_tomatina_flyer_1998",
+3
+],
+[
+"la_tomatina_white_towel_1998",
+2
+],
+[
+"plastic_bottle_water_500ml_spain_1998",
+3
+],
+[
+"la_tomatina_hose_nozzle_green_1998",
+1
+]
+],
+"no_wires": true,
+"theme": "crushed tomatoes, goggles, wet clothes and street debris after Spain's tomato fight"
 },
 "LANDFILL DRIVE": {
 "era": [
@@ -3708,6 +4495,137 @@
 "no_wires": true,
 "theme": "rookie cards, wax packs and every protective layer added before the crusher ignored all of them"
 },
+"MISSING PIECES": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cardboard, old plastic, metal tokens, attic dust, rubber bands and the dry paper smell inside game boxes",
+"a hall closet after every board-game box finally split down one corner",
+"milton_bradley_operation_game_board_1996"
+],
+"lore": "The top hat survived, the red Connect Four discs survived, and somehow every game is still missing the one piece needed to play it.",
+"mix": [
+[
+"milton_bradley_operation_game_board_1996",
+1
+],
+[
+"operation_tweezers_1996",
+2
+],
+[
+"operation_funny_bone_piece_1996",
+2
+],
+[
+"monopoly_play_money_assorted_1995",
+12
+],
+[
+"monopoly_top_hat_token_1995",
+2
+],
+[
+"monopoly_car_token_1995",
+2
+],
+[
+"monopoly_house_green_1995",
+8
+],
+[
+"mousetrap_red_bathtub_piece_1995",
+1
+],
+[
+"mousetrap_yellow_stair_piece_1995",
+1
+],
+[
+"mousetrap_metal_ball_1995",
+2
+],
+[
+"hungry_hungry_hippos_marble_white_1995",
+14
+],
+[
+"hungry_hungry_hippos_yellow_lever_1995",
+1
+],
+[
+"connect_four_red_disc_1995",
+14
+],
+[
+"connect_four_yellow_disc_1995",
+12
+],
+[
+"battleship_red_hit_peg_1996",
+10
+],
+[
+"battleship_white_miss_peg_1996",
+12
+],
+[
+"battleship_destroyer_gray_1996",
+1
+],
+[
+"guess_who_red_frame_board_1995",
+1
+],
+[
+"guess_who_character_door_red_1995",
+5
+],
+[
+"twister_spinner_board_1996",
+1
+],
+[
+"trouble_popomatic_dome_clear_1995",
+1
+],
+[
+"trouble_red_pawn_1995",
+4
+],
+[
+"clue_suspect_card_1996",
+6
+],
+[
+"clue_weapon_card_1996",
+4
+],
+[
+"scrabble_wood_letter_tile_1995",
+10
+],
+[
+"jenga_wood_block_1998",
+6
+],
+[
+"board_game_box_lid_mixed_1996",
+3
+],
+[
+"board_game_instruction_booklet_mixed_1996",
+5
+]
+],
+"no_wires": true,
+"theme": "twenty years of board games poured into one box where nothing belongs to the same set anymore"
+},
 "MIXTAPE": {
 "era": [
 1,
@@ -4134,6 +5052,117 @@
 ],
 "no_wires": true,
 "theme": "high-street sweet-shop paper bags filled by weight until the bag barely folded shut"
+},
+"PROBED": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"warm VHS plastic, cheap glow vinyl, printer toner, novelty slime and dusty motel-gift-shop cardboard",
+"a Nevada roadside souvenir box marked EVIDENCE in black marker",
+"area51_alien_souvenir_mug_black_1997"
+],
+"lore": "The photo was blurry, the tape was unlabeled, and the little green alien still glowed after everything else went dark.",
+"mix": [
+[
+"area51_alien_souvenir_mug_black_1997",
+2
+],
+[
+"area51_bumper_sticker_1997",
+5
+],
+[
+"foil_alien_hat_1997",
+2
+],
+[
+"glow_alien_plush_green_1997",
+3
+],
+[
+"inflatable_alien_green_1997",
+2
+],
+[
+"roswell_ufo_photo_8x10_1997",
+4
+],
+[
+"polaroid_ufo_photo_1997",
+4
+],
+[
+"silver_ufo_friction_toy_1997",
+3
+],
+[
+"ufo_pullback_toy_green_lights_1997",
+2
+],
+[
+"alien_autopsy_vhs_black_1995",
+3
+],
+[
+"alien_autopsy_vhs_clamshell_1995",
+2
+],
+[
+"crop_circle_pamphlet_1997",
+4
+],
+[
+"ufo_conference_flyer_1997",
+4
+],
+[
+"chrome_probe_novelty_prop_1997",
+2
+],
+[
+"alien_probe_gift_box_1997",
+2
+],
+[
+"green_alien_slime_tub_1997",
+4
+],
+[
+"loose_alien_slime_green_1997",
+6
+],
+[
+"alien_head_lollipop_green_1997",
+6
+],
+[
+"alien_sour_candy_tin_1997",
+2
+],
+[
+"area51_keychain_alien_1997",
+5
+],
+[
+"area51_shot_glass_green_alien_1997",
+2
+],
+[
+"alien_evidence_zip_bag_1997",
+3
+],
+[
+"alien_sighting_notebook_1997",
+2
+]
+],
+"no_wires": true,
+"theme": "Area 51 souvenirs, alien toys, autopsy tapes and every blurry photograph that proved absolutely nothing"
 },
 "PROST": {
 "era": [
@@ -4782,6 +5811,121 @@
 "no_wires": true,
 "theme": "every glowing LCD, CRT and little electronic window that owned your attention"
 },
+"SEWING KIT": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"butter-cookie tin, face powder, hard candy, furniture plastic, thread, peppermint and rotary-phone dust",
+"the cabinet beside the plastic-covered sofa after the house was finally emptied",
+"royal_dansk_butter_cookies_blue_tin_1998"
+],
+"lore": "The tin said cookies, the sofa said do not sit comfortably, and every useful object in the house lived under something crocheted.",
+"mix": [
+[
+"royal_dansk_butter_cookies_blue_tin_1998",
+2
+],
+[
+"coats_clark_dual_duty_thread_spool_white_1998",
+8
+],
+[
+"coats_clark_thread_spool_assorted_1998",
+10
+],
+[
+"sewing_button_mix_grandma_1998",
+16
+],
+[
+"singer_sewing_needle_packet_1998",
+3
+],
+[
+"seam_ripper_red_handle_1998",
+2
+],
+[
+"singer_tape_measure_yellow_1998",
+2
+],
+[
+"grandma_thimble_silver_1998",
+3
+],
+[
+"glass_hard_candy_dish_lid_1998",
+1
+],
+[
+"strawberry_bonbon_hard_candy_1998",
+8
+],
+[
+"butterscotch_disc_wrapper_1998",
+8
+],
+[
+"crochet_doily_white_round_1998",
+4
+],
+[
+"crochet_armrest_doily_white_1998",
+4
+],
+[
+"tv_guide_magazine_1998",
+4
+],
+[
+"clear_vinyl_sofa_cover_1998",
+1
+],
+[
+"werthers_original_wrapped_1998",
+10
+],
+[
+"werthers_original_bag_1998",
+2
+],
+[
+"weekly_pill_organizer_clear_1998",
+3
+],
+[
+"toilet_roll_doll_cover_pink_1998",
+1
+],
+[
+"toilet_paper_roll_under_doll_1998",
+2
+],
+[
+"western_electric_rotary_phone_beige_1982",
+1
+],
+[
+"rotary_phone_number_card_1982",
+2
+],
+[
+"grandma_floral_tissue_box_cover_1998",
+1
+],
+[
+"kleenex_tissue_box_1998",
+1
+]
+],
+"no_wires": true,
+"theme": "Grandma's house where the butter-cookie tin contained anything except butter cookies"
+},
 "SLIMED": {
 "era": [
 1
@@ -5114,6 +6258,113 @@
 ],
 "no_wires": true,
 "theme": "Christmas-morning packaging, dead lights, batteries and toys that needed one more part"
+},
+"SONGKRAN": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"wet cotton, jasmine, talcum powder, sweet Thai tea, sun-warmed plastic and street water",
+"beside a curb after Songkran where the water guns had finally run empty",
+"songkran_pump_water_gun_neon_2002"
+],
+"lore": "By midafternoon the phone pouch was fogged, the elephant pants weighed twice as much, and there was white powder on every surface the water had missed.",
+"mix": [
+[
+"songkran_pump_water_gun_neon_2002",
+3
+],
+[
+"songkran_small_water_pistol_blue_2002",
+4
+],
+[
+"songkran_water_tank_backpack_2004",
+1
+],
+[
+"songkran_silver_water_bowl_2002",
+3
+],
+[
+"songkran_small_aluminum_bowl_2002",
+4
+],
+[
+"din_sor_pong_white_powder_packet_2002",
+5
+],
+[
+"loose_songkran_white_powder_2002",
+8
+],
+[
+"jasmine_garland_phuang_malai_2002",
+3
+],
+[
+"jasmine_blossom_loose_2002",
+10
+],
+[
+"chatramue_thai_tea_mix_red_bag_2002",
+2
+],
+[
+"thai_iced_tea_plastic_bag_2002",
+3
+],
+[
+"thai_iced_tea_straw_red_2002",
+5
+],
+[
+"elephant_pants_black_white_2004",
+2
+],
+[
+"songkran_hawaiian_shirt_blue_2002",
+2
+],
+[
+"swim_goggles_clear_blue_2002",
+3
+],
+[
+"waterproof_phone_pouch_clear_blue_2006",
+3
+],
+[
+"nokia_3310_waterlogged_2002",
+1
+],
+[
+"songkran_bucket_blue_2002",
+2
+],
+[
+"songkran_bucket_red_2002",
+1
+],
+[
+"songkran_waterproof_money_bag_2002",
+2
+],
+[
+"flip_flop_blue_thailand_2002",
+2
+],
+[
+"songkran_flower_shirt_button_loose_2002",
+6
+]
+],
+"no_wires": true,
+"theme": "water guns, silver bowls, white powder and soaked street clothes after Thailand's annual water war"
 },
 "SPACE OPERA": {
 "era": [
@@ -5965,6 +7216,121 @@
 ],
 "no_wires": true,
 "theme": "hidden magazines, tissues, flashlight and everything nobody admitted was there"
+},
+"WINDOW SHOPPING": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"rain-wet brick, hot neon glass, perfume, stroopwafel caramel, tulips, cigarette smoke and canal air",
+"a canal-side curb after the red-light district emptied into the morning commute",
+"red_neon_window_frame_amsterdam_1998"
+],
+"lore": "The red light stayed on long after the beer was empty; by morning the windows reflected bicycles, wrappers and somebody's feather boa in the gutter.",
+"mix": [
+[
+"red_neon_window_frame_amsterdam_1998",
+1
+],
+[
+"red_neon_glass_tube_fragment_1998",
+5
+],
+[
+"philips_red_party_bulb_e27_1998",
+3
+],
+[
+"black_lace_bralette_1998",
+2
+],
+[
+"red_satin_lace_garment_1998",
+2
+],
+[
+"black_fishnet_stocking_1998",
+3
+],
+[
+"durex_condom_wrapper_blue_1998",
+5
+],
+[
+"durex_condom_wrapper_red_1998",
+5
+],
+[
+"pink_feather_boa_1998",
+2
+],
+[
+"red_feather_boa_1998",
+1
+],
+[
+"amsterdam_stroopwafel_1998",
+6
+],
+[
+"stroopwafel_paper_sleeve_1998",
+3
+],
+[
+"red_tulip_single_1998",
+4
+],
+[
+"yellow_tulip_single_1998",
+3
+],
+[
+"dutch_bicycle_bell_chrome_1998",
+3
+],
+[
+"dutch_bicycle_reflector_red_1998",
+3
+],
+[
+"wooden_clog_keychain_yellow_1998",
+4
+],
+[
+"heineken_330ml_can_1998",
+4
+],
+[
+"amstel_330ml_can_1998",
+3
+],
+[
+"amsterdam_coffeeshop_menu_card_1998",
+3
+],
+[
+"amsterdam_canal_map_foldout_1998",
+2
+],
+[
+"red_light_district_postcard_1998",
+4
+],
+[
+"dutch_guilder_coin_2_5_1998",
+4
+],
+[
+"tram_ticket_amsterdam_1998",
+5
+]
+],
+"no_wires": true,
+"theme": "red neon, lace, bike hardware and tourist trash from a night beside the canal"
 },
 "Y2K": {
 "era": [
