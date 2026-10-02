@@ -170,6 +170,15 @@ def free_sites(words):
     return out
 
 
+def queries(words, year):
+    """How a person searches for an old product: '90s duracell coppertop aa', then 'vintage ...'."""
+    qs = []
+    if year:
+        qs.append(f"{str(year)[2]}0s {words}" if year < 2000 else f"{year} {words}")
+    qs.append(("vintage " if year and year < 2012 else "") + words)
+    return qs
+
+
 def run(cid, words, year=None, log=print):
     d = os.path.join(WORK, "hunt", cid)
     os.makedirs(d, exist_ok=True)
@@ -178,15 +187,25 @@ def run(cid, words, year=None, log=print):
     for f in sorted(os.listdir(mine)) if os.path.isdir(mine) else []:
         if f.startswith(cid) and f.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
             got.append({"file": os.path.join(mine, f), "from": "your photo", "page": "", "title": ""})
+    hits = []
     try:
-        hits = ebay(words, year, log=log)
+        import google_images as G
+        for q in queries(words, year):
+            hits += [(u, "", f"Google Images: {q}") for u, w, h in G.search(q, most=15, log=log)]
     except Exception as e:
-        log(f"[hunt] eBay search did not work here: {e}")
-        hits = []
+        log(f"[hunt] Google Images did not work here: {e}")
+    if os.path.exists(KEYS):                            # eBay only if you ever add its free keys
+        try:
+            hits += ebay_api(words, year, log=log)
+        except Exception as e:
+            log(f"[hunt] eBay: {e}")
     hits += free_sites(words)
+    seen = set()
+    hits = [h for h in hits if not (h[0] in seen or seen.add(h[0]))]
     from PIL import Image
-    for n, (url, page, title) in enumerate(hits):
-        p = os.path.join(d, f"p{n:03d}.jpg")
+    import hashlib
+    for url, page, title in hits:
+        p = os.path.join(d, "p" + hashlib.sha1(url.encode()).hexdigest()[:12] + ".jpg")   # one file per photo link
         if not os.path.exists(p):
             try:
                 req = urllib.request.Request(url, headers={"User-Agent": UA})
@@ -197,7 +216,8 @@ def run(cid, words, year=None, log=print):
                 im.save(p, quality=92)
             except Exception:
                 continue
-        got.append({"file": p, "from": "eBay" if "ebay" in url else "free photo site", "page": page, "title": title})
+        src = "Google Images" if title.startswith("Google") else ("eBay" if "ebay" in url else "free photo site")
+        got.append({"file": p, "from": src, "url": url, "page": page, "title": title})
     json.dump(got, open(os.path.join(d, "found.json"), "w"), indent=1)
     log(f"[hunt] {cid}: {len(got)} photos saved")
     return got
