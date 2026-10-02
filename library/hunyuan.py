@@ -61,6 +61,50 @@ def main(photo, out, shape_only=False, paint=None):
         return paint_only(photo, out, paint)
     shape = os.path.join(out, "shape.glb")
     t = time.time()
+    mesh = shape_torch(photo)                       # the original Hunyuan (PyTorch) on the Apple chip's GPU
+    if mesh is not None:
+        mesh.export(shape)
+        print(f"[hunyuan] shape (PyTorch on the Apple GPU): {len(mesh.faces)} faces in {time.time() - t:.0f}s", flush=True)
+    if mesh is None:
+        mesh = shape_mlx(photo, shape)
+    if shape_only:
+        return shape
+    gc.collect()
+    t = time.time()
+    from textureGenPipeline_mlx import Hunyuan3DPaintConfigMLX, Hunyuan3DPaintPipelineMLX
+    paint = Hunyuan3DPaintPipelineMLX(Hunyuan3DPaintConfigMLX(max_num_view=6, resolution=512))
+    obj = os.path.join(out, "textured.obj")
+    paint(mesh_path=shape, image_path=photo, output_mesh_path=obj, use_remesh=True, save_glb=True)
+    print(f"[hunyuan] paint done in {time.time() - t:.0f}s", flush=True)
+    return obj[:-4] + ".glb"
+
+
+def shape_torch(photo):
+    """The original Hunyuan3D 2.1 shape model (Tencent's PyTorch code) on the Mac's GPU (Apple 'mps'). The Apple-chip
+    (MLX) port returned the same surface value everywhere - even on its own demo picture (2026-10-02) - so it never
+    made a shape; the original runs on the same chip, a little slower."""
+    try:
+        import torch
+        from PIL import Image
+        from hy3dshape.pipelines import Hunyuan3DDiTFlowMatchingPipeline
+        dev = "mps" if torch.backends.mps.is_available() else "cpu"
+        pipe = Hunyuan3DDiTFlowMatchingPipeline.from_pretrained("tencent/Hunyuan3D-2.1", subfolder="hunyuan3d-dit-v2-1",
+                                                                device=dev, dtype=torch.float16)
+        im = Image.open(photo).convert("RGBA")
+        mesh = pipe(image=im, num_inference_steps=50, guidance_scale=5.0, octree_resolution=256,
+                    generator=torch.manual_seed(42))[0]
+        if mesh is None or not len(mesh.faces):
+            print("[hunyuan] PyTorch: empty shape", flush=True)
+            return None
+        return mesh
+    except Exception as e:
+        import traceback
+        print(f"[hunyuan] PyTorch shape failed: {repr(e)[:300]}", flush=True)
+        traceback.print_exc()
+        return None
+
+
+def shape_mlx(photo, shape):
     from hy3dshape.pipeline_mlx import ShapePipeline
     import mlx.core as mx
     mesh = None
@@ -98,20 +142,10 @@ def main(photo, out, shape_only=False, paint=None):
         mesh = None
         gc.collect()
     if mesh is None:
-        sys.exit("Hunyuan3D made an empty shape from this photo in half and full precision")
+        sys.exit("Hunyuan3D made an empty shape from this photo (PyTorch and the Apple-chip version)")
     mesh.export(shape)
-    print(f"[hunyuan] shape: {len(mesh.faces)} faces in {time.time() - t:.0f}s", flush=True)
-    del pipe, mesh
-    gc.collect()
-    if shape_only:
-        return shape
-    t = time.time()
-    from textureGenPipeline_mlx import Hunyuan3DPaintConfigMLX, Hunyuan3DPaintPipelineMLX
-    paint = Hunyuan3DPaintPipelineMLX(Hunyuan3DPaintConfigMLX(max_num_view=6, resolution=512))
-    obj = os.path.join(out, "textured.obj")
-    paint(mesh_path=shape, image_path=photo, output_mesh_path=obj, use_remesh=True, save_glb=True)
-    print(f"[hunyuan] paint done in {time.time() - t:.0f}s", flush=True)
-    return obj[:-4] + ".glb"
+    print(f"[hunyuan] shape (Apple-chip version): {len(mesh.faces)} faces", flush=True)
+    return mesh
 
 
 def check():
