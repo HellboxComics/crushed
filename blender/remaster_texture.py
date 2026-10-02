@@ -102,6 +102,27 @@ def fit(ob, target):
     me.update()
 
 
+def _boxes(sheet_path):
+    """Each quadrant's object bounding box (sheet coordinates 0..1, v up), so the picture's white margin is never
+    painted onto the model."""
+    from PIL import Image
+    im = np.asarray(Image.open(sheet_path).convert("RGB")).astype(int)
+    H, W = im.shape[:2]
+    out = {}
+    for k, ((u0, v0), _, _, _) in VIEWS.items():
+        x0, x1 = int(u0 * W), int((u0 + 0.5) * W)
+        y0, y1 = int((1 - v0 - 0.5) * H), int((1 - v0) * H)          # image rows run top-down
+        q = im[y0:y1, x0:x1]
+        mask = np.abs(q - 255).sum(-1) > 45
+        if mask.sum() < 50:
+            out[k] = (u0 + 0.03, v0 + 0.03, 0.44, 0.44)
+            continue
+        ys, xs = np.nonzero(mask)
+        bx0, bx1, by0, by1 = xs.min(), xs.max(), ys.min(), ys.max()
+        out[k] = ((x0 + bx0 + 2) / W, 1 - (y0 + by1 - 2) / H, (bx1 - bx0 - 4) / W, (by1 - by0 - 4) / H)
+    return out
+
+
 def project(ob, sheet_path):
     me = ob.data
     img = bpy.data.images.load(sheet_path)
@@ -110,7 +131,8 @@ def project(ob, sheet_path):
     span = np.maximum(hi - lo, 1e-6)
     uv = me.uv_layers.new(name="sheet")
     me.uv_layers.active = uv
-    m = 0.03                                             # inset, so a view never samples its neighbor
+    m = 0.0
+    boxes = _boxes(sheet_path)                           # where the object actually sits in each view
     for poly in me.polygons:
         n = np.array(poly.normal)
         best, score = None, -2
@@ -126,7 +148,8 @@ def project(ob, sheet_path):
             if r.sum() < 0:
                 x = 1 - x
             y = float(np.dot(p, up) / np.dot(span, up))
-            uv.data[li].uv = (u0 + m + x * (0.5 - 2 * m), v0 + m + y * (0.5 - 2 * m))
+            bu0, bv0, bw, bh = boxes[best]
+            uv.data[li].uv = (bu0 + x * bw, bv0 + y * bh)
     mt = bpy.data.materials.new("remaster")
     mt.use_nodes = True
     nt = mt.node_tree

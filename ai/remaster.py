@@ -42,6 +42,8 @@ DROP = os.path.expanduser("~/3D Drop")
 DRAW_PY = os.path.expanduser(os.environ.get("CRUSHED_DRAW", "~/Desktop/AI/draw.py"))
 TRASH = os.path.expanduser("~/Desktop/_to delete/remaster")
 PY = os.path.join(ROOT, ".venv", "bin", "python")
+PLACEHOLDER = "The real object as it was sold and used"      # the stand-in prompt, before the real one is written
+PAUSE = os.path.join(ROOT, "ai", "remaster", "PAUSE")         # while this file exists, nothing new is made
 SHEET_STYLE = ("Product reference sheet, a 2x2 grid of four photos of the same single object on a plain white "
                "background: top left the FRONT, top right the BACK, bottom left the LEFT side, bottom right the "
                "RIGHT side. Same object, same size, same colors in all four. Studio product photography, soft even "
@@ -462,7 +464,11 @@ def main():
     # an object is ready once its prompts are written: the inside prompt is the last one the AI writes
     todo = a.only or [n for n in names() if not os.path.exists(os.path.join(PENDING, n, "model.glb"))
                       and not os.path.exists(os.path.join(MODELS, n, "model.glb"))
-                      and os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))]
+                      and os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))
+                      and PLACEHOLDER not in open(os.path.join(PROMPTS, n + ".txt")).read()]
+    if os.path.exists(PAUSE) and not a.only:
+        say("paused: " + open(PAUSE).read().strip())
+        todo = []
     if not todo:
         say("nothing ready: write the prompts (see the brief); an object is ready once <name>.inside.txt exists")
     for i, n in enumerate(todo[:a.limit] if not a.only else todo):
