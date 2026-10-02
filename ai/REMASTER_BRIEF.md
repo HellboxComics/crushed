@@ -42,7 +42,13 @@ The code's names and notes are parodies ("Blockbusted", "Surj", "Nintendont", "W
 To read the current names/notes/lore: `python3 -c "import bpy,sys;sys.path.insert(0,'blender');from crushed.objects
 import load;load();from crushed import lore;import json;print(json.dumps([lore.NAMES,lore.NOTES,lore.ONE_OF_ONES]))"`
 
-### 4. Audit the existing one-of-ones for missing brands
+### 4. Every one-of-one: at least 15 things to discover, the more the better
+Harrow (2026-10-01): "every 1 of 1 ... at minimum 15 unique traits to be discovered, the more the better ... I am
+looking for people to be absolutely infatuated with each and every one." plan_check prints a TO DO line with every
+one-of-one under 15 distinct objects. Take them one at a time: add real, specific, surprising objects that belong
+in that world (the deep cut a real fan would scream at, not filler), as planned objects (job 5 format) added with
+{"TITLE": {"extra": [["object", count]]}} in assets/plan/ones.json. Aim for 20+.
+Also audit each for missing brands:
 For every one-of-one (recipe.ONE_OF_ONES), ask: what are the brands/products everyone remembers from that thing,
 and are they in it? (CONSOLE WARS needs the real consoles of both sides; RETIREMENT PLAN needs the real Beanie
 Babies everyone hoarded; DIAL-UP needs the AOL disc.) For each missing one: add it as a planned object (job 5
@@ -61,7 +67,7 @@ Each one-of-one goes in assets/plan/ones.json:
     "EIGHT NIGHTS": {"mix": [["dreidel", 8], ["gelt_bag", 6], ...], "lore": "one dry sentence",
                      "flavor": ["Smell", "Recovered From", "Headliner Display Name"], "era": [1,2],
                      "fillers": ["gelt_coin", "crumpled_paper"], "soft": 0.5, "no_wires": true}
-  mix: at least 10 distinct objects, counts summing to 45-60. era: the eras its stuff was current (0 1985-90,
+  mix: at least 15 distinct objects (20+ is better), counts summing to 50-70. era: the eras its stuff was current (0 1985-90,
   1 1991-96, 2 1997-02, 3 2003-08, 4 2009-26). To ADD to an existing one-of-one (job 4), use
   {"TITLE": {"extra": [["object", count]]}} -- plan_check will tell you if the format is wrong.
 Respect: for religious holidays only the food, lights, gifts, decorations, toys and clothes. Never holy books,
@@ -123,6 +129,14 @@ there; check every line and fix what's wrong.
   crumble  cookies, crackers, chalk, cake, chocolate, pretzels, mooncakes: breaks into many chunks
   hard     how much force it takes: a chip bag 0.1, a Game Boy 0.7, a die-cast car 0.95
 Write the inside prompt to match: a snapped cartridge shows its board, a crumbled mooncake its yolk.
+
+### 5c. Real size and real material for EVERY object (assets/plan/behavior.json "size" and "mat")
+Everything in a bale is life size next to everything else: a ring is ring-sized beside a console. "size" is the
+real [width, depth, height] in meters of the actual product (a 1996 Nintendo 64: [0.26, 0.19, 0.073]; a Tamagotchi:
+[0.04, 0.015, 0.05]). The current values are the code's guesses: check every one against the real product.
+"mat" is what it is MADE of, so it looks like it under the lights: clay things are clay, metal is metal, plastic is
+plastic, paper is paper. One of: plastic, soft_plastic, metal, foil, paper, card, glossy_print, fabric, rubber,
+clay, ceramic, glass, wood, food, chocolate, candy, foam, wax. Check every line.
 
 ### 6. The real labels (ai/remaster/labels/<era>.txt)
 The crushed cans, cartons, chip bags and wrappers packed behind the objects in every bale wear parody labels.

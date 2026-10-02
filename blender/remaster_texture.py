@@ -213,6 +213,10 @@ def main():
     a = ap.parse_args(argv)
     bpy.ops.wm.read_factory_settings(use_empty=True)
     target, d = code_size(a.name)
+    from crushed import models as _m
+    real = _m.props(a.name).get("size")              # the real size the Mac's AI looked up wins over the code's
+    if real:
+        target = np.array([float(x) for x in real])
     ob = import_shape(a.shape)
     fit(ob, target)
     project(ob, a.sheet)

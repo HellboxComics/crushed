@@ -49,6 +49,59 @@ def behavior(name):
     return b.get("how", "fold"), float(b.get("hard", 0.4))
 
 
+def props(name):
+    """Everything assets/plan/behavior.json says about an object: how, hard, mat (what it is made of) and size
+    (its real [width, depth, height] in meters)."""
+    behavior(name)
+    return _BEHAVIOR.get(name) or {}
+
+
+# what each material looks like under the lights (Principled BSDF settings)
+MATS = {
+    "plastic": dict(rough=0.38, metal=0.0, spec=0.5, coat=0.0),
+    "soft_plastic": dict(rough=0.6, metal=0.0, spec=0.35, coat=0.0),
+    "metal": dict(rough=0.28, metal=1.0, spec=0.5, coat=0.0),
+    "foil": dict(rough=0.18, metal=1.0, spec=0.5, coat=0.0),
+    "paper": dict(rough=0.9, metal=0.0, spec=0.2, coat=0.0),
+    "card": dict(rough=0.75, metal=0.0, spec=0.3, coat=0.0),
+    "glossy_print": dict(rough=0.3, metal=0.0, spec=0.5, coat=0.4),
+    "fabric": dict(rough=0.95, metal=0.0, spec=0.15, sheen=0.6),
+    "rubber": dict(rough=0.8, metal=0.0, spec=0.3, coat=0.0),
+    "clay": dict(rough=0.85, metal=0.0, spec=0.2, coat=0.0),
+    "ceramic": dict(rough=0.15, metal=0.0, spec=0.5, coat=0.6),
+    "glass": dict(rough=0.04, metal=0.0, spec=0.5, trans=0.9),
+    "wood": dict(rough=0.7, metal=0.0, spec=0.3, coat=0.0),
+    "food": dict(rough=0.65, metal=0.0, spec=0.3, sss=0.15),
+    "chocolate": dict(rough=0.42, metal=0.0, spec=0.4, coat=0.0),
+    "candy": dict(rough=0.2, metal=0.0, spec=0.5, sss=0.25),
+    "foam": dict(rough=0.9, metal=0.0, spec=0.2, sss=0.1),
+    "wax": dict(rough=0.5, metal=0.0, spec=0.3, sss=0.3),
+}
+
+
+def finish(ob, kind):
+    """Make a remastered model's surface read as what it is made of: metal shines, paper is matte, glass is clear."""
+    m = MATS.get(kind)
+    if not m:
+        return
+    for mt in ob.data.materials:
+        if not mt or not mt.use_nodes or mt.name.startswith("inside"):
+            continue
+        b = next((n for n in mt.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
+        if not b:
+            continue
+        def put(key, val):
+            if key in b.inputs:
+                b.inputs[key].default_value = val
+        put("Roughness", m["rough"])
+        put("Metallic", m["metal"])
+        put("Specular IOR Level", m["spec"])
+        put("Coat Weight", m.get("coat", 0.0))
+        put("Sheen Weight", m.get("sheen", 0.0))
+        put("Transmission Weight", m.get("trans", 0.0))
+        put("Subsurface Weight", m.get("sss", 0.0))
+
+
 def labels(era):
     """Approved real product labels for an era (assets/labels/<era index>/*.png), made by ai/remaster/labels.py."""
     return sorted(glob.glob(os.path.join(ROOT, "assets", "labels", str(era), "*.png")))
@@ -108,4 +161,5 @@ def load(name, coll):
         if o != ob and o.name in bpy.data.objects and not o.users_collection:
             bpy.data.objects.remove(o)
     ob.name = name
+    finish(ob, props(name).get("mat"))
     return ob

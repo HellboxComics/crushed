@@ -40,13 +40,27 @@ def make_object(defn, rng, pal, coll, override=None):
     return ob
 
 
-def prepare(ob, scale_limit, rng):
-    """Scale to crush size, densify, mark sharp edges, store rest position."""
+REAL_MAX = 0.29            # anything longer than the cube itself is folded/cut down to this, everything else is life size
+
+
+def prepare(ob, scale_limit, rng, name=None):
+    """Scale to crush size, densify, mark sharp edges, store rest position. Objects are their REAL size relative to
+    each other (assets/plan/behavior.json "size" when known, else as built): a ring is ring-sized next to a console.
+    Only things longer than the cube are cut down to fit."""
     me = ob.data
     v = crush.verts(me)
     if len(v) == 0:
         return None
     ext = np.ptp(v, axis=0)
+    real = models.props(name).get("size") if name else None
+    if real:
+        rs = np.sort(np.array(real, dtype=float))[::-1]
+        es = np.sort(ext)[::-1]
+        k = float(np.median(rs / np.maximum(es, 1e-6)))
+        v = v * k
+        ext = ext * k
+    if name:
+        scale_limit = REAL_MAX
     s = min(1.0, scale_limit / max(ext.max(), 1e-6))
     v = (v - (v.min(axis=0) + v.max(axis=0)) / 2) * s
     crush.set_verts(me, v)
@@ -137,7 +151,7 @@ def build_block(r, coll, rng):
         limit = rng.uniform(0.17, 0.23) if d.big else 0.19     # big enough to name from a fragment
         if head or override:
             limit = 0.23 if d.big else 0.21
-        v = prepare(ob, limit, rng)
+        v = prepare(ob, limit, rng, d.name)
         if v is None:
             continue
         keep = "keep" in d.tags           # signature pieces (the gift pigs) stay whole enough to name at a glance

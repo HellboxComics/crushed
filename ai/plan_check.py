@@ -7,7 +7,7 @@ objects the remaster must make (ai/remaster/expected.txt) so the phone page coun
 
 Checks assets/plan/items.json and assets/plan/ones.json (formats in ai/REMASTER_BRIEF.md):
   - every object has a size in meters that makes sense (0.003 to 0.6), eras 0..4, a display name and notes
-  - every one-of-one has at least 10 distinct named objects, all of which exist, lore, flavor and eras
+  - every one-of-one has at least 10 distinct named objects (15+ is the bar; under 15 is listed as TO DO), all of which exist, lore, flavor and eras
   - every object (code-built or planned) has an outside prompt and an inside prompt (or is listed as missing)
   - assets/real/*.json only names objects and one-of-ones that exist
 Exit 0 = all good. Nothing is changed except expected.txt.
@@ -38,6 +38,7 @@ print(json.dumps({"objects": {n: d.group for n, d in reg.items()},
 
 def main():
     bad = []
+    short = []          # Harrow's bar: every one-of-one has at least 15 things to discover (the more the better)
     items = json.load(open(os.path.join(PLAN, "items.json"))) if os.path.exists(os.path.join(PLAN, "items.json")) else {}
     ones = json.load(open(os.path.join(PLAN, "ones.json"))) if os.path.exists(os.path.join(PLAN, "ones.json")) else {}
     for n, it in items.items():
@@ -81,6 +82,8 @@ def main():
         named = set(names) & set(info["named"])           # loose debris (paper, film) has no name and doesn't count
         if len(named) < 10 and t not in ("EMPTY", "UNCRUSHED", "SOLID GOLD"):
             bad.append(f"one-of-one {t}: only {len(named)} distinct named objects, needs at least 10")
+        elif len(named) < 15 and t not in ("EMPTY", "UNCRUSHED", "SOLID GOLD"):
+            short.append(f"{t} ({len(named)})")
     for t in ones:
         if t not in info["lore"] or t not in info["flavor"]:
             bad.append(f"one-of-one {t}: lore or flavor didn't load")
@@ -101,6 +104,8 @@ def main():
     print(f"{len(need)} objects to remaster, {len(info['ones'])} one-of-ones, {len(noprompt)} objects still need prompts")
     if noprompt:
         print("  need prompts: " + ", ".join(noprompt[:60]) + (" ..." if len(noprompt) > 60 else ""))
+    if short:
+        print(f"TO DO: {len(short)} one-of-ones under 15 distinct objects: " + ", ".join(short))
     for b in bad:
         print("PROBLEM: " + b)
     print("ALL GOOD" if not bad else f"{len(bad)} problem(s)")
