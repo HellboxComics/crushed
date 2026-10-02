@@ -152,6 +152,33 @@ def _quad_err(q):
     return max(_ang(e[0], e[2]), _ang(e[1], e[3]))
 
 
+def _lid_quad(m, big, small):
+    """The printed panel of an open or torn lid: the fold it shares with the big side, and the outline corners
+    right next to the fold's ends (not the flap tips sticking up past it)."""
+    shared = [p for p in small if min(np.linalg.norm(big - p, axis=1)) < 1.0]
+    if len(shared) != 2:
+        return None
+    for k in (8, 10, 7):
+        v, _ = _poly(m, k)
+        if v is None:
+            continue
+        ia = int(np.argmin(np.linalg.norm(v - shared[0], axis=1)))
+        ib = int(np.argmin(np.linalg.norm(v - shared[1], axis=1)))
+        n = len(v)
+        side = [i for i in range(n) if i not in (ia, ib)]
+        cb = big.mean(0)
+        nxt = []
+        for i, j in ((ia, ib), (ib, ia)):                     # the neighbor of each fold end, away from the big side
+            cand = [(i - 1) % n, (i + 1) % n]
+            cand = [c for c in cand if c != j]
+            far = max(cand, key=lambda c: np.linalg.norm(v[c] - cb))
+            nxt.append(far)
+        q = np.array([v[ia], v[nxt[0]], v[nxt[1]], v[ib]], np.float32)
+        if _quad_err(q) < 45 and len(set([ia, ib] + nxt)) == 4:     # a lid seen edge-on tapers strongly
+            return q
+    return None
+
+
 def find_faces(mask):
     """-> ([quads, biggest first], how). Each quad is one side of the box as it sits in the photo."""
     import cv2
@@ -169,7 +196,11 @@ def find_faces(mask):
         B = np.array([v[(i + 3 + k) % 6] for k in range(4)])
         big, small = sorted([A, B], key=lambda q: -cv2.contourArea(q.astype(np.float32)))
         e_big, e_small = _quad_err(big), _quad_err(small)
-        keep = [big, small] if e_small < 25 else [big]        # a torn or open flap is not a flat side: left out
+        if e_small < 25:
+            keep = [big, small]
+        else:                                                 # an open or torn lid: its printed panel is still
+            lid = _lid_quad(m, big, small)                    # there - take the panel, leave the flaps
+            keep = [big, lid] if lid is not None else [big]
         err = e_big + 0.3 * min(e_small, 25)
         if best is None or err < best[0]:
             best = (e_big, keep, "two sides" if len(keep) == 2 else "one clean side (the other is open or torn)")

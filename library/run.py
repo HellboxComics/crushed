@@ -226,6 +226,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         if route == "flat":
             D = min(D, 0.002)
         same = same_design(picked, others, use, want=5)
+        same += other_sides(cid, card, picked, use, have=[picked] + same)  # backs and sides, hunted on purpose
         status(cid, step="5/7 texture map: every box face at its measured size")
         make_room("drawing")
         atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
@@ -628,6 +629,58 @@ def reference(f, d, upright=False):
     sq.paste(obj, ((side - obj.width) // 2, (side - obj.height) // 2), obj)
     out = os.path.join(d, "reference.png")
     sq.resize((1024, 1024), Image.LANCZOS).save(out)
+    return out
+
+
+SIDES_Q = ("Picture 2 is the {product} you picked. Does picture 1 show THE SAME design version (same artwork, colors "
+           "and words as picture 2, maybe from another angle)? And which side of the box fills most of picture 1? "
+           "Answer ONLY JSON: {{\"same\": true/false, \"view\": \"front\" | \"back\" | \"left\" | \"right\" | \"top\" | "
+           "\"bottom\", \"also\": [other sides partly visible]}}")
+
+
+def other_sides(cid, card, picked, use, have=(), most=12, log=None):
+    """A box has six sides and a buyer turns it over. When the photos so far only show the front, your AI hunts
+    for the back and sides of the very same version (collectors photograph them), and keeps the ones that match
+    your pick. Each kept one is cut out for the box builder."""
+    import hunt
+    import turnaround as T
+    import vet as V
+    log = log or say
+    seen_views = {((p.get("vet") or {}).get("view")) for p in have}
+    if {"back", "left", "right"} <= seen_views:
+        return []
+    name = card["product"].split(",")[0]
+    yr = card.get("year")
+    qs = [f"{name} box back", f"{name} back of box", f"{name} box side panel"] + \
+         ([f"{name} {yr} box back"] if yr else [])
+    before = {f["file"] for f in jload(os.path.join(WORK, "hunt", cid, "found.json"), [])}
+    try:
+        found = hunt.run(cid, name, yr, log=log, extra=qs)
+    except Exception as e:
+        log(f"[texture] hunting the other sides didn't work: {e}")
+        return []
+    new = [f for f in found if f["file"] not in before][:most]
+    log(f"[texture] other sides: {len(new)} new photos to check")
+    out, got = [], set()
+    for f in new:
+        try:
+            v = V.ask(use, SIDES_Q.format(product=card["product"]), [f["file"], picked["file"]], think=False, side=896)
+        except Exception:
+            continue
+        view = v.get("view")
+        if v.get("same") is not True or view not in ("back", "left", "right", "top", "bottom") or view in got:
+            continue
+        try:
+            f["mask"] = T.photo_mask(f["file"], timeout=180)
+        except Exception as e:
+            log(f"[texture] {view}: cut-out failed ({e})")
+            continue
+        f["vet"] = {"view": view}
+        out.append(f)
+        got.add(view)
+        log(f"[texture] found the real {view} of this box: {os.path.basename(f['file'])}")
+        if len(got) >= 3:
+            break
     return out
 
 

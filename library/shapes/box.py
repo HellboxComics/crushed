@@ -74,6 +74,28 @@ if __name__ == "__main__":
         m.limit_method = "ANGLE"
         bpy.context.view_layer.objects.active = ob
         bpy.ops.object.modifier_apply(modifier="bevel")
+    if surface == "card" and D > 0.005:            # the top closes with a lid flap: built as its own layer of card
+        bm = bmesh.new()                            # (one card thick), its front edge tucked in - a real free edge
+        bm.from_mesh(me)                            # and the shadow line every real carton has
+        uv = bm.loops.layers.uv.verify()
+        t, g, e = 0.00035, 0.0009, 0.0002
+        x0, x1, y0, y1, z0, z1 = -w + e, w - e, -d + g, d - e, h, h + t
+        u0, v0, u1, v1 = L["top"]
+        U = lambda x: u0 + (x + w) / (2 * w) * (u1 - u0)
+        V = lambda y: v0 + (y + d) / (2 * d) * (v1 - v0)
+        quads = [[(x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)],              # lid top
+                 [(x0, y0, z0), (x1, y0, z0), (x1, y0, z1), (x0, y0, z1)],              # its front (free) edge
+                 [(x1, y0, z0), (x1, y1, z0), (x1, y1, z1), (x1, y0, z1)],
+                 [(x0, y1, z0), (x0, y0, z0), (x0, y0, z1), (x0, y1, z1)],
+                 [(x1, y1, z0), (x0, y1, z0), (x0, y1, z1), (x1, y1, z1)]]
+        for q in quads:
+            f = bm.faces.new([bm.verts.new(c) for c in q])
+            for loop, c in zip(f.loops, q):
+                loop[uv].uv = (U(c[0]), V(c[1]))
+        bm.normal_update()
+        bm.to_mesh(me)
+        bm.free()
+        me.update()
     for p in me.polygons:
         p.use_smooth = False
     mt = bpy.data.materials.new(name + "_print")
