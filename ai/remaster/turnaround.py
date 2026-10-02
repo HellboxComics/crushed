@@ -198,12 +198,34 @@ def _run(wf, out, timeout=3600):
 UPSCALER = "RealESRGAN_x4plus.pth"      # Real-ESRGAN (BSD-3), from its own GitHub release
 
 
-def upscale(png, timeout=900):
+LABEL = ("A flat, straight-on scan of the complete printed wrap-around label of the object below, unrolled into one "
+         "rectangle exactly as it is printed: everything printed all the way around the side, from its top edge to its "
+         "bottom edge, filling the whole image edge to edge. No background, no shadows, no curvature, no perspective, "
+         "no object shape, no captions. The left and right edges continue into each other seamlessly. The object: ")
+
+
+def label_size(circumference, height):
+    """A drawing size with the label's real proportions (about 1.6 megapixels, multiples of 16)."""
+    a = max(0.4, min(3.0, circumference / max(height, 1e-6)))
+    px = 1_670_000
+    w = int(round((px * a) ** 0.5 / 16)) * 16
+    h = int(round((px / a) ** 0.5 / 16)) * 16
+    return w, h
+
+
+def draw_label(description, out, circumference, height):
+    """The whole printed wrap of a round object (a can, a battery) as one flat picture: painted on as one piece,
+    it has no seams and no logo twice, which four separate views of a cylinder can't promise."""
+    w, h = label_size(circumference, height)
+    return draw(description, out, width=w, height=h, prefix=LABEL)
+
+
+def upscale(png, timeout=900, force=False):
     """The finished turnaround made twice as sharp (Real-ESRGAN 4x, then down to 2x): letters and edges crisp
     instead of soft when the model is seen up close. Done in place; a picture already this size is left alone."""
     from PIL import Image
     with Image.open(png) as im:
-        if im.width >= 2 * W:
+        if im.width >= 2 * W and not force:
             return png
     name = f"crushed_up_{uuid.uuid4().hex[:8]}.png"
     boundary = uuid.uuid4().hex
@@ -237,7 +259,7 @@ def for_drawing(description):
     return text if len(text) > 40 else description
 
 
-def draw(description, out, seed=None, steps=None, timeout=3600):
+def draw(description, out, seed=None, steps=None, timeout=3600, width=None, height=None, prefix=None):
     """One 1584x1056 turnaround from Qwen-Image 2512 (bf16), its own text encoder and VAE. With the Lightning
     LoRA installed it takes 8 steps at guidance 1 (one pass per step) instead of 30 at guidance 4: ~7x faster."""
     seed = seed if seed is not None else random.randint(1, 2 ** 31)
@@ -249,10 +271,10 @@ def draw(description, out, seed=None, steps=None, timeout=3600):
         "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b.safetensors", "type": "qwen_image"}},
         "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
         "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["11", 0] if fast else ["1", 0], "shift": 3.1}},
-        "5": {"class_type": "CLIPTextEncode", "inputs": {"text": LAYOUT + for_drawing(description), "clip": ["2", 0]}},
+        "5": {"class_type": "CLIPTextEncode", "inputs": {"text": (prefix or LAYOUT) + for_drawing(description), "clip": ["2", 0]}},
         "6": {"class_type": "CLIPTextEncode", "inputs": {"text": "blurry, deformed, different objects, inconsistent, "
                                                                  "captions, watermark, hands, people", "clip": ["2", 0]}},
-        "7": {"class_type": "EmptySD3LatentImage", "inputs": {"width": W, "height": H, "batch_size": 1}},
+        "7": {"class_type": "EmptySD3LatentImage", "inputs": {"width": width or W, "height": height or H, "batch_size": 1}},
         "8": {"class_type": "KSampler", "inputs": {"model": ["4", 0], "positive": ["5", 0], "negative": ["6", 0],
                                                   "latent_image": ["7", 0], "seed": seed, "steps": steps, "cfg": cfg,
                                                   "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0}},

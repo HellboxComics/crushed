@@ -30,6 +30,8 @@ import json
 import os
 import shutil
 import subprocess
+
+import numpy as np
 import sys
 import time
 
@@ -304,10 +306,30 @@ def remaster(name, redo=False):
     sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
     import turnaround as T
     import views as Vw
+    vws = None
     try:                                  # round or a box: built exactly from the drawing, no sculptor needed
-        spec = Vw.classify(Vw.load(turn), open(words).read() if os.path.exists(words) else "")
+        vws = Vw.load(turn)
+        spec = Vw.classify(vws, open(words).read() if os.path.exists(words) else "")
     except Exception as e:
         spec = {"kind": "sculpt", "why": f"could not read the views: {e}"}
+    label = None
+    mat = (json.load(open(os.path.join(ROOT, "assets", "plan", "behavior.json"))).get(name, {}).get("mat")
+           if os.path.exists(os.path.join(ROOT, "assets", "plan", "behavior.json")) else None)
+    if spec["kind"] == "lathe" and mat in ("metal", "card", "paper", "foil") and vws:
+        label = os.path.join(WORK, name + "_label.png")   # a printed wrap (can, battery, tube): drawn flat, in one piece
+        tp = os.path.join(PROMPTS, name + ".turn.txt")
+        if not (os.path.exists(label) and os.path.exists(tp) and os.path.getmtime(label) > os.path.getmtime(tp)):
+            step(name, "2/4 drawing its printed label flat, all the way around")
+            m = vws["front"]["mask"]
+            w = np.percentile(m.sum(1)[m.any(1)], 90)
+            raw = os.path.join(WORK, name + "_label_raw.png")
+            try:
+                T.draw_label(open(tp).read() if os.path.exists(tp) else name, raw, 3.1416 * w, m.shape[0])
+                T.upscale(raw, force=True)
+                os.replace(raw, label)
+            except Exception as e:
+                say(f"label drawing failed ({e}); painting from the views")
+                label = None
     json.dump({k: v for k, v in spec.items() if k != "profile"}, open(os.path.join(WORK, name + "_shape.json"), "w"))
     shape = None
     if spec["kind"] in ("lathe", "box"):
@@ -331,7 +353,8 @@ def remaster(name, redo=False):
     extra = ["--inside", inside] if draw_inside(name, inside) else []
     step(name, "4/4 Blender: real size, one seamless paint job from all six views, review pictures")
     cmd = [PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", name, "--turn", turn,
-           "--words", words, "--out", PENDING] + (["--shape", shape] if shape else []) + extra
+           "--words", words, "--out", PENDING] + (["--shape", shape] if shape else []) + extra + \
+          (["--label", label] if label and os.path.exists(label) else [])
     r = subprocess.run(cmd, capture_output=True, text=True)
     open(os.path.join(WORK, name + "_blender.log"), "w").write(r.stdout[-20000:] + "\n" + r.stderr[-20000:])
     if r.returncode or not os.path.exists(os.path.join(out, "model.glb")):

@@ -243,7 +243,9 @@ def new_method(a, target):
         views = B.rectify_box(views, size)
     tex = B.bake(ob, views, res=a.res, use_ends=spec.get("top_view") in ("round", "box"),
                  radial=spec["kind"] == "lathe", fill3d=spec["kind"] == "sculpt",
-                 min_fit=0.8 if spec["kind"] == "sculpt" else 0.0)
+                 min_fit=0.8 if spec["kind"] == "sculpt" else 0.0,
+                 label=(np.asarray(__import__("PIL.Image", fromlist=["Image"]).open(a.label).convert("RGB"),
+                                   np.float32) / 255) if a.label and spec["kind"] == "lathe" else None)
     od = os.path.join(a.out, a.name)
     os.makedirs(od, exist_ok=True)
     from PIL import Image
@@ -417,6 +419,7 @@ def main():
     ap.add_argument("--turn", default=None, help="the raw six-view turnaround: exact shape when simple, seamless bake")
     ap.add_argument("--words", default=None, help="the description file (says round or box when the views can't)")
     ap.add_argument("--res", type=int, default=2048, help="texture size")
+    ap.add_argument("--label", default=None, help="the flat printed wrap of a round object")
     ap.add_argument("--kind", default="auto", help="auto, or sculpt to use the sculptor's shape even for a simple object")
     a = ap.parse_args(argv)
     if a.turnaround:

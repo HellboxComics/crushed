@@ -359,7 +359,7 @@ def mesh_arrays(ob):
     return V, F, uv[L], cn[L]
 
 
-def bake(ob, views_raw, res=2048, use_ends=False, radial=False, fill3d=False, min_fit=0.0, log=print):
+def bake(ob, views_raw, res=2048, use_ends=False, radial=False, fill3d=False, min_fit=0.0, label=None, log=print):
     """Paint ob from the turnaround. Tries the few ways the drawing model may have meant 'left' and turned the
     top view, keeps the one where neighboring views agree best, and bakes one seamless texture. Returns an image
     array (res x res x 3, 0..1) laid out on ob's active UV map."""
@@ -454,6 +454,8 @@ def bake(ob, views_raw, res=2048, use_ends=False, radial=False, fill3d=False, mi
             log(f"[bake] {k} view matches the model {iou:.0%}")
     per = _per_view(V, F, P, N, C, vw, lo, span, power=24, radial=radial)
     col, have = _combine(per, int(C.sum()))
+    if label is not None and radial:                    # a printed wrap: the flat label painted on in one piece
+        col = wrap_label(P[C], N[C], col, label, views_raw, V, lo, span, log)
     if not use_ends and not fill3d:                     # the ends face no drawn view: ring or edge colors
         nz = N[C][:, 2] / np.maximum(np.linalg.norm(N[C], axis=1), 1e-9)
         cap = np.abs(nz) > 0.8
@@ -546,4 +548,55 @@ def rectify_box(views, size, log=print):
         best = max(range(0, w - we + 1), key=lambda o: g[max(0, o - 2):o + 3].max() + g[max(0, o + we - 3):o + we + 2].max())
         out[k] = {"rgb": rgb[:, best:best + we].copy(), "mask": m[:, best:best + we].copy()}
         log(f"[bake] {k} view cut to its real width ({w} -> {we} px)")
+    return out
+
+
+def _seamless(lab, frac=0.03):
+    """Cross-fade the label's right edge into its left so the wrap closes without a line."""
+    k = max(2, int(lab.shape[1] * frac))
+    a = np.linspace(0, 1, k)[None, :, None]
+    out = lab[:, :-k].copy()
+    out[:, :k] = lab[:, -k:] * (1 - a) + lab[:, :k] * a
+    return out
+
+
+def wrap_label(pts, nrm, col, label, views, V, lo, span, log=print):
+    """Paint the side of a round object from its flat label. Where the label starts is found by matching it to the
+    front view (so the logo faces front as drawn); the top and bottom ends keep their colors from the views."""
+    from PIL import Image
+    lab = _seamless(np.asarray(label, np.float32))
+    Hl, Wl = lab.shape[:2]
+    c = lo + span / 2
+    rx, ry = span[0] / 2, span[1] / 2
+    rv = np.sqrt(((V[:, 0] - c[0]) / rx) ** 2 + ((V[:, 1] - c[1]) / ry) ** 2)
+    body = rv >= 0.9 * rv.max()
+    zlo, zhi = V[body, 2].min(), V[body, 2].max()
+    # 1. line the label up with the front view
+    f = views["front"]
+    m = f["mask"]
+    widths = m.sum(1)
+    rows = np.nonzero(widths >= 0.9 * widths.max())[0]
+    r0, r1 = rows.min(), rows.max() + 1
+    fv = np.asarray(Image.fromarray(f["rgb"][r0:r1]).resize((64, 96), Image.BILINEAR), np.float32) / 255
+    lv = np.asarray(Image.fromarray((lab * 255).astype(np.uint8)).resize((360, 96), Image.BILINEAR), np.float32) / 255
+    xs = (np.arange(64) + 0.5) / 64 * 2 - 1
+    use = np.abs(xs) < 0.85
+    th = np.degrees(-np.arccos(np.clip(xs, -1, 1)))         # screen position -> angle around (front sees -90)
+    best = None
+    for sft in range(360):
+        idx = np.round(th - sft).astype(int) % 360
+        err = float(((lv[:, idx][:, use] - fv[:, use]) ** 2).mean())
+        if best is None or err < best[0]:
+            best = (err, sft)
+    th0 = math.radians(best[1])
+    log(f"[bake] label wrapped on in one piece, lined up with the front view (offset {best[1]} deg)")
+    # 2. paint the side
+    n = nrm / np.maximum(np.linalg.norm(nrm, axis=1, keepdims=True), 1e-9)
+    r = np.sqrt(((pts[:, 0] - c[0]) / rx) ** 2 + ((pts[:, 1] - c[1]) / ry) ** 2)
+    side = (np.abs(n[:, 2]) < 0.6) & (r >= 0.85 * rv.max()) & (pts[:, 2] >= zlo - 1e-6) & (pts[:, 2] <= zhi + 1e-6)
+    theta = np.arctan2((pts[side, 1] - c[1]) / ry, (pts[side, 0] - c[0]) / rx)
+    u = ((theta - th0) / (2 * math.pi)) % 1.0
+    v = (pts[side, 2] - zlo) / max(zhi - zlo, 1e-9)
+    out = col.copy()
+    out[side] = _bilinear(lab, u * (Wl - 1), (1 - v) * (Hl - 1))
     return out

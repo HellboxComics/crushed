@@ -216,6 +216,7 @@ def classify(views, words=""):
         fine = [_resample(_widths(views[k]["mask"]) / max(1, _widths(views[k]["mask"]).max()), 320) for k in sides]
         p = np.median(np.stack(fine), axis=0)
         p = np.array([np.median(p[max(0, i - 2):i + 3]) for i in range(len(p))])
+        p = _smooth_keep_steps(p)
         return {**rep, "kind": "lathe", "profile": [round(float(x), 4) for x in p]}
     rads = {k: _corner_radius(sm[k]) for k in sides}
     fits = {k: _roundrect_iou(sm[k], rads[k]) for k in sides}
@@ -229,6 +230,22 @@ def classify(views, words=""):
         return {**rep, "kind": "box", "corner_front": round(r_front if r_front > 0.10 else 0.0, 4)}
     rep["why"] = "not round all the way around and not a box"
     return rep
+
+
+def _smooth_keep_steps(p, jump=0.05, win=15):
+    """Smooth the outline's pixel wobble (it showed as rings of light across a battery's label) but keep real steps
+    (a shoulder, a cap edge): the outline is split where it jumps, and each stretch is smoothed on its own."""
+    p = np.asarray(p, float)
+    cuts = [0] + [i + 1 for i in range(len(p) - 1) if abs(p[i + 1] - p[i]) > jump] + [len(p)]
+    out = p.copy()
+    for a, b in zip(cuts, cuts[1:]):
+        seg = p[a:b]
+        if len(seg) < 3:
+            continue
+        k = min(win, len(seg) | 1)
+        pad = np.pad(seg, k // 2, mode="edge")
+        out[a:b] = np.convolve(pad, np.ones(k) / k, mode="valid")
+    return out
 
 
 def _mask_small(m, most=200):
