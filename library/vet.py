@@ -65,12 +65,24 @@ Look at this photo and answer ONLY with JSON, no other words:
   "problems": "short note of anything wrong, or empty"}}"""
 
 
+def _img(path, side=1280):
+    """Photos go to the model at most 1280 px on the long side: big enough to read small print, and about
+    a fifth of the reading time of a full-size camera photo."""
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((side, side), Image.LANCZOS)
+    b = io.BytesIO()
+    im.save(b, "JPEG", quality=92)
+    return base64.b64encode(b.getvalue()).decode()
+
+
 def ask(use, text, images, think=True):
     """One question to a vision model, answer as JSON. Thinking on gives better judgment; if a model can't think,
     ask again without it rather than failing."""
     body = {"model": use, "stream": False, "format": "json", "think": think, "options": {"temperature": 0},
             "messages": [{"role": "user", "content": text,
-                          "images": [base64.b64encode(open(p, "rb").read()).decode() for p in images]}]}
+                          "images": [_img(p) for p in images]}]}
     try:
         txt = _call("/api/chat", body).get("message", {}).get("content", "{}")
     except urllib.error.HTTPError as e:

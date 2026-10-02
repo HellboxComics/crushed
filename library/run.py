@@ -38,10 +38,17 @@ def status(cid, **kw):
     s = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
     s.setdefault(cid, {}).update(kw, at=time.time())
     json.dump(s, open(STATUS, "w"), indent=1)
-    try:
-        page()
-    except Exception as e:
-        say(f"(page skipped: {e})")
+    global _LAST
+    final = kw.get("step", "").startswith(("done", "stopped", "no ")) or "ok" in kw
+    if final or time.time() - _LAST > 90:          # the phone page updates at most every 90 s, and always at the end
+        _LAST = time.time()
+        try:
+            page()
+        except Exception as e:
+            say(f"(page skipped: {e})")
+
+
+_LAST = 0.0
 
 
 def item(cid):
@@ -95,13 +102,18 @@ def pipeline(cid, redo=False):
         if f not in todo:
             f["vet"] = old[f["file"]]["vet"]
     if quick and len(todo) > 16:                         # many photos: the small model throws out the obvious misses
-        for f in todo:
+        for k, f in enumerate(todo, 1):
             f["quick"] = V.vet(f["file"], product, era, quick, think=False) or {}
+            say(f"[quick look {k}/{len(todo)}] {os.path.basename(f['file'])}: match {f['quick'].get('match')}, "
+                f"era ok {f['quick'].get('era_ok')}, {f['quick'].get('view')}")
+            if k % 10 == 0:
+                status(cid, step=f"3/6 quick look: {k} of {len(todo)} photos")
         todo.sort(key=lambda f: -(f["quick"].get("match", 0) + 3 * (f["quick"].get("era_ok") is True)))
         for f in todo[16:]:
             f["vet"] = dict(f["quick"], note="only the quick look")
         todo = todo[:16]
-    for f in todo:
+    for k, f in enumerate(todo, 1):
+        status(cid, step=f"3/6 {use} judges the best photos carefully: {k} of {len(todo)}")
         f["vet"] = V.vet(f["file"], product, era, use)
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
     json.dump(found, open(vj, "w"), indent=1)
