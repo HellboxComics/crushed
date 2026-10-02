@@ -325,8 +325,23 @@ def draw_label(description, out, circumference, height, photos=None):
     w, h = label_size(circumference, height)
     if photos and can_edit():
         return draw_from_photos(description, photos, out, width=w, height=h,
-                                prefix="Picture 1 is a real photograph of a real product. " + LABEL)
+                                prefix=("Picture 1 is a real photograph of a real product. Do NOT draw the product itself: no "
+                                        "can, no battery, no bottle, no ends, no shadow. Peel its printed label off in "
+                                        "your mind and show only that, laid perfectly flat. " + LABEL))
     return draw(description, out, width=w, height=h, prefix=LABEL)
+
+
+def flat_label_ok(png):
+    """True when a drawn label really is a flat print filling the picture. False when the model drew the product
+    standing on a background instead (light, plain, grey-white margins around it), which wrapped onto a can or a
+    battery shows as a picture of the product inside a white tube."""
+    import numpy as np
+    from PIL import Image
+    a = np.asarray(Image.open(png).convert("RGB").resize((400, 400))).astype(int)
+    e = 14
+    border = np.concatenate([a[:e].reshape(-1, 3), a[-e:].reshape(-1, 3), a[:, :e].reshape(-1, 3), a[:, -e:].reshape(-1, 3)])
+    plain = (border.min(1) > 175) & (border.max(1) - border.min(1) < 20)
+    return plain.mean() < 0.25
 
 
 def upscale(png, timeout=900, force=False):

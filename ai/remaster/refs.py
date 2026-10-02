@@ -26,6 +26,7 @@ PROMPTS = os.path.join(HERE, "prompts")
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 REFS = os.path.join(WORK, "refs")
 UA = "crushed-remaster/1.0 (reference photos for a 3D art project)"
+SOURCES = "off+commons+openverse"
 OK_LICENSES = ("cc0", "pdm", "public domain", "by", "by-sa", "cc by", "cc-by", "cc by-sa", "cc-by-sa")
 
 
@@ -78,6 +79,26 @@ def openverse(q, n=6):
         if r.get("url"):
             out.append({"url": r["url"], "page": r.get("foreign_landing_url", ""), "license": r.get("license", ""),
                         "by": r.get("creator", "") or "", "from": "Openverse"})
+    return out
+
+
+def openfoodfacts(q, n=6):
+    """Open Food Facts (search.openfoodfacts.org, its full-text search): real photos of packaged products that
+    shoppers upload, mostly the front of the box/bag/can. CC BY-SA. Current packaging, not always the old one."""
+    u = "https://search.openfoodfacts.org/search?" + urllib.parse.urlencode(
+        {"q": q, "page_size": n, "fields": "code,product_name,brands,image_front_url"})
+    out = []
+    try:
+        hits = json.loads(_get(u)).get("hits", [])
+    except Exception:
+        return out
+    for h in hits:
+        img = h.get("image_front_url") or ""
+        if not img:
+            continue
+        out.append({"url": re.sub(r"\.\d+\.jpg$", ".full.jpg", img),
+                    "page": f"https://world.openfoodfacts.org/product/{h.get('code', '')}",
+                    "license": "cc by-sa", "by": "Open Food Facts contributors", "from": "Open Food Facts"})
     return out
 
 
@@ -154,7 +175,7 @@ def candidates(name, display="", most=12):
     seen, got = set(), []
     for q in queries(name, display):
         per = 0
-        for f in commons(q, n=8) + openverse(q, n=8):
+        for f in openfoodfacts(q, n=6) + commons(q, n=8) + openverse(q, n=8):
             if len(got) >= most or per >= 4:            # a few from each search, so one weak search can't fill it
                 break
             if f["url"] in seen or not any(k in f["license"].lower() for k in OK_LICENSES):
@@ -224,9 +245,11 @@ def choose(name, display="", looks="", keep=2, need=7.0):
         return mine[:3], "your photo"
     d = os.path.join(REFS, name)
     vj = os.path.join(d, "vet.json")
-    if os.path.exists(vj):
-        v = json.load(open(vj))
-    else:
+    v = json.load(open(vj)) if os.path.exists(vj) else {}
+    if v.get("sources") != SOURCES:       # searched before Open Food Facts was added (or the check never ran): again
+        for f in (os.listdir(d) if os.path.isdir(d) else []):
+            if f.startswith("cand"):
+                os.remove(os.path.join(d, f))
         cands = candidates(name, display)
         if not cands:
             v = {"picked": [], "why": "no photos found in the free libraries", "scores": []}
@@ -239,6 +262,8 @@ def choose(name, display="", looks="", keep=2, need=7.0):
             v = {"picked": picked, "why": "" if picked else f"no photo scored {need:.0f}+ for this exact product",
                  "scores": [{"score": sc, **{k: c[k] for k in ("file", "page", "license", "by", "from", "query")}}
                             for sc, c in scores]}
+        if v.get("why") != "the vision model isn't available to check the photos":
+            v["sources"] = SOURCES
         json.dump(v, open(vj, "w"), indent=1)
     picked = [p for p in v["picked"] if os.path.exists(p)]
     return (picked, "found and checked") if picked else ([], v.get("why", "no reference"))

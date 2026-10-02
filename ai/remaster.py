@@ -342,9 +342,16 @@ def remaster(name, redo=False):
             w = np.percentile(m.sum(1)[m.any(1)], 90)
             raw = os.path.join(WORK, name + "_label_raw.png")
             try:
-                T.draw_label(open(tp).read() if os.path.exists(tp) else name, raw, 3.1416 * w, m.shape[0],
-                             photos=json.load(open(os.path.join(WORK, name + "_refs.json"))).get("photos")
-                             if os.path.exists(os.path.join(WORK, name + "_refs.json")) else None)
+                ph = (json.load(open(os.path.join(WORK, name + "_refs.json"))).get("photos")
+                      if os.path.exists(os.path.join(WORK, name + "_refs.json")) else None)
+                for tries in range(2):        # a picture of the product on a background is not a label: draw again
+                    T.draw_label(open(tp).read() if os.path.exists(tp) else name, raw, 3.1416 * w, m.shape[0],
+                                 photos=ph)
+                    if T.flat_label_ok(raw):
+                        break
+                    say("the label came out as a picture of the product, not a flat label: drawing it again")
+                else:
+                    raise RuntimeError("no flat label after 2 tries")
                 T.upscale(raw, force=True)
                 os.replace(raw, label)
             except Exception as e:
