@@ -288,13 +288,53 @@ ENDS = ("Picture 1 shows this exact object from the front, the left, the back an
         "captions, no text outside the object, no perspective, no other objects. The object: ")
 
 
-def draw_from_photos_six(description, photos, out, seed=None):
+def sides_only(description):
+    """The words for the four side views: anything said to be underneath or on the bottom is left out, because
+    the drawing model puts every detail it is told about somewhere it can see (the Furby's battery door landed on
+    its back)."""
+    import re
+    parts = re.split(r"(?<=[,.;])\s+", description)
+    keep = [p for p in parts if not re.search(r"underneath|underside|bottom|\bbase\b|beneath", p, re.I)]
+    text = " ".join(keep).strip()
+    return text if len(text) > 40 else description
+
+
+def _silhouette(im):
+    """Rough object mask of one cell: what differs from the plain background in its corners."""
+    import numpy as np
+    a = np.asarray(im.convert("RGB").resize((256, 256))).astype(int)
+    bg = np.median(np.concatenate([a[:8, :8], a[:8, -8:], a[-8:, :8], a[-8:, -8:]]).reshape(-1, 3), 0)
+    return np.abs(a - bg).sum(-1) > 45
+
+
+def _iou(a, b):
+    return (a & b).sum() / max(1, (a | b).sum())
+
+
+def photo_front(path, C):
+    """The real photo itself as the front view (no redraw can beat the real thing): centered on the plain sheet
+    background, the object filling the cell the way the drawn views do."""
+    from PIL import Image
+    import numpy as np
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((int(C * 0.92), int(C * 0.92)), Image.LANCZOS)
+    a = np.asarray(im)
+    bg = tuple(int(v) for v in np.median(np.concatenate([a[:6, :6], a[:6, -6:], a[-6:, :6], a[-6:, -6:]]).reshape(-1, 3), 0))
+    cell = Image.new("RGB", (C, C), bg)            # the photo's own background color around it, no hard frame
+    cell.paste(im, ((C - im.width) // 2, (C - im.height) // 2))
+    return cell
+
+
+def draw_from_photos_six(description, photos, out, seed=None, front_is_photo=False):
     """Six views in two drawings, because one drawing of six cells kept putting the underside's battery door on
-    the top and the back: first the four side views from the photo, then the top and the bottom drawn while
-    looking at those four sides and the photo. Put together into the usual 3 by 2 sheet."""
+    the top and the back: first the four side views from the photo (told nothing about the underside), then the
+    top and the bottom drawn while looking at those four sides and the photo. When the real photo is a straight
+    front view it IS the front view. The two side views are checked to face opposite ways (the model sometimes
+    draws both facing the same way); a same-facing right view is mirrored. Put together into the 3 by 2 sheet."""
     from PIL import Image
     tmp_a, tmp_b = out[:-4] + "_sides.png", out[:-4] + "_ends.png"
-    draw_from_photos(description, photos, tmp_a, width=1328, height=1328, prefix=FROM_PHOTO + SIDES, seed=seed)
+    draw_from_photos(sides_only(description), photos, tmp_a, width=1328, height=1328,
+                     prefix=FROM_PHOTO + SIDES, seed=seed)
     draw_from_photos(description, [tmp_a] + list(photos[:2]), tmp_b, width=1600, height=800, prefix=ENDS, seed=seed)
     a, b = Image.open(tmp_a).convert("RGB"), Image.open(tmp_b).convert("RGB")
     C = H // 2
@@ -302,12 +342,19 @@ def draw_from_photos_six(description, photos, out, seed=None):
     cells = {"front": a.crop((0, 0, wa, ha)), "left": a.crop((wa, 0, 2 * wa, ha)),
              "back": a.crop((0, ha, wa, 2 * ha)), "right": a.crop((wa, ha, 2 * wa, 2 * ha)),
              "top": b.crop((0, 0, wb, hb)), "bottom": b.crop((wb, 0, 2 * wb, hb))}
+    cells = {k: v.resize((C, C), Image.LANCZOS) for k, v in cells.items()}
+    L, R = _silhouette(cells["left"]), _silhouette(cells["right"])
+    same, mirrored = _iou(L, R), _iou(L, R[:, ::-1])
+    if same > mirrored + 0.05:
+        print(f"  the two side views faced the same way ({same:.2f} vs {mirrored:.2f}): right view mirrored", flush=True)
+        cells["right"] = cells["right"].transpose(Image.FLIP_LEFT_RIGHT)
+    if front_is_photo:
+        cells["front"] = photo_front(photos[0], C)
     sheet = Image.new("RGB", (3 * C, 2 * C), (235, 235, 235))
     for i, k in enumerate(ORDER):
-        sheet.paste(cells[k].resize((C, C), Image.LANCZOS), ((i % 3) * C, (i // 3) * C))
+        sheet.paste(cells[k], ((i % 3) * C, (i // 3) * C))
     sheet.save(out)
     return out
-
 
 def label_size(circumference, height):
     """A drawing size with the label's real proportions (about 1.6 megapixels, multiples of 16)."""

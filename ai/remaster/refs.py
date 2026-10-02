@@ -269,6 +269,20 @@ def choose(name, display="", looks="", keep=2, need=7.0):
     return (picked, "found and checked") if picked else ([], v.get("why", "no reference"))
 
 
+def is_front(path, display):
+    """True when the photo shows the object straight from the front (not at an angle, not from above), so it can
+    be used as the front view itself."""
+    import base64
+    q = (f"Product: {display}. Does this photo show it straight-on from the front, the camera level and square to "
+         "its front (not turned at an angle, not from above or below), the whole object visible? Answer yes or no.")
+    try:
+        body = {"model": VISION, "stream": False, "options": {"temperature": 0},
+                "messages": [{"role": "user", "content": q, "images": [base64.b64encode(open(path, "rb").read()).decode()]}]}
+        return json.loads(_ollama("/api/chat", body)).get("message", {}).get("content", "").strip().lower().startswith("yes")
+    except Exception:
+        return False
+
+
 def main():
     args = sys.argv[1:]
     if args == ["--all"]:

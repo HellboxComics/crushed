@@ -281,7 +281,7 @@ def turnaround_sheet(name, redo=False):
     photos, how = R.choose(name, plan.get("display") or cat.get("display", name), seed)
     howp = os.path.join(WORK, name + "_turn.how")
     drawn = open(howp).read().strip() if os.path.exists(howp) else "words"
-    if photos and T.can_edit() and drawn != "photo6":
+    if photos and T.can_edit() and drawn != "photo7":
         fresh = False                     # a word-guessed or one-pass photo drawing is replaced by the two-pass one
     json.dump({"photos": photos, "how": how}, open(os.path.join(WORK, name + "_refs.json"), "w"))
     if photos and not T.can_edit():
@@ -289,8 +289,9 @@ def turnaround_sheet(name, redo=False):
     if not fresh:                         # a drawing newer than its words is reused; delete the png to draw again
         if photos and T.can_edit():
             step(name, f"1/4 drawing all six sides from the real photo ({how})")
-            T.draw_from_photos_six(desc, photos, turn)
-            open(howp, "w").write("photo6")
+            front = R.ensure_vision() and R.is_front(photos[0], plan.get("display") or cat.get("display", name))
+            T.draw_from_photos_six(desc, photos, turn, front_is_photo=front)
+            open(howp, "w").write("photo7")
         else:
             T.draw(desc, turn)
             open(howp, "w").write("words")
