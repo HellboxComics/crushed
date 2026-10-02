@@ -173,7 +173,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
             json.dump(spec, open(sp, "w"), indent=1)
         along, around = skin.label_size(spec)
         same = same_design(picked, others, use)
-        status(cid, step=f"5/7 the AI draws the flat label from {1 + len(same)} photos ({along:.0f} x {around:.0f} mm)")
+        status(cid, step=f"5/7 texture map: the label from your photo's real pixels, laid on the UV map ({along:.0f} x {around:.0f} mm)")
         reads = spec.get("label_reads") or card.get("label_reads") or "around"
         make_room("drawing")
         lab_png, _ = skin.make(product, [picked] + same, along, around, os.path.join(d, "skin"),
@@ -181,7 +181,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         base, mr = metal.metal_maps(Image.open(lab_png).convert("RGB"))
         base.save(os.path.join(d, "label.png"))
         mr.save(os.path.join(d, "label_mr.png"))
-        status(cid, step="5/7 Blender builds the exact shape wearing the label")
+        status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
         for ext in ("glb", "fbx", "usdc", "blend"):
             if os.path.exists(os.path.join(mdir, spec["id"] + "." + ext)):
@@ -192,11 +192,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         if route == "flat":
             D = min(D, 0.002)
         same = same_design(picked, others, use, want=5)
-        status(cid, step="5/7 the AI draws every face flat at its measured size")
+        status(cid, step="5/7 texture map: every box face at its measured size")
         make_room("drawing")
         atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
                                    flat=route == "flat", judge=use, log=say)
-        status(cid, step="5/7 Blender builds the exact box wearing its faces")
+        status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
                     "0.3" if route == "flat" else "0.6")
     else:
@@ -469,7 +469,7 @@ def same_design(picked, others, use, want=2):
             pass
         if len(out) >= want:
             break
-    say(f"[skin] same design as your pick: {len(out)} more photo(s)")
+    say(f"[texture] same design as your pick: {len(out)} more photo(s)")
     return out
 
 

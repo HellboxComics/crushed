@@ -1,4 +1,5 @@
-"""THE SKIN: one flat, perfect, print-ready label for an exact shape, made from real photos.
+"""THE TEXTURE MAP: the flat image laid on an exact mesh's UV map (the battery's label rectangle, a box's six
+faces), made from real photos.
 
 Each tool does only what it is best at:
   1. measure   the label's true size comes from the exact shape (an AA's label: 49.4 mm long, 45.6 mm around)
@@ -200,7 +201,7 @@ def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=1, 
     gaps = cov < 0.05
     real = os.path.join(out_dir, "label_real.png")
     Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(real)
-    log(f"[skin] real pixels cover {(~gaps).mean():.0%} of the label")
+    log(f"[texture] real pixels cover {(~gaps).mean():.0%} of the label")
     out = os.path.join(out_dir, "label.png")
     if gaps.mean() > 0.01:
         from scipy import ndimage
@@ -215,7 +216,7 @@ def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=1, 
         src, mp = os.path.join(out_dir, "fill_src.png"), os.path.join(out_dir, "fill_mask.png")
         img.resize((w, h), Image.LANCZOS).save(src)
         msk.resize((w, h), Image.NEAREST).save(mp)
-        log(f"[skin] the AI fills the {gaps.mean():.0%} nobody photographed ({w}x{h})")
+        log(f"[texture] the AI fills the {gaps.mean():.0%} nobody photographed ({w}x{h})")
         done = os.path.join(out_dir, "filled.png")
         fill(product, src, mp, done)
         got = Image.open(done).convert("RGB")
@@ -226,14 +227,14 @@ def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=1, 
     Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(out)
     clean = os.path.join(out_dir, "cleaned.png")
     try:
-        log("[skin] the AI cleans off glare and shine (an edit: everything else kept)")
+        log("[texture] the AI cleans off glare and shine (an edit: everything else kept)")
         cleanup(product, out, clean, reads)
         if same_words(out, clean, judge, log):
             Image.open(clean).convert("RGB").resize(Image.open(out).size, Image.LANCZOS).save(out)
         else:
-            log("[skin] the clean-up changed some words - kept the real-pixel label instead")
+            log("[texture] the clean-up changed some words - kept the real-pixel label instead")
     except Exception as e:
-        log(f"[skin] clean-up skipped: {e}")
+        log(f"[texture] clean-up skipped: {e}")
     T.upscale(out, force=True)
     return out, float((~gaps).mean())
 
@@ -268,13 +269,13 @@ def same_words(a, b, judge=None, log=print):
         wa = [w.lower() for w in V.ask(judge, q, [a], think=False).get("words", []) if isinstance(w, str)]
         wb = [w.lower() for w in V.ask(judge, q, [b], think=False).get("words", []) if isinstance(w, str)]
     except Exception as e:
-        log(f"[skin] could not read the words: {e}")
+        log(f"[texture] could not read the words: {e}")
         return False
     if not wa:
         return True
     keep = sum(1 for w in wa if w in wb) / len(wa)
     extra = sum(1 for w in wb if w not in wa) / max(len(wb), 1)
-    log(f"[skin] words kept {keep:.0%}, new words {extra:.0%}")
+    log(f"[texture] words kept {keep:.0%}, new words {extra:.0%}")
     return keep >= 0.85 and extra <= 0.15
 
 
@@ -351,7 +352,7 @@ def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, ju
         out = os.path.join(out_dir, f"{side}.png")
         Image.open(imgs[0]).convert("RGB").save(out)
         T.upscale(out, force=True)
-        log(f"[skin] {side}: real photo, straightened to {w_mm:.0f} x {h_mm:.0f} mm")
+        log(f"[texture] {side}: real photo, straightened to {w_mm:.0f} x {h_mm:.0f} mm")
         return out
     prefix = FACE_NEW.format(side=side)
     if not front:
@@ -361,7 +362,7 @@ def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, ju
     best, best_score = None, -1
     for t in range(tries):
         png = os.path.join(out_dir, f"{side}_try{t + 1}.png")
-        log(f"[skin] {side}: Qwen-Image-Edit draws it flat, {w}x{h} ({w_mm:.0f} x {h_mm:.0f} mm), try {t + 1}")
+        log(f"[texture] {side}: Qwen-Image-Edit draws it flat, {w}x{h} ({w_mm:.0f} x {h_mm:.0f} mm), try {t + 1}")
         T.draw_from_photos(product, imgs, png, width=w, height=h, prefix=prefix, seed=2000 + t)
         try:
             v = V.ask(judge, JUDGE.format(product=product).replace("flat printed label", f"flat printed {side} panel"),
@@ -369,7 +370,7 @@ def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, ju
         except Exception as e:
             v = {"flat_label": False, "problems": f"could not judge: {e}"}
         score = (v.get("same_design", 0) + (3 if v.get("crisp") else 0)) if v.get("flat_label") else -1
-        log(f"[skin] {side} try {t + 1}: {json.dumps(v)[:160]}")
+        log(f"[texture] {side} try {t + 1}: {json.dumps(v)[:160]}")
         if score > best_score:
             best, best_score = png, score
         if score >= 11:
