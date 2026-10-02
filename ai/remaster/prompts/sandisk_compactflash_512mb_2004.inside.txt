@@ -1,0 +1,1 @@
+NAND flash chips, controller, connector pins, PCB and molded shell

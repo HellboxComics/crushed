@@ -29,6 +29,16 @@
 0.18
 ]
 },
+"3m_masking_tape_1in_1998": {
+"hard": 0.2,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.11,
+0.025,
+0.11
+]
+},
 "3m_velcro_hook_loop_coins_1998": {
 "hard": 0.18,
 "how": "fold",
@@ -57,6 +67,16 @@
 0.3,
 0.15,
 0.2
+]
+},
+"ace_household_scissors_8in_1998": {
+"hard": 0.62,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.08,
+0.015,
+0.21
 ]
 },
 "adidas_snap_pants_black_white_1998": {
@@ -129,6 +149,16 @@
 0.125
 ]
 },
+"allsop_3_in_1_cassette_cleaner_1996": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
+]
+},
 "alpine_cda7832_car_cd_receiver_1997": {
 "hard": 0.76,
 "how": "dent",
@@ -177,6 +207,26 @@
 0.18,
 0.1,
 0.22
+]
+},
+"american_gold_eagle_1oz_1999": {
+"hard": 0.98,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0327,
+0.0028,
+0.0327
+]
+},
+"american_gold_eagle_1oz_2008": {
+"hard": 0.98,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0327,
+0.0028,
+0.0327
 ]
 },
 "american_pie_vhs_2000": {
@@ -269,6 +319,16 @@
 0.4
 ]
 },
+"apple_iphone_x_space_gray_2017": {
+"hard": 0.72,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.071,
+0.0077,
+0.144
+]
+},
 "apple_ipod_1st_gen_2001": {
 "hard": 0.66,
 "how": "snap",
@@ -299,6 +359,16 @@
 0.091
 ]
 },
+"apple_ipod_mini_silver_2004": {
+"hard": 0.66,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.051,
+0.013,
+0.091
+]
+},
 "apple_ipod_nano_1st_black_2005": {
 "hard": 0.56,
 "how": "snap",
@@ -307,6 +377,16 @@
 0.041,
 0.0069,
 0.09
+]
+},
+"apple_magsafe_60w_adapter_2008": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.074,
+0.029,
+0.074
 ]
 },
 "apple_powermac_g3_bluewhite_1999": {
@@ -369,6 +449,26 @@
 0.1023
 ]
 },
+"assorted_aa_battery_doors_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.005,
+0.08
+]
+},
+"assorted_junk_drawer_screw_jar_1998": {
+"hard": 0.76,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.055,
+0.055,
+0.085
+]
+},
 "assorted_key_ring_1998": {
 "hard": 0.72,
 "how": "fold",
@@ -377,6 +477,16 @@
 0.04,
 0.02,
 0.09
+]
+},
+"assorted_takeout_condiment_packets_1998": {
+"hard": 0.08,
+"how": "squish",
+"mat": "foil",
+"size": [
+0.06,
+0.004,
+0.08
 ]
 },
 "astroglide_2_5oz_1998": {
@@ -447,6 +557,16 @@
 0.24,
 0.1603,
 0.0069
+]
+},
+"audiovox_d1708_portable_dvd_2004": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.22,
+0.17,
+0.05
 ]
 },
 "austin_powers_vhs_1998": {
@@ -929,6 +1049,16 @@
 0.013
 ]
 },
+"bell_25ft_phone_extension_cord_1998": {
+"hard": 0.16,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.077,
+0.077,
+0.0308
+]
+},
 "bellsouth_caller_id_box_1998": {
 "hard": 0.48,
 "how": "snap",
@@ -947,6 +1077,16 @@
 0.015,
 0.015,
 0.145
+]
+},
+"bic_classic_lighter_clear_blue_1998": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.025,
+0.014,
+0.081
 ]
 },
 "bic_cristal_blue_10pack_1995": {
@@ -1039,6 +1179,16 @@
 0.0395
 ]
 },
+"binder_clips_assorted_12pack_1999": {
+"hard": 0.42,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.09,
+0.03,
+0.12
+]
+},
 "bkr_sticker": {
 "hard": 0.3,
 "how": "fold",
@@ -1127,6 +1277,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"blank_common_stock_certificate_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.28,
+0.0005,
+0.215
 ]
 },
 "blink182_enema_of_the_state_cd_1999": {
@@ -1249,6 +1409,16 @@
 0.28
 ]
 },
+"brass_market_bull_desk_figurine_1999": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.18,
+0.07,
+0.11
+]
+},
 "brass_pog_slammer_1994": {
 "hard": 0.84,
 "how": "dent",
@@ -1257,6 +1427,26 @@
 0.041,
 0.004,
 0.041
+]
+},
+"brass_thumbtacks_100box_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.025,
+0.08
+]
+},
+"bread_bag_clips_assorted_1998": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.002,
+0.03
 ]
 },
 "brick_game": {
@@ -1299,6 +1489,16 @@
 0.1577
 ]
 },
+"brooks_brothers_red_silk_tie_1999": {
+"hard": 0.16,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.09,
+0.008,
+1.45
+]
+},
 "brown_magazine_privacy_sleeve_1998": {
 "hard": 0.08,
 "how": "crumple",
@@ -1307,6 +1507,16 @@
 0.22,
 0.002,
 0.285
+]
+},
+"brown_market_bear_figurine_1999": {
+"hard": 0.88,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.15,
+0.07,
+0.1
 ]
 },
 "bubble_jug_tropical_fruit_1994": {
@@ -1579,6 +1789,16 @@
 0.18
 ]
 },
+"carmex_classic_jar_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.038,
+0.038,
+0.03
+]
+},
 "case_logic_12cassette_car_case_1995": {
 "hard": 0.22,
 "how": "fold",
@@ -1607,6 +1827,16 @@
 0.16,
 0.05,
 0.16
+]
+},
+"casio_calculator_watch_ca53w_1998": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.043,
+0.012,
+0.25
 ]
 },
 "casio_fx300ms_1999": {
@@ -1647,6 +1877,16 @@
 0.2387,
 0.1372,
 0.0125
+]
+},
+"cassette_record_tab_scotch_patch_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.012,
+0.0005,
+0.015
 ]
 },
 "cast_away_vhs_2001": {
@@ -1759,6 +1999,16 @@
 0.72
 ]
 },
+"chapstick_original_black_1998": {
+"hard": 0.26,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.017,
+0.017,
+0.07
+]
+},
 "charger_brick": {
 "hard": 0.7,
 "how": "snap",
@@ -1827,6 +2077,16 @@
 0.09,
 0.006,
 0.17
+]
+},
+"chinese_takeout_carton_white_1998": {
+"hard": 0.2,
+"how": "fold",
+"mat": "card",
+"size": [
+0.1,
+0.08,
+0.1
 ]
 },
 "chip_bag_3d": {
@@ -2029,6 +2289,26 @@
 0.0158
 ]
 },
+"clear_compact_cassette_case_1998": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.109,
+0.017,
+0.07
+]
+},
+"clear_deli_container_16oz_1999": {
+"hard": 0.2,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.12,
+0.12,
+0.07
+]
+},
 "clear_phone_neon_cords_1995": {
 "hard": 0.54,
 "how": "snap",
@@ -2037,6 +2317,16 @@
 0.18,
 0.18,
 0.1
+]
+},
+"clear_push_pins_100box_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.025,
+0.08
 ]
 },
 "clearblue_easy_pregnancy_test_1998": {
@@ -2199,6 +2489,16 @@
 0.41
 ]
 },
+"compaq_presario_mv520_crt_1999": {
+"hard": 0.74,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.38,
+0.41,
+0.38
+]
+},
 "composite_av_cable_1998": {
 "hard": 0.3,
 "how": "fold",
@@ -2299,6 +2599,16 @@
 0.168
 ]
 },
+"corrugated_pizza_box_slice_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.35,
+0.35,
+0.04
+]
+},
 "costume_mask": {
 "hard": 0.3,
 "how": "fold",
@@ -2319,6 +2629,16 @@
 0.0675
 ]
 },
+"country_crock_margarine_tub_reused_1998": {
+"hard": 0.22,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.13,
+0.1,
+0.09
+]
+},
 "cow_box": {
 "hard": 0.3,
 "how": "fold",
@@ -2337,6 +2657,16 @@
 0.066,
 0.115,
 0.0175
+]
+},
+"cracked_smoke_cassette_case_1996": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.109,
+0.017,
+0.07
 ]
 },
 "craftsman_4in1_screwdriver_1998": {
@@ -2509,6 +2839,26 @@
 0.0298
 ]
 },
+"crumpled_peak_market_chart_2021": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
+]
+},
+"crumpled_storage_price_chart_2010": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
+]
+},
 "crystal_cola": {
 "hard": 0.6,
 "how": "snap",
@@ -2589,6 +2939,16 @@
 0.42
 ]
 },
+"dell_pa10_90w_adapter_2005": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.058,
+0.032,
+0.135
+]
+},
 "denon_hd8_90_1990": {
 "hard": 0.6,
 "how": "snap",
@@ -2627,6 +2987,16 @@
 0.0513,
 0.0513,
 0.0295
+]
+},
+"diamond_hands_paper_cutout_2021": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.18,
+0.0005,
+0.24
 ]
 },
 "diamond_rio_pmp300_1998": {
@@ -2959,6 +3329,16 @@
 0.095
 ]
 },
+"duracell_aa_4pack_blister_1998": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.02,
+0.125
+]
+},
 "duracell_c_cell_2pack_1996": {
 "hard": 0.34,
 "how": "fold",
@@ -2997,6 +3377,16 @@
 0.085,
 0.016,
 0.12
+]
+},
+"duracell_coppertop_aa_1998": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0145,
+0.0145,
+0.0505
 ]
 },
 "duracell_coppertop_aaa4_1997": {
@@ -3057,6 +3447,26 @@
 0.135,
 0.19,
 0.0149
+]
+},
+"dymo_1570_embossing_labelmaker_1997": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.05,
+0.19
+]
+},
+"dymo_black_embossing_tape_3_8_1997": {
+"hard": 0.24,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.055,
+0.01,
+0.055
 ]
 },
 "earbuds_case": {
@@ -3239,6 +3649,26 @@
 0.12
 ]
 },
+"energizer_aa_4pack_blister_1998": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.02,
+0.125
+]
+},
+"energizer_aa_black_silver_1998": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0145,
+0.0145,
+0.0505
+]
+},
 "energizer_aaa4_1998": {
 "hard": 0.32,
 "how": "fold",
@@ -3329,6 +3759,16 @@
 0.19
 ]
 },
+"estes_alpha_iii_broken_rocket_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.041,
+0.041,
+0.56
+]
+},
 "et_extra_terrestrial_vhs_1988": {
 "hard": 0.72,
 "how": "snap",
@@ -3347,6 +3787,16 @@
 0.23,
 0.035,
 0.175
+]
+},
+"etrade_trade_confirmation_1999": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
 ]
 },
 "eveready_economy_flashlight_red_1997": {
@@ -3477,6 +3927,16 @@
 0.107,
 0.073,
 0.0163
+]
+},
+"fellowes_3_5_floppy_storage_box_1998": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.11,
+0.11
 ]
 },
 "felt_pennant": {
@@ -3757,6 +4217,16 @@
 0.056,
 0.056,
 0.0032
+]
+},
+"folded_mixtape_tracklist_note_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.21
 ]
 },
 "football_sticker": {
@@ -4149,6 +4619,16 @@
 0.42
 ]
 },
+"gateway_500se_tower_2003": {
+"hard": 0.82,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.19,
+0.43,
+0.42
+]
+},
 "gb_pocket": {
 "hard": 0.7,
 "how": "snap",
@@ -4209,6 +4689,16 @@
 0.18
 ]
 },
+"ge_7_4812_clock_radio_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.19,
+0.12,
+0.07
+]
+},
 "ge_c7_multicolor_christmas_lights_1998": {
 "hard": 0.44,
 "how": "snap",
@@ -4217,6 +4707,16 @@
 0.4954,
 0.4954,
 0.1982
+]
+},
+"ge_clear_night_light_1998": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.04,
+0.08
 ]
 },
 "ge_orange_purple_mini_lights_1998": {
@@ -4249,6 +4749,16 @@
 0.014
 ]
 },
+"gem_no1_paperclips_100box_1998": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.07,
+0.03,
+0.04
+]
+},
 "generic_cassette_case_1991": {
 "hard": 0.62,
 "how": "snap",
@@ -4267,6 +4777,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"generic_foam_takeout_clamshell_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "foam",
+"size": [
+0.23,
+0.21,
+0.08
 ]
 },
 "generic_rj11_phone_cord_1996": {
@@ -4317,6 +4837,16 @@
 0.05,
 0.02,
 0.055
+]
+},
+"glad_sandwich_bags_50ct_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.19,
+0.05,
+0.08
 ]
 },
 "gladiator_vhs_2000": {
@@ -4749,6 +5279,56 @@
 0.122
 ]
 },
+"handwritten_breakup_mixtape_maxell_xlii90_1998": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
+]
+},
+"handwritten_cassette_jcard_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.101,
+0.0005,
+0.104
+]
+},
+"handwritten_fridge_grocery_list_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0005,
+0.15
+]
+},
+"handwritten_market_order_ticket_1999": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
+0.2
+]
+},
+"handwritten_seed_backup_envelope_2017": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.16,
+0.003,
+0.23
+]
+},
 "hardware_wallet": {
 "hard": 0.35,
 "how": "fold",
@@ -4867,6 +5447,26 @@
 0.12,
 0.0184,
 0.0212
+]
+},
+"hillman_picture_hanging_kit_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.02,
+0.18
+]
+},
+"hitachi_travelstar_60gb_2004": {
+"hard": 0.86,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.07,
+0.0095,
+0.1
 ]
 },
 "hitclips_micro_player_2000": {
@@ -5029,6 +5629,16 @@
 0.0049
 ]
 },
+"hp_12c_financial_calculator_1998": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.015,
+0.129
+]
+},
 "hp_51629a_black_ink_1996": {
 "hard": 0.5,
 "how": "snap",
@@ -5127,6 +5737,16 @@
 0.45,
 0.0015,
 0.051
+]
+},
+"ikea_rusch_wall_clock_1999": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.25,
+0.04,
+0.25
 ]
 },
 "im_stickers": {
@@ -5489,6 +6109,16 @@
 0.125
 ]
 },
+"kingston_datatraveler_1gb_2005": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.021,
+0.009,
+0.067
+]
+},
 "kinkeshi": {
 "hard": 0.2,
 "how": "squish",
@@ -5519,6 +6149,26 @@
 0.25
 ]
 },
+"kodak_advantix_aps_25exp_1998": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.039,
+0.021,
+0.047
+]
+},
+"kodak_advantix_f200_1998": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.115,
+0.04,
+0.065
+]
+},
 "kodak_cr123a_2pack_1999": {
 "hard": 0.32,
 "how": "fold",
@@ -5536,6 +6186,16 @@
 "size": [
 0.126,
 0.054,
+0.081
+]
+},
+"kodak_dc215_zoom_1999": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.124,
+0.064,
 0.081
 ]
 },
@@ -5557,6 +6217,16 @@
 0.03,
 0.03,
 0.053
+]
+},
+"kodak_max_aa_1999": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0145,
+0.0145,
+0.0505
 ]
 },
 "konami_ddr_dance_pad_ps1_1999": {
@@ -5649,6 +6319,16 @@
 0.19
 ]
 },
+"krazy_glue_all_purpose_tube_1998": {
+"hard": 0.28,
+"how": "crumple",
+"mat": "metal",
+"size": [
+0.02,
+0.015,
+0.1
+]
+},
 "kudos_mms_granola_bar_1996": {
 "hard": 0.08,
 "how": "crumple",
@@ -5669,6 +6349,16 @@
 0.0766
 ]
 },
+"kwikset_kw1_brass_key_blank_1998": {
+"hard": 0.7,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.024,
+0.002,
+0.058
+]
+},
 "ky_jelly_2oz_1998": {
 "hard": 0.26,
 "how": "squish",
@@ -5687,6 +6377,16 @@
 0.08,
 0.1,
 0.25
+]
+},
+"lacie_rugged_500gb_2009": {
+"hard": 0.58,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.09,
+0.0275,
+0.142
 ]
 },
 "lady_gaga_the_fame_cd_2008": {
@@ -5759,6 +6459,16 @@
 0.301
 ]
 },
+"leatherman_pst_1998": {
+"hard": 0.88,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.029,
+0.014,
+0.1
+]
+},
 "legend_of_zelda_nes_1987": {
 "hard": 0.7,
 "how": "snap",
@@ -5777,6 +6487,16 @@
 0.22,
 0.22,
 0.24
+]
+},
+"leviton_3to2_grounding_adapter_1998": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.035,
+0.025,
+0.03
 ]
 },
 "lexmark_3200_1998": {
@@ -5999,6 +6719,26 @@
 0.065
 ]
 },
+"loctite_super_glue_control_1999": {
+"hard": 0.3,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.03,
+0.02,
+0.09
+]
+},
+"logitech_cordless_mouseman_optical_2001": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.045,
+0.125
+]
+},
 "logitech_cordless_mouseman_wheel_1999": {
 "hard": 0.6,
 "how": "snap",
@@ -6047,6 +6787,16 @@
 0.342,
 0.074,
 0.1198
+]
+},
+"loose_cassette_tape_spaghetti_1998": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.8,
+0.0001,
+0.0038
 ]
 },
 "loose_socks": {
@@ -6229,6 +6979,26 @@
 0.17
 ]
 },
+"master_lock_120d_brass_padlock_1998": {
+"hard": 0.84,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.03,
+0.013,
+0.055
+]
+},
+"master_lock_1500d_combination_1998": {
+"hard": 0.82,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.048,
+0.023,
+0.075
+]
+},
 "matchbook": {
 "hard": 0.3,
 "how": "fold",
@@ -6257,6 +7027,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"maxell_cassette_label_sheet_partial_1997": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.095,
+0.0005,
+0.06
 ]
 },
 "maxell_cdr_80_2002": {
@@ -6309,6 +7089,16 @@
 0.064
 ]
 },
+"maxell_ur90_recorded_1999": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
+]
+},
 "maxell_vhs_head_cleaner_1996": {
 "hard": 0.7,
 "how": "snap",
@@ -6337,6 +7127,16 @@
 0.21,
 0.006,
 0.275
+]
+},
+"maxtor_diamondmax_plus9_160gb_2004": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.102,
+0.026,
+0.147
 ]
 },
 "mcdonalds_mcboo_vinyl_treat_bag_1991": {
@@ -6449,6 +7249,16 @@
 0.095
 ]
 },
+"memorex_cdr_portfolio_backup_2000": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.0012,
+0.12
+]
+},
 "memorex_dbs90_1990": {
 "hard": 0.55,
 "how": "snap",
@@ -6457,6 +7267,26 @@
 0.102,
 0.013,
 0.064
+]
+},
+"memorex_dbs90_handwritten_mix_1995": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
+]
+},
+"memorex_dvdr_50_spindle_2007": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.14,
+0.095
 ]
 },
 "memorex_floppy_10pack_box_1997": {
@@ -6869,6 +7699,16 @@
 0.05
 ]
 },
+"motorola_advisor_pager_1996": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.025,
+0.05
+]
+},
 "motorola_bravo_pager_1990": {
 "hard": 0.52,
 "how": "snap",
@@ -6917,6 +7757,16 @@
 0.069,
 0.021,
 0.048
+]
+},
+"motorola_startac_7868_1999": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.057,
+0.027,
+0.094
 ]
 },
 "motorola_startac_8500_1996": {
@@ -7097,6 +7947,16 @@
 0.04,
 0.09,
 0.0088
+]
+},
+"natural_nylon_cable_ties_50pack_1999": {
+"hard": 0.28,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.1,
+0.015,
+0.3
 ]
 },
 "nba_jam_genesis_1994": {
@@ -7479,6 +8339,26 @@
 0.085
 ]
 },
+"nintendo_game_boy_advance_sp_cobalt_2003": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.084,
+0.024,
+0.082
+]
+},
+"nintendo_game_boy_color_grape_1998": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.078,
+0.027,
+0.133
+]
+},
 "nintendo_gamecube_indigo_2001": {
 "hard": 0.86,
 "how": "snap",
@@ -7569,6 +8449,16 @@
 0.113
 ]
 },
+"nokia_3310_blue_2001": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.048,
+0.022,
+0.113
+]
+},
 "nokia_3360_2001": {
 "hard": 0.62,
 "how": "snap",
@@ -7606,6 +8496,16 @@
 "size": [
 0.051,
 0.031,
+0.132
+]
+},
+"nokia_5190_blue_1998": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.048,
+0.028,
 0.132
 ]
 },
@@ -7727,6 +8627,16 @@
 0.04,
 0.018,
 0.105
+]
+},
+"olympus_xd_picture_card_512mb_2005": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.02,
+0.0017,
+0.025
 ]
 },
 "opera_carded": {
@@ -7999,6 +8909,16 @@
 0.12
 ]
 },
+"palm_iiixe_2000": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.081,
+0.017,
+0.119
+]
+},
 "palm_m100_2000": {
 "hard": 0.58,
 "how": "snap",
@@ -8117,6 +9037,16 @@
 0.1235,
 0.1638,
 0.004
+]
+},
+"paper_twist_ties_100pack_1998": {
+"hard": 0.08,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.1,
+0.002,
+0.002
 ]
 },
 "papermate_erasermate_pen_1995": {
@@ -8749,6 +9679,16 @@
 0.011
 ]
 },
+"polaroid_600_film_10pack_1998": {
+"hard": 0.38,
+"how": "fold",
+"mat": "card",
+"size": [
+0.108,
+0.02,
+0.088
+]
+},
 "polaroid_izone_camera_blue_1999": {
 "hard": 0.58,
 "how": "snap",
@@ -8756,6 +9696,16 @@
 "size": [
 0.06,
 0.05,
+0.15
+]
+},
+"polaroid_onestep_closeup_600_1996": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.16,
+0.1,
 0.15
 ]
 },
@@ -8817,6 +9767,16 @@
 0.136,
 0.1391,
 0.0285
+]
+},
+"postit_buy_the_dip_note_2020": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.076,
+0.0002,
+0.076
 ]
 },
 "postit_notes_yellow_3x3_1997": {
@@ -9049,6 +10009,26 @@
 0.12
 ]
 },
+"radio_request_phone_number_scrap_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.07,
+0.0005,
+0.1
+]
+},
+"radio_shack_electronic_pinball_keychain_2000": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.015,
+0.09
+]
+},
 "radio_shack_phone_coupler_1996": {
 "hard": 0.45,
 "how": "snap",
@@ -9079,6 +10059,16 @@
 0.115
 ]
 },
+"radioshack_battery_tester_22100_1998": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.03,
+0.11
+]
+},
 "radioshack_dual_lighter_adapter_1998": {
 "hard": 0.52,
 "how": "snap",
@@ -9087,6 +10077,16 @@
 0.08,
 0.04,
 0.035
+]
+},
+"radioshack_two_way_coax_splitter_1998": {
+"hard": 0.74,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.05,
+0.02,
+0.055
 ]
 },
 "rainbow_magic_spring_1996": {
@@ -9169,6 +10169,26 @@
 0.115
 ]
 },
+"rayovac_kpr102_flashlight_bulbs_2pack_1998": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.05,
+0.015,
+0.09
+]
+},
+"rayovac_maximum_aa_1999": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0145,
+0.0145,
+0.0505
+]
+},
 "rayovac_rechargeable_aa4_2000": {
 "hard": 0.34,
 "how": "fold",
@@ -9249,6 +10269,16 @@
 0.0744
 ]
 },
+"red_chart_candle_1999": {
+"hard": 0.16,
+"how": "fold",
+"mat": "wax",
+"size": [
+0.012,
+0.012,
+0.1
+]
+},
 "red_fuzzy_dice_1997": {
 "hard": 0.12,
 "how": "squish",
@@ -9277,6 +10307,16 @@
 0.2,
 0.065,
 0.28
+]
+},
+"refrigerator_pizza_coupon_magnet_1998": {
+"hard": 0.16,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.08,
+0.002,
+0.1
 ]
 },
 "rental_card": {
@@ -9337,6 +10377,16 @@
 0.015,
 0.015,
 0.06
+]
+},
+"reynolds_wrap_75sqft_1998": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.31,
+0.05,
+0.05
 ]
 },
 "rf_switch": {
@@ -9549,6 +10599,36 @@
 0.0183
 ]
 },
+"rubbermaid_drawer_organizer_gray_1998": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.38,
+0.25,
+0.05
+]
+},
+"rubbermaid_ice_cube_tray_blue_1998": {
+"hard": 0.32,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.3,
+0.11,
+0.04
+]
+},
+"rubbermaid_servin_saver_square_1998": {
+"hard": 0.24,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.15,
+0.15,
+0.08
+]
+},
 "safety_pins_assorted_tin_1998": {
 "hard": 0.5,
 "how": "dent",
@@ -9589,6 +10669,36 @@
 0.15
 ]
 },
+"sandisk_compactflash_512mb_2004": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.043,
+0.0033,
+0.036
+]
+},
+"sandisk_cruzer_micro_512mb_2004": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.021,
+0.01,
+0.079
+]
+},
+"sandisk_microsd_2gb_adapter_2008": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.024,
+0.0021,
+0.032
+]
+},
 "sandisk_sansa_e250_2006": {
 "hard": 0.58,
 "how": "snap",
@@ -9597,6 +10707,16 @@
 0.044,
 0.013,
 0.089
+]
+},
+"sandisk_sd_2gb_2007": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.024,
+0.0021,
+0.032
 ]
 },
 "sandmaster_footbag_1997": {
@@ -9617,6 +10737,16 @@
 0.008,
 0.008,
 0.19
+]
+},
+"saran_wrap_100sqft_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.31,
+0.05,
+0.05
 ]
 },
 "satin_jacket": {
@@ -9659,6 +10789,16 @@
 0.064
 ]
 },
+"scotch_duct_tape_silver_1998": {
+"hard": 0.34,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.12,
+0.05,
+0.12
+]
+},
 "scotch_magic_tape_3quarter_1997": {
 "hard": 0.46,
 "how": "snap",
@@ -9667,6 +10807,26 @@
 0.1,
 0.045,
 0.05
+]
+},
+"scotch_magic_tape_snail_dispenser_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.085,
+0.025,
+0.055
+]
+},
+"scotch_super33plus_electrical_tape_1998": {
+"hard": 0.22,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.08,
+0.02,
+0.08
 ]
 },
 "scotch_t120_blank_vhs_1991": {
@@ -9697,6 +10857,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"seagate_barracuda_7200_10_320gb_2006": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.102,
+0.026,
+0.147
 ]
 },
 "seal_sticker": {
@@ -9837,6 +11007,16 @@
 0.013,
 0.013,
 0.137
+]
+},
+"sharpie_fine_black_1998": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.016,
+0.016,
+0.135
 ]
 },
 "sharpie_fine_blue_1998": {
@@ -10339,6 +11519,16 @@
 0.032
 ]
 },
+"sony_discman_d_e220_1999": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.03,
+0.14
+]
+},
 "sony_dualshock2_black_2000": {
 "hard": 0.67,
 "how": "snap",
@@ -10379,6 +11569,16 @@
 0.12
 ]
 },
+"sony_handycam_dcrtrv22_2003": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.075,
+0.09,
+0.13
+]
+},
 "sony_hf90_1990": {
 "hard": 0.55,
 "how": "snap",
@@ -10387,6 +11587,16 @@
 0.102,
 0.013,
 0.064
+]
+},
+"sony_hf90_handwritten_mix_1997": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
 ]
 },
 "sony_icd_bp100_2001": {
@@ -10399,6 +11609,16 @@
 0.1
 ]
 },
+"sony_icfc25_clock_radio_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.12,
+0.07
+]
+},
 "sony_mavica_mvcfd7_1997": {
 "hard": 0.72,
 "how": "snap",
@@ -10407,6 +11627,16 @@
 0.14,
 0.082,
 0.105
+]
+},
+"sony_mdr006_foam_headphones_1997": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.05,
+0.17
 ]
 },
 "sony_mdr_7506_1991": {
@@ -10427,6 +11657,16 @@
 0.19,
 0.085,
 0.18
+]
+},
+"sony_memory_stick_pro_duo_1gb_2006": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.02,
+0.0016,
+0.031
 ]
 },
 "sony_minidisc_74_blue_1998": {
@@ -10547,6 +11787,16 @@
 0.065,
 0.005,
 0.064
+]
+},
+"sony_sports_walkman_wmfs191_1997": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.04,
+0.085
 ]
 },
 "sony_trinitron_gdm400ps_1998": {
@@ -11309,6 +12559,16 @@
 0.095
 ]
 },
+"tdk_d90_handwritten_mix_1996": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
+]
+},
 "tdk_ehg_t120_vhs_1997": {
 "hard": 0.7,
 "how": "snap",
@@ -11389,6 +12649,16 @@
 0.188
 ]
 },
+"texas_instruments_ti83": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.089,
+0.025,
+0.186
+]
+},
 "texas_instruments_ti83_1996": {
 "hard": 0.68,
 "how": "snap",
@@ -11429,6 +12699,36 @@
 0.188
 ]
 },
+"thermal_stock_ticker_tape_1999": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0003,
+1.0
+]
+},
+"thermal_takeout_receipt_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.075,
+0.0003,
+0.18
+]
+},
+"three_in_one_oil_3oz_1998": {
+"hard": 0.56,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.045,
+0.045,
+0.13
+]
+},
 "tic_tac_orange_1997": {
 "hard": 0.42,
 "how": "snap",
@@ -11459,6 +12759,16 @@
 0.0023
 ]
 },
+"ticketmaster_concert_stub_bundle_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.051,
+0.0005,
+0.14
+]
+},
 "tickle_monster": {
 "hard": 0.6,
 "how": "snap",
@@ -11479,6 +12789,16 @@
 0.25
 ]
 },
+"ticonderoga_no2_pencil_mixtape_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.007,
+0.007,
+0.19
+]
+},
 "tie_dye_shirt": {
 "hard": 0.2,
 "how": "squish",
@@ -11489,6 +12809,16 @@
 0.0
 ]
 },
+"tiger_9999in1_handheld_blue_2001": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.02,
+0.16
+]
+},
 "tiger_talkboy_deluxe_1993": {
 "hard": 0.62,
 "how": "snap",
@@ -11497,6 +12827,16 @@
 0.1,
 0.05,
 0.2
+]
+},
+"timex_t121_alarm_clock_1999": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.08,
+0.07
 ]
 },
 "tin_lunchbox": {
@@ -11789,6 +13129,16 @@
 0.14
 ]
 },
+"tupperware_round_seal_container_1997": {
+"hard": 0.26,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.16,
+0.16,
+0.09
+]
+},
 "tv_guide_weekly_1998": {
 "hard": 0.2,
 "how": "fold",
@@ -11959,6 +13309,16 @@
 0.12
 ]
 },
+"usb2_sata_ide_drive_adapter_2008": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.02,
+0.05
+]
+},
 "usb_stick": {
 "hard": 0.7,
 "how": "snap",
@@ -12069,6 +13429,16 @@
 0.095
 ]
 },
+"verbatim_datalifeplus_cdr_backup_2004": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.0012,
+0.12
+]
+},
 "vhs": {
 "hard": 0.7,
 "how": "snap",
@@ -12087,6 +13457,16 @@
 0.112,
 0.03,
 0.192
+]
+},
+"victorinox_classic_sd_red_1998": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.018,
+0.009,
+0.058
 ]
 },
 "video_rental_barcode_sticker_1998": {
@@ -12229,6 +13609,26 @@
 0.0369
 ]
 },
+"wall_street_business_card_bundle_1999": {
+"hard": 0.08,
+"how": "fold",
+"mat": "card",
+"size": [
+0.089,
+0.0004,
+0.051
+]
+},
+"wall_street_journal_market_section_1999": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.3,
+0.001,
+0.58
+]
+},
 "wallchart": {
 "hard": 0.15,
 "how": "crumple",
@@ -12289,6 +13689,26 @@
 0.188
 ]
 },
+"wd40_8oz_smart_straw_pre2000_1998": {
+"hard": 0.58,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.055,
+0.055,
+0.18
+]
+},
+"wd_my_passport_320gb_2008": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.081,
+0.015,
+0.126
+]
+},
 "webcam": {
 "hard": 0.35,
 "how": "fold",
@@ -12307,6 +13727,16 @@
 0.31,
 0.0025,
 0.03
+]
+},
+"western_digital_caviar_se_wd800jb_2003": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.102,
+0.026,
+0.147
 ]
 },
 "wham_o_slip_n_slide_1995": {
@@ -12459,6 +13889,16 @@
 0.03
 ]
 },
+"worlds_best_broker_mug_1999": {
+"hard": 0.72,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.12,
+0.085,
+0.095
+]
+},
 "wrestler_fig": {
 "hard": 0.7,
 "how": "snap",
@@ -12517,6 +13957,16 @@
 0.06,
 0.025,
 0.085
+]
+},
+"yak_bak_original_1995": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.03,
+0.1
 ]
 },
 "yak_bak_original_1996": {
@@ -12589,6 +14039,16 @@
 0.12
 ]
 },
+"yoplait_original_strawberry_cup_1998": {
+"hard": 0.16,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.075,
+0.075,
+0.065
+]
+},
 "yoplait_trix_strawberry_banana_1998": {
 "hard": 0.16,
 "how": "squish",
@@ -12647,6 +14107,16 @@
 0.116,
 0.019,
 0.075
+]
+},
+"ziploc_storage_quart_25ct_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.06,
+0.09
 ]
 }
 }

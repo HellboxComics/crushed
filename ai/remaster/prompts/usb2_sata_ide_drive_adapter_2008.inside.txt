@@ -1,0 +1,1 @@
+USB bridge PCB, controller chip, plastic shell, copper cable and SATA/IDE connectors

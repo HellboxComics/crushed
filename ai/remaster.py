@@ -131,12 +131,32 @@ def sculpt(name, sheet, timeout=3600):
     return None
 
 
+import threading
+_LOCK = threading.Lock()
+
+
 def step(name, what):
     """Say what's happening right now, for the progress page."""
     os.makedirs(WORK, exist_ok=True)
     json.dump({"name": name, "step": what, "since": time.time()}, open(os.path.join(WORK, "now.json"), "w"))
-    page()
-    publish()
+    with _LOCK:
+        page()
+        publish()
+
+
+def heartbeat(every=75):
+    """Keep the phone page current the whole run: a finished model shows up within a minute or two, even while the
+    next object spends minutes in one step (a skipped publish used to wait for the next step)."""
+    def loop():
+        while True:
+            time.sleep(every)
+            try:
+                with _LOCK:
+                    page()
+                    publish(force=True)
+            except Exception as e:
+                say(f"(page refresh skipped: {e})")
+    threading.Thread(target=loop, daemon=True).start()
 
 
 PROJECT = "crushed-remaster"          # the phone page: https://crushed-remaster.pages.dev
@@ -577,6 +597,8 @@ def main():
         todo = []
     if not todo:
         say("nothing ready: write the prompts (see the brief); an object is ready once <name>.inside.txt exists")
+    if todo:
+        heartbeat()
     for i, n in enumerate(todo[:a.limit] if not a.only else todo):
         t0 = time.time()
         res = remaster(n, a.redo)
@@ -588,8 +610,9 @@ def main():
     if os.path.exists(nowp):
         os.remove(nowp)                   # the run is over: nothing is being made right now
     status()
-    page()
-    publish(force=True)
+    with _LOCK:
+        page()
+        publish(force=True)
 
 
 if __name__ == "__main__":

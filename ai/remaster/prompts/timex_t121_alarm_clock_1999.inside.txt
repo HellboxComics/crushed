@@ -1,0 +1,1 @@
+LED module, clock circuit, piezo or small speaker, transformer, switches, wiring and 9V backup-battery contacts

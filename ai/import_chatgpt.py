@@ -64,6 +64,12 @@ def main(files):
     load = lambda f: json.load(open(os.path.join(PLAN, f))) if os.path.exists(os.path.join(PLAN, f)) else {}
     items, beh, shapes, ones = load("items.json"), load("behavior.json"), load("shapes.json"), load("ones.json")
     probs, n_asset, n_item, n_one = [], 0, 0, 0
+    catalog = set()
+    for f in files:                                        # every regular catalog id first, whichever batch it is in
+        for raw in open(f, encoding="utf-8", errors="replace"):
+            p = [x.strip() for x in raw.split("|")]
+            if p and p[0].upper() == "ASSET" and len(p) >= 16:
+                catalog.add(re.sub(r"[^a-z0-9_]", "_", p[2].lower()).strip("_"))
     for f in files:
         for raw in open(f, encoding="utf-8", errors="replace"):
             line = raw.strip()
@@ -95,6 +101,18 @@ def main(files):
                 _, title, oid, same, name, count, size, mat, how, hard, rare, query, looks, inside = p[:14]
                 fam, role, themes = "one-of-one", "main", title
             oid = re.sub(r"[^a-z0-9_]", "_", oid.lower()).strip("_")
+            if kind == "ITEM" and oid in catalog:          # already a regular catalog object: the recipe just uses it
+                t = title.upper().replace("’", "'")
+                o = ones.setdefault(t, {"mix": [], "no_wires": True})
+                try:
+                    k = max(1, int(re.findall(r"\d+", count)[0]))
+                except (IndexError, ValueError):
+                    k = 1
+                o["mix"] = [m for m in o.get("mix", []) if m[0] != oid] + [[oid, k]]
+                n_item += 1
+                continue
+            if kind == "ASSET":
+                catalog.add(oid)
             sz = size_m(size)
             if not sz or min(sz) <= 0 or max(sz) > 12.0:
                 probs.append(f"{oid}: size '{size}' doesn't read as W x D x H in cm")

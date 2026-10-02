@@ -1,0 +1,1 @@
+segmented LCD, tiny game IC, piezo speaker, buttons, coin cells and molded shell
