@@ -88,7 +88,7 @@ def pipeline(cid, redo=False):
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in json.load(open(vj))} if os.path.exists(vj) and not redo else {}
     use = V.model()
-    quick = V.QUICK if V.has(V.QUICK) else None
+    quick = V.quick_model()
     say(f"[check] vision model: {use}" + (f" (quick first look: {quick})" if quick else ""))
     todo = [f for f in found if not (f["file"] in old and "vet" in old[f["file"]])]
     for f in found:
@@ -111,32 +111,19 @@ def pipeline(cid, redo=False):
         status(cid, step="no usable photo found", ok=False, photos=len(found))
         return
 
-    status(cid, step=f"4/6 stitching the label from {len(good)} good photos")
-    objs = []
-    for f in good:
-        im = Image.open(f["file"]).convert("RGB")
-        m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
-        objs += mosaic.objects(im, m)
-    spec = json.load(open(os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json")))
-    lab_pts = [pt for p in spec["profile"] if p["part"] == "label" for pt in p["pts"]]
-    import math
-    lab_len = sum(math.dist(lab_pts[i], lab_pts[i + 1]) for i in range(len(lab_pts) - 1))
-    circ = 2 * math.pi * max(r for r, z in lab_pts)
-    log = []
-    lab, cov = mosaic.build(objs, W=2048, aspect=lab_len / circ, metal_top=fam.get("metal_top", False),
-                            log=lambda s: (say(s), log.append(s)))
-    covered = float((cov > 1e-3).mean())
-    import metal
-    base, mr = metal.metal_maps(Image.fromarray((lab * 255).astype(np.uint8)))
-    base.save(os.path.join(d, "label.png"))
-    mr.save(os.path.join(d, "label_mr.png"))
-
-    status(cid, step="5/6 building the 3D model", covered=covered)
+    plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json"))).get(cid, {})
+    size = plan.get("size") or [0.1, 0.1, 0.1]
     mdir = os.path.join(d, "model")
-    subprocess.run([PY, os.path.join(HERE, "shapes", "lathe.py"), "--", os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json"),
-                    mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")], check=True,
-                   capture_output=True)
-    glb = os.path.join(mdir, spec["id"] + ".glb")
+    log = []
+    if fam["family"] == "round":
+        glb, covered = build_round(cid, fam, good, d, mdir, log)
+    elif fam["family"] in ("box", "flat"):
+        glb, covered = build_box(cid, fam, good, d, mdir, size, log)
+    elif fam["family"] == "soft":
+        glb, covered = build_soft(cid, fam, good, d, mdir, size, log)
+    else:
+        status(cid, step=f"no builder for the '{fam['family']}' family yet", ok=False)
+        return
     pend = os.path.join(ROOT, "assets", "models_pending", cid)
     os.makedirs(pend, exist_ok=True)
     import shutil
@@ -150,28 +137,119 @@ def pipeline(cid, redo=False):
     for k, v in enumerate(views):
         sheet.paste(Image.open(v).convert("RGB").resize((300, 400)), (k * 300, 0))
     sheet.save(os.path.join(d, "views.jpg"), quality=88)
-    verdict = inspect(views[0], good[0]["file"], product, use)
+    verdict = inspect(os.path.join(d, "views.jpg"), good[0]["file"], product, use)
+    tex = os.path.join(d, "label.png") if os.path.exists(os.path.join(d, "label.png")) else os.path.join(d, "atlas.png")
     missing = 1 - covered
     ok = verdict.get("pass", False) and missing < 0.1
     status(cid, step="done", ok=ok, verdict=verdict, covered=covered, photos=len(found), good=len(good),
-           label=os.path.relpath(os.path.join(d, "label.png"), WORK), views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+           label=os.path.relpath(tex, WORK) if os.path.exists(tex) else None, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
            ref=os.path.relpath(good[0]["file"], WORK), stitch=log[-8:],
            note=("" if missing < 0.1 else f"{missing:.0%} of the way round has no photo yet - needs a photo of that side"))
 
 
-def inspect(render, photo, product, use):
-    import base64
+def _objs(good):
+    import numpy as np
+    from PIL import Image
+    out = []
+    for f in good:
+        im = Image.open(f["file"]).convert("RGB")
+        m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
+        out.append((f, im, m))
+    return out
+
+
+def build_round(cid, fam, good, d, mdir, log):
+    """Round things (batteries, cans, bottles): the exact master shape, the label stitched from the photos."""
+    import math
+    import numpy as np
+    from PIL import Image
+    import metal
+    import mosaic
+    status(cid, step=f"4/6 stitching the label from {len(good)} good photos")
+    objs = []
+    for f, im, m in _objs(good):
+        objs += mosaic.objects(im, m)
+    spec = json.load(open(os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json")))
+    lab_pts = [pt for p in spec["profile"] if p["part"] == "label" for pt in p["pts"]]
+    lab_len = sum(math.dist(lab_pts[i], lab_pts[i + 1]) for i in range(len(lab_pts) - 1))
+    circ = 2 * math.pi * max(r for r, z in lab_pts)
+    lab, cov = mosaic.build(objs, W=2048, aspect=lab_len / circ, metal_top=fam.get("metal_top", False),
+                            log=lambda s: (say(s), log.append(s)))
+    covered = float((cov > 1e-3).mean())
+    base, mr = metal.metal_maps(Image.fromarray((lab * 255).astype(np.uint8)))
+    base.save(os.path.join(d, "label.png"))
+    mr.save(os.path.join(d, "label_mr.png"))
+    status(cid, step="5/6 building the 3D model", covered=covered)
+    subprocess.run([PY, os.path.join(HERE, "shapes", "lathe.py"), "--", os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json"),
+                    mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")], check=True, capture_output=True)
+    return os.path.join(mdir, spec["id"] + ".glb"), covered
+
+
+def build_box(cid, fam, good, d, mdir, size, log):
+    """Boxes and flat things: the exact box at real size, each side straightened from a photo of that side."""
+    import panels
+    status(cid, step=f"4/6 straightening the sides from {len(good)} good photos")
+    W, D, H = (fam.get("size") or size)[:3]
+    if fam["family"] == "flat":
+        D = max(D, 0.0003)
+    photos = [(im, m, f["vet"].get("view", "")) for f, im, m in _objs(good)]
+    atlas, got = panels.build(photos, W, D, H)
+    atlas.save(os.path.join(d, "atlas.png"))
+    area = {"front": W * H, "back": W * H, "left": D * H, "right": D * H, "top": W * D, "bottom": W * D}
+    covered = sum(area[k] for k, v in got.items() if v) / sum(area.values())
+    missing = [k for k, v in got.items() if not v]
+    log.append("sides from photos: " + ", ".join(k for k, v in got.items() if v) + "; no photo yet: " + ", ".join(missing))
+    status(cid, step="5/6 building the 3D model", covered=covered)
+    subprocess.run([PY, os.path.join(HERE, "shapes", "box.py"), "--", str(W), str(D), str(H), mdir,
+                    os.path.join(d, "atlas.png"), "-", cid, "0.3" if fam["family"] == "flat" else "0.6"],
+                   check=True, capture_output=True)
+    return os.path.join(mdir, cid + ".glb"), covered
+
+
+def build_soft(cid, fam, good, d, mdir, size, log):
+    """Soft and odd shapes (plush, food, toys): Hunyuan3D 2.1 (Apple-chip build) makes the shape and paints it
+    from the best photo; Blender sets the real size and saves every format."""
+    from PIL import Image
+    import numpy as np
+    status(cid, step="4/6 Hunyuan3D 2.1 is making the shape and paint from the best photo")
+    f, im, m = _objs(good[:1])[0]
+    ys, xs = np.where(m > 0.5)                          # crop to the object, square, with a little room around it
+    y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+    side = int(max(y1 - y0, x1 - x0) * 1.15)
+    rgba = np.dstack([np.asarray(im), (m * 255).astype(np.uint8)])[y0:y1, x0:x1]
+    sq = Image.new("RGBA", (side, side), (255, 255, 255, 0))
+    sq.paste(Image.fromarray(rgba), ((side - (x1 - x0)) // 2, (side - (y1 - y0)) // 2))
+    ref = os.path.join(d, "reference.png")
+    sq.resize((1024, 1024), Image.LANCZOS).save(ref)
+    os.makedirs(mdir, exist_ok=True)
+    sys.path.insert(0, HERE)
+    import hunyuan
+    hy = hunyuan.home()
+    if not hy:
+        raise RuntimeError("Hunyuan3D is not installed yet - run the setup paste")
+    r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), ref,
+                        os.path.join(mdir, "hunyuan")], capture_output=True, text=True)
+    log.append((r.stdout + r.stderr)[-600:])
+    if r.returncode != 0 or not os.path.exists(os.path.join(mdir, "hunyuan", "textured.glb")):
+        raise RuntimeError("Hunyuan3D did not finish: " + (r.stderr or r.stdout)[-300:])
+    status(cid, step="5/6 setting the real size and saving every format", covered=1.0)
+    subprocess.run([PY, os.path.join(HERE, "shapes", "resize.py"), "--", os.path.join(mdir, "hunyuan", "textured.glb"),
+                    str(max(size)), mdir, cid], check=True, capture_output=True)
+    return os.path.join(mdir, cid + ".glb"), 1.0
+
+
+def inspect(sheet, photo, product, use):
+    """The judge compares the finished model (studio pictures from four sides) with a real photo."""
     import vet as V
     if not use:
         return {"pass": False, "problems": "no vision model installed"}
-    q = (f"Picture 1 is a 3D model of: {product}. Picture 2 is a real photo of it. Is the 3D model a faithful, "
-         "finished, game-quality copy of the real product (same design, colors, printing, readable words, no smears, "
-         "no seams, no holes)? Answer ONLY JSON: {\"pass\": true/false, \"problems\": \"short list or empty\"}")
-    body = {"model": use, "stream": False, "format": "json", "think": False, "options": {"temperature": 0},
-            "messages": [{"role": "user", "content": q, "images": [base64.b64encode(open(p, "rb").read()).decode()
-                                                                    for p in (render, photo)]}]}
+    q = (f"Picture 1 shows a 3D model of: {product}, from the front, right, back and left. Picture 2 is a real photo "
+         "of the product. Is the 3D model a faithful, finished, game-quality copy of the real product: same shape and "
+         "proportions, same design, colors and printing, readable words, every side finished, no smears, no seams, "
+         "no holes, nothing missing or invented? Answer ONLY JSON: "
+         "{\"pass\": true/false, \"problems\": \"short list or empty\"}")
     try:
-        return json.loads(V._call("/api/chat", body).get("message", {}).get("content", "{}"))
+        return V.ask(use, q, [sheet, photo])
     except Exception as e:
         return {"pass": False, "problems": f"could not inspect: {e}"}
 

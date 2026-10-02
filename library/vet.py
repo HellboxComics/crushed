@@ -6,12 +6,13 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 
 OLLAMA = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
 OLLAMA = OLLAMA if OLLAMA.startswith("http") else "http://" + OLLAMA
-PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.5:122b", "qwen2.5vl:7b"]   # newest first
-QUICK = "qwen3.6:35b"                     # fast first look
+PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.8:latest", "qwen3.5:122b-a10b", "qwen2.5vl:7b"]   # best first
+QUICK = ["qwen3.6:35b", "qwen3.5:9b"]     # fast first look (thinking off)
 
 
 def _call(path, body, timeout=900):
@@ -28,16 +29,27 @@ def has(name):
     return name in have or name + ":latest" in have
 
 
-def model():
+def _first(names):
     try:
         have = \
             [m["name"] for m in json.loads(urllib.request.urlopen(OLLAMA + "/api/tags", timeout=20).read()).get("models", [])]
     except Exception:
         return None
-    for m in PREFER:
+    for m in names:
         if m in have or m + ":latest" in have:
             return m
     return None
+
+
+def model():
+    """The judge: the best vision model on the Mac."""
+    return _first(PREFER)
+
+
+def quick_model():
+    """The quick first look, only used to throw out obvious misses when there are many photos."""
+    q = _first(QUICK)
+    return q if q and q != model() else None
 
 
 ASK = """Product: {display}
@@ -53,16 +65,27 @@ Look at this photo and answer ONLY with JSON, no other words:
   "problems": "short note of anything wrong, or empty"}}"""
 
 
-def vet(path, display, era, use=None):
+def ask(use, text, images, think=True):
+    """One question to a vision model, answer as JSON. Thinking on gives better judgment; if a model can't think,
+    ask again without it rather than failing."""
+    body = {"model": use, "stream": False, "format": "json", "think": think, "options": {"temperature": 0},
+            "messages": [{"role": "user", "content": text,
+                          "images": [base64.b64encode(open(p, "rb").read()).decode() for p in images]}]}
+    try:
+        txt = _call("/api/chat", body).get("message", {}).get("content", "{}")
+    except urllib.error.HTTPError as e:
+        if think and e.code == 400:
+            return ask(use, text, images, think=False)
+        raise
+    return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+
+
+def vet(path, display, era, use=None, think=True):
     use = use or model()
     if not use:
         return None
-    body = {"model": use, "stream": False, "format": "json", "think": False, "options": {"temperature": 0},
-            "messages": [{"role": "user", "content": ASK.format(display=display, era=era),
-                          "images": [base64.b64encode(open(path, "rb").read()).decode()]}]}
     try:
-        txt = _call("/api/chat", body).get("message", {}).get("content", "{}")
-        v = json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+        v = ask(use, ASK.format(display=display, era=era), [path], think)
     except Exception as e:
         return {"match": 0, "problems": f"could not judge: {e}"}
     v["model"] = use
