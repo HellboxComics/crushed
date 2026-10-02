@@ -1932,7 +1932,7 @@
 "brachs_loose_candy_corn_1998": {
 "hard": 0.2,
 "how": "crumple",
-"mat": "plastic",
+"mat": "candy",
 "size": [
 0.018,
 0.01,
@@ -6391,7 +6391,7 @@
 },
 "ge_100count_multicolor_mini_lights_1998": {
 "hard": 0.2,
-"how": "fold",
+"how": "crumple",
 "mat": "card",
 "size": [
 0.18,
@@ -10742,7 +10742,7 @@
 "necco_conversation_heart_assorted_1998": {
 "hard": 0.3,
 "how": "crumple",
-"mat": "plastic",
+"mat": "candy",
 "size": [
 0.016,
 0.006,
@@ -16641,7 +16641,7 @@
 },
 "tangled_multicolor_mini_light_strand_1998": {
 "hard": 0.16,
-"how": "fold",
+"how": "crumple",
 "mat": "glass",
 "size": [
 0.1913,
