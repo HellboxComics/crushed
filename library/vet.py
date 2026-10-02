@@ -1,6 +1,6 @@
 """The local vision model looks at every hunted photo and says, as JSON: is it this exact product, is it from the
 right era, which side shows, is it straight-on, sharp and the whole object. Only good photos go on.
-Uses the biggest Qwen2.5-VL that is installed (72B, else 32B, else 7B), all on the Mac through Ollama."""
+Uses Qwen 3.8 (27B, the newest local vision model, chosen 2026-10-02), all on the Mac through Ollama."""
 import base64
 import json
 import os
@@ -10,7 +10,8 @@ import urllib.request
 
 OLLAMA = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
 OLLAMA = OLLAMA if OLLAMA.startswith("http") else "http://" + OLLAMA
-PREFER = ["qwen2.5vl:72b", "qwen2.5vl:32b", "qwen2.5vl:7b"]
+PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.5:122b", "qwen2.5vl:7b"]   # newest first
+QUICK = "qwen3.6:35b"                     # fast first look
 
 
 def _call(path, body, timeout=900):
@@ -56,7 +57,7 @@ def vet(path, display, era, use=None):
     use = use or model()
     if not use:
         return None
-    body = {"model": use, "stream": False, "format": "json", "options": {"temperature": 0},
+    body = {"model": use, "stream": False, "format": "json", "think": False, "options": {"temperature": 0},
             "messages": [{"role": "user", "content": ASK.format(display=display, era=era),
                           "images": [base64.b64encode(open(path, "rb").read()).decode()]}]}
     try:

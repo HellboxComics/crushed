@@ -88,7 +88,7 @@ def pipeline(cid, redo=False):
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in json.load(open(vj))} if os.path.exists(vj) and not redo else {}
     use = V.model()
-    quick = "qwen2.5vl:7b" if use != "qwen2.5vl:7b" and V.has("qwen2.5vl:7b") else None
+    quick = V.QUICK if V.has(V.QUICK) else None
     say(f"[check] vision model: {use}" + (f" (quick first look: {quick})" if quick else ""))
     todo = [f for f in found if not (f["file"] in old and "vet" in old[f["file"]])]
     for f in found:
@@ -167,7 +167,7 @@ def inspect(render, photo, product, use):
     q = (f"Picture 1 is a 3D model of: {product}. Picture 2 is a real photo of it. Is the 3D model a faithful, "
          "finished, game-quality copy of the real product (same design, colors, printing, readable words, no smears, "
          "no seams, no holes)? Answer ONLY JSON: {\"pass\": true/false, \"problems\": \"short list or empty\"}")
-    body = {"model": use, "stream": False, "format": "json", "options": {"temperature": 0},
+    body = {"model": use, "stream": False, "format": "json", "think": False, "options": {"temperature": 0},
             "messages": [{"role": "user", "content": q, "images": [base64.b64encode(open(p, "rb").read()).decode()
                                                                     for p in (render, photo)]}]}
     try:
