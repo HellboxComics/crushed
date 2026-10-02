@@ -194,6 +194,131 @@ def project(ob, sheet_path):
     me.uv_layers["sheet"].name = "UVMap"
 
 
+def new_method(a, target):
+    """The six views decide the shape: round and box objects are built exactly from their real outline and real size;
+    anything else uses the sculptor's shape. Then one seamless texture is baked from all six views."""
+    import json
+    import remaster_bake as B
+    sys.path.insert(0, os.path.join(os.path.dirname(HERE), "ai", "remaster"))
+    import views as Vw
+    views = Vw.load(a.turn)
+    words = open(a.words).read() if a.words and os.path.exists(a.words) else ""
+    spec = Vw.classify(views, words)
+    if a.kind == "sculpt":
+        spec = {**spec, "kind": "sculpt"}
+    print("[remaster] shape: " + json.dumps({k: v for k, v in spec.items() if k != "profile"}))
+    size = true_size(views, words, [float(x) for x in target])
+    target[:] = size
+    if spec["kind"] in ("lathe", "box"):
+        if spec["kind"] == "lathe":
+            P, F = B.build_lathe(spec["profile"], size)
+        else:
+            P, F = B.build_box(size, spec.get("corner_front", 0.0))
+        me = bpy.data.meshes.new(a.name)
+        me.from_pydata([tuple(map(float, p)) for p in P], [], [tuple(f) for f in F])
+        me.update()
+        ob = bpy.data.objects.new(a.name, me)
+        bpy.context.scene.collection.objects.link(ob)
+        weld(ob)
+    else:
+        if not a.shape:
+            raise SystemExit("[remaster] this object needs the sculptor's shape (--shape)")
+        ob = import_shape(a.shape)
+        slim(ob)
+        fit(ob, target)
+        me = ob.data
+        me.calc_loop_triangles()
+        V = np.array([v.co[:] for v in me.vertices])
+        F = np.array([t.vertices[:] for t in me.loop_triangles])
+        q = B.silhouette_turn(V, F, views)
+        if q:
+            me.transform(Matrix.Rotation(q * math.pi / 2, 4, "Z"))
+            me.update()
+    outward(ob)
+    for p in ob.data.polygons:
+        p.use_smooth = True
+    unwrap(ob)
+    tex = B.bake(ob, views, res=a.res, use_ends=spec.get("top_view") in ("round", "box"),
+                 radial=spec["kind"] == "lathe")
+    od = os.path.join(a.out, a.name)
+    os.makedirs(od, exist_ok=True)
+    from PIL import Image
+    tp = os.path.join(od, "texture.png")
+    Image.fromarray((np.clip(tex, 0, 1) * 255).astype(np.uint8)).save(tp)
+    json.dump({k: v for k, v in spec.items()}, open(os.path.join(od, "shape.json"), "w"), indent=1)
+    mt = bpy.data.materials.new("remaster")
+    mt.use_nodes = True
+    nt = mt.node_tree
+    bsdf = next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED")
+    tx = nt.nodes.new("ShaderNodeTexImage")
+    tx.image = bpy.data.images.load(tp)
+    nt.links.new(tx.outputs["Color"], bsdf.inputs["Base Color"])
+    bsdf.inputs["Roughness"].default_value = 0.4
+    ob.data.materials.clear()
+    ob.data.materials.append(mt)
+    return ob
+
+
+def true_size(views, words, planned):
+    """Real width, depth, height (m). The size written in the description the drawing was made from comes first
+    ("real size 5.5 x 3.8 x 12.0 cm", "1.45 cm across and 5.05 cm tall"), then the planned size. The three numbers
+    are matched to the drawing's own proportions (which one is the height, which the depth), so a size written in
+    another order, or one meant for a whole pack, never squashes the object."""
+    import itertools
+    import re
+    real = None
+    m = re.search(r"real size\s+([\d.]+)\s*x\s*([\d.]+)\s*x\s*([\d.]+)\s*cm", words or "", re.I)
+    if m:
+        real = [float(x) / 100 for x in m.groups()]
+    else:
+        m = re.search(r"([\d.]+)\s*cm\s+(?:across|wide|in diameter)[^.]*?([\d.]+)\s*cm\s+(?:tall|high|long)",
+                      words or "", re.I)
+        if m:
+            d, h = float(m.group(1)) / 100, float(m.group(2)) / 100
+            real = [d, d, h]
+    real = real or planned
+    sides = {k: views[k]["mask"].shape for k in ("front", "back", "left", "right") if k in views}
+    wd = np.mean([sides[k][1] for k in ("front", "back") if k in sides])
+    dd = np.mean([sides[k][1] for k in ("left", "right") if k in sides])
+    hd = np.mean([v[0] for v in sides.values()])
+    drawn = np.log([wd, dd, hd])
+    best = min(itertools.permutations(real), key=lambda p: np.ptp(np.log(p) - drawn))
+    err = float(np.ptp(np.log(best) - drawn))
+    if err > math.log(1.35):                    # the numbers can't describe this drawing: keep its proportions
+        k = max(real) / max(wd, dd, hd)
+        best = (wd * k, dd * k, hd * k)
+        print(f"[remaster] size {real} does not fit the drawing; drawing's proportions at that largest size")
+    print(f"[remaster] real size used: {[round(x * 100, 2) for x in best]} cm (W, D, H)")
+    return [float(x) for x in best]
+
+
+def weld(ob):
+    """Join the seams of a built shape into one closed skin (the box's faces, the lathe's caps)."""
+    import bmesh
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts[:], dist=1e-7)
+    bm.to_mesh(ob.data)
+    bm.free()
+
+
+def unwrap(ob):
+    """Lay the skin out flat for painting (Blender's own Smart UV Project)."""
+    for u in list(ob.data.uv_layers):
+        ob.data.uv_layers.remove(u)
+    ob.data.uv_layers.new(name="UVMap")
+    if not ob.users_collection:
+        bpy.context.scene.collection.objects.link(ob)
+    vl = bpy.context.view_layer
+    for o in vl.objects:
+        o.select_set(o == ob)
+    vl.objects.active = ob
+    bpy.ops.object.mode_set(mode="EDIT")
+    bpy.ops.mesh.select_all(action="SELECT")
+    bpy.ops.uv.smart_project(angle_limit=math.radians(60), island_margin=0.004)
+    bpy.ops.object.mode_set(mode="OBJECT")
+
+
 def add_inside(ob, inside_path):
     """What it's made of inside: a slightly smaller copy of the shape, wearing the inside picture (circuit board,
     filling, foam, wires), mapped straight onto each side. The crusher tears holes in the outer shell, so this is
@@ -276,11 +401,15 @@ def main():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:]
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
-    ap.add_argument("--shape", required=True)
-    ap.add_argument("--sheet", required=True)
+    ap.add_argument("--shape", default=None)
+    ap.add_argument("--sheet", default=None)
     ap.add_argument("--out", required=True)
     ap.add_argument("--inside", default=None, help="picture of what it looks like inside, broken open")
     ap.add_argument("--turnaround", action="store_true", help="the sheet is the 3x2 six-view turnaround")
+    ap.add_argument("--turn", default=None, help="the raw six-view turnaround: exact shape when simple, seamless bake")
+    ap.add_argument("--words", default=None, help="the description file (says round or box when the views can't)")
+    ap.add_argument("--res", type=int, default=2048, help="texture size")
+    ap.add_argument("--kind", default="auto", help="auto, or sculpt to use the sculptor's shape even for a simple object")
     a = ap.parse_args(argv)
     if a.turnaround:
         global CELL
@@ -293,11 +422,14 @@ def main():
     real = _m.props(a.name).get("size")              # the real size the Mac's AI looked up wins over the code's
     if real:
         target = np.array([float(x) for x in real])
-    ob = import_shape(a.shape)
-    slim(ob)
-    outward(ob)
-    fit(ob, target)
-    project(ob, a.sheet)
+    if a.turn:
+        ob = new_method(a, target)
+    else:
+        ob = import_shape(a.shape)
+        slim(ob)
+        outward(ob)
+        fit(ob, target)
+        project(ob, a.sheet)
     if a.inside:
         add_inside(ob, a.inside)
     od = os.path.join(a.out, a.name)

@@ -29,8 +29,10 @@ W, H = 1584, 1056                                                    # Qwen-Imag
 
 LAYOUT = ("A professional 3D modeling reference sheet: a 3 by 2 grid of six orthographic studio product photos of "
           "the SAME single object on a plain light grey background, evenly lit, true colors, sharp focus. Top row, "
-          "left to right: the FRONT view, the LEFT SIDE view, the BACK view. Bottom row, left to right: the RIGHT "
-          "SIDE view, the TOP view looking straight down, the BOTTOM view looking straight up. The object is exactly "
+          "left to right: the FRONT view, the LEFT SIDE view (the object turned so the side that was on the viewer's "
+          "left now faces the camera), the BACK view. Bottom row, left to right: the RIGHT SIDE view (the side that "
+          "was on the viewer's right), the TOP view (camera directly overhead, perfectly flat, only the top surface "
+          "visible, no perspective), the BOTTOM view (camera directly underneath, perfectly flat, only the underside). The object is exactly "
           "the same size, centered in each cell, upright the same way in the four side views, with the same "
           "colors, wear and printing in every view; each view shows what really is on that side. No captions, no "
           "labels, no text outside the object, no hands, no props, no other objects. The object: ")
@@ -154,7 +156,7 @@ def to_white(im):
     h, w = a.shape[:2]
     lum = a.mean(-1)
     sat = a.max(-1) - a.min(-1)
-    bgish = (lum > 110) & (sat < 28)
+    bgish = (lum > 60) & (sat < 22)            # light grey studio background and its soft grey shadows
     seen = np.zeros((h, w), bool)
     q = deque()
     for x in range(w):

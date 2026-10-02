@@ -207,14 +207,24 @@ def publish_setup():
     say(f"phone page: https://{PROJECT}.pages.dev  (updates itself while the remaster works)")
 
 
-def record(name, result):
+def record(name, result, secs=None):
     p = os.path.join(WORK, "results.json")
     try:
         r = json.load(open(p))
     except Exception:
         r = {}
-    r[name] = {"result": result, "at": time.time()}
+    r[name] = {"result": result, "at": time.time(), **({"secs": round(secs)} if secs else {})}
     json.dump(r, open(p, "w"), indent=1)
+
+
+def forget(name):
+    p = os.path.join(WORK, "results.json")
+    try:
+        r = json.load(open(p))
+        if r.pop(name, None) is not None:
+            json.dump(r, open(p, "w"), indent=1)
+    except Exception:
+        pass
 
 
 def shape_base(name):
@@ -258,31 +268,47 @@ def remaster(name, redo=False):
     if os.path.exists(out):
         trash(out)
     os.makedirs(WORK, exist_ok=True)
+    forget(name)                          # an old failure is not shown while it is made again
     step(name, "1/4 the writer describes the real product, the drawing room paints it from six sides")
     try:
         sheet, atlas = turnaround_sheet(name, redo)
     except Exception as e:
         return f"drawing failed: {e}"[:300]
-    base = shape_base(name)
-    if base != name:                      # same physical shape as another object: reuse its sculpt, new paint only
-        tag = f"remaster_{base}"
-        shape = os.path.join(DROP, "done", tag, tag + ".glb")
-        if not os.path.exists(shape):
-            return f"waiting for its shape ({base}) to be sculpted first"
+    turn = os.path.join(WORK, name + "_turn.png")
+    words = os.path.join(PROMPTS, name + ".turn.txt")
+    sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
+    import turnaround as T
+    import views as Vw
+    try:                                  # round or a box: built exactly from the drawing, no sculptor needed
+        spec = Vw.classify(Vw.load(turn), open(words).read() if os.path.exists(words) else "")
+    except Exception as e:
+        spec = {"kind": "sculpt", "why": f"could not read the views: {e}"}
+    json.dump({k: v for k, v in spec.items() if k != "profile"}, open(os.path.join(WORK, name + "_shape.json"), "w"))
+    shape = None
+    if spec["kind"] in ("lathe", "box"):
+        step(name, "2/4 " + ("round: turned exactly from its real outline" if spec["kind"] == "lathe"
+                             else "a box: built exactly to its real corners") + " (seconds, no sculptor)")
     else:
-        step(name, "2/4 the sculptor is making the shape (the slow part)")
-        sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
-        import turnaround as T
-        T.free_room()                     # the drawing model out of memory while the sculptor works
-        shape = sculpt(name, sheet)
-    if not shape:
-        return "the sculptor could not make a shape (see ~/3D Drop/_PROBLEM.txt)"
+        base = shape_base(name)
+        if base != name:                  # same physical shape as another object: reuse its sculpt, new paint only
+            tag = f"remaster_{base}"
+            shape = os.path.join(DROP, "done", tag, tag + ".glb")
+            if not os.path.exists(shape):
+                return f"waiting for its shape ({base}) to be sculpted first"
+        else:
+            step(name, "2/4 the sculptor is making the shape (a complex object)")
+            T.free_room()                 # the drawing model out of memory while the sculptor works
+            shape = sculpt(name, sheet)
+        if not shape:
+            return "the sculptor could not make a shape (see ~/3D Drop/_PROBLEM.txt)"
     inside = os.path.join(WORK, name + "_inside.png")
     step(name, "3/4 painting the inside")
     extra = ["--inside", inside] if draw_inside(name, inside) else []
-    step(name, "4/4 Blender: sizing, painting it on, review pictures")
-    r = subprocess.run([PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", name, "--shape", shape,
-                        "--sheet", atlas, "--turnaround", "--out", PENDING] + extra, capture_output=True, text=True)
+    step(name, "4/4 Blender: real size, one seamless paint job from all six views, review pictures")
+    cmd = [PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", name, "--turn", turn,
+           "--words", words, "--out", PENDING] + (["--shape", shape] if shape else []) + extra
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    open(os.path.join(WORK, name + "_blender.log"), "w").write(r.stdout[-20000:] + "\n" + r.stderr[-20000:])
     if r.returncode or not os.path.exists(os.path.join(out, "model.glb")):
         return "Blender pass failed: " + (r.stderr.strip().splitlines() or ["?"])[-1]
     shutil.copy(os.path.join(WORK, name + "_turn.png"), os.path.join(out, "reference.png"))
@@ -350,7 +376,11 @@ def page():
             if line.strip():
                 k, _, v = line.strip().partition(" ")
                 verdicts[k] = v
-    allx = expected()
+    plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json"))) if os.path.exists(
+        os.path.join(ROOT, "assets", "plan", "items.json")) else {}
+    job = set(plan) | {n for n in names() if os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))}
+    old_lib = sorted(set(expected()) - job)           # code-built objects the new catalog replaces: not remade
+    allx = sorted(job)
     appr = {n for n in allx if os.path.exists(os.path.join(MODELS, n, "model.glb"))}
     pend = {n for n in allx if os.path.exists(os.path.join(PENDING, n, "model.glb"))}
     ready = {n for n in allx if os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))}
@@ -406,31 +436,40 @@ def page():
         if os.path.exists(sh) and os.path.getmtime(sh) < now["since"]:
             sh = ""
         mins = (time.time() - now["since"]) / 60
+        rv = os.path.join(PENDING, now["name"], "review.png")
+        rv = rv if os.path.exists(rv) and os.path.getmtime(rv) >= now["since"] - 5 else ""
         nowhtml = (f'<section class=now><h2>making now: {html.escape(now["name"])}</h2><p>{html.escape(now["step"])} '
-                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if sh and os.path.exists(sh) else "") + '</section>')
+                   f'({mins:.0f} min)</p>' + (f'<img src="{rel(sh)}">' if sh and os.path.exists(sh) else "")
+                   + (f'<img src="{rel(rv)}">' if rv else "") + '</section>')
     tabs = [("all", "all", len(allx)), ("review", "waiting for you", counts.get("review", 0)),
             ("redo", "AI says redo", counts.get("redo", 0)), ("approved", "approved", counts.get("approved", 0)),
             ("togo", "in line", counts.get("togo", 0)), ("prompts", "needs prompts", counts.get("prompts", 0)),
             ("problem", "problems", counts.get("problem", 0))]
-    left = len(allx) - len(appr)
-    # the parts of the job not yet on the list above: the new one-of-ones still being designed, and the labels
+    left = len(allx) - len(appr) - len(pend)
+    catalog = sum(1 for d in plan.values() if d.get("family") != "one-of-one")
+    one_items = sum(1 for d in plan.values() if d.get("family") == "one-of-one")
     try:
-        designed = sum(1 for o in json.load(open(os.path.join(ROOT, "assets", "plan", "ones.json"))).values() if "mix" in o)
+        recipes = sum(1 for o in json.load(open(os.path.join(ROOT, "assets", "plan", "ones.json"))).values() if o.get("mix"))
     except Exception:
-        designed = 0
-    undesigned = max(0, 40 - designed)
+        recipes = 0
+    future = max(0, 888 - catalog)                  # catalog items ChatGPT hasn't written yet
+    secs = sorted(r["secs"] for r in results.values() if r.get("result") == "ok" and r.get("secs"))
+    per = secs[len(secs) // 2] if len(secs) >= 3 else 8 * 60          # the real median once a few are made
     lab_listed = sum(1 for f in glob.glob(os.path.join(ROOT, "ai", "remaster", "labels", "*.txt"))
                      for line in open(f) if line.count("|") >= 2)
     lab_made = len(glob.glob(os.path.join(ROOT, "assets", "labels*", "*", "*.png")))
-    future = undesigned * 9                         # about 9 new objects per one-of-one still to design
-    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} of {len(allx)} objects approved'
-            f'{f" &middot; about {future} more coming as {undesigned} new one-of-ones get designed" if undesigned else ""}'
-            f' &middot; labels {lab_made} made of {lab_listed or "~200"} &middot; about '
-            f'{(left + future) * 11 / 60 / 24:.1f} days of Mac time left &middot; updated {time.strftime("%-I:%M %p")}</p>'
+    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} approved &middot; {len(pend)} waiting for you '
+            f'&middot; {left} to make, of {len(allx)} &middot; catalog {catalog} of 888 written'
+            f'{f" ({future} still to come from ChatGPT)" if future else ""} &middot; one-of-one recipes {recipes} of 88'
+            f'{f" ({one_items} of their objects listed)" if one_items else ""} &middot; labels {lab_made} made of '
+            f'{lab_listed or "~200"} &middot; about {(left + future) * per / 86400:.1f} days of Mac time left at '
+            f'{per / 60:.0f} min each &middot; updated {time.strftime("%-I:%M %p")}</p>'
             + nowhtml +
             '<div class=tabs>' + "".join(f'<button data-t="{k}">{l} <b>{c}</b></button>' for k, l, c in tabs) +
             '</div><input id=q type=search placeholder="search an object">' +
             "".join(card(n) for n in done_order) +
+            (f'<details class=old><summary>old code-built library: {len(old_lib)} objects the new catalog replaces '
+             f'(not remade)</summary><p>{html.escape(", ".join(old_lib))}</p></details>' if old_lib else "") +
             '<script>let T="all";const go=()=>{const q=document.getElementById("q").value.toLowerCase();'
             'document.querySelectorAll(".c").forEach(e=>{e.hidden=!((T=="all"||e.dataset.k==T)&&e.dataset.n.includes(q))});'
             'document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t==T))};'
@@ -529,7 +568,10 @@ def main():
                       and not os.path.exists(os.path.join(MODELS, n, "model.glb"))
                       and os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))
 ]
-    todo = sorted(todo, key=lambda n: shape_base(n) != n) if not a.only else todo
+    plan = set(json.load(open(os.path.join(ROOT, "assets", "plan", "items.json")))) if os.path.exists(
+        os.path.join(ROOT, "assets", "plan", "items.json")) else set()
+    # the new real-product catalog first, shapes before the objects that reuse them; older prompted objects after
+    todo = sorted(todo, key=lambda n: (n not in plan, shape_base(n) != n, n)) if not a.only else todo
     if os.path.exists(PAUSE) and not a.only:
         say("paused: " + open(PAUSE).read().strip())
         todo = []
@@ -538,10 +580,13 @@ def main():
     for i, n in enumerate(todo[:a.limit] if not a.only else todo):
         t0 = time.time()
         res = remaster(n, a.redo)
-        record(n, res)
+        record(n, res, time.time() - t0)
         say(f"[{i + 1}/{len(todo)}] {n}: {res} ({time.time() - t0:.0f}s)")
         if res.startswith("the drawing room"):
             break
+    nowp = os.path.join(WORK, "now.json")
+    if os.path.exists(nowp):
+        os.remove(nowp)                   # the run is over: nothing is being made right now
     status()
     page()
     publish(force=True)

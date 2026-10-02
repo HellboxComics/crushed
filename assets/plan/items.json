@@ -43,6 +43,72 @@
 "themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
+"3m_command_hooks_small_6pack_2000": {
+"display": "3M Command small hooks six-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.047,
+"notes": [
+"3M Command small hooks six-pack, circa 2000"
+],
+"product": "3M Command small hooks six-pack, circa 2000",
+"role": "support",
+"size": [
+0.1,
+0.025,
+0.18
+],
+"themes": "SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; Y2K; regular cubes",
+"weight": 1.0
+},
+"3m_velcro_hook_loop_coins_1998": {
+"display": "3M self-adhesive hook-and-loop fastener coins, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.014,
+"notes": [
+"3M self-adhesive hook-and-loop fastener coins, circa 1998"
+],
+"product": "3M self-adhesive hook-and-loop fastener coins, circa 1998",
+"role": "filler",
+"size": [
+0.09,
+0.01,
+0.15
+],
+"themes": "SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"aaa_roadside_emergency_kit_1999": {
+"display": "AAA roadside emergency kit in zippered bag, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.63,
+"notes": [
+"AAA roadside emergency kit in zippered bag, circa 1999"
+],
+"product": "AAA roadside emergency kit in zippered bag, circa 1999",
+"role": "hero",
+"size": [
+0.3,
+0.15,
+0.2
+],
+"themes": "ROAD TRIP; GARAGE SALE; LOST AND FOUND; Y2K; regular cubes",
+"weight": 1.0
+},
 "adidas_snap_pants_black_white_1998": {
 "display": "adidas three-stripe snap tearaway pants, circa",
 "eras": [
@@ -175,6 +241,50 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"alpine_cda7832_car_cd_receiver_1997": {
+"display": "Alpine CDA-7832 in-dash CD receiver, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 1.008,
+"notes": [
+"Alpine CDA-7832 in-dash CD receiver, circa 1997"
+],
+"product": "Alpine CDA-7832 in-dash CD receiver, circa 1997",
+"role": "hero",
+"size": [
+0.18,
+0.16,
+0.05
+],
+"themes": "ROAD TRIP; BASS BOOSTED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"alpine_sws_1040_subwoofer_1999": {
+"display": "Alpine SWS-1040 10-inch car subwoofer, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 1.656,
+"notes": [
+"Alpine SWS-1040 10-inch car subwoofer, circa 1999"
+],
+"product": "Alpine SWS-1040 10-inch car subwoofer, circa 1999",
+"role": "hero",
+"size": [
+0.26,
+0.14,
+0.26
+],
+"themes": "BASS BOOSTED; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
 "altec_lansing_acs45_1_1999": {
 "display": "Altec Lansing ACS45.1 satellite computer speaker",
 "eras": [
@@ -217,6 +327,28 @@
 0.06
 ],
 "themes": "ROAD TRIP; MALL RAT; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"always_ultra_thin_regular_wings_1998": {
+"display": "Always Ultra Thin Regular pads with wings, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.554,
+"notes": [
+"Always Ultra Thin Regular pads with wings, circa 1998"
+],
+"product": "Always Ultra Thin Regular pads with wings, circa 1998",
+"role": "hero",
+"size": [
+0.18,
+0.1,
+0.22
+],
+"themes": "UNDER THE MATTRESS; PROM NIGHT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "american_pie_vhs_2000": {
@@ -571,6 +703,50 @@
 "themes": "ROAD TRIP; LEFTOVERS; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"assorted_key_ring_1998": {
+"display": "Split key ring with house, car and locker keys, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.05,
+"notes": [
+"Split key ring with house, car and locker keys, circa 1998"
+],
+"product": "Split key ring with house, car and locker keys, circa 1998",
+"role": "filler",
+"size": [
+0.04,
+0.02,
+0.09
+],
+"themes": "LOST AND FOUND; ROAD TRIP; HOME_JUNK_DRAWER_MISC; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"astroglide_2_5oz_1998": {
+"display": "Astroglide personal lubricant 2.5 oz bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.033,
+"notes": [
+"Astroglide personal lubricant 2.5 oz bottle, circa 1998"
+],
+"product": "Astroglide personal lubricant 2.5 oz bottle, circa 1998",
+"role": "support",
+"size": [
+0.045,
+0.03,
+0.14
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "atari2600_cartridge_1977": {
 "display": "Atari 2600 cartridge shell",
 "eras": [
@@ -635,6 +811,50 @@
 0.127
 ],
 "themes": "CONSOLE WARS; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"atlanta1996_olympic_pin_1996": {
+"display": "Atlanta 1996 Olympic Games enamel souvenir pin",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Atlanta 1996 Olympic Games enamel souvenir pin, 1996"
+],
+"product": "Atlanta 1996 Olympic Games enamel souvenir pin, 1996",
+"role": "hero",
+"size": [
+0.03,
+0.002,
+0.035
+],
+"themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"att_trimline_210_phone_beige_1998": {
+"display": "AT&T Trimline 210 corded telephone, Beige, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.22,
+"notes": [
+"AT&T Trimline 210 corded telephone, Beige, circa 1998"
+],
+"product": "AT&T Trimline 210 corded telephone, Beige, circa 1998",
+"role": "hero",
+"size": [
+0.08,
+0.075,
+0.21
+],
+"themes": "DIAL-UP; SICK DAY; HOME_JUNK_DRAWER_MISC; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "austin_powers_vhs_1998": {
@@ -901,6 +1121,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"bazooka_el8a_tube_subwoofer_1998": {
+"display": "Bazooka EL8A amplified bass tube, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 3.55,
+"notes": [
+"Bazooka EL8A amplified bass tube, circa 1998"
+],
+"product": "Bazooka EL8A amplified bass tube, circa 1998",
+"role": "hero",
+"size": [
+0.21,
+0.46,
+0.21
+],
+"themes": "BASS BOOSTED; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"bcw_800count_card_box_1998": {
+"display": "BCW 800-count trading-card storage box, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.398,
+"notes": [
+"BCW 800-count trading-card storage box, circa 1998"
+],
+"product": "BCW 800-count trading-card storage box, circa 1998",
+"role": "support",
+"size": [
+0.38,
+0.095,
+0.105
+],
+"themes": "GOT GOT NEED; MINT CONDITION; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "be_kind_rewind_sticker_1995": {
 "display": "\u201cBE KIND, PLEASE REWIND\u201d VHS rental sticker, circa",
 "eras": [
@@ -921,6 +1185,138 @@
 0.025
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"beckett_baseball_card_monthly_1992": {
+"display": "Beckett Baseball Card Monthly magazine, circa",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.04,
+"notes": [
+"Beckett Baseball Card Monthly magazine, circa 1992"
+],
+"product": "Beckett Baseball Card Monthly magazine, circa 1992",
+"role": "hero",
+"size": [
+0.21,
+0.005,
+0.275
+],
+"themes": "GOT GOT NEED; MINT CONDITION; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"beckett_basketball_monthly_1996": {
+"display": "Beckett Basketball Monthly price guide, circa",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.04,
+"notes": [
+"Beckett Basketball Monthly price guide, circa 1996"
+],
+"product": "Beckett Basketball Monthly price guide, circa 1996",
+"role": "hero",
+"size": [
+0.21,
+0.005,
+0.275
+],
+"themes": "GOT GOT NEED; MINT CONDITION; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"beistle_halloween_static_clings_1998": {
+"display": "Beistle Halloween static-cling window decorations, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Beistle Halloween static-cling window decorations, circa 1998"
+],
+"product": "Beistle Halloween static-cling window decorations, circa 1998",
+"role": "filler",
+"size": [
+0.2,
+0.0005,
+0.28
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"beistle_honeycomb_black_cat_1995": {
+"display": "Beistle honeycomb black cat centerpiece, circa",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.568,
+"notes": [
+"Beistle honeycomb black cat centerpiece, circa 1995"
+],
+"product": "Beistle honeycomb black cat centerpiece, circa 1995",
+"role": "support",
+"size": [
+0.2,
+0.2,
+0.28
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"beistle_honeycomb_pumpkin_1995": {
+"display": "Beistle honeycomb tissue Jack-O'-Lantern centerpiece, circa",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 2.188,
+"notes": [
+"Beistle honeycomb tissue Jack-O'-Lantern centerpiece, circa 1995"
+],
+"product": "Beistle honeycomb tissue Jack-O'-Lantern centerpiece, circa 1995",
+"role": "hero",
+"size": [
+0.25,
+0.25,
+0.25
+],
+"themes": "TRICK OR TREAT; HAND TURKEY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"beistle_jointed_skeleton_1995": {
+"display": "Beistle jointed cardboard skeleton decoration, circa",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.189,
+"notes": [
+"Beistle jointed cardboard skeleton decoration, circa 1995"
+],
+"product": "Beistle jointed cardboard skeleton decoration, circa 1995",
+"role": "hero",
+"size": [
+0.4,
+0.003,
+1.5
+],
+"themes": "TRICK OR TREAT; HAND TURKEY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "belkin_6outlet_surge_protector_1998": {
@@ -965,6 +1361,28 @@
 0.013
 ],
 "themes": "DIAL-UP; SAVE ICON; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"bellsouth_caller_id_box_1998": {
+"display": "BellSouth Caller ID display box, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.049,
+"notes": [
+"BellSouth Caller ID display box, circa 1998"
+],
+"product": "BellSouth Caller ID display box, circa 1998",
+"role": "support",
+"size": [
+0.1,
+0.035,
+0.08
+],
+"themes": "DIAL-UP; SCREEN TIME; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "bic_4color_pen_1996": {
@@ -1077,6 +1495,28 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"bicycle_rider_back_cards_1998": {
+"display": "Bicycle Rider Back playing cards, Standard deck, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Bicycle Rider Back playing cards, Standard deck, circa 1998"
+],
+"product": "Bicycle Rider Back playing cards, Standard deck, circa 1998",
+"role": "hero",
+"size": [
+0.065,
+0.02,
+0.09
+],
+"themes": "SLEEPOVER; ROAD TRIP; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "big_league_chew_original_1995": {
 "display": "Big League Chew Original shredded bubble gum pouch, circa",
 "eras": [
@@ -1119,6 +1559,94 @@
 0.188
 ],
 "themes": "BE KIND REWIND; UNDER_THE_MATTRESS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"black_cat_5ball_roman_candle_1998": {
+"display": "Black Cat 5 Ball Roman Candle, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Black Cat 5 Ball Roman Candle, circa 1998"
+],
+"product": "Black Cat 5 Ball Roman Candle, circa 1998",
+"role": "hero",
+"size": [
+0.02,
+0.02,
+0.4
+],
+"themes": "LIGHT THE FUSE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"black_cat_bc408_bottle_rockets_1998": {
+"display": "Black Cat BC-408 one-ounce assorted bottle rockets, 12-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.382,
+"notes": [
+"Black Cat BC-408 one-ounce assorted bottle rockets, 12-pack, circa 1998"
+],
+"product": "Black Cat BC-408 one-ounce assorted bottle rockets, 12-pack, circa 1998",
+"role": "hero",
+"size": [
+0.11,
+0.04,
+0.62
+],
+"themes": "LIGHT THE FUSE; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"black_cat_firecrackers_100_1995": {
+"display": "Black Cat 100-count firecracker string, circa",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.047,
+"notes": [
+"Black Cat 100-count firecracker string, circa 1995"
+],
+"product": "Black Cat 100-count firecracker string, circa 1995",
+"role": "hero",
+"size": [
+0.07,
+0.03,
+0.16
+],
+"themes": "LIGHT THE FUSE; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"black_fuzzy_steering_wheel_cover_1999": {
+"display": "Black faux-fur steering-wheel cover, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.404,
+"notes": [
+"Black faux-fur steering-wheel cover, circa 1999"
+],
+"product": "Black faux-fur steering-wheel cover, circa 1999",
+"role": "hero",
+"size": [
+0.38,
+0.04,
+0.38
+],
+"themes": "ROAD TRIP; PROM NIGHT; MALL RAT; Y2K; regular cubes",
 "weight": 1.0
 },
 "blackberry_7290_2004": {
@@ -1275,6 +1803,28 @@
 "themes": "PRIZE COUNTER; SLEEPOVER; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"brachs_peppermint_candy_canes_12ct_1998": {
+"display": "Brach's Peppermint Candy Canes 12-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.132,
+"notes": [
+"Brach's Peppermint Candy Canes 12-count box, circa 1998"
+],
+"product": "Brach's Peppermint Candy Canes 12-count box, circa 1998",
+"role": "hero",
+"size": [
+0.15,
+0.03,
+0.28
+],
+"themes": "BOXING DAY; LUNCH TRADE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "brass_pog_slammer_1994": {
 "display": "Brass POG slammer, circa",
 "eras": [
@@ -1297,6 +1847,28 @@
 "themes": "GOT GOT NEED; PRIZE COUNTER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"brite_star_silver_tinsel_garland_1998": {
+"display": "Brite Star silver tinsel garland, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.75,
+"notes": [
+"Brite Star silver tinsel garland, circa 1998"
+],
+"product": "Brite Star silver tinsel garland, circa 1998",
+"role": "filler",
+"size": [
+0.5,
+0.5,
+0.2
+],
+"themes": "BOXING DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "britney_baby_one_more_time_cd_1999": {
 "display": "Britney Spears ...Baby One More Time CD in jewel case",
 "eras": [
@@ -1317,6 +1889,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"brown_magazine_privacy_sleeve_1998": {
+"display": "Plain brown paper magazine privacy sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.018,
+"notes": [
+"Plain brown paper magazine privacy sleeve, circa 1998"
+],
+"product": "Plain brown paper magazine privacy sleeve, circa 1998",
+"role": "support",
+"size": [
+0.22,
+0.002,
+0.285
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "bubble_jug_tropical_fruit_1994": {
@@ -1405,6 +1999,28 @@
 0.16
 ],
 "themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"cadbury_creme_egg_4pack_1998": {
+"display": "Cadbury Creme Egg 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"Cadbury Creme Egg 4-pack, circa 1998"
+],
+"product": "Cadbury Creme Egg 4-pack, circa 1998",
+"role": "hero",
+"size": [
+0.12,
+0.035,
+0.06
+],
+"themes": "EGG HUNT; LUNCH TRADE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "canon_bjc210_1995": {
@@ -1517,6 +2133,94 @@
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; SUMMER CAMP; regular cubes",
 "weight": 1.0
 },
+"carefree_original_pantiliners_1998": {
+"display": "Carefree Original Pantiliners, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.302,
+"notes": [
+"Carefree Original Pantiliners, circa 1998"
+],
+"product": "Carefree Original Pantiliners, circa 1998",
+"role": "support",
+"size": [
+0.15,
+0.08,
+0.18
+],
+"themes": "UNDER THE MATTRESS; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"case_logic_12cassette_car_case_1995": {
+"display": "Case Logic 12-cassette carrying case, circa",
+"eras": [
+1,
+2
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.088,
+"notes": [
+"Case Logic 12-cassette carrying case, circa 1995"
+],
+"product": "Case Logic 12-cassette carrying case, circa 1995",
+"role": "hero",
+"size": [
+0.15,
+0.07,
+0.12
+],
+"themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"case_logic_12cd_visor_organizer_1999": {
+"display": "Case Logic 12-CD visor organizer, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.049,
+"notes": [
+"Case Logic 12-CD visor organizer, circa 1999"
+],
+"product": "Case Logic 12-CD visor organizer, circa 1999",
+"role": "hero",
+"size": [
+0.31,
+0.015,
+0.15
+],
+"themes": "ROAD TRIP; MIXTAPE; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"case_logic_24cd_wallet_black_1999": {
+"display": "Case Logic 24-CD zippered wallet, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.09,
+"notes": [
+"Case Logic 24-CD zippered wallet, circa 1999"
+],
+"product": "Case Logic 24-CD zippered wallet, circa 1999",
+"role": "hero",
+"size": [
+0.16,
+0.05,
+0.16
+],
+"themes": "ROAD TRIP; MIXTAPE; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "casio_fx300ms_1999": {
 "display": "Casio fx-300MS scientific calculator, circa",
 "eras": [
@@ -1605,6 +2309,50 @@
 "themes": "DIAL-UP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"chamberlain_three_button_garage_remote_1999": {
+"display": "Chamberlain three-button garage-door remote control, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Chamberlain three-button garage-door remote control, circa 1999"
+],
+"product": "Chamberlain three-button garage-door remote control, circa 1999",
+"role": "filler",
+"size": [
+0.04,
+0.018,
+0.07
+],
+"themes": "ROAD TRIP; LOST AND FOUND; HOME_JUNK_DRAWER_MISC; Y2K; regular cubes",
+"weight": 1.0
+},
+"champagne_party_poppers_box_1990": {
+"display": "Champagne Party Poppers retail box, circa",
+"eras": [
+0,
+1
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.132,
+"notes": [
+"Champagne Party Poppers retail box, circa 1990"
+],
+"product": "Champagne Party Poppers retail box, circa 1990",
+"role": "support",
+"size": [
+0.14,
+0.05,
+0.18
+],
+"themes": "LIGHT THE FUSE; PROM NIGHT; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "champion_reverse_weave_hoodie_gray_1998": {
 "display": "Champion Reverse Weave pullover hoodie, gray, circa",
 "eras": [
@@ -1671,6 +2419,50 @@
 "themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
 "weight": 1.0
 },
+"chinese_red_envelope_6pack_1999": {
+"display": "Lunar New Year red envelope six-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.013,
+"notes": [
+"Lunar New Year red envelope six-pack, circa 1999"
+],
+"product": "Lunar New Year red envelope six-pack, circa 1999",
+"role": "support",
+"size": [
+0.09,
+0.006,
+0.17
+],
+"themes": "RED ENVELOPE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"chrome_flame_license_frame_1999": {
+"display": "Chrome flame license-plate frame, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.278,
+"notes": [
+"Chrome flame license-plate frame, circa 1999"
+],
+"product": "Chrome flame license-plate frame, circa 1999",
+"role": "support",
+"size": [
+0.31,
+0.008,
+0.16
+],
+"themes": "ROAD TRIP; PROM NIGHT; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
 "chuck_e_cheese_ticket_strip_1998": {
 "display": "Chuck E. Cheese's redemption ticket strip, circa",
 "eras": [
@@ -1715,6 +2507,72 @@
 "themes": "PRIZE COUNTER; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"clay_diya_lamp_1998": {
+"display": "Traditional terracotta diya oil lamp, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.074,
+"notes": [
+"Traditional terracotta diya oil lamp, circa 1998"
+],
+"product": "Traditional terracotta diya oil lamp, circa 1998",
+"role": "hero",
+"size": [
+0.08,
+0.08,
+0.03
+],
+"themes": "DIYA; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"clear_phone_neon_cords_1995": {
+"display": "Transparent corded telephone with neon internal wiring, circa",
+"eras": [
+1,
+2
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.567,
+"notes": [
+"Transparent corded telephone with neon internal wiring, circa 1995"
+],
+"product": "Transparent corded telephone with neon internal wiring, circa 1995",
+"role": "hero",
+"size": [
+0.18,
+0.18,
+0.1
+],
+"themes": "DIAL-UP; SLEEPOVER; TIME CAPSULE; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"clearblue_easy_pregnancy_test_1998": {
+"display": "Clearblue Easy home pregnancy test, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"Clearblue Easy home pregnancy test, circa 1998"
+],
+"product": "Clearblue Easy home pregnancy test, circa 1998",
+"role": "hero",
+"size": [
+0.07,
+0.03,
+0.19
+],
+"themes": "UNDER THE MATTRESS; PROM NIGHT; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "clearly_canadian_wild_cherry_1994": {
 "display": "Clearly Canadian Wild Cherry sparkling water, circa",
 "eras": [
@@ -1735,6 +2593,28 @@
 0.2
 ],
 "themes": "ROAD TRIP; TIME CAPSULE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"clearplan_easy_ovulation_test_1998": {
+"display": "ClearPlan Easy home ovulation test",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.123,
+"notes": [
+"ClearPlan Easy home ovulation test, 1998"
+],
+"product": "ClearPlan Easy home ovulation test, 1998",
+"role": "support",
+"size": [
+0.13,
+0.05,
+0.18
+],
+"themes": "UNDER THE MATTRESS; PROM NIGHT; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "clueless_vhs_1995": {
@@ -1759,6 +2639,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
 "weight": 1.0
 },
+"coats_clark_thread_spool_white_1998": {
+"display": "Coats & Clark Dual Duty Plus white sewing thread spool, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Coats & Clark Dual Duty Plus white sewing thread spool, circa 1998"
+],
+"product": "Coats & Clark Dual Duty Plus white sewing thread spool, circa 1998",
+"role": "filler",
+"size": [
+0.032,
+0.032,
+0.055
+],
+"themes": "SEWING KIT; HOME_JUNK_DRAWER_MISC; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"cobra_esd6060_radar_detector_1998": {
+"display": "Cobra ESD-6060 radar/laser detector, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.04,
+"notes": [
+"Cobra ESD-6060 radar/laser detector, circa 1998"
+],
+"product": "Cobra ESD-6060 radar/laser detector, circa 1998",
+"role": "hero",
+"size": [
+0.07,
+0.03,
+0.11
+],
+"themes": "ROAD TRIP; PROM NIGHT; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "coca_cola_12oz_can_1998": {
 "display": "Coca-Cola Classic 12 fl oz aluminum can, circa",
 "eras": [
@@ -1779,6 +2703,50 @@
 0.122
 ],
 "themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"coiled_phone_handset_cord_beige_1997": {
+"display": "Beige coiled telephone handset cord, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Beige coiled telephone handset cord, circa 1997"
+],
+"product": "Beige coiled telephone handset cord, circa 1997",
+"role": "filler",
+"size": [
+1.8,
+0.005,
+0.005
+],
+"themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"color_sparklers_no8_box_1990": {
+"display": "No. 8 Color Sparklers, 72-piece retail box, circa",
+"eras": [
+0,
+1
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.118,
+"notes": [
+"No. 8 Color Sparklers, 72-piece retail box, circa 1990"
+],
+"product": "No. 8 Color Sparklers, 72-piece retail box, circa 1990",
+"role": "hero",
+"size": [
+0.1,
+0.04,
+0.28
+],
+"themes": "LIGHT THE FUSE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "combos_pizzeria_pretzel_1996": {
@@ -1933,6 +2901,50 @@
 0.135
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"craftsman_4in1_screwdriver_1998": {
+"display": "Craftsman 4-in-1 reversible screwdriver, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.045,
+"notes": [
+"Craftsman 4-in-1 reversible screwdriver, circa 1998"
+],
+"product": "Craftsman 4-in-1 reversible screwdriver, circa 1998",
+"role": "support",
+"size": [
+0.035,
+0.035,
+0.21
+],
+"themes": "SOME ASSEMBLY REQUIRED; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"craftsman_pencil_tire_gauge_1998": {
+"display": "Craftsman pencil-style tire pressure gauge, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Craftsman pencil-style tire pressure gauge, circa 1998"
+],
+"product": "Craftsman pencil-style tire pressure gauge, circa 1998",
+"role": "filler",
+"size": [
+0.012,
+0.012,
+0.145
+],
+"themes": "ROAD TRIP; GARAGE SALE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "crayola_64_crayons_1994": {
@@ -2177,6 +3189,28 @@
 "themes": "LUNCH TRADE; LEFTOVERS; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"cyalume_snaplight_green_6in_1998": {
+"display": "Cyalume SnapLight 6-inch green light stick, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"Cyalume SnapLight 6-inch green light stick, circa 1998"
+],
+"product": "Cyalume SnapLight 6-inch green light stick, circa 1998",
+"role": "filler",
+"size": [
+0.015,
+0.015,
+0.15
+],
+"themes": "TRICK OR TREAT; SUMMER CAMP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "dam_troll_pencil_topper_1990": {
 "display": "Dam Things Troll pencil topper, circa",
 "eras": [
@@ -2285,6 +3319,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"dia_de_los_muertos_papel_picado_1998": {
+"display": "D\u00eda de los Muertos papel picado banner, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.315,
+"notes": [
+"D\u00eda de los Muertos papel picado banner, circa 1998"
+],
+"product": "D\u00eda de los Muertos papel picado banner, circa 1998",
+"role": "hero",
+"size": [
+0.1778,
+0.1778,
+0.0711
+],
+"themes": "OFRENDA; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "diamond_rio_pmp300_1998": {
@@ -2947,6 +4003,28 @@
 "themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"durex_extra_sensitive_3count_1999": {
+"display": "Durex Extra Sensitive lubricated condoms 3-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Durex Extra Sensitive lubricated condoms 3-count box, circa 1999"
+],
+"product": "Durex Extra Sensitive lubricated condoms 3-count box, circa 1999",
+"role": "support",
+"size": [
+0.065,
+0.025,
+0.1
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
 "earthlink_trial_cd_1999": {
 "display": "EarthLink free Internet trial CD-ROM, circa",
 "eras": [
@@ -2967,6 +4045,28 @@
 0.126
 ],
 "themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"easter_grass_green_cello_1998": {
+"display": "Green cellophane Easter basket grass, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.262,
+"notes": [
+"Green cellophane Easter basket grass, circa 1998"
+],
+"product": "Green cellophane Easter basket grass, circa 1998",
+"role": "filler",
+"size": [
+0.15,
+0.04,
+0.25
+],
+"themes": "EGG HUNT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "easy_bake_oven_1993": {
@@ -3011,6 +4111,28 @@
 0.23
 ],
 "themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"elite_hanukkah_gelt_mesh_bag_1998": {
+"display": "Elite milk chocolate Hanukkah gelt mesh bag, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Elite milk chocolate Hanukkah gelt mesh bag, circa 1998"
+],
+"product": "Elite milk chocolate Hanukkah gelt mesh bag, circa 1998",
+"role": "support",
+"size": [
+0.08,
+0.04,
+0.14
+],
+"themes": "EIGHT NIGHTS; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "elmers_glue_stick_purple_1999": {
@@ -3121,6 +4243,72 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"empire_black_cat_pumpkin_blowmold_1995": {
+"display": "Empire Plastics black-cat-and-pumpkin Halloween blow mold, circa",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 3.465,
+"notes": [
+"Empire Plastics black-cat-and-pumpkin Halloween blow mold, circa 1995"
+],
+"product": "Empire Plastics black-cat-and-pumpkin Halloween blow mold, circa 1995",
+"role": "hero",
+"size": [
+0.25,
+0.22,
+0.36
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"empire_ghost_pumpkin_blowmold_1995": {
+"display": "Empire Plastics lighted ghost-with-pumpkin blow mold, circa",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 8.12,
+"notes": [
+"Empire Plastics lighted ghost-with-pumpkin blow mold, circa 1995"
+],
+"product": "Empire Plastics lighted ghost-with-pumpkin blow mold, circa 1995",
+"role": "hero",
+"size": [
+0.32,
+0.25,
+0.58
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"empire_pumpkin_blowmold_22in_1991": {
+"display": "Empire Plastics lighted Jack-O'-Lantern blow mold, 22 inch",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 22.579,
+"notes": [
+"Empire Plastics lighted Jack-O'-Lantern blow mold, 22 inch, 1991"
+],
+"product": "Empire Plastics lighted Jack-O'-Lantern blow mold, 22 inch, 1991",
+"role": "hero",
+"size": [
+0.48,
+0.48,
+0.56
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "energizer_15minute_charger_2004": {
@@ -3343,6 +4531,28 @@
 "themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"ept_one_step_pregnancy_test_1998": {
+"display": "e.p.t. one-step home pregnancy test, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"e.p.t. one-step home pregnancy test, circa 1998"
+],
+"product": "e.p.t. one-step home pregnancy test, circa 1998",
+"role": "hero",
+"size": [
+0.07,
+0.03,
+0.19
+],
+"themes": "UNDER THE MATTRESS; PROM NIGHT; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "et_extra_terrestrial_vhs_1988": {
 "display": "E.T. the Extra-Terrestrial VHS home-video release",
 "eras": [
@@ -3385,6 +4595,28 @@
 0.175
 ],
 "themes": "SCREEN TIME; HAND TURKEY; TIME CAPSULE; SICK DAY; regular cubes",
+"weight": 1.0
+},
+"eveready_economy_flashlight_red_1997": {
+"display": "Eveready economy 2-D flashlight, Red, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.12,
+"notes": [
+"Eveready economy 2-D flashlight, Red, circa 1997"
+],
+"product": "Eveready economy 2-D flashlight, Red, circa 1997",
+"role": "support",
+"size": [
+0.06,
+0.06,
+0.19
+],
+"themes": "DOUBLE A; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "eveready_super_heavy_duty_aa4_1994": {
@@ -3497,6 +4729,28 @@
 "themes": "COASTERS; KICKFLIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"fhm_us_1999_issue": {
+"display": "FHM U.S. magazine issue, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.049,
+"notes": [
+"FHM U.S. magazine issue, circa 1999"
+],
+"product": "FHM U.S. magazine issue, circa 1999",
+"role": "support",
+"size": [
+0.21,
+0.006,
+0.275
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; MALL RAT; Y2K; regular cubes",
+"weight": 1.0
+},
 "fifty_cent_get_rich_cd_2003": {
 "display": "50 Cent Get Rich or Die Tryin' CD in jewel case",
 "eras": [
@@ -3585,6 +4839,50 @@
 "themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"fleer_basketball_pack_1990": {
+"display": "Fleer Basketball picture-card wax pack",
+"eras": [
+0,
+1
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Fleer Basketball picture-card wax pack, 1990"
+],
+"product": "Fleer Basketball picture-card wax pack, 1990",
+"role": "hero",
+"size": [
+0.068,
+0.008,
+0.095
+],
+"themes": "GOT GOT NEED; MINT CONDITION; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"fleet_ready_to_use_enema_1998": {
+"display": "Fleet Ready-to-Use saline enema, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Fleet Ready-to-Use saline enema, circa 1998"
+],
+"product": "Fleet Ready-to-Use saline enema, circa 1998",
+"role": "support",
+"size": [
+0.06,
+0.04,
+0.17
+],
+"themes": "UNDER THE MATTRESS; SICK DAY; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "floppy_34wire_ribbon_cable_1997": {
 "display": "34-conductor floppy-drive ribbon cable, circa",
 "eras": [
@@ -3627,6 +4925,50 @@
 0.188
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"franklin_batting_gloves_black_white_1998": {
+"display": "Franklin batting gloves, Black/White, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.035,
+"notes": [
+"Franklin batting gloves, Black/White, circa 1998"
+],
+"product": "Franklin batting gloves, Black/White, circa 1998",
+"role": "support",
+"size": [
+0.11,
+0.02,
+0.23
+],
+"themes": "SUMMER CAMP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"franklin_batting_tee_1998": {
+"display": "Franklin adjustable batting tee, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 27.783,
+"notes": [
+"Franklin adjustable batting tee, circa 1998"
+],
+"product": "Franklin adjustable batting tee, circa 1998",
+"role": "support",
+"size": [
+0.42,
+0.42,
+0.75
+],
+"themes": "SUMMER CAMP; GARAGE SALE; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
 "french_toast_crunch_1997": {
@@ -3781,6 +5123,50 @@
 0.064
 ],
 "themes": "MIXTAPE; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"fuji_quicksnap_flash_1998": {
+"display": "Fujifilm QuickSnap Flash 35 mm single-use camera, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.046,
+"notes": [
+"Fujifilm QuickSnap Flash 35 mm single-use camera, circa 1998"
+],
+"product": "Fujifilm QuickSnap Flash 35 mm single-use camera, circa 1998",
+"role": "hero",
+"size": [
+0.115,
+0.035,
+0.065
+],
+"themes": "TIME CAPSULE; ROAD TRIP; PROM NIGHT; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"fuji_superia_400_24exp_1999": {
+"display": "Fujicolor Superia 400 35 mm film, 24 exposures, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.033,
+"notes": [
+"Fujicolor Superia 400 35 mm film, 24 exposures, circa 1999"
+],
+"product": "Fujicolor Superia 400 35 mm film, 24 exposures, circa 1999",
+"role": "support",
+"size": [
+0.03,
+0.03,
+0.053
+],
+"themes": "TIME CAPSULE; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
 "weight": 1.0
 },
 "fun_dip_razzapple_magic_1995": {
@@ -4133,6 +5519,94 @@
 0.082
 ],
 "themes": "SCREEN TIME; STILL ALIVE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"ge_100_clear_mini_lights_1998": {
+"display": "GE 100-count clear miniature Christmas lights, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.339,
+"notes": [
+"GE 100-count clear miniature Christmas lights, circa 1998"
+],
+"product": "GE 100-count clear miniature Christmas lights, circa 1998",
+"role": "hero",
+"size": [
+0.2674,
+0.2674,
+0.107
+],
+"themes": "BOXING DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"ge_4device_universal_remote_1999": {
+"display": "GE four-device universal remote control, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"GE four-device universal remote control, circa 1999"
+],
+"product": "GE four-device universal remote control, circa 1999",
+"role": "hero",
+"size": [
+0.055,
+0.025,
+0.18
+],
+"themes": "SCREEN TIME; SICK DAY; LOST AND FOUND; Y2K; regular cubes",
+"weight": 1.0
+},
+"ge_c7_multicolor_christmas_lights_1998": {
+"display": "GE C7 multicolor Christmas light set, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 20.43,
+"notes": [
+"GE C7 multicolor Christmas light set, circa 1998"
+],
+"product": "GE C7 multicolor Christmas light set, circa 1998",
+"role": "hero",
+"size": [
+0.4954,
+0.4954,
+0.1982
+],
+"themes": "EIGHT NIGHTS; BOXING DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"ge_orange_purple_mini_lights_1998": {
+"display": "GE Halloween orange and purple mini light set, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.819,
+"notes": [
+"GE Halloween orange and purple mini light set, circa 1998"
+],
+"product": "GE Halloween orange and purple mini light set, circa 1998",
+"role": "hero",
+"size": [
+0.2962,
+0.2962,
+0.1185
+],
+"themes": "TRICK OR TREAT; BLACKLIGHT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "ge_six_outlet_power_strip_2000": {
@@ -4531,6 +6005,138 @@
 "themes": "CONSOLE WARS; SLEEPOVER; PROM NIGHT; BASS BOOSTED; regular cubes",
 "weight": 1.0
 },
+"hallmark_address_book_1998": {
+"display": "Hallmark pocket address and telephone book, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.032,
+"notes": [
+"Hallmark pocket address and telephone book, circa 1998"
+],
+"product": "Hallmark pocket address and telephone book, circa 1998",
+"role": "support",
+"size": [
+0.1,
+0.015,
+0.15
+],
+"themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"hallmark_assorted_bows_20pack_1998": {
+"display": "Hallmark self-stick Christmas gift bows 20-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.63,
+"notes": [
+"Hallmark self-stick Christmas gift bows 20-pack, circa 1998"
+],
+"product": "Hallmark self-stick Christmas gift bows 20-pack, circa 1998",
+"role": "filler",
+"size": [
+0.18,
+0.08,
+0.25
+],
+"themes": "BOXING DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hallmark_boxed_christmas_cards_20ct_1998": {
+"display": "Hallmark boxed Christmas greeting cards 20-count, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.118,
+"notes": [
+"Hallmark boxed Christmas greeting cards 20-count, circa 1998"
+],
+"product": "Hallmark boxed Christmas greeting cards 20-count, circa 1998",
+"role": "support",
+"size": [
+0.14,
+0.04,
+0.2
+],
+"themes": "BOXING DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hallmark_classroom_valentines_32ct_1998": {
+"display": "Hallmark classroom Valentine cards 32-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.079,
+"notes": [
+"Hallmark classroom Valentine cards 32-count box, circa 1998"
+],
+"product": "Hallmark classroom Valentine cards 32-count box, circa 1998",
+"role": "hero",
+"size": [
+0.15,
+0.025,
+0.2
+],
+"themes": "BE MINE; SCHOOL_JUNK; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hallmark_holly_gift_wrap_roll_1998": {
+"display": "Hallmark Christmas gift-wrap roll, holly pattern, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.215,
+"notes": [
+"Hallmark Christmas gift-wrap roll, holly pattern, circa 1998"
+],
+"product": "Hallmark Christmas gift-wrap roll, holly pattern, circa 1998",
+"role": "support",
+"size": [
+0.045,
+0.045,
+0.76
+],
+"themes": "BOXING DAY; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"hallmark_keepsake_ornament_box_1998": {
+"display": "Hallmark Keepsake Ornament gift box",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.101,
+"notes": [
+"Hallmark Keepsake Ornament gift box, 1998"
+],
+"product": "Hallmark Keepsake Ornament gift box, 1998",
+"role": "support",
+"size": [
+0.1,
+0.08,
+0.12
+],
+"themes": "BOXING DAY; MINT CONDITION; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "halo2_xbox_2004": {
 "display": "Halo 2 original Xbox game",
 "eras": [
@@ -4663,6 +6269,28 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"hersheys_kisses_valentine_bag_1998": {
+"display": "Hershey's Kisses Valentine's milk chocolate bag, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.06,
+"notes": [
+"Hershey's Kisses Valentine's milk chocolate bag, circa 1998"
+],
+"product": "Hershey's Kisses Valentine's milk chocolate bag, circa 1998",
+"role": "hero",
+"size": [
+0.15,
+0.05,
+0.23
+],
+"themes": "BE MINE; LUNCH TRADE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "hi_c_boppin_strawberry_juice_box_1996": {
 "display": "Hi-C Boppin' Strawberry juice box, circa",
 "eras": [
@@ -4749,6 +6377,28 @@
 0.032
 ],
 "themes": "SLEEPOVER; DRESS CODE; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"holi_gulal_powder_packet_pink_1998": {
+"display": "Gulal colored powder packet, Pink, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"Gulal colored powder packet, Pink, circa 1998"
+],
+"product": "Gulal colored powder packet, Pink, circa 1998",
+"role": "hero",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "GULAL; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "hollywood_video_membership_card_1999": {
@@ -5035,6 +6685,28 @@
 0.055
 ],
 "themes": "LUNCH TRADE; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hustler_august_1998_polybagged": {
+"display": "Hustler magazine, August 1998 issue, sealed newsstand copy",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Hustler magazine, August 1998 issue, sealed newsstand copy"
+],
+"product": "Hustler magazine, August 1998 issue, sealed newsstand copy",
+"role": "hero",
+"size": [
+0.21,
+0.007,
+0.275
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "ibm_3_5_floppy_blue_1997": {
@@ -5455,6 +7127,28 @@
 "themes": "GOT GOT NEED; PRIZE COUNTER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"johnson_band_aid_sheer_strips_30_1998": {
+"display": "BAND-AID Brand Sheer Strips 30-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"BAND-AID Brand Sheer Strips 30-count box, circa 1998"
+],
+"product": "BAND-AID Brand Sheer Strips 30-count box, circa 1998",
+"role": "support",
+"size": [
+0.1,
+0.035,
+0.07
+],
+"themes": "SICK DAY; HOME_JUNK_DRAWER_MISC; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "josta_20oz_1996": {
 "display": "Josta guarana soda 20 fl oz bottle, circa",
 "eras": [
@@ -5675,6 +7369,50 @@
 "themes": "SCREEN TIME; TIME CAPSULE; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"kodak_funsaver_flash_27exp_1998": {
+"display": "Kodak FunSaver 35 mm one-time-use camera with flash, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.046,
+"notes": [
+"Kodak FunSaver 35 mm one-time-use camera with flash, circa 1998"
+],
+"product": "Kodak FunSaver 35 mm one-time-use camera with flash, circa 1998",
+"role": "hero",
+"size": [
+0.115,
+0.035,
+0.065
+],
+"themes": "TIME CAPSULE; ROAD TRIP; PROM NIGHT; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"kodak_gold_200_24exp_1998": {
+"display": "Kodak Gold 200 35 mm film, 24 exposures, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.033,
+"notes": [
+"Kodak Gold 200 35 mm film, 24 exposures, circa 1998"
+],
+"product": "Kodak Gold 200 35 mm film, 24 exposures, circa 1998",
+"role": "support",
+"size": [
+0.03,
+0.03,
+0.053
+],
+"themes": "TIME CAPSULE; ROAD TRIP; PROM NIGHT; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
 "konami_ddr_dance_pad_ps1_1999": {
 "display": "Konami Dance Dance Revolution soft dance pad for PlayStation",
 "eras": [
@@ -5785,6 +7523,28 @@
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"kotex_maxi_regular_24count_1998": {
+"display": "Kotex Maxi Regular pads 24-count package, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.766,
+"notes": [
+"Kotex Maxi Regular pads 24-count package, circa 1998"
+],
+"product": "Kotex Maxi Regular pads 24-count package, circa 1998",
+"role": "support",
+"size": [
+0.19,
+0.12,
+0.24
+],
+"themes": "UNDER THE MATTRESS; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "kraft_easy_mac_original_cup_1999": {
 "display": "Kraft Easy Mac Original macaroni and cheese cup, circa",
 "eras": [
@@ -5871,6 +7631,28 @@
 0.13
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"ky_jelly_2oz_1998": {
+"display": "K-Y Jelly personal lubricant 2 oz tube, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.03,
+"notes": [
+"K-Y Jelly personal lubricant 2 oz tube, circa 1998"
+],
+"product": "K-Y Jelly personal lubricant 2 oz tube, circa 1998",
+"role": "support",
+"size": [
+0.045,
+0.025,
+0.15
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "labtec_verse_313_microphone_1999": {
@@ -6069,6 +7851,28 @@
 0.105
 ],
 "themes": "LUNCH TRADE; ROAD TRIP; TRICK OR TREAT; regular cubes",
+"weight": 1.0
+},
+"lifestyles_ultra_sensitive_3count_1999": {
+"display": "LifeStyles Ultra Sensitive condoms 3-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"LifeStyles Ultra Sensitive condoms 3-count box, circa 1999"
+],
+"product": "LifeStyles Ultra Sensitive condoms 3-count box, circa 1999",
+"role": "support",
+"size": [
+0.065,
+0.025,
+0.1
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
 "lil_wayne_carter_iii_cd_2008": {
@@ -6335,6 +8139,50 @@
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
+"little_trees_royal_pine_1998": {
+"display": "Little Trees Royal Pine hanging air freshener, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Little Trees Royal Pine hanging air freshener, circa 1998"
+],
+"product": "Little Trees Royal Pine hanging air freshener, circa 1998",
+"role": "hero",
+"size": [
+0.075,
+0.003,
+0.12
+],
+"themes": "ROAD TRIP; PROM NIGHT; MALL RAT; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"little_trees_vanillaroma_1998": {
+"display": "Little Trees Vanillaroma hanging air freshener, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Little Trees Vanillaroma hanging air freshener, circa 1998"
+],
+"product": "Little Trees Vanillaroma hanging air freshener, circa 1998",
+"role": "support",
+"size": [
+0.075,
+0.003,
+0.12
+],
+"themes": "ROAD TRIP; PROM NIGHT; MALL RAT; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "livestrong_yellow_wristband_2004": {
 "display": "LIVESTRONG yellow silicone wristband",
 "eras": [
@@ -6599,6 +8447,28 @@
 "themes": "MALL RAT; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"mardi_gras_beads_purple_green_gold_1996": {
+"display": "Mardi Gras parade bead necklace, Purple/Green/Gold",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.224,
+"notes": [
+"Mardi Gras parade bead necklace, Purple/Green/Gold, 1996"
+],
+"product": "Mardi Gras parade bead necklace, Purple/Green/Gold, 1996",
+"role": "hero",
+"size": [
+0.4,
+0.008,
+0.4
+],
+"themes": "CARNAVAL; TIME CAPSULE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "mario_kart_64_n64_1997": {
 "display": "Mario Kart 64 Nintendo 64 Game Pak",
 "eras": [
@@ -6641,6 +8511,28 @@
 0.19
 ],
 "themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"mason_jar_loose_change_1999": {
+"display": "Ball Mason jar used as loose-change jar, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.578,
+"notes": [
+"Ball Mason jar used as loose-change jar, circa 1999"
+],
+"product": "Ball Mason jar used as loose-change jar, circa 1999",
+"role": "hero",
+"size": [
+0.09,
+0.09,
+0.17
+],
+"themes": "RETIREMENT PLAN; HOME_JUNK_DRAWER_MISC; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "matchbox_5pack_1996": {
@@ -6839,6 +8731,116 @@
 0.064
 ],
 "themes": "MIXTAPE; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"maxim_september_1998": {
+"display": "Maxim magazine, September 1998 issue",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.049,
+"notes": [
+"Maxim magazine, September 1998 issue"
+],
+"product": "Maxim magazine, September 1998 issue",
+"role": "hero",
+"size": [
+0.21,
+0.006,
+0.275
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"mcdonalds_mcboo_vinyl_treat_bag_1991": {
+"display": "McDonald's McBoo glow-in-the-dark vinyl Halloween treat bag",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.094,
+"notes": [
+"McDonald's McBoo glow-in-the-dark vinyl Halloween treat bag, 1991"
+],
+"product": "McDonald's McBoo glow-in-the-dark vinyl Halloween treat bag, 1991",
+"role": "hero",
+"size": [
+0.24,
+0.01,
+0.28
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"mcdonalds_mcghost_glow_pail_1990": {
+"display": "McDonald's McGhost glow-in-the-dark Halloween Happy Meal pail",
+"eras": [
+0,
+1
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.26,
+"notes": [
+"McDonald's McGhost glow-in-the-dark Halloween Happy Meal pail, 1990"
+],
+"product": "McDonald's McGhost glow-in-the-dark Halloween Happy Meal pail, 1990",
+"role": "hero",
+"size": [
+0.2,
+0.2,
+0.18
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"mcdonalds_mcpunkn_pail_1992": {
+"display": "McDonald's McPunk'n Halloween Happy Meal pail with cookie-cutter lid",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.26,
+"notes": [
+"McDonald's McPunk'n Halloween Happy Meal pail with cookie-cutter lid, 1992"
+],
+"product": "McDonald's McPunk'n Halloween Happy Meal pail with cookie-cutter lid, 1992",
+"role": "hero",
+"size": [
+0.2,
+0.2,
+0.18
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"mcdonalds_mcwitch_pail_1992": {
+"display": "McDonald's McWitch Halloween Happy Meal pail with cookie-cutter lid",
+"eras": [
+1,
+2
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.61,
+"notes": [
+"McDonald's McWitch Halloween Happy Meal pail with cookie-cutter lid, 1992"
+],
+"product": "McDonald's McWitch Halloween Happy Meal pail with cookie-cutter lid, 1992",
+"role": "hero",
+"size": [
+0.2,
+0.2,
+0.23
+],
+"themes": "TRICK OR TREAT; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "mcr_black_parade_cd_2006": {
@@ -7281,6 +9283,50 @@
 "themes": "TRICK OR TREAT; GOT GOT NEED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"mini_maglite_2aa_black_1998": {
+"display": "Maglite Mini Maglite 2-AA flashlight, Black, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Maglite Mini Maglite 2-AA flashlight, Black, circa 1998"
+],
+"product": "Maglite Mini Maglite 2-AA flashlight, Black, circa 1998",
+"role": "hero",
+"size": [
+0.025,
+0.025,
+0.145
+],
+"themes": "DOUBLE A; ROAD TRIP; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"mishumaa_saba_candle_set_1998": {
+"display": "Mishumaa Saba Kwanzaa candle set, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.231,
+"notes": [
+"Mishumaa Saba Kwanzaa candle set, circa 1998"
+],
+"product": "Mishumaa Saba Kwanzaa candle set, circa 1998",
+"role": "support",
+"size": [
+0.15,
+0.025,
+0.22
+],
+"themes": "KWANZAA; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "molex_4pin_power_splitter_1999": {
 "display": "4-pin Molex PC power Y-splitter cable, circa",
 "eras": [
@@ -7323,6 +9369,28 @@
 0.16
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"monistat_7_cream_1998": {
+"display": "Monistat 7 vaginal antifungal cream treatment box, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.076,
+"notes": [
+"Monistat 7 vaginal antifungal cream treatment box, circa 1998"
+],
+"product": "Monistat 7 vaginal antifungal cream treatment box, circa 1998",
+"role": "support",
+"size": [
+0.09,
+0.05,
+0.16
+],
+"themes": "UNDER THE MATTRESS; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "monster_in_my_pocket_figure_1991": {
@@ -7875,6 +9943,28 @@
 "themes": "CONSOLE WARS; BLOW ON IT; MINT CONDITION; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"necco_sweethearts_box_1998": {
+"display": "NECCO Sweethearts Conversation Hearts box, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"NECCO Sweethearts Conversation Hearts box, circa 1998"
+],
+"product": "NECCO Sweethearts Conversation Hearts box, circa 1998",
+"role": "hero",
+"size": [
+0.06,
+0.022,
+0.09
+],
+"themes": "BE MINE; LUNCH TRADE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "nerds_rope_rainbow_2001": {
 "display": "Wonka Nerds Rope Rainbow candy",
 "eras": [
@@ -8137,6 +10227,28 @@
 0.05
 ],
 "themes": "SLIMED; PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"nike_shin_guards_black_white_1998": {
+"display": "Nike youth soccer shin guards, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.09,
+"notes": [
+"Nike youth soccer shin guards, circa 1998"
+],
+"product": "Nike youth soccer shin guards, circa 1998",
+"role": "support",
+"size": [
+0.09,
+0.03,
+0.19
+],
+"themes": "GOLAZO; SUMMER CAMP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "nintendo64_cartridge_1996": {
@@ -8733,6 +10845,28 @@
 "themes": "LEFTOVERS; TIME CAPSULE; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"oktoberfest_plastic_beer_stein_1998": {
+"display": "Oktoberfest souvenir plastic beer stein, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.409,
+"notes": [
+"Oktoberfest souvenir plastic beer stein, circa 1998"
+],
+"product": "Oktoberfest souvenir plastic beer stein, circa 1998",
+"role": "hero",
+"size": [
+0.13,
+0.1,
+0.18
+],
+"themes": "PROST; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "old_navy_performance_fleece_vest_1998": {
 "display": "Old Navy Performance Fleece vest, circa",
 "eras": [
@@ -8775,6 +10909,28 @@
 0.105
 ],
 "themes": "SCREEN TIME; PROBED; CRYPTID; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"oralb_satin_floss_1999": {
+"display": "Oral-B Satin Floss dental floss dispenser, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Oral-B Satin Floss dental floss dispenser, circa 1999"
+],
+"product": "Oral-B Satin Floss dental floss dispenser, circa 1999",
+"role": "filler",
+"size": [
+0.05,
+0.02,
+0.06
+],
+"themes": "SICK DAY; HOME_JUNK_DRAWER_MISC; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
 "orbitz_orange_vanilla_1997": {
@@ -8863,6 +11019,28 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"paas_classic_egg_kit_1998": {
+"display": "PAAS Classic Easter Egg Decorating Kit, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.028,
+"notes": [
+"PAAS Classic Easter Egg Decorating Kit, circa 1998"
+],
+"product": "PAAS Classic Easter Egg Decorating Kit, circa 1998",
+"role": "hero",
+"size": [
+0.15,
+0.018,
+0.1
+],
+"themes": "EGG HUNT; HAND TURKEY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "packard_bell_legend_406cd_1995": {
@@ -8995,6 +11173,28 @@
 0.12
 ],
 "themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"panasonic_kxtm90_answering_machine_1998": {
+"display": "Panasonic cassette answering machine, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.193,
+"notes": [
+"Panasonic cassette answering machine, circa 1998"
+],
+"product": "Panasonic cassette answering machine, circa 1998",
+"role": "hero",
+"size": [
+0.17,
+0.13,
+0.05
+],
+"themes": "DIAL-UP; SCREEN TIME; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "panasonic_pv9450_vcr_1999": {
@@ -9217,6 +11417,28 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"pastel_plastic_easter_eggs_24pack_1998": {
+"display": "Pastel hinged plastic Easter eggs 24-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.941,
+"notes": [
+"Pastel hinged plastic Easter eggs 24-pack, circa 1998"
+],
+"product": "Pastel hinged plastic Easter eggs 24-pack, circa 1998",
+"role": "filler",
+"size": [
+0.2,
+0.12,
+0.28
+],
+"themes": "EGG HUNT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "pearl_jam_ten_cd_1991": {
 "display": "Pearl Jam Ten CD in jewel case",
 "eras": [
@@ -9259,6 +11481,28 @@
 0.014
 ],
 "themes": "LOST AND FOUND; TIME CAPSULE; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"penn_championship_tennis_balls_3can_1998": {
+"display": "Penn Championship tennis balls, 3-ball pressurized can, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.827,
+"notes": [
+"Penn Championship tennis balls, 3-ball pressurized can, circa 1998"
+],
+"product": "Penn Championship tennis balls, 3-ball pressurized can, circa 1998",
+"role": "support",
+"size": [
+0.075,
+0.075,
+0.21
+],
+"themes": "SUMMER CAMP; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "pentel_hybrid_milky_pastel_set_1998": {
@@ -9325,6 +11569,28 @@
 0.145
 ],
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"penthouse_july_1998_polybagged": {
+"display": "Penthouse magazine, July 1998 issue, sealed newsstand copy",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Penthouse magazine, July 1998 issue, sealed newsstand copy"
+],
+"product": "Penthouse magazine, July 1998 issue, sealed newsstand copy",
+"role": "hero",
+"size": [
+0.21,
+0.007,
+0.275
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "pepsi_12oz_can_1998": {
@@ -9415,6 +11681,28 @@
 "themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"photo_lab_developing_envelope_1998": {
+"display": "One-hour photo processing envelope with negative sleeves, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.077,
+"notes": [
+"One-hour photo processing envelope with negative sleeves, circa 1998"
+],
+"product": "One-hour photo processing envelope with negative sleeves, circa 1998",
+"role": "hero",
+"size": [
+0.16,
+0.015,
+0.23
+],
+"themes": "TIME CAPSULE; ROAD TRIP; PROM NIGHT; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "pilot_g2_07_blue_1998": {
 "display": "Pilot G2 0.7 mm retractable gel pen, circa",
 "eras": [
@@ -9479,6 +11767,50 @@
 0.022
 ],
 "themes": "HAND TURKEY; LOST AND FOUND; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"pioneer_dehp2000_car_cd_receiver_2000": {
+"display": "Pioneer DEH-P2000 in-dash CD receiver",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 1.008,
+"notes": [
+"Pioneer DEH-P2000 in-dash CD receiver, 2000"
+],
+"product": "Pioneer DEH-P2000 in-dash CD receiver, 2000",
+"role": "hero",
+"size": [
+0.18,
+0.16,
+0.05
+],
+"themes": "ROAD TRIP; BASS BOOSTED; Y2K; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"pioneer_ts_a6965_6x9_speaker_1999": {
+"display": "Pioneer TS-A6965 6 x 9 inch car speaker, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 2.19,
+"notes": [
+"Pioneer TS-A6965 6 x 9 inch car speaker, circa 1999"
+],
+"product": "Pioneer TS-A6965 6 x 9 inch car speaker, circa 1999",
+"role": "support",
+"size": [
+0.23,
+0.085,
+0.16
+],
+"themes": "BASS BOOSTED; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
 "pixy_stix_giant_assorted_1996": {
@@ -9547,6 +11879,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"plastic_icicle_ornaments_24pack_1998": {
+"display": "Clear plastic icicle Christmas ornaments 24-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.294,
+"notes": [
+"Clear plastic icicle Christmas ornaments 24-pack, circa 1998"
+],
+"product": "Clear plastic icicle Christmas ornaments 24-pack, circa 1998",
+"role": "support",
+"size": [
+0.12,
+0.05,
+0.28
+],
+"themes": "BOXING DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "plastic_pog_slammer_1994": {
 "display": "Translucent plastic POG slammer, circa",
 "eras": [
@@ -9567,6 +11921,50 @@
 0.041
 ],
 "themes": "GOT GOT NEED; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"playboy_december_1999_polybagged": {
+"display": "Playboy magazine, December 1999 issue, sealed newsstand copy",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Playboy magazine, December 1999 issue, sealed newsstand copy"
+],
+"product": "Playboy magazine, December 1999 issue, sealed newsstand copy",
+"role": "hero",
+"size": [
+0.21,
+0.007,
+0.275
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"playboy_january_1998_polybagged": {
+"display": "Playboy magazine, January 1998 issue, sealed newsstand copy",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.049,
+"notes": [
+"Playboy magazine, January 1998 issue, sealed newsstand copy"
+],
+"product": "Playboy magazine, January 1998 issue, sealed newsstand copy",
+"role": "hero",
+"size": [
+0.21,
+0.006,
+0.275
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "playdoh_4pack_primary_1997": {
@@ -9855,6 +12253,28 @@
 "themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; SCHOOL_JUNK; regular cubes",
 "weight": 1.0
 },
+"preparation_h_ointment_1oz_1998": {
+"display": "Preparation H hemorrhoidal ointment 1 oz tube, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"Preparation H hemorrhoidal ointment 1 oz tube, circa 1998"
+],
+"product": "Preparation H hemorrhoidal ointment 1 oz tube, circa 1998",
+"role": "support",
+"size": [
+0.04,
+0.025,
+0.14
+],
+"themes": "UNDER THE MATTRESS; SICK DAY; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "pretty_woman_vhs_1990": {
 "display": "Pretty Woman VHS",
 "eras": [
@@ -9875,6 +12295,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"pro_set_football_pack_1990": {
+"display": "Pro Set Football trading-card pack",
+"eras": [
+0,
+1
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Pro Set Football trading-card pack, 1990"
+],
+"product": "Pro Set Football trading-card pack, 1990",
+"role": "hero",
+"size": [
+0.068,
+0.008,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "prodigy_internet_trial_cd_1997": {
@@ -10009,6 +12451,28 @@
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"qtips_cotton_swabs_375_1998": {
+"display": "Q-tips Cotton Swabs 375-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.296,
+"notes": [
+"Q-tips Cotton Swabs 375-count box, circa 1998"
+],
+"product": "Q-tips Cotton Swabs 375-count box, circa 1998",
+"role": "support",
+"size": [
+0.16,
+0.08,
+0.22
+],
+"themes": "SICK DAY; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "quaker_chewy_chocolate_chip_1996": {
 "display": "Quaker Chewy Chocolate Chip granola bar, circa",
 "eras": [
@@ -10097,6 +12561,28 @@
 "themes": "DOUBLE A; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"radioshack_dual_lighter_adapter_1998": {
+"display": "RadioShack dual cigarette-lighter socket adapter, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.02,
+"notes": [
+"RadioShack dual cigarette-lighter socket adapter, circa 1998"
+],
+"product": "RadioShack dual cigarette-lighter socket adapter, circa 1998",
+"role": "filler",
+"size": [
+0.08,
+0.04,
+0.035
+],
+"themes": "ROAD TRIP; Y2K; LOST AND FOUND; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "rainbow_magic_spring_1996": {
 "display": "Plastic rainbow magic spring, circa",
 "eras": [
@@ -10117,6 +12603,50 @@
 0.065
 ],
 "themes": "PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rand_mcnally_road_atlas_1998": {
+"display": "Rand McNally Road Atlas, 1998 edition",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.215,
+"notes": [
+"Rand McNally Road Atlas, 1998 edition"
+],
+"product": "Rand McNally Road Atlas, 1998 edition",
+"role": "hero",
+"size": [
+0.27,
+0.015,
+0.38
+],
+"themes": "ROAD TRIP; LOST AND FOUND; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rawlings_youth_batting_helmet_1998": {
+"display": "Rawlings youth batting helmet, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 1.428,
+"notes": [
+"Rawlings youth batting helmet, circa 1998"
+],
+"product": "Rawlings youth batting helmet, circa 1998",
+"role": "hero",
+"size": [
+0.24,
+0.2,
+0.17
+],
+"themes": "SUMMER CAMP; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "rayovac_1hour_charger_2002": {
@@ -10229,6 +12759,28 @@
 "themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"rca_rcu403_universal_remote_1999": {
+"display": "RCA RCU403 universal remote control, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.045,
+"notes": [
+"RCA RCU403 universal remote control, circa 1999"
+],
+"product": "RCA RCU403 universal remote control, circa 1999",
+"role": "support",
+"size": [
+0.055,
+0.025,
+0.185
+],
+"themes": "SCREEN TIME; SICK DAY; LOST AND FOUND; Y2K; regular cubes",
+"weight": 1.0
+},
 "rca_vcr_remote_1998": {
 "display": "RCA VCR infrared remote control, circa",
 "eras": [
@@ -10249,6 +12801,72 @@
 0.185
 ],
 "themes": "BE KIND REWIND; SCREEN TIME; LEFTOVERS; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"recessed_screwdown_card_holder_1997": {
+"display": "Four-screw recessed trading-card display holder, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Four-screw recessed trading-card display holder, circa 1997"
+],
+"product": "Four-screw recessed trading-card display holder, circa 1997",
+"role": "support",
+"size": [
+0.095,
+0.01,
+0.13
+],
+"themes": "MINT CONDITION; GOT GOT NEED; regular cubes",
+"weight": 1.0
+},
+"red_fuzzy_dice_1997": {
+"display": "Red fuzzy rear-view-mirror dice, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.051,
+"notes": [
+"Red fuzzy rear-view-mirror dice, circa 1997"
+],
+"product": "Red fuzzy rear-view-mirror dice, circa 1997",
+"role": "hero",
+"size": [
+0.09,
+0.09,
+0.09
+],
+"themes": "ROAD TRIP; PROM NIGHT; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"reeses_peanut_butter_egg_1998": {
+"display": "Reese's Peanut Butter Egg, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Reese's Peanut Butter Egg, circa 1998"
+],
+"product": "Reese's Peanut Butter Egg, circa 1998",
+"role": "hero",
+"size": [
+0.07,
+0.018,
+0.1
+],
+"themes": "EGG HUNT; LUNCH TRADE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "reeses_puffs_1994": {
@@ -10293,6 +12911,28 @@
 0.125
 ],
 "themes": "CONSOLE WARS; TRICK OR TREAT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"revlon_nail_clipper_1998": {
+"display": "Revlon fingernail clipper, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Revlon fingernail clipper, circa 1998"
+],
+"product": "Revlon fingernail clipper, circa 1998",
+"role": "filler",
+"size": [
+0.015,
+0.015,
+0.06
+],
+"themes": "HOME_JUNK_DRAWER_MISC; LOST AND FOUND; SICK DAY; regular cubes",
 "weight": 1.0
 },
 "rg6_coaxial_tv_cable_1998": {
@@ -10361,6 +13001,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"riddell_nfl_mini_helmet_blank_1998": {
+"display": "Riddell mini football helmet collectible, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.25,
+"notes": [
+"Riddell mini football helmet collectible, circa 1998"
+],
+"product": "Riddell mini football helmet collectible, circa 1998",
+"role": "hero",
+"size": [
+0.13,
+0.1,
+0.11
+],
+"themes": "MINT CONDITION; GOT GOT NEED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "ring_pop_blue_raspberry_1995": {
 "display": "Topps Ring Pop Blue Raspberry candy, circa",
 "eras": [
@@ -10381,6 +13043,182 @@
 0.085
 ],
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"rite_lite_electric_menorah_1998": {
+"display": "Rite Lite electric menorah, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.015,
+"notes": [
+"Rite Lite electric menorah, circa 1998"
+],
+"product": "Rite Lite electric menorah, circa 1998",
+"role": "hero",
+"size": [
+0.29,
+0.08,
+0.25
+],
+"themes": "EIGHT NIGHTS; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rockford_fosgate_punch_200a2_amp_1998": {
+"display": "Rockford Fosgate Punch 200a2 car amplifier, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 2.1,
+"notes": [
+"Rockford Fosgate Punch 200a2 car amplifier, circa 1998"
+],
+"product": "Rockford Fosgate Punch 200a2 car amplifier, circa 1998",
+"role": "hero",
+"size": [
+0.25,
+0.24,
+0.05
+],
+"themes": "BASS BOOSTED; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"rogaine_extra_strength_5percent_1998": {
+"display": "Rogaine Extra Strength 5% minoxidil solution, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.121,
+"notes": [
+"Rogaine Extra Strength 5% minoxidil solution, circa 1998"
+],
+"product": "Rogaine Extra Strength 5% minoxidil solution, circa 1998",
+"role": "support",
+"size": [
+0.12,
+0.06,
+0.16
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rollerblade_lightning_trs_black_1991": {
+"display": "Rollerblade Lightning TRS inline skates, circa",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 2.016,
+"notes": [
+"Rollerblade Lightning TRS inline skates, circa 1991"
+],
+"product": "Rollerblade Lightning TRS inline skates, circa 1991",
+"role": "hero",
+"size": [
+0.12,
+0.32,
+0.3
+],
+"themes": "SUMMER CAMP; ROAD TRIP; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rollerblade_wrist_guards_black_1997": {
+"display": "Rollerblade wrist guards, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.048,
+"notes": [
+"Rollerblade wrist guards, circa 1997"
+],
+"product": "Rollerblade wrist guards, circa 1997",
+"role": "support",
+"size": [
+0.1,
+0.04,
+0.17
+],
+"themes": "SUMMER CAMP; ROAD TRIP; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"rolodex_2254_card_file_1997": {
+"display": "Rolodex rotary card file with 2.25 x 4 inch cards, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.709,
+"notes": [
+"Rolodex rotary card file with 2.25 x 4 inch cards, circa 1997"
+],
+"product": "Rolodex rotary card file with 2.25 x 4 inch cards, circa 1997",
+"role": "hero",
+"size": [
+0.18,
+0.15,
+0.15
+],
+"themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rubber_band_ball_1998": {
+"display": "Homemade rubber-band ball, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.108,
+"notes": [
+"Homemade rubber-band ball, circa 1998"
+],
+"product": "Homemade rubber-band ball, circa 1998",
+"role": "filler",
+"size": [
+0.08,
+0.08,
+0.08
+],
+"themes": "HOME_JUNK_DRAWER_MISC; SCHOOL_JUNK; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"safety_pins_assorted_tin_1998": {
+"display": "Assorted safety pins in small metal tin, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.056,
+"notes": [
+"Assorted safety pins in small metal tin, circa 1998"
+],
+"product": "Assorted safety pins in small metal tin, circa 1998",
+"role": "filler",
+"size": [
+0.08,
+0.02,
+0.05
+],
+"themes": "SEWING KIT; HOME_JUNK_DRAWER_MISC; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "sakura_gelly_roll_metallic_gold_1998": {
@@ -10933,6 +13771,28 @@
 "themes": "PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"singer_travel_sewing_kit_1998": {
+"display": "Singer travel sewing kit, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.047,
+"notes": [
+"Singer travel sewing kit, circa 1998"
+],
+"product": "Singer travel sewing kit, circa 1998",
+"role": "hero",
+"size": [
+0.09,
+0.025,
+0.12
+],
+"themes": "SEWING KIT; ROAD TRIP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "sixth_sense_vhs_2000": {
 "display": "The Sixth Sense VHS",
 "eras": [
@@ -10997,6 +13857,28 @@
 0.2
 ],
 "themes": "SLEEPOVER; DRESS CODE; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"skybox_basketball_pack_1990": {
+"display": "SkyBox NBA Basketball foil pack",
+"eras": [
+0,
+1
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"SkyBox NBA Basketball foil pack, 1990"
+],
+"product": "SkyBox NBA Basketball foil pack, 1990",
+"role": "hero",
+"size": [
+0.068,
+0.008,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "slap_bracelet_holographic_1990": {
@@ -11923,6 +14805,28 @@
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"sony_xplod_cdxc5000x_2000": {
+"display": "Sony Xplod CDX-C5000X car CD receiver",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 1.008,
+"notes": [
+"Sony Xplod CDX-C5000X car CD receiver, 2000"
+],
+"product": "Sony Xplod CDX-C5000X car CD receiver, 2000",
+"role": "hero",
+"size": [
+0.18,
+0.16,
+0.05
+],
+"themes": "ROAD TRIP; BASS BOOSTED; Y2K; MALL RAT; regular cubes",
+"weight": 1.0
+},
 "sound_blaster_16_ct1740_1992": {
 "display": "Creative Labs Sound Blaster 16 CT1740 ISA sound card",
 "eras": [
@@ -12031,6 +14935,28 @@
 0.11
 ],
 "themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
+"weight": 1.0
+},
+"spalding_tf500_soccer_ball_1998": {
+"display": "Spalding recreational soccer ball, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.745,
+"notes": [
+"Spalding recreational soccer ball, circa 1998"
+],
+"product": "Spalding recreational soccer ball, circa 1998",
+"role": "hero",
+"size": [
+0.22,
+0.22,
+0.22
+],
+"themes": "GOLAZO; SUMMER CAMP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "spice_girls_spice_cassette_1996": {
@@ -12143,6 +15069,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"stanley_powerlock_25ft_tape_1998": {
+"display": "Stanley PowerLock 25-foot tape measure, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.147,
+"notes": [
+"Stanley PowerLock 25-foot tape measure, circa 1998"
+],
+"product": "Stanley PowerLock 25-foot tape measure, circa 1998",
+"role": "hero",
+"size": [
+0.075,
+0.04,
+0.07
+],
+"themes": "GARAGE SALE; SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "starter_pullover_jacket_black_red_1995": {
 "display": "Starter pullover half-zip jacket, black and red, circa",
 "eras": [
@@ -12163,6 +15111,50 @@
 0.72
 ],
 "themes": "DRESS CODE; MALL RAT; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"starting_lineup_baseball_figure_1995": {
+"display": "Kenner Starting Lineup baseball figure, circa",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.293,
+"notes": [
+"Kenner Starting Lineup baseball figure, circa 1995"
+],
+"product": "Kenner Starting Lineup baseball figure, circa 1995",
+"role": "hero",
+"size": [
+0.18,
+0.05,
+0.31
+],
+"themes": "MINT CONDITION; GOT GOT NEED; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"starting_lineup_basketball_figure_1996": {
+"display": "Kenner Starting Lineup basketball figure, circa",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.293,
+"notes": [
+"Kenner Starting Lineup basketball figure, circa 1996"
+],
+"product": "Kenner Starting Lineup basketball figure, circa 1996",
+"role": "hero",
+"size": [
+0.18,
+0.05,
+0.31
+],
+"themes": "MINT CONDITION; GOT GOT NEED; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "sticky_hand_arcade_prize_1998": {
@@ -12207,6 +15199,28 @@
 0.126
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"streetglow_gold_series_neon_tube_1999": {
+"display": "StreetGlow Gold Series automotive neon tube, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.344,
+"notes": [
+"StreetGlow Gold Series automotive neon tube, circa 1999"
+],
+"product": "StreetGlow Gold Series automotive neon tube, circa 1999",
+"role": "hero",
+"size": [
+0.91,
+0.03,
+0.03
+],
+"themes": "BASS BOOSTED; BLACKLIGHT; PROM NIGHT; Y2K; regular cubes",
 "weight": 1.0
 },
 "stretch_armstrong_1992": {
@@ -12385,6 +15399,28 @@
 "themes": "SUMMER CAMP; SOME ASSEMBLY REQUIRED; TIME CAPSULE; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"supermarket_loyalty_keytags_2001": {
+"display": "Grocery-store loyalty-card key tags, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Grocery-store loyalty-card key tags, circa 2001"
+],
+"product": "Grocery-store loyalty-card key tags, circa 2001",
+"role": "filler",
+"size": [
+0.05,
+0.001,
+0.025
+],
+"themes": "LOST AND FOUND; ROAD TRIP; HOME_JUNK_DRAWER_MISC; Y2K; regular cubes",
+"weight": 1.0
+},
 "surge_20oz_1997": {
 "display": "SURGE citrus soda 20 fl oz bottle",
 "eras": [
@@ -12515,6 +15551,28 @@
 0.045
 ],
 "themes": "STILL ALIVE; SCREEN TIME; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tampax_regular_40count_1998": {
+"display": "Tampax Regular cardboard applicator tampons 40-count box",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.314,
+"notes": [
+"Tampax Regular cardboard applicator tampons 40-count box, 1998"
+],
+"product": "Tampax Regular cardboard applicator tampons 40-count box, 1998",
+"role": "hero",
+"size": [
+0.17,
+0.08,
+0.22
+],
+"themes": "UNDER THE MATTRESS; PROM NIGHT; TIME CAPSULE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "tattoo_choker_black_1998": {
@@ -12715,6 +15773,28 @@
 "themes": "SCREEN TIME; SCHOOL_JUNK; TIME CAPSULE; COLD STORAGE; regular cubes",
 "weight": 1.0
 },
+"the_club_1000_steering_lock_1995": {
+"display": "Winner International The Club steering-wheel lock, circa",
+"eras": [
+1,
+2
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 1.015,
+"notes": [
+"Winner International The Club steering-wheel lock, circa 1995"
+],
+"product": "Winner International The Club steering-wheel lock, circa 1995",
+"role": "hero",
+"size": [
+0.58,
+0.05,
+0.05
+],
+"themes": "ROAD TRIP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "theres_something_about_mary_vhs_1999": {
 "display": "There's Something About Mary VHS",
 "eras": [
@@ -12823,6 +15903,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"titleist_dt_wound_3ball_sleeve_1997": {
+"display": "Titleist DT Wound golf balls, three-ball sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Titleist DT Wound golf balls, three-ball sleeve, circa 1997"
+],
+"product": "Titleist DT Wound golf balls, three-ball sleeve, circa 1997",
+"role": "support",
+"size": [
+0.046,
+0.046,
+0.14
+],
+"themes": "MINT CONDITION; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "tlc_crazysexycool_cassette_1994": {
@@ -12935,6 +16037,28 @@
 "themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"tomato_pincushion_strawberry_1998": {
+"display": "Tomato pincushion with emery strawberry, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Tomato pincushion with emery strawberry, circa 1998"
+],
+"product": "Tomato pincushion with emery strawberry, circa 1998",
+"role": "hero",
+"size": [
+0.08,
+0.08,
+0.07
+],
+"themes": "SEWING KIT; HOME_JUNK_DRAWER_MISC; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "display": "Tony Hawk's Pro Skater 2 PlayStation game",
 "eras": [
@@ -12977,6 +16101,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; ROAD TRIP; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"topps_stadium_club_baseball_pack_1993": {
+"display": "Topps Stadium Club Baseball foil pack",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Topps Stadium Club Baseball foil pack, 1993"
+],
+"product": "Topps Stadium Club Baseball foil pack, 1993",
+"role": "hero",
+"size": [
+0.068,
+0.008,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "totinos_pizza_rolls_pepperoni_1999": {
@@ -13023,6 +16169,28 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"translucent_35mm_film_canister_1998": {
+"display": "Translucent 35 mm film storage canister with snap lid, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Translucent 35 mm film storage canister with snap lid, circa 1998"
+],
+"product": "Translucent 35 mm film storage canister with snap lid, circa 1998",
+"role": "filler",
+"size": [
+0.032,
+0.032,
+0.053
+],
+"themes": "TIME CAPSULE; ROAD TRIP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "trend_scratch_sniff_sticker_sheet_1994": {
 "display": "TREND Scratch 'n Sniff reward sticker sheet, circa",
 "eras": [
@@ -13045,6 +16213,50 @@
 "themes": "HAND TURKEY; TIME CAPSULE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"trojan_enz_3count_1998": {
+"display": "Trojan ENZ lubricated condoms 3-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Trojan ENZ lubricated condoms 3-count box, circa 1998"
+],
+"product": "Trojan ENZ lubricated condoms 3-count box, circa 1998",
+"role": "hero",
+"size": [
+0.065,
+0.025,
+0.1
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; PROM NIGHT; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"trojan_magnum_3count_1998": {
+"display": "Trojan Magnum lubricated condoms 3-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "adult_awkward_private",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Trojan Magnum lubricated condoms 3-count box, circa 1998"
+],
+"product": "Trojan Magnum lubricated condoms 3-count box, circa 1998",
+"role": "hero",
+"size": [
+0.065,
+0.025,
+0.1
+],
+"themes": "UNDER THE MATTRESS; WINDOW SHOPPING; PROM NIGHT; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "troll_doll_neon_hair_1992": {
 "display": "Russ-style troll doll with neon hair, circa",
 "eras": [
@@ -13065,6 +16277,50 @@
 0.14
 ],
 "themes": "DRESS CODE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tv_guide_weekly_1998": {
+"display": "TV Guide weekly digest magazine, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"TV Guide weekly digest magazine, circa 1998"
+],
+"product": "TV Guide weekly digest magazine, circa 1998",
+"role": "hero",
+"size": [
+0.135,
+0.012,
+0.19
+],
+"themes": "SCREEN TIME; SICK DAY; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"tweezerman_slant_tweezers_1998": {
+"display": "Tweezerman stainless slant tweezers, circa",
+"eras": [
+2,
+3
+],
+"family": "home_junk_drawer_misc",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Tweezerman stainless slant tweezers, circa 1998"
+],
+"product": "Tweezerman stainless slant tweezers, circa 1998",
+"role": "filler",
+"size": [
+0.01,
+0.007,
+0.095
+],
+"themes": "HOME_JUNK_DRAWER_MISC; LOST AND FOUND; SICK DAY; regular cubes",
 "weight": 1.0
 },
 "twister_vhs_1997": {
@@ -13155,6 +16411,50 @@
 "themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"ultra_pro_penny_sleeves_100pack_1998": {
+"display": "Ultra PRO soft trading-card sleeves 100-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Ultra PRO soft trading-card sleeves 100-pack, circa 1998"
+],
+"product": "Ultra PRO soft trading-card sleeves 100-pack, circa 1998",
+"role": "filler",
+"size": [
+0.07,
+0.01,
+0.1
+],
+"themes": "MINT CONDITION; GOT GOT NEED; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"ultra_pro_toploaders_25pack_1998": {
+"display": "Ultra PRO 3 x 4 inch regular Toploader 25-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.032,
+"notes": [
+"Ultra PRO 3 x 4 inch regular Toploader 25-pack, circa 1998"
+],
+"product": "Ultra PRO 3 x 4 inch regular Toploader 25-pack, circa 1998",
+"role": "support",
+"size": [
+0.08,
+0.02,
+0.115
+],
+"themes": "MINT CONDITION; GOT GOT NEED; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "umax_astra_1220u_1998": {
 "display": "UMAX Astra 1220U flatbed scanner",
 "eras": [
@@ -13197,6 +16497,50 @@
 0.14
 ],
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"upper_deck_collectors_choice_basketball_pack_1996": {
+"display": "Upper Deck Collector's Choice Basketball pack, 1996-97",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Upper Deck Collector's Choice Basketball pack, 1996-97"
+],
+"product": "Upper Deck Collector's Choice Basketball pack, 1996-97",
+"role": "hero",
+"size": [
+0.068,
+0.008,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"upper_deck_hockey_pack_1991": {
+"display": "Upper Deck Hockey foil pack, 1991-92",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Upper Deck Hockey foil pack, 1991-92"
+],
+"product": "Upper Deck Hockey foil pack, 1991-92",
+"role": "hero",
+"size": [
+0.068,
+0.008,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "usher_confessions_cd_2004": {
@@ -13507,6 +16851,28 @@
 "themes": "SCREEN TIME; DIAL-UP; Y2K; regular cubes",
 "weight": 1.0
 },
+"viper_300_alarm_remote_1998": {
+"display": "Directed Electronics Viper car-alarm remote, circa",
+"eras": [
+2,
+3
+],
+"family": "automotive_and_teen",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"Directed Electronics Viper car-alarm remote, circa 1998"
+],
+"product": "Directed Electronics Viper car-alarm remote, circa 1998",
+"role": "hero",
+"size": [
+0.035,
+0.015,
+0.065
+],
+"themes": "ROAD TRIP; PROM NIGHT; LOST AND FOUND; Y2K; regular cubes",
+"weight": 1.0
+},
 "von_dutch_trucker_hat_red_white_2003": {
 "display": "Von Dutch mesh trucker cap, red and white, circa",
 "eras": [
@@ -13705,6 +17071,72 @@
 "themes": "SUMMER CAMP; ROAD TRIP; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"whitmans_sampler_heart_box_1998": {
+"display": "Whitman's Sampler Valentine's heart-shaped chocolate box, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.277,
+"notes": [
+"Whitman's Sampler Valentine's heart-shaped chocolate box, circa 1998"
+],
+"product": "Whitman's Sampler Valentine's heart-shaped chocolate box, circa 1998",
+"role": "hero",
+"size": [
+0.24,
+0.05,
+0.22
+],
+"themes": "BE MINE; PROM NIGHT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"wilson_pro_staff_6_0_95_1995": {
+"display": "Wilson Pro Staff 6.0 95 tennis racquet, circa",
+"eras": [
+1,
+2
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 1.232,
+"notes": [
+"Wilson Pro Staff 6.0 95 tennis racquet, circa 1995"
+],
+"product": "Wilson Pro Staff 6.0 95 tennis racquet, circa 1995",
+"role": "hero",
+"size": [
+0.34,
+0.03,
+0.69
+],
+"themes": "SUMMER CAMP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"wilson_us_open_tennis_balls_3can_1998": {
+"display": "Wilson US Open tennis balls, 3-ball pressurized can, circa",
+"eras": [
+2,
+3
+],
+"family": "sports_and_collectibles",
+"group": "era",
+"mass": 0.827,
+"notes": [
+"Wilson US Open tennis balls, 3-ball pressurized can, circa 1998"
+],
+"product": "Wilson US Open tennis balls, 3-ball pressurized can, circa 1998",
+"role": "support",
+"size": [
+0.075,
+0.075,
+0.21
+],
+"themes": "GOLAZO; SUMMER CAMP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "windows95_big_box_1995": {
 "display": "Microsoft Windows 95 retail big-box software package",
 "eras": [
@@ -13747,6 +17179,72 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"wooden_dreidel_blue_1998": {
+"display": "Painted wooden Hanukkah dreidel, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Painted wooden Hanukkah dreidel, circa 1998"
+],
+"product": "Painted wooden Hanukkah dreidel, circa 1998",
+"role": "support",
+"size": [
+0.04,
+0.04,
+0.065
+],
+"themes": "EIGHT NIGHTS; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"wooden_kwanzaa_kinara_1998": {
+"display": "Seven-cup wooden Kwanzaa kinara, circa",
+"eras": [
+2,
+3
+],
+"family": "holiday_and_seasonal",
+"group": "era",
+"mass": 1.512,
+"notes": [
+"Seven-cup wooden Kwanzaa kinara, circa 1998"
+],
+"product": "Seven-cup wooden Kwanzaa kinara, circa 1998",
+"role": "hero",
+"size": [
+0.36,
+0.1,
+0.2
+],
+"themes": "KWANZAA; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"woods_orange_extension_cord_25ft_1998": {
+"display": "Woods 25-foot orange outdoor extension cord, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.64,
+"notes": [
+"Woods 25-foot orange outdoor extension cord, circa 1998"
+],
+"product": "Woods 25-foot orange outdoor extension cord, circa 1998",
+"role": "filler",
+"size": [
+0.1968,
+0.1968,
+0.0787
+],
+"themes": "LIGHT THE FUSE; GARAGE SALE; HOME_JUNK_DRAWER_MISC; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
 "woods_three_outlet_cube_tap_1997": {
