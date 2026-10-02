@@ -263,6 +263,28 @@
 "themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
+"apple_firewire_power_adapter_2001": {
+"display": "Apple iPod FireWire Power Adapter",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Apple iPod FireWire Power Adapter, 2001"
+],
+"product": "Apple iPod FireWire Power Adapter, 2001",
+"role": "support",
+"size": [
+0.06,
+0.05,
+0.03
+],
+"themes": "SCREEN TIME; ROAD TRIP; Y2K; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "apple_imac_g3_bondi_1998": {
 "display": "Apple iMac G3 Bondi Blue",
 "eras": [
@@ -283,6 +305,94 @@
 0.4
 ],
 "themes": "DIAL-UP; SCREEN TIME; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"apple_ipod_1st_gen_2001": {
+"display": "Apple iPod first generation 5 GB",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Apple iPod first generation 5 GB, 2001"
+],
+"product": "Apple iPod first generation 5 GB, 2001",
+"role": "hero",
+"size": [
+0.062,
+0.02,
+0.102
+],
+"themes": "SCREEN TIME; ROAD TRIP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"apple_ipod_mini_blue_2004": {
+"display": "Apple iPod mini, Blue",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"Apple iPod mini, Blue, 2004"
+],
+"product": "Apple iPod mini, Blue, 2004",
+"role": "hero",
+"size": [
+0.051,
+0.013,
+0.091
+],
+"themes": "SCREEN TIME; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"apple_ipod_mini_pink_2004": {
+"display": "Apple iPod mini, Pink",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"Apple iPod mini, Pink, 2004"
+],
+"product": "Apple iPod mini, Pink, 2004",
+"role": "hero",
+"size": [
+0.051,
+0.013,
+0.091
+],
+"themes": "SCREEN TIME; SLEEPOVER; PROM NIGHT; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"apple_ipod_nano_1st_black_2005": {
+"display": "Apple iPod nano first generation, Black",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Apple iPod nano first generation, Black, 2005"
+],
+"product": "Apple iPod nano first generation, Black, 2005",
+"role": "hero",
+"size": [
+0.041,
+0.0069,
+0.09
+],
+"themes": "SCREEN TIME; ROAD TRIP; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
 "apple_powermac_g3_bluewhite_1999": {
@@ -439,6 +549,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"avery_1inch_binder_white_1997": {
+"display": "Avery 1-inch View Binder, White, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.627,
+"notes": [
+"Avery 1-inch View Binder, White, circa 1997"
+],
+"product": "Avery 1-inch View Binder, White, circa 1997",
+"role": "support",
+"size": [
+0.27,
+0.045,
+0.295
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"avery_reinforcement_labels_1996": {
+"display": "Avery Hole Reinforcement Labels, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Avery Hole Reinforcement Labels, circa 1996"
+],
+"product": "Avery Hole Reinforcement Labels, circa 1996",
+"role": "filler",
+"size": [
+0.075,
+0.004,
+0.14
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "avery_vhs_label_sheet_1996": {
 "display": "Avery VHS spine and face label sheet, circa",
 "eras": [
@@ -481,6 +635,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"baby_bottle_pop_strawberry_1998": {
+"display": "Topps Baby Bottle Pop Strawberry candy",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.034,
+"notes": [
+"Topps Baby Bottle Pop Strawberry candy, 1998"
+],
+"product": "Topps Baby Bottle Pop Strawberry candy, 1998",
+"role": "hero",
+"size": [
+0.04,
+0.04,
+0.12
+],
+"themes": "LUNCH TRADE; PRIZE COUNTER; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
 "back_to_future_vhs_1986": {
@@ -659,6 +835,116 @@
 "themes": "DIAL-UP; SAVE ICON; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"bic_4color_pen_1996": {
+"display": "BIC 4-Color ballpoint pen, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"BIC 4-Color ballpoint pen, circa 1996"
+],
+"product": "BIC 4-Color ballpoint pen, circa 1996",
+"role": "hero",
+"size": [
+0.015,
+0.015,
+0.145
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"bic_cristal_blue_10pack_1995": {
+"display": "BIC Cristal blue ballpoint pen 10-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.018,
+"notes": [
+"BIC Cristal blue ballpoint pen 10-pack, circa 1995"
+],
+"product": "BIC Cristal blue ballpoint pen 10-pack, circa 1995",
+"role": "support",
+"size": [
+0.07,
+0.013,
+0.19
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"bic_matic_grip_05_1998": {
+"display": "BIC Matic Grip 0.5 mm mechanical pencil, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"BIC Matic Grip 0.5 mm mechanical pencil, circa 1998"
+],
+"product": "BIC Matic Grip 0.5 mm mechanical pencil, circa 1998",
+"role": "support",
+"size": [
+0.01,
+0.01,
+0.147
+],
+"themes": "TIME CAPSULE; DRESS CODE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"bic_round_stic_blue_1996": {
+"display": "BIC Round Stic blue ballpoint pen, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"BIC Round Stic blue ballpoint pen, circa 1996"
+],
+"product": "BIC Round Stic blue ballpoint pen, circa 1996",
+"role": "filler",
+"size": [
+0.01,
+0.01,
+0.148
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"bic_wite_out_quick_dry_1998": {
+"display": "BIC Wite-Out Quick Dry correction fluid bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"BIC Wite-Out Quick Dry correction fluid bottle, circa 1998"
+],
+"product": "BIC Wite-Out Quick Dry correction fluid bottle, circa 1998",
+"role": "filler",
+"size": [
+0.032,
+0.032,
+0.085
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "big_lebowski_vhs_1998": {
 "display": "The Big Lebowski VHS",
 "eras": [
@@ -679,6 +965,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; UNDER_THE_MATTRESS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"blackberry_7290_2004": {
+"display": "BlackBerry 7290 smartphone",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.034,
+"notes": [
+"BlackBerry 7290 smartphone, 2004"
+],
+"product": "BlackBerry 7290 smartphone, 2004",
+"role": "hero",
+"size": [
+0.075,
+0.023,
+0.114
+],
+"themes": "SCREEN TIME; GM; COLD STORAGE; Y2K; regular cubes",
 "weight": 1.0
 },
 "blair_witch_project_vhs_1999": {
@@ -833,6 +1141,116 @@
 0.16
 ],
 "themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"canon_powershot_a40_2002": {
+"display": "Canon PowerShot A40 digital camera",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.052,
+"notes": [
+"Canon PowerShot A40 digital camera, 2002"
+],
+"product": "Canon PowerShot A40 digital camera, 2002",
+"role": "hero",
+"size": [
+0.11,
+0.038,
+0.071
+],
+"themes": "SCREEN TIME; ROAD TRIP; PROM NIGHT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"canon_zr10_minidv_2000": {
+"display": "Canon ZR10 MiniDV camcorder",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.132,
+"notes": [
+"Canon ZR10 MiniDV camcorder, 2000"
+],
+"product": "Canon ZR10 MiniDV camcorder, 2000",
+"role": "hero",
+"size": [
+0.06,
+0.12,
+0.105
+],
+"themes": "PROM NIGHT; SUMMER CAMP; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"capri_sun_pacific_cooler_1995": {
+"display": "Capri Sun Pacific Cooler juice drink pouch, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Capri Sun Pacific Cooler juice drink pouch, circa 1995"
+],
+"product": "Capri Sun Pacific Cooler juice drink pouch, circa 1995",
+"role": "hero",
+"size": [
+0.09,
+0.015,
+0.14
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"casio_fx300ms_1999": {
+"display": "Casio fx-300MS scientific calculator, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.032,
+"notes": [
+"Casio fx-300MS scientific calculator, circa 1999"
+],
+"product": "Casio fx-300MS scientific calculator, circa 1999",
+"role": "support",
+"size": [
+0.08,
+0.014,
+0.161
+],
+"themes": "SCHOOL_JUNK; TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"casio_qv10a_1996": {
+"display": "Casio QV-10A digital camera",
+"eras": [
+1,
+2
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.064,
+"notes": [
+"Casio QV-10A digital camera, 1996"
+],
+"product": "Casio QV-10A digital camera, 1996",
+"role": "hero",
+"size": [
+0.13,
+0.04,
+0.07
+],
+"themes": "SCREEN TIME; TIME CAPSULE; DIAL-UP; regular cubes",
 "weight": 1.0
 },
 "cast_away_vhs_2001": {
@@ -1033,6 +1451,94 @@
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"crayola_64_crayons_1994": {
+"display": "Crayola 64 Crayons with built-in sharpener, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.076,
+"notes": [
+"Crayola 64 Crayons with built-in sharpener, circa 1994"
+],
+"product": "Crayola 64 Crayons with built-in sharpener, circa 1994",
+"role": "hero",
+"size": [
+0.15,
+0.04,
+0.12
+],
+"themes": "HAND TURKEY; SCHOOL_JUNK; SOME ASSEMBLY REQUIRED; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"crayola_classic_markers_8_1996": {
+"display": "Crayola Classic Colors Broad Line Markers 8-count, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.053,
+"notes": [
+"Crayola Classic Colors Broad Line Markers 8-count, circa 1996"
+],
+"product": "Crayola Classic Colors Broad Line Markers 8-count, circa 1996",
+"role": "support",
+"size": [
+0.14,
+0.02,
+0.18
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"crayola_colored_pencils_12_1996": {
+"display": "Crayola Colored Pencils 12-count, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Crayola Colored Pencils 12-count, circa 1996"
+],
+"product": "Crayola Colored Pencils 12-count, circa 1996",
+"role": "support",
+"size": [
+0.07,
+0.01,
+0.21
+],
+"themes": "HAND TURKEY; TIME CAPSULE; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"crayola_school_scissors_1998": {
+"display": "Crayola Kids' Scissors, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Crayola Kids' Scissors, circa 1998"
+],
+"product": "Crayola Kids' Scissors, circa 1998",
+"role": "support",
+"size": [
+0.065,
+0.01,
+0.13
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
 "crazy_taxi_dreamcast_2000": {
 "display": "Crazy Taxi Sega Dreamcast game",
 "eras": [
@@ -1055,6 +1561,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
+"creative_nomad_jukebox_2000": {
+"display": "Creative NOMAD Jukebox digital audio player",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.107,
+"notes": [
+"Creative NOMAD Jukebox digital audio player, 2000"
+],
+"product": "Creative NOMAD Jukebox digital audio player, 2000",
+"role": "hero",
+"size": [
+0.127,
+0.038,
+0.127
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "creative_pcworks_fourpoint_speakers_1998": {
 "display": "Cambridge SoundWorks PCWorks computer speaker",
 "eras": [
@@ -1075,6 +1603,50 @@
 0.12
 ],
 "themes": "DIAL-UP; BLACKLIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"crystal_pepsi_20oz_1992": {
+"display": "Crystal Pepsi 20 fl oz bottle",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.177,
+"notes": [
+"Crystal Pepsi 20 fl oz bottle, 1992"
+],
+"product": "Crystal Pepsi 20 fl oz bottle, 1992",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.24
+],
+"themes": "LUNCH TRADE; LEFTOVERS; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"dam_troll_pencil_topper_1990": {
+"display": "Dam Things Troll pencil topper, circa",
+"eras": [
+0,
+1
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.014,
+"notes": [
+"Dam Things Troll pencil topper, circa 1990"
+],
+"product": "Dam Things Troll pencil topper, circa 1990",
+"role": "hero",
+"size": [
+0.035,
+0.035,
+0.08
+],
+"themes": "DRESS CODE; TIME CAPSULE; PRIZE COUNTER; SCHOOL_JUNK; regular cubes",
 "weight": 1.0
 },
 "dell_dimension_xps_d266_1997": {
@@ -1141,6 +1713,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"diamond_rio_pmp300_1998": {
+"display": "Diamond Rio PMP300 MP3 player",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Diamond Rio PMP300 MP3 player, 1998"
+],
+"product": "Diamond Rio PMP300 MP3 player, 1998",
+"role": "hero",
+"size": [
+0.064,
+0.016,
+0.09
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "diamond_suprafaxmodem_56k_1998": {
@@ -1251,6 +1845,28 @@
 0.126
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"doritos_3d_nacho_cheesier_1998": {
+"display": "Doritos 3D's Nacho Cheesier!",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.112,
+"notes": [
+"Doritos 3D's Nacho Cheesier!, 1998"
+],
+"product": "Doritos 3D's Nacho Cheesier!, 1998",
+"role": "hero",
+"size": [
+0.17,
+0.07,
+0.27
+],
+"themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
 "dot_matrix_banner_happy_birthday_1994": {
@@ -1407,6 +2023,204 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"dunkaroos_cinnamon_graham_rainbow_frosting_1995": {
+"display": "Betty Crocker Dunkaroos Cinnamon Grahams with Rainbow Sprinkles Frosting, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.074,
+"notes": [
+"Betty Crocker Dunkaroos Cinnamon Grahams with Rainbow Sprinkles Frosting, circa 1995"
+],
+"product": "Betty Crocker Dunkaroos Cinnamon Grahams with Rainbow Sprinkles Frosting, circa 1995",
+"role": "hero",
+"size": [
+0.16,
+0.028,
+0.095
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"duracell_c_cell_2pack_1996": {
+"display": "Duracell CopperTop C alkaline battery 2-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.027,
+"notes": [
+"Duracell CopperTop C alkaline battery 2-pack, circa 1996"
+],
+"product": "Duracell CopperTop C alkaline battery 2-pack, circa 1996",
+"role": "support",
+"size": [
+0.08,
+0.027,
+0.12
+],
+"themes": "DOUBLE A; FLASHLIGHT_JUNK; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"duracell_cef14_charger_2003": {
+"display": "Duracell CEF14 NiMH battery charger, circa",
+"eras": [
+3,
+4
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.059,
+"notes": [
+"Duracell CEF14 NiMH battery charger, circa 2003"
+],
+"product": "Duracell CEF14 NiMH battery charger, circa 2003",
+"role": "support",
+"size": [
+0.1,
+0.07,
+0.048
+],
+"themes": "DOUBLE A; SCREEN TIME; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"duracell_coppertop_9v_1996": {
+"display": "Duracell CopperTop 9V alkaline battery, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Duracell CopperTop 9V alkaline battery, circa 1996"
+],
+"product": "Duracell CopperTop 9V alkaline battery, circa 1996",
+"role": "support",
+"size": [
+0.027,
+0.018,
+0.048
+],
+"themes": "DOUBLE A; SMOKE_DETECTOR_JUNK; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"duracell_coppertop_aa4_1995": {
+"display": "Duracell CopperTop AA alkaline battery 4-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Duracell CopperTop AA alkaline battery 4-pack, circa 1995"
+],
+"product": "Duracell CopperTop AA alkaline battery 4-pack, circa 1995",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; MIXTAPE; SOME ASSEMBLY REQUIRED; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"duracell_coppertop_aaa4_1997": {
+"display": "Duracell CopperTop AAA alkaline battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Duracell CopperTop AAA alkaline battery 4-pack, circa 1997"
+],
+"product": "Duracell CopperTop AAA alkaline battery 4-pack, circa 1997",
+"role": "support",
+"size": [
+0.075,
+0.013,
+0.115
+],
+"themes": "SCREEN TIME; GM; LOST AND FOUND; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"duracell_cr2032_2pack_2000": {
+"display": "Duracell CR2032 lithium coin cell 2-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Duracell CR2032 lithium coin cell 2-pack, circa 2000"
+],
+"product": "Duracell CR2032 lithium coin cell 2-pack, circa 2000",
+"role": "filler",
+"size": [
+0.055,
+0.004,
+0.09
+],
+"themes": "COLD STORAGE; STILL ALIVE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"duracell_d_cell_2pack_1996": {
+"display": "Duracell CopperTop D alkaline battery 2-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"Duracell CopperTop D alkaline battery 2-pack, circa 1996"
+],
+"product": "Duracell CopperTop D alkaline battery 2-pack, circa 1996",
+"role": "support",
+"size": [
+0.09,
+0.034,
+0.135
+],
+"themes": "DOUBLE A; BOOMBOX_JUNK; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"duracell_rechargeable_aa4_2002": {
+"display": "Duracell Rechargeable NiMH AA battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Duracell Rechargeable NiMH AA battery 4-pack, circa 2002"
+],
+"product": "Duracell Rechargeable NiMH AA battery 4-pack, circa 2002",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "earthlink_trial_cd_1999": {
 "display": "EarthLink free Internet trial CD-ROM, circa",
 "eras": [
@@ -1427,6 +2241,50 @@
 0.126
 ],
 "themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"elmers_glue_stick_purple_1999": {
+"display": "Elmer's Disappearing Purple School Glue Stick, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.013,
+"notes": [
+"Elmer's Disappearing Purple School Glue Stick, circa 1999"
+],
+"product": "Elmer's Disappearing Purple School Glue Stick, circa 1999",
+"role": "support",
+"size": [
+0.027,
+0.027,
+0.1
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"elmers_school_glue_4oz_1996": {
+"display": "Elmer's School Glue 4 fl oz bottle, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.037,
+"notes": [
+"Elmer's School Glue 4 fl oz bottle, circa 1996"
+],
+"product": "Elmer's School Glue 4 fl oz bottle, circa 1996",
+"role": "hero",
+"size": [
+0.05,
+0.03,
+0.14
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "emachines_etower_566ir_2000": {
@@ -1495,6 +2353,204 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"energizer_15minute_charger_2004": {
+"display": "Energizer 15 Minute Charger with four AA NiMH batteries, circa",
+"eras": [
+3,
+4
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.074,
+"notes": [
+"Energizer 15 Minute Charger with four AA NiMH batteries, circa 2004"
+],
+"product": "Energizer 15 Minute Charger with four AA NiMH batteries, circa 2004",
+"role": "support",
+"size": [
+0.11,
+0.07,
+0.055
+],
+"themes": "DOUBLE A; SCREEN TIME; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"energizer_9v_1997": {
+"display": "Energizer 9V alkaline battery, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Energizer 9V alkaline battery, circa 1997"
+],
+"product": "Energizer 9V alkaline battery, circa 1997",
+"role": "support",
+"size": [
+0.027,
+0.018,
+0.048
+],
+"themes": "DOUBLE A; HOME_JUNK_DRAWER_MISC; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"energizer_aa4_1995": {
+"display": "Energizer AA alkaline battery 4-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Energizer AA alkaline battery 4-pack, circa 1995"
+],
+"product": "Energizer AA alkaline battery 4-pack, circa 1995",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; MIXTAPE; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"energizer_aaa4_1998": {
+"display": "Energizer AAA alkaline battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Energizer AAA alkaline battery 4-pack, circa 1998"
+],
+"product": "Energizer AAA alkaline battery 4-pack, circa 1998",
+"role": "support",
+"size": [
+0.075,
+0.013,
+0.115
+],
+"themes": "SCREEN TIME; GM; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"energizer_c_cell_2pack_1997": {
+"display": "Energizer C alkaline battery 2-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.027,
+"notes": [
+"Energizer C alkaline battery 2-pack, circa 1997"
+],
+"product": "Energizer C alkaline battery 2-pack, circa 1997",
+"role": "support",
+"size": [
+0.08,
+0.027,
+0.12
+],
+"themes": "DOUBLE A; FLASHLIGHT_JUNK; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"energizer_cr2032_2pack_2000": {
+"display": "Energizer CR2032 lithium coin cell 2-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Energizer CR2032 lithium coin cell 2-pack, circa 2000"
+],
+"product": "Energizer CR2032 lithium coin cell 2-pack, circa 2000",
+"role": "filler",
+"size": [
+0.055,
+0.004,
+0.09
+],
+"themes": "COLD STORAGE; STILL ALIVE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"energizer_d_cell_2pack_1997": {
+"display": "Energizer D alkaline battery 2-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"Energizer D alkaline battery 2-pack, circa 1997"
+],
+"product": "Energizer D alkaline battery 2-pack, circa 1997",
+"role": "support",
+"size": [
+0.09,
+0.034,
+0.135
+],
+"themes": "DOUBLE A; MIXTAPE; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"energizer_e2_lithium_aa4_2001": {
+"display": "Energizer e2 Lithium AA battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Energizer e2 Lithium AA battery 4-pack, circa 2001"
+],
+"product": "Energizer e2 Lithium AA battery 4-pack, circa 2001",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "SCREEN TIME; ROAD TRIP; DIGITAL_CAMERA_JUNK; regular cubes",
+"weight": 1.0
+},
+"energizer_rechargeable_aa4_2001": {
+"display": "Energizer Rechargeable NiMH AA battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Energizer Rechargeable NiMH AA battery 4-pack, circa 2001"
+],
+"product": "Energizer Rechargeable NiMH AA battery 4-pack, circa 2001",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "epson_stylus_color_600_1997": {
 "display": "Epson Stylus Color 600 inkjet printer",
 "eras": [
@@ -1537,6 +2593,72 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"eveready_super_heavy_duty_aa4_1994": {
+"display": "Eveready Super Heavy Duty AA battery 4-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Eveready Super Heavy Duty AA battery 4-pack, circa 1994"
+],
+"product": "Eveready Super Heavy Duty AA battery 4-pack, circa 1994",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; MIXTAPE; GARAGE SALE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"expo_low_odor_4pack_1999": {
+"display": "Sanford EXPO Low Odor dry erase marker 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.05,
+"notes": [
+"Sanford EXPO Low Odor dry erase marker 4-pack, circa 1999"
+],
+"product": "Sanford EXPO Low Odor dry erase marker 4-pack, circa 1999",
+"role": "support",
+"size": [
+0.12,
+0.02,
+0.2
+],
+"themes": "TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"expo_low_odor_black_1998": {
+"display": "Sanford EXPO Low Odor dry erase marker, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"Sanford EXPO Low Odor dry erase marker, circa 1998"
+],
+"product": "Sanford EXPO Low Odor dry erase marker, circa 1998",
+"role": "support",
+"size": [
+0.016,
+0.016,
+0.135
+],
+"themes": "TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "fable_xbox_2004": {
@@ -1649,6 +2771,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"fiskars_kids_scissors_1997": {
+"display": "Fiskars Kids Scissors, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Fiskars Kids Scissors, circa 1997"
+],
+"product": "Fiskars Kids Scissors, circa 1997",
+"role": "support",
+"size": [
+0.065,
+0.01,
+0.13
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "floppy_34wire_ribbon_cable_1997": {
 "display": "34-conductor floppy-drive ribbon cable, circa",
 "eras": [
@@ -1691,6 +2835,94 @@
 0.188
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"fruit_by_the_foot_berry_tie_dye_1995": {
+"display": "Betty Crocker Fruit by the Foot Berry Tie-Dye fruit snack, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Betty Crocker Fruit by the Foot Berry Tie-Dye fruit snack, circa 1995"
+],
+"product": "Betty Crocker Fruit by the Foot Berry Tie-Dye fruit snack, circa 1995",
+"role": "hero",
+"size": [
+0.04,
+0.04,
+0.095
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"fruit_gushers_strawberry_splash_1995": {
+"display": "Betty Crocker Fruit Gushers Strawberry Splash fruit snacks, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Betty Crocker Fruit Gushers Strawberry Splash fruit snacks, circa 1995"
+],
+"product": "Betty Crocker Fruit Gushers Strawberry Splash fruit snacks, circa 1995",
+"role": "hero",
+"size": [
+0.08,
+0.02,
+0.13
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"fruit_rollups_strawberry_1994": {
+"display": "Betty Crocker Fruit Roll-Ups Strawberry fruit snack, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Betty Crocker Fruit Roll-Ups Strawberry fruit snack, circa 1994"
+],
+"product": "Betty Crocker Fruit Roll-Ups Strawberry fruit snack, circa 1994",
+"role": "hero",
+"size": [
+0.06,
+0.015,
+0.115
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"fruitopia_strawberry_passion_1995": {
+"display": "Fruitopia Strawberry Passion Awareness drink, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.39,
+"notes": [
+"Fruitopia Strawberry Passion Awareness drink, circa 1995"
+],
+"product": "Fruitopia Strawberry Passion Awareness drink, circa 1995",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.22
+],
+"themes": "LUNCH TRADE; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "fuji_dri90_1995": {
@@ -1823,6 +3055,28 @@
 0.064
 ],
 "themes": "SCREEN TIME; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"game_boy_rechargeable_battery_pack_1991": {
+"display": "Nintendo Game Boy Rechargeable Battery Pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Nintendo Game Boy Rechargeable Battery Pack, circa 1991"
+],
+"product": "Nintendo Game Boy Rechargeable Battery Pack, circa 1991",
+"role": "hero",
+"size": [
+0.085,
+0.035,
+0.11
+],
+"themes": "DOUBLE A; SCREEN TIME; BLOW ON IT; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "gamecube_controller_indigo_2001": {
@@ -1999,6 +3253,28 @@
 0.082
 ],
 "themes": "SCREEN TIME; STILL ALIVE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"ge_six_outlet_power_strip_2000": {
+"display": "GE six-outlet power strip, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.079,
+"notes": [
+"GE six-outlet power strip, circa 2000"
+],
+"product": "GE six-outlet power strip, circa 2000",
+"role": "support",
+"size": [
+0.3,
+0.05,
+0.03
+],
+"themes": "DIAL-UP; SCREEN TIME; BLACKLIGHT; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "generic_cassette_case_1991": {
@@ -2375,6 +3651,28 @@
 "themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
 "weight": 1.0
 },
+"handspring_visor_deluxe_blue_1999": {
+"display": "Handspring Visor Deluxe, translucent blue",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.028,
+"notes": [
+"Handspring Visor Deluxe, translucent blue, 1999"
+],
+"product": "Handspring Visor Deluxe, translucent blue, 1999",
+"role": "hero",
+"size": [
+0.076,
+0.017,
+0.122
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "harry_potter_sorcerers_stone_vhs_2002": {
 "display": "Harry Potter and the Sorcerer's Stone VHS",
 "eras": [
@@ -2417,6 +3715,72 @@
 0.035
 ],
 "themes": "DIAL-UP; Y2K; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"helix_shatterproof_ruler_1998": {
+"display": "Helix Shatterproof 30 cm ruler, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Helix Shatterproof 30 cm ruler, circa 1998"
+],
+"product": "Helix Shatterproof 30 cm ruler, circa 1998",
+"role": "filler",
+"size": [
+0.31,
+0.0025,
+0.03
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"hitclips_micro_player_2000": {
+"display": "Tiger Electronics HitClips Micro Music Player",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Tiger Electronics HitClips Micro Music Player, 2000"
+],
+"product": "Tiger Electronics HitClips Micro Music Player, 2000",
+"role": "hero",
+"size": [
+0.045,
+0.02,
+0.055
+],
+"themes": "SLEEPOVER; DRESS CODE; PRIZE COUNTER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"hitclips_music_chip_2000": {
+"display": "Tiger Electronics HitClips music cartridge",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Tiger Electronics HitClips music cartridge, 2000"
+],
+"product": "Tiger Electronics HitClips music cartridge, 2000",
+"role": "filler",
+"size": [
+0.03,
+0.006,
+0.032
+],
+"themes": "SLEEPOVER; DRESS CODE; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
 "hollywood_video_membership_card_1999": {
@@ -2859,6 +4223,50 @@
 "themes": "SAVE ICON; DIAL-UP; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
+"jansport_right_pack_green_1997": {
+"display": "JanSport Right Pack backpack, Green, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 2.183,
+"notes": [
+"JanSport Right Pack backpack, Green, circa 1997"
+],
+"product": "JanSport Right Pack backpack, Green, circa 1997",
+"role": "hero",
+"size": [
+0.33,
+0.21,
+0.45
+],
+"themes": "LOST AND FOUND; TIME CAPSULE; SCHOOL_JUNK; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"jansport_superbreak_navy_1997": {
+"display": "JanSport SuperBreak backpack, Navy, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 2.037,
+"notes": [
+"JanSport SuperBreak backpack, Navy, circa 1997"
+],
+"product": "JanSport SuperBreak backpack, Navy, circa 1997",
+"role": "hero",
+"size": [
+0.33,
+0.21,
+0.42
+],
+"themes": "LOST AND FOUND; TIME CAPSULE; SCHOOL_JUNK; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "jayz_blueprint_cd_2001": {
 "display": "Jay-Z The Blueprint CD in jewel case",
 "eras": [
@@ -2925,6 +4333,28 @@
 "themes": "BASS BOOSTED; BLACKLIGHT; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"keebler_pizzarias_pizza_chips_1993": {
+"display": "Keebler Pizzarias Pizza Chips, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.104,
+"notes": [
+"Keebler Pizzarias Pizza Chips, circa 1993"
+],
+"product": "Keebler Pizzarias Pizza Chips, circa 1993",
+"role": "hero",
+"size": [
+0.17,
+0.07,
+0.25
+],
+"themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "killers_hot_fuss_cd_2004": {
 "display": "The Killers Hot Fuss CD in jewel case",
 "eras": [
@@ -2967,6 +4397,50 @@
 0.07
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"kodak_cr123a_2pack_1999": {
+"display": "Kodak K123LA / CR123A lithium photo battery 2-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.014,
+"notes": [
+"Kodak K123LA / CR123A lithium photo battery 2-pack, circa 1999"
+],
+"product": "Kodak K123LA / CR123A lithium photo battery 2-pack, circa 1999",
+"role": "support",
+"size": [
+0.07,
+0.017,
+0.115
+],
+"themes": "SCREEN TIME; TIME CAPSULE; ROAD TRIP; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"kodak_dc210_plus_1998": {
+"display": "Kodak DC210 Plus Zoom digital camera",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.096,
+"notes": [
+"Kodak DC210 Plus Zoom digital camera, 1998"
+],
+"product": "Kodak DC210 Plus Zoom digital camera, 1998",
+"role": "hero",
+"size": [
+0.126,
+0.054,
+0.081
+],
+"themes": "SCREEN TIME; TIME CAPSULE; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "konami_ddr_dance_pad_ps1_1999": {
@@ -3013,6 +4487,50 @@
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"kraft_handi_snacks_cheese_crackers_1995": {
+"display": "Kraft Handi-Snacks Crackers 'N Cheez, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.036,
+"notes": [
+"Kraft Handi-Snacks Crackers 'N Cheez, circa 1995"
+],
+"product": "Kraft Handi-Snacks Crackers 'N Cheez, circa 1995",
+"role": "hero",
+"size": [
+0.13,
+0.02,
+0.08
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"kudos_mms_granola_bar_1996": {
+"display": "M&M's Kudos granola bar, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"M&M's Kudos granola bar, circa 1996"
+],
+"product": "M&M's Kudos granola bar, circa 1996",
+"role": "hero",
+"size": [
+0.035,
+0.02,
+0.13
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "labtec_verse_313_microphone_1999": {
 "display": "Labtec desktop computer microphone, circa",
 "eras": [
@@ -3055,6 +4573,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"lands_end_collegiate_backpack_red_1997": {
+"display": "Lands' End Collegiate backpack, Red, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 2.304,
+"notes": [
+"Lands' End Collegiate backpack, Red, circa 1997"
+],
+"product": "Lands' End Collegiate backpack, Red, circa 1997",
+"role": "hero",
+"size": [
+0.34,
+0.22,
+0.44
+],
+"themes": "LOST AND FOUND; TIME CAPSULE; SCHOOL_JUNK; regular cubes",
 "weight": 1.0
 },
 "lauryn_hill_miseducation_cd_1998": {
@@ -3121,6 +4661,28 @@
 0.18
 ],
 "themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
+"weight": 1.0
+},
+"lg_vx6000_2003": {
+"display": "LG VX6000 camera phone",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.018,
+"notes": [
+"LG VX6000 camera phone, 2003"
+],
+"product": "LG VX6000 camera phone, 2003",
+"role": "hero",
+"size": [
+0.048,
+0.024,
+0.089
+],
+"themes": "SCREEN TIME; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
 "weight": 1.0
 },
 "lil_wayne_carter_iii_cd_2008": {
@@ -3233,6 +4795,72 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
+"lisa_frank_folder_neon_1995": {
+"display": "Lisa Frank two-pocket school folder, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.041,
+"notes": [
+"Lisa Frank two-pocket school folder, circa 1995"
+],
+"product": "Lisa Frank two-pocket school folder, circa 1995",
+"role": "hero",
+"size": [
+0.24,
+0.004,
+0.305
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"lisa_frank_sticker_sheet_1995": {
+"display": "Lisa Frank sticker sheet, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Lisa Frank sticker sheet, circa 1995"
+],
+"product": "Lisa Frank sticker sheet, circa 1995",
+"role": "hero",
+"size": [
+0.1,
+0.0005,
+0.2
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"little_hug_fruit_barrels_1996": {
+"display": "Little Hug Fruit Barrels fruit drink, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.048,
+"notes": [
+"Little Hug Fruit Barrels fruit drink, circa 1996"
+],
+"product": "Little Hug Fruit Barrels fruit drink, circa 1996",
+"role": "hero",
+"size": [
+0.06,
+0.06,
+0.095
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
 "logitech_cordless_mouseman_wheel_1999": {
 "display": "Logitech Cordless MouseMan Wheel",
 "eras": [
@@ -3319,6 +4947,72 @@
 0.21
 ],
 "themes": "DIAL-UP; CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"lunchables_ham_cheddar_cracker_stackers_1995": {
+"display": "Oscar Mayer Lunchables Ham + Cheddar with Crackers, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.206,
+"notes": [
+"Oscar Mayer Lunchables Ham + Cheddar with Crackers, circa 1995"
+],
+"product": "Oscar Mayer Lunchables Ham + Cheddar with Crackers, circa 1995",
+"role": "hero",
+"size": [
+0.21,
+0.035,
+0.16
+],
+"themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"lunchables_pizza_1996": {
+"display": "Oscar Mayer Lunchables Pizza, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.206,
+"notes": [
+"Oscar Mayer Lunchables Pizza, circa 1996"
+],
+"product": "Oscar Mayer Lunchables Pizza, circa 1996",
+"role": "hero",
+"size": [
+0.21,
+0.035,
+0.16
+],
+"themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"magic_rub_eraser_1996": {
+"display": "Sanford Magic Rub vinyl eraser, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sanford Magic Rub vinyl eraser, circa 1996"
+],
+"product": "Sanford Magic Rub vinyl eraser, circa 1996",
+"role": "filler",
+"size": [
+0.048,
+0.012,
+0.024
+],
+"themes": "HAND TURKEY; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "mario_kart_64_n64_1997": {
@@ -3431,6 +5125,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"maxell_lr44_2pack_1998": {
+"display": "Maxell LR44 alkaline button cell 2-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Maxell LR44 alkaline button cell 2-pack, circa 1998"
+],
+"product": "Maxell LR44 alkaline button cell 2-pack, circa 1998",
+"role": "filler",
+"size": [
+0.048,
+0.004,
+0.08
+],
+"themes": "STILL ALIVE; TOYS_NOVELTIES_AND_ARCADE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "maxell_t120_gx_silver_1994": {
 "display": "Maxell GX-Silver T-120 blank VHS cassette",
 "eras": [
@@ -3539,6 +5255,116 @@
 0.125
 ],
 "themes": "COASTERS; KICKFLIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"mead_composition_book_marble_1995": {
+"display": "Mead Composition Book, black-and-white marble cover, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.079,
+"notes": [
+"Mead Composition Book, black-and-white marble cover, circa 1995"
+],
+"product": "Mead Composition Book, black-and-white marble cover, circa 1995",
+"role": "hero",
+"size": [
+0.19,
+0.012,
+0.248
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; HAND TURKEY; regular cubes",
+"weight": 1.0
+},
+"mead_five_star_folder_blue_1997": {
+"display": "Mead Five Star two-pocket folder, Blue, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.051,
+"notes": [
+"Mead Five Star two-pocket folder, Blue, circa 1997"
+],
+"product": "Mead Five Star two-pocket folder, Blue, circa 1997",
+"role": "support",
+"size": [
+0.24,
+0.004,
+0.305
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"mead_five_star_notebook_1995": {
+"display": "Mead Five Star one-subject spiral notebook, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.082,
+"notes": [
+"Mead Five Star one-subject spiral notebook, circa 1995"
+],
+"product": "Mead Five Star one-subject spiral notebook, circa 1995",
+"role": "hero",
+"size": [
+0.21,
+0.01,
+0.279
+],
+"themes": "MIXTAPE; SAVE ICON; HAND TURKEY; SCHOOL_JUNK; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"mead_pee_chee_folder_1994": {
+"display": "Mead Pee-Chee All Season Portfolio folder, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.031,
+"notes": [
+"Mead Pee-Chee All Season Portfolio folder, circa 1994"
+],
+"product": "Mead Pee-Chee All Season Portfolio folder, circa 1994",
+"role": "hero",
+"size": [
+0.24,
+0.003,
+0.305
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"mead_trapper_keeper_1992": {
+"display": "Mead Trapper Keeper three-ring binder, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.761,
+"notes": [
+"Mead Trapper Keeper three-ring binder, circa 1992"
+],
+"product": "Mead Trapper Keeper three-ring binder, circa 1992",
+"role": "hero",
+"size": [
+0.29,
+0.05,
+0.3
+],
+"themes": "SCHOOL_JUNK; TIME CAPSULE; SLEEPOVER; DRESS CODE; regular cubes",
 "weight": 1.0
 },
 "memorex_cd_r_50_spindle_2001": {
@@ -3915,6 +5741,94 @@
 "themes": "SCREEN TIME; DOUBLE A; SLOW MOTION; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"motorola_i90c_nextel_2001": {
+"display": "Motorola i90c Nextel phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.034,
+"notes": [
+"Motorola i90c Nextel phone, 2001"
+],
+"product": "Motorola i90c Nextel phone, 2001",
+"role": "hero",
+"size": [
+0.05,
+0.03,
+0.13
+],
+"themes": "SCREEN TIME; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"motorola_razr_v3_pink_2005": {
+"display": "Motorola RAZR V3 Pink flip phone",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.051,
+"notes": [
+"Motorola RAZR V3 Pink flip phone, 2005"
+],
+"product": "Motorola RAZR V3 Pink flip phone, 2005",
+"role": "hero",
+"size": [
+0.053,
+0.014,
+0.098
+],
+"themes": "SCREEN TIME; SLEEPOVER; PROM NIGHT; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"motorola_razr_v3_silver_2004": {
+"display": "Motorola RAZR V3 flip phone",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.051,
+"notes": [
+"Motorola RAZR V3 flip phone, 2004"
+],
+"product": "Motorola RAZR V3 flip phone, 2004",
+"role": "hero",
+"size": [
+0.053,
+0.014,
+0.098
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"motorola_skytel_jazz_pager_1997": {
+"display": "Motorola Jazz numeric pager, circa",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Motorola Jazz numeric pager, circa 1997"
+],
+"product": "Motorola Jazz numeric pager, circa 1997",
+"role": "hero",
+"size": [
+0.069,
+0.021,
+0.048
+],
+"themes": "SCREEN TIME; SLOW MOTION; DOUBLE A; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "motorola_startac_8500_1996": {
 "display": "Motorola StarTAC 8500 flip phone",
 "eras": [
@@ -3957,6 +5871,50 @@
 0.06
 ],
 "themes": "SCREEN TIME; Y2K; DIAL-UP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"motorola_v60_2001": {
+"display": "Motorola V60 flip phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Motorola V60 flip phone, 2001"
+],
+"product": "Motorola V60 flip phone, 2001",
+"role": "hero",
+"size": [
+0.044,
+0.024,
+0.087
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"mr_sketch_scented_markers_12_1995": {
+"display": "Sanford Mr. Sketch Scented Watercolor Markers 12-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.119,
+"notes": [
+"Sanford Mr. Sketch Scented Watercolor Markers 12-pack, circa 1995"
+],
+"product": "Sanford Mr. Sketch Scented Watercolor Markers 12-pack, circa 1995",
+"role": "hero",
+"size": [
+0.17,
+0.02,
+0.2
+],
+"themes": "HAND TURKEY; SCHOOL_JUNK; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "mrs_doubtfire_vhs_1994": {
@@ -4509,6 +6467,50 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"nokia_3310_2000": {
+"display": "Nokia 3310 mobile phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.021,
+"notes": [
+"Nokia 3310 mobile phone, 2000"
+],
+"product": "Nokia 3310 mobile phone, 2000",
+"role": "hero",
+"size": [
+0.048,
+0.022,
+0.113
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"nokia_3360_2001": {
+"display": "Nokia 3360 mobile phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.021,
+"notes": [
+"Nokia 3360 mobile phone, 2001"
+],
+"product": "Nokia 3360 mobile phone, 2001",
+"role": "hero",
+"size": [
+0.048,
+0.022,
+0.113
+],
+"themes": "SCREEN TIME; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "nokia_3390_2000": {
 "display": "Nokia 3390 mobile phone",
 "eras": [
@@ -4551,6 +6553,94 @@
 0.132
 ],
 "themes": "SCREEN TIME; ROAD TRIP; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"nokia_5160_1998": {
+"display": "Nokia 5160 mobile phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.037,
+"notes": [
+"Nokia 5160 mobile phone, 1998"
+],
+"product": "Nokia 5160 mobile phone, 1998",
+"role": "hero",
+"size": [
+0.051,
+0.031,
+0.132
+],
+"themes": "SCREEN TIME; ROAD TRIP; Y2K; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"nokia_8260_2000": {
+"display": "Nokia 8260 mobile phone",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Nokia 8260 mobile phone, 2000"
+],
+"product": "Nokia 8260 mobile phone, 2000",
+"role": "hero",
+"size": [
+0.043,
+0.02,
+0.102
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"nokia_acp7u_charger_2000": {
+"display": "Nokia ACP-7U travel charger, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"Nokia ACP-7U travel charger, circa 2000"
+],
+"product": "Nokia ACP-7U travel charger, circa 2000",
+"role": "filler",
+"size": [
+0.055,
+0.04,
+0.05
+],
+"themes": "SCREEN TIME; ROAD TRIP; LOST AND FOUND; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"nokia_bls2n_battery_1999": {
+"display": "Nokia BLS-2N lithium-ion phone battery, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Nokia BLS-2N lithium-ion phone battery, circa 1999"
+],
+"product": "Nokia BLS-2N lithium-ion phone battery, circa 1999",
+"role": "filler",
+"size": [
+0.042,
+0.009,
+0.058
+],
+"themes": "SCREEN TIME; LOST AND FOUND; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "norton_antivirus_2001_box": {
@@ -4617,6 +6707,50 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"olympus_vn90_2001": {
+"display": "Olympus VN-90 digital voice recorder, circa",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.013,
+"notes": [
+"Olympus VN-90 digital voice recorder, circa 2001"
+],
+"product": "Olympus VN-90 digital voice recorder, circa 2001",
+"role": "support",
+"size": [
+0.04,
+0.018,
+0.105
+],
+"themes": "SCREEN TIME; PROBED; CRYPTID; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"orbitz_orange_vanilla_1997": {
+"display": "Orbitz Orange Vanilla drink",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.302,
+"notes": [
+"Orbitz Orange Vanilla drink, 1997"
+],
+"product": "Orbitz Orange Vanilla drink, 1997",
+"role": "hero",
+"size": [
+0.06,
+0.06,
+0.2
+],
+"themes": "LUNCH TRADE; Y2K; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "original_game_boy_dmg01_1989": {
@@ -4707,6 +6841,28 @@
 "themes": "SCREEN TIME; DIAL-UP; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"palm_m100_2000": {
+"display": "Palm m100 handheld organizer",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"Palm m100 handheld organizer, 2000"
+],
+"product": "Palm m100 handheld organizer, 2000",
+"role": "support",
+"size": [
+0.079,
+0.018,
+0.118
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "palm_pilot_professional_1997": {
 "display": "PalmPilot Professional PDA",
 "eras": [
@@ -4727,6 +6883,50 @@
 0.12
 ],
 "themes": "SCREEN TIME; DIAL-UP; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"palm_tungsten_e_2003": {
+"display": "Palm Tungsten E handheld",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.076,
+"notes": [
+"Palm Tungsten E handheld, 2003"
+],
+"product": "Palm Tungsten E handheld, 2003",
+"role": "hero",
+"size": [
+0.079,
+0.012,
+0.115
+],
+"themes": "SCREEN TIME; GM; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"panasonic_aa4_1998": {
+"display": "Panasonic Alkaline Plus AA battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Panasonic Alkaline Plus AA battery 4-pack, circa 1998"
+],
+"product": "Panasonic Alkaline Plus AA battery 4-pack, circa 1998",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "panasonic_pv9450_vcr_1999": {
@@ -4771,6 +6971,28 @@
 0.38
 ],
 "themes": "SCREEN TIME; BE KIND REWIND; SLEEPOVER; SICK DAY; regular cubes",
+"weight": 1.0
+},
+"panasonic_rr_dr60_1998": {
+"display": "Panasonic RR-DR60 digital voice recorder",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"Panasonic RR-DR60 digital voice recorder, 1998"
+],
+"product": "Panasonic RR-DR60 digital voice recorder, 1998",
+"role": "support",
+"size": [
+0.039,
+0.016,
+0.1
+],
+"themes": "SCREEN TIME; PROBED; CRYPTID; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "panasonic_shockwave_sl_sw202_1996": {
@@ -4839,6 +7061,94 @@
 "themes": "COASTERS; DIAL-UP; SAVE ICON; Y2K; regular cubes",
 "weight": 1.0
 },
+"papermate_erasermate_pen_1995": {
+"display": "Paper Mate Eraser Mate erasable ballpoint pen, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Paper Mate Eraser Mate erasable ballpoint pen, circa 1995"
+],
+"product": "Paper Mate Eraser Mate erasable ballpoint pen, circa 1995",
+"role": "hero",
+"size": [
+0.011,
+0.011,
+0.15
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"papermate_liquid_paper_correction_pen_1998": {
+"display": "Paper Mate Liquid Paper Correction Pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Paper Mate Liquid Paper Correction Pen, circa 1998"
+],
+"product": "Paper Mate Liquid Paper Correction Pen, circa 1998",
+"role": "filler",
+"size": [
+0.017,
+0.017,
+0.13
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"papermate_sharpwriter_2_1996": {
+"display": "Paper Mate SharpWriter No. 2 mechanical pencil, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Paper Mate SharpWriter No. 2 mechanical pencil, circa 1996"
+],
+"product": "Paper Mate SharpWriter No. 2 mechanical pencil, circa 1996",
+"role": "support",
+"size": [
+0.009,
+0.009,
+0.145
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"papermate_write_bros_10pack_1996": {
+"display": "Paper Mate Write Bros. ballpoint pens 10-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"Paper Mate Write Bros. ballpoint pens 10-pack, circa 1996"
+],
+"product": "Paper Mate Write Bros. ballpoint pens 10-pack, circa 1996",
+"role": "support",
+"size": [
+0.08,
+0.015,
+0.2
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "pearl_jam_ten_cd_1991": {
 "display": "Pearl Jam Ten CD in jewel case",
 "eras": [
@@ -4861,6 +7171,94 @@
 "themes": "COASTERS; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"pencil_grip_neon_foam_1996": {
+"display": "The Pencil Grip-style neon foam pencil grip, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"The Pencil Grip-style neon foam pencil grip, circa 1996"
+],
+"product": "The Pencil Grip-style neon foam pencil grip, circa 1996",
+"role": "filler",
+"size": [
+0.038,
+0.014,
+0.014
+],
+"themes": "LOST AND FOUND; TIME CAPSULE; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"pentel_hybrid_milky_pastel_set_1998": {
+"display": "Pentel Hybrid Milky pastel gel pen set, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.05,
+"notes": [
+"Pentel Hybrid Milky pastel gel pen set, circa 1998"
+],
+"product": "Pentel Hybrid Milky pastel gel pen set, circa 1998",
+"role": "hero",
+"size": [
+0.1,
+0.015,
+0.19
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"pentel_hybrid_milky_white_1997": {
+"display": "Pentel Hybrid Milky white gel roller pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Pentel Hybrid Milky white gel roller pen, circa 1997"
+],
+"product": "Pentel Hybrid Milky white gel roller pen, circa 1997",
+"role": "hero",
+"size": [
+0.011,
+0.011,
+0.145
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"pentel_p205_05mm_1995": {
+"display": "Pentel P205 0.5 mm mechanical pencil, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Pentel P205 0.5 mm mechanical pencil, circa 1995"
+],
+"product": "Pentel P205 0.5 mm mechanical pencil, circa 1995",
+"role": "hero",
+"size": [
+0.009,
+0.009,
+0.145
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "phone_line_splitter_1997": {
 "display": "Two-way RJ-11 telephone line splitter, circa",
 "eras": [
@@ -4881,6 +7279,94 @@
 0.021
 ],
 "themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"pilot_g2_07_blue_1998": {
+"display": "Pilot G2 0.7 mm retractable gel pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Pilot G2 0.7 mm retractable gel pen, circa 1998"
+],
+"product": "Pilot G2 0.7 mm retractable gel pen, circa 1998",
+"role": "support",
+"size": [
+0.012,
+0.012,
+0.143
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"pilot_precise_v5_blue_1998": {
+"display": "Pilot Precise V5 Extra Fine rolling ball pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Pilot Precise V5 Extra Fine rolling ball pen, circa 1998"
+],
+"product": "Pilot Precise V5 Extra Fine rolling ball pen, circa 1998",
+"role": "support",
+"size": [
+0.011,
+0.011,
+0.148
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"pink_pearl_eraser_1995": {
+"display": "Paper Mate Pink Pearl No. 100 eraser, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Paper Mate Pink Pearl No. 100 eraser, circa 1995"
+],
+"product": "Paper Mate Pink Pearl No. 100 eraser, circa 1995",
+"role": "filler",
+"size": [
+0.051,
+0.011,
+0.022
+],
+"themes": "HAND TURKEY; LOST AND FOUND; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"planters_pb_crisps_1994": {
+"display": "Planters P.B. Crisps, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.087,
+"notes": [
+"Planters P.B. Crisps, circa 1994"
+],
+"product": "Planters P.B. Crisps, circa 1994",
+"role": "hero",
+"size": [
+0.16,
+0.065,
+0.24
+],
+"themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "playstation_memory_card_1995": {
@@ -4947,6 +7433,72 @@
 0.065
 ],
 "themes": "BLOW ON IT; STILL ALIVE; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"polaroid_izone_camera_blue_1999": {
+"display": "Polaroid I-Zone Instant Pocket Camera, Blue",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.079,
+"notes": [
+"Polaroid I-Zone Instant Pocket Camera, Blue, 1999"
+],
+"product": "Polaroid I-Zone Instant Pocket Camera, Blue, 1999",
+"role": "hero",
+"size": [
+0.06,
+0.05,
+0.15
+],
+"themes": "TIME CAPSULE; SLEEPOVER; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"postit_notes_yellow_3x3_1997": {
+"display": "3M Post-it Notes 3 x 3 inch Canary Yellow pad, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"3M Post-it Notes 3 x 3 inch Canary Yellow pad, circa 1997"
+],
+"product": "3M Post-it Notes 3 x 3 inch Canary Yellow pad, circa 1997",
+"role": "filler",
+"size": [
+0.076,
+0.01,
+0.076
+],
+"themes": "TIME CAPSULE; DIAL-UP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"prang_watercolors_8_1996": {
+"display": "Prang Oval-Pan Watercolors 8-color set, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.045,
+"notes": [
+"Prang Oval-Pan Watercolors 8-color set, circa 1996"
+],
+"product": "Prang Oval-Pan Watercolors 8-color set, circa 1996",
+"role": "hero",
+"size": [
+0.22,
+0.018,
+0.065
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; SCHOOL_JUNK; regular cubes",
 "weight": 1.0
 },
 "pretty_woman_vhs_1990": {
@@ -5059,6 +7611,28 @@
 "themes": "BE KIND REWIND; UNDER THE MATTRESS; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"push_pop_strawberry_1995": {
+"display": "Topps Push Pop Strawberry candy, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"Topps Push Pop Strawberry candy, circa 1995"
+],
+"product": "Topps Push Pop Strawberry candy, circa 1995",
+"role": "hero",
+"size": [
+0.03,
+0.03,
+0.12
+],
+"themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "radio_shack_phone_coupler_1996": {
 "display": "RadioShack RJ-11 inline telephone coupler, circa",
 "eras": [
@@ -5101,6 +7675,138 @@
 0.038
 ],
 "themes": "BE KIND REWIND; CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"radioshack_battery_tester_22093_1998": {
+"display": "RadioShack analog battery tester, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.039,
+"notes": [
+"RadioShack analog battery tester, circa 1998"
+],
+"product": "RadioShack analog battery tester, circa 1998",
+"role": "support",
+"size": [
+0.065,
+0.03,
+0.115
+],
+"themes": "DOUBLE A; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"rayovac_1hour_charger_2002": {
+"display": "Rayovac 1 Hour NiMH battery charger, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.074,
+"notes": [
+"Rayovac 1 Hour NiMH battery charger, circa 2002"
+],
+"product": "Rayovac 1 Hour NiMH battery charger, circa 2002",
+"role": "support",
+"size": [
+0.11,
+0.07,
+0.055
+],
+"themes": "DOUBLE A; SCREEN TIME; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"rayovac_9v_1997": {
+"display": "Rayovac Maximum Alkaline 9V battery, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.016,
+"notes": [
+"Rayovac Maximum Alkaline 9V battery, circa 1997"
+],
+"product": "Rayovac Maximum Alkaline 9V battery, circa 1997",
+"role": "support",
+"size": [
+0.027,
+0.018,
+0.048
+],
+"themes": "DOUBLE A; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"rayovac_aa4_1996": {
+"display": "Rayovac Maximum Alkaline AA battery 4-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Rayovac Maximum Alkaline AA battery 4-pack, circa 1996"
+],
+"product": "Rayovac Maximum Alkaline AA battery 4-pack, circa 1996",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; MIXTAPE; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"rayovac_aaa4_1998": {
+"display": "Rayovac Maximum Alkaline AAA battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Rayovac Maximum Alkaline AAA battery 4-pack, circa 1998"
+],
+"product": "Rayovac Maximum Alkaline AAA battery 4-pack, circa 1998",
+"role": "support",
+"size": [
+0.075,
+0.013,
+0.115
+],
+"themes": "SCREEN TIME; LOST AND FOUND; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"rayovac_rechargeable_aa4_2000": {
+"display": "Rayovac Rechargeable NiMH AA battery 4-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Rayovac Rechargeable NiMH AA battery 4-pack, circa 2000"
+],
+"product": "Rayovac Rechargeable NiMH AA battery 4-pack, circa 2000",
+"role": "support",
+"size": [
+0.085,
+0.016,
+0.12
+],
+"themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "rca_vcr_remote_1998": {
@@ -5191,6 +7897,138 @@
 "themes": "COASTERS; ROAD TRIP; KICKFLIP; regular cubes",
 "weight": 1.0
 },
+"ring_pop_blue_raspberry_1995": {
+"display": "Topps Ring Pop Blue Raspberry candy, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Topps Ring Pop Blue Raspberry candy, circa 1995"
+],
+"product": "Topps Ring Pop Blue Raspberry candy, circa 1995",
+"role": "hero",
+"size": [
+0.035,
+0.025,
+0.085
+],
+"themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sakura_gelly_roll_metallic_gold_1998": {
+"display": "Sakura Gelly Roll Metallic Gold gel pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sakura Gelly Roll Metallic Gold gel pen, circa 1998"
+],
+"product": "Sakura Gelly Roll Metallic Gold gel pen, circa 1998",
+"role": "hero",
+"size": [
+0.01,
+0.01,
+0.15
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sakura_gelly_roll_metallic_silver_1998": {
+"display": "Sakura Gelly Roll Metallic Silver gel pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sakura Gelly Roll Metallic Silver gel pen, circa 1998"
+],
+"product": "Sakura Gelly Roll Metallic Silver gel pen, circa 1998",
+"role": "hero",
+"size": [
+0.01,
+0.01,
+0.15
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sakura_gelly_roll_white_1997": {
+"display": "Sakura Gelly Roll Classic white gel pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sakura Gelly Roll Classic white gel pen, circa 1997"
+],
+"product": "Sakura Gelly Roll Classic white gel pen, circa 1997",
+"role": "hero",
+"size": [
+0.01,
+0.01,
+0.15
+],
+"themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sandisk_sansa_e250_2006": {
+"display": "SanDisk Sansa e250 MP3 player",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"SanDisk Sansa e250 MP3 player, 2006"
+],
+"product": "SanDisk Sansa e250 MP3 player, 2006",
+"role": "support",
+"size": [
+0.044,
+0.013,
+0.089
+],
+"themes": "SCREEN TIME; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sanford_eagle_mirado_black_warrior_1997": {
+"display": "Sanford Eagle Black Warrior No. 2 pencil, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sanford Eagle Black Warrior No. 2 pencil, circa 1997"
+],
+"product": "Sanford Eagle Black Warrior No. 2 pencil, circa 1997",
+"role": "support",
+"size": [
+0.008,
+0.008,
+0.19
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "scotch_bx90_1990": {
 "display": "Scotch BX 90 Type I blank audio cassette",
 "eras": [
@@ -5211,6 +8049,28 @@
 0.064
 ],
 "themes": "MIXTAPE; GARAGE SALE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"scotch_magic_tape_3quarter_1997": {
+"display": "Scotch Magic Tape 3/4-inch roll in desktop dispenser, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.039,
+"notes": [
+"Scotch Magic Tape 3/4-inch roll in desktop dispenser, circa 1997"
+],
+"product": "Scotch Magic Tape 3/4-inch roll in desktop dispenser, circa 1997",
+"role": "filler",
+"size": [
+0.1,
+0.045,
+0.05
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "scotch_t120_blank_vhs_1991": {
@@ -5455,6 +8315,72 @@
 "themes": "CONSOLE WARS; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"shark_bites_fruit_snacks_1995": {
+"display": "Betty Crocker Shark Bites fruit snacks, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Betty Crocker Shark Bites fruit snacks, circa 1995"
+],
+"product": "Betty Crocker Shark Bites fruit snacks, circa 1995",
+"role": "hero",
+"size": [
+0.08,
+0.02,
+0.13
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"sharpie_fine_black_1997": {
+"display": "Sanford Sharpie Fine Point permanent marker, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Sanford Sharpie Fine Point permanent marker, circa 1997"
+],
+"product": "Sanford Sharpie Fine Point permanent marker, circa 1997",
+"role": "hero",
+"size": [
+0.013,
+0.013,
+0.137
+],
+"themes": "COASTERS; MIXTAPE; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"sharpie_fine_blue_1998": {
+"display": "Sanford Sharpie Fine Point blue permanent marker, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Sanford Sharpie Fine Point blue permanent marker, circa 1998"
+],
+"product": "Sanford Sharpie Fine Point blue permanent marker, circa 1998",
+"role": "support",
+"size": [
+0.013,
+0.013,
+0.137
+],
+"themes": "COASTERS; MIXTAPE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "shrek_vhs_2001": {
 "display": "Shrek VHS in clamshell case",
 "eras": [
@@ -5675,6 +8601,28 @@
 "themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; LANDFILL DRIVE; regular cubes",
 "weight": 1.0
 },
+"sony_ace45hg_adapter_1998": {
+"display": "Sony AC-E45HG AC power adapter for portable audio, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"Sony AC-E45HG AC power adapter for portable audio, circa 1998"
+],
+"product": "Sony AC-E45HG AC power adapter for portable audio, circa 1998",
+"role": "filler",
+"size": [
+0.055,
+0.045,
+0.045
+],
+"themes": "COASTERS; MIXTAPE; ROAD TRIP; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "sony_cfd_s22_boombox_1998": {
 "display": "Sony CFD-S22 CD Radio Cassette-Corder",
 "eras": [
@@ -5807,6 +8755,28 @@
 "themes": "SAVE ICON; DIAL-UP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"sony_handycam_ccdtrv65_1998": {
+"display": "Sony Handycam Vision CCD-TRV65 Hi8 camcorder",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.462,
+"notes": [
+"Sony Handycam Vision CCD-TRV65 Hi8 camcorder, 1998"
+],
+"product": "Sony Handycam Vision CCD-TRV65 Hi8 camcorder, 1998",
+"role": "hero",
+"size": [
+0.11,
+0.2,
+0.12
+],
+"themes": "SLEEPOVER; PROM NIGHT; SUMMER CAMP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "sony_hf90_1990": {
 "display": "Sony HF 90 Type I blank audio cassette",
 "eras": [
@@ -5827,6 +8797,50 @@
 0.064
 ],
 "themes": "MIXTAPE; ROAD TRIP; DIAL-UP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sony_icd_bp100_2001": {
+"display": "Sony ICD-BP100 digital voice recorder",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Sony ICD-BP100 digital voice recorder, 2001"
+],
+"product": "Sony ICD-BP100 digital voice recorder, 2001",
+"role": "support",
+"size": [
+0.035,
+0.017,
+0.1
+],
+"themes": "SCREEN TIME; PROBED; CRYPTID; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sony_mavica_mvcfd7_1997": {
+"display": "Sony Mavica MVC-FD7 digital camera",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.211,
+"notes": [
+"Sony Mavica MVC-FD7 digital camera, 1997"
+],
+"product": "Sony Mavica MVC-FD7 digital camera, 1997",
+"role": "hero",
+"size": [
+0.14,
+0.082,
+0.105
+],
+"themes": "SCREEN TIME; SAVE ICON; TIME CAPSULE; Y2K; regular cubes",
 "weight": 1.0
 },
 "sony_mdr_7506_1991": {
@@ -5871,6 +8885,138 @@
 0.18
 ],
 "themes": "MIXTAPE; BASS BOOSTED; DIAL-UP; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
+"sony_minidisc_74_blue_1998": {
+"display": "Sony MDW-74 recordable MiniDisc, circa",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Sony MDW-74 recordable MiniDisc, circa 1998"
+],
+"product": "Sony MDW-74 recordable MiniDisc, circa 1998",
+"role": "support",
+"size": [
+0.072,
+0.005,
+0.068
+],
+"themes": "COASTERS; Y2K; ROAD TRIP; SAVE ICON; regular cubes",
+"weight": 1.0
+},
+"sony_mz_n707_red_2002": {
+"display": "Sony MZ-N707 Net MD Walkman, Red",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.117,
+"notes": [
+"Sony MZ-N707 Net MD Walkman, Red, 2002"
+],
+"product": "Sony MZ-N707 Net MD Walkman, Red, 2002",
+"role": "hero",
+"size": [
+0.081,
+0.028,
+0.074
+],
+"themes": "COASTERS; DIAL-UP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sony_mz_r70_blue_2000": {
+"display": "Sony MZ-R70 MiniDisc Walkman recorder, Blue",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.116,
+"notes": [
+"Sony MZ-R70 MiniDisc Walkman recorder, Blue, 2000"
+],
+"product": "Sony MZ-R70 MiniDisc Walkman recorder, Blue, 2000",
+"role": "hero",
+"size": [
+0.082,
+0.027,
+0.075
+],
+"themes": "COASTERS; ROAD TRIP; Y2K; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"sony_network_walkman_nwe3_2000": {
+"display": "Sony Network Walkman NW-E3",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Sony Network Walkman NW-E3, 2000"
+],
+"product": "Sony Network Walkman NW-E3, 2000",
+"role": "hero",
+"size": [
+0.036,
+0.017,
+0.082
+],
+"themes": "SCREEN TIME; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sony_npf330_infolithium_1998": {
+"display": "Sony NP-F330 InfoLITHIUM L-series camcorder battery, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"Sony NP-F330 InfoLITHIUM L-series camcorder battery, circa 1998"
+],
+"product": "Sony NP-F330 InfoLITHIUM L-series camcorder battery, circa 1998",
+"role": "support",
+"size": [
+0.038,
+0.04,
+0.04
+],
+"themes": "SCREEN TIME; PROM NIGHT; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sony_npf550_infolithium_1997": {
+"display": "Sony NP-F550 InfoLITHIUM L-series camcorder battery, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Sony NP-F550 InfoLITHIUM L-series camcorder battery, circa 1997"
+],
+"product": "Sony NP-F550 InfoLITHIUM L-series camcorder battery, circa 1997",
+"role": "support",
+"size": [
+0.038,
+0.056,
+0.04
+],
+"themes": "SCREEN TIME; PROM NIGHT; SUMMER CAMP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "sony_playstation2_scph30001_2000": {
@@ -6115,6 +9261,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; MINT CONDITION; regular cubes",
 "weight": 1.0
 },
+"spacemaker_pencil_box_1995": {
+"display": "SpaceMaker plastic pencil box, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.192,
+"notes": [
+"SpaceMaker plastic pencil box, circa 1995"
+],
+"product": "SpaceMaker plastic pencil box, circa 1995",
+"role": "hero",
+"size": [
+0.215,
+0.06,
+0.085
+],
+"themes": "LOST AND FOUND; TIME CAPSULE; HAND TURKEY; regular cubes",
+"weight": 1.0
+},
+"spacemaker_school_box_purple_1997": {
+"display": "SpaceMaker school box, Purple, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.192,
+"notes": [
+"SpaceMaker school box, Purple, circa 1997"
+],
+"product": "SpaceMaker school box, Purple, circa 1997",
+"role": "support",
+"size": [
+0.215,
+0.06,
+0.085
+],
+"themes": "LOST AND FOUND; TIME CAPSULE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "spice_girls_spice_cassette_1996": {
 "display": "Spice Girls Spice prerecorded cassette",
 "eras": [
@@ -6159,6 +9349,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
+"squeezit_fruit_punch_1995": {
+"display": "General Mills Squeezit Fruit Punch drink, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.054,
+"notes": [
+"General Mills Squeezit Fruit Punch drink, circa 1995"
+],
+"product": "General Mills Squeezit Fruit Punch drink, circa 1995",
+"role": "hero",
+"size": [
+0.06,
+0.04,
+0.16
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "street_fighter_ii_snes_1992": {
 "display": "Street Fighter II Super Nintendo Game Pak",
 "eras": [
@@ -6179,6 +9391,28 @@
 0.126
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sunny_delight_california_16oz_1995": {
+"display": "Sunny Delight California Style citrus punch bottle, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.154,
+"notes": [
+"Sunny Delight California Style citrus punch bottle, circa 1995"
+],
+"product": "Sunny Delight California Style citrus punch bottle, circa 1995",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.18
+],
+"themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "super_mario_64_n64_1996": {
@@ -6267,6 +9501,72 @@
 0.072
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"surge_20oz_1997": {
+"display": "SURGE citrus soda 20 fl oz bottle",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.177,
+"notes": [
+"SURGE citrus soda 20 fl oz bottle, 1997"
+],
+"product": "SURGE citrus soda 20 fl oz bottle, 1997",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.24
+],
+"themes": "LUNCH TRADE; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"swingline_standard_staples_5000_1997": {
+"display": "Swingline Standard Staples 5000-count box, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"Swingline Standard Staples 5000-count box, circa 1997"
+],
+"product": "Swingline Standard Staples 5000-count box, circa 1997",
+"role": "filler",
+"size": [
+0.085,
+0.035,
+0.02
+],
+"themes": "SCHOOL_JUNK; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"swingline_tot50_stapler_1997": {
+"display": "Swingline Tot 50 stapler, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.111,
+"notes": [
+"Swingline Tot 50 stapler, circa 1997"
+],
+"product": "Swingline Tot 50 stapler, circa 1997",
+"role": "support",
+"size": [
+0.11,
+0.032,
+0.045
+],
+"themes": "SCHOOL_JUNK; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "tdk_cd_r_50_spindle_2001": {
@@ -6379,6 +9679,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"texas_instruments_ti83_1996": {
+"display": "Texas Instruments TI-83 graphing calculator",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.064,
+"notes": [
+"Texas Instruments TI-83 graphing calculator, 1996"
+],
+"product": "Texas Instruments TI-83 graphing calculator, 1996",
+"role": "hero",
+"size": [
+0.089,
+0.022,
+0.186
+],
+"themes": "SCREEN TIME; SCHOOL_JUNK; TIME CAPSULE; COLD STORAGE; regular cubes",
+"weight": 1.0
+},
 "theres_something_about_mary_vhs_1999": {
 "display": "There's Something About Mary VHS",
 "eras": [
@@ -6399,6 +9721,50 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; UNDER_THE_MATTRESS; regular cubes",
+"weight": 1.0
+},
+"ticonderoga_no2_12pack_1996": {
+"display": "Dixon Ticonderoga No. 2 pencil 12-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Dixon Ticonderoga No. 2 pencil 12-pack, circa 1996"
+],
+"product": "Dixon Ticonderoga No. 2 pencil 12-pack, circa 1996",
+"role": "support",
+"size": [
+0.065,
+0.01,
+0.25
+],
+"themes": "HAND TURKEY; TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"tiger_talkboy_deluxe_1993": {
+"display": "Tiger Electronics Talkboy Deluxe cassette recorder",
+"eras": [
+1,
+2
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.175,
+"notes": [
+"Tiger Electronics Talkboy Deluxe cassette recorder, 1993"
+],
+"product": "Tiger Electronics Talkboy Deluxe cassette recorder, 1993",
+"role": "hero",
+"size": [
+0.1,
+0.05,
+0.2
+],
+"themes": "MIXTAPE; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
 "titanic_vhs_1998": {
@@ -6467,6 +9833,50 @@
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"tmobile_sidekick_color_2003": {
+"display": "T-Mobile Sidekick Color",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"T-Mobile Sidekick Color, 2003"
+],
+"product": "T-Mobile Sidekick Color, 2003",
+"role": "hero",
+"size": [
+0.13,
+0.028,
+0.066
+],
+"themes": "SCREEN TIME; Y2K; DIAL-UP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"tmobile_sidekick_ii_2004": {
+"display": "T-Mobile Sidekick II",
+"eras": [
+3,
+4
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.033,
+"notes": [
+"T-Mobile Sidekick II, 2004"
+],
+"product": "T-Mobile Sidekick II, 2004",
+"role": "hero",
+"size": [
+0.13,
+0.022,
+0.066
+],
+"themes": "SCREEN TIME; DIAL-UP; Y2K; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "display": "Tony Hawk's Pro Skater 2 PlayStation game",
 "eras": [
@@ -6533,6 +9943,28 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"trend_scratch_sniff_sticker_sheet_1994": {
+"display": "TREND Scratch 'n Sniff reward sticker sheet, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"TREND Scratch 'n Sniff reward sticker sheet, circa 1994"
+],
+"product": "TREND Scratch 'n Sniff reward sticker sheet, circa 1994",
+"role": "hero",
+"size": [
+0.1,
+0.0005,
+0.2
+],
+"themes": "HAND TURKEY; TIME CAPSULE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "twister_vhs_1997": {
 "display": "Twister VHS",
 "eras": [
@@ -6575,6 +10007,28 @@
 0.09
 ],
 "themes": "DIAL-UP; SAVE ICON; Y2K; regular cubes",
+"weight": 1.0
+},
+"uni_ball_vision_elite_black_1998": {
+"display": "uni-ball Vision rollerball pen, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"uni-ball Vision rollerball pen, circa 1998"
+],
+"product": "uni-ball Vision rollerball pen, circa 1998",
+"role": "support",
+"size": [
+0.012,
+0.012,
+0.14
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "usher_confessions_cd_2004": {
@@ -6775,6 +10229,28 @@
 "themes": "SCREEN TIME; DIAL-UP; Y2K; regular cubes",
 "weight": 1.0
 },
+"warheads_extreme_sour_1995": {
+"display": "Warheads Extreme Sour hard candy bag, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.014,
+"notes": [
+"Warheads Extreme Sour hard candy bag, circa 1995"
+],
+"product": "Warheads Extreme Sour hard candy bag, circa 1995",
+"role": "hero",
+"size": [
+0.1,
+0.025,
+0.16
+],
+"themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "wavebird_controller_2002": {
 "display": "Nintendo WaveBird Wireless Controller",
 "eras": [
@@ -6819,6 +10295,28 @@
 "themes": "BE KIND REWIND; BASS BOOSTED; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"westcott_12inch_clear_ruler_1997": {
+"display": "Westcott 12-inch clear plastic ruler, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Westcott 12-inch clear plastic ruler, circa 1997"
+],
+"product": "Westcott 12-inch clear plastic ruler, circa 1997",
+"role": "filler",
+"size": [
+0.31,
+0.0025,
+0.03
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; HAND TURKEY; regular cubes",
+"weight": 1.0
+},
 "windows95_big_box_1995": {
 "display": "Microsoft Windows 95 retail big-box software package",
 "eras": [
@@ -6861,6 +10359,28 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"woods_three_outlet_cube_tap_1997": {
+"display": "Woods three-outlet cube tap adapter, circa",
+"eras": [
+2,
+3
+],
+"family": "power_and_batteries",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Woods three-outlet cube tap adapter, circa 1997"
+],
+"product": "Woods three-outlet cube tap adapter, circa 1997",
+"role": "filler",
+"size": [
+0.04,
+0.035,
+0.03
+],
+"themes": "HOME_JUNK_DRAWER_MISC; GARAGE SALE; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
 "xbox_controller_s_2002": {
@@ -6927,6 +10447,94 @@
 0.038
 ],
 "themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"yak_bak_2_1997": {
+"display": "Yes! Gear Yak Bak 2 voice recorder",
+"eras": [
+2,
+3
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Yes! Gear Yak Bak 2 voice recorder, 1997"
+],
+"product": "Yes! Gear Yak Bak 2 voice recorder, 1997",
+"role": "support",
+"size": [
+0.06,
+0.025,
+0.085
+],
+"themes": "STILL ALIVE; SLEEPOVER; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"yak_bak_original_1996": {
+"display": "Yes! Gear Yak Bak voice recorder",
+"eras": [
+1,
+2
+],
+"family": "mobile_and_portable_electronics",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Yes! Gear Yak Bak voice recorder, 1996"
+],
+"product": "Yes! Gear Yak Bak voice recorder, 1996",
+"role": "hero",
+"size": [
+0.06,
+0.025,
+0.085
+],
+"themes": "STILL ALIVE; SLEEPOVER; PRIZE COUNTER; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"yikes_pencil_5pack_1996": {
+"display": "Empire Berol Yikes! No. 2 pencil 5-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Empire Berol Yikes! No. 2 pencil 5-pack, circa 1996"
+],
+"product": "Empire Berol Yikes! No. 2 pencil 5-pack, circa 1996",
+"role": "hero",
+"size": [
+0.06,
+0.01,
+0.24
+],
+"themes": "TIME CAPSULE; HAND TURKEY; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"zebra_mildliner_yellow_1999": {
+"display": "Zebra fluorescent yellow highlighter, circa",
+"eras": [
+2,
+3
+],
+"family": "school_and_stationery",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Zebra fluorescent yellow highlighter, circa 1999"
+],
+"product": "Zebra fluorescent yellow highlighter, circa 1999",
+"role": "filler",
+"size": [
+0.014,
+0.014,
+0.135
+],
+"themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "zelda_ocarina_n64_1998": {

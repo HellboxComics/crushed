@@ -149,6 +149,16 @@
 0.17
 ]
 },
+"apple_firewire_power_adapter_2001": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.05,
+0.03
+]
+},
 "apple_imac_g3_bondi_1998": {
 "hard": 0.92,
 "how": "snap",
@@ -157,6 +167,46 @@
 0.38,
 0.44,
 0.4
+]
+},
+"apple_ipod_1st_gen_2001": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.062,
+0.02,
+0.102
+]
+},
+"apple_ipod_mini_blue_2004": {
+"hard": 0.66,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.051,
+0.013,
+0.091
+]
+},
+"apple_ipod_mini_pink_2004": {
+"hard": 0.66,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.051,
+0.013,
+0.091
+]
+},
+"apple_ipod_nano_1st_black_2005": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.041,
+0.0069,
+0.09
 ]
 },
 "apple_powermac_g3_bluewhite_1999": {
@@ -269,6 +319,26 @@
 0.0129
 ]
 },
+"avery_1inch_binder_white_1997": {
+"hard": 0.44,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.27,
+0.045,
+0.295
+]
+},
+"avery_reinforcement_labels_1996": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.075,
+0.004,
+0.14
+]
+},
 "avery_vhs_label_sheet_1996": {
 "hard": 0.04,
 "how": "crumple",
@@ -297,6 +367,16 @@
 0.0304,
 0.0301,
 0.1
+]
+},
+"baby_bottle_pop_strawberry_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.04,
+0.12
 ]
 },
 "back_to_future_vhs_1986": {
@@ -609,6 +689,56 @@
 0.013
 ]
 },
+"bic_4color_pen_1996": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.015,
+0.015,
+0.145
+]
+},
+"bic_cristal_blue_10pack_1995": {
+"hard": 0.22,
+"how": "fold",
+"mat": "card",
+"size": [
+0.07,
+0.013,
+0.19
+]
+},
+"bic_matic_grip_05_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.147
+]
+},
+"bic_round_stic_blue_1996": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.148
+]
+},
+"bic_wite_out_quick_dry_1998": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.032,
+0.032,
+0.085
+]
+},
 "big_lebowski_vhs_1998": {
 "hard": 0.72,
 "how": "snap",
@@ -657,6 +787,16 @@
 0.077,
 0.0792,
 0.1517
+]
+},
+"blackberry_7290_2004": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.075,
+0.023,
+0.114
 ]
 },
 "blacklight": {
@@ -929,6 +1069,36 @@
 0.16
 ]
 },
+"canon_powershot_a40_2002": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.038,
+0.071
+]
+},
+"canon_zr10_minidv_2000": {
+"hard": 0.74,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.12,
+0.105
+]
+},
+"capri_sun_pacific_cooler_1995": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.09,
+0.015,
+0.14
+]
+},
 "car_amp": {
 "hard": 0.6,
 "how": "snap",
@@ -977,6 +1147,26 @@
 0.0946,
 0.0562,
 0.004
+]
+},
+"casio_fx300ms_1999": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.014,
+0.161
+]
+},
+"casio_qv10a_1996": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.04,
+0.07
 ]
 },
 "cassette": {
@@ -1499,6 +1689,46 @@
 0.073
 ]
 },
+"crayola_64_crayons_1994": {
+"hard": 0.28,
+"how": "crumble",
+"mat": "card",
+"size": [
+0.15,
+0.04,
+0.12
+]
+},
+"crayola_classic_markers_8_1996": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.14,
+0.02,
+0.18
+]
+},
+"crayola_colored_pencils_12_1996": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.07,
+0.01,
+0.21
+]
+},
+"crayola_school_scissors_1998": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.065,
+0.01,
+0.13
+]
+},
 "crayon_box": {
 "hard": 0.3,
 "how": "fold",
@@ -1517,6 +1747,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"creative_nomad_jukebox_2000": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.127,
+0.038,
+0.127
 ]
 },
 "creative_pcworks_fourpoint_speakers_1998": {
@@ -1569,6 +1809,16 @@
 0.226
 ]
 },
+"crystal_pepsi_20oz_1992": {
+"hard": 0.34,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.24
+]
+},
 "cube_console": {
 "hard": 0.7,
 "how": "snap",
@@ -1577,6 +1827,16 @@
 0.15,
 0.2064,
 0.1143
+]
+},
+"dam_troll_pencil_topper_1990": {
+"hard": 0.24,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.035,
+0.035,
+0.08
 ]
 },
 "dare_flag": {
@@ -1627,6 +1887,16 @@
 0.0513,
 0.0513,
 0.0295
+]
+},
+"diamond_rio_pmp300_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.064,
+0.016,
+0.09
 ]
 },
 "diamond_suprafaxmodem_56k_1998": {
@@ -1717,6 +1987,16 @@
 0.085,
 0.019,
 0.126
+]
+},
+"doritos_3d_nacho_cheesier_1998": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.17,
+0.07,
+0.27
 ]
 },
 "dot_matrix_banner_happy_birthday_1994": {
@@ -1859,6 +2139,96 @@
 0.188
 ]
 },
+"dunkaroos_cinnamon_graham_rainbow_frosting_1995": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.16,
+0.028,
+0.095
+]
+},
+"duracell_c_cell_2pack_1996": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.08,
+0.027,
+0.12
+]
+},
+"duracell_cef14_charger_2003": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.07,
+0.048
+]
+},
+"duracell_coppertop_9v_1996": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.027,
+0.018,
+0.048
+]
+},
+"duracell_coppertop_aa4_1995": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
+"duracell_coppertop_aaa4_1997": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.075,
+0.013,
+0.115
+]
+},
+"duracell_cr2032_2pack_2000": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.055,
+0.004,
+0.09
+]
+},
+"duracell_d_cell_2pack_1996": {
+"hard": 0.36,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.034,
+0.135
+]
+},
+"duracell_rechargeable_aa4_2002": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
 "dvd_case": {
 "hard": 0.7,
 "how": "snap",
@@ -1899,6 +2269,26 @@
 0.0435
 ]
 },
+"elmers_glue_stick_purple_1999": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.027,
+0.027,
+0.1
+]
+},
+"elmers_school_glue_4oz_1996": {
+"hard": 0.24,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.05,
+0.03,
+0.14
+]
+},
 "emachines_etower_566ir_2000": {
 "hard": 0.86,
 "how": "dent",
@@ -1929,6 +2319,96 @@
 0.125
 ]
 },
+"energizer_15minute_charger_2004": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.07,
+0.055
+]
+},
+"energizer_9v_1997": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.027,
+0.018,
+0.048
+]
+},
+"energizer_aa4_1995": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
+"energizer_aaa4_1998": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.075,
+0.013,
+0.115
+]
+},
+"energizer_c_cell_2pack_1997": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.08,
+0.027,
+0.12
+]
+},
+"energizer_cr2032_2pack_2000": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.055,
+0.004,
+0.09
+]
+},
+"energizer_d_cell_2pack_1997": {
+"hard": 0.36,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.034,
+0.135
+]
+},
+"energizer_e2_lithium_aa4_2001": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
+"energizer_rechargeable_aa4_2001": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
 "energy_can": {
 "hard": 0.15,
 "how": "crumple",
@@ -1957,6 +2437,36 @@
 0.105,
 0.027,
 0.188
+]
+},
+"eveready_super_heavy_duty_aa4_1994": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
+"expo_low_odor_4pack_1999": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.12,
+0.02,
+0.2
+]
+},
+"expo_low_odor_black_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.016,
+0.016,
+0.135
 ]
 },
 "extension_cable": {
@@ -2127,6 +2637,16 @@
 0.0289,
 0.0294,
 0.119
+]
+},
+"fiskars_kids_scissors_1997": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.065,
+0.01,
+0.13
 ]
 },
 "five_subject": {
@@ -2329,6 +2849,16 @@
 0.0723
 ]
 },
+"fruit_by_the_foot_berry_tie_dye_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.04,
+0.04,
+0.095
+]
+},
 "fruit_chew": {
 "hard": 0.15,
 "how": "squish",
@@ -2349,6 +2879,26 @@
 0.4467
 ]
 },
+"fruit_gushers_strawberry_splash_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.08,
+0.02,
+0.13
+]
+},
+"fruit_rollups_strawberry_1994": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.06,
+0.015,
+0.115
+]
+},
 "fruit_strip": {
 "hard": 0.15,
 "how": "squish",
@@ -2357,6 +2907,16 @@
 0.2119,
 0.0329,
 0.0414
+]
+},
+"fruitopia_strawberry_passion_1995": {
+"hard": 0.78,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.065,
+0.065,
+0.22
 ]
 },
 "fuji_dri90_1995": {
@@ -2467,6 +3027,16 @@
 0.16,
 0.133,
 0.064
+]
+},
+"game_boy_rechargeable_battery_pack_1991": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.085,
+0.035,
+0.11
 ]
 },
 "game_cart": {
@@ -2587,6 +3157,16 @@
 0.084,
 0.024,
 0.082
+]
+},
+"ge_six_outlet_power_strip_2000": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.3,
+0.05,
+0.03
 ]
 },
 "gel_pens": {
@@ -3009,6 +3589,16 @@
 0.023
 ]
 },
+"handspring_visor_deluxe_blue_1999": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.076,
+0.017,
+0.122
+]
+},
 "hardware_wallet": {
 "hard": 0.35,
 "how": "fold",
@@ -3079,6 +3669,16 @@
 0.1344
 ]
 },
+"helix_shatterproof_ruler_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.31,
+0.0025,
+0.03
+]
+},
 "highlighter": {
 "hard": 0.85,
 "how": "dent",
@@ -3087,6 +3687,26 @@
 0.12,
 0.0184,
 0.0212
+]
+},
+"hitclips_micro_player_2000": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.045,
+0.02,
+0.055
+]
+},
+"hitclips_music_chip_2000": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.006,
+0.032
 ]
 },
 "hollywood_video_membership_card_1999": {
@@ -3389,6 +4009,26 @@
 0.042
 ]
 },
+"jansport_right_pack_green_1997": {
+"hard": 0.3,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.33,
+0.21,
+0.45
+]
+},
+"jansport_superbreak_navy_1997": {
+"hard": 0.26,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.33,
+0.21,
+0.42
+]
+},
 "jayz_blueprint_cd_2001": {
 "hard": 0.68,
 "how": "snap",
@@ -3469,6 +4109,16 @@
 0.265
 ]
 },
+"keebler_pizzarias_pizza_chips_1993": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.17,
+0.07,
+0.25
+]
+},
 "keitai_strap": {
 "hard": 0.7,
 "how": "snap",
@@ -3539,6 +4189,26 @@
 0.07
 ]
 },
+"kodak_cr123a_2pack_1999": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.07,
+0.017,
+0.115
+]
+},
+"kodak_dc210_plus_1998": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.126,
+0.054,
+0.081
+]
+},
 "konami_ddr_dance_pad_ps1_1999": {
 "hard": 0.18,
 "how": "fold",
@@ -3557,6 +4227,26 @@
 0.16,
 0.06,
 0.17
+]
+},
+"kraft_handi_snacks_cheese_crackers_1995": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.02,
+0.08
+]
+},
+"kudos_mms_granola_bar_1996": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.035,
+0.02,
+0.13
 ]
 },
 "kush_ball": {
@@ -3587,6 +4277,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"lands_end_collegiate_backpack_red_1997": {
+"hard": 0.28,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.34,
+0.22,
+0.44
 ]
 },
 "latefee_receipt": {
@@ -3657,6 +4357,16 @@
 0.43,
 0.27,
 0.18
+]
+},
+"lg_vx6000_2003": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.048,
+0.024,
+0.089
 ]
 },
 "light_gun": {
@@ -3739,6 +4449,36 @@
 0.202
 ]
 },
+"lisa_frank_folder_neon_1995": {
+"hard": 0.24,
+"how": "fold",
+"mat": "glossy_print",
+"size": [
+0.24,
+0.004,
+0.305
+]
+},
+"lisa_frank_sticker_sheet_1995": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "glossy_print",
+"size": [
+0.1,
+0.0005,
+0.2
+]
+},
+"little_hug_fruit_barrels_1996": {
+"hard": 0.14,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.06,
+0.06,
+0.095
+]
+},
 "logitech_cordless_mouseman_wheel_1999": {
 "hard": 0.6,
 "how": "snap",
@@ -3809,6 +4549,26 @@
 0.018
 ]
 },
+"lunchables_ham_cheddar_cracker_stackers_1995": {
+"hard": 0.32,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.21,
+0.035,
+0.16
+]
+},
+"lunchables_pizza_1996": {
+"hard": 0.32,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.21,
+0.035,
+0.16
+]
+},
 "lunchbox": {
 "hard": 0.3,
 "how": "fold",
@@ -3827,6 +4587,16 @@
 0.2385,
 0.2986,
 0.0149
+]
+},
+"magic_rub_eraser_1996": {
+"hard": 0.2,
+"how": "crumble",
+"mat": "rubber",
+"size": [
+0.048,
+0.012,
+0.024
 ]
 },
 "magic_wand": {
@@ -3919,6 +4689,16 @@
 0.187
 ]
 },
+"maxell_lr44_2pack_1998": {
+"hard": 0.26,
+"how": "fold",
+"mat": "card",
+"size": [
+0.048,
+0.004,
+0.08
+]
+},
 "maxell_t120_gx_silver_1994": {
 "hard": 0.7,
 "how": "snap",
@@ -3967,6 +4747,56 @@
 0.142,
 0.01,
 0.125
+]
+},
+"mead_composition_book_marble_1995": {
+"hard": 0.28,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.19,
+0.012,
+0.248
+]
+},
+"mead_five_star_folder_blue_1997": {
+"hard": 0.26,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.24,
+0.004,
+0.305
+]
+},
+"mead_five_star_notebook_1995": {
+"hard": 0.24,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.21,
+0.01,
+0.279
+]
+},
+"mead_pee_chee_folder_1994": {
+"hard": 0.18,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.24,
+0.003,
+0.305
+]
+},
+"mead_trapper_keeper_1992": {
+"hard": 0.42,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.29,
+0.05,
+0.3
 ]
 },
 "memorex_cd_r_50_spindle_2001": {
@@ -4319,6 +5149,46 @@
 0.043
 ]
 },
+"motorola_i90c_nextel_2001": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.03,
+0.13
+]
+},
+"motorola_razr_v3_pink_2005": {
+"hard": 0.68,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.053,
+0.014,
+0.098
+]
+},
+"motorola_razr_v3_silver_2004": {
+"hard": 0.68,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.053,
+0.014,
+0.098
+]
+},
+"motorola_skytel_jazz_pager_1997": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.069,
+0.021,
+0.048
+]
+},
 "motorola_startac_8500_1996": {
 "hard": 0.66,
 "how": "snap",
@@ -4337,6 +5207,16 @@
 0.088,
 0.026,
 0.06
+]
+},
+"motorola_v60_2001": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.044,
+0.024,
+0.087
 ]
 },
 "mouse": {
@@ -4367,6 +5247,16 @@
 0.05,
 0.09,
 0.0155
+]
+},
+"mr_sketch_scented_markers_12_1995": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.17,
+0.02,
+0.2
 ]
 },
 "mrs_doubtfire_vhs_1994": {
@@ -4809,6 +5699,26 @@
 0.0262
 ]
 },
+"nokia_3310_2000": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.048,
+0.022,
+0.113
+]
+},
+"nokia_3360_2001": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.048,
+0.022,
+0.113
+]
+},
 "nokia_3390_2000": {
 "hard": 0.62,
 "how": "snap",
@@ -4827,6 +5737,46 @@
 0.048,
 0.031,
 0.132
+]
+},
+"nokia_5160_1998": {
+"hard": 0.65,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.051,
+0.031,
+0.132
+]
+},
+"nokia_8260_2000": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.043,
+0.02,
+0.102
+]
+},
+"nokia_acp7u_charger_2000": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.04,
+0.05
+]
+},
+"nokia_bls2n_battery_1999": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.042,
+0.009,
+0.058
 ]
 },
 "norton_antivirus_2001_box": {
@@ -4867,6 +5817,16 @@
 0.205,
 0.055,
 0.24
+]
+},
+"olympus_vn90_2001": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.018,
+0.105
 ]
 },
 "opera_carded": {
@@ -5009,6 +5969,16 @@
 0.204
 ]
 },
+"orbitz_orange_vanilla_1997": {
+"hard": 0.78,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.06,
+0.06,
+0.2
+]
+},
 "original_game_boy_dmg01_1989": {
 "hard": 0.72,
 "how": "snap",
@@ -5099,6 +6069,16 @@
 0.12
 ]
 },
+"palm_m100_2000": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.079,
+0.018,
+0.118
+]
+},
 "palm_pilot_professional_1997": {
 "hard": 0.62,
 "how": "snap",
@@ -5106,6 +6086,26 @@
 "size": [
 0.081,
 0.018,
+0.12
+]
+},
+"palm_tungsten_e_2003": {
+"hard": 0.64,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.079,
+0.012,
+0.115
+]
+},
+"panasonic_aa4_1998": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
 0.12
 ]
 },
@@ -5127,6 +6127,16 @@
 0.385,
 0.405,
 0.38
+]
+},
+"panasonic_rr_dr60_1998": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.039,
+0.016,
+0.1
 ]
 },
 "panasonic_shockwave_sl_sw202_1996": {
@@ -5167,6 +6177,46 @@
 0.1235,
 0.1638,
 0.004
+]
+},
+"papermate_erasermate_pen_1995": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.011,
+0.011,
+0.15
+]
+},
+"papermate_liquid_paper_correction_pen_1998": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.017,
+0.017,
+0.13
+]
+},
+"papermate_sharpwriter_2_1996": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.009,
+0.009,
+0.145
+]
+},
+"papermate_write_bros_10pack_1996": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.08,
+0.015,
+0.2
 ]
 },
 "party_cup": {
@@ -5229,6 +6279,46 @@
 0.008
 ]
 },
+"pencil_grip_neon_foam_1996": {
+"hard": 0.08,
+"how": "squish",
+"mat": "foam",
+"size": [
+0.038,
+0.014,
+0.014
+]
+},
+"pentel_hybrid_milky_pastel_set_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.015,
+0.19
+]
+},
+"pentel_hybrid_milky_white_1997": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.011,
+0.011,
+0.145
+]
+},
+"pentel_p205_05mm_1995": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.009,
+0.009,
+0.145
+]
+},
 "persimmon": {
 "hard": 0.15,
 "how": "squish",
@@ -5289,6 +6379,26 @@
 0.074
 ]
 },
+"pilot_g2_07_blue_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.012,
+0.012,
+0.143
+]
+},
+"pilot_precise_v5_blue_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.011,
+0.011,
+0.148
+]
+},
 "pin_button": {
 "hard": 0.35,
 "how": "fold",
@@ -5297,6 +6407,16 @@
 0.056,
 0.056,
 0.0041
+]
+},
+"pink_pearl_eraser_1995": {
+"hard": 0.22,
+"how": "crumble",
+"mat": "rubber",
+"size": [
+0.051,
+0.011,
+0.022
 ]
 },
 "pixel_frame": {
@@ -5337,6 +6457,16 @@
 0.1468,
 0.1392,
 0.0373
+]
+},
+"planters_pb_crisps_1994": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.16,
+0.065,
+0.24
 ]
 },
 "plasma_ball": {
@@ -5499,6 +6629,16 @@
 0.011
 ]
 },
+"polaroid_izone_camera_blue_1999": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.05,
+0.15
+]
+},
 "popcorn_bag": {
 "hard": 0.15,
 "how": "squish",
@@ -5519,6 +6659,16 @@
 0.0285
 ]
 },
+"postit_notes_yellow_3x3_1997": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.076,
+0.01,
+0.076
+]
+},
 "potted_plant": {
 "hard": 0.6,
 "how": "snap",
@@ -5537,6 +6687,16 @@
 0.068,
 0.2165,
 0.0231
+]
+},
+"prang_watercolors_8_1996": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.22,
+0.018,
+0.065
 ]
 },
 "present": {
@@ -5649,6 +6809,16 @@
 0.027
 ]
 },
+"push_pop_strawberry_1995": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.03,
+0.12
+]
+},
 "putty_egg": {
 "hard": 0.2,
 "how": "squish",
@@ -5689,6 +6859,16 @@
 0.038
 ]
 },
+"radioshack_battery_tester_22093_1998": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.065,
+0.03,
+0.115
+]
+},
 "ramen_packet": {
 "hard": 0.15,
 "how": "crumple",
@@ -5697,6 +6877,56 @@
 0.12,
 0.1,
 0.0244
+]
+},
+"rayovac_1hour_charger_2002": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.07,
+0.055
+]
+},
+"rayovac_9v_1997": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.027,
+0.018,
+0.048
+]
+},
+"rayovac_aa4_1996": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
+]
+},
+"rayovac_aaa4_1998": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.075,
+0.013,
+0.115
+]
+},
+"rayovac_rechargeable_aa4_2000": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.016,
+0.12
 ]
 },
 "razor_phone": {
@@ -5859,6 +7089,16 @@
 0.105
 ]
 },
+"ring_pop_blue_raspberry_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.035,
+0.025,
+0.085
+]
+},
 "ripcord_launcher": {
 "hard": 0.35,
 "how": "fold",
@@ -5909,6 +7149,56 @@
 0.0183
 ]
 },
+"sakura_gelly_roll_metallic_gold_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.15
+]
+},
+"sakura_gelly_roll_metallic_silver_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.15
+]
+},
+"sakura_gelly_roll_white_1997": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.15
+]
+},
+"sandisk_sansa_e250_2006": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.044,
+0.013,
+0.089
+]
+},
+"sanford_eagle_mirado_black_warrior_1997": {
+"hard": 0.3,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.008,
+0.008,
+0.19
+]
+},
 "satin_jacket": {
 "hard": 0.6,
 "how": "snap",
@@ -5947,6 +7237,16 @@
 0.102,
 0.013,
 0.064
+]
+},
+"scotch_magic_tape_3quarter_1997": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.045,
+0.05
 ]
 },
 "scotch_t120_blank_vhs_1991": {
@@ -6097,6 +7397,36 @@
 0.079,
 0.0471,
 0.009
+]
+},
+"shark_bites_fruit_snacks_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.08,
+0.02,
+0.13
+]
+},
+"sharpie_fine_black_1997": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.013,
+0.013,
+0.137
+]
+},
+"sharpie_fine_blue_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.013,
+0.013,
+0.137
 ]
 },
 "shiny_badge": {
@@ -6429,6 +7759,16 @@
 0.094
 ]
 },
+"sony_ace45hg_adapter_1998": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.045,
+0.045
+]
+},
 "sony_cfd_s22_boombox_1998": {
 "hard": 0.84,
 "how": "snap",
@@ -6489,6 +7829,16 @@
 0.1
 ]
 },
+"sony_handycam_ccdtrv65_1998": {
+"hard": 0.78,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.2,
+0.12
+]
+},
 "sony_hf90_1990": {
 "hard": 0.55,
 "how": "snap",
@@ -6497,6 +7847,26 @@
 0.102,
 0.013,
 0.064
+]
+},
+"sony_icd_bp100_2001": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.035,
+0.017,
+0.1
+]
+},
+"sony_mavica_mvcfd7_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.082,
+0.105
 ]
 },
 "sony_mdr_7506_1991": {
@@ -6517,6 +7887,66 @@
 0.19,
 0.085,
 0.18
+]
+},
+"sony_minidisc_74_blue_1998": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.072,
+0.005,
+0.068
+]
+},
+"sony_mz_n707_red_2002": {
+"hard": 0.72,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.081,
+0.028,
+0.074
+]
+},
+"sony_mz_r70_blue_2000": {
+"hard": 0.72,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.082,
+0.027,
+0.075
+]
+},
+"sony_network_walkman_nwe3_2000": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.036,
+0.017,
+0.082
+]
+},
+"sony_npf330_infolithium_1998": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.038,
+0.04,
+0.04
+]
+},
+"sony_npf550_infolithium_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.038,
+0.056,
+0.04
 ]
 },
 "sony_playstation2_scph30001_2000": {
@@ -6639,6 +8069,26 @@
 0.188
 ]
 },
+"spacemaker_pencil_box_1995": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.215,
+0.06,
+0.085
+]
+},
+"spacemaker_school_box_purple_1997": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.215,
+0.06,
+0.085
+]
+},
 "spam_can": {
 "hard": 0.15,
 "how": "crumple",
@@ -6737,6 +8187,16 @@
 0.0677,
 0.0484,
 0.142
+]
+},
+"squeezit_fruit_punch_1995": {
+"hard": 0.18,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.06,
+0.04,
+0.16
 ]
 },
 "stereo_viewer": {
@@ -6869,6 +8329,16 @@
 0.1494
 ]
 },
+"sunny_delight_california_16oz_1995": {
+"hard": 0.32,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.18
+]
+},
 "sunscreen": {
 "hard": 0.6,
 "how": "snap",
@@ -6917,6 +8387,16 @@
 0.203,
 0.241,
 0.072
+]
+},
+"surge_20oz_1997": {
+"hard": 0.34,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.24
 ]
 },
 "surprise_capsule": {
@@ -6977,6 +8457,26 @@
 0.13,
 0.2337,
 0.003
+]
+},
+"swingline_standard_staples_5000_1997": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.035,
+0.02
+]
+},
+"swingline_tot50_stapler_1997": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.11,
+0.032,
+0.045
 ]
 },
 "swirl_console": {
@@ -7129,6 +8629,16 @@
 0.188
 ]
 },
+"texas_instruments_ti83_1996": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.089,
+0.022,
+0.186
+]
+},
 "theater_candy": {
 "hard": 0.15,
 "how": "crumple",
@@ -7179,6 +8689,16 @@
 0.1358
 ]
 },
+"ticonderoga_no2_12pack_1996": {
+"hard": 0.25,
+"how": "fold",
+"mat": "card",
+"size": [
+0.065,
+0.01,
+0.25
+]
+},
 "tie_dye_shirt": {
 "hard": 0.2,
 "how": "squish",
@@ -7187,6 +8707,16 @@
 0.16,
 0.18,
 0.0
+]
+},
+"tiger_talkboy_deluxe_1993": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.05,
+0.2
 ]
 },
 "tin_lunchbox": {
@@ -7259,6 +8789,26 @@
 0.125
 ]
 },
+"tmobile_sidekick_color_2003": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.028,
+0.066
+]
+},
+"tmobile_sidekick_ii_2004": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.022,
+0.066
+]
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "hard": 0.68,
 "how": "snap",
@@ -7307,6 +8857,16 @@
 0.2972,
 0.3078,
 0.047
+]
+},
+"trend_scratch_sniff_sticker_sheet_1994": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "glossy_print",
+"size": [
+0.1,
+0.0005,
+0.2
 ]
 },
 "trial_cd": {
@@ -7427,6 +8987,16 @@
 0.4747,
 0.0458,
 0.0332
+]
+},
+"uni_ball_vision_elite_black_1998": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.012,
+0.012,
+0.14
 ]
 },
 "usb_stick": {
@@ -7619,6 +9189,16 @@
 0.0634
 ]
 },
+"warheads_extreme_sour_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.1,
+0.025,
+0.16
+]
+},
 "wavebird_controller_2002": {
 "hard": 0.67,
 "how": "snap",
@@ -7657,6 +9237,16 @@
 0.06,
 0.06,
 0.083
+]
+},
+"westcott_12inch_clear_ruler_1997": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.31,
+0.0025,
+0.03
 ]
 },
 "whistle": {
@@ -7729,6 +9319,16 @@
 0.06
 ]
 },
+"woods_three_outlet_cube_tap_1997": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.035,
+0.03
+]
+},
 "wrestler_fig": {
 "hard": 0.7,
 "how": "snap",
@@ -7779,6 +9379,26 @@
 0.06
 ]
 },
+"yak_bak_2_1997": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.025,
+0.085
+]
+},
+"yak_bak_original_1996": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.025,
+0.085
+]
+},
 "yak_toy": {
 "hard": 0.7,
 "how": "snap",
@@ -7799,6 +9419,16 @@
 0.1658
 ]
 },
+"yikes_pencil_5pack_1996": {
+"hard": 0.22,
+"how": "fold",
+"mat": "card",
+"size": [
+0.06,
+0.01,
+0.24
+]
+},
 "yoyo": {
 "hard": 0.35,
 "how": "fold",
@@ -7817,6 +9447,16 @@
 0.1851,
 0.0867,
 0.0168
+]
+},
+"zebra_mildliner_yellow_1999": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.014,
+0.014,
+0.135
 ]
 },
 "zelda_ocarina_n64_1998": {
