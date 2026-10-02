@@ -80,15 +80,7 @@ def pipeline(cid, redo=False):
     if found is None:
         found = hunt.run(cid, product.split(",")[0], year, log=say, extra=card["searches"])
 
-    status(cid, step=f"2/7 cutting out {len(found)} photos")
-    T.free_room()
-    for f in found:
-        try:
-            f["mask"] = T.photo_mask(f["file"])
-        except Exception as e:
-            say(f"[cut out] {os.path.basename(f['file'])}: {e}")
-
-    status(cid, step="3/7 ranking the photos against the card")
+    status(cid, step="2/7 ranking the photos against the card")
     T.free_room()
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in jload(vj, [])} if not redo else {}
@@ -96,7 +88,7 @@ def pipeline(cid, redo=False):
     for i, f in enumerate(found):
         f["order"] = i
         f["vet"] = (old.get(f["file"]) or {}).get("vet")
-    todo = [f for f in found if not f["vet"] and f.get("mask")][:60]   # 60 a round, in Google's order
+    todo = [f for f in found if not f["vet"]][:60]                       # 60 a round, in Google's order
     if quick and len(todo) > 12:
         for k, f in enumerate(todo, 1):
             f["quick"] = V.vet(f["file"], product, use=quick, think=False, card=card) or {}
@@ -112,6 +104,15 @@ def pipeline(cid, redo=False):
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
     json.dump(found, open(vj, "w"), indent=1)
 
+    # cut out only the photos good enough to be shown to you (not all of them)
+    good = sorted([f for f in found if f.get("vet") and f["vet"].get("match", 0) >= 7], key=lambda f: -rank(f))[:24]
+    status(cid, step=f"4/7 cutting out the best {len(good)} photos")
+    T.free_room()
+    for f in good:
+        try:
+            f["mask"] = T.photo_mask(f["file"])
+        except Exception as e:
+            say(f"[cut out] {os.path.basename(f['file'])}: {e}")
     shown = jload(os.path.join(d, "shown.json"), [])
     cands = [f for f in found if f.get("mask") and f.get("vet") and f["vet"].get("match", 0) >= 7
              and f["vet"].get("sharp", True) is not False and f["vet"].get("whole", True) is not False
