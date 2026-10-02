@@ -319,8 +319,20 @@ def page():
             ("togo", "in line", counts.get("togo", 0)), ("prompts", "needs prompts", counts.get("prompts", 0)),
             ("problem", "problems", counts.get("problem", 0))]
     left = len(allx) - len(appr)
-    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} of {len(allx)} approved &middot; '
-            f'about {left * 11 / 60 / 24:.1f} days of Mac time left &middot; updated {time.strftime("%-I:%M %p")}</p>'
+    # the parts of the job not yet on the list above: the new one-of-ones still being designed, and the labels
+    try:
+        designed = sum(1 for o in json.load(open(os.path.join(ROOT, "assets", "plan", "ones.json"))).values() if "mix" in o)
+    except Exception:
+        designed = 0
+    undesigned = max(0, 40 - designed)
+    lab_listed = sum(1 for f in glob.glob(os.path.join(ROOT, "ai", "remaster", "labels", "*.txt"))
+                     for line in open(f) if line.count("|") >= 2)
+    lab_made = len(glob.glob(os.path.join(ROOT, "assets", "labels*", "*", "*.png")))
+    future = undesigned * 9                         # about 9 new objects per one-of-one still to design
+    body = (f'<h1>crushed.buzz remaster</h1><p class=count>{len(appr)} of {len(allx)} objects approved'
+            f'{f" &middot; about {future} more coming as {undesigned} new one-of-ones get designed" if undesigned else ""}'
+            f' &middot; labels {lab_made} made of {lab_listed or "~200"} &middot; about '
+            f'{(left + future) * 11 / 60 / 24:.1f} days of Mac time left &middot; updated {time.strftime("%-I:%M %p")}</p>'
             + nowhtml +
             '<div class=tabs>' + "".join(f'<button data-t="{k}">{l} <b>{c}</b></button>' for k, l, c in tabs) +
             '</div><input id=q type=search placeholder="search an object">' +
