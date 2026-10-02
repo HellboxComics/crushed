@@ -203,6 +203,17 @@ def record(name, result):
     json.dump(r, open(p, "w"), indent=1)
 
 
+def shape_base(name):
+    """The object whose sculpted shape this one reuses (assets/plan/shapes.json), or itself."""
+    p = os.path.join(ROOT, "assets", "plan", "shapes.json")
+    seen, n = set(), name
+    m = json.load(open(p)) if os.path.exists(p) else {}
+    while n in m and n not in seen:
+        seen.add(n)
+        n = m[n]
+    return n
+
+
 def turnaround_sheet(name, redo=False):
     """The six-view turnaround (ai/remaster/turnaround.py): the local language model writes the real product, Qwen-Image
     paints it from six sides. Returns (sculptor sheet, texture atlas)."""
@@ -234,8 +245,15 @@ def remaster(name, redo=False):
         sheet, atlas = turnaround_sheet(name, redo)
     except Exception as e:
         return f"drawing failed: {e}"[:300]
-    step(name, "2/4 the sculptor is making the shape (the slow part)")
-    shape = sculpt(name, sheet)
+    base = shape_base(name)
+    if base != name:                      # same physical shape as another object: reuse its sculpt, new paint only
+        tag = f"remaster_{base}"
+        shape = os.path.join(DROP, "done", tag, tag + ".glb")
+        if not os.path.exists(shape):
+            return f"waiting for its shape ({base}) to be sculpted first"
+    else:
+        step(name, "2/4 the sculptor is making the shape (the slow part)")
+        shape = sculpt(name, sheet)
     if not shape:
         return "the sculptor could not make a shape (see ~/3D Drop/_PROBLEM.txt)"
     inside = os.path.join(WORK, name + "_inside.png")
@@ -486,6 +504,7 @@ def main():
                       and not os.path.exists(os.path.join(MODELS, n, "model.glb"))
                       and os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))
 ]
+    todo = sorted(todo, key=lambda n: shape_base(n) != n) if not a.only else todo
     if os.path.exists(PAUSE) and not a.only:
         say("paused: " + open(PAUSE).read().strip())
         todo = []

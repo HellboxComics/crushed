@@ -19,6 +19,26 @@
 0.254
 ]
 },
+"alanis_jagged_little_pill_cassette_1995": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"alanis_jagged_little_pill_cd_1995": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "amp_kit": {
 "hard": 0.6,
 "how": "snap",
@@ -89,6 +109,26 @@
 0.46
 ]
 },
+"backstreet_boys_millennium_cassette_1999": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"backstreet_boys_millennium_cd_1999": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "ball_mouse": {
 "hard": 0.7,
 "how": "snap",
@@ -107,6 +147,16 @@
 0.07,
 0.07,
 0.1128
+]
+},
+"basf_chrome_maxima_ii90_1990": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
 ]
 },
 "bass_knob": {
@@ -359,6 +409,16 @@
 0.0669
 ]
 },
+"blink182_enema_of_the_state_cd_1999": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "blow_up_gloves": {
 "hard": 0.2,
 "how": "squish",
@@ -427,6 +487,16 @@
 0.075,
 0.13,
 0.0245
+]
+},
+"britney_baby_one_more_time_cd_1999": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "broken_rocket": {
@@ -1099,6 +1169,16 @@
 0.282
 ]
 },
+"denon_hd8_90_1990": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
 "diamond": {
 "hard": 0.35,
 "how": "fold",
@@ -1147,6 +1227,36 @@
 0.11,
 0.0585,
 0.0405
+]
+},
+"dmx_its_dark_and_hell_is_hot_cd_1998": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"dr_dre_the_chronic_cassette_1992": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"dr_dre_the_chronic_cd_1992": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "dream_catcher": {
@@ -1247,6 +1357,16 @@
 0.0479,
 0.0495,
 0.0435
+]
+},
+"eminem_marshall_mathers_lp_cd_2000": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "energy_can": {
@@ -1589,6 +1709,16 @@
 0.0414
 ]
 },
+"fuji_dri90_1995": {
+"hard": 0.55,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
 "fun_size_bar": {
 "hard": 0.25,
 "how": "crumble",
@@ -1777,6 +1907,26 @@
 0.014,
 0.014,
 0.0744
+]
+},
+"green_day_dookie_cassette_1994": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"green_day_dookie_cd_1994": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "gremlin": {
@@ -2219,6 +2369,16 @@
 0.0411
 ]
 },
+"lauryn_hill_miseducation_cd_1998": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "lava_lamp": {
 "hard": 0.7,
 "how": "snap",
@@ -2267,6 +2427,26 @@
 0.025,
 0.012,
 0.076
+]
+},
+"limp_bizkit_significant_other_cd_1999": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"linkin_park_hybrid_theory_cd_2000": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "loop_track": {
@@ -2359,6 +2539,36 @@
 0.0051
 ]
 },
+"maxell_ur90_1994": {
+"hard": 0.55,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"maxell_xlii90_1990": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"memorex_dbs90_1990": {
+"hard": 0.55,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
 "memory_card": {
 "hard": 0.3,
 "how": "fold",
@@ -2387,6 +2597,26 @@
 0.06,
 0.06,
 0.0021
+]
+},
+"metallica_metallica_cassette_1991": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"metallica_metallica_cd_1991": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "micro_cars": {
@@ -2749,6 +2979,46 @@
 0.0159
 ]
 },
+"nirvana_nevermind_cassette_1991": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"nirvana_nevermind_cd_1991": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"no_doubt_tragic_kingdom_cassette_1995": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"no_doubt_tragic_kingdom_cd_1995": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "noisemaker": {
 "hard": 0.35,
 "how": "fold",
@@ -2767,6 +3037,16 @@
 0.2059,
 0.26,
 0.0158
+]
+},
+"nsync_no_strings_attached_cd_2000": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "opera_carded": {
@@ -3007,6 +3287,16 @@
 0.1133,
 0.1598,
 0.0175
+]
+},
+"pearl_jam_ten_cd_1991": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "pencil": {
@@ -3469,6 +3759,16 @@
 0.023
 ]
 },
+"rhcp_californication_cd_1999": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "ribbon_cable": {
 "hard": 0.2,
 "how": "squish",
@@ -3577,6 +3877,16 @@
 0.0604,
 0.0604,
 0.107
+]
+},
+"scotch_bx90_1990": {
+"hard": 0.55,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
 ]
 },
 "scratch_ticket": {
@@ -3809,6 +4119,26 @@
 0.1159
 ]
 },
+"snoop_doggystyle_cassette_1993": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"snoop_doggystyle_cd_1993": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "sock": {
 "hard": 0.2,
 "how": "squish",
@@ -3847,6 +4177,26 @@
 0.1611,
 0.1077,
 0.0298
+]
+},
+"sony_hf90_1990": {
+"hard": 0.55,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"sony_uxs90_1990": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
 ]
 },
 "sour_pack": {
@@ -3897,6 +4247,26 @@
 0.235,
 0.165,
 0.086
+]
+},
+"spice_girls_spice_cassette_1996": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"spice_girls_spice_cd_1996": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "splat_sign": {
@@ -4209,6 +4579,16 @@
 0.046
 ]
 },
+"tdk_sa90_1992": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
 "team_scarf": {
 "hard": 0.2,
 "how": "squish",
@@ -4317,6 +4697,26 @@
 0.0474,
 0.0571,
 0.0316
+]
+},
+"tlc_crazysexycool_cassette_1994": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.013,
+0.064
+]
+},
+"tlc_crazysexycool_cd_1994": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "toy_oven": {
