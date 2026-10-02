@@ -98,24 +98,30 @@ def pipeline(cid, redo=False):
     use = V.model()
     quick = V.quick_model()
     say(f"[check] vision model: {use}" + (f" (quick first look: {quick})" if quick else ""))
+    for i, f in enumerate(found):
+        f["order"] = i
     todo = [f for f in found if not (f["file"] in old and "vet" in old[f["file"]])]
+    if len(todo) > 60:                                   # 60 photos in Google's order is plenty; the rest wait
+        for f in todo[60:]:
+            f["vet"] = old.get(f["file"], {}).get("vet")
+        todo = todo[:60]
     for f in found:
         if f not in todo:
-            f["vet"] = old[f["file"]]["vet"]
-    if quick and len(todo) > 16:                         # many photos: the small model throws out the obvious misses
+            f["vet"] = old.get(f["file"], {}).get("vet")
+    if quick and len(todo) > 12:                         # many photos: the small model throws out the obvious misses
         for k, f in enumerate(todo, 1):
             f["quick"] = V.vet(f["file"], product, era, quick, think=False) or {}
             say(f"[quick look {k}/{len(todo)}] {os.path.basename(f['file'])}: match {f['quick'].get('match')}, "
-                f"era ok {f['quick'].get('era_ok')}, {f['quick'].get('view')}")
+                f"{f['quick'].get('kind')}, date on it: {f['quick'].get('printed_year')}")
             if k % 10 == 0:
                 status(cid, step=f"3/6 quick look: {k} of {len(todo)} photos")
-        todo.sort(key=lambda f: -(f["quick"].get("match", 0) + 3 * (f["quick"].get("era_ok") is True)))
-        for f in todo[16:]:
+        todo.sort(key=lambda f: -rank(dict(f, vet=f["quick"]), year))      # what it can see, not its era guess
+        for f in todo[12:]:
             f["vet"] = dict(f["quick"], note="only the quick look")
-        todo = todo[:16]
+        todo = todo[:12]
     for k, f in enumerate(todo, 1):
         status(cid, step=f"3/6 {use} judges the best photos carefully: {k} of {len(todo)}")
-        f["vet"] = V.vet(f["file"], product, era, use)
+        f["vet"] = V.vet(f["file"], product, era, use, think=False)   # you make the final call: ranking only
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
     json.dump(found, open(vj, "w"), indent=1)
     # 4. YOUR PICK: the AI can't tell a 1998 product from a 2020 one, so it shows you its best photos on your
@@ -224,9 +230,10 @@ def rank(f, year):
     v = f["vet"]
     r = v.get("match", 0)
     r += {"photo": 4, "package": 2, "render": -2, "ad": -4}.get(v.get("kind"), 0)
-    py = v.get("printed_year")
-    if year and isinstance(py, int):
-        r += 6 if abs(py - year) <= 4 else -6      # an expiry date runs a few years past when it was made
+    m = re.search(r"(19[5-9]\d|20[0-4]\d)", str(v.get("printed_year") or ""))   # "JAN 2001", 2001, "2001" all count
+    if year and m:
+        r += 6 if abs(int(m.group(1)) - year) <= 4 else -6   # an expiry date runs a few years past when it was made
+    r -= f.get("order", 0) * 0.02                              # Google's own order breaks ties: its top hits are good
     r += 1 if v.get("era_ok") is True else 0
     r += 0.5 if v.get("view") == "front" else 0
     return r
