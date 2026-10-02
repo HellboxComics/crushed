@@ -204,26 +204,8 @@ def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=1, 
     log(f"[texture] real pixels cover {(~gaps).mean():.0%} of the label")
     out = os.path.join(out_dir, "label.png")
     if gaps.mean() > 0.01:
-        from scipy import ndimage
-        med = np.median(lab[~gaps], 0) if (~gaps).any() else np.array([0.5, 0.5, 0.5])
-        filled = np.where(gaps[..., None], med * 0 + 0.5, lab)               # plain gray where nobody looked
-        hole = ndimage.binary_dilation(gaps, iterations=6)
-        img = Image.fromarray((np.clip(filled, 0, 1) * 255).astype(np.uint8))
-        msk = Image.fromarray((hole * 255).astype(np.uint8))
-        if reads == "along":                                                # the AI reads it the right way up
-            img, msk = img.rotate(90, expand=True), msk.rotate(90, expand=True)
-        w, h = canvas(img.width, img.height)
-        src, mp = os.path.join(out_dir, "fill_src.png"), os.path.join(out_dir, "fill_mask.png")
-        img.resize((w, h), Image.LANCZOS).save(src)
-        msk.resize((w, h), Image.NEAREST).save(mp)
-        log(f"[texture] the AI fills the {gaps.mean():.0%} nobody photographed ({w}x{h})")
-        done = os.path.join(out_dir, "filled.png")
-        fill(product, src, mp, done)
-        got = Image.open(done).convert("RGB")
-        if reads == "along":
-            got = got.rotate(-90, expand=True)
-        got = np.asarray(got.resize((lab.shape[1], lab.shape[0]), Image.LANCZOS)) / 255.0
-        lab = np.where(hole[..., None], got, lab)                          # real pixels stay exactly as they were
+        log(f"[texture] the {gaps.mean():.0%} nobody photographed: the real colors carried across (no AI, no invented words)")
+        lab = continue_bands(lab, gaps)
     Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(out)
     clean = os.path.join(out_dir, "cleaned.png")
     try:
@@ -277,6 +259,41 @@ def same_words(a, b, judge=None, log=print):
     extra = sum(1 for w in wb if w not in wa) / max(len(wb), 1)
     log(f"[texture] words kept {keep:.0%}, new words {extra:.0%}")
     return keep >= 0.85 and extra <= 0.15
+
+
+def continue_bands(lab, gaps):
+    """Fill what no photo shows the way a texture artist would: each row of the label (one band along the length -
+    the copper end, the black body, a stripe) continues its own real color across the gap, blending from the real
+    pixels on each side. Plain math: nothing can be invented, no words."""
+    out = lab.copy()
+    H, W, _ = lab.shape
+    for y in range(H):
+        g = gaps[y]
+        if not g.any():
+            continue
+        real = np.where(~g)[0]
+        if len(real) == 0:
+            continue
+        # the row's own color from its real pixels, robust to print and glare
+        base = np.median(lab[y, real], 0)
+        idx = np.arange(W)
+        # nearest real pixel on each side (wrapping around the label), blended toward the row color in the middle
+        left = np.searchsorted(real, idx) - 1
+        right = left + 1
+        lp = real[left % len(real)]
+        rp = real[right % len(real)]
+        dl = (idx - lp) % W
+        dr = (rp - idx) % W
+        t = (dl / np.maximum(dl + dr, 1))[:, None]
+        edge = (1 - t) * lab[y, lp] + t * lab[y, rp]
+        far = np.minimum(dl, dr)[:, None]
+        mix = np.clip(far / 40.0, 0, 1)                                    # near the real edge: its color; farther: the band
+        fillrow = (1 - mix) * edge + mix * base
+        out[y, g] = fillrow[g]
+    from scipy.ndimage import gaussian_filter
+    soft = np.stack([gaussian_filter(out[..., c], sigma=2) for c in range(3)], -1)
+    out[gaps] = soft[gaps]                                                  # no hard streaks
+    return out
 
 
 def fill(product, src_png, mask_png, out, seed=7):
