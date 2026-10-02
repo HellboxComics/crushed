@@ -639,6 +639,16 @@
 0.125
 ]
 },
+"aol_5_0_free_hours_cd_1999": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.0012,
+0.12
+]
+},
 "aol_6_0_trial_cd_2000": {
 "hard": 0.12,
 "how": "crumple",
@@ -1119,6 +1129,16 @@
 0.035
 ]
 },
+"atlantic_24_cassette_storage_rack_black_1988": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.24,
+0.1,
+0.36
+]
+},
 "atlantic_city_buffet_ticket_1998": {
 "hard": 0.07,
 "how": "fold",
@@ -1497,6 +1517,16 @@
 0.04,
 0.03,
 0.05
+]
+},
+"bandai_tamagotchi_gen1_purple_1997": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.045,
+0.02,
+0.055
 ]
 },
 "bangle_cardboard_box_1998": {
@@ -3149,6 +3179,16 @@
 0.11
 ]
 },
+"brass_picture_frame_5x7_1988": {
+"hard": 0.46,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.15,
+0.02,
+0.2
+]
+},
 "brass_pog_slammer_1994": {
 "hard": 0.84,
 "how": "dent",
@@ -3241,6 +3281,16 @@
 },
 "britney_baby_one_more_time_cd_1999": {
 "hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"britney_baby_one_more_time_cd_single_1999": {
+"hard": 0.28,
 "how": "snap",
 "mat": "plastic",
 "size": [
@@ -3999,6 +4049,16 @@
 0.0125
 ]
 },
+"cassette_mixtape_1999_timecapsule": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.012,
+0.064
+]
+},
 "cassette_record_tab_scotch_patch_1998": {
 "hard": 0.02,
 "how": "crumple",
@@ -4337,6 +4397,16 @@
 0.22,
 0.21,
 0.008
+]
+},
+"ceramic_cat_figurine_white_blue_1984": {
+"hard": 0.64,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.1,
+0.07,
+0.18
 ]
 },
 "ceramic_gravy_boat_white_1998": {
@@ -8589,6 +8659,16 @@
 0.21
 ]
 },
+"fondue_fork_color_tip_1975": {
+"hard": 0.54,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.015,
+0.015,
+0.28
+]
+},
 "football_sticker": {
 "hard": 0.3,
 "how": "fold",
@@ -8699,6 +8779,16 @@
 0.013
 ]
 },
+"friendship_bracelet_chevron_1999": {
+"hard": 0.03,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.02,
+0.003,
+0.22
+]
+},
 "frosting_dip": {
 "hard": 0.35,
 "how": "fold",
@@ -8717,6 +8807,16 @@
 0.04,
 0.04,
 0.095
+]
+},
+"fruit_by_the_foot_wrapper_1999": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.05,
+0.0005,
+0.18
 ]
 },
 "fruit_chew": {
@@ -9147,6 +9247,36 @@
 0.3,
 0.12,
 0.4
+]
+},
+"garage_sale_poster_board_sign_1998": {
+"hard": 0.12,
+"how": "fold",
+"mat": "card",
+"size": [
+0.55,
+0.003,
+0.7
+]
+},
+"garage_sale_price_sticker_25c_neon_1998": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.02
+]
+},
+"garage_sale_quarter_change_1998": {
+"hard": 0.96,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.024,
+0.0018,
+0.024
 ]
 },
 "gas_can": {
@@ -11419,6 +11549,16 @@
 0.165
 ]
 },
+"hot_wheels_loose_car_1995": {
+"hard": 0.56,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.03,
+0.025,
+0.075
+]
+},
 "hours_mailer": {
 "hard": 0.3,
 "how": "fold",
@@ -11927,6 +12067,16 @@
 0.2,
 0.16,
 0.75
+]
+},
+"jane_fonda_original_workout_vhs_1980s": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.187,
+0.025,
+0.103
 ]
 },
 "jansport_pencil_pouch_black_1998": {
@@ -12569,6 +12719,16 @@
 0.08
 ]
 },
+"kinyo_vhs_rewinder_black_1993": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.21,
+0.09,
+0.14
+]
+},
 "kiss_me_im_irish_pin_2001": {
 "hard": 0.44,
 "how": "dent",
@@ -12667,6 +12827,16 @@
 0.124,
 0.064,
 0.081
+]
+},
+"kodak_fun_saver_27_1999": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.04,
+0.07
 ]
 },
 "kodak_funsaver_flash_27exp_1998": {
@@ -13589,6 +13759,16 @@
 0.24
 ]
 },
+"letter_to_future_self_1999": {
+"hard": 0.03,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
+]
+},
 "leviton_3to2_grounding_adapter_1998": {
 "hard": 0.54,
 "how": "snap",
@@ -13787,6 +13967,16 @@
 0.1,
 0.0005,
 0.2
+]
+},
+"lisa_frank_sticker_sheet_1999": {
+"hard": 0.05,
+"how": "fold",
+"mat": "glossy_print",
+"size": [
+0.15,
+0.0005,
+0.21
 ]
 },
 "lite_brite_1997": {
@@ -14369,6 +14559,16 @@
 0.024
 ]
 },
+"magic_the_gathering_card_sleeved_1999": {
+"hard": 0.08,
+"how": "fold",
+"mat": "card",
+"size": [
+0.063,
+0.001,
+0.088
+]
+},
 "magic_wand": {
 "hard": 0.7,
 "how": "snap",
@@ -14559,6 +14759,16 @@
 0.153
 ]
 },
+"masking_tape_price_label_roll_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.12,
+0.025,
+0.12
+]
+},
 "mason_jar_loose_change_1999": {
 "hard": 0.78,
 "how": "snap",
@@ -14647,6 +14857,16 @@
 0.04,
 0.0016,
 0.04
+]
+},
+"maxell_3_5_floppy_2hd_1999_timecapsule": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.0033,
+0.094
 ]
 },
 "maxell_cassette_label_sheet_partial_1997": {
@@ -15449,6 +15669,16 @@
 0.08
 ]
 },
+"millennium_party_confetti_2000_1999": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.02,
+0.0005,
+0.03
+]
+},
 "millennium_party_invitation_1999": {
 "hard": 0.08,
 "how": "fold",
@@ -15959,6 +16189,16 @@
 0.085
 ]
 },
+"motorola_advisor_pager_clear_blue_1999": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.02,
+0.085
+]
+},
 "motorola_bravo_pager_1990": {
 "hard": 0.52,
 "how": "snap",
@@ -16137,6 +16377,16 @@
 0.12,
 0.04,
 0.06
+]
+},
+"movie_ticket_stub_december_1999": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.0005,
+0.08
 ]
 },
 "mp3_player": {
@@ -16757,6 +17007,16 @@
 0.09,
 0.03,
 0.19
+]
+},
+"nike_style_shoebox_orange_1999": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.34,
+0.22,
+0.13
 ]
 },
 "nintendo64_cartridge_1996": {
@@ -17697,6 +17957,16 @@
 0.05,
 0.02,
 0.06
+]
+},
+"orange_extension_cord_25ft_1995": {
+"hard": 0.08,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.1966,
+0.1966,
+0.0786
 ]
 },
 "orange_foam_microphone_1994": {
@@ -19369,6 +19639,16 @@
 0.045
 ]
 },
+"pleated_lampshade_beige_1986": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "fabric",
+"size": [
+0.35,
+0.35,
+0.25
+]
+},
 "pocket_diecast": {
 "hard": 0.85,
 "how": "dent",
@@ -19397,6 +19677,26 @@
 0.08,
 0.118,
 0.0917
+]
+},
+"pog_metal_slammer_holographic_1995": {
+"hard": 0.72,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.041,
+0.003,
+0.041
+]
+},
+"pog_milk_cap_1995_timecapsule": {
+"hard": 0.12,
+"how": "fold",
+"mat": "card",
+"size": [
+0.041,
+0.0015,
+0.041
 ]
 },
 "pog_slammer": {
@@ -19497,6 +19797,16 @@
 0.108,
 0.02,
 0.088
+]
+},
+"polaroid_600_instant_photo_1999": {
+"hard": 0.08,
+"how": "fold",
+"mat": "glossy_print",
+"size": [
+0.088,
+0.001,
+0.107
 ]
 },
 "polaroid_izone_camera_blue_1999": {
@@ -19727,6 +20037,16 @@
 0.04,
 0.025,
 0.14
+]
+},
+"prerecorded_cassette_assorted_1989": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.012,
+0.064
 ]
 },
 "present": {
@@ -19987,6 +20307,16 @@
 0.0566,
 0.0566,
 0.0566
+]
+},
+"pyrex_autumn_harvest_casserole_1980": {
+"hard": 0.72,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.29,
+0.18,
+0.08
 ]
 },
 "qtips_cotton_swabs_375_1998": {
@@ -20357,6 +20687,16 @@
 0.055,
 0.024,
 0.185
+]
+},
+"readers_digest_condensed_book_1987": {
+"hard": 0.34,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.15,
+0.035,
+0.22
 ]
 },
 "receipt": {
@@ -21827,6 +22167,16 @@
 0.0604,
 0.0604,
 0.107
+]
+},
+"school_photo_envelope_fall_1999": {
+"hard": 0.08,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.16,
+0.005,
+0.23
 ]
 },
 "scorched_field_grass_clump_1998": {
@@ -24359,6 +24709,16 @@
 0.31
 ]
 },
+"steel_cash_box_gray_1995": {
+"hard": 0.7,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.25,
+0.18,
+0.09
+]
+},
 "steel_holi_snack_plate_1998": {
 "hard": 0.62,
 "how": "dent",
@@ -24487,6 +24847,16 @@
 0.24,
 0.1,
 0.08
+]
+},
+"stoneware_worlds_best_grandma_mug_1989": {
+"hard": 0.66,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.12,
+0.09,
+0.1
 ]
 },
 "strategy_guide": {
@@ -25789,6 +26159,16 @@
 0.2
 ]
 },
+"time_capsule_zip_bag_1999": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.27,
+0.001,
+0.28
+]
+},
 "timex_t121_alarm_clock_1999": {
 "hard": 0.5,
 "how": "snap",
@@ -26329,6 +26709,26 @@
 0.09
 ]
 },
+"tupperware_seal_orange_round_1978": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.19,
+0.015,
+0.19
+]
+},
+"tupperware_seal_pastel_yellow_1982": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.17,
+0.015,
+0.17
+]
+},
 "turkey_wishbone_dry_prop_1998": {
 "hard": 0.46,
 "how": "snap",
@@ -26769,6 +27169,16 @@
 0.102
 ]
 },
+"us_penny_1999": {
+"hard": 0.92,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.019,
+0.0015,
+0.019
+]
+},
 "usa_snapback_red_white_blue_1998": {
 "hard": 0.14,
 "how": "fold",
@@ -26777,6 +27187,16 @@
 0.2,
 0.18,
 0.12
+]
+},
+"usa_today_dec31_1999_y2k_issue": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.28,
+0.01,
+0.56
 ]
 },
 "usb2_sata_ide_drive_adapter_2008": {
@@ -27047,6 +27467,16 @@
 0.41,
 0.42,
 0.42
+]
+},
+"vintage_waffle_iron_chrome_black_1985": {
+"hard": 0.66,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.25,
+0.22,
+0.1
 ]
 },
 "viper_300_alarm_remote_1998": {
@@ -27399,6 +27829,16 @@
 0.05
 ]
 },
+"west_bend_electric_fondue_pot_avocado_1975": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.28,
+0.24,
+0.2
+]
+},
 "westcott_12inch_clear_ruler_1997": {
 "hard": 0.42,
 "how": "snap",
@@ -27709,6 +28149,16 @@
 0.3
 ]
 },
+"wooden_yardstick_hardware_store_1985": {
+"hard": 0.32,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.025,
+0.005,
+0.914
+]
+},
 "woods_orange_extension_cord_25ft_1998": {
 "hard": 0.32,
 "how": "fold",
@@ -27949,6 +28399,16 @@
 0.06
 ]
 },
+"y2k_novelty_glasses_2000_1999": {
+"hard": 0.16,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.16,
+0.03,
+0.06
+]
+},
 "yak_bak_2_1997": {
 "hard": 0.48,
 "how": "snap",
@@ -28007,6 +28467,16 @@
 0.2732,
 0.0624,
 0.1658
+]
+},
+"yearbook_autograph_page_1999": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.21,
+0.0005,
+0.28
 ]
 },
 "yellow_tulip_single_1998": {

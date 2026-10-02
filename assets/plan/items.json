@@ -1337,6 +1337,28 @@
 "themes": "DIAL-UP",
 "weight": 0.12
 },
+"aol_5_0_free_hours_cd_1999": {
+"display": "AOL 5.0 free-trial CD-ROM",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"AOL 5.0 free-trial CD-ROM, 1999"
+],
+"product": "AOL 5.0 free-trial CD-ROM, 1999",
+"role": "main",
+"size": [
+0.12,
+0.0012,
+0.12
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "aol_6_0_trial_cd_2000": {
 "display": "AOL 6.0 free Internet trial CD-ROM",
 "eras": [
@@ -2342,6 +2364,28 @@
 "themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"atlantic_24_cassette_storage_rack_black_1988": {
+"display": "Atlantic-style 24-cassette storage rack, Black, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.512,
+"notes": [
+"Atlantic-style 24-cassette storage rack, Black, circa 1988"
+],
+"product": "Atlantic-style 24-cassette storage rack, Black, circa 1988",
+"role": "main",
+"size": [
+0.24,
+0.1,
+0.36
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "atlantic_city_buffet_ticket_1998": {
 "display": "Atlantic City casino buffet admission ticket, circa",
 "eras": [
@@ -3044,6 +3088,28 @@
 0.05
 ],
 "themes": "GACHAPON",
+"weight": 1.0
+},
+"bandai_tamagotchi_gen1_purple_1997": {
+"display": "Bandai Original Tamagotchi Gen 1, Purple, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.009,
+"notes": [
+"Bandai Original Tamagotchi Gen 1, Purple, circa 1997"
+],
+"product": "Bandai Original Tamagotchi Gen 1, Purple, circa 1997",
+"role": "main",
+"size": [
+0.045,
+0.02,
+0.055
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "bangle_cardboard_box_1998": {
@@ -5990,6 +6056,28 @@
 "themes": "BULL TRAP",
 "weight": 1.0
 },
+"brass_picture_frame_5x7_1988": {
+"display": "Brass-tone 5 x 7 tabletop picture frame, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.42,
+"notes": [
+"Brass-tone 5 x 7 tabletop picture frame, circa 1988"
+],
+"product": "Brass-tone 5 x 7 tabletop picture frame, circa 1988",
+"role": "main",
+"size": [
+0.15,
+0.02,
+0.2
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "brass_pog_slammer_1994": {
 "display": "Brass POG slammer, circa",
 "eras": [
@@ -6186,6 +6274,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"britney_baby_one_more_time_cd_single_1999": {
+"display": "\u201c\u2026Baby One More Time\u201d CD single",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.031,
+"notes": [
+"\u201c\u2026Baby One More Time\u201d CD single, 1999"
+],
+"product": "\u201c\u2026Baby One More Time\u201d CD single, 1999",
+"role": "main",
+"size": [
+0.142,
+0.01,
+0.125
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "brooks_brothers_red_silk_tie_1999": {
@@ -7419,6 +7529,28 @@
 "themes": "SCREEN TIME; TIME CAPSULE; DIAL-UP; regular cubes",
 "weight": 1.0
 },
+"cassette_mixtape_1999_timecapsule": {
+"display": "Handwritten 1999 mixtape cassette",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Handwritten 1999 mixtape cassette, 1999"
+],
+"product": "Handwritten 1999 mixtape cassette, 1999",
+"role": "main",
+"size": [
+0.102,
+0.012,
+0.064
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "cassette_record_tab_scotch_patch_1998": {
 "display": "Scotch tape patches over cassette record-protect tabs, circa",
 "eras": [
@@ -8031,6 +8163,28 @@
 0.015
 ],
 "themes": "OFRENDA",
+"weight": 1.0
+},
+"ceramic_cat_figurine_white_blue_1984": {
+"display": "White ceramic cat figurine with blue floral decoration, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.485,
+"notes": [
+"White ceramic cat figurine with blue floral decoration, circa 1984"
+],
+"product": "White ceramic cat figurine with blue floral decoration, circa 1984",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.18
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "ceramic_gravy_boat_white_1998": {
@@ -15453,6 +15607,28 @@
 "themes": "MIXTAPE",
 "weight": 1.0
 },
+"fondue_fork_color_tip_1975": {
+"display": "Stainless fondue forks with colored tips, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.044,
+"notes": [
+"Stainless fondue forks with colored tips, circa 1975"
+],
+"product": "Stainless fondue forks with colored tips, circa 1975",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.28
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "forrest_gump_vhs_1995": {
 "display": "Forrest Gump VHS",
 "eras": [
@@ -15651,6 +15827,28 @@
 "themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"friendship_bracelet_chevron_1999": {
+"display": "Handmade chevron friendship bracelet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handmade chevron friendship bracelet, circa 1999"
+],
+"product": "Handmade chevron friendship bracelet, circa 1999",
+"role": "main",
+"size": [
+0.02,
+0.003,
+0.22
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "fruit_by_the_foot_berry_tie_dye_1995": {
 "display": "Betty Crocker Fruit by the Foot Berry Tie-Dye fruit snack, circa",
 "eras": [
@@ -15671,6 +15869,28 @@
 0.095
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"fruit_by_the_foot_wrapper_1999": {
+"display": "Betty Crocker Fruit by the Foot wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Betty Crocker Fruit by the Foot wrapper, circa 1999"
+],
+"product": "Betty Crocker Fruit by the Foot wrapper, circa 1999",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.18
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "fruit_gushers_strawberry_splash_1995": {
@@ -16397,6 +16617,72 @@
 0.4
 ],
 "themes": "MALL RAT",
+"weight": 1.0
+},
+"garage_sale_poster_board_sign_1998": {
+"display": "Hand-lettered GARAGE SALE sign, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.121,
+"notes": [
+"Hand-lettered GARAGE SALE sign, circa 1998"
+],
+"product": "Hand-lettered GARAGE SALE sign, circa 1998",
+"role": "main",
+"size": [
+0.55,
+0.003,
+0.7
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
+"garage_sale_price_sticker_25c_neon_1998": {
+"display": "Handwritten fluorescent 25-cent garage-sale price sticker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handwritten fluorescent 25-cent garage-sale price sticker, circa 1998"
+],
+"product": "Handwritten fluorescent 25-cent garage-sale price sticker, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.02
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
+"garage_sale_quarter_change_1998": {
+"display": "U.S. quarter used as garage-sale change, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"U.S. quarter used as garage-sale change, circa 1998"
+],
+"product": "U.S. quarter used as garage-sale change, circa 1998",
+"role": "main",
+"size": [
+0.024,
+0.0018,
+0.024
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "gateway2000_anykey_keyboard_1993": {
@@ -20581,6 +20867,28 @@
 "themes": "GOT GOT NEED; PRIZE COUNTER; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"hot_wheels_loose_car_1995": {
+"display": "Loose Hot Wheels die-cast toy car, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.039,
+"notes": [
+"Loose Hot Wheels die-cast toy car, circa 1995"
+],
+"product": "Loose Hot Wheels die-cast toy car, circa 1995",
+"role": "main",
+"size": [
+0.03,
+0.025,
+0.075
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "hp_12c_financial_calculator_1998": {
 "display": "Hewlett-Packard 12C financial calculator, circa",
 "eras": [
@@ -21546,6 +21854,28 @@
 0.75
 ],
 "themes": "LA TOMATINA",
+"weight": 1.0
+},
+"jane_fonda_original_workout_vhs_1980s": {
+"display": "Jane Fonda's Original Workout VHS cassette, 1980s home-video release",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"Jane Fonda's Original Workout VHS cassette, 1980s home-video release"
+],
+"product": "Jane Fonda's Original Workout VHS cassette, 1980s home-video release",
+"role": "main",
+"size": [
+0.187,
+0.025,
+0.103
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "jansport_pencil_pouch_black_1998": {
@@ -22734,6 +23064,28 @@
 "themes": "BE KIND REWIND",
 "weight": 1.0
 },
+"kinyo_vhs_rewinder_black_1993": {
+"display": "Kinyo-style VHS tape rewinder, Black, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.463,
+"notes": [
+"Kinyo-style VHS tape rewinder, Black, circa 1993"
+],
+"product": "Kinyo-style VHS tape rewinder, Black, circa 1993",
+"role": "main",
+"size": [
+0.21,
+0.09,
+0.14
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "kiss_me_im_irish_pin_2001": {
 "display": "\u201cKiss Me I'm Irish\u201d pin-back button, circa",
 "eras": [
@@ -22953,6 +23305,28 @@
 ],
 "themes": "SCREEN TIME",
 "weight": 0.12
+},
+"kodak_fun_saver_27_1999": {
+"display": "Kodak FunSaver 27-exposure disposable camera",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.059,
+"notes": [
+"Kodak FunSaver 27-exposure disposable camera, 1999"
+],
+"product": "Kodak FunSaver 27-exposure disposable camera, 1999",
+"role": "main",
+"size": [
+0.12,
+0.04,
+0.07
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
 },
 "kodak_funsaver_flash_27exp_1998": {
 "display": "Kodak FunSaver 35 mm one-time-use camera with flash, circa",
@@ -24865,6 +25239,28 @@
 "themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"letter_to_future_self_1999": {
+"display": "Handwritten \u201cLetter to My Future Self,\u201d December 31",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Handwritten \u201cLetter to My Future Self,\u201d December 31, 1999"
+],
+"product": "Handwritten \u201cLetter to My Future Self,\u201d December 31, 1999",
+"role": "main",
+"size": [
+0.216,
+0.0005,
+0.279
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "leviton_3to2_grounding_adapter_1998": {
 "display": "Leviton 3-to-2 prong grounding adapter, circa",
 "eras": [
@@ -25236,6 +25632,28 @@
 0.2
 ],
 "themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"lisa_frank_sticker_sheet_1999": {
+"display": "Lisa Frank-style fluorescent sticker sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Lisa Frank-style fluorescent sticker sheet, circa 1999"
+],
+"product": "Lisa Frank-style fluorescent sticker sheet, circa 1999",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "lite_brite_1997": {
@@ -26402,6 +26820,28 @@
 "themes": "HAND TURKEY; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"magic_the_gathering_card_sleeved_1999": {
+"display": "Magic: The Gathering trading card in clear sleeve, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Magic: The Gathering trading card in clear sleeve, circa 1999"
+],
+"product": "Magic: The Gathering trading card in clear sleeve, circa 1999",
+"role": "main",
+"size": [
+0.063,
+0.001,
+0.088
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "magna_doodle_1995": {
 "display": "Tyco Magna Doodle magnetic drawing board, circa",
 "eras": [
@@ -26754,6 +27194,28 @@
 "themes": "GAS FEES",
 "weight": 1.0
 },
+"masking_tape_price_label_roll_1998": {
+"display": "Beige masking-tape roll used for garage-sale prices, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.05,
+"notes": [
+"Beige masking-tape roll used for garage-sale prices, circa 1998"
+],
+"product": "Beige masking-tape roll used for garage-sale prices, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.025,
+0.12
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "mason_jar_loose_change_1999": {
 "display": "Ball Mason jar used as loose-change jar, circa",
 "eras": [
@@ -26928,6 +27390,28 @@
 0.04
 ],
 "themes": "TAZOS",
+"weight": 1.0
+},
+"maxell_3_5_floppy_2hd_1999_timecapsule": {
+"display": "Maxell 3.5-inch 2HD floppy disk, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Maxell 3.5-inch 2HD floppy disk, circa 1999"
+],
+"product": "Maxell 3.5-inch 2HD floppy disk, circa 1999",
+"role": "main",
+"size": [
+0.09,
+0.0033,
+0.094
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "maxell_cassette_label_sheet_partial_1997": {
@@ -28557,6 +29041,28 @@
 "themes": "TRICK OR TREAT",
 "weight": 1.0
 },
+"millennium_party_confetti_2000_1999": {
+"display": "\u201c2000\u201d metallic New Year's confetti",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"\u201c2000\u201d metallic New Year's confetti, 1999"
+],
+"product": "\u201c2000\u201d metallic New Year's confetti, 1999",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.03
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "millennium_party_invitation_1999": {
 "display": "\u201cMillennium 2000\u201d New Year's Eve party invitation",
 "eras": [
@@ -29412,6 +29918,28 @@
 "themes": "MALL RAT",
 "weight": 0.12
 },
+"motorola_advisor_pager_clear_blue_1999": {
+"display": "Motorola Advisor-style pager, translucent blue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.018,
+"notes": [
+"Motorola Advisor-style pager, translucent blue, circa 1999"
+],
+"product": "Motorola Advisor-style pager, translucent blue, circa 1999",
+"role": "main",
+"size": [
+0.06,
+0.02,
+0.085
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "motorola_bravo_pager_1990": {
 "display": "Motorola Bravo numeric pager, circa",
 "eras": [
@@ -29762,6 +30290,28 @@
 0.06
 ],
 "themes": "MISSING PIECES",
+"weight": 1.0
+},
+"movie_ticket_stub_december_1999": {
+"display": "Movie-theater ticket stubs, December",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Movie-theater ticket stubs, December 1999"
+],
+"product": "Movie-theater ticket stubs, December 1999",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.08
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "mr_sketch_loose_marker_assorted_1998": {
@@ -30708,6 +31258,28 @@
 0.19
 ],
 "themes": "GOLAZO; SUMMER CAMP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"nike_style_shoebox_orange_1999": {
+"display": "Orange athletic-shoe cardboard box used as a time capsule, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.021,
+"notes": [
+"Orange athletic-shoe cardboard box used as a time capsule, circa 1999"
+],
+"product": "Orange athletic-shoe cardboard box used as a time capsule, circa 1999",
+"role": "main",
+"size": [
+0.34,
+0.22,
+0.13
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "nintendo64_cartridge_1996": {
@@ -32490,6 +33062,28 @@
 0.06
 ],
 "themes": "SICK DAY; HOME_JUNK_DRAWER_MISC; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"orange_extension_cord_25ft_1995": {
+"display": "Orange 25-foot household extension cord, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.638,
+"notes": [
+"Orange 25-foot household extension cord, circa 1995"
+],
+"product": "Orange 25-foot household extension cord, circa 1995",
+"role": "main",
+"size": [
+0.1966,
+0.1966,
+0.0786
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "orange_foam_microphone_1994": {
@@ -35478,6 +36072,72 @@
 "themes": "CONSOLE WARS",
 "weight": 0.12
 },
+"pleated_lampshade_beige_1986": {
+"display": "Beige pleated table-lamp shade, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.144,
+"notes": [
+"Beige pleated table-lamp shade, circa 1986"
+],
+"product": "Beige pleated table-lamp shade, circa 1986",
+"role": "main",
+"size": [
+0.35,
+0.35,
+0.25
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
+"pog_metal_slammer_holographic_1995": {
+"display": "Holographic metal POG slammer, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Holographic metal POG slammer, circa 1995"
+],
+"product": "Holographic metal POG slammer, circa 1995",
+"role": "main",
+"size": [
+0.041,
+0.003,
+0.041
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
+"pog_milk_cap_1995_timecapsule": {
+"display": "POG-brand cardboard milk caps, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"POG-brand cardboard milk caps, circa 1995"
+],
+"product": "POG-brand cardboard milk caps, circa 1995",
+"role": "main",
+"size": [
+0.041,
+0.0015,
+0.041
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "pogs_assorted_stack_1994": {
 "display": "Assorted POG milk caps stack with plastic tube, circa",
 "eras": [
@@ -35630,6 +36290,28 @@
 0.088
 ],
 "themes": "TIME CAPSULE; PROM NIGHT; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"polaroid_600_instant_photo_1999": {
+"display": "Polaroid 600 instant photographs",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Polaroid 600 instant photographs, 1999"
+],
+"product": "Polaroid 600 instant photographs, 1999",
+"role": "main",
+"size": [
+0.088,
+0.001,
+0.107
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "polaroid_izone_camera_blue_1999": {
@@ -36047,6 +36729,28 @@
 "themes": "UNDER THE MATTRESS; SICK DAY; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"prerecorded_cassette_assorted_1989": {
+"display": "Assorted prerecorded music cassette tapes, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Assorted prerecorded music cassette tapes, circa 1989"
+],
+"product": "Assorted prerecorded music cassette tapes, circa 1989",
+"role": "main",
+"size": [
+0.102,
+0.012,
+0.064
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "pretty_woman_vhs_1990": {
 "display": "Pretty Woman VHS",
 "eras": [
@@ -36440,6 +37144,28 @@
 ],
 "themes": "EGG HUNT",
 "weight": 0.12
+},
+"pyrex_autumn_harvest_casserole_1980": {
+"display": "Pyrex Autumn Harvest casserole dish, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.754,
+"notes": [
+"Pyrex Autumn Harvest casserole dish, circa 1980"
+],
+"product": "Pyrex Autumn Harvest casserole dish, circa 1980",
+"role": "main",
+"size": [
+0.29,
+0.18,
+0.08
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
 },
 "qtips_cotton_swabs_375_1998": {
 "display": "Q-tips Cotton Swabs 375-count box, circa",
@@ -37187,6 +37913,28 @@
 0.185
 ],
 "themes": "BE KIND REWIND; SCREEN TIME; LEFTOVERS; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"readers_digest_condensed_book_1987": {
+"display": "Reader's Digest Condensed Books hardcover volume, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.162,
+"notes": [
+"Reader's Digest Condensed Books hardcover volume, circa 1987"
+],
+"product": "Reader's Digest Condensed Books hardcover volume, circa 1987",
+"role": "main",
+"size": [
+0.15,
+0.035,
+0.22
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "recessed_screwdown_card_holder_1997": {
@@ -40022,6 +40770,28 @@
 0.35
 ],
 "themes": "LOST AND FOUND",
+"weight": 1.0
+},
+"school_photo_envelope_fall_1999": {
+"display": "School-picture envelope and face-down photo prints, Fall",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.026,
+"notes": [
+"School-picture envelope and face-down photo prints, Fall 1999"
+],
+"product": "School-picture envelope and face-down photo prints, Fall 1999",
+"role": "main",
+"size": [
+0.16,
+0.005,
+0.23
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "scorched_field_grass_clump_1998": {
@@ -44793,6 +45563,28 @@
 "themes": "MINT CONDITION; GOT GOT NEED; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"steel_cash_box_gray_1995": {
+"display": "Gray locking steel cash box, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.835,
+"notes": [
+"Gray locking steel cash box, circa 1995"
+],
+"product": "Gray locking steel cash box, circa 1995",
+"role": "main",
+"size": [
+0.25,
+0.18,
+0.09
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "steel_holi_snack_plate_1998": {
 "display": "Stainless-steel snack plate, circa",
 "eras": [
@@ -44944,6 +45736,28 @@
 0.08
 ],
 "themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"stoneware_worlds_best_grandma_mug_1989": {
+"display": "\u201cWORLD'S BEST GRANDMA\u201d stoneware mug, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.416,
+"notes": [
+"\u201cWORLD'S BEST GRANDMA\u201d stoneware mug, circa 1989"
+],
+"product": "\u201cWORLD'S BEST GRANDMA\u201d stoneware mug, circa 1989",
+"role": "main",
+"size": [
+0.12,
+0.09,
+0.1
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "straw_costume_bundle_1998": {
@@ -47187,6 +48001,28 @@
 "themes": "MIXTAPE; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
+"time_capsule_zip_bag_1999": {
+"display": "Gallon-size zipper freezer bag protecting time-capsule papers",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.011,
+"notes": [
+"Gallon-size zipper freezer bag protecting time-capsule papers, 1999"
+],
+"product": "Gallon-size zipper freezer bag protecting time-capsule papers, 1999",
+"role": "main",
+"size": [
+0.27,
+0.001,
+0.28
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "timex_t121_alarm_clock_1999": {
 "display": "Timex T121 digital alarm clock, circa",
 "eras": [
@@ -48131,6 +48967,50 @@
 "themes": "LEFTOVERS; HOME_JUNK_DRAWER_MISC; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"tupperware_seal_orange_round_1978": {
+"display": "Tupperware round orange replacement lid, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.095,
+"notes": [
+"Tupperware round orange replacement lid, circa 1978"
+],
+"product": "Tupperware round orange replacement lid, circa 1978",
+"role": "main",
+"size": [
+0.19,
+0.015,
+0.19
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
+"tupperware_seal_pastel_yellow_1982": {
+"display": "Tupperware pastel-yellow round lid, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.076,
+"notes": [
+"Tupperware pastel-yellow round lid, circa 1982"
+],
+"product": "Tupperware pastel-yellow round lid, circa 1982",
+"role": "main",
+"size": [
+0.17,
+0.015,
+0.17
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "turkey_wishbone_dry_prop_1998": {
 "display": "Dried turkey wishbone display prop, circa",
 "eras": [
@@ -48989,6 +49869,28 @@
 "themes": "MINT CONDITION",
 "weight": 1.0
 },
+"us_penny_1999": {
+"display": "United States Lincoln cent",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"United States Lincoln cent, 1999"
+],
+"product": "United States Lincoln cent, 1999",
+"role": "main",
+"size": [
+0.019,
+0.0015,
+0.019
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "usa_snapback_red_white_blue_1998": {
 "display": "Red-white-and-blue USA snapback cap, circa",
 "eras": [
@@ -49009,6 +49911,28 @@
 0.12
 ],
 "themes": "LIGHT THE FUSE",
+"weight": 1.0
+},
+"usa_today_dec31_1999_y2k_issue": {
+"display": "USA Today newspaper, December 31, 1999, Y2K-era issue",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.22,
+"notes": [
+"USA Today newspaper, December 31, 1999, Y2K-era issue"
+],
+"product": "USA Today newspaper, December 31, 1999, Y2K-era issue",
+"role": "main",
+"size": [
+0.28,
+0.01,
+0.56
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "usb2_sata_ide_drive_adapter_2008": {
@@ -49515,6 +50439,28 @@
 0.42
 ],
 "themes": "SCREEN TIME; DIAL-UP; Y2K; regular cubes",
+"weight": 1.0
+},
+"vintage_waffle_iron_chrome_black_1985": {
+"display": "Chrome-and-black electric waffle iron, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.85,
+"notes": [
+"Chrome-and-black electric waffle iron, circa 1985"
+],
+"product": "Chrome-and-black electric waffle iron, circa 1985",
+"role": "main",
+"size": [
+0.25,
+0.22,
+0.1
+],
+"themes": "GARAGE SALE",
 "weight": 1.0
 },
 "viper_300_alarm_remote_1998": {
@@ -50110,6 +51056,28 @@
 "themes": "SEWING KIT",
 "weight": 1.0
 },
+"west_bend_electric_fondue_pot_avocado_1975": {
+"display": "West Bend electric fondue pot, Avocado Green, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 9.408,
+"notes": [
+"West Bend electric fondue pot, Avocado Green, circa 1975"
+],
+"product": "West Bend electric fondue pot, Avocado Green, circa 1975",
+"role": "main",
+"size": [
+0.28,
+0.24,
+0.2
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "westcott_12inch_clear_ruler_1997": {
 "display": "Westcott 12-inch clear plastic ruler, circa",
 "eras": [
@@ -50681,6 +51649,28 @@
 "themes": "KRAMPUSNACHT",
 "weight": 1.0
 },
+"wooden_yardstick_hardware_store_1985": {
+"display": "Hardware-store advertising yardstick, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.024,
+"notes": [
+"Hardware-store advertising yardstick, circa 1985"
+],
+"product": "Hardware-store advertising yardstick, circa 1985",
+"role": "main",
+"size": [
+0.025,
+0.005,
+0.914
+],
+"themes": "GARAGE SALE",
+"weight": 1.0
+},
 "woods_orange_extension_cord_25ft_1998": {
 "display": "Woods 25-foot orange outdoor extension cord, circa",
 "eras": [
@@ -51164,6 +52154,28 @@
 "themes": "Y2K",
 "weight": 1.0
 },
+"y2k_novelty_glasses_2000_1999": {
+"display": "\u201c2000\u201d New Year's novelty glasses",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.05,
+"notes": [
+"\u201c2000\u201d New Year's novelty glasses, 1999"
+],
+"product": "\u201c2000\u201d New Year's novelty glasses, 1999",
+"role": "main",
+"size": [
+0.16,
+0.03,
+0.06
+],
+"themes": "TIME CAPSULE",
+"weight": 1.0
+},
 "yak_bak_2_1997": {
 "display": "Yes! Gear Yak Bak 2 voice recorder",
 "eras": [
@@ -51250,6 +52262,28 @@
 0.15
 ],
 "themes": "GACHAPON",
+"weight": 1.0
+},
+"yearbook_autograph_page_1999": {
+"display": "Torn 1998\u201399 school-yearbook autograph page",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Torn 1998\u201399 school-yearbook autograph page"
+],
+"product": "Torn 1998\u201399 school-yearbook autograph page",
+"role": "main",
+"size": [
+0.21,
+0.0005,
+0.28
+],
+"themes": "TIME CAPSULE",
 "weight": 1.0
 },
 "yellow_tulip_single_1998": {

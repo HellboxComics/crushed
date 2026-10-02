@@ -2424,6 +2424,117 @@
 "no_wires": true,
 "theme": "capsule-machine plastic, tiny toys and two hundred yen disappearing one crank at a time"
 },
+"GARAGE SALE": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cardboard boxes, hot driveway concrete, old electronics, dust, masking tape and stale coffee",
+"the folding table nearest the curb fifteen minutes before everything left went to donation",
+"west_bend_electric_fondue_pot_avocado_1975"
+],
+"lore": "Everything was twenty-five cents until somebody asked about the fondue pot, then suddenly it was vintage.",
+"mix": [
+[
+"garage_sale_price_sticker_25c_neon_1998",
+12
+],
+[
+"west_bend_electric_fondue_pot_avocado_1975",
+1
+],
+[
+"fondue_fork_color_tip_1975",
+5
+],
+[
+"atlantic_24_cassette_storage_rack_black_1988",
+1
+],
+[
+"prerecorded_cassette_assorted_1989",
+6
+],
+[
+"ceramic_cat_figurine_white_blue_1984",
+2
+],
+[
+"tupperware_seal_orange_round_1978",
+3
+],
+[
+"tupperware_seal_pastel_yellow_1982",
+2
+],
+[
+"jane_fonda_original_workout_vhs_1980s",
+1
+],
+[
+"vintage_waffle_iron_chrome_black_1985",
+1
+],
+[
+"pleated_lampshade_beige_1986",
+1
+],
+[
+"steel_cash_box_gray_1995",
+1
+],
+[
+"garage_sale_poster_board_sign_1998",
+2
+],
+[
+"garage_sale_quarter_change_1998",
+6
+],
+[
+"pyrex_autumn_harvest_casserole_1980",
+1
+],
+[
+"orange_extension_cord_25ft_1995",
+1
+],
+[
+"kinyo_vhs_rewinder_black_1993",
+1
+],
+[
+"brass_picture_frame_5x7_1988",
+2
+],
+[
+"readers_digest_condensed_book_1987",
+3
+],
+[
+"stoneware_worlds_best_grandma_mug_1989",
+2
+],
+[
+"hot_wheels_loose_car_1995",
+3
+],
+[
+"wooden_yardstick_hardware_store_1985",
+3
+],
+[
+"masking_tape_price_label_roll_1998",
+1
+]
+],
+"no_wires": true,
+"theme": "driveway relics with masking-tape prices and thirty years of somebody else's basement"
+},
 "GAS FEES": {
 "era": [
 2,
@@ -7447,6 +7558,117 @@
 ],
 "no_wires": true,
 "theme": "playground discs, chip bags and the swaps pile that mattered more than the snack"
+},
+"TIME CAPSULE": {
+"era": [
+2
+],
+"flavor": [
+"shoebox cardboard, instant-film chemicals, friendship-bracelet thread, battery plastic, newspaper ink and old candy",
+"inside a taped plastic tote buried beneath a backyard stepping stone on December 31, 1999",
+"bandai_tamagotchi_gen1_purple_1997"
+],
+"lore": "The letter said DO NOT OPEN UNTIL 2025, which sounded impossibly far away when the newspaper still cost fifty cents.",
+"mix": [
+[
+"nike_style_shoebox_orange_1999",
+1
+],
+[
+"letter_to_future_self_1999",
+3
+],
+[
+"britney_baby_one_more_time_cd_single_1999",
+2
+],
+[
+"bandai_tamagotchi_gen1_purple_1997",
+1
+],
+[
+"usa_today_dec31_1999_y2k_issue",
+2
+],
+[
+"polaroid_600_instant_photo_1999",
+6
+],
+[
+"pog_milk_cap_1995_timecapsule",
+10
+],
+[
+"pog_metal_slammer_holographic_1995",
+2
+],
+[
+"magic_the_gathering_card_sleeved_1999",
+2
+],
+[
+"school_photo_envelope_fall_1999",
+1
+],
+[
+"friendship_bracelet_chevron_1999",
+3
+],
+[
+"aol_5_0_free_hours_cd_1999",
+2
+],
+[
+"maxell_3_5_floppy_2hd_1999_timecapsule",
+2
+],
+[
+"motorola_advisor_pager_clear_blue_1999",
+1
+],
+[
+"y2k_novelty_glasses_2000_1999",
+2
+],
+[
+"kodak_fun_saver_27_1999",
+1
+],
+[
+"movie_ticket_stub_december_1999",
+3
+],
+[
+"fruit_by_the_foot_wrapper_1999",
+3
+],
+[
+"lisa_frank_sticker_sheet_1999",
+1
+],
+[
+"yearbook_autograph_page_1999",
+2
+],
+[
+"us_penny_1999",
+5
+],
+[
+"cassette_mixtape_1999_timecapsule",
+1
+],
+[
+"time_capsule_zip_bag_1999",
+2
+],
+[
+"millennium_party_confetti_2000_1999",
+10
+]
+],
+"no_wires": true,
+"theme": "1999 sealed in a shoebox because everybody assumed the future would want Tamagotchis, Pogs and proof that Y2K happened"
 },
 "TRICK OR TREAT": {
 "era": [
