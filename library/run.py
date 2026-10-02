@@ -1,11 +1,12 @@
 """The asset pipeline, run on the Mac by itself, start to finish, for each catalog item:
 
-  1. hunt     every photo of the real product: eBay listings, your own photos, free photo sites (hunt.py)
+  1. hunt     every photo of the real product: Google Images, your own photos, free photo sites (hunt.py)
   2. cut out  each photo's object exactly (BiRefNet in the drawing room)
   3. check    the local vision model keeps only photos of this exact product, right era, sharp, straight-on (vet.py)
-  4. skin     the good photos flattened onto the label and stitched all the way round (mosaic.py)
-  5. build    the exact master shape with that skin, metal parts shiny (shapes/lathe.py in Blender)
-  6. inspect  studio pictures from every side; the vision model compares them with the real photos
+  4. pick     the best 6 go to your phone (Telegram); you tap the true one -- the AI can't judge era
+  5. build    the exact shape in Blender (lathe or box; Hunyuan's shape for soft things), Hunyuan Paint covers
+              every side from your photo, Blender sets the real size and saves .glb .fbx .usdc .blend
+  6. inspect  studio pictures from every side; the judge compares them with your photo
   7. page     everything onto the phone page, https://crushed-remaster.pages.dev
 
     .venv/bin/python library/run.py --only duracell_coppertop_aa_1998 [--redo]
@@ -27,6 +28,7 @@ WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-ren
 OUT = os.path.join(WORK, "library")
 PY = sys.executable
 STATUS = os.path.join(OUT, "status.json")
+WAIT = False          # --wait: a run you started yourself waits for your tap instead of moving on
 
 
 def say(*a):
@@ -64,7 +66,6 @@ def item(cid):
 
 def pipeline(cid, redo=False):
     import hunt
-    import mosaic
     import turnaround as T
     import vet as V
     import numpy as np
@@ -78,7 +79,7 @@ def pipeline(cid, redo=False):
     d = os.path.join(OUT, cid)
     os.makedirs(d, exist_ok=True)
 
-    status(cid, product=product, step="1/6 hunting photos (eBay, your photos, free sites)")
+    status(cid, product=product, step="1/6 hunting photos (Google Images, your photos, free sites)")
     found = json.load(open(os.path.join(WORK, "hunt", cid, "found.json"))) if (
         not redo and os.path.exists(os.path.join(WORK, "hunt", cid, "found.json"))) else hunt.run(cid, words, year, log=say)
 
@@ -117,31 +118,60 @@ def pipeline(cid, redo=False):
         f["vet"] = V.vet(f["file"], product, era, use)
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
     json.dump(found, open(vj, "w"), indent=1)
-    good = [f for f in found if V.good(f["vet"]) and f.get("mask")]
-    good.sort(key=lambda f: (-(f["vet"].get("view") == "front"), -f["vet"].get("match", 0)))
-    if not good:
-        status(cid, step="no usable photo found", ok=False, photos=len(found))
+    # 4. YOUR PICK: the AI can't tell a 1998 product from a 2020 one, so it shows you its best photos on your
+    # phone and you tap the true one. Everything after this is built from that one photo.
+    spec = json.load(open(os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json"))) if fam.get("shape") else None
+    cands = [f for f in found if f.get("mask") and f.get("vet") and f["vet"].get("match", 0) >= 7
+             and f["vet"].get("sharp", True) is not False and f["vet"].get("whole", True) is not False]
+    if spec:
+        cands = [f for f in cands if size_ok(f, spec)]
+    cands.sort(key=lambda f: (-(f["vet"].get("era_ok") is True), -(f["vet"].get("view") == "front"),
+                              -f["vet"].get("match", 0)))
+    picked = your_pick(cid, product, cands[:6], d)
+    if not picked:
         return
 
     plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json"))).get(cid, {})
-    size = plan.get("size") or [0.1, 0.1, 0.1]
+    size = fam.get("size") or plan.get("size") or [0.1, 0.1, 0.1]
     mdir = os.path.join(d, "model")
-    log = []
+    os.makedirs(mdir, exist_ok=True)
+    ref = reference(picked, d, upright=fam["family"] == "round")
+
+    # 5. BUILD: the exact shape in Blender (or Hunyuan's shape for soft things), then Hunyuan Paint covers every
+    # side of it from your photo, then Blender sets the real size and saves every format.
     if fam["family"] == "round":
-        glb, covered = build_round(cid, fam, good, d, mdir, log)
+        status(cid, step="5/6 building the exact shape in Blender")
+        subprocess.run([PY, os.path.join(HERE, "shapes", "lathe.py"), "--", os.path.join(HERE, "shapes", "specs",
+                        fam["shape"] + ".json"), os.path.join(mdir, "bare")], check=True, capture_output=True)
+        bare = os.path.join(mdir, "bare", spec["id"] + ".glb")
+        pts = [pt for p in spec["profile"] for pt in p["pts"]]
+        biggest = (max(z for r, z in pts) - min(z for r, z in pts)) / 1000.0
     elif fam["family"] in ("box", "flat"):
-        glb, covered = build_box(cid, fam, good, d, mdir, size, log)
+        status(cid, step="5/6 building the exact box in Blender")
+        W, D, H = size[:3]
+        subprocess.run([PY, os.path.join(HERE, "shapes", "box.py"), "--", str(W), str(max(D, 0.0003)), str(H),
+                        os.path.join(mdir, "bare"), "-", "-", cid, "0.3" if fam["family"] == "flat" else "0.6"],
+                       check=True, capture_output=True)
+        bare = os.path.join(mdir, "bare", cid + ".glb")
+        biggest = max(W, D, H)
     elif fam["family"] == "soft":
-        glb, covered = build_soft(cid, fam, good, d, mdir, size, log)
+        bare, biggest = None, max(size)
     else:
         status(cid, step=f"no builder for the '{fam['family']}' family yet", ok=False)
         return
+    status(cid, step="5/6 Hunyuan Paint is painting every side from your photo (about 10 minutes)")
+    painted = hunyuan_paint(ref, os.path.join(mdir, "hunyuan"), bare)
+    status(cid, step="5/6 Blender: real size, every format")
+    subprocess.run([PY, os.path.join(HERE, "shapes", "resize.py"), "--", painted, str(biggest), mdir, cid],
+                   check=True, capture_output=True)
+    glb = os.path.join(mdir, cid + ".glb")
     pend = os.path.join(ROOT, "assets", "models_pending", cid)
     os.makedirs(pend, exist_ok=True)
     import shutil
     shutil.copy(glb, os.path.join(pend, "model.glb"))
 
-    status(cid, step="6/6 pictures from every side and the vision model's inspection")
+    # 6. INSPECT: studio pictures from four sides, judged against your photo
+    status(cid, step="6/6 pictures from every side and the judge's inspection")
     subprocess.run([PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],
                    check=True, capture_output=True)
     views = [os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)]
@@ -149,105 +179,135 @@ def pipeline(cid, redo=False):
     for k, v in enumerate(views):
         sheet.paste(Image.open(v).convert("RGB").resize((300, 400)), (k * 300, 0))
     sheet.save(os.path.join(d, "views.jpg"), quality=88)
-    verdict = inspect(os.path.join(d, "views.jpg"), good[0]["file"], product, use)
-    tex = os.path.join(d, "label.png") if os.path.exists(os.path.join(d, "label.png")) else os.path.join(d, "atlas.png")
-    missing = 1 - covered
-    ok = verdict.get("pass", False) and missing < 0.1
-    status(cid, step="done", ok=ok, verdict=verdict, covered=covered, photos=len(found), good=len(good),
-           label=os.path.relpath(tex, WORK) if os.path.exists(tex) else None, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
-           ref=os.path.relpath(good[0]["file"], WORK), stitch=log[-8:],
-           note=("" if missing < 0.1 else f"{missing:.0%} of the way round has no photo yet - needs a photo of that side"))
+    verdict = inspect(os.path.join(d, "views.jpg"), picked["file"], product, use)
+    status(cid, step="done", ok=bool(verdict.get("pass")), verdict=verdict, photos=len(found), good=len(cands),
+           label=os.path.relpath(ref, WORK), views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+           ref=os.path.relpath(picked["file"], WORK), note="")
 
 
-def _objs(good):
+def size_ok(f, spec, tol=0.2):
+    """Round things: the photo's object must have the right length-to-width (an AA is about 3.5 to 1, a D cell
+    about 1.8 to 1). Measured on the cut-out, so a wrong size can never get in."""
     import numpy as np
     from PIL import Image
-    out = []
-    for f in good:
-        im = Image.open(f["file"]).convert("RGB")
-        m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
-        out.append((f, im, m))
+    import mosaic
+    pts = [pt for p in spec["profile"] for pt in p["pts"]]
+    want = (max(z for r, z in pts) - min(z for r, z in pts)) / (2 * max(r for r, z in pts))
+    im = Image.open(f["file"]).convert("RGB")
+    m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
+    objs = mosaic.objects(im, m)
+    if not objs:
+        return False
+    mm = objs[0][1] > 0.5
+    ys, xs = np.where(mm)
+    got = (xs.max() - xs.min() + 1) / max(ys.max() - ys.min() + 1, 1)      # lying sideways: length / width
+    f["ratio"] = round(float(got), 2)
+    return abs(got - want) / want <= tol
+
+
+def your_pick(cid, product, cands, d):
+    """The photo you picked on your phone, or None while we wait (or if you said none of these)."""
+    picks_f = os.path.expanduser("~/.hellbox/picks.json")
+    cf = os.path.join(d, "candidates.json")
+    picks = json.load(open(picks_f)) if os.path.exists(picks_f) else {}
+    p = picks.get(cid)
+    if p and os.path.exists(cf):
+        shown = json.load(open(cf))["files"]
+        if p["pick"] == "none":
+            status(cid, step="you said none of these photos fit - it needs better photos", ok=False)
+            return None
+        f = shown[int(p["pick"]) - 1]
+        return next((x for x in cands if x["file"] == f["file"]), f)
+    if os.path.exists(cf):
+        status(cid, step="waiting for your pick on your phone (Telegram)", ok=False)
+        if WAIT:                                       # started by hand: wait here for the tap (up to 30 min)
+            for _ in range(180):
+                time.sleep(10)
+                picks = json.load(open(picks_f)) if os.path.exists(picks_f) else {}
+                if cid in picks:
+                    say("[pick] you picked " + picks[cid]["pick"])
+                    return your_pick(cid, product, cands, d)
+        return None
+    if not cands:
+        status(cid, step="no usable photo found", ok=False)
+        return None
+    sheet = pick_sheet(cands, os.path.join(d, "pick_sheet.jpg"))
+    sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
+    import askfirst
+    if not askfirst.ask_pick(cid, product, sheet, len(cands)):
+        status(cid, step="could not send the photo choice to your phone - will try again next run", ok=False)
+        return None
+    json.dump({"files": [{"file": c["file"], "mask": c["mask"], "vet": c["vet"]} for c in cands], "asked": time.time()},
+              open(cf, "w"), indent=1)
+    status(cid, step="waiting for your pick on your phone (Telegram)", ok=False, pick_sheet=os.path.relpath(sheet, WORK))
+    say("[pick] the best photos are on your phone (Hart's Telegram) - tap the true one")
+    return your_pick(cid, product, cands, d) if WAIT else None
+
+
+def pick_sheet(cands, out):
+    """The photos side by side, big numbers on each, for your phone."""
+    from PIL import Image, ImageDraw, ImageFont
+    S = 512
+    cols = 3 if len(cands) > 2 else len(cands)
+    rows = (len(cands) + cols - 1) // cols
+    sheet = Image.new("RGB", (cols * S, rows * S), "white")
+    try:
+        font = ImageFont.load_default(size=72)
+    except TypeError:
+        font = ImageFont.load_default()
+    for k, c in enumerate(cands):
+        im = Image.open(c["file"]).convert("RGB")
+        im.thumbnail((S - 16, S - 16), Image.LANCZOS)
+        x, y = (k % cols) * S, (k // cols) * S
+        sheet.paste(im, (x + (S - im.width) // 2, y + (S - im.height) // 2))
+        dr = ImageDraw.Draw(sheet)
+        dr.rectangle([x + 8, y + 8, x + 100, y + 100], fill="black")
+        dr.text((x + 30, y + 14), str(k + 1), fill="yellow", font=font)
+        dr.rectangle([x, y, x + S - 1, y + S - 1], outline="black", width=3)
+    sheet.save(out, quality=90)
     return out
 
 
-def build_round(cid, fam, good, d, mdir, log):
-    """Round things (batteries, cans, bottles): the exact master shape, the label stitched from the photos."""
-    import math
+def reference(f, d, upright=False):
+    """Your photo, cut out, centered on white with room around it - what the painter looks at."""
     import numpy as np
     from PIL import Image
-    import metal
-    import mosaic
-    status(cid, step=f"4/6 stitching the label from {len(good)} good photos")
-    objs = []
-    for f, im, m in _objs(good):
-        objs += mosaic.objects(im, m)
-    spec = json.load(open(os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json")))
-    lab_pts = [pt for p in spec["profile"] if p["part"] == "label" for pt in p["pts"]]
-    lab_len = sum(math.dist(lab_pts[i], lab_pts[i + 1]) for i in range(len(lab_pts) - 1))
-    circ = 2 * math.pi * max(r for r, z in lab_pts)
-    lab, cov = mosaic.build(objs, W=2048, aspect=lab_len / circ, metal_top=fam.get("metal_top", False),
-                            log=lambda s: (say(s), log.append(s)))
-    covered = float((cov > 1e-3).mean())
-    base, mr = metal.metal_maps(Image.fromarray((lab * 255).astype(np.uint8)))
-    base.save(os.path.join(d, "label.png"))
-    mr.save(os.path.join(d, "label_mr.png"))
-    status(cid, step="5/6 building the 3D model", covered=covered)
-    subprocess.run([PY, os.path.join(HERE, "shapes", "lathe.py"), "--", os.path.join(HERE, "shapes", "specs", fam["shape"] + ".json"),
-                    mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")], check=True, capture_output=True)
-    return os.path.join(mdir, spec["id"] + ".glb"), covered
-
-
-def build_box(cid, fam, good, d, mdir, size, log):
-    """Boxes and flat things: the exact box at real size, each side straightened from a photo of that side."""
-    import panels
-    status(cid, step=f"4/6 straightening the sides from {len(good)} good photos")
-    W, D, H = (fam.get("size") or size)[:3]
-    if fam["family"] == "flat":
-        D = max(D, 0.0003)
-    photos = [(im, m, f["vet"].get("view", "")) for f, im, m in _objs(good)]
-    atlas, got = panels.build(photos, W, D, H)
-    atlas.save(os.path.join(d, "atlas.png"))
-    area = {"front": W * H, "back": W * H, "left": D * H, "right": D * H, "top": W * D, "bottom": W * D}
-    covered = sum(area[k] for k, v in got.items() if v) / sum(area.values())
-    missing = [k for k, v in got.items() if not v]
-    log.append("sides from photos: " + ", ".join(k for k, v in got.items() if v) + "; no photo yet: " + ", ".join(missing))
-    status(cid, step="5/6 building the 3D model", covered=covered)
-    subprocess.run([PY, os.path.join(HERE, "shapes", "box.py"), "--", str(W), str(D), str(H), mdir,
-                    os.path.join(d, "atlas.png"), "-", cid, "0.3" if fam["family"] == "flat" else "0.6"],
-                   check=True, capture_output=True)
-    return os.path.join(mdir, cid + ".glb"), covered
-
-
-def build_soft(cid, fam, good, d, mdir, size, log):
-    """Soft and odd shapes (plush, food, toys): Hunyuan3D 2.1 (Apple-chip build) makes the shape and paints it
-    from the best photo; Blender sets the real size and saves every format."""
-    from PIL import Image
-    import numpy as np
-    status(cid, step="4/6 Hunyuan3D 2.1 is making the shape and paint from the best photo")
-    f, im, m = _objs(good[:1])[0]
-    ys, xs = np.where(m > 0.5)                          # crop to the object, square, with a little room around it
+    im = Image.open(f["file"]).convert("RGB")
+    m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
+    from scipy import ndimage
+    lab, n = ndimage.label(m > 0.5)
+    if n > 1:                                             # several in the photo: the biggest one
+        k = np.argmax(ndimage.sum(np.ones_like(lab), lab, range(1, n + 1))) + 1
+        m = np.where(lab == k, m, 0)
+    ys, xs = np.where(m > 0.5)
     y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
-    side = int(max(y1 - y0, x1 - x0) * 1.15)
     rgba = np.dstack([np.asarray(im), (m * 255).astype(np.uint8)])[y0:y1, x0:x1]
+    obj = Image.fromarray(rgba)
+    if upright and obj.width > obj.height:                # round things stand up, like the shape does
+        obj = obj.rotate(90, expand=True)
+    side = int(max(obj.size) * 1.15)
     sq = Image.new("RGBA", (side, side), (255, 255, 255, 0))
-    sq.paste(Image.fromarray(rgba), ((side - (x1 - x0)) // 2, (side - (y1 - y0)) // 2))
-    ref = os.path.join(d, "reference.png")
-    sq.resize((1024, 1024), Image.LANCZOS).save(ref)
-    os.makedirs(mdir, exist_ok=True)
-    sys.path.insert(0, HERE)
+    sq.paste(obj, ((side - obj.width) // 2, (side - obj.height) // 2), obj)
+    out = os.path.join(d, "reference.png")
+    sq.resize((1024, 1024), Image.LANCZOS).save(out)
+    return out
+
+
+def hunyuan_paint(ref, out, bare=None):
+    """Hunyuan3D 2.1 (Apple-chip build) in its own Python. With an exact shape: paints it. Without: makes the
+    shape from the photo too (soft things)."""
     import hunyuan
     hy = hunyuan.home()
     if not hy:
         raise RuntimeError("Hunyuan3D is not installed yet - run the setup paste")
-    r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), ref,
-                        os.path.join(mdir, "hunyuan")], capture_output=True, text=True)
-    log.append((r.stdout + r.stderr)[-600:])
-    if r.returncode != 0 or not os.path.exists(os.path.join(mdir, "hunyuan", "textured.glb")):
-        raise RuntimeError("Hunyuan3D did not finish: " + (r.stderr or r.stdout)[-300:])
-    status(cid, step="5/6 setting the real size and saving every format", covered=1.0)
-    subprocess.run([PY, os.path.join(HERE, "shapes", "resize.py"), "--", os.path.join(mdir, "hunyuan", "textured.glb"),
-                    str(max(size)), mdir, cid], check=True, capture_output=True)
-    return os.path.join(mdir, cid + ".glb"), 1.0
+    cmd = [os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), ref, out]
+    if bare:
+        cmd += ["--paint", bare]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    glb = os.path.join(out, "textured.glb")
+    if r.returncode != 0 or not os.path.exists(glb):
+        raise RuntimeError("Hunyuan3D did not finish: " + (r.stderr or r.stdout)[-400:])
+    return glb
 
 
 def inspect(sheet, photo, product, use):
@@ -296,12 +356,17 @@ if __name__ == "__main__":
     ap.add_argument("--only", nargs="+")
     ap.add_argument("--queue", type=int, default=0, help="make up to N sorted items that are not done yet")
     ap.add_argument("--redo", action="store_true")
+    ap.add_argument("--wait", action="store_true", help="wait for your photo pick on the phone")
     a = ap.parse_args()
+    WAIT = a.wait
     todo = a.only or []
     if a.queue:
         fam = {k: v for k, v in json.load(open(os.path.join(HERE, "families.json"))).items() if not k.startswith("_")}
         st = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
-        todo = [k for k in sorted(fam) if st.get(k, {}).get("step") != "done"][:a.queue]
+        pf = os.path.expanduser("~/.hellbox/picks.json")
+        picks = json.load(open(pf)) if os.path.exists(pf) else {}
+        waiting = lambda k: st.get(k, {}).get("step", "").startswith("waiting for your pick") and k not in picks
+        todo = [k for k in sorted(fam) if st.get(k, {}).get("step") != "done" and not waiting(k)][:a.queue]
         if not todo:
             say("nothing waiting: every sorted item is made")
     for cid in todo:

@@ -79,10 +79,11 @@ if __name__ == "__main__":
     mt.use_nodes = True
     bsdf = mt.node_tree.nodes["Principled BSDF"]
     bsdf.inputs["Roughness"].default_value = 0.45
-    tex = mt.node_tree.nodes.new("ShaderNodeTexImage")
-    tex.image = bpy.data.images.load(os.path.abspath(atlas))
-    tex.extension = "EXTEND"
-    mt.node_tree.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+    if atlas not in ("", "-"):                    # "-" = bare shape, painted later
+        tex = mt.node_tree.nodes.new("ShaderNodeTexImage")
+        tex.image = bpy.data.images.load(os.path.abspath(atlas))
+        tex.extension = "EXTEND"
+        mt.node_tree.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
     if mr:
         t2 = mt.node_tree.nodes.new("ShaderNodeTexImage")
         t2.image = bpy.data.images.load(os.path.abspath(mr))
