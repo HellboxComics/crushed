@@ -60,6 +60,7 @@ def columns(part):
     return out
 
 
+WRAPS = []
 for p in spec["profile"]:
     pts = p["pts"]
     mi = parts.index(p["part"])
@@ -69,12 +70,18 @@ for p in spec["profile"]:
     cols = columns(p)
     t = (p.get("seam") or {}).get("thickness_mm", 0.08) if isinstance(p.get("seam"), dict) else 0.08
     rings = []
-    for (r, z) in pts:
+    for k_, (r, z) in enumerate(pts):
+        # the overlap's extra thickness follows the surface: full on the straight side, fading to nothing where the
+        # sleeve curls over a shoulder or lip (pushing it straight out there cut a notch into the end)
+        a, b = pts[max(k_ - 1, 0)], pts[min(k_ + 1, len(pts) - 1)]
+        dz, dr = abs(b[1] - a[1]), abs(b[0] - a[0])
+        upright = (dz / max(math.hypot(dz, dr), 1e-9)) ** 4 if (dz or dr) else 0.0
         ring = []
         for phi, f, _ in cols:
-            rr = r + (t * f if r > 0 else 0)
+            rr = r + (t * f * upright if r > 0 else 0)
             ring.append(bm.verts.new((rr * math.sin(phi) * S, -rr * math.cos(phi) * S, z * S)))
         rings.append(ring)
+    WRAPS.append(rings)
     for i in range(len(pts) - 1):
         for j in range(len(cols) - 1):
             a, b, c, d = rings[i][j], rings[i][j + 1], rings[i + 1][j + 1], rings[i + 1][j]
@@ -96,6 +103,16 @@ for p in spec["profile"]:
                     loop[uvl].uv = (0.5 + 0.5 * r / rmax * math.sin(phi), 0.5 - 0.5 * r / rmax * math.cos(phi))
 
 bmesh.ops.remove_doubles(bm, verts=[v for v in bm.verts if v.co.xy.length < 1e-9], dist=1e-9)
+# the wrap's start and end columns sit at the same spot: one vertex, so the shading runs smooth across it (two
+# vertices there made a hard line - "a seam cut into the metal"). UVs are per corner, so the label's map still wraps.
+# Only those pairs, only inside each part (welding everything joined separate parts and made spikes).
+tm = {}
+for rings_ in WRAPS:
+    for ring in rings_:
+        if len(ring) > 1 and ring[-1].is_valid and ring[0].is_valid and (ring[-1].co - ring[0].co).length < 1e-9:
+            tm[ring[-1]] = ring[0]
+if tm:
+    bmesh.ops.weld_verts(bm, targetmap=tm)
 bm.normal_update()
 bm.to_mesh(me)
 bm.free()

@@ -328,3 +328,15 @@ def brand_panel(front, logo_box, w, h, side):
     panel[oy:oy + nh, ox:ox + nw] = region * (1 - alpha[:region.shape[0], :region.shape[1]]) + \
         logo[:region.shape[0], :region.shape[1]] * alpha[:region.shape[0], :region.shape[1]]
     return Image.fromarray(np.clip(panel, 0, 255).astype(np.uint8))
+
+
+def warp_mask(mask, q, w, h, inset=0.006):
+    """The object's own outline, straightened the same way as its side (white = the object)."""
+    import cv2
+    q = order_quad(q)
+    c = q.mean(0)
+    q = c + (q - c) * (1 - 2 * inset)
+    dst = np.float32([[0, 0], [w - 1, 0], [w - 1, h - 1], [0, h - 1]])
+    M = cv2.getPerspectiveTransform(q.astype(np.float32), dst)
+    m = cv2.warpPerspective((mask > 0.5).astype(np.uint8) * 255, M, (w, h), flags=cv2.INTER_LINEAR)
+    return Image.fromarray(m)

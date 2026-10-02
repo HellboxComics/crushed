@@ -496,6 +496,7 @@ def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=prin
                 continue
             w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
             face_im = panels.warp_quad(im, m, q, w, h)
+            panels.warp_mask(m, q, w, h).save(os.path.join(out_dir, f"{side}_mask.png"))   # its real outline
             if view == "back" and side in ("top", "bottom"):
                 face_im = face_im.rotate(180)
             face_im = panels.delight(face_im)
