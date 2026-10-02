@@ -1,43 +1,359 @@
 {
  "item": "duracell_coppertop_aa_1998",
- "source": "Cody's peeled 1998-99 Duracell PowerCheck AA label (best if installed by MAR 2003), measured",
- "width_mm": 50.3, "height_mm": 45.6, "background": "#0e0e0e", "roughness": 0.4,
+ "source": "Cody's peeled 1998-99 Duracell PowerCheck AA label (best if installed by MAR 2003), measured; second test dot at the minus end (hidden under the key-ring clip in the peeled photo, visible in the 4-battery photo)",
+ "width_mm": 50.3,
+ "height_mm": 45.6,
+ "background": "#0e0e0e",
+ "roughness": 0.4,
  "shapes": [
-  {"type": "rect", "x": 0, "y": 0, "w": 0.34, "h": 1, "fill": "#c97636", "shade": "copper", "metal": true, "roughness": 0.32},
-  {"type": "rect", "x": 0.055, "y": 0.337, "w": 0.2, "h": 0.048, "fill": null, "stroke": "#2a1708", "stroke_w": 0.005},
-  {"type": "rect", "x": 0.15, "y": 0.343, "w": 0.1, "h": 0.036, "fill": "#2a1708"},
-  {"type": "ellipse", "x": 0.132, "y": 0.52, "w": 0.077, "h": 0.118, "fill": "#2a1708"},
-  {"type": "ellipse", "x": 0.14, "y": 0.533, "w": 0.061, "h": 0.092, "fill": "#f4f1ea"},
-  {"type": "rect", "x": 0.345, "y": 0.535, "w": 0.545, "h": 0.215, "fill": null, "stroke": "#2f9e44", "stroke_w": 0.006},
-  {"type": "bar", "x": 0.375, "y": 0.565, "w": 0.48, "h": 0.05, "colors": ["#38bf47", "#9ed9a0", "#e9efe8", "#e9efe8", "#e2452b", "#e2452b"], "stops": [0, 0.3, 0.55, 0.8, 0.81, 1]},
-  {"type": "bar", "x": 0.375, "y": 0.632, "w": 0.48, "h": 0.022, "colors": ["#5a3b17", "#7a5a1e", "#e6b520", "#f2d23a"], "stops": [0, 0.55, 0.8, 1]},
-  {"type": "rect", "x": 0.584, "y": 0.79, "w": 0.3, "h": 0.115, "fill": "#c8803f", "metal": true, "roughness": 0.35}
+  {
+   "type": "rect",
+   "x": 0,
+   "y": 0,
+   "w": 0.34,
+   "h": 1,
+   "fill": "#c97636",
+   "shade": "copper",
+   "metal": true,
+   "roughness": 0.32
+  },
+  {
+   "type": "rect",
+   "x": 0.055,
+   "y": 0.337,
+   "w": 0.2,
+   "h": 0.048,
+   "fill": null,
+   "stroke": "#2a1708",
+   "stroke_w": 0.005
+  },
+  {
+   "type": "rect",
+   "x": 0.15,
+   "y": 0.343,
+   "w": 0.1,
+   "h": 0.036,
+   "fill": "#2a1708"
+  },
+  {
+   "type": "ellipse",
+   "x": 0.132,
+   "y": 0.52,
+   "w": 0.077,
+   "h": 0.118,
+   "fill": "#2a1708"
+  },
+  {
+   "type": "ellipse",
+   "x": 0.14,
+   "y": 0.533,
+   "w": 0.061,
+   "h": 0.092,
+   "fill": "#f4f1ea"
+  },
+  {
+   "type": "ellipse",
+   "x": 0.912,
+   "y": 0.52,
+   "w": 0.077,
+   "h": 0.118,
+   "fill": "#2a2a2a"
+  },
+  {
+   "type": "ellipse",
+   "x": 0.92,
+   "y": 0.533,
+   "w": 0.061,
+   "h": 0.092,
+   "fill": "#f4f1ea"
+  },
+  {
+   "type": "rect",
+   "x": 0.345,
+   "y": 0.535,
+   "w": 0.545,
+   "h": 0.215,
+   "fill": null,
+   "stroke": "#2f9e44",
+   "stroke_w": 0.006
+  },
+  {
+   "type": "bar",
+   "x": 0.375,
+   "y": 0.565,
+   "w": 0.48,
+   "h": 0.05,
+   "colors": [
+    "#38bf47",
+    "#9ed9a0",
+    "#e9efe8",
+    "#e9efe8",
+    "#e2452b",
+    "#e2452b"
+   ],
+   "stops": [
+    0,
+    0.3,
+    0.55,
+    0.8,
+    0.81,
+    1
+   ]
+  },
+  {
+   "type": "bar",
+   "x": 0.375,
+   "y": 0.632,
+   "w": 0.48,
+   "h": 0.022,
+   "colors": [
+    "#5a3b17",
+    "#7a5a1e",
+    "#e6b520",
+    "#f2d23a"
+   ],
+   "stops": [
+    0,
+    0.55,
+    0.8,
+    1
+   ]
+  },
+  {
+   "type": "rect",
+   "x": 0.584,
+   "y": 0.79,
+   "w": 0.3,
+   "h": 0.115,
+   "fill": "#c8803f",
+   "metal": true,
+   "roughness": 0.35
+  }
  ],
  "texts": [
-  {"text": "+", "x": 0.125, "y": 0.025, "h": 0.06, "color": "#2a1708", "weight": "black"},
-  {"text": "SIZE AA", "x": 0.1, "y": 0.176, "h": 0.048, "w": 0.18, "color": "#2a1708", "weight": "bold"},
-  {"text": "BATTERY", "x": 0.104, "y": 0.229, "h": 0.04, "w": 0.165, "color": "#2a1708", "weight": "bold"},
-  {"text": "←", "x": 0.262, "y": 0.343, "h": 0.04, "color": "#2a1708", "weight": "black"},
-  {"text": "↑", "x": 0.066, "y": 0.39, "h": 0.04, "color": "#2a1708", "weight": "black"},
-  {"text": "PRESS DOTS", "x": 0.104, "y": 0.41, "h": 0.034, "w": 0.18, "color": "#2a1708", "weight": "bold"},
-  {"text": "TO TEST", "x": 0.133, "y": 0.452, "h": 0.03, "w": 0.115, "color": "#2a1708", "weight": "bold"},
-  {"text": "DURACELL", "x": 0.373, "y": 0.04, "h": 0.105, "w": 0.5, "color": "#f2f2f2", "weight": "black", "mark": "registered"},
-  {"text": "MN 1500   LR6   1.5 VOLTS", "x": 0.37, "y": 0.135, "h": 0.052, "w": 0.53, "color": "#f2f2f2", "weight": "bold"},
-  {"text": "CAUTION: DO NOT CONNECT IMPROPERLY,", "x": 0.37, "y": 0.205, "h": 0.033, "w": 0.53, "color": "#e8e8e8", "weight": "bold"},
-  {"text": "CHARGE OR DISPOSE OF IN FIRE. BATTERY", "x": 0.37, "y": 0.248, "h": 0.033, "w": 0.53, "color": "#e8e8e8", "weight": "bold"},
-  {"text": "MAY EXPLODE OR LEAK.", "x": 0.37, "y": 0.291, "h": 0.033, "w": 0.29, "color": "#e8e8e8", "weight": "bold"},
-  {"text": "Made in U.S.A.", "x": 0.71, "y": 0.291, "h": 0.033, "w": 0.19, "color": "#e8e8e8", "weight": "regular"},
-  {"text": "DURACELL", "x": 0.355, "y": 0.375, "h": 0.105, "w": 0.5, "color": "#f2f2f2", "weight": "black", "mark": "registered"},
-  {"text": "ALKALINE BATTERY", "x": 0.37, "y": 0.49, "h": 0.026, "w": 0.24, "color": "#8a8a8a", "weight": "bold"},
-  {"text": "100%", "x": 0.4, "y": 0.571, "h": 0.036, "w": 0.09, "color": "#1d4d22", "weight": "black"},
-  {"text": "DURACELL® P", "x": 0.375, "y": 0.675, "h": 0.045, "w": 0.235, "color": "#f2f2f2", "weight": "bold"},
-  {"text": "OWER", "x": 0.611, "y": 0.684, "h": 0.036, "w": 0.085, "color": "#f2f2f2", "weight": "bold"},
-  {"text": "C", "x": 0.698, "y": 0.675, "h": 0.045, "w": 0.026, "color": "#f2f2f2", "weight": "bold"},
-  {"text": "HECK™", "x": 0.725, "y": 0.684, "h": 0.036, "w": 0.115, "color": "#f2f2f2", "weight": "bold"},
-  {"text": "Patented", "x": 0.355, "y": 0.775, "h": 0.034, "w": 0.115, "color": "#e8e8e8", "weight": "regular"},
-  {"text": "DURACELL INC.,", "x": 0.355, "y": 0.82, "h": 0.034, "w": 0.2, "color": "#e8e8e8", "weight": "regular"},
-  {"text": "Bethel, CT 06801", "x": 0.355, "y": 0.865, "h": 0.034, "w": 0.21, "color": "#e8e8e8", "weight": "regular"},
-  {"text": "BEST IF INSTALLED BY:", "x": 0.598, "y": 0.8, "h": 0.03, "w": 0.27, "color": "#2a1708", "weight": "bold"},
-  {"text": "MAR 2003", "x": 0.6, "y": 0.84, "h": 0.05, "w": 0.24, "color": "#2a1708", "weight": "black"}
+  {
+   "text": "+",
+   "x": 0.125,
+   "y": 0.025,
+   "h": 0.06,
+   "color": "#2a1708",
+   "weight": "black"
+  },
+  {
+   "text": "SIZE AA",
+   "x": 0.1,
+   "y": 0.176,
+   "h": 0.048,
+   "w": 0.18,
+   "color": "#2a1708",
+   "weight": "bold"
+  },
+  {
+   "text": "BATTERY",
+   "x": 0.104,
+   "y": 0.229,
+   "h": 0.04,
+   "w": 0.165,
+   "color": "#2a1708",
+   "weight": "bold"
+  },
+  {
+   "text": "\u2190",
+   "x": 0.262,
+   "y": 0.343,
+   "h": 0.04,
+   "color": "#2a1708",
+   "weight": "black"
+  },
+  {
+   "text": "\u2191",
+   "x": 0.066,
+   "y": 0.39,
+   "h": 0.04,
+   "color": "#2a1708",
+   "weight": "black"
+  },
+  {
+   "text": "PRESS DOTS",
+   "x": 0.104,
+   "y": 0.41,
+   "h": 0.034,
+   "w": 0.18,
+   "color": "#2a1708",
+   "weight": "bold"
+  },
+  {
+   "text": "TO TEST",
+   "x": 0.133,
+   "y": 0.452,
+   "h": 0.03,
+   "w": 0.115,
+   "color": "#2a1708",
+   "weight": "bold"
+  },
+  {
+   "text": "DURACELL",
+   "x": 0.373,
+   "y": 0.04,
+   "h": 0.105,
+   "w": 0.5,
+   "color": "#f2f2f2",
+   "weight": "black",
+   "mark": "registered"
+  },
+  {
+   "text": "MN 1500   LR6   1.5 VOLTS",
+   "x": 0.37,
+   "y": 0.135,
+   "h": 0.052,
+   "w": 0.53,
+   "color": "#f2f2f2",
+   "weight": "bold"
+  },
+  {
+   "text": "CAUTION: DO NOT CONNECT IMPROPERLY,",
+   "x": 0.37,
+   "y": 0.205,
+   "h": 0.033,
+   "w": 0.53,
+   "color": "#e8e8e8",
+   "weight": "bold"
+  },
+  {
+   "text": "CHARGE OR DISPOSE OF IN FIRE. BATTERY",
+   "x": 0.37,
+   "y": 0.248,
+   "h": 0.033,
+   "w": 0.53,
+   "color": "#e8e8e8",
+   "weight": "bold"
+  },
+  {
+   "text": "MAY EXPLODE OR LEAK.",
+   "x": 0.37,
+   "y": 0.291,
+   "h": 0.033,
+   "w": 0.29,
+   "color": "#e8e8e8",
+   "weight": "bold"
+  },
+  {
+   "text": "Made in U.S.A.",
+   "x": 0.71,
+   "y": 0.291,
+   "h": 0.033,
+   "w": 0.19,
+   "color": "#e8e8e8",
+   "weight": "regular"
+  },
+  {
+   "text": "DURACELL",
+   "x": 0.355,
+   "y": 0.375,
+   "h": 0.105,
+   "w": 0.5,
+   "color": "#f2f2f2",
+   "weight": "black",
+   "mark": "registered"
+  },
+  {
+   "text": "ALKALINE BATTERY",
+   "x": 0.37,
+   "y": 0.49,
+   "h": 0.026,
+   "w": 0.24,
+   "color": "#8a8a8a",
+   "weight": "bold"
+  },
+  {
+   "text": "100%",
+   "x": 0.4,
+   "y": 0.571,
+   "h": 0.036,
+   "w": 0.09,
+   "color": "#1d4d22",
+   "weight": "black"
+  },
+  {
+   "text": "DURACELL\u00ae P",
+   "x": 0.375,
+   "y": 0.675,
+   "h": 0.045,
+   "w": 0.235,
+   "color": "#f2f2f2",
+   "weight": "bold"
+  },
+  {
+   "text": "OWER",
+   "x": 0.611,
+   "y": 0.684,
+   "h": 0.036,
+   "w": 0.085,
+   "color": "#f2f2f2",
+   "weight": "bold"
+  },
+  {
+   "text": "C",
+   "x": 0.698,
+   "y": 0.675,
+   "h": 0.045,
+   "w": 0.026,
+   "color": "#f2f2f2",
+   "weight": "bold"
+  },
+  {
+   "text": "HECK\u2122",
+   "x": 0.725,
+   "y": 0.684,
+   "h": 0.036,
+   "w": 0.115,
+   "color": "#f2f2f2",
+   "weight": "bold"
+  },
+  {
+   "text": "Patented",
+   "x": 0.355,
+   "y": 0.775,
+   "h": 0.034,
+   "w": 0.115,
+   "color": "#e8e8e8",
+   "weight": "regular"
+  },
+  {
+   "text": "DURACELL INC.,",
+   "x": 0.355,
+   "y": 0.82,
+   "h": 0.034,
+   "w": 0.2,
+   "color": "#e8e8e8",
+   "weight": "regular"
+  },
+  {
+   "text": "Bethel, CT 06801",
+   "x": 0.355,
+   "y": 0.865,
+   "h": 0.034,
+   "w": 0.21,
+   "color": "#e8e8e8",
+   "weight": "regular"
+  },
+  {
+   "text": "BEST IF INSTALLED BY:",
+   "x": 0.598,
+   "y": 0.8,
+   "h": 0.03,
+   "w": 0.27,
+   "color": "#2a1708",
+   "weight": "bold"
+  },
+  {
+   "text": "MAR 2003",
+   "x": 0.6,
+   "y": 0.84,
+   "h": 0.05,
+   "w": 0.24,
+   "color": "#2a1708",
+   "weight": "black"
+  }
  ]
 }
