@@ -16,6 +16,7 @@ import os
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -39,7 +40,64 @@ def words_ok(title, words):
     return not ws or (ws[0] in t and sum(w in t for w in ws) >= max(1, int(0.4 * len(ws))))
 
 
+KEYS = os.path.expanduser("~/.hellbox/ebay.json")      # your free eBay developer keys, kept outside the repo
+_TOKEN = {}
+
+
+def _ebay_token():
+    """An application token from eBay's own sign-in service (client credentials, 2 hours)."""
+    import base64
+    if _TOKEN.get("exp", 0) > time.time() + 60:
+        return _TOKEN["tok"]
+    k = json.load(open(KEYS))
+    auth = base64.b64encode(f"{k['client_id']}:{k['client_secret']}".encode()).decode()
+    body = urllib.parse.urlencode({"grant_type": "client_credentials",
+                                   "scope": "https://api.ebay.com/oauth/api_scope"}).encode()
+    req = urllib.request.Request("https://api.ebay.com/identity/v1/oauth2/token", data=body, headers={
+        "Content-Type": "application/x-www-form-urlencoded", "Authorization": "Basic " + auth})
+    r = json.loads(urllib.request.urlopen(req, timeout=30).read())
+    _TOKEN.update(tok=r["access_token"], exp=time.time() + int(r.get("expires_in", 7200)))
+    return _TOKEN["tok"]
+
+
+def _ebay_get(path):
+    req = urllib.request.Request("https://api.ebay.com/buy/browse/v1/" + path, headers={
+        "Authorization": "Bearer " + _ebay_token(), "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"})
+    return json.loads(urllib.request.urlopen(req, timeout=40).read())
+
+
+def _big(url):
+    return re.sub(r"/s-l\d+\.(jpg|jpeg|png|webp)", r"/s-l1600.jpg", url)
+
+
+def ebay_api(words, year=None, listings=12, log=print):
+    """eBay's official search for developers (Browse API): every photo of each matching listing, full size."""
+    q = (words + (" vintage" if year and year < 2015 else "")).strip()
+    res = _ebay_get("item_summary/search?" + urllib.parse.urlencode({"q": q, "limit": 100}))
+    items = res.get("itemSummaries", [])
+    good = [it for it in items if words_ok(it.get("title", ""), words) and era_ok(it.get("title", ""), year)]
+    log(f"[hunt] eBay: {len(items)} listings, {len(good)} match the item and era")
+    out = []
+    for it in good[:listings]:
+        try:
+            full = _ebay_get("item/" + urllib.parse.quote(it["itemId"]))
+        except Exception as e:
+            full = it
+        urls = [full.get("image", {}).get("imageUrl")] + [a.get("imageUrl") for a in full.get("additionalImages", [])]
+        for u in [u for u in urls if u][:12]:
+            out.append((_big(u), it.get("itemWebUrl", ""), it.get("title", "")))
+        time.sleep(0.3)
+    return out
+
+
 def ebay(words, year=None, listings=12, log=print):
+    if os.path.exists(KEYS):
+        return ebay_api(words, year, listings, log)
+    log("[hunt] no eBay developer keys yet (~/.hellbox/ebay.json): trying the browser instead")
+    return ebay_browser(words, year, listings, log)
+
+
+def ebay_browser(words, year=None, listings=12, log=print):
     """[(photo url, listing url, title)] from eBay search results, every photo of each good listing."""
     from playwright.sync_api import sync_playwright
     q = (words + (" vintage" if year and year < 2015 else "")).strip()
