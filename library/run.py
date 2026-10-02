@@ -148,35 +148,53 @@ def pipeline(cid, redo=False):
     size = fam.get("size") or plan.get("size") or [0.1, 0.1, 0.1]
     mdir = os.path.join(d, "model")
     os.makedirs(mdir, exist_ok=True)
-    ref = reference(picked, d, upright=fam["family"] == "round")
 
     # 5. BUILD: the exact shape in Blender (or Hunyuan's shape for soft things), then Hunyuan Paint covers every
     # side of it from your photo, then Blender sets the real size and saves every format.
     if fam["family"] == "round":
-        status(cid, step="5/6 building the exact shape in Blender")
+        # the skin: one flat, perfect label redrawn by AI from your photo (+ two more of the same design),
+        # measured to fit; then the exact shape wears it
+        import skin
+        import metal
+        along, around = skin.label_size(spec)
+        status(cid, step="5/6 finding two more photos of the same design for consistency")
+        same = same_design(picked, [c for c in cands if c["file"] != picked["file"]], use)
+        status(cid, step=f"5/6 the AI draws the flat label from {1 + len(same)} photos ({along:.1f} x {around:.1f} mm)")
+        lab_png, score = skin.make(product, [picked] + same, along, around, os.path.join(d, "skin"),
+                                   reads=spec.get("label_reads", "around"), judge=use, log=say)
+        base, mr = metal.metal_maps(Image.open(lab_png).convert("RGB"))
+        base.save(os.path.join(d, "label.png"))
+        mr.save(os.path.join(d, "label_mr.png"))
+        status(cid, step="5/6 building the exact shape wearing the label (Blender)")
         subprocess.run([PY, os.path.join(HERE, "shapes", "lathe.py"), "--", os.path.join(HERE, "shapes", "specs",
-                        fam["shape"] + ".json"), os.path.join(mdir, "bare")], check=True, capture_output=True)
-        bare = os.path.join(mdir, "bare", spec["id"] + ".glb")
-        pts = [pt for p in spec["profile"] for pt in p["pts"]]
-        biggest = (max(z for r, z in pts) - min(z for r, z in pts)) / 1000.0
+                        fam["shape"] + ".json"), mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")],
+                       check=True, capture_output=True)
+        import shutil
+        for ext in ("glb", "fbx", "usdc", "blend"):                    # every format under the item's own name
+            if os.path.exists(os.path.join(mdir, spec["id"] + "." + ext)):
+                shutil.copy(os.path.join(mdir, spec["id"] + "." + ext), os.path.join(mdir, cid + "." + ext))
+        painted = None
     elif fam["family"] in ("box", "flat"):
+        ref = reference(picked, d)
         status(cid, step="5/6 building the exact box in Blender")
         W, D, H = size[:3]
         subprocess.run([PY, os.path.join(HERE, "shapes", "box.py"), "--", str(W), str(max(D, 0.0003)), str(H),
                         os.path.join(mdir, "bare"), "-", "-", cid, "0.3" if fam["family"] == "flat" else "0.6"],
                        check=True, capture_output=True)
-        bare = os.path.join(mdir, "bare", cid + ".glb")
+        status(cid, step="5/6 Hunyuan Paint is painting every side from your photo")
+        painted = hunyuan_paint(ref, os.path.join(mdir, "hunyuan"), os.path.join(mdir, "bare", cid + ".glb"))
         biggest = max(W, D, H)
     elif fam["family"] == "soft":
-        bare, biggest = None, max(size)
+        ref = reference(picked, d)
+        status(cid, step="5/6 Hunyuan3D makes the shape and paints it from your photo")
+        painted, biggest = hunyuan_paint(ref, os.path.join(mdir, "hunyuan")), max(size)
     else:
         status(cid, step=f"no builder for the '{fam['family']}' family yet", ok=False)
         return
-    status(cid, step="5/6 Hunyuan Paint is painting every side from your photo (about 10 minutes)")
-    painted = hunyuan_paint(ref, os.path.join(mdir, "hunyuan"), bare)
-    status(cid, step="5/6 Blender: real size, every format")
-    subprocess.run([PY, os.path.join(HERE, "shapes", "resize.py"), "--", painted, str(biggest), mdir, cid],
-                   check=True, capture_output=True)
+    if painted:
+        status(cid, step="5/6 Blender: real size, every format")
+        subprocess.run([PY, os.path.join(HERE, "shapes", "resize.py"), "--", painted, str(biggest), mdir, cid],
+                       check=True, capture_output=True)
     glb = os.path.join(mdir, cid + ".glb")
     pend = os.path.join(ROOT, "assets", "models_pending", cid)
     os.makedirs(pend, exist_ok=True)
@@ -194,7 +212,8 @@ def pipeline(cid, redo=False):
     sheet.save(os.path.join(d, "views.jpg"), quality=88)
     verdict = inspect(os.path.join(d, "views.jpg"), picked["file"], product, use)
     status(cid, step="done", ok=bool(verdict.get("pass")), verdict=verdict, photos=len(found), good=len(cands),
-           label=os.path.relpath(ref, WORK), views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+           label=os.path.relpath(os.path.join(d, "label.png") if os.path.exists(os.path.join(d, "label.png")) else
+                                 os.path.join(d, "reference.png"), WORK), views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
            ref=os.path.relpath(picked["file"], WORK), note="")
 
 
@@ -325,37 +344,36 @@ def pick_sheet(cands, out):
 
 
 def reference(f, d, upright=False):
-    """Your photo, cut out, centered on white with room around it - what the painter looks at."""
+    """Your photo's item, cut out, centered on white with room around it - what Hunyuan looks at."""
     import numpy as np
     from PIL import Image
-    im = Image.open(f["file"]).convert("RGB")
-    m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
-    from scipy import ndimage
-    lab, n = ndimage.label(m > 0.5)
-    if n > 1:                                             # several in the photo: the biggest one
-        k = np.argmax(ndimage.sum(np.ones_like(lab), lab, range(1, n + 1))) + 1
-        m = np.where(lab == k, m, 0)
-    ys, xs = np.where(m > 0.5)
-    y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
-    n_items = int(f.get("vet", {}).get("count") or 1)
-    if upright and n_items > 1 and (y1 - y0) < 1.5 * (x1 - x0):           # wider than one standing item can be
-        # several round things standing side by side and touching: cut the blob into equal strips, one per item,
-        # and keep the fullest one
-        w = (x1 - x0) / n_items
-        best = max(range(n_items), key=lambda k: m[y0:y1, int(x0 + k * w):int(x0 + (k + 1) * w)].mean())
-        x0, x1 = int(x0 + (best + 0.06) * w), int(x0 + (best + 0.94) * w)    # trim the neighbors' edges
-        m = m.copy()
-        m[:, :x0] = 0
-        m[:, x1:] = 0
-    rgba = np.dstack([np.asarray(im), (m * 255).astype(np.uint8)])[y0:y1, x0:x1]
+    import skin
+    im, m = skin.one_item(f, upright)
+    rgba = np.dstack([np.asarray(im), (m * 255).astype(np.uint8)])
     obj = Image.fromarray(rgba)
-    if upright and obj.width > obj.height:                # round things stand up, like the shape does
-        obj = obj.rotate(90, expand=True)
     side = int(max(obj.size) * 1.15)
     sq = Image.new("RGBA", (side, side), (255, 255, 255, 0))
     sq.paste(obj, ((side - obj.width) // 2, (side - obj.height) // 2), obj)
     out = os.path.join(d, "reference.png")
     sq.resize((1024, 1024), Image.LANCZOS).save(out)
+    return out
+
+
+def same_design(picked, others, use, want=2):
+    """Up to two more photos the judge says show the very same design as your pick (for consistency)."""
+    import vet as V
+    q = ("Do these two photos show the very same product design version (same label artwork, same words and "
+         "layout, same colors), even if the angle or lighting differs? Answer ONLY JSON: {\"same\": true/false}")
+    out = []
+    for f in others[:8]:
+        try:
+            if V.ask(use, q, [picked["file"], f["file"]], think=False).get("same") is True:
+                out.append(f)
+        except Exception:
+            pass
+        if len(out) >= want:
+            break
+    say(f"[skin] same design as your pick: {len(out)} more photo(s)")
     return out
 
 

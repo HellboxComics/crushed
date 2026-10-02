@@ -1,19 +1,145 @@
 {
-  "id": "aa_battery",
-  "name": "AA battery (IEC LR6 / ANSI 15A)",
-  "units": "mm",
-  "source": "IEC 60086-2 LR6: 50.5 mm long, 14.5 mm across; positive button 5.5 mm across, about 1 mm high",
-  "segments": 160,
-  "profile": [
-    {"part": "steel",     "pts": [[0, 0], [4.3, 0]]},
-    {"part": "insulator", "pts": [[4.3, 0], [4.5, 0.22], [6.5, 0.25]]},
-    {"part": "label",     "pts": [[6.5, 0.25], [6.95, 0.38], [7.18, 0.62], [7.25, 0.95], [7.25, 48.95], [7.18, 49.28], [6.95, 49.52], [6.5, 49.62]]},
-    {"part": "steel",     "pts": [[6.5, 49.62], [3.3, 49.6], [2.8, 49.68], [2.75, 49.8], [2.75, 50.28], [2.68, 50.44], [2.5, 50.5], [0, 50.5]]}
-  ],
-  "materials": {
-    "label":     {"color": [0.1, 0.1, 0.1], "metallic": 0.0, "roughness": 0.32, "texture": true},
-    "steel":     {"color": [0.78, 0.78, 0.76], "metallic": 1.0, "roughness": 0.28},
-    "insulator": {"color": [0.04, 0.04, 0.04], "metallic": 0.0, "roughness": 0.6}
+ "id": "aa_battery",
+ "name": "AA battery (IEC LR6 / ANSI 15A)",
+ "units": "mm",
+ "source": "IEC 60086-2 LR6: 50.5 mm long, 14.5 mm across; positive button 5.5 mm across, about 1 mm high",
+ "segments": 160,
+ "profile": [
+  {
+   "part": "steel",
+   "pts": [
+    [
+     0,
+     0
+    ],
+    [
+     4.3,
+     0
+    ]
+   ]
   },
-  "label_map": "u runs once around (0.5 faces the front, -Y); v runs along the wrapper from the minus end (0) to the plus end (1)"
+  {
+   "part": "insulator",
+   "pts": [
+    [
+     4.3,
+     0
+    ],
+    [
+     4.5,
+     0.22
+    ],
+    [
+     6.5,
+     0.25
+    ]
+   ]
+  },
+  {
+   "part": "label",
+   "pts": [
+    [
+     6.5,
+     0.25
+    ],
+    [
+     6.95,
+     0.38
+    ],
+    [
+     7.18,
+     0.62
+    ],
+    [
+     7.25,
+     0.95
+    ],
+    [
+     7.25,
+     48.95
+    ],
+    [
+     7.18,
+     49.28
+    ],
+    [
+     6.95,
+     49.52
+    ],
+    [
+     6.5,
+     49.62
+    ]
+   ]
+  },
+  {
+   "part": "steel",
+   "pts": [
+    [
+     6.5,
+     49.62
+    ],
+    [
+     3.3,
+     49.6
+    ],
+    [
+     2.8,
+     49.68
+    ],
+    [
+     2.75,
+     49.8
+    ],
+    [
+     2.75,
+     50.28
+    ],
+    [
+     2.68,
+     50.44
+    ],
+    [
+     2.5,
+     50.5
+    ],
+    [
+     0,
+     50.5
+    ]
+   ]
+  }
+ ],
+ "materials": {
+  "label": {
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "metallic": 0.0,
+   "roughness": 0.32,
+   "texture": true
+  },
+  "steel": {
+   "color": [
+    0.78,
+    0.78,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "insulator": {
+   "color": [
+    0.04,
+    0.04,
+    0.04
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  }
+ },
+ "label_map": "u runs once around (0.5 faces the front, -Y); v runs along the wrapper from the minus end (0) to the plus end (1)",
+ "label_reads": "along"
 }
