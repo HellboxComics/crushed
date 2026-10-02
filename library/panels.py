@@ -270,7 +270,11 @@ def delight(im):
     yy, xx = np.mgrid[0:h, 0:w]
     xx, yy = xx / w - 0.5, yy / h - 0.5
     field = coef[1] * xx + coef[2] * yy + coef[3] * xx * xx + coef[4] * yy * yy + coef[5] * xx * yy
-    field -= field.max()                                      # brighten the dim parts up to the brightest
+    # even the light out around the photo's own middle brightness - never brighten the whole thing (on a dark
+    # circuit board with white print, lifting everything to the brightest spot washed it gray), and never by more
+    # than about a third either way
+    field -= np.median(field)
+    field = np.clip(field, -0.3, 0.3)
     out = np.clip(a * np.exp(-field)[..., None], 0, 1)
     return Image.fromarray((out * 255).astype(np.uint8))
 

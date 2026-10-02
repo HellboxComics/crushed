@@ -229,6 +229,22 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         for ext in ("glb", "fbx", "usdc", "blend"):
             if os.path.exists(os.path.join(mdir, spec["id"] + "." + ext)):
                 shutil.copy(os.path.join(mdir, spec["id"] + "." + ext), os.path.join(mdir, cid + "." + ext))
+    elif route in ("box", "flat") and family_of(card, use) == "printed_circuit_card":
+        # a circuit card is a board with parts standing on it - built part by part, never a printed slab
+        import skin
+        W, H = size[0], size[2]
+        status(cid, step="5/7 the board: its top, straightened, with its real outline")
+        make_room("drawing")
+        skin.box_skin(product, W, 0.002, H, [picked] + same_design(picked, others, use, want=2),
+                      os.path.join(d, "skin"), flat=True, judge=use, log=say)
+        status(cid, step="5/7 your AI finds every part on the board (chips, memory, capacitors, connectors)")
+        make_room("judging")
+        parts = board_parts(os.path.join(d, "skin", "front.png"), product, use)
+        json.dump(parts, open(os.path.join(d, "parts.json"), "w"), indent=1)
+        say(f"[pcb] {cid}: {len(parts)} parts found on the board")
+        status(cid, step=f"5/7 Blender: the board and its {len(parts)} parts, each its own solid")
+        run_blender("pcb.py", str(W), str(H), mdir, os.path.join(d, "skin", "front.png"),
+                    os.path.join(d, "skin", "front_mask.png"), os.path.join(d, "parts.json"), cid)
     elif route in ("box", "flat"):
         import skin
         W, D, H = size[:3]
@@ -729,6 +745,54 @@ def reference(f, d, upright=False):
     out = os.path.join(d, "reference.png")
     sq.resize((1024, 1024), Image.LANCZOS).save(out)
     return out
+
+
+PARTS_Q = ("Picture 1 is a straight-on photo of the top of a {product}. List every part soldered on it that stands up "
+           "from the board - chips, memory chips, capacitors, crystals, connectors, pin headers, heatsinks, voltage "
+           "regulators and transistors, sockets, jumpers, LEDs, inductors - biggest first, up to 60. For each: its type "
+           "(one of chip, memory_chip, capacitor_electrolytic, capacitor_ceramic, resistor, crystal, connector, "
+           "pin_header, heatsink, inductor, transistor, socket, led, jumper), its box as fractions of the picture "
+           "(x0, y0, x1, y1 - 0..1 from the left edge and from the top edge) and its height in millimeters. "
+           "Answer ONLY JSON: {{\"parts\": [{{\"type\": \"chip\", \"box\": [x0, y0, x1, y1], \"height_mm\": 2.4}}]}}")
+
+
+def board_parts(front, product, use):
+    """Every part on a circuit board, read off the photo by your AI (checked for sense)."""
+    import vet as V
+    try:
+        r = V.ask(use, PARTS_Q.format(product=product), [front], think=False, side=1280)
+    except Exception as e:
+        say(f"[pcb] parts not read: {e}")
+        return []
+    out = []
+    for p in r.get("parts", []) if isinstance(r, dict) else []:
+        try:
+            b = [float(v) for v in p["box"]]
+            if max(b) > 1.5:                                    # answered in 0..1000
+                b = [v / 1000 for v in b]
+            x0, y0, x1, y1 = b
+            if 0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1 and (x1 - x0) * (y1 - y0) > 0.0004:
+                out.append({"type": str(p.get("type", "chip")), "box": [x0, y0, x1, y1],
+                            "height_mm": float(p.get("height_mm") or 0) or None})
+        except Exception:
+            continue
+    return out
+
+
+def family_of(card, use=None):
+    """The item's manufacturing family (your AI names it once; kept on its card)."""
+    if card.get("family"):
+        return card["family"]
+    try:
+        sys.path.insert(0, os.path.join(HERE, "factory"))
+        import factory
+        import cards
+        card["family"] = factory.family_of(card, model=use)
+        json.dump(card, open(cards.path(card["id"]), "w"), indent=1)
+    except Exception as e:
+        say(f"[factory] family not named: {e}")
+        card["family"] = ""
+    return card["family"]
 
 
 SIDES_Q = ("Picture 2 is the {product} you picked. Does picture 1 show THE SAME design version (same artwork, colors "

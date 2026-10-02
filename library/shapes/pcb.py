@@ -32,8 +32,8 @@ fw, fh = front.size
 parts = json.load(open(PARTS)) if os.path.exists(PARTS) else []
 
 # how tall each kind of part stands, and what it's made of (when the AI didn't say)
-KIND = {"chip": (2.4, "molded_plastic", (0.05, 0.05, 0.055), 0.55),
-        "memory_chip": (1.2, "molded_plastic", (0.05, 0.05, 0.055), 0.55),
+KIND = {"chip": (2.4, "molded_plastic", (0.04, 0.04, 0.045), 0.75),          # chip epoxy is matte
+        "memory_chip": (1.2, "molded_plastic", (0.04, 0.04, 0.045), 0.75),
         "capacitor_electrolytic": (7.0, "aluminum", None, 0.4), "capacitor_ceramic": (1.2, "molded_plastic", (0.6, 0.45, 0.3), 0.5),
         "resistor": (0.6, "molded_plastic", (0.08, 0.08, 0.08), 0.5), "crystal": (3.5, "bare_steel", (0.75, 0.75, 0.75), 0.3),
         "connector": (12.0, "molded_plastic", None, 0.45), "pin_header": (8.5, "molded_plastic", (0.05, 0.05, 0.05), 0.5),
@@ -88,22 +88,20 @@ c = max(cs, key=cv2.contourArea)
 poly = cv2.approxPolyDP(c, 0.0015 * cv2.arcLength(c, True), True).reshape(-1, 2).astype(float)
 bm = bmesh.new()
 uvl = bm.loops.layers.uv.new("UVMap")
-top = [bm.verts.new((*[a * S for a in img_xy(x / fw, y / fh)], T * S)) for x, y in poly]
-f = bm.faces.new(top)
-if f.normal.z < 0:
-    f.normal_flip()
-uvs = {}
-for loop in f.loops:
-    x, y = loop.vert.co.x / S, loop.vert.co.y / S
-    loop[uvl].uv = (x / W, y / H)
-ext = bmesh.ops.extrude_face_region(bm, geom=[f])
-bmesh.ops.translate(bm, vec=(0, 0, -T * S), verts=[v for v in ext["geom"] if isinstance(v, bmesh.types.BMVert)])
+xy = [img_xy(x / fw, y / fh) for x, y in poly]
+top = [bm.verts.new((x * S, y * S, T * S)) for x, y in xy]
+bot = [bm.verts.new((x * S, y * S, 0.0)) for x, y in xy]
+faces = [bm.faces.new(top), bm.faces.new(bot[::-1])]
+n = len(xy)
+for k in range(n):                                    # the board's cut edge all the way round
+    faces.append(bm.faces.new((bot[k], bot[(k + 1) % n], top[(k + 1) % n], top[k])))
+bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+bmesh.ops.triangulate(bm, faces=[x for x in bm.faces if len(x.verts) > 4], ngon_method="EAR_CLIP")
 bm.normal_update()
 for face in bm.faces:                                # top: the photo; bottom: the solder side; edges: FR4
     face.material_index = 0 if face.normal.z > 0.9 else (1 if face.normal.z < -0.9 else 2)
     for loop in face.loops:
         loop[uvl].uv = (loop.vert.co.x / S / W, loop.vert.co.y / S / H)
-bmesh.ops.triangulate(bm, faces=[x for x in bm.faces if len(x.verts) > 4])
 me = bpy.data.meshes.new(NAME + "_board")
 bm.to_mesh(me)
 bm.free()
@@ -127,7 +125,7 @@ for _ in range(1500):
 Image.fromarray((np.clip(sol, 0, 1) * 255).astype(np.uint8)).save(os.path.join(OUT, "textures", NAME + "_board_bottom.png"))
 fn = finish.make("plastic", os.path.join(OUT, "textures"), NAME + "_board", w=1024, h=512, base_rough=0.45)
 board.data.materials.append(material("board_top", tex=os.path.join(OUT, "textures", NAME + "_board_top.png"),
-                                     normal=fn["normal"], roughness=0.42))
+                                     normal=fn["normal"], roughness=0.62))   # solder mask: satin, not mirror
 board.data.materials.append(material("board_bottom", tex=os.path.join(OUT, "textures", NAME + "_board_bottom.png"),
                                      roughness=0.5))
 board.data.materials.append(material("fr4_edge", color=(0.55, 0.5, 0.3), roughness=0.7))
@@ -173,7 +171,7 @@ for i, p in enumerate(parts):
     ob.data.materials.append(material(name + "_top", tex=cp, roughness=rough,
                                       metallic=1.0 if mkind in ("aluminum", "bare_steel") else 0.0))
     me2 = ob.data
-    uv2 = me2.uv_layers.new(name="UVMap")
+    uv2 = me2.uv_layers.active or me2.uv_layers.new(name="UVMap")
     for poly in me2.polygons:                        # the top shows the real part from the photo (its markings)
         if poly.normal.z > 0.9:
             poly.material_index = 1
