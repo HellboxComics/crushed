@@ -49,6 +49,16 @@
 0.0376
 ]
 },
+"amy_winehouse_back_to_black_cd_2006": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "army_men": {
 "hard": 0.35,
 "how": "fold",
@@ -87,6 +97,16 @@
 0.2439,
 0.0641,
 0.0129
+]
+},
+"avril_lavigne_let_go_cd_2002": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "baby_bottle_pop": {
@@ -1179,6 +1199,16 @@
 0.064
 ]
 },
+"destinys_child_survivor_cd_2001": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "diamond": {
 "hard": 0.35,
 "how": "fold",
@@ -1369,6 +1399,16 @@
 0.125
 ]
 },
+"eminem_show_cd_2002": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "energy_can": {
 "hard": 0.15,
 "how": "crumple",
@@ -1439,6 +1479,16 @@
 0.0808
 ]
 },
+"fall_out_boy_cork_tree_cd_2005": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "famicom_cart": {
 "hard": 0.7,
 "how": "snap",
@@ -1467,6 +1517,16 @@
 0.0698,
 0.0705,
 0.0105
+]
+},
+"fifty_cent_get_rich_cd_2003": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "film_canister": {
@@ -1819,6 +1879,26 @@
 0.014
 ]
 },
+"generic_cassette_case_1991": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.109,
+0.017,
+0.07
+]
+},
+"generic_clear_jewel_case_1994": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "giant_controller": {
 "hard": 0.2,
 "how": "squish",
@@ -1907,6 +1987,16 @@
 0.014,
 0.014,
 0.0744
+]
+},
+"green_day_american_idiot_cd_2004": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "green_day_dookie_cassette_1994": {
@@ -2139,6 +2229,16 @@
 0.0212
 ]
 },
+"home_alone_vhs_1991": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "hood_clan": {
 "hard": 0.6,
 "how": "snap",
@@ -2239,6 +2339,16 @@
 0.0061
 ]
 },
+"jayz_blueprint_cd_2001": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "jelly_babies": {
 "hard": 0.2,
 "how": "squish",
@@ -2289,6 +2399,26 @@
 0.1519
 ]
 },
+"jurassic_park_vhs_1994": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
+"jvc_kaboom_rvb90_1998": {
+"hard": 0.88,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.66,
+0.265,
+0.265
+]
+},
 "keitai_strap": {
 "hard": 0.7,
 "how": "snap",
@@ -2329,6 +2459,16 @@
 0.008
 ]
 },
+"killers_hot_fuss_cd_2004": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "kinkeshi": {
 "hard": 0.2,
 "how": "squish",
@@ -2339,6 +2479,16 @@
 0.052
 ]
 },
+"koss_porta_pro_1984": {
+"hard": 0.55,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.16,
+0.06,
+0.17
+]
+},
 "kush_ball": {
 "hard": 0.7,
 "how": "snap",
@@ -2347,6 +2497,16 @@
 0.0795,
 0.0776,
 0.0766
+]
+},
+"lady_gaga_the_fame_cd_2008": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
 ]
 },
 "latefee_receipt": {
@@ -2429,6 +2589,16 @@
 0.076
 ]
 },
+"lil_wayne_carter_iii_cd_2008": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "limp_bizkit_significant_other_cd_1999": {
 "hard": 0.68,
 "how": "snap",
@@ -2447,6 +2617,26 @@
 0.142,
 0.01,
 0.125
+]
+},
+"linkin_park_meteora_cd_2003": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"lion_king_vhs_1995": {
+"hard": 0.58,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.033,
+0.202
 ]
 },
 "loop_track": {
@@ -2539,6 +2729,26 @@
 0.0051
 ]
 },
+"matrix_vhs_1999": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
+"maxell_cdr_80_2002": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.138,
+0.138,
+0.095
+]
+},
 "maxell_ur90_1994": {
 "hard": 0.55,
 "how": "snap",
@@ -2557,6 +2767,26 @@
 0.102,
 0.013,
 0.064
+]
+},
+"mcr_black_parade_cd_2006": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"memorex_cd_r_50_spindle_2001": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.138,
+0.138,
+0.095
 ]
 },
 "memorex_dbs90_1990": {
@@ -2587,6 +2817,16 @@
 0.0853,
 0.1014,
 0.0307
+]
+},
+"men_in_black_vhs_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "menko_card": {
@@ -3209,6 +3449,16 @@
 0.0508
 ]
 },
+"outkast_stankonia_cd_2000": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "p2p_sleeve": {
 "hard": 0.3,
 "how": "fold",
@@ -3237,6 +3487,36 @@
 0.06,
 0.045,
 0.024
+]
+},
+"panasonic_shockwave_sl_sw202_1996": {
+"hard": 0.8,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.15,
+0.035
+]
+},
+"panic_fever_cd_2005": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
+"paper_cd_sleeve_1999": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.126,
+0.002,
+0.126
 ]
 },
 "paper_hand": {
@@ -3949,6 +4229,16 @@
 0.06
 ]
 },
+"shrek_vhs_2001": {
+"hard": 0.58,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.033,
+0.202
+]
+},
 "sidekick_phone": {
 "hard": 0.7,
 "how": "snap",
@@ -4179,6 +4469,36 @@
 0.0298
 ]
 },
+"sony_cfd_s22_boombox_1998": {
+"hard": 0.84,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.41,
+0.24,
+0.165
+]
+},
+"sony_cpa9c_cassette_adapter_1996": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.012,
+0.064
+]
+},
+"sony_discman_d121_1992": {
+"hard": 0.76,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.135,
+0.148,
+0.032
+]
+},
 "sony_hf90_1990": {
 "hard": 0.55,
 "how": "snap",
@@ -4189,6 +4509,26 @@
 0.064
 ]
 },
+"sony_mdr_7506_1991": {
+"hard": 0.73,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.19,
+0.085,
+0.18
+]
+},
+"sony_mdr_v6_1985": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.19,
+0.085,
+0.18
+]
+},
 "sony_uxs90_1990": {
 "hard": 0.6,
 "how": "snap",
@@ -4197,6 +4537,16 @@
 0.102,
 0.013,
 0.064
+]
+},
+"sony_walkman_wm_fx195_1995": {
+"hard": 0.74,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.035,
+0.085
 ]
 },
 "sour_pack": {
@@ -4579,6 +4929,16 @@
 0.046
 ]
 },
+"tdk_cd_r_50_spindle_2001": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.138,
+0.138,
+0.095
+]
+},
 "tdk_sa90_1992": {
 "hard": 0.58,
 "how": "snap",
@@ -4699,6 +5059,16 @@
 0.0316
 ]
 },
+"titanic_vhs_1998": {
+"hard": 0.48,
+"how": "fold",
+"mat": "card",
+"size": [
+0.208,
+0.056,
+0.188
+]
+},
 "tlc_crazysexycool_cassette_1994": {
 "hard": 0.56,
 "how": "snap",
@@ -4727,6 +5097,16 @@
 0.22,
 0.115,
 0.13
+]
+},
+"toy_story_vhs_1996": {
+"hard": 0.58,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.033,
+0.202
 ]
 },
 "trapped_keeper": {
@@ -4849,6 +5229,16 @@
 0.009
 ]
 },
+"usher_confessions_cd_2004": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.142,
+0.01,
+0.125
+]
+},
 "valentine_card": {
 "hard": 0.3,
 "how": "fold",
@@ -4867,6 +5257,16 @@
 0.024,
 0.1055,
 0.0145
+]
+},
+"verbatim_datalifeplus_cdr_2001": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.138,
+0.138,
+0.095
 ]
 },
 "vhs": {
