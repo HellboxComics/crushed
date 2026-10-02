@@ -76,6 +76,18 @@ def main(photo, out, shape_only=False, paint=None):
                       f"min={float(mx.min(l32).item()):.3g} max={float(mx.max(l32).item()):.3g}", flush=True)
                 return _dec(latents, *a, **k)
             pipe.vae.decode_to_mesh = _checked
+            _q = pipe.vae._query_sdf_volume
+
+            def _sdf(pts, feats, n, _q=_q):                    # the surface values at each level: the facts
+                import numpy as _np
+                v = _q(pts, feats, n) if len(pts) else _np.zeros(0, _np.float32)
+                if len(v):
+                    print(f"[hunyuan] {name}: {len(v)} points, surface value min={float(v.min()):.3g} "
+                          f"max={float(v.max()):.3g} inside={float((v > 0).mean()):.2f}", flush=True)
+                else:
+                    print(f"[hunyuan] {name}: no points near a surface at this level", flush=True)
+                return v
+            pipe.vae._query_sdf_volume = _sdf
             mesh = pipe(photo, num_inference_steps=50, guidance_scale=7.5, octree_resolution=256, seed=42)
             if mesh is not None and len(mesh.faces):
                 break
@@ -114,9 +126,25 @@ def check():
     print("ok")
 
 
+def test():
+    """Hunyuan on its own demo picture (does this Mac's Hunyuan make shapes at all?)."""
+    hy = home()
+    demo = next((os.path.join(hy, p) for p in ("assets/demo.png", "assets/example_images/004.png", "demo.png")
+                 if os.path.exists(os.path.join(hy, p))), None)
+    if not demo:
+        import glob
+        demo = (glob.glob(os.path.join(hy, "assets", "**", "*.png"), recursive=True) or [None])[0]
+    print(f"[hunyuan] test picture: {demo}", flush=True)
+    out = os.path.join(os.path.expanduser("~/crushed-render/remaster"), "hunyuan_test")
+    print(main(demo, out, shape_only=True), flush=True)
+
+
 if __name__ == "__main__":
     a = sys.argv
     if "--check" in a:
         check()
+        sys.exit(0)
+    if "--test" in a:
+        test()
         sys.exit(0)
     print(main(a[1], a[2], "--shape-only" in a, a[a.index("--paint") + 1] if "--paint" in a else None))

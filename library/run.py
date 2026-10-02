@@ -1056,6 +1056,16 @@ if __name__ == "__main__":
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
             say("self-test failed - nothing run (the reason is on your phone)")
             sys.exit(1)
+        req = os.path.join(WORK, "hunyuan_test.request")
+        if os.path.exists(req):                          # Claude asked: does Hunyuan make a shape from its own demo?
+            os.replace(req, req + ".done")
+            import hunyuan
+            hy = hunyuan.home()
+            r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), "--test"],
+                               capture_output=True, text=True)
+            for line in ((r.stdout or "") + (r.stderr or "")[-1500:]).splitlines():
+                if line.startswith("[hunyuan]") or "Error" in line or "error" in line:
+                    say("[hunyuan test] " + line[:300])
         quiet = 0
         while quiet < 20:                               # 10 quiet minutes: leave, so the clock can start a fresh one
             try:
