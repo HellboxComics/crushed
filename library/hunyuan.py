@@ -17,7 +17,8 @@ import time
 # (library/profile.py did: it broke torch's "import cProfile", 2026-10-02) would be loaded instead of the real
 # one. Hunyuan needs nothing from this folder, so it is taken off the search list.
 _HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path[:] = [p for p in sys.path if os.path.abspath(p or ".") != _HERE]
+if __name__ == "__main__":                 # only when run as its own program - never when the asset maker imports it
+    sys.path[:] = [p for p in sys.path if os.path.abspath(p or ".") != _HERE]
 
 FOLDERS = ["~/.hellbox/hunyuan3d-mlx", "~/.hellbox/hunyuan21-mlx"]
 
