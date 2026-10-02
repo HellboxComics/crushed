@@ -36,10 +36,10 @@ def words_ok(title, words):
     """Most of the important search words must be in the title."""
     ws = [w for w in re.findall(r"[a-z0-9]+", words.lower()) if len(w) > 2 and w not in ("vintage", "the", "and")]
     t = title.lower()
-    return not ws or sum(w in t for w in ws) >= max(1, int(0.6 * len(ws)))
+    return not ws or (ws[0] in t and sum(w in t for w in ws) >= max(1, int(0.4 * len(ws))))
 
 
-def ebay(words, year=None, listings=8, log=print):
+def ebay(words, year=None, listings=12, log=print):
     """[(photo url, listing url, title)] from eBay search results, every photo of each good listing."""
     from playwright.sync_api import sync_playwright
     q = (words + (" vintage" if year and year < 2015 else "")).strip()
