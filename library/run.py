@@ -29,6 +29,7 @@ import shutil
 import subprocess
 import sys
 import time
+import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -72,6 +73,15 @@ def pipeline(cid, redo=False):
 
     card = cards.make(cid, log=say)
     product, size, year, route = card["product"], card["size"], card.get("year"), card["route"]
+    picks = jload(os.path.join(HB, "picks.json"), {})
+    cf = os.path.join(d, "candidates.json")
+    if picks.get(cid, {}).get("pick", "none") != "none" and os.path.exists(cf):
+        # you already picked: straight to building, no hunting or ranking again
+        status(cid, product=product, route=route, step="your pick is in - building")
+        cands = json.load(open(cf))["files"]
+        picked = your_pick(cid, product, cands, d)
+        use = V.model()
+        return build(cid, card, picked, [c for c in cands if c["file"] != picked["file"]], use, d, mdir, 0, len(cands))
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
         route = "round"                                          # it has a measured master shape (the AA)
     status(cid, product=product, route=route, step="1/7 hunting photos (Google Images, your photos)")
@@ -81,7 +91,7 @@ def pipeline(cid, redo=False):
         found = hunt.run(cid, product.split(",")[0], year, log=say, extra=card["searches"])
 
     status(cid, step="2/7 ranking the photos against the card")
-    T.free_room()
+    make_room("judging")
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in jload(vj, [])} if not redo else {}
     use, quick = V.model(), V.quick_model()
@@ -107,12 +117,18 @@ def pipeline(cid, redo=False):
     # cut out only the photos good enough to be shown to you (not all of them)
     good = sorted([f for f in found if f.get("vet") and f["vet"].get("match", 0) >= 7], key=lambda f: -rank(f))[:24]
     status(cid, step=f"4/7 cutting out the best {len(good)} photos")
-    T.free_room()
+    make_room("drawing")
+    fails = 0
     for f in good:
         try:
-            f["mask"] = T.photo_mask(f["file"])
+            f["mask"] = T.photo_mask(f["file"], timeout=180)
         except Exception as e:
             say(f"[cut out] {os.path.basename(f['file'])}: {e}")
+            fails += 1
+            if fails >= 2:
+                raise RuntimeError("the drawing room (ComfyUI) is not answering - restart it: "
+                                   "launchctl kickstart -k gui/$(id -u)/com.hellbox.ai.draw")
+    make_room("judging")
     shown = jload(os.path.join(d, "shown.json"), [])
     cands = [f for f in found if f.get("mask") and f.get("vet") and f["vet"].get("match", 0) >= 7
              and f["vet"].get("sharp", True) is not False and f["vet"].get("whole", True) is not False
@@ -131,7 +147,15 @@ def pipeline(cid, redo=False):
         return pipeline(cid, redo=False)
     if not picked:
         return
-    others = [c for c in cands if c["file"] != picked["file"]]
+    return build(cid, card, picked, [c for c in cands if c["file"] != picked["file"]], use, d, mdir, len(found), len(cands))
+
+
+def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
+    """5-7: build by the card's route, check it, send it to you for Keep / Redo."""
+    from PIL import Image
+    product, size, route = card["product"], card["size"], card["route"]
+    if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
+        route = "round"
 
     # 5. BUILD by the card's route
     if route == "round":
@@ -151,6 +175,7 @@ def pipeline(cid, redo=False):
         same = same_design(picked, others, use)
         status(cid, step=f"5/7 the AI draws the flat label from {1 + len(same)} photos ({along:.0f} x {around:.0f} mm)")
         reads = spec.get("label_reads") or card.get("label_reads") or "around"
+        make_room("drawing")
         lab_png, _ = skin.make(product, [picked] + same, along, around, os.path.join(d, "skin"),
                                reads="along" if reads == "along" else "around", judge=use, log=say)
         base, mr = metal.metal_maps(Image.open(lab_png).convert("RGB"))
@@ -168,6 +193,7 @@ def pipeline(cid, redo=False):
             D = min(D, 0.002)
         same = same_design(picked, others, use, want=5)
         status(cid, step="5/7 the AI draws every face flat at its measured size")
+        make_room("drawing")
         atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
                                    flat=route == "flat", judge=use, log=say)
         status(cid, step="5/7 Blender builds the exact box wearing its faces")
@@ -176,6 +202,8 @@ def pipeline(cid, redo=False):
     else:
         ref = reference(picked, d)
         status(cid, step="5/7 Hunyuan3D makes the shape and paint from your photo")
+        make_room("drawing")
+        make_room("judging")                                       # Hunyuan gets the memory to itself
         painted = hunyuan_paint(ref, os.path.join(mdir, "hunyuan"))
         status(cid, step="5/7 Blender: real size, every format")
         run_blender("resize.py", painted, str(max(size)), mdir, cid)
@@ -189,6 +217,7 @@ def pipeline(cid, redo=False):
     for k, a in enumerate((0, 90, 180, 270)):
         sheet.paste(Image.open(os.path.join(d, f"view_{a:03d}.png")).convert("RGB").resize((300, 400)), (k * 300, 0))
     sheet.save(os.path.join(d, "views.jpg"), quality=88)
+    make_room("judging")
     verdict = inspect(os.path.join(d, "views.jpg"), picked["file"], product, use)
 
     # 7. YOU: Keep or Redo on your phone
@@ -199,8 +228,24 @@ def pipeline(cid, redo=False):
     tex = next((p for p in (os.path.join(d, "label.png"), os.path.join(d, "skin", "atlas.png"),
                             os.path.join(d, "reference.png")) if os.path.exists(p)), None)
     status(cid, step="waiting for your Keep or Redo on your phone", ok=bool(verdict.get("pass")), verdict=verdict,
-           photos=len(found), good=len(cands), views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+           photos=n_found, good=n_good, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
            label=os.path.relpath(tex, WORK) if tex else None, ref=os.path.relpath(picked["file"], WORK), note="")
+
+
+def make_room(for_what):
+    """Your Mac's memory, one kind of work at a time: before drawing, the judging AIs are let go (Ollama's own
+    keep_alive 0); before judging, the drawing room lets go of its models (ComfyUI's own /free). Both load again
+    by themselves when next needed."""
+    import turnaround as T
+    import vet as V
+    if for_what == "judging":
+        T.free_room()
+        return
+    try:
+        for m in json.loads(urllib.request.urlopen(V.OLLAMA + "/api/ps", timeout=20).read()).get("models", []):
+            V._call("/api/generate", {"model": m["name"], "keep_alive": 0}, timeout=60)
+    except Exception as e:
+        say(f"(could not free the judging AIs: {e})")
 
 
 def run_blender(script, *args):

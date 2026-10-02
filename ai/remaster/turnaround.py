@@ -144,7 +144,7 @@ def _run_all(wf, timeout=900):
 CUTOUT = "birefnet.safetensors"          # BiRefNet (MIT), ComfyUI's own repackaging (Comfy-Org/BiRefNet)
 
 
-def photo_mask(png):
+def photo_mask(png, timeout=900):
     """The cut-out model (BiRefNet, in the drawing room) on one whole photo -> <photo>_mask.png, white = object.
     Kept once made."""
     import io
@@ -161,7 +161,7 @@ def photo_mask(png):
           "2": {"class_type": "RemoveBackground", "inputs": {"bg_removal_model": ["0", 0], "image": ["1", 0]}},
           "3": {"class_type": "MaskToImage", "inputs": {"mask": ["2", 0]}},
           "4": {"class_type": "SaveImage", "inputs": {"images": ["3", 0], "filename_prefix": "crushed_pmask"}}}
-    got = _run_all(wf)
+    got = _run_all(wf, timeout)
     Image.open(io.BytesIO(got["4"])).convert("L").resize(im.size).save(out)
     return out
 
