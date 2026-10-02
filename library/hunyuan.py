@@ -13,6 +13,12 @@ import os
 import sys
 import time
 
+# Run as a script, Python looks in this folder first, so a file here named like one of Python's own modules
+# (library/profile.py did: it broke torch's "import cProfile", 2026-10-02) would be loaded instead of the real
+# one. Hunyuan needs nothing from this folder, so it is taken off the search list.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path[:] = [p for p in sys.path if os.path.abspath(p or ".") != _HERE]
+
 FOLDERS = ["~/.hellbox/hunyuan3d-mlx", "~/.hellbox/hunyuan21-mlx"]
 
 
@@ -72,6 +78,22 @@ def main(photo, out, shape_only=False, paint=None):
     return obj[:-4] + ".glb"
 
 
+def check():
+    """The self-test: load both halves exactly the way a real build does (same script, same folder, same imports)."""
+    hy = home()
+    if not hy:
+        sys.exit("Hunyuan3D is not installed")
+    os.chdir(hy)
+    sys.path[:0] = [os.path.join(hy, "hy3dshape"), os.path.join(hy, "hy3dpaint"), hy]
+    import torch._dynamo  # noqa: F401  (what failed on 2026-10-02)
+    from hy3dshape.pipeline_mlx import ShapePipeline  # noqa: F401
+    from textureGenPipeline_mlx import Hunyuan3DPaintPipelineMLX  # noqa: F401
+    print("ok")
+
+
 if __name__ == "__main__":
     a = sys.argv
+    if "--check" in a:
+        check()
+        sys.exit(0)
     print(main(a[1], a[2], "--shape-only" in a, a[a.index("--paint") + 1] if "--paint" in a else None))

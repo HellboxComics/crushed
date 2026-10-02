@@ -114,11 +114,9 @@ def t_hunyuan():
     hy = hunyuan.home()
     if not hy:
         raise RuntimeError("Hunyuan3D is not installed")
-    r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), "-c",
-                        "import sys; sys.path[:0]=['hy3dshape','hy3dpaint','.']; "
-                        "import hy3dshape.pipeline_mlx, textureGenPipeline_mlx; print('ok')"],
-                       cwd=hy, capture_output=True, text=True, timeout=180)
-    if "ok" not in r.stdout:
+    r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), "--check"],
+                       cwd=HERE, capture_output=True, text=True, timeout=180)      # exactly how a real build runs it
+    if r.stdout.strip().splitlines()[-1:] != ["ok"]:
         raise RuntimeError((r.stderr or r.stdout)[-300:])
     return "loads"
 

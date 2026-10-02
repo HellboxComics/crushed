@@ -163,7 +163,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     # 5. BUILD by the card's route
     if route == "round":
         import metal
-        import profile
+        import outline
         import skin
         fam = jload(os.path.join(HERE, "families.json"), {}).get(cid, {})
         sp = os.path.join(HERE, "shapes", "specs", fam.get("shape", "") + ".json")
@@ -171,7 +171,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
             spec = json.load(open(sp))                                # a measured master (the AA battery)
         else:
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
-            spec = profile.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
+            spec = outline.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
             sp = os.path.join(d, "shape.json")
             json.dump(spec, open(sp, "w"), indent=1)
         along, around = skin.label_size(spec)
@@ -833,6 +833,10 @@ if __name__ == "__main__":
     except OSError:
         say("another asset run is already going - leaving it alone")
         sys.exit(0)
+    clash = sorted(f[:-3] for f in os.listdir(HERE) if f.endswith(".py") and f[:-3] in sys.stdlib_module_names)
+    if clash:                                           # a file named like Python's own module breaks other tools
+        say(f"STOP: library files named like Python's own modules: {clash} - rename them")
+        sys.exit(1)
     beat("starting")
     _beating()
     if a.loop:
