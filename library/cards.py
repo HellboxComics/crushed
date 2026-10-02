@@ -67,7 +67,8 @@ def construction(cid, card=None, model=None, log=print):
     sys.path.insert(0, HERE)
     import vet as V
     model = model or V.model()
-    body = {"model": model, "stream": False, "format": "json", "think": True, "options": {"temperature": 0.2},
+    body = {"model": model, "stream": False, "format": "json", "think": False,      # a list, not a puzzle: no long
+            "options": {"temperature": 0.2, "num_predict": 1200},                      # thinking (it took 4+ minutes)
             "messages": [{"role": "user", "content": BUILD.format(product=card["product"], size=card["size"],
                                                                   materials=MATERIALS, details=DETAILS)}]}
     try:
