@@ -60,6 +60,7 @@ def describe(name, display, years, notes, seed, redo=False):
         return open(out).read().strip()
     text = _ask().ask(WRITER, BRIEF.format(display=display, years=years, notes=notes or "-", seed=seed or "-"),
                       kind="write")
+    release()                       # hand its memory back before the drawing room loads a 20B image model
     text = " ".join(str(text or "").split())
     if len(text) < 80:
         raise RuntimeError(f"the writer gave back almost nothing for {name}")
@@ -67,8 +68,16 @@ def describe(name, display, years, notes, seed, redo=False):
     return text
 
 
-def _upload_none():
-    return None
+def release():
+    """Ollama's own way to unload a model now: ask for nothing with keep_alive 0."""
+    host = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
+    host = host if host.startswith("http") else "http://" + host + ":11434"
+    try:
+        body = json.dumps({"model": WRITER, "keep_alive": 0}).encode()
+        urllib.request.urlopen(urllib.request.Request(host + "/api/generate", data=body,
+                                                      headers={"content-type": "application/json"}), timeout=30)
+    except Exception:
+        pass
 
 
 def draw(description, out, seed=None, steps=30, timeout=1800):
