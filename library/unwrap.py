@@ -134,11 +134,11 @@ def _bands(base, most=4, tol=0.08):
     return cen[lab]
 
 
-def clean(lab, seen, phis, soft=(0.07, 0.17)):
+def clean(lab, seen, phis, soft=(0.07, 0.17), cover=None):
     """The production label: each printed band becomes one flat color (no shine, no shading, no grain), and only
     the print on it (letters, logos, lines) is kept from the photo, lifted off the band's own lighting. What no
     photo saw is the flat band color."""
-    v = np.abs(phis) <= np.abs(phis[seen]).max()
+    v = (cover > 1e-4) if cover is not None else (np.abs(phis) <= np.abs(phis[seen]).max())
     rowbase = np.zeros((lab.shape[0], 3))
     vis = lab[:, v]
     for i, row in enumerate(vis):
@@ -149,7 +149,7 @@ def clean(lab, seen, phis, soft=(0.07, 0.17)):
     flat = _bands(rowbase)                                           # per-row flat band color
     out = np.repeat(flat[:, None, :], lab.shape[1], 1)
     bands = np.unique(flat, axis=0)
-    pv = phis[v]
+    pv = phis[v] if cover is None else None
     for col in bands:
         rows = np.all(np.isclose(flat, col), 1)
         blk = lab[rows][:, v]                                        # this band, seen part
@@ -167,12 +167,14 @@ def clean(lab, seen, phis, soft=(0.07, 0.17)):
                           for j in range(3)], -1)
         if bright:                                                   # print = what differs from the band's shade
             cl = np.maximum(curve.mean(-1), 0.04)[None]                  # how lit the band is at this angle
-            has &= cl[0] >= 0.55 * cl.max()                              # only well-lit angles are trusted
+            if cover is None:
+                has &= cl[0] >= 0.55 * cl.max()                          # only well-lit angles are trusted
             dev = (blk - curve[None]) * (col.mean() / cl)[..., None]     # print, brought to the band's true light
             a_ = np.clip((np.abs(dev).max(-1) - 0.10) / 0.12, 0, 1)
             val = np.clip(col + dev, 0, 1)
         else:                                                        # dark band: oblique edges read as mush
-            has &= np.abs(pv) <= np.radians(66)
+            if cover is None:
+                has &= np.abs(pv) <= np.radians(66)
             dev = blk - curve[None]
             a_ = np.clip((np.abs(dev).max(-1) - soft[0]) / (soft[1] - soft[0]), 0, 1)
             val = np.clip(col + dev, 0, 1)
