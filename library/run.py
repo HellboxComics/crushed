@@ -563,6 +563,14 @@ if __name__ == "__main__":
     a = ap.parse_args()
     WAIT = a.wait
     if a.loop:
+        if not queue(a.queue or 3):                     # nothing to make right now: done in a second
+            sys.exit(0)
+        import selftest
+        last = jload(os.path.join(WORK, "selftest.json"), {})
+        fresh = last.get("ok") and time.time() - last.get("at", 0) < 6 * 3600
+        if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
+            say("self-test failed - nothing run (the reason is on your phone)")
+            sys.exit(1)
         quiet = 0
         while quiet < 360:
             todo = queue(a.queue or 3)
