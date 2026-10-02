@@ -526,6 +526,72 @@
 "themes": "ROAD TRIP; BASS BOOSTED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"alpine_cowbell_brass_1998": {
+"display": "Alpine-style brass cowbell, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.637,
+"notes": [
+"Alpine-style brass cowbell, circa 1998"
+],
+"product": "Alpine-style brass cowbell, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.13
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"alpine_hat_cord_green_white_1998": {
+"display": "Green-and-white braided hat cord, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Green-and-white braided hat cord, circa 1998"
+],
+"product": "Green-and-white braided hat cord, circa 1998",
+"role": "main",
+"size": [
+0.65,
+0.008,
+0.008
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"alpine_hat_feather_gray_1998": {
+"display": "Long gray-brown Alpine hat feather, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Long gray-brown Alpine hat feather, circa 1998"
+],
+"product": "Long gray-brown Alpine hat feather, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.01,
+0.24
+],
+"themes": "PROST",
+"weight": 1.0
+},
 "alpine_mrv_f407_amplifier_1999": {
 "display": "Alpine V12 MRV-F407 four-channel amplifier, circa",
 "eras": [
@@ -2012,6 +2078,28 @@
 "themes": "LEFTOVERS; SLEEPOVER; SICK DAY; regular cubes",
 "weight": 1.0
 },
+"baklava_diamond_piece_1998": {
+"display": "Diamond-cut baklava piece, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Diamond-cut baklava piece, circa 1998"
+],
+"product": "Diamond-cut baklava piece, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.03,
+0.06
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "bandai_capsule_machine_200yen_coin_mech_1998": {
 "display": "Gachapon 200-yen coin mechanism, circa",
 "eras": [
@@ -2164,6 +2252,28 @@
 0.05
 ],
 "themes": "GACHAPON",
+"weight": 1.0
+},
+"bangle_cardboard_box_1998": {
+"display": "Cylindrical cardboard bangle storage box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.095,
+"notes": [
+"Cylindrical cardboard bangle storage box, circa 1998"
+],
+"product": "Cylindrical cardboard bangle storage box, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.09
+],
+"themes": "EIDI",
 "weight": 1.0
 },
 "bar_matchbook_black_2001": {
@@ -2408,6 +2518,28 @@
 "themes": "PICK 'N' MIX",
 "weight": 1.0
 },
+"barro_copal_burner_1998": {
+"display": "Small barro clay copal incense burner, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.693,
+"notes": [
+"Small barro clay copal incense burner, circa 1998"
+],
+"product": "Small barro clay copal incense burner, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.1,
+0.15
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "baseball_acrylic_ball_display_cube_1995": {
 "display": "Clear acrylic single-baseball display cube, circa",
 "eras": [
@@ -2538,6 +2670,72 @@
 0.025
 ],
 "themes": "SOME ASSEMBLY REQUIRED",
+"weight": 1.0
+},
+"bavarian_felt_hat_green_1998": {
+"display": "Green Bavarian-style felt hat with feather, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.49,
+"notes": [
+"Green Bavarian-style felt hat with feather, circa 1998"
+],
+"product": "Green Bavarian-style felt hat with feather, circa 1998",
+"role": "main",
+"size": [
+0.25,
+0.2,
+0.14
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"bavarian_giant_pretzel_1998": {
+"display": "Giant Bavarian-style soft pretzel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.706,
+"notes": [
+"Giant Bavarian-style soft pretzel, circa 1998"
+],
+"product": "Giant Bavarian-style soft pretzel, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.05,
+0.24
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"bavarian_pretzel_broken_half_1998": {
+"display": "Broken giant pretzel half, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.315,
+"notes": [
+"Broken giant pretzel half, circa 1998"
+],
+"product": "Broken giant pretzel half, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.05,
+0.2
+],
+"themes": "PROST",
 "weight": 1.0
 },
 "bazooka_el8a_tube_subwoofer_1998": {
@@ -2870,6 +3068,28 @@
 "themes": "COASTERS",
 "weight": 1.0
 },
+"beeswax_advent_candle_red_1998": {
+"display": "Red Advent candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.072,
+"notes": [
+"Red Advent candle, circa 1998"
+],
+"product": "Red Advent candle, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.16
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "beige_rj11_phone_cord_25ft_1998": {
 "display": "Beige RJ11 telephone-line cord, 25 ft, circa",
 "eras": [
@@ -3110,6 +3330,28 @@
 0.012
 ],
 "themes": "STILL ALIVE",
+"weight": 1.0
+},
+"besan_ladoo_1998": {
+"display": "Besan ladoo sweet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Besan ladoo sweet, circa 1998"
+],
+"product": "Besan ladoo sweet, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.045,
+0.045
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "betty_crocker_dunkaroos_cinnamon_1995": {
@@ -3463,6 +3705,28 @@
 "themes": "SPAM GIFT SET",
 "weight": 1.0
 },
+"birch_switch_bundle_1998": {
+"display": "Bundled birch switches for Krampus costume prop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.739,
+"notes": [
+"Bundled birch switches for Krampus costume prop, circa 1998"
+],
+"product": "Bundled birch switches for Krampus costume prop, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.55
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "bitbox02_2019": {
 "display": "Shift Crypto BitBox02 hardware wallet",
 "eras": [
@@ -3678,6 +3942,50 @@
 0.15
 ],
 "themes": "LOW RES",
+"weight": 1.0
+},
+"black_wood_photo_frame_5x7_1998": {
+"display": "Black wood 5 x 7-inch family photo frame, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.141,
+"notes": [
+"Black wood 5 x 7-inch family photo frame, circa 1998"
+],
+"product": "Black wood 5 x 7-inch family photo frame, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.02,
+0.21
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"black_wool_boot_krampus_1998": {
+"display": "Black wool winter boot used for Krampus-night treats, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.235,
+"notes": [
+"Black wool winter boot used for Krampus-night treats, circa 1998"
+],
+"product": "Black wool winter boot used for Krampus-night treats, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.1,
+0.28
+],
+"themes": "KRAMPUSNACHT",
 "weight": 1.0
 },
 "blackberry_7290_2004": {
@@ -4208,6 +4516,28 @@
 "themes": "UNDER THE MATTRESS",
 "weight": 1.0
 },
+"boys_white_kurta_folded_1998": {
+"display": "New white cotton kurta, folded, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.319,
+"notes": [
+"New white cotton kurta, folded, circa 1998"
+],
+"product": "New white cotton kurta, folded, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.04,
+0.38
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "brachs_autumn_mix_candy_corn_1998": {
 "display": "Brach's Autumn Mix Candy Corn bag, circa",
 "eras": [
@@ -4668,6 +4998,28 @@
 0.25
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"burlap_krampus_sack_1998": {
+"display": "Rough burlap costume sack, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.28,
+"notes": [
+"Rough burlap costume sack, circa 1998"
+],
+"product": "Rough burlap costume sack, circa 1998",
+"role": "main",
+"size": [
+0.5,
+0.01,
+0.8
+],
+"themes": "KRAMPUSNACHT",
 "weight": 1.0
 },
 "burned_fireworks_cardboard_scraps_1998": {
@@ -5943,6 +6295,50 @@
 "themes": "GM",
 "weight": 1.0
 },
+"cempasuchil_marigold_blossom_1998": {
+"display": "Cempas\u00fachil marigold blossom, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.022,
+"notes": [
+"Cempas\u00fachil marigold blossom, circa 1998"
+],
+"product": "Cempas\u00fachil marigold blossom, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.05,
+0.08
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"cempasuchil_petals_loose_1998": {
+"display": "Loose cempas\u00fachil marigold petals, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose cempas\u00fachil marigold petals, circa 1998"
+],
+"product": "Loose cempas\u00fachil marigold petals, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.0005,
+0.015
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "ceramic_gravy_boat_white_1998": {
 "display": "White ceramic gravy boat, circa",
 "eras": [
@@ -6317,6 +6713,28 @@
 "themes": "HAND TURKEY",
 "weight": 1.0
 },
+"christmas_cookie_tin_round_1998": {
+"display": "Round Christmas biscuit tin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.71,
+"notes": [
+"Round Christmas biscuit tin, circa 1998"
+],
+"product": "Round Christmas biscuit tin, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.08,
+0.22
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "christmas_gift_bow_red_1998": {
 "display": "Red self-adhesive Christmas gift bow, circa",
 "eras": [
@@ -6623,6 +7041,50 @@
 0.03
 ],
 "themes": "DIYA; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"clay_jarrito_brown_glaze_1998": {
+"display": "Traditional glazed clay jarrito cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.305,
+"notes": [
+"Traditional glazed clay jarrito cup, circa 1998"
+],
+"product": "Traditional glazed clay jarrito cup, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.08,
+0.11
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"clay_salt_dish_white_1998": {
+"display": "Small clay dish of salt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.094,
+"notes": [
+"Small clay dish of salt, circa 1998"
+],
+"product": "Small clay dish of salt, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.03,
+0.09
+],
+"themes": "OFRENDA",
 "weight": 1.0
 },
 "claystonkz_acrylic_work_board_2026": {
@@ -7240,6 +7702,28 @@
 "themes": "HOME_JUNK_DRAWER_MISC; SCHOOL_JUNK; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"clear_water_glass_ofrenda_1998": {
+"display": "Clear tumbler of water for ofrenda, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.226,
+"notes": [
+"Clear tumbler of water for ofrenda, circa 1998"
+],
+"product": "Clear tumbler of water for ofrenda, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.11
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "clearblue_easy_pregnancy_test_1998": {
 "display": "Clearblue Easy home pregnancy test, circa",
 "eras": [
@@ -7787,6 +8271,28 @@
 0.006
 ],
 "themes": "CONSOLE WARS",
+"weight": 1.0
+},
+"copal_resin_chunk_1998": {
+"display": "Copal incense resin chunks, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Copal incense resin chunks, circa 1998"
+],
+"product": "Copal incense resin chunks, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.03
+],
+"themes": "OFRENDA",
 "weight": 1.0
 },
 "coppertone_spf15_8oz_1994": {
@@ -8531,6 +9037,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
+"date_cardboard_box_eid_1998": {
+"display": "Printed date gift box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.185,
+"notes": [
+"Printed date gift box, circa 1998"
+],
+"product": "Printed date gift box, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.05,
+0.16
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "dell_dimension_xps_d266_1997": {
 "display": "Dell Dimension XPS D266 desktop tower",
 "eras": [
@@ -8857,6 +9385,116 @@
 0.06
 ],
 "themes": "PURIKURA",
+"weight": 1.0
+},
+"diwali_greeting_card_1998": {
+"display": "Diwali greeting card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Diwali greeting card, circa 1998"
+],
+"product": "Diwali greeting card, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.0015,
+0.18
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"diwali_marigold_garland_1998": {
+"display": "Orange-and-yellow marigold garland, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.21,
+"notes": [
+"Orange-and-yellow marigold garland, circa 1998"
+],
+"product": "Orange-and-yellow marigold garland, circa 1998",
+"role": "main",
+"size": [
+1.2,
+0.05,
+0.05
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"diwali_string_lights_multicolor_1998": {
+"display": "Multicolor decorative festival light strand, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.84,
+"notes": [
+"Multicolor decorative festival light strand, circa 1998"
+],
+"product": "Multicolor decorative festival light strand, circa 1998",
+"role": "main",
+"size": [
+0.171,
+0.171,
+0.0684
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"diwali_sweet_box_red_gold_1998": {
+"display": "Red-and-gold Diwali assorted mithai gift box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.273,
+"notes": [
+"Red-and-gold Diwali assorted mithai gift box, circa 1998"
+],
+"product": "Red-and-gold Diwali assorted mithai gift box, circa 1998",
+"role": "main",
+"size": [
+0.26,
+0.05,
+0.2
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"diya_cotton_wick_spent_1998": {
+"display": "Spent cotton diya wick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Spent cotton diya wick, circa 1998"
+],
+"product": "Spent cotton diya wick, circa 1998",
+"role": "main",
+"size": [
+0.008,
+0.008,
+0.05
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "dmx_its_dark_and_hell_is_hot_cd_1998": {
@@ -9761,6 +10399,182 @@
 "themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"eid_assorted_sweet_box_1998": {
+"display": "Assorted Eid mithai/sweets box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.273,
+"notes": [
+"Assorted Eid mithai/sweets box, circa 1998"
+],
+"product": "Assorted Eid mithai/sweets box, circa 1998",
+"role": "main",
+"size": [
+0.26,
+0.05,
+0.2
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_balloon_crescent_green_1998": {
+"display": "Green crescent-and-star printed party balloon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.025,
+"notes": [
+"Green crescent-and-star printed party balloon, circa 1998"
+],
+"product": "Green crescent-and-star printed party balloon, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.002,
+0.3
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_eidi_money_envelope_green_gold_1998": {
+"display": "Green-and-gold Eidi money envelope, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Green-and-gold Eidi money envelope, circa 1998"
+],
+"product": "Green-and-gold Eidi money envelope, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.001,
+0.165
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_eidi_money_envelope_red_gold_1998": {
+"display": "Red-and-gold Eidi money envelope, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Red-and-gold Eidi money envelope, circa 1998"
+],
+"product": "Red-and-gold Eidi money envelope, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.001,
+0.165
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_greeting_card_green_gold_1998": {
+"display": "Green-and-gold Eid greeting card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Green-and-gold Eid greeting card, circa 1998"
+],
+"product": "Green-and-gold Eid greeting card, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.0015,
+0.18
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_metal_lantern_green_1998": {
+"display": "Small green-and-gold decorative Eid lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.54,
+"notes": [
+"Small green-and-gold decorative Eid lantern, circa 1998"
+],
+"product": "Small green-and-gold decorative Eid lantern, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.1,
+0.22
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_new_clothes_box_white_1998": {
+"display": "White clothing gift box for new Eid clothes, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.741,
+"notes": [
+"White clothing gift box for new Eid clothes, circa 1998"
+],
+"product": "White clothing gift box for new Eid clothes, circa 1998",
+"role": "main",
+"size": [
+0.36,
+0.07,
+0.28
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"eid_toy_cap_pistol_red_1998": {
+"display": "Red plastic toy cap pistol, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.079,
+"notes": [
+"Red plastic toy cap pistol, circa 1998"
+],
+"product": "Red plastic toy cap pistol, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.03,
+0.1
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "elfbar_bc5000_blue_razz_ice_2022": {
 "display": "ELFBAR BC5000 disposable vape, Blue Razz Ice, circa",
 "eras": [
@@ -9911,6 +10725,28 @@
 0.39
 ],
 "themes": "DIAL-UP; Y2K; LANDFILL DRIVE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"embroidered_scarf_eid_1998": {
+"display": "Embroidered festive scarf/dupatta, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.22,
+"notes": [
+"Embroidered festive scarf/dupatta, circa 1998"
+],
+"product": "Embroidered festive scarf/dupatta, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.01,
+0.9
+],
+"themes": "EIDI",
 "weight": 1.0
 },
 "eminem_marshall_mathers_lp_cd_2000": {
@@ -12768,6 +13604,28 @@
 "themes": "DIAL-UP; HOME_JUNK_DRAWER_MISC; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"german_advent_calendar_cardboard_1998": {
+"display": "Traditional paperboard Advent calendar, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.112,
+"notes": [
+"Traditional paperboard Advent calendar, circa 1998"
+],
+"product": "Traditional paperboard Advent calendar, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.01,
+0.38
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "germany_bar_scarf_black_red_gold_2006": {
 "display": "Germany black-red-gold football supporter scarf, circa",
 "eras": [
@@ -12944,6 +13802,28 @@
 "themes": "BE KIND REWIND; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"glass_prayer_candle_plain_white_1998": {
+"display": "Plain white glass devotional candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.267,
+"notes": [
+"Plain white glass devotional candle, circa 1998"
+],
+"product": "Plain white glass devotional candle, circa 1998",
+"role": "main",
+"size": [
+0.055,
+0.055,
+0.21
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "glico_pocky_strawberry_1999": {
 "display": "Glico Pocky Strawberry biscuit sticks, circa",
 "eras": [
@@ -13029,6 +13909,28 @@
 0.23
 ],
 "themes": "LOW RES",
+"weight": 1.0
+},
+"gold_gift_ribbon_diwali_1998": {
+"display": "Gold metallic Diwali gift ribbon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Gold metallic Diwali gift ribbon, circa 1998"
+],
+"product": "Gold metallic Diwali gift ribbon, circa 1998",
+"role": "main",
+"size": [
+0.8,
+0.002,
+0.02
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "goldeneye_007_n64_1997": {
@@ -13227,6 +14129,28 @@
 0.085
 ],
 "themes": "GREEN BEER",
+"weight": 1.0
+},
+"green_glass_bangle_set_1998": {
+"display": "Green glass bangle set, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Green glass bangle set, circa 1998"
+],
+"product": "Green glass bangle set, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.004,
+0.07
+],
+"themes": "EIDI",
 "weight": 1.0
 },
 "green_plastic_bead_necklace_2001": {
@@ -13535,6 +14459,50 @@
 0.28
 ],
 "themes": "CONSOLE WARS; SLEEPOVER; PROM NIGHT; BASS BOOSTED; regular cubes",
+"weight": 1.0
+},
+"gujiya_pastry_holi_1998": {
+"display": "Gujiya sweet pastry, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.021,
+"notes": [
+"Gujiya sweet pastry, circa 1998"
+],
+"product": "Gujiya sweet pastry, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.025,
+0.05
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"gulal_shop_paper_bag_1998": {
+"display": "Small paper festival-supply bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.564,
+"notes": [
+"Small paper festival-supply bag, circa 1998"
+],
+"product": "Small paper festival-supply bag, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.08,
+0.28
+],
+"themes": "GULAL",
 "weight": 1.0
 },
 "hallmark_address_book_1998": {
@@ -14107,6 +15075,380 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"hanukkah_candle_box_blue_white_1998": {
+"display": "Blue-and-white Hanukkah candle box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.024,
+"notes": [
+"Blue-and-white Hanukkah candle box, circa 1998"
+],
+"product": "Blue-and-white Hanukkah candle box, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.025,
+0.18
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_gelt_chocolate_coin_gold_1998": {
+"display": "Gold-foil chocolate gelt coin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Gold-foil chocolate gelt coin, circa 1998"
+],
+"product": "Gold-foil chocolate gelt coin, circa 1998",
+"role": "main",
+"size": [
+0.038,
+0.005,
+0.038
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_gelt_chocolate_coin_silver_1998": {
+"display": "Silver-foil chocolate gelt coin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Silver-foil chocolate gelt coin, circa 1998"
+],
+"product": "Silver-foil chocolate gelt coin, circa 1998",
+"role": "main",
+"size": [
+0.038,
+0.005,
+0.038
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_gelt_empty_foil_wrapper_1998": {
+"display": "Empty chocolate-gelt foil wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Empty chocolate-gelt foil wrapper, circa 1998"
+],
+"product": "Empty chocolate-gelt foil wrapper, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.0002,
+0.05
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_gelt_mesh_bag_blue_1998": {
+"display": "Blue mesh bag of chocolate gelt, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Blue mesh bag of chocolate gelt, circa 1998"
+],
+"product": "Blue mesh bag of chocolate gelt, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.03,
+0.15
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_gift_socks_blue_silver_stripe_1998": {
+"display": "Blue-and-silver striped gift socks, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.049,
+"notes": [
+"Blue-and-silver striped gift socks, circa 1998"
+],
+"product": "Blue-and-silver striped gift socks, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.35
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_gift_socks_dreidel_blue_1998": {
+"display": "Blue Hanukkah gift socks with dreidel pattern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.049,
+"notes": [
+"Blue Hanukkah gift socks with dreidel pattern, circa 1998"
+],
+"product": "Blue Hanukkah gift socks with dreidel pattern, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.35
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_mini_dreidel_gold_1998": {
+"display": "Mini gold-colored plastic dreidel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Mini gold-colored plastic dreidel, circa 1998"
+],
+"product": "Mini gold-colored plastic dreidel, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.03,
+0.045
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_plastic_dreidel_clear_blue_1998": {
+"display": "Translucent blue plastic dreidel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.025,
+"notes": [
+"Translucent blue plastic dreidel, circa 1998"
+],
+"product": "Translucent blue plastic dreidel, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.045,
+0.07
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_silver_gift_bow_1998": {
+"display": "Silver metallic gift bow, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.045,
+"notes": [
+"Silver metallic gift bow, circa 1998"
+],
+"product": "Silver metallic gift bow, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.04,
+0.09
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_sock_retail_card_1998": {
+"display": "Cardboard retail hanger from gift socks, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Cardboard retail hanger from gift socks, circa 1998"
+],
+"product": "Cardboard retail hanger from gift socks, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.001,
+0.14
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_spent_candle_stub_blue_1998": {
+"display": "Spent blue Hanukkah candle stub, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Spent blue Hanukkah candle stub, circa 1998"
+],
+"product": "Spent blue Hanukkah candle stub, circa 1998",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.04
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_taper_candle_blue_1998": {
+"display": "Blue Hanukkah taper candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Blue Hanukkah taper candle, circa 1998"
+],
+"product": "Blue Hanukkah taper candle, circa 1998",
+"role": "main",
+"size": [
+0.012,
+0.012,
+0.11
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_taper_candle_white_1998": {
+"display": "White Hanukkah taper candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"White Hanukkah taper candle, circa 1998"
+],
+"product": "White Hanukkah taper candle, circa 1998",
+"role": "main",
+"size": [
+0.012,
+0.012,
+0.11
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_wood_dreidel_blue_1998": {
+"display": "Painted wooden Hanukkah dreidel, Blue/White, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.03,
+"notes": [
+"Painted wooden Hanukkah dreidel, Blue/White, circa 1998"
+],
+"product": "Painted wooden Hanukkah dreidel, Blue/White, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.045,
+0.07
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_wrapping_paper_blue_silver_roll_1998": {
+"display": "Blue-and-silver Hanukkah wrapping paper roll, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.245,
+"notes": [
+"Blue-and-silver Hanukkah wrapping paper roll, circa 1998"
+],
+"product": "Blue-and-silver Hanukkah wrapping paper roll, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.7
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"hanukkah_wrapping_paper_scrap_1998": {
+"display": "Torn blue-and-silver wrapping-paper scraps, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Torn blue-and-silver wrapping-paper scraps, circa 1998"
+],
+"product": "Torn blue-and-silver wrapping-paper scraps, circa 1998",
+"role": "main",
+"size": [
+0.25,
+0.0003,
+0.35
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
 "hard_shell_suitcase_gray_1998": {
 "display": "Gray hard-shell travel suitcase, circa",
 "eras": [
@@ -14217,6 +15559,28 @@
 "themes": "DIAL-UP; Y2K; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"hazelnut_in_shell_krampus_1998": {
+"display": "Whole hazelnut in shell, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Whole hazelnut in shell, circa 1998"
+],
+"product": "Whole hazelnut in shell, circa 1998",
+"role": "main",
+"size": [
+0.022,
+0.022,
+0.025
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "helix_shatterproof_ruler_1998": {
 "display": "Helix Shatterproof 30 cm ruler, circa",
 "eras": [
@@ -14237,6 +15601,50 @@
 0.03
 ],
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"henna_cone_green_foil_1998": {
+"display": "Green foil henna/mehndi cone, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Green foil henna/mehndi cone, circa 1998"
+],
+"product": "Green foil henna/mehndi cone, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.03,
+0.18
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"henna_design_practice_card_1998": {
+"display": "Mehndi design practice card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Mehndi design practice card, circa 1998"
+],
+"product": "Mehndi design practice card, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "EIDI",
 "weight": 1.0
 },
 "hersheys_chocolate_milk_halfpint_1995": {
@@ -14459,6 +15867,116 @@
 "themes": "SLEEPOVER; DRESS CODE; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
+"holi_color_handprint_paper_1998": {
+"display": "Handprint-stamped Holi paper sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Handprint-stamped Holi paper sheet, circa 1998"
+],
+"product": "Handprint-stamped Holi paper sheet, circa 1998",
+"role": "main",
+"size": [
+0.21,
+0.0005,
+0.297
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_greeting_card_1998": {
+"display": "Holi greeting card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Holi greeting card, circa 1998"
+],
+"product": "Holi greeting card, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.0015,
+0.18
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_gulal_blue_powder_packet_1998": {
+"display": "Blue gulal color-powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.091,
+"notes": [
+"Blue gulal color-powder packet, circa 1998"
+],
+"product": "Blue gulal color-powder packet, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.03,
+0.18
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_gulal_green_powder_packet_1998": {
+"display": "Green gulal color-powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.091,
+"notes": [
+"Green gulal color-powder packet, circa 1998"
+],
+"product": "Green gulal color-powder packet, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.03,
+0.18
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_gulal_pink_powder_packet_1998": {
+"display": "Pink gulal color-powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.091,
+"notes": [
+"Pink gulal color-powder packet, circa 1998"
+],
+"product": "Pink gulal color-powder packet, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.03,
+0.18
+],
+"themes": "GULAL",
+"weight": 1.0
+},
 "holi_gulal_powder_packet_pink_1998": {
 "display": "Gulal colored powder packet, Pink, circa",
 "eras": [
@@ -14479,6 +15997,160 @@
 0.15
 ],
 "themes": "GULAL; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"holi_gulal_red_powder_packet_1998": {
+"display": "Red gulal color-powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.091,
+"notes": [
+"Red gulal color-powder packet, circa 1998"
+],
+"product": "Red gulal color-powder packet, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.03,
+0.18
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_pichkari_brass_style_1998": {
+"display": "Traditional brass-style pichkari water squirter, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.788,
+"notes": [
+"Traditional brass-style pichkari water squirter, circa 1998"
+],
+"product": "Traditional brass-style pichkari water squirter, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.45
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_pichkari_plastic_neon_1999": {
+"display": "Neon plastic pichkari water gun, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.336,
+"notes": [
+"Neon plastic pichkari water gun, circa 1999"
+],
+"product": "Neon plastic pichkari water gun, circa 1999",
+"role": "main",
+"size": [
+0.08,
+0.06,
+0.4
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_powder_scoop_plastic_1998": {
+"display": "Small plastic scoop for gulal powder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.047,
+"notes": [
+"Small plastic scoop for gulal powder, circa 1998"
+],
+"product": "Small plastic scoop for gulal powder, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.03,
+0.15
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_sweets_cardboard_box_1998": {
+"display": "Cardboard Holi sweets box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.272,
+"notes": [
+"Cardboard Holi sweets box, circa 1998"
+],
+"product": "Cardboard Holi sweets box, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.06,
+0.18
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_water_balloon_assorted_1998": {
+"display": "Assorted Holi water balloons, empty/spent, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Assorted Holi water balloons, empty/spent, circa 1998"
+],
+"product": "Assorted Holi water balloons, empty/spent, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.002,
+0.12
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"holi_water_balloon_red_1998": {
+"display": "Red water balloon, empty/spent, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Red water balloon, empty/spent, circa 1998"
+],
+"product": "Red water balloon, empty/spent, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.002,
+0.12
+],
+"themes": "GULAL",
 "weight": 1.0
 },
 "hollywood_video_membership_card_1999": {
@@ -15212,6 +16884,28 @@
 "themes": "SPAM GIFT SET",
 "weight": 1.0
 },
+"ibarra_mexican_chocolate_tablet_1998": {
+"display": "Ibarra Mexican chocolate tablet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Ibarra Mexican chocolate tablet, circa 1998"
+],
+"product": "Ibarra Mexican chocolate tablet, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.015,
+0.09
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "ibm_3_5_floppy_blue_1997": {
 "display": "IBM 3.5-inch 2HD 1.44 MB floppy disk, circa",
 "eras": [
@@ -15474,6 +17168,72 @@
 0.188
 ],
 "themes": "BE KIND REWIND; PROBED; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"indian_paper_lantern_kandil_1998": {
+"display": "Decorative Diwali paper kandil lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.049,
+"notes": [
+"Decorative Diwali paper kandil lantern, circa 1998"
+],
+"product": "Decorative Diwali paper kandil lantern, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.22,
+0.45
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"inert_spent_flowerpot_firework_shell_1998": {
+"display": "Spent \u201cflower pot\u201d fountain firework casing, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.108,
+"notes": [
+"Spent \u201cflower pot\u201d fountain firework casing, circa 1998"
+],
+"product": "Spent \u201cflower pot\u201d fountain firework casing, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.12
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"inert_spent_sparkler_box_diwali_1998": {
+"display": "Diwali sparkler retail box with spent sparkler wires, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.035,
+"notes": [
+"Diwali sparkler retail box with spent sparkler wires, circa 1998"
+],
+"product": "Diwali sparkler retail box with spent sparkler wires, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.02,
+0.28
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "iomega_zip100_disk_1995": {
@@ -16090,6 +17850,28 @@
 0.265
 ],
 "themes": "BASS BOOSTED; BLACKLIGHT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"kaju_katli_diamond_1998": {
+"display": "Kaju katli diamond-shaped sweet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Kaju katli diamond-shaped sweet, circa 1998"
+],
+"product": "Kaju katli diamond-shaped sweet, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.01,
+0.05
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "keebler_pizzarias_pizza_chips_1993": {
@@ -17234,6 +19016,138 @@
 "themes": "LEFTOVERS; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"krampus_bell_leather_strap_1998": {
+"display": "Wide leather bell harness strap, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.071,
+"notes": [
+"Wide leather bell harness strap, circa 1998"
+],
+"product": "Wide leather bell harness strap, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.01,
+0.85
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"krampus_chain_heavy_steel_1998": {
+"display": "Heavy steel costume chain, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.121,
+"notes": [
+"Heavy steel costume chain, circa 1998"
+],
+"product": "Heavy steel costume chain, circa 1998",
+"role": "main",
+"size": [
+1.2,
+0.012,
+0.012
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"krampus_gift_tag_1998": {
+"display": "Krampusnacht gift tags, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Krampusnacht gift tags, circa 1998"
+],
+"product": "Krampusnacht gift tags, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.0005,
+0.1
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"krampus_goat_horn_pair_1998": {
+"display": "Detachable Krampus costume horn pair, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.358,
+"notes": [
+"Detachable Krampus costume horn pair, circa 1998"
+],
+"product": "Detachable Krampus costume horn pair, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.32
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"krampus_horned_wood_mask_1998": {
+"display": "Hand-carved horned Krampus-style wooden mask, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 5.363,
+"notes": [
+"Hand-carved horned Krampus-style wooden mask, circa 1998"
+],
+"product": "Hand-carved horned Krampus-style wooden mask, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.24,
+0.38
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"krampusnacht_postcard_1998": {
+"display": "Krampusnacht illustrated postcard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Krampusnacht illustrated postcard, circa 1998"
+],
+"product": "Krampusnacht illustrated postcard, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.0005,
+0.148
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "krazy_glue_all_purpose_tube_1998": {
 "display": "Krazy Glue All Purpose tube, circa",
 "eras": [
@@ -17276,6 +19190,512 @@
 0.13
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"kwanzaa_banana_1998": {
+"display": "Yellow banana, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Yellow banana, circa 1998"
+],
+"product": "Yellow banana, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.2
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_black_center_candle_1998": {
+"display": "Black Kwanzaa taper candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Black Kwanzaa taper candle, circa 1998"
+],
+"product": "Black Kwanzaa taper candle, circa 1998",
+"role": "main",
+"size": [
+0.022,
+0.022,
+0.25
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_ear_of_corn_dried_1998": {
+"display": "Dried ear of corn with husk, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.06,
+"notes": [
+"Dried ear of corn with husk, circa 1998"
+],
+"product": "Dried ear of corn with husk, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.24
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_green_taper_candle_1998": {
+"display": "Green Kwanzaa taper candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Green Kwanzaa taper candle, circa 1998"
+],
+"product": "Green Kwanzaa taper candle, circa 1998",
+"role": "main",
+"size": [
+0.022,
+0.022,
+0.25
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_greeting_card_1998": {
+"display": "Kwanzaa greeting card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Kwanzaa greeting card, circa 1998"
+],
+"product": "Kwanzaa greeting card, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.0015,
+0.18
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_greeting_envelope_red_1998": {
+"display": "Red greeting-card envelope, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Red greeting-card envelope, circa 1998"
+],
+"product": "Red greeting-card envelope, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.001,
+0.19
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_handcarved_wood_figure_1998": {
+"display": "Hand-carved wooden family figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"Hand-carved wooden family figure, circa 1998"
+],
+"product": "Hand-carved wooden family figure, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.05,
+0.18
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_handmade_bead_bracelet_1998": {
+"display": "Handmade red-green-black bead bracelet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Handmade red-green-black bead bracelet, circa 1998"
+],
+"product": "Handmade red-green-black bead bracelet, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.008,
+0.07
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_handmade_gift_box_kraft_1998": {
+"display": "Handmade kraft-paper gift box, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.159,
+"notes": [
+"Handmade kraft-paper gift box, circa 1998"
+],
+"product": "Handmade kraft-paper gift box, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.06,
+0.18
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_handmade_gift_ribbon_1998": {
+"display": "Red-green-black woven gift ribbon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Red-green-black woven gift ribbon, circa 1998"
+],
+"product": "Red-green-black woven gift ribbon, circa 1998",
+"role": "main",
+"size": [
+0.75,
+0.002,
+0.025
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_kente_cloth_panel_1998": {
+"display": "Bright kente-style woven cloth panel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.085,
+"notes": [
+"Bright kente-style woven cloth panel, circa 1998"
+],
+"product": "Bright kente-style woven cloth panel, circa 1998",
+"role": "main",
+"size": [
+0.45,
+0.003,
+0.9
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_kinara_wood_black_1998": {
+"display": "Seven-cup wooden kinara, Black, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.225,
+"notes": [
+"Seven-cup wooden kinara, Black, circa 1998"
+],
+"product": "Seven-cup wooden kinara, Black, circa 1998",
+"role": "main",
+"size": [
+0.36,
+0.09,
+0.18
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_loose_corn_kernels_1998": {
+"display": "Loose dried corn kernels, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose dried corn kernels, circa 1998"
+],
+"product": "Loose dried corn kernels, circa 1998",
+"role": "main",
+"size": [
+0.008,
+0.006,
+0.007
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_mkeka_woven_straw_mat_1998": {
+"display": "Woven straw mkeka-style Kwanzaa table mat, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.265,
+"notes": [
+"Woven straw mkeka-style Kwanzaa table mat, circa 1998"
+],
+"product": "Woven straw mkeka-style Kwanzaa table mat, circa 1998",
+"role": "main",
+"size": [
+0.45,
+0.006,
+0.7
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_orange_1998": {
+"display": "Navel orange, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.108,
+"notes": [
+"Navel orange, circa 1998"
+],
+"product": "Navel orange, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.08
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_red_apple_1998": {
+"display": "Red apple, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.108,
+"notes": [
+"Red apple, circa 1998"
+],
+"product": "Red apple, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.08
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_red_taper_candle_1998": {
+"display": "Red Kwanzaa taper candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Red Kwanzaa taper candle, circa 1998"
+],
+"product": "Red Kwanzaa taper candle, circa 1998",
+"role": "main",
+"size": [
+0.022,
+0.022,
+0.25
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_small_woven_coaster_1998": {
+"display": "Handmade woven-fiber coaster, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Handmade woven-fiber coaster, circa 1998"
+],
+"product": "Handmade woven-fiber coaster, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.005,
+0.1
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_straw_gift_fill_1998": {
+"display": "Natural straw gift-box filler, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.262,
+"notes": [
+"Natural straw gift-box filler, circa 1998"
+],
+"product": "Natural straw gift-box filler, circa 1998",
+"role": "main",
+"size": [
+0.25,
+0.03,
+0.25
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_sweet_potato_pie_1998": {
+"display": "Sweet potato pie, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.555,
+"notes": [
+"Sweet potato pie, circa 1998"
+],
+"product": "Sweet potato pie, circa 1998",
+"role": "main",
+"size": [
+0.23,
+0.05,
+0.23
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_sweet_potato_pie_slice_1998": {
+"display": "Sweet potato pie slice, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.091,
+"notes": [
+"Sweet potato pie slice, circa 1998"
+],
+"product": "Sweet potato pie slice, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.04,
+0.12
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_unity_cup_black_wood_1998": {
+"display": "Black wooden unity cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.306,
+"notes": [
+"Black wooden unity cup, circa 1998"
+],
+"product": "Black wooden unity cup, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.09,
+0.18
+],
+"themes": "KWANZAA",
+"weight": 1.0
+},
+"kwanzaa_woven_fruit_basket_1998": {
+"display": "Woven natural-fiber fruit basket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.811,
+"notes": [
+"Woven natural-fiber fruit basket, circa 1998"
+],
+"product": "Woven natural-fiber fruit basket, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.22,
+0.14
+],
+"themes": "KWANZAA",
 "weight": 1.0
 },
 "kwikset_kw1_brass_key_blank_1998": {
@@ -17495,6 +19915,204 @@
 0.1
 ],
 "themes": "ROAD TRIP; GARAGE SALE; SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"lebkuchen_heart_iced_1998": {
+"display": "Iced Lebkuchen heart cookie, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Iced Lebkuchen heart cookie, circa 1998"
+],
+"product": "Iced Lebkuchen heart cookie, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.015,
+0.1
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"lebkuchen_round_chocolate_1998": {
+"display": "Round chocolate-covered Lebkuchen, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Round chocolate-covered Lebkuchen, circa 1998"
+],
+"product": "Round chocolate-covered Lebkuchen, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.018,
+0.07
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"lebkuchenherz_ich_liebe_dich_1998": {
+"display": "Oktoberfest gingerbread heart reading \u201cICH LIEBE DICH,\u201d circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.151,
+"notes": [
+"Oktoberfest gingerbread heart reading \u201cICH LIEBE DICH,\u201d circa 1998"
+],
+"product": "Oktoberfest gingerbread heart reading \u201cICH LIEBE DICH,\u201d circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.02,
+0.2
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"lebkuchenherz_prost_heart_1998": {
+"display": "Oktoberfest Lebkuchenherz gingerbread heart reading \u201cPROST,\u201d circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.151,
+"notes": [
+"Oktoberfest Lebkuchenherz gingerbread heart reading \u201cPROST,\u201d circa 1998"
+],
+"product": "Oktoberfest Lebkuchenherz gingerbread heart reading \u201cPROST,\u201d circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.02,
+0.2
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"lebkuchenherz_ribbon_red_white_1998": {
+"display": "Red-and-white ribbon from gingerbread heart, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Red-and-white ribbon from gingerbread heart, circa 1998"
+],
+"product": "Red-and-white ribbon from gingerbread heart, circa 1998",
+"role": "main",
+"size": [
+0.9,
+0.002,
+0.02
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"lederhosen_brass_buckle_1998": {
+"display": "Brass-colored lederhosen suspender buckle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Brass-colored lederhosen suspender buckle, circa 1998"
+],
+"product": "Brass-colored lederhosen suspender buckle, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.004,
+0.05
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"lederhosen_chest_bridge_embroidered_1998": {
+"display": "Detached embroidered lederhosen suspender chest bridge, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.009,
+"notes": [
+"Detached embroidered lederhosen suspender chest bridge, circa 1998"
+],
+"product": "Detached embroidered lederhosen suspender chest bridge, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.007,
+0.1
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"lederhosen_leather_button_loop_1998": {
+"display": "Lederhosen leather button loop, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Lederhosen leather button loop, circa 1998"
+],
+"product": "Lederhosen leather button loop, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.005,
+0.08
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"lederhosen_suspenders_brown_1998": {
+"display": "Brown leather lederhosen suspenders with embroidered bridge, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.189,
+"notes": [
+"Brown leather lederhosen suspenders with embroidered bridge, circa 1998"
+],
+"product": "Brown leather lederhosen suspenders with embroidered bridge, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.01,
+0.9
+],
+"themes": "PROST",
 "weight": 1.0
 },
 "ledger_nano_s_2016": {
@@ -18074,7 +20692,7 @@
 ],
 "family": "automotive_and_teen",
 "group": "era",
-"mass": 0.003,
+"mass": 0.002,
 "notes": [
 "Little Trees Royal Pine hanging air freshener, circa 1998"
 ],
@@ -18096,7 +20714,7 @@
 ],
 "family": "automotive_and_teen",
 "group": "era",
-"mass": 0.003,
+"mass": 0.002,
 "notes": [
 "Little Trees Vanillaroma hanging air freshener, circa 1998"
 ],
@@ -18329,6 +20947,28 @@
 "themes": "STILL ALIVE",
 "weight": 1.0
 },
+"loose_gulal_powder_mix_holi_1998": {
+"display": "Loose mixed gulal powder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.01,
+"notes": [
+"Loose mixed gulal powder, circa 1998"
+],
+"product": "Loose mixed gulal powder, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.005,
+0.1
+],
+"themes": "GULAL",
+"weight": 1.0
+},
 "loose_mouse_ball_gray_1998": {
 "display": "Rubber-coated mechanical mouse ball, circa",
 "eras": [
@@ -18350,6 +20990,28 @@
 ],
 "themes": "DIAL-UP",
 "weight": 0.12
+},
+"loose_rangoli_powder_mix_1998": {
+"display": "Loose mixed rangoli powder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Loose mixed rangoli powder, circa 1998"
+],
+"product": "Loose mixed rangoli powder, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.005,
+0.08
+],
+"themes": "DIYA",
+"weight": 1.0
 },
 "loose_round_brilliant_diamond_1ct_2020": {
 "display": "Loose round-brilliant one-carat diamond, circa",
@@ -18702,6 +21364,50 @@
 "themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"maamoul_date_cookie_1998": {
+"display": "Date-filled maamoul cookie, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.016,
+"notes": [
+"Date-filled maamoul cookie, circa 1998"
+],
+"product": "Date-filled maamoul cookie, circa 1998",
+"role": "main",
+"size": [
+0.055,
+0.025,
+0.055
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"maamoul_pistachio_cookie_1998": {
+"display": "Pistachio-filled maamoul cookie, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.016,
+"notes": [
+"Pistachio-filled maamoul cookie, circa 1998"
+],
+"product": "Pistachio-filled maamoul cookie, circa 1998",
+"role": "main",
+"size": [
+0.055,
+0.025,
+0.055
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "magazine_subscription_card_stack_1998": {
 "display": "Magazine subscription reply cards, circa",
 "eras": [
@@ -18834,6 +21540,28 @@
 "themes": "RED ENVELOPE",
 "weight": 1.0
 },
+"mandarin_orange_krampus_1998": {
+"display": "Mandarin orange, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Mandarin orange, circa 1998"
+],
+"product": "Mandarin orange, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.065
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "manila_private_envelope_1998": {
 "display": "Plain manila \u201cPRIVATE\u201d envelope, circa",
 "eras": [
@@ -18876,6 +21604,28 @@
 0.4
 ],
 "themes": "CARNAVAL; TIME CAPSULE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"marigold_garland_holi_1998": {
+"display": "Orange marigold garland, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.21,
+"notes": [
+"Orange marigold garland, circa 1998"
+],
+"product": "Orange marigold garland, circa 1998",
+"role": "main",
+"size": [
+1.2,
+0.05,
+0.05
+],
+"themes": "GULAL",
 "weight": 1.0
 },
 "mario_kart_64_n64_1997": {
@@ -19845,6 +22595,28 @@
 "themes": "SCHOOL_JUNK; TIME CAPSULE; SLEEPOVER; DRESS CODE; regular cubes",
 "weight": 1.0
 },
+"medjool_dates_eid_1998": {
+"display": "Medjool dates for Eid, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Medjool dates for Eid, circa 1998"
+],
+"product": "Medjool dates for Eid, circa 1998",
+"role": "main",
+"size": [
+0.025,
+0.02,
+0.045
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "memorex_2hd_floppy_1998": {
 "display": "Memorex 2HD 1.44 MB floppy disk, circa",
 "eras": [
@@ -20724,6 +23496,28 @@
 "themes": "KWANZAA; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"mithai_paper_cup_fluted_1998": {
+"display": "Fluted paper sweet cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Fluted paper sweet cup, circa 1998"
+],
+"product": "Fluted paper sweet cup, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.015,
+0.045
+],
+"themes": "DIYA",
+"weight": 1.0
+},
 "mms_plain_fun_size_1998": {
 "display": "M&M's Plain fun-size pouch, circa",
 "eras": [
@@ -21052,6 +23846,28 @@
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"motichoor_ladoo_1998": {
+"display": "Motichoor ladoo sweet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Motichoor ladoo sweet, circa 1998"
+],
+"product": "Motichoor ladoo sweet, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.045,
+0.045
+],
+"themes": "DIYA",
+"weight": 1.0
+},
 "motorola_advisor_ii_pager_1996": {
 "display": "Motorola Advisor II alphanumeric pager, circa",
 "eras": [
@@ -21314,6 +24130,50 @@
 0.087
 ],
 "themes": "SCREEN TIME; Y2K; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"motts_applesauce_jar_1998": {
+"display": "Mott's Applesauce glass jar, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.476,
+"notes": [
+"Mott's Applesauce glass jar, circa 1998"
+],
+"product": "Mott's Applesauce glass jar, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.09,
+0.14
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"motts_applesauce_lid_1998": {
+"display": "Mott's Applesauce metal jar lid, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.051,
+"notes": [
+"Mott's Applesauce metal jar lid, circa 1998"
+],
+"product": "Mott's Applesauce metal jar lid, circa 1998",
+"role": "main",
+"size": [
+0.085,
+0.01,
+0.085
+],
+"themes": "EIGHT NIGHTS",
 "weight": 1.0
 },
 "mountain_dew_12oz_can_1998": {
@@ -21908,6 +24768,28 @@
 0.18
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"nestle_abuelita_chocolate_tablet_1998": {
+"display": "Nestl\u00e9 Abuelita Mexican chocolate tablet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Nestl\u00e9 Abuelita Mexican chocolate tablet, circa 1998"
+],
+"product": "Nestl\u00e9 Abuelita Mexican chocolate tablet, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.015,
+0.09
+],
+"themes": "OFRENDA",
 "weight": 1.0
 },
 "nestle_wonder_ball_2000": {
@@ -23472,6 +26354,28 @@
 "themes": "Y2K",
 "weight": 1.0
 },
+"ofrenda_white_taper_candle_1998": {
+"display": "Tall white altar taper candle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.034,
+"notes": [
+"Tall white altar taper candle, circa 1998"
+],
+"product": "Tall white altar taper candle, circa 1998",
+"role": "main",
+"size": [
+0.022,
+0.022,
+0.25
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "ok_soda_12oz_can_1994": {
 "display": "Coca-Cola OK Soda 12 fl oz can",
 "eras": [
@@ -23492,6 +26396,160 @@
 0.122
 ],
 "themes": "LEFTOVERS; TIME CAPSULE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"oktoberfest_beer_mat_round_1998": {
+"display": "Round Oktoberfest beer mat, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Round Oktoberfest beer mat, circa 1998"
+],
+"product": "Round Oktoberfest beer mat, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.003,
+0.105
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"oktoberfest_beer_mat_square_1998": {
+"display": "Square Oktoberfest beer mat, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Square Oktoberfest beer mat, circa 1998"
+],
+"product": "Square Oktoberfest beer mat, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.003,
+0.105
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"oktoberfest_coaster_stack_1998": {
+"display": "Damp stack of used Oktoberfest beer mats, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.023,
+"notes": [
+"Damp stack of used Oktoberfest beer mats, circa 1998"
+],
+"product": "Damp stack of used Oktoberfest beer mats, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.02,
+0.105
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"oktoberfest_glass_masskrug_1l_1998": {
+"display": "One-liter dimpled glass Ma\u00dfkrug beer stein, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.235,
+"notes": [
+"One-liter dimpled glass Ma\u00dfkrug beer stein, circa 1998"
+],
+"product": "One-liter dimpled glass Ma\u00dfkrug beer stein, circa 1998",
+"role": "main",
+"size": [
+0.105,
+0.14,
+0.2
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"oktoberfest_hat_pin_1998": {
+"display": "Small Oktoberfest souvenir hat pin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Small Oktoberfest souvenir hat pin, circa 1998"
+],
+"product": "Small Oktoberfest souvenir hat pin, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.005,
+0.03
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"oktoberfest_masskrug_base_fragment_1998": {
+"display": "Thick glass stein base fragment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"Thick glass stein base fragment, circa 1998"
+],
+"product": "Thick glass stein base fragment, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.1
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"oktoberfest_masskrug_broken_handle_1998": {
+"display": "Broken glass Ma\u00dfkrug handle fragment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.121,
+"notes": [
+"Broken glass Ma\u00dfkrug handle fragment, circa 1998"
+],
+"product": "Broken glass Ma\u00dfkrug handle fragment, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.03,
+0.12
+],
+"themes": "PROST",
 "weight": 1.0
 },
 "oktoberfest_plastic_beer_stein_1998": {
@@ -23934,6 +26992,72 @@
 "themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"painted_alebrije_dog_1998": {
+"display": "Hand-painted alebrije dog carving, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.318,
+"notes": [
+"Hand-painted alebrije dog carving, circa 1998"
+],
+"product": "Hand-painted alebrije dog carving, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.07,
+0.12
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"painted_alebrije_lizard_1998": {
+"display": "Hand-painted alebrije lizard carving, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.162,
+"notes": [
+"Hand-painted alebrije lizard carving, circa 1998"
+],
+"product": "Hand-painted alebrije lizard carving, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.07,
+0.05
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"painted_diya_red_gold_1998": {
+"display": "Hand-painted decorative clay diya, Red/Gold, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.055,
+"notes": [
+"Hand-painted decorative clay diya, Red/Gold, circa 1998"
+],
+"product": "Hand-painted decorative clay diya, Red/Gold, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.06,
+0.03
+],
+"themes": "DIYA",
+"weight": 1.0
+},
 "palm_iii_1998": {
 "display": "Palm III connected organizer",
 "eras": [
@@ -24042,6 +27166,50 @@
 0.115
 ],
 "themes": "SCREEN TIME; GM; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"pan_de_muerto_round_1998": {
+"display": "Traditional round pan de muerto loaf, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.672,
+"notes": [
+"Traditional round pan de muerto loaf, circa 1998"
+],
+"product": "Traditional round pan de muerto loaf, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.08,
+0.2
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"pan_de_muerto_slice_1998": {
+"display": "Slice of pan de muerto, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.055,
+"notes": [
+"Slice of pan de muerto, circa 1998"
+],
+"product": "Slice of pan de muerto, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.03,
+0.11
+],
+"themes": "OFRENDA",
 "weight": 1.0
 },
 "panasonic_aa4_1998": {
@@ -24504,6 +27672,94 @@
 0.29
 ],
 "themes": "GOT GOT NEED",
+"weight": 1.0
+},
+"papel_cempasuchil_path_strip_1998": {
+"display": "Marigold-petal path on brown paper strip, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.025,
+"notes": [
+"Marigold-petal path on brown paper strip, circa 1998"
+],
+"product": "Marigold-petal path on brown paper strip, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.002,
+0.6
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"papel_picado_calavera_orange_1998": {
+"display": "Orange papel picado skull banner sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Orange papel picado skull banner sheet, circa 1998"
+],
+"product": "Orange papel picado skull banner sheet, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.0005,
+0.25
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"papel_picado_purple_1998": {
+"display": "Purple papel picado floral banner sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Purple papel picado floral banner sheet, circa 1998"
+],
+"product": "Purple papel picado floral banner sheet, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.0005,
+0.25
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
+"paper_cap_roll_spent_1998": {
+"display": "Spent paper roll caps for toy cap pistol, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Spent paper roll caps for toy cap pistol, circa 1998"
+],
+"product": "Spent paper roll caps for toy cap pistol, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.01,
+0.04
+],
+"themes": "EIDI",
 "weight": 1.0
 },
 "paper_cd_sleeve_1999": {
@@ -25320,6 +28576,28 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"pine_sprig_winter_1998": {
+"display": "Winter evergreen pine sprig, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Winter evergreen pine sprig, circa 1998"
+],
+"product": "Winter evergreen pine sprig, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.04,
+0.24
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "pine_tree_needle_clump_1998": {
 "display": "Fallen Christmas-tree pine needles and twig clump, circa",
 "eras": [
@@ -25538,6 +28816,28 @@
 0.05
 ],
 "themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"pista_barfi_square_1998": {
+"display": "Pistachio barfi square, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Pistachio barfi square, circa 1998"
+],
+"product": "Pistachio barfi square, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.04
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "pixel_hood_clan_framed_print_2026": {
@@ -26256,6 +29556,50 @@
 0.076
 ],
 "themes": "TIME CAPSULE; DIAL-UP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"potato_latke_1998": {
+"display": "Potato latke, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.031,
+"notes": [
+"Potato latke, circa 1998"
+],
+"product": "Potato latke, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.018,
+0.09
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"potato_latke_broken_half_1998": {
+"display": "Broken half potato latke, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.014,
+"notes": [
+"Broken half potato latke, circa 1998"
+],
+"product": "Broken half potato latke, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.018,
+0.045
+],
+"themes": "EIGHT NIGHTS",
 "weight": 1.0
 },
 "potted_monstera_black_pot_2020": {
@@ -27047,6 +30391,72 @@
 "themes": "ROAD TRIP; LOST AND FOUND; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"rangoli_powder_blue_packet_1998": {
+"display": "Blue rangoli color powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.042,
+"notes": [
+"Blue rangoli color powder packet, circa 1998"
+],
+"product": "Blue rangoli color powder packet, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"rangoli_powder_red_packet_1998": {
+"display": "Red rangoli color powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.042,
+"notes": [
+"Red rangoli color powder packet, circa 1998"
+],
+"product": "Red rangoli color powder packet, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"rangoli_powder_yellow_packet_1998": {
+"display": "Yellow rangoli color powder packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.042,
+"notes": [
+"Yellow rangoli color powder packet, circa 1998"
+],
+"product": "Yellow rangoli color powder packet, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "DIYA",
+"weight": 1.0
+},
 "rawlings_official_league_signed_baseball_1995": {
 "display": "Rawlings Official League baseball with blue-ink autograph, circa",
 "eras": [
@@ -27486,6 +30896,28 @@
 "themes": "ROAD TRIP; PROM NIGHT; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"red_gold_glass_bangle_set_1998": {
+"display": "Red-and-gold glass bangle set, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Red-and-gold glass bangle set, circa 1998"
+],
+"product": "Red-and-gold glass bangle set, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.004,
+0.07
+],
+"themes": "EIDI",
+"weight": 1.0
+},
 "red_lantern_gold_tassel_1998": {
 "display": "Detached red-and-gold lantern tassel, circa",
 "eras": [
@@ -27683,6 +31115,28 @@
 ],
 "themes": "CONSOLE WARS",
 "weight": 0.12
+},
+"red_wool_costume_ribbon_1998": {
+"display": "Red wool costume ribbon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Red wool costume ribbon, circa 1998"
+],
+"product": "Red wool costume ribbon, circa 1998",
+"role": "main",
+"size": [
+0.8,
+0.003,
+0.03
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
 },
 "red_wrapped_sesame_candy_1998": {
 "display": "Sesame brittle candy in red wrapper, circa",
@@ -28474,6 +31928,50 @@
 0.45
 ],
 "themes": "LIGHT THE FUSE",
+"weight": 1.0
+},
+"rose_incense_stick_bundle_1998": {
+"display": "Rose-scented incense-stick bundle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Rose-scented incense-stick bundle, circa 1998"
+],
+"product": "Rose-scented incense-stick bundle, circa 1998",
+"role": "main",
+"size": [
+0.003,
+0.003,
+0.22
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"rosewater_bottle_holi_1998": {
+"display": "Rosewater glass bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.189,
+"notes": [
+"Rosewater glass bottle, circa 1998"
+],
+"product": "Rosewater glass bottle, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.05,
+0.18
+],
+"themes": "GULAL",
 "weight": 1.0
 },
 "rowntrees_fruit_pastilles_tube_1997": {
@@ -29926,6 +33424,28 @@
 "themes": "UNDER THE MATTRESS",
 "weight": 1.0
 },
+"sepia_family_photo_print_1940s_reprint_1998": {
+"display": "Sepia family photograph reprint used on ofrenda, printed circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Sepia family photograph reprint used on ofrenda, printed circa 1998"
+],
+"product": "Sepia family photograph reprint used on ofrenda, printed circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0003,
+0.15
+],
+"themes": "OFRENDA",
+"weight": 1.0
+},
 "shamrock_bar_coaster_2001": {
 "display": "Green shamrock pulpboard bar coaster, circa",
 "eras": [
@@ -30078,6 +33598,50 @@
 0.137
 ],
 "themes": "COASTERS; MIXTAPE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sheer_khurma_bowl_steel_1998": {
+"display": "Stainless-steel bowl of sheer khurma, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.102,
+"notes": [
+"Stainless-steel bowl of sheer khurma, circa 1998"
+],
+"product": "Stainless-steel bowl of sheer khurma, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.07,
+0.15
+],
+"themes": "EIDI",
+"weight": 1.0
+},
+"sheer_khurma_serving_spoon_1998": {
+"display": "Stainless-steel dessert spoon, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.076,
+"notes": [
+"Stainless-steel dessert spoon, circa 1998"
+],
+"product": "Stainless-steel dessert spoon, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.015,
+0.18
+],
+"themes": "EIDI",
 "weight": 1.0
 },
 "shell_gas_receipt_2008": {
@@ -30581,6 +34145,28 @@
 0.3
 ],
 "themes": "LIGHT THE FUSE",
+"weight": 1.0
+},
+"small_brass_puja_bowl_1998": {
+"display": "Small hammered brass offering bowl, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.28,
+"notes": [
+"Small hammered brass offering bowl, circa 1998"
+],
+"product": "Small hammered brass offering bowl, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.04,
+0.1
+],
+"themes": "DIYA",
 "weight": 1.0
 },
 "smash_bros_melee_gamecube_2001": {
@@ -32562,6 +36148,28 @@
 "themes": "LIGHT THE FUSE",
 "weight": 1.0
 },
+"spent_sparkler_wire_diwali_1998": {
+"display": "Spent sparkler wire, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Spent sparkler wire, circa 1998"
+],
+"product": "Spent sparkler wire, circa 1998",
+"role": "main",
+"size": [
+0.002,
+0.002,
+0.28
+],
+"themes": "DIYA",
+"weight": 1.0
+},
 "spice_girls_spice_cassette_1996": {
 "display": "Spice Girls Spice prerecorded cassette",
 "eras": [
@@ -32891,6 +36499,28 @@
 "themes": "MINT CONDITION; GOT GOT NEED; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"steel_holi_snack_plate_1998": {
+"display": "Stainless-steel snack plate, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.806,
+"notes": [
+"Stainless-steel snack plate, circa 1998"
+],
+"product": "Stainless-steel snack plate, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.02,
+0.24
+],
+"themes": "GULAL",
+"weight": 1.0
+},
 "sticker_swap_checklist_notebook_1994": {
 "display": "Handwritten football sticker \u201cGOT / GOT / NEED\u201d checklist, circa",
 "eras": [
@@ -32954,6 +36584,50 @@
 0.19
 ],
 "themes": "GM",
+"weight": 1.0
+},
+"stollen_powdered_loaf_1998": {
+"display": "Powdered Christmas Stollen loaf, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.403,
+"notes": [
+"Powdered Christmas Stollen loaf, circa 1998"
+],
+"product": "Powdered Christmas Stollen loaf, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.1,
+0.08
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
+"straw_costume_bundle_1998": {
+"display": "Dry straw costume stuffing, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.21,
+"notes": [
+"Dry straw costume stuffing, circa 1998"
+],
+"product": "Dry straw costume stuffing, circa 1998",
+"role": "main",
+"size": [
+0.2,
+0.05,
+0.3
+],
+"themes": "KRAMPUSNACHT",
 "weight": 1.0
 },
 "street_fighter_ii_snes_1992": {
@@ -33108,6 +36782,50 @@
 0.04
 ],
 "themes": "GOT GOT NEED",
+"weight": 1.0
+},
+"sufganiyah_powdered_plain_1998": {
+"display": "Powdered sufganiyah, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Powdered sufganiyah, circa 1998"
+],
+"product": "Powdered sufganiyah, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.05,
+0.08
+],
+"themes": "EIGHT NIGHTS",
+"weight": 1.0
+},
+"sufganiyah_raspberry_1998": {
+"display": "Raspberry-filled sufganiyah jelly doughnut, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.067,
+"notes": [
+"Raspberry-filled sufganiyah jelly doughnut, circa 1998"
+],
+"product": "Raspberry-filled sufganiyah jelly doughnut, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.05,
+0.08
+],
+"themes": "EIGHT NIGHTS",
 "weight": 1.0
 },
 "sunkist_orange_12oz_can_1998": {
@@ -33394,6 +37112,50 @@
 ],
 "themes": "COLD STORAGE",
 "weight": 0.12
+},
+"sweet_bavarian_mustard_tube_1998": {
+"display": "Tube of Bavarian sweet mustard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.178,
+"notes": [
+"Tube of Bavarian sweet mustard, circa 1998"
+],
+"product": "Tube of Bavarian sweet mustard, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.03,
+0.17
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"sweet_mustard_squeeze_blob_1998": {
+"display": "Dried sweet-mustard residue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Dried sweet-mustard residue, circa 1998"
+],
+"product": "Dried sweet-mustard residue, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.003,
+0.06
+],
+"themes": "PROST",
+"weight": 1.0
 },
 "sweetarts_roll_1995": {
 "display": "Wonka SweeTarts roll, circa",
@@ -34207,6 +37969,50 @@
 0.186
 ],
 "themes": "SCREEN TIME; SCHOOL_JUNK; TIME CAPSULE; COLD STORAGE; regular cubes",
+"weight": 1.0
+},
+"thandai_glass_steel_1998": {
+"display": "Stainless-steel thandai tumbler, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.377,
+"notes": [
+"Stainless-steel thandai tumbler, circa 1998"
+],
+"product": "Stainless-steel thandai tumbler, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.11
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"thandai_masala_packet_1998": {
+"display": "Thandai masala spice packet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Thandai masala spice packet, circa 1998"
+],
+"product": "Thandai masala spice packet, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.015,
+0.15
+],
+"themes": "GULAL",
 "weight": 1.0
 },
 "thanksgiving_grocery_receipt_1998": {
@@ -35282,6 +39088,50 @@
 0.202
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"traditional_clay_diya_oil_lamp_1998": {
+"display": "Traditional unglazed clay diya oil lamp, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.055,
+"notes": [
+"Traditional unglazed clay diya oil lamp, circa 1998"
+],
+"product": "Traditional unglazed clay diya oil lamp, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.06,
+0.03
+],
+"themes": "DIYA",
+"weight": 1.0
+},
+"traditional_mexican_sugar_skull_named_1998": {
+"display": "Traditional Mexican alfe\u00f1ique sugar skull with piped icing name, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.302,
+"notes": [
+"Traditional Mexican alfe\u00f1ique sugar skull with piped icing name, circa 1998"
+],
+"product": "Traditional Mexican alfe\u00f1ique sugar skull with piped icing name, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.08,
+0.12
+],
+"themes": "OFRENDA",
 "weight": 1.0
 },
 "translucent_35mm_film_canister_1998": {
@@ -37020,6 +40870,28 @@
 "themes": "STOP THE PRESSES",
 "weight": 1.0
 },
+"walnut_in_shell_krampus_1998": {
+"display": "Whole walnut in shell, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.024,
+"notes": [
+"Whole walnut in shell, circa 1998"
+],
+"product": "Whole walnut in shell, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.035,
+0.045
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "warheads_extreme_sour_1995": {
 "display": "Warheads Extreme Sour hard candy bag, circa",
 "eras": [
@@ -37174,6 +41046,50 @@
 "themes": "LANDFILL DRIVE",
 "weight": 1.0
 },
+"weisswurst_cut_piece_1998": {
+"display": "Cut Weisswurst sausage piece, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.013,
+"notes": [
+"Cut Weisswurst sausage piece, circa 1998"
+],
+"product": "Cut Weisswurst sausage piece, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.05
+],
+"themes": "PROST",
+"weight": 1.0
+},
+"weisswurst_link_1998": {
+"display": "Bavarian Weisswurst sausage link, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.031,
+"notes": [
+"Bavarian Weisswurst sausage link, circa 1998"
+],
+"product": "Bavarian Weisswurst sausage link, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.12
+],
+"themes": "PROST",
+"weight": 1.0
+},
 "westcott_12inch_clear_ruler_1997": {
 "display": "Westcott 12-inch clear plastic ruler, circa",
 "eras": [
@@ -37260,6 +41176,50 @@
 0.45
 ],
 "themes": "SLOW MOTION",
+"weight": 1.0
+},
+"white_cotton_kurta_holi_1998": {
+"display": "White cotton kurta stained with Holi colors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.654,
+"notes": [
+"White cotton kurta stained with Holi colors, circa 1998"
+],
+"product": "White cotton kurta stained with Holi colors, circa 1998",
+"role": "main",
+"size": [
+0.55,
+0.02,
+0.85
+],
+"themes": "GULAL",
+"weight": 1.0
+},
+"white_cotton_pajama_trouser_holi_1998": {
+"display": "White cotton pajama trousers stained with Holi colors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.63,
+"notes": [
+"White cotton pajama trousers stained with Holi colors, circa 1998"
+],
+"product": "White cotton pajama trousers stained with Holi colors, circa 1998",
+"role": "main",
+"size": [
+0.45,
+0.02,
+1.0
+],
+"themes": "GULAL",
 "weight": 1.0
 },
 "white_pillowcase_candy_bag_1998": {
@@ -37591,6 +41551,28 @@
 "themes": "KWANZAA; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"wooden_nutcracker_soldier_red_1998": {
+"display": "Wooden nutcracker soldier, Red, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.504,
+"notes": [
+"Wooden nutcracker soldier, Red, circa 1998"
+],
+"product": "Wooden nutcracker soldier, Red, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.08,
+0.3
+],
+"themes": "KRAMPUSNACHT",
+"weight": 1.0
+},
 "woods_orange_extension_cord_25ft_1998": {
 "display": "Woods 25-foot orange outdoor extension cord, circa",
 "eras": [
@@ -37831,6 +41813,28 @@
 0.095
 ],
 "themes": "BULL TRAP",
+"weight": 1.0
+},
+"woven_palm_basket_bread_1998": {
+"display": "Small woven palm bread basket, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.484,
+"notes": [
+"Small woven palm bread basket, circa 1998"
+],
+"product": "Small woven palm bread basket, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.18,
+0.08
+],
+"themes": "OFRENDA",
 "weight": 1.0
 },
 "woven_pastel_easter_basket_1998": {

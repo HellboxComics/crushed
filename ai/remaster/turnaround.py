@@ -204,6 +204,61 @@ LABEL = ("A flat, straight-on scan of the complete printed wrap-around label of 
          "no object shape, no captions. The left and right edges continue into each other seamlessly. The object: ")
 
 
+EDIT_UNET = "qwen_image_edit_2511_bf16.safetensors"     # Qwen-Image-Edit-2511 (Apache 2.0), ComfyUI's own repackaging
+EDIT_LORA = "Qwen-Image-Edit-2511-Lightning-8steps-V1.0-bf16.safetensors"   # its official 8-step speed-up
+COMFY_MODELS = os.path.expanduser("~/.hellbox/drawing-room/ComfyUI/models")
+FROM_PHOTO = ("Picture 1 is a real photograph of a real product. Make a professional 3D modeling reference sheet of "
+              "EXACTLY this object, copied faithfully from the photograph: the same shape and proportions, the same "
+              "colors, materials and wear, the same logos, printed words and markings in the same places. ")
+
+
+def can_edit():
+    return os.path.exists(os.path.join(COMFY_MODELS, "diffusion_models", EDIT_UNET))
+
+
+def draw_from_photos(description, photos, out, width=None, height=None, prefix=None, seed=None, timeout=3600):
+    """The drawing made FROM real photos (Qwen-Image-Edit-2511, the photo-editing version of the drawing model):
+    the photos say what the product really looks like, the words only fill in the sides no photo shows. Follows
+    ComfyUI's own Qwen-Image-Edit-2511 template (reference method index_timestep_zero, CFGNorm, shift 3.1)."""
+    import io
+    from PIL import Image
+    seed = seed if seed is not None else random.randint(1, 2 ** 31)
+    fast = os.path.exists(os.path.join(LORA_DIR, EDIT_LORA))
+    wf = {
+        "1": {"class_type": "UNETLoader", "inputs": {"unet_name": EDIT_UNET, "weight_dtype": "default"}},
+        "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b.safetensors", "type": "qwen_image"}},
+        "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
+        "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["11", 0] if fast else ["1", 0], "shift": 3.1}},
+        "12": {"class_type": "CFGNorm", "inputs": {"model": ["4", 0], "strength": 1.0}},
+        "7": {"class_type": "EmptySD3LatentImage", "inputs": {"width": width or W, "height": height or H, "batch_size": 1}},
+        "9": {"class_type": "VAEDecode", "inputs": {"samples": ["8", 0], "vae": ["3", 0]}},
+        "10": {"class_type": "SaveImage", "inputs": {"images": ["9", 0], "filename_prefix": "crushed_photo_turn"}},
+    }
+    if fast:
+        wf["11"] = {"class_type": "LoraLoaderModelOnly", "inputs": {"model": ["1", 0], "lora_name": EDIT_LORA,
+                                                                   "strength_model": 1.0}}
+    imgs = {}
+    for i, p in enumerate(photos[:3]):
+        im = Image.open(p).convert("RGB")
+        b = io.BytesIO()
+        im.save(b, "PNG")
+        name = _upload(b.getvalue(), f"crushed_ref_{uuid.uuid4().hex[:8]}_{i}.png")
+        wf[str(20 + i)] = {"class_type": "LoadImage", "inputs": {"image": name}}
+        imgs[f"image{i + 1}"] = [str(20 + i), 0]
+    text = (prefix or (FROM_PHOTO + LAYOUT)) + for_drawing(description)
+    wf["5"] = {"class_type": "TextEncodeQwenImageEditPlus", "inputs": {"clip": ["2", 0], "prompt": text, "vae": ["3", 0], **imgs}}
+    wf["6"] = {"class_type": "TextEncodeQwenImageEditPlus", "inputs": {"clip": ["2", 0], "prompt": "", "vae": ["3", 0], **imgs}}
+    wf["15"] = {"class_type": "FluxKontextMultiReferenceLatentMethod",
+                "inputs": {"conditioning": ["5", 0], "reference_latents_method": "index_timestep_zero"}}
+    wf["16"] = {"class_type": "FluxKontextMultiReferenceLatentMethod",
+                "inputs": {"conditioning": ["6", 0], "reference_latents_method": "index_timestep_zero"}}
+    wf["8"] = {"class_type": "KSampler", "inputs": {"model": ["12", 0], "positive": ["15", 0], "negative": ["16", 0],
+                                                    "latent_image": ["7", 0], "seed": seed, "steps": 8 if fast else 40,
+                                                    "cfg": 1.0 if fast else 3.0, "sampler_name": "euler",
+                                                    "scheduler": "simple", "denoise": 1.0}}
+    return _run(wf, out, timeout)
+
+
 def label_size(circumference, height):
     """A drawing size with the label's real proportions (about 1.6 megapixels, multiples of 16)."""
     a = max(0.4, min(3.0, circumference / max(height, 1e-6)))
@@ -213,10 +268,14 @@ def label_size(circumference, height):
     return w, h
 
 
-def draw_label(description, out, circumference, height):
+def draw_label(description, out, circumference, height, photos=None):
     """The whole printed wrap of a round object (a can, a battery) as one flat picture: painted on as one piece,
-    it has no seams and no logo twice, which four separate views of a cylinder can't promise."""
+    it has no seams and no logo twice, which four separate views of a cylinder can't promise. From the real photos
+    when there are any."""
     w, h = label_size(circumference, height)
+    if photos and can_edit():
+        return draw_from_photos(description, photos, out, width=w, height=h,
+                                prefix="Picture 1 is a real photograph of a real product. " + LABEL)
     return draw(description, out, width=w, height=h, prefix=LABEL)
 
 

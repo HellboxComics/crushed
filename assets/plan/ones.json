@@ -1200,6 +1200,117 @@
 "no_wires": true,
 "theme": "free-trial discs, beige peripherals and the modem scream that occupied the whole phone line"
 },
+"DIYA": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"ghee, cardamom, marigold, wax, clay, rosewater and firework smoke",
+"the entryway floor the morning after Diwali",
+"traditional_clay_diya_oil_lamp_1998"
+],
+"lore": "Every lamp had burned low; the sweet box was mostly paper cups; the rangoli had migrated into every crack in the floor.",
+"mix": [
+[
+"traditional_clay_diya_oil_lamp_1998",
+10
+],
+[
+"painted_diya_red_gold_1998",
+6
+],
+[
+"diya_cotton_wick_spent_1998",
+8
+],
+[
+"rangoli_powder_red_packet_1998",
+3
+],
+[
+"rangoli_powder_yellow_packet_1998",
+3
+],
+[
+"rangoli_powder_blue_packet_1998",
+2
+],
+[
+"loose_rangoli_powder_mix_1998",
+6
+],
+[
+"motichoor_ladoo_1998",
+6
+],
+[
+"besan_ladoo_1998",
+4
+],
+[
+"kaju_katli_diamond_1998",
+8
+],
+[
+"pista_barfi_square_1998",
+4
+],
+[
+"diwali_sweet_box_red_gold_1998",
+2
+],
+[
+"mithai_paper_cup_fluted_1998",
+8
+],
+[
+"diwali_marigold_garland_1998",
+2
+],
+[
+"indian_paper_lantern_kandil_1998",
+2
+],
+[
+"diwali_string_lights_multicolor_1998",
+2
+],
+[
+"inert_spent_sparkler_box_diwali_1998",
+2
+],
+[
+"spent_sparkler_wire_diwali_1998",
+8
+],
+[
+"inert_spent_flowerpot_firework_shell_1998",
+3
+],
+[
+"diwali_greeting_card_1998",
+4
+],
+[
+"gold_gift_ribbon_diwali_1998",
+4
+],
+[
+"rose_incense_stick_bundle_1998",
+6
+],
+[
+"small_brass_puja_bowl_1998",
+1
+]
+],
+"no_wires": true,
+"theme": "clay lamps, rangoli powder and sweet-box wreckage after Diwali night"
+},
 "DOUBLE A": {
 "era": [
 0,
@@ -1417,6 +1528,228 @@
 ],
 "no_wires": true,
 "theme": "plastic eggs, Easter candy and one ruined plush animal nobody found until July"
+},
+"EIDI": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cardamom milk, dates, rosewater, pastry, perfume, cardboard and new fabric",
+"the living room after Eid prayers and the first round of visiting relatives",
+"eid_eidi_money_envelope_green_gold_1998"
+],
+"lore": "The money disappeared first; the sweet box emptied second; the bangles, envelopes and clothing box stayed on the sofa all day.",
+"mix": [
+[
+"eid_eidi_money_envelope_green_gold_1998",
+10
+],
+[
+"eid_eidi_money_envelope_red_gold_1998",
+6
+],
+[
+"medjool_dates_eid_1998",
+8
+],
+[
+"date_cardboard_box_eid_1998",
+1
+],
+[
+"maamoul_date_cookie_1998",
+6
+],
+[
+"maamoul_pistachio_cookie_1998",
+4
+],
+[
+"sheer_khurma_bowl_steel_1998",
+2
+],
+[
+"sheer_khurma_serving_spoon_1998",
+3
+],
+[
+"henna_cone_green_foil_1998",
+4
+],
+[
+"henna_design_practice_card_1998",
+3
+],
+[
+"green_glass_bangle_set_1998",
+8
+],
+[
+"red_gold_glass_bangle_set_1998",
+8
+],
+[
+"bangle_cardboard_box_1998",
+1
+],
+[
+"eid_new_clothes_box_white_1998",
+2
+],
+[
+"boys_white_kurta_folded_1998",
+2
+],
+[
+"embroidered_scarf_eid_1998",
+2
+],
+[
+"eid_assorted_sweet_box_1998",
+2
+],
+[
+"baklava_diamond_piece_1998",
+4
+],
+[
+"eid_toy_cap_pistol_red_1998",
+1
+],
+[
+"paper_cap_roll_spent_1998",
+3
+],
+[
+"eid_metal_lantern_green_1998",
+2
+],
+[
+"eid_balloon_crescent_green_1998",
+4
+],
+[
+"eid_greeting_card_green_gold_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "money envelopes, dates, sweets, bangles and new-clothes packaging after Eid morning"
+},
+"EIGHT NIGHTS": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"frying oil, chocolate foil, powdered sugar, applesauce, wax and new cotton",
+"the dining-room floor after the last round of gifts was opened",
+"hanukkah_wood_dreidel_blue_1998"
+],
+"lore": "Eight nights later there were more chocolate wrappers than coins, candle boxes were empty, and one sock had somehow become a gift.",
+"mix": [
+[
+"hanukkah_wood_dreidel_blue_1998",
+4
+],
+[
+"hanukkah_plastic_dreidel_clear_blue_1998",
+4
+],
+[
+"hanukkah_mini_dreidel_gold_1998",
+4
+],
+[
+"hanukkah_gelt_chocolate_coin_gold_1998",
+12
+],
+[
+"hanukkah_gelt_chocolate_coin_silver_1998",
+8
+],
+[
+"hanukkah_gelt_mesh_bag_blue_1998",
+3
+],
+[
+"hanukkah_gelt_empty_foil_wrapper_1998",
+8
+],
+[
+"potato_latke_1998",
+6
+],
+[
+"potato_latke_broken_half_1998",
+4
+],
+[
+"sufganiyah_raspberry_1998",
+4
+],
+[
+"sufganiyah_powdered_plain_1998",
+3
+],
+[
+"hanukkah_candle_box_blue_white_1998",
+3
+],
+[
+"hanukkah_taper_candle_blue_1998",
+7
+],
+[
+"hanukkah_taper_candle_white_1998",
+6
+],
+[
+"hanukkah_spent_candle_stub_blue_1998",
+6
+],
+[
+"hanukkah_wrapping_paper_blue_silver_roll_1998",
+2
+],
+[
+"hanukkah_wrapping_paper_scrap_1998",
+8
+],
+[
+"hanukkah_silver_gift_bow_1998",
+4
+],
+[
+"motts_applesauce_jar_1998",
+2
+],
+[
+"motts_applesauce_lid_1998",
+2
+],
+[
+"hanukkah_gift_socks_dreidel_blue_1998",
+3
+],
+[
+"hanukkah_gift_socks_blue_silver_stripe_1998",
+2
+],
+[
+"hanukkah_sock_retail_card_1998",
+2
+]
+],
+"no_wires": true,
+"theme": "dreidels, gelt, fried food and blue-silver gift wrap after eight nights"
 },
 "GACHAPON": {
 "era": [
@@ -2057,6 +2390,113 @@
 "no_wires": true,
 "theme": "one-day-Irish bar junk, green plastic and everything that stained the counter"
 },
+"GULAL": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"dry gulal, rosewater, thandai spices, fried pastry, wet cotton and sun-warmed plastic",
+"the courtyard drain after Holi when the water finally stopped running purple",
+"holi_gulal_red_powder_packet_1998"
+],
+"lore": "By noon the white kurta was pink, green and blue, every balloon was gone, and the powder had reached places nobody remembered throwing it.",
+"mix": [
+[
+"holi_gulal_red_powder_packet_1998",
+4
+],
+[
+"holi_gulal_pink_powder_packet_1998",
+4
+],
+[
+"holi_gulal_green_powder_packet_1998",
+3
+],
+[
+"holi_gulal_blue_powder_packet_1998",
+3
+],
+[
+"loose_gulal_powder_mix_holi_1998",
+8
+],
+[
+"holi_pichkari_brass_style_1998",
+1
+],
+[
+"holi_pichkari_plastic_neon_1999",
+2
+],
+[
+"holi_water_balloon_red_1998",
+6
+],
+[
+"holi_water_balloon_assorted_1998",
+8
+],
+[
+"gujiya_pastry_holi_1998",
+6
+],
+[
+"thandai_glass_steel_1998",
+2
+],
+[
+"thandai_masala_packet_1998",
+2
+],
+[
+"rosewater_bottle_holi_1998",
+1
+],
+[
+"white_cotton_kurta_holi_1998",
+2
+],
+[
+"white_cotton_pajama_trouser_holi_1998",
+2
+],
+[
+"holi_color_handprint_paper_1998",
+4
+],
+[
+"marigold_garland_holi_1998",
+2
+],
+[
+"steel_holi_snack_plate_1998",
+2
+],
+[
+"holi_sweets_cardboard_box_1998",
+2
+],
+[
+"gulal_shop_paper_bag_1998",
+3
+],
+[
+"holi_greeting_card_1998",
+3
+],
+[
+"holi_powder_scoop_plastic_1998",
+2
+]
+],
+"no_wires": true,
+"theme": "Holi powder packets, water guns, balloons and the white clothes that did not stay white"
+},
 "HAND TURKEY": {
 "era": [
 0,
@@ -2262,6 +2702,228 @@
 ],
 "no_wires": true,
 "theme": "fuzzy talking gremlins, loose battery doors and the bedside electronics that refused to stay quiet"
+},
+"KRAMPUSNACHT": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cold leather, beeswax, pine, gingerbread, orange peel, wool and fireplace smoke",
+"beside the front door after Krampus night, under a wool coat that still had straw stuck to it",
+"krampus_horned_wood_mask_1998"
+],
+"lore": "The mask came off, the bells stopped, and the boot by the door still had one orange and six nuts in it.",
+"mix": [
+[
+"krampus_horned_wood_mask_1998",
+1
+],
+[
+"krampus_goat_horn_pair_1998",
+2
+],
+[
+"birch_switch_bundle_1998",
+2
+],
+[
+"krampus_chain_heavy_steel_1998",
+2
+],
+[
+"alpine_cowbell_brass_1998",
+3
+],
+[
+"krampus_bell_leather_strap_1998",
+1
+],
+[
+"german_advent_calendar_cardboard_1998",
+1
+],
+[
+"lebkuchen_heart_iced_1998",
+5
+],
+[
+"lebkuchen_round_chocolate_1998",
+4
+],
+[
+"stollen_powdered_loaf_1998",
+2
+],
+[
+"black_wool_boot_krampus_1998",
+2
+],
+[
+"mandarin_orange_krampus_1998",
+4
+],
+[
+"walnut_in_shell_krampus_1998",
+6
+],
+[
+"hazelnut_in_shell_krampus_1998",
+6
+],
+[
+"wooden_nutcracker_soldier_red_1998",
+1
+],
+[
+"straw_costume_bundle_1998",
+4
+],
+[
+"red_wool_costume_ribbon_1998",
+3
+],
+[
+"krampusnacht_postcard_1998",
+2
+],
+[
+"burlap_krampus_sack_1998",
+1
+],
+[
+"beeswax_advent_candle_red_1998",
+3
+],
+[
+"pine_sprig_winter_1998",
+3
+],
+[
+"christmas_cookie_tin_round_1998",
+1
+],
+[
+"krampus_gift_tag_1998",
+3
+]
+],
+"no_wires": true,
+"theme": "birch switches, horned masks, bells and Advent food after Krampus night"
+},
+"KWANZAA": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"beeswax, corn husk, sweet potato, woven straw, citrus peel and warm fabric",
+"the family table after the last candle was extinguished",
+"kwanzaa_mkeka_woven_straw_mat_1998"
+],
+"lore": "Seven candles burned down at different speeds; the handmade gifts and fruit stayed on the mat after everybody left the table.",
+"mix": [
+[
+"kwanzaa_mkeka_woven_straw_mat_1998",
+1
+],
+[
+"kwanzaa_kinara_wood_black_1998",
+1
+],
+[
+"kwanzaa_black_center_candle_1998",
+1
+],
+[
+"kwanzaa_red_taper_candle_1998",
+3
+],
+[
+"kwanzaa_green_taper_candle_1998",
+3
+],
+[
+"kwanzaa_ear_of_corn_dried_1998",
+4
+],
+[
+"kwanzaa_loose_corn_kernels_1998",
+8
+],
+[
+"kwanzaa_woven_fruit_basket_1998",
+1
+],
+[
+"kwanzaa_red_apple_1998",
+4
+],
+[
+"kwanzaa_orange_1998",
+4
+],
+[
+"kwanzaa_banana_1998",
+4
+],
+[
+"kwanzaa_kente_cloth_panel_1998",
+2
+],
+[
+"kwanzaa_unity_cup_black_wood_1998",
+1
+],
+[
+"kwanzaa_handcarved_wood_figure_1998",
+2
+],
+[
+"kwanzaa_handmade_bead_bracelet_1998",
+4
+],
+[
+"kwanzaa_small_woven_coaster_1998",
+4
+],
+[
+"kwanzaa_sweet_potato_pie_1998",
+1
+],
+[
+"kwanzaa_sweet_potato_pie_slice_1998",
+4
+],
+[
+"kwanzaa_handmade_gift_box_kraft_1998",
+3
+],
+[
+"kwanzaa_handmade_gift_ribbon_1998",
+4
+],
+[
+"kwanzaa_greeting_card_1998",
+4
+],
+[
+"kwanzaa_greeting_envelope_red_1998",
+4
+],
+[
+"kwanzaa_straw_gift_fill_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "mkeka, kinara, corn, fruit and handmade gifts gathered around one table"
 },
 "LANDFILL DRIVE": {
 "era": [
@@ -3039,6 +3701,113 @@
 "no_wires": true,
 "theme": "hand-recorded cassettes, Walkman junk and handwritten track lists"
 },
+"OFRENDA": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"cempas\u00fachil, candle wax, copal smoke, sweet bread, chocolate and cool clay",
+"the family altar on November 3 after the photographs had been wrapped back in newspaper",
+"traditional_mexican_sugar_skull_named_1998"
+],
+"lore": "The flowers dried first; the candles leaned next; the sugar skull still had somebody's name across the forehead.",
+"mix": [
+[
+"traditional_mexican_sugar_skull_named_1998",
+3
+],
+[
+"cempasuchil_marigold_blossom_1998",
+8
+],
+[
+"cempasuchil_petals_loose_1998",
+12
+],
+[
+"papel_picado_calavera_orange_1998",
+4
+],
+[
+"papel_picado_purple_1998",
+4
+],
+[
+"pan_de_muerto_round_1998",
+2
+],
+[
+"pan_de_muerto_slice_1998",
+4
+],
+[
+"ofrenda_white_taper_candle_1998",
+6
+],
+[
+"glass_prayer_candle_plain_white_1998",
+3
+],
+[
+"black_wood_photo_frame_5x7_1998",
+2
+],
+[
+"sepia_family_photo_print_1940s_reprint_1998",
+3
+],
+[
+"copal_resin_chunk_1998",
+6
+],
+[
+"barro_copal_burner_1998",
+1
+],
+[
+"clay_jarrito_brown_glaze_1998",
+3
+],
+[
+"painted_alebrije_dog_1998",
+1
+],
+[
+"painted_alebrije_lizard_1998",
+1
+],
+[
+"nestle_abuelita_chocolate_tablet_1998",
+3
+],
+[
+"ibarra_mexican_chocolate_tablet_1998",
+2
+],
+[
+"clay_salt_dish_white_1998",
+1
+],
+[
+"clear_water_glass_ofrenda_1998",
+2
+],
+[
+"woven_palm_basket_bread_1998",
+1
+],
+[
+"papel_cempasuchil_path_strip_1998",
+2
+]
+],
+"no_wires": true,
+"theme": "marigolds, sugar skulls, candles and the food that stayed after the photographs came down"
+},
 "PICK 'N' MIX": {
 "era": [
 0,
@@ -3143,6 +3912,117 @@
 ],
 "no_wires": true,
 "theme": "high-street sweet-shop paper bags filled by weight until the bag barely folded shut"
+},
+"PROST": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"toasted pretzel, sweet mustard, smoked wool, sausage, wet cardboard and stale beer foam",
+"beneath a beer-hall bench after the last brass band packed up",
+"oktoberfest_glass_masskrug_1l_1998"
+],
+"lore": "The steins were empty, the pretzel was rock hard, and the feathered hat had somehow collected mustard.",
+"mix": [
+[
+"oktoberfest_glass_masskrug_1l_1998",
+4
+],
+[
+"oktoberfest_masskrug_broken_handle_1998",
+3
+],
+[
+"oktoberfest_masskrug_base_fragment_1998",
+2
+],
+[
+"bavarian_giant_pretzel_1998",
+3
+],
+[
+"bavarian_pretzel_broken_half_1998",
+4
+],
+[
+"lebkuchenherz_prost_heart_1998",
+2
+],
+[
+"lebkuchenherz_ich_liebe_dich_1998",
+1
+],
+[
+"lebkuchenherz_ribbon_red_white_1998",
+3
+],
+[
+"oktoberfest_beer_mat_round_1998",
+8
+],
+[
+"oktoberfest_beer_mat_square_1998",
+6
+],
+[
+"oktoberfest_coaster_stack_1998",
+3
+],
+[
+"bavarian_felt_hat_green_1998",
+2
+],
+[
+"alpine_hat_feather_gray_1998",
+3
+],
+[
+"alpine_hat_cord_green_white_1998",
+2
+],
+[
+"oktoberfest_hat_pin_1998",
+4
+],
+[
+"weisswurst_link_1998",
+6
+],
+[
+"weisswurst_cut_piece_1998",
+4
+],
+[
+"sweet_bavarian_mustard_tube_1998",
+3
+],
+[
+"sweet_mustard_squeeze_blob_1998",
+4
+],
+[
+"lederhosen_suspenders_brown_1998",
+2
+],
+[
+"lederhosen_chest_bridge_embroidered_1998",
+1
+],
+[
+"lederhosen_brass_buckle_1998",
+4
+],
+[
+"lederhosen_leather_button_loop_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "glass Ma\u00dfkr\u00fcge, giant pretzels and Oktoberfest costume pieces after the tent closed"
 },
 "PURIKURA": {
 "era": [

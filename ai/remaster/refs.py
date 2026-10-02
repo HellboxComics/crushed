@@ -118,6 +118,132 @@ def photos(name):
         if os.path.isdir(d) else []
 
 
+MINE = os.path.join(WORK, "refs-mine")        # your own photos: <name>.jpg/.png (and <name>_2.jpg ...) always win
+VISION = os.environ.get("CRUSHED_VISION", "qwen2.5vl:7b")
+OLLAMA = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
+OLLAMA = OLLAMA if OLLAMA.startswith("http") else "http://" + OLLAMA
+
+
+def queries(name, display=""):
+    """Several searches, most specific first: the exact product line, then the product name, then brand + item."""
+    qs = [query_for(name)]
+    base = re.sub(r"\(.*?\)", "", (display or "").split(",")[0]).strip()
+    base = re.sub(r"\b(circa|c\.)\s*(19|20)\d\d\b|\b(19|20)\d\d\b", "", base).strip()
+    w = base.split()
+    if base:
+        qs.append(base)
+    if len(w) >= 3:
+        qs.append(" ".join(w[1:]))                       # without the maker: "Furby", "Pop-Tarts Frosted Strawberry"
+        qs.append(" ".join(w[1:3]))
+    if len(w) >= 2 and w[-1][:1].isupper():
+        qs.append(w[-1])                                 # the product's own name ("Furby", "Discman")
+    out = []
+    for q in qs:
+        q = " ".join(q.split())
+        if q and q.lower() not in [x.lower() for x in out]:
+            out.append(q)
+    return out
+
+
+def candidates(name, display="", most=12):
+    """Real photos from the free libraries, downloaded into refs/<name>/cand*.jpg."""
+    from PIL import Image
+    import io
+    d = os.path.join(REFS, name)
+    os.makedirs(d, exist_ok=True)
+    seen, got = set(), []
+    for q in queries(name, display):
+        per = 0
+        for f in commons(q, n=8) + openverse(q, n=8):
+            if len(got) >= most or per >= 4:            # a few from each search, so one weak search can't fill it
+                break
+            if f["url"] in seen or not any(k in f["license"].lower() for k in OK_LICENSES):
+                continue
+            seen.add(f["url"])
+            try:
+                im = Image.open(io.BytesIO(_get(f["url"]))).convert("RGB")
+            except Exception:
+                continue
+            if min(im.size) < 300:
+                continue
+            im.thumbnail((1280, 1280))
+            p = os.path.join(d, f"cand{len(got) + 1}.jpg")
+            im.save(p, quality=90)
+            got.append(dict(f, file=p, query=q))
+            per += 1
+            time.sleep(0.3)
+        if len(got) >= most:
+            break
+    return got
+
+
+def _ollama(path, body, timeout=600):
+    req = urllib.request.Request(OLLAMA + path, data=json.dumps(body).encode(), headers={"content-type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read()
+
+
+def ensure_vision():
+    """The local vision model (Ollama's own pull; once, about 6 GB)."""
+    try:
+        tags = json.loads(_get(OLLAMA + "/api/tags"))
+        if any(m.get("name", "").startswith(VISION) for m in tags.get("models", [])):
+            return True
+        _ollama("/api/pull", {"model": VISION, "stream": False}, timeout=7200)
+        return True
+    except Exception as e:
+        print(f"vision model unavailable: {e}", flush=True)
+        return False
+
+
+def vet(path, display, looks=""):
+    """0..10: how surely this photo shows exactly this real product, by the local vision model."""
+    import base64
+    q = (f"Product: {display}.\nWhat it looks like: {looks[:400]}\n\nLook at the photo. Rate from 0 to 10 how "
+         "certainly it shows exactly this real product (the right brand, model, version and era), as one clearly "
+         "visible item that a 3D artist could copy. 0 = a different thing, a drawing, a crowd of items or the product "
+         "is tiny/hidden. Reply with only the number.")
+    try:
+        body = {"model": VISION, "stream": False, "options": {"temperature": 0},
+                "messages": [{"role": "user", "content": q,
+                              "images": [base64.b64encode(open(path, "rb").read()).decode()]}]}
+        txt = json.loads(_ollama("/api/chat", body)).get("message", {}).get("content", "")
+        m = re.search(r"\d+(\.\d+)?", txt)
+        return min(10.0, float(m.group(0))) if m else 0.0
+    except Exception as e:
+        print(f"vet failed: {e}", flush=True)
+        return 0.0
+
+
+def choose(name, display="", looks="", keep=2, need=7.0):
+    """The real photos the drawing copies: yours first; otherwise searched and checked by the local vision model.
+    Returns (paths, how) where how says where they came from; ([], why) when nothing trustworthy was found."""
+    mine = sorted(os.path.join(MINE, f) for f in (os.listdir(MINE) if os.path.isdir(MINE) else [])
+                  if re.match(re.escape(name) + r"(_\d+)?\.(jpe?g|png|webp)$", f, re.I))
+    if mine:
+        return mine[:3], "your photo"
+    d = os.path.join(REFS, name)
+    vj = os.path.join(d, "vet.json")
+    if os.path.exists(vj):
+        v = json.load(open(vj))
+    else:
+        cands = candidates(name, display)
+        if not cands:
+            v = {"picked": [], "why": "no photos found in the free libraries", "scores": []}
+        elif not ensure_vision():
+            v = {"picked": [], "why": "the vision model isn't available to check the photos", "scores": []}
+        else:
+            scores = [(vet(c["file"], display, looks), c) for c in cands]
+            scores.sort(key=lambda x: -x[0])
+            picked = [c["file"] for sc, c in scores if sc >= need][:keep]
+            v = {"picked": picked, "why": "" if picked else f"no photo scored {need:.0f}+ for this exact product",
+                 "scores": [{"score": sc, **{k: c[k] for k in ("file", "page", "license", "by", "from", "query")}}
+                            for sc, c in scores]}
+        json.dump(v, open(vj, "w"), indent=1)
+    picked = [p for p in v["picked"] if os.path.exists(p)]
+    return (picked, "found and checked") if picked else ([], v.get("why", "no reference"))
+
+
 def main():
     args = sys.argv[1:]
     if args == ["--all"]:

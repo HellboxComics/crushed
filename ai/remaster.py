@@ -275,8 +275,25 @@ def turnaround_sheet(name, redo=False):
     turn = os.path.join(WORK, name + "_turn.png")
     tp = os.path.join(PROMPTS, name + ".turn.txt")
     fresh = os.path.exists(turn) and os.path.exists(tp) and os.path.getmtime(turn) > os.path.getmtime(tp)
+    import refs as R
+    plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json"))).get(name, {}) if os.path.exists(
+        os.path.join(ROOT, "assets", "plan", "items.json")) else {}
+    photos, how = R.choose(name, plan.get("display") or cat.get("display", name), seed)
+    howp = os.path.join(WORK, name + "_turn.how")
+    drawn = open(howp).read().strip() if os.path.exists(howp) else "words"
+    if photos and T.can_edit() and drawn == "words":
+        fresh = False                     # a drawing guessed from words is replaced once a real photo exists
+    json.dump({"photos": photos, "how": how}, open(os.path.join(WORK, name + "_refs.json"), "w"))
+    if photos and not T.can_edit():
+        say("photo drawing model not downloaded yet: drawing from words")
     if not fresh:                         # a drawing newer than its words is reused; delete the png to draw again
-        T.draw(desc, turn)
+        if photos and T.can_edit():
+            step(name, f"1/4 drawing all six sides from the real photo ({how})")
+            T.draw_from_photos(desc, photos, turn)
+            open(howp, "w").write("photo")
+        else:
+            T.draw(desc, turn)
+            open(howp, "w").write("words")
     T.upscale(turn)                       # twice as sharp (once per drawing; skipped when already done)
     try:
         T.masks(turn)                     # exact object outlines from the cut-out model
@@ -318,13 +335,16 @@ def remaster(name, redo=False):
     if spec["kind"] == "lathe" and mat in ("metal", "card", "paper", "foil") and vws:
         label = os.path.join(WORK, name + "_label.png")   # a printed wrap (can, battery, tube): drawn flat, in one piece
         tp = os.path.join(PROMPTS, name + ".turn.txt")
-        if not (os.path.exists(label) and os.path.exists(tp) and os.path.getmtime(label) > os.path.getmtime(tp)):
+        if not (os.path.exists(label) and os.path.exists(tp) and os.path.getmtime(label) > os.path.getmtime(tp)
+                and os.path.getmtime(label) > os.path.getmtime(turn)):
             step(name, "2/4 drawing its printed label flat, all the way around")
             m = vws["front"]["mask"]
             w = np.percentile(m.sum(1)[m.any(1)], 90)
             raw = os.path.join(WORK, name + "_label_raw.png")
             try:
-                T.draw_label(open(tp).read() if os.path.exists(tp) else name, raw, 3.1416 * w, m.shape[0])
+                T.draw_label(open(tp).read() if os.path.exists(tp) else name, raw, 3.1416 * w, m.shape[0],
+                             photos=json.load(open(os.path.join(WORK, name + "_refs.json"))).get("photos")
+                             if os.path.exists(os.path.join(WORK, name + "_refs.json")) else None)
                 T.upscale(raw, force=True)
                 os.replace(raw, label)
             except Exception as e:
@@ -459,15 +479,19 @@ def page():
         for f, c in (("review.png", "new (top) vs code (bottom)"), ("reference.png", "reference sheet"), ("inside.png", "inside")):
             if os.path.exists(os.path.join(d, f)):
                 pics.append((os.path.join(d, f), c))
-        rd = os.path.join(WORK, "refs", n)
-        if os.path.isdir(rd):
-            pics += [(os.path.join(rd, f), "real photo") for f in sorted(os.listdir(rd)) if f.startswith("ref")]
+        rj = os.path.join(WORK, n + "_refs.json")
+        ref = json.load(open(rj)) if os.path.exists(rj) else None
+        if ref:
+            pics += [(p, "real photo it copied (" + ref.get("how", "") + ")") for p in ref.get("photos", [])
+                     if os.path.exists(p)]
         imgs = "".join(f'<figure><img src="{rel(p)}" loading="lazy"><figcaption>{c}</figcaption></figure>' for p, c in pics)
         glb = os.path.join(d, "model.glb")
         spin = f'<a class=spin href="view.html#{n}">spin in 3D</a>' if os.path.exists(glb) else ""
         v = verdicts.get(n, "")
+        noref = (f' <span class=v>NO REAL PHOTO: {html.escape(ref.get("how", ""))} &mdash; drop one in '
+                 f'remaster/refs-mine/{html.escape(n)}.jpg</span>') if ref and not ref.get("photos") else ""
         return (f'<section class="c {k}" data-k="{k}" data-n="{html.escape(n)}"><h2>{html.escape(n)} '
-                f'<span class=st>{html.escape(label)}</span>{f" <span class=v>AI: {html.escape(v)}</span>" if v else ""}{spin}</h2>'
+                f'<span class=st>{html.escape(label)}</span>{noref}{f" <span class=v>AI: {html.escape(v)}</span>" if v else ""}{spin}</h2>'
                 f'<div class=imgs>{imgs}</div><details><summary>prompts</summary><p><b>outside</b> {txt(n)}</p>'
                 f'<p><b>inside</b> {txt(n, ".inside.txt")}</p><p class=fix>wrong direction? edit '
                 f'<code>ai/remaster/prompts/{n}.txt</code>, then <code>.venv/bin/python ai/remaster.py --only {n} --redo</code>'
