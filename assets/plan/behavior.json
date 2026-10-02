@@ -59,6 +59,16 @@
 0.0145
 ]
 },
+"aa_battery_orientation_card_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.1,
+0.0005,
+0.15
+]
+},
 "aaa_roadside_emergency_kit_1999": {
 "hard": 0.34,
 "how": "fold",
@@ -189,6 +199,16 @@
 0.05
 ]
 },
+"alpine_mrv_f407_amplifier_1999": {
+"hard": 0.82,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.29,
+0.06,
+0.39
+]
+},
 "alpine_sws_1040_subwoofer_1999": {
 "hard": 0.72,
 "how": "dent",
@@ -317,6 +337,16 @@
 0.092,
 0.06,
 0.022
+]
+},
+"anl_fuse_holder_clear_2002": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.04,
+0.14
 ]
 },
 "antistatic_zip_bag_small_2018": {
@@ -2399,6 +2429,16 @@
 0.0897
 ]
 },
+"car_stereo_faceplate_hard_case_2002": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.19,
+0.04,
+0.07
+]
+},
 "card_binder_sheet": {
 "hard": 0.3,
 "how": "fold",
@@ -4319,6 +4359,16 @@
 0.1143
 ]
 },
+"custom_airbrushed_amp_cover_blue_flame_2002": {
+"hard": 0.62,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.28,
+0.01,
+0.4
+]
+},
 "cyalume_green_glow_stick_1998": {
 "hard": 0.36,
 "how": "snap",
@@ -4800,13 +4850,13 @@
 ]
 },
 "duracell_aa_4pack_blister_1998": {
-"hard": 0.32,
+"hard": 0.34,
 "how": "fold",
 "mat": "card",
 "size": [
-0.085,
+0.09,
 0.02,
-0.125
+0.13
 ]
 },
 "duracell_aa_8pack_christmas_1998": {
@@ -5407,6 +5457,16 @@
 0.06,
 0.06,
 0.19
+]
+},
+"eveready_flashlight_red_1997": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.05,
+0.18
 ]
 },
 "eveready_lantern_flashlight_1999": {
@@ -6129,6 +6189,56 @@
 0.0122
 ]
 },
+"furby_battery_door_original_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.008,
+0.08
+]
+},
+"furby_box_twist_tie_bundle_1998": {
+"hard": 0.08,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.15,
+0.002,
+0.002
+]
+},
+"furby_buddy_plush_gray_1999": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.12,
+0.09,
+0.14
+]
+},
+"furby_buddy_plush_pink_1999": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.12,
+0.09,
+0.14
+]
+},
+"furby_carry_sling_purple_1999": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.18,
+0.08,
+0.22
+]
+},
 "furby_gray_pink_1998": {
 "hard": 0.42,
 "how": "squish",
@@ -6136,6 +6246,46 @@
 "size": [
 0.12,
 0.12,
+0.15
+]
+},
+"furby_instruction_furbish_dictionary_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.13,
+0.002,
+0.18
+]
+},
+"furby_keychain_gray_1999": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.04,
+0.06
+]
+},
+"furby_sealed_window_box_1998": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.16,
+0.22
+]
+},
+"furby_sleep_note_handwritten_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
 0.15
 ]
 },
@@ -8199,6 +8349,16 @@
 0.0104
 ]
 },
+"jl_audio_12w3v2_subwoofer_2003": {
+"hard": 0.72,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.31,
+0.18,
+0.31
+]
+},
 "jnco_mammoth_jeans_1998": {
 "hard": 0.34,
 "how": "fold",
@@ -8319,6 +8479,16 @@
 0.012
 ]
 },
+"kenwood_kfc_6979ie_6x9_speaker_2001": {
+"hard": 0.54,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.24,
+0.1,
+0.17
+]
+},
 "keyboard_chunk": {
 "hard": 0.2,
 "how": "squish",
@@ -8327,6 +8497,16 @@
 0.162,
 0.086,
 0.0252
+]
+},
+"kicker_window_decal_white_2002": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.25,
+0.0005,
+0.07
 ]
 },
 "kid_blimp": {
@@ -8919,6 +9099,16 @@
 0.076
 ]
 },
+"lightning_audio_1farad_capacitor_2002": {
+"hard": 0.78,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.08,
+0.08,
+0.25
+]
+},
 "lil_wayne_carter_iii_cd_2008": {
 "hard": 0.68,
 "how": "snap",
@@ -9509,6 +9699,16 @@
 0.06
 ]
 },
+"maxell_cdr80_bass_test_2002": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.0012,
+0.12
+]
+},
 "maxell_cdr80_handwritten_2001": {
 "hard": 0.36,
 "how": "snap",
@@ -9830,6 +10030,16 @@
 ]
 },
 "memorex_cdr_sharpie_backup_2000": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.0012,
+0.12
+]
+},
+"memorex_cdr_sharpie_bass_mix_2002": {
 "hard": 0.36,
 "how": "snap",
 "mat": "plastic",
@@ -10249,6 +10459,16 @@
 0.033
 ]
 },
+"modified_furby_red_led_eyes_2002": {
+"hard": 0.34,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.15,
+0.13,
+0.16
+]
+},
 "modular_synth_84hp_black_2020": {
 "hard": 0.72,
 "how": "dent",
@@ -10287,6 +10507,16 @@
 0.09,
 0.05,
 0.16
+]
+},
+"monster_cable_car_audio_rca_2003": {
+"hard": 0.18,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.1216,
+0.1216,
+0.0487
 ]
 },
 "monster_card": {
@@ -12459,6 +12689,16 @@
 0.16
 ]
 },
+"phoenix_gold_m44_amplifier_1994": {
+"hard": 0.82,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.23,
+0.05,
+0.37
+]
+},
 "phone_cord": {
 "hard": 0.7,
 "how": "snap",
@@ -12569,6 +12809,46 @@
 0.022
 ]
 },
+"pioneer_6disc_cd_magazine_1998": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.03,
+0.13
+]
+},
+"pioneer_cdx_p650_6disc_changer_1998": {
+"hard": 0.72,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.26,
+0.19,
+0.08
+]
+},
+"pioneer_deh_faceplate_2002": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.17,
+0.02,
+0.045
+]
+},
+"pioneer_deh_p6400_2002": {
+"hard": 0.68,
+"how": "snap",
+"mat": "metal",
+"size": [
+0.18,
+0.16,
+0.05
+]
+},
 "pioneer_dehp2000_car_cd_receiver_2000": {
 "hard": 0.76,
 "how": "dent",
@@ -12579,6 +12859,16 @@
 0.05
 ]
 },
+"pioneer_ts_a6965_6x9_speaker_1998": {
+"hard": 0.54,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.24,
+0.1,
+0.17
+]
+},
 "pioneer_ts_a6965_6x9_speaker_1999": {
 "hard": 0.68,
 "how": "dent",
@@ -12587,6 +12877,16 @@
 0.23,
 0.085,
 0.16
+]
+},
+"pioneer_ts_t15_tweeter_2001": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.04,
+0.05
 ]
 },
 "pixel_frame": {
@@ -13879,6 +14179,16 @@
 0.06
 ]
 },
+"remote_bass_level_knob_2002": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.04,
+0.03
+]
+},
 "rental_card": {
 "hard": 0.3,
 "how": "fold",
@@ -14129,6 +14439,16 @@
 0.136
 ]
 },
+"rockford_fosgate_punch_12_subwoofer_2001": {
+"hard": 0.7,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.31,
+0.16,
+0.31
+]
+},
 "rockford_fosgate_punch_200a2_amp_1998": {
 "hard": 0.82,
 "how": "dent",
@@ -14137,6 +14457,26 @@
 0.25,
 0.24,
 0.05
+]
+},
+"rockford_fosgate_punch_500a2_amp_1999": {
+"hard": 0.82,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.25,
+0.06,
+0.38
+]
+},
+"rockford_fosgate_window_decal_2002": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.28,
+0.0005,
+0.07
 ]
 },
 "rogaine_extra_strength_5percent_1998": {
@@ -14497,6 +14837,16 @@
 0.1,
 0.05,
 0.2
+]
+},
+"scosche_amp_wiring_kit_4ga_2002": {
+"hard": 0.22,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.25,
+0.07,
+0.3
 ]
 },
 "scotch_bx90_1990": {
@@ -15499,6 +15849,16 @@
 0.064
 ]
 },
+"sony_cpa9c_cassette_adapter_1998": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.012,
+0.063
+]
+},
 "sony_discman_d121_1992": {
 "hard": 0.76,
 "how": "snap",
@@ -15979,6 +16339,16 @@
 0.3
 ]
 },
+"speak_furbish_sticker_sheet_1999": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.2
+]
+},
 "speaker_6x9": {
 "hard": 0.7,
 "how": "snap",
@@ -16287,6 +16657,26 @@
 0.91,
 0.03,
 0.03
+]
+},
+"streetglow_neon_tube_blue_2001": {
+"hard": 0.52,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.03,
+0.03,
+0.3
+]
+},
+"streetwires_zero_noise_rca_pair_2002": {
+"hard": 0.16,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.1077,
+0.1077,
+0.0431
 ]
 },
 "stretch_armstrong_1992": {
@@ -17089,6 +17479,56 @@
 0.16
 ]
 },
+"tiger_furby_baby_blue_1999": {
+"hard": 0.28,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.13,
+0.11,
+0.14
+]
+},
+"tiger_furby_baby_pink_1999": {
+"hard": 0.28,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.13,
+0.11,
+0.14
+]
+},
+"tiger_furby_black_brown_1998": {
+"hard": 0.32,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.15,
+0.13,
+0.16
+]
+},
+"tiger_furby_gray_white_1998": {
+"hard": 0.32,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.15,
+0.13,
+0.16
+]
+},
+"tiger_furby_white_pink_1998": {
+"hard": 0.32,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.15,
+0.13,
+0.16
+]
+},
 "tiger_hitclips_personal_player_2001": {
 "hard": 0.4,
 "how": "snap",
@@ -17467,6 +17907,16 @@
 0.06,
 0.04,
 0.14
+]
+},
+"trunk_gray_carpet_scrap_2002": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.4,
+0.01,
+0.5
 ]
 },
 "tupperware_round_seal_container_1997": {

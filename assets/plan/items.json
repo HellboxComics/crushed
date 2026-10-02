@@ -109,6 +109,28 @@
 "themes": "SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"aa_battery_orientation_card_1998": {
+"display": "Furby battery-installation instruction card",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Furby battery-installation instruction card, 1998"
+],
+"product": "Furby battery-installation instruction card, 1998",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.15
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
 "aaa_roadside_emergency_kit_1999": {
 "display": "AAA roadside emergency kit in zippered bag, circa",
 "eras": [
@@ -373,6 +395,28 @@
 "themes": "ROAD TRIP; BASS BOOSTED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"alpine_mrv_f407_amplifier_1999": {
+"display": "Alpine V12 MRV-F407 four-channel amplifier, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 4.75,
+"notes": [
+"Alpine V12 MRV-F407 four-channel amplifier, circa 1999"
+],
+"product": "Alpine V12 MRV-F407 four-channel amplifier, circa 1999",
+"role": "main",
+"size": [
+0.29,
+0.06,
+0.39
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "alpine_sws_1040_subwoofer_1999": {
 "display": "Alpine SWS-1040 10-inch car subwoofer, circa",
 "eras": [
@@ -633,6 +677,28 @@
 0.022
 ],
 "themes": "GM",
+"weight": 1.0
+},
+"anl_fuse_holder_clear_2002": {
+"display": "Clear ANL-style car-audio fuse holder, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.049,
+"notes": [
+"Clear ANL-style car-audio fuse holder, circa 2002"
+],
+"product": "Clear ANL-style car-audio fuse holder, circa 2002",
+"role": "main",
+"size": [
+0.05,
+0.04,
+0.14
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "antistatic_zip_bag_small_2018": {
@@ -4011,6 +4077,28 @@
 "themes": "LUNCH TRADE",
 "weight": 1.0
 },
+"car_stereo_faceplate_hard_case_2002": {
+"display": "Detachable car-stereo faceplate hard case, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.093,
+"notes": [
+"Detachable car-stereo faceplate hard case, circa 2002"
+],
+"product": "Detachable car-stereo faceplate hard case, circa 2002",
+"role": "main",
+"size": [
+0.19,
+0.04,
+0.07
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "cardboard_firework_mortar_tube_spent_1998": {
 "display": "Spent cardboard consumer-firework launch tube, circa",
 "eras": [
@@ -7036,6 +7124,28 @@
 "themes": "LUNCH TRADE",
 "weight": 1.0
 },
+"custom_airbrushed_amp_cover_blue_flame_2002": {
+"display": "Airbrushed amplifier cosmetic cover, blue flame graphic, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.784,
+"notes": [
+"Airbrushed amplifier cosmetic cover, blue flame graphic, circa 2002"
+],
+"product": "Airbrushed amplifier cosmetic cover, blue flame graphic, circa 2002",
+"role": "main",
+"size": [
+0.28,
+0.01,
+0.4
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "cyalume_green_glow_stick_1998": {
 "display": "Cyalume green chemical light stick, circa",
 "eras": [
@@ -7805,25 +7915,25 @@
 "weight": 1.0
 },
 "duracell_aa_4pack_blister_1998": {
-"display": "Duracell CopperTop AA 4-pack blister card, circa",
+"display": "Duracell CopperTop AA 4-pack blister, circa",
 "eras": [
 2,
 3
 ],
 "family": "one-of-one",
 "group": "era",
-"mass": 0.022,
+"mass": 0.025,
 "notes": [
 "Duracell CopperTop AA 4-pack blister card, circa 1998"
 ],
-"product": "Duracell CopperTop AA 4-pack blister card, circa 1998",
+"product": "Duracell CopperTop AA 4-pack blister, circa 1998",
 "role": "main",
 "size": [
-0.085,
+0.09,
 0.02,
-0.125
+0.13
 ],
-"themes": "DOUBLE A",
+"themes": "IT'S AWAKE",
 "weight": 0.12
 },
 "duracell_aa_8pack_christmas_1998": {
@@ -7955,7 +8065,7 @@
 0.0145,
 0.0505
 ],
-"themes": "SOME ASSEMBLY REQUIRED",
+"themes": "IT'S AWAKE",
 "weight": 0.12
 },
 "duracell_coppertop_aaa4_1997": {
@@ -9053,6 +9163,28 @@
 "themes": "DOUBLE A; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"eveready_flashlight_red_1997": {
+"display": "Eveready economy flashlight, Red, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "era",
+"mass": 0.095,
+"notes": [
+"Eveready economy flashlight, Red, circa 1997"
+],
+"product": "Eveready economy flashlight, Red, circa 1997",
+"role": "main",
+"size": [
+0.06,
+0.05,
+0.18
+],
+"themes": "IT'S AWAKE",
+"weight": 0.12
+},
 "eveready_lantern_flashlight_1999": {
 "display": "Eveready floating lantern flashlight, circa",
 "eras": [
@@ -9888,6 +10020,116 @@
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"furby_battery_door_original_1998": {
+"display": "Original Furby battery-compartment door",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Original Furby battery-compartment door, 1998"
+],
+"product": "Original Furby battery-compartment door, 1998",
+"role": "main",
+"size": [
+0.07,
+0.008,
+0.08
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_box_twist_tie_bundle_1998": {
+"display": "Furby packaging twist ties, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Furby packaging twist ties, circa 1998"
+],
+"product": "Furby packaging twist ties, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.002,
+0.002
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_buddy_plush_gray_1999": {
+"display": "Tiger Furby Buddy plush toy, gray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.106,
+"notes": [
+"Tiger Furby Buddy plush toy, gray, circa 1999"
+],
+"product": "Tiger Furby Buddy plush toy, gray, circa 1999",
+"role": "main",
+"size": [
+0.12,
+0.09,
+0.14
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_buddy_plush_pink_1999": {
+"display": "Tiger Furby Buddy plush toy, pink, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.106,
+"notes": [
+"Tiger Furby Buddy plush toy, pink, circa 1999"
+],
+"product": "Tiger Furby Buddy plush toy, pink, circa 1999",
+"role": "main",
+"size": [
+0.12,
+0.09,
+0.14
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_carry_sling_purple_1999": {
+"display": "Furby soft carry sling, Purple, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.222,
+"notes": [
+"Furby soft carry sling, Purple, circa 1999"
+],
+"product": "Furby soft carry sling, Purple, circa 1999",
+"role": "main",
+"size": [
+0.18,
+0.08,
+0.22
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
 "furby_gray_pink_1998": {
 "display": "Tiger Electronics Furby, gray and pink",
 "eras": [
@@ -9908,6 +10150,94 @@
 0.15
 ],
 "themes": "IT\u2019S AWAKE; SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"furby_instruction_furbish_dictionary_1998": {
+"display": "Furby instruction booklet with Furbish-English dictionary",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Furby instruction booklet with Furbish-English dictionary, 1998"
+],
+"product": "Furby instruction booklet with Furbish-English dictionary, 1998",
+"role": "main",
+"size": [
+0.13,
+0.002,
+0.18
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_keychain_gray_1999": {
+"display": "Furby miniature keychain toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.021,
+"notes": [
+"Furby miniature keychain toy, circa 1999"
+],
+"product": "Furby miniature keychain toy, circa 1999",
+"role": "main",
+"size": [
+0.05,
+0.04,
+0.06
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_sealed_window_box_1998": {
+"display": "Tiger Electronics Furby retail window box",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.739,
+"notes": [
+"Tiger Electronics Furby retail window box, 1998"
+],
+"product": "Tiger Electronics Furby retail window box, 1998",
+"role": "main",
+"size": [
+0.2,
+0.16,
+0.22
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"furby_sleep_note_handwritten_1998": {
+"display": "Handwritten \u201cFURBY WON'T SLEEP\u201d notebook note, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Handwritten \u201cFURBY WON'T SLEEP\u201d notebook note, circa 1998"
+],
+"product": "Handwritten \u201cFURBY WON'T SLEEP\u201d notebook note, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.0005,
+0.15
+],
+"themes": "IT'S AWAKE",
 "weight": 1.0
 },
 "game_boy_advance_indigo_2001": {
@@ -13277,6 +13607,28 @@
 "themes": "EGG HUNT",
 "weight": 1.0
 },
+"jl_audio_12w3v2_subwoofer_2003": {
+"display": "JL Audio 12W3v2 12-inch subwoofer, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.027,
+"notes": [
+"JL Audio 12W3v2 12-inch subwoofer, circa 2003"
+],
+"product": "JL Audio 12W3v2 12-inch subwoofer, circa 2003",
+"role": "main",
+"size": [
+0.31,
+0.18,
+0.31
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "jnco_mammoth_jeans_1998": {
 "display": "JNCO Mammoth wide-leg jeans, circa",
 "eras": [
@@ -13472,6 +13824,50 @@
 0.012
 ],
 "themes": "COLD STORAGE",
+"weight": 1.0
+},
+"kenwood_kfc_6979ie_6x9_speaker_2001": {
+"display": "Kenwood KFC-series 6x9-inch car speaker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.714,
+"notes": [
+"Kenwood KFC-series 6x9-inch car speaker, circa 2001"
+],
+"product": "Kenwood KFC-series 6x9-inch car speaker, circa 2001",
+"role": "main",
+"size": [
+0.24,
+0.1,
+0.17
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"kicker_window_decal_white_2002": {
+"display": "KICKER car-audio window decal, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"KICKER car-audio window decal, circa 2002"
+],
+"product": "KICKER car-audio window decal, circa 2002",
+"role": "main",
+"size": [
+0.25,
+0.0005,
+0.07
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "kid_cuisine_all_american_fried_chicken_1998": {
@@ -14524,6 +14920,28 @@
 0.1
 ],
 "themes": "UNDER THE MATTRESS; WINDOW SHOPPING; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"lightning_audio_1farad_capacitor_2002": {
+"display": "Lightning Audio one-farad stiffening capacitor, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.12,
+"notes": [
+"Lightning Audio one-farad stiffening capacitor, circa 2002"
+],
+"product": "Lightning Audio one-farad stiffening capacitor, circa 2002",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.25
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "lil_wayne_carter_iii_cd_2008": {
@@ -15623,6 +16041,28 @@
 "themes": "MIXTAPE",
 "weight": 1.0
 },
+"maxell_cdr80_bass_test_2002": {
+"display": "Maxell CD-R 80-minute handwritten bass-test disc, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Maxell CD-R 80-minute handwritten bass-test disc, circa 2002"
+],
+"product": "Maxell CD-R 80-minute handwritten bass-test disc, circa 2002",
+"role": "main",
+"size": [
+0.12,
+0.0012,
+0.12
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "maxell_cdr80_handwritten_2001": {
 "display": "Maxell CD-R 80-minute 700 MB recordable disc, circa",
 "eras": [
@@ -16348,6 +16788,28 @@
 "themes": "SAVE ICON",
 "weight": 1.0
 },
+"memorex_cdr_sharpie_bass_mix_2002": {
+"display": "Memorex CD-R 700 MB handwritten \u201cBASS MIX,\u201d circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Memorex CD-R 700 MB handwritten \u201cBASS MIX,\u201d circa 2002"
+],
+"product": "Memorex CD-R 700 MB handwritten \u201cBASS MIX,\u201d circa 2002",
+"role": "main",
+"size": [
+0.12,
+0.0012,
+0.12
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "memorex_cdr_sharpie_mix_2002": {
 "display": "Memorex 700 MB 80-minute CD-R, hand-burned mix disc, circa",
 "eras": [
@@ -16985,6 +17447,28 @@
 "themes": "TRICK OR TREAT",
 "weight": 1.0
 },
+"modified_furby_red_led_eyes_2002": {
+"display": "Modified original Furby with red LED-eye conversion, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.546,
+"notes": [
+"Modified original Furby with red LED-eye conversion, circa 2002"
+],
+"product": "Modified original Furby with red LED-eye conversion, circa 2002",
+"role": "main",
+"size": [
+0.15,
+0.13,
+0.16
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
 "modular_synth_84hp_black_2020": {
 "display": "84 HP Eurorack modular synthesizer case with mixed modules, circa",
 "eras": [
@@ -17070,6 +17554,28 @@
 0.16
 ],
 "themes": "UNDER THE MATTRESS; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"monster_cable_car_audio_rca_2003": {
+"display": "Monster Cable car-audio RCA interconnect, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.151,
+"notes": [
+"Monster Cable car-audio RCA interconnect, circa 2003"
+],
+"product": "Monster Cable car-audio RCA interconnect, circa 2003",
+"role": "main",
+"size": [
+0.1216,
+0.1216,
+0.0487
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "monster_energy_original_16oz_2008": {
@@ -20635,6 +21141,28 @@
 "themes": "SOME ASSEMBLY REQUIRED",
 "weight": 1.0
 },
+"phoenix_gold_m44_amplifier_1994": {
+"display": "Phoenix Gold M44 four-channel car amplifier, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.978,
+"notes": [
+"Phoenix Gold M44 four-channel car amplifier, circa 1994"
+],
+"product": "Phoenix Gold M44 four-channel car amplifier, circa 1994",
+"role": "main",
+"size": [
+0.23,
+0.05,
+0.37
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "phone_line_splitter_1997": {
 "display": "Two-way RJ-11 telephone line splitter, circa",
 "eras": [
@@ -20767,6 +21295,94 @@
 "themes": "HAND TURKEY; LOST AND FOUND; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"pioneer_6disc_cd_magazine_1998": {
+"display": "Pioneer six-disc CD changer magazine, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.102,
+"notes": [
+"Pioneer six-disc CD changer magazine, circa 1998"
+],
+"product": "Pioneer six-disc CD changer magazine, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.03,
+0.13
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"pioneer_cdx_p650_6disc_changer_1998": {
+"display": "Pioneer six-disc trunk CD changer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.766,
+"notes": [
+"Pioneer six-disc trunk CD changer, circa 1998"
+],
+"product": "Pioneer six-disc trunk CD changer, circa 1998",
+"role": "main",
+"size": [
+0.26,
+0.19,
+0.08
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"pioneer_deh_faceplate_2002": {
+"display": "Pioneer detachable car-stereo faceplate, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.027,
+"notes": [
+"Pioneer detachable car-stereo faceplate, circa 2002"
+],
+"product": "Pioneer detachable car-stereo faceplate, circa 2002",
+"role": "main",
+"size": [
+0.17,
+0.02,
+0.045
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"pioneer_deh_p6400_2002": {
+"display": "Pioneer DEH-P6400 detachable-face CD receiver, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.008,
+"notes": [
+"Pioneer DEH-P6400 detachable-face CD receiver, circa 2002"
+],
+"product": "Pioneer DEH-P6400 detachable-face CD receiver, circa 2002",
+"role": "main",
+"size": [
+0.18,
+0.16,
+0.05
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "pioneer_dehp2000_car_cd_receiver_2000": {
 "display": "Pioneer DEH-P2000 in-dash CD receiver",
 "eras": [
@@ -20789,6 +21405,28 @@
 "themes": "ROAD TRIP; BASS BOOSTED; Y2K; MALL RAT; regular cubes",
 "weight": 1.0
 },
+"pioneer_ts_a6965_6x9_speaker_1998": {
+"display": "Pioneer TS-series 6x9-inch coaxial car speaker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.714,
+"notes": [
+"Pioneer TS-series 6x9-inch coaxial car speaker, circa 1998"
+],
+"product": "Pioneer TS-series 6x9-inch coaxial car speaker, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.1,
+0.17
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "pioneer_ts_a6965_6x9_speaker_1999": {
 "display": "Pioneer TS-A6965 6 x 9 inch car speaker, circa",
 "eras": [
@@ -20809,6 +21447,28 @@
 0.16
 ],
 "themes": "BASS BOOSTED; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"pioneer_ts_t15_tweeter_2001": {
+"display": "Pioneer TS-T15-style swivel-mount car tweeter, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Pioneer TS-T15-style swivel-mount car tweeter, circa 2001"
+],
+"product": "Pioneer TS-T15-style swivel-mount car tweeter, circa 2001",
+"role": "main",
+"size": [
+0.05,
+0.04,
+0.05
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "pixel_hood_clan_framed_print_2026": {
@@ -22889,6 +23549,28 @@
 "themes": "HAND TURKEY",
 "weight": 1.0
 },
+"remote_bass_level_knob_2002": {
+"display": "Remote amplifier bass-level control knob, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Remote amplifier bass-level control knob, circa 2002"
+],
+"product": "Remote amplifier bass-level control knob, circa 2002",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.03
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "replacement_christmas_bulb_pack_1998": {
 "display": "Replacement miniature Christmas bulbs and fuses pack, circa",
 "eras": [
@@ -23219,6 +23901,28 @@
 "themes": "HAND TURKEY",
 "weight": 1.0
 },
+"rockford_fosgate_punch_12_subwoofer_2001": {
+"display": "Rockford Fosgate Punch 12-inch car subwoofer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.691,
+"notes": [
+"Rockford Fosgate Punch 12-inch car subwoofer, circa 2001"
+],
+"product": "Rockford Fosgate Punch 12-inch car subwoofer, circa 2001",
+"role": "main",
+"size": [
+0.31,
+0.16,
+0.31
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "rockford_fosgate_punch_200a2_amp_1998": {
 "display": "Rockford Fosgate Punch 200a2 car amplifier, circa",
 "eras": [
@@ -23239,6 +23943,50 @@
 0.05
 ],
 "themes": "BASS BOOSTED; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"rockford_fosgate_punch_500a2_amp_1999": {
+"display": "Rockford Fosgate Punch 500a2 amplifier, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.99,
+"notes": [
+"Rockford Fosgate Punch 500a2 amplifier, circa 1999"
+],
+"product": "Rockford Fosgate Punch 500a2 amplifier, circa 1999",
+"role": "main",
+"size": [
+0.25,
+0.06,
+0.38
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"rockford_fosgate_window_decal_2002": {
+"display": "Rockford Fosgate car-audio window decal, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Rockford Fosgate car-audio window decal, circa 2002"
+],
+"product": "Rockford Fosgate car-audio window decal, circa 2002",
+"role": "main",
+"size": [
+0.28,
+0.0005,
+0.07
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "rogaine_extra_strength_5percent_1998": {
@@ -23897,6 +24645,28 @@
 0.2
 ],
 "themes": "LIGHT THE FUSE",
+"weight": 1.0
+},
+"scosche_amp_wiring_kit_4ga_2002": {
+"display": "Scosche 4-gauge amplifier wiring kit, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.919,
+"notes": [
+"Scosche 4-gauge amplifier wiring kit, circa 2002"
+],
+"product": "Scosche 4-gauge amplifier wiring kit, circa 2002",
+"role": "main",
+"size": [
+0.25,
+0.07,
+0.3
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "scotch_bx90_1990": {
@@ -25502,6 +26272,28 @@
 "themes": "MIXTAPE; ROAD TRIP; BASS BOOSTED; regular cubes",
 "weight": 1.0
 },
+"sony_cpa9c_cassette_adapter_1998": {
+"display": "Sony CPA-9C cassette adapter, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.013,
+"notes": [
+"Sony CPA-9C cassette adapter, circa 1998"
+],
+"product": "Sony CPA-9C cassette adapter, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.012,
+0.063
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
 "sony_discman_d121_1992": {
 "display": "Sony Discman D-121 portable CD player",
 "eras": [
@@ -26470,6 +27262,28 @@
 "themes": "LIGHT THE FUSE",
 "weight": 1.0
 },
+"speak_furbish_sticker_sheet_1999": {
+"display": "Furby-themed \u201cSpeak Furbish!\u201d sticker sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Furby-themed \u201cSpeak Furbish!\u201d sticker sheet, circa 1999"
+],
+"product": "Furby-themed \u201cSpeak Furbish!\u201d sticker sheet, circa 1999",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.2
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
 "spectrum_heroes_bitcoin_acrylic_tile_2026": {
 "display": "Pixelord Spectrum Heroes physical acrylic art tile, custom tribute object",
 "eras": [
@@ -26861,6 +27675,50 @@
 0.03
 ],
 "themes": "BASS BOOSTED; BLACKLIGHT; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"streetglow_neon_tube_blue_2001": {
+"display": "StreetGlow blue neon accent tube, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.113,
+"notes": [
+"StreetGlow blue neon accent tube, circa 2001"
+],
+"product": "StreetGlow blue neon accent tube, circa 2001",
+"role": "main",
+"size": [
+0.03,
+0.03,
+0.3
+],
+"themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"streetwires_zero_noise_rca_pair_2002": {
+"display": "StreetWires-style twisted-pair RCA interconnect, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.105,
+"notes": [
+"StreetWires-style twisted-pair RCA interconnect, circa 2002"
+],
+"product": "StreetWires-style twisted-pair RCA interconnect, circa 2002",
+"role": "main",
+"size": [
+0.1077,
+0.1077,
+0.0431
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "stretch_armstrong_1992": {
@@ -28048,6 +28906,116 @@
 "themes": "STILL ALIVE",
 "weight": 1.0
 },
+"tiger_furby_baby_blue_1999": {
+"display": "Tiger Electronics Furby Baby, blue-and-white fur",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.35,
+"notes": [
+"Tiger Electronics Furby Baby, blue-and-white fur, 1999"
+],
+"product": "Tiger Electronics Furby Baby, blue-and-white fur, 1999",
+"role": "main",
+"size": [
+0.13,
+0.11,
+0.14
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"tiger_furby_baby_pink_1999": {
+"display": "Tiger Electronics Furby Baby, pink-and-white fur",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.35,
+"notes": [
+"Tiger Electronics Furby Baby, pink-and-white fur, 1999"
+],
+"product": "Tiger Electronics Furby Baby, pink-and-white fur, 1999",
+"role": "main",
+"size": [
+0.13,
+0.11,
+0.14
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"tiger_furby_black_brown_1998": {
+"display": "Tiger Electronics Furby, black-and-brown fur",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.546,
+"notes": [
+"Tiger Electronics Furby, black-and-brown fur, 1998"
+],
+"product": "Tiger Electronics Furby, black-and-brown fur, 1998",
+"role": "main",
+"size": [
+0.15,
+0.13,
+0.16
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"tiger_furby_gray_white_1998": {
+"display": "Tiger Electronics Furby, gray-and-white fur",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.546,
+"notes": [
+"Tiger Electronics Furby, gray-and-white fur, 1998"
+],
+"product": "Tiger Electronics Furby, gray-and-white fur, 1998",
+"role": "main",
+"size": [
+0.15,
+0.13,
+0.16
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
+"tiger_furby_white_pink_1998": {
+"display": "Tiger Electronics Furby, white-and-pink fur",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.546,
+"notes": [
+"Tiger Electronics Furby, white-and-pink fur, 1998"
+],
+"product": "Tiger Electronics Furby, white-and-pink fur, 1998",
+"role": "main",
+"size": [
+0.15,
+0.13,
+0.16
+],
+"themes": "IT'S AWAKE",
+"weight": 1.0
+},
 "tiger_hitclips_personal_player_2001": {
 "display": "Tiger Electronics HitClips Personal Player, circa",
 "eras": [
@@ -28638,6 +29606,28 @@
 0.14
 ],
 "themes": "DRESS CODE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"trunk_gray_carpet_scrap_2002": {
+"display": "Gray automotive trunk carpet scrap, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.14,
+"notes": [
+"Gray automotive trunk carpet scrap, circa 2002"
+],
+"product": "Gray automotive trunk carpet scrap, circa 2002",
+"role": "main",
+"size": [
+0.4,
+0.01,
+0.5
+],
+"themes": "BASS BOOSTED",
 "weight": 1.0
 },
 "tupperware_round_seal_container_1997": {

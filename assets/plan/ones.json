@@ -1,4 +1,129 @@
 {
+"BASS BOOSTED": {
+"era": [
+1,
+2,
+3
+],
+"flavor": [
+"hot amplifier metal, trunk carpet, solder, burned CD plastic and warm speaker glue",
+"the trunk of a lowered coupe after somebody finally admitted the rattle was not part of the song",
+"rockford_fosgate_punch_12_subwoofer_2001"
+],
+"lore": "Two subs, three amps and a faceplate in its case. The trunk rattled. So did the neighborhood.",
+"mix": [
+[
+"rockford_fosgate_punch_12_subwoofer_2001",
+2
+],
+[
+"jl_audio_12w3v2_subwoofer_2003",
+2
+],
+[
+"pioneer_ts_a6965_6x9_speaker_1998",
+4
+],
+[
+"kenwood_kfc_6979ie_6x9_speaker_2001",
+3
+],
+[
+"rockford_fosgate_punch_500a2_amp_1999",
+1
+],
+[
+"phoenix_gold_m44_amplifier_1994",
+1
+],
+[
+"alpine_mrv_f407_amplifier_1999",
+1
+],
+[
+"custom_airbrushed_amp_cover_blue_flame_2002",
+1
+],
+[
+"pioneer_deh_p6400_2002",
+1
+],
+[
+"pioneer_deh_faceplate_2002",
+2
+],
+[
+"car_stereo_faceplate_hard_case_2002",
+2
+],
+[
+"streetwires_zero_noise_rca_pair_2002",
+4
+],
+[
+"monster_cable_car_audio_rca_2003",
+2
+],
+[
+"lightning_audio_1farad_capacitor_2002",
+1
+],
+[
+"streetglow_neon_tube_blue_2001",
+2
+],
+[
+"remote_bass_level_knob_2002",
+2
+],
+[
+"pioneer_cdx_p650_6disc_changer_1998",
+1
+],
+[
+"pioneer_6disc_cd_magazine_1998",
+2
+],
+[
+"sony_cpa9c_cassette_adapter_1998",
+2
+],
+[
+"pioneer_ts_t15_tweeter_2001",
+4
+],
+[
+"scosche_amp_wiring_kit_4ga_2002",
+1
+],
+[
+"anl_fuse_holder_clear_2002",
+2
+],
+[
+"kicker_window_decal_white_2002",
+3
+],
+[
+"rockford_fosgate_window_decal_2002",
+3
+],
+[
+"memorex_cdr_sharpie_bass_mix_2002",
+8
+],
+[
+"maxell_cdr80_bass_test_2002",
+5
+],
+[
+"trunk_gray_carpet_scrap_2002",
+3
+]
+],
+"no_wires": true,
+"theme": "trunk subs, detachable faces and every cable that made the license plate rattle"
+},
 "BE KIND REWIND": {
 "era": [
 1,
@@ -1606,6 +1731,105 @@
 ],
 "no_wires": true,
 "theme": "school crafts, football junk and the Thanksgiving leftovers nobody threw away"
+},
+"IT'S AWAKE": {
+"era": [
+2
+],
+"flavor": [
+"synthetic fur, warm alkaline batteries, dusty speaker cloth and flashlight plastic",
+"the bedroom shelf where everybody swore the thing had just moved by itself",
+"tiger_furby_gray_white_1998"
+],
+"lore": "Every fuzzy gremlin that ever talked at 3 A.M. with no batteries in it. Still talking.",
+"mix": [
+[
+"tiger_furby_gray_white_1998",
+8
+],
+[
+"tiger_furby_black_brown_1998",
+5
+],
+[
+"tiger_furby_white_pink_1998",
+5
+],
+[
+"tiger_furby_baby_blue_1999",
+6
+],
+[
+"tiger_furby_baby_pink_1999",
+5
+],
+[
+"furby_buddy_plush_gray_1999",
+6
+],
+[
+"furby_buddy_plush_pink_1999",
+4
+],
+[
+"furby_keychain_gray_1999",
+5
+],
+[
+"furby_sealed_window_box_1998",
+3
+],
+[
+"furby_instruction_furbish_dictionary_1998",
+4
+],
+[
+"speak_furbish_sticker_sheet_1999",
+3
+],
+[
+"modified_furby_red_led_eyes_2002",
+2
+],
+[
+"furby_battery_door_original_1998",
+8
+],
+[
+"duracell_coppertop_aa_1998",
+16
+],
+[
+"duracell_aa_4pack_blister_1998",
+3
+],
+[
+"furby_carry_sling_purple_1999",
+2
+],
+[
+"mini_maglite_2aa_black_1998",
+2
+],
+[
+"eveready_flashlight_red_1997",
+2
+],
+[
+"aa_battery_orientation_card_1998",
+3
+],
+[
+"furby_sleep_note_handwritten_1998",
+3
+],
+[
+"furby_box_twist_tie_bundle_1998",
+8
+]
+],
+"no_wires": true,
+"theme": "fuzzy talking gremlins, loose battery doors and the bedside electronics that refused to stay quiet"
 },
 "LANDFILL DRIVE": {
 "era": [

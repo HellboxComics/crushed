@@ -1,0 +1,1 @@
+original Furby electronics, added LEDs, wiring, resistor, toggle switch, solder and batteries
