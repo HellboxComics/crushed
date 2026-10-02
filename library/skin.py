@@ -147,46 +147,171 @@ def canvas(width_mm, height_mm, mp=1.6e6):
     return int(round(width_mm * s / 16)) * 16, int(round(height_mm * s / 16)) * 16
 
 
-def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=3, judge=None, log=print):
-    """photos: [picked, more of the same...] each {"file", "mask", "vet"}. Returns the finished label PNG in the
-    shape's map orientation (u around, v along with the plus/top end up), or raises if no try passes."""
+FILL = ("This is a flat printed label laid out like a sheet. The gray areas are parts of the label nobody "
+        "photographed. Fill ONLY those gray areas so the label continues seamlessly: the same background colors, "
+        "bands and patterns carried across. Do not add any new words, numbers or logos there, and do not change "
+        "anything outside the gray areas. The product: ")
+
+
+def compose(photos, along_mm, around_mm, W=2048):
+    """The label made from the photos' REAL pixels: each item in your photo unrolled flat by math and laid at its
+    place around the label (the fullest at the front; one showing a clearly different side at the back).
+    -> (label RGB float H x W in the map layout: rows along with the top/plus end up, columns around with the
+        front in the middle), coverage 0..1 per pixel)."""
+    import mosaic
+    H = int(round(W * along_mm / around_mm))
+    lab = np.zeros((H, W, 3))
+    cov = np.zeros((H, W))
+    strips = []
+    for f in photos[:1]:
+        for im, m in all_items(f):
+            objs = mosaic.objects(im, m)
+            o, om = max(objs, key=lambda x: x[1].sum())
+            try:
+                strips.append(mosaic.strip(o, om, W, H))
+            except Exception:
+                pass
+    if not strips:
+        raise RuntimeError("could not unroll the label from your photo")
+    strips.sort(key=lambda lw: -lw[1].sum())
+    keep = [strips[0]]
+    small = lambda x: x[::16, ::16].mean(-1)
+    diffs = []
+    for l, w in strips[1:]:
+        k = keep[0]
+        both = (k[1] > 0.05) & (w > 0.05)
+        diffs.append(np.abs(small(k[0])[:, both[::16]] - small(l)[:, both[::16]]).mean() if both.any() else 0)
+    if diffs and max(diffs) > 0.05:                                         # the most different one shows another side
+        l, w = strips[1 + int(np.argmax(diffs))]
+        keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2)))     # it goes at the back
+    for l, w in keep:
+        better = w[None, :] > cov
+        lab = np.where(better[..., None], l, lab)
+        cov = np.maximum(cov, np.broadcast_to(w[None, :], cov.shape))
+    return lab, cov
+
+
+def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=1, judge=None, log=print):
+    """The finished flat label: real pixels wherever your photo shows the label; the AI fills only the parts no
+    photo shows (it cannot touch the rest), then Real-ESRGAN sharpens it. -> (label png in the map layout, score)"""
     import turnaround as T
-    import vet as V
     os.makedirs(out_dir, exist_ok=True)
-    refs = []
-    for i, p in enumerate(sides(photos[0], reads)):                         # your photo, every side it shows
-        refs.append(os.path.join(out_dir, f"flat_part{i + 1}.png"))
-        p.save(refs[-1])
-    refs += [cutout(p, os.path.join(out_dir, f"ref_{i}.png")) for i, p in enumerate(photos[1:], 1)][:3 - len(refs)]
-    W_mm, H_mm = (along_mm, around_mm) if reads == "along" else (around_mm, along_mm)
-    w, h = canvas(W_mm, H_mm)
-    judge = judge or V.model()
-    best, best_score = None, -1
-    for t in range(tries):
-        png = os.path.join(out_dir, f"try_{t + 1}.png")
-        log(f"[skin] try {t + 1}: Qwen-Image-Edit draws the flat label, {w}x{h} ({W_mm:.1f} x {H_mm:.1f} mm)")
-        T.draw_from_photos(product, refs, png, width=w, height=h, prefix=FLAT, seed=1000 + t)
-        try:
-            v = V.ask(judge, JUDGE.format(product=product), [png, photos[0]["file"]])
-        except Exception as e:
-            v = {"flat_label": False, "problems": f"could not judge: {e}"}
-        score = (v.get("same_design", 0) + (3 if v.get("crisp") else 0)) if v.get("flat_label") else -1
-        log(f"[skin] try {t + 1}: {json.dumps(v)[:200]}")
-        json.dump(v, open(png[:-4] + ".json", "w"), indent=1)
-        if score > best_score:
-            best, best_score = png, score
-        if v.get("flat_label") and v.get("same_design", 0) >= 9 and v.get("crisp"):
-            break                                                          # good enough: stop early
-    if best_score < 0:
-        raise RuntimeError("none of the AI's label tries was a clean flat label")
-    T.upscale(best, force=True)
-    lab = Image.open(best).convert("RGB")
-    if reads == "along":
-        lab = lab.rotate(-90, expand=True)                                 # back to the map: plus end up
-    lab = lab.resize((2048, int(round(2048 * along_mm / around_mm))), Image.LANCZOS)
+    lab, cov = compose(photos, along_mm, around_mm)
+    gaps = cov < 0.05
+    real = os.path.join(out_dir, "label_real.png")
+    Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(real)
+    log(f"[skin] real pixels cover {(~gaps).mean():.0%} of the label")
     out = os.path.join(out_dir, "label.png")
-    lab.save(out)
-    return out, best_score
+    if gaps.mean() > 0.01:
+        from scipy import ndimage
+        med = np.median(lab[~gaps], 0) if (~gaps).any() else np.array([0.5, 0.5, 0.5])
+        filled = np.where(gaps[..., None], med * 0 + 0.5, lab)               # plain gray where nobody looked
+        hole = ndimage.binary_dilation(gaps, iterations=6)
+        img = Image.fromarray((np.clip(filled, 0, 1) * 255).astype(np.uint8))
+        msk = Image.fromarray((hole * 255).astype(np.uint8))
+        if reads == "along":                                                # the AI reads it the right way up
+            img, msk = img.rotate(90, expand=True), msk.rotate(90, expand=True)
+        w, h = canvas(img.width, img.height)
+        src, mp = os.path.join(out_dir, "fill_src.png"), os.path.join(out_dir, "fill_mask.png")
+        img.resize((w, h), Image.LANCZOS).save(src)
+        msk.resize((w, h), Image.NEAREST).save(mp)
+        log(f"[skin] the AI fills the {gaps.mean():.0%} nobody photographed ({w}x{h})")
+        done = os.path.join(out_dir, "filled.png")
+        fill(product, src, mp, done)
+        got = Image.open(done).convert("RGB")
+        if reads == "along":
+            got = got.rotate(-90, expand=True)
+        got = np.asarray(got.resize((lab.shape[1], lab.shape[0]), Image.LANCZOS)) / 255.0
+        lab = np.where(hole[..., None], got, lab)                          # real pixels stay exactly as they were
+    Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(out)
+    clean = os.path.join(out_dir, "cleaned.png")
+    try:
+        log("[skin] the AI cleans off glare and shine (an edit: everything else kept)")
+        cleanup(product, out, clean, reads)
+        if same_words(out, clean, judge, log):
+            Image.open(clean).convert("RGB").resize(Image.open(out).size, Image.LANCZOS).save(out)
+        else:
+            log("[skin] the clean-up changed some words - kept the real-pixel label instead")
+    except Exception as e:
+        log(f"[skin] clean-up skipped: {e}")
+    T.upscale(out, force=True)
+    return out, float((~gaps).mean())
+
+
+CLEAN = ("This is a flat printed label photographed in poor light. Remove the glare, shine, reflections, creases, "
+         "dirt and blur so it looks like the clean printed original. Keep EVERYTHING else exactly as it is: every "
+         "word, number, letter, logo, color and position unchanged. Do not add or remove anything. The product: ")
+
+
+def cleanup(product, src, out, reads="along"):
+    """Qwen-Image-Edit as an editor (its strength), not a painter: glare and wear off, nothing else changed."""
+    import turnaround as T
+    im = Image.open(src).convert("RGB")
+    if reads == "along":
+        im = im.rotate(90, expand=True)
+    w, h = canvas(im.width, im.height)
+    tmp = out[:-4] + "_in.png"
+    im.resize((w, h), Image.LANCZOS).save(tmp)
+    T.draw_from_photos(product, [tmp], out, width=w, height=h, prefix=CLEAN, seed=11)
+    got = Image.open(out).convert("RGB")
+    if reads == "along":
+        got = got.rotate(-90, expand=True)
+    got.save(out)
+
+
+def same_words(a, b, judge=None, log=print):
+    """The judge reads every word on both labels; the clean-up is kept only if the words are the same."""
+    import vet as V
+    judge = judge or V.model()
+    q = 'Read every word and number printed in this picture. Answer ONLY JSON: {"words": ["...", "..."]}'
+    try:
+        wa = [w.lower() for w in V.ask(judge, q, [a], think=False).get("words", []) if isinstance(w, str)]
+        wb = [w.lower() for w in V.ask(judge, q, [b], think=False).get("words", []) if isinstance(w, str)]
+    except Exception as e:
+        log(f"[skin] could not read the words: {e}")
+        return False
+    if not wa:
+        return True
+    keep = sum(1 for w in wa if w in wb) / len(wa)
+    extra = sum(1 for w in wb if w not in wa) / max(len(wb), 1)
+    log(f"[skin] words kept {keep:.0%}, new words {extra:.0%}")
+    return keep >= 0.85 and extra <= 0.15
+
+
+def fill(product, src_png, mask_png, out, seed=7):
+    """Qwen-Image-Edit-2511 in the drawing room, allowed to change only the masked part (ComfyUI's own
+    SetLatentNoiseMask): the rest of the picture is kept exactly."""
+    import turnaround as T
+    fast = os.path.exists(os.path.join(T.LORA_DIR, T.EDIT_LORA))
+    w, h = Image.open(src_png).size
+    img = T._upload(open(src_png, "rb").read(), f"crushed_fill_{os.getpid()}.png")
+    msk = T._upload(open(mask_png, "rb").read(), f"crushed_fillmask_{os.getpid()}.png")
+    text = FILL + product
+    wf = {
+        "1": {"class_type": "UNETLoader", "inputs": {"unet_name": T.EDIT_UNET, "weight_dtype": "default"}},
+        "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b.safetensors", "type": "qwen_image"}},
+        "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
+        "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["11", 0] if fast else ["1", 0], "shift": 3.1}},
+        "12": {"class_type": "CFGNorm", "inputs": {"model": ["4", 0], "strength": 1.0}},
+        "20": {"class_type": "LoadImage", "inputs": {"image": img}},
+        "21": {"class_type": "LoadImage", "inputs": {"image": msk}},
+        "22": {"class_type": "ImageToMask", "inputs": {"image": ["21", 0], "channel": "red"}},
+        "23": {"class_type": "VAEEncode", "inputs": {"pixels": ["20", 0], "vae": ["3", 0]}},
+        "24": {"class_type": "SetLatentNoiseMask", "inputs": {"samples": ["23", 0], "mask": ["22", 0]}},
+        "5": {"class_type": "TextEncodeQwenImageEditPlus", "inputs": {"clip": ["2", 0], "prompt": text, "vae": ["3", 0], "image1": ["20", 0]}},
+        "6": {"class_type": "TextEncodeQwenImageEditPlus", "inputs": {"clip": ["2", 0], "prompt": "", "vae": ["3", 0], "image1": ["20", 0]}},
+        "15": {"class_type": "FluxKontextMultiReferenceLatentMethod", "inputs": {"conditioning": ["5", 0], "reference_latents_method": "index_timestep_zero"}},
+        "16": {"class_type": "FluxKontextMultiReferenceLatentMethod", "inputs": {"conditioning": ["6", 0], "reference_latents_method": "index_timestep_zero"}},
+        "8": {"class_type": "KSampler", "inputs": {"model": ["12", 0], "positive": ["15", 0], "negative": ["16", 0],
+                                                    "latent_image": ["24", 0], "seed": seed, "steps": 8 if fast else 40,
+                                                    "cfg": 1.0 if fast else 3.0, "sampler_name": "euler",
+                                                    "scheduler": "simple", "denoise": 1.0}},
+        "9": {"class_type": "VAEDecode", "inputs": {"samples": ["8", 0], "vae": ["3", 0]}},
+        "10": {"class_type": "SaveImage", "inputs": {"images": ["9", 0], "filename_prefix": "crushed_fill"}},
+    }
+    if fast:
+        wf["11"] = {"class_type": "LoraLoaderModelOnly", "inputs": {"model": ["1", 0], "lora_name": T.EDIT_LORA, "strength_model": 1.0}}
+    return T._run(wf, out, 1800)
 
 
 # ------------------------------------------------------------------ boxes and flat things: one face at a time
@@ -199,11 +324,10 @@ FACE = ("Picture 1 is one side of a real product's box or package, already strai
         "same places and sizes, spelled exactly the same, crisp and sharp. The product: ")
 
 FACE_NEW = ("Picture 1 is the clean front panel of a real product's box or package. Draw its {side} panel - the {side} "
-            "side of the very same box - as one perfectly flat, clean, print-ready panel that fills the whole image "
-            "edge to edge, straight-on, no background, no shadows. Use the same design, colors and lettering style "
-            "as the front. Put only what that side of such a package really carries (for example the brand, the "
-            "name, a short description, a plain panel); do not copy the front, and do not invent long blocks of "
-            "small text, barcodes or prices. The product: ")
+            "side of the very same box - as one perfectly flat, clean panel that fills the whole image edge to "
+            "edge, straight-on, no background, no shadows. Use the same background colors, color bands, patterns "
+            "and graphic style as the front. NO words, letters, numbers, logos or barcodes at all: only color and "
+            "graphic design. The product: ")
 
 
 def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, judge=None, log=print, tries=2):
@@ -223,11 +347,16 @@ def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, ju
             src = os.path.join(out_dir, f"{side}_photo.png")
             flat.save(src)
             imgs = [src] + [cutout(r, os.path.join(out_dir, f"{side}_ref{i}.png")) for i, r in enumerate(refs[:2], 1)]
-    prefix = FACE if imgs else FACE_NEW.format(side=side)
-    if not imgs:
-        if not front:
-            return None
-        imgs = [front]
+    if imgs:                                   # this side was photographed: its REAL pixels, straightened, sharpened
+        out = os.path.join(out_dir, f"{side}.png")
+        Image.open(imgs[0]).convert("RGB").save(out)
+        T.upscale(out, force=True)
+        log(f"[skin] {side}: real photo, straightened to {w_mm:.0f} x {h_mm:.0f} mm")
+        return out
+    prefix = FACE_NEW.format(side=side)
+    if not front:
+        return None
+    imgs = [front]
     judge = judge or V.model()
     best, best_score = None, -1
     for t in range(tries):
