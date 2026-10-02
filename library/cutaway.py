@@ -25,6 +25,7 @@ for o in obs:
     m.operation = "DIFFERENCE"
     m.object = cut
     m.solver = "EXACT"
+    m.use_hole_tolerant = True                     # folded board with overlapping flaps is not one closed solid
 sc = bpy.context.scene
 sc.render.engine = "CYCLES"
 sc.cycles.samples = 96

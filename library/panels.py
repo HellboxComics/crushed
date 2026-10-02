@@ -316,7 +316,10 @@ def brand_panel(front, logo_box, w, h, side):
     n, lab, st, _ = cv2.connectedComponentsWithStats((alpha > 0.5).astype(np.uint8))
     for k in range(1, n):                                    # a sliver of a neighboring picture or line cut by the
         x, y, ww, hh, area = st[k]                           # crop's edge is not part of the logo: left out
-        if (x == 0 or y == 0 or x + ww >= alpha.shape[1] or y + hh >= alpha.shape[0]) and area < 0.03 * alpha.size:
+        Hh, Ww = alpha.shape
+        sliver = (y == 0 and y + hh < 0.15 * Hh) or (y + hh >= Hh and y > 0.85 * Hh)   # bits of the next line
+        corner = (x == 0 or x + ww >= Ww) and (y == 0 or y + hh >= Hh) and area < 0.01 * alpha.size  # a picture's edge
+        if sliver or corner:
             alpha[lab == k] = 0
     alpha = cv2.GaussianBlur(alpha, (0, 0), 0.8)[..., None]
     ox, oy = (w - nw) // 2, (h - nh) // 2 if side != "back" else int(h * 0.3 - nh / 2)

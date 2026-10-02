@@ -1,0 +1,60 @@
+{
+ "family": "folding_carton",
+ "covers": "printed paperboard boxes: cereal, toaster pastries, crackers, candy, toy and game boxes",
+ "how_it_is_made": [
+  "A sheet of paperboard is printed on one side (the outside), then varnished.",
+  "A steel-rule die cuts the sheet into its flat shape (the dieline) and presses crease lines where it will fold.",
+  "The glue flap is glued to the inside of the back panel, making a flat sleeve (the 'knocked-down' carton).",
+  "At the food plant the sleeve is opened into a tube; the bottom flaps are folded in (the small dust flaps first, then the two big flaps) and glued.",
+  "The product goes in (here: foil pouches, two pastries each).",
+  "The top closes: the dust flaps fold in, then the lid folds over and its tuck flap tucks inside the front."
+ ],
+ "board": {
+  "kind": "printed_card",
+  "thickness_mm": 0.45,
+  "inside_color": [
+   0.56,
+   0.54,
+   0.5
+  ],
+  "inside_note": "recycled board (this box says 100% recycled paper) is gray-brown inside, unprinted"
+ },
+ "flaps_mm": {
+  "glue": 12,
+  "tuck": 16,
+  "dust_fraction": 0.8,
+  "bottom_inner_fraction": 0.55
+ },
+ "contents": {
+  "poptarts_8": {
+   "pouches": 4,
+   "per_pouch": 2,
+   "pouch_mm": [
+    132,
+    95,
+    23
+   ],
+   "pastry_mm": [
+    110,
+    76,
+    10
+   ],
+   "pouch_kind": "foil_laminate",
+   "pastry_kind": "food_baked",
+   "layout": "two pouches deep, two high, standing on their long edge",
+   "sizes_note": "pouch and pastry sizes estimated to fill this box's real inside (140 x 50 x 200 mm), four pouches of two; not measured from a 1997 pouch"
+  }
+ },
+ "checked_against": [
+  {
+   "source": "standard tuck-top / glued-bottom folding carton construction (paperboard packaging dieline conventions)"
+  },
+  {
+   "source": "the picked photo: tuck lid with 'TO CLOSE INSERT TAB HERE', 'Carton made from 100% recycled paper'"
+  },
+  {
+   "source": "Kellanova (Kellogg's) product page: 2 pastries per pouch",
+   "url": "https://www.kellanovaawayfromhome.com/en-us/products/pop-tarts-frosted-strawberry-product.00038000222726.html"
+  }
+ ]
+}

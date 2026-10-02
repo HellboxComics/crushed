@@ -429,7 +429,26 @@ _NEXT = {"front": {"left": "left", "right": "right"}, "back": {"left": "right", 
          "left": {"left": "back", "right": "front"}, "right": {"left": "front", "right": "back"}}
 
 
-def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=print):
+PHOTO_Q = ("Picture 1 is the flat front of a product's box. Find the main product picture on it (the food, toy or "
+           "product shown, not the words). Answer ONLY JSON with its box as fractions of the picture (0..1 from the "
+           "left and from the top): {\"x0\": , \"y0\": , \"x1\": , \"y1\": }")
+
+
+def photo_box(front_png, judge=None, log=print):
+    try:
+        import vet as V
+        b = V.ask(judge or V.model(), PHOTO_Q, [front_png], think=False, side=768)
+        x0, y0, x1, y1 = (float(b[k]) for k in ("x0", "y0", "x1", "y1"))
+        if max(x0, y0, x1, y1) > 1.5:
+            x0, y0, x1, y1 = (v / 1000 for v in (x0, y0, x1, y1))
+        if 0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1 and (x1 - x0) * (y1 - y0) > 0.05:
+            return (x0, y0, x1, y1)
+    except Exception as e:
+        log(f"[texture] product picture not found by the AI: {e}")
+    return (0.0, 0.55, 1.0, 0.92)
+
+
+def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=print, era=None):
     """All six sides of a box (two for a flat thing) -> one atlas laid out the way shapes/box.py maps it.
     Every side a photo shows is cut out of that photo on its own (a photo showing the front and the top gives
     both), straightened, with the room's light taken out. Sides no photo shows get the box's own color and the
@@ -505,8 +524,14 @@ def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=prin
             src[side] = "plain (thin edge)"
         else:
             box = box or logo_box(faces["front"], judge, log)
-            panels.brand_panel(front, box, w, h, side).save(out)
-            src[side] = "box color + the real logo (no photo of this side)"
+            if era:                                       # the era's real panels, rebuilt in exact type (his choice)
+                import eraprint
+                pbox = photo_box(faces["front"], judge, log) if side == "back" else None
+                eraprint.panel(side, era, front, box, pbox, w, h, panels.paper_color(front)).save(out)
+                src[side] = "rebuilt as printed in that era (words from your AI's knowledge, exact type, real logo)"
+            else:
+                panels.brand_panel(front, box, w, h, side).save(out)
+                src[side] = "box color + the real logo (no photo of this side)"
         faces[side] = out
         log(f"[texture] {side}: {src[side]}")
     atlas = panels.assemble(faces, W, D, H)

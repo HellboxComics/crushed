@@ -227,17 +227,34 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
             D = min(D, 0.002)
         same = same_design(picked, others, use, want=5)
         same += other_sides(cid, card, picked, use, have=[picked] + same)  # backs and sides, hunted on purpose
-        status(cid, step="5/7 texture map: every box face at its measured size")
-        make_room("drawing")
-        atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
-                                   flat=route == "flat", judge=use, log=say)
-        status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         import cards
         mats = cards.materials(card)
         surface = ("card" if "printed_card" in mats else "plastic" if "molded_plastic" in mats else
                    "card" if any(k in str(card.get("mat", "")).lower() for k in ("card", "paper", "board")) else "plastic")
-        run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
-                    "0.3" if route == "flat" else "0.6", surface)
+        era = None
+        if surface == "card" and route == "box":         # the era's real panels for the sides no photo shows
+            era = card.get("era_print")
+            if not era:
+                try:
+                    import eraprint
+                    status(cid, step="5/7 your AI writes the era's printed panels (nutrition, ingredients, maker)")
+                    era = eraprint.content(product, model=use)
+                    card["era_print"] = era
+                    json.dump(card, open(cards.path(cid), "w"), indent=1)
+                except Exception as e:
+                    say(f"[texture] era panels skipped ({e})")
+        status(cid, step="5/7 texture map: every box face at its measured size")
+        make_room("drawing")
+        atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
+                                   flat=route == "flat", judge=use, log=say, era=era)
+        status(cid, step="5/7 Blender: the carton made like the factory makes it (flat sheet, creased, folded)"
+               if surface == "card" and route == "box" else "5/7 Blender: mesh + UV map + texture map + material")
+        if surface == "card" and route == "box":         # a folding carton: its dieline, folded, with what's inside
+            contents = "poptarts_8" if "pop-tarts" in product.lower() else ""
+            run_blender("carton.py", str(W), str(D), str(H), mdir, os.path.join(d, "skin"), cid, contents)
+        else:
+            run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
+                        "0.3" if route == "flat" else "0.6", surface)
     else:
         st = jload(os.path.join(WORK, "selftest.json"), {})
         if not st.get("hunyuan_ok", True):
