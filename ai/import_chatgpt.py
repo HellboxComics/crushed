@@ -28,7 +28,7 @@ HOW_ALIAS = {"bend": "fold", "tear": "fold", "shatter": "snap", "crack": "snap",
              "stretch": "squish", "tangle": "crumple", "buckle": "dent", "warp": "fold", "rip": "fold"}
 MAT_ALIAS = {"vinyl": "soft_plastic", "denim": "fabric", "nylon": "fabric", "cotton": "fabric", "fleece": "fabric",
              "leather": "fabric", "suede": "fabric", "shell": "ceramic", "silicone": "rubber", "latex": "rubber",
-             "cardboard": "card", "fiber": "card", "felt": "fabric", "synthetic": "fabric", "composite": "plastic", "acrylic": "plastic", "resin": "plastic", "sugar": "candy", "wire": "metal", "plant": "fabric", "food_prop": "food", "bone_prop": "ceramic", "bone": "ceramic", "leaf": "paper", "grass": "fabric", "mineral": "glass", "stone": "ceramic", "marble": "ceramic", "porcelain": "ceramic", "aluminum": "metal", "steel": "metal", "tin": "metal", "porcelain": "ceramic"}
+             "cardboard": "card", "fiber": "card", "felt": "fabric", "synthetic": "fabric", "composite": "plastic", "acrylic": "plastic", "resin": "plastic", "sugar": "candy", "wire": "metal", "gel": "soft_plastic", "foam_candy": "candy", "wafer": "food", "plant": "fabric", "food_prop": "food", "bone_prop": "ceramic", "bone": "ceramic", "leaf": "paper", "grass": "fabric", "mineral": "glass", "stone": "ceramic", "marble": "ceramic", "porcelain": "ceramic", "aluminum": "metal", "steel": "metal", "tin": "metal", "porcelain": "ceramic"}
 DENSITY = {"metal": 2.0, "glass": 1.2, "ceramic": 1.1, "wood": 0.6, "clay": 1.2, "plastic": 0.5, "soft_plastic": 0.4,
            "rubber": 0.6, "food": 0.6, "chocolate": 0.9, "candy": 0.9, "wax": 0.8, "paper": 0.4, "card": 0.3,
            "glossy_print": 0.4, "fabric": 0.2, "foam": 0.05, "foil": 0.1}      # rough, of the bounding box, g/cm3

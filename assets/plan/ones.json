@@ -1092,6 +1092,114 @@
 "no_wires": true,
 "theme": "every playground hardware argument crushed into one cube"
 },
+"DIAL-UP": {
+"era": [
+1,
+2
+],
+"flavor": [
+"warm CRT dust, hot modem plastic, printer paper, carpet lint and the metallic smell of a freshly opened CD sleeve",
+"the family computer desk beside the phone jack nobody else was allowed to use after 8 P.M.",
+"aol_500_hours_free_trial_cd_1999"
+],
+"lore": "A thousand free hours on a thousand discs. The phone line was busy the whole time.",
+"mix": [
+[
+"aol_500_hours_free_trial_cd_1999",
+8
+],
+[
+"aol_trial_tin_1000_hours_2000",
+2
+],
+[
+"usr_sportster_56k_external_5686_1998",
+2
+],
+[
+"ibm_model_m_1391401_1991",
+1
+],
+[
+"microsoft_intellimouse_serial_beige_1998",
+2
+],
+[
+"loose_mouse_ball_gray_1998",
+3
+],
+[
+"beige_rj11_phone_cord_25ft_1998",
+4
+],
+[
+"flying_floppies_mousepad_1997",
+1
+],
+[
+"aim_buddy_icon_sticker_sheet_2001",
+3
+],
+[
+"napster_cdr_paper_sleeve_2000",
+4
+],
+[
+"winamp_skin_printout_2000",
+3
+],
+[
+"aol_1000_hours_free_mailer_2001",
+8
+],
+[
+"memorex_cdr_aol_downloads_2000",
+6
+],
+[
+"att_trimline_210_phone_beige_1998",
+1
+],
+[
+"apple_imac_g3_bondi_blue_1998",
+1
+],
+[
+"aol_quick_start_booklet_2000",
+2
+],
+[
+"radioshack_rj11_phone_splitter_1998",
+2
+],
+[
+"handwritten_aim_screenname_note_2000",
+3
+],
+[
+"usr_sportster_56k_retail_box_1998",
+1
+],
+[
+"dialup_connection_log_printout_2000",
+3
+],
+[
+"rj11_inline_coupler_beige_1998",
+2
+],
+[
+"belkin_6outlet_power_strip_beige_1999",
+1
+],
+[
+"pc_computing_internet_issue_1999",
+2
+]
+],
+"no_wires": true,
+"theme": "free-trial discs, beige peripherals and the modem scream that occupied the whole phone line"
+},
 "DOUBLE A": {
 "era": [
 0,
@@ -1310,6 +1418,111 @@
 "no_wires": true,
 "theme": "plastic eggs, Easter candy and one ruined plush animal nobody found until July"
 },
+"GACHAPON": {
+"era": [
+0,
+1,
+2
+],
+"flavor": [
+"warm vending-machine plastic, candy wafers, metal coins and the dusty rubber smell of tiny figures",
+"the sidewalk beside a Tokyo toy shop under a wall of capsule machines",
+"bandai_gashapon_capsule_65mm_red_clear_1998"
+],
+"lore": "Two hundred yen at a time outside a Tokyo toy shop: a wall of capsules, the toy nobody wanted, and a crank that clicks.",
+"mix": [
+[
+"bandai_gashapon_capsule_65mm_red_clear_1998",
+12
+],
+[
+"bandai_gashapon_capsule_48mm_blue_clear_1998",
+8
+],
+[
+"bandai_kinkeshi_kinnikuman_flesh_1986",
+6
+],
+[
+"bandai_sd_gundam_capsule_figure_1992",
+6
+],
+[
+"dragon_ball_z_menko_card_1995",
+4
+],
+[
+"lotte_bikkuriman_akuma_vs_tenshi_sticker_1986",
+4
+],
+[
+"tomica_nissan_skyline_gtr_r32_1990",
+1
+],
+[
+"tomica_toyota_supra_a80_1994",
+1
+],
+[
+"nintendo_famicom_super_mario_bros_cart_1985",
+1
+],
+[
+"enix_dragon_quest_iii_famicom_cart_1988",
+1
+],
+[
+"yaokin_umaibo_corn_potage_1995",
+3
+],
+[
+"calpis_water_500ml_pet_1996",
+2
+],
+[
+"japan_100yen_coin_heisei10_1998",
+6
+],
+[
+"bandai_capsule_machine_crank_red_1998",
+1
+],
+[
+"bandai_capsule_machine_200yen_coin_mech_1998",
+1
+],
+[
+"gachapon_folded_paper_insert_1998",
+4
+],
+[
+"gachapon_machine_display_card_1998",
+1
+],
+[
+"bandai_character_keychain_capsule_1998",
+3
+],
+[
+"mini_fingerboard_capsule_prize_2000",
+2
+],
+[
+"lotte_bikkuriman_choco_wafer_wrapper_1995",
+2
+],
+[
+"mini_capsule_robot_key_1998",
+2
+],
+[
+"gachapon_capsule_half_assorted_1998",
+6
+]
+],
+"no_wires": true,
+"theme": "capsule-machine plastic, tiny toys and two hundred yen disappearing one crank at a time"
+},
 "GAS FEES": {
 "era": [
 2,
@@ -1517,6 +1730,225 @@
 ],
 "no_wires": true,
 "theme": "coffee, phones, chargers and the modern ritual of saying good morning before checking the chart"
+},
+"GOLAZO": {
+"era": [
+1,
+2,
+3,
+4
+],
+"flavor": [
+"lager, hot vinyl, felt scarf, printer ink, grass and the rubber smell of a match ball",
+"the living room, pub floor and office wall after another tournament ended earlier than planned",
+"adidas_questra_world_cup_ball_1994"
+],
+"lore": "Every four years the whole planet stops work: scarves in June, horns at dawn, a wallchart filled in until your team went out.",
+"mix": [
+[
+"adidas_questra_world_cup_ball_1994",
+1
+],
+[
+"adidas_tricolore_world_cup_ball_1998",
+1
+],
+[
+"adidas_fevernova_world_cup_ball_2002",
+1
+],
+[
+"adidas_jabulani_world_cup_ball_2010",
+1
+],
+[
+"england_bar_scarf_red_white_1998",
+3
+],
+[
+"brazil_bar_scarf_green_yellow_2002",
+2
+],
+[
+"germany_bar_scarf_black_red_gold_2006",
+2
+],
+[
+"vuvuzela_yellow_2010",
+3
+],
+[
+"compressed_air_stadium_horn_1998",
+2
+],
+[
+"france98_footix_plush_1998",
+1
+],
+[
+"world_cup_flag_bunting_assorted_1998",
+2
+],
+[
+"france98_wallchart_1998",
+2
+],
+[
+"world_cup_wallchart_2002",
+1
+],
+[
+"foam_number_one_finger_red_1998",
+2
+],
+[
+"coca_cola_330ml_can_world_cup_1998",
+5
+],
+[
+"pepsi_330ml_football_can_2002",
+4
+],
+[
+"england_replica_jersey_scrap_1998",
+2
+],
+[
+"brazil_replica_jersey_scrap_2002",
+2
+],
+[
+"handheld_flag_england_1998",
+4
+],
+[
+"panini_france98_sticker_loose_1998",
+12
+],
+[
+"red_party_cup_football_watch_1998",
+5
+],
+[
+"tournament_bracket_office_pool_2006",
+3
+],
+[
+"pub_match_ticket_stub_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "match balls, scarves, wallcharts and four-year tournament debris"
+},
+"GOT GOT NEED": {
+"era": [
+0,
+1,
+2
+],
+"flavor": [
+"glossy sticker paper, rubber bands, schoolbag dust, newsprint ink and warm playground asphalt",
+"the playground wall where everybody brought doubles and nobody admitted how many packets they had bought",
+"panini_world_cup_italia90_album_1990"
+],
+"lore": "Italia 90 to France 98 in one swap pile: the album half full, the doubles rubber-banded, the shiny never found.",
+"mix": [
+[
+"panini_world_cup_italia90_album_1990",
+2
+],
+[
+"panini_world_cup_usa94_album_1994",
+1
+],
+[
+"panini_world_cup_france98_album_1998",
+2
+],
+[
+"panini_italia90_sticker_packet_1990",
+8
+],
+[
+"panini_usa94_sticker_packet_1994",
+6
+],
+[
+"panini_france98_sticker_packet_1998",
+8
+],
+[
+"panini_italia90_player_sticker_1990",
+8
+],
+[
+"panini_usa94_player_sticker_1994",
+8
+],
+[
+"panini_france98_player_sticker_1998",
+8
+],
+[
+"panini_italia90_shiny_team_badge_1990",
+2
+],
+[
+"panini_france98_shiny_team_badge_1998",
+1
+],
+[
+"rubber_banded_swaps_stack_1994",
+5
+],
+[
+"loose_tan_rubber_band_1994",
+8
+],
+[
+"subbuteo_football_player_red_white_1992",
+4
+],
+[
+"subbuteo_football_player_blue_1992",
+3
+],
+[
+"foam_football_mini_1994",
+3
+],
+[
+"england_replica_jersey_scrap_1998",
+2
+],
+[
+"italy_replica_jersey_scrap_1994",
+2
+],
+[
+"handheld_flag_italy_1990",
+3
+],
+[
+"handheld_flag_brazil_1994",
+3
+],
+[
+"england_bar_scarf_red_white_1998",
+2
+],
+[
+"sticker_swap_checklist_notebook_1994",
+3
+],
+[
+"panini_sticker_storage_envelope_1994",
+3
+]
+],
+"no_wires": true,
+"theme": "half-filled albums, rubber-banded doubles and the shiny badge that never turned up"
 },
 "GREEN BEER": {
 "era": [
@@ -2384,6 +2816,125 @@
 "no_wires": true,
 "theme": "cafeteria currency in pouches, wrappers and one deeply regretted fruit-snack deal"
 },
+"MINT CONDITION": {
+"era": [
+1
+],
+"flavor": [
+"cardboard, penny-sleeve plastic, leather baseballs, felt, stadium dust and old Beckett ink",
+"the closet shelf between the card binders and the box nobody was allowed to open with greasy hands",
+"upper_deck_sp_derek_jeter_279_1993_toploader"
+],
+"lore": "Rookie cards in top-loaders, signed balls, pennants. Was going to pay for a house. Crushed instead.",
+"mix": [
+[
+"upper_deck_sp_derek_jeter_279_1993_toploader",
+2
+],
+[
+"topps_kobe_bryant_138_1996_toploader",
+2
+],
+[
+"upper_deck_shaquille_oneal_1b_1992_toploader",
+2
+],
+[
+"topps_allen_iverson_171_1996_toploader",
+2
+],
+[
+"ultra_pro_3x4_toploader_clear_1995",
+10
+],
+[
+"ultra_pro_penny_sleeves_100ct_1995",
+2
+],
+[
+"upper_deck_baseball_foil_pack_1991",
+5
+],
+[
+"topps_baseball_wax_pack_1991",
+5
+],
+[
+"fleer_basketball_pack_1992",
+4
+],
+[
+"topps_basketball_pack_1996",
+4
+],
+[
+"rawlings_official_league_signed_baseball_1995",
+2
+],
+[
+"baseball_acrylic_ball_display_cube_1995",
+2
+],
+[
+"foam_number_one_finger_red_1995",
+2
+],
+[
+"new_york_yankees_felt_pennant_1995",
+2
+],
+[
+"chicago_bulls_felt_pennant_1996",
+2
+],
+[
+"stadium_giveaway_bobblehead_1996",
+1
+],
+[
+"chicago_bulls_23_replica_jersey_scrap_1996",
+2
+],
+[
+"new_york_yankees_snapback_navy_1995",
+2
+],
+[
+"stadium_ticket_stub_bundle_1995",
+5
+],
+[
+"riddell_new_york_giants_mini_helmet_1995",
+1
+],
+[
+"riddell_green_bay_packers_mini_helmet_1996",
+1
+],
+[
+"ultra_pro_9pocket_binder_page_1995",
+4
+],
+[
+"three_ring_card_binder_black_1995",
+2
+],
+[
+"starter_satin_team_jacket_scrap_1995",
+2
+],
+[
+"beckett_baseball_card_monthly_1995",
+2
+],
+[
+"card_shop_price_stickers_1995",
+8
+]
+],
+"no_wires": true,
+"theme": "rookie cards, wax packs and every protective layer added before the crusher ignored all of them"
+},
 "MIXTAPE": {
 "era": [
 1,
@@ -2487,6 +3038,323 @@
 ],
 "no_wires": true,
 "theme": "hand-recorded cassettes, Walkman junk and handwritten track lists"
+},
+"PICK 'N' MIX": {
+"era": [
+0,
+1,
+2
+],
+"flavor": [
+"fizzy sugar, foam candy, strawberry laces, paper bag dust and the plastic smell inside the sweet bins",
+"beneath a Woolworths pick 'n' mix counter after the shutters came down for good",
+"woolworths_pick_n_mix_paper_bag_1997"
+],
+"lore": "One paper bag every Saturday, filled by weight and gone by Monday, from a high-street store that is not there anymore.",
+"mix": [
+[
+"woolworths_pick_n_mix_paper_bag_1997",
+2
+],
+[
+"woolworths_clear_candy_scoop_1997",
+1
+],
+[
+"haribo_happy_cola_bottle_1997",
+6
+],
+[
+"barratt_foam_shrimp_1997",
+6
+],
+[
+"haribo_fried_egg_gummy_1997",
+5
+],
+[
+"woolworths_white_sugar_mouse_1997",
+3
+],
+[
+"barratt_flying_saucer_1997",
+6
+],
+[
+"barratt_strawberry_fizzy_lace_1997",
+3
+],
+[
+"bassetts_jelly_baby_assorted_1997",
+6
+],
+[
+"mccowans_wham_original_bar_1997",
+2
+],
+[
+"barratt_foam_banana_1997",
+4
+],
+[
+"barratt_fruit_salad_chew_1997",
+4
+],
+[
+"barratt_black_jack_chew_1997",
+4
+],
+[
+"swizzels_love_hearts_roll_1997",
+2
+],
+[
+"barratt_sherbet_fountain_1997",
+1
+],
+[
+"barratt_dip_dab_1997",
+1
+],
+[
+"rowntrees_fruit_pastilles_tube_1997",
+2
+],
+[
+"maynards_wine_gums_bag_1997",
+2
+],
+[
+"woolworths_pick_n_mix_bin_lid_1997",
+1
+],
+[
+"woolworths_pick_n_mix_price_label_79p_100g_1997",
+2
+],
+[
+"uk_one_pound_coin_1997",
+2
+],
+[
+"woolworths_pick_n_mix_receipt_1997",
+1
+]
+],
+"no_wires": true,
+"theme": "high-street sweet-shop paper bags filled by weight until the bag barely folded shut"
+},
+"PURIKURA": {
+"era": [
+2,
+3
+],
+"flavor": [
+"strawberry Pocky, gel pen ink, warm phone plastic, perfume, vinyl charms and schoolbag fabric",
+"beneath a purikura booth bench in Shibuya after the last train rush",
+"atlus_print_club_purikura_sheet_1999"
+],
+"lore": "A Shibuya schoolbag, emptied: a planner full of photo stickers, a phone wearing its weight in charms, and one loose sock.",
+"mix": [
+[
+"atlus_print_club_purikura_sheet_1999",
+8
+],
+[
+"ntt_docomo_panasonic_p504i_pink_2002",
+2
+],
+[
+"sanrio_hello_kitty_phone_strap_2002",
+4
+],
+[
+"disney_mickey_mobile_phone_strap_2003",
+4
+],
+[
+"tamagotchi_gen1_white_blue_1997",
+2
+],
+[
+"glico_pocky_strawberry_1999",
+3
+],
+[
+"morinaga_hichew_grape_2002",
+4
+],
+[
+"japanese_loose_sock_white_2001",
+2
+],
+[
+"sakura_gelly_roll_classic_assorted_2001",
+6
+],
+[
+"takara_cardcaptor_sakura_clow_staff_1998",
+1
+],
+[
+"nintendo_game_boy_pocket_silver_1996",
+1
+],
+[
+"purikura_sticker_album_clear_pink_2001",
+2
+],
+[
+"sanrio_hello_kitty_schedule_book_2003",
+1
+],
+[
+"japanese_kawaii_sticker_flake_assorted_2002",
+5
+],
+[
+"fujifilm_quicksnap_flash_27_2002",
+1
+],
+[
+"sony_walkman_mz_e909_pink_2001",
+1
+],
+[
+"sony_minidisc_color_assorted_2001",
+4
+],
+[
+"sanrio_hello_kitty_pencil_case_2002",
+1
+],
+[
+"pentel_sharp_p205_pink_2001",
+2
+],
+[
+"purikura_booth_token_1999",
+4
+],
+[
+"shibuya_purikura_receipt_2002",
+2
+],
+[
+"japanese_school_id_card_holder_pink_2002",
+1
+],
+[
+"japanese_snap_hair_clip_assorted_2002",
+4
+]
+],
+"no_wires": true,
+"theme": "Shibuya schoolbag photo stickers, phone charms and stationery spilled across the floor"
+},
+"RETIREMENT PLAN": {
+"era": [
+1,
+2
+],
+"flavor": [
+"polyester plush, old acrylic, bookstore paper, plastic pellets and attic dust",
+"a Rubbermaid tote marked DO NOT SELL until somebody finally checked the prices",
+"ty_princess_bear_1997"
+],
+"lore": "Tags protected. Price guide highlighted. The college fund is in here somewhere.",
+"mix": [
+[
+"ty_princess_bear_1997",
+3
+],
+[
+"ty_valentino_bear_1995",
+2
+],
+[
+"ty_peace_bear_1996",
+2
+],
+[
+"ty_spot_dog_1994",
+2
+],
+[
+"ty_squealer_pig_1994",
+2
+],
+[
+"ty_pinchers_lobster_1994",
+2
+],
+[
+"ty_peanut_elephant_1995",
+2
+],
+[
+"ty_legs_frog_1993",
+2
+],
+[
+"ty_pinky_flamingo_1995",
+2
+],
+[
+"ty_heart_swing_tag_1998",
+6
+],
+[
+"beanie_baby_tag_protector_clear_1998",
+10
+],
+[
+"beanie_babies_collectors_value_guide_1998",
+2
+],
+[
+"beanie_price_guide_highlighter_yellow_1998",
+2
+],
+[
+"beanie_acrylic_display_cube_1998",
+4
+],
+[
+"mcdonalds_teenie_beanie_baby_sealed_1997",
+6
+],
+[
+"mcdonalds_teenie_beanie_display_box_1997",
+1
+],
+[
+"ty_beanie_babies_official_club_kit_1998",
+1
+],
+[
+"beanie_certificate_of_authenticity_1998",
+4
+],
+[
+"beanie_collection_inventory_sheet_1998",
+3
+],
+[
+"rubbermaid_roughneck_tote_blue_1998",
+1
+],
+[
+"silica_gel_packet_5g_1998",
+4
+],
+[
+"beanie_baby_clear_storage_bag_1998",
+4
+]
+],
+"no_wires": true,
+"theme": "Beanie Babies, tag protectors and the retirement fund that stayed stuffed with pellets"
 },
 "SAVE ICON": {
 "era": [
@@ -2700,6 +3568,113 @@
 ],
 "no_wires": true,
 "theme": "every glowing LCD, CRT and little electronic window that owned your attention"
+},
+"SLIMED": {
+"era": [
+1
+],
+"flavor": [
+"sweet cereal dust, vinyl slime, plastic toys, bubble gum and warm VHS cases",
+"the rec-room carpet after an entire Saturday morning got dumped into one bin",
+"pickleodeon_glopp_bucket_1994"
+],
+"lore": "Green slime, orange splats, and every kids' channel trophy nobody actually won.",
+"mix": [
+[
+"pickleodeon_glopp_bucket_1994",
+4
+],
+[
+"pickleodeon_loose_green_glopp_1994",
+8
+],
+[
+"orange_splat_wall_sign_1994",
+3
+],
+[
+"orange_splat_foam_piece_1994",
+6
+],
+[
+"toot_putty_egg_green_1995",
+5
+],
+[
+"floom_foam_slime_tub_pink_1996",
+4
+],
+[
+"floom_loose_bead_blob_1996",
+6
+],
+[
+"orange_vhs_clamshell_kids_show_1994",
+5
+],
+[
+"tdk_e180_slime_special_1994",
+4
+],
+[
+"double_dog_dare_flag_1994",
+3
+],
+[
+"grossout_cereal_box_green_1994",
+3
+],
+[
+"gloppos_cereal_loose_rings_1994",
+12
+],
+[
+"bubble_tapeworm_roll_1995",
+4
+],
+[
+"grossout_sticker_sheet_1994",
+4
+],
+[
+"pickleodeon_toy_blimp_1995",
+1
+],
+[
+"kids_chews_choice_award_1995",
+2
+],
+[
+"slime_bucket_trophy_green_1994",
+2
+],
+[
+"orange_foam_microphone_1994",
+3
+],
+[
+"nickelodeon_style_green_slime_cup_1994",
+5
+],
+[
+"grossout_eyeball_bouncy_ball_1994",
+6
+],
+[
+"fake_barf_rubber_blob_1994",
+3
+],
+[
+"whoopee_cushion_orange_1994",
+3
+],
+[
+"kids_tv_schedule_magazine_1994",
+2
+]
+],
+"no_wires": true,
+"theme": "neon slime, orange splats and every fake kids-TV trophy that felt more important than school"
 },
 "SLOW MOTION": {
 "era": [
@@ -2926,6 +3901,110 @@
 ],
 "no_wires": true,
 "theme": "Christmas-morning packaging, dead lights, batteries and toys that needed one more part"
+},
+"SPACE OPERA": {
+"era": [
+0,
+1
+],
+"flavor": [
+"old blister plastic, cardboard backing, vinyl capes, lunchbox metal and the dusty sweetness of a collector case",
+"the top shelf of a bedroom where every package had been preserved better than the furniture",
+"space_opera_overlord_vex_carded_1992"
+],
+"lore": "Never opened. Still on the card. Mint, until now.",
+"mix": [
+[
+"space_opera_overlord_vex_carded_1992",
+3
+],
+[
+"space_opera_rebel_pilot_carded_1991",
+3
+],
+[
+"space_opera_alien_smuggler_carded_1993",
+2
+],
+[
+"space_opera_loose_hero_figure_1991",
+5
+],
+[
+"space_opera_loose_robot_figure_1992",
+4
+],
+[
+"space_opera_collapsible_laser_sword_red_1994",
+3
+],
+[
+"space_opera_collapsible_laser_sword_green_1994",
+3
+],
+[
+"rusty_comet_starship_vehicle_1993",
+1
+],
+[
+"rusty_comet_retail_box_1993",
+1
+],
+[
+"overlord_vex_costume_helmet_1994",
+1
+],
+[
+"space_opera_collector_case_1992",
+1
+],
+[
+"space_opera_metal_lunchbox_1991",
+1
+],
+[
+"space_opera_matching_thermos_1991",
+1
+],
+[
+"space_opera_trilogy_vhs_boxset_1995",
+2
+],
+[
+"space_opera_vhs_episode_one_1995",
+2
+],
+[
+"space_opera_trading_card_wax_pack_1993",
+6
+],
+[
+"space_opera_trading_card_loose_1993",
+12
+],
+[
+"space_opera_sticker_sheet_1993",
+3
+],
+[
+"space_opera_mailaway_mystery_figure_bag_1994",
+2
+],
+[
+"space_opera_mailaway_proof_of_purchase_1994",
+6
+],
+[
+"space_opera_fan_club_newsletter_1994",
+3
+],
+[
+"space_opera_bedroom_poster_1992",
+2
+]
+],
+"no_wires": true,
+"theme": "unopened figures, plastic laser swords and the trilogy that kept getting remastered"
 },
 "STILL ALIVE": {
 "era": [

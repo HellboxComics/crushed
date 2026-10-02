@@ -109,6 +109,36 @@
 0.23
 ]
 },
+"adidas_fevernova_world_cup_ball_2002": {
+"hard": 0.5,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.22,
+0.22,
+0.22
+]
+},
+"adidas_jabulani_world_cup_ball_2010": {
+"hard": 0.52,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.22,
+0.22,
+0.22
+]
+},
+"adidas_questra_world_cup_ball_1994": {
+"hard": 0.48,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.22,
+0.22,
+0.22
+]
+},
 "adidas_snap_pants_black_white_1998": {
 "hard": 0.22,
 "how": "fold",
@@ -117,6 +147,26 @@
 0.52,
 0.02,
 1.05
+]
+},
+"adidas_tricolore_world_cup_ball_1998": {
+"hard": 0.48,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.22,
+0.22,
+0.22
+]
+},
+"aim_buddy_icon_sticker_sheet_2001": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.2
 ]
 },
 "air_horn": {
@@ -359,6 +409,16 @@
 0.15
 ]
 },
+"aol_1000_hours_free_mailer_2001": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.14,
+0.006,
+0.18
+]
+},
 "aol_2_5_floppy_1994": {
 "hard": 0.46,
 "how": "snap",
@@ -397,6 +457,26 @@
 0.126,
 0.002,
 0.126
+]
+},
+"aol_quick_start_booklet_2000": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.13,
+0.002,
+0.18
+]
+},
+"aol_trial_tin_1000_hours_2000": {
+"hard": 0.54,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.13,
+0.018,
+0.13
 ]
 },
 "apc_backups_500_2000": {
@@ -719,6 +799,16 @@
 0.035
 ]
 },
+"atlus_print_club_purikura_sheet_1999": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
+0.15
+]
+},
 "att_trimline_210_phone_beige_1998": {
 "hard": 0.58,
 "how": "snap",
@@ -919,6 +1009,76 @@
 0.1128
 ]
 },
+"bandai_capsule_machine_200yen_coin_mech_1998": {
+"hard": 0.76,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.12,
+0.06,
+0.18
+]
+},
+"bandai_capsule_machine_crank_red_1998": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.08,
+0.14
+]
+},
+"bandai_character_keychain_capsule_1998": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.02,
+0.05
+]
+},
+"bandai_gashapon_capsule_48mm_blue_clear_1998": {
+"hard": 0.16,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.048,
+0.048,
+0.048
+]
+},
+"bandai_gashapon_capsule_65mm_red_clear_1998": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.065
+]
+},
+"bandai_kinkeshi_kinnikuman_flesh_1986": {
+"hard": 0.18,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.03,
+0.02,
+0.045
+]
+},
+"bandai_sd_gundam_capsule_figure_1992": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.03,
+0.05
+]
+},
 "bar_matchbook_black_2001": {
 "hard": 0.16,
 "how": "fold",
@@ -949,6 +1109,96 @@
 0.24
 ]
 },
+"barratt_black_jack_chew_1997": {
+"hard": 0.08,
+"how": "squish",
+"mat": "paper",
+"size": [
+0.023,
+0.008,
+0.04
+]
+},
+"barratt_dip_dab_1997": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.015,
+0.14
+]
+},
+"barratt_flying_saucer_1997": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.04,
+0.008,
+0.04
+]
+},
+"barratt_foam_banana_1997": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "candy",
+"size": [
+0.02,
+0.018,
+0.07
+]
+},
+"barratt_foam_shrimp_1997": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "candy",
+"size": [
+0.045,
+0.018,
+0.03
+]
+},
+"barratt_fruit_salad_chew_1997": {
+"hard": 0.08,
+"how": "squish",
+"mat": "paper",
+"size": [
+0.023,
+0.008,
+0.04
+]
+},
+"barratt_sherbet_fountain_1997": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.035,
+0.035,
+0.15
+]
+},
+"barratt_strawberry_fizzy_lace_1997": {
+"hard": 0.03,
+"how": "fold",
+"mat": "candy",
+"size": [
+0.4,
+0.004,
+0.004
+]
+},
+"baseball_acrylic_ball_display_cube_1995": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.09,
+0.09
+]
+},
 "basf_2hd_floppy_1997": {
 "hard": 0.38,
 "how": "snap",
@@ -977,6 +1227,16 @@
 0.08,
 0.1997,
 0.0852
+]
+},
+"bassetts_jelly_baby_assorted_1997": {
+"hard": 0.05,
+"how": "squish",
+"mat": "candy",
+"size": [
+0.025,
+0.014,
+0.04
 ]
 },
 "batman_vhs_1989": {
@@ -1069,6 +1329,46 @@
 0.1107
 ]
 },
+"beanie_acrylic_display_cube_1998": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.14,
+0.22
+]
+},
+"beanie_babies_collectors_value_guide_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.14,
+0.013,
+0.21
+]
+},
+"beanie_baby_clear_storage_bag_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.2,
+0.001,
+0.25
+]
+},
+"beanie_baby_tag_protector_clear_1998": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.005,
+0.06
+]
+},
 "beanie_bear": {
 "hard": 0.2,
 "how": "squish",
@@ -1087,6 +1387,26 @@
 0.2011,
 0.1515,
 0.0014
+]
+},
+"beanie_certificate_of_authenticity_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.14
+]
+},
+"beanie_collection_inventory_sheet_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
 ]
 },
 "beanie_display_case": {
@@ -1169,6 +1489,16 @@
 0.0041
 ]
 },
+"beanie_price_guide_highlighter_yellow_1998": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.02,
+0.02,
+0.135
+]
+},
 "beanie_tag_protector": {
 "hard": 0.2,
 "how": "squish",
@@ -1206,6 +1536,16 @@
 "size": [
 0.21,
 0.005,
+0.275
+]
+},
+"beckett_baseball_card_monthly_1995": {
+"hard": 0.22,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.21,
+0.006,
 0.275
 ]
 },
@@ -1247,6 +1587,16 @@
 0.457,
 0.2091,
 0.0306
+]
+},
+"beige_rj11_phone_cord_25ft_1998": {
+"hard": 0.12,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.1067,
+0.1067,
+0.0427
 ]
 },
 "beige_tower": {
@@ -1297,6 +1647,16 @@
 0.4,
 0.003,
 1.5
+]
+},
+"belkin_6outlet_power_strip_beige_1999": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.04,
+0.32
 ]
 },
 "belkin_6outlet_surge_protector_1998": {
@@ -2029,6 +2389,26 @@
 0.08
 ]
 },
+"brazil_bar_scarf_green_yellow_2002": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.18,
+0.006,
+1.4
+]
+},
+"brazil_replica_jersey_scrap_2002": {
+"hard": 0.07,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.35,
+0.004,
+0.45
+]
+},
 "bread_bag_clips_assorted_1998": {
 "hard": 0.18,
 "how": "snap",
@@ -2137,6 +2517,16 @@
 0.2309,
 0.068,
 0.0217
+]
+},
+"bubble_tapeworm_roll_1995": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.02,
+0.07
 ]
 },
 "bud_light_12oz_can_1999": {
@@ -2273,6 +2663,16 @@
 "hard": 0.7,
 "how": "snap",
 "mat": "glass",
+"size": [
+0.065,
+0.065,
+0.21
+]
+},
+"calpis_water_500ml_pet_1996": {
+"hard": 0.18,
+"how": "dent",
+"mat": "plastic",
 "size": [
 0.065,
 0.065,
@@ -2447,6 +2847,16 @@
 0.2386,
 0.29,
 0.0024
+]
+},
+"card_shop_price_stickers_1995": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.03,
+0.0005,
+0.02
 ]
 },
 "card_toploader": {
@@ -3077,6 +3487,26 @@
 0.1249,
 0.089,
 0.1602
+]
+},
+"chicago_bulls_23_replica_jersey_scrap_1996": {
+"hard": 0.06,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.3,
+0.003,
+0.4
+]
+},
+"chicago_bulls_felt_pennant_1996": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.15,
+0.003,
+0.45
 ]
 },
 "chinese_red_envelope_6pack_1999": {
@@ -3729,6 +4159,16 @@
 0.122
 ]
 },
+"coca_cola_330ml_can_world_cup_1998": {
+"hard": 0.36,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.115
+]
+},
 "coffee_mug": {
 "hard": 0.7,
 "how": "snap",
@@ -3837,6 +4277,16 @@
 1.8,
 0.012,
 0.012
+]
+},
+"compressed_air_stadium_horn_1998": {
+"hard": 0.52,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.09,
+0.09,
+0.22
 ]
 },
 "compusa_floppy_cleaning_disk_1998": {
@@ -4469,6 +4919,16 @@
 0.0711
 ]
 },
+"dialup_connection_log_printout_2000": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
+]
+},
 "diamond": {
 "hard": 0.35,
 "how": "fold",
@@ -4589,6 +5049,16 @@
 0.0597
 ]
 },
+"disney_mickey_mobile_phone_strap_2003": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.02,
+0.06
+]
+},
 "disposable_camera": {
 "hard": 0.7,
 "how": "snap",
@@ -4659,6 +5129,16 @@
 0.279
 ]
 },
+"double_dog_dare_flag_1994": {
+"hard": 0.06,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.35,
+0.002,
+0.25
+]
+},
 "dr_dre_the_chronic_cassette_1992": {
 "hard": 0.56,
 "how": "snap",
@@ -4697,6 +5177,16 @@
 0.066,
 0.066,
 0.122
+]
+},
+"dragon_ball_z_menko_card_1995": {
+"hard": 0.12,
+"how": "fold",
+"mat": "card",
+"size": [
+0.055,
+0.001,
+0.055
 ]
 },
 "dream_catcher": {
@@ -5349,6 +5839,36 @@
 0.059
 ]
 },
+"england_bar_scarf_red_white_1998": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.18,
+0.006,
+1.4
+]
+},
+"england_replica_jersey_scrap_1998": {
+"hard": 0.07,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.35,
+0.004,
+0.45
+]
+},
+"enix_dragon_quest_iii_famicom_cart_1988": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.108,
+0.017,
+0.07
+]
+},
 "epson_stylus_color_600_1997": {
 "hard": 0.82,
 "how": "snap",
@@ -5589,6 +6109,16 @@
 0.0808
 ]
 },
+"fake_barf_rubber_blob_1994": {
+"hard": 0.08,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.14,
+0.01,
+0.1
+]
+},
 "fall_out_boy_cork_tree_cd_2005": {
 "hard": 0.68,
 "how": "snap",
@@ -5769,6 +6299,16 @@
 0.095
 ]
 },
+"fleer_basketball_pack_1992": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.07,
+0.008,
+0.115
+]
+},
 "fleet_ready_to_use_enema_1998": {
 "hard": 0.28,
 "how": "squish",
@@ -5797,6 +6337,26 @@
 0.048,
 0.1693,
 0.0538
+]
+},
+"floom_foam_slime_tub_pink_1996": {
+"hard": 0.12,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.1,
+0.1,
+0.08
+]
+},
+"floom_loose_bead_blob_1996": {
+"hard": 0.03,
+"how": "squish",
+"mat": "foam",
+"size": [
+0.09,
+0.04,
+0.11
 ]
 },
 "flop_it": {
@@ -5847,6 +6407,16 @@
 0.06,
 0.06,
 0.08
+]
+},
+"flying_floppies_mousepad_1997": {
+"hard": 0.18,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.23,
+0.005,
+0.2
 ]
 },
 "flying_floppy_mousepad_1997": {
@@ -5909,7 +6479,27 @@
 0.0817
 ]
 },
+"foam_football_mini_1994": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "foam",
+"size": [
+0.1,
+0.1,
+0.1
+]
+},
 "foam_number_one_finger_green_2001": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "foam",
+"size": [
+0.28,
+0.05,
+0.5
+]
+},
+"foam_number_one_finger_red_1995": {
 "hard": 0.05,
 "how": "crumple",
 "mat": "foam",
@@ -6007,6 +6597,26 @@
 0.02,
 0.025,
 0.05
+]
+},
+"france98_footix_plush_1998": {
+"hard": 0.1,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.18,
+0.1,
+0.28
+]
+},
+"france98_wallchart_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.594,
+0.0008,
+0.841
 ]
 },
 "franklin_batting_gloves_black_white_1998": {
@@ -6169,6 +6779,16 @@
 0.053
 ]
 },
+"fujifilm_quicksnap_flash_27_2002": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.115,
+0.035,
+0.055
+]
+},
 "fun_dip_razzapple_magic_1995": {
 "hard": 0.08,
 "how": "crumple",
@@ -6327,6 +6947,36 @@
 0.1,
 0.12,
 0.032
+]
+},
+"gachapon_capsule_half_assorted_1998": {
+"hard": 0.14,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.065,
+0.033,
+0.065
+]
+},
+"gachapon_folded_paper_insert_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0005,
+0.12
+]
+},
+"gachapon_machine_display_card_1998": {
+"hard": 0.12,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.001,
+0.28
 ]
 },
 "game_boy_advance_indigo_2001": {
@@ -6699,6 +7349,16 @@
 0.002
 ]
 },
+"germany_bar_scarf_black_red_gold_2006": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.18,
+0.006,
+1.4
+]
+},
 "ghostbusters_vhs_1985": {
 "hard": 0.72,
 "how": "snap",
@@ -6807,6 +7467,26 @@
 0.059,
 0.059,
 0.2335
+]
+},
+"glico_pocky_strawberry_1999": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.025,
+0.165
+]
+},
+"gloppos_cereal_loose_rings_1994": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.018,
+0.007,
+0.018
 ]
 },
 "glow_stars": {
@@ -7129,6 +7809,36 @@
 0.0007
 ]
 },
+"grossout_cereal_box_green_1994": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.19,
+0.07,
+0.28
+]
+},
+"grossout_eyeball_bouncy_ball_1994": {
+"hard": 0.16,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.04,
+0.04,
+0.04
+]
+},
+"grossout_sticker_sheet_1994": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.2
+]
+},
 "gta_san_andreas_ps2_2004": {
 "hard": 0.48,
 "how": "squish",
@@ -7359,6 +8069,36 @@
 0.023
 ]
 },
+"handheld_flag_brazil_1994": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.2,
+0.002,
+0.3
+]
+},
+"handheld_flag_england_1998": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.2,
+0.002,
+0.3
+]
+},
+"handheld_flag_italy_1990": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.2,
+0.002,
+0.3
+]
+},
 "handspring_visor_deluxe_blue_1999": {
 "hard": 0.6,
 "how": "snap",
@@ -7367,6 +8107,16 @@
 0.076,
 0.017,
 0.122
+]
+},
+"handwritten_aim_screenname_note_2000": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.1,
+0.0005,
+0.15
 ]
 },
 "handwritten_breakup_mixtape_maxell_xlii90_1998": {
@@ -7457,6 +8207,26 @@
 0.0725,
 0.02,
 0.0102
+]
+},
+"haribo_fried_egg_gummy_1997": {
+"hard": 0.05,
+"how": "squish",
+"mat": "candy",
+"size": [
+0.045,
+0.01,
+0.038
+]
+},
+"haribo_happy_cola_bottle_1997": {
+"hard": 0.06,
+"how": "squish",
+"mat": "candy",
+"size": [
+0.02,
+0.008,
+0.04
 ]
 },
 "harry_potter_sorcerers_stone_vhs_2002": {
@@ -8269,6 +9039,16 @@
 0.13
 ]
 },
+"italy_replica_jersey_scrap_1994": {
+"hard": 0.07,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.35,
+0.004,
+0.45
+]
+},
 "jansport_right_pack_green_1997": {
 "hard": 0.3,
 "how": "fold",
@@ -8287,6 +9067,56 @@
 0.33,
 0.21,
 0.42
+]
+},
+"japan_100yen_coin_heisei10_1998": {
+"hard": 0.96,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0226,
+0.0017,
+0.0226
+]
+},
+"japanese_kawaii_sticker_flake_assorted_2002": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.03,
+0.0005,
+0.03
+]
+},
+"japanese_loose_sock_white_2001": {
+"hard": 0.05,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.15,
+0.03,
+0.55
+]
+},
+"japanese_school_id_card_holder_pink_2002": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.1,
+0.004,
+0.07
+]
+},
+"japanese_snap_hair_clip_assorted_2002": {
+"hard": 0.28,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.015,
+0.005,
+0.05
 ]
 },
 "jayz_blueprint_cd_2001": {
@@ -8529,6 +9359,16 @@
 0.17
 ]
 },
+"kids_chews_choice_award_1995": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.08,
+0.22
+]
+},
 "kids_choc_bar": {
 "hard": 0.25,
 "how": "crumble",
@@ -8537,6 +9377,16 @@
 0.0654,
 0.022,
 0.008
+]
+},
+"kids_tv_schedule_magazine_1994": {
+"hard": 0.2,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.21,
+0.005,
+0.275
 ]
 },
 "killers_hot_fuss_cd_2004": {
@@ -9419,6 +10269,36 @@
 0.0517
 ]
 },
+"loose_tan_rubber_band_1994": {
+"hard": 0.04,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.06,
+0.002,
+0.06
+]
+},
+"lotte_bikkuriman_akuma_vs_tenshi_sticker_1986": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.048,
+0.0005,
+0.048
+]
+},
+"lotte_bikkuriman_choco_wafer_wrapper_1995": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.07,
+0.015,
+0.11
+]
+},
 "lunch_tray": {
 "hard": 0.6,
 "how": "snap",
@@ -9849,6 +10729,26 @@
 0.147
 ]
 },
+"maynards_wine_gums_bag_1997": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.14,
+0.04,
+0.21
+]
+},
+"mccowans_wham_original_bar_1997": {
+"hard": 0.1,
+"how": "fold",
+"mat": "candy",
+"size": [
+0.035,
+0.01,
+0.12
+]
+},
 "mcdonalds_mcboo_vinyl_treat_bag_1991": {
 "hard": 0.12,
 "how": "fold",
@@ -9887,6 +10787,26 @@
 0.2,
 0.2,
 0.23
+]
+},
+"mcdonalds_teenie_beanie_baby_sealed_1997": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.1,
+0.03,
+0.14
+]
+},
+"mcdonalds_teenie_beanie_display_box_1997": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.32,
+0.18,
+0.24
 ]
 },
 "mcr_black_parade_cd_2006": {
@@ -10017,6 +10937,16 @@
 0.14,
 0.14,
 0.095
+]
+},
+"memorex_cdr_aol_downloads_2000": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.0012,
+0.12
 ]
 },
 "memorex_cdr_portfolio_backup_2000": {
@@ -10389,6 +11319,26 @@
 0.052
 ]
 },
+"mini_capsule_robot_key_1998": {
+"hard": 0.58,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.035,
+0.02,
+0.045
+]
+},
+"mini_fingerboard_capsule_prize_2000": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.095,
+0.028,
+0.015
+]
+},
 "mini_flag": {
 "hard": 0.3,
 "how": "fold",
@@ -10637,6 +11587,16 @@
 0.2278,
 0.104,
 0.0495
+]
+},
+"morinaga_hichew_grape_2002": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.05,
+0.015,
+0.1
 ]
 },
 "mortal_kombat_genesis_1993": {
@@ -10947,6 +11907,16 @@
 0.05,
 0.018,
 0.055
+]
+},
+"napster_cdr_paper_sleeve_2000": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.125,
+0.002,
+0.125
 ]
 },
 "natural_nylon_cable_ties_50pack_1999": {
@@ -11269,6 +12239,26 @@
 0.0328
 ]
 },
+"new_york_yankees_felt_pennant_1995": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.15,
+0.003,
+0.45
+]
+},
+"new_york_yankees_snapback_navy_1995": {
+"hard": 0.14,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.2,
+0.18,
+0.12
+]
+},
 "newspaper": {
 "hard": 0.3,
 "how": "fold",
@@ -11297,6 +12287,16 @@
 0.1,
 0.1,
 0.05
+]
+},
+"nickelodeon_style_green_slime_cup_1994": {
+"hard": 0.14,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.08
 ]
 },
 "nike_shin_guards_black_white_1998": {
@@ -11419,6 +12419,16 @@
 0.085
 ]
 },
+"nintendo_famicom_super_mario_bros_cart_1985": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.108,
+0.017,
+0.07
+]
+},
 "nintendo_game_boy_advance_indigo_2001": {
 "hard": 0.56,
 "how": "snap",
@@ -11447,6 +12457,16 @@
 0.078,
 0.027,
 0.133
+]
+},
+"nintendo_game_boy_pocket_silver_1996": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.078,
+0.025,
+0.128
 ]
 },
 "nintendo_gamecube_controller_indigo_2001": {
@@ -11849,6 +12869,16 @@
 0.125
 ]
 },
+"ntt_docomo_panasonic_p504i_pink_2002": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.02,
+0.1
+]
+},
 "oakley_eye_jacket_black_1994": {
 "hard": 0.52,
 "how": "snap",
@@ -12069,6 +13099,16 @@
 0.06
 ]
 },
+"orange_foam_microphone_1994": {
+"hard": 0.2,
+"how": "crumple",
+"mat": "foam",
+"size": [
+0.06,
+0.06,
+0.22
+]
+},
 "orange_jug": {
 "hard": 0.15,
 "how": "squish",
@@ -12089,6 +13129,26 @@
 0.18
 ]
 },
+"orange_splat_foam_piece_1994": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "foam",
+"size": [
+0.15,
+0.02,
+0.12
+]
+},
+"orange_splat_wall_sign_1994": {
+"hard": 0.38,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.25,
+0.01,
+0.2
+]
+},
 "orange_vhs": {
 "hard": 0.15,
 "how": "squish",
@@ -12097,6 +13157,16 @@
 0.1248,
 0.205,
 0.0302
+]
+},
+"orange_vhs_clamshell_kids_show_1994": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.125,
+0.03,
+0.205
 ]
 },
 "orb_bottle": {
@@ -12187,6 +13257,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"overlord_vex_costume_helmet_1994": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.24,
+0.25,
+0.28
 ]
 },
 "p2p_sleeve": {
@@ -12369,6 +13449,136 @@
 0.125
 ]
 },
+"panini_france98_player_sticker_1998": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.0005,
+0.07
+]
+},
+"panini_france98_shiny_team_badge_1998": {
+"hard": 0.06,
+"how": "fold",
+"mat": "foil",
+"size": [
+0.05,
+0.0005,
+0.07
+]
+},
+"panini_france98_sticker_loose_1998": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.0005,
+0.07
+]
+},
+"panini_france98_sticker_packet_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.065,
+0.005,
+0.095
+]
+},
+"panini_italia90_player_sticker_1990": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.0005,
+0.07
+]
+},
+"panini_italia90_shiny_team_badge_1990": {
+"hard": 0.06,
+"how": "fold",
+"mat": "foil",
+"size": [
+0.05,
+0.0005,
+0.07
+]
+},
+"panini_italia90_sticker_packet_1990": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.065,
+0.005,
+0.095
+]
+},
+"panini_sticker_storage_envelope_1994": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.12,
+0.004,
+0.18
+]
+},
+"panini_usa94_player_sticker_1994": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.0005,
+0.07
+]
+},
+"panini_usa94_sticker_packet_1994": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.065,
+0.005,
+0.095
+]
+},
+"panini_world_cup_france98_album_1998": {
+"hard": 0.24,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.23,
+0.008,
+0.29
+]
+},
+"panini_world_cup_italia90_album_1990": {
+"hard": 0.24,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.23,
+0.008,
+0.29
+]
+},
+"panini_world_cup_usa94_album_1994": {
+"hard": 0.24,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.23,
+0.008,
+0.29
+]
+},
 "paper_cd_sleeve_1999": {
 "hard": 0.12,
 "how": "crumple",
@@ -12509,6 +13719,16 @@
 0.28
 ]
 },
+"pc_computing_internet_issue_1999": {
+"hard": 0.22,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.21,
+0.006,
+0.275
+]
+},
 "pc_world_floppy_backup_article_1998": {
 "hard": 0.12,
 "how": "fold",
@@ -12629,6 +13849,16 @@
 0.145
 ]
 },
+"pentel_sharp_p205_pink_2001": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.145
+]
+},
 "penthouse_july_1998_polybagged": {
 "hard": 0.22,
 "how": "fold",
@@ -12647,6 +13877,16 @@
 0.066,
 0.066,
 0.122
+]
+},
+"pepsi_330ml_football_can_2002": {
+"hard": 0.36,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.115
 ]
 },
 "pepsi_blue_20oz_2002": {
@@ -12737,6 +13977,36 @@
 0.13,
 0.0517,
 0.194
+]
+},
+"pickleodeon_glopp_bucket_1994": {
+"hard": 0.14,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.09,
+0.09,
+0.08
+]
+},
+"pickleodeon_loose_green_glopp_1994": {
+"hard": 0.01,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.1,
+0.03,
+0.12
+]
+},
+"pickleodeon_toy_blimp_1995": {
+"hard": 0.22,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.32,
+0.12,
+0.12
 ]
 },
 "piggy_bank": {
@@ -13559,6 +14829,16 @@
 0.045
 ]
 },
+"pub_match_ticket_stub_1998": {
+"hard": 0.1,
+"how": "fold",
+"mat": "card",
+"size": [
+0.08,
+0.0008,
+0.15
+]
+},
 "puff_bag": {
 "hard": 0.15,
 "how": "crumple",
@@ -13609,6 +14889,16 @@
 0.3
 ]
 },
+"purikura_booth_token_1999": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.025,
+0.002,
+0.025
+]
+},
 "purikura_sheet": {
 "hard": 0.3,
 "how": "fold",
@@ -13617,6 +14907,16 @@
 0.0948,
 0.1333,
 0.0006
+]
+},
+"purikura_sticker_album_clear_pink_2001": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.12,
+0.02,
+0.16
 ]
 },
 "purple_acrylic_room_panel_2026": {
@@ -13789,6 +15089,16 @@
 0.035
 ]
 },
+"radioshack_rj11_phone_splitter_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.02,
+0.04
+]
+},
 "radioshack_two_way_coax_splitter_1998": {
 "hard": 0.74,
 "how": "dent",
@@ -13837,6 +15147,16 @@
 0.27,
 0.015,
 0.38
+]
+},
+"rawlings_official_league_signed_baseball_1995": {
+"hard": 0.48,
+"how": "dent",
+"mat": "fabric",
+"size": [
+0.073,
+0.073,
+0.073
 ]
 },
 "rawlings_youth_batting_helmet_1998": {
@@ -14067,6 +15387,16 @@
 0.4,
 0.01,
 0.48
+]
+},
+"red_party_cup_football_watch_1998": {
+"hard": 0.18,
+"how": "dent",
+"mat": "soft_plastic",
+"size": [
+0.095,
+0.06,
+0.12
 ]
 },
 "red_plastic_megaphone_1994": {
@@ -14329,6 +15659,26 @@
 0.09
 ]
 },
+"riddell_green_bay_packers_mini_helmet_1996": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.11,
+0.12
+]
+},
+"riddell_new_york_giants_mini_helmet_1995": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.11,
+0.12
+]
+},
 "riddell_nfl_mini_helmet_blank_1998": {
 "hard": 0.56,
 "how": "snap",
@@ -14417,6 +15767,16 @@
 0.29,
 0.08,
 0.25
+]
+},
+"rj11_inline_coupler_beige_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.025,
+0.018,
+0.03
 ]
 },
 "roast_turkey_drumstick_prop_1998": {
@@ -14549,6 +15909,16 @@
 0.1245
 ]
 },
+"rowntrees_fruit_pastilles_tube_1997": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.03,
+0.03,
+0.14
+]
+},
 "rubber_band_ball_1998": {
 "hard": 0.18,
 "how": "squish",
@@ -14556,6 +15926,16 @@
 "size": [
 0.08,
 0.08,
+0.08
+]
+},
+"rubber_banded_swaps_stack_1994": {
+"hard": 0.16,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.06,
+0.02,
 0.08
 ]
 },
@@ -14599,6 +15979,16 @@
 0.04
 ]
 },
+"rubbermaid_roughneck_tote_blue_1998": {
+"hard": 0.38,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.61,
+0.41,
+0.36
+]
+},
 "rubbermaid_servin_saver_square_1998": {
 "hard": 0.24,
 "how": "squish",
@@ -14629,6 +16019,26 @@
 0.2
 ]
 },
+"rusty_comet_retail_box_1993": {
+"hard": 0.38,
+"how": "fold",
+"mat": "card",
+"size": [
+0.38,
+0.14,
+0.3
+]
+},
+"rusty_comet_starship_vehicle_1993": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.32,
+0.24,
+0.12
+]
+},
 "sacagawea_dollar_2000": {
 "hard": 0.96,
 "how": "dent",
@@ -14647,6 +16057,16 @@
 0.08,
 0.02,
 0.05
+]
+},
+"sakura_gelly_roll_classic_assorted_2001": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.01,
+0.01,
+0.15
 ]
 },
 "sakura_gelly_roll_metallic_gold_1998": {
@@ -14767,6 +16187,36 @@
 0.008,
 0.008,
 0.19
+]
+},
+"sanrio_hello_kitty_pencil_case_2002": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.2,
+0.05,
+0.08
+]
+},
+"sanrio_hello_kitty_phone_strap_2002": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.02,
+0.06
+]
+},
+"sanrio_hello_kitty_schedule_book_2003": {
+"hard": 0.18,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.1,
+0.015,
+0.15
 ]
 },
 "saran_wrap_100sqft_1998": {
@@ -15259,6 +16709,16 @@
 0.025
 ]
 },
+"shibuya_purikura_receipt_2002": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.058,
+0.0003,
+0.12
+]
+},
 "shiny_badge": {
 "hard": 0.35,
 "how": "fold",
@@ -15327,6 +16787,16 @@
 0.0765,
 0.0765,
 0.086
+]
+},
+"silica_gel_packet_5g_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.05,
+0.008,
+0.06
 ]
 },
 "silica_gel_packet_5g_2018": {
@@ -15517,6 +16987,16 @@
 0.0947,
 0.068,
 0.078
+]
+},
+"slime_bucket_trophy_green_1994": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.1,
+0.18
 ]
 },
 "slime_cereal": {
@@ -16049,6 +17529,16 @@
 0.068
 ]
 },
+"sony_minidisc_color_assorted_2001": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.068,
+0.005,
+0.072
+]
+},
 "sony_mz_n707_red_2002": {
 "hard": 0.72,
 "how": "dent",
@@ -16209,6 +17699,16 @@
 0.064
 ]
 },
+"sony_walkman_mz_e909_pink_2001": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.073,
+0.01,
+0.081
+]
+},
 "sony_walkman_wm_fx195_1995": {
 "hard": 0.74,
 "how": "snap",
@@ -16257,6 +17757,196 @@
 0.105,
 0.027,
 0.188
+]
+},
+"space_opera_alien_smuggler_carded_1993": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.04,
+0.23
+]
+},
+"space_opera_bedroom_poster_1992": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.61,
+0.0008,
+0.91
+]
+},
+"space_opera_collapsible_laser_sword_green_1994": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.04,
+0.62
+]
+},
+"space_opera_collapsible_laser_sword_red_1994": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.04,
+0.62
+]
+},
+"space_opera_collector_case_1992": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.32,
+0.1,
+0.26
+]
+},
+"space_opera_fan_club_newsletter_1994": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.001,
+0.279
+]
+},
+"space_opera_loose_hero_figure_1991": {
+"hard": 0.4,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.025,
+0.1
+]
+},
+"space_opera_loose_robot_figure_1992": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.04,
+0.025,
+0.1
+]
+},
+"space_opera_mailaway_mystery_figure_bag_1994": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.1,
+0.03,
+0.15
+]
+},
+"space_opera_mailaway_proof_of_purchase_1994": {
+"hard": 0.04,
+"how": "fold",
+"mat": "card",
+"size": [
+0.04,
+0.0005,
+0.04
+]
+},
+"space_opera_matching_thermos_1991": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.08,
+0.18
+]
+},
+"space_opera_metal_lunchbox_1991": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.2,
+0.09,
+0.17
+]
+},
+"space_opera_overlord_vex_carded_1992": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.04,
+0.23
+]
+},
+"space_opera_rebel_pilot_carded_1991": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.04,
+0.23
+]
+},
+"space_opera_sticker_sheet_1993": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.2
+]
+},
+"space_opera_trading_card_loose_1993": {
+"hard": 0.08,
+"how": "fold",
+"mat": "card",
+"size": [
+0.064,
+0.0004,
+0.089
+]
+},
+"space_opera_trading_card_wax_pack_1993": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.07,
+0.008,
+0.115
+]
+},
+"space_opera_trilogy_vhs_boxset_1995": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.12,
+0.08,
+0.2
+]
+},
+"space_opera_vhs_episode_one_1995": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.187,
+0.025,
+0.103
 ]
 },
 "spacemaker_pencil_box_1995": {
@@ -16479,6 +18169,26 @@
 0.16
 ]
 },
+"stadium_giveaway_bobblehead_1996": {
+"hard": 0.62,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.08,
+0.08,
+0.18
+]
+},
+"stadium_ticket_stub_bundle_1995": {
+"hard": 0.1,
+"how": "fold",
+"mat": "card",
+"size": [
+0.05,
+0.0008,
+0.12
+]
+},
 "stanley_powerlock_25ft_tape_1998": {
 "hard": 0.72,
 "how": "dent",
@@ -16517,6 +18227,16 @@
 0.62,
 0.04,
 0.72
+]
+},
+"starter_satin_team_jacket_scrap_1995": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.35,
+0.005,
+0.45
 ]
 },
 "starting_lineup_baseball_figure_1995": {
@@ -16577,6 +18297,16 @@
 0.055,
 0.0069,
 0.089
+]
+},
+"sticker_swap_checklist_notebook_1994": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.0005,
+0.21
 ]
 },
 "sticky_hand_arcade_prize_1998": {
@@ -16707,6 +18437,26 @@
 0.19,
 0.0782,
 0.1354
+]
+},
+"subbuteo_football_player_blue_1992": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.025,
+0.025,
+0.04
+]
+},
+"subbuteo_football_player_red_white_1992": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.025,
+0.025,
+0.04
 ]
 },
 "subwoofer": {
@@ -16969,6 +18719,16 @@
 0.0732
 ]
 },
+"swizzels_love_hearts_roll_1997": {
+"hard": 0.18,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.022,
+0.022,
+0.09
+]
+},
 "synth_keys": {
 "hard": 0.85,
 "how": "dent",
@@ -16987,6 +18747,16 @@
 0.17,
 0.24,
 0.0096
+]
+},
+"takara_cardcaptor_sakura_clow_staff_1998": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.06,
+0.55
 ]
 },
 "tamagotchi_gen1_white_blue_1997": {
@@ -17140,6 +18910,16 @@
 ]
 },
 "tdk_e180_halloween_special_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.187,
+0.025,
+0.103
+]
+},
+"tdk_e180_slime_special_1994": {
 "hard": 0.56,
 "how": "snap",
 "mat": "plastic",
@@ -17377,6 +19157,16 @@
 0.045,
 0.045,
 0.13
+]
+},
+"three_ring_card_binder_black_1995": {
+"hard": 0.34,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.29,
+0.06,
+0.32
 ]
 },
 "tic_tac_orange_1997": {
@@ -17699,6 +19489,26 @@
 0.07
 ]
 },
+"tomica_nissan_skyline_gtr_r32_1990": {
+"hard": 0.74,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.075,
+0.03,
+0.025
+]
+},
+"tomica_toyota_supra_a80_1994": {
+"hard": 0.74,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.075,
+0.03,
+0.025
+]
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "hard": 0.68,
 "how": "snap",
@@ -17707,6 +19517,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"toot_putty_egg_green_1995": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.06,
+0.08
 ]
 },
 "tootsie_roll_midgee_1998": {
@@ -17739,6 +19559,46 @@
 0.1
 ]
 },
+"topps_allen_iverson_171_1996_toploader": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.076,
+0.004,
+0.102
+]
+},
+"topps_baseball_wax_pack_1991": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.07,
+0.008,
+0.115
+]
+},
+"topps_basketball_pack_1996": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.07,
+0.008,
+0.115
+]
+},
+"topps_kobe_bryant_138_1996_toploader": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.076,
+0.004,
+0.102
+]
+},
 "topps_stadium_club_baseball_pack_1993": {
 "hard": 0.1,
 "how": "crumple",
@@ -17757,6 +19617,16 @@
 0.2,
 0.055,
 0.15
+]
+},
+"tournament_bracket_office_pool_2006": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
 ]
 },
 "toy_battery_door_assorted_christmas_1998": {
@@ -18019,6 +19889,16 @@
 0.05
 ]
 },
+"ty_beanie_babies_official_club_kit_1998": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.22,
+0.03,
+0.28
+]
+},
 "ty_beanie_baby_bear_1996": {
 "hard": 0.14,
 "how": "squish",
@@ -18039,6 +19919,66 @@
 0.05
 ]
 },
+"ty_legs_frog_1993": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.17,
+0.07,
+0.2
+]
+},
+"ty_peace_bear_1996": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.13,
+0.08,
+0.2
+]
+},
+"ty_peanut_elephant_1995": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.15,
+0.1,
+0.2
+]
+},
+"ty_pinchers_lobster_1994": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.24,
+0.07,
+0.18
+]
+},
+"ty_pinky_flamingo_1995": {
+"hard": 0.07,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.14,
+0.08,
+0.24
+]
+},
+"ty_princess_bear_1997": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.15,
+0.09,
+0.22
+]
+},
 "ty_smoochy_frog_1997": {
 "hard": 0.08,
 "how": "squish",
@@ -18047,6 +19987,16 @@
 0.14,
 0.08,
 0.2
+]
+},
+"ty_spot_dog_1994": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.14,
+0.08,
+0.22
 ]
 },
 "ty_squealer_pig_1994": {
@@ -18079,6 +20029,36 @@
 0.2
 ]
 },
+"uk_one_pound_coin_1997": {
+"hard": 0.96,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.0224,
+0.003,
+0.0224
+]
+},
+"ultra_pro_3x4_toploader_clear_1995": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.076,
+0.003,
+0.102
+]
+},
+"ultra_pro_9pocket_binder_page_1995": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.23,
+0.001,
+0.29
+]
+},
 "ultra_pro_9pocket_pokemon_binder_1999": {
 "hard": 0.32,
 "how": "fold",
@@ -18087,6 +20067,16 @@
 0.26,
 0.04,
 0.3
+]
+},
+"ultra_pro_penny_sleeves_100ct_1995": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.07,
+0.01,
+0.1
 ]
 },
 "ultra_pro_penny_sleeves_100pack_1998": {
@@ -18159,6 +20149,16 @@
 0.2
 ]
 },
+"upper_deck_baseball_foil_pack_1991": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.07,
+0.007,
+0.115
+]
+},
 "upper_deck_collectors_choice_basketball_pack_1996": {
 "hard": 0.1,
 "how": "crumple",
@@ -18177,6 +20177,26 @@
 0.068,
 0.008,
 0.12
+]
+},
+"upper_deck_shaquille_oneal_1b_1992_toploader": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.076,
+0.004,
+0.102
+]
+},
+"upper_deck_sp_derek_jeter_279_1993_toploader": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.076,
+0.004,
+0.102
 ]
 },
 "usa_snapback_red_white_blue_1998": {
@@ -18217,6 +20237,26 @@
 0.142,
 0.01,
 0.125
+]
+},
+"usr_sportster_56k_external_5686_1998": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.04,
+0.18
+]
+},
+"usr_sportster_56k_retail_box_1998": {
+"hard": 0.36,
+"how": "fold",
+"mat": "card",
+"size": [
+0.23,
+0.09,
+0.28
 ]
 },
 "usrobotics_56k_pci_modem_1998": {
@@ -18499,6 +20539,16 @@
 0.1
 ]
 },
+"vuvuzela_yellow_2010": {
+"hard": 0.22,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.65
+]
+},
 "wacky_wallwalker_1990": {
 "hard": 0.04,
 "how": "squish",
@@ -18779,6 +20829,16 @@
 0.22
 ]
 },
+"whoopee_cushion_orange_1994": {
+"hard": 0.06,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.16,
+0.02,
+0.16
+]
+},
 "wide_handheld": {
 "hard": 0.7,
 "how": "snap",
@@ -18817,6 +20877,16 @@
 0.075,
 0.075,
 0.21
+]
+},
+"winamp_skin_printout_2000": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
 ]
 },
 "windows95_big_box_1995": {
@@ -18897,6 +20967,86 @@
 0.04,
 0.035,
 0.03
+]
+},
+"woolworths_clear_candy_scoop_1997": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.05,
+0.24
+]
+},
+"woolworths_pick_n_mix_bin_lid_1997": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.3,
+0.01,
+0.24
+]
+},
+"woolworths_pick_n_mix_paper_bag_1997": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.07,
+0.27
+]
+},
+"woolworths_pick_n_mix_price_label_79p_100g_1997": {
+"hard": 0.26,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.002,
+0.06
+]
+},
+"woolworths_pick_n_mix_receipt_1997": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0003,
+0.22
+]
+},
+"woolworths_white_sugar_mouse_1997": {
+"hard": 0.18,
+"how": "crumple",
+"mat": "candy",
+"size": [
+0.035,
+0.025,
+0.07
+]
+},
+"world_cup_flag_bunting_assorted_1998": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+3.0,
+0.002,
+0.2
+]
+},
+"world_cup_wallchart_2002": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.594,
+0.0008,
+0.841
 ]
 },
 "worlds_best_broker_mug_1999": {
@@ -19047,6 +21197,16 @@
 0.0648,
 0.1357,
 0.0459
+]
+},
+"yaokin_umaibo_corn_potage_1995": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.03,
+0.03,
+0.15
 ]
 },
 "yapper_boy": {

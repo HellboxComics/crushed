@@ -225,16 +225,9 @@ def new_method(a, target):
             raise SystemExit("[remaster] this object needs the sculptor's shape (--shape)")
         ob = import_shape(a.shape)
         slim(ob)
-        fit(ob, target)
-        me = ob.data
-        me.calc_loop_triangles()
-        V = np.array([v.co[:] for v in me.vertices])
-        F = np.array([t.vertices[:] for t in me.loop_triangles])
-        q = B.silhouette_turn(V, F, views)
-        if q:
-            me.transform(Matrix.Rotation(q * math.pi / 2, 4, "Z"))
-            me.update()
-            fit(ob, target, turn=False)   # sized to the real size again, facing kept
+        # the sculptor's model always faces the way its front picture did (checked: its face sits at -Y, our
+        # front), so it is never turned; silhouettes can't tell front from back and once painted a Furby backward
+        fit(ob, target, turn=False)
     outward(ob)
     for p in ob.data.polygons:
         p.use_smooth = True
