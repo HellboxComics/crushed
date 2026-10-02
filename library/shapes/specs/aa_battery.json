@@ -258,5 +258,6 @@
    "brushed sheen on the copper ink band",
    "glossy black sleeve with crisp white print"
   ]
- }
+ },
+ "recipe": "alkaline_cylindrical_cell"
 }

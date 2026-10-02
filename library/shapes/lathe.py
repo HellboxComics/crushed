@@ -190,15 +190,132 @@ for name in parts:
         L.new(_green(mt, tc).outputs["Green"], bsdf.inputs["Coat Roughness"])
     me.materials.append(mt)
 
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out, spec["id"] + ".blend"))
+# ---------------------------------------------------------------- built like the factory makes it (factory/recipes)
+# Every part is its own solid object with real thickness, its own material, and how it behaves when crushed
+# (density, stiffness, yield, how it fails) saved on it - so a crush bends steel like steel, tears the sleeve,
+# crumbles the cathode and lets the gel ooze, and the right things are inside when it splits open.
+HERE_LIB = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PHYS = json.load(open(os.path.join(HERE_LIB, "factory", "physics.json")))
+recipe = {}
+if spec.get("recipe"):
+    rp = os.path.join(HERE_LIB, "factory", "recipes", spec["recipe"] + ".json")
+    recipe = json.load(open(rp)) if os.path.exists(rp) else {}
+ref = recipe.get("reference_size_mm") or {}
+rmax_mm = max(r for p in spec["profile"] for r, z in p["pts"])
+zmax_mm = max(z for p in spec["profile"] for r, z in p["pts"])
+SR = (2 * rmax_mm / ref["diameter"]) if ref.get("diameter") else 1.0      # one recipe, scaled to this size
+SZ = (zmax_mm / ref["height"]) if ref.get("height") else 1.0
+
+
+def physics(ob, kind, part):
+    ph = PHYS.get(kind, {})
+    ob["part"] = part
+    ob["material_kind"] = kind
+    for k in ("density", "stiffness", "yield", "fails", "sheet_mm"):
+        if k in ph:
+            ob[k] = ph[k]
+
+
 bpy.ops.object.select_all(action="DESELECT")
 ob.select_set(True)
 bpy.context.view_layer.objects.active = ob
-bpy.ops.export_scene.gltf(filepath=os.path.join(out, spec["id"] + ".glb"), use_selection=True, export_yup=True)
+bpy.ops.object.mode_set(mode="EDIT")
+bpy.ops.mesh.select_all(action="SELECT")
+bpy.ops.mesh.separate(type="MATERIAL")                   # one object per outside part
+bpy.ops.object.mode_set(mode="OBJECT")
+outside = recipe.get("outside") or {}
+shell = recipe.get("shell_mm") or {}
+parts_out = []
+for o in [o for o in bpy.context.scene.objects if o.type == "MESH"]:
+    name = o.data.materials[0].name if o.data.materials else "part"
+    o.name = o.data.name = name
+    kind = outside.get(name) or spec["materials"].get(name, {}).get("kind") or \
+        ("printed_plastic_sleeve" if name == "label" else "bare_steel" if name == "steel" else "molded_plastic")
+    t = shell.get(name) or PHYS.get(kind, {}).get("sheet_mm")
+    if t:                                                # a real wall: the surface given its true thickness inward
+        m = o.modifiers.new("thickness", "SOLIDIFY")
+        m.thickness = t * S
+        m.offset = -1
+        m.use_rim = True
+        m.use_even_offset = True
+        bpy.context.view_layer.objects.active = o
+        bpy.ops.object.modifier_apply(modifier="thickness")
+    physics(o, kind, name)
+    parts_out.append(o)
+
+
+def revolve(name, poly, segs=96):
+    """A closed outline in (radius, height) mm spun into a watertight solid."""
+    bm = bmesh.new()
+    rings = []
+    for r, z in poly:
+        r, z = r * SR, z * SZ
+        if r <= 1e-9:
+            rings.append([bm.verts.new((0, 0, z * S))])
+        else:
+            rings.append([bm.verts.new((r * math.sin(2 * math.pi * j / segs) * S, -r * math.cos(2 * math.pi * j / segs) * S,
+                                        z * S)) for j in range(segs)])
+    n = len(rings)
+    for i in range(n):
+        a, b = rings[i], rings[(i + 1) % n]
+        if len(a) == 1 and len(b) == 1:
+            continue
+        for j in range(segs):
+            try:
+                if len(a) == 1:
+                    bm.faces.new((a[0], b[(j + 1) % segs], b[j]))
+                elif len(b) == 1:
+                    bm.faces.new((a[j], a[(j + 1) % segs], b[0]))
+                else:
+                    bm.faces.new((a[j], a[(j + 1) % segs], b[(j + 1) % segs], b[j]))
+            except ValueError:
+                pass
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    me2 = bpy.data.meshes.new(name)
+    bm.to_mesh(me2)
+    bm.free()
+    for f in me2.polygons:
+        f.use_smooth = True
+    o2 = bpy.data.objects.new(name, me2)
+    bpy.context.scene.collection.objects.link(o2)
+    return o2
+
+
+for q in recipe.get("inside", []):
+    polys = [q["poly"]]
+    if q["part"] == "cathode" and recipe.get("cathode_pellets", 1) > 1:       # pressed as separate pellets
+        (r0, z0), (r1, _), (_, z1), _ = q["poly"]
+        k = recipe["cathode_pellets"]
+        hz = (z1 - z0) / k
+        polys = [[[r0, z0 + i * hz + 0.05], [r1, z0 + i * hz + 0.05], [r1, z0 + (i + 1) * hz - 0.05],
+                  [r0, z0 + (i + 1) * hz - 0.05]] for i in range(k)]
+    for i, poly in enumerate(polys):
+        nm = q["part"] + (f"_{i + 1}" if len(polys) > 1 else "")
+        o2 = revolve(nm, poly)
+        mt2 = bpy.data.materials.new(nm)
+        mt2.use_nodes = True
+        b2 = mt2.node_tree.nodes["Principled BSDF"]
+        b2.inputs["Base Color"].default_value = (*q.get("color", [0.5, 0.5, 0.5]), 1)
+        b2.inputs["Metallic"].default_value = q.get("metallic", 0.0)
+        b2.inputs["Roughness"].default_value = q.get("roughness", 0.5)
+        o2.data.materials.append(mt2)
+        physics(o2, q.get("kind", "molded_plastic"), q["part"])
+        parts_out.append(o2)
+
+json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in parts_out},
+          open(os.path.join(out, "physics.json"), "w"), indent=1)
+
+bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out, spec["id"] + ".blend"))
+bpy.ops.object.select_all(action="DESELECT")
+for o in parts_out:
+    o.select_set(True)
+bpy.context.view_layer.objects.active = parts_out[0]
+bpy.ops.export_scene.gltf(filepath=os.path.join(out, spec["id"] + ".glb"), use_selection=True, export_yup=True,
+                          export_extras=True)            # each part's physics travels inside the .glb too
 for fmt, call in (("fbx", lambda p: bpy.ops.export_scene.fbx(filepath=p, use_selection=True)),
                   ("usdc", lambda p: bpy.ops.wm.usd_export(filepath=p, selected_objects_only=True))):
     try:
         call(os.path.join(out, spec["id"] + "." + fmt))
     except Exception as e:
         print(f"[lathe] {fmt} export unavailable here: {e}")
-print("[lathe]", spec["id"], "verts", len(me.vertices), "faces", len(me.polygons))
+print("[lathe]", spec["id"], "parts", ", ".join(o.name for o in parts_out))

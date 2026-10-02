@@ -250,6 +250,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         status(cid, step="5/7 Blender: real size, every format")
         run_blender("resize.py", painted, str(max(size)), mdir, cid)
     glb = os.path.join(mdir, cid + ".glb")
+    status(cid, step="5/7 every format (.obj .mtl .3ds .ma), textures, and a cutaway of the insides")
+    finish_files(cid, d)
     pend = os.path.join(ROOT, "assets", "models_pending", cid)       # so the phone page can spin it in 3D right away
     os.makedirs(pend, exist_ok=True)
     shutil.copy(glb, os.path.join(pend, "model.glb"))
@@ -453,22 +455,82 @@ def more_searches(card, use):
     return out
 
 
-def file_away(cid, d):
-    """You said Keep: every format, the textures and your reference photo into ~/Desktop/Asset Library/<item>."""
-    dst = os.path.join(SHELF, cid)
-    os.makedirs(dst, exist_ok=True)
+def finish_files(cid, d):
+    """Every format and the check pictures for one asset (into <build>/model/export): .obj + .mtl, .3ds, .ma,
+    all textures as PNG, a cutaway picture of the insides. Called right after the build."""
     mdir = os.path.join(d, "model")
-    for ext in ("glb", "fbx", "usdc", "blend"):
+    blend = os.path.join(mdir, cid + ".blend")
+    exp = os.path.join(mdir, "export")
+    os.makedirs(os.path.join(exp, "previews"), exist_ok=True)
+    if os.path.exists(blend):
+        r = subprocess.run([PY, os.path.join(HERE, "exports.py"), "--", blend, exp, cid], capture_output=True, text=True)
+        for line in (r.stdout or "").splitlines():
+            if line.startswith("[exports]"):
+                say(line)
+    glb = os.path.join(mdir, cid + ".glb")
+    if os.path.exists(glb):
+        cut = os.path.join(d, "check", "cutaway.png")
+        os.makedirs(os.path.dirname(cut), exist_ok=True)
+        r = subprocess.run([PY, os.path.join(HERE, "cutaway.py"), "--", glb, cut], capture_output=True, text=True)
+        if os.path.exists(cut):
+            from PIL import Image
+            Image.open(cut).convert("RGB").save(os.path.join(exp, "previews", "cutaway.jpg"), quality=92)
+
+
+def file_away(cid, d):
+    """You said Keep (or the check passed): the asset's own folder in ~/Desktop/Asset Library/<item>, holding every
+    format (.blend .fbx .obj+.mtl .3ds .ma .glb .usdc), textures/ (PNG), previews/ (JPG: all around, close-ups,
+    cutaway, the photo it was made from), physics.json (how each part crushes) and made_of.json (how it's made).
+    An older copy of the folder is moved to _to delete first, never deleted."""
+    from PIL import Image
+    dst = os.path.join(SHELF, cid)
+    if os.path.isdir(dst) and os.listdir(dst):
+        old = os.path.expanduser(f"~/Desktop/_to delete/remaster/{cid}-asset-library-{time.strftime('%Y%m%d-%H%M%S')}")
+        os.makedirs(os.path.dirname(old), exist_ok=True)
+        shutil.move(dst, old)
+        open(old + ".txt", "w").write(f"the older copy of {cid} from your Asset Library, replaced by a newer build\n")
+    os.makedirs(os.path.join(dst, "previews"), exist_ok=True)
+    mdir = os.path.join(d, "model")
+    exp = os.path.join(mdir, "export")
+    for ext in ("blend", "fbx", "glb", "usdc"):
         p = os.path.join(mdir, cid + "." + ext)
         if os.path.exists(p):
             shutil.copy(p, dst)
-    if os.path.isdir(os.path.join(mdir, "textures")):
+    for ext in ("obj", "mtl", "3ds", "ma"):
+        p = os.path.join(exp, cid + "." + ext)
+        if os.path.exists(p):
+            shutil.copy(p, dst)
+    if os.path.isdir(os.path.join(exp, "textures")):
+        shutil.copytree(os.path.join(exp, "textures"), os.path.join(dst, "textures"), dirs_exist_ok=True)
+    elif os.path.isdir(os.path.join(mdir, "textures")):
         shutil.copytree(os.path.join(mdir, "textures"), os.path.join(dst, "textures"), dirs_exist_ok=True)
-    for name in ("label.png", "label_mr.png", "views.jpg", "reference.png"):
-        if os.path.exists(os.path.join(d, name)):
-            shutil.copy(os.path.join(d, name), dst)
-    if os.path.exists(os.path.join(d, "skin", "atlas.png")):
-        shutil.copy(os.path.join(d, "skin", "atlas.png"), dst)
+    for src, name in ((os.path.join(d, "check", "viewer_around.jpg"), "all_around.jpg"),
+                      (os.path.join(d, "check", "viewer_close.jpg"), "close_ups.jpg"),
+                      (os.path.join(exp, "previews", "cutaway.jpg"), "cutaway.jpg"),
+                      (os.path.join(d, "views.jpg"), "studio.jpg")):
+        if os.path.exists(src):
+            shutil.copy(src, os.path.join(dst, "previews", name))
+    ref = jload(os.path.join(STATUS), {}).get(cid, {}).get("ref")
+    if ref and os.path.exists(os.path.join(WORK, ref)):
+        Image.open(os.path.join(WORK, ref)).convert("RGB").save(os.path.join(dst, "previews", "made_from_photo.jpg"), quality=92)
+    if os.path.exists(os.path.join(mdir, "physics.json")):
+        shutil.copy(os.path.join(mdir, "physics.json"), dst)
+    try:
+        import cards
+        c = cards.make(cid)
+        json.dump({"product": c.get("product"), "construction": c.get("construction"), "size_m": c.get("size")},
+                  open(os.path.join(dst, "made_of.json"), "w"), indent=1)
+    except Exception:
+        pass
+    open(os.path.join(dst, "README.txt"), "w").write(
+        f"{cid}\n\n"
+        "Formats: .blend (Blender), .fbx (opens in 3ds Max, Cinema 4D, Maya, Unity, Unreal), .obj + .mtl (opens in\n"
+        "everything), .3ds (3D Studio), .ma (Maya ASCII), .glb (web and game engines), .usdc (USD).\n"
+        "textures/ - every map as PNG.  previews/ - JPG pictures (all around, close-ups, cutaway, the photo it was\n"
+        "made from).  physics.json - how each part behaves when crushed.  made_of.json - how the real one is made.\n"
+        "Real size, in meters.\n\n"
+        "Not included: .max (only 3ds Max itself can write it) and .c4d (needs Maxon's Cineware library); both\n"
+        "programs open the .fbx directly.\n")
     pend = os.path.join(ROOT, "assets", "models_pending", cid)
     os.makedirs(pend, exist_ok=True)
     if os.path.exists(os.path.join(mdir, cid + ".glb")):

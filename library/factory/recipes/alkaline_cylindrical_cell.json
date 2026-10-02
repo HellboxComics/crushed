@@ -1,0 +1,247 @@
+{
+ "family": "alkaline_cylindrical_cell",
+ "covers": "AA (LR6), AAA (LR03), C (LR14) and D (LR20) alkaline cells: one recipe, scaled to each size",
+ "reference_size_mm": {
+  "diameter": 14.5,
+  "height": 50.5
+ },
+ "how_it_is_made": [
+  "A nickel-plated steel strip is deep-drawn into a can; its closed end is formed into the + button.",
+  "Cathode rings (manganese dioxide + graphite, black) are pressed into the can against its wall.",
+  "A separator (non-woven paper) is set inside the rings as a cup.",
+  "The anode - zinc powder in a potassium hydroxide gel (gray paste) - fills the separator.",
+  "The current collector, a brass nail, is pushed through the nylon seal into the gel.",
+  "The steel negative cap sits on the seal; the can's open edge is crimped over them, sealing the cell.",
+  "A printed plastic sleeve is slid on and heat-shrunk, rolling over both shoulders."
+ ],
+ "outside": {
+  "label": "printed_plastic_sleeve",
+  "edge": "printed_plastic_sleeve",
+  "steel": "bare_steel"
+ },
+ "shell_mm": {
+  "label": 0.08,
+  "edge": 0.08,
+  "steel": 0.3
+ },
+ "inside": [
+  {
+   "part": "can_wall",
+   "kind": "bare_steel",
+   "color": [
+    0.55,
+    0.55,
+    0.53
+   ],
+   "metallic": 1.0,
+   "roughness": 0.4,
+   "poly": [
+    [
+     6.92,
+     0.6
+    ],
+    [
+     7.17,
+     0.6
+    ],
+    [
+     7.17,
+     49.55
+    ],
+    [
+     6.92,
+     49.55
+    ]
+   ]
+  },
+  {
+   "part": "cathode",
+   "kind": "cathode_compound",
+   "color": [
+    0.035,
+    0.035,
+    0.037
+   ],
+   "metallic": 0.0,
+   "roughness": 0.92,
+   "poly": [
+    [
+     4.75,
+     3.0
+    ],
+    [
+     6.92,
+     3.0
+    ],
+    [
+     6.92,
+     47.6
+    ],
+    [
+     4.75,
+     47.6
+    ]
+   ]
+  },
+  {
+   "part": "separator",
+   "kind": "separator_paper",
+   "color": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "metallic": 0.0,
+   "roughness": 0.85,
+   "poly": [
+    [
+     4.5,
+     2.8
+    ],
+    [
+     4.75,
+     2.8
+    ],
+    [
+     4.75,
+     48.3
+    ],
+    [
+     0.0,
+     48.3
+    ],
+    [
+     0.0,
+     48.1
+    ],
+    [
+     4.5,
+     48.1
+    ]
+   ]
+  },
+  {
+   "part": "anode_gel",
+   "kind": "zinc_gel",
+   "color": [
+    0.42,
+    0.43,
+    0.44
+   ],
+   "metallic": 0.15,
+   "roughness": 0.3,
+   "poly": [
+    [
+     0.0,
+     3.2
+    ],
+    [
+     4.5,
+     3.2
+    ],
+    [
+     4.5,
+     40.0
+    ],
+    [
+     0.0,
+     40.0
+    ]
+   ]
+  },
+  {
+   "part": "collector",
+   "kind": "brass",
+   "color": [
+    0.9,
+    0.74,
+    0.42
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "poly": [
+    [
+     0.0,
+     0.75
+    ],
+    [
+     1.5,
+     0.75
+    ],
+    [
+     1.5,
+     1.05
+    ],
+    [
+     0.71,
+     1.05
+    ],
+    [
+     0.71,
+     33.2
+    ],
+    [
+     0.5,
+     33.75
+    ],
+    [
+     0.0,
+     33.9
+    ]
+   ]
+  },
+  {
+   "part": "seal",
+   "kind": "nylon",
+   "color": [
+    0.86,
+    0.85,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "poly": [
+    [
+     0.71,
+     1.05
+    ],
+    [
+     6.9,
+     0.95
+    ],
+    [
+     6.9,
+     2.8
+    ],
+    [
+     1.7,
+     2.8
+    ],
+    [
+     1.7,
+     4.6
+    ],
+    [
+     0.71,
+     4.6
+    ]
+   ]
+  }
+ ],
+ "checked_against": [
+  {
+   "source": "US7897282B2 (AA alkaline battery patent)",
+   "url": "https://patents.google.com/patent/US7897282B2/en",
+   "facts": "brass current collector 1.425 mm across, 33 mm long; two cathode pellets of 5.15 g; 6.2 g gelled zinc anode"
+  },
+  {
+   "source": "US20090181299A1 (AA alkaline battery patent)",
+   "url": "https://patents.google.com/patent/US20090181299A1/en",
+   "facts": "nylon gasket with a thin vent section 0.12-0.25 mm; two cathode pellets; 6.2 g gel anode (4.1 g zinc)"
+  },
+  {
+   "check": "volumes: cathode ring 3.5 cm3 x ~3.0 g/cm3 = 10.3 g (two 5.15 g pellets); gel 2.3 cm3 x ~2.7 g/cm3 = 6.2 g - the gel fills to about 40 mm, the rest is gas space"
+  }
+ ],
+ "cathode_pellets": 2
+}
