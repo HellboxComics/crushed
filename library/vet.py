@@ -53,18 +53,19 @@ def quick_model():
 
 
 ASK = """Product: {display}
-Era: {era}
+Things that mark the right version: {recognize}
+Things that would mean a different version: {avoid}
 Look at this photo and answer ONLY with JSON, no other words:
-{{"match": 0-10 how surely this shows exactly this product (right brand, model and design version),
-  "era_ok": true if the design fits that era (packaging from within about 3 years counts), false if clearly newer/older,
+{{"match": 0-10 how surely this shows this product (right brand and kind of item),
+  "seen": how many of the "right version" things you can actually see in this photo (0 if none),
+  "avoid_seen": true if any of the "different version" things is visible,
   "count": how many of the product are visible,
-  "view": which side of the product faces the camera most: "front", "back", "left", "right", "top", "bottom" or "mixed",
-  "straight_on": true if the camera looks squarely at that side (not steeply from above or at a sharp angle),
-  "sharp": true if the printing on it is in focus and readable,
-  "whole": true if the whole product is in the picture (not cut off, not mostly hidden by hands or packaging),
-  "kind": "photo" if it is a real photograph of a physical item, "render" if computer-made, "ad" if an advertisement
-          or graphic with added words, "package" if the item is still inside retail packaging,
-  "printed_year": any year you can actually read printed on the item or package (expiry or date code), or null,
+  "view": which side faces the camera most: "front", "back", "left", "right", "top", "bottom" or "mixed",
+  "straight_on": true if the camera looks squarely at that side,
+  "sharp": true if it is in focus and its printing is readable,
+  "whole": true if the whole item is in the picture (not cut off, not mostly hidden),
+  "kind": "photo" if a real photograph of a physical item, "render" if computer-made, "ad" if an advertisement or
+          graphic with added words, "package" if the item is still inside retail packaging,
   "problems": "short note of anything wrong, or empty"}}"""
 
 
@@ -95,12 +96,16 @@ def ask(use, text, images, think=True):
     return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
 
 
-def vet(path, display, era, use=None, think=True):
+def vet(path, display, era="", use=None, think=True, card=None):
+    """One photo judged against the item's card (what marks the right version, what marks a wrong one)."""
     use = use or model()
     if not use:
         return None
+    card = card or {}
+    q = ASK.format(display=display, recognize="; ".join(card.get("recognize", [])) or "(none listed)",
+                   avoid="; ".join(card.get("avoid", [])) or "(none listed)")
     try:
-        v = ask(use, ASK.format(display=display, era=era), [path], think)
+        v = ask(use, q, [path], think)
     except Exception as e:
         return {"match": 0, "problems": f"could not judge: {e}"}
     v["model"] = use

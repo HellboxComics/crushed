@@ -1,0 +1,5 @@
+# the items the asset maker works through, top to bottom (the clock does 2 every half hour)
+# first: one of each route, to prove them
+duracell_coppertop_aa_1998
+poptarts_frosted_strawberry_1997
+furby_gray_pink_1998

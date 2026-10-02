@@ -147,3 +147,99 @@ def make(product, photos, along_mm, around_mm, out_dir, reads="along", tries=3, 
     out = os.path.join(out_dir, "label.png")
     lab.save(out)
     return out, best_score
+
+
+# ------------------------------------------------------------------ boxes and flat things: one face at a time
+
+FACE = ("Picture 1 is one side of a real product's box or package, already straightened flat from a photograph (it "
+        "may be creased, shiny, faded or blurry). Pictures 2 and 3, when given, are more photographs of the same "
+        "product. Draw THIS SIDE as one perfectly flat, clean, print-ready panel, like the original artwork file sent "
+        "to the printer: it fills the whole image edge to edge, straight-on, no background, no shadows, no glare, no "
+        "creases, no perspective, no wear. Keep every word, number, logo, picture and color exactly as printed, in the "
+        "same places and sizes, spelled exactly the same, crisp and sharp. The product: ")
+
+FACE_NEW = ("Picture 1 is the clean front panel of a real product's box or package. Draw its {side} panel - the {side} "
+            "side of the very same box - as one perfectly flat, clean, print-ready panel that fills the whole image "
+            "edge to edge, straight-on, no background, no shadows. Use the same design, colors and lettering style "
+            "as the front. Put only what that side of such a package really carries (for example the brand, the "
+            "name, a short description, a plain panel); do not copy the front, and do not invent long blocks of "
+            "small text, barcodes or prices. The product: ")
+
+
+def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, judge=None, log=print, tries=2):
+    """One side of a box as a flat print-ready panel at exactly w_mm x h_mm. From its own photo when there is
+    one (straightened, then redrawn clean), else drawn by the AI from the clean front."""
+    import panels
+    import turnaround as T
+    import vet as V
+    os.makedirs(out_dir, exist_ok=True)
+    w, h = canvas(w_mm, h_mm, mp=1.2e6)
+    imgs = []
+    if photo is not None:
+        im = Image.open(photo["file"]).convert("RGB")
+        m = np.asarray(Image.open(photo["mask"]).convert("L").resize(im.size)) / 255.0
+        flat, fit = panels.flatten(im, m, w, h)
+        if flat is not None and fit >= 0.8:
+            src = os.path.join(out_dir, f"{side}_photo.png")
+            flat.save(src)
+            imgs = [src] + [cutout(r, os.path.join(out_dir, f"{side}_ref{i}.png")) for i, r in enumerate(refs[:2], 1)]
+    prefix = FACE if imgs else FACE_NEW.format(side=side)
+    if not imgs:
+        if not front:
+            return None
+        imgs = [front]
+    judge = judge or V.model()
+    best, best_score = None, -1
+    for t in range(tries):
+        png = os.path.join(out_dir, f"{side}_try{t + 1}.png")
+        log(f"[skin] {side}: Qwen-Image-Edit draws it flat, {w}x{h} ({w_mm:.0f} x {h_mm:.0f} mm), try {t + 1}")
+        T.draw_from_photos(product, imgs, png, width=w, height=h, prefix=prefix, seed=2000 + t)
+        try:
+            v = V.ask(judge, JUDGE.format(product=product).replace("flat printed label", f"flat printed {side} panel"),
+                      [png, (photo or {}).get("file") or imgs[0]])
+        except Exception as e:
+            v = {"flat_label": False, "problems": f"could not judge: {e}"}
+        score = (v.get("same_design", 0) + (3 if v.get("crisp") else 0)) if v.get("flat_label") else -1
+        log(f"[skin] {side} try {t + 1}: {json.dumps(v)[:160]}")
+        if score > best_score:
+            best, best_score = png, score
+        if score >= 11:
+            break
+    if best_score < 0:
+        return None
+    out = os.path.join(out_dir, f"{side}.png")
+    Image.open(best).convert("RGB").resize((w, h), Image.LANCZOS).save(out)
+    return out
+
+
+def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=print):
+    """All six sides of a box (two for a flat thing) -> one atlas laid out the way shapes/box.py maps it.
+    photos: [picked, more of the same...], each with its vet "view"."""
+    import panels
+    mm = lambda x: x * 1000
+    sides = {"front": (W, H), "back": (W, H)} if flat else \
+        {"front": (W, H), "back": (W, H), "left": (D, H), "right": (D, H), "top": (W, D), "bottom": (W, D)}
+    by_view = {}
+    for p in photos:
+        v = (p.get("vet") or {}).get("view")
+        if v in sides and v not in by_view and (p.get("vet") or {}).get("straight_on", True):
+            by_view[v] = p
+    by_view.setdefault("front", photos[0])
+    faces = {}
+    faces["front"] = face(product, "front", mm(W), mm(H), out_dir, photo=by_view["front"], refs=photos[1:3],
+                          judge=judge, log=log)
+    if not faces["front"]:
+        raise RuntimeError("the AI could not draw a clean front")
+    biggest = max(max(d) for d in sides.values())
+    for side, (a, b) in sides.items():
+        if side == "front":
+            continue
+        if min(a, b) < 0.12 * biggest:                        # a thin edge: plain, in the front's edge color
+            faces[side] = None
+            continue
+        faces[side] = face(product, side, mm(a), mm(b), out_dir, photo=by_view.get(side), front=faces["front"],
+                           judge=judge, log=log, tries=1)
+    atlas = panels.assemble({k: v for k, v in faces.items() if v}, W, D, H)
+    out = os.path.join(out_dir, "atlas.png")
+    atlas.save(out)
+    return out, {k: bool(v) for k, v in faces.items()}

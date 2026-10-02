@@ -95,3 +95,26 @@ def build(photos, W, D, H, size=4096):
             atlas[int((1 - v1) * size):int((1 - v0) * size), int(u0 * size):int(u1 * size)] = plain
             got[view] = None
     return Image.fromarray(atlas), got
+
+
+def assemble(faces, W, D, H, size=4096):
+    """{side: flat panel png} -> one atlas in box.py's layout. A side with no panel (a thin edge) takes the
+    median edge color of the panels it has."""
+    import os
+    src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "shapes", "box.py")).read()
+    ns = {}
+    exec(src[src.index("def layout"):src.index("if __name__")], ns)
+    L = ns["layout"](W, D, H)
+    atlas = np.zeros((size, size, 3), np.uint8)
+    edge = []
+    for side, png in faces.items():
+        u0, v0, u1, v1 = L[side]
+        x0, x1, y0, y1 = int(u0 * size), int(u1 * size), int((1 - v1) * size), int((1 - v0) * size)
+        a = np.asarray(Image.open(png).convert("RGB").resize((x1 - x0, y1 - y0), Image.LANCZOS))
+        atlas[y0:y1, x0:x1] = a
+        edge.append(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]))
+    plain = np.median(np.concatenate(edge), 0).astype(np.uint8) if edge else np.array([200, 200, 200], np.uint8)
+    for side, (u0, v0, u1, v1) in L.items():
+        if side not in faces:
+            atlas[int((1 - v1) * size):int((1 - v0) * size), int(u0 * size):int(u1 * size)] = plain
+    return Image.fromarray(atlas)
