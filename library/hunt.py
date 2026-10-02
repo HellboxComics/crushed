@@ -51,7 +51,7 @@ def ebay(words, year=None, listings=12, log=print):
         for how in ({"headless": True, "channel": "chromium"}, {"headless": False}):
             try:
                 b = p.chromium.launch(**how)
-                pg = b.new_page(user_agent=UA, viewport={"width": 1400, "height": 1000}, locale="en-US")
+                pg = b.new_page(viewport={"width": 1400, "height": 1000}, locale="en-US")   # its own true browser name
                 pg.goto("https://www.ebay.com/sch/i.html?_nkw=" + urllib.request.quote(q) + "&_ipg=120", timeout=60000)
                 pg.wait_for_timeout(3000)
                 found = pg.evaluate("""() => { const m = {};
