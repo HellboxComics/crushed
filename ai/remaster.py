@@ -106,6 +106,9 @@ def sculpt(name, sheet, timeout=3600):
     tag = f"remaster_{name}"
     os.makedirs(DROP, exist_ok=True)
     done = os.path.join(DROP, "done", tag, tag + ".glb")
+    turn = os.path.join(WORK, name + "_turn.png")
+    if os.path.exists(done) and os.path.exists(turn) and os.path.getmtime(done) > os.path.getmtime(turn):
+        return done                       # already sculpted from this very drawing: only the painting is redone
     # an older shape or an older failure must not be mistaken for this one: both moved aside first, never deleted
     stamp = time.strftime("%Y%m%d-%H%M%S")
     if os.path.isdir(os.path.dirname(done)):

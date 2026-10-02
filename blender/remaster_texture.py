@@ -80,6 +80,25 @@ def import_shape(path):
     return ob
 
 
+def outward(ob):
+    """Every face's normal pointing out of the object. The sculptor's meshes can come out inside-out, and then each
+    face picks the picture from the OPPOSITE side (the battery got its back label, mirrored, on its front). Blender's
+    own recalculation makes them consistent; a final check against the center makes them point out, not in."""
+    import bmesh
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces[:])
+    bm.faces.ensure_lookup_table()
+    c = sum((f.calc_center_median() for f in bm.faces), Vector()) / max(1, len(bm.faces))
+    out = sum(f.normal.dot(f.calc_center_median() - c) * f.calc_area() for f in bm.faces)
+    if out < 0:
+        bmesh.ops.reverse_faces(bm, faces=bm.faces[:])
+    bm.to_mesh(ob.data)
+    bm.free()
+    ob.data.update()
+    print(f"[remaster] normals {'flipped to point out' if out < 0 else 'already point out'}")
+
+
 MAX_FACES = 60000      # the sculptor's raw mesh is millions of faces (250 MB); a crushed bale needs a fraction of that
 
 
@@ -276,6 +295,7 @@ def main():
         target = np.array([float(x) for x in real])
     ob = import_shape(a.shape)
     slim(ob)
+    outward(ob)
     fit(ob, target)
     project(ob, a.sheet)
     if a.inside:
