@@ -255,6 +255,8 @@ def new_method(a, target):
     bsdf.inputs["Roughness"].default_value = 0.4
     ob.data.materials.clear()
     ob.data.materials.append(mt)
+    global QA_VIEWS, QA_KIND
+    QA_VIEWS, QA_KIND = views, spec["kind"]
     return ob
 
 
@@ -293,6 +295,120 @@ def true_size(views, words, planned):
         print(f"[remaster] size {real} does not fit the drawing; drawing's proportions at that largest size")
     print(f"[remaster] real size used: {[round(x * 100, 2) for x in best]} cm (W, D, H)")
     return [float(x) for x in best]
+
+
+QA_VIEWS, QA_KIND = None, None
+
+
+def inspect(ob, out_dir):
+    """The inspector: the finished model photographed from the front, back and both sides exactly like the drawing,
+    flat-lit so only its paint shows, and compared with the drawing it was made from. Catches a wrong outline, paint
+    that doesn't match (smears, background bleeding in, a view painted on the wrong side), and mirrored printing.
+    Writes qa.json and qa.png (drawing above, model below)."""
+    import json
+    from PIL import Image
+    import remaster_bake as B
+    if not QA_VIEWS:
+        return None
+    sc = bpy.context.scene
+    sc.render.engine = "BLENDER_WORKBENCH"
+    sc.display.shading.light = "FLAT"
+    sc.display.shading.color_type = "TEXTURE"
+    sc.render.film_transparent = True
+    sc.view_settings.view_transform = "Standard"
+    for x in bpy.data.objects:
+        if x.type == "MESH":
+            x.hide_render = x != ob
+    V = np.array([ob.matrix_world @ v.co for v in ob.data.vertices])
+    lo, hi = V.min(0), V.max(0)
+    span, c = np.maximum(hi - lo, 1e-9), (lo + hi) / 2
+    cam = bpy.data.objects.new("qa", bpy.data.cameras.new("qa"))
+    sc.collection.objects.link(cam)
+    sc.camera = cam
+    cam.data.type = "ORTHO"
+    res, rows, tops = {}, [], []
+    for k in ("front", "left", "back", "right"):
+        if k not in QA_VIEWS:
+            continue
+        f, r, up = (np.array(a, float) for a in B.AXES[k])
+        sr, su = float(span @ np.abs(r)), float(span @ np.abs(up))
+        big = 320
+        w, h = (big, max(8, round(big * su / sr))) if sr >= su else (max(8, round(big * sr / su)), big)
+        sc.render.resolution_x, sc.render.resolution_y = w, h
+        cam.data.ortho_scale = max(sr, su)
+        cam.location = Vector((c + f * float(span.max()) * 3).tolist())
+        fwd, upv = Vector((-f).tolist()), Vector(up.tolist())
+        right = fwd.cross(upv).normalized()
+        upv = right.cross(fwd).normalized()
+        cam.rotation_euler = Matrix((right, upv, -fwd)).transposed().to_euler()
+        p = os.path.join(out_dir, f"_qa_{k}.png")
+        sc.render.filepath = p
+        bpy.ops.render.render(write_still=True)
+        im = Image.open(p).convert("RGBA")
+        os.remove(p)
+        ra = np.asarray(im, np.float32) / 255
+        rm = ra[..., 3] > 0.5
+        d = QA_VIEWS[k]
+        dm = np.asarray(Image.fromarray(d["mask"].astype(np.uint8) * 255).resize((w, h))) > 127
+        dr = np.asarray(Image.fromarray(d["rgb"]).resize((w, h)), np.float32) / 255
+        both = rm & dm
+        iou = float(both.sum() / max(1, (rm | dm).sum()))
+
+        def diff(a, b, m):
+            return float(np.abs(a[m] - b[m]).mean()) if m.any() else 1.0
+        cd = diff(ra[..., :3], dr, both)
+        mir = diff(ra[..., :3], dr[:, ::-1], rm & dm[:, ::-1])
+        res[k] = {"outline": round(iou, 3), "paint_diff": round(cd, 3), "mirrored_diff": round(mir, 3)}
+        tops.append(Image.fromarray((dr * 255).astype(np.uint8)))
+        bg = Image.new("RGB", (w, h), (128, 128, 128))
+        bg.paste(im, (0, 0), im)
+        rows.append(bg)
+    bpy.data.objects.remove(cam)
+    problems = []
+    strict = QA_KIND in ("lathe", "box")
+    for k, m in res.items():
+        side = k in ("left", "right")
+        if m["outline"] < (0.95 if strict else (0.7 if side else 0.85)):
+            problems.append(f"{k}: outline matches the drawing only {m['outline']:.0%}")
+        if m["paint_diff"] > (0.12 if (not side or strict) else 0.2):
+            problems.append(f"{k}: paint differs from the drawing ({m['paint_diff']:.2f})")
+        if m["mirrored_diff"] < m["paint_diff"] * 0.8 and m["paint_diff"] > 0.06:
+            problems.append(f"{k}: printing looks mirrored")
+    if QA_KIND == "sculpt":                             # parts floating free of the body (ears, a tail)
+        me = ob.data
+        parent = list(range(len(me.vertices)))
+
+        def find(i):
+            while parent[i] != i:
+                parent[i] = parent[parent[i]]
+                i = parent[i]
+            return i
+        for e in me.edges:
+            a, b = find(e.vertices[0]), find(e.vertices[1])
+            if a != b:
+                parent[a] = b
+        roots = np.array([find(i) for i in range(len(me.vertices))])
+        ids, counts = np.unique(roots, return_counts=True)
+        if len(ids) > 1:
+            main = ids[counts.argmax()]
+            for i, n in zip(ids, counts):
+                if i != main and n > 0.02 * len(roots):
+                    problems.append(f"a part ({n / len(roots):.0%} of the model) floats free of the body")
+    rep = {"views": res, "problems": problems, "pass": not problems}
+    json.dump(rep, open(os.path.join(out_dir, "qa.json"), "w"), indent=1)
+    if rows:
+        th = max(t.height for t in tops)
+        W = sum(max(t.width, b.width) for t, b in zip(tops, rows)) + 10 * len(rows)
+        H = th + max(b.height for b in rows) + 10
+        sheet = Image.new("RGB", (W, H), (40, 40, 40))
+        x = 0
+        for t, b in zip(tops, rows):
+            sheet.paste(t, (x, 0))
+            sheet.paste(b, (x, th + 10))
+            x += max(t.width, b.width) + 10
+        sheet.save(os.path.join(out_dir, "qa.png"))
+    print("[inspect] " + ("PASS" if not problems else "PROBLEMS: " + "; ".join(problems)))
+    return rep
 
 
 def weld(ob):
@@ -455,6 +571,7 @@ def main():
     if ob.name not in bpy.context.scene.collection.objects and not ob.users_collection:
         bpy.context.scene.collection.objects.link(ob)
     preview(ob, os.path.join(od, "review"), extra)
+    inspect(ob, od)
     print(f"[remaster] {a.name} -> {od}/model.glb")
 
 

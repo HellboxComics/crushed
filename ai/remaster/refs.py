@@ -258,3 +258,31 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def judge(name, display, qa_png, review_png=None, photos=None):
+    """The AI inspector's eyes: the local vision model looks at the finished model next to the real photo and the
+    drawing and lists anything that would not pass in a finished video game. Returns (ok, [problems])."""
+    import base64
+    if not ensure_vision():
+        return True, []
+    imgs = [p for p in [qa_png, review_png] + list(photos or [])[:1] if p and os.path.exists(p)]
+    q = (f"You are the final quality inspector for 3D game assets. The object is: {display}.\n"
+         "Image 1: top row = the reference drawing from front, left, back and right; bottom row = the finished 3D "
+         "model seen the same way. " + ("Image 2: the 3D model rendered from four angles. " if review_png else "")
+         + ("The last image is a real photo of the real product. " if photos else "")
+         + "List every visible defect that would not pass in a finished, polished video game: wrong shape or "
+         "proportions, a different product than the real one, smeared, streaked, stretched or blurry paint, seams, "
+         "background or white patches, mirrored or garbled text where the real product has clear text, parts "
+         "floating or missing, holes, wrong colors. Reply in JSON only: {\"pass\": true|false, \"problems\": [\"...\"]}. "
+         "Pass only if it is clean enough to ship.")
+    try:
+        body = {"model": VISION, "stream": False, "format": "json", "options": {"temperature": 0},
+                "messages": [{"role": "user", "content": q,
+                              "images": [base64.b64encode(open(p, "rb").read()).decode() for p in imgs]}]}
+        v = json.loads(json.loads(_ollama("/api/chat", body)).get("message", {}).get("content", "{}"))
+        probs = [str(x) for x in (v.get("problems") or [])][:8]
+        return bool(v.get("pass")) and not probs, probs
+    except Exception as e:
+        print(f"inspector could not look: {e}", flush=True)
+        return True, []

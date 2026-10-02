@@ -380,9 +380,38 @@ def remaster(name, redo=False):
     if r.returncode or not os.path.exists(os.path.join(out, "model.glb")):
         return "Blender pass failed: " + (r.stderr.strip().splitlines() or ["?"])[-1]
     shutil.copy(os.path.join(WORK, name + "_turn.png"), os.path.join(out, "reference.png"))
+    verdict = inspect_model(name, out)
+    if not verdict.startswith("PASS"):
+        say(f"{name}: inspector says {verdict}")
     if extra:
         shutil.copy(inside, os.path.join(out, "inside.png"))
     return "ok"
+
+
+def inspect_model(name, out):
+    """The inspector, after every model: Blender's measured check (qa.json: outline and paint against the drawing,
+    mirrored printing, floating parts) plus the local vision model looking at it next to the real photo. The verdict
+    goes to ai/remaster/verdicts.txt, which the page shows as AI SAYS REDO / PASS."""
+    import refs as R
+    probs = []
+    qj = os.path.join(out, "qa.json")
+    if os.path.exists(qj):
+        probs += json.load(open(qj)).get("problems", [])
+    rj = os.path.join(WORK, name + "_refs.json")
+    photos = json.load(open(rj)).get("photos", []) if os.path.exists(rj) else []
+    plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json"))).get(name, {})
+    ok, seen = R.judge(name, plan.get("display", name), os.path.join(out, "qa.png"),
+                       os.path.join(out, "review.png"), photos)
+    probs += seen
+    if not photos:
+        probs.append("no real photo to check it against")
+    verdict = "PASS" if not probs else "REDO " + "; ".join(probs)
+    vp = os.path.join(ROOT, "ai", "remaster", "verdicts.txt")
+    lines = [l for l in (open(vp).read().splitlines() if os.path.exists(vp) else []) if not l.startswith(name + " ")]
+    lines.append(f"{name} {verdict}")
+    open(vp, "w").write("\n".join(sorted(lines)) + "\n")
+    json.dump({"verdict": verdict, "problems": probs}, open(os.path.join(out, "verdict.json"), "w"), indent=1)
+    return verdict
 
 
 def expected():
@@ -654,6 +683,14 @@ def main():
     for i, n in enumerate(todo[:a.limit] if not a.only else todo):
         t0 = time.time()
         res = remaster(n, a.redo)
+        vj = os.path.join(PENDING, n, "verdict.json")
+        if res == "ok" and os.path.exists(vj) and json.load(open(vj))["verdict"].startswith("REDO") \
+                and "no real photo" not in json.load(open(vj))["verdict"]:
+            say(f"{n}: the inspector rejected it, drawing it again once")
+            for f in (n + "_turn.png", n + "_label.png"):
+                if os.path.exists(os.path.join(WORK, f)):
+                    trash(os.path.join(WORK, f))
+            res = remaster(n, True)
         record(n, res, time.time() - t0)
         say(f"[{i + 1}/{len(todo)}] {n}: {res} ({time.time() - t0:.0f}s)")
         if res.startswith("the drawing room"):
