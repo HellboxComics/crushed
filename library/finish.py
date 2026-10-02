@@ -113,3 +113,59 @@ def make(kind, out_dir, name, w=2048, h=2048, **kw):
         im.save(p)
         out[k] = p
     return out
+
+
+def box_atlas(atlas_png, L, out_dir, kind="card", name="box"):
+    """A box's whole texture (the flattened cross from shapes/box.py) finished as the real thing:
+    card - paper grain, satin varnish, and the folds: every edge where the card bends gets a crease in the bump,
+           a little cracked/whitened ink along it, and a scuffed, duller shine (the details that sell a real
+           carton); the top and bottom closing flaps get their seam lines.
+    plastic - molded plastic, crisp edges, very fine texture.
+    -> {"base": path, "normal": path, "mr": path}  (mr in the glTF layout: G roughness, B metallic)"""
+    os.makedirs(out_dir, exist_ok=True)
+    base = np.asarray(Image.open(atlas_png).convert("RGB")).astype(np.float32) / 255
+    h, w = base.shape[:2]
+    if kind != "card":
+        m = plastic(w, h, 0.35)
+        rough = np.asarray(m["rough"])[..., 1] / 255
+    else:
+        m = card(w, h, 0.5)
+        rough = np.asarray(m["rough"])[..., 1] / 255
+    height = np.zeros((h, w), np.float32)
+    wear = np.zeros((h, w), np.float32)
+    yy, xx = np.mgrid[0:h, 0:w]
+    px = 1.0 / w
+    for side, (u0, v0, u1, v1) in L.items():
+        x0, x1, y0, y1 = u0 * w, u1 * w, (1 - v1) * h, (1 - v0) * h
+        inside = (xx >= x0) & (xx < x1) & (yy >= y0) & (yy < y1)
+        d = np.minimum.reduce([xx - x0, x1 - 1 - xx, yy - y0, y1 - 1 - yy]).astype(np.float32)
+        d = np.where(inside, d, 1e9)
+        crease = np.exp(-(d / (0.0012 * w)) ** 2)                 # the fold itself: a soft groove
+        height -= 3.0 * crease * inside
+        if kind == "card":
+            n = _noise(h, w, 2.5, seed=sum(map(ord, side)))
+            wear += inside * np.clip(np.exp(-(d / (0.002 * w)) ** 2) * (0.6 + 0.8 * n), 0, 1)
+        if kind == "card" and side in ("top", "bottom"):        # closing flaps: the outer flap's edge line
+            fy = y0 + 0.62 * (y1 - y0) if side == "top" else y0 + 0.38 * (y1 - y0)
+            seam = inside * np.exp(-((yy - fy) / (0.0008 * w)) ** 2)
+            height -= 2.0 * seam
+    if kind == "card":
+        paper = np.array([0.93, 0.92, 0.88], np.float32)        # cracked ink shows the card's own color
+        k = np.clip(wear * 0.55, 0, 0.55)[..., None]
+        base = base * (1 - k) + paper * k
+        rough = np.clip(rough + 0.25 * wear, 0, 1)
+    nrm = np.asarray(m["normal"]).astype(np.float32) / 127.5 - 1
+    gy, gx = np.gradient(height)
+    nrm[..., 0] += -gx * 0.6
+    nrm[..., 1] += gy * 0.6
+    nrm /= np.linalg.norm(nrm, axis=-1, keepdims=True)
+    out = {}
+    out["base"] = os.path.join(out_dir, name + "_base.png")
+    Image.fromarray((np.clip(base, 0, 1) * 255).astype(np.uint8)).save(out["base"])
+    out["normal"] = os.path.join(out_dir, name + "_normal.png")
+    Image.fromarray(((nrm * 0.5 + 0.5) * 255).astype(np.uint8)).save(out["normal"])
+    mr = np.zeros((h, w, 3), np.uint8)
+    mr[..., 1] = (np.clip(rough, 0, 1) * 255).astype(np.uint8)
+    out["mr"] = os.path.join(out_dir, name + "_mr.png")
+    Image.fromarray(mr).save(out["mr"])
+    return out

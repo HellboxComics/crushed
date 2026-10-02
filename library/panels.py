@@ -118,3 +118,174 @@ def assemble(faces, W, D, H, size=4096):
         if side not in faces:
             atlas[int((1 - v1) * size):int((1 - v0) * size), int(u0 * size):int(u1 * size)] = plain
     return Image.fromarray(atlas)
+
+
+# ------------------------------------------------------------------ box faces from ordinary photos (2026-10-02)
+# A real photo of a box usually shows two or three sides at once (front + top, front + side, a corner view).
+# Each side is found on its own, straightened on its own, and only real pixels are used. A side that no photo
+# shows is never drawn by a painting AI (it can't spell): it gets the box's own paper color and the real logo
+# cut from the real front.
+
+def _poly(mask, k):
+    import cv2
+    cs, _ = cv2.findContours(mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    if not cs:
+        return None, 0.0
+    hull = cv2.convexHull(max(cs, key=cv2.contourArea))
+    area = cv2.contourArea(hull)
+    peri = cv2.arcLength(hull, True)
+    for eps in np.linspace(0.003, 0.08, 80):
+        a = cv2.approxPolyDP(hull, eps * peri, True).reshape(-1, 2).astype(np.float32)
+        if len(a) <= k:
+            return (a if len(a) == k else None), area
+    return None, area
+
+
+def _ang(u, v):
+    a = np.degrees(np.arctan2(u[1], u[0]) - np.arctan2(v[1], v[0])) % 180
+    return min(a, 180 - a)
+
+
+def _quad_err(q):
+    """A flat side seen in a photo: its opposite edges run close to parallel (perspective tilts them a little)."""
+    e = [q[(i + 1) % 4] - q[i] for i in range(4)]
+    return max(_ang(e[0], e[2]), _ang(e[1], e[3]))
+
+
+def find_faces(mask):
+    """-> ([quads, biggest first], how). Each quad is one side of the box as it sits in the photo."""
+    import cv2
+    m = mask > 0.5
+    q4, hull_area = _poly(m, 4)
+    if q4 is not None and cv2.contourArea(q4) > 0.96 * hull_area:
+        return [q4], "one side"
+    v, _ = _poly(m, 6)
+    if v is None:
+        return ([q4], "one side (rough)") if q4 is not None else ([], "no box outline")
+    size = np.sqrt(hull_area)
+    best = None
+    for i in range(3):                                        # two sides: the fold joins two opposite corners
+        A = np.array([v[(i + k) % 6] for k in range(4)])
+        B = np.array([v[(i + 3 + k) % 6] for k in range(4)])
+        big, small = sorted([A, B], key=lambda q: -cv2.contourArea(q.astype(np.float32)))
+        e_big, e_small = _quad_err(big), _quad_err(small)
+        keep = [big, small] if e_small < 25 else [big]        # a torn or open flap is not a flat side: left out
+        err = e_big + 0.3 * min(e_small, 25)
+        if best is None or err < best[0]:
+            best = (e_big, keep, "two sides" if len(keep) == 2 else "one clean side (the other is open or torn)")
+    for s in (0, 1):                                          # three sides: an inner corner shared by all three
+        ids = [s, s + 2, s + 4]
+        P = np.array([v[i] + v[(i + 2) % 6] - v[(i + 1) % 6] for i in ids]).mean(0)
+        spread = max(np.linalg.norm(v[i] + v[(i + 2) % 6] - v[(i + 1) % 6] - P) for i in ids) / size
+        quads = [np.array([v[i], v[(i + 1) % 6], v[(i + 2) % 6], P]) for i in ids]
+        err = max(_quad_err(q) for q in quads) + 100 * spread
+        if err < best[0]:
+            best = (err, quads, "three sides")
+    err, quads, how = best
+    if err > 25:
+        return ([q4] if q4 is not None else []), f"one side (rough: no clear fold, {err:.0f} deg)"
+    quads.sort(key=lambda q: -cv2.contourArea(q.astype(np.float32)))
+    return quads, f"{how} ({err:.0f} deg)"
+
+
+def order_quad(q):
+    """Corners as top-left, top-right, bottom-right, bottom-left (as they sit in the photo)."""
+    q = np.asarray(q, np.float32)
+    c = q.mean(0)
+    q = q[np.argsort(np.arctan2(q[:, 1] - c[1], q[:, 0] - c[0]))]
+    return np.roll(q, -int(np.argmin(q.sum(1))), 0)
+
+
+def quad_size(q):
+    q = order_quad(q)
+    return ((np.linalg.norm(q[1] - q[0]) + np.linalg.norm(q[2] - q[3])) / 2,
+            (np.linalg.norm(q[3] - q[0]) + np.linalg.norm(q[2] - q[1])) / 2)
+
+
+def warp_quad(img, mask, q, w, h, inset=0.006):
+    """One side straightened to w x h. A hair inside the outline (no background slivers); any pixel the cut-out
+    says isn't the object is filled from its neighbors."""
+    import cv2
+    q = order_quad(q)
+    c = q.mean(0)
+    q = c + (q - c) * (1 - 2 * inset)
+    a = np.asarray(img.convert("RGB"))
+    dst = np.float32([[0, 0], [w - 1, 0], [w - 1, h - 1], [0, h - 1]])
+    M = cv2.getPerspectiveTransform(q.astype(np.float32), dst)
+    out = cv2.warpPerspective(a, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+    mm = cv2.warpPerspective((mask > 0.5).astype(np.uint8) * 255, M, (w, h), flags=cv2.INTER_NEAREST)
+    hole = (mm < 128).astype(np.uint8)
+    if hole.any():
+        out = cv2.inpaint(out, hole, 5, cv2.INPAINT_TELEA)
+    return Image.fromarray(out)
+
+
+def delight(im):
+    """Takes the room's light back out of a photographed side (a window making one end bright, the other dim), so
+    the 3D viewer can light it fresh. Only a smooth, wide gradient is removed - the print itself is untouched."""
+    a = np.asarray(im.convert("RGB")).astype(np.float32) / 255
+    h, w = a.shape[:2]
+    lum = np.log(np.clip(a.mean(-1), 1e-3, 1))
+    gy, gx = 8, 8
+    ys, xs, vs = [], [], []
+    for i in range(gy):
+        for j in range(gx):
+            blk = lum[i * h // gy:(i + 1) * h // gy, j * w // gx:(j + 1) * w // gx]
+            vs.append(np.percentile(blk, 90))                 # the paper (brightest) in each block, not the ink
+            ys.append((i + 0.5) / gy - 0.5)
+            xs.append((j + 0.5) / gx - 0.5)
+    X = np.array([[1, x, y, x * x, y * y, x * y] for x, y in zip(xs, ys)])
+    coef, *_ = np.linalg.lstsq(X, np.array(vs), rcond=None)
+    yy, xx = np.mgrid[0:h, 0:w]
+    xx, yy = xx / w - 0.5, yy / h - 0.5
+    field = coef[1] * xx + coef[2] * yy + coef[3] * xx * xx + coef[4] * yy * yy + coef[5] * xx * yy
+    field -= field.max()                                      # brighten the dim parts up to the brightest
+    out = np.clip(a * np.exp(-field)[..., None], 0, 1)
+    return Image.fromarray((out * 255).astype(np.uint8))
+
+
+def paper_color(im):
+    """The box's own background color: the most common color around the front's edges (a box's edges are almost
+    always its plain background, where the middle is pictures and words)."""
+    a = np.asarray(im.convert("RGB").resize((128, 128)))
+    a = np.concatenate([a[:6].reshape(-1, 3), a[-6:].reshape(-1, 3), a[:, :6].reshape(-1, 3), a[:, -6:].reshape(-1, 3)])
+    lum = a.mean(1)
+    a = a[lum >= np.percentile(lum, 50)]                      # shadowed or dirty edge pixels don't count
+    q = (a // 16).astype(int)
+    keys, counts = np.unique(q[:, 0] * 256 + q[:, 1] * 16 + q[:, 2], return_counts=True)
+    k = keys[np.argmax(counts)]
+    sel = (q[:, 0] * 256 + q[:, 1] * 16 + q[:, 2]) == k
+    return tuple(int(v) for v in np.median(a[sel], 0))
+
+
+def brand_panel(front, logo_box, w, h, side):
+    """A side no photo shows: the box's paper color with the REAL logo (cut from the real front, its own
+    background knocked out). Tall sides carry it turned to read upward, like real cartons."""
+    import cv2
+    bg = np.array(paper_color(front), np.float32)
+    panel = np.ones((h, w, 3), np.float32) * bg
+    if logo_box is None:
+        return Image.fromarray(panel.astype(np.uint8))
+    fw, fh = front.size
+    x0, y0, x1, y1 = [int(v) for v in (logo_box[0] * fw, logo_box[1] * fh, logo_box[2] * fw, logo_box[3] * fh)]
+    logo = np.asarray(front.convert("RGB").crop((x0, y0, x1, y1))).astype(np.float32)
+    if h > 1.6 * w:                                             # a tall narrow side: reads bottom-to-top
+        logo = np.rot90(logo, 1)
+    lh, lw = logo.shape[:2]
+    fit = {"back": 0.7, "top": 0.8, "bottom": 0.8}.get(side, 0.85)
+    s = min(fit * w / lw, fit * h / lh)
+    nw, nh = max(1, int(lw * s)), max(1, int(lh * s))
+    logo = cv2.resize(logo, (nw, nh), interpolation=cv2.INTER_CUBIC)
+    ring = np.concatenate([logo[:3].reshape(-1, 3), logo[-3:].reshape(-1, 3), logo[:, :3].reshape(-1, 3),
+                           logo[:, -3:].reshape(-1, 3)])
+    local = np.median(ring, 0)                              # the paper right around the logo: the panel's color too,
+    panel[:] = local                                        # so the logo sits on exactly its own paper
+    dist = np.linalg.norm(logo - local, axis=-1)
+    alpha = np.clip((dist - 45) / 40, 0, 1)                 # only the ink comes across, never a pasted patch
+    alpha = cv2.GaussianBlur(alpha, (0, 0), 0.8)[..., None]
+    ox, oy = (w - nw) // 2, (h - nh) // 2 if side != "back" else int(h * 0.3 - nh / 2)
+    oy = max(0, oy)
+    region = panel[oy:oy + nh, ox:ox + nw]
+    panel[oy:oy + nh, ox:ox + nw] = region * (1 - alpha[:region.shape[0], :region.shape[1]]) + \
+        logo[:region.shape[0], :region.shape[1]] * alpha[:region.shape[0], :region.shape[1]]
+    return Image.fromarray(np.clip(panel, 0, 255).astype(np.uint8))

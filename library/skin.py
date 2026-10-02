@@ -403,34 +403,114 @@ def face(product, side, w_mm, h_mm, out_dir, photo=None, refs=(), front=None, ju
     return out
 
 
+LOGO = ("Picture 1 is the flat front of a product's box. Find the brand name and product name lockup (the main logo "
+        "words, e.g. the maker's name and the product's name, together). Answer ONLY JSON with its box as fractions "
+        "of the picture (0..1 from the left and from the top): {\"x0\": , \"y0\": , \"x1\": , \"y1\": }")
+
+
+def logo_box(front_png, judge=None, log=print):
+    """Where the logo is on the real front (fractions), for the sides no photo shows. Checked for sense; if the
+    AI's answer isn't usable, the top part of the front is used."""
+    try:
+        import vet as V
+        b = V.ask(judge or V.model(), LOGO, [front_png], think=False)
+        x0, y0, x1, y1 = (float(b[k]) for k in ("x0", "y0", "x1", "y1"))
+        if max(x0, y0, x1, y1) > 1.5:                    # answered in 0..1000 instead of fractions
+            x0, y0, x1, y1 = (v / 1000 for v in (x0, y0, x1, y1))
+        if 0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1 and (x1 - x0) * (y1 - y0) > 0.04:
+            return (x0, y0, x1, y1)
+        log(f"[texture] logo answer not usable: {b}")
+    except Exception as e:
+        log(f"[texture] logo not found by the AI: {e}")
+    return (0.03, 0.02, 0.97, 0.45)
+
+
+_NEXT = {"front": {"left": "left", "right": "right"}, "back": {"left": "right", "right": "left"},
+         "left": {"left": "back", "right": "front"}, "right": {"left": "front", "right": "back"}}
+
+
 def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=print):
     """All six sides of a box (two for a flat thing) -> one atlas laid out the way shapes/box.py maps it.
-    photos: [picked, more of the same...], each with its vet "view"."""
+    Every side a photo shows is cut out of that photo on its own (a photo showing the front and the top gives
+    both), straightened, with the room's light taken out. Sides no photo shows get the box's own color and the
+    real logo from the real front. No painting AI draws any side (it can't spell)."""
     import panels
+    import turnaround as T
+    os.makedirs(out_dir, exist_ok=True)
     mm = lambda x: x * 1000
-    sides = {"front": (W, H), "back": (W, H)} if flat else \
+    dims = {"front": (W, H), "back": (W, H)} if flat else \
         {"front": (W, H), "back": (W, H), "left": (D, H), "right": (D, H), "top": (W, D), "bottom": (W, D)}
-    by_view = {}
-    for p in photos:
-        v = (p.get("vet") or {}).get("view")
-        if v in sides and v not in by_view and (p.get("vet") or {}).get("straight_on", True):
-            by_view[v] = p
-    by_view.setdefault("front", photos[0])
-    faces = {}
-    faces["front"] = face(product, "front", mm(W), mm(H), out_dir, photo=by_view["front"], refs=photos[1:3],
-                          judge=judge, log=log)
-    if not faces["front"]:
-        raise RuntimeError("the AI could not draw a clean front")
-    biggest = max(max(d) for d in sides.values())
-    for side, (a, b) in sides.items():
-        if side == "front":
+    faces, src = {}, {}
+    for n, p in enumerate(photos):
+        im = Image.open(p["file"]).convert("RGB")
+        m = np.asarray(Image.open(p["mask"]).convert("L").resize(im.size)) / 255.0
+        quads, how = panels.find_faces(m)
+        if not quads:
             continue
-        if min(a, b) < 0.12 * biggest:                        # a thin edge: plain, in the front's edge color
-            faces[side] = None
+        view = (p.get("vet") or {}).get("view") or "front"
+        view = view if view in dims else "front"
+        log(f"[texture] photo {n + 1}: {how}; the biggest side is the {view}")
+        c0 = panels.order_quad(quads[0]).mean(0)
+        named = [(view, quads[0])]
+        for q in quads[1:]:
+            dx, dy = panels.order_quad(q).mean(0) - c0
+            if abs(dy) > abs(dx):
+                side = "top" if dy < 0 else "bottom"
+            else:
+                side = _NEXT.get(view, {}).get("right" if dx > 0 else "left")
+            if side and side in dims:
+                named.append((side, q))
+        for side, q in named:
+            if side in faces:
+                continue                                      # the first (your pick) wins
+            pw, ph = dims[side]
+            qw, qh = panels.quad_size(q)
+            ratio = (qw / max(qh, 1)) / (pw / ph)
+            if side in ("top", "bottom") and view in ("front", "back"):
+                ok = 0.6 < ratio                              # seen from above it looks shallower than it is
+            elif side in ("left", "right") and view in ("front", "back"):
+                ok = ratio < 1.7                              # seen at an angle it looks narrower
+            else:
+                ok = abs(np.log(ratio)) < 0.45
+            if not ok and not (n == 0 and side == view):
+                log(f"[texture] {side}: the shape in photo {n + 1} doesn't fit a {side} ({ratio:.2f}) - not used")
+                continue
+            w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
+            face_im = panels.warp_quad(im, m, q, w, h)
+            if view == "back" and side in ("top", "bottom"):
+                face_im = face_im.rotate(180)
+            face_im = panels.delight(face_im)
+            out = os.path.join(out_dir, f"{side}.png")
+            face_im.save(out)
+            if qw * qh < 0.6 * w * h:                         # the photo had fewer pixels than the panel: sharpen up
+                try:
+                    T.upscale(out, force=True)
+                    Image.open(out).convert("RGB").resize((w, h), Image.LANCZOS).save(out)
+                except Exception as e:
+                    log(f"[texture] {side}: sharpening skipped ({e})")
+            faces[side], src[side] = out, f"photo {n + 1}"
+            log(f"[texture] {side}: real photo {n + 1}, straightened to {mm(pw):.0f} x {mm(ph):.0f} mm, room light taken out")
+    if "front" not in faces:
+        raise RuntimeError("no photo shows the front clearly enough to straighten")
+    front = Image.open(faces["front"]).convert("RGB")
+    biggest = max(max(d) for d in dims.values())
+    box = None
+    for side, (pw, ph) in dims.items():
+        if side in faces:
             continue
-        faces[side] = face(product, side, mm(a), mm(b), out_dir, photo=by_view.get(side), front=faces["front"],
-                           judge=judge, log=log, tries=1)
-    atlas = panels.assemble({k: v for k, v in faces.items() if v}, W, D, H)
+        w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
+        out = os.path.join(out_dir, f"{side}.png")
+        if min(pw, ph) < 0.12 * biggest:                      # a thin edge: the box's own color
+            panels.brand_panel(front, None, w, h, side).save(out)
+            src[side] = "plain (thin edge)"
+        else:
+            box = box or logo_box(faces["front"], judge, log)
+            panels.brand_panel(front, box, w, h, side).save(out)
+            src[side] = "box color + the real logo (no photo of this side)"
+        faces[side] = out
+        log(f"[texture] {side}: {src[side]}")
+    atlas = panels.assemble(faces, W, D, H)
     out = os.path.join(out_dir, "atlas.png")
     atlas.save(out)
-    return out, {k: bool(v) for k, v in faces.items()}
+    json.dump(src, open(os.path.join(out_dir, "sources.json"), "w"), indent=1)
+    return out, src

@@ -227,8 +227,9 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
                                    flat=route == "flat", judge=use, log=say)
         status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
+        surface = "card" if any(k in str(card.get("mat", "")).lower() for k in ("card", "paper", "board")) else "plastic"
         run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
-                    "0.3" if route == "flat" else "0.6")
+                    "0.3" if route == "flat" else "0.6", surface)
     else:
         st = jload(os.path.join(WORK, "selftest.json"), {})
         if not st.get("hunyuan_ok", True):

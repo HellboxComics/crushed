@@ -23,6 +23,7 @@ out, atlas = argv[3], argv[4]
 mr = argv[5] if len(argv) > 5 and argv[5] not in ("", "-") else None
 name = argv[6] if len(argv) > 6 else "box"
 bevel = (float(argv[7]) if len(argv) > 7 else 0.6) / 1000.0
+surface = argv[8] if len(argv) > 8 else "card"          # what it's made of: card | plastic (library/finish.py)
 os.makedirs(out, exist_ok=True)
 
 
@@ -79,11 +80,24 @@ if __name__ == "__main__":
     mt.use_nodes = True
     bsdf = mt.node_tree.nodes["Principled BSDF"]
     bsdf.inputs["Roughness"].default_value = 0.45
+    fin = {}
+    if atlas not in ("", "-") and not mr:          # the real thing's surface: folds, grain, varnish, worn edges
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        import finish
+        fin = finish.box_atlas(atlas, L, os.path.join(out, "finish"), kind=surface, name=name)
+        atlas, mr = fin["base"], fin["mr"]
     if atlas not in ("", "-"):                    # "-" = bare shape, painted later
         tex = mt.node_tree.nodes.new("ShaderNodeTexImage")
         tex.image = bpy.data.images.load(os.path.abspath(atlas))
         tex.extension = "EXTEND"
         mt.node_tree.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+    if fin.get("normal"):
+        tn = mt.node_tree.nodes.new("ShaderNodeTexImage")
+        tn.image = bpy.data.images.load(os.path.abspath(fin["normal"]))
+        tn.image.colorspace_settings.name = "Non-Color"
+        nm = mt.node_tree.nodes.new("ShaderNodeNormalMap")
+        mt.node_tree.links.new(tn.outputs["Color"], nm.inputs["Color"])
+        mt.node_tree.links.new(nm.outputs["Normal"], bsdf.inputs["Normal"])
     if mr:
         t2 = mt.node_tree.nodes.new("ShaderNodeTexImage")
         t2.image = bpy.data.images.load(os.path.abspath(mr))
