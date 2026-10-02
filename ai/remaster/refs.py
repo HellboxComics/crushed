@@ -158,7 +158,7 @@ def photos(name):
 
 
 MINE = os.path.join(WORK, "refs-mine")        # your own photos: <name>.jpg/.png (and <name>_2.jpg ...) always win
-VISION = os.environ.get("CRUSHED_VISION", "qwen2.5vl:7b")
+VISION = os.environ.get("CRUSHED_VISION", "qwen3.8:27b-q8_0")
 OLLAMA = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
 OLLAMA = OLLAMA if OLLAMA.startswith("http") else "http://" + OLLAMA
 

@@ -96,7 +96,7 @@ def pipeline(cid, redo=False):
             f["vet"] = old[f["file"]]["vet"]
     if quick and len(todo) > 16:                         # many photos: the small model throws out the obvious misses
         for f in todo:
-            f["quick"] = V.vet(f["file"], product, era, quick) or {}
+            f["quick"] = V.vet(f["file"], product, era, quick, think=False) or {}
         todo.sort(key=lambda f: -(f["quick"].get("match", 0) + 3 * (f["quick"].get("era_ok") is True)))
         for f in todo[16:]:
             f["vet"] = dict(f["quick"], note="only the quick look")
@@ -203,10 +203,18 @@ def page():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--only", nargs="+", required=True)
+    ap.add_argument("--only", nargs="+")
+    ap.add_argument("--queue", type=int, default=0, help="make up to N sorted items that are not done yet")
     ap.add_argument("--redo", action="store_true")
     a = ap.parse_args()
-    for cid in a.only:
+    todo = a.only or []
+    if a.queue:
+        fam = {k: v for k, v in json.load(open(os.path.join(HERE, "families.json"))).items() if not k.startswith("_")}
+        st = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
+        todo = [k for k in sorted(fam) if st.get(k, {}).get("step") != "done"][:a.queue]
+        if not todo:
+            say("nothing waiting: every sorted item is made")
+    for cid in todo:
         try:
             pipeline(cid, a.redo)
         except Exception as e:
