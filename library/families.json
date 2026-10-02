@@ -1,0 +1,4 @@
+{
+  "_about": "Which master shape each catalog item uses. Filled in by the sorter (local AI) for the whole catalog; these are the first ones, checked by hand.",
+  "duracell_coppertop_aa_1998": {"family": "round", "shape": "aa_battery", "metal_top": true}
+}

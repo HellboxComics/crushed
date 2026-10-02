@@ -144,6 +144,28 @@ def _run_all(wf, timeout=900):
 CUTOUT = "birefnet.safetensors"          # BiRefNet (MIT), ComfyUI's own repackaging (Comfy-Org/BiRefNet)
 
 
+def photo_mask(png):
+    """The cut-out model (BiRefNet, in the drawing room) on one whole photo -> <photo>_mask.png, white = object.
+    Kept once made."""
+    import io
+    from PIL import Image
+    out = png.rsplit(".", 1)[0] + "_mask.png"
+    if os.path.exists(out) and os.path.getmtime(out) >= os.path.getmtime(png):
+        return out
+    im = Image.open(png).convert("RGB")
+    b = io.BytesIO()
+    im.save(b, "PNG")
+    name = _upload(b.getvalue(), f"crushed_photo_{uuid.uuid4().hex[:8]}.png")
+    wf = {"0": {"class_type": "LoadBackgroundRemovalModel", "inputs": {"bg_removal_name": CUTOUT}},
+          "1": {"class_type": "LoadImage", "inputs": {"image": name}},
+          "2": {"class_type": "RemoveBackground", "inputs": {"bg_removal_model": ["0", 0], "image": ["1", 0]}},
+          "3": {"class_type": "MaskToImage", "inputs": {"mask": ["2", 0]}},
+          "4": {"class_type": "SaveImage", "inputs": {"images": ["3", 0], "filename_prefix": "crushed_pmask"}}}
+    got = _run_all(wf)
+    Image.open(io.BytesIO(got["4"])).convert("L").resize(im.size).save(out)
+    return out
+
+
 def masks(turn_png):
     """Exactly what is object and what is background, in each of the six views, from a real cut-out model (BiRefNet)
     instead of guessing by color: a grey Furby on a grey studio backdrop came apart under color guessing. Saved
