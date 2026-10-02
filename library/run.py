@@ -31,6 +31,8 @@ import sys
 import time
 import urllib.request
 
+import numpy as np
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
@@ -172,15 +174,42 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
             sp = os.path.join(d, "shape.json")
             json.dump(spec, open(sp, "w"), indent=1)
         along, around = skin.label_size(spec)
-        same = same_design(picked, others, use)
-        status(cid, step=f"5/7 texture map: the label from your photo's real pixels, laid on the UV map ({along:.0f} x {around:.0f} mm)")
         reads = spec.get("label_reads") or card.get("label_reads") or "around"
-        make_room("drawing")
-        lab_png, _ = skin.make(product, [picked] + same, along, around, os.path.join(d, "skin"),
-                               reads="along" if reads == "along" else "around", judge=use, log=say)
-        base, mr = metal.metal_maps(Image.open(lab_png).convert("RGB"))
-        base.save(os.path.join(d, "label.png"))
-        mr.save(os.path.join(d, "label_mr.png"))
+        w_mm, h_mm = (along, around) if reads == "along" else (around, along)   # the label as it is read
+        tex = os.path.join(d, "texture")
+        os.makedirs(tex, exist_ok=True)
+        hand = os.path.join(HERE, "labels", cid + ".json")
+        import labelart
+        if os.path.exists(hand):                                   # a layout measured by hand: used as it is
+            status(cid, step="5/7 texture map: drawing the measured label layout (exact type)")
+            lay = json.load(open(hand))
+            lay["width_mm"], lay["height_mm"] = w_mm, h_mm
+            png, mr = labelart.render(lay, tex, px=4096)
+        else:
+            # the real label from your photo, unrolled flat (read the right way up), and its exact words
+            lab, cov = skin.compose([picked], along, around)
+            lab = skin.continue_bands(lab, cov < 0.05)
+            real = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
+            if reads == "along":
+                real = real.rotate(90, expand=True)
+            real_png = os.path.join(tex, "real.png")
+            real.save(real_png)
+            make_room("judging")
+            words = []
+            for i, part in enumerate(skin.sides(picked, "along" if reads == "along" else "around")):
+                pp = os.path.join(tex, f"side{i + 1}.png")
+                part.save(pp)
+                words += [w for w in read_words(pp, use) if w not in words]
+            say(f"[texture] words on the real label: {words}")
+            status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
+            import layout as LAY
+            png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say)
+        lab_png, mr_png = os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")
+        img, mimg = Image.open(png).convert("RGB"), Image.open(mr).convert("RGB")
+        if reads == "along":                                        # onto the UV map: the plus/top end up
+            img, mimg = img.rotate(-90, expand=True), mimg.rotate(-90, expand=True)
+        img.save(lab_png)
+        mimg.save(mr_png)
         status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
         for ext in ("glb", "fbx", "usdc", "blend"):
@@ -249,6 +278,17 @@ def make_room(for_what):
             V._call("/api/generate", {"model": m["name"], "keep_alive": 0}, timeout=60)
     except Exception as e:
         say(f"(could not free the judging AIs: {e})")
+
+
+def read_words(png, use):
+    """The judge reads every word and number on a picture, exactly as spelled."""
+    import vet as V
+    q = 'Read every word and number printed in this picture, exactly as spelled. Answer ONLY JSON: {"words": ["..."]}'
+    try:
+        return [w for w in V.ask(use, q, [png], think=False).get("words", []) if isinstance(w, str) and w.strip()]
+    except Exception as e:
+        say(f"[texture] could not read the words: {e}")
+        return []
 
 
 def run_blender(script, *args):
