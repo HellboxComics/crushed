@@ -1,4 +1,26 @@
 {
+"aladdin_vhs_1993": {
+"display": "Aladdin VHS Walt Disney Classics clamshell",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.146,
+"notes": [
+"Aladdin VHS Walt Disney Classics clamshell, 1993"
+],
+"product": "Aladdin VHS Walt Disney Classics clamshell, 1993",
+"role": "hero",
+"size": [
+0.125,
+0.033,
+0.202
+],
+"themes": "BE KIND REWIND; SLEEPOVER; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "alanis_jagged_little_pill_cassette_1995": {
 "display": "Alanis Morissette Jagged Little Pill prerecorded cassette",
 "eras": [
@@ -43,6 +65,28 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"american_pie_vhs_2000": {
+"display": "American Pie VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"American Pie VHS, 2000"
+],
+"product": "American Pie VHS, 2000",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; UNDER_THE_MATTRESS; SLEEPOVER; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
 "amy_winehouse_back_to_black_cd_2006": {
 "display": "Amy Winehouse Back to Black CD in jewel case",
 "eras": [
@@ -65,6 +109,116 @@
 "themes": "COASTERS; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"atari2600_cartridge_1977": {
+"display": "Atari 2600 cartridge shell",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"Atari 2600 cartridge shell, 1977"
+],
+"product": "Atari 2600 cartridge shell, 1977",
+"role": "support",
+"size": [
+0.08,
+0.02,
+0.102
+],
+"themes": "CONSOLE WARS; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"atari2600_woodgrain_1977": {
+"display": "Atari Video Computer System / Atari 2600 six-switch console",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 1.25,
+"notes": [
+"Atari Video Computer System / Atari 2600 six-switch console, 1977"
+],
+"product": "Atari Video Computer System / Atari 2600 six-switch console, 1977",
+"role": "hero",
+"size": [
+0.346,
+0.232,
+0.089
+],
+"themes": "CONSOLE WARS; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"atari_cx40_joystick_1977": {
+"display": "Atari CX40 joystick controller",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.18,
+"notes": [
+"Atari CX40 joystick controller, 1977"
+],
+"product": "Atari CX40 joystick controller, 1977",
+"role": "hero",
+"size": [
+0.09,
+0.09,
+0.127
+],
+"themes": "CONSOLE WARS; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"austin_powers_vhs_1998": {
+"display": "Austin Powers: International Man of Mystery VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Austin Powers: International Man of Mystery VHS, 1998"
+],
+"product": "Austin Powers: International Man of Mystery VHS, 1998",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"avery_vhs_label_sheet_1996": {
+"display": "Avery VHS spine and face label sheet, circa",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Avery VHS spine and face label sheet, circa 1996"
+],
+"product": "Avery VHS spine and face label sheet, circa 1996",
+"role": "filler",
+"size": [
+0.216,
+0.0003,
+0.279
+],
+"themes": "BE KIND REWIND; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "avril_lavigne_let_go_cd_2002": {
 "display": "Avril Lavigne Let Go CD in jewel case",
 "eras": [
@@ -85,6 +239,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"back_to_future_vhs_1986": {
+"display": "Back to the Future VHS",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Back to the Future VHS, 1986"
+],
+"product": "Back to the Future VHS, 1986",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; TIME CAPSULE; ROAD TRIP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "backstreet_boys_millennium_cassette_1999": {
@@ -153,6 +329,94 @@
 "themes": "MIXTAPE; BASS BOOSTED; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"batman_vhs_1989": {
+"display": "Batman VHS",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Batman VHS, 1989"
+],
+"product": "Batman VHS, 1989",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"be_kind_rewind_sticker_1995": {
+"display": "\u201cBE KIND, PLEASE REWIND\u201d VHS rental sticker, circa",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"\u201cBE KIND, PLEASE REWIND\u201d VHS rental sticker, circa 1995"
+],
+"product": "\u201cBE KIND, PLEASE REWIND\u201d VHS rental sticker, circa 1995",
+"role": "filler",
+"size": [
+0.05,
+0.0002,
+0.025
+],
+"themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"big_lebowski_vhs_1998": {
+"display": "The Big Lebowski VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"The Big Lebowski VHS, 1998"
+],
+"product": "The Big Lebowski VHS, 1998",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; UNDER_THE_MATTRESS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"blair_witch_project_vhs_1999": {
+"display": "The Blair Witch Project VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"The Blair Witch Project VHS, 1999"
+],
+"product": "The Blair Witch Project VHS, 1999",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; TRICK OR TREAT; CRYPTID; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "blink182_enema_of_the_state_cd_1999": {
 "display": "blink-182 Enema of the State CD in jewel case",
 "eras": [
@@ -175,6 +439,72 @@
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; KICKFLIP; regular cubes",
 "weight": 1.0
 },
+"blockbuster_late_fee_receipt_1998": {
+"display": "Blockbuster Video thermal-paper late-fee receipt, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Blockbuster Video thermal-paper late-fee receipt, circa 1998"
+],
+"product": "Blockbuster Video thermal-paper late-fee receipt, circa 1998",
+"role": "filler",
+"size": [
+0.08,
+0.0002,
+0.22
+],
+"themes": "BE KIND REWIND; LEFTOVERS; MALL RAT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"blockbuster_membership_card_1997": {
+"display": "Blockbuster Video membership card, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Blockbuster Video membership card, circa 1997"
+],
+"product": "Blockbuster Video membership card, circa 1997",
+"role": "support",
+"size": [
+0.086,
+0.0008,
+0.054
+],
+"themes": "BE KIND REWIND; MALL RAT; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"blockbuster_rental_clamshell_1998": {
+"display": "Blockbuster Video large VHS rental case, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.151,
+"notes": [
+"Blockbuster Video large VHS rental case, circa 1998"
+],
+"product": "Blockbuster Video large VHS rental case, circa 1998",
+"role": "hero",
+"size": [
+0.125,
+0.034,
+0.203
+],
+"themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "britney_baby_one_more_time_cd_1999": {
 "display": "Britney Spears ...Baby One More Time CD in jewel case",
 "eras": [
@@ -195,6 +525,72 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"cast_away_vhs_2001": {
+"display": "Cast Away VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Cast Away VHS, 2001"
+],
+"product": "Cast Away VHS, 2001",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; GARAGE SALE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"clueless_vhs_1995": {
+"display": "Clueless VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Clueless VHS, 1995"
+],
+"product": "Clueless VHS, 1995",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"composite_av_cable_1998": {
+"display": "Three-plug RCA composite A/V cable, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.054,
+"notes": [
+"Three-plug RCA composite A/V cable, circa 1998"
+],
+"product": "Three-plug RCA composite A/V cable, circa 1998",
+"role": "filler",
+"size": [
+1.8,
+0.012,
+0.012
+],
+"themes": "BE KIND REWIND; CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "denon_hd8_90_1990": {
@@ -239,6 +635,28 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"dirty_dancing_vhs_1988": {
+"display": "Dirty Dancing VHS",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Dirty Dancing VHS, 1988"
+],
+"product": "Dirty Dancing VHS, 1988",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "dmx_its_dark_and_hell_is_hot_cd_1998": {
@@ -307,6 +725,72 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"dreamcast_controller_1999": {
+"display": "Sega Dreamcast controller",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.233,
+"notes": [
+"Sega Dreamcast controller, 1999"
+],
+"product": "Sega Dreamcast controller, 1999",
+"role": "hero",
+"size": [
+0.159,
+0.055,
+0.152
+],
+"themes": "CONSOLE WARS; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"dreamcast_vmu_1999": {
+"display": "Sega Dreamcast Visual Memory Unit",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"Sega Dreamcast Visual Memory Unit, 1999"
+],
+"product": "Sega Dreamcast Visual Memory Unit, 1999",
+"role": "support",
+"size": [
+0.047,
+0.016,
+0.08
+],
+"themes": "CONSOLE WARS; SCREEN TIME; STILL ALIVE; Y2K; regular cubes",
+"weight": 1.0
+},
+"dumb_and_dumber_vhs_1995": {
+"display": "Dumb and Dumber VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Dumb and Dumber VHS, 1995"
+],
+"product": "Dumb and Dumber VHS, 1995",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "eminem_marshall_mathers_lp_cd_2000": {
 "display": "Eminem The Marshall Mathers LP CD in jewel case",
 "eras": [
@@ -349,6 +833,28 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"et_extra_terrestrial_vhs_1988": {
+"display": "E.T. the Extra-Terrestrial VHS home-video release",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"E.T. the Extra-Terrestrial VHS home-video release, 1988"
+],
+"product": "E.T. the Extra-Terrestrial VHS home-video release, 1988",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "fall_out_boy_cork_tree_cd_2005": {
@@ -395,6 +901,50 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"finding_nemo_vhs_2003": {
+"display": "Finding Nemo VHS clamshell",
+"eras": [
+3,
+4
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.146,
+"notes": [
+"Finding Nemo VHS clamshell, 2003"
+],
+"product": "Finding Nemo VHS clamshell, 2003",
+"role": "hero",
+"size": [
+0.125,
+0.033,
+0.202
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"forrest_gump_vhs_1995": {
+"display": "Forrest Gump VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Forrest Gump VHS, 1995"
+],
+"product": "Forrest Gump VHS, 1995",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "fuji_dri90_1995": {
 "display": "Fuji DR-I 90 Type I blank audio cassette",
 "eras": [
@@ -415,6 +965,226 @@
 0.064
 ],
 "themes": "MIXTAPE; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"game_boy_advance_indigo_2001": {
+"display": "Nintendo Game Boy Advance, Indigo",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.052,
+"notes": [
+"Nintendo Game Boy Advance, Indigo, 2001"
+],
+"product": "Nintendo Game Boy Advance, Indigo, 2001",
+"role": "hero",
+"size": [
+0.144,
+0.025,
+0.082
+],
+"themes": "SCREEN TIME; BLOW ON IT; DOUBLE A; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"game_boy_camera_blue_1998": {
+"display": "Nintendo Game Boy Camera, Blue",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.027,
+"notes": [
+"Nintendo Game Boy Camera, Blue, 1998"
+],
+"product": "Nintendo Game Boy Camera, Blue, 1998",
+"role": "hero",
+"size": [
+0.058,
+0.03,
+0.09
+],
+"themes": "SCREEN TIME; BLOW ON IT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"game_boy_cartridge_1989": {
+"display": "Nintendo Game Boy Game Pak cartridge",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Nintendo Game Boy Game Pak cartridge, 1989"
+],
+"product": "Nintendo Game Boy Game Pak cartridge, 1989",
+"role": "support",
+"size": [
+0.058,
+0.008,
+0.065
+],
+"themes": "SCREEN TIME; BLOW ON IT; STILL ALIVE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"game_boy_color_grape_1998": {
+"display": "Nintendo Game Boy Color, Grape",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.049,
+"notes": [
+"Nintendo Game Boy Color, Grape, 1998"
+],
+"product": "Nintendo Game Boy Color, Grape, 1998",
+"role": "hero",
+"size": [
+0.078,
+0.027,
+0.133
+],
+"themes": "SCREEN TIME; BLOW ON IT; DOUBLE A; STILL ALIVE; regular cubes",
+"weight": 1.0
+},
+"game_boy_printer_1998": {
+"display": "Nintendo Game Boy Printer",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.238,
+"notes": [
+"Nintendo Game Boy Printer, 1998"
+],
+"product": "Nintendo Game Boy Printer, 1998",
+"role": "hero",
+"size": [
+0.16,
+0.133,
+0.064
+],
+"themes": "SCREEN TIME; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"gamecube_controller_indigo_2001": {
+"display": "Nintendo GameCube Controller, Indigo",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.159,
+"notes": [
+"Nintendo GameCube Controller, Indigo, 2001"
+],
+"product": "Nintendo GameCube Controller, Indigo, 2001",
+"role": "hero",
+"size": [
+0.14,
+0.1,
+0.065
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"gameshark_pro_n64_1998": {
+"display": "InterAct GameShark Pro for Nintendo 64",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.06,
+"notes": [
+"InterAct GameShark Pro for Nintendo 64, 1998"
+],
+"product": "InterAct GameShark Pro for Nintendo 64, 1998",
+"role": "hero",
+"size": [
+0.116,
+0.027,
+0.11
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"gba_cartridge_gray_2001": {
+"display": "Nintendo Game Boy Advance Game Pak cartridge",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Nintendo Game Boy Advance Game Pak cartridge, 2001"
+],
+"product": "Nintendo Game Boy Advance Game Pak cartridge, 2001",
+"role": "support",
+"size": [
+0.06,
+0.009,
+0.034
+],
+"themes": "SCREEN TIME; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"gba_game_link_cable_2001": {
+"display": "Nintendo Game Boy Advance Game Link Cable",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.053,
+"notes": [
+"Nintendo Game Boy Advance Game Link Cable, 2001"
+],
+"product": "Nintendo Game Boy Advance Game Link Cable, 2001",
+"role": "filler",
+"size": [
+1.5,
+0.013,
+0.013
+],
+"themes": "SCREEN TIME; CONSOLE WARS; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"gba_sp_cobalt_2003": {
+"display": "Nintendo Game Boy Advance SP, Cobalt",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"Nintendo Game Boy Advance SP, Cobalt, 2003"
+],
+"product": "Nintendo Game Boy Advance SP, Cobalt, 2003",
+"role": "hero",
+"size": [
+0.084,
+0.024,
+0.082
+],
+"themes": "SCREEN TIME; STILL ALIVE; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "generic_cassette_case_1991": {
@@ -459,6 +1229,50 @@
 0.125
 ],
 "themes": "COASTERS; DIAL-UP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"ghostbusters_vhs_1985": {
+"display": "Ghostbusters VHS",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Ghostbusters VHS, 1985"
+],
+"product": "Ghostbusters VHS, 1985",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; PROBED; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"gladiator_vhs_2000": {
+"display": "Gladiator VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Gladiator VHS, 2000"
+],
+"product": "Gladiator VHS, 2000",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "green_day_american_idiot_cd_2004": {
@@ -527,6 +1341,160 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"gta_vice_city_ps2_2002": {
+"display": "Grand Theft Auto: Vice City PlayStation 2 game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Grand Theft Auto: Vice City PlayStation 2 game, 2002"
+],
+"product": "Grand Theft Auto: Vice City PlayStation 2 game, 2002",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; BASS BOOSTED; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"guitar_hero_sg_controller_red_2005": {
+"display": "RedOctane Guitar Hero SG guitar controller for PlayStation 2",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 1.896,
+"notes": [
+"RedOctane Guitar Hero SG guitar controller for PlayStation 2, 2005"
+],
+"product": "RedOctane Guitar Hero SG guitar controller for PlayStation 2, 2005",
+"role": "hero",
+"size": [
+0.86,
+0.045,
+0.28
+],
+"themes": "CONSOLE WARS; SLEEPOVER; PROM NIGHT; BASS BOOSTED; regular cubes",
+"weight": 1.0
+},
+"halo_combat_evolved_xbox_2001": {
+"display": "Halo: Combat Evolved original Xbox game",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Halo: Combat Evolved original Xbox game, 2001"
+],
+"product": "Halo: Combat Evolved original Xbox game, 2001",
+"role": "hero",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"harry_potter_sorcerers_stone_vhs_2002": {
+"display": "Harry Potter and the Sorcerer's Stone VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Harry Potter and the Sorcerer's Stone VHS, 2002"
+],
+"product": "Harry Potter and the Sorcerer's Stone VHS, 2002",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hollywood_video_membership_card_1999": {
+"display": "Hollywood Video membership card, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Hollywood Video membership card, circa 1999"
+],
+"product": "Hollywood Video membership card, circa 1999",
+"role": "support",
+"size": [
+0.086,
+0.0008,
+0.054
+],
+"themes": "BE KIND REWIND; MALL RAT; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hollywood_video_receipt_2000": {
+"display": "Hollywood Video rental receipt, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Hollywood Video rental receipt, circa 2000"
+],
+"product": "Hollywood Video rental receipt, circa 2000",
+"role": "filler",
+"size": [
+0.08,
+0.0002,
+0.22
+],
+"themes": "BE KIND REWIND; MALL RAT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"hollywood_video_rental_case_1999": {
+"display": "Hollywood Video reusable VHS rental case, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.151,
+"notes": [
+"Hollywood Video reusable VHS rental case, circa 1999"
+],
+"product": "Hollywood Video reusable VHS rental case, circa 1999",
+"role": "support",
+"size": [
+0.125,
+0.034,
+0.203
+],
+"themes": "BE KIND REWIND; MALL RAT; LEFTOVERS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "home_alone_vhs_1991": {
 "display": "Home Alone VHS home-video release in cardboard slipcase",
 "eras": [
@@ -547,6 +1515,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"independence_day_vhs_1997": {
+"display": "Independence Day VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Independence Day VHS, 1997"
+],
+"product": "Independence Day VHS, 1997",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; PROBED; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "jayz_blueprint_cd_2001": {
@@ -635,6 +1625,50 @@
 0.125
 ],
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"kinyo_uv428_vhs_rewinder_1995": {
+"display": "Kinyo UV-428 VHS videocassette rewinder, circa",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.412,
+"notes": [
+"Kinyo UV-428 VHS videocassette rewinder, circa 1995"
+],
+"product": "Kinyo UV-428 VHS videocassette rewinder, circa 1995",
+"role": "support",
+"size": [
+0.21,
+0.16,
+0.07
+],
+"themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"konami_ddr_dance_pad_ps1_1999": {
+"display": "Konami Dance Dance Revolution soft dance pad for PlayStation",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.534,
+"notes": [
+"Konami Dance Dance Revolution soft dance pad for PlayStation, 1999"
+],
+"product": "Konami Dance Dance Revolution soft dance pad for PlayStation, 1999",
+"role": "hero",
+"size": [
+0.93,
+0.005,
+0.82
+],
+"themes": "CONSOLE WARS; SLEEPOVER; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
 "koss_porta_pro_1984": {
@@ -857,6 +1891,50 @@
 "themes": "COASTERS; DIAL-UP; SAVE ICON; regular cubes",
 "weight": 1.0
 },
+"maxell_hgx_gold_t120_1996": {
+"display": "Maxell HGX-Gold T-120 blank VHS cassette, circa",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.083,
+"notes": [
+"Maxell HGX-Gold T-120 blank VHS cassette, circa 1996"
+],
+"product": "Maxell HGX-Gold T-120 blank VHS cassette, circa 1996",
+"role": "support",
+"size": [
+0.102,
+0.025,
+0.187
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"maxell_t120_gx_silver_1994": {
+"display": "Maxell GX-Silver T-120 blank VHS cassette",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.083,
+"notes": [
+"Maxell GX-Silver T-120 blank VHS cassette, 1994"
+],
+"product": "Maxell GX-Silver T-120 blank VHS cassette, 1994",
+"role": "support",
+"size": [
+0.102,
+0.025,
+0.187
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "maxell_ur90_1994": {
 "display": "Maxell UR 90 Type I blank audio cassette",
 "eras": [
@@ -877,6 +1955,28 @@
 0.064
 ],
 "themes": "MIXTAPE; COASTERS; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"maxell_vhs_head_cleaner_1996": {
+"display": "Maxell Dry-Type VHS Head Cleaner cassette, circa",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.083,
+"notes": [
+"Maxell Dry-Type VHS Head Cleaner cassette, circa 1996"
+],
+"product": "Maxell Dry-Type VHS Head Cleaner cassette, circa 1996",
+"role": "support",
+"size": [
+0.102,
+0.025,
+0.187
+],
+"themes": "BE KIND REWIND; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "maxell_xlii90_1990": {
@@ -1033,6 +2133,446 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"microsoft_xbox_console_2001": {
+"display": "Microsoft Xbox console",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 1.456,
+"notes": [
+"Microsoft Xbox console, 2001"
+],
+"product": "Microsoft Xbox console, 2001",
+"role": "hero",
+"size": [
+0.32,
+0.26,
+0.1
+],
+"themes": "CONSOLE WARS; SCREEN TIME; LANDFILL DRIVE; regular cubes",
+"weight": 1.0
+},
+"monsters_inc_vhs_2002": {
+"display": "Monsters, Inc. VHS clamshell",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.146,
+"notes": [
+"Monsters, Inc. VHS clamshell, 2002"
+],
+"product": "Monsters, Inc. VHS clamshell, 2002",
+"role": "hero",
+"size": [
+0.125,
+0.033,
+0.202
+],
+"themes": "BE KIND REWIND; SLEEPOVER; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"mrs_doubtfire_vhs_1994": {
+"display": "Mrs. Doubtfire VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Mrs. Doubtfire VHS, 1994"
+],
+"product": "Mrs. Doubtfire VHS, 1994",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"n64_controller_pak_1996": {
+"display": "Nintendo 64 Controller Pak",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.02,
+"notes": [
+"Nintendo 64 Controller Pak, 1996"
+],
+"product": "Nintendo 64 Controller Pak, 1996",
+"role": "support",
+"size": [
+0.055,
+0.032,
+0.065
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"n64_expansion_pak_1998": {
+"display": "Nintendo 64 Expansion Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Nintendo 64 Expansion Pak, 1998"
+],
+"product": "Nintendo 64 Expansion Pak, 1998",
+"role": "support",
+"size": [
+0.044,
+0.038,
+0.016
+],
+"themes": "CONSOLE WARS; BLOW ON IT; regular cubes",
+"weight": 1.0
+},
+"n64_rumble_pak_1997": {
+"display": "Nintendo 64 Rumble Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.02,
+"notes": [
+"Nintendo 64 Rumble Pak, 1997"
+],
+"product": "Nintendo 64 Rumble Pak, 1997",
+"role": "support",
+"size": [
+0.055,
+0.032,
+0.065
+],
+"themes": "CONSOLE WARS; BLOW ON IT; regular cubes",
+"weight": 1.0
+},
+"n64_transfer_pak_1999": {
+"display": "Nintendo 64 Transfer Pak",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.027,
+"notes": [
+"Nintendo 64 Transfer Pak, 1999"
+],
+"product": "Nintendo 64 Transfer Pak, 1999",
+"role": "support",
+"size": [
+0.062,
+0.035,
+0.072
+],
+"themes": "CONSOLE WARS; BLOW ON IT; regular cubes",
+"weight": 1.0
+},
+"namco_guncon_1997": {
+"display": "Namco GunCon light gun for PlayStation",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.228,
+"notes": [
+"Namco GunCon light gun for PlayStation, 1997"
+],
+"product": "Namco GunCon light gun for PlayStation, 1997",
+"role": "hero",
+"size": [
+0.2,
+0.045,
+0.145
+],
+"themes": "CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"nes_cartridge_gray_1985": {
+"display": "Nintendo Entertainment System Game Pak cartridge",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.057,
+"notes": [
+"Nintendo Entertainment System Game Pak cartridge, 1985"
+],
+"product": "Nintendo Entertainment System Game Pak cartridge, 1985",
+"role": "support",
+"size": [
+0.12,
+0.02,
+0.135
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"nes_controller_1985": {
+"display": "Nintendo Entertainment System controller",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.02,
+"notes": [
+"Nintendo Entertainment System controller, 1985"
+],
+"product": "Nintendo Entertainment System controller, 1985",
+"role": "hero",
+"size": [
+0.124,
+0.017,
+0.053
+],
+"themes": "CONSOLE WARS; BLOW ON IT; LEFTOVERS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"nintendo64_cartridge_1996": {
+"display": "Nintendo 64 Game Pak cartridge",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.029,
+"notes": [
+"Nintendo 64 Game Pak cartridge, 1996"
+],
+"product": "Nintendo 64 Game Pak cartridge, 1996",
+"role": "support",
+"size": [
+0.116,
+0.019,
+0.075
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"nintendo64_console_1996": {
+"display": "Nintendo 64 console",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.631,
+"notes": [
+"Nintendo 64 console, 1996"
+],
+"product": "Nintendo 64 console, 1996",
+"role": "hero",
+"size": [
+0.26,
+0.19,
+0.073
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"nintendo64_controller_gray_1996": {
+"display": "Nintendo 64 Controller, gray",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.255,
+"notes": [
+"Nintendo 64 Controller, gray, 1996"
+],
+"product": "Nintendo 64 Controller, gray, 1996",
+"role": "hero",
+"size": [
+0.16,
+0.06,
+0.152
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"nintendo_ds_game_card_2004": {
+"display": "Nintendo DS Game Card",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Nintendo DS Game Card, 2004"
+],
+"product": "Nintendo DS Game Card, 2004",
+"role": "support",
+"size": [
+0.035,
+0.004,
+0.033
+],
+"themes": "SCREEN TIME; SLEEPOVER; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"nintendo_ds_silver_2004": {
+"display": "Nintendo DS, Titanium/Silver",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.064,
+"notes": [
+"Nintendo DS, Titanium/Silver, 2004"
+],
+"product": "Nintendo DS, Titanium/Silver, 2004",
+"role": "hero",
+"size": [
+0.149,
+0.029,
+0.085
+],
+"themes": "SCREEN TIME; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"nintendo_entertainment_system_1985": {
+"display": "Nintendo Entertainment System Control Deck",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.822,
+"notes": [
+"Nintendo Entertainment System Control Deck, 1985"
+],
+"product": "Nintendo Entertainment System Control Deck, 1985",
+"role": "hero",
+"size": [
+0.26,
+0.203,
+0.089
+],
+"themes": "CONSOLE WARS; BLOW ON IT; LEFTOVERS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"nintendo_ereader_2002": {
+"display": "Nintendo e-Reader for Game Boy Advance",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.03,
+"notes": [
+"Nintendo e-Reader for Game Boy Advance, 2002"
+],
+"product": "Nintendo e-Reader for Game Boy Advance, 2002",
+"role": "support",
+"size": [
+0.083,
+0.024,
+0.085
+],
+"themes": "SCREEN TIME; CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"nintendo_gamecube_indigo_2001": {
+"display": "Nintendo GameCube, Indigo",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.465,
+"notes": [
+"Nintendo GameCube, Indigo, 2001"
+],
+"product": "Nintendo GameCube, Indigo, 2001",
+"role": "hero",
+"size": [
+0.15,
+0.161,
+0.11
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"nintendo_power_glove_1989": {
+"display": "Mattel Nintendo Power Glove",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.178,
+"notes": [
+"Mattel Nintendo Power Glove, 1989"
+],
+"product": "Mattel Nintendo Power Glove, 1989",
+"role": "hero",
+"size": [
+0.28,
+0.13,
+0.07
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"nintendo_super_scope_1992": {
+"display": "Nintendo Super Scope",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 1.208,
+"notes": [
+"Nintendo Super Scope, 1992"
+],
+"product": "Nintendo Super Scope, 1992",
+"role": "hero",
+"size": [
+0.58,
+0.07,
+0.17
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "nirvana_nevermind_cassette_1991": {
 "display": "Nirvana Nevermind prerecorded cassette",
 "eras": [
@@ -1143,6 +2683,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
+"original_game_boy_dmg01_1989": {
+"display": "Nintendo Game Boy DMG-01 handheld",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.075,
+"notes": [
+"Nintendo Game Boy DMG-01 handheld, 1989"
+],
+"product": "Nintendo Game Boy DMG-01 handheld, 1989",
+"role": "hero",
+"size": [
+0.09,
+0.032,
+0.148
+],
+"themes": "SCREEN TIME; BLOW ON IT; DOUBLE A; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
 "outkast_stankonia_cd_2000": {
 "display": "OutKast Stankonia CD in jewel case",
 "eras": [
@@ -1163,6 +2725,50 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"panasonic_pv9450_vcr_1999": {
+"display": "Panasonic PV-9450 Hi-Fi VHS VCR",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 7.864,
+"notes": [
+"Panasonic PV-9450 Hi-Fi VHS VCR, 1999"
+],
+"product": "Panasonic PV-9450 Hi-Fi VHS VCR, 1999",
+"role": "hero",
+"size": [
+0.43,
+0.275,
+0.095
+],
+"themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"panasonic_pvc1320_tv_vcr_2000": {
+"display": "Panasonic PV-C1320 13-inch TV/VCR combination",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 10.369,
+"notes": [
+"Panasonic PV-C1320 13-inch TV/VCR combination, 2000"
+],
+"product": "Panasonic PV-C1320 13-inch TV/VCR combination, 2000",
+"role": "hero",
+"size": [
+0.385,
+0.405,
+0.38
+],
+"themes": "SCREEN TIME; BE KIND REWIND; SLEEPOVER; SICK DAY; regular cubes",
 "weight": 1.0
 },
 "panasonic_shockwave_sl_sw202_1996": {
@@ -1253,6 +2859,182 @@
 "themes": "COASTERS; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"playstation_memory_card_1995": {
+"display": "Sony PlayStation Memory Card",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sony PlayStation Memory Card, 1995"
+],
+"product": "Sony PlayStation Memory Card, 1995",
+"role": "support",
+"size": [
+0.055,
+0.01,
+0.035
+],
+"themes": "CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"pretty_woman_vhs_1990": {
+"display": "Pretty Woman VHS",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Pretty Woman VHS, 1990"
+],
+"product": "Pretty Woman VHS, 1990",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; regular cubes",
+"weight": 1.0
+},
+"ps2_dvd_game_case_black_2000": {
+"display": "PlayStation 2 black DVD-style game case",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"PlayStation 2 black DVD-style game case, 2000"
+],
+"product": "PlayStation 2 black DVD-style game case, 2000",
+"role": "support",
+"size": [
+0.135,
+0.014,
+0.19
+],
+"themes": "CONSOLE WARS; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"ps2_memory_card_8mb_2000": {
+"display": "Sony PlayStation 2 8MB Memory Card",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Sony PlayStation 2 8MB Memory Card, 2000"
+],
+"product": "Sony PlayStation 2 8MB Memory Card, 2000",
+"role": "support",
+"size": [
+0.042,
+0.01,
+0.036
+],
+"themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"pulp_fiction_vhs_1995": {
+"display": "Pulp Fiction VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Pulp Fiction VHS, 1995"
+],
+"product": "Pulp Fiction VHS, 1995",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; UNDER THE MATTRESS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"radio_shack_rf_modulator_1998": {
+"display": "RadioShack RF Modulator, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.069,
+"notes": [
+"RadioShack RF Modulator, circa 1998"
+],
+"product": "RadioShack RF Modulator, circa 1998",
+"role": "support",
+"size": [
+0.13,
+0.08,
+0.038
+],
+"themes": "BE KIND REWIND; CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"rca_vcr_remote_1998": {
+"display": "RCA VCR infrared remote control, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.043,
+"notes": [
+"RCA VCR infrared remote control, circa 1998"
+],
+"product": "RCA VCR infrared remote control, circa 1998",
+"role": "filler",
+"size": [
+0.055,
+0.024,
+0.185
+],
+"themes": "BE KIND REWIND; SCREEN TIME; LEFTOVERS; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"rg6_coaxial_tv_cable_1998": {
+"display": "RG-6 television coaxial cable with F connectors, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"RG-6 television coaxial cable with F connectors, circa 1998"
+],
+"product": "RG-6 television coaxial cable with F connectors, circa 1998",
+"role": "filler",
+"size": [
+1.8,
+0.007,
+0.007
+],
+"themes": "SCREEN TIME; BE KIND REWIND; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "rhcp_californication_cd_1999": {
 "display": "Red Hot Chili Peppers Californication CD in jewel case",
 "eras": [
@@ -1297,6 +3079,248 @@
 "themes": "MIXTAPE; GARAGE SALE; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"scotch_t120_blank_vhs_1991": {
+"display": "Scotch T-120 EG blank VHS cassette",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.083,
+"notes": [
+"Scotch T-120 EG blank VHS cassette, 1991"
+],
+"product": "Scotch T-120 EG blank VHS cassette, 1991",
+"role": "support",
+"size": [
+0.102,
+0.025,
+0.187
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; BLACKLIGHT; regular cubes",
+"weight": 1.0
+},
+"scream_vhs_1997": {
+"display": "Scream VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Scream VHS, 1997"
+],
+"product": "Scream VHS, 1997",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; TRICK OR TREAT; SLEEPOVER; UNDER THE MATTRESS; regular cubes",
+"weight": 1.0
+},
+"sega_dreamcast_console_1999": {
+"display": "Sega Dreamcast console",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.5,
+"notes": [
+"Sega Dreamcast console, 1999"
+],
+"product": "Sega Dreamcast console, 1999",
+"role": "hero",
+"size": [
+0.191,
+0.197,
+0.076
+],
+"themes": "CONSOLE WARS; SCREEN TIME; Y2K; regular cubes",
+"weight": 1.0
+},
+"sega_game_gear_1991": {
+"display": "Sega Game Gear handheld console",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.158,
+"notes": [
+"Sega Game Gear handheld console, 1991"
+],
+"product": "Sega Game Gear handheld console, 1991",
+"role": "hero",
+"size": [
+0.21,
+0.038,
+0.113
+],
+"themes": "SCREEN TIME; DOUBLE A; CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"sega_game_gear_cartridge_1991": {
+"display": "Sega Game Gear game cartridge",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Sega Game Gear game cartridge, 1991"
+],
+"product": "Sega Game Gear game cartridge, 1991",
+"role": "support",
+"size": [
+0.068,
+0.01,
+0.065
+],
+"themes": "SCREEN TIME; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"sega_genesis_3button_controller_1989": {
+"display": "Sega Genesis three-button Control Pad",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.097,
+"notes": [
+"Sega Genesis three-button Control Pad, 1989"
+],
+"product": "Sega Genesis three-button Control Pad, 1989",
+"role": "hero",
+"size": [
+0.155,
+0.035,
+0.102
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sega_genesis_cartridge_1989": {
+"display": "Sega Genesis game cartridge",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"Sega Genesis game cartridge, 1989"
+],
+"product": "Sega Genesis game cartridge, 1989",
+"role": "support",
+"size": [
+0.07,
+0.018,
+0.115
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"sega_genesis_model1_1989": {
+"display": "Sega Genesis Model 1 console",
+"eras": [
+0,
+1
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.596,
+"notes": [
+"Sega Genesis Model 1 console, 1989"
+],
+"product": "Sega Genesis Model 1 console, 1989",
+"role": "hero",
+"size": [
+0.278,
+0.215,
+0.057
+],
+"themes": "CONSOLE WARS; BLOW ON IT; BASS BOOSTED; regular cubes",
+"weight": 1.0
+},
+"sega_saturn_console_1995": {
+"display": "Sega Saturn console, North American model",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.869,
+"notes": [
+"Sega Saturn console, North American model, 1995"
+],
+"product": "Sega Saturn console, North American model, 1995",
+"role": "hero",
+"size": [
+0.26,
+0.23,
+0.083
+],
+"themes": "CONSOLE WARS; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"sega_saturn_controller_model2_1995": {
+"display": "Sega Saturn Model 2 controller",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.107,
+"notes": [
+"Sega Saturn Model 2 controller, 1995"
+],
+"product": "Sega Saturn Model 2 controller, 1995",
+"role": "hero",
+"size": [
+0.155,
+0.046,
+0.086
+],
+"themes": "CONSOLE WARS; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"sega_saturn_longbox_case_1995": {
+"display": "Sega Saturn North American longbox game case",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.127,
+"notes": [
+"Sega Saturn North American longbox game case, 1995"
+],
+"product": "Sega Saturn North American longbox game case, 1995",
+"role": "support",
+"size": [
+0.148,
+0.024,
+0.205
+],
+"themes": "CONSOLE WARS; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "shrek_vhs_2001": {
 "display": "Shrek VHS in clamshell case",
 "eras": [
@@ -1317,6 +3341,72 @@
 0.202
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sixth_sense_vhs_2000": {
+"display": "The Sixth Sense VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"The Sixth Sense VHS, 2000"
+],
+"product": "The Sixth Sense VHS, 2000",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; TRICK OR TREAT; regular cubes",
+"weight": 1.0
+},
+"snes_cartridge_1991": {
+"display": "Super Nintendo Entertainment System Game Pak cartridge",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.036,
+"notes": [
+"Super Nintendo Entertainment System Game Pak cartridge, 1991"
+],
+"product": "Super Nintendo Entertainment System Game Pak cartridge, 1991",
+"role": "support",
+"size": [
+0.085,
+0.019,
+0.126
+],
+"themes": "CONSOLE WARS; BLOW ON IT; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"snes_controller_1991": {
+"display": "Super Nintendo Entertainment System controller",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.039,
+"notes": [
+"Super Nintendo Entertainment System controller, 1991"
+],
+"product": "Super Nintendo Entertainment System controller, 1991",
+"role": "hero",
+"size": [
+0.14,
+0.025,
+0.063
+],
+"themes": "CONSOLE WARS; BLOW ON IT; LEFTOVERS; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "snoop_doggystyle_cassette_1993": {
@@ -1429,6 +3519,50 @@
 "themes": "COASTERS; ROAD TRIP; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"sony_dualshock2_black_2000": {
+"display": "Sony DualShock 2 analog controller, black",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.144,
+"notes": [
+"Sony DualShock 2 analog controller, black, 2000"
+],
+"product": "Sony DualShock 2 analog controller, black, 2000",
+"role": "hero",
+"size": [
+0.157,
+0.095,
+0.055
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sony_dualshock_controller_1998": {
+"display": "Sony DualShock analog controller SCPH-1200",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.144,
+"notes": [
+"Sony DualShock analog controller SCPH-1200, 1998"
+],
+"product": "Sony DualShock analog controller SCPH-1200, 1998",
+"role": "hero",
+"size": [
+0.157,
+0.055,
+0.095
+],
+"themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
 "sony_hf90_1990": {
 "display": "Sony HF 90 Type I blank audio cassette",
 "eras": [
@@ -1495,6 +3629,138 @@
 "themes": "MIXTAPE; BASS BOOSTED; DIAL-UP; BLACKLIGHT; regular cubes",
 "weight": 1.0
 },
+"sony_playstation2_scph30001_2000": {
+"display": "Sony PlayStation 2 SCPH-30001 console",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.754,
+"notes": [
+"Sony PlayStation 2 SCPH-30001 console, 2000"
+],
+"product": "Sony PlayStation 2 SCPH-30001 console, 2000",
+"role": "hero",
+"size": [
+0.302,
+0.183,
+0.078
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sony_playstation_multitap_1995": {
+"display": "Sony PlayStation Multitap SCPH-1070",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.033,
+"notes": [
+"Sony PlayStation Multitap SCPH-1070, 1995"
+],
+"product": "Sony PlayStation Multitap SCPH-1070, 1995",
+"role": "support",
+"size": [
+0.108,
+0.08,
+0.022
+],
+"themes": "CONSOLE WARS; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sony_playstation_scph1001_1995": {
+"display": "Sony PlayStation SCPH-1001 console",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.585,
+"notes": [
+"Sony PlayStation SCPH-1001 console, 1995"
+],
+"product": "Sony PlayStation SCPH-1001 console, 1995",
+"role": "hero",
+"size": [
+0.275,
+0.19,
+0.064
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sony_premium_t120_vhs_1996": {
+"display": "Sony Premium Grade T-120 blank VHS cassette",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.083,
+"notes": [
+"Sony Premium Grade T-120 blank VHS cassette, 1996"
+],
+"product": "Sony Premium Grade T-120 blank VHS cassette, 1996",
+"role": "support",
+"size": [
+0.102,
+0.025,
+0.187
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"sony_psp1000_black_2005": {
+"display": "Sony PSP-1000, Piano Black",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.051,
+"notes": [
+"Sony PSP-1000, Piano Black, 2005"
+],
+"product": "Sony PSP-1000, Piano Black, 2005",
+"role": "hero",
+"size": [
+0.17,
+0.023,
+0.074
+],
+"themes": "SCREEN TIME; ROAD TRIP; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"sony_psp_umd_disc_2005": {
+"display": "Sony Universal Media Disc game/movie cartridge",
+"eras": [
+3,
+4
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Sony Universal Media Disc game/movie cartridge, 2005"
+],
+"product": "Sony Universal Media Disc game/movie cartridge, 2005",
+"role": "support",
+"size": [
+0.065,
+0.005,
+0.064
+],
+"themes": "SCREEN TIME; ROAD TRIP; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "sony_uxs90_1990": {
 "display": "Sony UX-S 90 Type II blank audio cassette",
 "eras": [
@@ -1537,6 +3803,28 @@
 0.085
 ],
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"space_jam_vhs_1997": {
+"display": "Space Jam VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Space Jam VHS, 1997"
+],
+"product": "Space Jam VHS, 1997",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; MINT CONDITION; regular cubes",
 "weight": 1.0
 },
 "spice_girls_spice_cassette_1996": {
@@ -1583,6 +3871,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
+"super_nintendo_console_1991": {
+"display": "Super Nintendo Entertainment System console",
+"eras": [
+1,
+2
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.616,
+"notes": [
+"Super Nintendo Entertainment System console, 1991"
+],
+"product": "Super Nintendo Entertainment System console, 1991",
+"role": "hero",
+"size": [
+0.203,
+0.241,
+0.072
+],
+"themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "tdk_cd_r_50_spindle_2001": {
 "display": "TDK 700 MB 80 Minute CD-R 50-pack spindle",
 "eras": [
@@ -1605,6 +3915,28 @@
 "themes": "COASTERS; DIAL-UP; SAVE ICON; Y2K; regular cubes",
 "weight": 1.0
 },
+"tdk_ehg_t120_vhs_1997": {
+"display": "TDK E-HG T-120 Extra High Grade blank VHS cassette",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.083,
+"notes": [
+"TDK E-HG T-120 Extra High Grade blank VHS cassette, 1997"
+],
+"product": "TDK E-HG T-120 Extra High Grade blank VHS cassette, 1997",
+"role": "support",
+"size": [
+0.102,
+0.025,
+0.187
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "tdk_sa90_1992": {
 "display": "TDK SA 90 Super Avilyn Type II blank audio cassette",
 "eras": [
@@ -1625,6 +3957,72 @@
 0.064
 ],
 "themes": "MIXTAPE; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"tdk_vhsc_ec60_1997": {
+"display": "TDK EC-60 VHS-C compact videocassette, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"TDK EC-60 VHS-C compact videocassette, circa 1997"
+],
+"product": "TDK EC-60 VHS-C compact videocassette, circa 1997",
+"role": "support",
+"size": [
+0.092,
+0.023,
+0.059
+],
+"themes": "SLEEPOVER; PROM NIGHT; SUMMER CAMP; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"terminator2_judgment_day_vhs_1992": {
+"display": "Terminator 2: Judgment Day VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Terminator 2: Judgment Day VHS, 1992"
+],
+"product": "Terminator 2: Judgment Day VHS, 1992",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"theres_something_about_mary_vhs_1999": {
+"display": "There's Something About Mary VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"There's Something About Mary VHS, 1999"
+],
+"product": "There's Something About Mary VHS, 1999",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; UNDER_THE_MATTRESS; regular cubes",
 "weight": 1.0
 },
 "titanic_vhs_1998": {
@@ -1693,6 +4091,28 @@
 "themes": "COASTERS; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"top_gun_vhs_1987": {
+"display": "Top Gun VHS",
+"eras": [
+0,
+1
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Top Gun VHS, 1987"
+],
+"product": "Top Gun VHS, 1987",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; ROAD TRIP; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "toy_story_vhs_1996": {
 "display": "Toy Story VHS in clamshell case",
 "eras": [
@@ -1713,6 +4133,28 @@
 0.202
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"twister_vhs_1997": {
+"display": "Twister VHS",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Twister VHS, 1997"
+],
+"product": "Twister VHS, 1997",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
 "usher_confessions_cd_2004": {
@@ -1757,6 +4199,160 @@
 0.095
 ],
 "themes": "COASTERS; DIAL-UP; SAVE ICON; regular cubes",
+"weight": 1.0
+},
+"vhs_storage_case_black_1994": {
+"display": "Black plastic single-VHS library case, circa",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.113,
+"notes": [
+"Black plastic single-VHS library case, circa 1994"
+],
+"product": "Black plastic single-VHS library case, circa 1994",
+"role": "filler",
+"size": [
+0.112,
+0.03,
+0.192
+],
+"themes": "BE KIND REWIND; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"video_rental_barcode_sticker_1998": {
+"display": "Video-store VHS inventory barcode sticker, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Video-store VHS inventory barcode sticker, circa 1998"
+],
+"product": "Video-store VHS inventory barcode sticker, circa 1998",
+"role": "filler",
+"size": [
+0.051,
+0.0002,
+0.025
+],
+"themes": "BE KIND REWIND; GARAGE SALE; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"videocassette_rewind_label_1997": {
+"display": "Handwritten VHS recording spine label, circa",
+"eras": [
+2,
+3
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Handwritten VHS recording spine label, circa 1997"
+],
+"product": "Handwritten VHS recording spine label, circa 1997",
+"role": "filler",
+"size": [
+0.095,
+0.0002,
+0.019
+],
+"themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"waynes_world_vhs_1992": {
+"display": "Wayne's World VHS",
+"eras": [
+1,
+2
+],
+"family": "video_media_and_rental",
+"group": "era",
+"mass": 0.093,
+"notes": [
+"Wayne's World VHS, 1992"
+],
+"product": "Wayne's World VHS, 1992",
+"role": "hero",
+"size": [
+0.105,
+0.027,
+0.188
+],
+"themes": "BE KIND REWIND; BASS BOOSTED; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"xbox_controller_s_2002": {
+"display": "Microsoft Xbox Controller S",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.185,
+"notes": [
+"Microsoft Xbox Controller S, 2002"
+],
+"product": "Microsoft Xbox Controller S, 2002",
+"role": "hero",
+"size": [
+0.155,
+0.105,
+0.065
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"xbox_duke_controller_2001": {
+"display": "Microsoft Xbox \u201cDuke\u201d controller",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.253,
+"notes": [
+"Microsoft Xbox \u201cDuke\u201d controller, 2001"
+],
+"product": "Microsoft Xbox \u201cDuke\u201d controller, 2001",
+"role": "hero",
+"size": [
+0.18,
+0.107,
+0.075
+],
+"themes": "CONSOLE WARS; SCREEN TIME; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"xbox_memory_unit_2001": {
+"display": "Microsoft Xbox Memory Unit",
+"eras": [
+2,
+3
+],
+"family": "video_games_and_accessories",
+"group": "era",
+"mass": 0.004,
+"notes": [
+"Microsoft Xbox Memory Unit, 2001"
+],
+"product": "Microsoft Xbox Memory Unit, 2001",
+"role": "support",
+"size": [
+0.042,
+0.013,
+0.038
+],
+"themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
 "weight": 1.0
 }
 }

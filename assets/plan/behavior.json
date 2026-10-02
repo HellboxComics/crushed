@@ -19,6 +19,16 @@
 0.254
 ]
 },
+"aladdin_vhs_1993": {
+"hard": 0.58,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.033,
+0.202
+]
+},
 "alanis_jagged_little_pill_cassette_1995": {
 "hard": 0.56,
 "how": "snap",
@@ -37,6 +47,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"american_pie_vhs_2000": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "amp_kit": {
@@ -79,6 +99,36 @@
 0.1023
 ]
 },
+"atari2600_cartridge_1977": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.02,
+0.102
+]
+},
+"atari2600_woodgrain_1977": {
+"hard": 0.86,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.346,
+0.232,
+0.089
+]
+},
+"atari_cx40_joystick_1977": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.09,
+0.127
+]
+},
 "audio_stickers": {
 "hard": 0.3,
 "how": "fold",
@@ -89,6 +139,16 @@
 0.0069
 ]
 },
+"austin_powers_vhs_1998": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "av_cable": {
 "hard": 0.35,
 "how": "fold",
@@ -97,6 +157,16 @@
 0.2439,
 0.0641,
 0.0129
+]
+},
+"avery_vhs_label_sheet_1996": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0003,
+0.279
 ]
 },
 "avril_lavigne_let_go_cd_2002": {
@@ -117,6 +187,16 @@
 0.0304,
 0.0301,
 0.1
+]
+},
+"back_to_future_vhs_1986": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "backpack": {
@@ -189,6 +269,16 @@
 0.0852
 ]
 },
+"batman_vhs_1989": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "battle_top": {
 "hard": 0.35,
 "how": "fold",
@@ -197,6 +287,16 @@
 0.075,
 0.0651,
 0.0372
+]
+},
+"be_kind_rewind_sticker_1995": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.05,
+0.0002,
+0.025
 ]
 },
 "beaded_curtain": {
@@ -379,6 +479,16 @@
 0.42
 ]
 },
+"big_lebowski_vhs_1998": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "big_x_console": {
 "hard": 0.7,
 "how": "snap",
@@ -429,6 +539,16 @@
 0.0669
 ]
 },
+"blair_witch_project_vhs_1999": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "blink182_enema_of_the_state_cd_1999": {
 "hard": 0.68,
 "how": "snap",
@@ -437,6 +557,36 @@
 0.142,
 0.01,
 0.125
+]
+},
+"blockbuster_late_fee_receipt_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0002,
+0.22
+]
+},
+"blockbuster_membership_card_1997": {
+"hard": 0.38,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.086,
+0.0008,
+0.054
+]
+},
+"blockbuster_rental_clamshell_1998": {
+"hard": 0.62,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.034,
+0.203
 ]
 },
 "blow_up_gloves": {
@@ -709,6 +859,16 @@
 0.0125
 ]
 },
+"cast_away_vhs_2001": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "cd": {
 "hard": 0.7,
 "how": "snap",
@@ -979,6 +1139,16 @@
 0.0196
 ]
 },
+"clueless_vhs_1995": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "coffee_mug": {
 "hard": 0.7,
 "how": "snap",
@@ -1007,6 +1177,16 @@
 0.131,
 0.052,
 0.0148
+]
+},
+"composite_av_cable_1998": {
+"hard": 0.3,
+"how": "fold",
+"mat": "rubber",
+"size": [
+1.8,
+0.012,
+0.012
 ]
 },
 "console_16bit": {
@@ -1239,6 +1419,16 @@
 0.0549
 ]
 },
+"dirty_dancing_vhs_1988": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "disc_console": {
 "hard": 0.7,
 "how": "snap",
@@ -1297,6 +1487,26 @@
 0.106,
 0.008,
 0.183
+]
+},
+"dreamcast_controller_1999": {
+"hard": 0.65,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.159,
+0.055,
+0.152
+]
+},
+"dreamcast_vmu_1999": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.047,
+0.016,
+0.08
 ]
 },
 "drink_pouch": {
@@ -1359,6 +1569,16 @@
 0.0042
 ]
 },
+"dumb_and_dumber_vhs_1995": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "dvd_case": {
 "hard": 0.7,
 "how": "snap",
@@ -1417,6 +1637,16 @@
 0.1715,
 0.059,
 0.059
+]
+},
+"et_extra_terrestrial_vhs_1988": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "extension_cable": {
@@ -1537,6 +1767,16 @@
 0.0895,
 0.033,
 0.033
+]
+},
+"finding_nemo_vhs_2003": {
+"hard": 0.58,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.033,
+0.202
 ]
 },
 "finger_skateboard": {
@@ -1719,6 +1959,16 @@
 0.0005
 ]
 },
+"forrest_gump_vhs_1995": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "fried_eggs": {
 "hard": 0.2,
 "how": "squish",
@@ -1829,6 +2079,56 @@
 0.032
 ]
 },
+"game_boy_advance_indigo_2001": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.144,
+0.025,
+0.082
+]
+},
+"game_boy_camera_blue_1998": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.058,
+0.03,
+0.09
+]
+},
+"game_boy_cartridge_1989": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.058,
+0.008,
+0.065
+]
+},
+"game_boy_color_grape_1998": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.078,
+0.027,
+0.133
+]
+},
+"game_boy_printer_1998": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.16,
+0.133,
+0.064
+]
+},
 "game_cart": {
 "hard": 0.7,
 "how": "snap",
@@ -1849,6 +2149,26 @@
 0.015
 ]
 },
+"gamecube_controller_indigo_2001": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.1,
+0.065
+]
+},
+"gameshark_pro_n64_1998": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.116,
+0.027,
+0.11
+]
+},
 "gas_can": {
 "hard": 0.15,
 "how": "crumple",
@@ -1867,6 +2187,36 @@
 0.0776,
 0.1276,
 0.0288
+]
+},
+"gba_cartridge_gray_2001": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.009,
+0.034
+]
+},
+"gba_game_link_cable_2001": {
+"hard": 0.28,
+"how": "fold",
+"mat": "rubber",
+"size": [
+1.5,
+0.013,
+0.013
+]
+},
+"gba_sp_cobalt_2003": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.084,
+0.024,
+0.082
 ]
 },
 "gel_pens": {
@@ -1899,6 +2249,16 @@
 0.125
 ]
 },
+"ghostbusters_vhs_1985": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "giant_controller": {
 "hard": 0.2,
 "how": "squish",
@@ -1917,6 +2277,16 @@
 0.067,
 0.067,
 0.214
+]
+},
+"gladiator_vhs_2000": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "glass_shard": {
@@ -2119,6 +2489,26 @@
 0.0007
 ]
 },
+"gta_vice_city_ps2_2002": {
+"hard": 0.48,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.135,
+0.014,
+0.19
+]
+},
+"guitar_hero_sg_controller_red_2005": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.86,
+0.045,
+0.28
+]
+},
 "gum_wrapper": {
 "hard": 0.15,
 "how": "crumple",
@@ -2137,6 +2527,16 @@
 0.1004,
 0.1152,
 0.11
+]
+},
+"halo_combat_evolved_xbox_2001": {
+"hard": 0.48,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.135,
+0.014,
+0.19
 ]
 },
 "hand_sanitizer": {
@@ -2177,6 +2577,16 @@
 0.0725,
 0.02,
 0.0102
+]
+},
+"harry_potter_sorcerers_stone_vhs_2002": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "hazelnut_wafer_bar": {
@@ -2227,6 +2637,36 @@
 0.12,
 0.0184,
 0.0212
+]
+},
+"hollywood_video_membership_card_1999": {
+"hard": 0.38,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.086,
+0.0008,
+0.054
+]
+},
+"hollywood_video_receipt_2000": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0002,
+0.22
+]
+},
+"hollywood_video_rental_case_1999": {
+"hard": 0.62,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.034,
+0.203
 ]
 },
 "home_alone_vhs_1991": {
@@ -2307,6 +2747,16 @@
 0.1,
 0.14,
 0.0274
+]
+},
+"independence_day_vhs_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "inflatable_chair": {
@@ -2477,6 +2927,26 @@
 0.0384,
 0.0129,
 0.052
+]
+},
+"kinyo_uv428_vhs_rewinder_1995": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.21,
+0.16,
+0.07
+]
+},
+"konami_ddr_dance_pad_ps1_1999": {
+"hard": 0.18,
+"how": "fold",
+"mat": "soft_plastic",
+"size": [
+0.93,
+0.005,
+0.82
 ]
 },
 "koss_porta_pro_1984": {
@@ -2749,6 +3219,26 @@
 0.095
 ]
 },
+"maxell_hgx_gold_t120_1996": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.025,
+0.187
+]
+},
+"maxell_t120_gx_silver_1994": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.025,
+0.187
+]
+},
 "maxell_ur90_1994": {
 "hard": 0.55,
 "how": "snap",
@@ -2757,6 +3247,16 @@
 0.102,
 0.013,
 0.064
+]
+},
+"maxell_vhs_head_cleaner_1996": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.025,
+0.187
 ]
 },
 "maxell_xlii90_1990": {
@@ -2879,6 +3379,16 @@
 0.2005
 ]
 },
+"microsoft_xbox_console_2001": {
+"hard": 0.92,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.32,
+0.26,
+0.1
+]
+},
 "milk_caps": {
 "hard": 0.35,
 "how": "fold",
@@ -2989,6 +3499,16 @@
 0.1193
 ]
 },
+"monsters_inc_vhs_2002": {
+"hard": 0.58,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.125,
+0.033,
+0.202
+]
+},
 "mood_ring": {
 "hard": 0.85,
 "how": "dent",
@@ -3039,6 +3559,16 @@
 0.0155
 ]
 },
+"mrs_doubtfire_vhs_1994": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "mushroom_cluster": {
 "hard": 0.35,
 "how": "fold",
@@ -3047,6 +3577,56 @@
 0.0736,
 0.074,
 0.0802
+]
+},
+"n64_controller_pak_1996": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.032,
+0.065
+]
+},
+"n64_expansion_pak_1998": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.044,
+0.038,
+0.016
+]
+},
+"n64_rumble_pak_1997": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.032,
+0.065
+]
+},
+"n64_transfer_pak_1999": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.062,
+0.035,
+0.072
+]
+},
+"namco_guncon_1997": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.2,
+0.045,
+0.145
 ]
 },
 "nano_pod": {
@@ -3199,6 +3779,26 @@
 0.1194
 ]
 },
+"nes_cartridge_gray_1985": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.02,
+0.135
+]
+},
+"nes_controller_1985": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.124,
+0.017,
+0.053
+]
+},
 "new_release_case": {
 "hard": 0.7,
 "how": "snap",
@@ -3217,6 +3817,106 @@
 0.17,
 0.24,
 0.0159
+]
+},
+"nintendo64_cartridge_1996": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.116,
+0.019,
+0.075
+]
+},
+"nintendo64_console_1996": {
+"hard": 0.86,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.26,
+0.19,
+0.073
+]
+},
+"nintendo64_controller_gray_1996": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.16,
+0.06,
+0.152
+]
+},
+"nintendo_ds_game_card_2004": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.035,
+0.004,
+0.033
+]
+},
+"nintendo_ds_silver_2004": {
+"hard": 0.74,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.149,
+0.029,
+0.085
+]
+},
+"nintendo_entertainment_system_1985": {
+"hard": 0.86,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.26,
+0.203,
+0.089
+]
+},
+"nintendo_ereader_2002": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.083,
+0.024,
+0.085
+]
+},
+"nintendo_gamecube_indigo_2001": {
+"hard": 0.86,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.161,
+0.11
+]
+},
+"nintendo_power_glove_1989": {
+"hard": 0.58,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.28,
+0.13,
+0.07
+]
+},
+"nintendo_super_scope_1992": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.58,
+0.07,
+0.17
 ]
 },
 "nirvana_nevermind_cassette_1991": {
@@ -3429,6 +4129,16 @@
 0.204
 ]
 },
+"original_game_boy_dmg01_1989": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.09,
+0.032,
+0.148
+]
+},
 "ornament": {
 "hard": 0.7,
 "how": "snap",
@@ -3487,6 +4197,26 @@
 0.06,
 0.045,
 0.024
+]
+},
+"panasonic_pv9450_vcr_1999": {
+"hard": 0.88,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.43,
+0.275,
+0.095
+]
+},
+"panasonic_pvc1320_tv_vcr_2000": {
+"hard": 0.9,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.385,
+0.405,
+0.38
 ]
 },
 "panasonic_shockwave_sl_sw202_1996": {
@@ -3759,6 +4489,16 @@
 0.0027
 ]
 },
+"playstation_memory_card_1995": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.01,
+0.035
+]
+},
 "pocket_diecast": {
 "hard": 0.85,
 "how": "dent",
@@ -3879,6 +4619,36 @@
 0.007
 ]
 },
+"pretty_woman_vhs_1990": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
+"ps2_dvd_game_case_black_2000": {
+"hard": 0.48,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.135,
+0.014,
+0.19
+]
+},
+"ps2_memory_card_8mb_2000": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.042,
+0.01,
+0.036
+]
+},
 "puff_bag": {
 "hard": 0.15,
 "how": "crumple",
@@ -3887,6 +4657,16 @@
 0.12,
 0.0714,
 0.1949
+]
+},
+"pulp_fiction_vhs_1995": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "pumpkin_pail": {
@@ -3939,6 +4719,16 @@
 0.0566
 ]
 },
+"radio_shack_rf_modulator_1998": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.08,
+0.038
+]
+},
 "ramen_packet": {
 "hard": 0.15,
 "how": "crumple",
@@ -3967,6 +4757,16 @@
 0.3598,
 0.0941,
 0.0156
+]
+},
+"rca_vcr_remote_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.024,
+0.185
 ]
 },
 "receipt": {
@@ -4037,6 +4837,16 @@
 0.1534,
 0.0841,
 0.023
+]
+},
+"rg6_coaxial_tv_cable_1998": {
+"hard": 0.36,
+"how": "fold",
+"mat": "rubber",
+"size": [
+1.8,
+0.007,
+0.007
 ]
 },
 "rhcp_californication_cd_1999": {
@@ -4169,6 +4979,16 @@
 0.064
 ]
 },
+"scotch_t120_blank_vhs_1991": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.025,
+0.187
+]
+},
 "scratch_ticket": {
 "hard": 0.3,
 "how": "fold",
@@ -4179,6 +4999,16 @@
 0.0
 ]
 },
+"scream_vhs_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "seal_sticker": {
 "hard": 0.25,
 "how": "crumble",
@@ -4187,6 +5017,96 @@
 0.0498,
 0.0498,
 0.0005
+]
+},
+"sega_dreamcast_console_1999": {
+"hard": 0.83,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.191,
+0.197,
+0.076
+]
+},
+"sega_game_gear_1991": {
+"hard": 0.78,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.21,
+0.038,
+0.113
+]
+},
+"sega_game_gear_cartridge_1991": {
+"hard": 0.6,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.068,
+0.01,
+0.065
+]
+},
+"sega_genesis_3button_controller_1989": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.155,
+0.035,
+0.102
+]
+},
+"sega_genesis_cartridge_1989": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.018,
+0.115
+]
+},
+"sega_genesis_model1_1989": {
+"hard": 0.86,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.278,
+0.215,
+0.057
+]
+},
+"sega_saturn_console_1995": {
+"hard": 0.86,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.26,
+0.23,
+0.083
+]
+},
+"sega_saturn_controller_model2_1995": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.155,
+0.046,
+0.086
+]
+},
+"sega_saturn_longbox_case_1995": {
+"hard": 0.63,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.148,
+0.024,
+0.205
 ]
 },
 "selfie_stick": {
@@ -4257,6 +5177,16 @@
 0.0765,
 0.0765,
 0.086
+]
+},
+"sixth_sense_vhs_2000": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "skate_wheel": {
@@ -4409,6 +5339,26 @@
 0.1159
 ]
 },
+"snes_cartridge_1991": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.085,
+0.019,
+0.126
+]
+},
+"snes_controller_1991": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.025,
+0.063
+]
+},
 "snoop_doggystyle_cassette_1993": {
 "hard": 0.56,
 "how": "snap",
@@ -4499,6 +5449,26 @@
 0.032
 ]
 },
+"sony_dualshock2_black_2000": {
+"hard": 0.67,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.157,
+0.095,
+0.055
+]
+},
+"sony_dualshock_controller_1998": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.157,
+0.055,
+0.095
+]
+},
 "sony_hf90_1990": {
 "hard": 0.55,
 "how": "snap",
@@ -4529,6 +5499,66 @@
 0.18
 ]
 },
+"sony_playstation2_scph30001_2000": {
+"hard": 0.88,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.302,
+0.183,
+0.078
+]
+},
+"sony_playstation_multitap_1995": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.108,
+0.08,
+0.022
+]
+},
+"sony_playstation_scph1001_1995": {
+"hard": 0.84,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.275,
+0.19,
+0.064
+]
+},
+"sony_premium_t120_vhs_1996": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.025,
+0.187
+]
+},
+"sony_psp1000_black_2005": {
+"hard": 0.76,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.17,
+0.023,
+0.074
+]
+},
+"sony_psp_umd_disc_2005": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.065,
+0.005,
+0.064
+]
+},
 "sony_uxs90_1990": {
 "hard": 0.6,
 "how": "snap",
@@ -4557,6 +5587,16 @@
 0.0932,
 0.1001,
 0.015
+]
+},
+"space_jam_vhs_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "spam_can": {
@@ -4789,6 +5829,16 @@
 0.13
 ]
 },
+"super_nintendo_console_1991": {
+"hard": 0.84,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.203,
+0.241,
+0.072
+]
+},
 "surprise_capsule": {
 "hard": 0.7,
 "how": "snap",
@@ -4939,6 +5989,16 @@
 0.095
 ]
 },
+"tdk_ehg_t120_vhs_1997": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.102,
+0.025,
+0.187
+]
+},
 "tdk_sa90_1992": {
 "hard": 0.58,
 "how": "snap",
@@ -4947,6 +6007,16 @@
 0.102,
 0.013,
 0.064
+]
+},
+"tdk_vhsc_ec60_1997": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.092,
+0.023,
+0.059
 ]
 },
 "team_scarf": {
@@ -4969,6 +6039,16 @@
 0.066
 ]
 },
+"terminator2_judgment_day_vhs_1992": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "theater_candy": {
 "hard": 0.15,
 "how": "crumple",
@@ -4977,6 +6057,16 @@
 0.0873,
 0.1399,
 0.0418
+]
+},
+"theres_something_about_mary_vhs_1999": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
 ]
 },
 "ticker_tape": {
@@ -5089,6 +6179,16 @@
 0.125
 ]
 },
+"top_gun_vhs_1987": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "toy_oven": {
 "hard": 0.7,
 "how": "snap",
@@ -5199,6 +6299,16 @@
 0.042
 ]
 },
+"twister_vhs_1997": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "umaibo": {
 "hard": 0.25,
 "how": "crumble",
@@ -5279,6 +6389,36 @@
 0.0254
 ]
 },
+"vhs_storage_case_black_1994": {
+"hard": 0.52,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.112,
+0.03,
+0.192
+]
+},
+"video_rental_barcode_sticker_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.051,
+0.0002,
+0.025
+]
+},
+"videocassette_rewind_label_1997": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.095,
+0.0002,
+0.019
+]
+},
 "virtual_pet": {
 "hard": 0.7,
 "how": "snap",
@@ -5349,6 +6489,16 @@
 0.0084
 ]
 },
+"waynes_world_vhs_1992": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.105,
+0.027,
+0.188
+]
+},
 "webcam": {
 "hard": 0.35,
 "how": "fold",
@@ -5417,6 +6567,36 @@
 0.1753,
 0.0544,
 0.1742
+]
+},
+"xbox_controller_s_2002": {
+"hard": 0.68,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.155,
+0.105,
+0.065
+]
+},
+"xbox_duke_controller_2001": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.107,
+0.075
+]
+},
+"xbox_memory_unit_2001": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.042,
+0.013,
+0.038
 ]
 },
 "y2k_glasses": {
