@@ -351,7 +351,33 @@ def say(*a):
     print(*a, flush=True)
 
 
+def beat(doing):
+    """The heartbeat the watchdog reads: when the run last did anything, and what."""
+    try:
+        json.dump({"at": time.time(), "doing": doing}, open(os.path.join(WORK, "heartbeat.json"), "w"))
+    except Exception:
+        pass
+
+
+def _beating():
+    """While the run waits on one long job (a drawing, Hunyuan), it still says it's alive every minute - but only
+    while those jobs really are moving: the drawing room is checked to be answering."""
+    import threading
+
+    def loop():
+        while True:
+            time.sleep(60)
+            try:
+                urllib.request.urlopen(os.environ.get("DRAWING_ROOM", "http://127.0.0.1:8188") + "/system_stats",
+                                       timeout=15).read()
+                beat("waiting on a long job (drawing room answering)")
+            except Exception:
+                pass
+    threading.Thread(target=loop, daemon=True).start()
+
+
 def status(cid, **kw):
+    beat(f"{cid}: {kw.get('step', '')}")
     os.makedirs(OUT, exist_ok=True)
     s = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
     if "product" in kw:                               # a fresh run of this item: nothing left over from the last one
@@ -575,6 +601,8 @@ if __name__ == "__main__":
     except OSError:
         say("another asset run is already going - leaving it alone")
         sys.exit(0)
+    beat("starting")
+    _beating()
     if a.loop:
         if not queue(a.queue or 3):                     # nothing to make right now: done in a second
             sys.exit(0)

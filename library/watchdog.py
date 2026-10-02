@@ -1,16 +1,23 @@
-"""WATCHDOG: the clock runs this every 5 minutes. If the asset maker is running but hasn't moved in 10 minutes
-(and isn't waiting on you), it restarts the drawing room once; if it still hasn't moved 10 minutes later, it
-stops the run, restarts it, and tells your phone what was stuck. A run never sits frozen without anyone knowing.
+"""WATCHDOG: the clock runs this every 5 minutes. It only acts on things it can prove:
+
+  1. the drawing room (ComfyUI) doesn't answer its own health check two checks in a row while a run is going
+     -> restart the drawing room, tell your phone
+  2. the run's heartbeat (written every time it does anything, and every minute while it waits on a long job)
+     hasn't moved in 45 minutes -> restart the run, tell your phone
+
+It never judges "stuck" from the status page (that can be old); only from the heartbeat and a live check.
 """
 import json
 import os
 import subprocess
 import time
+import urllib.request
 
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
-STATUS = os.path.join(WORK, "library", "status.json")
+BEAT = os.path.join(WORK, "heartbeat.json")
 STATE = os.path.join(WORK, "watchdog.json")
 REPO = os.path.expanduser("~/crushed-render/repo")
+ROOM = os.environ.get("DRAWING_ROOM", "http://127.0.0.1:8188")
 
 
 def running():
@@ -27,41 +34,48 @@ def tell(text):
         pass
 
 
-def main():
-    if not running():
-        return
+def room_ok():
     try:
-        st = json.load(open(STATUS))
+        urllib.request.urlopen(ROOM + "/system_stats", timeout=15).read()
+        return True
     except Exception:
-        return
-    busy = {k: v for k, v in st.items() if not str(v.get("step", "")).startswith(("waiting", "done", "stopped", "3 rounds"))}
-    if not busy:
-        return
-    cid, v = max(busy.items(), key=lambda kv: kv[1].get("at", 0))
-    idle = time.time() - v.get("at", 0)
+        return False
+
+
+def main():
     try:
         w = json.load(open(STATE))
     except Exception:
         w = {}
-    if idle < 600:
-        if w:
-            json.dump({}, open(STATE, "w"))
+    if not running():
+        json.dump({}, open(STATE, "w"))
         return
-    if w.get("cid") != cid or w.get("at") != v.get("at"):        # first time stuck on this step
-        subprocess.run(["launchctl", "kickstart", "-k", f"gui/{os.getuid()}/com.hellbox.ai.draw"])
-        json.dump({"cid": cid, "at": v.get("at"), "kicked": time.time()}, open(STATE, "w"))
-        print(f"[watchdog] {cid} stuck {idle / 60:.0f} min on '{v.get('step')}': restarted the drawing room")
-        return
-    if time.time() - w.get("kicked", 0) >= 600:                  # still stuck: restart the run itself
+    # 1. the drawing room
+    if room_ok():
+        w["room_fails"] = 0
+    else:
+        w["room_fails"] = w.get("room_fails", 0) + 1
+        if w["room_fails"] >= 2:
+            subprocess.run(["launchctl", "kickstart", "-k", f"gui/{os.getuid()}/com.hellbox.ai.draw"])
+            tell("Asset maker: the drawing room stopped answering, so I restarted it.")
+            print("[watchdog] drawing room not answering twice: restarted it")
+            w["room_fails"] = 0
+    # 2. the run's heartbeat
+    try:
+        beat = json.load(open(BEAT))
+    except Exception:
+        beat = {"at": time.time(), "doing": "starting"}
+    idle = time.time() - beat.get("at", 0)
+    if idle > 45 * 60:
         subprocess.run(["pkill", "-f", "bin/python library/run.py"])
         time.sleep(3)
-        subprocess.Popen(["nohup", os.path.join(REPO, ".venv", "bin", "python"), "library/run.py", "--loop", "--queue", "3"],
+        subprocess.Popen([os.path.join(REPO, ".venv", "bin", "python"), "library/run.py", "--loop", "--queue", "3"],
                          cwd=REPO, stdout=open(os.path.expanduser("~/crushed-render/library.log"), "a"),
                          stderr=subprocess.STDOUT, start_new_session=True)
-        json.dump({}, open(STATE, "w"))
-        tell(f"Asset maker was stuck on {cid} ({v.get('step')}) for {idle / 60:.0f} min. "
-             "I restarted the drawing room, then the run. If this repeats, send it to Claude.")
-        print(f"[watchdog] {cid}: restarted the run")
+        tell(f"Asset maker: no sign of life for {idle / 60:.0f} min while '{beat.get('doing')}'. I restarted it. "
+             "If this repeats, send it to Claude.")
+        print(f"[watchdog] heartbeat {idle / 60:.0f} min old ({beat.get('doing')}): restarted the run")
+    json.dump(w, open(STATE, "w"))
 
 
 if __name__ == "__main__":

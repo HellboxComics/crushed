@@ -21,6 +21,11 @@ RESULTS = []
 
 
 def check(name, fn, limit):
+    try:
+        import run
+        run.beat("self-test: " + name)
+    except Exception:
+        pass
     t = time.time()
     try:
         note = fn() or ""
