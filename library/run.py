@@ -241,6 +241,9 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         status(cid, step="5/7 Blender: real size, every format")
         run_blender("resize.py", painted, str(max(size)), mdir, cid)
     glb = os.path.join(mdir, cid + ".glb")
+    pend = os.path.join(ROOT, "assets", "models_pending", cid)       # so the phone page can spin it in 3D right away
+    os.makedirs(pend, exist_ok=True)
+    shutil.copy(glb, os.path.join(pend, "model.glb"))
 
     # 6. CHECK: four sides against your photo
     status(cid, step="6/7 pictures from four sides and the judge's check")
@@ -623,7 +626,7 @@ def page():
                     f"<p>{'photos found: %s, usable: %s, label covered: %s' % (v.get('photos','-'), v.get('good','-'), format(v.get('covered',0),'.0%')) if 'covered' in v else ''}</p>"
                     f"<p>{html.escape(v.get('note', ''))}</p>"
                     f"<p>{html.escape(str(ver.get('problems', '')) if ver else '')}</p>{imgs}"
-                    + (f'<p><a href="view.html#{cid}">spin the 3D model</a></p>' if v.get("step") == "done" else "")
+                    + (f'<p><a href="view.html#{cid}">spin it in 3D</a></p>' if v.get("views") else "")
                     + "</div>")
     doc = ("<!doctype html><meta charset=utf-8><title>Crushed asset library</title><style>"
            "body{font:16px system-ui;margin:12px;background:#111;color:#eee}img{width:100%;margin:4px 0;border-radius:6px}"
