@@ -24,7 +24,11 @@ PROMPTS = os.path.join(ROOT, "ai", "remaster", "prompts")
 MATS = {"plastic", "soft_plastic", "metal", "foil", "paper", "card", "glossy_print", "fabric", "rubber", "clay", "ceramic",
         "glass", "wood", "food", "chocolate", "candy", "foam", "wax"}
 HOWS = {"crumple", "fold", "squish", "dent", "snap", "crumble"}
-HOW_ALIAS = {"bend": "fold", "tear": "fold", "shatter": "snap", "crack": "snap", "flatten": "crumple"}
+HOW_ALIAS = {"bend": "fold", "tear": "fold", "shatter": "snap", "crack": "snap", "flatten": "crumple", "crush": "crumple",
+             "stretch": "squish"}
+MAT_ALIAS = {"vinyl": "soft_plastic", "denim": "fabric", "nylon": "fabric", "cotton": "fabric", "fleece": "fabric",
+             "leather": "fabric", "suede": "fabric", "shell": "ceramic", "silicone": "rubber", "latex": "rubber",
+             "cardboard": "card", "aluminum": "metal", "steel": "metal", "tin": "metal", "porcelain": "ceramic"}
 DENSITY = {"metal": 2.0, "glass": 1.2, "ceramic": 1.1, "wood": 0.6, "clay": 1.2, "plastic": 0.5, "soft_plastic": 0.4,
            "rubber": 0.6, "food": 0.6, "chocolate": 0.9, "candy": 0.9, "wax": 0.8, "paper": 0.4, "card": 0.3,
            "glossy_print": 0.4, "fabric": 0.2, "foam": 0.05, "foil": 0.1}      # rough, of the bounding box, g/cm3
@@ -96,6 +100,7 @@ def main(files):
                 probs.append(f"{oid}: size '{size}' doesn't read as W x D x H in cm")
                 continue
             mat = mat.lower().replace(" ", "_")
+            mat = MAT_ALIAS.get(mat, mat)
             if mat not in MATS:
                 probs.append(f"{oid}: material '{mat}' not on the list, used plastic")
                 mat = "plastic"

@@ -29,6 +29,16 @@
 0.0145
 ]
 },
+"adidas_snap_pants_black_white_1998": {
+"hard": 0.22,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.52,
+0.02,
+1.05
+]
+},
 "air_horn": {
 "hard": 0.85,
 "how": "dent",
@@ -37,6 +47,26 @@
 0.076,
 0.076,
 0.254
+]
+},
+"airheads_blue_raspberry_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.045,
+0.007,
+0.18
+]
+},
+"airwalk_one_black_white_1995": {
+"hard": 0.48,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.11,
+0.1,
+0.3
 ]
 },
 "aladdin_vhs_1993": {
@@ -77,6 +107,16 @@
 0.1,
 0.1,
 0.18
+]
+},
+"altoids_peppermint_tin_1997": {
+"hard": 0.66,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.095,
+0.02,
+0.06
 ]
 },
 "american_pie_vhs_2000": {
@@ -237,6 +277,16 @@
 0.08,
 0.08,
 0.038
+]
+},
+"arizona_green_tea_23oz_can_1996": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.07,
+0.07,
+0.19
 ]
 },
 "army_men": {
@@ -417,6 +467,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"bagel_bites_cheese_pepperoni_1997": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.19,
+0.05,
+0.14
 ]
 },
 "ball_mouse": {
@@ -739,6 +799,16 @@
 0.085
 ]
 },
+"big_league_chew_original_1995": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.12,
+0.03,
+0.18
+]
+},
 "big_lebowski_vhs_1998": {
 "hard": 0.72,
 "how": "snap",
@@ -909,6 +979,16 @@
 0.3184
 ]
 },
+"bop_it_original_1996": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.38,
+0.07,
+0.07
+]
+},
 "bottle_cap": {
 "hard": 0.2,
 "how": "squish",
@@ -917,6 +997,16 @@
 0.0308,
 0.0309,
 0.006
+]
+},
+"brass_pog_slammer_1994": {
+"hard": 0.84,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.041,
+0.004,
+0.041
 ]
 },
 "brick_game": {
@@ -949,6 +1039,16 @@
 0.1577
 ]
 },
+"bubble_jug_tropical_fruit_1994": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.085
+]
+},
 "bubble_tape": {
 "hard": 0.35,
 "how": "fold",
@@ -969,6 +1069,16 @@
 0.0432
 ]
 },
+"bugles_original_1995": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.16,
+0.06,
+0.25
+]
+},
 "bull": {
 "hard": 0.6,
 "how": "snap",
@@ -987,6 +1097,26 @@
 0.0681,
 0.1039,
 0.0104
+]
+},
+"butterfinger_bbs_1995": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.08,
+0.04,
+0.15
+]
+},
+"butterfly_clips_12pack_1999": {
+"hard": 0.22,
+"how": "fold",
+"mat": "card",
+"size": [
+0.12,
+0.02,
+0.16
 ]
 },
 "calculator": {
@@ -1087,6 +1217,16 @@
 0.06,
 0.12,
 0.105
+]
+},
+"capri_sun_mountain_cooler_1997": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.09,
+0.015,
+0.14
 ]
 },
 "capri_sun_pacific_cooler_1995": {
@@ -1269,6 +1409,16 @@
 0.075
 ]
 },
+"champion_reverse_weave_hoodie_gray_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.62,
+0.05,
+0.72
+]
+},
 "charger_brick": {
 "hard": 0.7,
 "how": "snap",
@@ -1287,6 +1437,26 @@
 0.0959,
 0.1044,
 0.0239
+]
+},
+"cheetos_paws_1993": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.17,
+0.07,
+0.25
+]
+},
+"chef_boyardee_beefaroni_1997": {
+"hard": 0.56,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.075,
+0.075,
+0.11
 ]
 },
 "chew_bar": {
@@ -1357,6 +1527,26 @@
 0.1598,
 0.1365,
 0.0497
+]
+},
+"chuck_e_cheese_ticket_strip_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.05,
+0.0002,
+0.025
+]
+},
+"chuck_e_cheese_token_1998": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.025,
+0.0018,
+0.025
 ]
 },
 "clay_bear": {
@@ -1469,6 +1659,16 @@
 0.0158
 ]
 },
+"clearly_canadian_wild_cherry_1994": {
+"hard": 0.8,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.06,
+0.06,
+0.2
+]
+},
 "clip_player": {
 "hard": 0.35,
 "how": "fold",
@@ -1487,6 +1687,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"coca_cola_12oz_can_1998": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
 ]
 },
 "coffee_mug": {
@@ -1517,6 +1727,16 @@
 0.131,
 0.052,
 0.0148
+]
+},
+"combos_pizzeria_pretzel_1996": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.15,
+0.05,
+0.23
 ]
 },
 "compaq_151fs_crt_1997": {
@@ -1739,6 +1959,16 @@
 0.1879
 ]
 },
+"crazy_bones_series1_1998": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.025,
+0.015,
+0.03
+]
+},
 "crazy_taxi_dreamcast_2000": {
 "hard": 0.68,
 "how": "snap",
@@ -1767,6 +1997,26 @@
 0.09,
 0.08,
 0.12
+]
+},
+"creepy_crawlers_thingmaker_1992": {
+"hard": 0.72,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.34,
+0.23,
+0.13
+]
+},
+"crossfire_game_1994": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.52,
+0.08,
+0.31
 ]
 },
 "crt": {
@@ -1837,6 +2087,16 @@
 0.035,
 0.035,
 0.08
+]
+},
+"danimals_strawberry_explosion_2000": {
+"hard": 0.18,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.05,
+0.05,
+0.1
 ]
 },
 "dare_flag": {
@@ -1929,6 +2189,26 @@
 0.0163
 ]
 },
+"dickies_874_black_1999": {
+"hard": 0.28,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.48,
+0.02,
+1.1
+]
+},
+"digimon_virtual_pet_v1_1997": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.02,
+0.043
+]
+},
 "digital_camera": {
 "hard": 0.7,
 "how": "snap",
@@ -1977,6 +2257,16 @@
 0.142,
 0.01,
 0.125
+]
+},
+"dnl_20oz_2002": {
+"hard": 0.34,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.24
 ]
 },
 "donkey_kong_country_snes_1994": {
@@ -2039,6 +2329,26 @@
 0.125
 ]
 },
+"dr_martens_1460_cherry_1996": {
+"hard": 0.62,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.12,
+0.11,
+0.28
+]
+},
+"dr_pepper_12oz_can_1998": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
+]
+},
 "dream_catcher": {
 "hard": 0.35,
 "how": "fold",
@@ -2047,6 +2357,16 @@
 0.106,
 0.008,
 0.183
+]
+},
+"dream_phone_1991": {
+"hard": 0.48,
+"how": "fold",
+"mat": "card",
+"size": [
+0.4,
+0.07,
+0.27
 ]
 },
 "dreamcast_controller_1999": {
@@ -2137,6 +2457,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"duncan_butterfly_yoyo_1998": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.04,
+0.06
 ]
 },
 "dunkaroos_cinnamon_graham_rainbow_frosting_1995": {
@@ -2267,6 +2597,26 @@
 0.0479,
 0.0495,
 0.0435
+]
+},
+"easy_bake_oven_1993": {
+"hard": 0.7,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.36,
+0.2,
+0.19
+]
+},
+"eggo_homestyle_waffles_1997": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.19,
+0.06,
+0.23
 ]
 },
 "elmers_glue_stick_purple_1999": {
@@ -2437,6 +2787,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"etch_a_sketch_classic_1995": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.23,
+0.035,
+0.175
 ]
 },
 "eveready_super_heavy_duty_aa4_1994": {
@@ -2829,6 +3189,16 @@
 0.188
 ]
 },
+"french_toast_crunch_1997": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.065,
+0.28
+]
+},
 "fried_eggs": {
 "hard": 0.2,
 "how": "squish",
@@ -2909,6 +3279,16 @@
 0.0414
 ]
 },
+"fruit_stripe_gum_five_flavor_1995": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.075,
+0.012,
+0.055
+]
+},
 "fruitopia_strawberry_passion_1995": {
 "hard": 0.78,
 "how": "snap",
@@ -2929,6 +3309,16 @@
 0.064
 ]
 },
+"fun_dip_razzapple_magic_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.105,
+0.008,
+0.17
+]
+},
 "fun_size_bar": {
 "hard": 0.25,
 "how": "crumble",
@@ -2937,6 +3327,16 @@
 0.082,
 0.036,
 0.0122
+]
+},
+"furby_gray_pink_1998": {
+"hard": 0.42,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.12,
+0.12,
+0.15
 ]
 },
 "fuzzy_poster": {
@@ -3239,6 +3639,16 @@
 0.214
 ]
 },
+"gigapets_digital_dog_1997": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.02,
+0.055
+]
+},
 "gladiator_vhs_2000": {
 "hard": 0.72,
 "how": "snap",
@@ -3307,6 +3717,16 @@
 0.116,
 0.019,
 0.075
+]
+},
+"goosebumps_terror_in_graveyard_game_1995": {
+"hard": 0.44,
+"how": "fold",
+"mat": "card",
+"size": [
+0.39,
+0.06,
+0.27
 ]
 },
 "gran_turismo_ps1_1998": {
@@ -3679,6 +4099,26 @@
 0.03
 ]
 },
+"hi_c_boppin_strawberry_juice_box_1996": {
+"hard": 0.16,
+"how": "squish",
+"mat": "card",
+"size": [
+0.055,
+0.038,
+0.12
+]
+},
+"hi_c_ecto_cooler_juice_box_1997": {
+"hard": 0.16,
+"how": "squish",
+"mat": "card",
+"size": [
+0.055,
+0.038,
+0.12
+]
+},
 "highlighter": {
 "hard": 0.85,
 "how": "dent",
@@ -3779,6 +4219,46 @@
 0.1566
 ]
 },
+"hostess_hohos_3pack_1996": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.08,
+0.04,
+0.13
+]
+},
+"hostess_twinkies_2pack_1996": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.08,
+0.04,
+0.15
+]
+},
+"hot_pockets_pepperoni_pizza_1999": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.19,
+0.06,
+0.14
+]
+},
+"hot_wheels_blue_card_1995": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.108,
+0.035,
+0.165
+]
+},
 "hours_mailer": {
 "hard": 0.3,
 "how": "fold",
@@ -3827,6 +4307,26 @@
 0.3,
 0.48,
 0.1
+]
+},
+"hubba_bubba_bubble_tape_awesome_original_1996": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.075,
+0.028,
+0.075
+]
+},
+"hunt_snack_pack_chocolate_1997": {
+"hard": 0.18,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.08,
+0.08,
+0.055
 ]
 },
 "hwatu_cards": {
@@ -4039,6 +4539,16 @@
 0.125
 ]
 },
+"jello_chocolate_pudding_cup_1997": {
+"hard": 0.18,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.08,
+0.08,
+0.055
+]
+},
 "jelly_babies": {
 "hard": 0.2,
 "how": "squish",
@@ -4067,6 +4577,36 @@
 0.142,
 0.125,
 0.0104
+]
+},
+"jnco_mammoth_jeans_1998": {
+"hard": 0.34,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.56,
+0.03,
+1.12
+]
+},
+"johnny_lightning_muscle_car_1996": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.1,
+0.035,
+0.16
+]
+},
+"josta_20oz_1996": {
+"hard": 0.34,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.24
 ]
 },
 "joy_egg": {
@@ -4149,6 +4689,16 @@
 0.0769
 ]
 },
+"kid_cuisine_all_american_fried_chicken_1998": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.22,
+0.038,
+0.17
+]
+},
 "kids_choc_bar": {
 "hard": 0.25,
 "how": "crumble",
@@ -4189,6 +4739,16 @@
 0.07
 ]
 },
+"knex_70model_set_1997": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.32,
+0.08,
+0.25
+]
+},
 "kodak_cr123a_2pack_1999": {
 "hard": 0.32,
 "how": "fold",
@@ -4219,6 +4779,36 @@
 0.82
 ]
 },
+"koolaid_bursts_tropical_punch_1994": {
+"hard": 0.16,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.055,
+0.055,
+0.14
+]
+},
+"koolaid_jammers_tropical_punch_1999": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.09,
+0.015,
+0.14
+]
+},
+"koosh_ball_rainbow_1992": {
+"hard": 0.08,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.09,
+0.09,
+0.09
+]
+},
 "koss_porta_pro_1984": {
 "hard": 0.55,
 "how": "snap",
@@ -4229,6 +4819,16 @@
 0.17
 ]
 },
+"kraft_easy_mac_original_cup_1999": {
+"hard": 0.22,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.1,
+0.1,
+0.09
+]
+},
 "kraft_handi_snacks_cheese_crackers_1995": {
 "hard": 0.24,
 "how": "snap",
@@ -4237,6 +4837,16 @@
 0.13,
 0.02,
 0.08
+]
+},
+"kraft_macaroni_cheese_box_1997": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.125,
+0.04,
+0.19
 ]
 },
 "kudos_mms_granola_bar_1996": {
@@ -4349,6 +4959,16 @@
 0.135
 ]
 },
+"lego_basic_bucket_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.22,
+0.22,
+0.24
+]
+},
 "lexmark_3200_1998": {
 "hard": 0.8,
 "how": "snap",
@@ -4367,6 +4987,16 @@
 0.048,
 0.024,
 0.089
+]
+},
+"lifesavers_five_flavor_roll_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.023,
+0.023,
+0.105
 ]
 },
 "light_gun": {
@@ -4419,6 +5049,16 @@
 0.125
 ]
 },
+"lincoln_logs_frontier_fort_1998": {
+"hard": 0.42,
+"how": "fold",
+"mat": "card",
+"size": [
+0.25,
+0.2,
+0.25
+]
+},
 "linkin_park_hybrid_theory_cd_2000": {
 "hard": 0.68,
 "how": "snap",
@@ -4469,6 +5109,36 @@
 0.2
 ]
 },
+"lite_brite_1997": {
+"hard": 0.66,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.34,
+0.1,
+0.27
+]
+},
+"little_debbie_cosmic_brownies_1999": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.085,
+0.02,
+0.13
+]
+},
+"little_debbie_zebra_cakes_1997": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.09,
+0.03,
+0.13
+]
+},
 "little_hug_fruit_barrels_1996": {
 "hard": 0.14,
 "how": "squish",
@@ -4477,6 +5147,16 @@
 0.06,
 0.06,
 0.095
+]
+},
+"livestrong_yellow_wristband_2004": {
+"hard": 0.1,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.065,
+0.012,
+0.065
 ]
 },
 "logitech_cordless_mouseman_wheel_1999": {
@@ -4559,6 +5239,16 @@
 0.16
 ]
 },
+"lunchables_nachos_cheese_salsa_1998": {
+"hard": 0.32,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.21,
+0.035,
+0.16
+]
+},
 "lunchables_pizza_1996": {
 "hard": 0.32,
 "how": "squish",
@@ -4589,6 +5279,16 @@
 0.0149
 ]
 },
+"magic_8_ball_1995": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.1,
+0.1
+]
+},
 "magic_rub_eraser_1996": {
 "hard": 0.2,
 "how": "crumble",
@@ -4607,6 +5307,26 @@
 0.2319,
 0.0738,
 0.0196
+]
+},
+"magna_doodle_1995": {
+"hard": 0.54,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.31,
+0.025,
+0.24
+]
+},
+"mall_madness_1990": {
+"hard": 0.48,
+"how": "fold",
+"mat": "card",
+"size": [
+0.46,
+0.07,
+0.3
 ]
 },
 "mario_kart_64_n64_1997": {
@@ -4657,6 +5377,16 @@
 0.036,
 0.055,
 0.0051
+]
+},
+"matchbox_5pack_1996": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.11,
+0.035,
+0.28
 ]
 },
 "matrix_vhs_1999": {
@@ -4909,6 +5639,16 @@
 0.0129
 ]
 },
+"micro_machines_5pack_1995": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.16,
+0.025,
+0.18
+]
+},
 "microphone": {
 "hard": 0.7,
 "how": "snap",
@@ -4967,6 +5707,16 @@
 0.32,
 0.26,
 0.1
+]
+},
+"mighty_max_skull_doom_zone_1993": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.05,
+0.09
 ]
 },
 "milk_caps": {
@@ -5049,6 +5799,16 @@
 0.023
 ]
 },
+"mondo_fruit_squeezers_grape_1995": {
+"hard": 0.16,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.055,
+0.055,
+0.16
+]
+},
 "monster_card": {
 "hard": 0.3,
 "how": "fold",
@@ -5079,6 +5839,16 @@
 0.0311
 ]
 },
+"monster_in_my_pocket_figure_1991": {
+"hard": 0.2,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.035,
+0.02,
+0.045
+]
+},
 "monster_playset": {
 "hard": 0.35,
 "how": "fold",
@@ -5107,6 +5877,26 @@
 0.021,
 0.0244,
 0.016
+]
+},
+"mood_ring_vending_1997": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.025,
+0.025,
+0.025
+]
+},
+"moon_shoes_1992": {
+"hard": 0.64,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.3,
+0.2,
+0.13
 ]
 },
 "moon_shooz": {
@@ -5219,6 +6009,16 @@
 0.087
 ]
 },
+"mountain_dew_12oz_can_1998": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
+]
+},
 "mouse": {
 "hard": 0.7,
 "how": "snap",
@@ -5267,6 +6067,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"mtg_fourth_edition_starter_1995": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.07,
+0.032,
+0.095
 ]
 },
 "mushroom_cluster": {
@@ -5327,6 +6137,16 @@
 0.2,
 0.045,
 0.145
+]
+},
+"nano_baby_1997": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.018,
+0.055
 ]
 },
 "nano_pod": {
@@ -5489,6 +6309,46 @@
 0.1194
 ]
 },
+"nerds_rope_rainbow_2001": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.04,
+0.012,
+0.2
+]
+},
+"nerds_strawberry_grape_box_1995": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.085,
+0.02,
+0.055
+]
+},
+"nerf_supermaxx_1500_1997": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.48,
+0.07,
+0.21
+]
+},
+"nerf_turbo_football_1992": {
+"hard": 0.06,
+"how": "squish",
+"mat": "foam",
+"size": [
+0.18,
+0.11,
+0.11
+]
+},
 "nes_cartridge_gray_1985": {
 "hard": 0.7,
 "how": "snap",
@@ -5507,6 +6367,26 @@
 0.124,
 0.017,
 0.053
+]
+},
+"nesquik_strawberry_14oz_2001": {
+"hard": 0.3,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.18
+]
+},
+"nestle_wonder_ball_disney_2000": {
+"hard": 0.22,
+"how": "fold",
+"mat": "card",
+"size": [
+0.06,
+0.05,
+0.075
 ]
 },
 "netscape_isp_trial_cd_1999": {
@@ -5547,6 +6427,26 @@
 0.17,
 0.24,
 0.0159
+]
+},
+"nickelodeon_floam_green_1994": {
+"hard": 0.12,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.1,
+0.1,
+0.05
+]
+},
+"nickelodeon_gak_green_1992": {
+"hard": 0.18,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.1,
+0.1,
+0.05
 ]
 },
 "nintendo64_cartridge_1996": {
@@ -5809,6 +6709,16 @@
 0.125
 ]
 },
+"oakley_eye_jacket_black_1994": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.05,
+0.05
+]
+},
 "office97_standard_bigbox_1996": {
 "hard": 0.36,
 "how": "fold",
@@ -5817,6 +6727,26 @@
 0.205,
 0.055,
 0.24
+]
+},
+"ok_soda_12oz_can_1994": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
+]
+},
+"old_navy_performance_fleece_vest_1998": {
+"hard": 0.18,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.58,
+0.04,
+0.68
 ]
 },
 "olympus_vn90_2001": {
@@ -5977,6 +6907,16 @@
 0.06,
 0.06,
 0.2
+]
+},
+"oreo_os_cereal_1998": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.065,
+0.28
 ]
 },
 "original_game_boy_dmg01_1989": {
@@ -6319,6 +7259,36 @@
 0.145
 ]
 },
+"pepsi_12oz_can_1998": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
+]
+},
+"pepsi_blue_20oz_2002": {
+"hard": 0.34,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.065,
+0.065,
+0.24
+]
+},
+"perfection_game_1997": {
+"hard": 0.62,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.28,
+0.08,
+0.28
+]
+},
 "persimmon": {
 "hard": 0.15,
 "how": "squish",
@@ -6439,6 +7409,16 @@
 0.156
 ]
 },
+"pixy_stix_giant_assorted_1996": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.014,
+0.014,
+0.38
+]
+},
 "pizza_box": {
 "hard": 0.25,
 "how": "crumble",
@@ -6457,6 +7437,16 @@
 0.1468,
 0.1392,
 0.0373
+]
+},
+"planters_cheez_balls_canister_1997": {
+"hard": 0.26,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.105,
+0.105,
+0.2
 ]
 },
 "planters_pb_crisps_1994": {
@@ -6509,6 +7499,16 @@
 0.185
 ]
 },
+"plastic_pog_slammer_1994": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.041,
+0.005,
+0.041
+]
+},
 "plastic_shard": {
 "hard": 0.35,
 "how": "fold",
@@ -6527,6 +7527,16 @@
 0.1679,
 0.0848,
 0.0012
+]
+},
+"playdoh_4pack_primary_1997": {
+"hard": 0.28,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.27,
+0.07,
+0.07
 ]
 },
 "playing_cards": {
@@ -6599,6 +7609,26 @@
 0.048
 ]
 },
+"pogs_assorted_stack_1994": {
+"hard": 0.3,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.041,
+0.041,
+0.15
+]
+},
+"pokemon_base_set_booster_pack_1999": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.068,
+0.006,
+0.12
+]
+},
 "pokemon_blue_gameboy_1998": {
 "hard": 0.62,
 "how": "snap",
@@ -6639,6 +7669,26 @@
 0.15
 ]
 },
+"polly_pocket_compact_1993": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.035,
+0.09
+]
+},
+"pop_rocks_strawberry_1995": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.085,
+0.005,
+0.115
+]
+},
 "popcorn_bag": {
 "hard": 0.15,
 "how": "squish",
@@ -6647,6 +7697,26 @@
 0.2,
 0.14,
 0.0411
+]
+},
+"poptarts_brown_sugar_cinnamon_1997": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.14,
+0.05,
+0.2
+]
+},
+"poptarts_frosted_strawberry_1997": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.14,
+0.05,
+0.2
 ]
 },
 "portable_cd": {
@@ -6769,6 +7839,16 @@
 0.1949
 ]
 },
+"puka_shell_necklace_2000": {
+"hard": 0.46,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.46,
+0.008,
+0.46
+]
+},
 "pulp_fiction_vhs_1995": {
 "hard": 0.72,
 "how": "snap",
@@ -6839,6 +7919,16 @@
 0.0566
 ]
 },
+"quaker_chewy_chocolate_chip_1996": {
+"hard": 0.07,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.04,
+0.015,
+0.12
+]
+},
 "radio_shack_phone_coupler_1996": {
 "hard": 0.45,
 "how": "snap",
@@ -6867,6 +7957,16 @@
 0.065,
 0.03,
 0.115
+]
+},
+"rainbow_magic_spring_1996": {
+"hard": 0.24,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.065
 ]
 },
 "ramen_packet": {
@@ -6979,6 +8079,16 @@
 0.0744
 ]
 },
+"reeses_puffs_1994": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.065,
+0.28
+]
+},
 "rental_card": {
 "hard": 0.3,
 "how": "fold",
@@ -7067,6 +8177,16 @@
 0.246,
 0.03,
 0.008
+]
+},
+"rice_krispies_treats_original_1995": {
+"hard": 0.07,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.05,
+0.02,
+0.09
 ]
 },
 "ring_candy": {
@@ -7187,6 +8307,16 @@
 0.044,
 0.013,
 0.089
+]
+},
+"sandmaster_footbag_1997": {
+"hard": 0.14,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.055,
+0.055,
+0.055
 ]
 },
 "sanford_eagle_mirado_black_warrior_1997": {
@@ -7459,6 +8589,16 @@
 0.202
 ]
 },
+"shrinky_dinks_creative_pack_1995": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.22,
+0.005,
+0.28
+]
+},
 "sidekick_phone": {
 "hard": 0.7,
 "how": "snap",
@@ -7477,6 +8617,16 @@
 0.0765,
 0.0765,
 0.086
+]
+},
+"silly_putty_red_egg_1995": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.045,
+0.045,
+0.06
 ]
 },
 "sixth_sense_vhs_2000": {
@@ -7519,6 +8669,16 @@
 0.0525
 ]
 },
+"skip_it_pink_1992": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.8,
+0.1,
+0.1
+]
+},
 "skull_candle": {
 "hard": 0.15,
 "how": "crumple",
@@ -7529,6 +8689,16 @@
 0.1063
 ]
 },
+"sky_dancers_launcher_1994": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.13,
+0.2
+]
+},
 "slap_bracelet": {
 "hard": 0.2,
 "how": "squish",
@@ -7537,6 +8707,16 @@
 0.0616,
 0.0617,
 0.024
+]
+},
+"slap_bracelet_holographic_1990": {
+"hard": 0.4,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.23,
+0.004,
+0.03
 ]
 },
 "slim_tower_console": {
@@ -7589,6 +8769,16 @@
 0.0747
 ]
 },
+"slinky_metal_1995": {
+"hard": 0.42,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.07,
+0.07,
+0.065
+]
+},
 "smartphone": {
 "hard": 0.7,
 "how": "snap",
@@ -7619,6 +8809,16 @@
 0.19
 ]
 },
+"snackwells_devils_food_cookie_cakes_1993": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.16,
+0.05,
+0.23
+]
+},
 "snake_phone": {
 "hard": 0.7,
 "how": "snap",
@@ -7637,6 +8837,16 @@
 0.15,
 0.2241,
 0.106
+]
+},
+"snapple_elements_rain_1999": {
+"hard": 0.78,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.062,
+0.062,
+0.185
 ]
 },
 "sneaker": {
@@ -7689,6 +8899,16 @@
 0.125
 ]
 },
+"sobe_lizard_fuel_2000": {
+"hard": 0.8,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.065,
+0.065,
+0.2
+]
+},
 "sock": {
 "hard": 0.2,
 "how": "squish",
@@ -7697,6 +8917,16 @@
 0.1064,
 0.17,
 0.012
+]
+},
+"sockem_boppers_red_pair_1997": {
+"hard": 0.08,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.18,
+0.18,
+0.45
 ]
 },
 "soda_can": {
@@ -8089,6 +9319,16 @@
 0.085
 ]
 },
+"spaghettios_original_1997": {
+"hard": 0.56,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.075,
+0.075,
+0.11
+]
+},
 "spam_can": {
 "hard": 0.15,
 "how": "crumple",
@@ -8149,6 +9389,16 @@
 0.125
 ]
 },
+"spirograph_deluxe_1996": {
+"hard": 0.46,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.38,
+0.045,
+0.27
+]
+},
 "splat_sign": {
 "hard": 0.7,
 "how": "snap",
@@ -8179,6 +9429,16 @@
 0.03
 ]
 },
+"sprite_12oz_can_1998": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
+]
+},
 "squeeze_buddy": {
 "hard": 0.35,
 "how": "fold",
@@ -8197,6 +9457,16 @@
 0.06,
 0.04,
 0.16
+]
+},
+"starter_pullover_jacket_black_red_1995": {
+"hard": 0.24,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.62,
+0.04,
+0.72
 ]
 },
 "stereo_viewer": {
@@ -8237,6 +9507,16 @@
 0.055,
 0.0069,
 0.089
+]
+},
+"sticky_hand_arcade_prize_1998": {
+"hard": 0.04,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.05,
+0.004,
+0.2
 ]
 },
 "stiff_cap": {
@@ -8289,6 +9569,16 @@
 0.0034
 ]
 },
+"stretch_armstrong_1992": {
+"hard": 0.16,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.18,
+0.07,
+0.38
+]
+},
 "stretch_man": {
 "hard": 0.6,
 "how": "snap",
@@ -8327,6 +9617,16 @@
 0.1318,
 0.0516,
 0.1494
+]
+},
+"sunkist_orange_12oz_can_1998": {
+"hard": 0.46,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
 ]
 },
 "sunny_delight_california_16oz_1995": {
@@ -8389,6 +9689,16 @@
 0.072
 ]
 },
+"super_soaker_50_1991": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.45,
+0.07,
+0.2
+]
+},
 "surge_20oz_1997": {
 "hard": 0.34,
 "how": "squish",
@@ -8447,6 +9757,16 @@
 0.0535,
 0.0688,
 0.0216
+]
+},
+"sweetarts_roll_1995": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.02,
+0.14
 ]
 },
 "swimsuit": {
@@ -8509,6 +9829,26 @@
 0.0096
 ]
 },
+"tamagotchi_gen1_white_blue_1997": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.018,
+0.045
+]
+},
+"tamagotchi_gen2_green_1997": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.055,
+0.018,
+0.045
+]
+},
 "tango_football": {
 "hard": 0.7,
 "how": "snap",
@@ -8517,6 +9857,16 @@
 0.22,
 0.22,
 0.22
+]
+},
+"tattoo_choker_black_1998": {
+"hard": 0.08,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.3,
+0.004,
+0.3
 ]
 },
 "tazo": {
@@ -8609,6 +9959,26 @@
 0.0349
 ]
 },
+"tech_deck_fingerboard_1998": {
+"hard": 0.48,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.028,
+0.015,
+0.096
+]
+},
+"tech_deck_launch_ramp_1999": {
+"hard": 0.5,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.08,
+0.065
+]
+},
 "tennis_ball": {
 "hard": 0.7,
 "how": "snap",
@@ -8657,6 +10027,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"tic_tac_orange_1997": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.038,
+0.016,
+0.06
 ]
 },
 "ticker_tape": {
@@ -8809,6 +10189,16 @@
 0.066
 ]
 },
+"toaster_strudel_strawberry_1997": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.19,
+0.055,
+0.14
+]
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "hard": 0.68,
 "how": "snap",
@@ -8827,6 +10217,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"totinos_pizza_rolls_pepperoni_1999": {
+"hard": 0.32,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.055,
+0.15
 ]
 },
 "toy_oven": {
@@ -8919,6 +10319,16 @@
 0.1492
 ]
 },
+"troll_doll_neon_hair_1992": {
+"hard": 0.24,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.06,
+0.04,
+0.14
+]
+},
 "tv_remote": {
 "hard": 0.7,
 "how": "snap",
@@ -8957,6 +10367,36 @@
 0.105,
 0.027,
 0.188
+]
+},
+"ty_beanie_babies_heart_tag_1996": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.05,
+0.0015,
+0.05
+]
+},
+"ty_beanie_baby_bear_1996": {
+"hard": 0.14,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.14,
+0.08,
+0.2
+]
+},
+"ultra_pro_9pocket_pokemon_binder_1999": {
+"hard": 0.32,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.26,
+0.04,
+0.3
 ]
 },
 "umaibo": {
@@ -9059,6 +10499,36 @@
 0.0145
 ]
 },
+"velvet_scrunchies_3pack_1997": {
+"hard": 0.08,
+"how": "squish",
+"mat": "fabric",
+"size": [
+0.11,
+0.03,
+0.18
+]
+},
+"vending_machine_capsule_clear_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.05,
+0.05
+]
+},
+"vending_super_bounce_ball_1997": {
+"hard": 0.18,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.032,
+0.032,
+0.032
+]
+},
 "verbatim_datalife_floppy_red_1998": {
 "hard": 0.46,
 "how": "snap",
@@ -9119,6 +10589,26 @@
 0.019
 ]
 },
+"viewmaster_red_1995": {
+"hard": 0.58,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.07,
+0.1
+]
+},
+"viewmaster_reel_3pack_1995": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.001,
+0.09
+]
+},
 "viewsonic_e70f_crt_2001": {
 "hard": 0.93,
 "how": "snap",
@@ -9149,6 +10639,16 @@
 0.0485
 ]
 },
+"von_dutch_trucker_hat_red_white_2003": {
+"hard": 0.22,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.2,
+0.14,
+0.28
+]
+},
 "vr_headset": {
 "hard": 0.6,
 "how": "snap",
@@ -9169,6 +10669,26 @@
 0.1
 ]
 },
+"wacky_wallwalker_1990": {
+"hard": 0.04,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.07,
+0.01,
+0.08
+]
+},
+"waffle_crisp_1996": {
+"hard": 0.3,
+"how": "fold",
+"mat": "card",
+"size": [
+0.2,
+0.065,
+0.28
+]
+},
 "walkman": {
 "hard": 0.7,
 "how": "snap",
@@ -9187,6 +10707,16 @@
 0.2859,
 0.22,
 0.0634
+]
+},
+"wallet_chain_24inch_1999": {
+"hard": 0.78,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.61,
+0.012,
+0.012
 ]
 },
 "warheads_extreme_sour_1995": {
@@ -9247,6 +10777,16 @@
 0.31,
 0.0025,
 0.03
+]
+},
+"wham_o_slip_n_slide_1995": {
+"hard": 0.12,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.45,
+0.08,
+0.3
 ]
 },
 "whistle": {
@@ -9429,6 +10969,46 @@
 0.24
 ]
 },
+"yogoplait_gogurt_strawberry_splash_1999": {
+"hard": 0.08,
+"how": "squish",
+"mat": "soft_plastic",
+"size": [
+0.035,
+0.015,
+0.2
+]
+},
+"yomega_fireball_yoyo_1996": {
+"hard": 0.52,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.058,
+0.035,
+0.058
+]
+},
+"yoohoo_chocolate_juice_box_1997": {
+"hard": 0.16,
+"how": "squish",
+"mat": "card",
+"size": [
+0.055,
+0.038,
+0.12
+]
+},
+"yoplait_trix_strawberry_banana_1998": {
+"hard": 0.16,
+"how": "squish",
+"mat": "plastic",
+"size": [
+0.07,
+0.07,
+0.06
+]
+},
 "yoyo": {
 "hard": 0.35,
 "how": "fold",
@@ -9437,6 +11017,16 @@
 0.1653,
 0.058,
 0.034
+]
+},
+"yugioh_lob_booster_pack_2002": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.068,
+0.006,
+0.12
 ]
 },
 "yut_sticks": {

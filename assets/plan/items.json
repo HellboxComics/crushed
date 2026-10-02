@@ -43,6 +43,72 @@
 "themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
+"adidas_snap_pants_black_white_1998": {
+"display": "adidas three-stripe snap tearaway pants, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.764,
+"notes": [
+"adidas three-stripe snap tearaway pants, circa 1998"
+],
+"product": "adidas three-stripe snap tearaway pants, circa 1998",
+"role": "hero",
+"size": [
+0.52,
+0.02,
+1.05
+],
+"themes": "DRESS CODE; PROM NIGHT; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"airheads_blue_raspberry_1995": {
+"display": "Airheads Blue Raspberry taffy bar, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Airheads Blue Raspberry taffy bar, circa 1995"
+],
+"product": "Airheads Blue Raspberry taffy bar, circa 1995",
+"role": "hero",
+"size": [
+0.045,
+0.007,
+0.18
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"airwalk_one_black_white_1995": {
+"display": "Airwalk One skate shoes, black and white, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.231,
+"notes": [
+"Airwalk One skate shoes, black and white, circa 1995"
+],
+"product": "Airwalk One skate shoes, black and white, circa 1995",
+"role": "hero",
+"size": [
+0.11,
+0.1,
+0.3
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "aladdin_vhs_1993": {
 "display": "Aladdin VHS Walt Disney Classics clamshell",
 "eras": [
@@ -129,6 +195,28 @@
 0.18
 ],
 "themes": "DIAL-UP; BLACKLIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"altoids_peppermint_tin_1997": {
+"display": "Altoids Curiously Strong Peppermints tin, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.08,
+"notes": [
+"Altoids Curiously Strong Peppermints tin, circa 1997"
+],
+"product": "Altoids Curiously Strong Peppermints tin, circa 1997",
+"role": "hero",
+"size": [
+0.095,
+0.02,
+0.06
+],
+"themes": "ROAD TRIP; MALL RAT; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
 "american_pie_vhs_2000": {
@@ -461,6 +549,28 @@
 "themes": "DIAL-UP; Y2K; SAVE ICON; regular cubes",
 "weight": 1.0
 },
+"arizona_green_tea_23oz_can_1996": {
+"display": "AriZona Green Tea with Ginseng and Honey tall can, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.652,
+"notes": [
+"AriZona Green Tea with Ginseng and Honey tall can, circa 1996"
+],
+"product": "AriZona Green Tea with Ginseng and Honey tall can, circa 1996",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.19
+],
+"themes": "ROAD TRIP; LEFTOVERS; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "atari2600_cartridge_1977": {
 "display": "Atari 2600 cartridge shell",
 "eras": [
@@ -725,6 +835,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"bagel_bites_cheese_pepperoni_1997": {
+"display": "Bagel Bites Cheese & Pepperoni mini bagel pizzas, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.14,
+"notes": [
+"Bagel Bites Cheese & Pepperoni mini bagel pizzas, circa 1997"
+],
+"product": "Bagel Bites Cheese & Pepperoni mini bagel pizzas, circa 1997",
+"role": "hero",
+"size": [
+0.19,
+0.05,
+0.14
+],
+"themes": "LEFTOVERS; SLEEPOVER; SICK DAY; regular cubes",
+"weight": 1.0
+},
 "basf_chrome_maxima_ii90_1990": {
 "display": "BASF Chrome Maxima II 90 Type II blank audio cassette",
 "eras": [
@@ -945,6 +1077,28 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"big_league_chew_original_1995": {
+"display": "Big League Chew Original shredded bubble gum pouch, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.023,
+"notes": [
+"Big League Chew Original shredded bubble gum pouch, circa 1995"
+],
+"product": "Big League Chew Original shredded bubble gum pouch, circa 1995",
+"role": "hero",
+"size": [
+0.12,
+0.03,
+0.18
+],
+"themes": "LUNCH TRADE; SLEEPOVER; GOLAZO; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "big_lebowski_vhs_1998": {
 "display": "The Big Lebowski VHS",
 "eras": [
@@ -1099,6 +1253,50 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"bop_it_original_1996": {
+"display": "Hasbro Bop It electronic game",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.326,
+"notes": [
+"Hasbro Bop It electronic game, 1996"
+],
+"product": "Hasbro Bop It electronic game, 1996",
+"role": "hero",
+"size": [
+0.38,
+0.07,
+0.07
+],
+"themes": "PRIZE COUNTER; SLEEPOVER; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"brass_pog_slammer_1994": {
+"display": "Brass POG slammer, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.005,
+"notes": [
+"Brass POG slammer, circa 1994"
+],
+"product": "Brass POG slammer, circa 1994",
+"role": "hero",
+"size": [
+0.041,
+0.004,
+0.041
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "britney_baby_one_more_time_cd_1999": {
 "display": "Britney Spears ...Baby One More Time CD in jewel case",
 "eras": [
@@ -1119,6 +1317,94 @@
 0.125
 ],
 "themes": "COASTERS; SLEEPOVER; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"bubble_jug_tropical_fruit_1994": {
+"display": "Amurol Bubble Jug Tropical Fruit bubble gum, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.073,
+"notes": [
+"Amurol Bubble Jug Tropical Fruit bubble gum, circa 1994"
+],
+"product": "Amurol Bubble Jug Tropical Fruit bubble gum, circa 1994",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.085
+],
+"themes": "LUNCH TRADE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"bugles_original_1995": {
+"display": "General Mills Bugles Original corn snacks, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.084,
+"notes": [
+"General Mills Bugles Original corn snacks, circa 1995"
+],
+"product": "General Mills Bugles Original corn snacks, circa 1995",
+"role": "support",
+"size": [
+0.16,
+0.06,
+0.25
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"butterfinger_bbs_1995": {
+"display": "Nestl\u00e9 Butterfinger BB's candy, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.05,
+"notes": [
+"Nestl\u00e9 Butterfinger BB's candy, circa 1995"
+],
+"product": "Nestl\u00e9 Butterfinger BB's candy, circa 1995",
+"role": "hero",
+"size": [
+0.08,
+0.04,
+0.15
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TRICK OR TREAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"butterfly_clips_12pack_1999": {
+"display": "Plastic butterfly hair clip 12-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.04,
+"notes": [
+"Plastic butterfly hair clip 12-pack, circa 1999"
+],
+"product": "Plastic butterfly hair clip 12-pack, circa 1999",
+"role": "hero",
+"size": [
+0.12,
+0.02,
+0.16
+],
+"themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
 "weight": 1.0
 },
 "canon_bjc210_1995": {
@@ -1185,6 +1471,28 @@
 0.105
 ],
 "themes": "PROM NIGHT; SUMMER CAMP; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"capri_sun_mountain_cooler_1997": {
+"display": "Capri Sun Mountain Cooler juice drink pouch, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Capri Sun Mountain Cooler juice drink pouch, circa 1997"
+],
+"product": "Capri Sun Mountain Cooler juice drink pouch, circa 1997",
+"role": "hero",
+"size": [
+0.09,
+0.015,
+0.14
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "capri_sun_pacific_cooler_1995": {
@@ -1297,6 +1605,138 @@
 "themes": "DIAL-UP; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"champion_reverse_weave_hoodie_gray_1998": {
+"display": "Champion Reverse Weave pullover hoodie, gray, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.562,
+"notes": [
+"Champion Reverse Weave pullover hoodie, gray, circa 1998"
+],
+"product": "Champion Reverse Weave pullover hoodie, gray, circa 1998",
+"role": "hero",
+"size": [
+0.62,
+0.05,
+0.72
+],
+"themes": "DRESS CODE; KICKFLIP; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"cheetos_paws_1993": {
+"display": "Cheetos Paws cheese-flavored snacks, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.104,
+"notes": [
+"Cheetos Paws cheese-flavored snacks, circa 1993"
+],
+"product": "Cheetos Paws cheese-flavored snacks, circa 1993",
+"role": "hero",
+"size": [
+0.17,
+0.07,
+0.25
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"chef_boyardee_beefaroni_1997": {
+"display": "Chef Boyardee Beefaroni 15 oz can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.433,
+"notes": [
+"Chef Boyardee Beefaroni 15 oz can, circa 1997"
+],
+"product": "Chef Boyardee Beefaroni 15 oz can, circa 1997",
+"role": "hero",
+"size": [
+0.075,
+0.075,
+0.11
+],
+"themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
+"weight": 1.0
+},
+"chuck_e_cheese_ticket_strip_1998": {
+"display": "Chuck E. Cheese's redemption ticket strip, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Chuck E. Cheese's redemption ticket strip, circa 1998"
+],
+"product": "Chuck E. Cheese's redemption ticket strip, circa 1998",
+"role": "filler",
+"size": [
+0.05,
+0.0002,
+0.025
+],
+"themes": "PRIZE COUNTER; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"chuck_e_cheese_token_1998": {
+"display": "Chuck E. Cheese's arcade token, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Chuck E. Cheese's arcade token, circa 1998"
+],
+"product": "Chuck E. Cheese's arcade token, circa 1998",
+"role": "hero",
+"size": [
+0.025,
+0.0018,
+0.025
+],
+"themes": "PRIZE COUNTER; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"clearly_canadian_wild_cherry_1994": {
+"display": "Clearly Canadian Wild Cherry sparkling water, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.302,
+"notes": [
+"Clearly Canadian Wild Cherry sparkling water, circa 1994"
+],
+"product": "Clearly Canadian Wild Cherry sparkling water, circa 1994",
+"role": "hero",
+"size": [
+0.06,
+0.06,
+0.2
+],
+"themes": "ROAD TRIP; TIME CAPSULE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "clueless_vhs_1995": {
 "display": "Clueless VHS",
 "eras": [
@@ -1317,6 +1757,50 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"coca_cola_12oz_can_1998": {
+"display": "Coca-Cola Classic 12 fl oz aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Coca-Cola Classic 12 fl oz aluminum can, circa 1998"
+],
+"product": "Coca-Cola Classic 12 fl oz aluminum can, circa 1998",
+"role": "support",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"combos_pizzeria_pretzel_1996": {
+"display": "COMBOS Pizzeria Pretzel baked snacks, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.06,
+"notes": [
+"COMBOS Pizzeria Pretzel baked snacks, circa 1996"
+],
+"product": "COMBOS Pizzeria Pretzel baked snacks, circa 1996",
+"role": "hero",
+"size": [
+0.15,
+0.05,
+0.23
+],
+"themes": "ROAD TRIP; LUNCH TRADE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "compaq_151fs_crt_1997": {
@@ -1539,6 +2023,28 @@
 "themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
+"crazy_bones_series1_1998": {
+"display": "GoGo's Crazy Bones Series 1 figure",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"GoGo's Crazy Bones Series 1 figure, 1998"
+],
+"product": "GoGo's Crazy Bones Series 1 figure, 1998",
+"role": "hero",
+"size": [
+0.025,
+0.015,
+0.03
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; SCHOOL_JUNK; Y2K; regular cubes",
+"weight": 1.0
+},
 "crazy_taxi_dreamcast_2000": {
 "display": "Crazy Taxi Sega Dreamcast game",
 "eras": [
@@ -1605,6 +2111,50 @@
 "themes": "DIAL-UP; BLACKLIGHT; Y2K; regular cubes",
 "weight": 1.0
 },
+"creepy_crawlers_thingmaker_1992": {
+"display": "ToyMax Creepy Crawlers Thingmaker",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.779,
+"notes": [
+"ToyMax Creepy Crawlers Thingmaker, 1992"
+],
+"product": "ToyMax Creepy Crawlers Thingmaker, 1992",
+"role": "hero",
+"size": [
+0.34,
+0.23,
+0.13
+],
+"themes": "SOME ASSEMBLY REQUIRED; TRICK OR TREAT; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"crossfire_game_1994": {
+"display": "Milton Bradley Crossfire rapid-fire game, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 2.257,
+"notes": [
+"Milton Bradley Crossfire rapid-fire game, circa 1994"
+],
+"product": "Milton Bradley Crossfire rapid-fire game, circa 1994",
+"role": "hero",
+"size": [
+0.52,
+0.08,
+0.31
+],
+"themes": "SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "crystal_pepsi_20oz_1992": {
 "display": "Crystal Pepsi 20 fl oz bottle",
 "eras": [
@@ -1647,6 +2197,28 @@
 0.08
 ],
 "themes": "DRESS CODE; TIME CAPSULE; PRIZE COUNTER; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"danimals_strawberry_explosion_2000": {
+"display": "Dannon Danimals Strawberry Explosion drinkable yogurt, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.044,
+"notes": [
+"Dannon Danimals Strawberry Explosion drinkable yogurt, circa 2000"
+],
+"product": "Dannon Danimals Strawberry Explosion drinkable yogurt, circa 2000",
+"role": "hero",
+"size": [
+0.05,
+0.05,
+0.1
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; Y2K; regular cubes",
 "weight": 1.0
 },
 "dell_dimension_xps_d266_1997": {
@@ -1781,6 +2353,50 @@
 "themes": "DIAL-UP; SCREEN TIME; LANDFILL DRIVE; Y2K; regular cubes",
 "weight": 1.0
 },
+"dickies_874_black_1999": {
+"display": "Dickies 874 Original Fit work pants, black, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.739,
+"notes": [
+"Dickies 874 Original Fit work pants, black, circa 1999"
+],
+"product": "Dickies 874 Original Fit work pants, black, circa 1999",
+"role": "hero",
+"size": [
+0.48,
+0.02,
+1.1
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"digimon_virtual_pet_v1_1997": {
+"display": "Bandai Digimon Original Digital Monster virtual pet",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Bandai Digimon Original Digital Monster virtual pet, 1997"
+],
+"product": "Bandai Digimon Original Digital Monster virtual pet, 1997",
+"role": "hero",
+"size": [
+0.06,
+0.02,
+0.043
+],
+"themes": "STILL ALIVE; SCREEN TIME; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "dirty_dancing_vhs_1988": {
 "display": "Dirty Dancing VHS",
 "eras": [
@@ -1823,6 +2439,28 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"dnl_20oz_2002": {
+"display": "dnL lemon-lime soda 20 fl oz bottle",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.177,
+"notes": [
+"dnL lemon-lime soda 20 fl oz bottle, 2002"
+],
+"product": "dnL lemon-lime soda 20 fl oz bottle, 2002",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.24
+],
+"themes": "Y2K; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "donkey_kong_country_snes_1994": {
@@ -1957,6 +2595,72 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"dr_martens_1460_cherry_1996": {
+"display": "Dr. Martens 1460 eight-eye boots, Cherry Red, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.259,
+"notes": [
+"Dr. Martens 1460 eight-eye boots, Cherry Red, circa 1996"
+],
+"product": "Dr. Martens 1460 eight-eye boots, Cherry Red, circa 1996",
+"role": "hero",
+"size": [
+0.12,
+0.11,
+0.28
+],
+"themes": "DRESS CODE; BLACKLIGHT; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"dr_pepper_12oz_can_1998": {
+"display": "Dr Pepper 12 fl oz aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Dr Pepper 12 fl oz aluminum can, circa 1998"
+],
+"product": "Dr Pepper 12 fl oz aluminum can, circa 1998",
+"role": "support",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"dream_phone_1991": {
+"display": "Milton Bradley Electronic Dream Phone game",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.794,
+"notes": [
+"Milton Bradley Electronic Dream Phone game, 1991"
+],
+"product": "Milton Bradley Electronic Dream Phone game, 1991",
+"role": "hero",
+"size": [
+0.4,
+0.07,
+0.27
+],
+"themes": "SLEEPOVER; PROM NIGHT; DRESS CODE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "dreamcast_controller_1999": {
 "display": "Sega Dreamcast controller",
 "eras": [
@@ -2021,6 +2725,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"duncan_butterfly_yoyo_1998": {
+"display": "Duncan Butterfly yo-yo, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.025,
+"notes": [
+"Duncan Butterfly yo-yo, circa 1998"
+],
+"product": "Duncan Butterfly yo-yo, circa 1998",
+"role": "support",
+"size": [
+0.06,
+0.04,
+0.06
+],
+"themes": "PRIZE COUNTER; SUMMER CAMP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "dunkaroos_cinnamon_graham_rainbow_frosting_1995": {
@@ -2241,6 +2967,50 @@
 0.126
 ],
 "themes": "DIAL-UP; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"easy_bake_oven_1993": {
+"display": "Kenner Easy-Bake Oven, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 2.394,
+"notes": [
+"Kenner Easy-Bake Oven, circa 1993"
+],
+"product": "Kenner Easy-Bake Oven, circa 1993",
+"role": "hero",
+"size": [
+0.36,
+0.2,
+0.19
+],
+"themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"eggo_homestyle_waffles_1997": {
+"display": "Kellogg's Eggo Homestyle Waffles, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.275,
+"notes": [
+"Kellogg's Eggo Homestyle Waffles, circa 1997"
+],
+"product": "Kellogg's Eggo Homestyle Waffles, circa 1997",
+"role": "hero",
+"size": [
+0.19,
+0.06,
+0.23
+],
+"themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "elmers_glue_stick_purple_1999": {
@@ -2595,6 +3365,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"etch_a_sketch_classic_1995": {
+"display": "Ohio Art Etch A Sketch Classic, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.247,
+"notes": [
+"Ohio Art Etch A Sketch Classic, circa 1995"
+],
+"product": "Ohio Art Etch A Sketch Classic, circa 1995",
+"role": "hero",
+"size": [
+0.23,
+0.035,
+0.175
+],
+"themes": "SCREEN TIME; HAND TURKEY; TIME CAPSULE; SICK DAY; regular cubes",
+"weight": 1.0
+},
 "eveready_super_heavy_duty_aa4_1994": {
 "display": "Eveready Super Heavy Duty AA battery 4-pack, circa",
 "eras": [
@@ -2837,6 +3629,28 @@
 "themes": "BE KIND REWIND; GARAGE SALE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"french_toast_crunch_1997": {
+"display": "General Mills French Toast Crunch cereal, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.382,
+"notes": [
+"General Mills French Toast Crunch cereal, circa 1997"
+],
+"product": "General Mills French Toast Crunch cereal, circa 1997",
+"role": "hero",
+"size": [
+0.2,
+0.065,
+0.28
+],
+"themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "fruit_by_the_foot_berry_tie_dye_1995": {
 "display": "Betty Crocker Fruit by the Foot Berry Tie-Dye fruit snack, circa",
 "eras": [
@@ -2903,6 +3717,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; regular cubes",
 "weight": 1.0
 },
+"fruit_stripe_gum_five_flavor_1995": {
+"display": "Fruit Stripe Five Flavor chewing gum, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Fruit Stripe Five Flavor chewing gum, circa 1995"
+],
+"product": "Fruit Stripe Five Flavor chewing gum, circa 1995",
+"role": "hero",
+"size": [
+0.075,
+0.012,
+0.055
+],
+"themes": "LUNCH TRADE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "fruitopia_strawberry_passion_1995": {
 "display": "Fruitopia Strawberry Passion Awareness drink, circa",
 "eras": [
@@ -2945,6 +3781,50 @@
 0.064
 ],
 "themes": "MIXTAPE; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"fun_dip_razzapple_magic_1995": {
+"display": "Wonka Fun Dip RazzApple Magic candy pouch, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.02,
+"notes": [
+"Wonka Fun Dip RazzApple Magic candy pouch, circa 1995"
+],
+"product": "Wonka Fun Dip RazzApple Magic candy pouch, circa 1995",
+"role": "hero",
+"size": [
+0.105,
+0.008,
+0.17
+],
+"themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"furby_gray_pink_1998": {
+"display": "Tiger Electronics Furby, gray and pink",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.151,
+"notes": [
+"Tiger Electronics Furby, gray and pink, 1998"
+],
+"product": "Tiger Electronics Furby, gray and pink, 1998",
+"role": "hero",
+"size": [
+0.12,
+0.12,
+0.15
+],
+"themes": "IT\u2019S AWAKE; SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "game_boy_advance_indigo_2001": {
@@ -3365,6 +4245,28 @@
 "themes": "BE KIND REWIND; PROBED; GARAGE SALE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"gigapets_digital_dog_1997": {
+"display": "Tiger Electronics Giga Pets Digital Dog",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Tiger Electronics Giga Pets Digital Dog, 1997"
+],
+"product": "Tiger Electronics Giga Pets Digital Dog, 1997",
+"role": "hero",
+"size": [
+0.05,
+0.02,
+0.055
+],
+"themes": "STILL ALIVE; SCREEN TIME; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "gladiator_vhs_2000": {
 "display": "Gladiator VHS",
 "eras": [
@@ -3407,6 +4309,28 @@
 0.075
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"goosebumps_terror_in_graveyard_game_1995": {
+"display": "Goosebumps Terror in the Graveyard board game, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.663,
+"notes": [
+"Goosebumps Terror in the Graveyard board game, circa 1995"
+],
+"product": "Goosebumps Terror in the Graveyard board game, circa 1995",
+"role": "hero",
+"size": [
+0.39,
+0.06,
+0.27
+],
+"themes": "TRICK OR TREAT; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "gran_turismo_ps1_1998": {
@@ -3739,6 +4663,50 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"hi_c_boppin_strawberry_juice_box_1996": {
+"display": "Hi-C Boppin' Strawberry juice box, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"Hi-C Boppin' Strawberry juice box, circa 1996"
+],
+"product": "Hi-C Boppin' Strawberry juice box, circa 1996",
+"role": "hero",
+"size": [
+0.055,
+0.038,
+0.12
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hi_c_ecto_cooler_juice_box_1997": {
+"display": "Hi-C Ecto Cooler juice box, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"Hi-C Ecto Cooler juice box, circa 1997"
+],
+"product": "Hi-C Ecto Cooler juice box, circa 1997",
+"role": "hero",
+"size": [
+0.055,
+0.038,
+0.12
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TIME CAPSULE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "hitclips_micro_player_2000": {
 "display": "Tiger Electronics HitClips Micro Music Player",
 "eras": [
@@ -3871,6 +4839,94 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
+"hostess_hohos_3pack_1996": {
+"display": "Hostess Ho Hos three-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Hostess Ho Hos three-pack, circa 1996"
+],
+"product": "Hostess Ho Hos three-pack, circa 1996",
+"role": "hero",
+"size": [
+0.08,
+0.04,
+0.13
+],
+"themes": "LUNCH TRADE; SICK DAY; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"hostess_twinkies_2pack_1996": {
+"display": "Hostess Twinkies twin pack, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.017,
+"notes": [
+"Hostess Twinkies twin pack, circa 1996"
+],
+"product": "Hostess Twinkies twin pack, circa 1996",
+"role": "hero",
+"size": [
+0.08,
+0.04,
+0.15
+],
+"themes": "LUNCH TRADE; SICK DAY; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hot_pockets_pepperoni_pizza_1999": {
+"display": "Hot Pockets Pepperoni Pizza, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.168,
+"notes": [
+"Hot Pockets Pepperoni Pizza, circa 1999"
+],
+"product": "Hot Pockets Pepperoni Pizza, circa 1999",
+"role": "hero",
+"size": [
+0.19,
+0.06,
+0.14
+],
+"themes": "LEFTOVERS; SLEEPOVER; SICK DAY; Y2K; regular cubes",
+"weight": 1.0
+},
+"hot_wheels_blue_card_1995": {
+"display": "Mattel Hot Wheels single car on blue blister card, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.065,
+"notes": [
+"Mattel Hot Wheels single car on blue blister card, circa 1995"
+],
+"product": "Mattel Hot Wheels single car on blue blister card, circa 1995",
+"role": "hero",
+"size": [
+0.108,
+0.035,
+0.165
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "hp_51629a_black_ink_1996": {
 "display": "HP 51629A black inkjet cartridge, circa",
 "eras": [
@@ -3935,6 +4991,50 @@
 0.1
 ],
 "themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"hubba_bubba_bubble_tape_awesome_original_1996": {
+"display": "Hubba Bubba Bubble Tape Awesome Original, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.028,
+"notes": [
+"Hubba Bubba Bubble Tape Awesome Original, circa 1996"
+],
+"product": "Hubba Bubba Bubble Tape Awesome Original, circa 1996",
+"role": "hero",
+"size": [
+0.075,
+0.028,
+0.075
+],
+"themes": "LUNCH TRADE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"hunt_snack_pack_chocolate_1997": {
+"display": "Hunt's Snack Pack Chocolate Pudding four-pack cup, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.062,
+"notes": [
+"Hunt's Snack Pack Chocolate Pudding four-pack cup, circa 1997"
+],
+"product": "Hunt's Snack Pack Chocolate Pudding four-pack cup, circa 1997",
+"role": "support",
+"size": [
+0.08,
+0.08,
+0.055
+],
+"themes": "LUNCH TRADE; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "ibm_3_5_floppy_blue_1997": {
@@ -4289,6 +5389,94 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"jello_chocolate_pudding_cup_1997": {
+"display": "Jell-O Chocolate Pudding Snack cup, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.062,
+"notes": [
+"Jell-O Chocolate Pudding Snack cup, circa 1997"
+],
+"product": "Jell-O Chocolate Pudding Snack cup, circa 1997",
+"role": "support",
+"size": [
+0.08,
+0.08,
+0.055
+],
+"themes": "LUNCH TRADE; SICK DAY; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"jnco_mammoth_jeans_1998": {
+"display": "JNCO Mammoth wide-leg jeans, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.317,
+"notes": [
+"JNCO Mammoth wide-leg jeans, circa 1998"
+],
+"product": "JNCO Mammoth wide-leg jeans, circa 1998",
+"role": "hero",
+"size": [
+0.56,
+0.03,
+1.12
+],
+"themes": "DRESS CODE; KICKFLIP; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"johnny_lightning_muscle_car_1996": {
+"display": "Playing Mantis Johnny Lightning die-cast car, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.059,
+"notes": [
+"Playing Mantis Johnny Lightning die-cast car, circa 1996"
+],
+"product": "Playing Mantis Johnny Lightning die-cast car, circa 1996",
+"role": "support",
+"size": [
+0.1,
+0.035,
+0.16
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"josta_20oz_1996": {
+"display": "Josta guarana soda 20 fl oz bottle, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.177,
+"notes": [
+"Josta guarana soda 20 fl oz bottle, circa 1996"
+],
+"product": "Josta guarana soda 20 fl oz bottle, circa 1996",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.24
+],
+"themes": "Y2K; ROAD TRIP; GARAGE SALE; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "jurassic_park_vhs_1994": {
 "display": "Jurassic Park VHS home-video release in cardboard slipcase",
 "eras": [
@@ -4355,6 +5543,28 @@
 "themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"kid_cuisine_all_american_fried_chicken_1998": {
+"display": "Kid Cuisine All American Fried Chicken frozen dinner, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.149,
+"notes": [
+"Kid Cuisine All American Fried Chicken frozen dinner, circa 1998"
+],
+"product": "Kid Cuisine All American Fried Chicken frozen dinner, circa 1998",
+"role": "hero",
+"size": [
+0.22,
+0.038,
+0.17
+],
+"themes": "SICK DAY; LEFTOVERS; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "killers_hot_fuss_cd_2004": {
 "display": "The Killers Hot Fuss CD in jewel case",
 "eras": [
@@ -4397,6 +5607,28 @@
 0.07
 ],
 "themes": "BE KIND REWIND; GARAGE SALE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"knex_70model_set_1997": {
+"display": "K'NEX 70 Model Building Set, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.12,
+"notes": [
+"K'NEX 70 Model Building Set, circa 1997"
+],
+"product": "K'NEX 70 Model Building Set, circa 1997",
+"role": "hero",
+"size": [
+0.32,
+0.08,
+0.25
+],
+"themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "kodak_cr123a_2pack_1999": {
@@ -4465,6 +5697,72 @@
 "themes": "CONSOLE WARS; SLEEPOVER; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
+"koolaid_bursts_tropical_punch_1994": {
+"display": "Kool-Aid Bursts Tropical Punch drink, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.059,
+"notes": [
+"Kool-Aid Bursts Tropical Punch drink, circa 1994"
+],
+"product": "Kool-Aid Bursts Tropical Punch drink, circa 1994",
+"role": "hero",
+"size": [
+0.055,
+0.055,
+0.14
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"koolaid_jammers_tropical_punch_1999": {
+"display": "Kool-Aid Jammers Tropical Punch pouch, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Kool-Aid Jammers Tropical Punch pouch, circa 1999"
+],
+"product": "Kool-Aid Jammers Tropical Punch pouch, circa 1999",
+"role": "hero",
+"size": [
+0.09,
+0.015,
+0.14
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; Y2K; regular cubes",
+"weight": 1.0
+},
+"koosh_ball_rainbow_1992": {
+"display": "OddzOn Koosh Ball, multicolor, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.153,
+"notes": [
+"OddzOn Koosh Ball, multicolor, circa 1992"
+],
+"product": "OddzOn Koosh Ball, multicolor, circa 1992",
+"role": "hero",
+"size": [
+0.09,
+0.09,
+0.09
+],
+"themes": "PRIZE COUNTER; SUMMER CAMP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "koss_porta_pro_1984": {
 "display": "Koss Porta Pro headphones",
 "eras": [
@@ -4487,6 +5785,28 @@
 "themes": "MIXTAPE; ROAD TRIP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"kraft_easy_mac_original_cup_1999": {
+"display": "Kraft Easy Mac Original macaroni and cheese cup, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.158,
+"notes": [
+"Kraft Easy Mac Original macaroni and cheese cup, circa 1999"
+],
+"product": "Kraft Easy Mac Original macaroni and cheese cup, circa 1999",
+"role": "hero",
+"size": [
+0.1,
+0.1,
+0.09
+],
+"themes": "SICK DAY; LUNCH TRADE; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
 "kraft_handi_snacks_cheese_crackers_1995": {
 "display": "Kraft Handi-Snacks Crackers 'N Cheez, circa",
 "eras": [
@@ -4507,6 +5827,28 @@
 0.08
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"kraft_macaroni_cheese_box_1997": {
+"display": "Kraft Macaroni & Cheese Dinner 7.25 oz box, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.1,
+"notes": [
+"Kraft Macaroni & Cheese Dinner 7.25 oz box, circa 1997"
+],
+"product": "Kraft Macaroni & Cheese Dinner 7.25 oz box, circa 1997",
+"role": "hero",
+"size": [
+0.125,
+0.04,
+0.19
+],
+"themes": "LEFTOVERS; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "kudos_mms_granola_bar_1996": {
@@ -4641,6 +5983,28 @@
 "themes": "CONSOLE WARS; BLOW ON IT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"lego_basic_bucket_1998": {
+"display": "LEGO Basic building set bucket, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 2.033,
+"notes": [
+"LEGO Basic building set bucket, circa 1998"
+],
+"product": "LEGO Basic building set bucket, circa 1998",
+"role": "hero",
+"size": [
+0.22,
+0.22,
+0.24
+],
+"themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
 "lexmark_3200_1998": {
 "display": "Lexmark 3200 Color Jetprinter",
 "eras": [
@@ -4685,6 +6049,28 @@
 "themes": "SCREEN TIME; ROAD TRIP; PROM NIGHT; Y2K; regular cubes",
 "weight": 1.0
 },
+"lifesavers_five_flavor_roll_1995": {
+"display": "Life Savers Five Flavor candy roll, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Life Savers Five Flavor candy roll, circa 1995"
+],
+"product": "Life Savers Five Flavor candy roll, circa 1995",
+"role": "support",
+"size": [
+0.023,
+0.023,
+0.105
+],
+"themes": "LUNCH TRADE; ROAD TRIP; TRICK OR TREAT; regular cubes",
+"weight": 1.0
+},
 "lil_wayne_carter_iii_cd_2008": {
 "display": "Lil Wayne Tha Carter III CD in jewel case",
 "eras": [
@@ -4727,6 +6113,28 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; KICKFLIP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"lincoln_logs_frontier_fort_1998": {
+"display": "Lincoln Logs Frontier Fort building set, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.312,
+"notes": [
+"Lincoln Logs Frontier Fort building set, circa 1998"
+],
+"product": "Lincoln Logs Frontier Fort building set, circa 1998",
+"role": "hero",
+"size": [
+0.25,
+0.2,
+0.25
+],
+"themes": "SOME ASSEMBLY REQUIRED; TIME CAPSULE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "linkin_park_hybrid_theory_cd_2000": {
@@ -4839,6 +6247,72 @@
 "themes": "SLEEPOVER; DRESS CODE; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"lite_brite_1997": {
+"display": "Hasbro Lite-Brite, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.606,
+"notes": [
+"Hasbro Lite-Brite, circa 1997"
+],
+"product": "Hasbro Lite-Brite, circa 1997",
+"role": "hero",
+"size": [
+0.34,
+0.1,
+0.27
+],
+"themes": "BLACKLIGHT; HAND TURKEY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"little_debbie_cosmic_brownies_1999": {
+"display": "Little Debbie Cosmic Brownies",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Little Debbie Cosmic Brownies, 1999"
+],
+"product": "Little Debbie Cosmic Brownies, 1999",
+"role": "hero",
+"size": [
+0.085,
+0.02,
+0.13
+],
+"themes": "LUNCH TRADE; SLEEPOVER; Y2K; SICK DAY; regular cubes",
+"weight": 1.0
+},
+"little_debbie_zebra_cakes_1997": {
+"display": "Little Debbie Zebra Cakes, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Little Debbie Zebra Cakes, circa 1997"
+],
+"product": "Little Debbie Zebra Cakes, circa 1997",
+"role": "hero",
+"size": [
+0.09,
+0.03,
+0.13
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SICK DAY; regular cubes",
+"weight": 1.0
+},
 "little_hug_fruit_barrels_1996": {
 "display": "Little Hug Fruit Barrels fruit drink, circa",
 "eras": [
@@ -4859,6 +6333,28 @@
 0.095
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"livestrong_yellow_wristband_2004": {
+"display": "LIVESTRONG yellow silicone wristband",
+"eras": [
+3,
+4
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"LIVESTRONG yellow silicone wristband, 2004"
+],
+"product": "LIVESTRONG yellow silicone wristband, 2004",
+"role": "hero",
+"size": [
+0.065,
+0.012,
+0.065
+],
+"themes": "DRESS CODE; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "logitech_cordless_mouseman_wheel_1999": {
@@ -4971,6 +6467,28 @@
 "themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"lunchables_nachos_cheese_salsa_1998": {
+"display": "Oscar Mayer Lunchables Nachos Cheese Dip & Salsa, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.206,
+"notes": [
+"Oscar Mayer Lunchables Nachos Cheese Dip & Salsa, circa 1998"
+],
+"product": "Oscar Mayer Lunchables Nachos Cheese Dip & Salsa, circa 1998",
+"role": "hero",
+"size": [
+0.21,
+0.035,
+0.16
+],
+"themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
 "lunchables_pizza_1996": {
 "display": "Oscar Mayer Lunchables Pizza, circa",
 "eras": [
@@ -4993,6 +6511,28 @@
 "themes": "LUNCH TRADE; LEFTOVERS; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"magic_8_ball_1995": {
+"display": "Mattel Magic 8 Ball, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.175,
+"notes": [
+"Mattel Magic 8 Ball, circa 1995"
+],
+"product": "Mattel Magic 8 Ball, circa 1995",
+"role": "hero",
+"size": [
+0.1,
+0.1,
+0.1
+],
+"themes": "PRIZE COUNTER; SLEEPOVER; PROBED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "magic_rub_eraser_1996": {
 "display": "Sanford Magic Rub vinyl eraser, circa",
 "eras": [
@@ -5013,6 +6553,50 @@
 0.024
 ],
 "themes": "HAND TURKEY; LOST AND FOUND; regular cubes",
+"weight": 1.0
+},
+"magna_doodle_1995": {
+"display": "Tyco Magna Doodle magnetic drawing board, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.326,
+"notes": [
+"Tyco Magna Doodle magnetic drawing board, circa 1995"
+],
+"product": "Tyco Magna Doodle magnetic drawing board, circa 1995",
+"role": "hero",
+"size": [
+0.31,
+0.025,
+0.24
+],
+"themes": "SCREEN TIME; HAND TURKEY; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"mall_madness_1990": {
+"display": "Milton Bradley Mall Madness electronic board game",
+"eras": [
+0,
+1
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.014,
+"notes": [
+"Milton Bradley Mall Madness electronic board game, 1990"
+],
+"product": "Milton Bradley Mall Madness electronic board game, 1990",
+"role": "hero",
+"size": [
+0.46,
+0.07,
+0.3
+],
+"themes": "MALL RAT; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "mario_kart_64_n64_1997": {
@@ -5057,6 +6641,28 @@
 0.19
 ],
 "themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"matchbox_5pack_1996": {
+"display": "Matchbox vehicle five-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.113,
+"notes": [
+"Matchbox vehicle five-pack, circa 1996"
+],
+"product": "Matchbox vehicle five-pack, circa 1996",
+"role": "hero",
+"size": [
+0.11,
+0.035,
+0.28
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "matrix_vhs_1999": {
@@ -5521,6 +7127,28 @@
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"micro_machines_5pack_1995": {
+"display": "Galoob Micro Machines vehicle five-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.076,
+"notes": [
+"Galoob Micro Machines vehicle five-pack, circa 1995"
+],
+"product": "Galoob Micro Machines vehicle five-pack, circa 1995",
+"role": "hero",
+"size": [
+0.16,
+0.025,
+0.18
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "microsoft_intellimouse_explorer_1999": {
 "display": "Microsoft IntelliMouse Explorer",
 "eras": [
@@ -5631,6 +7259,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; LANDFILL DRIVE; regular cubes",
 "weight": 1.0
 },
+"mighty_max_skull_doom_zone_1993": {
+"display": "Bluebird Mighty Max Skull Dungeon-style Doom Zone compact, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.087,
+"notes": [
+"Bluebird Mighty Max Skull Dungeon-style Doom Zone compact, circa 1993"
+],
+"product": "Bluebird Mighty Max Skull Dungeon-style Doom Zone compact, circa 1993",
+"role": "hero",
+"size": [
+0.11,
+0.05,
+0.09
+],
+"themes": "TRICK OR TREAT; GOT GOT NEED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "molex_4pin_power_splitter_1999": {
 "display": "4-pin Molex PC power Y-splitter cable, circa",
 "eras": [
@@ -5653,6 +7303,50 @@
 "themes": "DIAL-UP; LANDFILL DRIVE; SAVE ICON; regular cubes",
 "weight": 1.0
 },
+"mondo_fruit_squeezers_grape_1995": {
+"display": "Mondo Fruit Squeezers Grape drink, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.068,
+"notes": [
+"Mondo Fruit Squeezers Grape drink, circa 1995"
+],
+"product": "Mondo Fruit Squeezers Grape drink, circa 1995",
+"role": "hero",
+"size": [
+0.055,
+0.055,
+0.16
+],
+"themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"monster_in_my_pocket_figure_1991": {
+"display": "Matchbox Monster in My Pocket figure, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Matchbox Monster in My Pocket figure, circa 1991"
+],
+"product": "Matchbox Monster in My Pocket figure, circa 1991",
+"role": "hero",
+"size": [
+0.035,
+0.02,
+0.045
+],
+"themes": "GOT GOT NEED; TRICK OR TREAT; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "monsters_inc_vhs_2002": {
 "display": "Monsters, Inc. VHS clamshell",
 "eras": [
@@ -5673,6 +7367,50 @@
 0.202
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"mood_ring_vending_1997": {
+"display": "Vending-machine mood ring, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.011,
+"notes": [
+"Vending-machine mood ring, circa 1997"
+],
+"product": "Vending-machine mood ring, circa 1997",
+"role": "filler",
+"size": [
+0.025,
+0.025,
+0.025
+],
+"themes": "PRIZE COUNTER; MALL RAT; PROM NIGHT; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"moon_shoes_1992": {
+"display": "Big Time Toys Moon Shoes, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.365,
+"notes": [
+"Big Time Toys Moon Shoes, circa 1992"
+],
+"product": "Big Time Toys Moon Shoes, circa 1992",
+"role": "hero",
+"size": [
+0.3,
+0.2,
+0.13
+],
+"themes": "SUMMER CAMP; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "mortal_kombat_genesis_1993": {
@@ -5895,6 +7633,28 @@
 "themes": "SCREEN TIME; Y2K; ROAD TRIP; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"mountain_dew_12oz_can_1998": {
+"display": "Mountain Dew 12 fl oz aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Mountain Dew 12 fl oz aluminum can, circa 1998"
+],
+"product": "Mountain Dew 12 fl oz aluminum can, circa 1998",
+"role": "support",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
 "mr_sketch_scented_markers_12_1995": {
 "display": "Sanford Mr. Sketch Scented Watercolor Markers 12-pack, circa",
 "eras": [
@@ -5937,6 +7697,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"mtg_fourth_edition_starter_1995": {
+"display": "Magic: The Gathering Fourth Edition starter deck box",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Magic: The Gathering Fourth Edition starter deck box, 1995"
+],
+"product": "Magic: The Gathering Fourth Edition starter deck box, 1995",
+"role": "hero",
+"size": [
+0.07,
+0.032,
+0.095
+],
+"themes": "GOT GOT NEED; MINT CONDITION; BLACKLIGHT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "n64_controller_pak_1996": {
@@ -6049,6 +7831,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"nano_baby_1997": {
+"display": "Playmates Nano Baby virtual pet",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.009,
+"notes": [
+"Playmates Nano Baby virtual pet, 1997"
+],
+"product": "Playmates Nano Baby virtual pet, 1997",
+"role": "hero",
+"size": [
+0.05,
+0.018,
+0.055
+],
+"themes": "STILL ALIVE; SCREEN TIME; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "nba_jam_genesis_1994": {
 "display": "NBA Jam Sega Genesis cartridge",
 "eras": [
@@ -6069,6 +7873,94 @@
 0.115
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; MINT CONDITION; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"nerds_rope_rainbow_2001": {
+"display": "Wonka Nerds Rope Rainbow candy",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Wonka Nerds Rope Rainbow candy, 2001"
+],
+"product": "Wonka Nerds Rope Rainbow candy, 2001",
+"role": "hero",
+"size": [
+0.04,
+0.012,
+0.2
+],
+"themes": "LUNCH TRADE; SLEEPOVER; PRIZE COUNTER; Y2K; regular cubes",
+"weight": 1.0
+},
+"nerds_strawberry_grape_box_1995": {
+"display": "Wonka Nerds Strawberry and Grape candy box, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Wonka Nerds Strawberry and Grape candy box, circa 1995"
+],
+"product": "Wonka Nerds Strawberry and Grape candy box, circa 1995",
+"role": "hero",
+"size": [
+0.085,
+0.02,
+0.055
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TRICK OR TREAT; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"nerf_supermaxx_1500_1997": {
+"display": "Larami NERF SuperMAXX 1500 air blaster",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.235,
+"notes": [
+"Larami NERF SuperMAXX 1500 air blaster, 1997"
+],
+"product": "Larami NERF SuperMAXX 1500 air blaster, 1997",
+"role": "hero",
+"size": [
+0.48,
+0.07,
+0.21
+],
+"themes": "SLEEPOVER; SUMMER CAMP; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"nerf_turbo_football_1992": {
+"display": "NERF Turbo Football, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.038,
+"notes": [
+"NERF Turbo Football, circa 1992"
+],
+"product": "NERF Turbo Football, circa 1992",
+"role": "hero",
+"size": [
+0.18,
+0.11,
+0.11
+],
+"themes": "SUMMER CAMP; ROAD TRIP; PRIZE COUNTER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "nes_cartridge_gray_1985": {
@@ -6115,6 +8007,50 @@
 "themes": "CONSOLE WARS; BLOW ON IT; LEFTOVERS; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"nesquik_strawberry_14oz_2001": {
+"display": "Nestl\u00e9 Nesquik Strawberry flavored milk bottle, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.133,
+"notes": [
+"Nestl\u00e9 Nesquik Strawberry flavored milk bottle, circa 2001"
+],
+"product": "Nestl\u00e9 Nesquik Strawberry flavored milk bottle, circa 2001",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.18
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
+"nestle_wonder_ball_disney_2000": {
+"display": "Nestl\u00e9 Wonder Ball chocolate candy, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.024,
+"notes": [
+"Nestl\u00e9 Wonder Ball chocolate candy, circa 2000"
+],
+"product": "Nestl\u00e9 Wonder Ball chocolate candy, circa 2000",
+"role": "hero",
+"size": [
+0.06,
+0.05,
+0.075
+],
+"themes": "LUNCH TRADE; SLEEPOVER; PRIZE COUNTER; Y2K; regular cubes",
+"weight": 1.0
+},
 "netscape_isp_trial_cd_1999": {
 "display": "Netscape Internet access trial CD-ROM, circa",
 "eras": [
@@ -6157,6 +8093,50 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"nickelodeon_floam_green_1994": {
+"display": "Nickelodeon Floam, neon green, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.088,
+"notes": [
+"Nickelodeon Floam, neon green, circa 1994"
+],
+"product": "Nickelodeon Floam, neon green, circa 1994",
+"role": "hero",
+"size": [
+0.1,
+0.1,
+0.05
+],
+"themes": "SLIMED; SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"nickelodeon_gak_green_1992": {
+"display": "Nickelodeon Gak, neon green",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.088,
+"notes": [
+"Nickelodeon Gak, neon green, 1992"
+],
+"product": "Nickelodeon Gak, neon green, 1992",
+"role": "hero",
+"size": [
+0.1,
+0.1,
+0.05
+],
+"themes": "SLIMED; PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "nintendo64_cartridge_1996": {
@@ -6687,6 +8667,28 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
+"oakley_eye_jacket_black_1994": {
+"display": "Oakley Eye Jacket sunglasses, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.066,
+"notes": [
+"Oakley Eye Jacket sunglasses, circa 1994"
+],
+"product": "Oakley Eye Jacket sunglasses, circa 1994",
+"role": "hero",
+"size": [
+0.15,
+0.05,
+0.05
+],
+"themes": "DRESS CODE; MALL RAT; Y2K; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "office97_standard_bigbox_1996": {
 "display": "Microsoft Office 97 Standard retail software box",
 "eras": [
@@ -6707,6 +8709,50 @@
 0.24
 ],
 "themes": "DIAL-UP; SAVE ICON; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"ok_soda_12oz_can_1994": {
+"display": "Coca-Cola OK Soda 12 fl oz can",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Coca-Cola OK Soda 12 fl oz can, 1994"
+],
+"product": "Coca-Cola OK Soda 12 fl oz can, 1994",
+"role": "hero",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; TIME CAPSULE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"old_navy_performance_fleece_vest_1998": {
+"display": "Old Navy Performance Fleece vest, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.104,
+"notes": [
+"Old Navy Performance Fleece vest, circa 1998"
+],
+"product": "Old Navy Performance Fleece vest, circa 1998",
+"role": "hero",
+"size": [
+0.58,
+0.04,
+0.68
+],
+"themes": "DRESS CODE; MALL RAT; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "olympus_vn90_2001": {
@@ -6751,6 +8797,28 @@
 0.2
 ],
 "themes": "LUNCH TRADE; Y2K; TIME CAPSULE; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"oreo_os_cereal_1998": {
+"display": "Post Oreo O's cereal",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.382,
+"notes": [
+"Post Oreo O's cereal, 1998"
+],
+"product": "Post Oreo O's cereal, 1998",
+"role": "hero",
+"size": [
+0.2,
+0.065,
+0.28
+],
+"themes": "SICK DAY; SLEEPOVER; Y2K; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "original_game_boy_dmg01_1989": {
@@ -7259,6 +9327,72 @@
 "themes": "TIME CAPSULE; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"pepsi_12oz_can_1998": {
+"display": "Pepsi 12 fl oz aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Pepsi 12 fl oz aluminum can, circa 1998"
+],
+"product": "Pepsi 12 fl oz aluminum can, circa 1998",
+"role": "support",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; Y2K; regular cubes",
+"weight": 1.0
+},
+"pepsi_blue_20oz_2002": {
+"display": "Pepsi Blue 20 fl oz bottle",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.177,
+"notes": [
+"Pepsi Blue 20 fl oz bottle, 2002"
+],
+"product": "Pepsi Blue 20 fl oz bottle, 2002",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.24
+],
+"themes": "Y2K; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"perfection_game_1997": {
+"display": "Milton Bradley Perfection game, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.098,
+"notes": [
+"Milton Bradley Perfection game, circa 1997"
+],
+"product": "Milton Bradley Perfection game, circa 1997",
+"role": "hero",
+"size": [
+0.28,
+0.08,
+0.28
+],
+"themes": "SLEEPOVER; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "phone_line_splitter_1997": {
 "display": "Two-way RJ-11 telephone line splitter, circa",
 "eras": [
@@ -7347,6 +9481,50 @@
 "themes": "HAND TURKEY; LOST AND FOUND; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"pixy_stix_giant_assorted_1996": {
+"display": "Wonka Giant Pixy Stix assorted flavor candy straw, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.01,
+"notes": [
+"Wonka Giant Pixy Stix assorted flavor candy straw, circa 1996"
+],
+"product": "Wonka Giant Pixy Stix assorted flavor candy straw, circa 1996",
+"role": "hero",
+"size": [
+0.014,
+0.014,
+0.38
+],
+"themes": "LUNCH TRADE; PRIZE COUNTER; TRICK OR TREAT; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"planters_cheez_balls_canister_1997": {
+"display": "Planters Cheez Balls canister, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.232,
+"notes": [
+"Planters Cheez Balls canister, circa 1997"
+],
+"product": "Planters Cheez Balls canister, circa 1997",
+"role": "hero",
+"size": [
+0.105,
+0.105,
+0.2
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "planters_pb_crisps_1994": {
 "display": "Planters P.B. Crisps, circa",
 "eras": [
@@ -7369,6 +9547,50 @@
 "themes": "LUNCH TRADE; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"plastic_pog_slammer_1994": {
+"display": "Translucent plastic POG slammer, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Translucent plastic POG slammer, circa 1994"
+],
+"product": "Translucent plastic POG slammer, circa 1994",
+"role": "support",
+"size": [
+0.041,
+0.005,
+0.041
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"playdoh_4pack_primary_1997": {
+"display": "Hasbro Play-Doh four-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.232,
+"notes": [
+"Hasbro Play-Doh four-pack, circa 1997"
+],
+"product": "Hasbro Play-Doh four-pack, circa 1997",
+"role": "hero",
+"size": [
+0.27,
+0.07,
+0.07
+],
+"themes": "SOME ASSEMBLY REQUIRED; HAND TURKEY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "playstation_memory_card_1995": {
 "display": "Sony PlayStation Memory Card",
 "eras": [
@@ -7389,6 +9611,50 @@
 0.035
 ],
 "themes": "CONSOLE WARS; SCREEN TIME; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"pogs_assorted_stack_1994": {
+"display": "Assorted POG milk caps stack with plastic tube, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"Assorted POG milk caps stack with plastic tube, circa 1994"
+],
+"product": "Assorted POG milk caps stack with plastic tube, circa 1994",
+"role": "hero",
+"size": [
+0.041,
+0.041,
+0.15
+],
+"themes": "GOT GOT NEED; PRIZE COUNTER; TIME CAPSULE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"pokemon_base_set_booster_pack_1999": {
+"display": "Pok\u00e9mon Trading Card Game Base Set booster pack",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Pok\u00e9mon Trading Card Game Base Set booster pack, 1999"
+],
+"product": "Pok\u00e9mon Trading Card Game Base Set booster pack, 1999",
+"role": "hero",
+"size": [
+0.068,
+0.006,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; PRIZE COUNTER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "pokemon_blue_gameboy_1998": {
@@ -7455,6 +9721,94 @@
 0.15
 ],
 "themes": "TIME CAPSULE; SLEEPOVER; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"polly_pocket_compact_1993": {
+"display": "Bluebird Polly Pocket compact playset, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.055,
+"notes": [
+"Bluebird Polly Pocket compact playset, circa 1993"
+],
+"product": "Bluebird Polly Pocket compact playset, circa 1993",
+"role": "hero",
+"size": [
+0.1,
+0.035,
+0.09
+],
+"themes": "SLEEPOVER; DRESS CODE; GOT GOT NEED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"pop_rocks_strawberry_1995": {
+"display": "Pop Rocks Strawberry popping candy pouch, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Pop Rocks Strawberry popping candy pouch, circa 1995"
+],
+"product": "Pop Rocks Strawberry popping candy pouch, circa 1995",
+"role": "hero",
+"size": [
+0.085,
+0.005,
+0.115
+],
+"themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; regular cubes",
+"weight": 1.0
+},
+"poptarts_brown_sugar_cinnamon_1997": {
+"display": "Kellogg's Pop-Tarts Frosted Brown Sugar Cinnamon toaster pastries, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.147,
+"notes": [
+"Kellogg's Pop-Tarts Frosted Brown Sugar Cinnamon toaster pastries, circa 1997"
+],
+"product": "Kellogg's Pop-Tarts Frosted Brown Sugar Cinnamon toaster pastries, circa 1997",
+"role": "hero",
+"size": [
+0.14,
+0.05,
+0.2
+],
+"themes": "LUNCH TRADE; SICK DAY; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"poptarts_frosted_strawberry_1997": {
+"display": "Kellogg's Pop-Tarts Frosted Strawberry toaster pastries, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.147,
+"notes": [
+"Kellogg's Pop-Tarts Frosted Strawberry toaster pastries, circa 1997"
+],
+"product": "Kellogg's Pop-Tarts Frosted Strawberry toaster pastries, circa 1997",
+"role": "hero",
+"size": [
+0.14,
+0.05,
+0.2
+],
+"themes": "LUNCH TRADE; SICK DAY; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "postit_notes_yellow_3x3_1997": {
@@ -7589,6 +9943,28 @@
 "themes": "CONSOLE WARS; SCREEN TIME; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"puka_shell_necklace_2000": {
+"display": "White puka shell necklace, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.652,
+"notes": [
+"White puka shell necklace, circa 2000"
+],
+"product": "White puka shell necklace, circa 2000",
+"role": "hero",
+"size": [
+0.46,
+0.008,
+0.46
+],
+"themes": "DRESS CODE; PROM NIGHT; ROAD TRIP; Y2K; regular cubes",
+"weight": 1.0
+},
 "pulp_fiction_vhs_1995": {
 "display": "Pulp Fiction VHS",
 "eras": [
@@ -7631,6 +10007,28 @@
 0.12
 ],
 "themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"quaker_chewy_chocolate_chip_1996": {
+"display": "Quaker Chewy Chocolate Chip granola bar, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Quaker Chewy Chocolate Chip granola bar, circa 1996"
+],
+"product": "Quaker Chewy Chocolate Chip granola bar, circa 1996",
+"role": "support",
+"size": [
+0.04,
+0.015,
+0.12
+],
+"themes": "LUNCH TRADE; ROAD TRIP; SUMMER CAMP; regular cubes",
 "weight": 1.0
 },
 "radio_shack_phone_coupler_1996": {
@@ -7697,6 +10095,28 @@
 0.115
 ],
 "themes": "DOUBLE A; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"rainbow_magic_spring_1996": {
+"display": "Plastic rainbow magic spring, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.056,
+"notes": [
+"Plastic rainbow magic spring, circa 1996"
+],
+"product": "Plastic rainbow magic spring, circa 1996",
+"role": "support",
+"size": [
+0.07,
+0.07,
+0.065
+],
+"themes": "PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "rayovac_1hour_charger_2002": {
@@ -7831,6 +10251,28 @@
 "themes": "BE KIND REWIND; SCREEN TIME; LEFTOVERS; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
+"reeses_puffs_1994": {
+"display": "General Mills Reese's Peanut Butter Puffs cereal",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.382,
+"notes": [
+"General Mills Reese's Peanut Butter Puffs cereal, 1994"
+],
+"product": "General Mills Reese's Peanut Butter Puffs cereal, 1994",
+"role": "hero",
+"size": [
+0.2,
+0.065,
+0.28
+],
+"themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "resident_evil2_ps1_1998": {
 "display": "Resident Evil 2 PlayStation two-disc game",
 "eras": [
@@ -7895,6 +10337,28 @@
 0.125
 ],
 "themes": "COASTERS; ROAD TRIP; KICKFLIP; regular cubes",
+"weight": 1.0
+},
+"rice_krispies_treats_original_1995": {
+"display": "Kellogg's Rice Krispies Treats Original bar, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.003,
+"notes": [
+"Kellogg's Rice Krispies Treats Original bar, circa 1995"
+],
+"product": "Kellogg's Rice Krispies Treats Original bar, circa 1995",
+"role": "hero",
+"size": [
+0.05,
+0.02,
+0.09
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
 "ring_pop_blue_raspberry_1995": {
@@ -8005,6 +10469,28 @@
 0.089
 ],
 "themes": "SCREEN TIME; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sandmaster_footbag_1997": {
+"display": "SandMaster-style suede footbag, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"SandMaster-style suede footbag, circa 1997"
+],
+"product": "SandMaster-style suede footbag, circa 1997",
+"role": "support",
+"size": [
+0.055,
+0.055,
+0.055
+],
+"themes": "SUMMER CAMP; KICKFLIP; MALL RAT; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "sanford_eagle_mirado_black_warrior_1997": {
@@ -8403,6 +10889,50 @@
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"shrinky_dinks_creative_pack_1995": {
+"display": "Shrinky Dinks Creative Pack, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.054,
+"notes": [
+"Shrinky Dinks Creative Pack, circa 1995"
+],
+"product": "Shrinky Dinks Creative Pack, circa 1995",
+"role": "support",
+"size": [
+0.22,
+0.005,
+0.28
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"silly_putty_red_egg_1995": {
+"display": "Crayola Silly Putty in red plastic egg, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.021,
+"notes": [
+"Crayola Silly Putty in red plastic egg, circa 1995"
+],
+"product": "Crayola Silly Putty in red plastic egg, circa 1995",
+"role": "hero",
+"size": [
+0.045,
+0.045,
+0.06
+],
+"themes": "PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
 "sixth_sense_vhs_2000": {
 "display": "The Sixth Sense VHS",
 "eras": [
@@ -8425,6 +10955,94 @@
 "themes": "BE KIND REWIND; SLEEPOVER; TRICK OR TREAT; regular cubes",
 "weight": 1.0
 },
+"skip_it_pink_1992": {
+"display": "Tiger Electronics Skip-It, Pink, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.4,
+"notes": [
+"Tiger Electronics Skip-It, Pink, circa 1992"
+],
+"product": "Tiger Electronics Skip-It, Pink, circa 1992",
+"role": "hero",
+"size": [
+0.8,
+0.1,
+0.1
+],
+"themes": "SUMMER CAMP; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sky_dancers_launcher_1994": {
+"display": "Galoob Sky Dancers launcher and flying doll",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.592,
+"notes": [
+"Galoob Sky Dancers launcher and flying doll, 1994"
+],
+"product": "Galoob Sky Dancers launcher and flying doll, 1994",
+"role": "hero",
+"size": [
+0.13,
+0.13,
+0.2
+],
+"themes": "SLEEPOVER; DRESS CODE; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"slap_bracelet_holographic_1990": {
+"display": "Holographic slap bracelet, circa",
+"eras": [
+0,
+1
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.019,
+"notes": [
+"Holographic slap bracelet, circa 1990"
+],
+"product": "Holographic slap bracelet, circa 1990",
+"role": "hero",
+"size": [
+0.23,
+0.004,
+0.03
+],
+"themes": "DRESS CODE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"slinky_metal_1995": {
+"display": "James Industries Original Slinky metal spring toy, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.223,
+"notes": [
+"James Industries Original Slinky metal spring toy, circa 1995"
+],
+"product": "James Industries Original Slinky metal spring toy, circa 1995",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.065
+],
+"themes": "PRIZE COUNTER; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "smash_bros_melee_gamecube_2001": {
 "display": "Super Smash Bros. Melee Nintendo GameCube game",
 "eras": [
@@ -8445,6 +11063,50 @@
 0.19
 ],
 "themes": "CONSOLE WARS; SLEEPOVER; SCREEN TIME; regular cubes",
+"weight": 1.0
+},
+"snackwells_devils_food_cookie_cakes_1993": {
+"display": "Nabisco SnackWell's Devil's Food Cookie Cakes, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.193,
+"notes": [
+"Nabisco SnackWell's Devil's Food Cookie Cakes, circa 1993"
+],
+"product": "Nabisco SnackWell's Devil's Food Cookie Cakes, circa 1993",
+"role": "hero",
+"size": [
+0.16,
+0.05,
+0.23
+],
+"themes": "SICK DAY; TIME CAPSULE; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"snapple_elements_rain_1999": {
+"display": "Snapple Elements Rain agave-cactus drink",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.299,
+"notes": [
+"Snapple Elements Rain agave-cactus drink, 1999"
+],
+"product": "Snapple Elements Rain agave-cactus drink, 1999",
+"role": "hero",
+"size": [
+0.062,
+0.062,
+0.185
+],
+"themes": "Y2K; ROAD TRIP; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "snes_cartridge_1991": {
@@ -8533,6 +11195,50 @@
 0.125
 ],
 "themes": "COASTERS; BASS BOOSTED; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sobe_lizard_fuel_2000": {
+"display": "SoBe Lizard Fuel fruit drink, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.355,
+"notes": [
+"SoBe Lizard Fuel fruit drink, circa 2000"
+],
+"product": "SoBe Lizard Fuel fruit drink, circa 2000",
+"role": "hero",
+"size": [
+0.065,
+0.065,
+0.2
+],
+"themes": "Y2K; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"sockem_boppers_red_pair_1997": {
+"display": "Big Time Toys Sock'em Boppers inflatable boxing toys, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 2.041,
+"notes": [
+"Big Time Toys Sock'em Boppers inflatable boxing toys, circa 1997"
+],
+"product": "Big Time Toys Sock'em Boppers inflatable boxing toys, circa 1997",
+"role": "hero",
+"size": [
+0.18,
+0.18,
+0.45
+],
+"themes": "SLEEPOVER; SUMMER CAMP; SOME ASSEMBLY REQUIRED; regular cubes",
 "weight": 1.0
 },
 "sonic_2_genesis_1992": {
@@ -9305,6 +12011,28 @@
 "themes": "LOST AND FOUND; TIME CAPSULE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"spaghettios_original_1997": {
+"display": "Campbell's SpaghettiOs Original 15 oz can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.433,
+"notes": [
+"Campbell's SpaghettiOs Original 15 oz can, circa 1997"
+],
+"product": "Campbell's SpaghettiOs Original 15 oz can, circa 1997",
+"role": "hero",
+"size": [
+0.075,
+0.075,
+0.11
+],
+"themes": "LEFTOVERS; SICK DAY; LUNCH TRADE; regular cubes",
+"weight": 1.0
+},
 "spice_girls_spice_cassette_1996": {
 "display": "Spice Girls Spice prerecorded cassette",
 "eras": [
@@ -9349,6 +12077,50 @@
 "themes": "COASTERS; SLEEPOVER; Y2K; regular cubes",
 "weight": 1.0
 },
+"spirograph_deluxe_1996": {
+"display": "Kenner Spirograph Deluxe Set, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.808,
+"notes": [
+"Kenner Spirograph Deluxe Set, circa 1996"
+],
+"product": "Kenner Spirograph Deluxe Set, circa 1996",
+"role": "hero",
+"size": [
+0.38,
+0.045,
+0.27
+],
+"themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; SICK DAY; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sprite_12oz_can_1998": {
+"display": "Sprite 12 fl oz aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Sprite 12 fl oz aluminum can, circa 1998"
+],
+"product": "Sprite 12 fl oz aluminum can, circa 1998",
+"role": "support",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "squeezit_fruit_punch_1995": {
 "display": "General Mills Squeezit Fruit Punch drink, circa",
 "eras": [
@@ -9371,6 +12143,50 @@
 "themes": "LUNCH TRADE; SLEEPOVER; SUMMER CAMP; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"starter_pullover_jacket_black_red_1995": {
+"display": "Starter pullover half-zip jacket, black and red, circa",
+"eras": [
+1,
+2
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 1.25,
+"notes": [
+"Starter pullover half-zip jacket, black and red, circa 1995"
+],
+"product": "Starter pullover half-zip jacket, black and red, circa 1995",
+"role": "hero",
+"size": [
+0.62,
+0.04,
+0.72
+],
+"themes": "DRESS CODE; MALL RAT; ROAD TRIP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sticky_hand_arcade_prize_1998": {
+"display": "Sticky Hand vending and arcade prize toy, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Sticky Hand vending and arcade prize toy, circa 1998"
+],
+"product": "Sticky Hand vending and arcade prize toy, circa 1998",
+"role": "filler",
+"size": [
+0.05,
+0.004,
+0.2
+],
+"themes": "PRIZE COUNTER; SLEEPOVER; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
 "street_fighter_ii_snes_1992": {
 "display": "Street Fighter II Super Nintendo Game Pak",
 "eras": [
@@ -9391,6 +12207,50 @@
 0.126
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"stretch_armstrong_1992": {
+"display": "Kenner Stretch Armstrong, 1992 reissue",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.005,
+"notes": [
+"Kenner Stretch Armstrong, 1992 reissue"
+],
+"product": "Kenner Stretch Armstrong, 1992 reissue",
+"role": "hero",
+"size": [
+0.18,
+0.07,
+0.38
+],
+"themes": "SOME ASSEMBLY REQUIRED; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"sunkist_orange_12oz_can_1998": {
+"display": "Sunkist Orange Soda 12 fl oz aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.372,
+"notes": [
+"Sunkist Orange Soda 12 fl oz aluminum can, circa 1998"
+],
+"product": "Sunkist Orange Soda 12 fl oz aluminum can, circa 1998",
+"role": "support",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "LEFTOVERS; ROAD TRIP; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
 "sunny_delight_california_16oz_1995": {
@@ -9503,6 +12363,28 @@
 "themes": "CONSOLE WARS; BLOW ON IT; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"super_soaker_50_1991": {
+"display": "Larami Super Soaker 50 water blaster",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.103,
+"notes": [
+"Larami Super Soaker 50 water blaster, 1991"
+],
+"product": "Larami Super Soaker 50 water blaster, 1991",
+"role": "hero",
+"size": [
+0.45,
+0.07,
+0.2
+],
+"themes": "SUMMER CAMP; SOME ASSEMBLY REQUIRED; TIME CAPSULE; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
 "surge_20oz_1997": {
 "display": "SURGE citrus soda 20 fl oz bottle",
 "eras": [
@@ -9523,6 +12405,28 @@
 0.24
 ],
 "themes": "LUNCH TRADE; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"sweetarts_roll_1995": {
+"display": "Wonka SweeTarts roll, circa",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Wonka SweeTarts roll, circa 1995"
+],
+"product": "Wonka SweeTarts roll, circa 1995",
+"role": "support",
+"size": [
+0.02,
+0.02,
+0.14
+],
+"themes": "LUNCH TRADE; TRICK OR TREAT; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
 "swingline_standard_staples_5000_1997": {
@@ -9567,6 +12471,72 @@
 0.045
 ],
 "themes": "SCHOOL_JUNK; TIME CAPSULE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"tamagotchi_gen1_white_blue_1997": {
+"display": "Bandai Tamagotchi Generation 1, white with blue trim",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Bandai Tamagotchi Generation 1, white with blue trim, 1997"
+],
+"product": "Bandai Tamagotchi Generation 1, white with blue trim, 1997",
+"role": "hero",
+"size": [
+0.055,
+0.018,
+0.045
+],
+"themes": "STILL ALIVE; SCREEN TIME; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tamagotchi_gen2_green_1997": {
+"display": "Bandai Tamagotchi Generation 2, translucent green",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.008,
+"notes": [
+"Bandai Tamagotchi Generation 2, translucent green, 1997"
+],
+"product": "Bandai Tamagotchi Generation 2, translucent green, 1997",
+"role": "hero",
+"size": [
+0.055,
+0.018,
+0.045
+],
+"themes": "STILL ALIVE; SCREEN TIME; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tattoo_choker_black_1998": {
+"display": "Black stretch tattoo choker necklace, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.063,
+"notes": [
+"Black stretch tattoo choker necklace, circa 1998"
+],
+"product": "Black stretch tattoo choker necklace, circa 1998",
+"role": "hero",
+"size": [
+0.3,
+0.004,
+0.3
+],
+"themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
 "weight": 1.0
 },
 "tdk_cd_r_50_spindle_2001": {
@@ -9657,6 +12627,50 @@
 "themes": "SLEEPOVER; PROM NIGHT; SUMMER CAMP; ROAD TRIP; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"tech_deck_fingerboard_1998": {
+"display": "Tech Deck fingerboard, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Tech Deck fingerboard, circa 1998"
+],
+"product": "Tech Deck fingerboard, circa 1998",
+"role": "hero",
+"size": [
+0.028,
+0.015,
+0.096
+],
+"themes": "KICKFLIP; PRIZE COUNTER; SCHOOL_JUNK; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tech_deck_launch_ramp_1999": {
+"display": "Tech Deck tabletop launch ramp, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.164,
+"notes": [
+"Tech Deck tabletop launch ramp, circa 1999"
+],
+"product": "Tech Deck tabletop launch ramp, circa 1999",
+"role": "support",
+"size": [
+0.18,
+0.08,
+0.065
+],
+"themes": "KICKFLIP; PRIZE COUNTER; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
 "terminator2_judgment_day_vhs_1992": {
 "display": "Terminator 2: Judgment Day VHS",
 "eras": [
@@ -9721,6 +12735,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; UNDER_THE_MATTRESS; regular cubes",
+"weight": 1.0
+},
+"tic_tac_orange_1997": {
+"display": "Tic Tac Orange mints, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.006,
+"notes": [
+"Tic Tac Orange mints, circa 1997"
+],
+"product": "Tic Tac Orange mints, circa 1997",
+"role": "filler",
+"size": [
+0.038,
+0.016,
+0.06
+],
+"themes": "ROAD TRIP; MALL RAT; LOST AND FOUND; regular cubes",
 "weight": 1.0
 },
 "ticonderoga_no2_12pack_1996": {
@@ -9877,6 +12913,28 @@
 "themes": "SCREEN TIME; DIAL-UP; Y2K; PROM NIGHT; regular cubes",
 "weight": 1.0
 },
+"toaster_strudel_strawberry_1997": {
+"display": "Pillsbury Toaster Strudel Strawberry pastries, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.154,
+"notes": [
+"Pillsbury Toaster Strudel Strawberry pastries, circa 1997"
+],
+"product": "Pillsbury Toaster Strudel Strawberry pastries, circa 1997",
+"role": "hero",
+"size": [
+0.19,
+0.055,
+0.14
+],
+"themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "tony_hawk_pro_skater2_ps1_2000": {
 "display": "Tony Hawk's Pro Skater 2 PlayStation game",
 "eras": [
@@ -9919,6 +12977,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; ROAD TRIP; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"totinos_pizza_rolls_pepperoni_1999": {
+"display": "Totino's Pepperoni Pizza Rolls, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.173,
+"notes": [
+"Totino's Pepperoni Pizza Rolls, circa 1999"
+],
+"product": "Totino's Pepperoni Pizza Rolls, circa 1999",
+"role": "hero",
+"size": [
+0.2,
+0.055,
+0.15
+],
+"themes": "LEFTOVERS; SLEEPOVER; SICK DAY; Y2K; regular cubes",
 "weight": 1.0
 },
 "toy_story_vhs_1996": {
@@ -9965,6 +13045,28 @@
 "themes": "HAND TURKEY; TIME CAPSULE; SLEEPOVER; regular cubes",
 "weight": 1.0
 },
+"troll_doll_neon_hair_1992": {
+"display": "Russ-style troll doll with neon hair, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.047,
+"notes": [
+"Russ-style troll doll with neon hair, circa 1992"
+],
+"product": "Russ-style troll doll with neon hair, circa 1992",
+"role": "hero",
+"size": [
+0.06,
+0.04,
+0.14
+],
+"themes": "DRESS CODE; SLEEPOVER; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
 "twister_vhs_1997": {
 "display": "Twister VHS",
 "eras": [
@@ -9985,6 +13087,72 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
+"weight": 1.0
+},
+"ty_beanie_babies_heart_tag_1996": {
+"display": "Ty Beanie Babies heart-shaped swing tag, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Ty Beanie Babies heart-shaped swing tag, circa 1996"
+],
+"product": "Ty Beanie Babies heart-shaped swing tag, circa 1996",
+"role": "filler",
+"size": [
+0.05,
+0.0015,
+0.05
+],
+"themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"ty_beanie_baby_bear_1996": {
+"display": "Ty Beanie Babies teddy bear plush, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.157,
+"notes": [
+"Ty Beanie Babies teddy bear plush, circa 1996"
+],
+"product": "Ty Beanie Babies teddy bear plush, circa 1996",
+"role": "hero",
+"size": [
+0.14,
+0.08,
+0.2
+],
+"themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"ultra_pro_9pocket_pokemon_binder_1999": {
+"display": "Ultra PRO nine-pocket trading-card binder pages with Pok\u00e9mon cards, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.546,
+"notes": [
+"Ultra PRO nine-pocket trading-card binder pages with Pok\u00e9mon cards, circa 1999"
+],
+"product": "Ultra PRO nine-pocket trading-card binder pages with Pok\u00e9mon cards, circa 1999",
+"role": "hero",
+"size": [
+0.26,
+0.04,
+0.3
+],
+"themes": "GOT GOT NEED; MINT CONDITION; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "umax_astra_1220u_1998": {
@@ -10097,6 +13265,72 @@
 "themes": "DIAL-UP; SAVE ICON; Y2K; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"velvet_scrunchies_3pack_1997": {
+"display": "Velvet scrunchie three-pack, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.042,
+"notes": [
+"Velvet scrunchie three-pack, circa 1997"
+],
+"product": "Velvet scrunchie three-pack, circa 1997",
+"role": "support",
+"size": [
+0.11,
+0.03,
+0.18
+],
+"themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"vending_machine_capsule_clear_1998": {
+"display": "Two-piece vending-machine toy capsule, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.022,
+"notes": [
+"Two-piece vending-machine toy capsule, circa 1998"
+],
+"product": "Two-piece vending-machine toy capsule, circa 1998",
+"role": "filler",
+"size": [
+0.05,
+0.05,
+0.05
+],
+"themes": "PRIZE COUNTER; GOT GOT NEED; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"vending_super_bounce_ball_1997": {
+"display": "Super Bounce high-bounce vending ball, circa",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.007,
+"notes": [
+"Super Bounce high-bounce vending ball, circa 1997"
+],
+"product": "Super Bounce high-bounce vending ball, circa 1997",
+"role": "filler",
+"size": [
+0.032,
+0.032,
+0.032
+],
+"themes": "PRIZE COUNTER; MALL RAT; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
 "verbatim_datalife_floppy_red_1998": {
 "display": "Verbatim DataLife Colors 3.5-inch floppy disk, red, circa",
 "eras": [
@@ -10207,6 +13441,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"viewmaster_red_1995": {
+"display": "Fisher-Price View-Master viewer, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.159,
+"notes": [
+"Fisher-Price View-Master viewer, circa 1995"
+],
+"product": "Fisher-Price View-Master viewer, circa 1995",
+"role": "hero",
+"size": [
+0.13,
+0.07,
+0.1
+],
+"themes": "TIME CAPSULE; SICK DAY; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
+"viewmaster_reel_3pack_1995": {
+"display": "View-Master stereoscopic reel three-pack, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"View-Master stereoscopic reel three-pack, circa 1995"
+],
+"product": "View-Master stereoscopic reel three-pack, circa 1995",
+"role": "support",
+"size": [
+0.09,
+0.001,
+0.09
+],
+"themes": "TIME CAPSULE; SICK DAY; SUMMER CAMP; regular cubes",
+"weight": 1.0
+},
 "viewsonic_e70f_crt_2001": {
 "display": "ViewSonic E70f 17-inch CRT monitor",
 "eras": [
@@ -10227,6 +13505,94 @@
 0.42
 ],
 "themes": "SCREEN TIME; DIAL-UP; Y2K; regular cubes",
+"weight": 1.0
+},
+"von_dutch_trucker_hat_red_white_2003": {
+"display": "Von Dutch mesh trucker cap, red and white, circa",
+"eras": [
+3,
+4
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.549,
+"notes": [
+"Von Dutch mesh trucker cap, red and white, circa 2003"
+],
+"product": "Von Dutch mesh trucker cap, red and white, circa 2003",
+"role": "hero",
+"size": [
+0.2,
+0.14,
+0.28
+],
+"themes": "DRESS CODE; MALL RAT; PROM NIGHT; Y2K; regular cubes",
+"weight": 1.0
+},
+"wacky_wallwalker_1990": {
+"display": "Wacky WallWalker sticky octopus toy, circa",
+"eras": [
+0,
+1
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.012,
+"notes": [
+"Wacky WallWalker sticky octopus toy, circa 1990"
+],
+"product": "Wacky WallWalker sticky octopus toy, circa 1990",
+"role": "filler",
+"size": [
+0.07,
+0.01,
+0.08
+],
+"themes": "PRIZE COUNTER; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"waffle_crisp_1996": {
+"display": "Post Waffle Crisp cereal",
+"eras": [
+1,
+2
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.382,
+"notes": [
+"Post Waffle Crisp cereal, 1996"
+],
+"product": "Post Waffle Crisp cereal, 1996",
+"role": "hero",
+"size": [
+0.2,
+0.065,
+0.28
+],
+"themes": "SICK DAY; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"wallet_chain_24inch_1999": {
+"display": "24-inch chrome wallet chain with leather tab, circa",
+"eras": [
+2,
+3
+],
+"family": "clothing_and_accessories",
+"group": "era",
+"mass": 0.061,
+"notes": [
+"24-inch chrome wallet chain with leather tab, circa 1999"
+],
+"product": "24-inch chrome wallet chain with leather tab, circa 1999",
+"role": "hero",
+"size": [
+0.61,
+0.012,
+0.012
+],
+"themes": "KICKFLIP; DRESS CODE; MALL RAT; Y2K; regular cubes",
 "weight": 1.0
 },
 "warheads_extreme_sour_1995": {
@@ -10315,6 +13681,28 @@
 0.03
 ],
 "themes": "TIME CAPSULE; LOST AND FOUND; HAND TURKEY; regular cubes",
+"weight": 1.0
+},
+"wham_o_slip_n_slide_1995": {
+"display": "Wham-O Slip 'N Slide, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 1.89,
+"notes": [
+"Wham-O Slip 'N Slide, circa 1995"
+],
+"product": "Wham-O Slip 'N Slide, circa 1995",
+"role": "hero",
+"size": [
+0.45,
+0.08,
+0.3
+],
+"themes": "SUMMER CAMP; ROAD TRIP; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
 "windows95_big_box_1995": {
@@ -10513,6 +13901,116 @@
 0.24
 ],
 "themes": "TIME CAPSULE; HAND TURKEY; DRESS CODE; regular cubes",
+"weight": 1.0
+},
+"yogoplait_gogurt_strawberry_splash_1999": {
+"display": "Yoplait Go-Gurt Strawberry Splash yogurt tube",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.015,
+"notes": [
+"Yoplait Go-Gurt Strawberry Splash yogurt tube, 1999"
+],
+"product": "Yoplait Go-Gurt Strawberry Splash yogurt tube, 1999",
+"role": "hero",
+"size": [
+0.035,
+0.015,
+0.2
+],
+"themes": "LUNCH TRADE; SLEEPOVER; Y2K; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"yomega_fireball_yoyo_1996": {
+"display": "Yomega Fireball yo-yo, circa",
+"eras": [
+1,
+2
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.021,
+"notes": [
+"Yomega Fireball yo-yo, circa 1996"
+],
+"product": "Yomega Fireball yo-yo, circa 1996",
+"role": "hero",
+"size": [
+0.058,
+0.035,
+0.058
+],
+"themes": "PRIZE COUNTER; SUMMER CAMP; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"yoohoo_chocolate_juice_box_1997": {
+"display": "Yoo-hoo Chocolate Drink box, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.026,
+"notes": [
+"Yoo-hoo Chocolate Drink box, circa 1997"
+],
+"product": "Yoo-hoo Chocolate Drink box, circa 1997",
+"role": "hero",
+"size": [
+0.055,
+0.038,
+0.12
+],
+"themes": "LUNCH TRADE; SLEEPOVER; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"yoplait_trix_strawberry_banana_1998": {
+"display": "Yoplait Trix Strawberry Banana yogurt cup, circa",
+"eras": [
+2,
+3
+],
+"family": "food_candy_and_drinks",
+"group": "era",
+"mass": 0.051,
+"notes": [
+"Yoplait Trix Strawberry Banana yogurt cup, circa 1998"
+],
+"product": "Yoplait Trix Strawberry Banana yogurt cup, circa 1998",
+"role": "hero",
+"size": [
+0.07,
+0.07,
+0.06
+],
+"themes": "LUNCH TRADE; SLEEPOVER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"yugioh_lob_booster_pack_2002": {
+"display": "Yu-Gi-Oh! Legend of Blue Eyes White Dragon booster pack",
+"eras": [
+2,
+3
+],
+"family": "toys_novelties_and_arcade",
+"group": "era",
+"mass": 0.002,
+"notes": [
+"Yu-Gi-Oh! Legend of Blue Eyes White Dragon booster pack, 2002"
+],
+"product": "Yu-Gi-Oh! Legend of Blue Eyes White Dragon booster pack, 2002",
+"role": "hero",
+"size": [
+0.068,
+0.006,
+0.12
+],
+"themes": "GOT GOT NEED; MINT CONDITION; PRIZE COUNTER; regular cubes",
 "weight": 1.0
 },
 "zebra_mildliner_yellow_1999": {
