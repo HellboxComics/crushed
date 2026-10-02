@@ -131,6 +131,28 @@
 "themes": "SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"411_video_magazine_vhs_1998": {
+"display": "411 Video Magazine skateboarding VHS, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"411 Video Magazine skateboarding VHS, circa 1998"
+],
+"product": "411 Video Magazine skateboarding VHS, circa 1998",
+"role": "main",
+"size": [
+0.187,
+0.025,
+0.103
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "aa_battery_orientation_card_1998": {
 "display": "Furby battery-installation instruction card",
 "eras": [
@@ -1030,6 +1052,50 @@
 0.22
 ],
 "themes": "UNDER THE MATTRESS; PROM NIGHT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"amber_mosquito_keychain_1998": {
+"display": "Faux-amber mosquito specimen keychain, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Faux-amber mosquito specimen keychain, circa 1998"
+],
+"product": "Faux-amber mosquito specimen keychain, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.012,
+0.07
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"amc_large_popcorn_tub_2008": {
+"display": "AMC Theatres large popcorn tub, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.756,
+"notes": [
+"AMC Theatres large popcorn tub, circa 2008"
+],
+"product": "AMC Theatres large popcorn tub, circa 2008",
+"role": "main",
+"size": [
+0.2,
+0.15,
+0.24
+],
+"themes": "MIDNIGHT SHOWING",
 "weight": 1.0
 },
 "american_gold_eagle_1oz_1999": {
@@ -2340,6 +2406,28 @@
 0.09
 ],
 "themes": "LOST AND FOUND; ROAD TRIP; HOME_JUNK_DRAWER_MISC; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"assorted_plastic_dinosaur_bag_1998": {
+"display": "Bag of assorted plastic dinosaurs, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.315,
+"notes": [
+"Bag of assorted plastic dinosaurs, circa 1998"
+],
+"product": "Bag of assorted plastic dinosaurs, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.05,
+0.25
+],
+"themes": "EXTINCT",
 "weight": 1.0
 },
 "assorted_takeout_condiment_packets_1998": {
@@ -5946,6 +6034,28 @@
 "themes": "BLACKLIGHT",
 "weight": 1.0
 },
+"bmx_steel_peg_chrome_2001": {
+"display": "Chrome steel BMX axle peg, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.101,
+"notes": [
+"Chrome steel BMX axle peg, circa 2001"
+],
+"product": "Chrome steel BMX axle peg, circa 2001",
+"role": "main",
+"size": [
+0.038,
+0.038,
+0.1
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "board_game_box_lid_mixed_1996": {
 "display": "Crushed assorted board-game box lid, circa",
 "eras": [
@@ -6122,6 +6232,28 @@
 "themes": "CARNAVAL",
 "weight": 1.0
 },
+"bones_reds_608_bearing_2001": {
+"display": "Bones REDS 608 skateboard bearing, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Bones REDS 608 skateboard bearing, circa 2001"
+],
+"product": "Bones REDS 608 skateboard bearing, circa 2001",
+"role": "main",
+"size": [
+0.022,
+0.007,
+0.022
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "bonne_bell_lip_smackers_strawberry_1999": {
 "display": "Bonne Bell Lip Smackers Strawberry lip balm, circa",
 "eras": [
@@ -6252,6 +6384,28 @@
 0.38
 ],
 "themes": "EIDI",
+"weight": 1.0
+},
+"brachiosaurus_plastic_gray_1998": {
+"display": "Gray plastic Brachiosaurus figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.122,
+"notes": [
+"Gray plastic Brachiosaurus figure, circa 1998"
+],
+"product": "Gray plastic Brachiosaurus figure, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.2
+],
+"themes": "EXTINCT",
 "weight": 1.0
 },
 "brachs_autumn_mix_candy_corn_1998": {
@@ -6650,6 +6804,28 @@
 "themes": "TIME CAPSULE",
 "weight": 1.0
 },
+"broken_skateboard_bushing_orange_2001": {
+"display": "Orange skateboard truck bushings, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Orange skateboard truck bushings, circa 2001"
+],
+"product": "Orange skateboard truck bushings, circa 2001",
+"role": "main",
+"size": [
+0.025,
+0.015,
+0.025
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "brooks_brothers_red_silk_tie_1999": {
 "display": "Brooks Brothers red silk rep necktie, circa",
 "eras": [
@@ -6934,6 +7110,28 @@
 0.16
 ],
 "themes": "DRESS CODE; SLEEPOVER; PROM NIGHT; MALL RAT; regular cubes",
+"weight": 1.0
+},
+"butterfly_hair_clip_translucent_assorted_1998": {
+"display": "Translucent butterfly hair clips, assorted colors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Translucent butterfly hair clips, assorted colors, circa 1998"
+],
+"product": "Translucent butterfly hair clips, assorted colors, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.015,
+0.03
+],
+"themes": "DRESS CODE",
 "weight": 1.0
 },
 "butterscotch_disc_wrapper_1998": {
@@ -7682,6 +7880,28 @@
 0.03
 ],
 "themes": "SICK DAY; HOME_JUNK_DRAWER_MISC; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"carnation_instant_nonfat_dry_milk_box_1962": {
+"display": "Carnation Instant Nonfat Dry Milk box, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.206,
+"notes": [
+"Carnation Instant Nonfat Dry Milk box, circa 1962"
+],
+"product": "Carnation Instant Nonfat Dry Milk box, circa 1962",
+"role": "main",
+"size": [
+0.14,
+0.07,
+0.2
+],
+"themes": "DUCK AND COVER",
 "weight": 1.0
 },
 "carnaval_half_mask_gold_1998": {
@@ -8844,7 +9064,7 @@
 0.03,
 0.09
 ],
-"themes": "MALL RAT",
+"themes": "DRESS CODE",
 "weight": 1.0
 },
 "chamberlain_three_button_garage_remote_1999": {
@@ -9989,6 +10209,380 @@
 0.025
 ],
 "themes": "SPAM GIFT SET",
+"weight": 1.0
+},
+"civil_defense_dosimeter_charger_cd_v750_1962": {
+"display": "Civil Defense CD V-750 dosimeter charger, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.456,
+"notes": [
+"Civil Defense CD V-750 dosimeter charger, circa 1962"
+],
+"product": "Civil Defense CD V-750 dosimeter charger, circa 1962",
+"role": "main",
+"size": [
+0.13,
+0.1,
+0.16
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_emergency_food_can_1962": {
+"display": "U.S. Civil Defense emergency food ration can, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.835,
+"notes": [
+"U.S. Civil Defense emergency food ration can, circa 1962"
+],
+"product": "U.S. Civil Defense emergency food ration can, circa 1962",
+"role": "main",
+"size": [
+0.15,
+0.15,
+0.18
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_fallout_protection_booklet_1961": {
+"display": "Civil Defense \u201cFallout Protection\u201d family shelter booklet, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Civil Defense \u201cFallout Protection\u201d family shelter booklet, circa 1961"
+],
+"product": "Civil Defense \u201cFallout Protection\u201d family shelter booklet, circa 1961",
+"role": "main",
+"size": [
+0.14,
+0.002,
+0.215
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_fallout_shelter_sign_1961": {
+"display": "U.S. Civil Defense Fallout Shelter sign, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.127,
+"notes": [
+"U.S. Civil Defense Fallout Shelter sign, circa 1961"
+],
+"product": "U.S. Civil Defense Fallout Shelter sign, circa 1961",
+"role": "main",
+"size": [
+0.355,
+0.002,
+0.255
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_flashlight_yellow_1962": {
+"display": "Yellow Civil Defense-style angle-head flashlight, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.504,
+"notes": [
+"Yellow Civil Defense-style angle-head flashlight, circa 1962"
+],
+"product": "Yellow Civil Defense-style angle-head flashlight, circa 1962",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.2
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_hand_crank_radio_1962": {
+"display": "Civil Defense-style emergency hand-crank radio, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 7.056,
+"notes": [
+"Civil Defense-style emergency hand-crank radio, circa 1962"
+],
+"product": "Civil Defense-style emergency hand-crank radio, circa 1962",
+"role": "main",
+"size": [
+0.28,
+0.18,
+0.2
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_matches_waterproof_tin_1962": {
+"display": "Waterproof emergency match tin, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.086,
+"notes": [
+"Waterproof emergency match tin, circa 1962"
+],
+"product": "Waterproof emergency match tin, circa 1962",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.1
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_medical_kit_box_1962": {
+"display": "U.S. Civil Defense emergency medical kit box, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 3.92,
+"notes": [
+"U.S. Civil Defense emergency medical kit box, circa 1962"
+],
+"product": "U.S. Civil Defense emergency medical kit box, circa 1962",
+"role": "main",
+"size": [
+0.28,
+0.1,
+0.2
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_pill_box_yellow_1962": {
+"display": "Small Civil Defense emergency tablet/pill box, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"Small Civil Defense emergency tablet/pill box, circa 1962"
+],
+"product": "Small Civil Defense emergency tablet/pill box, circa 1962",
+"role": "main",
+"size": [
+0.08,
+0.03,
+0.05
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_sanitation_kit_carton_1962": {
+"display": "Civil Defense shelter sanitation kit carton, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 4.41,
+"notes": [
+"Civil Defense shelter sanitation kit carton, circa 1962"
+],
+"product": "Civil Defense shelter sanitation kit carton, circa 1962",
+"role": "main",
+"size": [
+0.4,
+0.3,
+0.35
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_survival_cracker_1962": {
+"display": "Civil Defense survival ration cracker, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.005,
+"notes": [
+"Civil Defense survival ration cracker, circa 1962"
+],
+"product": "Civil Defense survival ration cracker, circa 1962",
+"role": "main",
+"size": [
+0.06,
+0.006,
+0.06
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_survival_cracker_tin_1962": {
+"display": "U.S. Civil Defense survival cracker tin, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.835,
+"notes": [
+"U.S. Civil Defense survival cracker tin, circa 1962"
+],
+"product": "U.S. Civil Defense survival cracker tin, circa 1962",
+"role": "main",
+"size": [
+0.15,
+0.15,
+0.18
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_survival_under_atomic_attack_1950": {
+"display": "\u201cSurvival Under Atomic Attack\u201d U.S. Civil Defense pamphlet, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"\u201cSurvival Under Atomic Attack\u201d U.S. Civil Defense pamphlet, circa 1950"
+],
+"product": "\u201cSurvival Under Atomic Attack\u201d U.S. Civil Defense pamphlet, circa 1950",
+"role": "main",
+"size": [
+0.14,
+0.0015,
+0.215
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_water_can_17_5gal_1962": {
+"display": "U.S. Civil Defense emergency water storage can, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 25.563,
+"notes": [
+"U.S. Civil Defense emergency water storage can, circa 1962"
+],
+"product": "U.S. Civil Defense emergency water storage can, circa 1962",
+"role": "main",
+"size": [
+0.31,
+0.31,
+0.38
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_water_purification_tablet_bottle_1962": {
+"display": "Civil Defense emergency water-purification tablet bottle, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.054,
+"notes": [
+"Civil Defense emergency water-purification tablet bottle, circa 1962"
+],
+"product": "Civil Defense emergency water-purification tablet bottle, circa 1962",
+"role": "main",
+"size": [
+0.04,
+0.04,
+0.08
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_wood_supply_crate_1962": {
+"display": "Civil Defense shelter supply crate, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 16.17,
+"notes": [
+"Civil Defense shelter supply crate, circa 1962"
+],
+"product": "Civil Defense shelter supply crate, circa 1962",
+"role": "main",
+"size": [
+0.55,
+0.4,
+0.35
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"civil_defense_wool_blanket_gray_1962": {
+"display": "Gray emergency wool blanket, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.205,
+"notes": [
+"Gray emergency wool blanket, circa 1962"
+],
+"product": "Gray emergency wool blanket, circa 1962",
+"role": "main",
+"size": [
+1.5,
+0.01,
+2.1
+],
+"themes": "DUCK AND COVER",
 "weight": 1.0
 },
 "cj_spam_chuseok_gift_set_2002": {
@@ -12365,6 +12959,28 @@
 "themes": "SEWING KIT",
 "weight": 1.0
 },
+"crocs_classic_clog_lime_2004": {
+"display": "Crocs Classic foam clog, Lime Green",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.061,
+"notes": [
+"Crocs Classic foam clog, Lime Green, 2004"
+],
+"product": "Crocs Classic foam clog, Lime Green, 2004",
+"role": "main",
+"size": [
+0.12,
+0.1,
+0.29
+],
+"themes": "DRESS CODE",
+"weight": 1.0
+},
 "crop_circle_pamphlet_1997": {
 "display": "Crop-circle conspiracy pamphlet, circa",
 "eras": [
@@ -13259,6 +13875,270 @@
 "themes": "GM",
 "weight": 1.0
 },
+"dinosaur_dig_brush_1998": {
+"display": "Small fossil-kit excavation brush, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.009,
+"notes": [
+"Small fossil-kit excavation brush, circa 1998"
+],
+"product": "Small fossil-kit excavation brush, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.15
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_dig_tool_chisel_red_1998": {
+"display": "Red plastic fossil-kit chisel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Red plastic fossil-kit chisel, circa 1998"
+],
+"product": "Red plastic fossil-kit chisel, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.015,
+0.14
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_egg_shell_halves_1998": {
+"display": "Broken toy dinosaur egg shell halves, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Broken toy dinosaur egg shell halves, circa 1998"
+],
+"product": "Broken toy dinosaur egg shell halves, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.01,
+0.07
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_eraser_green_1998": {
+"display": "Green molded dinosaur eraser, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Green molded dinosaur eraser, circa 1998"
+],
+"product": "Green molded dinosaur eraser, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.015,
+0.07
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_footprint_stamp_green_1998": {
+"display": "Green rubber dinosaur footprint stamp, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.018,
+"notes": [
+"Green rubber dinosaur footprint stamp, circa 1998"
+],
+"product": "Green rubber dinosaur footprint stamp, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.03,
+0.07
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_fossil_dig_kit_box_1998": {
+"display": "Children's dinosaur fossil excavation kit, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.388,
+"notes": [
+"Children's dinosaur fossil excavation kit, circa 1998"
+],
+"product": "Children's dinosaur fossil excavation kit, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.06,
+0.28
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_fossil_plaster_block_1998": {
+"display": "Dinosaur fossil excavation plaster block, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.296,
+"notes": [
+"Dinosaur fossil excavation plaster block, circa 1998"
+],
+"product": "Dinosaur fossil excavation plaster block, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.04,
+0.16
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_lunchbox_plastic_green_1998": {
+"display": "Green plastic dinosaur school lunchbox, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.756,
+"notes": [
+"Green plastic dinosaur school lunchbox, circa 1998"
+],
+"product": "Green plastic dinosaur school lunchbox, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.1,
+0.18
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_nugget_stegosaurus_1998": {
+"display": "Stegosaurus-shaped breaded chicken nugget, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.028,
+"notes": [
+"Stegosaurus-shaped breaded chicken nugget, circa 1998"
+],
+"product": "Stegosaurus-shaped breaded chicken nugget, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.015,
+0.11
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_nugget_trex_1998": {
+"display": "T. rex-shaped breaded chicken nugget, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.022,
+"notes": [
+"T. rex-shaped breaded chicken nugget, circa 1998"
+],
+"product": "T. rex-shaped breaded chicken nugget, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.015,
+0.1
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_pencil_topper_trex_1998": {
+"display": "T. rex pencil topper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"T. rex pencil topper, circa 1998"
+],
+"product": "T. rex pencil topper, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.05
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"dinosaur_sticker_sheet_1998": {
+"display": "Generic dinosaur sticker sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Generic dinosaur sticker sheet, circa 1998"
+],
+"product": "Generic dinosaur sticker sheet, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.0005,
+0.21
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
 "dirty_dancing_vhs_1988": {
 "display": "Dirty Dancing VHS",
 "eras": [
@@ -13411,6 +14291,28 @@
 0.05
 ],
 "themes": "DIYA",
+"weight": 1.0
+},
+"dk_eyewitness_dinosaur_book_1990": {
+"display": "DK Eyewitness Dinosaur hardcover, circa 1990s",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.129,
+"notes": [
+"DK Eyewitness Dinosaur hardcover, circa 1990s"
+],
+"product": "DK Eyewitness Dinosaur hardcover, circa 1990s",
+"role": "main",
+"size": [
+0.22,
+0.015,
+0.28
+],
+"themes": "EXTINCT",
 "weight": 1.0
 },
 "dmx_its_dark_and_hell_is_hot_cd_1998": {
@@ -14711,6 +15613,50 @@
 "themes": "EIDI",
 "weight": 1.0
 },
+"electronic_roaring_trex_green_1998": {
+"display": "Electronic roaring green T. rex toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.735,
+"notes": [
+"Electronic roaring green T. rex toy, circa 1998"
+],
+"product": "Electronic roaring green T. rex toy, circa 1998",
+"role": "main",
+"size": [
+0.14,
+0.1,
+0.3
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
+"element_skateboard_deck_snapped_2001": {
+"display": "Element 7.5-inch skateboard deck, snapped, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.596,
+"notes": [
+"Element 7.5-inch skateboard deck, snapped, circa 2001"
+],
+"product": "Element 7.5-inch skateboard deck, snapped, circa 2001",
+"role": "main",
+"size": [
+0.19,
+0.05,
+0.8
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "elephant_pants_black_white_2004": {
 "display": "Black-and-white Thai elephant-print loose trousers, circa",
 "eras": [
@@ -15650,6 +16596,28 @@
 0.003
 ],
 "themes": "LOW RES",
+"weight": 1.0
+},
+"eveready_d_cell_battery_1962": {
+"display": "Eveready D-cell dry battery, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.049,
+"notes": [
+"Eveready D-cell dry battery, circa 1962"
+],
+"product": "Eveready D-cell dry battery, circa 1962",
+"role": "main",
+"size": [
+0.034,
+0.034,
+0.061
+],
+"themes": "DUCK AND COVER",
 "weight": 1.0
 },
 "eveready_d_cell_battery_1998": {
@@ -18928,6 +19896,50 @@
 "themes": "PROBED",
 "weight": 1.0
 },
+"glow_bracelet_connector_clear_2008": {
+"display": "Clear glow-bracelet connectors, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Clear glow-bracelet connectors, circa 2008"
+],
+"product": "Clear glow-bracelet connectors, circa 2008",
+"role": "main",
+"size": [
+0.006,
+0.006,
+0.025
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"glow_dinosaur_skeleton_trex_1998": {
+"display": "Glow-in-the-dark T. rex skeleton toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.101,
+"notes": [
+"Glow-in-the-dark T. rex skeleton toy, circa 1998"
+],
+"product": "Glow-in-the-dark T. rex skeleton toy, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.04,
+0.18
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
 "glow_in_dark_planet_set_1998": {
 "display": "Glow-in-the-dark plastic planet and moon set, circa",
 "eras": [
@@ -19036,6 +20048,28 @@
 0.2
 ],
 "themes": "MOONCAKE",
+"weight": 1.0
+},
+"glow_stick_green_8in_2008": {
+"display": "Green 8-inch glow stick, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Green 8-inch glow stick, circa 2008"
+],
+"product": "Green 8-inch glow stick, circa 2008",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.2
+],
+"themes": "MIDNIGHT SHOWING",
 "weight": 1.0
 },
 "glow_vampire_fangs_1998": {
@@ -20993,6 +22027,28 @@
 "themes": "SLEEPOVER",
 "weight": 1.0
 },
+"hatching_dinosaur_egg_toy_1998": {
+"display": "Water-hatching dinosaur egg toy, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.05,
+"notes": [
+"Water-hatching dinosaur egg toy, circa 1998"
+],
+"product": "Water-hatching dinosaur egg toy, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.06,
+0.08
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
 "havaianas_top_brasil_blue_1998": {
 "display": "Havaianas Top Brasil flip-flop, Blue, circa",
 "eras": [
@@ -21101,6 +22157,28 @@
 0.4
 ],
 "themes": "SICK DAY",
+"weight": 1.0
+},
+"heelies_one_wheel_black_white_2003": {
+"display": "Heelys wheeled skate shoe, Black/White, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.832,
+"notes": [
+"Heelys wheeled skate shoe, Black/White, circa 2003"
+],
+"product": "Heelys wheeled skate shoe, Black/White, circa 2003",
+"role": "main",
+"size": [
+0.12,
+0.11,
+0.3
+],
+"themes": "DRESS CODE",
 "weight": 1.0
 },
 "heineken_330ml_can_1998": {
@@ -22934,6 +24012,50 @@
 "themes": "BE KIND REWIND; PROBED; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"independent_stage9_truck_2001": {
+"display": "Independent Stage 9-style skateboard truck, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.559,
+"notes": [
+"Independent Stage 9-style skateboard truck, circa 2001"
+],
+"product": "Independent Stage 9-style skateboard truck, circa 2001",
+"role": "main",
+"size": [
+0.19,
+0.07,
+0.06
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"independent_truck_sticker_2001": {
+"display": "Independent Trucks logo sticker, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Independent Trucks logo sticker, circa 2001"
+],
+"product": "Independent Trucks logo sticker, circa 2001",
+"role": "main",
+"size": [
+0.08,
+0.0005,
+0.08
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "indian_paper_lantern_kandil_1998": {
 "display": "Decorative Diwali paper kandil lantern, circa",
 "eras": [
@@ -23704,6 +24826,28 @@
 "themes": "MISSING PIECES",
 "weight": 1.0
 },
+"jessup_grip_tape_sheet_black_2001": {
+"display": "Jessup black skateboard grip tape sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.054,
+"notes": [
+"Jessup black skateboard grip tape sheet, circa 2001"
+],
+"product": "Jessup black skateboard grip tape sheet, circa 2001",
+"role": "main",
+"size": [
+0.23,
+0.002,
+0.84
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "jet_puffed_marshmallow_bag_1998": {
 "display": "Kraft Jet-Puffed Marshmallows bag, circa",
 "eras": [
@@ -23746,6 +24890,28 @@
 0.31
 ],
 "themes": "BASS BOOSTED",
+"weight": 1.0
+},
+"jnco_mammoth_40in_jeans_dark_indigo_1998": {
+"display": "JNCO Mammoth 40-inch wide-leg jeans, Dark Indigo, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.888,
+"notes": [
+"JNCO Mammoth 40-inch wide-leg jeans, Dark Indigo, circa 1998"
+],
+"product": "JNCO Mammoth 40-inch wide-leg jeans, Dark Indigo, circa 1998",
+"role": "main",
+"size": [
+0.75,
+0.05,
+1.1
+],
+"themes": "DRESS CODE",
 "weight": 1.0
 },
 "jnco_mammoth_jeans_1998": {
@@ -23878,6 +25044,28 @@
 0.16
 ],
 "themes": "BE KIND REWIND",
+"weight": 1.0
+},
+"junior_mints_theater_box_2008": {
+"display": "Junior Mints theater candy box, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.04,
+"notes": [
+"Junior Mints theater candy box, circa 2008"
+],
+"product": "Junior Mints theater candy box, circa 2008",
+"role": "main",
+"size": [
+0.09,
+0.025,
+0.17
+],
+"themes": "MIDNIGHT SHOWING",
 "weight": 1.0
 },
 "jurassic_park_vhs_1994": {
@@ -25989,6 +27177,28 @@
 ],
 "themes": "UNDER THE MATTRESS; WINDOW SHOPPING; LOST AND FOUND; regular cubes",
 "weight": 1.0
+},
+"la_gear_la_lights_high_top_1992": {
+"display": "L.A. Gear L.A. Lights high-top sneaker, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "era",
+"mass": 0.907,
+"notes": [
+"L.A. Gear L.A. Lights light-up high-top sneaker, circa 1992"
+],
+"product": "L.A. Gear L.A. Lights high-top sneaker, circa 1992",
+"role": "main",
+"size": [
+0.12,
+0.12,
+0.3
+],
+"themes": "DRESS CODE",
+"weight": 0.12
 },
 "la_tomatina_blue_bucket_1998": {
 "display": "Blue plastic water bucket, circa",
@@ -31043,6 +32253,28 @@
 "themes": "MOONCAKE",
 "weight": 1.0
 },
+"midnight_showing_wristband_2008": {
+"display": "Midnight-premiere paper wristband, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Midnight-premiere paper wristband, circa 2008"
+],
+"product": "Midnight-premiere paper wristband, circa 2008",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.24
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
 "mighty_max_skull_doom_zone_1993": {
 "display": "Bluebird Mighty Max Skull Dungeon-style Doom Zone compact, circa",
 "eras": [
@@ -31063,6 +32295,28 @@
 0.09
 ],
 "themes": "TRICK OR TREAT; GOT GOT NEED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"milk_duds_theater_box_2008": {
+"display": "Milk Duds theater candy box, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.04,
+"notes": [
+"Milk Duds theater candy box, circa 2008"
+],
+"product": "Milk Duds theater candy box, circa 2008",
+"role": "main",
+"size": [
+0.09,
+0.025,
+0.17
+],
+"themes": "MIDNIGHT SHOWING",
 "weight": 1.0
 },
 "milky_way_fun_size_1998": {
@@ -31742,6 +32996,28 @@
 0.202
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; LEFTOVERS; regular cubes",
+"weight": 1.0
+},
+"mood_ring_oval_1996": {
+"display": "Oval color-changing mood ring, circa",
+"eras": [
+1,
+2
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Oval color-changing mood ring, circa 1996"
+],
+"product": "Oval color-changing mood ring, circa 1996",
+"role": "main",
+"size": [
+0.022,
+0.02,
+0.022
+],
+"themes": "DRESS CODE",
 "weight": 1.0
 },
 "mood_ring_vending_1997": {
@@ -32426,6 +33702,226 @@
 "themes": "MISSING PIECES",
 "weight": 1.0
 },
+"movie_nacho_tray_black_2008": {
+"display": "Black plastic movie-theater nacho tray, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.302,
+"notes": [
+"Black plastic movie-theater nacho tray, circa 2008"
+],
+"product": "Black plastic movie-theater nacho tray, circa 2008",
+"role": "main",
+"size": [
+0.18,
+0.04,
+0.24
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_poster_standee_corrugated_scrap_2008": {
+"display": "Corrugated cardboard theatrical lobby standee fragment, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.092,
+"notes": [
+"Corrugated cardboard theatrical lobby standee fragment, circa 2008"
+],
+"product": "Corrugated cardboard theatrical lobby standee fragment, circa 2008",
+"role": "main",
+"size": [
+0.25,
+0.01,
+0.35
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_cupholder_black_2008": {
+"display": "Black plastic folding theater-seat cupholder, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.202,
+"notes": [
+"Black plastic folding theater-seat cupholder, circa 2008"
+],
+"product": "Black plastic folding theater-seat cupholder, circa 2008",
+"role": "main",
+"size": [
+0.12,
+0.06,
+0.16
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_large_soda_cup_2008": {
+"display": "Large movie-theater paper soda cup, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.162,
+"notes": [
+"Large movie-theater paper soda cup, circa 2008"
+],
+"product": "Large movie-theater paper soda cup, circa 2008",
+"role": "main",
+"size": [
+0.11,
+0.07,
+0.2
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_napkin_2008": {
+"display": "Movie-theater paper napkin, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Movie-theater paper napkin, circa 2008"
+],
+"product": "Movie-theater paper napkin, circa 2008",
+"role": "main",
+"size": [
+0.16,
+0.0003,
+0.16
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_popcorn_loose_2008": {
+"display": "Loose movie-theater buttered popcorn, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Loose movie-theater buttered popcorn, circa 2008"
+],
+"product": "Loose movie-theater buttered popcorn, circa 2008",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.03
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_receipt_2008": {
+"display": "Theater concession receipt, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Theater concession receipt, circa 2008"
+],
+"product": "Theater concession receipt, circa 2008",
+"role": "main",
+"size": [
+0.08,
+0.0005,
+0.25
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_seat_number_tag_2008": {
+"display": "Plastic theater-seat row/number tag, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Plastic theater-seat row/number tag, circa 2008"
+],
+"product": "Plastic theater-seat row/number tag, circa 2008",
+"role": "main",
+"size": [
+0.05,
+0.003,
+0.08
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_straw_wrapper_2008": {
+"display": "Concession straw wrapper, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Concession straw wrapper, circa 2008"
+],
+"product": "Concession straw wrapper, circa 2008",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.24
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
+"movie_theater_tortilla_chip_2008": {
+"display": "Movie-theater tortilla chips, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Movie-theater tortilla chips, circa 2008"
+],
+"product": "Movie-theater tortilla chips, circa 2008",
+"role": "main",
+"size": [
+0.06,
+0.003,
+0.06
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
 "movie_ticket_stub_december_1999": {
 "display": "Movie-theater ticket stubs, December",
 "eras": [
@@ -32446,6 +33942,28 @@
 0.08
 ],
 "themes": "TIME CAPSULE",
+"weight": 1.0
+},
+"movie_ticket_stub_midnight_2008": {
+"display": "Midnight-showing theater ticket stub, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Midnight-showing theater ticket stub, circa 2008"
+],
+"product": "Midnight-showing theater ticket stub, circa 2008",
+"role": "main",
+"size": [
+0.05,
+0.0005,
+0.08
+],
+"themes": "MIDNIGHT SHOWING",
 "weight": 1.0
 },
 "mr_sketch_loose_marker_assorted_1998": {
@@ -32536,6 +34054,28 @@
 "themes": "BE KIND REWIND; SLEEPOVER; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"msa_civil_defense_gas_mask_1962": {
+"display": "MSA-style U.S. Civil Defense gas mask, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.27,
+"notes": [
+"MSA-style U.S. Civil Defense gas mask, circa 1962"
+],
+"product": "MSA-style U.S. Civil Defense gas mask, circa 1962",
+"role": "main",
+"size": [
+0.18,
+0.14,
+0.24
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
 "msdos_6_user_guide_1993": {
 "display": "Microsoft MS-DOS 6 User's Guide",
 "eras": [
@@ -32578,6 +34118,28 @@
 0.095
 ],
 "themes": "GOT GOT NEED; MINT CONDITION; BLACKLIGHT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"museum_fossil_shark_tooth_necklace_1998": {
+"display": "Fossil shark-tooth souvenir necklace, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Fossil shark-tooth souvenir necklace, circa 1998"
+],
+"product": "Fossil shark-tooth souvenir necklace, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.01,
+0.05
+],
+"themes": "EXTINCT",
 "weight": 1.0
 },
 "n64_controller_pak_1996": {
@@ -32666,6 +34228,28 @@
 0.072
 ],
 "themes": "CONSOLE WARS; BLOW ON IT; regular cubes",
+"weight": 1.0
+},
+"nacho_cheese_cup_clear_2008": {
+"display": "Clear concession nacho-cheese cup, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.019,
+"notes": [
+"Clear concession nacho-cheese cup, circa 2008"
+],
+"product": "Clear concession nacho-cheese cup, circa 2008",
+"role": "main",
+"size": [
+0.06,
+0.03,
+0.06
+],
+"themes": "MIDNIGHT SHOWING",
 "weight": 1.0
 },
 "nag_champa_incense_stick_1998": {
@@ -39193,6 +40777,28 @@
 "themes": "LOW RES",
 "weight": 1.0
 },
+"powdered_milk_foil_packet_1962": {
+"display": "Powdered milk ration packet, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Powdered milk ration packet, circa 1962"
+],
+"product": "Powdered milk ration packet, circa 1962",
+"role": "main",
+"size": [
+0.1,
+0.01,
+0.16
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
 "prang_watercolors_8_1996": {
 "display": "Prang Oval-Pan Watercolors 8-color set, circa",
 "eras": [
@@ -40357,6 +41963,28 @@
 "themes": "BE KIND REWIND",
 "weight": 0.12
 },
+"raisinets_theater_box_2008": {
+"display": "Nestl\u00e9 Raisinets theater box, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.04,
+"notes": [
+"Nestl\u00e9 Raisinets theater box, circa 2008"
+],
+"product": "Nestl\u00e9 Raisinets theater box, circa 2008",
+"role": "main",
+"size": [
+0.09,
+0.025,
+0.17
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
 "rand_mcnally_road_atlas_1998": {
 "display": "Rand McNally Road Atlas, 1998 edition",
 "eras": [
@@ -40687,6 +42315,28 @@
 "themes": "DOUBLE A; SCREEN TIME; ROAD TRIP; regular cubes",
 "weight": 1.0
 },
+"razor_a_scooter_wheel_2000": {
+"display": "Razor A scooter polyurethane wheel, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.044,
+"notes": [
+"Razor A scooter polyurethane wheel, circa 2000"
+],
+"product": "Razor A scooter polyurethane wheel, circa 2000",
+"role": "main",
+"size": [
+0.1,
+0.025,
+0.1
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "rca_rcu403_universal_remote_1999": {
 "display": "RCA RCU403 universal remote control, circa",
 "eras": [
@@ -40753,6 +42403,27 @@
 "themes": "GARAGE SALE",
 "weight": 1.0
 },
+"reald_3d_glasses_black_2009": {
+"display": "RealD 3D theater glasses, circa",
+"eras": [
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.052,
+"notes": [
+"RealD 3D theater glasses, circa 2009"
+],
+"product": "RealD 3D theater glasses, circa 2009",
+"role": "main",
+"size": [
+0.15,
+0.04,
+0.05
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
 "recessed_screwdown_card_holder_1997": {
 "display": "Four-screw recessed trading-card display holder, circa",
 "eras": [
@@ -40773,6 +42444,28 @@
 0.13
 ],
 "themes": "MINT CONDITION; GOT GOT NEED; regular cubes",
+"weight": 1.0
+},
+"red_bull_250ml_can_2001": {
+"display": "Red Bull Energy Drink 250 ml can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.263,
+"notes": [
+"Red Bull Energy Drink 250 ml can, circa 2001"
+],
+"product": "Red Bull Energy Drink 250 ml can, circa 2001",
+"role": "main",
+"size": [
+0.053,
+0.053,
+0.134
+],
+"themes": "KICKFLIP",
 "weight": 1.0
 },
 "red_bull_8_4oz_2008": {
@@ -42246,6 +43939,28 @@
 0.3
 ],
 "themes": "SUMMER CAMP; ROAD TRIP; MALL RAT; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"rollerblade_macroblade_black_gray_1998": {
+"display": "Rollerblade Macroblade-style inline skate, Black/Gray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.238,
+"notes": [
+"Rollerblade Macroblade-style inline skate, Black/Gray, circa 1998"
+],
+"product": "Rollerblade Macroblade-style inline skate, Black/Gray, circa 1998",
+"role": "main",
+"size": [
+0.13,
+0.16,
+0.34
+],
+"themes": "KICKFLIP",
 "weight": 1.0
 },
 "rollerblade_wrist_guards_black_1997": {
@@ -43991,7 +45706,7 @@
 3
 ],
 "family": "one-of-one",
-"group": "special",
+"group": "era",
 "mass": 0.009,
 "notes": [
 "Velvet hair scrunchies, assorted colors, circa 1998"
@@ -44003,8 +45718,8 @@
 0.02,
 0.08
 ],
-"themes": "SLEEPOVER",
-"weight": 1.0
+"themes": "DRESS CODE",
+"weight": 0.12
 },
 "seagate_barracuda_7200_10_320gb_2006": {
 "display": "Seagate Barracuda 7200.10 320 GB 3.5-inch SATA hard drive",
@@ -45322,6 +47037,182 @@
 0.188
 ],
 "themes": "BE KIND REWIND; SLEEPOVER; TRICK OR TREAT; regular cubes",
+"weight": 1.0
+},
+"skate_shoelace_white_broken_2001": {
+"display": "Broken white skate-shoe lace, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Broken white skate-shoe lace, circa 2001"
+],
+"product": "Broken white skate-shoe lace, circa 2001",
+"role": "main",
+"size": [
+0.008,
+0.004,
+1.2
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skate_tool_t_shape_black_2001": {
+"display": "T-shaped skateboard multi-tool, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.058,
+"notes": [
+"T-shaped skateboard multi-tool, circa 2001"
+],
+"product": "T-shaped skateboard multi-tool, circa 2001",
+"role": "main",
+"size": [
+0.11,
+0.03,
+0.1
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skate_wax_paraffin_block_white_2001": {
+"display": "White paraffin skateboard wax block, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.06,
+"notes": [
+"White paraffin skateboard wax block, circa 2001"
+],
+"product": "White paraffin skateboard wax block, circa 2001",
+"role": "main",
+"size": [
+0.06,
+0.04,
+0.09
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skateboard_hardware_black_1in_2001": {
+"display": "Black 1-inch skateboard mounting hardware, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Black 1-inch skateboard mounting hardware, circa 2001"
+],
+"product": "Black 1-inch skateboard mounting hardware, circa 2001",
+"role": "main",
+"size": [
+0.008,
+0.008,
+0.025
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skateboard_riser_pad_black_2001": {
+"display": "Black skateboard riser pads, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Black skateboard riser pads, circa 2001"
+],
+"product": "Black skateboard riser pads, circa 2001",
+"role": "main",
+"size": [
+0.06,
+0.006,
+0.08
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skatepark_concrete_dust_chunk_2001": {
+"display": "Waxed concrete ledge chips and dust, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.027,
+"notes": [
+"Waxed concrete ledge chips and dust, circa 2001"
+],
+"product": "Waxed concrete ledge chips and dust, circa 2001",
+"role": "main",
+"size": [
+0.05,
+0.02,
+0.07
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skatepark_waiver_copy_2001": {
+"display": "Photocopied skatepark liability-waiver sheet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Photocopied skatepark liability-waiver sheet, circa 2001"
+],
+"product": "Photocopied skatepark liability-waiver sheet, circa 2001",
+"role": "main",
+"size": [
+0.216,
+0.0005,
+0.279
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
+"skatepark_wristband_paper_2001": {
+"display": "Skatepark admission wristband, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Skatepark admission wristband, circa 2001"
+],
+"product": "Skatepark admission wristband, circa 2001",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.24
+],
+"themes": "KICKFLIP",
 "weight": 1.0
 },
 "skechers_energy_white_1999": {
@@ -47479,6 +49370,28 @@
 "themes": "INSERT DISK 2",
 "weight": 1.0
 },
+"sour_patch_kids_theater_box_2008": {
+"display": "Sour Patch Kids theater box, circa",
+"eras": [
+3,
+4
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.04,
+"notes": [
+"Sour Patch Kids theater box, circa 2008"
+],
+"product": "Sour Patch Kids theater box, circa 2008",
+"role": "main",
+"size": [
+0.09,
+0.025,
+0.17
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
 "souvenir_spoon_mount_rushmore_1998": {
 "display": "Mount Rushmore souvenir spoon, circa",
 "eras": [
@@ -48336,6 +50249,28 @@
 "themes": "HAND TURKEY; SOME ASSEMBLY REQUIRED; SICK DAY; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"spitfire_classic_52mm_wheel_white_2001": {
+"display": "Spitfire Classic 52 mm skateboard wheel, White, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.018,
+"notes": [
+"Spitfire Classic 52 mm skateboard wheel, White, circa 2001"
+],
+"product": "Spitfire Classic 52 mm skateboard wheel, White, circa 2001",
+"role": "main",
+"size": [
+0.052,
+0.032,
+0.052
+],
+"themes": "KICKFLIP",
+"weight": 1.0
+},
 "splurge_citrus_soda_20oz_1998": {
 "display": "\u201cSplurge\u201d fictional citrus soda 20 oz bottle, custom nostalgia parody prop, circa",
 "eras": [
@@ -48578,6 +50513,28 @@
 "themes": "GARAGE SALE; SOME ASSEMBLY REQUIRED; HOME_JUNK_DRAWER_MISC; regular cubes",
 "weight": 1.0
 },
+"star_wars_episode1_souvenir_cup_1999": {
+"display": "Star Wars: Episode I promotional theater souvenir cup",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.245,
+"notes": [
+"Star Wars: Episode I promotional theater souvenir cup, 1999"
+],
+"product": "Star Wars: Episode I promotional theater souvenir cup, 1999",
+"role": "main",
+"size": [
+0.1,
+0.07,
+0.2
+],
+"themes": "MIDNIGHT SHOWING",
+"weight": 1.0
+},
 "starbucks_clear_cold_cup_24oz_2021": {
 "display": "Starbucks reusable clear cold cup with green straw, circa",
 "eras": [
@@ -48795,6 +50752,28 @@
 0.26
 ],
 "themes": "BOARDWALK",
+"weight": 1.0
+},
+"stegosaurus_plastic_green_1998": {
+"display": "Green plastic Stegosaurus figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.084,
+"notes": [
+"Green plastic Stegosaurus figure, circa 1998"
+],
+"product": "Green plastic Stegosaurus figure, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.05,
+0.16
+],
+"themes": "EXTINCT",
 "weight": 1.0
 },
 "steve_madden_slinky_platform_sandal_1999": {
@@ -50093,6 +52072,28 @@
 "themes": "SOME ASSEMBLY REQUIRED",
 "weight": 1.0
 },
+"tattoo_choker_black_1997": {
+"display": "Black stretch tattoo choker necklace, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.006,
+"notes": [
+"Black stretch tattoo choker necklace, circa 1997"
+],
+"product": "Black stretch tattoo choker necklace, circa 1997",
+"role": "main",
+"size": [
+0.12,
+0.003,
+0.12
+],
+"themes": "DRESS CODE",
+"weight": 1.0
+},
 "tattoo_choker_black_1998": {
 "display": "Black stretch tattoo choker necklace, circa",
 "eras": [
@@ -50597,6 +52598,28 @@
 0.096
 ],
 "themes": "KICKFLIP; PRIZE COUNTER; SCHOOL_JUNK; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"tech_deck_fingerboard_2000": {
+"display": "Tech Deck finger skateboard, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Tech Deck finger skateboard, circa 2000"
+],
+"product": "Tech Deck finger skateboard, circa 2000",
+"role": "main",
+"size": [
+0.03,
+0.015,
+0.1
+],
+"themes": "KICKFLIP",
 "weight": 1.0
 },
 "tech_deck_launch_ramp_1999": {
@@ -52399,6 +54422,28 @@
 "themes": "COLD STORAGE",
 "weight": 1.0
 },
+"triceratops_plastic_brown_1998": {
+"display": "Brown plastic Triceratops figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.073,
+"notes": [
+"Brown plastic Triceratops figure, circa 1998"
+],
+"product": "Brown plastic Triceratops figure, circa 1998",
+"role": "main",
+"size": [
+0.06,
+0.05,
+0.14
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
 "trojan_enz_3count_1998": {
 "display": "Trojan ENZ lubricated condoms 3-count box, circa",
 "eras": [
@@ -53103,6 +55148,28 @@
 "themes": "RETIREMENT PLAN",
 "weight": 0.12
 },
+"tyrannosaurus_rex_plastic_green_1998": {
+"display": "Green plastic Tyrannosaurus rex figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.126,
+"notes": [
+"Green plastic Tyrannosaurus rex figure, circa 1998"
+],
+"product": "Green plastic Tyrannosaurus rex figure, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.05,
+0.18
+],
+"themes": "EXTINCT",
+"weight": 1.0
+},
 "ufo_conference_flyer_1997": {
 "display": "UFO conference flyer, circa",
 "eras": [
@@ -53477,6 +55544,28 @@
 "themes": "MINT CONDITION",
 "weight": 1.0
 },
+"us_army_m1956_canteen_olive_1962": {
+"display": "U.S. military-style 1-quart plastic canteen with canvas cover, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.392,
+"notes": [
+"U.S. military-style 1-quart plastic canteen with canvas cover, circa 1962"
+],
+"product": "U.S. military-style 1-quart plastic canteen with canvas cover, circa 1962",
+"role": "main",
+"size": [
+0.14,
+0.08,
+0.2
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
 "us_penny_1999": {
 "display": "United States Lincoln cent",
 "eras": [
@@ -53717,6 +55806,28 @@
 0.12
 ],
 "themes": "BE MINE",
+"weight": 1.0
+},
+"velociraptor_plastic_orange_1998": {
+"display": "Orange plastic Velociraptor figure, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.104,
+"notes": [
+"Orange plastic Velociraptor figure, circa 1998"
+],
+"product": "Orange plastic Velociraptor figure, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.05,
+0.17
+],
+"themes": "EXTINCT",
 "weight": 1.0
 },
 "velvet_scrunchies_3pack_1997": {
@@ -53981,6 +56092,50 @@
 0.07
 ],
 "themes": "SICK DAY",
+"weight": 1.0
+},
+"victoreen_cd_v700_geiger_counter_1962": {
+"display": "Victoreen CD V-700 Model 6B Geiger counter, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 4.55,
+"notes": [
+"Victoreen CD V-700 Model 6B Geiger counter, circa 1962"
+],
+"product": "Victoreen CD V-700 Model 6B Geiger counter, circa 1962",
+"role": "main",
+"size": [
+0.25,
+0.13,
+0.2
+],
+"themes": "DUCK AND COVER",
+"weight": 1.0
+},
+"victoreen_cd_v742_dosimeter_1962": {
+"display": "Victoreen CD V-742 pocket dosimeter, circa",
+"eras": [
+0,
+1
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Victoreen CD V-742 pocket dosimeter, circa 1962"
+],
+"product": "Victoreen CD V-742 pocket dosimeter, circa 1962",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.11
+],
+"themes": "DUCK AND COVER",
 "weight": 1.0
 },
 "victorinox_classic_sd_red_1998": {

@@ -59,6 +59,16 @@
 0.15
 ]
 },
+"411_video_magazine_vhs_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.187,
+0.025,
+0.103
+]
+},
 "aa_batteries": {
 "hard": 0.85,
 "how": "dent",
@@ -487,6 +497,26 @@
 0.18,
 0.1,
 0.22
+]
+},
+"amber_mosquito_keychain_1998": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.012,
+0.07
+]
+},
+"amc_large_popcorn_tub_2008": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.2,
+0.15,
+0.24
 ]
 },
 "american_gold_eagle_1oz_1999": {
@@ -1117,6 +1147,16 @@
 0.04,
 0.02,
 0.09
+]
+},
+"assorted_plastic_dinosaur_bag_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.18,
+0.05,
+0.25
 ]
 },
 "assorted_takeout_condiment_packets_1998": {
@@ -3089,6 +3129,16 @@
 0.0977
 ]
 },
+"bmx_steel_peg_chrome_2001": {
+"hard": 0.86,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.038,
+0.038,
+0.1
+]
+},
 "board_game_box_lid_mixed_1996": {
 "hard": 0.32,
 "how": "fold",
@@ -3179,6 +3229,16 @@
 0.12
 ]
 },
+"bones_reds_608_bearing_2001": {
+"hard": 0.9,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.022,
+0.007,
+0.022
+]
+},
 "bonne_bell_lip_smackers_strawberry_1999": {
 "hard": 0.16,
 "how": "snap",
@@ -3267,6 +3327,16 @@
 0.3,
 0.04,
 0.38
+]
+},
+"brachiosaurus_plastic_gray_1998": {
+"hard": 0.32,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.05,
+0.2
 ]
 },
 "brachs_autumn_mix_candy_corn_1998": {
@@ -3469,6 +3539,16 @@
 0.1577
 ]
 },
+"broken_skateboard_bushing_orange_2001": {
+"hard": 0.2,
+"how": "squish",
+"mat": "rubber",
+"size": [
+0.025,
+0.015,
+0.025
+]
+},
 "brooks_brothers_red_silk_tie_1999": {
 "hard": 0.16,
 "how": "fold",
@@ -3637,6 +3717,16 @@
 0.12,
 0.02,
 0.16
+]
+},
+"butterfly_hair_clip_translucent_assorted_1998": {
+"hard": 0.12,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.035,
+0.015,
+0.03
 ]
 },
 "butterscotch_disc_wrapper_1998": {
@@ -4097,6 +4187,16 @@
 0.038,
 0.038,
 0.03
+]
+},
+"carnation_instant_nonfat_dry_milk_box_1962": {
+"hard": 0.24,
+"how": "fold",
+"mat": "card",
+"size": [
+0.14,
+0.07,
+0.2
 ]
 },
 "carnaval_half_mask_gold_1998": {
@@ -5327,6 +5427,176 @@
 0.05,
 0.03,
 0.025
+]
+},
+"civil_defense_dosimeter_charger_cd_v750_1962": {
+"hard": 0.58,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.13,
+0.1,
+0.16
+]
+},
+"civil_defense_emergency_food_can_1962": {
+"hard": 0.58,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.15,
+0.15,
+0.18
+]
+},
+"civil_defense_fallout_protection_booklet_1961": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.14,
+0.002,
+0.215
+]
+},
+"civil_defense_fallout_shelter_sign_1961": {
+"hard": 0.72,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.355,
+0.002,
+0.255
+]
+},
+"civil_defense_flashlight_yellow_1962": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.06,
+0.06,
+0.2
+]
+},
+"civil_defense_hand_crank_radio_1962": {
+"hard": 0.56,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.28,
+0.18,
+0.2
+]
+},
+"civil_defense_matches_waterproof_tin_1962": {
+"hard": 0.42,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.035,
+0.035,
+0.1
+]
+},
+"civil_defense_medical_kit_box_1962": {
+"hard": 0.64,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.28,
+0.1,
+0.2
+]
+},
+"civil_defense_pill_box_yellow_1962": {
+"hard": 0.42,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.08,
+0.03,
+0.05
+]
+},
+"civil_defense_sanitation_kit_carton_1962": {
+"hard": 0.34,
+"how": "fold",
+"mat": "card",
+"size": [
+0.4,
+0.3,
+0.35
+]
+},
+"civil_defense_survival_cracker_1962": {
+"hard": 0.06,
+"how": "snap",
+"mat": "food",
+"size": [
+0.06,
+0.006,
+0.06
+]
+},
+"civil_defense_survival_cracker_tin_1962": {
+"hard": 0.58,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.15,
+0.15,
+0.18
+]
+},
+"civil_defense_survival_under_atomic_attack_1950": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.14,
+0.0015,
+0.215
+]
+},
+"civil_defense_water_can_17_5gal_1962": {
+"hard": 0.62,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.31,
+0.31,
+0.38
+]
+},
+"civil_defense_water_purification_tablet_bottle_1962": {
+"hard": 0.52,
+"how": "snap",
+"mat": "glass",
+"size": [
+0.04,
+0.04,
+0.08
+]
+},
+"civil_defense_wood_supply_crate_1962": {
+"hard": 0.72,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.55,
+0.4,
+0.35
+]
+},
+"civil_defense_wool_blanket_gray_1962": {
+"hard": 0.08,
+"how": "fold",
+"mat": "fabric",
+"size": [
+1.5,
+0.01,
+2.1
 ]
 },
 "cj_spam_chuseok_gift_set_2002": {
@@ -6689,6 +6959,16 @@
 0.28
 ]
 },
+"crocs_classic_clog_lime_2004": {
+"hard": 0.16,
+"how": "fold",
+"mat": "foam",
+"size": [
+0.12,
+0.1,
+0.29
+]
+},
 "crop_circle_pamphlet_1997": {
 "hard": 0.04,
 "how": "crumple",
@@ -7189,6 +7469,126 @@
 0.095
 ]
 },
+"dinosaur_dig_brush_1998": {
+"hard": 0.12,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.02,
+0.015,
+0.15
+]
+},
+"dinosaur_dig_tool_chisel_red_1998": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.02,
+0.015,
+0.14
+]
+},
+"dinosaur_egg_shell_halves_1998": {
+"hard": 0.1,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.01,
+0.07
+]
+},
+"dinosaur_eraser_green_1998": {
+"hard": 0.08,
+"how": "snap",
+"mat": "rubber",
+"size": [
+0.03,
+0.015,
+0.07
+]
+},
+"dinosaur_footprint_stamp_green_1998": {
+"hard": 0.12,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.04,
+0.03,
+0.07
+]
+},
+"dinosaur_fossil_dig_kit_box_1998": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.22,
+0.06,
+0.28
+]
+},
+"dinosaur_fossil_plaster_block_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.12,
+0.04,
+0.16
+]
+},
+"dinosaur_lunchbox_plastic_green_1998": {
+"hard": 0.36,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.24,
+0.1,
+0.18
+]
+},
+"dinosaur_nugget_stegosaurus_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.08,
+0.015,
+0.11
+]
+},
+"dinosaur_nugget_trex_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.07,
+0.015,
+0.1
+]
+},
+"dinosaur_pencil_topper_trex_1998": {
+"hard": 0.07,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.03,
+0.02,
+0.05
+]
+},
+"dinosaur_sticker_sheet_1998": {
+"hard": 0.05,
+"how": "fold",
+"mat": "glossy_print",
+"size": [
+0.15,
+0.0005,
+0.21
+]
+},
 "dirty_dancing_vhs_1988": {
 "hard": 0.72,
 "how": "snap",
@@ -7277,6 +7677,16 @@
 0.008,
 0.008,
 0.05
+]
+},
+"dk_eyewitness_dinosaur_book_1990": {
+"hard": 0.34,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.22,
+0.015,
+0.28
 ]
 },
 "dmx_its_dark_and_hell_is_hot_cd_1998": {
@@ -7969,6 +8379,26 @@
 0.1
 ]
 },
+"electronic_roaring_trex_green_1998": {
+"hard": 0.42,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.14,
+0.1,
+0.3
+]
+},
+"element_skateboard_deck_snapped_2001": {
+"hard": 0.62,
+"how": "snap",
+"mat": "wood",
+"size": [
+0.19,
+0.05,
+0.8
+]
+},
 "elephant_pants_black_white_2004": {
 "hard": 0.05,
 "how": "fold",
@@ -8407,6 +8837,16 @@
 0.3,
 0.025,
 0.003
+]
+},
+"eveready_d_cell_battery_1962": {
+"hard": 0.76,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.034,
+0.034,
+0.061
 ]
 },
 "eveready_d_cell_battery_1998": {
@@ -10369,6 +10809,26 @@
 0.28
 ]
 },
+"glow_bracelet_connector_clear_2008": {
+"hard": 0.1,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.006,
+0.006,
+0.025
+]
+},
+"glow_dinosaur_skeleton_trex_1998": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.04,
+0.18
+]
+},
 "glow_in_dark_planet_set_1998": {
 "hard": 0.14,
 "how": "snap",
@@ -10431,6 +10891,16 @@
 },
 "glow_stick_green_8in_1998": {
 "hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.015,
+0.015,
+0.2
+]
+},
+"glow_stick_green_8in_2008": {
+"hard": 0.1,
 "how": "fold",
 "mat": "plastic",
 "size": [
@@ -11519,6 +11989,16 @@
 0.15
 ]
 },
+"hatching_dinosaur_egg_toy_1998": {
+"hard": 0.16,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.06,
+0.08
+]
+},
 "havaianas_top_brasil_blue_1998": {
 "hard": 0.18,
 "how": "fold",
@@ -11607,6 +12087,16 @@
 0.3,
 0.03,
 0.4
+]
+},
+"heelies_one_wheel_black_white_2003": {
+"hard": 0.48,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.12,
+0.11,
+0.3
 ]
 },
 "heineken_330ml_can_1998": {
@@ -12529,6 +13019,26 @@
 0.188
 ]
 },
+"independent_stage9_truck_2001": {
+"hard": 0.78,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.19,
+0.07,
+0.06
+]
+},
+"independent_truck_sticker_2001": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "glossy_print",
+"size": [
+0.08,
+0.0005,
+0.08
+]
+},
 "indian_paper_lantern_kandil_1998": {
 "hard": 0.1,
 "how": "crumple",
@@ -12929,6 +13439,16 @@
 0.003
 ]
 },
+"jessup_grip_tape_sheet_black_2001": {
+"hard": 0.18,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.23,
+0.002,
+0.84
+]
+},
 "jet_puffed_marshmallow_bag_1998": {
 "hard": 0.05,
 "how": "crumple",
@@ -12957,6 +13477,16 @@
 0.31,
 0.18,
 0.31
+]
+},
+"jnco_mammoth_40in_jeans_dark_indigo_1998": {
+"hard": 0.18,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.75,
+0.05,
+1.1
 ]
 },
 "jnco_mammoth_jeans_1998": {
@@ -13037,6 +13567,16 @@
 0.1,
 0.02,
 0.16
+]
+},
+"junior_mints_theater_box_2008": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.025,
+0.17
 ]
 },
 "jurassic_park_vhs_1994": {
@@ -14057,6 +14597,16 @@
 0.045,
 0.025,
 0.15
+]
+},
+"la_gear_la_lights_high_top_1992": {
+"hard": 0.46,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.12,
+0.12,
+0.3
 ]
 },
 "la_tomatina_blue_bucket_1998": {
@@ -16569,6 +17119,16 @@
 0.085
 ]
 },
+"midnight_showing_wristband_2008": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.24
+]
+},
 "mighty_max_skull_doom_zone_1993": {
 "hard": 0.5,
 "how": "snap",
@@ -16587,6 +17147,16 @@
 0.0836,
 0.0655,
 0.0141
+]
+},
+"milk_duds_theater_box_2008": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.025,
+0.17
 ]
 },
 "milky_way_fun_size_1998": {
@@ -17009,6 +17579,16 @@
 0.016
 ]
 },
+"mood_ring_oval_1996": {
+"hard": 0.42,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.022,
+0.02,
+0.022
+]
+},
 "mood_ring_vending_1997": {
 "hard": 0.62,
 "how": "dent",
@@ -17349,7 +17929,117 @@
 0.06
 ]
 },
+"movie_nacho_tray_black_2008": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.04,
+0.24
+]
+},
+"movie_poster_standee_corrugated_scrap_2008": {
+"hard": 0.28,
+"how": "fold",
+"mat": "card",
+"size": [
+0.25,
+0.01,
+0.35
+]
+},
+"movie_theater_cupholder_black_2008": {
+"hard": 0.34,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.12,
+0.06,
+0.16
+]
+},
+"movie_theater_large_soda_cup_2008": {
+"hard": 0.12,
+"how": "crumple",
+"mat": "card",
+"size": [
+0.11,
+0.07,
+0.2
+]
+},
+"movie_theater_napkin_2008": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.16,
+0.0003,
+0.16
+]
+},
+"movie_theater_popcorn_loose_2008": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.03,
+0.02,
+0.03
+]
+},
+"movie_theater_receipt_2008": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.08,
+0.0005,
+0.25
+]
+},
+"movie_theater_seat_number_tag_2008": {
+"hard": 0.18,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.05,
+0.003,
+0.08
+]
+},
+"movie_theater_straw_wrapper_2008": {
+"hard": 0.01,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.24
+]
+},
+"movie_theater_tortilla_chip_2008": {
+"hard": 0.04,
+"how": "snap",
+"mat": "food",
+"size": [
+0.06,
+0.003,
+0.06
+]
+},
 "movie_ticket_stub_december_1999": {
+"hard": 0.04,
+"how": "fold",
+"mat": "paper",
+"size": [
+0.05,
+0.0005,
+0.08
+]
+},
+"movie_ticket_stub_midnight_2008": {
 "hard": 0.04,
 "how": "fold",
 "mat": "paper",
@@ -17409,6 +18099,16 @@
 0.188
 ]
 },
+"msa_civil_defense_gas_mask_1962": {
+"hard": 0.38,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.18,
+0.14,
+0.24
+]
+},
 "msdos_6_user_guide_1993": {
 "hard": 0.34,
 "how": "fold",
@@ -17427,6 +18127,16 @@
 0.07,
 0.032,
 0.095
+]
+},
+"museum_fossil_shark_tooth_necklace_1998": {
+"hard": 0.46,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.04,
+0.01,
+0.05
 ]
 },
 "mushroom_cluster": {
@@ -17477,6 +18187,16 @@
 0.062,
 0.035,
 0.072
+]
+},
+"nacho_cheese_cup_clear_2008": {
+"hard": 0.12,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.06,
+0.03,
+0.06
 ]
 },
 "nag_champa_incense_stick_1998": {
@@ -21149,6 +21869,16 @@
 0.1195
 ]
 },
+"powdered_milk_foil_packet_1962": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "foil",
+"size": [
+0.1,
+0.01,
+0.16
+]
+},
 "power_bank": {
 "hard": 0.6,
 "how": "snap",
@@ -21769,6 +22499,16 @@
 0.16
 ]
 },
+"raisinets_theater_box_2008": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.025,
+0.17
+]
+},
 "ramen_packet": {
 "hard": 0.15,
 "how": "crumple",
@@ -21929,6 +22669,16 @@
 0.12
 ]
 },
+"razor_a_scooter_wheel_2000": {
+"hard": 0.44,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.1,
+0.025,
+0.1
+]
+},
 "razor_phone": {
 "hard": 0.7,
 "how": "snap",
@@ -21979,6 +22729,16 @@
 0.22
 ]
 },
+"reald_3d_glasses_black_2009": {
+"hard": 0.22,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.15,
+0.04,
+0.05
+]
+},
 "receipt": {
 "hard": 0.3,
 "how": "fold",
@@ -21997,6 +22757,16 @@
 0.095,
 0.01,
 0.13
+]
+},
+"red_bull_250ml_can_2001": {
+"hard": 0.38,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.053,
+0.053,
+0.134
 ]
 },
 "red_bull_8_4oz_2008": {
@@ -22787,6 +23557,16 @@
 0.12,
 0.32,
 0.3
+]
+},
+"rollerblade_macroblade_black_gray_1998": {
+"hard": 0.56,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.13,
+0.16,
+0.34
 ]
 },
 "rollerblade_wrist_guards_black_1997": {
@@ -24319,6 +25099,36 @@
 0.188
 ]
 },
+"skate_shoelace_white_broken_2001": {
+"hard": 0.02,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.008,
+0.004,
+1.2
+]
+},
+"skate_tool_t_shape_black_2001": {
+"hard": 0.44,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.11,
+0.03,
+0.1
+]
+},
+"skate_wax_paraffin_block_white_2001": {
+"hard": 0.1,
+"how": "dent",
+"mat": "wax",
+"size": [
+0.06,
+0.04,
+0.09
+]
+},
 "skate_wheel": {
 "hard": 0.35,
 "how": "fold",
@@ -24337,6 +25147,56 @@
 0.392,
 0.202,
 0.0683
+]
+},
+"skateboard_hardware_black_1in_2001": {
+"hard": 0.88,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.008,
+0.008,
+0.025
+]
+},
+"skateboard_riser_pad_black_2001": {
+"hard": 0.18,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.06,
+0.006,
+0.08
+]
+},
+"skatepark_concrete_dust_chunk_2001": {
+"hard": 0.46,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.05,
+0.02,
+0.07
+]
+},
+"skatepark_waiver_copy_2001": {
+"hard": 0.03,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.216,
+0.0005,
+0.279
+]
+},
+"skatepark_wristband_paper_2001": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.24
 ]
 },
 "skechers_energy_white_1999": {
@@ -25499,6 +26359,16 @@
 0.015
 ]
 },
+"sour_patch_kids_theater_box_2008": {
+"hard": 0.18,
+"how": "fold",
+"mat": "card",
+"size": [
+0.09,
+0.025,
+0.17
+]
+},
 "souvenir_spoon_mount_rushmore_1998": {
 "hard": 0.54,
 "how": "fold",
@@ -25929,6 +26799,16 @@
 0.27
 ]
 },
+"spitfire_classic_52mm_wheel_white_2001": {
+"hard": 0.42,
+"how": "dent",
+"mat": "rubber",
+"size": [
+0.052,
+0.032,
+0.052
+]
+},
 "splat_sign": {
 "hard": 0.7,
 "how": "snap",
@@ -26079,6 +26959,16 @@
 0.07
 ]
 },
+"star_wars_episode1_souvenir_cup_1999": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.1,
+0.07,
+0.2
+]
+},
 "starbucks_clear_cold_cup_24oz_2021": {
 "hard": 0.2,
 "how": "dent",
@@ -26177,6 +27067,16 @@
 0.18,
 0.08,
 0.26
+]
+},
+"stegosaurus_plastic_green_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.05,
+0.16
 ]
 },
 "stereo_viewer": {
@@ -26999,6 +27899,16 @@
 0.22
 ]
 },
+"tattoo_choker_black_1997": {
+"hard": 0.03,
+"how": "fold",
+"mat": "soft_plastic",
+"size": [
+0.12,
+0.003,
+0.12
+]
+},
 "tattoo_choker_black_1998": {
 "hard": 0.08,
 "how": "squish",
@@ -27277,6 +28187,16 @@
 0.028,
 0.015,
 0.096
+]
+},
+"tech_deck_fingerboard_2000": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.03,
+0.015,
+0.1
 ]
 },
 "tech_deck_launch_ramp_1999": {
@@ -28239,6 +29159,16 @@
 0.1126
 ]
 },
+"triceratops_plastic_brown_1998": {
+"hard": 0.3,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.06,
+0.05,
+0.14
+]
+},
 "trident_controller": {
 "hard": 0.2,
 "how": "squish",
@@ -28619,6 +29549,16 @@
 0.2
 ]
 },
+"tyrannosaurus_rex_plastic_green_1998": {
+"hard": 0.28,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.08,
+0.05,
+0.18
+]
+},
 "ufo_conference_flyer_1997": {
 "hard": 0.03,
 "how": "crumple",
@@ -28809,6 +29749,16 @@
 0.102
 ]
 },
+"us_army_m1956_canteen_olive_1962": {
+"hard": 0.3,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.14,
+0.08,
+0.2
+]
+},
 "us_penny_1999": {
 "hard": 0.92,
 "how": "dent",
@@ -28949,6 +29899,16 @@
 0.0145
 ]
 },
+"velociraptor_plastic_orange_1998": {
+"hard": 0.26,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.07,
+0.05,
+0.17
+]
+},
 "velvet_scrunchies_3pack_1997": {
 "hard": 0.08,
 "how": "squish",
@@ -29077,6 +30037,26 @@
 0.07,
 0.07,
 0.07
+]
+},
+"victoreen_cd_v700_geiger_counter_1962": {
+"hard": 0.68,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.25,
+0.13,
+0.2
+]
+},
+"victoreen_cd_v742_dosimeter_1962": {
+"hard": 0.48,
+"how": "fold",
+"mat": "metal",
+"size": [
+0.015,
+0.015,
+0.11
 ]
 },
 "victorinox_classic_sd_red_1998": {

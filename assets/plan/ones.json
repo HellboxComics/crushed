@@ -2097,6 +2097,228 @@
 "no_wires": true,
 "theme": "missing AA batteries and the devices they abandoned"
 },
+"DRESS CODE": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"locker-room deodorant, warm sneaker rubber, hair spray, denim, plastic jewelry and cafeteria floor wax",
+"the school-office confiscation drawer after the last day of classes",
+"slap_bracelet_holographic_1990"
+],
+"lore": "The principal confiscated the slap bracelet, sent the shirt home, and still couldn't explain why the jeans needed that much fabric.",
+"mix": [
+[
+"slap_bracelet_holographic_1990",
+6
+],
+[
+"generra_hypercolor_blue_pink_1991",
+2
+],
+[
+"scrunchie_velvet_assorted_1998",
+6
+],
+[
+"jnco_mammoth_40in_jeans_dark_indigo_1998",
+1
+],
+[
+"la_gear_la_lights_high_top_1992",
+2
+],
+[
+"tattoo_choker_black_1997",
+4
+],
+[
+"butterfly_hair_clip_translucent_assorted_1998",
+8
+],
+[
+"von_dutch_trucker_hat_red_white_2003",
+1
+],
+[
+"livestrong_yellow_wristband_2004",
+4
+],
+[
+"crocs_classic_clog_lime_2004",
+2
+],
+[
+"chain_wallet_black_1999",
+2
+],
+[
+"mood_ring_oval_1996",
+4
+],
+[
+"black_jelly_bracelet_stack_2003",
+2
+],
+[
+"heelies_one_wheel_black_white_2003",
+2
+],
+[
+"starter_snapback_black_red_1996",
+1
+],
+[
+"no_fear_extreme_sports_tee_1995",
+1
+],
+[
+"polo_sport_spellout_windbreaker_1997",
+1
+],
+[
+"mini_backpack_black_nylon_1997",
+1
+],
+[
+"studded_leather_belt_black_2001",
+1
+],
+[
+"checkerboard_web_belt_1998",
+1
+],
+[
+"stretchy_comb_headband_black_1998",
+2
+],
+[
+"tortoise_claw_hair_clip_1998",
+2
+],
+[
+"wwjd_wristband_black_1997",
+2
+]
+],
+"no_wires": true,
+"theme": "everything schools banned because apparently bracelets, giant jeans and blinking shoes were the real problem"
+},
+"DUCK AND COVER": {
+"era": [
+0
+],
+"flavor": [
+"galvanized steel, canvas, powdered milk, old paper, rubber mask, waxed ration cartons and concrete dust",
+"a municipal fallout shelter storeroom sealed behind a basement utility room",
+"civil_defense_fallout_shelter_sign_1961"
+],
+"lore": "The sign promised shelter, the crackers promised calories, and nobody ever explained how long everyone was supposed to sit down there together.",
+"mix": [
+[
+"civil_defense_fallout_shelter_sign_1961",
+1
+],
+[
+"msa_civil_defense_gas_mask_1962",
+1
+],
+[
+"victoreen_cd_v700_geiger_counter_1962",
+1
+],
+[
+"civil_defense_emergency_food_can_1962",
+4
+],
+[
+"civil_defense_water_can_17_5gal_1962",
+4
+],
+[
+"civil_defense_hand_crank_radio_1962",
+1
+],
+[
+"us_army_m1956_canteen_olive_1962",
+2
+],
+[
+"civil_defense_survival_under_atomic_attack_1950",
+6
+],
+[
+"civil_defense_fallout_protection_booklet_1961",
+4
+],
+[
+"carnation_instant_nonfat_dry_milk_box_1962",
+1
+],
+[
+"powdered_milk_foil_packet_1962",
+2
+],
+[
+"civil_defense_survival_cracker_tin_1962",
+6
+],
+[
+"civil_defense_survival_cracker_1962",
+3
+],
+[
+"civil_defense_medical_kit_box_1962",
+2
+],
+[
+"civil_defense_pill_box_yellow_1962",
+2
+],
+[
+"civil_defense_water_purification_tablet_bottle_1962",
+4
+],
+[
+"victoreen_cd_v742_dosimeter_1962",
+8
+],
+[
+"civil_defense_dosimeter_charger_cd_v750_1962",
+2
+],
+[
+"civil_defense_flashlight_yellow_1962",
+2
+],
+[
+"eveready_d_cell_battery_1962",
+4
+],
+[
+"civil_defense_wool_blanket_gray_1962",
+2
+],
+[
+"civil_defense_sanitation_kit_carton_1962",
+1
+],
+[
+"civil_defense_matches_waterproof_tin_1962",
+3
+],
+[
+"civil_defense_wood_supply_crate_1962",
+1
+]
+],
+"no_wires": true,
+"theme": "Civil Defense fallout-shelter hardware, canned food and government pamphlets packed for the end of the world"
+},
 "EGG HUNT": {
 "era": [
 0,
@@ -2429,6 +2651,121 @@
 ],
 "no_wires": true,
 "theme": "dreidels, gelt, fried food and blue-silver gift wrap after eight nights"
+},
+"EXTINCT": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"plaster dust, vinyl toys, lunchbox plastic, chicken nuggets, batteries and museum gift-shop carpet",
+"the bottom of a dinosaur-obsessed kid's toy chest after the museum phase finally ended",
+"tyrannosaurus_rex_plastic_green_1998"
+],
+"lore": "The T. rex roared until the batteries died, the fossil kit never produced a real fossil, and every plastic dinosaur eventually lost at least one foot.",
+"mix": [
+[
+"tyrannosaurus_rex_plastic_green_1998",
+5
+],
+[
+"triceratops_plastic_brown_1998",
+4
+],
+[
+"stegosaurus_plastic_green_1998",
+4
+],
+[
+"brachiosaurus_plastic_gray_1998",
+3
+],
+[
+"velociraptor_plastic_orange_1998",
+3
+],
+[
+"assorted_plastic_dinosaur_bag_1998",
+1
+],
+[
+"dinosaur_fossil_dig_kit_box_1998",
+1
+],
+[
+"dinosaur_fossil_plaster_block_1998",
+2
+],
+[
+"dinosaur_dig_tool_chisel_red_1998",
+3
+],
+[
+"dinosaur_dig_brush_1998",
+3
+],
+[
+"dinosaur_nugget_trex_1998",
+6
+],
+[
+"dinosaur_nugget_stegosaurus_1998",
+4
+],
+[
+"glow_dinosaur_skeleton_trex_1998",
+2
+],
+[
+"dinosaur_lunchbox_plastic_green_1998",
+1
+],
+[
+"electronic_roaring_trex_green_1998",
+1
+],
+[
+"amber_mosquito_keychain_1998",
+4
+],
+[
+"hatching_dinosaur_egg_toy_1998",
+3
+],
+[
+"dinosaur_egg_shell_halves_1998",
+6
+],
+[
+"dk_eyewitness_dinosaur_book_1990",
+2
+],
+[
+"dinosaur_sticker_sheet_1998",
+3
+],
+[
+"dinosaur_eraser_green_1998",
+4
+],
+[
+"dinosaur_pencil_topper_trex_1998",
+4
+],
+[
+"museum_fossil_shark_tooth_necklace_1998",
+2
+],
+[
+"dinosaur_footprint_stamp_green_1998",
+2
+]
+],
+"no_wires": true,
+"theme": "plastic dinosaurs, fossil kits and every childhood attempt to rebuild 150 million years with glow-in-the-dark plastic"
 },
 "GACHAPON": {
 "era": [
@@ -3716,6 +4053,117 @@
 "no_wires": true,
 "theme": "fuzzy talking gremlins, loose battery doors and the bedside electronics that refused to stay quiet"
 },
+"KICKFLIP": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"grip tape, concrete dust, urethane wheels, hot bearings, energy drink and shoe rubber",
+"beneath the quarter-pipe after the lights shut off",
+"element_skateboard_deck_snapped_2001"
+],
+"lore": "The deck snapped before the trick landed, the shoe survived, and the wax disappeared because somebody always stole the wax.",
+"mix": [
+[
+"element_skateboard_deck_snapped_2001",
+2
+],
+[
+"tech_deck_fingerboard_2000",
+5
+],
+[
+"razor_a_scooter_wheel_2000",
+4
+],
+[
+"la_gear_la_lights_high_top_1992",
+1
+],
+[
+"rollerblade_macroblade_black_gray_1998",
+1
+],
+[
+"bmx_steel_peg_chrome_2001",
+4
+],
+[
+"jessup_grip_tape_sheet_black_2001",
+3
+],
+[
+"411_video_magazine_vhs_1998",
+2
+],
+[
+"red_bull_250ml_can_2001",
+4
+],
+[
+"skate_wax_paraffin_block_white_2001",
+3
+],
+[
+"independent_stage9_truck_2001",
+4
+],
+[
+"spitfire_classic_52mm_wheel_white_2001",
+8
+],
+[
+"bones_reds_608_bearing_2001",
+8
+],
+[
+"skateboard_hardware_black_1in_2001",
+8
+],
+[
+"osiris_d3_black_silver_2001",
+2
+],
+[
+"skate_shoelace_white_broken_2001",
+6
+],
+[
+"skate_tool_t_shape_black_2001",
+2
+],
+[
+"skateboard_riser_pad_black_2001",
+4
+],
+[
+"independent_truck_sticker_2001",
+5
+],
+[
+"skatepark_wristband_paper_2001",
+4
+],
+[
+"skatepark_waiver_copy_2001",
+3
+],
+[
+"broken_skateboard_bushing_orange_2001",
+6
+],
+[
+"skatepark_concrete_dust_chunk_2001",
+5
+]
+],
+"no_wires": true,
+"theme": "snapped decks, Tech Decks, skate shoes and every loose part swept from the park after dark"
+},
 "KRAMPUSNACHT": {
 "era": [
 0,
@@ -4827,6 +5275,113 @@
 ],
 "no_wires": true,
 "theme": "food-court trays, record-store bags and everything carried through the mall for six hours without buying much"
+},
+"MIDNIGHT SHOWING": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"buttered popcorn, cola syrup, warm projector-room dust, nacho cheese, carpet cleaner and glow-stick plastic",
+"beneath the back row after the midnight premiere emptied out",
+"amc_large_popcorn_tub_2008"
+],
+"lore": "The movie ended after two in the morning, the floor sounded like Velcro, and somebody still carried the empty souvenir cup home.",
+"mix": [
+[
+"amc_large_popcorn_tub_2008",
+3
+],
+[
+"movie_theater_popcorn_loose_2008",
+12
+],
+[
+"star_wars_episode1_souvenir_cup_1999",
+2
+],
+[
+"reald_3d_glasses_black_2009",
+5
+],
+[
+"movie_ticket_stub_midnight_2008",
+6
+],
+[
+"junior_mints_theater_box_2008",
+2
+],
+[
+"milk_duds_theater_box_2008",
+2
+],
+[
+"sour_patch_kids_theater_box_2008",
+2
+],
+[
+"raisinets_theater_box_2008",
+2
+],
+[
+"movie_nacho_tray_black_2008",
+3
+],
+[
+"nacho_cheese_cup_clear_2008",
+4
+],
+[
+"movie_theater_tortilla_chip_2008",
+10
+],
+[
+"glow_stick_green_8in_2008",
+5
+],
+[
+"glow_bracelet_connector_clear_2008",
+5
+],
+[
+"movie_poster_standee_corrugated_scrap_2008",
+3
+],
+[
+"movie_theater_cupholder_black_2008",
+2
+],
+[
+"movie_theater_large_soda_cup_2008",
+3
+],
+[
+"movie_theater_straw_wrapper_2008",
+6
+],
+[
+"movie_theater_napkin_2008",
+6
+],
+[
+"midnight_showing_wristband_2008",
+4
+],
+[
+"movie_theater_receipt_2008",
+4
+],
+[
+"movie_theater_seat_number_tag_2008",
+3
+]
+],
+"no_wires": true,
+"theme": "popcorn, ticket stubs, souvenir cups and everything left under the seats after the midnight crowd"
 },
 "MINT CONDITION": {
 "era": [
