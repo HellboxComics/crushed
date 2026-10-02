@@ -61,8 +61,31 @@ def main(photo, out, shape_only=False, paint=None):
     shape = os.path.join(out, "shape.glb")
     t = time.time()
     from hy3dshape.pipeline_mlx import ShapePipeline
-    pipe = ShapePipeline.from_pretrained("dgrauet/hunyuan3d-2.1-mlx")
-    mesh = pipe(photo, num_inference_steps=50, guidance_scale=7.5, octree_resolution=256, seed=42)
+    import mlx.core as mx
+    mesh = None
+    # Half precision (the default) is fast but can overflow into "not a number" on some photos, which leaves an
+    # empty shape ("need at least one array to concatenate", the Furby, 2026-10-02). Then: full precision.
+    for dtype, name in ((mx.float16, "half"), (mx.float32, "full")):
+        try:
+            pipe = ShapePipeline.from_pretrained("dgrauet/hunyuan3d-2.1-mlx", dtype=dtype)
+            _dec = pipe.vae.decode_to_mesh
+
+            def _checked(latents, *a, _dec=_dec, **k):          # the facts, in the log, if it goes wrong again
+                l32 = latents.astype(mx.float32)
+                print(f"[hunyuan] {name} precision: shape code nan={int(mx.isnan(l32).sum().item())} "
+                      f"min={float(mx.min(l32).item()):.3g} max={float(mx.max(l32).item()):.3g}", flush=True)
+                return _dec(latents, *a, **k)
+            pipe.vae.decode_to_mesh = _checked
+            mesh = pipe(photo, num_inference_steps=50, guidance_scale=7.5, octree_resolution=256, seed=42)
+            if mesh is not None and len(mesh.faces):
+                break
+            print(f"[hunyuan] {name} precision gave an empty shape", flush=True)
+        except ValueError as e:
+            print(f"[hunyuan] {name} precision gave an empty shape ({e})", flush=True)
+        mesh = None
+        gc.collect()
+    if mesh is None:
+        sys.exit("Hunyuan3D made an empty shape from this photo in half and full precision")
     mesh.export(shape)
     print(f"[hunyuan] shape: {len(mesh.faces)} faces in {time.time() - t:.0f}s", flush=True)
     del pipe, mesh

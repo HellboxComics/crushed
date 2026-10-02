@@ -74,6 +74,7 @@ def pipeline(cid, redo=False):
         start_over(cid, d)
 
     card = cards.make(cid, log=say)
+    cards.construction(cid, card, log=say)                       # how the real thing is made: layers, materials, details
     product, size, year, route = card["product"], card["size"], card.get("year"), card["route"]
     picks = jload(os.path.join(HB, "picks.json"), {})
     cf = os.path.join(d, "candidates.json")
@@ -172,6 +173,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         else:
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
             spec = outline.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
+            spec = outline.apply_construction(spec, card)          # its real layers, seam, lips, metal ends
             sp = os.path.join(d, "shape.json")
             json.dump(spec, open(sp, "w"), indent=1)
         along, around = skin.label_size(spec)
@@ -227,7 +229,10 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
                                    flat=route == "flat", judge=use, log=say)
         status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
-        surface = "card" if any(k in str(card.get("mat", "")).lower() for k in ("card", "paper", "board")) else "plastic"
+        import cards
+        mats = cards.materials(card)
+        surface = ("card" if "printed_card" in mats else "plastic" if "molded_plastic" in mats else
+                   "card" if any(k in str(card.get("mat", "")).lower() for k in ("card", "paper", "board")) else "plastic")
         run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
                     "0.3" if route == "flat" else "0.6", surface)
     else:
@@ -251,25 +256,33 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     subprocess.run([PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],
                    check=True, capture_output=True)
     sheet_views([os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)], os.path.join(d, "views.jpg"))
+    shots, close = os.path.join(d, "views.jpg"), None
+    try:                                                    # the check shots: the same viewer as your phone page
+        import viewshot
+        shots, close = viewshot.shoot(glb, os.path.join(d, "check"))
+    except Exception as e:
+        say(f"[check] viewer shots skipped ({e}) - the studio pictures are used")
     make_room("judging")
-    verdict = inspect(os.path.join(d, "views.jpg"), picked["file"], product, use)
+    verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
+    say(f"[check] {cid}: " + ("passed every realism check" if verdict.get("pass") else
+                              "failed: " + ", ".join(verdict.get("failed", [])) + " - " + str(verdict.get("problems"))[:300]))
 
     # 7. YOU: Keep or Redo on your phone
     import askfirst
     probs = verdict.get("problems")
     note = ("The judge: looks right." if verdict.get("pass") else "The judge: " + (", ".join(probs) if isinstance(probs, list) else str(probs)))
     if setting("auto_keep") and verdict.get("pass"):           # the judge passed it: filed without asking you
-        status(cid, verdict=verdict, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+        status(cid, verdict=verdict, views=os.path.relpath(shots, WORK),
                ref=os.path.relpath(picked["file"], WORK))
         file_away(cid, d)
         return
-    sent = askfirst.ask_review(cid, product, os.path.join(d, "views.jpg"), note[:600])
+    sent = askfirst.ask_review(cid, product, shots, note[:600])
     if not sent:
         say(f"[phone] {cid}: the Keep/Redo message did not reach your phone - it is sent again every minute until it does")
     tex = next((p for p in (os.path.join(d, "label.png"), os.path.join(d, "skin", "atlas.png"),
                             os.path.join(d, "reference.png")) if os.path.exists(p)), None)
     status(cid, step="waiting for your Keep or Redo on your phone", ok=bool(verdict.get("pass")), verdict=verdict,
-           photos=n_found, good=n_good, views=os.path.relpath(os.path.join(d, "views.jpg"), WORK),
+           photos=n_found, good=n_good, views=os.path.relpath(shots, WORK),
            label=os.path.relpath(tex, WORK) if tex else None, ref=os.path.relpath(picked["file"], WORK), note="",
            sent=bool(sent))
 
@@ -648,25 +661,55 @@ def hunyuan_paint(ref, out, bare=None):
     if bare:
         cmd += ["--paint", bare]
     r = subprocess.run(cmd, capture_output=True, text=True)
+    for line in (r.stdout or "").splitlines():
+        if line.startswith("[hunyuan]"):
+            say(line)
     if r.returncode != 0 or not os.path.exists(glb):
         raise RuntimeError("Hunyuan3D did not finish: " + (r.stderr or r.stdout)[-400:])
     return glb
 
 
-def inspect(sheet, photo, product, use):
-    """The judge compares the finished model (studio pictures from four sides) with a real photo."""
+CHECKS = {
+    "shape": "same shape and proportions as the real one",
+    "print": "all the printing is there, crisp, spelled right and in the right places (no smeared or invented words)",
+    "materials": "each part looks like what it is made of ({mats}): metal reads as real metal (never white or flat "
+                 "gray paint), plastic as plastic, card as printed card; glossy where the real one is glossy",
+    "layers": "separate layers read as separate, with real edges where they meet (a label or sleeve over a can, a "
+              "cap on a bottle, flaps on a box, a seam where a wrap's ends meet)",
+    "details": "these real details are there: {closeups}",
+    "no_painted_light": "no light, shadow or glare is painted into the colors (a bright patch or dark side that "
+                        "doesn't belong to the print)",
+    "finished": "every side is finished: nothing blank, stretched, smeared, repeated, blurry or cut off",
+    "not_cg": "the surfaces have the faint variation of a real object (gloss that changes, grain, slight wear) - "
+              "nothing looks like perfectly clean computer plastic",
+}
+
+
+def inspect(sheet, photo, product, use, card=None, close=None):
+    """The judge checks the finished model the way you'd look at it - in the same viewer your phone page uses, all
+    around and up close - against the real photo and a fixed realism checklist built from how the item is made.
+    Every check must pass for it to be kept without asking you; the failed ones are named."""
     import vet as V
     if not use:
         return {"pass": False, "problems": "no vision model installed"}
-    q = (f"Picture 1 shows a 3D model of: {product}, from the front, right, back and left. Picture 2 is a real photo "
-         "of the product. Is the 3D model a faithful, finished, game-quality copy of the real product: same shape and "
-         "proportions, same design, colors and printing, readable words, every side finished, no smears, no seams, "
-         "no holes, nothing missing or invented? Answer ONLY JSON: "
-         "{\"pass\": true/false, \"problems\": \"short list or empty\"}")
+    c = (card or {}).get("construction") or {}
+    mats = ", ".join(f"{L.get('part')}: {L.get('material', '').replace('_', ' ')}" for L in c.get("layers", [])) or "as the photo shows"
+    closeups = "; ".join(c.get("closeups", [])) or "the small real details visible in the photo"
+    lines = "\n".join(f' "{k}": {v.format(mats=mats, closeups=closeups)}' for k, v in CHECKS.items())
+    pics = [sheet] + ([close] if close else []) + [photo]
+    what = ("Picture 1 shows the 3D model all around" + ("; picture 2 shows it up close (ends, seams, edges)" if close
+            else "") + f"; the last picture is a real photo.")
+    q = (f"{what} The product: {product}. A professional, photoreal product model must pass ALL of these checks. "
+         f"Answer each one true or false:\n{lines}\nAnswer ONLY JSON: {{" +
+         ", ".join(f'"{k}": true/false' for k in CHECKS) + ', "problems": ["short and specific, for each false"]}')
     try:
-        return V.ask(use, q, [sheet, photo])
+        v = V.ask(use, q, pics)
     except Exception as e:
         return {"pass": False, "problems": f"could not inspect: {e}"}
+    failed = [k for k in CHECKS if v.get(k) is not True]
+    v["failed"] = failed
+    v["pass"] = not failed
+    return v
 
 
 PAGE_CSS = """

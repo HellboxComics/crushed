@@ -39,6 +39,63 @@ Answer ONLY JSON, no other words:
  "parts": "one short line: the main parts and what each is made of"}}"""
 
 
+BUILD = """You are the lead 3D artist for a studio known for photoreal product models. Before modeling a real product you
+write down HOW IT IS REALLY MADE, layer by layer, so nothing that makes it look real gets missed (the overlap seam of
+a battery's plastic sleeve, the sleeve's edge rolled over the ends, the pressed rings in a steel cap, the glued flap
+of a carton, the cracked ink along a box's folds, the mold seam on a toy, the stitching on fabric).
+Product: {product}
+Real size (width x depth x height, meters): {size}
+Answer ONLY JSON:
+{{"layers": [{{"part": "short name", "material": one of {materials}, "on_top_of": "part it covers or empty",
+              "details": [any that apply, from {details}]}}],
+ "closeups": [4 to 8 short things a close-up photo of the real one shows that a cheap model would miss]}}"""
+
+MATERIALS = ["printed_plastic_sleeve", "printed_paper_label", "printed_card", "bare_steel", "aluminum", "chrome",
+             "copper", "brass", "gold_plate", "glass", "clear_plastic", "molded_plastic", "soft_rubber", "fabric",
+             "plush_fur", "painted_metal", "wood", "leather", "foam"]
+DETAILS = ["sleeve_seam", "rolled_lip", "pressed_rings", "rolled_button", "crimp_ring", "can_rim", "pull_tab",
+           "cap_ridges", "screw_threads", "glue_flap", "flap_seams", "worn_edges", "cracked_ink_folds", "mold_seam",
+           "screws", "stitching", "fur_pile", "sticker", "scratches", "dents", "fingerprints", "dust", "faded_print"]
+
+
+def construction(cid, card=None, model=None, log=print):
+    """How the real thing is made (layers, materials, the small real details), written once by your local AI and
+    kept on the item's card. The builders use it to build each layer as its own part with its own material."""
+    card = card or make(cid, log=log)
+    if card.get("construction"):
+        return card["construction"]
+    sys.path.insert(0, HERE)
+    import vet as V
+    model = model or V.model()
+    body = {"model": model, "stream": False, "format": "json", "think": True, "options": {"temperature": 0.2},
+            "messages": [{"role": "user", "content": BUILD.format(product=card["product"], size=card["size"],
+                                                                  materials=MATERIALS, details=DETAILS)}]}
+    try:
+        txt = V._call("/api/chat", body).get("message", {}).get("content", "{}")
+        c = json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+    except Exception as e:
+        log(f"[card] {cid}: how-it's-made step failed ({e}) - built with the defaults for its route")
+        return {}
+    for L in c.get("layers", []):
+        if L.get("material") not in MATERIALS:
+            L["material"] = "molded_plastic"
+        L["details"] = [d for d in L.get("details", []) if d in DETAILS]
+    card["construction"] = c
+    json.dump(card, open(path(cid), "w"), indent=1)
+    log(f"[card] {cid}: made of " + "; ".join(f"{L.get('part')} ({L.get('material')}: {', '.join(L['details']) or '-'})"
+                                         for L in c.get("layers", [])))
+    return c
+
+
+def details(card):
+    """Every detail named for any layer of this item (a set)."""
+    return {d for L in (card.get("construction") or {}).get("layers", []) for d in L.get("details", [])}
+
+
+def materials(card):
+    return [L.get("material") for L in (card.get("construction") or {}).get("layers", [])]
+
+
 def path(cid):
     return os.path.join(DIR, cid + ".json")
 

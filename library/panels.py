@@ -245,17 +245,15 @@ def delight(im):
 
 
 def paper_color(im):
-    """The box's own background color: the most common color around the front's edges (a box's edges are almost
-    always its plain background, where the middle is pictures and words)."""
-    a = np.asarray(im.convert("RGB").resize((128, 128)))
-    a = np.concatenate([a[:6].reshape(-1, 3), a[-6:].reshape(-1, 3), a[:, :6].reshape(-1, 3), a[:, -6:].reshape(-1, 3)])
+    """The box's own paper: the commonest color among the lighter half of the front (pictures and big letters are
+    the darker half), so every plain side, edge and logo background is the same paper."""
+    a = np.asarray(im.convert("RGB").resize((160, 160))).reshape(-1, 3).astype(int)
     lum = a.mean(1)
-    a = a[lum >= np.percentile(lum, 50)]                      # shadowed or dirty edge pixels don't count
-    q = (a // 16).astype(int)
-    keys, counts = np.unique(q[:, 0] * 256 + q[:, 1] * 16 + q[:, 2], return_counts=True)
-    k = keys[np.argmax(counts)]
-    sel = (q[:, 0] * 256 + q[:, 1] * 16 + q[:, 2]) == k
-    return tuple(int(v) for v in np.median(a[sel], 0))
+    a = a[lum >= np.percentile(lum, 50)]
+    q = a // 12
+    key = q[:, 0] * 4096 + q[:, 1] * 64 + q[:, 2]
+    keys, counts = np.unique(key, return_counts=True)
+    return tuple(int(v) for v in np.median(a[key == keys[np.argmax(counts)]], 0))
 
 
 def brand_panel(front, logo_box, w, h, side):
@@ -267,7 +265,9 @@ def brand_panel(front, logo_box, w, h, side):
     if logo_box is None:
         return Image.fromarray(panel.astype(np.uint8))
     fw, fh = front.size
-    x0, y0, x1, y1 = [int(v) for v in (logo_box[0] * fw, logo_box[1] * fh, logo_box[2] * fw, logo_box[3] * fh)]
+    pad = 0.02                                              # a little room so no letter touches the cut
+    x0, y0 = max(0, int((logo_box[0] - pad) * fw)), max(0, int((logo_box[1] - pad) * fh))
+    x1, y1 = min(fw, int((logo_box[2] + pad) * fw)), min(fh, int((logo_box[3] + pad) * fh))
     logo = np.asarray(front.convert("RGB").crop((x0, y0, x1, y1))).astype(np.float32)
     if h > 1.6 * w:                                             # a tall narrow side: reads bottom-to-top
         logo = np.rot90(logo, 1)
@@ -276,12 +276,17 @@ def brand_panel(front, logo_box, w, h, side):
     s = min(fit * w / lw, fit * h / lh)
     nw, nh = max(1, int(lw * s)), max(1, int(lh * s))
     logo = cv2.resize(logo, (nw, nh), interpolation=cv2.INTER_CUBIC)
-    ring = np.concatenate([logo[:3].reshape(-1, 3), logo[-3:].reshape(-1, 3), logo[:, :3].reshape(-1, 3),
-                           logo[:, -3:].reshape(-1, 3)])
-    local = np.median(ring, 0)                              # the paper right around the logo: the panel's color too,
-    panel[:] = local                                        # so the logo sits on exactly its own paper
-    dist = np.linalg.norm(logo - local, axis=-1)
-    alpha = np.clip((dist - 45) / 40, 0, 1)                 # only the ink comes across, never a pasted patch
+    local = bg
+    L, Lp = logo.mean(-1), local.mean()
+    sat = np.linalg.norm(logo - L[..., None], axis=-1)
+    sat_p = np.linalg.norm(local - Lp)
+    ink = np.maximum(0, Lp - L) + 1.5 * np.maximum(0, sat - sat_p)   # ink is darker or more colorful than paper;
+    alpha = np.clip((ink - 45) / 30, 0, 1)                   # lighter or grayer paper (photo light, color cast) is paper
+    n, lab, st, _ = cv2.connectedComponentsWithStats((alpha > 0.5).astype(np.uint8))
+    for k in range(1, n):                                    # a sliver of a neighboring picture or line cut by the
+        x, y, ww, hh, area = st[k]                           # crop's edge is not part of the logo: left out
+        if (x == 0 or y == 0 or x + ww >= alpha.shape[1] or y + hh >= alpha.shape[0]) and area < 0.03 * alpha.size:
+            alpha[lab == k] = 0
     alpha = cv2.GaussianBlur(alpha, (0, 0), 0.8)[..., None]
     ox, oy = (w - nw) // 2, (h - nh) // 2 if side != "back" else int(h * 0.3 - nh / 2)
     oy = max(0, oy)

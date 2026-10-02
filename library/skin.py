@@ -422,7 +422,7 @@ def logo_box(front_png, judge=None, log=print):
         log(f"[texture] logo answer not usable: {b}")
     except Exception as e:
         log(f"[texture] logo not found by the AI: {e}")
-    return (0.03, 0.02, 0.97, 0.45)
+    return (0.04, 0.03, 0.96, 0.47)
 
 
 _NEXT = {"front": {"left": "left", "right": "right"}, "back": {"left": "right", "right": "left"},
