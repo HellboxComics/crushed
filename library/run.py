@@ -565,6 +565,16 @@ if __name__ == "__main__":
                     "your tap is set aside and picked up again the minute you tap; stops after 3 quiet hours")
     a = ap.parse_args()
     WAIT = a.wait
+    # ONE run at a time on this Mac, whoever starts it (the clock, the watchdog, a paste): a second one leaves
+    # at once. Two runs drawing together ran the memory out and crashed the drawing room (2026-10-02).
+    import fcntl
+    os.makedirs(WORK, exist_ok=True)
+    _lock = open(os.path.join(WORK, "run.lock"), "w")
+    try:
+        fcntl.flock(_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        say("another asset run is already going - leaving it alone")
+        sys.exit(0)
     if a.loop:
         if not queue(a.queue or 3):                     # nothing to make right now: done in a second
             sys.exit(0)
