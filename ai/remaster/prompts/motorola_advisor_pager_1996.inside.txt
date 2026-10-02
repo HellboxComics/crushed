@@ -1,1 +1,1 @@
-LCD, radio board, piezo alert, controls, battery and shell
+ABS shell, LCD, PCB, battery contacts, piezo alert and belt clip
