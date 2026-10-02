@@ -2379,6 +2379,16 @@
 0.279
 ]
 },
+"bloco_paper_wristband_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.02,
+0.0005,
+0.24
+]
+},
 "blow_pop_cherry_1998": {
 "hard": 0.26,
 "how": "snap",
@@ -2417,6 +2427,16 @@
 0.07,
 0.0839,
 0.17
+]
+},
+"body_glitter_silver_tube_1998": {
+"hard": 0.12,
+"how": "dent",
+"mat": "soft_plastic",
+"size": [
+0.03,
+0.02,
+0.12
 ]
 },
 "bookshelf_slice": {
@@ -2607,6 +2627,26 @@
 0.075,
 0.13,
 0.0245
+]
+},
+"brigadeiro_chocolate_1998": {
+"hard": 0.06,
+"how": "squish",
+"mat": "food",
+"size": [
+0.035,
+0.035,
+0.035
+]
+},
+"brigadeiro_paper_cup_white_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.04,
+0.015,
+0.04
 ]
 },
 "brite_star_silver_tinsel_garland_1998": {
@@ -2837,6 +2877,16 @@
 0.1,
 0.0005,
 0.15
+]
+},
+"caipirinha_clear_plastic_cup_1998": {
+"hard": 0.16,
+"how": "dent",
+"mat": "soft_plastic",
+"size": [
+0.085,
+0.055,
+0.11
 ]
 },
 "calculator": {
@@ -3127,6 +3177,66 @@
 0.038,
 0.038,
 0.03
+]
+},
+"carnaval_half_mask_gold_1998": {
+"hard": 0.2,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.05,
+0.09
+]
+},
+"carnaval_mask_feather_sidepiece_1998": {
+"hard": 0.03,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.1,
+0.03,
+0.25
+]
+},
+"carnival_confetti_round_assorted_1998": {
+"hard": 0.0,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.01,
+0.0002,
+0.01
+]
+},
+"carnival_loose_sequins_assorted_1998": {
+"hard": 0.01,
+"how": "fold",
+"mat": "soft_plastic",
+"size": [
+0.01,
+0.0005,
+0.01
+]
+},
+"carnival_sequin_strand_gold_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.6,
+0.002,
+0.01
+]
+},
+"carnival_serpentine_streamer_roll_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.04,
+0.02,
+0.04
 ]
 },
 "cartridge_blower_breath_note_1995": {
@@ -3579,6 +3689,16 @@
 0.1
 ]
 },
+"ceramic_teapot_white_blue_1998": {
+"hard": 0.7,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.18,
+0.12,
+0.12
+]
+},
 "ch_products_flightstick_pro_1995": {
 "hard": 0.7,
 "how": "snap",
@@ -3777,6 +3897,16 @@
 0.1,
 0.08,
 0.1
+]
+},
+"chinese_tea_cup_porcelain_blue_white_1998": {
+"hard": 0.66,
+"how": "snap",
+"mat": "ceramic",
+"size": [
+0.07,
+0.07,
+0.05
 ]
 },
 "chinet_classic_white_plate_1998": {
@@ -4529,6 +4659,16 @@
 0.115
 ]
 },
+"coca_cola_350ml_brazil_1998": {
+"hard": 0.36,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
+]
+},
 "coffee_mug": {
 "hard": 0.7,
 "how": "snap",
@@ -4717,6 +4857,16 @@
 0.18,
 0.001,
 0.22
+]
+},
+"contemporanea_tamborim_6in_1998": {
+"hard": 0.58,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.16,
+0.05,
+0.16
 ]
 },
 "contra_nes_1988": {
@@ -8089,6 +8239,26 @@
 0.0106
 ]
 },
+"glow_stick_connector_clear_1998": {
+"hard": 0.14,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.02,
+0.008,
+0.03
+]
+},
+"glow_stick_green_8in_1998": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.015,
+0.015,
+0.2
+]
+},
 "glow_vampire_fangs_1998": {
 "hard": 0.24,
 "how": "snap",
@@ -8457,6 +8627,16 @@
 0.135,
 0.014,
 0.19
+]
+},
+"guarana_antarctica_350ml_can_1998": {
+"hard": 0.36,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.066,
+0.066,
+0.122
 ]
 },
 "guinness_pint_glass_2001": {
@@ -9039,6 +9219,26 @@
 0.188
 ]
 },
+"havaianas_top_brasil_blue_1998": {
+"hard": 0.18,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.11,
+0.02,
+0.28
+]
+},
+"havaianas_top_yellow_1998": {
+"hard": 0.18,
+"how": "fold",
+"mat": "rubber",
+"size": [
+0.11,
+0.02,
+0.28
+]
+},
 "hayes_accura_56k_1997": {
 "hard": 0.7,
 "how": "snap",
@@ -9407,6 +9607,16 @@
 0.105,
 0.027,
 0.188
+]
+},
+"hong_kong_style_mooncake_gift_tin_red_1998": {
+"hard": 0.56,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.24,
+0.07,
+0.24
 ]
 },
 "hood_clan": {
@@ -9917,6 +10127,16 @@
 0.22,
 0.22,
 0.45
+]
+},
+"individual_mooncake_plastic_tray_1998": {
+"hard": 0.14,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.1,
+0.02,
+0.1
 ]
 },
 "inert_spent_flowerpot_firework_shell_1998": {
@@ -11589,6 +11809,16 @@
 0.08
 ]
 },
+"lime_wedge_caipirinha_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.04,
+0.02,
+0.04
+]
+},
 "limp_bizkit_significant_other_cd_1999": {
 "hard": 0.68,
 "how": "snap",
@@ -11829,6 +12059,16 @@
 0.1198
 ]
 },
+"loose_body_glitter_mix_1998": {
+"hard": 0.0,
+"how": "crumple",
+"mat": "plastic",
+"size": [
+0.05,
+0.001,
+0.05
+]
+},
 "loose_cassette_tape_spaghetti_1998": {
 "hard": 0.01,
 "how": "crumple",
@@ -11867,6 +12107,16 @@
 0.032,
 0.032,
 0.032
+]
+},
+"loose_oolong_tea_leaves_1998": {
+"hard": 0.04,
+"how": "crumple",
+"mat": "fabric",
+"size": [
+0.01,
+0.005,
+0.01
 ]
 },
 "loose_rangoli_powder_mix_1998": {
@@ -13049,6 +13299,66 @@
 0.1
 ]
 },
+"mid_autumn_double_yolk_lotus_mooncake_1998": {
+"hard": 0.14,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.09,
+0.045,
+0.09
+]
+},
+"mid_autumn_fish_paper_lantern_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.35,
+0.1,
+0.2
+]
+},
+"mid_autumn_greeting_card_1998": {
+"hard": 0.07,
+"how": "fold",
+"mat": "card",
+"size": [
+0.12,
+0.0015,
+0.18
+]
+},
+"mid_autumn_lantern_carry_stick_1998": {
+"hard": 0.18,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.02,
+0.02,
+0.45
+]
+},
+"mid_autumn_rabbit_paper_lantern_red_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.3,
+0.12,
+0.24
+]
+},
+"mid_autumn_red_bean_mooncake_1998": {
+"hard": 0.13,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.085,
+0.04,
+0.085
+]
+},
 "mighty_max_skull_doom_zone_1993": {
 "hard": 0.5,
 "how": "snap",
@@ -13187,6 +13497,16 @@
 0.05,
 0.095,
 0.0149
+]
+},
+"mini_round_paper_lantern_red_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.15,
+0.15,
+0.2
 ]
 },
 "mishumaa_saba_candle_set_1998": {
@@ -13407,6 +13727,46 @@
 0.2278,
 0.104,
 0.0495
+]
+},
+"mooncake_clear_wrapper_1998": {
+"hard": 0.02,
+"how": "crumple",
+"mat": "soft_plastic",
+"size": [
+0.11,
+0.0005,
+0.11
+]
+},
+"mooncake_cut_quarter_double_yolk_1998": {
+"hard": 0.1,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.045,
+0.04,
+0.045
+]
+},
+"mooncake_gift_bag_red_gold_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "paper",
+"size": [
+0.28,
+0.1,
+0.32
+]
+},
+"mooncake_tin_plastic_insert_1998": {
+"hard": 0.18,
+"how": "dent",
+"mat": "plastic",
+"size": [
+0.22,
+0.03,
+0.22
 ]
 },
 "morinaga_hichew_grape_2002": {
@@ -16389,6 +16749,16 @@
 0.19
 ]
 },
+"plastic_cocktail_stirrer_green_1998": {
+"hard": 0.12,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.01,
+0.003,
+0.16
+]
+},
 "plastic_egg": {
 "hard": 0.25,
 "how": "crumble",
@@ -16437,6 +16807,16 @@
 0.041,
 0.005,
 0.041
+]
+},
+"plastic_rabbit_glow_lantern_1998": {
+"hard": 0.24,
+"how": "snap",
+"mat": "plastic",
+"size": [
+0.18,
+0.05,
+0.25
 ]
 },
 "plastic_shard": {
@@ -16677,6 +17057,36 @@
 0.1,
 0.035,
 0.09
+]
+},
+"pomelo_peel_segment_1998": {
+"hard": 0.06,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.1,
+0.02,
+0.15
+]
+},
+"pomelo_segment_peeled_1998": {
+"hard": 0.05,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.04,
+0.03,
+0.08
+]
+},
+"pomelo_whole_mid_autumn_1998": {
+"hard": 0.16,
+"how": "crumple",
+"mat": "food",
+"size": [
+0.16,
+0.16,
+0.18
 ]
 },
 "pop_rocks_strawberry_1995": {
@@ -17947,6 +18357,36 @@
 0.035,
 0.035,
 0.045
+]
+},
+"rio_carnaval_feather_headdress_pink_blue_1998": {
+"hard": 0.08,
+"how": "crumple",
+"mat": "fabric",
+"size": [
+0.55,
+0.2,
+0.7
+]
+},
+"rio_carnaval_feather_plume_blue_1998": {
+"hard": 0.03,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.08,
+0.01,
+0.35
+]
+},
+"rio_carnaval_feather_plume_pink_1998": {
+"hard": 0.03,
+"how": "fold",
+"mat": "fabric",
+"size": [
+0.08,
+0.01,
+0.35
 ]
 },
 "ripcord_launcher": {
@@ -21189,6 +21629,16 @@
 0.1
 ]
 },
+"tamborim_baqueta_flexible_1998": {
+"hard": 0.16,
+"how": "fold",
+"mat": "plastic",
+"size": [
+0.03,
+0.01,
+0.35
+]
+},
 "tampax_regular_40count_1998": {
 "hard": 0.34,
 "how": "fold",
@@ -21517,6 +21967,16 @@
 0.0683,
 0.0685,
 0.066
+]
+},
+"tenren_oolong_tea_tin_1998": {
+"hard": 0.5,
+"how": "dent",
+"mat": "metal",
+"size": [
+0.08,
+0.08,
+0.14
 ]
 },
 "terminator2_judgment_day_vhs_1992": {

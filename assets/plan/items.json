@@ -4428,6 +4428,28 @@
 "themes": "BE KIND REWIND",
 "weight": 1.0
 },
+"bloco_paper_wristband_1998": {
+"display": "Carnival bloco paper wristband, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Carnival bloco paper wristband, circa 1998"
+],
+"product": "Carnival bloco paper wristband, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.0005,
+0.24
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "blow_pop_cherry_1998": {
 "display": "Charms Blow Pop Cherry lollipop, circa",
 "eras": [
@@ -4449,6 +4471,28 @@
 ],
 "themes": "TRICK OR TREAT",
 "weight": 0.12
+},
+"body_glitter_silver_tube_1998": {
+"display": "Silver body-glitter gel tube, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.01,
+"notes": [
+"Silver body-glitter gel tube, circa 1998"
+],
+"product": "Silver body-glitter gel tube, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.02,
+0.12
+],
+"themes": "CARNAVAL",
+"weight": 1.0
 },
 "bop_it_original_1996": {
 "display": "Hasbro Bop It electronic game",
@@ -4778,6 +4822,50 @@
 0.03
 ],
 "themes": "LEFTOVERS; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"brigadeiro_chocolate_1998": {
+"display": "Brigadeiro chocolate sweet, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.009,
+"notes": [
+"Brigadeiro chocolate sweet, circa 1998"
+],
+"product": "Brigadeiro chocolate sweet, circa 1998",
+"role": "main",
+"size": [
+0.035,
+0.035,
+0.035
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"brigadeiro_paper_cup_white_1998": {
+"display": "Fluted brigadeiro paper cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Fluted brigadeiro paper cup, circa 1998"
+],
+"product": "Fluted brigadeiro paper cup, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.015,
+0.04
+],
+"themes": "CARNAVAL",
 "weight": 1.0
 },
 "brite_star_silver_tinsel_garland_1998": {
@@ -5176,6 +5264,28 @@
 "themes": "LUNCH TRADE",
 "weight": 1.0
 },
+"caipirinha_clear_plastic_cup_1998": {
+"display": "Clear disposable caipirinha cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.072,
+"notes": [
+"Clear disposable caipirinha cup, circa 1998"
+],
+"product": "Clear disposable caipirinha cup, circa 1998",
+"role": "main",
+"size": [
+0.085,
+0.055,
+0.11
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "calpis_water_500ml_pet_1996": {
 "display": "Calpis Water 500 ml PET bottle, circa",
 "eras": [
@@ -5548,6 +5658,138 @@
 0.03
 ],
 "themes": "SICK DAY; HOME_JUNK_DRAWER_MISC; ROAD TRIP; regular cubes",
+"weight": 1.0
+},
+"carnaval_half_mask_gold_1998": {
+"display": "Gold carnival half-mask with rhinestones, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.142,
+"notes": [
+"Gold carnival half-mask with rhinestones, circa 1998"
+],
+"product": "Gold carnival half-mask with rhinestones, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.05,
+0.09
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"carnaval_mask_feather_sidepiece_1998": {
+"display": "Feathered sidepiece from carnival mask, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.052,
+"notes": [
+"Feathered sidepiece from carnival mask, circa 1998"
+],
+"product": "Feathered sidepiece from carnival mask, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.03,
+0.25
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"carnival_confetti_round_assorted_1998": {
+"display": "Paper carnival confetti, assorted colors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Paper carnival confetti, assorted colors, circa 1998"
+],
+"product": "Paper carnival confetti, assorted colors, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.0002,
+0.01
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"carnival_loose_sequins_assorted_1998": {
+"display": "Loose carnival sequins, assorted colors, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose carnival sequins, assorted colors, circa 1998"
+],
+"product": "Loose carnival sequins, assorted colors, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.0005,
+0.01
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"carnival_sequin_strand_gold_1998": {
+"display": "Gold sequin costume strand, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Gold sequin costume strand, circa 1998"
+],
+"product": "Gold sequin costume strand, circa 1998",
+"role": "main",
+"size": [
+0.6,
+0.002,
+0.01
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"carnival_serpentine_streamer_roll_1998": {
+"display": "Paper serpentine streamer roll, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.004,
+"notes": [
+"Paper serpentine streamer roll, circa 1998"
+],
+"product": "Paper serpentine streamer roll, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.04
+],
+"themes": "CARNAVAL",
 "weight": 1.0
 },
 "cartridge_blower_breath_note_1995": {
@@ -6361,6 +6603,28 @@
 "themes": "HAND TURKEY",
 "weight": 1.0
 },
+"ceramic_teapot_white_blue_1998": {
+"display": "Small blue-and-white porcelain teapot, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.998,
+"notes": [
+"Small blue-and-white porcelain teapot, circa 1998"
+],
+"product": "Small blue-and-white porcelain teapot, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.12,
+0.12
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
 "ch_products_flightstick_pro_1995": {
 "display": "CH Products Flightstick Pro joystick, circa",
 "eras": [
@@ -6689,6 +6953,28 @@
 0.1
 ],
 "themes": "LEFTOVERS",
+"weight": 1.0
+},
+"chinese_tea_cup_porcelain_blue_white_1998": {
+"display": "Small blue-and-white porcelain tea cup, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.094,
+"notes": [
+"Small blue-and-white porcelain tea cup, circa 1998"
+],
+"product": "Small blue-and-white porcelain tea cup, circa 1998",
+"role": "main",
+"size": [
+0.07,
+0.07,
+0.05
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "chinet_classic_white_plate_1998": {
@@ -7944,6 +8230,28 @@
 "themes": "GOLAZO",
 "weight": 1.0
 },
+"coca_cola_350ml_brazil_1998": {
+"display": "Coca-Cola 350 ml Brazil can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.372,
+"notes": [
+"Coca-Cola 350 ml Brazil can, circa 1998"
+],
+"product": "Coca-Cola 350 ml Brazil can, circa 1998",
+"role": "main",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "coiled_phone_handset_cord_beige_1997": {
 "display": "Beige coiled telephone handset cord, circa",
 "eras": [
@@ -8227,6 +8535,28 @@
 0.22
 ],
 "themes": "HAND TURKEY",
+"weight": 1.0
+},
+"contemporanea_tamborim_6in_1998": {
+"display": "Contempor\u00e2nea-style 6-inch tamborim, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.896,
+"notes": [
+"Contempor\u00e2nea-style 6-inch tamborim, circa 1998"
+],
+"product": "Contempor\u00e2nea-style 6-inch tamborim, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.05,
+0.16
+],
+"themes": "CARNAVAL",
 "weight": 1.0
 },
 "contra_nes_1988": {
@@ -13868,6 +14198,50 @@
 "themes": "SLIMED",
 "weight": 1.0
 },
+"glow_stick_connector_clear_1998": {
+"display": "Clear glow-stick loop connector, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Clear glow-stick loop connector, circa 1998"
+],
+"product": "Clear glow-stick loop connector, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.008,
+0.03
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"glow_stick_green_8in_1998": {
+"display": "Green chemical glow stick, spent/inert, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.008,
+"notes": [
+"Green chemical glow stick, spent/inert, circa 1998"
+],
+"product": "Green chemical glow stick, spent/inert, circa 1998",
+"role": "main",
+"size": [
+0.015,
+0.015,
+0.2
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
 "glow_vampire_fangs_1998": {
 "display": "Glow-in-the-dark plastic vampire fangs, circa",
 "eras": [
@@ -14393,6 +14767,28 @@
 0.19
 ],
 "themes": "CONSOLE WARS; BASS BOOSTED; SLEEPOVER; regular cubes",
+"weight": 1.0
+},
+"guarana_antarctica_350ml_can_1998": {
+"display": "Guaran\u00e1 Antarctica 350 ml aluminum can, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.372,
+"notes": [
+"Guaran\u00e1 Antarctica 350 ml aluminum can, circa 1998"
+],
+"product": "Guaran\u00e1 Antarctica 350 ml aluminum can, circa 1998",
+"role": "main",
+"size": [
+0.066,
+0.066,
+0.122
+],
+"themes": "CARNAVAL",
 "weight": 1.0
 },
 "guinness_pint_glass_2001": {
@@ -15537,6 +15933,50 @@
 "themes": "BE KIND REWIND; SLEEPOVER; TIME CAPSULE; regular cubes",
 "weight": 1.0
 },
+"havaianas_top_brasil_blue_1998": {
+"display": "Havaianas Top Brasil flip-flop, Blue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.129,
+"notes": [
+"Havaianas Top Brasil flip-flop, Blue, circa 1998"
+],
+"product": "Havaianas Top Brasil flip-flop, Blue, circa 1998",
+"role": "main",
+"size": [
+0.11,
+0.02,
+0.28
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"havaianas_top_yellow_1998": {
+"display": "Havaianas Top flip-flop, Yellow, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.129,
+"notes": [
+"Havaianas Top flip-flop, Yellow, circa 1998"
+],
+"product": "Havaianas Top flip-flop, Yellow, circa 1998",
+"role": "main",
+"size": [
+0.11,
+0.02,
+0.28
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "hayes_accura_56k_1997": {
 "display": "Hayes ACCURA 56K external modem",
 "eras": [
@@ -16239,6 +16679,28 @@
 0.188
 ],
 "themes": "BE KIND REWIND; LEFTOVERS; SLEEPOVER; SOME ASSEMBLY REQUIRED; regular cubes",
+"weight": 1.0
+},
+"hong_kong_style_mooncake_gift_tin_red_1998": {
+"display": "Four-mooncake embossed red metal gift tin, Hong Kong style, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 2.822,
+"notes": [
+"Four-mooncake embossed red metal gift tin, Hong Kong style, circa 1998"
+],
+"product": "Four-mooncake embossed red metal gift tin, Hong Kong style, circa 1998",
+"role": "main",
+"size": [
+0.24,
+0.07,
+0.24
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "hood_street_metal_sign_2026": {
@@ -17190,6 +17652,28 @@
 0.45
 ],
 "themes": "DIYA",
+"weight": 1.0
+},
+"individual_mooncake_plastic_tray_1998": {
+"display": "Individual clear mooncake tray, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.035,
+"notes": [
+"Individual clear mooncake tray, circa 1998"
+],
+"product": "Individual clear mooncake tray, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.1
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "inert_spent_flowerpot_firework_shell_1998": {
@@ -20398,6 +20882,28 @@
 "themes": "LOW RES",
 "weight": 1.0
 },
+"lime_wedge_caipirinha_1998": {
+"display": "Lime wedge from caipirinha, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.007,
+"notes": [
+"Lime wedge from caipirinha, circa 1998"
+],
+"product": "Lime wedge from caipirinha, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.02,
+0.04
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "limp_bizkit_significant_other_cd_1999": {
 "display": "Limp Bizkit Significant Other CD in jewel case",
 "eras": [
@@ -20903,6 +21409,28 @@
 "themes": "DIAL-UP; CONSOLE WARS; GARAGE SALE; regular cubes",
 "weight": 1.0
 },
+"loose_body_glitter_mix_1998": {
+"display": "Loose cosmetic glitter, assorted, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose cosmetic glitter, assorted, circa 1998"
+],
+"product": "Loose cosmetic glitter, assorted, circa 1998",
+"role": "main",
+"size": [
+0.05,
+0.001,
+0.05
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "loose_cassette_tape_spaghetti_1998": {
 "display": "Pulled-out compact cassette magnetic tape, circa",
 "eras": [
@@ -20990,6 +21518,28 @@
 ],
 "themes": "DIAL-UP",
 "weight": 0.12
+},
+"loose_oolong_tea_leaves_1998": {
+"display": "Loose rolled oolong tea leaves, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Loose rolled oolong tea leaves, circa 1998"
+],
+"product": "Loose rolled oolong tea leaves, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.005,
+0.01
+],
+"themes": "MOONCAKE",
+"weight": 1.0
 },
 "loose_rangoli_powder_mix_1998": {
 "display": "Loose mixed rangoli powder, circa",
@@ -23299,6 +23849,138 @@
 "themes": "CONSOLE WARS",
 "weight": 0.12
 },
+"mid_autumn_double_yolk_lotus_mooncake_1998": {
+"display": "Double-yolk white lotus seed paste mooncake, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.077,
+"notes": [
+"Double-yolk white lotus seed paste mooncake, circa 1998"
+],
+"product": "Double-yolk white lotus seed paste mooncake, circa 1998",
+"role": "main",
+"size": [
+0.09,
+0.045,
+0.09
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mid_autumn_fish_paper_lantern_1998": {
+"display": "Colorful fish-shaped Mid-Autumn paper lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.98,
+"notes": [
+"Colorful fish-shaped Mid-Autumn paper lantern, circa 1998"
+],
+"product": "Colorful fish-shaped Mid-Autumn paper lantern, circa 1998",
+"role": "main",
+"size": [
+0.35,
+0.1,
+0.2
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mid_autumn_greeting_card_1998": {
+"display": "Mid-Autumn Festival greeting card, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.003,
+"notes": [
+"Mid-Autumn Festival greeting card, circa 1998"
+],
+"product": "Mid-Autumn Festival greeting card, circa 1998",
+"role": "main",
+"size": [
+0.12,
+0.0015,
+0.18
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mid_autumn_lantern_carry_stick_1998": {
+"display": "Plastic lantern carrying stick, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.032,
+"notes": [
+"Plastic lantern carrying stick, circa 1998"
+],
+"product": "Plastic lantern carrying stick, circa 1998",
+"role": "main",
+"size": [
+0.02,
+0.02,
+0.45
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mid_autumn_rabbit_paper_lantern_red_1998": {
+"display": "Red rabbit-shaped paper lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.21,
+"notes": [
+"Red rabbit-shaped paper lantern, circa 1998"
+],
+"product": "Red rabbit-shaped paper lantern, circa 1998",
+"role": "main",
+"size": [
+0.3,
+0.12,
+0.24
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mid_autumn_red_bean_mooncake_1998": {
+"display": "Red-bean paste mooncake, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.061,
+"notes": [
+"Red-bean paste mooncake, circa 1998"
+],
+"product": "Red-bean paste mooncake, circa 1998",
+"role": "main",
+"size": [
+0.085,
+0.04,
+0.085
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
 "mighty_max_skull_doom_zone_1993": {
 "display": "Bluebird Mighty Max Skull Dungeon-style Doom Zone compact, circa",
 "eras": [
@@ -23472,6 +24154,28 @@
 0.145
 ],
 "themes": "DOUBLE A; ROAD TRIP; GARAGE SALE; HOME_JUNK_DRAWER_MISC; regular cubes",
+"weight": 1.0
+},
+"mini_round_paper_lantern_red_1998": {
+"display": "Small round red paper lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.63,
+"notes": [
+"Small round red paper lantern, circa 1998"
+],
+"product": "Small round red paper lantern, circa 1998",
+"role": "main",
+"size": [
+0.15,
+0.15,
+0.2
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "mishumaa_saba_candle_set_1998": {
@@ -23800,6 +24504,94 @@
 0.13
 ],
 "themes": "SUMMER CAMP; SOME ASSEMBLY REQUIRED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"mooncake_clear_wrapper_1998": {
+"display": "Clear sealed mooncake wrapper, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Clear sealed mooncake wrapper, circa 1998"
+],
+"product": "Clear sealed mooncake wrapper, circa 1998",
+"role": "main",
+"size": [
+0.11,
+0.0005,
+0.11
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mooncake_cut_quarter_double_yolk_1998": {
+"display": "Quartered double-yolk mooncake pieces, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.017,
+"notes": [
+"Quartered double-yolk mooncake pieces, circa 1998"
+],
+"product": "Quartered double-yolk mooncake pieces, circa 1998",
+"role": "main",
+"size": [
+0.045,
+0.04,
+0.045
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mooncake_gift_bag_red_gold_1998": {
+"display": "Red-and-gold mooncake gift bag, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 1.254,
+"notes": [
+"Red-and-gold mooncake gift bag, circa 1998"
+],
+"product": "Red-and-gold mooncake gift bag, circa 1998",
+"role": "main",
+"size": [
+0.28,
+0.1,
+0.32
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"mooncake_tin_plastic_insert_1998": {
+"display": "Four-cavity plastic mooncake tin insert, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.254,
+"notes": [
+"Four-cavity plastic mooncake tin insert, circa 1998"
+],
+"product": "Four-cavity plastic mooncake tin insert, circa 1998",
+"role": "main",
+"size": [
+0.22,
+0.03,
+0.22
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "morinaga_hichew_grape_2002": {
@@ -29054,6 +29846,28 @@
 "themes": "Y2K",
 "weight": 1.0
 },
+"plastic_cocktail_stirrer_green_1998": {
+"display": "Green plastic drink stirrer, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.002,
+"notes": [
+"Green plastic drink stirrer, circa 1998"
+],
+"product": "Green plastic drink stirrer, circa 1998",
+"role": "main",
+"size": [
+0.01,
+0.003,
+0.16
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "plastic_icicle_ornaments_24pack_1998": {
 "display": "Clear plastic icicle Christmas ornaments 24-pack, circa",
 "eras": [
@@ -29096,6 +29910,28 @@
 0.041
 ],
 "themes": "GOT GOT NEED; PRIZE COUNTER; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"plastic_rabbit_glow_lantern_1998": {
+"display": "Rabbit-shaped plastic glow-stick lantern, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.394,
+"notes": [
+"Rabbit-shaped plastic glow-stick lantern, circa 1998"
+],
+"product": "Rabbit-shaped plastic glow-stick lantern, circa 1998",
+"role": "main",
+"size": [
+0.18,
+0.05,
+0.25
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "playboy_december_1999_polybagged": {
@@ -29426,6 +30262,72 @@
 0.09
 ],
 "themes": "SLEEPOVER; DRESS CODE; GOT GOT NEED; TIME CAPSULE; regular cubes",
+"weight": 1.0
+},
+"pomelo_peel_segment_1998": {
+"display": "Thick pomelo peel segment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.063,
+"notes": [
+"Thick pomelo peel segment, circa 1998"
+],
+"product": "Thick pomelo peel segment, circa 1998",
+"role": "main",
+"size": [
+0.1,
+0.02,
+0.15
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"pomelo_segment_peeled_1998": {
+"display": "Peeled pomelo fruit segment, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.02,
+"notes": [
+"Peeled pomelo fruit segment, circa 1998"
+],
+"product": "Peeled pomelo fruit segment, circa 1998",
+"role": "main",
+"size": [
+0.04,
+0.03,
+0.08
+],
+"themes": "MOONCAKE",
+"weight": 1.0
+},
+"pomelo_whole_mid_autumn_1998": {
+"display": "Whole pomelo, Mid-Autumn table fruit, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.968,
+"notes": [
+"Whole pomelo, Mid-Autumn table fruit, circa 1998"
+],
+"product": "Whole pomelo, Mid-Autumn table fruit, circa 1998",
+"role": "main",
+"size": [
+0.16,
+0.16,
+0.18
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "pop_rocks_strawberry_1995": {
@@ -31665,6 +32567,72 @@
 ],
 "themes": "EGG HUNT",
 "weight": 0.12
+},
+"rio_carnaval_feather_headdress_pink_blue_1998": {
+"display": "Rio Carnival feather samba headdress, Pink/Blue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 5.39,
+"notes": [
+"Rio Carnival feather samba headdress, Pink/Blue, circa 1998"
+],
+"product": "Rio Carnival feather samba headdress, Pink/Blue, circa 1998",
+"role": "main",
+"size": [
+0.55,
+0.2,
+0.7
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"rio_carnaval_feather_plume_blue_1998": {
+"display": "Loose dyed carnival feather plume, Electric Blue, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.02,
+"notes": [
+"Loose dyed carnival feather plume, Electric Blue, circa 1998"
+],
+"product": "Loose dyed carnival feather plume, Electric Blue, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.01,
+0.35
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
+"rio_carnaval_feather_plume_pink_1998": {
+"display": "Loose dyed carnival feather plume, Hot Pink, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.02,
+"notes": [
+"Loose dyed carnival feather plume, Hot Pink, circa 1998"
+],
+"product": "Loose dyed carnival feather plume, Hot Pink, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.01,
+0.35
+],
+"themes": "CARNAVAL",
+"weight": 1.0
 },
 "rite_lite_electric_menorah_1998": {
 "display": "Rite Lite electric menorah, circa",
@@ -37333,6 +38301,28 @@
 "themes": "STILL ALIVE",
 "weight": 1.0
 },
+"tamborim_baqueta_flexible_1998": {
+"display": "Flexible multi-rod tamborim beater, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.018,
+"notes": [
+"Flexible multi-rod tamborim beater, circa 1998"
+],
+"product": "Flexible multi-rod tamborim beater, circa 1998",
+"role": "main",
+"size": [
+0.03,
+0.01,
+0.35
+],
+"themes": "CARNAVAL",
+"weight": 1.0
+},
 "tampax_regular_40count_1998": {
 "display": "Tampax Regular cardboard applicator tampons 40-count box",
 "eras": [
@@ -37903,6 +38893,28 @@
 0.065
 ],
 "themes": "KICKFLIP; PRIZE COUNTER; SCHOOL_JUNK; regular cubes",
+"weight": 1.0
+},
+"tenren_oolong_tea_tin_1998": {
+"display": "Ten Ren-style oolong tea tin, circa",
+"eras": [
+2,
+3
+],
+"family": "one-of-one",
+"group": "special",
+"mass": 0.627,
+"notes": [
+"Ten Ren-style oolong tea tin, circa 1998"
+],
+"product": "Ten Ren-style oolong tea tin, circa 1998",
+"role": "main",
+"size": [
+0.08,
+0.08,
+0.14
+],
+"themes": "MOONCAKE",
 "weight": 1.0
 },
 "terminator2_judgment_day_vhs_1992": {

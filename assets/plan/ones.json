@@ -553,6 +553,117 @@
 "no_wires": true,
 "theme": "market junk from buying the top and holding through the drop"
 },
+"CARNAVAL": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"citrus, sweat, aluminum cans, body glitter, latex, wet pavement and crushed brigadeiro wrappers",
+"the curb after a Rio bloco emptied into the next neighborhood",
+"rio_carnaval_feather_headdress_pink_blue_1998"
+],
+"lore": "By sunrise the feathers were bent, the glitter had become permanent, and one flip-flop had lost its owner somewhere three blocks back.",
+"mix": [
+[
+"rio_carnaval_feather_headdress_pink_blue_1998",
+1
+],
+[
+"rio_carnaval_feather_plume_pink_1998",
+6
+],
+[
+"rio_carnaval_feather_plume_blue_1998",
+6
+],
+[
+"carnival_sequin_strand_gold_1998",
+5
+],
+[
+"carnival_loose_sequins_assorted_1998",
+12
+],
+[
+"contemporanea_tamborim_6in_1998",
+2
+],
+[
+"tamborim_baqueta_flexible_1998",
+3
+],
+[
+"carnival_confetti_round_assorted_1998",
+20
+],
+[
+"carnival_serpentine_streamer_roll_1998",
+4
+],
+[
+"caipirinha_clear_plastic_cup_1998",
+5
+],
+[
+"lime_wedge_caipirinha_1998",
+8
+],
+[
+"plastic_cocktail_stirrer_green_1998",
+5
+],
+[
+"havaianas_top_brasil_blue_1998",
+2
+],
+[
+"havaianas_top_yellow_1998",
+2
+],
+[
+"guarana_antarctica_350ml_can_1998",
+5
+],
+[
+"coca_cola_350ml_brazil_1998",
+4
+],
+[
+"brigadeiro_chocolate_1998",
+8
+],
+[
+"brigadeiro_paper_cup_white_1998",
+8
+],
+[
+"body_glitter_silver_tube_1998",
+3
+],
+[
+"loose_body_glitter_mix_1998",
+8
+],
+[
+"carnaval_half_mask_gold_1998",
+3
+],
+[
+"carnaval_mask_feather_sidepiece_1998",
+3
+],
+[
+"bloco_paper_wristband_1998",
+6
+]
+],
+"no_wires": true,
+"theme": "feathers, sequins, tamborim skins and street-party debris after Rio Carnival"
+},
 "CCFF00": {
 "era": [
 4
@@ -3700,6 +3811,117 @@
 ],
 "no_wires": true,
 "theme": "hand-recorded cassettes, Walkman junk and handwritten track lists"
+},
+"MOONCAKE": {
+"era": [
+0,
+1,
+2,
+3,
+4
+],
+"flavor": [
+"lotus seed paste, tea leaves, pomelo peel, paper lantern glue, candle wax and metal gift tin",
+"the balcony table after the moon had disappeared behind the apartment blocks",
+"mid_autumn_double_yolk_lotus_mooncake_1998"
+],
+"lore": "The mooncakes were quartered, the tea went cold, and the rabbit lantern stayed lit until somebody finally snapped the glow stick out.",
+"mix": [
+[
+"mid_autumn_double_yolk_lotus_mooncake_1998",
+4
+],
+[
+"mid_autumn_red_bean_mooncake_1998",
+3
+],
+[
+"mooncake_cut_quarter_double_yolk_1998",
+8
+],
+[
+"hong_kong_style_mooncake_gift_tin_red_1998",
+2
+],
+[
+"mooncake_tin_plastic_insert_1998",
+2
+],
+[
+"individual_mooncake_plastic_tray_1998",
+6
+],
+[
+"mooncake_clear_wrapper_1998",
+6
+],
+[
+"mid_autumn_rabbit_paper_lantern_red_1998",
+2
+],
+[
+"mid_autumn_fish_paper_lantern_1998",
+2
+],
+[
+"mini_round_paper_lantern_red_1998",
+4
+],
+[
+"pomelo_whole_mid_autumn_1998",
+2
+],
+[
+"pomelo_peel_segment_1998",
+4
+],
+[
+"pomelo_segment_peeled_1998",
+6
+],
+[
+"tenren_oolong_tea_tin_1998",
+2
+],
+[
+"loose_oolong_tea_leaves_1998",
+8
+],
+[
+"chinese_tea_cup_porcelain_blue_white_1998",
+4
+],
+[
+"ceramic_teapot_white_blue_1998",
+1
+],
+[
+"glow_stick_green_8in_1998",
+6
+],
+[
+"glow_stick_connector_clear_1998",
+6
+],
+[
+"plastic_rabbit_glow_lantern_1998",
+2
+],
+[
+"mid_autumn_lantern_carry_stick_1998",
+4
+],
+[
+"mooncake_gift_bag_red_gold_1998",
+3
+],
+[
+"mid_autumn_greeting_card_1998",
+3
+]
+],
+"no_wires": true,
+"theme": "embossed mooncakes, gift tins, pomelo peel and lanterns after Mid-Autumn night"
 },
 "OFRENDA": {
 "era": [
