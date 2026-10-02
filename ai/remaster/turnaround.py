@@ -80,24 +80,35 @@ def release():
         pass
 
 
-def draw(description, out, seed=None, steps=30, timeout=1800):
-    """One 1584x1056 turnaround from Qwen-Image 2512 (bf16), its own text encoder and VAE."""
+LIGHTNING = "Qwen-Image-2512-Lightning-8steps-V1.0-bf16.safetensors"     # the official 8-step speed-up (Apache 2.0)
+LORA_DIR = os.path.expanduser("~/.hellbox/drawing-room/ComfyUI/models/loras")
+
+
+def draw(description, out, seed=None, steps=None, timeout=3600):
+    """One 1584x1056 turnaround from Qwen-Image 2512 (bf16), its own text encoder and VAE. With the Lightning
+    LoRA installed it takes 8 steps at guidance 1 (one pass per step) instead of 30 at guidance 4: ~7x faster."""
     seed = seed if seed is not None else random.randint(1, 2 ** 31)
+    fast = os.path.exists(os.path.join(LORA_DIR, LIGHTNING))
+    steps = steps or (8 if fast else 30)
+    cfg = 1.0 if fast else 4.0
     wf = {
         "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "qwen_image_2512_bf16.safetensors", "weight_dtype": "default"}},
         "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_2.5_vl_7b.safetensors", "type": "qwen_image"}},
         "3": {"class_type": "VAELoader", "inputs": {"vae_name": "qwen_image_vae.safetensors"}},
-        "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["1", 0], "shift": 3.1}},
+        "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["11", 0] if fast else ["1", 0], "shift": 3.1}},
         "5": {"class_type": "CLIPTextEncode", "inputs": {"text": LAYOUT + description, "clip": ["2", 0]}},
         "6": {"class_type": "CLIPTextEncode", "inputs": {"text": "blurry, deformed, different objects, inconsistent, "
                                                                  "captions, watermark, hands, people", "clip": ["2", 0]}},
         "7": {"class_type": "EmptySD3LatentImage", "inputs": {"width": W, "height": H, "batch_size": 1}},
         "8": {"class_type": "KSampler", "inputs": {"model": ["4", 0], "positive": ["5", 0], "negative": ["6", 0],
-                                                  "latent_image": ["7", 0], "seed": seed, "steps": steps, "cfg": 4.0,
+                                                  "latent_image": ["7", 0], "seed": seed, "steps": steps, "cfg": cfg,
                                                   "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0}},
         "9": {"class_type": "VAEDecode", "inputs": {"samples": ["8", 0], "vae": ["3", 0]}},
         "10": {"class_type": "SaveImage", "inputs": {"images": ["9", 0], "filename_prefix": "crushed_turn"}},
     }
+    if fast:
+        wf["11"] = {"class_type": "LoraLoaderModelOnly", "inputs": {"model": ["1", 0], "lora_name": LIGHTNING,
+                                                                   "strength_model": 1.0}}
     body = json.dumps({"prompt": wf, "client_id": uuid.uuid4().hex}).encode()
     req = urllib.request.Request(ROOM + "/prompt", data=body, headers={"content-type": "application/json"})
     with urllib.request.urlopen(req, timeout=60) as r:
