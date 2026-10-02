@@ -19,6 +19,14 @@ def _call(path, body, timeout=900):
         return json.loads(r.read())
 
 
+def has(name):
+    try:
+        have = [m["name"] for m in json.loads(urllib.request.urlopen(OLLAMA + "/api/tags", timeout=20).read()).get("models", [])]
+    except Exception:
+        return False
+    return name in have or name + ":latest" in have
+
+
 def model():
     try:
         have = \

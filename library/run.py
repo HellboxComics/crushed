@@ -88,12 +88,21 @@ def pipeline(cid, redo=False):
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in json.load(open(vj))} if os.path.exists(vj) and not redo else {}
     use = V.model()
-    say(f"[check] vision model: {use}")
+    quick = "qwen2.5vl:7b" if use != "qwen2.5vl:7b" and V.has("qwen2.5vl:7b") else None
+    say(f"[check] vision model: {use}" + (f" (quick first look: {quick})" if quick else ""))
+    todo = [f for f in found if not (f["file"] in old and "vet" in old[f["file"]])]
     for f in found:
-        if f["file"] in old and "vet" in old[f["file"]]:
+        if f not in todo:
             f["vet"] = old[f["file"]]["vet"]
-        else:
-            f["vet"] = V.vet(f["file"], product, era, use)
+    if quick and len(todo) > 16:                         # many photos: the small model throws out the obvious misses
+        for f in todo:
+            f["quick"] = V.vet(f["file"], product, era, quick) or {}
+        todo.sort(key=lambda f: -(f["quick"].get("match", 0) + 3 * (f["quick"].get("era_ok") is True)))
+        for f in todo[16:]:
+            f["vet"] = dict(f["quick"], note="only the quick look")
+        todo = todo[:16]
+    for f in todo:
+        f["vet"] = V.vet(f["file"], product, era, use)
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
     json.dump(found, open(vj, "w"), indent=1)
     good = [f for f in found if V.good(f["vet"]) and f.get("mask")]

@@ -171,12 +171,16 @@ def free_sites(words):
 
 
 def queries(words, year):
-    """How a person searches for an old product: '90s duracell coppertop aa', then 'vintage ...'."""
+    """How a person digs up an old product: the decade and the brand first ('90s duracell', which found the
+    1990s PowerCheck batteries at once), then decade + the product, then vintage + product + year."""
+    brand = words.split()[0] if words else ""
     qs = []
-    if year:
-        qs.append(f"{str(year)[2]}0s {words}" if year < 2000 else f"{year} {words}")
-    qs.append(("vintage " if year and year < 2012 else "") + words)
-    return qs
+    if year and year < 2010:
+        dec = f"{str(year)[2]}0s" if year < 2000 else "2000s"
+        qs += [f"{dec} {brand}", f"{dec} {words}", f"vintage {words} {year}"]
+    else:
+        qs += [words, f"{words} {year}" if year else words + " product photo"]
+    return list(dict.fromkeys(qs))
 
 
 def run(cid, words, year=None, log=print):
@@ -191,7 +195,7 @@ def run(cid, words, year=None, log=print):
     try:
         import google_images as G
         for q in queries(words, year):
-            hits += [(u, "", f"Google Images: {q}") for u, w, h in G.search(q, most=15, log=log)]
+            hits += [(u, "", f"Google Images: {q}") for u, w, h in G.search(q, most=40, log=log)]
     except Exception as e:
         log(f"[hunt] Google Images did not work here: {e}")
     if os.path.exists(KEYS):                            # eBay only if you ever add its free keys
