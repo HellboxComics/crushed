@@ -23,7 +23,17 @@ import bpy  # noqa: E402
 import numpy as np  # noqa: E402
 from mathutils import Matrix, Vector  # noqa: E402
 
-# view: (quadrant u0, v0 in the sheet (0..1, v up), facing direction, screen-right axis, screen-up axis)
+# view: (cell corner u0, v0 in the sheet (0..1, v up), facing direction, screen-right axis, screen-up axis)
+CELL = (0.5, 0.5)            # each view's cell size in the sheet; the 3x2 turnaround sets (1/3, 1/2)
+# the turnaround the drawing room makes: top row FRONT, LEFT, BACK; bottom row RIGHT, TOP, BOTTOM
+VIEWS6 = {
+    "front": ((0.0, 0.5), (0, -1, 0), (1, 0, 0), (0, 0, 1)),
+    "left": ((1 / 3, 0.5), (-1, 0, 0), (0, -1, 0), (0, 0, 1)),
+    "back": ((2 / 3, 0.5), (0, 1, 0), (-1, 0, 0), (0, 0, 1)),
+    "right": ((0.0, 0.0), (1, 0, 0), (0, 1, 0), (0, 0, 1)),
+    "top": ((1 / 3, 0.0), (0, 0, 1), (1, 0, 0), (0, 1, 0)),
+    "bottom": ((2 / 3, 0.0), (0, 0, -1), (1, 0, 0), (0, -1, 0)),
+}
 VIEWS = {
     "front": ((0.0, 0.5), (0, -1, 0), (1, 0, 0), (0, 0, 1)),
     "back": ((0.5, 0.5), (0, 1, 0), (-1, 0, 0), (0, 0, 1)),
@@ -110,12 +120,12 @@ def _boxes(sheet_path):
     H, W = im.shape[:2]
     out = {}
     for k, ((u0, v0), _, _, _) in VIEWS.items():
-        x0, x1 = int(u0 * W), int((u0 + 0.5) * W)
-        y0, y1 = int((1 - v0 - 0.5) * H), int((1 - v0) * H)          # image rows run top-down
+        x0, x1 = int(u0 * W), int((u0 + CELL[0]) * W)
+        y0, y1 = int((1 - v0 - CELL[1]) * H), int((1 - v0) * H)      # image rows run top-down
         q = im[y0:y1, x0:x1]
         mask = np.abs(q - 255).sum(-1) > 45
         if mask.sum() < 50:
-            out[k] = (u0 + 0.03, v0 + 0.03, 0.44, 0.44)
+            out[k] = (u0 + 0.03, v0 + 0.03, CELL[0] - 0.06, CELL[1] - 0.06)
             continue
         ys, xs = np.nonzero(mask)
         bx0, bx1, by0, by1 = xs.min(), xs.max(), ys.min(), ys.max()
@@ -251,7 +261,13 @@ def main():
     ap.add_argument("--sheet", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--inside", default=None, help="picture of what it looks like inside, broken open")
+    ap.add_argument("--turnaround", action="store_true", help="the sheet is the 3x2 six-view turnaround")
     a = ap.parse_args(argv)
+    if a.turnaround:
+        global CELL
+        CELL = (1 / 3, 0.5)
+        VIEWS.clear()
+        VIEWS.update(VIEWS6)
     bpy.ops.wm.read_factory_settings(use_empty=True)
     target, d = code_size(a.name)
     from crushed import models as _m

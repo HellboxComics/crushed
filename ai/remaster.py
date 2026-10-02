@@ -203,6 +203,25 @@ def record(name, result):
     json.dump(r, open(p, "w"), indent=1)
 
 
+def turnaround_sheet(name, redo=False):
+    """The six-view turnaround (ai/remaster/turnaround.py): the local language model writes the real product, Qwen-Image
+    paints it from six sides. Returns (sculptor sheet, texture atlas)."""
+    sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
+    import turnaround as T
+    cat = json.load(open(os.path.join(ROOT, "ai", "remaster", "catalog.json"))).get(name, {})
+    seedp = os.path.join(PROMPTS, name + ".txt")
+    seed = open(seedp).read().strip() if os.path.exists(seedp) else ""
+    if PLACEHOLDER in seed:
+        seed = ""
+    desc = T.describe(name, cat.get("display", name), cat.get("years", ""), cat.get("notes", ""), seed, redo=redo)
+    turn = os.path.join(WORK, name + "_turn.png")
+    T.draw(desc, turn)
+    cells = T.split(turn)
+    sheet = T.sheet2x2(cells, os.path.join(WORK, name + "_sheet.png"))
+    atlas = T.atlas(turn, os.path.join(WORK, name + "_atlas.png"))
+    return sheet, atlas
+
+
 def remaster(name, redo=False):
     out = os.path.join(PENDING, name)
     if os.path.exists(os.path.join(out, "model.glb")) and not redo:
@@ -210,10 +229,11 @@ def remaster(name, redo=False):
     if os.path.exists(out):
         trash(out)
     os.makedirs(WORK, exist_ok=True)
-    sheet = os.path.join(WORK, name + "_sheet.png")
-    step(name, "1/4 finding real photos, painting the reference sheet")
-    if not draw_sheet(name, sheet):
-        return "the drawing room did not answer (is ComfyUI open?)"
+    step(name, "1/4 the writer describes the real product, the drawing room paints it from six sides")
+    try:
+        sheet, atlas = turnaround_sheet(name, redo)
+    except Exception as e:
+        return f"drawing failed: {e}"[:300]
     step(name, "2/4 the sculptor is making the shape (the slow part)")
     shape = sculpt(name, sheet)
     if not shape:
@@ -223,10 +243,10 @@ def remaster(name, redo=False):
     extra = ["--inside", inside] if draw_inside(name, inside) else []
     step(name, "4/4 Blender: sizing, painting it on, review pictures")
     r = subprocess.run([PY, os.path.join(ROOT, "blender", "remaster_texture.py"), "--name", name, "--shape", shape,
-                        "--sheet", sheet, "--out", PENDING] + extra, capture_output=True, text=True)
+                        "--sheet", atlas, "--turnaround", "--out", PENDING] + extra, capture_output=True, text=True)
     if r.returncode or not os.path.exists(os.path.join(out, "model.glb")):
         return "Blender pass failed: " + (r.stderr.strip().splitlines() or ["?"])[-1]
-    shutil.copy(sheet, os.path.join(out, "reference.png"))
+    shutil.copy(os.path.join(WORK, name + "_turn.png"), os.path.join(out, "reference.png"))
     if extra:
         shutil.copy(inside, os.path.join(out, "inside.png"))
     return "ok"
@@ -465,7 +485,7 @@ def main():
     todo = a.only or [n for n in names() if not os.path.exists(os.path.join(PENDING, n, "model.glb"))
                       and not os.path.exists(os.path.join(MODELS, n, "model.glb"))
                       and os.path.exists(os.path.join(PROMPTS, n + ".inside.txt"))
-                      and PLACEHOLDER not in open(os.path.join(PROMPTS, n + ".txt")).read()]
+]
     if os.path.exists(PAUSE) and not a.only:
         say("paused: " + open(PAUSE).read().strip())
         todo = []

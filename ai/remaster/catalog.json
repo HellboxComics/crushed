@@ -1,0 +1,2217 @@
+{
+"aa_batteries": {
+"display": "AA Batteries",
+"notes": "",
+"years": "1985-2026"
+},
+"air_horn": {
+"display": "Air Horn",
+"notes": "The canned air horn with the red plastic trumpet. Banned at the gate, smuggled in a sock.",
+"years": "1985-2026"
+},
+"amp_kit": {
+"display": "Amp Wiring Kit",
+"notes": "The amp wiring kit: a coil of fat red power wire, a short blue ground, an inline fuse holder you could see the fuse through, and a ring terminal crimped with pliers.",
+"years": "1985-2008"
+},
+"army_men": {
+"display": "Army Man Squad",
+"notes": "",
+"years": "1985-1996"
+},
+"asian_pear": {
+"display": "Korean Pear",
+"notes": "A Korean pear the size of a softball, golden-brown and freckled, in its white foam net sock.",
+"years": "1985-2026"
+},
+"audio_stickers": {
+"display": "Car Audio Decals",
+"notes": "The window decals: a long windshield banner in chrome die-cut letters, plus the stickers that came in every box, so the whole lot knew what was in your trunk before they heard it.",
+"years": "1985-2008"
+},
+"av_cable": {
+"display": "Red-White-Yellow AV Cable",
+"notes": "Red, white, yellow: the three plugs, the split, the flat multi-out on the other end.",
+"years": "1985-2008"
+},
+"baby_bottle_pop": {
+"display": "Baby Bottle Flop",
+"notes": "",
+"years": "1997-2008"
+},
+"backpack": {
+"display": "JanSpork Backpack",
+"notes": "One-strap-only backpack: suede bottom, front pocket, a pile of zipper pulls, iron-on patches, pins.",
+"years": "1991-2008"
+},
+"ball_mouse": {
+"display": "Ball Mouse (Ball Escaped)",
+"notes": "The two-button ball mouse, its retaining ring twisted off and the grey rubber ball rolled away from it, the way it went every time it stopped tracking. Rollers wore a gasket of gunk.",
+"years": "1991-2002"
+},
+"banana_milk": {
+"display": "Banana Milk",
+"notes": "The squat pale-yellow jug of banana milk with the foil peel top. Bought at every bathhouse and rest stop.",
+"years": "1985-2026"
+},
+"bass_knob": {
+"display": "Remote Bass Knob",
+"notes": "The remote bass knob, screwed under the dash by your knee: one fat knob, BASS in white letters, a red light, and a cable running all the way back to the trunk. Turned it to the right. Always.",
+"years": "1985-2008"
+},
+"battle_top": {
+"display": "Bayblade Battle Top",
+"notes": "The battle top: a sharp tip, a heavy disc, a jagged attack ring, a printed chip on top.",
+"years": "1997-2008"
+},
+"beaded_curtain": {
+"display": "Beaded Curtain",
+"notes": "A tangle of strands torn off a beaded curtain: clear and colored plastic beads on string.",
+"years": "1985-2002"
+},
+"bean_bag_chunk": {
+"display": "Bean Bag Chair (Torn)",
+"notes": "A torn corner of a bean bag chair: vinyl or corduroy, the zipper, foam beads spilling out.",
+"years": "1991-2008"
+},
+"beanie_bear": {
+"display": "Bean-Bag Bear, Heart Tag Attached",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_certificate": {
+"display": "Certificate of Authenticity",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_display_case": {
+"display": "Acrylic Display Case (Occupied)",
+"notes": "The clear acrylic case: the bear never touched air again.",
+"years": "1991-2002"
+},
+"beanie_dog": {
+"display": "Bean-Bag Dog",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_elephant": {
+"display": "Bean-Bag Elephant",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_flamingo": {
+"display": "Bean-Bag Flamingo",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_frog": {
+"display": "Bean-Bag Frog",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_lobster": {
+"display": "Bean-Bag Lobster",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_pig": {
+"display": "Bean-Bag Pig",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_price_guide": {
+"display": "Bean Counter Price Guide",
+"notes": "",
+"years": "1991-2002"
+},
+"beanie_tag_protector": {
+"display": "Heart Tag Protectors",
+"notes": "Loose clear tag protectors, some still holding a heart tag snipped off something 'worthless'.",
+"years": "1991-2002"
+},
+"beanie_teeny": {
+"display": "Teeny Weenie, Sealed",
+"notes": "The fast-food mini, still sealed in its baggie with the insert, because opening it kills the value.",
+"years": "1991-2002"
+},
+"bear": {
+"display": "Bear",
+"notes": "",
+"years": "1985-2026"
+},
+"beer_can": {
+"display": "Beer Can",
+"notes": "",
+"years": "1985-2026"
+},
+"beige_keyboard": {
+"display": "Clicky-Tek 101 Keyboard",
+"notes": "The whole beige keyboard: grey modifier keys, a numpad, three green lights, a coiled cord, and enough crumbs under the keys to feed a family through Y2K.",
+"years": "1991-2002"
+},
+"beige_tower": {
+"display": "Beige Tower PC",
+"notes": "The beige tower: two drive bays, a floppy slot, a TURBO button nobody understood and a red LED display bragging about megahertz.",
+"years": "1991-2002"
+},
+"big_x_console": {
+"display": "X-Bawks",
+"notes": "The huge black box with the crossed channel on top and the green glowing jewel.",
+"years": "1997-2008"
+},
+"binder": {
+"display": "Three-Ring Binder",
+"notes": "",
+"years": "1985-1996"
+},
+"bkr_sticker": {
+"display": "Be Kind Rewind Sticker",
+"notes": "A BE KIND PLEASE REWIND sticker still stuck to a shard of black tape shell, the arrow pointing the way you never turned it.",
+"years": "1985-2002"
+},
+"black_cat": {
+"display": "Black Cat Figurine",
+"notes": "A sitting cat figurine: tall, slim, ears up, tail wrapped around the front.",
+"years": "1985-2026"
+},
+"blacklight": {
+"display": "Blacklight Tube",
+"notes": "An 18-inch blacklight tube in its black plastic fixture, the tube glowing purple.",
+"years": "1985-2002"
+},
+"blow_up_gloves": {
+"display": "Inflatable Boxing Gloves",
+"notes": "Inflatable boxing gloves. Every punch made the same squeak.",
+"years": "1991-2002"
+},
+"bluetooth_speaker": {
+"display": "Bluetooth Speaker",
+"notes": "",
+"years": "2009-2026"
+},
+"bobblehead": {
+"display": "Giveaway Bobblehead",
+"notes": "Stadium giveaway bobblehead: tiny body, enormous head on a spring, a face only a promo budget could love.",
+"years": "1991-2008"
+},
+"bookshelf_slice": {
+"display": "Shelf of Books",
+"notes": "",
+"years": "1985-2026"
+},
+"boombox": {
+"display": "Boom Box",
+"notes": "",
+"years": "1985-1996"
+},
+"brick_game": {
+"display": "9999-in-1 Handheld",
+"notes": "",
+"years": "1991-1996"
+},
+"broken_rocket": {
+"display": "Broken Rocket",
+"notes": "",
+"years": "1985-2026"
+},
+"bubble_tape": {
+"display": "Bubble Tapeworm",
+"notes": "The tape-measure case of shredded gum, pulled out across the desk to measure everything but the gum.",
+"years": "1991-2002"
+},
+"bug_oven": {
+"display": "Creepy Crawlspace Thing-A-Baker",
+"notes": "The bug-maker: a hot little oven, a metal mold full of bug-shaped dents, goop, and rubber bugs.",
+"years": "1985-2002"
+},
+"bull": {
+"display": "Bull",
+"notes": "",
+"years": "1985-2026"
+},
+"bunny_charm": {
+"display": "Bunny Charm",
+"notes": "Our rabbit (the same one on the magazine covers), as a glossy black keepsake: round head, two tall ears leaning apart, one eye, a bow tie. Nobody's logo; everybody's bunny.",
+"years": "1985-2026"
+},
+"calculator": {
+"display": "Calculator",
+"notes": "",
+"years": "1985-1996"
+},
+"calpis_bottle": {
+"display": "Kalpisu Water",
+"notes": "The milky soft-drink bottle, white with blue polka dots. Tastes like a yogurt that went to heaven.",
+"years": "1991-2026"
+},
+"candy_cane": {
+"display": "Candy Cane",
+"notes": "",
+"years": "1985-2026"
+},
+"candy_corn": {
+"display": "Candy Corn",
+"notes": "",
+"years": "1985-2026"
+},
+"candy_heart": {
+"display": "Candy Heart",
+"notes": "",
+"years": "1985-2026"
+},
+"candy_scoop": {
+"display": "Candy Scoop",
+"notes": "The scoop off the sweet wall, chained to nothing, in the bag by mistake.",
+"years": "1985-2008"
+},
+"candybar_phone": {
+"display": "Brick Phone",
+"notes": "",
+"years": "1997-2002"
+},
+"car_amp": {
+"display": "Airbrushed Amplifier",
+"notes": "The amp: an aluminum slab with fins like a radiator, an airbrushed top, a terminal block for the fat power wire and a row of lights that meant the alternator was crying.",
+"years": "1985-2008"
+},
+"car_rewinder": {
+"display": "Rewind-O-Matic Turbo",
+"notes": "The VHS rewinder shaped like a red sports car: pop the hood, drop the tape in, and it screamed through a two-hour movie in ninety seconds, then ejected the hood like a crash test.",
+"years": "1985-2002"
+},
+"card_binder_sheet": {
+"display": "9-Pocket Binder Page",
+"notes": "A 9-pocket binder page of commons, sorted by team, one empty slot where the good card used to be.",
+"years": "1985-1996"
+},
+"card_toploader": {
+"display": "Rookie Card (Top-Loaded)",
+"notes": "A rookie card in a rigid top-loader, penny-sleeved, because it was going to pay for college.",
+"years": "1985-1996"
+},
+"cassette": {
+"display": "Cassette Tape",
+"notes": "",
+"years": "1985-2002"
+},
+"cassette_adapter": {
+"display": "Cassette Adapter",
+"notes": "The cassette adapter: a tape with no tape in it, a fake head where the tape should be, and a thin cord out the side to the portable CD player sliding around the passenger seat. Clicked forever.",
+"years": "1985-2008"
+},
+"cd": {
+"display": "Burned CD",
+"notes": "",
+"years": "1991-2008"
+},
+"cd_changer": {
+"display": "Trunk CD Changer",
+"notes": "The trunk-mounted CD changer: a steel box bolted to the trunk floor, a sliding door, and a magazine of ten discs you loaded once in 1998 and never changed again.",
+"years": "1985-2008"
+},
+"cdr_sharpie": {
+"display": "Sharpie CD-R",
+"notes": "A gold CD-R, Sharpie on the label side, burned at 4x after three coasters. Do not lend.",
+"years": "1991-2002"
+},
+"cdr_spindle": {
+"display": "CD-R Spindle (50 Pack)",
+"notes": "The cake box of blank discs: black base, a post up the middle, a stack of shiny CD-Rs and a smoky clear dome that never screwed back on straight.",
+"years": "1997-2008"
+},
+"centerfold": {
+"display": "Centerfold",
+"notes": "",
+"years": "1985-2008"
+},
+"champagne": {
+"display": "Cheap Champagne",
+"notes": "",
+"years": "1985-2026"
+},
+"charger_brick": {
+"display": "Laptop Charger",
+"notes": "",
+"years": "2003-2026"
+},
+"charm_phone": {
+"display": "Decorated Flip Phone",
+"notes": "A clamshell phone with more charm than phone: rhinestones on the lid, straps by the fistful.",
+"years": "1997-2008"
+},
+"chew_bar": {
+"display": "Whammo! Bar",
+"notes": "The fizzy chew bar: pink and blue wrapper, sherbet bits in the chew, two pence.",
+"years": "1985-2008"
+},
+"chews_trophy": {
+"display": "Kids' Chews Award",
+"notes": "The orange goblet trophy from the kids' choice-ish awards, dripping slime off the rim on purpose.",
+"years": "1991-2002"
+},
+"chip_bag_3d": {
+"display": "3D Dorkitos",
+"notes": "The 1998 puffed-up 3D chips: a pillow bag of air and, somewhere, nine chips.",
+"years": "1997-2002"
+},
+"choc_bunny": {
+"display": "Chocolate Bunny",
+"notes": "A hollow chocolate rabbit, ears bitten off first, in foil.",
+"years": "1985-2026"
+},
+"choc_egg_shell": {
+"display": "Chocolate Egg Shell",
+"notes": "Broken shards of the egg: brown outside, white inside.",
+"years": "1985-2008"
+},
+"choco_pie_box": {
+"display": "Choco Pai",
+"notes": "The red box of marshmallow chocolate cakes, or one cake in its red wrapper, or one cake with a bite out.",
+"years": "1985-2026"
+},
+"chocolate_box": {
+"display": "Heart-Shaped Box",
+"notes": "The heart-shaped box: red foil lid, a few chocolates left in their brown cups.",
+"years": "1985-2026"
+},
+"clay_bear": {
+"display": "Clay Bear",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_bull": {
+"display": "Clay Bull",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_candle": {
+"display": "Clay Candle",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_cleaver": {
+"display": "Clay Cleaver",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_coin": {
+"display": "Clay Coin",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_frog": {
+"display": "Clay Frog",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_gem": {
+"display": "Clay Gem",
+"notes": "The purple gem from the shelf: a hand-cut clay diamond, flat top, a crown of facets, a point below.",
+"years": "1985-2026"
+},
+"clay_pig": {
+"display": "Clay Pig",
+"notes": "",
+"years": "1985-2026"
+},
+"clay_steak": {
+"display": "Clay Cut",
+"notes": "From the butcher shop: a clay cut of meat with a fat rim and a bone.",
+"years": "1985-2026"
+},
+"clip_player": {
+"display": "Bit Clipz Player",
+"notes": "BIT CLIPZ: a music player the size of a cracker that plays one minute of one song, off a chip the size of a stamp. On a keychain clip, with spare song chips rattling around.",
+"years": "1997-2002"
+},
+"coffee_mug": {
+"display": "Coffee Mug",
+"notes": "",
+"years": "1985-2026"
+},
+"cola_bottles": {
+"display": "Gummy Cola Bottles",
+"notes": "Gummy cola bottles: brown at the bottom, clear at the top, sometimes rolled in fizzy sugar.",
+"years": "1985-2008"
+},
+"cold_wallet": {
+"display": "Hardware Wallet",
+"notes": "A hardware wallet at a size you can read from across a room. The screen keeps its own material, so it still says SEED? from inside the ice.",
+"years": "1985-2026"
+},
+"console_16bit": {
+"display": "Degenesis 16-Bit",
+"notes": "The black 16-bit slab: the big round well in the middle and the lettering stamped into it.",
+"years": "1985-1996"
+},
+"console_64": {
+"display": "Nintendon't 64",
+"notes": "The 64-bit grey slab: a raised spine with a cart slot, two sliders, four ports on the nose.",
+"years": "1991-2002"
+},
+"console_box": {
+"display": "Console Retail Box",
+"notes": "The retail box: brand across the top, the console on the front, starbursts everywhere.",
+"years": "1985-2008"
+},
+"controller_16bit": {
+"display": "16-Bit Controller",
+"notes": "",
+"years": "1991-1996"
+},
+"controller_modern": {
+"display": "Game Controller",
+"notes": "",
+"years": "1997-2026"
+},
+"corded_phone": {
+"display": "Corded Phone",
+"notes": "",
+"years": "1985-2002"
+},
+"costume_mask": {
+"display": "Drugstore Mask",
+"notes": "A cheap drugstore vacuum-formed mask, the kind with the staple and the elastic that snapped.",
+"years": "1985-2026"
+},
+"couch_cushion": {
+"display": "Couch Cushion",
+"notes": "",
+"years": "1985-2026"
+},
+"cow_box": {
+"display": "Mooteway 2000 Box",
+"notes": "The computer box with cow spots: black-and-white holstein cardboard, flaps open, the most exciting box that ever came to the house.",
+"years": "1991-2002"
+},
+"crackberry": {
+"display": "Crackberry",
+"notes": "The email phone: a keyboard of forty tiny chiclets, a scroll wheel on the side, a red light blinking at dinner. Thumbs never recovered.",
+"years": "2003-2008"
+},
+"cranberry_log": {
+"display": "Canned Cranberry",
+"notes": "Canned cranberry sauce, still holding the can's rings.",
+"years": "1985-2026"
+},
+"crayon_box": {
+"display": "Crayolol 64 Box",
+"notes": "The 64-box: stadium seating for crayons, the sharpener in the back, half the points already gone.",
+"years": "1985-2002"
+},
+"crt": {
+"display": "CRT Monitor",
+"notes": "",
+"years": "1985-2002"
+},
+"crumpled_chart": {
+"display": "Crumpled Chart",
+"notes": "",
+"years": "1985-2026"
+},
+"crystal_cola": {
+"display": "Crystal Peppy",
+"notes": "The clear cola of 1993. Tasted like a cola that had seen a ghost.",
+"years": "1991-1996"
+},
+"cube_console": {
+"display": "Game Cubicle",
+"notes": "The purple lunchbox: a cube, a round lid, a carry handle off the back.",
+"years": "1997-2008"
+},
+"dare_flag": {
+"display": "Double Dog Dare Flag",
+"notes": "The obstacle-course flag you had to grab before the clock ran out. Slime drip on the pole: authentic.",
+"years": "1991-2002"
+},
+"diamond": {
+"display": "Diamond",
+"notes": "",
+"years": "1985-2026"
+},
+"dice": {
+"display": "Dice",
+"notes": "",
+"years": "1985-2026"
+},
+"digital_camera": {
+"display": "Digital Camera",
+"notes": "",
+"years": "1997-2008"
+},
+"disc_console": {
+"display": "PlayStationary",
+"notes": "The grey disc box: a round lid on the left, three round buttons on the right.",
+"years": "1991-2002"
+},
+"disposable_camera": {
+"display": "Disposable Camera",
+"notes": "",
+"years": "1991-2026"
+},
+"dream_catcher": {
+"display": "Mall Dream Catcher",
+"notes": "A mall dream catcher: suede-wrapped hoop, a web, plastic beads, three dangling feathers.",
+"years": "1991-2002"
+},
+"drink_pouch": {
+"display": "Capri Sunk Pouch",
+"notes": "The foil drink pouch, straw stabbed through the dot on the third try.",
+"years": "1985-2008"
+},
+"drone": {
+"display": "Drone",
+"notes": "",
+"years": "2009-2026"
+},
+"dropbox_door": {
+"display": "Return Slot Door",
+"notes": "A piece of the after-hours return slot, pried off the wall: painted steel, a flap that swung in, MOVIE RETURNS in vinyl letters, and one hundred thousand tapes shoved through it at 11:58 PM.",
+"years": "1985-2002"
+},
+"drumstick": {
+"display": "Drumstick",
+"notes": "",
+"years": "1985-2026"
+},
+"dual_screen_handheld": {
+"display": "Dual Scream Clamshell",
+"notes": "The silver clamshell, open, two screens, a stylus parked in the back.",
+"years": "2003-2008"
+},
+"duel_card": {
+"display": "Duel Monstahs Card",
+"notes": "A duel-monstahs card: stars, ATK/DEF, and the brown spiral back everyone knows from across a cafeteria.",
+"years": "1997-2008"
+},
+"dvd_case": {
+"display": "Early DVD Keep Case",
+"notes": "The early-DVD keep case: black plastic, a clear sleeve over the cover, WIDESCREEN in a box, and a BLOCKBUSTED sticker over the actors' faces.",
+"years": "1985-2002"
+},
+"earbuds_case": {
+"display": "Earbud Case",
+"notes": "",
+"years": "2009-2026"
+},
+"energy_can": {
+"display": "Energy Drink",
+"notes": "",
+"years": "2003-2026"
+},
+"extension_cable": {
+"display": "Controller Extension Cable",
+"notes": "The controller extension cable: a coiled mess and two chunky ends, so you could sit on the couch.",
+"years": "1985-2008"
+},
+"extension_cord": {
+"display": "Power Strip",
+"notes": "",
+"years": "1985-2026"
+},
+"eye_pod": {
+"display": "Eye-Pod (White)",
+"notes": "The white one. Mirror-chrome back, a wheel you rubbed with your thumb, and the white earbuds that told the whole bus what you had.",
+"years": "2003-2008"
+},
+"face_mask": {
+"display": "Face Mask",
+"notes": "",
+"years": "2009-2026"
+},
+"faceplate_case": {
+"display": "Faceplate Hard Case",
+"notes": "The faceplate's hard case: a little clamshell the size of a glasses case, so nobody smashed your window for a deck with no face. They smashed it anyway.",
+"years": "1985-2008"
+},
+"famicom_cart": {
+"display": "Family Computer Cartridge",
+"notes": "The short, wide Japanese cartridge in a candy color, grip ridges on the sides, label on the front.",
+"years": "1985-1996"
+},
+"felt_pennant": {
+"display": "Felt Pennant",
+"notes": "",
+"years": "1985-2002"
+},
+"fidget_spinner": {
+"display": "Fidget Spinner",
+"notes": "",
+"years": "2009-2026"
+},
+"film_canister": {
+"display": "Film Canister",
+"notes": "",
+"years": "1985-2002"
+},
+"finger_skateboard": {
+"display": "Finger Board",
+"notes": "A finger board: kicked nose and tail, tiny trucks, a real printed graphic underneath.",
+"years": "1997-2008"
+},
+"firework": {
+"display": "Firework",
+"notes": "A cardboard tube with a fuse, label and all; some already went off.",
+"years": "1985-2026"
+},
+"five_subject": {
+"display": "Five Starved Notebook",
+"notes": "",
+"years": "1991-2008"
+},
+"fizzy_laces": {
+"display": "Fizzy Laces",
+"notes": "Sour laces in sugar, tangled the way they came out of the jar.",
+"years": "1985-2008"
+},
+"flag_bunting": {
+"display": "Paper Flag Bunting",
+"notes": "A string of little paper flags of every country in the group, off the front of the corner shop.",
+"years": "1985-2026"
+},
+"flashlight": {
+"display": "Flashlight",
+"notes": "",
+"years": "1985-2026"
+},
+"flick_figure": {
+"display": "Table Football Player",
+"notes": "The table-football man: a painted little player glued to a disc on a weighted half-ball. Flick to kick.",
+"years": "1985-2002"
+},
+"flip_phone": {
+"display": "Flip Phone",
+"notes": "",
+"years": "1997-2008"
+},
+"flop_it": {
+"display": "Flop-It",
+"notes": "FLOP. TWIST. PULL. The arc-shaped command toy: bop cap in the middle, twist knob one end, pull handle the other.",
+"years": "1997-2008"
+},
+"floppy": {
+"display": "Floppy Disk",
+"notes": "",
+"years": "1985-2002"
+},
+"flying_saucers": {
+"display": "Flying Saucers",
+"notes": "Rice-paper flying saucers full of sherbet. The paper stuck to the roof of your mouth.",
+"years": "1985-2008"
+},
+"foam_bead_tub": {
+"display": "Floom",
+"notes": "The tub of foam-bead clay, a sticky crunchy mound of it out on the table, the rest in the carpet forever.",
+"years": "1991-2002"
+},
+"foam_finger": {
+"display": "Foam #1 Finger",
+"notes": "The giant foam #1 hand. Bought in the third inning, lost in the parking lot.",
+"years": "1985-2002"
+},
+"foam_football": {
+"display": "Foam Football",
+"notes": "The soft indoor ball, the only kind allowed in the house. Still broke the lamp.",
+"years": "1985-2008"
+},
+"foam_shrimps": {
+"display": "Foam Shrimps",
+"notes": "Pink-and-white foam shrimps: curled, chalky, and nothing like a shrimp.",
+"years": "1985-2008"
+},
+"football_sticker": {
+"display": "Panetti Sticker",
+"notes": "One loose sticker, maybe a double, maybe the one you needed.",
+"years": "1985-2008"
+},
+"fried_eggs": {
+"display": "Gummy Fried Eggs",
+"notes": "Gummy fried eggs: a white foam puddle and a yellow gummy yolk.",
+"years": "1985-2008"
+},
+"frosting_dip": {
+"display": "Plunkaroos",
+"notes": "Cookies plus a well of frosting with sprinkles, foil lid peeled back. Everyone traded up for these.",
+"years": "1991-2002"
+},
+"fruit_chew": {
+"display": "Hai-Choo",
+"notes": "The soft fruit chew in its stick pack, or a few loose pieces in their little wrappers.",
+"years": "1991-2026"
+},
+"fruit_computer": {
+"display": "iSmack Fruit Computer",
+"notes": "The translucent all-in-one: candy-colored see-through back with the tube showing inside, a handle on top, a hockey-puck mouse somewhere. Came in five fruits. Nobody bought a printer that matched.",
+"years": "1997-2002"
+},
+"fruit_strip": {
+"display": "Fruit by the Yard",
+"notes": "Three feet of rolled fruit leather, half unrolled, paper backing printed with jokes nobody laughed at.",
+"years": "1991-2008"
+},
+"fun_size_bar": {
+"display": "Fun Size Bar",
+"notes": "",
+"years": "1985-2026"
+},
+"fuzzy_poster": {
+"display": "Fuzzy Blacklight Poster",
+"notes": "A flocked velvet blacklight poster, curling off the wall, thumbtack holes in the corners.",
+"years": "1985-2002"
+},
+"gacha_capsule": {
+"display": "Gacha Capsule",
+"notes": "A capsule: clear top, colored bottom, a toy folded inside a paper slip.",
+"years": "1985-2026"
+},
+"gacha_figure": {
+"display": "Capsule Figure",
+"notes": "A 200-yen figure: a tiny robot, a lazy cat or a pocket dinosaur. Painted, slightly off-register.",
+"years": "1985-2026"
+},
+"gacha_knob": {
+"display": "Capsule Machine Crank",
+"notes": "The front plate off a capsule machine: the coin slot and the crank you turned until it clicked.",
+"years": "1985-2026"
+},
+"game_cart": {
+"display": "Game Cartridge",
+"notes": "",
+"years": "1985-1996"
+},
+"game_case": {
+"display": "Game Case, Disc Hanging Out",
+"notes": "A black disc case with the sleeve art, and the disc half slid out of it.",
+"years": "1985-2008"
+},
+"gas_can": {
+"display": "Gas Can",
+"notes": "",
+"years": "1985-2026"
+},
+"gb_pocket": {
+"display": "Game Kid Pocket",
+"notes": "The slimmed-down 1996 handheld: two AAA batteries, a black-and-white screen you could finally read.",
+"years": "1991-2002"
+},
+"gel_pens": {
+"display": "Gelly Rolled Gel Pens",
+"notes": "A fistful of glitter gel pens: clear barrels, sparkly ink tubes, see-through caps, the good ones.",
+"years": "1997-2002"
+},
+"giant_controller": {
+"display": "The Brick (X-Bawks Controller)",
+"notes": "The brick: the biggest controller ever made, jewel in the middle, six face buttons.",
+"years": "1997-2008"
+},
+"gift_oil_bottle": {
+"display": "Gift Set Canola Oil",
+"notes": "The bottle of cooking oil every Korean gift set came with, wedged between the cans.",
+"years": "1985-2026"
+},
+"glass_soda": {
+"display": "Jarrones Soda",
+"notes": "The tall glass bottle of fruit soda, mandarin or tamarind or lime, with the paper-look label.",
+"years": "1985-2026"
+},
+"glow_stars": {
+"display": "Glow-in-the-Dark Stars",
+"notes": "A handful of glow-in-the-dark ceiling stars and a crescent moon, sticky putty still on the backs.",
+"years": "1991-2008"
+},
+"glow_stick": {
+"display": "Glow Stick",
+"notes": "",
+"years": "1997-2026"
+},
+"gold_coin": {
+"display": "Gold Coin",
+"notes": "",
+"years": "1985-2026"
+},
+"green_bowler": {
+"display": "Green Bowler",
+"notes": "",
+"years": "1985-2026"
+},
+"green_candle": {
+"display": "Tiny Green Candle",
+"notes": "",
+"years": "1985-2026"
+},
+"gremlin": {
+"display": "Furblin (Talking Owl-Gremlin)",
+"notes": "The late-90s fuzzy owl-gremlin that talked all night. Original face, era-true colorways.",
+"years": "1997-2002"
+},
+"gremlin_baby": {
+"display": "Baby Furblin",
+"notes": "",
+"years": "1997-2002"
+},
+"gremlin_batteries": {
+"display": "AA 4-Pack and Battery Door",
+"notes": "The blister 4-pack of AAs the gremlin ate every week, and the screw-down battery door it came off of.",
+"years": "1997-2002"
+},
+"gremlin_box": {
+"display": "Furblin, Sealed Window Box",
+"notes": "",
+"years": "1997-2002"
+},
+"gremlin_dictionary": {
+"display": "Furblish-English Dictionary",
+"notes": "",
+"years": "1997-2002"
+},
+"gremlin_fur": {
+"display": "Loose Furblin Fur",
+"notes": "Locks of loose fur from the one somebody tried to give a haircut.",
+"years": "1997-2002"
+},
+"gremlin_keychain": {
+"display": "Furblin Keychain",
+"notes": "",
+"years": "1997-2002"
+},
+"gremlin_reboot": {
+"display": "Furblin, LED-Eye Reboot",
+"notes": "The 2010s comeback: same gremlin, LCD eyes that roll, louder fur, worse attitude.",
+"years": "2009-2026"
+},
+"gremlin_sling": {
+"display": "Furblin Carry Sling",
+"notes": "The padded cloth carry pouch with a shoulder strap, so it could talk at you hands-free.",
+"years": "1997-2002"
+},
+"gremlin_stickers": {
+"display": "Speak Furblish! Sticker Sheet",
+"notes": "",
+"years": "1997-2002"
+},
+"gusher_box": {
+"display": "Fruit Gushies",
+"notes": "The box of liquid-center fruit snacks, one pouch torn open and spilling.",
+"years": "1991-2002"
+},
+"hand_sanitizer": {
+"display": "Hand Sanitizer",
+"notes": "",
+"years": "2009-2026"
+},
+"hand_turkey": {
+"display": "Hand Turkey",
+"notes": "",
+"years": "1985-2026"
+},
+"handheld": {
+"display": "Handheld Console",
+"notes": "",
+"years": "2003-2026"
+},
+"hardware_wallet": {
+"display": "Suspicious Rectangle",
+"notes": "",
+"years": "1985-2026"
+},
+"hazelnut_wafer_bar": {
+"display": "Kinda Bono",
+"notes": "The two-bar hazelnut wafer, in its white wrapper, or one bar already out of it.",
+"years": "1991-2008"
+},
+"hdd": {
+"display": "Hard Drive",
+"notes": "",
+"years": "1985-2026"
+},
+"head_unit": {
+"display": "Detachable-Face Head Unit",
+"notes": "The in-dash deck with the detachable face: blue display, a volume knob the size of a cookie, graphics that looked like a energy drink exploded. Face half popped off, ready for the case.",
+"years": "1985-2008"
+},
+"headphones": {
+"display": "Foam Headphones",
+"notes": "",
+"years": "1985-2002"
+},
+"highlighter": {
+"display": "Highlighter",
+"notes": "",
+"years": "1985-2026"
+},
+"hood_clan": {
+"display": "Hooded Clan Member",
+"notes": "A clan member: a big hooded figure with the extras: mask, shades, chain, backpack, something in hand.",
+"years": "1985-2026"
+},
+"hood_mini": {
+"display": "Hooded Mini",
+"notes": "A mini: a small hooded figure, plain, in one of the squad colors.",
+"years": "1985-2026"
+},
+"hooded_figure": {
+"display": "Hooded Figure",
+"notes": "The one at the desk: a plain green hoodie, hood up.",
+"years": "1985-2026"
+},
+"hours_mailer": {
+"display": "1000 Hours Free Mailer",
+"notes": "The envelope with the round lump in it: 1000 HOURS FREE in letters bigger than your address. Opened by the dog. Coaster number forty.",
+"years": "1991-2002"
+},
+"hwatu_cards": {
+"display": "Hwatu Cards",
+"notes": "Flower cards: little thick red-backed cards, twelve months of plants. Played on a blanket after dinner.",
+"years": "1985-2026"
+},
+"im_stickers": {
+"display": "Aimless Messenger Sticker Sheet",
+"notes": "A sheet of AIMLESS messenger stickers starring BLIPPY: away message, door opening, door slamming. Half of them already on a binder.",
+"years": "1991-2002"
+},
+"inflatable_chair": {
+"display": "Inflatable Chair",
+"notes": "A crushed inflatable chair: translucent neon vinyl tubes, the valve, the seams.",
+"years": "1991-2002"
+},
+"instant_camera": {
+"display": "Polarvoid Instant Camera",
+"notes": "The boxy instant camera: a black wedge with a lens like a porthole, a flip-up flash, a sunset stripe down the face and a fresh print sliding out of its mouth.",
+"years": "1985-2002"
+},
+"instant_photos": {
+"display": "Instant Prints",
+"notes": "A loose fan of instant prints: square-ish photo, fat white chin, sharpie caption. Shook them anyway.",
+"years": "1985-2002"
+},
+"jelly_babies": {
+"display": "Jelly Babies",
+"notes": "Floury little gummy babies in six colors. Heads first, always.",
+"years": "1985-2008"
+},
+"jersey_scrap": {
+"display": "Replica Jersey Scrap",
+"notes": "A torn chunk of a replica jersey: mesh weave, name across the shoulders, the big tackle-twill number.",
+"years": "1985-2002"
+},
+"jewel_case": {
+"display": "Jewel Case",
+"notes": "",
+"years": "1991-2008"
+},
+"joy_egg": {
+"display": "Kinda Joy",
+"notes": "The split plastic egg: in its foil, or opened, cream half and toy half, with the little spoon.",
+"years": "1997-2026"
+},
+"joystick": {
+"display": "Joystick",
+"notes": "",
+"years": "1985-1990"
+},
+"keitai_strap": {
+"display": "Phone Straps",
+"notes": "A clump of phone straps that outlived the phone.",
+"years": "1997-2008"
+},
+"keyboard_chunk": {
+"display": "Keyboard (Partial)",
+"notes": "",
+"years": "1985-2002"
+},
+"kid_blimp": {
+"display": "Toy Blimp",
+"notes": "The toy of the awards-show blimp: orange, splat-logo'd, would not fly no matter how hard you threw it.",
+"years": "1991-2002"
+},
+"kids_choc_bar": {
+"display": "Kinda Chocolate Bar",
+"notes": "The little single bar with the milky middle, wrapped or half-eaten.",
+"years": "1985-2026"
+},
+"kinkeshi": {
+"display": "Muscle Eraser",
+"notes": "A one-color rubber muscle-man eraser: masked, flexing, and useless for erasing.",
+"years": "1985-1996"
+},
+"kush_ball": {
+"display": "Kush Ball",
+"notes": "The rubber-filament ball: a thousand floppy strands, every one of them dusty.",
+"years": "1991-2002"
+},
+"latefee_receipt": {
+"display": "Late Fee Receipt",
+"notes": "The late fee receipt, curled from the thermal printer: one tape, nine days late, a total that could have bought the movie.",
+"years": "1985-2002"
+},
+"launchables": {
+"display": "Launchables",
+"notes": "The build-it-yourself lunch tray: crackers, cheese squares, meat circles, yellow sleeve half off.",
+"years": "1991-2002"
+},
+"lava_lamp": {
+"display": "Lava Lamp",
+"notes": "",
+"years": "1985-2026"
+},
+"lava_lamp_era": {
+"display": "Lava Lamp",
+"notes": "The rocket-shaped lava lamp: gold cone base, tapered glass, glowing wax blobs, gold cap.",
+"years": "1985-2026"
+},
+"light_gun": {
+"display": "Zapped Light Gun",
+"notes": "The orange light gun: point it at the screen, shoot the ducks, blame the dog.",
+"years": "1985-2008"
+},
+"light_strand": {
+"display": "Light Strand",
+"notes": "Old fat C9 bulbs on green wire, the strand nobody could untangle.",
+"years": "1985-2026"
+},
+"lighter": {
+"display": "Clear Lighter",
+"notes": "",
+"years": "1991-2026"
+},
+"loop_track": {
+"display": "Not Wheels Loop Track",
+"notes": "Orange plastic race track with the loop-de-loop, the blue connector tabs and one car that never made it.",
+"years": "1985-2002"
+},
+"loose_socks": {
+"display": "Loose Sock",
+"notes": "One loose sock, bunched down the shin the way they were meant to be, held up with sock glue.",
+"years": "1997-2008"
+},
+"lunch_tray": {
+"display": "Cafeteria Tray",
+"notes": "The cafeteria compartment tray: rectangle pizza, tater tots, canned corn, a spork, a bad decision.",
+"years": "1985-2002"
+},
+"lunchbox": {
+"display": "Metal Lunchbox",
+"notes": "",
+"years": "1985-1996"
+},
+"magazine": {
+"display": "Magazine",
+"notes": "",
+"years": "1985-2008"
+},
+"magic_wand": {
+"display": "Magical Girl Wand",
+"notes": "A toy magical-girl wand of our own: star head, heart jewel, little wings, ribbons. The light-up button stopped.",
+"years": "1991-2008"
+},
+"marshmallow_chick": {
+"display": "Marshmallow Chick",
+"notes": "",
+"years": "1985-2026"
+},
+"mascot_plush": {
+"display": "Mascot Plush",
+"notes": "Our own tournament mascot, a big-mouthed frog in a jersey with a ball under one arm. Claw-machine quality.",
+"years": "1985-2026"
+},
+"matchbook": {
+"display": "Matchbook",
+"notes": "",
+"years": "1985-2008"
+},
+"memory_card": {
+"display": "Memory Card",
+"notes": "",
+"years": "1997-2008"
+},
+"memory_card_stack": {
+"display": "Memory Card Stack",
+"notes": "A small stack of labeled memory cards, one of them holding a 60-hour save nobody backed up.",
+"years": "1985-2008"
+},
+"menko_card": {
+"display": "Menko Card",
+"notes": "A round slapping card, thick board, bent from being slammed on the pavement.",
+"years": "1985-2002"
+},
+"micro_cars": {
+"display": "Micro Machinations",
+"notes": "A fistful of tiny cars, the kind you lost in the carpet by the dozen.",
+"years": "1985-1996"
+},
+"microphone": {
+"display": "Microphone",
+"notes": "",
+"years": "1985-2026"
+},
+"milk_caps": {
+"display": "Milk Caps",
+"notes": "",
+"years": "1991-1996"
+},
+"mini_arcade": {
+"display": "Mini Arcade Cabinet",
+"notes": "",
+"years": "1985-2026"
+},
+"mini_barrels": {
+"display": "Little Shrug Barrels",
+"notes": "Twist-top mini barrels of colored sugar water. The blue one was the currency of the lunch table.",
+"years": "1991-2002"
+},
+"mini_flag": {
+"display": "Little Flag",
+"notes": "",
+"years": "1985-2026"
+},
+"mini_helmet": {
+"display": "Mini Helmet",
+"notes": "A mini replica football helmet: glossy shell, center stripe, grey facemask, the logo decal.",
+"years": "1985-2002"
+},
+"mini_pod": {
+"display": "Eye-Pod Mini-ish",
+"notes": "The mini: anodized aluminum in five colors, the click wheel printed in the same color as the shell.",
+"years": "2003-2008"
+},
+"modem_56k": {
+"display": "Sportstir 56K Modem",
+"notes": "The external 56K: a flat box with a row of lights that blinked through the handshake, the scream that came with it, and the one family member who picked up the phone at 98%.",
+"years": "1991-2002"
+},
+"monster_card": {
+"display": "Pocket Moansters Trading Card",
+"notes": "A pocket-moanster trading card: yellow border, HP, energy pips, our own critter. Blue back.",
+"years": "1991-2002"
+},
+"monster_cart": {
+"display": "Pocket Moansters Cartridge",
+"notes": "The little grey cart, clipped corner, label in red, blue or yellow.",
+"years": "1991-2002"
+},
+"monster_dex": {
+"display": "Moanster-Dex Toy",
+"notes": "The red flip-open monster encyclopedia toy: big blue lens, three little lights, a screen, a lid.",
+"years": "1991-2002"
+},
+"monster_playset": {
+"display": "Mighty Minimum Doom Head",
+"notes": "The black-and-green horned-beast clamshell: the whole head opened into a doom fortress for one tiny guy.",
+"years": "1991-1996"
+},
+"mood_ring": {
+"display": "Mood Ring",
+"notes": "A mood ring: thin silver band, a big oval stone shifting blue-green-purple.",
+"years": "1985-1996"
+},
+"moon_shooz": {
+"display": "Moon Shooz",
+"notes": "Mini trampolines strapped to your feet: a plastic tub, a black mat on bungee cords, a sole and two straps.",
+"years": "1991-2002"
+},
+"mouse": {
+"display": "Ball Mouse",
+"notes": "",
+"years": "1991-2002"
+},
+"mousepad": {
+"display": "Flying Floppies Mousepad",
+"notes": "The screensaver mousepad: winged floppy disks flying across a night sky, a parody of the screensaver your dad paid for. The fabric pilled where the mouse lived.",
+"years": "1991-2002"
+},
+"mp3_player": {
+"display": "MP3 Player",
+"notes": "",
+"years": "1997-2008"
+},
+"mushroom_cluster": {
+"display": "Mushrooms",
+"notes": "",
+"years": "1985-2026"
+},
+"nano_pod": {
+"display": "Eye-Pod Nano-ish",
+"notes": "The nano: thinner than a pencil, glossy, a color screen the size of a postage stamp. Scratched by looking at it.",
+"years": "2003-2008"
+},
+"necktie": {
+"display": "Necktie",
+"notes": "",
+"years": "1985-2026"
+},
+"neon_coin": {
+"display": "Neon Coin",
+"notes": "A fat coin in the brand color, a black CCFF00 stamped in the face.",
+"years": "1985-2026"
+},
+"neon_cube": {
+"display": "Neon Cube",
+"notes": "",
+"years": "1985-2026"
+},
+"neon_diamond": {
+"display": "Neon Diamond",
+"notes": "",
+"years": "1985-2026"
+},
+"neon_folder": {
+"display": "Liza Frankly Folder",
+"notes": "The pocket folder from the book fair: rainbow, glitter dolphins, a unicorn who has seen things.",
+"years": "1991-2002"
+},
+"neon_frame": {
+"display": "Hollow Square",
+"notes": "A square that is only the outline of one. The black shows through.",
+"years": "1985-2026"
+},
+"neon_pig": {
+"display": "Neon Piggy Bank",
+"notes": "The piggy bank in the brand colors: gloss black, with a CCFF00 snout, eyes and coin slot that glow.",
+"years": "1985-2026"
+},
+"neon_sign": {
+"display": "Neon Sign",
+"notes": "A small bent-glass neon sign (a heart, a lightning bolt, a cocktail glass) on a black backing grid.",
+"years": "1985-2026"
+},
+"neon_square": {
+"display": "Neon Square",
+"notes": "",
+"years": "1985-2026"
+},
+"neon_square_big": {
+"display": "Big Neon Square",
+"notes": "The headliner: one big flat square that says what it is.",
+"years": "1985-2026"
+},
+"neon_stack": {
+"display": "Square Stack",
+"notes": "",
+"years": "1985-2026"
+},
+"neon_tube": {
+"display": "Neon Tube",
+"notes": "",
+"years": "1985-2026"
+},
+"nerd_blaster": {
+"display": "NERD Foam Dart Blaster",
+"notes": "The orange-and-blue foam dart blaster and the darts that ended up on the roof.",
+"years": "1991-2008"
+},
+"new_release_case": {
+"display": "New Release Case",
+"notes": "The NEW RELEASE case: red sash sticker, the guarantee in fine print, out of stock since Tuesday, and the one copy left was behind the counter with a mustache guy's name on it.",
+"years": "1985-2002"
+},
+"newspaper": {
+"display": "Newspaper",
+"notes": "",
+"years": "1985-2026"
+},
+"noisemaker": {
+"display": "Noisemaker",
+"notes": "",
+"years": "1985-2026"
+},
+"notebook": {
+"display": "Spiral Notebook",
+"notes": "",
+"years": "1985-2026"
+},
+"opera_carded": {
+"display": "Space Opera Figure, Carded",
+"notes": "A figure still sealed on its cardback. Nobody opened these. Okay, everybody opened these.",
+"years": "1985-2002"
+},
+"opera_cards": {
+"display": "Space Opera Trading Cards",
+"notes": "",
+"years": "1985-2002"
+},
+"opera_case": {
+"display": "Collector's Carry Case",
+"notes": "",
+"years": "1985-2002"
+},
+"opera_figures": {
+"display": "Loose Space Opera Figures",
+"notes": "Loose figures, one missing its gun, one chewed by a younger brother.",
+"years": "1985-2002"
+},
+"opera_lunchbox": {
+"display": "Space Opera Lunchbox",
+"notes": "",
+"years": "1985-2002"
+},
+"opera_mailaway": {
+"display": "Mail-Away Mystery Figure",
+"notes": "The mail-away mystery figure: white box, baggie, eleven weeks of checking the mailbox.",
+"years": "1985-2002"
+},
+"opera_mask": {
+"display": "Overlord Vex Costume Helm",
+"notes": "OVERLORD VEX's helm, the drugstore costume version: crimson, gold ram horns, a crest and a slit visor.",
+"years": "1985-2002"
+},
+"opera_saber": {
+"display": "Collapsible Laser Sword",
+"notes": "The collapsible toy laser sword: two blade sections out, the third jammed forever.",
+"years": "1985-2002"
+},
+"opera_ship": {
+"display": "The Rusty Comet",
+"notes": "THE RUSTY COMET: our freighter. Swept wedge hull, twin engines, bubble cockpit, a dorsal fin.",
+"years": "1985-2002"
+},
+"opera_stickers": {
+"display": "Space Opera Sticker Sheet",
+"notes": "",
+"years": "1985-2002"
+},
+"opera_vhs": {
+"display": "The Space Opera Trilogy (Remastered Again)",
+"notes": "The boxed trilogy: three tapes in a slipcase, 'digitally remastered', for the second time this decade.",
+"years": "1985-2002"
+},
+"orange_jug": {
+"display": "Sunny D-Gen",
+"notes": "The orange 'drink' jug every mom thought was juice. It was not juice.",
+"years": "1991-2002"
+},
+"orange_vhs": {
+"display": "Orange Clamshell VHS",
+"notes": "An orange clamshell kids' VHS of a cartoon taped off a cable channel that was mostly slime.",
+"years": "1991-2002"
+},
+"orb_bottle": {
+"display": "Orbedz",
+"notes": "The 1997 drink with gel balls floating in it like a lava lamp you were supposed to drink.",
+"years": "1997-2002"
+},
+"ornament": {
+"display": "Glass Ornament",
+"notes": "",
+"years": "1985-2026"
+},
+"os_box": {
+"display": "Windoze Boxed Software",
+"notes": "Boxed OS software: a fat cardboard box of floppies or one CD, clouds on the front, a window cracked clean through the middle of the logo. Start me up.",
+"years": "1991-2002"
+},
+"p2p_sleeve": {
+"display": "Song-Share CD Sleeve",
+"notes": "A paper CD sleeve from the song-sharing years, its sticker from the app that got the whole dorm's internet cut off: a sour lime in headphones, or a cat asleep on the download button.",
+"years": "1991-2002"
+},
+"pager": {
+"display": "Pager",
+"notes": "",
+"years": "1991-2002"
+},
+"paper_hand": {
+"display": "Paper Hand",
+"notes": "",
+"years": "1985-2026"
+},
+"party_cup": {
+"display": "Red Party Cup",
+"notes": "The red party cup, crushed flat on one side like they all were by the end.",
+"years": "1985-2026"
+},
+"party_hat": {
+"display": "Party Hat",
+"notes": "",
+"years": "1985-2026"
+},
+"pda": {
+"display": "Sweaty Palm PDA",
+"notes": "The stylus organizer: a green-grey screen you wrote on in a made-up alphabet, four round app buttons, and a stylus that was lost by Tuesday.",
+"years": "1997-2002"
+},
+"pencil": {
+"display": "No. 2 Pencil",
+"notes": "",
+"years": "1985-2026"
+},
+"persimmon": {
+"display": "Persimmon",
+"notes": "A squat orange persimmon with its four-leaf cap. Sometimes a dried one, wrinkled and frosted.",
+"years": "1985-2026"
+},
+"phone_cord": {
+"display": "Phone Line Cord",
+"notes": "Twenty-five feet of beige phone line, from the kitchen jack to the computer in the den, clear plastic plug on each end with the little clip already snapped off.",
+"years": "1991-2002"
+},
+"pick_bag": {
+"display": "Pick 'n' Mix Bag",
+"notes": "The striped paper bag, top twisted shut, corners gone see-through from the sugar.",
+"years": "1985-2008"
+},
+"piggy_bank": {
+"display": "Piggy Bank",
+"notes": "Fat body, big snout, real ears, a curly tail and a coin slot. Five breeds: pink ceramic, gold, a tusked iron boar, plush, and chrome.",
+"years": "1985-2026"
+},
+"pilgrim_hat": {
+"display": "Pilgrim Hat",
+"notes": "The construction-paper pilgrim hat from second grade.",
+"years": "1985-2026"
+},
+"pin_button": {
+"display": "Pin Button",
+"notes": "",
+"years": "1985-2026"
+},
+"pixel_frame": {
+"display": "Framed Pixel Art",
+"notes": "A framed picture off the wall: black frame, a pixel-art square inside (the frames a room hangs its NFTs in).",
+"years": "1985-2026"
+},
+"pixel_hoodie": {
+"display": "Pixel Hoodie",
+"notes": "A hoodie laid flat, arms out, built from square steps so it reads as pixels.",
+"years": "1985-2026"
+},
+"pizza_box": {
+"display": "Pizza Hutch Pan Pizza",
+"notes": "The personal pan pizza you earned by reading, with the star button you wore to prove it.",
+"years": "1985-1996"
+},
+"pizza_crust": {
+"display": "Pizza Crust",
+"notes": "",
+"years": "1985-2026"
+},
+"plasma_ball": {
+"display": "Plasma Ball",
+"notes": "A plasma ball: clear globe on a black base, a glowing core, purple lightning filaments to the glass.",
+"years": "1991-2008"
+},
+"plastic_egg": {
+"display": "Plastic Egg",
+"notes": "",
+"years": "1985-2026"
+},
+"plastic_lunchbox": {
+"display": "Plastic Lunch Box",
+"notes": "The molded plastic one that replaced the tin: fat rounded corners, two-tone, a raised sticker panel.",
+"years": "1991-2002"
+},
+"play_money": {
+"display": "Play Money",
+"notes": "",
+"years": "1985-2026"
+},
+"playing_cards": {
+"display": "Playing Cards",
+"notes": "",
+"years": "1985-2026"
+},
+"pocket_diecast": {
+"display": "Tomiko Die-Cast",
+"notes": "A palm-sized die-cast car with opening-nothing and suspension that actually bounces. Sometimes still in its box.",
+"years": "1985-2026"
+},
+"pocket_handheld": {
+"display": "Game Boi Color (Grape)",
+"notes": "The vertical pocket color handheld in see-through grape (or teal, lime, berry, clear).",
+"years": "1991-2002"
+},
+"pocket_playset": {
+"display": "Molly Pocket Compact",
+"notes": "The pink pocket compact that opened into a tiny house, with a peg doll you lost within the hour.",
+"years": "1991-2002"
+},
+"pog_slammer": {
+"display": "Metal Slammer",
+"notes": "The heavy metal slammer: a thick disc with a raised rim and a stamped design.",
+"years": "1991-1996"
+},
+"pog_tube": {
+"display": "Pogfed Milkcap Tube",
+"notes": "A clear tube of pogs, colored caps, the top pog showing its art.",
+"years": "1991-1996"
+},
+"poker_chip": {
+"display": "Poker Chip",
+"notes": "",
+"years": "1985-2026"
+},
+"popcorn_bag": {
+"display": "Microwave Popcorn Bag",
+"notes": "Microwave popcorn, puffed and steaming, a butter stain through the THIS SIDE UP. Somebody pushed the POPCORN button and walked away.",
+"years": "1985-2002"
+},
+"portable_cd": {
+"display": "Portable CD Player",
+"notes": "",
+"years": "1991-2002"
+},
+"potted_plant": {
+"display": "Potted Plant",
+"notes": "",
+"years": "1985-2026"
+},
+"power_bank": {
+"display": "Power Bank",
+"notes": "",
+"years": "2009-2026"
+},
+"present": {
+"display": "Present",
+"notes": "",
+"years": "1985-2026"
+},
+"press_badge": {
+"display": "Press Badge",
+"notes": "",
+"years": "1985-2026"
+},
+"puff_bag": {
+"display": "Cheese Puffs",
+"notes": "Cheese puffs: the orange bag, the orange dust, the orange fingers.",
+"years": "1991-2008"
+},
+"pumpkin_pail": {
+"display": "Pumpkin Pail",
+"notes": "The plastic jack-o'-lantern candy bucket, black handle and all.",
+"years": "1985-2026"
+},
+"purikura_sheet": {
+"display": "Purikura Sheet",
+"notes": "A sheet of photo-booth stickers, half of them already peeled off and stuck in somebody's notebook.",
+"years": "1997-2008"
+},
+"push_pop": {
+"display": "Shove Pop",
+"notes": "",
+"years": "1991-2002"
+},
+"putty_egg": {
+"display": "Toot Putty Egg",
+"notes": "The plastic egg of noise putty. Push your finger in. Act surprised. Get sent to the hall.",
+"years": "1991-2002"
+},
+"puzzle_cube": {
+"display": "Puzzle Cube",
+"notes": "",
+"years": "1985-1996"
+},
+"ramen_packet": {
+"display": "Emergency Ramen",
+"notes": "",
+"years": "1985-2026"
+},
+"razor_phone": {
+"display": "Razzed V3 Flip Phone",
+"notes": "The razor-thin metal flip phone: etched keypad that glowed blue, the chin at the bottom, and the hinge that cracked open with one flick of the wrist.",
+"years": "2003-2008"
+},
+"rca_cables": {
+"display": "Twisted RCA Cables",
+"notes": "Twisted-pair RCA interconnects, blue jacket, chunky gold plugs with a red ring and a white ring. Paid extra for the gold. Heard the difference. Didn't.",
+"years": "1985-2008"
+},
+"red_candle": {
+"display": "Tiny Red Candle",
+"notes": "",
+"years": "1985-2026"
+},
+"rental_card": {
+"display": "Blockbusted Membership Card",
+"notes": "The membership card: blue plastic, the cracked brick, a barcode, a signature strip signed in gel pen. The most valuable ID a fourteen-year-old owned.",
+"years": "1985-2002"
+},
+"rental_game": {
+"display": "Game Rental Case",
+"notes": "The game rental case: a smaller clamshell, a grey cartridge with a rental sticker over the art, and the save file of a stranger who was already on the last level.",
+"years": "1985-2002"
+},
+"rental_vhs": {
+"display": "Blockbusted Rental Clamshell",
+"notes": "The rental clamshell: blue plastic, a yellow BLOCKBUSTED cover, the barcode, the category sticker, and a tape that was not rewound.",
+"years": "1985-2002"
+},
+"rescue_can": {
+"display": "Rescue Can",
+"notes": "",
+"years": "1985-2026"
+},
+"rf_switch": {
+"display": "RF Switch Box",
+"notes": "The RF switch box: TV / GAME slider, coax tail, two spade lugs for the screws on the back of the set.",
+"years": "1985-2008"
+},
+"ribbon_cable": {
+"display": "Ribbon Cable",
+"notes": "",
+"years": "1985-2026"
+},
+"ring_candy": {
+"display": "Ring Plop",
+"notes": "The giant-jewel candy ring. Worn for status, licked in public, sticky until Thursday.",
+"years": "1991-2008"
+},
+"ring_light": {
+"display": "Ring Light",
+"notes": "",
+"years": "2009-2026"
+},
+"ripcord_launcher": {
+"display": "Bayblade Rip-Cord Launcher",
+"notes": "The launcher: a toothed rip-cord half pulled out, the T-handle on the end.",
+"years": "1997-2008"
+},
+"robo_car": {
+"display": "Transmogrifier Robot Car",
+"notes": "The robot-that-is-also-a-car: hood for a chest, wheels on the shins, a spoiler for wings. Ours, not theirs.",
+"years": "1985-2002"
+},
+"roller_skate": {
+"display": "Roller Skate",
+"notes": "",
+"years": "1985-1990"
+},
+"rose": {
+"display": "Drugstore Rose",
+"notes": "",
+"years": "1985-2026"
+},
+"rubber_spider": {
+"display": "Rubber Spider",
+"notes": "",
+"years": "1985-2026"
+},
+"satin_jacket": {
+"display": "Satin Team Jacket Scrap",
+"notes": "A shredded chunk of the shiny team jacket everybody's cousin had: satin shell, striped knit collar, snaps.",
+"years": "1991-1996"
+},
+"scented_markers": {
+"display": "Mr. Sketchy Scented Markers",
+"notes": "Fat scented markers with fruit-colored caps; one cap is always missing and that one is dried out.",
+"years": "1985-1996"
+},
+"school_milk": {
+"display": "Mooville Chocolate Milk",
+"notes": "The half-pint chocolate milk carton, opened wrong, spout torn into a ragged mouth.",
+"years": "1985-2002"
+},
+"scratch_ticket": {
+"display": "Scratch Ticket",
+"notes": "",
+"years": "1985-2026"
+},
+"seal_sticker": {
+"display": "Wafer Seal Sticker",
+"notes": "The holographic sticker out of a 30-yen wafer. Kids bought the wafers and threw the wafers away.",
+"years": "1985-2002"
+},
+"selfie_stick": {
+"display": "Selfie Stick",
+"notes": "",
+"years": "2009-2026"
+},
+"shiny_badge": {
+"display": "Shiny Team Badge",
+"notes": "The shiny: a foil team crest. Worth five normal ones on the playground exchange rate.",
+"years": "1985-2002"
+},
+"shot_glass": {
+"display": "Shot Glass",
+"notes": "",
+"years": "1985-2026"
+},
+"sidekick_phone": {
+"display": "Sidekicked Swivel Phone",
+"notes": "The swivel-screen texter: the screen flipped around to reveal a full keyboard, a trackball, and the first time you could AIM from the back of algebra.",
+"years": "2003-2008"
+},
+"signed_baseball": {
+"display": "Signed Baseball",
+"notes": "An autographed ball on its little stand. The signature is real. The person is not famous.",
+"years": "1985-2002"
+},
+"skate_wheel": {
+"display": "Skate Wheel",
+"notes": "",
+"years": "1991-2002"
+},
+"skateboard": {
+"display": "Skateboard",
+"notes": "",
+"years": "1991-2002"
+},
+"skin_printout": {
+"display": "Windamp Skin Printout",
+"notes": "An inkjet printout of a media-player skin somebody was proud of: the spectrum bars, the scrolling title, the slogan about whipping a farm animal. Banding from the cyan cartridge running low.",
+"years": "1991-2002"
+},
+"skull_candle": {
+"display": "Skull Candle",
+"notes": "A skull-shaped candle, face toward -Y: cranium, brow, two deep sockets, a nose hole, a row of teeth.",
+"years": "1985-2026"
+},
+"slap_bracelet": {
+"display": "Slap Bracelet",
+"notes": "",
+"years": "1991-1996"
+},
+"slim_tower_console": {
+"display": "PlayStationary 2 (Standing)",
+"notes": "The black monolith, standing up: half its side ribbed in parallel grooves, a tray seam, a blue badge.",
+"years": "1997-2008"
+},
+"slime": {
+"display": "Toy Slime",
+"notes": "",
+"years": "1991-1996"
+},
+"slime_cereal": {
+"display": "Cartoon Tie-In Cereal",
+"notes": "A cartoon tie-in cereal box: neon O's, slime marshmallows, a toy that broke on the drive home.",
+"years": "1991-2002"
+},
+"slime_stickers": {
+"display": "Gross-Out Sticker Sheet",
+"notes": "",
+"years": "1991-2002"
+},
+"slime_tub": {
+"display": "Pickleodeon Glopp",
+"notes": "The tub of official green slime, lid off, slime making a break for it.",
+"years": "1991-2002"
+},
+"smartphone": {
+"display": "Smartphone",
+"notes": "",
+"years": "2009-2026"
+},
+"smartwatch": {
+"display": "Smartwatch",
+"notes": "",
+"years": "2009-2026"
+},
+"snake_phone": {
+"display": "No-Kidding Brick Phone",
+"notes": "The brick that never died: blue-grey shell, one big navi key, a green screen with Snake on it. Dropped down the stairs, battery flew out, put it back in, still worked.",
+"years": "1997-2002"
+},
+"snapback_cap": {
+"display": "Snapback",
+"notes": "A two-tone snapback with a flat brim and the gold sticker nobody ever peeled off.",
+"years": "1991-2002"
+},
+"sneaker": {
+"display": "Sneaker",
+"notes": "",
+"years": "1985-2026"
+},
+"sock": {
+"display": "Tube Sock",
+"notes": "",
+"years": "1985-2026"
+},
+"soda_can": {
+"display": "Soda Can",
+"notes": "",
+"years": "1985-2026"
+},
+"soggy_blaster": {
+"display": "Soggy 50 Water Blaster",
+"notes": "The neon pump water blaster: tank on top, pump slide underneath, an orange nozzle, a lawsuit-level range.",
+"years": "1991-2002"
+},
+"songpyeon": {
+"display": "Songpyeon",
+"notes": "Half-moon rice cakes in pastel colors, pinched shut over sesame or bean, steamed on pine needles.",
+"years": "1985-2026"
+},
+"sour_pack": {
+"display": "Warheadache",
+"notes": "The face-melting sour candy bag, a few twist-wrapped pieces loose. Held in mouth for 30 seconds on a dare.",
+"years": "1991-2002"
+},
+"spam_can": {
+"display": "Splam",
+"notes": "The canned ham with the pull-ring lid. In Seoul it comes in a gift box and nobody laughs.",
+"years": "1985-2026"
+},
+"spam_gift_box": {
+"display": "Splam Gift Set",
+"notes": "The holiday gift set: a blue box, a plastic carry handle, cans in a molded tray. Given to bosses.",
+"years": "1985-2026"
+},
+"speaker_6x9": {
+"display": "6x9 Oval Speaker",
+"notes": "The 6x9 oval for the rear deck: stamped basket, a cone in mica glitter or blue poly, a little tweeter on a bridge across the middle, and a sticker promising more watts than the car had.",
+"years": "1985-2008"
+},
+"splat_sign": {
+"display": "Orange Splat Sign",
+"notes": "The orange splat logo sign off the studio wall. Our splat, our letters, our lawsuit-free goo.",
+"years": "1991-2002"
+},
+"splurge_can": {
+"display": "Splurge",
+"notes": "The lime-green citrus soda of 1997: neon can, red letters, the energy drink before energy drinks.",
+"years": "1991-2002"
+},
+"squeeze_buddy": {
+"display": "Squeezurz",
+"notes": "A character-shaped squeeze drink: twist off his head, squeeze his guts out. That's lunch.",
+"years": "1991-2002"
+},
+"stereo_viewer": {
+"display": "Viewmeister 3D Viewer",
+"notes": "The red stereo picture viewer and a reel of 3D photos of somewhere you never went.",
+"years": "1985-2002"
+},
+"stick_biscuit_box": {
+"display": "Pocko",
+"notes": "The chocolate-dipped biscuit sticks, red box, one end torn open with a few sticks sliding out.",
+"years": "1985-2026"
+},
+"sticker_album": {
+"display": "Panetti Sticker Album",
+"notes": "The album, cover curling open on a page that is about half full. It was always about half full.",
+"years": "1985-2002"
+},
+"sticker_packet": {
+"display": "Sticker Packet",
+"notes": "A five-sticker packet, sealed or torn across the top with the stickers half out.",
+"years": "1985-2002"
+},
+"stiff_cap": {
+"display": "Stiffening Capacitor",
+"notes": "The stiffening capacitor: a chrome can the size of a soda bottle with a blue digital readout on top that dipped from 14.4 to 11.9 every time the bass hit. That was the point.",
+"years": "1985-2008"
+},
+"stock_cert": {
+"display": "Share Certificate",
+"notes": "",
+"years": "1985-2026"
+},
+"strategy_guide": {
+"display": "Primo Official Strategy Guide",
+"notes": "The official strategy guide: every secret, every map, a poster stapled in the middle.",
+"years": "1985-2008"
+},
+"street_sign": {
+"display": "Street Sign",
+"notes": "",
+"years": "1985-2026"
+},
+"stretch_man": {
+"display": "Stretch Armslow",
+"notes": "The gel-filled muscle man: one arm pulled to twice its length, slowly not coming back.",
+"years": "1985-1996"
+},
+"studio_headphones": {
+"display": "Studio Headphones",
+"notes": "",
+"years": "1985-2026"
+},
+"subwoofer": {
+"display": "Subwoofer",
+"notes": "The 10 or the 12: a fat rubber surround you could pinch, a cone that hopped a quarter inch on every kick drum, a magnet stack heavier than the spare tire. Rattled the license plate off.",
+"years": "1985-2008"
+},
+"sunglasses": {
+"display": "Cheap Sunglasses",
+"notes": "",
+"years": "1985-2026"
+},
+"sunscreen": {
+"display": "Sunscreen",
+"notes": "",
+"years": "1985-2026"
+},
+"surprise_capsule": {
+"display": "Yellow Toy Capsule",
+"notes": "",
+"years": "1985-2008"
+},
+"surprise_egg": {
+"display": "Kinda Surprise Egg",
+"notes": "The foil egg, or what is left once it was opened: two chocolate halves, white inside, and the capsule.",
+"years": "1985-2008"
+},
+"surprise_slip": {
+"display": "Instruction Slip",
+"notes": "The accordion-folded instruction slip, the part everyone threw away first.",
+"years": "1985-2008"
+},
+"surprise_toy": {
+"display": "Surprise Egg Toy",
+"notes": "The toy: a painted little critter, a four-piece buggy, or the parts still on the sprue.",
+"years": "1985-2008"
+},
+"swap_stack": {
+"display": "Swaps Stack",
+"notes": "The swaps: a fat stack of doubles held with a rubber band, thumbed until the corners went round.",
+"years": "1985-2002"
+},
+"swimsuit": {
+"display": "Red Swimsuit",
+"notes": "",
+"years": "1985-2026"
+},
+"swirl_console": {
+"display": "WetDreamcast",
+"notes": "The white rounded box with the orange pinwheel on its lid: dead too soon.",
+"years": "1997-2002"
+},
+"synth_keys": {
+"display": "Synth Keys",
+"notes": "",
+"years": "1985-2026"
+},
+"tablet": {
+"display": "Tablet",
+"notes": "",
+"years": "2009-2026"
+},
+"tango_football": {
+"display": "Match Ball",
+"notes": "A match ball with the twelve-circle triad pattern, scuffed grey from the street. Sometimes half flat.",
+"years": "1985-2002"
+},
+"tazo": {
+"display": "Taza",
+"notes": "One disc out of a chip bag. Some were shiny. You traded three for a shiny.",
+"years": "1991-2002"
+},
+"tazo_board": {
+"display": "Taza Collector Board",
+"notes": "The cardboard collector board with a round hole for every disc. It was never full.",
+"years": "1991-2002"
+},
+"tazo_chip_bag": {
+"display": "Chip Bag (Tazas Inside)",
+"notes": "The bag you bought for the disc inside. The chips were a bonus.",
+"years": "1991-2002"
+},
+"tazo_tube": {
+"display": "Taza Collector Tube",
+"notes": "The clear collector tube with the colored cap, packed with discs, rattling in a backpack.",
+"years": "1991-2002"
+},
+"team_scarf": {
+"display": "Bar Scarf",
+"notes": "A knitted bar scarf, folded three times, the team chant spelled down its length. Tassels on both ends.",
+"years": "1985-2026"
+},
+"tennis_ball": {
+"display": "Tennis Ball",
+"notes": "",
+"years": "1985-2026"
+},
+"theater_candy": {
+"display": "Theater-Box Candy",
+"notes": "Theater-box candy from the rack by the register: a long cardboard box, flap torn open, a few pieces rattling loose. Overpriced. Bought anyway.",
+"years": "1985-2002"
+},
+"ticker_tape": {
+"display": "Ticker Tape",
+"notes": "A long strip of tape, coiled like it fell off the machine, with a loose end.",
+"years": "1985-2026"
+},
+"ticket_stubs": {
+"display": "Ticket Stubs",
+"notes": "",
+"years": "1985-2002"
+},
+"tickle_monster": {
+"display": "Tickle Me Grumbo",
+"notes": "Red plush cyclops with a laugh box in its gut. Squeeze, it giggles. Squeeze at 2am, it giggles anyway.",
+"years": "1997-2002"
+},
+"tie_dye_shirt": {
+"display": "Tie-Dye Shirt",
+"notes": "A wadded tie-dye T-shirt, the spiral of the dye still showing.",
+"years": "1985-2002"
+},
+"tin_lunchbox": {
+"display": "Tin Lunch Box + Thermos",
+"notes": "The embossed metal lunch box with a Saturday-morning cartoon on it, and its matching plastic thermos.",
+"years": "1985-1996"
+},
+"tissue_box": {
+"display": "Tissue Box",
+"notes": "",
+"years": "1985-2026"
+},
+"toy_oven": {
+"display": "Queasy-Bake Oven",
+"notes": "The light-bulb oven: purple and pink, two fake burners, one real burn.",
+"years": "1991-2002"
+},
+"trapped_keeper": {
+"display": "Trapped Keeper Zip Binder",
+"notes": "The zip-around trapper binder: loud cover, chunky side zipper, the velcro flap that ripped in class.",
+"years": "1985-1996"
+},
+"trial_cd": {
+"display": "AOHell Free Trial Disc",
+"notes": "The free trial disc. Arrived in the mail, in the cereal box, in the bag at the store, under the windshield wiper. Coaster count at its peak: one per household per day.",
+"years": "1991-2002"
+},
+"trial_tin": {
+"display": "AOHell Trial Tin",
+"notes": "The fancy one: the trial disc in a little metal tin, lid printed in silver and blue, hinged open with the disc winking inside. Too nice to throw out. Too useless to keep.",
+"years": "1991-2002"
+},
+"trident_controller": {
+"display": "Three-Handled Controller",
+"notes": "Three handles, one stick dead center, a blue A, a green B and four yellow arrows.",
+"years": "1991-2002"
+},
+"trip_it": {
+"display": "Trip-It Ankle Hopper",
+"notes": "The ankle-hop toy: a hoop for your ankle, a long stem, a ball at the end and a lap counter.",
+"years": "1991-2002"
+},
+"troll_doll": {
+"display": "Troll Doll",
+"notes": "A pencil-topper troll: chubby vinyl body, wide grin, a tall shock of neon hair.",
+"years": "1991-2002"
+},
+"tv_remote": {
+"display": "TV Remote",
+"notes": "",
+"years": "1985-2026"
+},
+"tweeter": {
+"display": "Swivel Tweeter",
+"notes": "A component tweeter on its swivel cup: a little silk dome, a chrome ring, a stick-on base you glued to the dash and aimed at your own ear.",
+"years": "1985-2008"
+},
+"twin_grip_controller": {
+"display": "Twin-Grip Rumble Pad",
+"notes": "Grey, two long grips, two sticks low in the middle, four face buttons in a diamond.",
+"years": "1991-2002"
+},
+"umaibo": {
+"display": "Oishibo",
+"notes": "The ten-yen corn puff stick, in a printed wrapper, or bitten open with the hollow puff showing.",
+"years": "1985-2026"
+},
+"underglow": {
+"display": "Neon Underglow Tube",
+"notes": "A neon underglow tube: glass-clear tube, gas glowing inside, black end caps and a cord to the switch on the dash. Made a Civic look like it was hovering. Got pulled over for it.",
+"years": "1985-2008"
+},
+"usb_stick": {
+"display": "USB Stick",
+"notes": "",
+"years": "2003-2026"
+},
+"valentine_card": {
+"display": "Classroom Valentine",
+"notes": "",
+"years": "1985-2026"
+},
+"vape": {
+"display": "Disposable Vape",
+"notes": "",
+"years": "2009-2026"
+},
+"vhs": {
+"display": "VHS Tape",
+"notes": "",
+"years": "1985-2002"
+},
+"virtual_pet": {
+"display": "Virtual Pet",
+"notes": "",
+"years": "1997-2002"
+},
+"vmu_controller": {
+"display": "WetDreamcast Pad + Memory Screen",
+"notes": "White, rounded, a memory card with its own little screen jammed in the top, cord out the bottom.",
+"years": "1997-2002"
+},
+"vr_headset": {
+"display": "VR Headset",
+"notes": "",
+"years": "2009-2026"
+},
+"vuvuzela": {
+"display": "Vuvuzela",
+"notes": "The bell half of a two-piece plastic stadium horn. One B-flat, ninety minutes, the whole summer of 2010.",
+"years": "2003-2026"
+},
+"walkman": {
+"display": "Portable Tape Player",
+"notes": "",
+"years": "1985-1996"
+},
+"wallchart": {
+"display": "World Cup Wallchart",
+"notes": "The free newspaper wallchart, folded in half, groups filled in in pen until your team went out.",
+"years": "1985-2008"
+},
+"wax_pack": {
+"display": "Wax Pack",
+"notes": "A torn wax pack of cards: crimped wax wrapper, a pink slab of gum that could cut glass, two cards out.",
+"years": "1985-1996"
+},
+"webcam": {
+"display": "Webcam",
+"notes": "",
+"years": "1997-2002"
+},
+"whistle": {
+"display": "Lifeguard Whistle",
+"notes": "",
+"years": "1985-2026"
+},
+"white_mice": {
+"display": "Sugar Mice",
+"notes": "Chalky sugar mice, white and pink, with a sugar-string tail.",
+"years": "1985-2002"
+},
+"wide_handheld": {
+"display": "Game Boi Advanse",
+"notes": "The landscape handheld: indigo, flared ends, two shoulder buttons.",
+"years": "1997-2008"
+},
+"wonder_ball": {
+"display": "Wonder Bawl",
+"notes": "The foil chocolate ball with the surprise inside. The surprise was always a smaller disappointment.",
+"years": "1991-2002"
+},
+"wrestler_fig": {
+"display": "Wrestling Figure (Champion, Allegedly)",
+"notes": "A rubbery wrestling figure in neon tights with a gold title belt the size of his torso.",
+"years": "1991-2002"
+},
+"y2k_glasses": {
+"display": "2000 Glasses",
+"notes": "The 2000 glasses: the two zeros in the middle are the lenses.",
+"years": "1985-2026"
+},
+"yak_toy": {
+"display": "Yak Bakk Voice Recorder",
+"notes": "The handheld voice recorder toy: a fat translucent pill with one huge thumb button. Six seconds of memory, all of it fart noises.",
+"years": "1991-2002"
+},
+"yapper_boy": {
+"display": "Yapper Boy Tape Recorder",
+"notes": "The movie-kid tape recorder: a silver brick with a carry handle bigger than the kid's hand and a mic on a stalk that pulls out the side. Slows your voice down. Prank calls the hotel.",
+"years": "1991-1996"
+},
+"yoyo": {
+"display": "Yo-Yo",
+"notes": "",
+"years": "1985-1996"
+},
+"yut_sticks": {
+"display": "Yut Sticks",
+"notes": "Four half-round sticks for yut nori, the flat faces up or down; one has the X that sends you back.",
+"years": "1985-2026"
+}
+}
