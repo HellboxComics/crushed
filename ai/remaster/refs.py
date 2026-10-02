@@ -30,6 +30,24 @@ SOURCES = "off+commons+openverse"
 OK_LICENSES = ("cc0", "pdm", "public domain", "by", "by-sa", "cc by", "cc-by", "cc by-sa", "cc-by-sa")
 
 
+def era(text):
+    """A catalog year is an era, not one exact year: "circa 1997" / ", 1997" means 1994-2000 (+/- 3 years), so
+    a photo of the packaging from any of those years is the right one and the year is never printed on the art.
+    Years that are part of the printed words themselves (PROM 1999, DEC 1999) are left alone."""
+    def rep(m):
+        y = int(m.group(2))
+        lead = m.group(1)
+        if re.search(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},\s*$",
+                     m.string[:m.start()] + lead, re.I):
+            return m.group(0)                     # an exact date (December 31, 1999) is part of the object
+        lead = "" if lead.strip().lower().startswith(("circa", "c.")) else lead
+        return f"{lead}from the {y - 3}-{y + 3} era"
+    t = re.sub(r"\b(circa\s+|c\.\s*)((?:19|20)\d\d)s?\b", rep, text or "", flags=re.I)
+    t = re.sub(r"(,\s*)((?:19|20)\d\d)(?=\s*(,|$|\)|\.\s))", rep, t)
+    t = re.sub(r"(\(\s*)((?:19|20)\d\d)(?=\s*\))", rep, t)
+    return t
+
+
 def query_for(name):
     q = os.path.join(PROMPTS, name + ".query")
     if os.path.exists(q):
@@ -220,8 +238,9 @@ def ensure_vision():
 def vet(path, display, looks=""):
     """0..10: how surely this photo shows exactly this real product, by the local vision model."""
     import base64
-    q = (f"Product: {display}.\nWhat it looks like: {looks[:400]}\n\nLook at the photo. Rate from 0 to 10 how "
-         "certainly it shows exactly this real product (the right brand, model, version and era), as one clearly "
+    q = (f"Product: {era(display)}.\nWhat it looks like: {era(looks)[:400]}\n\nLook at the photo. Rate from 0 to 10 how "
+         "certainly it shows exactly this real product (the right brand, model and version; packaging from any year "
+         "inside that era counts as right), as one clearly "
          "visible item that a 3D artist could copy. 0 = a different thing, a drawing, a crowd of items or the product "
          "is tiny/hidden. Reply with only the number.")
     try:
@@ -306,7 +325,7 @@ def judge(name, display, qa_png, review_png=None, photos=None):
     if not ensure_vision():
         return True, []
     imgs = [p for p in [qa_png, review_png] + list(photos or [])[:1] if p and os.path.exists(p)]
-    q = (f"You are the final quality inspector for 3D game assets. The object is: {display}.\n"
+    q = (f"You are the final quality inspector for 3D game assets. The object is: {era(display)}.\n"
          "Image 1: top row = the reference drawing from front, left, back and right; bottom row = the finished 3D "
          "model seen the same way. " + ("Image 2: the 3D model rendered from four angles. " if review_png else "")
          + ("The last image is a real photo of the real product. " if photos else "")

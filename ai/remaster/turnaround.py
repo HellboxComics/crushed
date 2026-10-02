@@ -58,11 +58,16 @@ def _ask():
     return ask
 
 
+def _era(t):
+    from refs import era
+    return era(t)
+
+
 def describe(name, display, years, notes, seed, redo=False):
     out = os.path.join(PROMPTS, name + ".turn.txt")
     if os.path.exists(out) and not redo:
         return open(out).read().strip()
-    text = _ask().ask(WRITER, BRIEF.format(display=display, years=years, notes=notes or "-", seed=seed or "-"),
+    text = _ask().ask(WRITER, BRIEF.format(display=_era(display), years=_era(str(years)), notes=notes or "-", seed=seed or "-"),
                       kind="write", timeout=600)
     release()                       # hand its memory back before the drawing room loads a 20B image model
     text = " ".join(str(text or "").split())
@@ -424,7 +429,8 @@ def for_drawing(description):
     """The words the drawing model gets: measurements taken out (it printed '14.0 x 5.0 x 20.0 cm' right onto the
     Pop-Tarts box). The size still sets the model's real size; it just isn't drawn."""
     import re
-    parts = re.split(r"(?<=[,.;])\s+", description)
+    from refs import era
+    parts = re.split(r"(?<=[,.;])\s+", era(description))
     keep = [p for p in parts if not re.search(r"\d\s*(cm|mm|in\b|inch)|real size", p, re.I)]
     text = " ".join(keep).strip()
     return text if len(text) > 40 else description
