@@ -2,7 +2,7 @@
  "id": "aa_battery",
  "name": "AA battery (IEC LR6 / ANSI 15A)",
  "units": "mm",
- "source": "IEC 60086-2 LR6: 50.5 mm long, 14.5 mm across; positive button 5.5 mm across, about 1 mm high",
+ "source": "IEC 60086-2 LR6: 50.5 mm long, 14.5 mm across; positive button 5.5 mm across, about 1 mm high; end-cap pressings (groove, raised rings, rolled button edge) as on real cells",
  "segments": 160,
  "profile": [
   {
@@ -10,36 +10,61 @@
    "pts": [
     [
      0,
-     0
+     0.14
     ],
     [
-     4.3,
-     0
+     3.9,
+     0.14
+    ],
+    [
+     4.15,
+     0.08
+    ],
+    [
+     4.35,
+     0.0
+    ],
+    [
+     4.7,
+     0.0
+    ],
+    [
+     4.95,
+     0.06
+    ],
+    [
+     5.1,
+     0.14
     ]
    ]
   },
   {
-   "part": "insulator",
+   "part": "edge",
    "pts": [
     [
-     4.3,
-     0
+     5.1,
+     0.14
     ],
     [
-     4.5,
-     0.22
-    ],
-    [
-     6.5,
-     0.25
+     5.1,
+     0.21
     ]
    ]
   },
   {
    "part": "label",
+   "seam": {
+    "overlap_deg": 6,
+    "thickness_mm": 0.07,
+    "ramp_deg": 2
+   },
    "pts": [
     [
-     6.5,
+     5.1,
+     0.21
+    ],
+    [
+     6.2,
      0.25
     ],
     [
@@ -68,7 +93,24 @@
     ],
     [
      6.5,
-     49.62
+     49.63
+    ],
+    [
+     6.3,
+     49.66
+    ]
+   ]
+  },
+  {
+   "part": "edge",
+   "pts": [
+    [
+     6.3,
+     49.66
+    ],
+    [
+     6.3,
+     49.59
     ]
    ]
   },
@@ -76,36 +118,72 @@
    "part": "steel",
    "pts": [
     [
-     6.5,
-     49.62
+     6.3,
+     49.59
     ],
     [
-     3.3,
+     6.0,
      49.6
     ],
     [
-     2.8,
+     5.75,
+     49.54
+    ],
+    [
+     5.5,
+     49.6
+    ],
+    [
+     4.6,
+     49.6
+    ],
+    [
+     4.35,
      49.68
     ],
     [
-     2.75,
-     49.8
+     4.0,
+     49.7
+    ],
+    [
+     3.75,
+     49.62
+    ],
+    [
+     3.2,
+     49.6
+    ],
+    [
+     2.95,
+     49.64
+    ],
+    [
+     2.8,
+     49.74
     ],
     [
      2.75,
-     50.28
+     49.9
     ],
     [
-     2.68,
-     50.44
+     2.75,
+     50.26
     ],
     [
-     2.5,
+     2.7,
+     50.4
+    ],
+    [
+     2.55,
+     50.47
+    ],
+    [
+     2.2,
      50.5
     ],
     [
      0,
-     50.5
+     50.51
     ]
    ]
   }
@@ -119,27 +197,30 @@
    ],
    "metallic": 0.0,
    "roughness": 0.32,
-   "texture": true
+   "texture": true,
+   "finish": "wrap"
   },
   "steel": {
    "color": [
-    0.78,
-    0.78,
-    0.76
+    0.5,
+    0.5,
+    0.49
    ],
    "metallic": 1.0,
-   "roughness": 0.28
+   "roughness": 0.36,
+   "finish": "spun"
   },
-  "insulator": {
+  "edge": {
    "color": [
-    0.04,
-    0.04,
-    0.04
+    0.03,
+    0.03,
+    0.03
    ],
    "metallic": 0.0,
-   "roughness": 0.6
+   "roughness": 0.45
   }
  },
  "label_map": "u runs once around (0.5 faces the front, -Y); v runs along the wrapper from the minus end (0) to the plus end (1)",
- "label_reads": "along"
+ "label_reads": "along",
+ "layers": "steel can and end caps (spun nickel-plated steel, pressed rings); a printed plastic shrink sleeve over the can, rolled over both shoulders as a lip, its two ends overlapping at the back in a seam"
 }

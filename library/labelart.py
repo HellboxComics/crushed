@@ -112,13 +112,14 @@ def render(layout, out_dir, px=4096, name="label"):
         fill = rgb(s["fill"]) if s.get("fill") else None
         outline = rgb(s["stroke"]) if s.get("stroke") else None
         width = int((s.get("stroke_w") or 0) * H) or (1 if outline else 0)
-        if s.get("shade") == "copper" and fill:          # a brushed copper band: soft light along it
-            x0, y0, x1, y1 = [int(v) for v in b]
-            base = np.array(fill, float)
-            for y in range(y0, y1):
-                f = (y - y0) / max(y1 - y0, 1)
-                k = 0.82 + 0.3 * np.exp(-((f - 0.35) / 0.18) ** 2)
-                d.line([(x0, y), (x1, y)], fill=tuple(int(min(255, v * k)) for v in base))
+        if s.get("shade") == "copper" and fill:          # metal ink: an even color with a faint brushed grain.
+            x0, y0, x1, y1 = [int(v) for v in b]         # NO painted-in light - the renderer lights it (a texture
+            base = np.array(fill, float)                 # with light baked in looks fake from every other angle)
+            grain = np.random.default_rng(3).normal(0, 1, max(x1 - x0, 1))
+            grain = np.convolve(grain, np.ones(9) / 9, "same")
+            for i, x in enumerate(range(x0, x1)):
+                k = 1 + 0.025 * grain[i]
+                d.line([(x, y0), (x, y1)], fill=tuple(int(min(255, v * k)) for v in base))
         elif t == "ellipse":
             d.ellipse(b, fill=fill, outline=outline, width=width)
         else:
