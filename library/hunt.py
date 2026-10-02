@@ -44,18 +44,41 @@ def ebay(words, year=None, listings=12, log=print):
     from playwright.sync_api import sync_playwright
     q = (words + (" vintage" if year and year < 2015 else "")).strip()
     out = []
+    found, pg, b = {}, None, None
     with sync_playwright() as p:
-        b = p.chromium.launch(headless=True)
-        pg = b.new_page(user_agent=UA, viewport={"width": 1400, "height": 1000})
-        pg.goto("https://www.ebay.com/sch/i.html?_nkw=" + urllib.request.quote(q) + "&_ipg=120", timeout=60000)
-        pg.wait_for_timeout(2500)
-        found = pg.evaluate("""() => { const m = {};
-            document.querySelectorAll('a[href*="/itm/"]').forEach(a => {
-              const id = (a.href.match(/itm\\/(\\d+)/) || [])[1]; if (!id) return;
-              const li = a.closest('li'); if (!li) return;
-              const t = ((li.querySelector('.s-item__title, .s-card__title, [role=heading]') || {}).innerText || '');
-              if (!(id in m)) m[id] = ''; if (t && !m[id]) m[id] = t.split('\\n')[0];
-            }); return m; }""")
+        # an ordinary visible-capable browser first (new headless mode of full Chromium), then a real window:
+        # eBay turns away the stripped-down "headless shell". A sign-in or "are you a robot" page is never answered.
+        for how in ({"headless": True, "channel": "chromium"}, {"headless": False}):
+            try:
+                b = p.chromium.launch(**how)
+                pg = b.new_page(user_agent=UA, viewport={"width": 1400, "height": 1000}, locale="en-US")
+                pg.goto("https://www.ebay.com/sch/i.html?_nkw=" + urllib.request.quote(q) + "&_ipg=120", timeout=60000)
+                pg.wait_for_timeout(3000)
+                found = pg.evaluate("""() => { const m = {};
+                    document.querySelectorAll('a[href*="/itm/"]').forEach(a => {
+                      const id = (a.href.match(/itm\\/(\\d+)/) || [])[1]; if (!id) return;
+                      const li = a.closest('li'); if (!li) return;
+                      const t = ((li.querySelector('.s-item__title, .s-card__title, [role=heading]') || {}).innerText || '');
+                      if (!(id in m)) m[id] = ''; if (t && !m[id]) m[id] = t.split('\\n')[0];
+                    }); return m; }""")
+            except Exception as e:
+                log(f"[hunt] eBay ({'window' if not how['headless'] else 'background'} browser) failed: {e}")
+                found = {}
+            if found:
+                break
+            title = pg.title() if pg else ""
+            try:
+                shot = os.path.join(WORK, "hunt", "_ebay_last_page.png")
+                pg.screenshot(path=shot)
+            except Exception:
+                shot = ""
+            log(f"[hunt] eBay showed '{title}' with no listings ({'window' if not how['headless'] else 'background'} browser); "
+                f"picture of it: {shot}")
+            if b:
+                b.close()
+                b = None
+        if not found:
+            return out
         good = [(i, t) for i, t in found.items() if t and t != "Shop on eBay" and words_ok(t, words) and era_ok(t, year)]
         log(f"[hunt] eBay: {len(found)} listings, {len(good)} match the item and era")
         for item, title in good[:listings]:
