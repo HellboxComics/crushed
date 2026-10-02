@@ -50,6 +50,12 @@ def main():
     if not running():
         json.dump({}, open(STATE, "w"))
         return
+    req = os.path.join(WORK, "restart.request")                    # Claude asked for the newest version now
+    if os.path.exists(req):
+        os.replace(req, req + ".done")
+        subprocess.run(["pkill", "-f", "bin/python library/run.py"])
+        print("[watchdog] restart asked for: stopped the run so the clock starts the newest version")
+        return
     # 1. the drawing room
     if room_ok():
         w["room_fails"] = 0
