@@ -66,6 +66,12 @@
       "the product name and flavor",
       "the product picture",
       "the count and net weight"
+     ],
+     "elements": [
+      "logo",
+      "name",
+      "picture",
+      "net_weight"
      ]
     },
     {
@@ -76,6 +82,13 @@
       "a promotion, game, recipe or product story of that era",
       "the product picture",
       "the net weight"
+     ],
+     "elements": [
+      "logo",
+      "name",
+      "picture",
+      "net_weight",
+      "maker_lines"
      ]
     },
     {
@@ -84,6 +97,10 @@
      "typical": [
       "the Nutrition Facts panel (in that year's format)",
       "the ingredients"
+     ],
+     "elements": [
+      "nutrition",
+      "ingredients"
      ]
     },
     {
@@ -93,6 +110,11 @@
       "the brand logo",
       "the maker's 'distributed by' name and address",
       "copyright / trademark / recycled-carton lines"
+     ],
+     "elements": [
+      "logo",
+      "maker_lines",
+      "legal_lines"
      ]
     },
     {
@@ -102,6 +124,10 @@
       "the brand logo and product name on the flap",
       "'to open' / 'to close' instructions",
       "a recycled-paper seal"
+     ],
+     "elements": [
+      "logo",
+      "name"
      ]
     },
     {
@@ -111,6 +137,10 @@
       "the barcode (UPC)",
       "carton and plant codes",
       "copyright / recycled-carton lines"
+     ],
+     "elements": [
+      "upc",
+      "legal_lines"
      ]
     }
    ]
@@ -415,7 +445,14 @@
       122.7
      ],
      "lid_mm": 54.1,
-     "source": "Can Manufacturers Institute 202 can standard (cancentral.com): body 2.602 in across, flange height 4.812 in; en.wikipedia.org/wiki/Drink_can: 4.83 in high, 2.13 in across at the lid, 2.6 in at the body"
+     "source": "Can Manufacturers Institute 202 can standard (cancentral.com): body 2.602 in across, flange height 4.812 in; en.wikipedia.org/wiki/Drink_can: 4.83 in high, 2.13 in across at the lid, 2.6 in at the body",
+     "names": [
+      "12 oz can",
+      "12oz can",
+      "12 ounce can",
+      "355 ml",
+      "355ml"
+     ]
     }
    },
    "variant_default": "12 fl oz",
@@ -804,5 +841,6 @@
    "checks": []
   }
  },
- "_side_words": "side_words: how collectors and sellers name each side of this kind of thing in a search (the dossier's hunt uses them instead of box words)"
+ "_side_words": "side_words: how collectors and sellers name each side of this kind of thing in a search (the dossier's hunt uses them instead of box words)",
+ "_zone_elements": "zones[].elements: what a rebuilt zone draws from facts with receipts (eraprint: logo, name, picture, net_weight, maker_lines, legal_lines, nutrition, ingredients, upc), in order; zones[].typical: the same in words, for your AI when it rebuilds artwork (kits.py)"
 }

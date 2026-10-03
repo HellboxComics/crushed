@@ -734,23 +734,17 @@ def _rel(b, fb):
     return r if r[2] - r[0] > 0.02 and r[3] - r[1] > 0.02 else None
 
 
-SIDE_DEFAULTS = {   # what an unseen side of a package must carry when no photo of that era shows its layout
-    "back": ["logo", "name", "picture", "net_weight", "maker_lines"],
-    "left": ["nutrition", "ingredients"],
-    "right": ["logo", "maker_lines", "legal_lines"],
-    "top": ["logo"],
-    "bottom": ["upc", "legal_lines"],
-}
-
-
-def _must_show_rebuilt(entry, face, route, facts, food, kind="packaging"):
+def _must_show_rebuilt(entry, face, route, facts, food, kind="packaging", kit=None):
     """What a side rebuilt from facts must show. Only PACKAGING carries printed panels on its unseen sides; a battery
-    end, a can bottom, a circuit card's solder side or the back of a gadget carries nothing it can be held to."""
+    end, a can bottom, a circuit card's solder side or the back of a gadget carries nothing it can be held to.
+    What belongs on the side comes from the kit (what this kind of thing normally carries there, kits.elements),
+    unless a real box of the era showed its layout."""
     if kind != "packaging" or route not in ("box", "flat"):
         return []
-    want = entry.get("want") or [e["kind"] for e in entry.get("layout") or []] or SIDE_DEFAULTS.get(face, ["logo"])
-    if face == "left" and not food and not entry.get("want") and not entry.get("layout"):
-        want = ["logo", "name", "net_weight"]
+    import kits
+    if not entry.get("want") and not entry.get("layout"):
+        entry["want"] = kits.elements(kits.get(kit or ""), face, food)      # eraprint draws the same list
+    want = entry.get("want") or [e["kind"] for e in entry.get("layout") or []]
     known = lambda k: (facts.get(k) or {}).get("status") in ("verified", "single_source") and (facts.get(k) or {}).get("value")
     if not any(known(k) for k in want if k not in ("logo", "name", "picture")):
         want = ["logo", "name"] + [k for k in want if k not in ("logo", "name")]     # as eraprint draws it
@@ -780,7 +774,8 @@ def _sides_from_facts(dos):
     for F, e in dos["faces"].items():
         if e["source"] == "rebuilt":
             e["must_show"] = _must_show_rebuilt(e, F, route, dos.get("facts") or {}, food,
-                                                (dos.get("identity") or {}).get("kind", "packaging"))
+                                                (dos.get("identity") or {}).get("kind", "packaging"),
+                                                dos.get("family_lib"))
             got = [m["what"] for m in e["must_show"]]
             e["note"] += f" ({', '.join(got) or 'nothing known to print'})"
         elif e["source"] == "template_photo":                # a sister's side: its own parts replaced by ours

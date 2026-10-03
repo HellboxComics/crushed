@@ -410,7 +410,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         master = jload(os.path.join(HERE, "families.json"), {}).get(cid, {})
         sp = os.path.join(HERE, "shapes", "specs", master.get("shape", "") + ".json")
         kit_name = (card.get("family_lib") or {}).get("family", "")
-        variant = kits.variant_of(kits.get(kit_name), card)
+        variant, vwhy = kits.pick_variant(kits.get(kit_name), card)
+        say(f"[kit] {cid}: {kit_name or 'no kit'} - size: {variant or 'none'} ({vwhy})")
         kspec = None if master.get("shape") else kits.spec_for(kit_name, variant)
         if master.get("shape") and os.path.exists(sp) or kspec:
             # a thing with a standard size: its exact shape from the kit (a battery's AA / AAA / C / D), never traced
@@ -423,6 +424,10 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                 card["construction"] = spec["construction"]
         else:
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
+            vs = ((kits.get(kit_name).get("variants") or {}).get(variant) or {}).get("size_mm")
+            if vs:                                                 # the kit's standard size (a 12 oz can) wins
+                size = [x / 1000 for x in vs]
+                say(f"[kit] {cid}: {kit_name} {variant} - traced from your photo at its standard size {vs} mm")
             spec = outline.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
             spec = outline.apply_construction(spec, card)          # its real layers, seam, lips, metal ends
             try:                                                       # what's inside, from the family's recipe
@@ -477,7 +482,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             words = label_words(parts, use)
             status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
             import layout as LAY
-            png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say)
+            png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
+                                      typical=kits.typical(kits.get(kit_name), "label"))
         lab_png, mr_png = os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")
         img, mimg = Image.open(png).convert("RGB"), Image.open(mr).convert("RGB")
         if reads == "along":                                        # onto the UV map: the plus/top end up

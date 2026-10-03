@@ -106,7 +106,31 @@ def t_blender():
                        capture_output=True, text=True, timeout=240)
     if not os.path.exists(os.path.join(TMP, "lathe", "aa_battery.glb")):
         raise RuntimeError((r.stderr or r.stdout)[-300:])
-    return "box and round shapes built"
+    import kits                                          # a kit's standard shape (an AAA from the AA master)
+    sp = os.path.join(TMP, "aaa.json")
+    json.dump(kits.spec_for("cylindrical_cell", "AAA"), open(sp, "w"))
+    r = subprocess.run([sys.executable, os.path.join(HERE, "shapes", "lathe.py"), "--", sp, os.path.join(TMP, "aaa")],
+                       capture_output=True, text=True, timeout=240)
+    glb = os.path.join(TMP, "aaa", "aaa_cell.glb")
+    if not os.path.exists(glb):
+        raise RuntimeError("the AAA kit shape: " + (r.stderr or r.stdout)[-300:])
+    ext = sorted(glb_size_mm(glb))
+    if abs(ext[2] - 44.5) > 0.3 or abs(ext[1] - 10.5) > 0.3:
+        raise RuntimeError(f"the AAA kit shape came out {ext[1]:.1f} x {ext[2]:.1f} mm, not 10.5 x 44.5")
+    return "box, round and kit (AAA) shapes built"
+
+
+def glb_size_mm(glb):
+    """A .glb's overall size in mm, read from its own header (every part's corner points; no extra library)."""
+    import struct
+    with open(glb, "rb") as f:
+        f.read(12)
+        n, _ = struct.unpack("<II", f.read(8))
+        g = json.loads(f.read(n))
+    acc = [g["accessors"][p["attributes"]["POSITION"]] for m in g.get("meshes", []) for p in m["primitives"]]
+    lo = [min(a["min"][i] for a in acc) for i in range(3)]
+    hi = [max(a["max"][i] for a in acc) for i in range(3)]
+    return [1000 * (h - l) for l, h in zip(lo, hi)]
 
 
 def t_hunyuan():

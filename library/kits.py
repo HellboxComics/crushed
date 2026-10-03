@@ -8,7 +8,7 @@ A kit is a family in family_library.json, plus what makes it a kit:
              there (from verified facts), never left blank and never invented
 
     kit = kits.get("cylindrical_cell")
-    v = kits.variant_of(kit, card)          # "AA"
+    v, why = kits.pick_variant(kit, card)  # ("AA", "named in the catalog"); (None, ...) when none fits
     spec = kits.spec_for("cylindrical_cell", "AA")   # the exact shape for the lathe builder (None: no template)
     for z in kits.zones(kit): ...           # {"name", "kind", "typical": [...]}
 """
@@ -29,14 +29,46 @@ def get(name):
     return (library().get("families") or {}).get(name) or {}
 
 
-def variant_of(kit, card):
-    """The kit's variant this item is, from its catalog name (the longest name that matches wins: AAA before AA)."""
+def _named(kit, card):
+    """The variant the catalog name says (its own name or one of its other names; the longest match wins, so AAA
+    before AA and "12 fl oz" before "12 oz"), or None."""
     vs = (kit or {}).get("variants") or {}
     text = " ".join(str(card.get(k, "")) for k in ("product", "display"))
-    for name in sorted(vs, key=len, reverse=True):
-        if re.search(r"(?<![A-Za-z0-9])" + re.escape(name) + r"(?![A-Za-z0-9])", text, re.I):
-            return name
-    return (kit or {}).get("variant_default")
+    names = sorted(((n, v) for v, d in vs.items() for n in [v] + list(d.get("names") or [])),
+                   key=lambda x: len(x[0]), reverse=True)
+    for n, v in names:
+        if re.search(r"(?<![A-Za-z0-9.])" + re.escape(n) + r"(?![A-Za-z0-9])", text, re.I):
+            return v
+    return None
+
+
+def _fits(size_mm, card, within=0.15):
+    """The catalog's size for the item agrees with a standard size (each side within 15%)."""
+    s = card.get("size") or []
+    if len(s) != 3 or not size_mm:
+        return False
+    a = sorted(1000 * float(x) for x in s)
+    b = sorted(float(x) for x in size_mm)
+    return all(abs(x - y) <= within * y for x, y in zip(a, b))
+
+
+def pick_variant(kit, card):
+    """(variant, why) - the kit's standard size this item is, or (None, why) when it is none of them.
+    Trusted only when the catalog name says it, or the catalog's size agrees with it: a soup can is not forced
+    into a 12 oz soda can's shape, nor an N cell into an AA."""
+    vs = (kit or {}).get("variants") or {}
+    v = _named(kit, card)
+    if v:
+        return v, "named in the catalog"
+    for name in sorted(vs, key=lambda n: n != (kit or {}).get("variant_default")):
+        if _fits(vs[name].get("size_mm"), card):
+            return name, "the catalog size agrees with the standard"
+    return None, "not one of this kind's standard sizes - traced from the photo at the catalog size"
+
+
+def variant_of(kit, card):
+    """The kit's variant this item is (see pick_variant), or None."""
+    return pick_variant(kit, card)[0]
 
 
 def zones(kit):
@@ -48,6 +80,35 @@ def zones(kit):
     faces = (kit or {}).get("faces") or []
     kind = {"round": lambda f: "wrap" if f == "label" else "disc"}.get(route, lambda f: "rect")
     return [{"name": f, "kind": kind(f), "typical": []} for f in faces]
+
+
+# What a printed package's sides carry when its kit says nothing more specific - the things eraprint can draw from
+# facts with receipts: logo, name, picture (cut from the real front), net_weight, maker_lines, legal_lines,
+# nutrition, ingredients, upc. In the order they are drawn, top to bottom.
+GENERIC_ELEMENTS = {
+    "front": ["logo", "name", "picture", "net_weight"],
+    "back": ["logo", "name", "picture", "net_weight", "maker_lines"],
+    "left": ["nutrition", "ingredients"],
+    "right": ["logo", "maker_lines", "legal_lines"],
+    "top": ["logo"],
+    "bottom": ["upc", "legal_lines"],
+}
+FOOD_ONLY = ("nutrition", "ingredients")
+
+
+def elements(kit, zone, food=True):
+    """What this zone of this kind of thing carries, as things that can be drawn from facts (see GENERIC_ELEMENTS):
+    the kit's own list for the zone, else the generic package side's. Nutrition and ingredients only on food; a side
+    left with nothing gets the logo, name and net weight."""
+    els = None
+    for z in zones(kit):
+        if z.get("name") == zone and z.get("elements") is not None:
+            els = list(z["elements"])
+    if els is None:
+        els = list(GENERIC_ELEMENTS.get(zone, ["logo"]))
+    if not food:
+        els = [e for e in els if e not in FOOD_ONLY] or ["logo", "name", "net_weight"]
+    return els
 
 
 def typical(kit, zone):

@@ -483,15 +483,6 @@ def element(kind, c, w, h, px_per_mm, paper, front=None, logo_box=None, photo_bo
 
 
 # ------------------------------------------------------------------ one rebuilt side
-DEFAULT = {   # what each side carries when no photo of that era shows its layout (facts only, in this order)
-    "back": ["logo", "name", "picture", "net_weight", "maker_lines"],
-    "left": ["nutrition", "ingredients"],
-    "right": ["logo", "maker_lines", "legal_lines"],
-    "top": ["logo"],
-    "bottom": ["upc", "legal_lines"],
-}
-
-
 def panel_notes(side, c, front, logo_box, photo_box, w, h, paper, size_mm=None, layout=None, want=None):
     """One rebuilt side as a w x h picture, from facts only. layout (optional) = where a real box of that era put
     each kind of thing on this side ([{"kind", "box": [x0, y0, x1, y1] fractions}], from the closest sister box's
@@ -502,10 +493,9 @@ def panel_notes(side, c, front, logo_box, photo_box, w, h, paper, size_mm=None, 
     ppm = (w / size_mm[0]) if size_mm and size_mm[0] else (w / 140.0)
     ink = ink_color(front, paper) if front is not None else (25, 25, 25)
     used, missing = [], []
-    if not want:
-        want = DEFAULT.get(side, ["logo"])
-        if side == "left" and not c.get("food"):
-            want = ["logo", "name", "net_weight"]
+    if not want:                                               # (the dossier passes the kit's list for the side)
+        import kits
+        want = kits.elements(None, side, bool(c.get("food")))
     known = lambda k: bool(c.get(k)) or (k == "net_weight" and bool(c.get("count")))
     if not any(known(k) for k in want if k not in ("logo", "name", "picture")):
         want = ["logo", "name"] + [k for k in want if k not in ("logo", "name")]   # nothing known for this side:

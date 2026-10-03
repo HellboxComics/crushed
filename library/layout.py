@@ -23,12 +23,13 @@ the top), sizes as fractions too:
             "weight": "regular" | "bold" | "black", "align": "left" | "center", "rotate": 0}]}
 List shapes from back to front (big background areas first)."""
 
-FIRST = """Picture 1 is the real printed label of: {product}, unrolled flat from a photo (it may be blurry, shiny,
-or have smeared areas where the photo couldn't see). It is {w:.1f} mm wide and {h:.1f} mm tall.
-The words printed on it, read exactly: {words}.
-Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those words in its
-place, size, weight and color. Use only those words, spelled exactly. Where the photo is smeared, continue the
-design plainly.
+FIRST = """Picture 1 is the real printed label of: {product}, unrolled flat from photos of it (the middle is the
+side facing the camera in the main photo, the two outer edges the opposite side when another photo showed it; blurry,
+shiny or smeared parts are where no photo could see). It is {w:.1f} mm wide and {h:.1f} mm tall.
+The words printed on it, each confirmed by two reads: {words}.
+{typical}Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those words
+in its place, size, weight and color. Use only those words, spelled exactly. Where no photo could see, carry the
+design across plainly and put there only those confirmed words that belong there.
 """ + SCHEMA + "\nAnswer ONLY the JSON."
 
 AGAIN = """Picture 1 is your rebuilt label, drawn from your layout below. Picture 2 is the real label.
@@ -79,12 +80,16 @@ def clean_layout(lay, w_mm, h_mm, words):
     return lay
 
 
-def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, log=print):
+def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, log=print, typical=()):
+    """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
+    belongs there, from the confirmed words only."""
     model = model or V.model()
     os.makedirs(out_dir, exist_ok=True)
     said = ", ".join(f'"{w}"' for w in words)
     best = (-1, None, None, None)
-    lay = clean_layout(_ask(model, FIRST.format(product=product, w=w_mm, h=h_mm, words=said), [real_png]), w_mm, h_mm, words)
+    tip = ("A label like this normally carries: " + "; ".join(typical) + ".\n") if typical else ""
+    lay = clean_layout(_ask(model, FIRST.format(product=product, w=w_mm, h=h_mm, words=said, typical=tip), [real_png]),
+                       w_mm, h_mm, words)
     for r in range(1, rounds + 1):
         png, mr = labelart.render(lay, out_dir, px=2048, name=f"round{r}")
         try:

@@ -63,6 +63,17 @@ def columns(part):
     return out
 
 
+def _area(profile):
+    """The whole outline's signed area in (radius, height), closed along the axis: above 0 when it walks the usual
+    way (bottom center -> out -> up the side -> top center)."""
+    pts = [pt for p in profile for pt in p["pts"]]
+    return sum(r0 * z1 - r1 * z0 for (r0, z0), (r1, z1) in zip(pts, pts[1:] + pts[:1])) / 2
+
+
+# Which way each face points comes from the direction the outline walks - the outside is always on the same hand
+# of it - never from guessing face by face. (2026-10-03: a guess by height and slope turned the small pressed groove
+# on an AAA's end inside out, and giving the steel its thickness then threw spikes 100 mm out of the battery.)
+USUAL = _area(spec["profile"]) >= 0
 WRAPS = []
 for p in spec["profile"]:
     pts = p["pts"]
@@ -91,7 +102,7 @@ for p in spec["profile"]:
             if pts[i][0] == 0 and pts[i + 1][0] == 0:
                 continue
             try:
-                f = bm.faces.new((a, b, c, d) if pts[i + 1][1] >= pts[i][1] or pts[i + 1][0] < pts[i][0] else (a, d, c, b))
+                f = bm.faces.new((a, b, c, d) if USUAL else (a, d, c, b))
             except ValueError:
                 continue
             f.material_index = mi
@@ -120,17 +131,16 @@ bm.normal_update()
 bm.to_mesh(me)
 bm.free()
 me.validate()
-# faces must point outward: a closed lathe's normals are checked against the axis
+# the check on the whole: the outside encloses a positive volume only when every face points out
+vol = 0.0
 for poly in me.polygons:
-    c = poly.center
-    n = poly.normal
-    if (c.x * n.x + c.y * n.y) < -1e-12 and abs(n.z) < 0.9:
+    vs = [me.vertices[i].co for i in poly.vertices]
+    for k in range(1, len(vs) - 1):
+        vol += vs[0].dot(vs[k].cross(vs[k + 1])) / 6
+if vol < 0:
+    print("[lathe] the outline walks the other way round - every face turned to point out")
+    for poly in me.polygons:
         poly.flip()
-me.update()
-for poly in me.polygons:
-    if abs(poly.normal.z) > 0.9:
-        if (poly.center.z > 0.5 * max(z for p in spec["profile"] for r, z in p["pts"]) * S) != (poly.normal.z > 0):
-            poly.flip()
 me.update()
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

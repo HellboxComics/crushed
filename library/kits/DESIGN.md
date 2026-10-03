@@ -81,4 +81,20 @@ bakeoffs (the best brain per job stays).
 
 ## Status
 
-  (kept up to date as each step lands)
+  2026-10-03
+  - kits.py + family_library.json: kits carry variants (with sources), a template, zones with what each zone
+    normally carries (typical, in words) and what a rebuilt zone draws from facts (elements).
+  - The variant is trusted only when the catalog name says it or the catalog size agrees (15%) - a soup can is not
+    forced into a soda can, an N cell not into an AA (kits.pick_variant).
+  - cylindrical_cell: AA / AAA / C / D from the measured AA master (template "cell"); Blender builds all four at
+    their exact standard sizes (selftest builds the AAA on the Mac every start).
+  - beverage_can: 12 fl oz standard size (CMI 202); the outline is traced from the photo AT that size until a
+    measured can master exists.
+  - folding_carton: six zones; the dossier's must-show list and eraprint's rebuilt sides both read the kit
+    (one list, not three copies).
+  - Round labels: the label layout is told what a label like this normally carries (zone typical) and to fill the
+    parts no photo saw only with confirmed words that belong there.
+  - The lathe builder orients every face by the direction the outline walks (an AAA's pressed end was turned inside
+    out by the old face-by-face guess, and its steel threw 100 mm spikes when given thickness).
+  - Brains: the photo exam picks the judge and sorter from every installed vision brain (brainjobs.py).
+  Next: dossier hunt words from the kit's zones; prove can + carton end to end; media kits.
