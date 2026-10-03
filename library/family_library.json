@@ -405,7 +405,7 @@
    "builder_status": "partial",
    "recipe": "aluminum_beverage_can",
    "gaps": [
-    "no pull tab or countersink detail yet"
+    "no pull tab yet (the lid's seamed rim, countersink and panel are built at the CMI standard's sizes)"
    ],
    "faces": [
     "label",
@@ -452,7 +452,13 @@
       "12 ounce can",
       "355 ml",
       "355ml"
-     ]
+     ],
+     "end_mm": {
+      "countersink_depth": 6.86,
+      "countersink_diameter": 48.59,
+      "panel_height": 2.29,
+      "source": "Can Manufacturers Institute 202 end standard (cancentral.com): countersink depth 0.270 in, countersink diameter 1.913 in, panel height 0.090 in"
+     }
     }
    },
    "variant_default": "12 fl oz",

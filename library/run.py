@@ -430,6 +430,9 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                 say(f"[kit] {cid}: {kit_name} {variant} - traced from your photo at its standard size {vs} mm")
             spec = outline.from_photo(picked, size, card.get("standing") or "upright", cid=cid)
             spec = outline.apply_construction(spec, card)          # its real layers, seam, lips, metal ends
+            spec, refined = kits.refine(kit_name, variant, spec)   # the parts a side photo can't show (a can's lid)
+            for x in refined:
+                say(f"[kit] {cid}: {x}")
             try:                                                       # what's inside, from the family's recipe
                 sys.path.insert(0, os.path.join(HERE, "factory"))
                 import factory

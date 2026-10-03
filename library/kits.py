@@ -174,6 +174,31 @@ def _cell(variant, kit):
 TEMPLATES = {"cell": _cell}
 
 
+# ------------------------------------------------------------------ refining a traced shape with the kit's standards
+def refine(kit_name, variant, spec):
+    """A shape traced from a photo, given the parts every item of this kind has at their standard size - the parts a
+    side photo can't show. A can's lid: the photo traces a flat top; a real 12 oz can's lid sits in a seamed rim,
+    dropping 6.86 mm into the countersink and rising 2.29 mm to the center panel (CMI 202 end). Returns
+    (spec, [what was done])."""
+    kit = get(kit_name)
+    v = (kit.get("variants") or {}).get(variant or "") or {}
+    done = []
+    end = v.get("end_mm")
+    if end:
+        top = next((p for p in spec.get("profile", []) if p.get("part") == "top"), None)
+        side = next((p for p in spec.get("profile", []) if p.get("part") == "label"), None)
+        if top and side:
+            r0, H = side["pts"][-1]
+            cs, depth, panel = end["countersink_diameter"] / 2, end["countersink_depth"], end["panel_height"]
+            if r0 > cs + 1.5:
+                top["pts"] = [[r0, H], [r0 - 0.6, H], [r0 - 1.2, H - 0.6], [r0 - 1.3, H - 2.5],
+                              [cs + 0.5, H - depth + 0.26], [cs, H - depth], [cs - 0.5, H - depth + 0.26],
+                              [cs - 0.6, H - depth + panel], [0, H - depth + panel]]
+                done.append(f"the lid: seamed rim, countersink {depth} mm deep at {2 * cs:.1f} mm across, center "
+                            f"panel {panel} mm up ({end.get('source', '').split('(')[0].strip()})")
+    return spec, done
+
+
 def spec_for(kit_name, variant):
     """The exact shape spec for a kit's variant (the lathe builder's input), or None when the kit has no template."""
     kit = get(kit_name)
