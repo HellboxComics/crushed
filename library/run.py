@@ -389,6 +389,15 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
         bld, why = "lathe", "a measured master shape"          # the AA battery, measured by hand
     say(f"[family] {cid}: {fam['family']} -> built by '{bld}' ({why})")
+    if bld == "organic" and not TRIAL and not setting("one_photo_organic"):
+        # A soft or molded thing (plush toy, garment, shoe) has no kit yet: the one-photo way guesses the back,
+        # builds hang tags into the toy and bakes the photo's light in (the Furby, 2026-10-03) - a known-bad build
+        # that then costs the engineer hours. It waits for its kit (kits/DESIGN.md, "Soft and molded things")
+        # instead of being built badly. (settings.json "one_photo_organic": true builds it anyway.)
+        status(cid, family=fam["family"], step=f"stopped: waiting for its kind of thing ({fam['family']}) to be set "
+               "up properly - the one-photo way makes a rough guess, not a master asset", ok=False)
+        say(f"[family] {cid}: parked - its kind ({fam['family']}) has no proper builder yet")
+        return
     card["built_by"] = {"family": fam["family"], "builder": bld, "why": why, "gaps": fam.get("gaps", [])}
     status(cid, family=fam["family"], builder={"lathe": "the round builder", "pcb": "the circuit-card builder",
                                                "carton": "the carton builder (folded like the factory)",
