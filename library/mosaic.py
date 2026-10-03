@@ -46,6 +46,42 @@ def strip(img, m, W, H, max_deg=62, flip=False):
     return lab, w
 
 
+def placed(img, m, W, H, expect, max_deg=62):
+    """One photo -> (label H x W, how well each pixel was seen H x W, which part of the length it covers (a, b)
+    as fractions). A photo that shows only PART of the object's length (a close-up of one end) covers only that
+    part: its scale comes from the object's diameter (the photo's width across the object is the real diameter),
+    and it is put at the end that is in the picture - never stretched over the whole length.
+    expect = the object's real length / its real diameter (the kit's numbers)."""
+    lab, w = strip(img, m, W, H, max_deg=max_deg)
+    a, b = 0.0, 1.0
+    try:
+        _, m2, _ = U.straighten(img, m)
+        cols, t, bt = U._edges(m2)
+        mid = slice(len(cols) // 10, len(cols) * 9 // 10)
+        full = np.median(bt[mid] - t[mid])
+        body = cols[(bt - t) > 0.9 * full]
+        ratio = (body[-1] - body[0]) / max(full, 1)                 # the length it shows, in diameters
+        frac = ratio / max(expect, 1e-6)
+        mm = np.asarray(m) > 0.5
+        cut_l, cut_r = mm[:, :3].any(), mm[:, -3:].any()            # the photo's frame cuts the object there
+        if frac < 0.85 and (cut_l != cut_r):
+            hp = max(1, int(round(min(frac, 1.0) * H)))
+            part = np.asarray(Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).resize((W, hp), Image.BICUBIC)) / 255.0
+            out = np.zeros_like(lab)
+            if not cut_l:                                           # its top (left) end is in the picture
+                out[:hp], (a, b) = part, (0.0, hp / H)
+            else:                                                   # its bottom (right) end is in the picture
+                out[H - hp:], (a, b) = part, (1 - hp / H, 1.0)
+            lab = out
+        elif frac < 0.85:                                          # neither end, or both, cut: its place is unknown
+            return lab, np.zeros((H, W)), (0.0, 0.0)
+    except Exception:
+        pass
+    rows = np.zeros(H)
+    rows[int(round(a * H)):int(round(b * H))] = 1
+    return lab, rows[:, None] * w[None, :], (a, b)
+
+
 def metal_end_top(lab, w):
     """True when the metal-ink band (copper, gold) is in the top half: that end is the battery's plus end."""
     v = lab[:, w > 0.3][::8, ::8]

@@ -157,65 +157,63 @@ FILL = ("This is a flat printed label laid out like a sheet. The gray areas are 
 
 def compose(photos, along_mm, around_mm, W=2048):
     """The label made from the photos' REAL pixels: each item in your photo unrolled flat by math and laid at its
-    place around the label (the fullest at the front; one showing a clearly different side at the back).
+    place around the label (the fullest at the front; one showing a clearly different side at the back). A photo
+    that shows only part of the length (a close-up of one end) covers only that part, at the end it shows
+    (mosaic.placed) - never stretched over the whole label.
     -> (label RGB float H x W in the map layout: rows along with the top/plus end up, columns around with the
         front in the middle), coverage 0..1 per pixel)."""
     import mosaic
     H = int(round(W * along_mm / around_mm))
+    expect = along_mm / (around_mm / math.pi)                    # the real length in diameters
     lab = np.zeros((H, W, 3))
     cov = np.zeros((H, W))
-    strips = []
-    for f in photos[:1]:
+
+    def unrolled(f):
+        got = []
         for im, m in all_items(f):
-            objs = mosaic.objects(im, m)
-            o, om = max(objs, key=lambda x: x[1].sum())
             try:
-                strips.append(mosaic.strip(o, om, W, H))
+                objs = mosaic.objects(im, m)
+                o, om = max(objs, key=lambda x: x[1].sum())
+                l, w, ab = mosaic.placed(o, om, W, H, expect)
+                if w.max() > 0:
+                    got.append((l, w))
             except Exception:
                 pass
+        return got
+    strips = unrolled(photos[0]) if photos else []
     if not strips:
         raise RuntimeError("could not unroll the label from your photo")
     strips.sort(key=lambda lw: -lw[1].sum())
     keep = [strips[0]]
-    small = lambda x: x[::16, ::16].mean(-1)
-    diffs = []
-    for l, w in strips[1:]:
-        k = keep[0]
-        both = (k[1] > 0.05) & (w > 0.05)
-        diffs.append(np.abs(small(k[0])[:, both[::16]] - small(l)[:, both[::16]]).mean() if both.any() else 0)
+    small = lambda x: x[::16, ::16]
+
+    def unlike(k, s):
+        """How different two unrolled views look where both saw the label (0 = nothing in common)."""
+        both = (small(k[1]) > 0.05) & (small(s[1]) > 0.05)
+        if not both.any():
+            return 0
+        return np.abs(small(k[0]).mean(-1)[both] - small(s[0]).mean(-1)[both]).mean()
     other_side = 0.10       # measured 2026-10-03: the same side in two photos differs ~0.07-0.09, the opposite ~0.14
+    diffs = [unlike(keep[0], s) for s in strips[1:]]
     if diffs and max(diffs) > other_side:                                   # the most different one shows another side
         l, w = strips[1 + int(np.argmax(diffs))]
-        keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2)))     # it goes at the back
+        keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)))     # it goes at the back
     if len(keep) == 1 and len(photos) > 1:
         # your pick shows only one side: the other photos of this very item (the dossier's) fill the back - the one
         # that looks most unlike the front is the opposite side, the same rule as several items in one photo
         more = []
         for f in photos[1:]:
-            try:
-                items = all_items(f) if f.get("mask") else []    # (a photo without its cut-out can't be unrolled)
-            except Exception:
-                items = []
-            for im, m in items:
-                try:
-                    objs = mosaic.objects(im, m)
-                    o, om = max(objs, key=lambda x: x[1].sum())
-                    more.append(mosaic.strip(o, om, W, H))
-                except Exception:
-                    pass
+            if f.get("mask"):                                    # (a photo without its cut-out can't be unrolled)
+                more += unrolled(f)
         if more:
-            k = keep[0]
-            d = []
-            for l, w in more:
-                both = (k[1] > 0.05) & (w > 0.05)
-                d.append(np.abs(small(k[0])[:, both[::16]] - small(l)[:, both[::16]]).mean() if both.any() else 0)
+            d = [unlike(keep[0], s) for s in more]
             if max(d) > other_side:
                 l, w = more[int(np.argmax(d))]
-                keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2)))
+                keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)))
     for l, w in keep:
-        better = w[None, :] > cov
+        better = w > cov
         lab = np.where(better[..., None], l, lab)
-        cov = np.maximum(cov, np.broadcast_to(w[None, :], cov.shape))
+        cov = np.maximum(cov, w)
     return lab, cov
 
 

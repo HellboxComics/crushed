@@ -768,7 +768,25 @@ def label_words(pngs, use):
         for w in o:                                        # the reader's lines, confirmed by either AI read
             if norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out]):
                 out.append(w)
+    out = whole_words(out)
     say(f"[texture] words confirmed by two reads: {out}")
+    return out
+
+
+def whole_words(words):
+    """A word the photo's edge cut off ("DURA" at the frame's edge, read the same by every reader) is the start or
+    the end of a longer word read elsewhere ("DURACELL"): it is printed as that whole word, never as the piece."""
+    norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
+    tokens = [t for w in words for t in str(w).split() if len(norm(t)) >= 3]
+    out = []
+    for w in words:
+        n = norm(w)
+        if len(str(w).split()) == 1 and len(n) >= 3:
+            longer = [t for t in tokens if len(norm(t)) > len(n) and (norm(t).startswith(n) or norm(t).endswith(n))]
+            if longer:
+                w = min(longer, key=lambda t: len(norm(t)))
+        if w not in out:
+            out.append(w)
     return out
 
 

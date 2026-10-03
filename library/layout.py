@@ -27,14 +27,18 @@ FIRST = """Picture 1 is the real printed label of: {product}, unrolled flat from
 side facing the camera in the main photo, the two outer edges the opposite side when another photo showed it; blurry,
 shiny or smeared parts are where no photo could see). It is {w:.1f} mm wide and {h:.1f} mm tall.
 The words printed on it, each confirmed by two reads: {words}.
-{typical}Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those words
-in its place, size, weight and color. Use only those words, spelled exactly. Where no photo could see, carry the
-design across plainly and put there only those confirmed words that belong there.
+{typical}Picture 1 is ONLY the printed sleeve: the metal ends, the plus button and the bottom are not part of it - never
+draw them. Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those
+words in its place, size, weight and color. Use only those words, spelled exactly; a word can appear more than once
+(a logo printed again on the other side). Where no photo could see (smeared, streaked parts), carry the design
+across plainly and put there only those confirmed words that belong there.
 """ + SCHEMA.replace("{", "{{").replace("}", "}}") + "\nAnswer ONLY the JSON."   # (its braces are not blanks)
 
 AGAIN = """Picture 1 is your rebuilt label, drawn from your layout below. Picture 2 is the real label.
 Your layout: {layout}
-Fix every difference: positions, sizes, colors, missing or extra elements. Keep the words exactly: {words}.
+A careful comparison found these differences to fix: {fixes}
+Fix them and every other difference: positions, sizes, colors, missing or extra elements. Words: only these,
+spelled exactly: {words} (a fix asking for a word that is not in this list can't be made - leave that word out).
 Answer ONLY the corrected JSON (the whole layout)."""
 
 COMPARE = """Picture 1 is a rebuilt label; picture 2 is the real one it copies. Answer ONLY JSON:
@@ -102,12 +106,17 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
             best = (c.get("match") or 0, lay, png, mr)
         if (c.get("match") or 0) >= 9 or r == rounds:
             break
+        fixes = "; ".join(map(str, c.get("fixes") or [])) or "(none listed - compare the two pictures yourself)"
         try:
-            lay = clean_layout(_ask(model, AGAIN.format(layout=json.dumps(lay), words=said), [png, real_png]),
-                               w_mm, h_mm, words)
+            new = clean_layout(_ask(model, AGAIN.format(layout=json.dumps(lay), words=said, fixes=fixes),
+                                    [png, real_png]), w_mm, h_mm, words)
         except Exception as e:
             log(f"[texture] could not improve the layout: {e}")
             break
+        if json.dumps(new, sort_keys=True) == json.dumps(lay, sort_keys=True):
+            log("[texture] the layout came back unchanged - no point drawing it again")
+            break
+        lay = new
     score, lay, _, _ = best
     json.dump(lay, open(os.path.join(out_dir, "layout.json"), "w"), indent=1)
     png, mr = labelart.render(lay, out_dir, px=4096, name="label")
