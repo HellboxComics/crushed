@@ -77,8 +77,9 @@ Look at this photo and answer ONLY with JSON, no other words:
           a package - a box, a bag, a can - a real photo of it is "photo"),
   "problems": "short note of anything wrong, or empty"{note_field}}}"""
 NOTE_FIELD = """,
-  "note_ok": true if this photo shows what the owner's note asks for, false if it clearly shows something else
-           (the owner's note: "{note}")"""
+  "note_ok": true ONLY if this photo plainly shows what the owner's note asks for; false ONLY if it plainly shows
+           something the note rules out; null when this photo can't tell (the owner's note: "{note}")"""
+NOTE_RULE = 2      # how note_ok is asked (2: true / false / null) - an answer asked another way is asked again
 
 
 def _img(path, side=1280):
@@ -131,6 +132,9 @@ def vet(path, display, era="", use=None, think=True, card=None):
         pass
     if note:
         v["note"] = note[:200]                          # judged against this note (a new note means a new look)
+        v["note_rule"] = NOTE_RULE
+        if v.get("note_ok") not in (True, False):
+            v["note_ok"] = None                         # can't tell from this photo
     return v
 
 

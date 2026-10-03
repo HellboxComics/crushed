@@ -215,7 +215,7 @@ def pipeline(cid, redo=False):
     for i, f in enumerate(found):
         f["order"] = i
         f["vet"] = (old.get(f["file"]) or {}).get("vet")
-        if f["vet"] and note and f["vet"].get("note") != note[:200]:
+        if f["vet"] and note and (f["vet"].get("note") != note[:200] or f["vet"].get("note_rule") != V.NOTE_RULE):
             f["vet"] = None                                      # judged before your note: looked at again with it
     todo = [f for f in found if not f["vet"]][:60]                       # 60 a round, in Google's order
     if quick and len(todo) > 12:
@@ -654,6 +654,23 @@ def setting(name):
     return jload(os.path.join(WORK, "settings.json"), {}).get(name, True)
 
 
+def _item_px(f):
+    """How many pixels the item spans in its photo (its cut-out's longer side) - measured, not judged."""
+    try:
+        from PIL import Image
+        im = Image.open(f["file"])
+        m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) > 127
+        ys, xs = np.where(m)
+        if not len(xs):
+            return 0
+        px = max(int(np.ptp(ys)) + 1, int(np.ptp(xs)) + 1)
+        # a blown-up thumbnail has many pixels but little in them: under half a bit per pixel as a JPEG, its
+        # real detail is counted as at most 400 px
+        return px if os.path.getsize(f["file"]) * 16 >= im.size[0] * im.size[1] else min(px, 400)
+    except Exception:
+        return 0
+
+
 def auto_pick(cid, cands, d):
     """Pick for you only when it's clear: the top photo is a real photo showing at least 3 of the card's marks of
     the right version, no wrong-version mark, and it beats the next one by a wide margin."""
@@ -668,6 +685,11 @@ def auto_pick(cid, cands, d):
     if note and (v.get("note_ok") is not True or v.get("note") != note[:200]):
         say("[pick] not picked by itself: the top photo was not judged to show what your note asks for - you choose")
         return                                                # your note decides the version: never guessed past it
+    big = _item_px(cands[0])
+    if big < 800:                                             # a small or blown-up web picture can't carry the print
+        say(f"[pick] not picked by itself: the item in the top photo is only {big} px tall - too small to build "
+            "from - you choose")
+        return
     if isinstance(v.get("year_off"), int) and v["year_off"] > 2:
         say(f"[pick] not picked by itself: the top photo's item was made about {v['year_off']} years from the "
             "catalog year (read off its printed dates) - you choose")
