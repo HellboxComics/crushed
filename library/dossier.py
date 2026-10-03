@@ -37,7 +37,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 1
+VERSION = 2                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
 LOOK = 3                     # careful looks per side
@@ -58,6 +58,17 @@ WORDS = {   # how a collector says each side in a search
              "top": ["top", "top view"], "bottom": ["bottom", "underside"]},
 }
 NAMES = ["front", "back", "left", "right", "side", "top", "bottom", "label"]
+# What a look calls a side -> the side it is for this kind of thing. A battery, can or bottle has ONE wrapped side
+# (its label): its "front" and "back" in a photo are both parts of that label. (Found 2026-10-03: the Duracell's
+# label had nothing to check its words against, because your AI called the label's two halves "front" and "back".)
+FACE_ALIAS = {"round": {"front": "label", "back": "label", "left": "label", "right": "label", "side": "label"},
+              "pcb": {"front": "top", "back": "bottom"},
+              "flat": {"top": None, "bottom": None, "left": None, "right": None, "side": None}}
+
+
+def face_name(route, f):
+    """The side a look's face name means for this route (None: not a side this kind of thing has)."""
+    return FACE_ALIAS.get(route, {}).get(f, f)
 
 ID_Q = """[identity] Picture 1 is the photo picked as the true "{product}". Its catalog card says: real size
 {size} mm (width x depth x height), year {year}.
@@ -106,7 +117,16 @@ Look at picture 1 carefully. Answer ONLY JSON:
    "text": "its words exactly, or empty", "kind": "barcode" | "text" | "panel" | "graphic",
    "item_specific": true if it changes from flavor to flavor or box to box (flavor name, flavor picture,
    nutrition panel, ingredients, barcode, count, net weight, date code),
-   "box": [x0, y0, x1, y1] fractions of the photo (required when item_specific)}}]}}"""
+   "box": [x0, y0, x1, y1] fractions of the photo (required when item_specific)}}],
+ "overlays": [everything laid ON TOP of the photo that is NOT printed on the item itself - a watermark, a
+   photographer's or seller's name, an email or web address over the picture, a price or store sticker, a hand or
+   finger covering print: {{"what": "short name", "text": "its words exactly, or empty", "box": [x0, y0, x1, y1]}}
+   - an empty list when there is none]}}
+{sides_hint}"""
+SIDES_HINT = {"round": "This item is ROUND (a battery, can, bottle, jar or tube): its wrapped printed side is "
+                       "\"label\" (call every part of the wrap \"label\"), its two ends are \"top\" and \"bottom\".",
+              "pcb": "This item is a circuit card: the side with the chips is \"top\", the solder side is \"bottom\".",
+              "flat": "This item is flat (a sheet or card): it only has a \"front\" and a \"back\"."}
 
 
 # ------------------------------------------------------------------ files
@@ -406,7 +426,7 @@ def _quick_score(p, era):
 
 def _could_show(p, face, route):
     f = (p.get("quick") or {}).get("face")
-    if f == face or f in ("several", "mixed"):
+    if f == face or f in ("several", "mixed") or (f in NAMES and face_name(route, f) == face):
         return True
     return f == "side" and face in ("left", "right")
 
@@ -434,11 +454,15 @@ def careful_looks(dos, use, log=print):
         imgs = [p["file"]] + ([picked] if p["file"] != picked and picked else [])
         try:
             v = _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("year") or "", y0=era[0], y1=era[1],
-                                         ref=ref), imgs, think=True, side=1280) or {}
+                                         ref=ref, sides_hint=SIDES_HINT.get(route, "")), imgs, think=True,
+                     side=1280) or {}
         except Exception as e:
             log(f"[dossier] careful look failed for {os.path.basename(p['file'])}: {e}")
             continue
         _apply_label(p, v, era, p["file"] == picked)
+        if p.get("overlays"):
+            log(f"[dossier] {os.path.basename(p['file'])}: laid over the photo (never copied, never a fact): "
+                + "; ".join(f"{o['what']} {o['text']!r}" for o in p["overlays"])[:200])
         log(f"[dossier] {os.path.basename(p['file'])}: {p['face']} ({', '.join(f['face'] for f in p['faces'][1:])})"
             f" {p['match']}, {p['product_shown'][:60]}, years {p['years']}, quality {p['quality']}")
         save(dos)
@@ -472,10 +496,16 @@ def _apply_label(p, v, era, is_pick=False):
         q = max(0.0, min(10.0, float(v.get("quality"))))
     except (TypeError, ValueError):
         q = 0.0
+    overlays = [{"what": _str(o.get("what"), 60), "text": _str(o.get("text"), 200), "box": _box(o.get("box"))}
+                for o in v.get("overlays") or [] if isinstance(o, dict) and (_str(o.get("what")) or _str(o.get("text")))]
+    import facts as FX                                     # words on the photo that can only be a watermark or credit
+    overlays += [{"what": "watermark or credit", "text": _str(t, 200), "box": None}
+                 for t in (v.get("text") or []) if FX.not_printed(t)]
     p.update(labeled=True, faces=faces, face=faces[0]["face"] if faces else "none", also=[f["face"] for f in faces[1:]],
              match=match, product_shown=_str(v.get("product_shown")), years=ys, years_why=_str(v.get("years_why")),
-             text=[_str(t, 200) for t in (v.get("text") or []) if _str(t)][:60], quality=q,
-             elements=els, kind=(p.get("quick") or {}).get("kind", "photo"))
+             text=[_str(t, 200) for t in (v.get("text") or []) if _str(t) and not FX.not_printed(t)][:60], quality=q,
+             elements=[e for e in els if not FX.not_printed(e["text"])], overlays=overlays,
+             kind=(p.get("quick") or {}).get("kind", "photo"))
     if why:
         p["why"] = why
 
@@ -553,8 +583,24 @@ def _ours(e, facts):
     return ""
 
 
-def _els_on(p, fe, primary):
-    return [e for e in p.get("elements", []) if e.get("face") == fe["face"] or (not e.get("face") and primary)]
+def _els_on(p, fe, primary, route=None):
+    import facts as FX
+    want = face_name(route, fe["face"])
+    return [e for e in p.get("elements", []) if (face_name(route, e.get("face")) == want if e.get("face") else primary)
+            and not FX.not_printed(e.get("text"))]
+
+
+def _covered(p, fe):
+    """Is something laid over this side in this photo (a watermark, a sticker, a hand)? A side that is covered is
+    never copied onto the model (it may still show where things go)."""
+    fb = fe.get("box")
+    for o in p.get("overlays") or []:
+        ob = o.get("box")
+        if not ob or not fb:
+            return True                                    # where it is isn't known: the whole photo counts as covered
+        if min(ob[2], fb[2]) > max(ob[0], fb[0]) and min(ob[3], fb[3]) > max(ob[1], fb[1]):
+            return True
+    return False
 
 
 def plan(dos):
@@ -570,26 +616,35 @@ def plan(dos):
     for F in FACES[route]:
         cands = []
         for p in labeled:
+            seen_here = set()
             for i, fe in enumerate(p.get("faces", [])):
-                if fe["face"] != F and not (fe["face"] == "side" and F in ("left", "right")):
+                fn = face_name(route, fe["face"])
+                if fn != F and not (fe["face"] == "side" and F in ("left", "right")):
                     continue
-                if fe.get("edge_on"):
-                    continue
+                if fe.get("edge_on") or (route == "round" and F in seen_here):
+                    continue                                  # (a round item's label: the photo counts once)
+                seen_here.add(F)
                 q = (p.get("quality") or 0) * (1.0 if i == 0 else 0.6) * (0.85 if fe["face"] == "side" else 1.0)
                 cands.append((q, p, fe))
         cands.sort(key=lambda c: -c[0])
         free = lambda c: (c[1]["file"], c[2]["face"]) not in taken or c[2]["face"] != "side"
-        exact = [c for c in cands if c[1].get("match") == "exact" and c[0] >= 3 and free(c)]
+        exact = [c for c in cands if c[1].get("match") == "exact" and c[0] >= 3 and free(c) and not _covered(c[1], c[2])]
         tmpl = [c for c in cands if c[1].get("match") in ("sister", "near_year") and c[0] >= 4 and free(c)
-                and _shape_ok(c[1], c[2], dims.get(F))]
+                and _shape_ok(c[1], c[2], dims.get(F)) and not _covered(c[1], c[2])]
         sister_seen = [c for c in cands if c[1].get("match") in ("sister", "near_year")]
         entry = {"source": "none", "photo": None, "page": "", "product_shown": "", "match": None, "swap": [],
                  "must_show": [], "note": "", "alternates": []}
         if F == PRIMARY[route] and picked:
             pp = next((p for p in dos["photos"] if p["file"] == picked), {"file": picked})
-            fe = next((f for f in pp.get("faces", []) if f["face"] == F), {"face": F})
+            fe = next((f for f in pp.get("faces", []) if face_name(route, f["face"]) == F), {"face": F})
+            if route == "round":                              # the whole wrap: every part of the label in the photo
+                fe = {"face": F, "turn": fe.get("turn", 0), "straight_on": fe.get("straight_on", False)}
             entry.update(source="exact_photo", photo=picked, page=pp.get("page", ""), match="exact",
                          product_shown=pp.get("product_shown", ""), note="your pick")
+            if _covered(pp, fe):
+                gaps.append(f"{F}: your pick has something laid over this side ("
+                            + ", ".join(f"{o['what']} {o['text']!r}" for o in pp.get("overlays", []))[:120]
+                            + ") - it must not end up on the model")
             exact = [(10, pp, fe)] + [c for c in exact if c[1]["file"] != picked]
         if exact:
             q, p, fe = exact[0]
@@ -602,10 +657,10 @@ def plan(dos):
             entry["alternates"] = [c[1]["file"] for c in exact[1:4]]
             entry["must_show"] = [{"what": e["what"], "text": e["text"], "kind": e["kind"],
                                    "item_specific": e["item_specific"]}
-                                  for e in _els_on(p, fe, fe is (p.get("faces") or [None])[0])]
+                                  for e in _els_on(p, fe, route == "round" or fe is (p.get("faces") or [None])[0], route)]
         elif tmpl:
             q, p, fe = tmpl[0]
-            els = _els_on(p, fe, fe is (p.get("faces") or [None])[0])
+            els = _els_on(p, fe, route == "round" or fe is (p.get("faces") or [None])[0], route)
             entry.update(source="template_photo", photo=p["file"], page=p.get("page", ""), match=p["match"],
                          product_shown=p.get("product_shown", ""), view=fe,
                          swap=[e["what"] for e in els if e["item_specific"]],
@@ -628,7 +683,7 @@ def plan(dos):
                 entry["layout_from"] = p["file"]
                 entry["layout"] = [{"kind": fact_kind(e), "box": turn_box(_rel(e["box"], fe.get("box")),
                                                                           fe.get("turn") or 0), "what": e["what"]}
-                                   for e in _els_on(p, fe, fe is (p.get("faces") or [None])[0])
+                                   for e in _els_on(p, fe, route == "round" or fe is (p.get("faces") or [None])[0], route)
                                    if fact_kind(e) and e.get("box")]
                 entry["layout"] = [x for x in entry["layout"] if x["box"]] or None
             entry["note"] = "rebuilt from facts only" + (" in a sister box's layout" if entry.get("layout") else "")
@@ -697,6 +752,55 @@ def _must_show_rebuilt(entry, face, route, facts, food, kind="packaging"):
     return out
 
 
+def _sides_from_facts(dos):
+    """What each side must show, once the facts are known: a rebuilt side its facts; a sister's side our values in
+    place of its own item-specific parts."""
+    route = dos["route"]
+    food = (dos.get("identity") or {}).get("food")
+    for F, e in dos["faces"].items():
+        if e["source"] == "rebuilt":
+            e["must_show"] = _must_show_rebuilt(e, F, route, dos.get("facts") or {}, food,
+                                                (dos.get("identity") or {}).get("kind", "packaging"))
+            got = [m["what"] for m in e["must_show"]]
+            e["note"] += f" ({', '.join(got) or 'nothing known to print'})"
+        elif e["source"] == "template_photo":                # a sister's side: its own parts replaced by ours
+            for m in e["must_show"]:
+                if m["item_specific"]:
+                    m["sister_text"], m["text"] = m["text"], _ours(m, dos.get("facts") or {})
+
+
+def replan(dos, log=print):
+    """A dossier made under older rules, brought up to the current ones from the looks already taken - no new
+    looks, nothing downloaded: words that can only be a watermark or credit come out of every look and fact, and
+    the plan for every side is worked out again (a round item's wrapped side is its label)."""
+    import facts as FX
+    for p in dos.get("photos", []):
+        if not p.get("labeled"):
+            continue
+        bad = [t for t in p.get("text", []) if FX.not_printed(t)]
+        bad += [e.get("text") for e in p.get("elements", []) if FX.not_printed(e.get("text"))]
+        if bad:
+            have = {o.get("text") for o in p.get("overlays", [])}
+            p.setdefault("overlays", []).extend({"what": "watermark or credit", "text": t, "box": None}
+                                                for t in dict.fromkeys(bad) if t not in have)
+            p["text"] = [t for t in p.get("text", []) if not FX.not_printed(t)]
+            p["elements"] = [e for e in p.get("elements", []) if not FX.not_printed(e.get("text"))]
+    FX.recheck_lines(dos, log)
+    before = {F: (e.get("source"), len(e.get("must_show") or [])) for F, e in (dos.get("faces") or {}).items()}
+    dos["faces"], face_gaps = plan(dos)
+    _sides_from_facts(dos)
+    sides = set(NAMES) | set(FACES.get(dos["route"], []))
+    dos["gaps"] = face_gaps + [g for g in dos.get("gaps", []) if g.split(":")[0].strip() not in sides]
+    dos["version"] = VERSION
+    save(dos)
+    after = {F: (e.get("source"), len(e.get("must_show") or [])) for F, e in dos["faces"].items()}
+    log(f"[dossier] {dos.get('cid', '')}: brought up to the newest rules (no new looks): "
+        + "; ".join(f"{F} {after[F][0].replace('_', ' ')}, {after[F][1]} things it must show"
+                    + (f" (was {before[F][1]})" if F in before and before[F][1] != after[F][1] else "")
+                    for F in after))
+    return dos
+
+
 # ------------------------------------------------------------------ the whole dossier
 def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, web=True):
     """The item's dossier (see the top of this file). Reused when it was finished for the same inputs (product,
@@ -709,6 +813,8 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     if old and not redo and old.get("inputs") == sig and old.get("done"):
         log(f"[dossier] {cid}: known already ({len(old.get('photos', []))} photos, made "
             f"{time.strftime('%Y-%m-%d %H:%M', time.localtime(old.get('made_at', 0)))}) - reused")
+        if int(old.get("version") or 1) < VERSION:
+            replan(old, log)
         return old
     resume = bool(old) and not redo and old.get("inputs") == sig
     if old and not resume:
@@ -777,18 +883,9 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     import facts as FX
     dos["faces"], face_gaps = plan(dos)
     dos["facts"] = FX.gather(dos, log, use, web=web)
-    food = dos["identity"].get("food")
-    for F, e in dos["faces"].items():
-        if e["source"] == "rebuilt":
-            e["must_show"] = _must_show_rebuilt(e, F, route, dos["facts"], food,
-                                                (dos.get("identity") or {}).get("kind", "packaging"))
-            got = [m["what"] for m in e["must_show"]]
-            e["note"] += f" ({', '.join(got) or 'nothing known to print'})"
-        elif e["source"] == "template_photo":                # a sister's side: its own parts replaced by ours
-            for m in e["must_show"]:
-                if m["item_specific"]:
-                    m["sister_text"], m["text"] = m["text"], _ours(m, dos["facts"])
+    _sides_from_facts(dos)
     dos["gaps"] = face_gaps + dos["gaps"]
+    dos["version"] = VERSION
     dos["made_at"] = time.time()
     dos["done"] = bool(use)                                   # made without your AI: tried again next time
     save(dos)

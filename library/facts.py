@@ -29,7 +29,9 @@ KEYS = ["upc", "net_weight", "count", "nutrition", "ingredients", "maker_lines",
 
 PANEL_Q = """[panel-text] This photo shows a package of: {shown}.
 Copy ONLY what is printed and readable in this photo. Never fill anything in from memory: leave a field empty or
-null when it can't be read clearly. Answer ONLY JSON:
+null when it can't be read clearly. Words laid ON TOP of the photo are NOT printed on the package - a watermark, a
+photographer's or seller's name, an email or web address over the picture, a price or store sticker: never copy
+them into the fields below, list them in "overlay_text" instead. Answer ONLY JSON:
 {{"upc_digits": "every digit printed under the barcode, in order, or empty",
  "net_weight": "the net weight line exactly as printed, or empty",
  "count": "the count line exactly as printed, e.g. '8 TOASTER PASTRIES', or empty",
@@ -42,7 +44,8 @@ null when it can't be read clearly. Answer ONLY JSON:
  "maker_lines": ["the 'distributed by' / 'manufactured by' lines and address, exactly"],
  "legal_lines": ["copyright, trademark, recycled-carton and made-in lines, exactly"],
  "contents_lines": ["any line saying how the items are packed inside, e.g. '4 pouches of 2 pastries'"],
- "codes": ["carton numbers, item numbers, date codes, exactly"]}}"""
+ "codes": ["carton numbers, item numbers, date codes, exactly"],
+ "overlay_text": ["words laid over the photo that are not printed on the package (watermark, credit, sticker)"]}}"""
 
 
 # ------------------------------------------------------------------ small helpers
@@ -85,6 +88,51 @@ def _same_size(a, b):
 
 COPYRIGHT = re.compile(r"(?i)©|\(c\)\s*(?:19|20)\d\d|copyright")   # a copyright line (its year is that box's own;
 #                                                                   an address's ZIP+4 like 49016-1986 is not a year)
+
+# Words that are on the PHOTO, never on the product: a photographer's or seller's watermark, an email, an @name, a
+# photo / stock / auction site's name. Found 2026-10-03: a Flickr photographer's name and email ("(c) 2015 <name>
+# <email>" over a battery photo) was read as the battery's legal lines - and legal lines get printed on rebuilt sides.
+NOT_PRINTED = re.compile(
+    r"(?i)[\w.+-]+@[\w-]+\.[\w.]+|(?:^|\s)@[a-z0-9_.]{3,}|"
+    r"\b(?:alamy|shutterstock|getty\s*images|gettyimages|istock(?:photo)?|dreamstime|123rf|depositphotos|"
+    r"adobe\s*stock|bigstock|flickr|worthpoint|picclick|ebay|etsy|pinterest|mercari|poshmark|craigslist|kijiji|"
+    r"imgur|wikimedia)\b|"
+    r"\b(?:photo|photograph|photography|image|picture|pic)(?:s|ed)?\s+(?:by|from|credit|courtesy)\b|"
+    r"\bwatermark")
+
+
+def not_printed(line):
+    """True when a line read off a photo belongs to the photo (watermark, credit, email, site name), not the product."""
+    return bool(NOT_PRINTED.search(str(line or "")))
+
+
+def _overlay_words(p):
+    """Every word the careful look or the panel reader said was laid ON TOP of this photo (watermark, sticker...)."""
+    out = [str(o.get("text", "")) for o in p.get("overlays") or [] if isinstance(o, dict)]
+    out += [str(t) for t in ((p.get("panel") or {}).get("overlay_text") or []) if t]
+    return [_norm(t) for t in out if _norm(t)]
+
+
+def _on_overlay(line, words):
+    n = _norm(line)
+    return bool(n) and any(n in w or (len(w) >= 4 and w in n) for w in words)
+
+
+def marked(p):
+    """Does this photo carry a watermark / credit / sticker? (then its lines count only when another photo agrees)"""
+    if p.get("watermarked") or p.get("overlays") or (p.get("panel") or {}).get("overlay_text"):
+        return True
+    panel = p.get("panel") or {}
+    return any(not_printed(x) for k in ("maker_lines", "legal_lines", "codes", "contents_lines")
+               for x in (panel.get(k) or []) if isinstance(x, str))
+
+
+def clean_lines(lines, p=None):
+    """The lines that are really printed on the product (watermarks, credits, emails, site names and anything the
+    looks said was laid over the photo taken out)."""
+    words = _overlay_words(p or {})
+    return [ln for ln in lines or [] if isinstance(ln, str) and ln.strip() and not not_printed(ln)
+            and not _on_overlay(ln, words)]
 
 
 def _years(text):
@@ -184,6 +232,28 @@ def scan_barcodes(path):
     return out
 
 
+def clean_panel(p):
+    """Takes everything that is on the photo but not on the product out of one photo's read panel; marks the photo
+    as watermarked when anything was. Returns what was taken out."""
+    panel = p.get("panel")
+    if not isinstance(panel, dict):
+        return []
+    dropped = []
+    for k in ("maker_lines", "legal_lines", "contents_lines", "codes"):
+        v = panel.get(k)
+        if isinstance(v, list):
+            keep = clean_lines(v, p)
+            dropped += [str(x) for x in v if x not in keep and str(x).strip()]
+            panel[k] = keep
+    for k in ("ingredients", "net_weight", "count", "upc_digits"):
+        if isinstance(panel.get(k), str) and panel[k] and not clean_lines([panel[k]], p):
+            dropped.append(panel[k])
+            panel[k] = ""
+    if dropped or panel.get("overlay_text") or p.get("overlays"):
+        p["watermarked"] = True
+    return dropped
+
+
 def read_panels(dos, use=None, log=print, most=8):
     """Your local AI copies the printed facts off the era's photos (this exact item first, then its sister boxes of
     the same era). Kept on each photo as 'panel', so nothing is read twice."""
@@ -197,6 +267,8 @@ def read_panels(dos, use=None, log=print, most=8):
                     key=lambda p: -(p.get("quality") or 0))[:4]
     n = 0
     for p in order:
+        if "panel" in p:
+            clean_panel(p)                     # read before the watermark rule: cleaned now (the same rule)
         if "panel" in p or n >= most or not use:
             continue
         n += 1
@@ -206,6 +278,10 @@ def read_panels(dos, use=None, log=print, most=8):
         except Exception as e:
             log(f"[facts] could not read {os.path.basename(p['file'])}: {e}")
             p["panel"] = {}
+        dropped = clean_panel(p)
+        if dropped:
+            log(f"[facts] {os.path.basename(p['file'])}: on the photo, not the product (left out): "
+                + "; ".join(dropped)[:200])
         p["barcodes"] = scan_barcodes(p["file"])
         log(f"[facts] read {os.path.basename(p['file'])} ({p.get('match') or 'your pick'}): "
             + ", ".join(k for k, v in (p["panel"] or {}).items() if v) + (f"; barcode {p['barcodes']}" if p["barcodes"] else ""))
@@ -456,18 +532,64 @@ def gather(dos, log=print, use=None, web=True):
                         + (" (a newer web source exists but describes a later recipe, so it isn't printed)" if ref else "")
                         + " - that panel is left off")
 
-    # --- maker and legal lines: this item's own photos; if they show none, the ONE sister box closest to it (same
-    #     maker, same era - the same flavor first, then the nearest year); other photos that print the same line
-    #     count as agreeing sources
+    # --- maker and legal lines
+    _lines(facts, gaps, photos, exact, sisters, idn, era)
+
+    # --- what is inside
+    facts["contents"] = contents_fact(dos, facts, log, web)
+    return facts
+
+
+def recheck_lines(dos, log=print):
+    """A dossier made before the watermark rule: its maker and legal lines worked out again from the photos already
+    read (no new looks, nothing downloaded). Returns the lines that were taken out."""
+    facts = dos.get("facts") or {}
+    old = {k: list((facts.get(k) or {}).get("value") or []) for k in ("maker_lines", "legal_lines")}
+    picked = dos.get("picked")
+    photos = [p for p in dos.get("photos", []) if isinstance(p.get("panel"), dict)]
+    for p in photos:
+        clean_panel(p)
+    exact = [p for p in photos if p.get("match") == "exact" or p.get("file") == picked]
+    sisters = [p for p in photos if p.get("match") in ("sister", "near_year")]
+    gaps = []
+    new = {}
+    _lines(new, gaps, photos, exact, sisters, dos.get("identity") or {}, (dos.get("identity") or {}).get("years") or [None, None])
+    for k in ("maker_lines", "legal_lines"):
+        if (facts.get(k) or {}).get("checks", {}).get("applies") is False:
+            continue
+        facts[k] = new[k]
+    word = ("maker lines:", "legal lines:")
+    dos["gaps"] = [g for g in dos.get("gaps", []) if not g.startswith(word)] + gaps
+    dos["facts"] = facts
+    gone = [ln for k in old for ln in old[k] if ln not in ((facts.get(k) or {}).get("value") or [])]
+    if gone:
+        log(f"[facts] {dos.get('cid', '')}: on a photo, not on the product - taken out of its facts: " + "; ".join(gone)[:200])
+    return gone
+
+
+def _lines(facts, gaps, photos, exact, sisters, idn, era):
+    """Maker and legal lines: this item's own photos; if they show none, the ONE sister box closest to it (same maker,
+    same era - the same flavor first, then the nearest year); other photos that print the same line count as
+    agreeing sources. Never a watermark, credit or email; a watermarked photo's lines only when a clean one agrees."""
     y = idn.get("year") or 0
 
     def lines_of(p, mine):
         out = []
-        for ln in (p.get("panel") or {}).get(key) or []:
+        for ln in clean_lines((p.get("panel") or {}).get(key) or [], p):   # never a watermark, credit or email
             ln = str(ln).strip()
-            if ln and (mine or not COPYRIGHT.search(ln)):
-                out.append(ln)                                 # another box's own copyright year is not ours
+            late = COPYRIGHT.search(ln) and _years(ln) and era[1] and min(_years(ln)) > era[1] + 1
+            if ln and (mine or not COPYRIGHT.search(ln)) and not late:   # (a copyright years after the item was
+                out.append(ln)                                 # made is a photo's) another box's year is not ours
+        if marked(p):                                          # a watermarked photo: its words count only when a
+            out = [ln for ln in out if seen_by.get(_norm(ln), set()) - {p.get("file")}]   # clean photo agrees
         return out
+    seen_by = {}                                               # line -> the clean (unmarked) photos that print it
+    for p in photos:
+        if marked(p):
+            continue
+        for k in ("maker_lines", "legal_lines"):
+            for ln in clean_lines((p.get("panel") or {}).get(k) or [], p):
+                seen_by.setdefault(_norm(ln), set()).add(p.get("file"))
     near = sorted([s for s in sisters if _era_ok(s.get("years"), era) is not False],
                   key=lambda s: (-(_norm(idn.get("variant")) in _norm(s.get("product_shown"))),
                                  min([abs(v - y) for v in s.get("years") or [y + 9]]), -(s.get("quality") or 0)))
@@ -498,10 +620,6 @@ def gather(dos, log=print, use=None, web=True):
                         "exact box")
         if not lines:
             gaps.append(f"{key.replace('_', ' ')}: not readable on any photo of this item or its era")
-
-    # --- what is inside
-    facts["contents"] = contents_fact(dos, facts, log, web)
-    return facts
 
 
 def _web_reference(key, code12, era, log):

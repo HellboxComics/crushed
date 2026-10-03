@@ -49,6 +49,10 @@ The verdict lists failed checks by name. Three kinds:
     looks). Cause: an inside part reaching past the outer shell. Every builder must keep inside parts inside
     the outer shell less its thickness (lathe.py does it in fit_inside(); do the same in any builder that
     adds insides).
+  - `measure_no_photo_marks`: words that belong to a PHOTO, not the item, were read off the model - a
+    watermark, a photographer's or seller's name, an email, a photo or auction site's name. Cause: a side
+    copied from a watermarked photo, or a "fact" read off a watermark. Never paint over it: the side must come
+    from a clean photo or be rebuilt from facts (the dossier marks watermarked photos and never copies them).
   - `measure_web_copy`, `measure_viewer`: the phone copy is too big or missing; the viewer shows nothing.
 - `side_<face>` - one side of the model compared with the real photo of that side, looked at twice.
 - the realism names (`shape`, `print`, `materials`, `layers`, `details`, `no_painted_light`, `finished`,

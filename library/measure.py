@@ -264,9 +264,10 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
     # text: every printed element the plan lists, read off the model's own sides
     want_text = [(f, m) for f, e in faces.items() for m in e.get("must_show", [])
                  if m.get("kind") in ("text", "panel") and len(_text_of(m.get("text", "")).strip()) >= 3]
+    read = {}                                               # every side read once, shared by the word checks
     if want_text:
         try:
-            read, ref_read, skipped = {}, {}, []
+            ref_read, skipped = {}, []
             missing = []
             for f, m in want_text:
                 e = faces.get(f) or {}
@@ -296,6 +297,22 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
                                 not_readable_on_the_real_photo=skipped)
         except Exception as e:
             checks["text"] = _c(False, f"the printed words could not be read: {e}")
+
+    # words that can only come from a PHOTO - a watermark, someone's name and email, a photo or auction site's name -
+    # must never be on the model (they would be sold printed on it)
+    try:
+        import facts as FX
+        found = []
+        for n, png in renders.items():
+            if n not in read:
+                read[n] = read_text(png, use=use, log=log)
+            for m in FX.NOT_PRINTED.finditer(read[n] or ""):
+                found.append(f"{n}: \"{m.group(0).strip()[:40]}\"")
+        checks["no_photo_marks"] = _c(not found, "no watermark, email, photographer or photo-site name on the model"
+                                      if not found else "words that belong to a photo, not the item, are printed "
+                                      "on the model: " + "; ".join(found[:6]), found=found)
+    except Exception as e:
+        checks["no_photo_marks"] = _c(False, f"the model's sides could not be read for watermarks: {e}")
 
     # materials
     bad = []
