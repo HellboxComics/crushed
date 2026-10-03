@@ -1,6 +1,7 @@
 # the items the asset maker works through, top to bottom (one run at a time; the clock keeps it going)
 duracell_coppertop_aa_1998
 poptarts_frosted_strawberry_1997
+canada_dry_ginger_ale_12oz_can_1998
 furby_gray_pink_1998
 3dfx_voodoo2_12mb_1998
 aaa_roadside_emergency_kit_1999
@@ -825,7 +826,6 @@ campbells_chunky_soup_can_1999
 campbells_soup_bowl_white_1998
 campfire_marshmallow_roasting_stick_1998
 campfire_smore_1998
-canada_dry_ginger_ale_12oz_can_1998
 candied_winter_melon_tray_piece_1998
 candy_bracelet_wrapped_1998
 canned_cranberry_cylinder_prop_1998
