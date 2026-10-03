@@ -101,6 +101,40 @@ part doubled, a different object, a different version of the item, or the item's
 Answer ONLY JSON: {{"problems": ["short, specific"], "ok": true or false}}"""
 
 
+FACES_Q = """Picture 1 is the flat texture map of a box model of {product}: its six sides laid out (front, back,
+left, right, top, bottom), each made from a real photo, a sister box's photo, or rebuilt from printed facts.
+Picture 2 is the main photo of the real item. Is anything on picture 1 WRONG for this item: a side upside down or
+mirrored, a side stretched or squashed, a watermark or website text, a different product's panel, room light or
+shadow on a side, a side left blank that should be printed?
+Answer ONLY JSON: {{"problems": ["short, specific, naming the side"], "ok": true or false}}"""
+
+
+def look_faces(atlas_png, photo, product, use):
+    """The judge brain looks at a box's six sides next to the main photo."""
+    import vet as V
+    try:
+        v = V.ask(use, FACES_Q.format(product=product), [atlas_png, photo], think=False, side=1280) or {}
+    except Exception as e:
+        return None, f"could not look: {e}"
+    probs = [str(p) for p in (v.get("problems") or []) if str(p).strip()]
+    ok = v.get("ok")
+    ok = (not probs) if ok is None else bool(ok) and not probs
+    return ok, "; ".join(probs)[:400] or "nothing wrong seen"
+
+
+def box_checks(src, sides=("front", "back", "left", "right", "top", "bottom")):
+    """Exact checks on a box's sides (skin.box_skin's sources): [(what, ok, detail)]."""
+    out = []
+    front = (src.get("front") or {}).get("source")
+    out.append(("the front is a real photo of this item", front == "photo", f"front: {front}"))
+    missing = [s for s in sides if s not in src]
+    out.append(("every side is made", not missing, ", ".join(missing) or "all six"))
+    gaps = {s: v.get("no_fact_for") for s, v in src.items() if v.get("source") == "rebuilt" and v.get("no_fact_for")}
+    out.append(("rebuilt sides carry what this kind normally has", None if gaps else True,
+                "; ".join(f"{s}: no fact found for {', '.join(g)}" for s, g in gaps.items()) or "all drawn"))
+    return out
+
+
 def look_unrolled(real_png, photo, product, use, top="top"):
     """The judge brain looks at the unrolled label next to the main photo (only eyes can tell some things)."""
     import vet as V

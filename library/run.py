@@ -510,6 +510,17 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         shots += other_sides(cid, card, picked, use, have=shots, dossier=dos)   # backs and sides the dossier found
         atlas, got = skin.box_skin(product, W, D, H, shots, os.path.join(d, "skin"),
                                    flat=route == "flat", judge=use, log=say, era=era, dossier=dos)
+        try:                                             # the sides on the review sheet, with their own checks
+            import review
+            make_room("judging")
+            seen_ok, seen_why = review.look_faces(atlas, picked["file"], product, use)
+            review.Sheet(d).step("box sides (each from its plan: photo, sister box, or rebuilt from facts)",
+                                 files=[atlas], checks=review.box_checks(
+                                     got, ("front", "back") if route == "flat" else
+                                     ("front", "back", "left", "right", "top", "bottom")) +
+                                 [("the judge sees nothing wrong on the sides", seen_ok, seen_why)])
+        except Exception as e:
+            say(f"[review] {cid}: the sides could not be put on the sheet ({e})")
         status(cid, step="5/7 Blender: the carton made like the factory makes it (flat sheet, creased, folded)"
                if bld == "carton" else "5/7 Blender: mesh + UV map + texture map + material")
         if bld == "carton":                              # a folding carton: its dieline, folded, with what's inside
