@@ -1807,6 +1807,18 @@ HUNYUAN_PINS = {"timm": "timm==1.0.27",            # Hunyuan3D-2.1's requirement
                 "pygltflib": "pygltflib==1.16.3"}   # the version Hunyuan3D-2.1's requirements.txt pins
 
 
+def pip_install(python, pkgs, no_deps=False, timeout=900):
+    """Install packages into one Python. The asset maker's and Hunyuan's Pythons were made by uv and have no pip
+    inside them, so uv is used when it is on this Mac (pip otherwise). Returns (ok, message)."""
+    uv = next((u for u in (shutil.which("uv"), os.path.expanduser("~/.local/bin/uv"), "/opt/homebrew/bin/uv")
+               if u and os.path.exists(u)), None)
+    extra = ["--no-deps"] if no_deps else []
+    cmd = ([uv, "pip", "install", "-q", "--python", python, *extra, *pkgs] if uv else
+           [python, "-m", "pip", "install", "-q", *extra, *pkgs])
+    pr = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    return pr.returncode == 0, ("ok" if pr.returncode == 0 else (pr.stderr or pr.stdout)[-300:])
+
+
 def hunyuan_test_request():
     """Claude asked (WORK/hunyuan_test.request): does Hunyuan make a shape from its own demo picture? Only the two
     packages its folder is known to be missing are installed - at fixed versions, without touching anything they
@@ -1835,9 +1847,8 @@ def hunyuan_test_request():
             missing.append(mod)
     if missing:
         try:
-            pr = subprocess.run([py, "-m", "pip", "install", "-q", "--no-deps", *[HUNYUAN_PINS[m] for m in missing]],
-                                capture_output=True, text=True, timeout=600)
-            say(f"[hunyuan test] installed {missing}: " + ("ok" if pr.returncode == 0 else (pr.stderr or pr.stdout)[-300:]))
+            ok, msg = pip_install(py, [HUNYUAN_PINS[m] for m in missing], no_deps=True, timeout=600)
+            say(f"[hunyuan test] installed {missing}: {msg}")
         except subprocess.TimeoutExpired:
             say(f"[hunyuan test] installing {missing} took over 10 minutes and was stopped")
     log = os.path.join(WORK, "hunyuan_test.log")
@@ -1905,15 +1916,15 @@ if __name__ == "__main__":
         _lock.close()
         os.execv(PY, [PY] + sys.argv)
     if a.loop:
+        installed = False
         sreq = os.path.join(WORK, "setup.request")  # Cody approved installing these free tools
         if os.path.exists(sreq):
             os.replace(sreq, sreq + ".done")
             allowed = {"zxing-cpp", "ocrmac"}           # only these, ever: the exact checks' readers
             want = [w for w in open(sreq + ".done").read().split() if w in allowed]
             if want:
-                pr = subprocess.run([PY, "-m", "pip", "install", "-q", *want], capture_output=True, text=True,
-                                    timeout=900)
-                say(f"[setup] installed {', '.join(want)}: " + ("ok" if pr.returncode == 0 else (pr.stderr or pr.stdout)[-300:]))
+                installed, msg = pip_install(PY, want)  # this Python was made by uv: no pip inside it
+                say(f"[setup] installed {', '.join(want)}: {msg}")
         try:
             resend()                                    # first: anything that never reached your phone
         except Exception as e:
@@ -1923,10 +1934,11 @@ if __name__ == "__main__":
         import selftest
         last = jload(os.path.join(WORK, "selftest.json"), {})
         age = time.time() - last.get("at", 0)
-        if not last.get("ok", True) and age < 3600:     # it failed lately: no rerun (and no phone alarm) for an hour
+        if not last.get("ok", True) and age < 3600 and not installed:   # failed lately: no rerun for an hour
+            # (unless a missing tool was just installed - then every piece is checked again right away)
             sys.exit(0)
         head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-        fresh = last.get("ok") and age < 6 * 3600 and last.get("code") == head   # new code: every piece checked again
+        fresh = last.get("ok") and age < 6 * 3600 and last.get("code") == head and not installed   # new code: all again
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
             say("self-test failed - nothing run (the reason is on your phone)")
             sys.exit(1)
