@@ -129,13 +129,14 @@ def t_engineer_guard():
     import engineer as E
     must = ["vet.py", "VET.py", "viewshot.py", "judge.py", "measure.py", "engineer.py", "selftest.py", "watchdog.py",
             "dossier.py", "facts.py", "queue.txt", "families.json", "playbook/playbook.md", "playbook//playbook.md",
-            "playbook/lessons.md", "shapes/specs/aa_battery.json", "labels/any.json", "shapes/vet.py", ".gitignore",
-            "shapes/../vet.py"]
+            "playbook/lessons.md", "shapes/vet.py", ".gitignore", "shapes/../vet.py", "measure_blender.py",
+            "materials.json", "families.py", "family_library.json", "notes.py", "catalog.py"]
     bad = [p for p in must if not E.locked(p)]
     if bad:
         raise RuntimeError("not locked: " + ", ".join(bad))
-    if E.locked("finish.py") or E.locked("shapes/lathe.py") or E.locked("factory/recipes/x.json"):
-        raise RuntimeError("normal builder files are locked by mistake")
+    if E.locked("finish.py") or E.locked("shapes/lathe.py") or E.locked("factory/recipes/x.json") or \
+            E.locked("labels/any.json") or E.locked("shapes/specs/aa_battery.json"):
+        raise RuntimeError("build files (builders, recipes, label layouts, measured shapes) are locked by mistake")
     tree = ast.parse(open(os.path.join(HERE, "run.py")).read())
     same = ast.unparse(tree)
     for node in tree.body:                               # the checklist made weaker: must be caught
