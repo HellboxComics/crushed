@@ -112,6 +112,11 @@ Already made for every kept asset: .blend, .glb, .fbx, .usdc, .obj/.mtl, .3ds, .
 picture. Still to build for this lane: LODs, collision mesh, 2K maps, named collections, turntable / wireframe /
 exploded / crushed pictures, listing text, one folder per store. No store accounts are opened by the asset maker -
 that is Cody's to do.
+  brand              BUILTINSIDE - "3D objects modeled all the way through" (handles in order: BuiltInside,
+                     BuiltInside3D, BuiltInsideAssets); kept separate from Harrow and CRUSHED on every store
+  the standard       every listing: EXTERIOR, INTERIOR, MATERIALS, PHYSICS (density, hardness, deformation), BREAK,
+                     STATES (clean / opened / damaged / crushed), GAME (optimized mesh, collision, LODs), PBR;
+                     thumbnail badges FULL INTERIOR, PHYSICS READY, DESTRUCTIBLE, PBR, GAME READY
 
 ## Build order
 
