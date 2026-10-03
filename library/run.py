@@ -771,6 +771,7 @@ def whole_words(words):
     norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
     tokens = [t for w in words for t in str(w).split() if len(norm(t)) >= 3]
     out = []
+    words = [re.sub(r"([™®])[A-Z](?=\s|$)", r"\1", str(w)) for w in words]   # "POWERCHECK™M": the TM read twice
     for w in words:
         n = norm(w)
         if len(str(w).split()) == 1 and len(n) >= 3:
@@ -822,6 +823,16 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             part.save(pp)
             parts.append(pp)
     words = label_words(parts, use)
+    # the printed lines the dossier read off this item's own photo for its label (the same lines the finished model
+    # is checked against): allowed too, so the layout can carry them (2026-10-03: "DURACELL INC., Bethel, CT 06801"
+    # was checked on the model but never allowed on the label - the writer was told to add it and could not)
+    lab_face = ((dos or {}).get("faces") or {}).get("label") or {}
+    if lab_face.get("source") == "exact_photo":
+        for m in lab_face.get("must_show") or []:
+            t = str(m.get("text") or "").strip()
+            if m.get("kind") in ("text", "panel") and len(t) >= 3 and t not in words:
+                words.append(t)
+        words = whole_words(words)
     R.step("words on the label (each confirmed by two reads)", files=parts, checks=[
         ("words were read", bool(words), f"{len(words)} words"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])

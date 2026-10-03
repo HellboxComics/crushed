@@ -149,6 +149,23 @@ def render(layout, out_dir, px=4096, name="label"):
             x -= layer.width / 2
         elif tx.get("align") == "right":
             x -= layer.width
+        # words printed on a panel stay inside that panel (2026-10-03: "JAN 2001" ran out of the bottom of its tan
+        # box): the smallest filled box under the words' middle, and the words shrunk to fit it with a margin
+        cx, cy = x + 0.15 * layer.width, tx["y"] * H + 0.3 * layer.height   # (where the words start: a panel
+        #                                                       they overflow may not hold their middle)
+        under = [box(s) for s in layout.get("shapes", []) if s.get("fill") and s.get("type", "rect") == "rect"
+                 and box(s)[0] <= cx <= box(s)[2] and box(s)[1] <= cy <= box(s)[3]
+                 and (box(s)[2] - box(s)[0]) * (box(s)[3] - box(s)[1]) < 0.5 * W * H]
+        if under:
+            bx0, by0, bx1, by1 = min(under, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
+            m = 0.06 * min(bx1 - bx0, by1 - by0)
+            y = tx["y"] * H
+            if x < bx0 + m or y < by0 + m or x + layer.width > bx1 - m or y + layer.height > by1 - m:
+                k = min(1.0, (bx1 - bx0 - 2 * m) / max(layer.width, 1), (by1 - by0 - 2 * m) / max(layer.height, 1))
+                if k > 0.3:
+                    layer = layer.resize((max(1, int(layer.width * k)), max(1, int(layer.height * k))), Image.LANCZOS)
+                    x = min(max(x, bx0 + m), bx1 - m - layer.width)
+                    tx = dict(tx, y=min(max(y, by0 + m), by1 - m - layer.height) / H)
         img.paste(Image.new("RGB", layer.size, rgb(tx.get("color", "#000000"))), (int(x), int(tx["y"] * H)), layer)
         if not tx.get("metal"):                          # the letters' ink is not metal, even on a copper band
             mr.paste(Image.new("RGB", layer.size, (0, int(255 * layout.get("roughness", 0.45)), 0)),
