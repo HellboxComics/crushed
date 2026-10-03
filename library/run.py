@@ -25,6 +25,7 @@ import os as _os, sys as _sys  # noqa: E401
 _sys.path.append(_os.path.dirname(_os.path.abspath(__file__)))
 import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import argparse
+import collections
 import json
 import os
 import re
@@ -156,6 +157,16 @@ def pipeline(cid, redo=False):
 
     card = cards.make(cid, log=say)
     cards.construction(cid, card, log=say)                       # how the real thing is made: layers, materials, details
+    ev = cards.era_version(cid, card, V.model(), log=say)       # its own name and look in its
+    card["searches"] = list(dict.fromkeys(list(ev.get("searches") or []) + list(card.get("searches") or [])))  # era
+    ehk = " | ".join(ev.get("names") or [])
+    if ev.get("searches") and card.get("era_hunted") != ehk and \
+            jload(os.path.join(HB, "picks.json"), {}).get(cid, {}).get("pick", "none") == "none":
+        say(f"[hunt] {cid}: hunting the era's own version ({ehk})")   # not picked yet: look for it by its real name
+        hunt.run(cid, card["product"].split(",")[0], card.get("year"), log=say, extra=ev["searches"])
+        card["era_hunted"] = ehk
+        if not TRIAL:
+            json.dump(card, open(cards.path(cid), "w"), indent=1)
     if card.pop("era_print", None) is not None and not TRIAL:    # box words once written from your AI's memory:
         json.dump(card, open(cards.path(cid), "w"), indent=1)     # never used again - facts come from the dossier
         say("[dossier] the box words your AI once wrote from memory are dropped from the card - every printed fact "
@@ -212,12 +223,17 @@ def pipeline(cid, redo=False):
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in jload(vj, [])} if not redo else {}
     use, quick = V.model(), V.quick_model()
+    seen_q = collections.Counter()
+    q_of = lambda f: str(f.get("title", "")).replace("Google Images:", "").split("|")[0].strip().lower()
     for i, f in enumerate(found):
-        f["order"] = i
-        f["vet"] = (old.get(f["file"]) or {}).get("vet")
+        seen_q[q_of(f)] += 1
+        f["order"] = seen_q[q_of(f)] - 1                         # its place in its OWN search (a later hunt's photos
+        f["vet"] = (old.get(f["file"]) or {}).get("vet")         # are not pushed down for coming later)
         fv = f["vet"]
         if fv and note and (fv.get("note") != note[:200] or fv.get("note_rule") != V.NOTE_RULE):
             f["vet"] = fv = None                                 # judged before your note: looked at again with it
+        if fv and (card.get("era_version") or {}).get("names") and fv.get("era_names") != card["era_version"]["names"]:
+            f["vet"] = fv = None                                 # judged before it knew the era's own name and look
         if fv and not note and fv.get("note"):
             for k in ("note", "note_ok", "note_rule"):           # judged against a note since taken off: that part
                 fv.pop(k, None)                                  # of the answer no longer counts
@@ -225,7 +241,9 @@ def pipeline(cid, redo=False):
             import era as ERA                                    # how far outside the era ("90s"), by today's rule
             o = ERA.off(fv.get("made_year"), year)
             fv.pop("year_off", None) if o is None else fv.__setitem__("year_off", o)
-    todo = [f for f in found if not f["vet"]][:60]                       # 60 a round, in Google's order
+    era_q = {s.lower().strip() for s in (card.get("era_version") or {}).get("searches") or []}
+    todo = sorted([f for f in found if not f["vet"]], key=lambda f: (q_of(f) not in era_q, f["order"]))[:60]
+    # 60 a round: photos found by the era's own name first ("90s Duracell PowerCheck"), each search in Google's order
     if quick and len(todo) > 12:
         for k, f in enumerate(todo, 1):
             f["quick"] = V.vet(f["file"], disp, use=quick, think=False, card=card) or {}
@@ -272,6 +290,8 @@ def pipeline(cid, redo=False):
             return
         open(os.path.join(d, f"round_{rounds + 1}"), "w").write("")
         status(cid, step=f"you said none fit - digging deeper (round {rounds + 2})")
+        import cards as CD                                        # what was it really called back then? asked again
+        CD.era_version(cid, card, use, log=say, evidence=era_evidence(d), refresh=True)   # with what photos showed
         hunt.run(cid, product.split(",")[0], year, log=say, extra=more_searches(card, use))
         return pipeline(cid, redo=False)
     if not picked:
@@ -748,6 +768,17 @@ def size_fits(f, size_m, tol=0.35):
     return int((f.get("vet") or {}).get("count") or 1) > 1
 
 
+def era_evidence(d):
+    """Names read on photos a judge placed in the item's era (a real photo, a fair match): what the item was really
+    called on its label back then, from the photos themselves."""
+    out = []
+    for f in jload(os.path.join(d, "vetted.json"), []):
+        v = f.get("vet") or {}
+        if v.get("era_ok") is True and v.get("kind") == "photo" and int(v.get("match") or 0) >= 4 and v.get("version_seen"):
+            out.append(str(v["version_seen"])[:80])
+    return out
+
+
 def more_searches(card, use):
     """When you turn every photo down: different searches than last time, the way a collector digs. Search words
     only (never facts); none that already ran."""
@@ -755,8 +786,13 @@ def more_searches(card, use):
     ran = {s.lower().strip() for s in card.get("searches", [])}
     ran |= {str(f.get("title", "")).replace("Google Images:", "").strip().lower()
             for f in jload(os.path.join(WORK, "hunt", card.get("id", ""), "found.json"), [])}
-    q = (f"I need real photos of this exact old product: {card['product']}. It is recognized by: "
-         f"{'; '.join(card.get('recognize', []))}. These searches did not find it: {'; '.join(sorted(ran)[:20])}. "
+    ev = card.get("era_version") or {}
+    import era as ERA
+    era_w = ERA.words(card.get("year")) if card.get("year") else ""
+    q = (f"I need real photos of this exact old product: {card['product']}"
+         + (f" - in the {era_w} it was sold as {' / '.join(ev['names'])}" if ev.get("names") else "")
+         + f". It is recognized by: {'; '.join(list(ev.get('marks') or []) + card.get('recognize', []))}. "
+         + f"These searches did not find it: {'; '.join(sorted(ran)[:20])}. "
          "Give 5 different Google Images searches a collector would type (other names it was sold under, its "
          "model or catalog number, 'vintage', 'NOS', 'eBay', the decade), each 2 to 7 words. "
          "Answer ONLY JSON: {\"searches\": [\"...\"]}")
@@ -768,10 +804,10 @@ def more_searches(card, use):
     except Exception as e:
         say(f"[hunt] no new searches from your AI: {e}")
         out = []
-    name, yr = card["product"].split(",")[0], card.get("year")
-    plain = [f"{str(yr)[2]}0s {name}" if yr and yr < 2000 else name, f"vintage {name} {yr or ''}", f"{name} NOS",
-             f"old {name} ebay"]                                  # a collector's plain searches if your AI gave none
-    out = [re.sub(r"\s+", " ", x).strip() for x in out + plain]
+    name = (ev.get("names") or [card["product"].split(",")[0]])[0]   # the era's own name first
+    plain = [f"{era_w} {name}", f"vintage {name} {era_w}", f"{name} NOS", f"old {name} ebay"]   # a collector's
+    out = [re.sub(r"\s+", " ", ERA.in_words(x, card.get("year")) if card.get("year") else x).strip()   # plain searches
+           for x in out + plain]
     out = list(dict.fromkeys(x for x in out if x and x.lower() not in ran and len(x.split()) <= 9))[:5]
     say("[hunt] digging deeper with: " + "; ".join(out))
     return out

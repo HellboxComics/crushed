@@ -142,5 +142,60 @@ def make(cid, model=None, redo=False, log=print):
     return card
 
 
+ERA_Q = """Catalog item: {product}. Its era: {era} (any year in that range).
+A catalog name can use a later or more general name than the one printed on the item back then. From what you know
+about this product line, answer for THAT era's version only:
+{{"names": [1 to 3 names it was actually sold under in {words}, exactly as its own label or package said them then
+            (brand + line + version, e.g. a model or feature name of that time)],
+ "marks": [3 to 5 things you can SEE on that era's version that a later or earlier one doesn't have (a feature
+           printed on it, a logo style, colors, a tester, a slogan)],
+ "not_then": [1 to 3 visible things that would mean a photo shows a later or earlier version],
+ "searches": [5 short Google Images searches (2 to 6 words) that find photos of THAT era's version: use its own
+              name from then and era words like "{words}" or "vintage" - never one exact year]}}
+Answer ONLY the JSON."""
+
+
+def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
+    """What the item was called and looked like IN ITS ERA ("90s"), from your AI's own knowledge plus what the photos
+    found so far showed (evidence: names read on photos judged to be from the right era). The catalog may call a
+    1998 Duracell "Coppertop" while the 90s battery itself said "PowerCheck" (2026-10-03) - the hunt, the photo
+    judge and the pick all use the era's own names and marks. Kept on the card; asked again when the evidence or
+    the era changes."""
+    import era as ERA
+    sys.path.insert(0, HERE)
+    import vet as V
+    y = card.get("year")
+    if not y:
+        return card.get("era_version") or {}
+    ev = sorted({str(e).strip()[:80] for e in evidence if str(e).strip()})[:12]
+    old = card.get("era_version") or {}
+    if old.get("era") == ERA.words(y) and old.get("names") and not refresh:
+        return old                                    # worked out once; asked again only after you turn photos down
+    q = ERA_Q.format(product=card.get("product"), era=ERA.describe(y), words=ERA.words(y))
+    if ev:
+        q += ("\nPhotos already found that a judge placed in that era show the item labeled as: " + "; ".join(ev)
+              + ". Use them: a name printed on those photos is better evidence than memory.")
+    model = model or V.model()
+    try:
+        body = {"model": model, "stream": False, "format": "json", "think": True, "options": {"temperature": 0},
+                "messages": [{"role": "user", "content": q}]}
+        txt = V._call("/api/chat", body).get("message", {}).get("content", "{}")
+        v = json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+    except Exception as e:
+        log(f"[card] {cid}: could not work out the era's own version ({e})")
+        return old
+    clean = lambda k, n: [str(x).strip()[:80] for x in v.get(k) or [] if str(x).strip()][:n]
+    ev_out = {"era": ERA.words(y), "evidence": ev, "names": clean("names", 3), "marks": clean("marks", 5),
+              "not_then": clean("not_then", 3),
+              "searches": [ERA.in_words(x, y) for x in clean("searches", 5)]}
+    card["era_version"] = ev_out
+    if os.environ.get("CRUSHED_TRIAL") != "1":
+        os.makedirs(DIR, exist_ok=True)
+        json.dump(card, open(path(cid), "w"), indent=1)
+    log(f"[card] {cid}: in the {ev_out['era']} it was sold as {', '.join(ev_out['names']) or '?'}; marks of that "
+        f"version: {'; '.join(ev_out['marks'])}")
+    return ev_out
+
+
 if __name__ == "__main__":
     print(json.dumps(make(sys.argv[1], redo="--redo" in sys.argv), indent=1))

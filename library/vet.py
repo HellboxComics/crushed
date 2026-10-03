@@ -118,9 +118,12 @@ def vet(path, display, era="", use=None, think=True, card=None):
     card = card or {}
     note = str(card.get("owner_note") or "").strip()
     import era as ERA
+    ev = card.get("era_version") or {}                  # what it was called and looked like in its era
+    if ev.get("names"):
+        display = f"{display} - in its era it was sold as: {' / '.join(ev['names'])}"
     q = ASK.format(display=display, era=ERA.describe(card.get("year")) if card.get("year") else "unknown",
-                   recognize="; ".join(card.get("recognize", [])) or "(none listed)",
-                   avoid="; ".join(card.get("avoid", [])) or "(none listed)",
+                   recognize="; ".join(list(ev.get("marks") or []) + list(card.get("recognize", []))) or "(none listed)",
+                   avoid="; ".join(list(ev.get("not_then") or []) + list(card.get("avoid", []))) or "(none listed)",
                    note_field=NOTE_FIELD.format(note=note.replace('"', "'")) if note else "")
     try:
         v = ask(use, q, [path], think)
@@ -131,6 +134,7 @@ def vet(path, display, era="", use=None, think=True, card=None):
         o = ERA.off(v.get("made_year"), card.get("year"))      # years outside the item's era (0 = inside it)
         if o is not None:
             v["year_off"] = o
+    v["era_names"] = list(ev.get("names") or [])        # judged knowing the era's own names (changed: look again)
     if note:
         v["note"] = note[:200]                          # judged against this note (a new note means a new look)
         v["note_rule"] = NOTE_RULE
