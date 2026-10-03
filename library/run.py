@@ -2104,6 +2104,11 @@ if __name__ == "__main__":
         except Exception as e:
             say(f"[speed] skipped: {e}")
         try:
+            import brainjobs                            # one brain per job, chosen by a photo exam (timed)
+            brainjobs.setup(log=say)
+        except Exception as e:
+            say(f"[brains] skipped: {e}")
+        try:
             import families                             # the organic builder not proven yet: test it once a day
             tlog = os.path.join(WORK, "hunyuan_test.log")
             if not families.organic_ready() and (not os.path.exists(tlog) or time.time() - os.path.getmtime(tlog) > 86400):

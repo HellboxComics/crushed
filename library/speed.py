@@ -57,7 +57,12 @@ def _wait(up, seconds):
 
 
 def restart_ollama(log=print):
-    """Restart the brain server the way it was started, so it reads the new setting. -> what was done"""
+    """Restart the brain server the way it was started, so it reads the new setting. -> what was done
+    Never while one of Cody's brain tests is running (it owns the brain server)."""
+    import vet as V
+    if V._test_running():
+        log("[speed] one of your brain tests is running - the brain server is not restarted now")
+        return False
     ps = _sh(["pgrep", "-fl", "ollama"]).stdout
     labels = [ln.split()[-1] for ln in _sh(["launchctl", "list"]).stdout.splitlines() if "ollama" in ln.lower()]
     if "Ollama.app" in ps or (not ps.strip() and os.path.exists("/Applications/Ollama.app")):

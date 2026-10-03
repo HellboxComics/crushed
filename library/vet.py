@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -19,7 +20,23 @@ CTX = 32768   # one memory size for every question to the brain: Ollama reloads 
 #               and a question with a photo plus a long think must never run out of room (it is cut silently)
 
 
+def _test_running():
+    """One of Cody's brain tests is scoring a brain right now (the suite's testlock): hands off the brain server -
+    his rule, 2026-09-23: "When a brain is testing, all other operations that use said brain need to be refused"."""
+    try:
+        sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
+        import testlock
+        return testlock.testing() and not testlock.mine()
+    except Exception:
+        return False
+
+
 def _call(path, body, timeout=900):
+    if path in ("/api/chat", "/api/generate") and (body.get("messages") or body.get("prompt")):
+        waited = 0
+        while _test_running() and waited < 3 * 3600:      # wait for the test to finish (checked every minute)
+            time.sleep(60)
+            waited += 60
     if path in ("/api/chat", "/api/generate") and body.get("model") and (body.get("messages") or body.get("prompt")):
         body = dict(body, options=dict(body.get("options") or {}))
         if int(body["options"].get("num_ctx") or 0) < CTX:
@@ -90,14 +107,22 @@ def _first(names):
     return None
 
 
+def _job(name):
+    try:
+        import brainjobs
+        return brainjobs.job(name)
+    except Exception:
+        return None
+
+
 def model():
-    """The judge: the best vision model on the Mac."""
-    return _first(PREFER)
+    """The judge (careful looks): the brain that did best on the photo exam (brainjobs.py); else the usual list."""
+    return _job("judge") or _first(PREFER)
 
 
 def quick_model():
-    """The quick first look, only used to throw out obvious misses when there are many photos."""
-    q = _first(QUICK)
+    """The quick look (sorting many photos): the fastest brain that still sorts right on the exam; else the list."""
+    q = _job("sort") or _first(QUICK)
     return q if q and q != model() else None
 
 
