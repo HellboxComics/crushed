@@ -84,6 +84,13 @@ def sides(cid, renders, dos, use, route, product="", log=print):
             ref_note = "The real photo shows this exact item."
         else:
             ref_note = "There is no real photo of this side; judge the model's side on the list and the print only."
+            try:                                          # what this kind of thing normally has there (the kit)
+                import kits
+                typ = kits.typical(kits.get(dos.get("family_lib") or ""), face)
+                if typ:
+                    ref_note += " On this kind of item this side normally is: " + "; ".join(typ) + "."
+            except Exception:
+                pass
         for order in ((model, ref), (ref, model)) if ref else ((model,),):
             imgs = [x for x in order if x]
             if ref:

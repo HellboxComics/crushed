@@ -38,8 +38,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 3                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+VERSION = 4                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
+#                              4: a round end's reference photo must show that end end-on (a disc)
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
 LOOK = 2                     # careful looks per side (the quick look already ranks every photo)
@@ -610,6 +611,18 @@ def _els_on(p, fe, primary, route=None):
             and not FX.not_printed(e.get("text"))]
 
 
+def _end_on(fe):
+    """A round item's end seen as a disc: squarely, and about as tall as wide in the photo (a battery seen lying
+    down has its end as a thin ellipse at best)."""
+    if not fe.get("straight_on"):
+        return False
+    b = fe.get("box")
+    if not b:
+        return True
+    w, h = b[2] - b[0], b[3] - b[1]
+    return w > 0 and h > 0 and 0.6 <= h / w <= 1.7
+
+
 def _covered(p, fe):
     """Is something laid over this side in this photo (a watermark, a sticker, a hand)? A side that is covered is
     never copied onto the model (it may still show where things go)."""
@@ -643,6 +656,10 @@ def plan(dos):
                     continue
                 if fe.get("edge_on") or (route == "round" and F in seen_here):
                     continue                                  # (a round item's label: the photo counts once)
+                if route == "round" and F in ("top", "bottom") and not _end_on(fe):
+                    continue                                  # a round end is only a reference seen END-ON (a disc):
+                #                                               a battery lying down shows its label, not its end -
+                #                                               the judge compared a bottom disc to a label (2026-10-03)
                 seen_here.add(F)
                 q = (p.get("quality") or 0) * (1.0 if i == 0 else 0.6) * (0.85 if fe["face"] == "side" else 1.0)
                 cands.append((q, p, fe))
