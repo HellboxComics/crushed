@@ -1,2 +1,4 @@
 # LESSONS - what the asset engineer learned (symptom -> cause -> fix), newest last
 
+- (2026-10-02, duracell_coppertop_aa_1998) SEEN: a thin silver ring at the battery's top, outside the copper label | CAUSE: the recipe's steel can wall (an inside part) reached past the label where the label curls over the shoulder - nothing kept inside parts inside the outer shell | FIX: lathe.fit_inside() keeps every inside point within the outer profile less the shell thickness; measure_inside_fit catches any builder that forgets
+- (2026-10-02, duracell_coppertop_aa_1998) SEEN: the battery's steel ends read as dull gray plastic | CAUSE: steel base color 0.42 - darker than any real steel or nickel (0.55-0.75 linear) | FIX: shapes/realmat.fit() keeps every material in its real range (materials.json); measure_materials catches values outside it

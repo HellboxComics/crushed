@@ -56,7 +56,10 @@ ASK = """Product: {display}
 Things that mark the right version: {recognize}
 Things that would mean a different version: {avoid}
 Look at this photo and answer ONLY with JSON, no other words:
-{{"match": 0-10 how surely this shows this product (right brand and kind of item),
+{{"match": 0-10 how surely this shows EXACTLY this product: the right brand, line, flavor/model/version and count,
+           in the design of that era (a different flavor or version, or a modern redesign, is at most 4),
+  "era_ok": true if the package/design looks like it is from the product's era (its year +/- 3), false if not,
+  "version_seen": "the flavor / model / version and count you can read in the photo, or empty",
   "seen": how many of the "right version" things you can actually see in this photo (0 if none),
   "avoid_seen": true if any of the "different version" things is visible,
   "count": how many of the product are visible,
@@ -65,7 +68,8 @@ Look at this photo and answer ONLY with JSON, no other words:
   "sharp": true if it is in focus and its printing is readable,
   "whole": true if the whole item is in the picture (not cut off, not mostly hidden),
   "kind": "photo" if a real photograph of a physical item, "render" if computer-made, "ad" if an advertisement or
-          graphic with added words, "package" if the item is still inside retail packaging,
+          graphic with added words, "package" if the item is still inside retail packaging (when the product IS
+          a package - a box, a bag, a can - a real photo of it is "photo"),
   "problems": "short note of anything wrong, or empty"}}"""
 
 

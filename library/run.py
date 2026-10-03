@@ -142,7 +142,9 @@ def pipeline(cid, redo=False):
     # your Keep / Redo from last time
     ap = jload(os.path.join(HB, "approvals.json"), {})
     if ap.get(cid, {}).get("say") == "keep":
-        file_away(cid, d)
+        r = file_away(cid, d)
+        if not r.get("ok"):
+            status(cid, step=f"stopped: delivery check failed: {r.get('why')}"[:300], ok=False)
         return
     fresh = redo                                                 # the dossier is made again on --redo or your Redo
     if ap.get(cid, {}).get("say") == "redo":
@@ -156,13 +158,29 @@ def pipeline(cid, redo=False):
         say("[dossier] the box words your AI once wrote from memory are dropped from the card - every printed fact "
             "now comes from the dossier, with its receipt")
     product, size, year, route = card["product"], card["size"], card.get("year"), card["route"]
+    import notes as NT                                           # your notes on this item: your AI follows them
+    note = NT.text(cid)
+    if note:
+        card["owner_note"] = note
+        if NT.apply_repick(cid, d, HB, log=say):                 # a note asking for another version: hunt + pick again
+            status(cid, product=product, route=route, step=f"your note: \"{note[:80]}\" - hunting that version")
+            extra = NT.searches(card, note, V.model(), log=say)
+            hunt.run(cid, product.split(",")[0], year, log=say, extra=extra or card["searches"])
+            fresh = True
+    disp = product + (f" (the owner's note: {note})" if note else "")   # what the photo judge looks for
 
     def go(picked, others, use, n_found, n_good):
         """Know the object before building it: the dossier (every side planned, every fact with a receipt) is
         made or refreshed right after the pick, then the build follows it."""
         import dossier as DS
-        if route in ("box", "flat"):
-            family_of(card, use)                                 # a circuit card has other sides than a box
+        import families
+        status(cid, step="4/7 your AI decides what kind of thing it is (its family) from the photo")
+        make_room("judging")
+        fl = families.classify(card, picked["file"], use, log=say, redo=fresh, notes=note)
+        family_of(card, use)                                 # its manufacturing family too (recipes, contents)
+        if not TRIAL:
+            json.dump(card, open(cards.path(cid), "w"), indent=1)
+        say(f"[family] {cid}: {fl['family']} ({fl['confidence']}/10): {fl['why']}")
         status(cid, step="4/7 your AI gets to know the item: every side hunted, every fact with a receipt")
         make_room("judging")
         DS.ensure(cid, card, picked, use=use, redo=fresh, log=say)
@@ -197,7 +215,7 @@ def pipeline(cid, redo=False):
     todo = [f for f in found if not f["vet"]][:60]                       # 60 a round, in Google's order
     if quick and len(todo) > 12:
         for k, f in enumerate(todo, 1):
-            f["quick"] = V.vet(f["file"], product, use=quick, think=False, card=card) or {}
+            f["quick"] = V.vet(f["file"], disp, use=quick, think=False, card=card) or {}
             say(f"[quick look {k}/{len(todo)}] {os.path.basename(f['file'])}: match {f['quick'].get('match')}, "
                 f"marks seen {f['quick'].get('seen')}, {f['quick'].get('kind')}")
         todo.sort(key=lambda f: -rank(dict(f, vet=f["quick"])))
@@ -206,7 +224,7 @@ def pipeline(cid, redo=False):
         todo = todo[:12]
     for k, f in enumerate(todo, 1):
         status(cid, step=f"3/7 {use} ranks the best photos: {k} of {len(todo)}")
-        f["vet"] = V.vet(f["file"], product, use=use, think=False, card=card)
+        f["vet"] = V.vet(f["file"], disp, use=use, think=True, card=card)
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
     json.dump(found, open(vj, "w"), indent=1)
 
@@ -228,6 +246,7 @@ def pipeline(cid, redo=False):
     shown = jload(os.path.join(d, "shown.json"), [])
     cands = [f for f in found if f.get("mask") and f.get("vet") and f["vet"].get("match", 0) >= 7
              and f["vet"].get("sharp", True) is not False and f["vet"].get("whole", True) is not False
+             and f["vet"].get("era_ok", True) is not False
              and f["file"] not in shown and size_fits(f, size)]
     cands.sort(key=lambda f: -rank(f))
     auto_pick(cid, cands[:9], d)                              # a clear winner is picked without asking you
@@ -252,11 +271,25 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     follows its dossier (made by pipeline right after your pick; made here if it isn't there yet, and made again
     with redo=True)."""
     from PIL import Image
-    product, size, route = card["product"], card["size"], card["route"]
+    import families
+    product, size = card["product"], card["size"]
+    # WHAT KIND OF THING IS THIS: the family your AI read from the photo decides the builder (family_library.json)
+    fl = card.get("family_lib") or families.classify(card, picked["file"], use, log=say,
+                                                     notes=card.get("owner_note", ""))
+    fam = families.get(fl.get("family", "general"))
+    bld, why = families.builder(fam)
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
-        route = "round"
+        bld, why = "lathe", "a measured master shape"          # the AA battery, measured by hand
+    route = {"lathe": "round", "pcb": "pcb", "carton": "box", "box": fam.get("route", "box"),
+             "organic": "free", "assembly": "assembly"}.get(bld, "assembly")
+    if route not in ("round", "pcb", "box", "flat", "free", "assembly"):
+        route = "box"
+    say(f"[family] {cid}: {fam['family']} -> built by '{bld}' ({why})")
+    card["built_by"] = {"family": fam["family"], "builder": bld, "why": why, "gaps": fam.get("gaps", [])}
+    import dossier as DS                                     # every route knows the object before it is built
+    DS.ensure(cid, card, picked, use=use, redo=redo, log=say)
 
-    # 5. BUILD by the card's route
+    # 5. BUILD by the family's builder
     if route == "round":
         import metal
         import outline
@@ -324,7 +357,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         for ext in ("glb", "fbx", "usdc", "blend"):
             if os.path.exists(os.path.join(mdir, spec["id"] + "." + ext)):
                 shutil.copy(os.path.join(mdir, spec["id"] + "." + ext), os.path.join(mdir, cid + "." + ext))
-    elif route in ("box", "flat") and family_of(card, use) == "printed_circuit_card":
+    elif route == "pcb":
         # a circuit card is a board with parts standing on it - built part by part, never a printed slab
         import dossier as DS
         import skin
@@ -353,6 +386,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         mats = cards.materials(card)
         surface = ("card" if "printed_card" in mats else "plastic" if "molded_plastic" in mats else
                    "card" if any(k in str(card.get("mat", "")).lower() for k in ("card", "paper", "board")) else "plastic")
+        surface = {"rigid_case": "plastic", "flat_printed": "card", "folding_carton": "card"}.get(fam["family"], surface)
         era = None
         if (dos.get("identity") or {}).get("kind", "packaging") == "packaging" and dos.get("facts"):
             import eraprint                              # the printed facts with receipts, for the sides no photo shows
@@ -364,8 +398,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         atlas, got = skin.box_skin(product, W, D, H, shots, os.path.join(d, "skin"),
                                    flat=route == "flat", judge=use, log=say, era=era, dossier=dos)
         status(cid, step="5/7 Blender: the carton made like the factory makes it (flat sheet, creased, folded)"
-               if surface == "card" and route == "box" else "5/7 Blender: mesh + UV map + texture map + material")
-        if surface == "card" and route == "box":         # a folding carton: its dieline, folded, with what's inside
+               if bld == "carton" else "5/7 Blender: mesh + UV map + texture map + material")
+        if bld == "carton":                              # a folding carton: its dieline, folded, with what's inside
             import facts as FX
             contents = FX.carton_contents(dos, W, D, H, os.path.join(d, "contents.json")) or ""
             cf_ = (dos.get("facts") or {}).get("contents") or {}
@@ -375,10 +409,21 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         else:
             run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
                         "0.3" if route == "flat" else "0.6", surface)
+    elif route == "assembly":
+        # THE GENERAL ONE-OFF BUILDER: your AI breaks the object into its real parts from every photo of it, and
+        # each part is built as its own solid with its own material, at real size (parts.py + shapes/assembly.py)
+        import dossier as DS
+        import parts as PT
+        dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)
+        status(cid, step="5/7 your AI breaks the object into its real parts (every side the dossier found)")
+        make_room("judging")
+        plan = PT.plan(cid, card, dos, use, os.path.join(d, "parts_plan.json"), log=say,
+                       notes=card.get("owner_note", ""))
+        status(cid, step=f"5/7 Blender: {len(plan['parts'])} parts, each its own solid with its own material")
+        run_blender("assembly.py", os.path.join(d, "parts_plan.json"), mdir, cid)
     else:
-        st = jload(os.path.join(WORK, "selftest.json"), {})
-        if not st.get("hunyuan_ok", True):
-            raise RuntimeError("Hunyuan3D is not working on this Mac yet: " + str(st.get("hunyuan_note", ""))[-200:])
+        if not families.organic_ready():
+            raise RuntimeError("the organic builder (Hunyuan3D) has not proven it works on this Mac yet")
         ref = reference(picked, d)
         status(cid, step="5/7 Hunyuan3D makes the shape and paint from your photo")
         make_room("drawing")
@@ -407,7 +452,26 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     except Exception as e:
         say(f"[check] viewer shots skipped ({e}) - the studio pictures are used")
     make_room("judging")
+    # THE EXACT CHECKS first (measure.py): size, every side, barcode scan, printed words read off the model,
+    # materials, mesh, inside parts showing through, the phone copy - measured, never guessed
+    import dossier as DS
+    import judge
+    import measure
+    dos_now = DS.load(cid) or {"size_m": size, "faces": {}, "facts": {}}
+    status(cid, step="6/7 the exact checks: real size, every side, barcode, printed words, materials, insides")
+    m = measure.run(cid, d, glb, dos_now, route if route in ("round", "flat", "pcb") else "box", fam=fam,
+                    shots=[x for x in (shots, close) if x], web_glb=os.path.join(mdir, cid + "_web.glb"), use=use,
+                    log=say)
+    say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
+    status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
+    j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say)
     verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
+    looked = verdict.get("problems")
+    looked = looked if isinstance(looked, list) else ([str(looked)] if looked else [])
+    failed = [f"measure_{k}" for k in m["failed"]] + j["failed"] + list(verdict.get("failed", []))
+    verdict = dict(verdict, failed=failed, pass_=not failed, measure=m["checks"], sides=j["faces"],
+                   problems=m["problems"] + j["problems"] + looked)
+    verdict["pass"] = verdict.pop("pass_")
     say(f"[check] {cid}: " + ("passed every realism check" if verdict.get("pass") else
                               "failed: " + ", ".join(verdict.get("failed", [])) + " - " + str(verdict.get("problems"))[:300]))
     if TRIAL:                                                # the engineer's test: the result, nothing sent anywhere
@@ -422,7 +486,9 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     if setting("auto_keep") and verdict.get("pass"):           # the judge passed it: filed without asking you
         status(cid, verdict=verdict, views=os.path.relpath(shots, WORK),
                ref=os.path.relpath(picked["file"], WORK))
-        file_away(cid, d)
+        r = file_away(cid, d)
+        if not r.get("ok"):
+            status(cid, step=f"stopped: delivery check failed: {r.get('why')}"[:300], ok=False)
         return
     if not verdict.get("pass") and engineer_turn(cid):         # your AI's engineer works out why, and fixes the cause
         status(cid, step="failed the realism check - your AI's engineer is working out why", verdict=verdict,
@@ -577,6 +643,7 @@ def rank(f):
     v = f["vet"] or {}
     r = v.get("match", 0) + 3 * min(int(v.get("seen") or 0), 5)
     r -= 8 if v.get("avoid_seen") is True else 0
+    r -= 8 if v.get("era_ok") is False else 0                 # a modern redesign is not this item
     r += {"photo": 4, "package": 1, "render": -2, "ad": -4}.get(v.get("kind"), 0)
     r += 0.5 if v.get("view") == "front" else 0
     return r - f.get("order", 0) * 0.02
@@ -869,6 +936,13 @@ def file_away(cid, d):
     except Exception as e:
         say(f"[keep] {cid}: made_of.json skipped ({e})")
     dossier = jload(os.path.join(WORK, "dossier", cid + ".json"), None)
+    try:                                                   # the master-asset record (catalog.py): asset.json
+        import cards
+        import catalog
+        catalog.record(cid, tmp, cards.make(cid), dossier if isinstance(dossier, dict) else None,
+                       jload(os.path.join(tmp, "physics.json"), {}))
+    except Exception as e:
+        say(f"[keep] {cid}: the catalog record could not be written ({e})")
     deliver.write_readme(tmp, cid, product, not_here, dossier if isinstance(dossier, dict) else None)
 
     res = deliver.verify(tmp, cid)
@@ -1464,7 +1538,7 @@ def trial(cid, tdir, clear=(), judge_only=False):
     cards.construction(cid, card, log=say)
     os.makedirs(os.path.join(tdir, "model"), exist_ok=True)
     return build(cid, card, picked, [c for c in cands if c["file"] != picked["file"]], V.model(), tdir,
-                 os.path.join(tdir, "model"), 0, len(cands))
+                 os.path.join(tdir, "model"), 0, len(cands), redo="dossier" in clear)
 
 
 SYNC_STATE = os.path.join(WORK, "sync_state.json")
@@ -1798,6 +1872,15 @@ if __name__ == "__main__":
         _lock.close()
         os.execv(PY, [PY] + sys.argv)
     if a.loop:
+        sreq = os.path.join(WORK, "setup.request")  # Cody approved installing these free tools
+        if os.path.exists(sreq):
+            os.replace(sreq, sreq + ".done")
+            allowed = {"zxing-cpp", "ocrmac"}           # only these, ever: the exact checks' readers
+            want = [w for w in open(sreq + ".done").read().split() if w in allowed]
+            if want:
+                pr = subprocess.run([PY, "-m", "pip", "install", "-q", *want], capture_output=True, text=True,
+                                    timeout=900)
+                say(f"[setup] installed {', '.join(want)}: " + ("ok" if pr.returncode == 0 else (pr.stderr or pr.stdout)[-300:]))
         try:
             resend()                                    # first: anything that never reached your phone
         except Exception as e:
@@ -1809,12 +1892,17 @@ if __name__ == "__main__":
         age = time.time() - last.get("at", 0)
         if not last.get("ok", True) and age < 3600:     # it failed lately: no rerun (and no phone alarm) for an hour
             sys.exit(0)
-        fresh = last.get("ok") and age < 6 * 3600
+        head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        fresh = last.get("ok") and age < 6 * 3600 and last.get("code") == head   # new code: every piece checked again
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
             say("self-test failed - nothing run (the reason is on your phone)")
             sys.exit(1)
         try:
-            hunyuan_test_request()                      # Claude asked: does Hunyuan make a shape from its own demo?
+            import families                             # the organic builder not proven yet: test it once a day
+            tlog = os.path.join(WORK, "hunyuan_test.log")
+            if not families.organic_ready() and (not os.path.exists(tlog) or time.time() - os.path.getmtime(tlog) > 86400):
+                open(os.path.join(WORK, "hunyuan_test.request"), "w").write("daily check: not proven yet\n")
+            hunyuan_test_request()                      # does Hunyuan make a shape from its own demo picture?
         except Exception as e:
             say(f"[hunyuan test] skipped: {e}")
         quiet = 0

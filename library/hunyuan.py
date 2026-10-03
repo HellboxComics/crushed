@@ -176,8 +176,24 @@ def test():
         import glob
         demo = (glob.glob(os.path.join(hy, "assets", "**", "*.png"), recursive=True) or [None])[0]
     print(f"[hunyuan] test picture: {demo}", flush=True)
-    out = os.path.join(os.path.expanduser("~/crushed-render/remaster"), "hunyuan_test")
-    print(main(demo, out, shape_only=True), flush=True)
+    work = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
+    out = os.path.join(work, "hunyuan_test")
+    proof = os.path.join(work, "hunyuan_proven.json")
+    if os.path.exists(proof):                       # an old proof never stands in for this test
+        os.replace(proof, proof + ".before")
+    shape = main(demo, out, shape_only=True)
+    print(shape, flush=True)
+    try:                                            # PROOF the organic builder works: a real shape with real faces
+        import json
+        import trimesh
+        m = trimesh.load(shape, force="mesh")
+        ok = len(m.faces) > 1000 and float(min(m.extents)) > 0
+        json.dump({"ok": ok, "at": time.time(), "faces": int(len(m.faces)), "shape": shape,
+                   "note": "proven: made a real shape from its own demo picture" if ok else "the shape came out empty"},
+                  open(proof, "w"), indent=1)
+        print(f"[hunyuan] proof: {'a real shape' if ok else 'empty shape'} ({len(m.faces)} faces)", flush=True)
+    except Exception as e:
+        print(f"[hunyuan] no proof: {e}", flush=True)
 
 
 if __name__ == "__main__":

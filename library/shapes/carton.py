@@ -253,7 +253,8 @@ physics(box, R["board"]["kind"], "carton")
 parts = [box]
 
 # ------------------------------------------------------------------ 4. what's inside
-C = R.get("contents", {}).get(CONTENTS)
+C = (json.load(open(CONTENTS)) if CONTENTS.endswith(".json") and os.path.exists(CONTENTS)   # from the item's dossier
+     else R.get("contents", {}).get(CONTENTS))
 if C:
     pw, ph, pd = C["pouch_mm"]
     sw, sh, sd = C["pastry_mm"]
@@ -302,24 +303,30 @@ if C:
         return o
 
     k = 0
-    for row in range(2):                                   # two high
-        for col in range(2):                               # two deep
+    rows_, cols_ = int(C.get("rows", 2)), int(C.get("cols", 2))
+    for row in range(rows_):                               # how many high
+        for col in range(cols_):                           # how many deep
+            if k >= int(C.get("pouches", rows_ * cols_)):
+                break
             cx = 0.0
             cy = -D / 2 + T * 3 + pd / 2 + col * (pd + 0.6)
             cz = T * 4 + ph / 2 + row * (ph + 1.0)
             k += 1
-            po = rounded_box(f"pouch_{k}", pw, pd, ph, (cx * S, cy * S, cz * S), [foil], bevel=4)
-            # a pouch is a pillow: its middle bulges a little, its sealed ends are pinched flat
-            for v in po.data.vertices:
-                fx = 1 - min(1, abs(v.co.x) / (pw / 2 * S))
-                v.co.y = cy * S + (v.co.y - cy * S) * (0.75 + 0.25 * math.sin(math.pi * min(1, fx * 1.6) / 2))
-            physics(po, C["pouch_kind"], "pouch")
-            parts.append(po)
+            if not C.get("loose"):                         # items packed in pouches; loose items sit in the box
+                po = rounded_box(f"pouch_{k}", pw, pd, ph, (cx * S, cy * S, cz * S), [foil], bevel=4)
+                # a pouch is a pillow: its middle bulges a little, its sealed ends are pinched flat
+                for v in po.data.vertices:
+                    fx = 1 - min(1, abs(v.co.x) / (pw / 2 * S))
+                    v.co.y = cy * S + (v.co.y - cy * S) * (0.75 + 0.25 * math.sin(math.pi * min(1, fx * 1.6) / 2))
+                physics(po, C["pouch_kind"], "pouch")
+                po["inside"] = True                        # inside the box: must never show through it
+                parts.append(po)
             for s_ in range(C["per_pouch"]):               # the pastries in it, stacked
                 py = cy - pd / 2 + 2.5 + sd / 2 + s_ * (sd + 0.4)
                 pa = rounded_box(f"pastry_{k}_{s_ + 1}", sw, sd, sh, (cx * S, py * S, cz * S), [pastry_mat, crust_mat],
                                  bevel=3)
                 physics(pa, C["pastry_kind"], "pastry")
+                pa["inside"] = True
                 parts.append(pa)
 
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in parts},

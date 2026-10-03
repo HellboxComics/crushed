@@ -160,9 +160,17 @@ for name in parts:
     mt.use_nodes = True
     L = mt.node_tree.links
     bsdf = mt.node_tree.nodes["Principled BSDF"]
-    bsdf.inputs["Base Color"].default_value = (*m.get("color", [0.8, 0.8, 0.8]), 1)
-    bsdf.inputs["Metallic"].default_value = m.get("metallic", 0.0)
-    bsdf.inputs["Roughness"].default_value = m.get("roughness", 0.5)
+    mkind = m.get("kind") or ("printed_plastic_sleeve" if name == "label" else "bare_steel" if name == "steel" else
+                              "molded_plastic")
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import realmat                                       # every material inside its real-world range
+    col, met, rou = realmat.fit(mkind, m.get("color", [0.8, 0.8, 0.8]), m.get("metallic", 0.0),
+                                m.get("roughness", 0.5), name) if name != "label" else \
+        (m.get("color", [0.8, 0.8, 0.8]), m.get("metallic", 0.0), m.get("roughness", 0.5))
+    m = dict(m, color=col, metallic=met, roughness=rou)
+    bsdf.inputs["Base Color"].default_value = (*col, 1)
+    bsdf.inputs["Metallic"].default_value = met
+    bsdf.inputs["Roughness"].default_value = rou
     kind = m.get("finish", DEFAULT_FINISH.get(name))
     px = 2048 if name == "label" else 1024              # small parts don't need big maps (keeps the file light)
     kw = {"base_rough": m.get("roughness", 0.4)}
@@ -261,12 +269,47 @@ for o in [o for o in bpy.context.scene.objects if o.type == "MESH"]:
     parts_out.append(o)
 
 
+_ENV = [(a[0], a[1], b[0], b[1]) for p in spec["profile"] for a, b in zip(p["pts"], p["pts"][1:])]
+_ZLO = min(min(e[1], e[3]) for e in _ENV)
+_ZHI = max(max(e[1], e[3]) for e in _ENV)
+_SKIN = max([PHYS.get(spec["materials"].get(p["part"], {}).get("kind", ""), {}).get("sheet_mm", 0) or 0
+             for p in spec["profile"]] + [0.11]) + 0.05
+
+
+def outer_r(z):
+    """How far out the OUTSIDE reaches at height z (mm) - the inside of the item must stay within it."""
+    best = 0.0
+    for r0, z0, r1, z1 in _ENV:
+        if min(z0, z1) - 1e-9 <= z <= max(z0, z1) + 1e-9:
+            best = max(best, max(r0, r1) if abs(z1 - z0) < 1e-9 else r0 + (r1 - r0) * (z - z0) / (z1 - z0))
+    return best
+
+
+def fit_inside(poly):
+    """THE INSIDE-FIT RULE (every round item): an inside part never reaches past the outside. Its outline is cut into
+    0.25 mm steps and every point is kept inside the outer shell (less the shell's own thickness) - so a can wall
+    follows the shoulder in under the label instead of poking out past it."""
+    pts = []
+    for (r0, z0), (r1, z1) in zip(poly, poly[1:] + poly[:1]):
+        n = max(1, int(math.hypot(r1 - r0, z1 - z0) / 0.25))
+        pts += [(r0 + (r1 - r0) * k / n, z0 + (z1 - z0) * k / n) for k in range(n)]
+    out, moved = [], 0.0
+    for r, z in pts:
+        z2 = min(max(z, _ZLO + _SKIN), _ZHI - _SKIN)
+        r2 = min(r, max(outer_r(z2) - _SKIN, 0.0))
+        moved = max(moved, r - r2, abs(z - z2))
+        out.append([r2, z2])
+    return out, moved
+
+
 def revolve(name, poly, segs=96):
     """A closed outline in (radius, height) mm spun into a watertight solid."""
     bm = bmesh.new()
     rings = []
+    poly, moved = fit_inside([[r * SR, z * SZ] for r, z in poly])
+    if moved > 0.01:
+        print(f"[lathe] {name}: kept inside the outer shell (moved in up to {moved:.2f} mm)")
     for r, z in poly:
-        r, z = r * SR, z * SZ
         if r <= 1e-9:
             rings.append([bm.verts.new((0, 0, z * S))])
         else:
@@ -346,11 +389,15 @@ for q in recipe.get("inside", []):
         mt2 = bpy.data.materials.new(nm)
         mt2.use_nodes = True
         b2 = mt2.node_tree.nodes["Principled BSDF"]
-        b2.inputs["Base Color"].default_value = (*q.get("color", [0.5, 0.5, 0.5]), 1)
-        b2.inputs["Metallic"].default_value = q.get("metallic", 0.0)
-        b2.inputs["Roughness"].default_value = q.get("roughness", 0.5)
+        import realmat                                   # inside parts too: real-world material values
+        c2, m2, r2 = realmat.fit(q.get("kind", "molded_plastic"), q.get("color", [0.5, 0.5, 0.5]),
+                                 q.get("metallic", 0.0), q.get("roughness", 0.5), nm)
+        b2.inputs["Base Color"].default_value = (*c2, 1)
+        b2.inputs["Metallic"].default_value = m2
+        b2.inputs["Roughness"].default_value = r2
         o2.data.materials.append(mt2)
         physics(o2, q.get("kind", "molded_plastic"), q["part"])
+        o2["inside"] = True                              # an inside part: it must never show through the outside
         parts_out.append(o2)
 
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in parts_out},

@@ -29,6 +29,42 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    session and goes into lessons.md only together with a fix that is kept; a lesson from a fix that is
    not kept is filed under "tried and not kept", so nobody walks that dead end again.
 
+## What the checks are (read the failed names this way)
+
+The verdict lists failed checks by name. Three kinds:
+- `measure_<name>` - an EXACT check (measure.py). These are measurements, not opinions, and they are the
+  most reliable evidence you have. Their pictures are in `build/measure/<side>.png` (a flat-lit, straight-on
+  picture of each side of the MODEL, magenta background) - look at them first.
+  - `measure_size`: the model's real size vs the dossier's. Cause: the builder's dimensions or the scale.
+  - `measure_sides`: a side missing from the model, or a printed side that came out one flat color. Cause:
+    the face art (skin.py / eraprint.py) or the UV map putting the art somewhere else.
+  - `measure_barcode`: the barcode on the model doesn't scan, or scans as the wrong number. Cause: the UPC
+    renderer (eraprint.upc), the face that carries it, or the texture resolution (bars too thin to read).
+  - `measure_text`: printed words the dossier lists were not read off the model. Cause: missing from the
+    face art, too small/blurry (resolution), cut off, or on the wrong side.
+  - `measure_materials`: a part's base color / metallic / roughness is outside the real range for its
+    material (materials.json). Cause: the spec/recipe values or a builder ignoring shapes/realmat.py.
+  - `measure_mesh`: spikes, inside-out parts, broken faces. Cause: geometry code (welds, normals, booleans).
+  - `measure_inside_fit`: an INSIDE part shows through the outside (seen from outside on more than 0.2% of
+    looks). Cause: an inside part reaching past the outer shell. Every builder must keep inside parts inside
+    the outer shell less its thickness (lathe.py does it in fit_inside(); do the same in any builder that
+    adds insides).
+  - `measure_web_copy`, `measure_viewer`: the phone copy is too big or missing; the viewer shows nothing.
+- `side_<face>` - one side of the model compared with the real photo of that side, looked at twice.
+- the realism names (`shape`, `print`, `materials`, `layers`, `details`, `no_painted_light`, `finished`,
+  `not_cg`) - the judge's look at the whole model in the phone viewer.
+
+## Families and builders
+
+Every item is first sorted into a FAMILY from its photo (family_library.json, families.py): folding
+carton, rigid case, media cartridge, circuit card, battery cell, can, bottle, wrapper, soft bag, molded
+device, clothing, footwear, organic toy, flat printed, or general. The family picks the builder:
+carton.py, box.py, lathe.py, pcb.py, the organic builder (Hunyuan, only once proven on this Mac), or the
+GENERAL builder for one-offs: parts.py (your AI breaks the object into its real parts from every photo)
++ shapes/assembly.py (builds each part). A family whose builder is missing uses the general builder.
+When a whole family keeps failing the same way, the fix belongs in that family's builder or recipe - or
+in the family library itself (a better description so items are sorted right, honest gaps).
+
 ## When is a fix kept (all of these, checked by the program, not by you)
 
 - Nothing that passed at first fails now, and at least one check that failed now passes. Counts don't
@@ -52,7 +88,9 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    - printed art              -> texture (labelart.py, layout.py, skin.py, panels.py, eraprint.py)
    - shine / metal / plastic  -> material + maps (spec "materials", finish.py, the *_mr.png map, exports)
    - seams, lips, edges, bevels, layers -> geometry first, then normal maps (finish.py)
-   - insides                  -> factory recipe (factory/recipes/*.json, factory/physics.json)
+   - insides                  -> factory recipe (factory/recipes/*.json, factory/physics.json); an
+     inside part showing through the outside -> the builder's inside-fit rule (lathe.fit_inside)
+   - parts of a one-off       -> parts.py (the parts plan) and shapes/assembly.py (how parts are built)
    - how it looks in the viewer -> webglb.py (the light copy); viewshot.py (camera, light) is locked
    Use mesh_info and pixel_stats to tell the stages apart. Example: metal that looks like plastic is
    either metallic=0 (material), roughness too high (map), or nothing for it to reflect (viewer). Those

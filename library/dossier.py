@@ -36,7 +36,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
-DIR = os.path.join(WORK, "dossier")
+DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
 VERSION = 1
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
@@ -141,7 +141,17 @@ def _set_aside(cid, why):
 
 
 def route_of(card):
-    """Which faces this item has: by the card's build route (a circuit card is 'pcb', a measured master is round)."""
+    """Which faces this item has: by its family from the family library (read from the photo by families.py), else
+    the card's build route (a circuit card is 'pcb', a measured master is round)."""
+    fl = (card.get("family_lib") or {}).get("family")
+    if fl:
+        try:
+            import families
+            r = families.get(fl).get("route")
+            if r in FACES:
+                return r
+        except Exception:
+            pass
     if str(card.get("family", "")) == "printed_circuit_card":
         return "pcb"
     try:

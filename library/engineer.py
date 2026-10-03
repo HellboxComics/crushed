@@ -73,12 +73,14 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 
 # ---------------------------------------------------------------- LOCKED: what it may never change
 # Paths are inside library/, in lower case (the Mac's disk ignores case: Vet.py IS vet.py there).
-LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "judge.py", "engineer.py", "selftest.py", "watchdog.py",
-                "dossier.py", "facts.py", "queue.txt", "families.json"}
+LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
+                "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
+                "families.json"}
 LOCKED_DIRS = ("playbook/", "shapes/specs/", "labels/")      # its rulebook + lessons, measured shapes, hand layouts
 # file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
-LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "judge.py", "engineer.py", "selftest.py", "watchdog.py",
-                "dossier.py", "facts.py", "run.py", "sitecustomize.py", "usercustomize.py"}
+LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
+                "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "sitecustomize.py",
+                "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
 RUN_FROZEN_DEFS = {"inspect", "trial", "_judge_trial", "_trial_copies", "_atomic_json", "read_json_safe",
@@ -88,7 +90,8 @@ RUN_COUNTED = RUN_PROTECTED | {"build", "trial", "TRIAL", "status", "engineer_tu
 # Things a builder never needs and that could fool the check from inside a test build (judged by whether the change
 # ADDS any of them compared with the code as it was).
 _RISKY_IMPORTS = {"__main__", "builtins", "importlib", "ctypes", "atexit", "gc", "inspect", "runpy", "run",
-                  "engineer", "selftest", "watchdog", "judge", "measure", "dossier", "facts", "viewshot",
+                  "engineer", "selftest", "watchdog", "judge", "measure", "measure_blender", "dossier", "facts",
+                  "viewshot",
                   "sitecustomize", "usercustomize"}
 _RISKY_NAMES = {"setattr", "delattr", "globals", "vars", "exec", "eval", "compile", "__import__", "breakpoint",
                 "__builtins__"}
@@ -680,7 +683,7 @@ TOOLS = [
     ("revert", "Undo your changes to one file (path), or all of them (path = 'all').", {"path": "string"}, ["path"]),
     ("rebuild", "Rebuild this item with YOUR copy of the code and run the realism check again (takes minutes). "
                 "clear = cached steps to redo instead of reuse: 'skin' (box faces from photos), 'texture' (label "
-                "art), 'era_print' (the rebuilt box sides' words), 'construction' (how it is made), 'parts' "
+                "art), 'dossier' (what it knows about the item: every side, its facts and their receipts), 'construction' (how it is made), 'parts' "
                 "(circuit card parts). Clear a step whenever you changed the code that makes it.",
      {"clear": "array", "why": "string"}, ["why"]),
     ("lesson", "Write down what you learned: the symptom you saw, its cause, the fix. It goes into the playbook "

@@ -197,7 +197,8 @@ def run(cid, words, year=None, log=print, extra=()):
     try:
         import google_images as G
         for q in (list(extra) if extra else queries(words, year)):
-            hits += [(u, "", f"Google Images: {q}") for u, w, h in G.search(q, most=15 if extra else 40, log=log)]
+            for r in G.search_full(q, most=15 if extra else 40, log=log):     # each photo with its source page
+                hits.append((r["url"], r.get("page", ""), f"Google Images: {q}" + (f" | {r['title']}" if r.get("title") else "")))
     except Exception as e:
         log(f"[hunt] Google Images did not work here: {e}")
     if os.path.exists(KEYS):                            # eBay only if you ever add its free keys

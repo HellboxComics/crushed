@@ -1,0 +1,420 @@
+{
+ "_about": "Real-world ranges for each material kind (glTF PBR, linear values 0..1). The exact checks (measure.py) fail a part whose material is outside its range. base = the average base color brightness (linear); metallic and roughness as glTF uses them. Sources: measured reflectance of metals (F0, linear: iron 0.56, nickel 0.66/0.61/0.53, aluminum 0.91/0.92/0.92, chrome 0.55/0.56/0.55, copper 0.95/0.64/0.54, gold 1.00/0.71/0.29) and dielectric albedo charts (paper/card 0.6-0.85 white stock, plastics by color); roughness from physically based material libraries.",
+ "kinds": {
+  "bare_steel": {
+   "metallic": [
+    0.9,
+    1.0
+   ],
+   "base": [
+    0.55,
+    0.75
+   ],
+   "roughness": [
+    0.1,
+    0.55
+   ]
+  },
+  "aluminum": {
+   "metallic": [
+    0.9,
+    1.0
+   ],
+   "base": [
+    0.8,
+    0.95
+   ],
+   "roughness": [
+    0.1,
+    0.6
+   ]
+  },
+  "chrome": {
+   "metallic": [
+    0.9,
+    1.0
+   ],
+   "base": [
+    0.5,
+    0.65
+   ],
+   "roughness": [
+    0.0,
+    0.2
+   ]
+  },
+  "copper": {
+   "metallic": [
+    0.9,
+    1.0
+   ],
+   "base": [
+    0.55,
+    0.8
+   ],
+   "roughness": [
+    0.15,
+    0.5
+   ]
+  },
+  "brass": {
+   "metallic": [
+    0.9,
+    1.0
+   ],
+   "base": [
+    0.55,
+    0.85
+   ],
+   "roughness": [
+    0.15,
+    0.5
+   ]
+  },
+  "gold_plate": {
+   "metallic": [
+    0.9,
+    1.0
+   ],
+   "base": [
+    0.55,
+    0.8
+   ],
+   "roughness": [
+    0.1,
+    0.45
+   ]
+  },
+  "painted_metal": {
+   "metallic": [
+    0.0,
+    0.1
+   ],
+   "base": [
+    0.02,
+    0.9
+   ],
+   "roughness": [
+    0.2,
+    0.8
+   ]
+  },
+  "printed_plastic_sleeve": {
+   "metallic": [
+    0.0,
+    0.6
+   ],
+   "base": [
+    0.02,
+    0.9
+   ],
+   "roughness": [
+    0.08,
+    0.5
+   ]
+  },
+  "printed_paper_label": {
+   "metallic": [
+    0.0,
+    0.3
+   ],
+   "base": [
+    0.02,
+    0.9
+   ],
+   "roughness": [
+    0.3,
+    0.85
+   ]
+  },
+  "printed_card": {
+   "metallic": [
+    0.0,
+    0.1
+   ],
+   "base": [
+    0.02,
+    0.9
+   ],
+   "roughness": [
+    0.25,
+    0.85
+   ]
+  },
+  "corrugated_card": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.15,
+    0.6
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  },
+  "foil_laminate": {
+   "metallic": [
+    0.7,
+    1.0
+   ],
+   "base": [
+    0.5,
+    0.95
+   ],
+   "roughness": [
+    0.08,
+    0.5
+   ]
+  },
+  "glass": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.0,
+    0.95
+   ],
+   "roughness": [
+    0.0,
+    0.15
+   ]
+  },
+  "clear_plastic": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.0,
+    0.95
+   ],
+   "roughness": [
+    0.0,
+    0.3
+   ]
+  },
+  "molded_plastic": {
+   "metallic": [
+    0.0,
+    0.1
+   ],
+   "base": [
+    0.02,
+    0.9
+   ],
+   "roughness": [
+    0.15,
+    0.85
+   ]
+  },
+  "soft_rubber": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.02,
+    0.8
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  },
+  "fabric": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.02,
+    0.85
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  },
+  "plush_fur": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.02,
+    0.85
+   ],
+   "roughness": [
+    0.7,
+    1.0
+   ]
+  },
+  "foam": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.05,
+    0.9
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  },
+  "wood": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.05,
+    0.7
+   ],
+   "roughness": [
+    0.4,
+    0.95
+   ]
+  },
+  "leather": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.02,
+    0.6
+   ],
+   "roughness": [
+    0.35,
+    0.9
+   ]
+  },
+  "circuit_board": {
+   "metallic": [
+    0.0,
+    0.3
+   ],
+   "base": [
+    0.02,
+    0.6
+   ],
+   "roughness": [
+    0.25,
+    0.75
+   ]
+  },
+  "cathode_compound": {
+   "metallic": [
+    0.0,
+    0.1
+   ],
+   "base": [
+    0.01,
+    0.15
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  },
+  "zinc_gel": {
+   "metallic": [
+    0.0,
+    0.2
+   ],
+   "base": [
+    0.2,
+    0.6
+   ],
+   "roughness": [
+    0.2,
+    0.7
+   ]
+  },
+  "separator_paper": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.5,
+    0.95
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  },
+  "nylon": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.02,
+    0.95
+   ],
+   "roughness": [
+    0.3,
+    0.8
+   ]
+  },
+  "food_baked": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.1,
+    0.95
+   ],
+   "roughness": [
+    0.4,
+    1.0
+   ]
+  },
+  "liquid": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.0,
+    0.95
+   ],
+   "roughness": [
+    0.0,
+    0.3
+   ]
+  },
+  "raw_board": {
+   "metallic": [
+    0.0,
+    0.05
+   ],
+   "base": [
+    0.15,
+    0.75
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ]
+  }
+ },
+ "_slots": {
+  "_about": "a material slot whose name says it is unprinted board (the inside or the cut edge of a carton) is checked as raw board, whatever its object's kind",
+  "raw_board": [
+   "board_inside",
+   "board_edge",
+   "raw_board",
+   "cut_edge"
+  ]
+ }
+}

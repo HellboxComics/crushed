@@ -151,6 +151,24 @@ def t_engineer_guard():
     return "locked files, the checklist and judge tricks are all refused"
 
 
+def t_readers():
+    """The exact checks' readers: the barcode reader (zxing-cpp) and the Mac's own text reader (ocrmac). Without
+    them every barcode and every printed word would fail its check - so nothing is built until they are there."""
+    import measure
+    missing = []
+    try:
+        import zxingcpp  # noqa: F401
+    except Exception:
+        missing.append("zxing-cpp (barcode reader)")
+    kind = measure.reader()
+    if not kind:
+        missing.append("ocrmac (the Mac's built-in text reader)")
+    if missing:
+        raise RuntimeError("missing: " + ", ".join(missing) + " - install into the asset maker's Python: "
+                           ".venv/bin/pip install zxing-cpp ocrmac")
+    return f"barcodes: zxing-cpp; words: {kind}"
+
+
 def t_phone():
     import askfirst
     import hart as H
@@ -178,6 +196,7 @@ def run_all(quiet_phone=False):
              ("cut-out (drawing room)", t_cutout, 120),
              ("label drawer (Qwen-Image-Edit)", t_draw, 480),
              ("Blender: box and round shapes", t_blender, 300),
+             ("exact-check readers (barcode, text)", t_readers, 60),
              (HY, t_hunyuan, 260),
              ("Google Images browser", t_google, 90)]
     for name, fn, limit in order:
@@ -196,7 +215,9 @@ def run_all(quiet_phone=False):
     os.makedirs(work, exist_ok=True)
     out = os.path.join(work, "selftest.json")
     with open(out + ".tmp", "w") as f:                 # written whole or not at all
-        json.dump({"ok": ok, "hunyuan_ok": hy["ok"], "hunyuan_note": hy["note"], "engineer_guard_ok": guard["ok"],
+        code = subprocess.run(["git", "rev-parse", "HEAD"], cwd=os.path.dirname(HERE), capture_output=True,
+                              text=True).stdout.strip()
+        json.dump({"ok": ok, "code": code, "hunyuan_ok": hy["ok"], "hunyuan_note": hy["note"], "engineer_guard_ok": guard["ok"],
                    "engineer_guard_note": guard["note"], "at": time.time(), "results": RESULTS}, f, indent=1)
     os.replace(out + ".tmp", out)
     if not guard["ok"] and not quiet_phone:

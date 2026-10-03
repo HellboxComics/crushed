@@ -1,0 +1,33 @@
+{
+ "family": "toaster_pastry",
+ "covers": "toaster pastries sold in a folding carton (Pop-Tarts and the like): the carton is built by the folding_carton recipe; this recipe says what is inside",
+ "typical_contents": {
+  "poptarts_8": {
+   "pouches": 4,
+   "per_pouch": 2,
+   "pouch_mm": [
+    132,
+    95,
+    23
+   ],
+   "pastry_mm": [
+    110,
+    76,
+    10
+   ],
+   "pouch_kind": "foil_laminate",
+   "pastry_kind": "food_baked",
+   "layout": "two pouches deep, two high, standing on their long edge",
+   "sizes_note": "pouch and pastry sizes estimated to fill this box's real inside (140 x 50 x 200 mm), four pouches of two; not measured from a 1997 pouch"
+  }
+ },
+ "checked_against": [
+  {
+   "source": "the picked photo: tuck lid with 'TO CLOSE INSERT TAB HERE', 'Carton made from 100% recycled paper'"
+  },
+  {
+   "source": "Kellanova (Kellogg's) product page: 2 pastries per pouch",
+   "url": "https://www.kellanovaawayfromhome.com/en-us/products/pop-tarts-frosted-strawberry-product.00038000222726.html"
+  }
+ ]
+}
