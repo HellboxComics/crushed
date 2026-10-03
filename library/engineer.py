@@ -2,30 +2,42 @@
 Claude: your own AI takes it. It looks at the failed pictures up close, measures the model and its texture maps,
 reads the code that built it, works out the CAUSE, fixes the builder or the family recipe (never the one asset by
 hand), rebuilds, looks again, and keeps only what really made it better. What it learns goes into
-playbook/lessons.md, so the next item of that kind comes out right the first time.
+playbook/lessons.md - but only together with a fix that was kept - so the next item of that kind comes out right.
 
     import engineer
     result = engineer.fix(cid, card, verdict, shots, close, photo, build_dir, log=say, beat=beat)
 
-It works in its OWN copy of the code (a git worktree in ~/crushed-render/remaster/engineer/wt) - the running asset
-maker is never edited mid-run. A fix is kept only when its rebuild is better (fewer failed checks) and the items
-already built still pass as well as they did. Kept fixes become a local commit in your repo, by "Asset Engineer
-(your AI)"; the asset maker then restarts on the fixed code and rebuilds the item.
+It works in its OWN copy of the code (a git worktree in ~/crushed-render/remaster/engineer/wt, on a branch named
+engineer/<item>-<time>) - the running asset maker is never edited mid-run. A fix is kept only when ALL of this holds:
+  - every check that passed before still passes, and at least one failed check now passes;
+  - a SECOND rebuild with exactly the same code comes out the same, and the asset maker's own check (its own,
+    untouched code, in a separate program) agrees - so a lucky answer from the judge is never kept;
+  - other items already built that use the changed files did not start failing a new check;
+  - nothing it changed touches the checks (see LOCKED below) - also re-checked after every test build, in case a
+    test build changed files by itself.
+Kept fixes become a local commit in your repo, by "Asset Engineer (your AI)"; the asset maker then restarts on the
+fixed code and rebuilds the item. A fix that can't be added cleanly stays on its own branch for review.
 
-Its brain is the one in settings.json "engineer_brain", otherwise your judge (the same brain that does the
-looking, so only one is in memory). Hard limits: its own code copy only, the library folder only, never the
-realism checklist or the judge's question, never your finished assets, nothing pushed anywhere.
+Its brain is the one in settings.json "engineer_brain", otherwise your judge. Hard limits: its own code copy only,
+the library folder only, never the checks or the judge, never your finished assets, nothing pushed anywhere, and
+3 hours in all (test builds of other items included) - a test build that runs over is stopped with everything it
+started (Blender, Hunyuan, browsers).
 """
+import ast
 import base64
+import collections
+import fcntl
 import hashlib
 import io
 import json
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
 import time
+import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -33,11 +45,19 @@ WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-ren
 OUT = os.path.join(WORK, "library")
 ENG = os.path.join(WORK, "engineer")
 WT = os.path.join(ENG, "wt")
+SCRATCH = os.path.join(ENG, "scratch")             # its refused / undone / left-over files (never inside library/)
+PENDING = os.path.join(ENG, "lessons-pending")     # lessons written during a session, before the fix is kept
+REJECTED = os.path.join(ENG, "lessons-rejected.md")  # what was tried and NOT kept, so dead ends aren't repeated
 PY = sys.executable
 MAX_TURNS = 90
-MAX_REBUILDS = 6
-MAX_SECONDS = 3 * 3600
+MAX_REBUILDS = 6                       # its own test builds of this item (the confirmation is not counted)
+MAX_SECONDS = 3 * 3600                 # the whole session, every test build included
+REBUILD_TIMEOUT = 3600                 # one test build at most
+JUDGE_TIMEOUT = 1800                   # the asset maker's own check of a test build at most
+MIN_RESERVE = 1800                     # time always kept back for the confirmation and the other items
 KEEP_PICTURES = 3                      # only the newest few picture sets stay in its memory (the rest it can re-look)
+KEEP_FULL_TURNS = 8                    # tool results older than this many turns are cut short
+OLD_RESULT_CHARS = 600
 AUTHOR = ["-c", "user.name=Asset Engineer (your AI)", "-c", "user.email=engineer@hellbox.local"]
 
 ROUTE_FILES = {                         # which shared files each kind of build uses (for the "still works" check)
@@ -49,6 +69,39 @@ ROUTE_FILES = {                         # which shared files each kind of build 
     "free": ("hunyuan.py", "shapes/resize.py"),
     "all": ("run.py", "exports.py", "webglb.py", "viewshot.py", "cutaway.py", "vet.py", "cards.py", "preview.py"),
 }
+
+
+# ---------------------------------------------------------------- LOCKED: what it may never change
+# Paths are inside library/, in lower case (the Mac's disk ignores case: Vet.py IS vet.py there).
+LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "judge.py", "engineer.py", "selftest.py", "watchdog.py",
+                "dossier.py", "facts.py", "queue.txt", "families.json"}
+LOCKED_DIRS = ("playbook/", "shapes/specs/", "labels/")      # its rulebook + lessons, measured shapes, hand layouts
+# file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
+LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "judge.py", "engineer.py", "selftest.py", "watchdog.py",
+                "dossier.py", "facts.py", "run.py", "sitecustomize.py", "usercustomize.py"}
+# run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
+RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
+RUN_FROZEN_DEFS = {"inspect", "trial", "_judge_trial", "_trial_copies", "_atomic_json", "read_json_safe",
+                   "update_json", "read_status", "jload"}
+RUN_COUNTED = RUN_PROTECTED | {"build", "trial", "TRIAL", "status", "engineer_turn", "jload", "say", "beat"}
+
+# Things a builder never needs and that could fool the check from inside a test build (judged by whether the change
+# ADDS any of them compared with the code as it was).
+_RISKY_IMPORTS = {"__main__", "builtins", "importlib", "ctypes", "atexit", "gc", "inspect", "runpy", "run",
+                  "engineer", "selftest", "watchdog", "judge", "measure", "dossier", "facts", "viewshot",
+                  "sitecustomize", "usercustomize"}
+_RISKY_NAMES = {"setattr", "delattr", "globals", "vars", "exec", "eval", "compile", "__import__", "breakpoint",
+                "__builtins__"}
+_RISKY_ATTRS = {"__dict__", "__code__", "__globals__", "__builtins__", "__defaults__", "__kwdefaults__",
+                "__closure__", "__subclasses__", "f_globals", "f_locals", "f_back", "putenv"}
+_GUARDED_MODULES = {"vet", "judge", "measure", "viewshot", "run", "__main__", "dossier", "facts", "engineer",
+                    "cards", "json", "subprocess", "sys", "os", "shutil", "builtins", "time", "io"}
+_MUTATORS = {"append", "extend", "insert", "pop", "remove", "clear", "update", "setdefault", "popitem", "add",
+             "discard", "__setitem__", "__delitem__", "sort", "reverse"}
+_RISKY_STRINGS = ("trial.json", "judged.json", "status.json", "approvals.json", "picks.json", "Asset Library",
+                  "CRUSHED_", ".git", "playbook", "lessons", "heartbeat", "selftest.json", "settings.json")
+_INSTALLED = {"bpy", "bmesh", "mathutils", "numpy", "scipy", "pil", "cv2", "torch", "playwright", "trimesh",
+              "skimage", "requests", "urllib3", "certifi", "mlx", "transformers", "diffusers"}
 
 
 # ---------------------------------------------------------------- small helpers
@@ -64,6 +117,31 @@ def jload(p, d):
         return d
 
 
+def _stamp():
+    return time.strftime("%Y%m%d-%H%M%S")
+
+
+def _update_json(path, change, default=None):
+    """Read-change-write one small JSON file under a lock (the same sidecar <file>.lock the asset maker uses), written
+    whole or not at all."""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path + ".lock", "a") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            data = jload(path, {} if default is None else default)
+            out = change(data)
+            data = data if out is None else out
+            tmp = f"{path}.tmp-{os.getpid()}"
+            with open(tmp, "w") as f:
+                json.dump(data, f, indent=1)
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(tmp, path)
+            return data
+        finally:
+            fcntl.flock(lk, fcntl.LOCK_UN)
+
+
 def setting(name, default=None):
     return jload(os.path.join(WORK, "settings.json"), {}).get(name, default)
 
@@ -72,6 +150,22 @@ def brain():
     sys.path.insert(0, HERE)
     import vet as V
     return setting("engineer_brain") or V.model()
+
+
+def _judge_model():
+    sys.path.insert(0, HERE)
+    import vet as V
+    return V.model()
+
+
+def _release(model):
+    """Let go of a brain's memory now (Ollama's own keep_alive 0) - so a test build can load the judge."""
+    try:
+        sys.path.insert(0, HERE)
+        import vet as V
+        V._call("/api/generate", {"model": model, "keep_alive": 0}, timeout=60)
+    except Exception:
+        pass
 
 
 def _b64(im, side=1024):
@@ -109,49 +203,447 @@ def _route_of(card, d):
     return (card or {}).get("route", "free")
 
 
+def _scratch(label):
+    """A fresh folder for its own junk (refused files, undone files, left-overs), outside the code."""
+    p = os.path.join(SCRATCH, f"{_stamp()}-{re.sub(r'[^A-Za-z0-9_.-]+', '_', label)[:80]}")
+    n, q = 1, p
+    while os.path.exists(q):
+        n += 1
+        q = f"{p}-{n}"
+    os.makedirs(q)
+    return q
+
+
+def _move_to_scratch(path, label):
+    dst = os.path.join(_scratch(label), os.path.basename(path))
+    shutil.move(path, dst)
+    return dst
+
+
+def nothing_to_fix(verdict):
+    """Why there is nothing for the engineer to work on ('' when there is): no verdict, a pass, or the judge could
+    not look at it at all (that is not a builder problem)."""
+    if not isinstance(verdict, dict):
+        return "there is no check result to work from"
+    probs = str(verdict.get("problems") or "")
+    if "could not inspect" in probs or "no vision model" in probs:
+        return f"the judge could not look at the model ({probs[:200]}) - that is not something to fix in the builder"
+    if verdict.get("pass"):
+        return "it passed every check"
+    if not isinstance(verdict.get("failed"), list) or not verdict.get("failed"):
+        return "the check result names no failed check"
+    return ""
+
+
+def _refund_attempt(cid):
+    """A session that never started does not use up one of the item's 3 tries for the day."""
+    def change(a):
+        ts = sorted(t for t in a.get(cid, []) if isinstance(t, (int, float)))
+        if ts and time.time() - ts[-1] < 600:
+            ts.pop()
+        a[cid] = ts
+    try:
+        _update_json(os.path.join(ENG, "attempts.json"), change)
+    except Exception:
+        pass
+
+
+# ---------------------------------------------------------------- running a test build (time limits)
+
+def _group_alive(pgid):
+    try:
+        os.killpg(pgid, 0)
+        return True
+    except (ProcessLookupError, PermissionError):
+        return False
+
+
+def _kill_group(p, grace=10):
+    """Stop a test build and everything it started (its own process group: Blender, Hunyuan, the viewer's browser)."""
+    pgid = p.pid
+    for sig in (signal.SIGTERM, signal.SIGKILL):
+        try:
+            os.killpg(pgid, sig)
+        except (ProcessLookupError, PermissionError):
+            break
+        t = time.time()
+        while time.time() - t < (grace if sig == signal.SIGTERM else 5):
+            p.poll()
+            if not _group_alive(pgid):
+                break
+            time.sleep(0.2)
+        if not _group_alive(pgid):
+            break
+    p.poll()
+
+
+def run_group(cmd, timeout, log_path, env=None, cwd=None, beat=None):
+    """Run one program in its own process group with a hard time limit; on time-out the whole group is stopped.
+    Everything it prints goes to log_path. Returns (exit code or None when stopped, seconds taken)."""
+    t0 = time.time()
+    timeout = max(1, int(timeout))
+    with open(log_path, "w") as out:
+        p = subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT, env=env, cwd=cwd, start_new_session=True)
+        rc = None
+        while True:
+            try:
+                rc = p.wait(timeout=max(0.2, min(30, timeout - (time.time() - t0))))
+                break
+            except subprocess.TimeoutExpired:
+                if time.time() - t0 >= timeout:
+                    _kill_group(p)
+                    rc = None
+                    break
+                if beat:
+                    beat()
+    if _group_alive(p.pid):                           # anything it left running in the background: stopped too
+        _kill_group(p, grace=3)
+    return rc, int(time.time() - t0)
+
+
+def _trial_cmd(cid, tdir, clear):
+    """A test build: the item rebuilt with the engineer's code copy and checked (run.py --trial)."""
+    return [PY, os.path.join(WT, "library", "run.py"), "--trial", cid, tdir, "--clear", ",".join(clear)]
+
+
+def _judge_cmd(cid, tdir):
+    """The asset maker's OWN check (its own untouched code, a separate program) of a test build's model."""
+    return [PY, os.path.join(HERE, "run.py"), "--judge", cid, tdir]
+
+
 # ---------------------------------------------------------------- its own copy of the code
 
+def _common_dir(cwd):
+    r = git("rev-parse", "--git-common-dir", cwd=cwd)
+    if r.returncode:
+        return None
+    d = r.stdout.strip()
+    return os.path.realpath(d if os.path.isabs(d) else os.path.join(cwd, d))
+
+
+def _is_our_worktree():
+    return os.path.exists(os.path.join(WT, ".git")) and _common_dir(WT) == _common_dir(ROOT)
+
+
+def _new_branch(cid):
+    base = "engineer/" + re.sub(r"[^a-z0-9_.-]", "_", cid.lower()) + "-" + _stamp()
+    name, n = base, 1
+    while git("rev-parse", "-q", "--verify", "refs/heads/" + name).returncode == 0:
+        n += 1
+        name = f"{base}-{n}"
+    return name
+
+
+def _save_leftovers():
+    """Changes an earlier session left in its code copy (it stopped half way) are saved to scratch, not thrown away."""
+    git("add", "-A", "-N", "--", ".", cwd=WT)
+    d = git("diff", "--binary", "HEAD", cwd=WT).stdout
+    git("reset", "-q", cwd=WT)
+    extra = [f for f in git("ls-files", "--others", "--exclude-standard", "-z", cwd=WT).stdout.split("\0") if f]
+    if not d.strip() and not extra:
+        return None
+    s = _scratch("unfinished-session")
+    if d.strip():
+        open(os.path.join(s, "changes.diff"), "w").write(d)
+    for f in extra:
+        os.makedirs(os.path.dirname(os.path.join(s, "files", f)), exist_ok=True)
+        shutil.move(os.path.join(WT, f), os.path.join(s, "files", f))
+    open(os.path.join(s, "NOTE.txt"), "w").write(
+        "Changes your AI's engineer had made in its own copy of the code when a session stopped half way.\n"
+        "They were never tested or kept. Safe to throw away.\n")
+    return s
+
+
+def _tidy_branches(keep):
+    """Its old session branches that hold nothing new (every commit already in the running code) are removed; any
+    branch with a commit of its own is left exactly as it is, for review."""
+    out = git("for-each-ref", "--format=%(refname:short)", "refs/heads/engineer/").stdout.split()
+    for b in out:
+        if b == keep:
+            continue
+        if git("merge-base", "--is-ancestor", b, "HEAD").returncode == 0:
+            git("branch", "-q", "-d", b)
+
+
 def fresh_worktree(cid):
-    """A clean copy of the code exactly as it runs now, on a local branch of its own."""
+    """A clean copy of the code exactly as it runs now, on a new branch of its own (never reusing or resetting an
+    old branch, so a fix kept for review is never lost). Returns (code version, branch)."""
     os.makedirs(ENG, exist_ok=True)
     git("worktree", "prune")
     sha = git("rev-parse", "HEAD").stdout.strip()
-    branch = "engineer/" + re.sub(r"[^a-z0-9_.-]", "_", cid.lower())
-    if not os.path.exists(os.path.join(WT, ".git")):
-        if os.path.exists(WT):                                   # a leftover folder that is not a worktree
-            shutil.move(WT, WT + "-old-" + time.strftime("%Y%m%d-%H%M%S"))
-        r = git("worktree", "add", "-q", "--force", "-B", branch, WT, sha)
+    if not sha:
+        raise RuntimeError("could not read which version of the code is running (git rev-parse HEAD)")
+    branch = _new_branch(cid)
+    if not _is_our_worktree():
+        if os.path.lexists(WT):                                   # a leftover folder that is not its code copy
+            _move_to_scratch(WT, "old-code-copy")
+            git("worktree", "prune")
+        r = git("worktree", "add", "-q", "-b", branch, WT, sha)
         if r.returncode:
             raise RuntimeError("could not make the engineer's code copy: " + r.stderr[-300:])
     else:
-        git("checkout", "-q", "-B", branch, sha, cwd=WT)
-        git("reset", "-q", "--hard", sha, cwd=WT)
-        git("clean", "-fdq", "--", "library", cwd=WT)             # only files it made itself in its own copy
-    return sha
+        _save_leftovers()
+        r = git("checkout", "-q", "-f", "-b", branch, sha, cwd=WT)
+        if r.returncode:
+            raise RuntimeError("could not start the engineer's code copy: " + r.stderr[-300:])
+    _tidy_branches(keep=branch)
+    return sha, branch
 
 
-def _inside(rel, write=False):
-    """A path in its code copy; writing only inside library/ (never the git folder)."""
-    rel = (rel or "").strip().lstrip("/")
-    if rel.startswith("wt/"):
-        rel = rel[3:]
-    if not rel.startswith("library") and not write:
-        rel = rel if os.path.exists(os.path.join(WT, rel)) else os.path.join("library", rel)
-    elif not rel.startswith("library"):
-        rel = os.path.join("library", rel)
-    p = os.path.realpath(os.path.join(WT, rel))
-    base = os.path.realpath(os.path.join(WT, "library" if write else ""))
-    if not (p == base or p.startswith(base + os.sep)) or "/.git" in p:
-        raise ValueError(f"{rel}: outside what you may {'change' if write else 'read'}")
-    return p, rel
+# ---------------------------------------------------------------- the rules for what it changes
+
+def _norm(rel):
+    return unicodedata.normalize("NFC", rel.replace(os.sep, "/")).casefold().strip("/")
 
 
-def _protected(text):
-    """The realism checklist and the judge's question: the parts of run.py it may never change."""
-    a = text.find("CHECKS = {")
-    b = text.find("def inspect(")
-    c = text.find("\ndef ", b + 10) if b >= 0 else -1
-    return (text[a:b] if a >= 0 and b > a else "") + (text[b:c] if b >= 0 else "")
+def locked(rel):
+    """rel = a path inside library/ (any case). True when the engineer may never change or create it."""
+    r = _norm(rel)
+    while "//" in r:
+        r = r.replace("//", "/")
+    parts = r.split("/")
+    if ".." in parts or "." in parts:
+        return True
+    if r in LOCKED_FILES or any(r == d.rstrip("/") or r.startswith(d) for d in LOCKED_DIRS):
+        return True
+    name = parts[-1]
+    if name in LOCKED_NAMES and r != "run.py":
+        return True
+    return any(p.startswith(".") for p in parts)                  # .gitignore, .gitattributes, hidden folders
+
+
+def _binds(node):
+    """Names one module-level statement binds."""
+    if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+        return [node.name]
+    if isinstance(node, (ast.Import, ast.ImportFrom)):
+        return [(a.asname or a.name).split(".")[0] for a in node.names]
+    targets = []
+    if isinstance(node, ast.Assign):
+        targets = node.targets
+    elif isinstance(node, (ast.AugAssign, ast.AnnAssign)):
+        targets = [node.target]
+    out = []
+    for t in targets:
+        for n in ast.walk(t):
+            if isinstance(n, ast.Name):
+                out.append(n.id)
+    return out
+
+
+def _mentions(nodes, names):
+    for top in nodes:
+        if top is None:
+            continue
+        for n in ast.walk(top):
+            if isinstance(n, ast.Name) and n.id in names:
+                return True
+            if isinstance(n, ast.Attribute) and n.attr in names:
+                return True
+            if isinstance(n, ast.alias) and ((n.asname or n.name).split(".")[0] in names):
+                return True
+            if isinstance(n, (ast.Global, ast.Nonlocal)) and set(n.names) & names:
+                return True
+            if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and n.name in names:
+                return True
+    return False
+
+
+def _header(node):
+    """The part of a statement that is its own (for a compound statement: its first line, not its body)."""
+    if isinstance(node, (ast.If, ast.While)):
+        return [node.test]
+    if isinstance(node, (ast.For, ast.AsyncFor)):
+        return [node.target, node.iter]
+    if isinstance(node, (ast.With, ast.AsyncWith)):
+        return [i.context_expr for i in node.items] + [i.optional_vars for i in node.items]
+    if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+        return list(node.decorator_list) + list(node.args.defaults) + [d for d in node.args.kw_defaults if d]
+    if isinstance(node, ast.ClassDef):
+        return list(node.decorator_list) + list(node.bases)
+    if isinstance(node, ast.Try) or (hasattr(ast, "TryStar") and isinstance(node, ast.TryStar)):
+        return [h.type for h in node.handlers if h.type]
+    if hasattr(ast, "Match") and isinstance(node, ast.Match):
+        return [node.subject]
+    return [node]
+
+
+def run_fingerprint(text):
+    """Everything in run.py the engineer may never change, as one string: the checklist, the judge's question, the
+    test-build command, the end of build() (pictures, check, verdict), every TRIAL block, every line that touches
+    the verdict / checklist / judge, and how often the key names are defined."""
+    tree = ast.parse(text)
+    parts = []
+    counts = collections.Counter(n for node in tree.body for n in _binds(node))
+    parts.append("dups " + ",".join(sorted(n for n, c in counts.items() if c > 1)))
+    parts.append("counted " + repr(sorted((n, counts[n]) for n in RUN_COUNTED)))
+    for node in tree.body:
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name in RUN_FROZEN_DEFS:
+            parts.append(ast.dump(node))
+        elif isinstance(node, (ast.Assign, ast.AnnAssign, ast.AugAssign)) and set(_binds(node)) & {"CHECKS", "TRIAL"}:
+            parts.append(ast.dump(node))
+        elif isinstance(node, ast.If) and _mentions([node.test], {"__name__"}):
+            parts.append(ast.dump(node))                          # the program's own start (trial / judge modes)
+        elif isinstance(node, ast.FunctionDef) and node.name == "build":
+            k = next((i for i, s in enumerate(node.body) if isinstance(s, ast.If) and _mentions([s.test], {"route"})),
+                     None)
+            tail = node.body[k + 1:] if k is not None else node.body
+            parts += ["build-tail " + ast.dump(s) for s in tail]
+    for node in ast.walk(tree):
+        if isinstance(node, ast.ExceptHandler) and node.name in RUN_PROTECTED:
+            parts.append("except-as " + ast.dump(node))
+        if not isinstance(node, ast.stmt):
+            continue
+        if isinstance(node, ast.If) and _mentions([node.test], {"TRIAL"}):
+            parts.append("trial-block " + ast.dump(node))
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and node.name in RUN_PROTECTED:
+            parts.append("def " + ast.dump(node))
+        own = _header(node)
+        if _mentions(own, RUN_PROTECTED):
+            parts.append("touches " + "|".join(ast.dump(x) for x in own if x is not None))
+    return "\n".join(parts)
+
+
+def _root(node):
+    """(the name a target or call chain starts from, how deep: 0 = the name itself)."""
+    depth = 0
+    while isinstance(node, (ast.Attribute, ast.Subscript, ast.Call)):
+        node = node.func if isinstance(node, ast.Call) else node.value
+        depth += 1
+    return (node.id if isinstance(node, ast.Name) else None), depth
+
+
+def risky(text):
+    """Counts of the things in one Python file a builder never needs and that could fool the check from inside a
+    test build: reaching into the judge's or the asset maker's own modules, replacing functions of shared modules,
+    running code from strings, touching the asset maker's own files."""
+    tree = ast.parse(text)
+    alias, objs = {}, {}
+    c = collections.Counter()
+    for n in ast.walk(tree):
+        if isinstance(n, ast.Import):
+            for a in n.names:
+                root = a.name.split(".")[0]
+                alias[a.asname or root] = root
+                if root in _RISKY_IMPORTS:
+                    c[f"imports {root}"] += 1
+        elif isinstance(n, ast.ImportFrom):
+            root = "." if n.level else (n.module or "").split(".")[0]
+            if root in _RISKY_IMPORTS:
+                c[f"imports from {root}"] += 1
+            for a in n.names:
+                objs[a.asname or a.name] = root
+
+    def guarded(name):
+        m = alias.get(name) or objs.get(name)
+        return m if m in _GUARDED_MODULES else None
+
+    docs = set()                                      # docstrings are words for people, not code
+    for n in ast.walk(tree):
+        if isinstance(n, (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and n.body:
+            s = n.body[0]
+            if isinstance(s, ast.Expr) and isinstance(s.value, ast.Constant) and isinstance(s.value.value, str):
+                docs.add(id(s.value))
+    for n in ast.walk(tree):
+        if isinstance(n, ast.Name) and n.id in _RISKY_NAMES:
+            c[f"uses {n.id}"] += 1
+        elif isinstance(n, ast.Attribute):
+            if n.attr in _RISKY_ATTRS:
+                c[f"uses .{n.attr}"] += 1
+            if (n.attr in ("modules", "path", "meta_path", "path_hooks") and isinstance(n.value, ast.Name)
+                    and alias.get(n.value.id) == "sys"):
+                c[f"uses sys.{n.attr}"] += 1
+        if isinstance(n, (ast.Assign, ast.AugAssign, ast.AnnAssign, ast.Delete)):
+            targets = n.targets if isinstance(n, (ast.Assign, ast.Delete)) else [n.target]
+            for t in targets:
+                for tt in (t.elts if isinstance(t, (ast.Tuple, ast.List)) else [t]):
+                    name, depth = _root(tt)
+                    m = guarded(name) if name else None
+                    if m and depth > 0:
+                        c[f"changes something inside {m}"] += 1
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute) and n.func.attr in _MUTATORS:
+            name, depth = _root(n.func.value)
+            m = guarded(name) if name else None
+            if m and (depth > 0 or name in objs):
+                c[f"changes something inside {m}"] += 1
+        if isinstance(n, ast.Constant) and isinstance(n.value, str) and id(n) not in docs:
+            for s in _RISKY_STRINGS:
+                if s in n.value:
+                    c[f"names '{s}'"] += 1
+    return c
+
+
+def _module_stems(skip=None):
+    out = set()
+    for d, dirs, fs in os.walk(os.path.join(WT, "library")):
+        dirs[:] = [x for x in dirs if x != "__pycache__" and not x.startswith(".")]
+        for f in fs:
+            if f.endswith(".py") and os.path.join(d, f) != skip:
+                out.add(f[:-3].casefold())
+    return out
+
+
+def _shadows(path):
+    """Would a NEW .py file with this name be loaded instead of another module (Python's own, an installed one, or
+    one of the asset maker's)? That would change programs that never import it on purpose."""
+    stem = os.path.basename(path)[:-3]
+    s = stem.casefold()
+    if s in {m.casefold() for m in getattr(sys, "stdlib_module_names", ())} | _INSTALLED:
+        return f"{stem}.py has the same name as a module Python or the asset maker already uses"
+    if s in _module_stems(skip=path):
+        return f"{stem}.py has the same name as another file in library/"
+    try:
+        import importlib.util
+        spec = importlib.util.find_spec(stem)
+        if spec is not None:
+            return f"{stem}.py has the same name as an installed module"
+    except Exception:
+        pass
+    return ""
+
+
+def _base_text(rel):
+    r = git("show", f"HEAD:{rel}", cwd=WT)
+    return r.stdout if r.returncode == 0 else None
+
+
+def check_change(rel, text, new_file=False):
+    """The hard rules for one file's new content (rel = path from the code copy's top, e.g. library/finish.py).
+    Returns why it is refused, or ''."""
+    lib = rel[len("library/"):] if rel.startswith("library/") else rel
+    if locked(lib):
+        return (f"{lib} is locked - the checks, the judge, the playbook, the measured shapes and labels, the queue "
+                "and the engineer itself are never yours to change. Fix the builder or the recipe instead")
+    if not rel.endswith(".py"):
+        return ""
+    if new_file:
+        bad = _shadows(os.path.join(WT, rel))
+        if bad:
+            return bad + " - pick another name"
+    try:
+        after = risky(text)
+    except SyntaxError as e:
+        return f"Python does not parse: {e}"
+    base = _base_text(rel)
+    before = collections.Counter()
+    if base is not None:
+        try:
+            before = risky(base)
+        except SyntaxError:
+            pass
+    added = sorted(k for k in after if after[k] > before.get(k, 0))
+    if added:
+        return ("that change does things a builder never needs and that could fool the check from inside a test "
+                "build (" + "; ".join(added[:6]) + ") - fix how the model is built, never how it is judged")
+    if lib == "run.py":
+        try:
+            same = base is not None and run_fingerprint(base) == run_fingerprint(text)
+        except SyntaxError:
+            same = False
+        if not same:
+            return ("that changes the realism checklist, the judge's question, the test build, the check at the end "
+                    "of build(), or a line that handles the verdict - fix the build, not the check")
+    return ""
 
 
 # ---------------------------------------------------------------- the tools it works with
@@ -178,9 +670,11 @@ TOOLS = [
      {"pattern": "string", "path": "string"}, ["pattern"]),
     ("edit_file", "Change a file in YOUR copy of the code: replace the exact text old (must appear exactly once, "
                   "copy it from read_file without the line numbers) with new. Python must still compile and JSON "
-                  "must still parse, or the edit is refused.",
+                  "must still parse, or the edit is refused. Locked files (the checks, the judge, the playbook, "
+                  "measured shapes, labels, the queue) are refused.",
      {"path": "string", "old": "string", "new": "string"}, ["path", "old", "new"]),
-    ("new_file", "Create a NEW file in your copy of library/ (a helper module, a recipe, a spec).",
+    ("new_file", "Create a NEW file in your copy of library/ (a helper module, a recipe). It may not share a name "
+                 "with another module.",
      {"path": "string", "content": "string"}, ["path", "content"]),
     ("diff", "Show every change you have made so far.", {}, []),
     ("revert", "Undo your changes to one file (path), or all of them (path = 'all').", {"path": "string"}, ["path"]),
@@ -189,10 +683,12 @@ TOOLS = [
                 "art), 'era_print' (the rebuilt box sides' words), 'construction' (how it is made), 'parts' "
                 "(circuit card parts). Clear a step whenever you changed the code that makes it.",
      {"clear": "array", "why": "string"}, ["why"]),
-    ("lesson", "Write down what you learned, for every future build: the symptom you saw, its cause, the fix.",
+    ("lesson", "Write down what you learned: the symptom you saw, its cause, the fix. It goes into the playbook "
+               "only if your fix is kept; if not, it is filed under 'tried and not kept'.",
      {"symptom": "string", "cause": "string", "fix": "string"}, ["symptom", "cause", "fix"]),
     ("finish", "You are done: every check passes, or you made it as good as you can. Say what you changed and why, "
-               "and what (if anything) is still wrong and its likely cause.", {"summary": "string"}, ["summary"]),
+               "and what (if anything) is still wrong and its likely cause. Your fix is then confirmed by a second "
+               "rebuild and the asset maker's own check before it is kept.", {"summary": "string"}, ["summary"]),
 ]
 
 
@@ -252,12 +748,45 @@ print("PROBE" + json.dumps(out, default=str))
 '''
 
 
+def _hash(p):
+    try:
+        return hashlib.sha1(open(p, "rb").read()).hexdigest()
+    except OSError:
+        return "gone"
+
+
+def _root_watch():
+    """What the running asset maker's own code looks like on disk outside its commits (edits and new files in
+    library/, Python files anywhere) plus the real item cards - so a test build that writes into them is caught at
+    once. None when git can't tell (then this extra watch is skipped and said in the log)."""
+    try:
+        st = git("status", "--porcelain", "-z", "-uall", "--no-renames", cwd=ROOT, timeout=120)
+    except Exception:
+        return None
+    if st.returncode:
+        return None
+    out = {}
+    for e in st.stdout.split("\0"):
+        if len(e) < 4:
+            continue
+        rel = e[3:]
+        if rel.startswith("library/") or rel.casefold().endswith((".py", ".pth")):
+            out[rel] = _hash(os.path.join(ROOT, rel))
+    cards = os.path.join(WORK, "cards")
+    if os.path.isdir(cards):
+        for n in os.listdir(cards):
+            if n.endswith(".json"):
+                out["(your cards) " + n] = _hash(os.path.join(cards, n))
+    return out
+
+
 class Bench:
     """Everything the engineer can see and touch for one item."""
 
-    def __init__(self, cid, card, verdict, shots, close, photo, build_dir, log, beat):
+    def __init__(self, cid, card, verdict, shots, close, photo, build_dir, log, beat, base=None):
         self.cid, self.card, self.log, self.beat = cid, card or {}, log, beat
         self.photo = photo
+        self.base = base
         self.first = {"verdict": verdict, "shots": shots, "close": close, "dir": build_dir}
         self.cur = dict(self.first)                    # the latest build (the failed one until it rebuilds)
         self.trials = []
@@ -265,7 +794,27 @@ class Bench:
         self.done = None
         self.lessons = []
         self.accepted = None
+        self.decided = {}                              # code version (diff hash) -> (kept?, why): never re-rolled
+        self.stopped = None                            # set when the session must stop at once
+        self.model = None
+        self.judge = None
         self.t0 = time.time()
+        self.deadline = self.t0 + MAX_SECONDS
+        self.watch = _root_watch()
+        if self.watch is None:
+            log("[engineer] (git could not list the running code's changed files - the extra watch on it is off)")
+
+    # -- time
+    def left(self):
+        return self.deadline - time.time()
+
+    def _longest(self):
+        return max([t["took"] for t in self.trials] or [900])
+
+    def reserve(self):
+        """Time kept back so a good fix can always be confirmed (a second rebuild, the asset maker's own check and
+        up to two other items)."""
+        return int(min(MAX_SECONDS / 2, max(MIN_RESERVE, 3.5 * self._longest() + 300)))
 
     # -- seeing
     def _file(self, what):
@@ -301,7 +850,8 @@ class Bench:
             s = 1024 / max(im.size)
             im = im.resize((int(im.width * s), int(im.height * s)), Image.LANCZOS)
         self.pictures.append((f"{what}" + (f" zoomed to {box}" if box else ""), _b64(im)))
-        return f"looking at {what} ({os.path.basename(p)}, {Image.open(p).size[0]}x{Image.open(p).size[1]} px)" + \
+        w, h = Image.open(p).size
+        return f"looking at {what} ({os.path.basename(p)}, {w}x{h} px)" + \
                (f", zoomed to {box}" if box else "") + " - the picture comes with the next message."
 
     def pixel_stats(self, what, box=None):
@@ -319,23 +869,55 @@ class Bench:
         glb = os.path.join(self.cur["dir"], "model", self.cid + ".glb")
         if not os.path.exists(glb):
             return "no model file in this build"
+        if self.left() < 120:
+            return "REFUSED: out of time"
         probe = os.path.join(ENG, "probe.py")
         open(probe, "w").write(PROBE)
-        r = subprocess.run([PY, probe, "--", glb], capture_output=True, text=True, timeout=600)
-        m = re.search(r"PROBE(.*)", r.stdout or "")
+        log = os.path.join(ENG, "probe.log")
+        rc, _ = run_group([PY, probe, "--", glb], min(600, self.left() - 60), log)
+        txt = open(log, errors="replace").read()
+        m = re.search(r"PROBE(.*)", txt)
         if not m:
-            return "could not measure: " + (r.stderr or r.stdout)[-500:]
-        parts = json.loads(m.group(1))
-        return json.dumps(parts)[:9000]
+            return "could not measure: " + ("it ran over its time limit" if rc is None else txt[-500:])
+        return json.dumps(json.loads(m.group(1)))[:9000]
 
     # -- reading code
+    def _readable(self, path):
+        rel = (path or "").strip().lstrip("/")
+        if rel.startswith("wt/"):
+            rel = rel[3:]
+        if not rel.startswith("library") and not os.path.exists(os.path.join(WT, rel)):
+            rel = os.path.join("library", rel)
+        p = os.path.realpath(os.path.join(WT, rel))
+        base = os.path.realpath(WT)
+        if not (p == base or p.startswith(base + os.sep)) or "/.git" in p[len(base):]:
+            raise ValueError(f"{rel}: outside what you may read")
+        return p
+
+    def _writable(self, path):
+        """(real path, path from the code copy's top) - only inside library/, never through a link."""
+        rel = (path or "").strip().replace("\\", "/").lstrip("/")
+        if rel.startswith("wt/"):
+            rel = rel[3:]
+        if rel != "library" and not rel.startswith("library/"):
+            rel = "library/" + rel
+        top = os.path.realpath(WT)
+        base = os.path.join(top, "library")
+        full = os.path.normpath(os.path.join(top, rel))
+        real = os.path.realpath(full)
+        if not real.startswith(base + os.sep):
+            raise ValueError(f"{path}: outside library/ (you may only change files in library/)")
+        if real != full:
+            raise ValueError(f"{path}: goes through a link - not allowed")
+        return real, os.path.relpath(real, top).replace(os.sep, "/")
+
     def list_files(self, path):
         if path.startswith("build"):
             base = os.path.join(self.cur["dir"], path[5:].lstrip("/"))
             if not os.path.realpath(base).startswith(os.path.realpath(self.cur["dir"])):
                 raise ValueError("only inside the build folder")
         else:
-            base, _ = _inside(path)
+            base = self._readable(path)
         out = []
         for n in sorted(os.listdir(base)):
             if n.startswith(".") or n == "__pycache__":
@@ -350,7 +932,7 @@ class Bench:
             if not p.startswith(os.path.realpath(self.cur["dir"])):
                 raise ValueError("only inside the build folder")
         else:
-            p, _ = _inside(path)
+            p = self._readable(path)
         lines = open(p, errors="replace").read().splitlines()
         start = max(1, int(start or 1))
         end = min(len(lines), int(end or start + 199), start + 399)
@@ -358,11 +940,11 @@ class Bench:
         return f"{path} lines {start}-{end} of {len(lines)}\n{body}"
 
     def grep(self, pattern, path="library"):
-        base, _ = _inside(path or "library")
+        base = self._readable(path or "library")
         rx = re.compile(pattern)
         hits = []
         files = [base] if os.path.isfile(base) else [os.path.join(d, f) for d, _, fs in os.walk(base)
-                                                     if "__pycache__" not in d for f in fs
+                                                     if "__pycache__" not in d and "/.git" not in d for f in fs
                                                      if f.endswith((".py", ".json", ".md", ".txt"))]
         for f in sorted(files):
             try:
@@ -378,7 +960,7 @@ class Bench:
     # -- changing code (its own copy only)
     def _check_file(self, p):
         if p.endswith(".py"):
-            r = subprocess.run([PY, "-m", "py_compile", p], capture_output=True, text=True)
+            r = subprocess.run([PY, "-m", "py_compile", p], capture_output=True, text=True, timeout=120)
             if r.returncode:
                 return "Python does not compile: " + (r.stderr or "")[-600:]
         if p.endswith(".json"):
@@ -389,11 +971,16 @@ class Bench:
         return None
 
     def edit_file(self, path, old, new):
-        p, rel = _inside(path, write=True)
-        if rel.endswith("playbook/playbook.md"):
-            return "REFUSED: the playbook's rules are not yours to change (write a lesson instead)"
+        try:
+            p, rel = self._writable(path)
+        except ValueError as e:
+            return f"REFUSED: {e}"
+        if locked(rel[len("library/"):]):
+            return "REFUSED: " + check_change(rel, "")
+        if not os.path.isfile(p):
+            return f"REFUSED: {rel} does not exist (use new_file for a new file)"
         text = open(p).read()
-        n = text.count(old)
+        n = text.count(old) if old else 0
         if n != 1:
             near = ""
             key = (old.strip().splitlines() or [""])[0].strip()[:60]
@@ -403,8 +990,9 @@ class Bench:
             return (f"REFUSED: the old text appears {n} times in {rel} (it must appear exactly once - copy it exactly "
                     f"from read_file, without line numbers)." + (f" Lines that look like it:\n{near}" if near else ""))
         new_text = text.replace(old, new)
-        if rel.endswith("library/run.py") and _protected(text) != _protected(new_text):
-            return "REFUSED: that changes the realism checklist or the judge's question - fix the build, not the check"
+        bad = check_change(rel, new_text)
+        if bad:
+            return "REFUSED: " + bad
         open(p, "w").write(new_text)
         bad = self._check_file(p)
         if bad:
@@ -413,114 +1001,251 @@ class Bench:
         return f"changed {rel}"
 
     def new_file(self, path, content):
-        p, rel = _inside(path, write=True)
+        try:
+            p, rel = self._writable(path)
+        except ValueError as e:
+            return f"REFUSED: {e}"
+        if locked(rel[len("library/"):]):
+            return "REFUSED: " + check_change(rel, "")
         tracked = git("ls-files", "--error-unmatch", rel, cwd=WT).returncode == 0
         if os.path.exists(p) and tracked:
             return f"REFUSED: {rel} already exists - use edit_file"
+        if os.path.isdir(p):
+            return f"REFUSED: {rel} is a folder"
+        bad = check_change(rel, content, new_file=not os.path.exists(p))
+        if bad:
+            return "REFUSED: " + bad
         os.makedirs(os.path.dirname(p), exist_ok=True)
+        old = open(p).read() if os.path.exists(p) else None
         open(p, "w").write(content)
         bad = self._check_file(p)
         if bad:
-            os.replace(p, p + ".refused")
+            keep = os.path.join(_scratch("refused-" + rel), os.path.basename(p) + ".refused")
+            shutil.move(p, keep)                      # kept for a look, outside the code
+            if old is not None:
+                open(p, "w").write(old)
             return "REFUSED: " + bad
         return f"wrote {rel}"
 
     def diff(self):
-        git("add", "-A", "-N", "library", cwd=WT)
-        d = git("diff", "--", "library", cwd=WT).stdout
+        git("add", "-A", "-N", "--", "library", cwd=WT)
+        d = git("diff", "HEAD", "--", "library", ":(exclude)library/playbook", cwd=WT).stdout
         return (d[:12000] + ("\n(diff cut short)" if len(d) > 12000 else "")) or "no changes yet"
 
     def revert(self, path):
-        if path == "all":
-            git("checkout", "-q", "--", "library", cwd=WT)
-            git("clean", "-fdq", "--", "library", cwd=WT)
+        if path == "all":                                       # its whole code copy, back as it was
+            git("reset", "-q", cwd=WT)
+            git("checkout", "-q", "--", ".", cwd=WT)
+            extra = [f for f in git("ls-files", "--others", "--exclude-standard", "-z", cwd=WT).stdout.split("\0") if f]
+            if extra:
+                s = _scratch("undone-new-files")
+                for f in extra:
+                    os.makedirs(os.path.dirname(os.path.join(s, f)), exist_ok=True)
+                    shutil.move(os.path.join(WT, f), os.path.join(s, f + ".undone"))
             return "every change undone"
-        p, rel = _inside(path, write=True)
+        try:
+            p, rel = self._writable(path)
+        except ValueError as e:
+            return f"REFUSED: {e}"
         if git("ls-files", "--error-unmatch", rel, cwd=WT).returncode == 0:
+            git("reset", "-q", "--", rel, cwd=WT)
             git("checkout", "-q", "--", rel, cwd=WT)
         elif os.path.exists(p):
-            os.replace(p, p + ".undone")
+            git("reset", "-q", "--", rel, cwd=WT)
+            shutil.move(p, os.path.join(_scratch("undone-" + rel), os.path.basename(p) + ".undone"))
         return f"{rel} is back as it was"
 
     def _diff_hash(self):
-        git("add", "-A", "-N", "library", cwd=WT)
-        return hashlib.sha1(git("diff", "--", "library", cwd=WT).stdout.encode()).hexdigest()
+        """Which code is being tested: every change in library/ except the playbook (so writing a lesson never makes
+        a tested fix look untested)."""
+        git("add", "-A", "-N", "--", "library", cwd=WT)
+        d = git("diff", "--binary", "HEAD", "--", "library", ":(exclude)library/playbook", cwd=WT).stdout
+        return hashlib.sha1(d.encode()).hexdigest()
+
+    def changed(self):
+        """Every path changed in its code copy (from the top of the code), with git's two status letters."""
+        out = []
+        st = git("status", "--porcelain", "-z", "-uall", "--no-renames", cwd=WT).stdout
+        for e in st.split("\0"):
+            if len(e) >= 4 and not e.endswith(".DS_Store"):
+                out.append((e[:2], e[3:]))
+        return out
+
+    def audit(self):
+        """Every change in its code copy against the hard rules - also catches a test build that changed files by
+        itself while it ran. Returns what breaks the rules ('' when nothing does)."""
+        problems = []
+        for code, rel in self.changed():
+            if not rel.startswith("library/"):
+                problems.append(f"{rel} (outside library/) was changed")
+                continue
+            p = os.path.join(WT, rel)
+            if os.path.islink(p):
+                problems.append(f"{rel} is a link")
+                continue
+            if "D" in code or not os.path.exists(p):
+                if locked(rel[8:]):
+                    problems.append(f"{rel} is locked and was removed")
+                continue
+            try:
+                text = open(p, errors="replace").read()
+            except OSError as e:
+                problems.append(f"{rel}: {e}")
+                continue
+            bad = check_change(rel, text, new_file=_base_text(rel) is None)
+            if bad:
+                problems.append(f"{rel}: {bad}")
+        return "; ".join(problems)[:3000]
 
     # -- testing
-    def rebuild(self, clear=None, why="", cid=None, card=None):
-        cid = cid or self.cid
-        n = len([t for t in self.trials if t["cid"] == cid]) + 1
-        if cid == self.cid and n > MAX_REBUILDS:
-            return "REFUSED: out of rebuilds for this item - call finish with what you found"
-        tdir = os.path.join(ENG, "trials", cid, time.strftime("%Y%m%d-%H%M%S"))
-        os.makedirs(tdir, exist_ok=True)
-        clear = [c for c in (clear or []) if isinstance(c, str)]
-        self.log(f"[engineer] {cid}: rebuild {n} with its fix ({why[:160]})")
-        self.beat(f"engineer: rebuilding {cid} to test a fix")
-        env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK)
+    def _own_trials(self):
+        return [t for t in self.trials if t["cid"] == self.cid and t["kind"] == "try"]
+
+    def _check_root(self):
+        """Did a test build write into the running asset maker's own code or your real cards? Then everything
+        stops."""
+        if self.watch is None:
+            return True
+        now = _root_watch()
+        if now is None:
+            return True
+        bad = sorted(k for k, v in now.items() if self.watch.get(k) != v)
+        if bad:
+            self.stopped = ("a test build changed the running asset maker's own files or your real cards (" +
+                            ", ".join(bad[:8]) + ") - the session was stopped and nothing is kept. Send this to Claude.")
+            self.log(f"[engineer] {self.cid}: STOPPED - {self.stopped}")
+        return not bad
+
+    def _run_trial(self, cid, clear, why, kind):
+        """One test build (and its check) with the engineer's code copy, inside the time left."""
+        if self.left() < 90:
+            return None, "out of time"
+        timeout = min(REBUILD_TIMEOUT, self.left() - 30)
+        if self.model and self.judge and self.model != self.judge:
+            _release(self.model)                       # the test build loads the judge: its own brain lets go
+        tdir = os.path.join(ENG, "trials", cid, _stamp())
+        n = 1
+        while os.path.exists(tdir):
+            n += 1
+            tdir = os.path.join(ENG, "trials", cid, f"{_stamp()}-{n}")
+        os.makedirs(tdir)
+        clear = [c for c in (clear or []) if isinstance(c, str) and re.fullmatch(r"[a-z_]{1,30}", c)]
         h = self._diff_hash()
-        t0 = time.time()
-        try:
-            r = subprocess.run([PY, os.path.join(WT, "library", "run.py"), "--trial", cid, tdir,
-                                "--clear", ",".join(clear)], capture_output=True, text=True, env=env, timeout=3600)
-            out = (r.stdout or "") + (r.stderr or "")
-        except subprocess.TimeoutExpired:
-            out = "the rebuild ran over an hour and was stopped"
-        open(os.path.join(tdir, "trial.log"), "w").write(out)
+        self.beat(f"engineer: test build of {cid} ({kind})")
+        env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK)
+        rc, took = run_group(_trial_cmd(cid, tdir, clear), timeout, os.path.join(tdir, "trial.log"), env=env,
+                             cwd=WT, beat=lambda: self.beat(f"engineer: test build of {cid} running ({kind})"))
         res = jload(os.path.join(tdir, "trial.json"), {})
-        v = res.get("verdict")
-        t = {"cid": cid, "dir": tdir, "verdict": v, "shots": res.get("shots"), "close": res.get("close"),
-             "diff": h, "took": int(time.time() - t0), "why": why}
+        v = res.get("verdict") if rc is not None else None
+        t = {"cid": cid, "dir": tdir, "verdict": v if isinstance(v, dict) else None, "shots": res.get("shots"),
+             "close": res.get("close"), "diff": h, "took": took, "why": why, "clear": clear, "kind": kind,
+             "stopped": rc is None}
         self.trials.append(t)
+        self._check_root()
+        out = open(os.path.join(tdir, "trial.log"), errors="replace").read()
         tail = "\n".join(l for l in out.splitlines()[-40:] if l.strip())[-3000:]
+        if rc is None:
+            tail = f"the test build ran over its time limit ({timeout} s) and was stopped with everything it started\n" + tail
+        return t, tail
+
+    def _judge_own(self, t):
+        """The asset maker's own check of a test build's model: its own untouched code, in a separate program."""
+        if self.left() < 90:
+            return None
+        timeout = min(JUDGE_TIMEOUT, self.left() - 30)
+        if self.model and self.judge and self.model != self.judge:
+            _release(self.model)
+        env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK)
+        rc, _ = run_group(_judge_cmd(t["cid"], t["dir"]), timeout, os.path.join(t["dir"], "judge.log"), env=env,
+                          cwd=ROOT, beat=lambda: self.beat(f"engineer: the asset maker's own check of {t['cid']}"))
+        v = jload(os.path.join(t["dir"], "judged.json"), {}).get("verdict") if rc is not None else None
+        return v if isinstance(v, dict) else None
+
+    def rebuild(self, clear=None, why=""):
+        if self.stopped:
+            return "REFUSED: " + self.stopped
+        n = len(self._own_trials()) + 1
+        if n > MAX_REBUILDS:
+            return "REFUSED: out of rebuilds for this item - call finish with what you found"
+        need = self.reserve() + self._longest()
+        if self.left() < need:
+            return (f"REFUSED: not enough time left for another test build ({int(self.left() / 60)} min left; "
+                    f"{int(self.reserve() / 60)} min are kept for confirming a fix) - call finish now")
+        bad = self.audit()
+        if bad:
+            return "REFUSED: your changes break the rules, so they can't be tested: " + bad
+        self.log(f"[engineer] {self.cid}: rebuild {n} with its fix ({why[:160]})")
+        t, tail = self._run_trial(self.cid, clear, why, "try")
+        if t is None:
+            return "REFUSED: " + tail
+        if self.stopped:
+            return "STOPPED: " + self.stopped
+        v = t["verdict"]
         if not v:
             return f"THE REBUILD FAILED before the check (it took {t['took']} s). The end of its log:\n{tail}"
-        if cid != self.cid:
-            return json.dumps({"item": cid, "failed": _fails(v), "problems": v.get("problems")})
         before = _fails(self.cur.get("verdict"))
-        self.cur = {"verdict": v, "shots": t["shots"], "close": t["close"], "dir": tdir}
+        first = set(_fails(self.first["verdict"]))
+        now = set(_fails(v))
+        self.cur = {"verdict": v, "shots": t["shots"], "close": t["close"], "dir": t["dir"]}
         for w in ("check", "close"):
             try:
                 self.look(w)
             except Exception:
                 pass
         return json.dumps({"rebuilt_in_seconds": t["took"], "passed_every_check": bool(v.get("pass")),
-                           "failed_before": before, "failed_now": _fails(v), "judge_says": v.get("problems"),
+                           "failed_before": before, "failed_now": sorted(now),
+                           "now_passing_that_failed_at_first": sorted(first - now),
+                           "NEW_failures_that_passed_at_first": sorted(now - first),
+                           "judge_says": v.get("problems"),
                            "note": "the new check and close-up pictures come with the next message - look at them "
-                                   "yourself before you decide whether this change helped"}, default=str)
+                                   "yourself before you decide whether this change helped. A fix is kept only if "
+                                   "nothing that passed at first fails now and at least one failure is gone."},
+                          default=str)
 
     def lesson(self, symptom, cause, fix):
-        self.lessons.append({"symptom": symptom, "cause": cause, "fix": fix})
-        p = os.path.join(WT, "library", "playbook", "lessons.md")
-        with open(p, "a") as f:
-            f.write(f"- ({time.strftime('%Y-%m-%d')}, {self.cid}) SEEN: {symptom.strip()} | CAUSE: {cause.strip()} | "
-                    f"FIX: {fix.strip()}\n")
-        return "written - every future build reads it"
+        """Kept aside until the fix is kept (then it goes into the playbook with it); never written into the code
+        copy during the session."""
+        item = {"symptom": str(symptom).strip()[:600], "cause": str(cause).strip()[:600], "fix": str(fix).strip()[:600]}
+        self.lessons.append(item)
+        os.makedirs(PENDING, exist_ok=True)
+        with open(os.path.join(PENDING, self.cid + ".md"), "a") as f:
+            f.write(_lesson_line(self.cid, item))
+        return "written down - it goes into the playbook if your fix is kept (otherwise it is filed as tried)"
 
     def finish(self, summary):
-        self.done = summary
+        self.done = str(summary)
         return "ok"
+
+
+def _lesson_line(cid, item, tag=""):
+    clean = {k: " ".join(str(item.get(k, "")).split()) for k in ("symptom", "cause", "fix")}
+    return (f"- ({time.strftime('%Y-%m-%d')}, {cid}){tag} SEEN: {clean['symptom']} | CAUSE: {clean['cause']} | "
+            f"FIX: {clean['fix']}\n")
 
 
 # ---------------------------------------------------------------- the conversation with its brain
 
-def _chat(model, messages, tools):
+def _chat(model, messages, tools, timeout=2400):
     sys.path.insert(0, HERE)
     import urllib.error
     import vet as V
     body = {"model": model, "stream": False, "think": True, "messages": messages, "tools": tools,
             "keep_alive": "30m", "options": {"temperature": 0.6, "num_ctx": 65536, "num_predict": 8192}}
     try:
-        return V._call("/api/chat", body, timeout=2400).get("message", {})
+        return V._call("/api/chat", body, timeout=timeout).get("message", {})
     except urllib.error.HTTPError as e:
         if e.code == 400:                                     # a brain that can't think out loud: ask plainly
             body["think"] = False
-            return V._call("/api/chat", body, timeout=2400).get("message", {})
+            return V._call("/api/chat", body, timeout=timeout).get("message", {})
         raise
 
 
+CUT_NOTE = " [cut short to save room - run the tool again if you need all of it]"
+
+
 def _prune(messages):
-    """Only the newest picture sets stay in its memory - the older ones it can look at again if it needs to."""
+    """Only the newest picture sets stay in its memory, and only the last few turns' tool results stay whole - the
+    older ones it can look at or read again if it needs to."""
     seen = 0
     for m in reversed(messages):
         if m.get("images"):
@@ -528,37 +1253,74 @@ def _prune(messages):
             if seen > KEEP_PICTURES:
                 m.pop("images")
                 m["content"] += " [these pictures were taken out of memory to save room - look again if needed]"
+    turns = [i for i, m in enumerate(messages) if m.get("role") == "assistant"]
+    if len(turns) <= KEEP_FULL_TURNS:
+        return
+    cutoff = turns[-KEEP_FULL_TURNS]
+    for m in messages[:cutoff]:
+        c = m.get("content")
+        if m.get("role") == "tool" and isinstance(c, str) and len(c) > OLD_RESULT_CHARS and not c.endswith(CUT_NOTE):
+            m["content"] = c[:OLD_RESULT_CHARS] + CUT_NOTE
 
 
 def _system(b):
     pb = open(os.path.join(WT, "library", "playbook", "playbook.md")).read()
     lessons = open(os.path.join(WT, "library", "playbook", "lessons.md")).read()[-6000:]
+    tried = ""
+    if os.path.exists(REJECTED):
+        tried = open(REJECTED, errors="replace").read()[-3000:]
+        tried = ("\n\n## Tried before and NOT kept (do not repeat these unless you have new evidence)\n" + tried
+                 if tried.strip() else "")
     c = b.card.get("construction") or {}
     route = _route_of(b.card, b.first["dir"])
     files = ", ".join("library/" + f for f in ROUTE_FILES.get(route, ()) + ROUTE_FILES["all"])
-    return (pb + "\n\n" + lessons +
+    return (pb + "\n\n" + lessons + tried +
             f"\n\n## This item\nproduct: {b.card.get('product')}\nreal size (m, width x depth x height): "
             f"{b.card.get('size')}\nbuild route: {route}\nhow it is made (its card): {json.dumps(c)[:2500]}\n"
             f"what marks the real thing: {b.card.get('recognize')}\nfiles this route uses: {files}\n"
             "Your code copy is the folder 'library/...'. The build folder (its pictures, textures, model) is 'build/'.")
 
 
+def _file_old_pending(cid):
+    """Lessons an earlier session of this item wrote but never finished: filed as tried-and-not-kept."""
+    p = os.path.join(PENDING, cid + ".md")
+    if os.path.exists(p):
+        txt = open(p, errors="replace").read()
+        if txt.strip():
+            with open(REJECTED, "a") as f:
+                f.write(txt.replace(f", {cid})", f", {cid}) [session stopped half way]"))
+        _move_to_scratch(p, f"lessons-{cid}-filed")
+
+
 def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lambda s: None, status=None):
     """Your AI works on one failed model until it passes or it runs out of ideas. Returns what happened."""
     say = log
     status = status or (lambda **k: None)
+    why = nothing_to_fix(verdict)
+    if why:
+        say(f"[engineer] {cid}: not started - {why}")
+        _refund_attempt(cid)
+        return {"kept": False, "why": "not started: " + why, "started": False}
     model = brain()
     if not model:
-        return {"kept": False, "why": "no brain installed for the engineer"}
-    base_sha = fresh_worktree(cid)
-    b = Bench(cid, card, verdict, shots, close, photo, build_dir, log, beat)
-    say(f"[engineer] {cid}: your AI ({model}) takes the failed model: {', '.join(_fails(verdict))}")
+        return {"kept": False, "why": "no brain installed for the engineer", "started": False}
+    os.makedirs(ENG, exist_ok=True)
+    _file_old_pending(cid)
+    base_sha, branch = fresh_worktree(cid)
+    b = Bench(cid, card, verdict, shots, close, photo, build_dir, log, beat, base=base_sha)
+    b.model = model
+    try:
+        b.judge = _judge_model()
+    except Exception:
+        b.judge = None
+    say(f"[engineer] {cid}: your AI ({model}) takes the failed model: {', '.join(_fails(verdict))} "
+        f"(its code copy: branch {branch})")
     for w in ("check", "close", "photo"):
         try:
             b.look(w)
         except Exception:
             pass
-    first = (f"The model of {card.get('product')} failed the realism check.\nFailed checks: {_fails(verdict)}\n"
+    first = (f"The model of {(card or {}).get('product')} failed the realism check.\nFailed checks: {_fails(verdict)}\n"
              f"The judge said: {json.dumps(verdict.get('problems'))}\n"
              "With this message: the model all around, its close-ups, and the real photo. Follow the playbook: look "
              "closely (zoom in where each problem is), measure (mesh_info, pixel_stats on its maps), find the code "
@@ -568,10 +1330,13 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
     fns = {"look": b.look, "pixel_stats": b.pixel_stats, "mesh_info": b.mesh_info, "list_files": b.list_files,
            "read_file": b.read_file, "grep": b.grep, "edit_file": b.edit_file, "new_file": b.new_file,
            "diff": b.diff, "revert": b.revert, "rebuild": b.rebuild, "lesson": b.lesson, "finish": b.finish}
+    allowed = {name: set(props) for name, _, props, _ in TOOLS}
     nudged = 0
     for turn in range(MAX_TURNS):
-        if time.time() - b.t0 > MAX_SECONDS:
-            say(f"[engineer] {cid}: out of time")
+        if b.stopped:
+            break
+        if b.left() < b.reserve():
+            say(f"[engineer] {cid}: time is nearly up - what it has is checked now")
             break
         if b.pictures:
             messages.append({"role": "user", "content": "Pictures: " + "; ".join(n for n, _ in b.pictures),
@@ -580,7 +1345,7 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
         _prune(messages)
         beat(f"engineer thinking about {cid} (turn {turn + 1})")
         try:
-            msg = _chat(model, messages, tools)
+            msg = _chat(model, messages, tools, timeout=int(max(60, min(2400, b.left() - b.reserve()))))
         except Exception as e:
             say(f"[engineer] {cid}: its brain did not answer ({e})")
             break
@@ -603,6 +1368,9 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
                     args = json.loads(args)
                 except Exception:
                     args = {}
+            if not isinstance(args, dict):
+                args = {}
+            args = {k: v for k, v in args.items() if k in allowed.get(name, ())}   # only the inputs it was given
             try:
                 res = fns[name](**args) if name in fns else f"no tool called {name}"
             except TypeError as e:
@@ -617,52 +1385,104 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
             ok, why = _accept(b, say)
             if ok:
                 b.accepted = b._diff_hash()
-            if ok or why.startswith("nothing"):
+            if ok or why.startswith("nothing") or b.stopped:
                 break
             b.done = None                                           # not good enough: it hears why and goes on
             messages.append({"role": "user", "content": why})
-    return _keep(b, base_sha, say)
+    return _keep(b, base_sha, branch, say)
 
 
 def _accept(b, say):
-    """May its changes be kept? Only when the rebuild WITH THESE EXACT CHANGES is better than the failed build and the
-    other built items of the same kind did not get worse."""
-    h = b._diff_hash()
-    if not git("diff", "--stat", "--", "library", cwd=WT).stdout.strip():
+    """May its changes be kept? Only when (1) nothing breaks the rules, (2) the rebuild WITH THESE EXACT CHANGES fixed
+    at least one failed check and broke none that passed, (3) a second rebuild of the same code comes out the same
+    and the asset maker's own check agrees, (4) the other built items of the same kind gained no new failure."""
+    if b.stopped:
+        return False, b.stopped
+    if not [c for c in b.changed() if not c[1].startswith("library/playbook/")]:
         return False, "nothing changed"
-    mine = [t for t in b.trials if t["cid"] == b.cid and t["verdict"]]
+    h = b._diff_hash()
+    if h in b.decided:
+        ok, why = b.decided[h]
+        return ok, (why if ok else "Same code as before, so the same answer: " + why)
+    bad = b.audit()
+    if bad:
+        return False, "Your changes break the rules and can't be kept: " + bad + ". Revert them."
+    tried = b._own_trials()
+    if tried and tried[-1]["diff"] == h and not tried[-1]["verdict"]:
+        return False, ("Your last rebuild with these changes did not finish (it broke or ran over its time) - nothing "
+                       "is kept that was not checked. Look at why, fix it, and rebuild.")
+    mine = [t for t in tried if t["verdict"]]
     last = mine[-1] if mine else None
     if not last or last["diff"] != h:
         return False, ("You changed code after your last rebuild (or never rebuilt). Rebuild with exactly these changes "
                        "first - nothing is kept that was not tested.")
-    if len(_fails(last["verdict"])) >= len(_fails(b.first["verdict"])):
-        return False, (f"Your last rebuild failed {_fails(last['verdict'])} - no better than before "
-                       f"({_fails(b.first['verdict'])}). Look at the new pictures, revert what did not help, and try "
-                       "the real cause - or call finish again if you truly have no other idea.")
+    F0, F1 = set(_fails(b.first["verdict"])), set(_fails(last["verdict"]))
+    if not F1 < F0:
+        worse = sorted(F1 - F0)
+        msg = (f"Your last rebuild failed {sorted(F1)} (at first: {sorted(F0)}). " +
+               (f"It broke checks that passed before: {worse}. " if worse else "No failed check was fixed. ") +
+               "A fix is kept only if nothing that passed fails now and at least one failure is gone. Look at the new "
+               "pictures, revert what did not help, and try the real cause - or call finish again if you truly have "
+               "no other idea.")
+        b.decided[h] = (False, msg)
+        return False, msg
+
+    def decide(ok, why):
+        b.decided[h] = (ok, why)
+        return ok, why
+
+    say(f"[engineer] {b.cid}: {sorted(F0)} -> {sorted(F1)} - confirming with a second rebuild and the asset maker's "
+        "own check")
+    t, tail = b._run_trial(b.cid, last["clear"], "confirm: the same code again", "confirm")
+    if b.stopped:
+        return False, b.stopped
+    if t is None or not t["verdict"]:
+        return decide(False, "The confirmation rebuild of the same code did not finish (" +
+                      (tail or "")[-600:] + ") - nothing is kept that can't be repeated.")
+    F2 = set(_fails(t["verdict"]))
+    own = b._judge_own(t)
+    if b.stopped:
+        return False, b.stopped
+    if own is None or "failed" not in own:
+        return decide(False, "The asset maker's own check could not judge the confirmation rebuild" +
+                      (f" ({str((own or {}).get('problems'))[:300]})" if own else "") + " - nothing is kept unconfirmed.")
+    Fp = set(_fails(own))
+    if F2 != F1 or Fp != F1:
+        return decide(False, f"The same code built a second time did not come out the same: first {sorted(F1)}, "
+                             f"second {sorted(F2)}, the asset maker's own check {sorted(Fp)}. That is luck or noise, "
+                             "not a real fix - find a change that helps every time.")
     for other in _neighbors(b):
-        res = b.rebuild(why="does this fix break other items?", cid=other["cid"])
-        try:
-            got = json.loads(res)
-        except Exception:
-            return False, f"Your fix broke the build of {other['cid']}: {res[:1500]}"
-        if len(got.get("failed", [])) > len(other["fails"]):
-            return False, (f"Your fix made {other['cid']} worse: it now fails {got['failed']} (before: {other['fails']}; "
-                           f"judge: {got.get('problems')}). Fix the cause without breaking it.")
-    return True, "ok"
+        o, otail = b._run_trial(other["cid"], [], "does this fix break other items?", "neighbor")
+        if b.stopped:
+            return False, b.stopped
+        if o is None or not o["verdict"]:
+            return decide(False, f"Your fix broke the build of {other['cid']}: {(otail or '')[-1500:]}")
+        new = sorted(set(_fails(o["verdict"])) - set(other["fails"]))
+        if new:
+            return decide(False, f"Your fix made {other['cid']} worse: it now also fails {new} (before it failed "
+                                 f"{sorted(other['fails'])}; judge: {o['verdict'].get('problems')}). Fix the cause "
+                                 "without breaking it.")
+    if b._diff_hash() != h:
+        return decide(False, "The code changed by itself while the fix was being confirmed (a test build wrote into "
+                             "the code copy) - nothing is kept.")
+    bad = b.audit()
+    if bad:
+        return decide(False, "A test build changed files it must not: " + bad)
+    return decide(True, "ok")
 
 
 def _neighbors(b, most=2):
     """Other items already built whose build uses the files it changed (to prove the fix doesn't break them)."""
-    changed = [l[len("library/"):] for l in git("diff", "--name-only", "--", "library", cwd=WT).stdout.split()]
-    changed += [l[len("library/"):] for l in git("ls-files", "--others", "--exclude-standard", "library",
-                                                    cwd=WT).stdout.split()]
-    changed = [c for c in changed if not c.startswith("playbook/")]
+    changed = [rel[len("library/"):] for code, rel in b.changed()
+               if rel.startswith("library/") and not rel.startswith("library/playbook/")]
     if not changed:
         return []
-    st = jload(os.path.join(OUT, "status.json"), {})
+    st = jload(os.path.join(OUT, "status.json"), None)
+    if not isinstance(st, dict):                            # broken right now: its last good backup
+        st = jload(os.path.join(OUT, "status.json.bak"), {})
     out = []
-    for cid, v in st.items():
-        if cid == b.cid or not isinstance(v.get("verdict"), dict):
+    for cid, v in (st.items() if isinstance(st, dict) else []):
+        if cid == b.cid or not isinstance(v, dict) or not isinstance(v.get("verdict"), dict):
             continue
         d = os.path.join(OUT, cid)
         if not os.path.exists(os.path.join(d, "candidates.json")):
@@ -674,8 +1494,28 @@ def _neighbors(b, most=2):
     return sorted(out, key=lambda x: len(x["fails"]))[:most]
 
 
-def _keep(b, base_sha, say):
-    if b.accepted and b.accepted == b._diff_hash():
+def _file_rejected(b, why):
+    """Nothing kept: its lessons (and what it changed) go under 'tried and not kept', so the next session doesn't
+    walk the same dead end."""
+    files = sorted({rel for _, rel in b.changed() if not rel.startswith("library/playbook/")})
+    p = os.path.join(PENDING, b.cid + ".md")
+    if not b.lessons and not files:
+        if os.path.exists(p):
+            _move_to_scratch(p, f"lessons-{b.cid}-filed")
+        return
+    with open(REJECTED, "a") as f:
+        f.write(f"- ({time.strftime('%Y-%m-%d')}, {b.cid}) NOT KEPT ({' '.join(str(why).split())[:240]}); "
+                f"changed: {', '.join(files)[:300] or 'nothing'}\n")
+        for item in b.lessons:
+            f.write("  " + _lesson_line(b.cid, item, tag=" [not kept]"))
+    if os.path.exists(p):
+        _move_to_scratch(p, f"lessons-{b.cid}-filed")
+
+
+def _keep(b, base_sha, branch, say):
+    if b.stopped:
+        ok, why = False, b.stopped
+    elif b.accepted and b.accepted == b._diff_hash():
         ok, why = True, "ok"
     elif b.done is None and b.trials:                       # out of turns or time: what it has, if it is better
         ok, why = _accept(b, say)
@@ -683,26 +1523,43 @@ def _keep(b, base_sha, say):
         ok, why = False, "nothing better was found"
     if not ok:
         say(f"[engineer] {b.cid}: nothing kept ({why[:200]})")
+        _file_rejected(b, why)
         return {"kept": False, "why": why, "summary": b.done, "trials": len(b.trials),
-                "fails_now": _fails(b.cur.get("verdict"))}
-    last = [t for t in b.trials if t["cid"] == b.cid][-1]
-    msg = (f"Asset engineer (your AI): {b.cid} - {(_fails(b.first['verdict']))} -> {_fails(last['verdict'])}\n\n"
-           f"{(b.done or '').strip()[:1500]}\n\nLessons: " + "; ".join(l["symptom"] for l in b.lessons))
-    git("add", "-A", "--", "library", cwd=WT)
+                "fails_now": _fails(b.cur.get("verdict")), "branch": branch}
+    last = [t for t in b._own_trials() if t["verdict"]][-1]
+    if b.lessons:                                           # the lessons go into the playbook WITH the kept fix
+        with open(os.path.join(WT, "library", "playbook", "lessons.md"), "a") as f:
+            for item in b.lessons:
+                f.write(_lesson_line(b.cid, item))
+    p = os.path.join(PENDING, b.cid + ".md")
+    msg = (f"Asset engineer (your AI): {b.cid} - {sorted(_fails(b.first['verdict']))} -> {sorted(_fails(last['verdict']))}"
+           f"\n\n{(b.done or '').strip()[:1500]}\n\nConfirmed by a second rebuild and the asset maker's own check."
+           "\n\nLessons: " + "; ".join(l["symptom"] for l in b.lessons))
+    git("add", "-A", "--", "library", ":(exclude)*.DS_Store", cwd=WT)
     r = git(*AUTHOR, "commit", "-q", "-m", msg, cwd=WT)
     if r.returncode:
-        return {"kept": False, "why": "could not save the fix: " + r.stderr[-300:]}
+        _file_rejected(b, "could not save the fix")
+        return {"kept": False, "why": "could not save the fix: " + (r.stderr or r.stdout)[-300:], "branch": branch}
+    if os.path.exists(p):
+        _move_to_scratch(p, f"lessons-{b.cid}-kept")
     sha = git("rev-parse", "HEAD", cwd=WT).stdout.strip()
     if git("rev-parse", "HEAD").stdout.strip() != base_sha:
-        say(f"[engineer] the code moved while it worked - its fix is kept on branch engineer/{b.cid} for review")
-        return {"kept": False, "why": "code changed meanwhile", "branch": f"engineer/{b.cid}", "sha": sha}
-    r = git(*AUTHOR, "cherry-pick", sha)
+        say(f"[engineer] the code moved while it worked - its fix is kept on branch {branch} for review")
+        return {"kept": False, "why": f"its fix passed, but the code changed while it worked - kept on branch {branch} "
+                                      "for review", "branch": branch, "sha": sha, "summary": b.done}
+    r = git("merge", "-q", "--ff-only", sha)
     if r.returncode:
-        git("cherry-pick", "--abort")
-        return {"kept": False, "why": "could not add the fix: " + r.stderr[-300:], "sha": sha}
-    say(f"[engineer] {b.cid}: KEPT - {_fails(b.first['verdict'])} -> {_fails(last['verdict'])}: {(b.done or '')[:300]}")
-    return {"kept": True, "sha": sha, "summary": b.done, "before": _fails(b.first["verdict"]),
-            "after": _fails(last["verdict"]), "pass": bool(last["verdict"].get("pass")), "lessons": b.lessons}
+        r = git(*AUTHOR, "cherry-pick", sha)
+        if r.returncode:
+            git("cherry-pick", "--abort")
+            say(f"[engineer] {b.cid}: the fix could not be added to the running code - it is kept on branch {branch}")
+            return {"kept": False, "why": "could not add the fix: " + (r.stderr or r.stdout)[-300:], "sha": sha,
+                    "branch": branch, "summary": b.done}
+    say(f"[engineer] {b.cid}: KEPT - {sorted(_fails(b.first['verdict']))} -> {sorted(_fails(last['verdict']))}: "
+        f"{(b.done or '')[:300]}")
+    return {"kept": True, "sha": git("rev-parse", "HEAD").stdout.strip(), "summary": b.done,
+            "before": _fails(b.first["verdict"]), "after": _fails(last["verdict"]),
+            "pass": bool(last["verdict"].get("pass")), "lessons": b.lessons, "branch": branch}
 
 
 if __name__ == "__main__":

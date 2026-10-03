@@ -23,7 +23,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
-DIR = os.path.join(WORK, "cards")
+DIR = os.environ.get("CRUSHED_CARDS_DIR") or os.path.join(WORK, "cards")   # a test build uses its own copies
 
 ASK = """You are preparing a real product for a professional 3D model. Use what you know about it.
 Product: {product}

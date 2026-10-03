@@ -18,7 +18,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LIB = os.path.dirname(HERE)
-RECIPES = os.path.join(HERE, "recipes")
+RECIPES = os.environ.get("CRUSHED_RECIPES_DIR") or os.path.join(HERE, "recipes")   # a test build: its own copies
 sys.path.insert(0, LIB)
 
 PHYS = json.load(open(os.path.join(HERE, "physics.json")))

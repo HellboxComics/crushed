@@ -115,10 +115,40 @@ def t_hunyuan():
     if not hy:
         raise RuntimeError("Hunyuan3D is not installed")
     r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), "--check"],
-                       cwd=HERE, capture_output=True, text=True, timeout=180)      # exactly how a real build runs it
+                       cwd=HERE, capture_output=True, text=True, timeout=240)      # exactly how a real build runs it
     if r.stdout.strip().splitlines()[-1:] != ["ok"]:
         raise RuntimeError((r.stderr or r.stdout)[-300:])
-    return "loads"
+    notes = [l for l in r.stdout.splitlines() if l.startswith("[hunyuan] note")]
+    return "the PyTorch shape maker and the painter load" + (f" ({notes[0][16:120]})" if notes else "")
+
+
+def t_engineer_guard():
+    """Your AI's engineer: its hard rules still refuse what they must (offline, about a second). If this fails the
+    engineer is not used (the rest of the asset maker still runs)."""
+    import ast
+    import engineer as E
+    must = ["vet.py", "VET.py", "viewshot.py", "judge.py", "measure.py", "engineer.py", "selftest.py", "watchdog.py",
+            "dossier.py", "facts.py", "queue.txt", "families.json", "playbook/playbook.md", "playbook//playbook.md",
+            "playbook/lessons.md", "shapes/specs/aa_battery.json", "labels/any.json", "shapes/vet.py", ".gitignore",
+            "shapes/../vet.py"]
+    bad = [p for p in must if not E.locked(p)]
+    if bad:
+        raise RuntimeError("not locked: " + ", ".join(bad))
+    if E.locked("finish.py") or E.locked("shapes/lathe.py") or E.locked("factory/recipes/x.json"):
+        raise RuntimeError("normal builder files are locked by mistake")
+    tree = ast.parse(open(os.path.join(HERE, "run.py")).read())
+    same = ast.unparse(tree)
+    for node in tree.body:                               # the checklist made weaker: must be caught
+        if isinstance(node, ast.Assign) and any(getattr(t, "id", "") == "CHECKS" for t in node.targets):
+            node.value.values[0] = ast.Constant("anything")
+            break
+    else:
+        raise RuntimeError("the realism checklist (CHECKS) is not in run.py")
+    if E.run_fingerprint(ast.unparse(tree)) == E.run_fingerprint(same):
+        raise RuntimeError("a weaker checklist in run.py is not caught")
+    if not E.risky("import vet as V\nV.ask = lambda *a, **k: {}\n"):
+        raise RuntimeError("replacing the judge's function from a builder is not caught")
+    return "locked files, the checklist and judge tricks are all refused"
 
 
 def t_phone():
@@ -138,32 +168,46 @@ def run_all(quiet_phone=False):
     global SAMPLE
     SAMPLE = sample_photo()
     print("SELF-TEST " + time.strftime("%H:%M"), flush=True)
-    order = [("memory: what is loaded", t_memory, 20),
+    HY, GUARD = "Hunyuan3D loads", "your AI's engineer: safety rules"
+    optional = {HY, GUARD}                             # these only switch off their own part, never the whole run
+    order = [(GUARD, t_engineer_guard, 30),
+             ("memory: what is loaded", t_memory, 20),
              ("phone buttons (Hart's bot)", t_phone, 30),
              ("judge (Ollama vision)", t_judge, 240),
              ("judges let go of memory", t_free_judges, 60),
              ("cut-out (drawing room)", t_cutout, 120),
              ("label drawer (Qwen-Image-Edit)", t_draw, 480),
              ("Blender: box and round shapes", t_blender, 300),
-             ("Hunyuan3D loads", t_hunyuan, 200),
+             (HY, t_hunyuan, 260),
              ("Google Images browser", t_google, 90)]
     for name, fn, limit in order:
-        if not check(name, fn, limit) and name != "Hunyuan3D loads":   # Hunyuan only blocks free-form items
+        if not check(name, fn, limit) and name not in optional:   # Hunyuan only blocks free-form items
             break
     try:
         import turnaround as T
         T.free_room()
     except Exception:
         pass
-    core = [r for r in RESULTS if r["piece"] != "Hunyuan3D loads"]
-    ok = all(r["ok"] for r in core) and len(core) == len(order) - 1
-    hy = next((r for r in RESULTS if r["piece"] == "Hunyuan3D loads"), {"ok": False, "note": "not checked"})
+    core = [r for r in RESULTS if r["piece"] not in optional]
+    ok = all(r["ok"] for r in core) and len(core) == len(order) - len(optional)
+    hy = next((r for r in RESULTS if r["piece"] == HY), {"ok": False, "note": "not checked"})
+    guard = next((r for r in RESULTS if r["piece"] == GUARD), {"ok": False, "note": "not checked"})
     work = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
     os.makedirs(work, exist_ok=True)
-    json.dump({"ok": ok, "hunyuan_ok": hy["ok"], "hunyuan_note": hy["note"], "at": time.time(), "results": RESULTS},
-              open(os.path.join(work, "selftest.json"), "w"), indent=1)
+    out = os.path.join(work, "selftest.json")
+    with open(out + ".tmp", "w") as f:                 # written whole or not at all
+        json.dump({"ok": ok, "hunyuan_ok": hy["ok"], "hunyuan_note": hy["note"], "engineer_guard_ok": guard["ok"],
+                   "engineer_guard_note": guard["note"], "at": time.time(), "results": RESULTS}, f, indent=1)
+    os.replace(out + ".tmp", out)
+    if not guard["ok"] and not quiet_phone:
+        try:
+            import hart as H
+            H.send(f"Asset maker self-test: your AI's engineer is switched off - its safety rules failed:\n"
+                   f"{guard['note']}\nEverything else still runs. Send this to Claude.")
+        except (Exception, SystemExit):
+            pass
     if not ok and not quiet_phone:
-        bad = next(r for r in RESULTS if not r["ok"] and r["piece"] != "Hunyuan3D loads")
+        bad = next(r for r in RESULTS if not r["ok"] and r["piece"] not in optional)
         try:
             import hart as H
             H.send(f"Asset maker self-test FAILED at: {bad['piece']}\n{bad['note']}\nNothing was run. Send this to Claude.")

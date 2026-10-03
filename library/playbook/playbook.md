@@ -11,17 +11,36 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
 1. Fix the builder or the recipe, never one asset by hand. The question is never "how do I make THIS
    battery pass" - it is "what in the battery builder makes every battery look wrong". A fix that only
    works for this one item is not a fix.
-2. Never weaken the check. Do not edit the CHECKS list, the inspect() prompt, or lower any standard.
-   If the judge is wrong, prove it with evidence (zoomed pixels, texture values, mesh numbers) and fix
-   the check SHOTS so the feature is actually visible - never the checklist.
+2. Never weaken the check. You can't anyway: these are LOCKED and every change to them is refused -
+   vet.py, viewshot.py, judge.py, measure.py, dossier.py, facts.py, engineer.py, selftest.py,
+   watchdog.py, this playbook and lessons.md, shapes/specs/, labels/, queue.txt, families.json, and in
+   run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every
+   TRIAL block and every line that handles the verdict. A builder may not reach into the judge or the
+   asset maker's own modules either (no replacing their functions, no setattr/exec/eval, no sys.modules,
+   no new file named like another module). If the judge is wrong, prove it with evidence (zoomed pixels,
+   texture values, mesh numbers) and write that down in your summary - never "fix" the judge.
 3. One cause at a time. Change one thing, rebuild, look at the same view, compare. If it did not help,
    revert it before trying the next idea.
 4. Evidence before edits. Before you change code, say in one line: the symptom you SEE, the stage that
    makes it, the line of code you believe causes it, and what you expect to look different after.
 5. Never touch the finished asset folders (~/Desktop/Asset Library), the owner's files, money, keys,
    or anything outside the library code. Your edits only go into the engineer's own copy of the code.
-6. When a fix is kept, write the lesson (symptom -> cause -> fix) with the `lesson` tool so you never
-   have to work it out again.
+6. Write the lesson (symptom -> cause -> fix) with the `lesson` tool. It is kept aside during your
+   session and goes into lessons.md only together with a fix that is kept; a lesson from a fix that is
+   not kept is filed under "tried and not kept", so nobody walks that dead end again.
+
+## When is a fix kept (all of these, checked by the program, not by you)
+
+- Nothing that passed at first fails now, and at least one check that failed now passes. Counts don't
+  matter - the exact checks do: fixing "print" while breaking "shape" is not better.
+- Your last rebuild used exactly the code you have now (change anything after it and you must rebuild).
+- The same code is built a SECOND time and checked again - by your test build and by the asset maker's
+  own check (its own untouched code, in a separate program). All must come out the same. A lucky answer
+  from the judge is never kept.
+- Up to two other items already built that use the files you changed are rebuilt: none may fail a
+  check it passed before.
+- Time: the whole session has 3 hours, every rebuild included. Time is kept back for the confirmation;
+  when it runs short you are told to finish.
 
 ## How to work (the loop)
 
@@ -34,7 +53,7 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    - shine / metal / plastic  -> material + maps (spec "materials", finish.py, the *_mr.png map, exports)
    - seams, lips, edges, bevels, layers -> geometry first, then normal maps (finish.py)
    - insides                  -> factory recipe (factory/recipes/*.json, factory/physics.json)
-   - how it looks in the viewer -> viewshot.py (camera, light), webglb.py (the light copy)
+   - how it looks in the viewer -> webglb.py (the light copy); viewshot.py (camera, light) is locked
    Use mesh_info and pixel_stats to tell the stages apart. Example: metal that looks like plastic is
    either metallic=0 (material), roughness too high (map), or nothing for it to reflect (viewer). Those
    three have three different fixes; the numbers tell you which one it is.
@@ -50,8 +69,9 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
 
 Routes are chosen by the item's card: round (lathe), box (carton or box), flat, circuit card (pcb), free (Hunyuan).
 
-- library/run.py            the pipeline; build() calls the builders below. (Do not edit CHECKS/inspect.)
-- library/shapes/specs/*.json   measured round shapes: "profile" (the side outline, bottom to top, in mm),
+- library/run.py            the pipeline; build() calls the builders below. (CHECKS, inspect(), the
+                            end of build() and the verdict lines are locked.)
+- library/shapes/specs/*.json   (locked) measured round shapes: "profile" (the side outline, bottom to top, in mm),
                             "materials" (color, roughness, metallic, finish), "construction" (layers, seams).
 - library/outline.py        traces a round profile from the photo and applies the construction (lips, seams).
 - library/shapes/lathe.py   spins the profile into a real mesh; each material is its own part; seams;
@@ -66,7 +86,8 @@ Routes are chosen by the item's card: round (lathe), box (carton or box), flat, 
 - library/shapes/pcb.py     circuit cards: board outline, solder side, each part a solid with its photo on top.
 - library/factory/recipes/<family>.json   how the family is made and what is inside, in assembly order.
 - library/factory/physics.json   density / stiffness / yield per material (used by the crush).
-- library/exports.py, webglb.py, cutaway.py, viewshot.py   files, light web copy, cutaway, check shots.
+- library/exports.py, webglb.py, cutaway.py   files, light web copy, cutaway. (viewshot.py, the check
+                            shots, is locked.)
 
 ## Symptom -> cause -> fix (proven on real builds)
 
@@ -127,19 +148,20 @@ Reference values (real materials)
 The viewer and the files
 - MODEL BLANK on the phone page -> the file is over 25 MB and the host refused it -> the light web copy
   (webglb.py: textures <= 2048 px, JPEG) must be the one sent.
-- The judge cannot see a detail -> check viewshot.py's camera positions and distance (CLOSE list) before
-  changing the model.
+- The judge cannot see a detail -> viewshot.py (the cameras) is locked; make the real detail big and
+  clear enough on the model itself (geometry, then normal/roughness maps), never exaggerated.
 - Cutaway faces gray -> the boolean is not keeping material indexes.
 
 ## When the judge and your eyes disagree
 
 The judge is a model too and can be wrong. If a problem it names is NOT there when you zoom in and
 measure (the texture has the seam, the mesh has the nub, the B channel says metal), write that down with
-the numbers, then make the feature easier to see in the check shots (camera) - or move on to the next
-real problem. Never "fix" something that is already right.
+the numbers in your summary and move on to the next real problem. Never "fix" something that is already
+right, and never change how it is judged.
 
 ## Before you call finish
 
 - Every change you kept has a reason you can state in one line, and you looked at the result.
 - You reverted every change that did not help (see `diff`).
-- You wrote a `lesson` for each fix you kept.
+- Your last rebuild used exactly the code you have now.
+- You wrote a `lesson` for each fix.

@@ -149,15 +149,21 @@ def shape_mlx(photo, shape):
 
 
 def check():
-    """The self-test: load both halves exactly the way a real build does (same script, same folder, same imports)."""
+    """The self-test: load what a real build uses, exactly the way a real build does (same script, same folder, same
+    imports): the original PyTorch shape maker (what makes every shape now - see shape_torch) and the Apple-chip
+    painter. The Apple-chip shape port is only the fallback, so it can't fail the check; it is only reported."""
     hy = home()
     if not hy:
         sys.exit("Hunyuan3D is not installed")
     os.chdir(hy)
     sys.path[:0] = [os.path.join(hy, "hy3dshape"), os.path.join(hy, "hy3dpaint"), hy]
     import torch._dynamo  # noqa: F401  (what failed on 2026-10-02)
-    from hy3dshape.pipeline_mlx import ShapePipeline  # noqa: F401
+    from hy3dshape.pipelines import Hunyuan3DDiTFlowMatchingPipeline  # noqa: F401  (the real shape maker)
     from textureGenPipeline_mlx import Hunyuan3DPaintPipelineMLX  # noqa: F401
+    try:
+        from hy3dshape.pipeline_mlx import ShapePipeline  # noqa: F401  (the fallback)
+    except Exception as e:
+        print(f"[hunyuan] note: the Apple-chip shape fallback does not load ({repr(e)[:200]})", flush=True)
     print("ok")
 
 
