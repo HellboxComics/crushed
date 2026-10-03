@@ -162,16 +162,24 @@ def exam(models, log=print, finalists=2):
 
 
 def choose(results):
-    """judge: best thinking score, then the faster; sort: the fastest quick answerer within 1 of the best quick score."""
+    """judge: the best thinking score (every question), then the faster.
+    sort: the best quick score on the SORTING questions (is it this item, this size, this era, does it meet the
+    note - not the reading question, which sorting never asks), then the fastest. No slack: a sorter that lets a
+    D cell or a later label through costs more careful looks than its speed saves."""
     if not results:
         return {}
     thought = [m for m in results if "think" in results[m]]
     if not thought:
         return {}
     judge = sorted(thought, key=lambda m: (-results[m]["think"]["score"], results[m]["think"]["seconds"]))[0]
-    best_quick = max(r["quick"]["score"] for r in results.values())
-    sort = sorted([m for m in results if results[m]["quick"]["score"] >= best_quick - 1],
-                  key=lambda m: results[m]["quick"]["seconds"])[0]
+    reading = {it["id"] for it in EXAM if it.get("read")}
+
+    def sorting(m):
+        q = results[m].get("quick") or {}
+        its = [x for x in q.get("items", []) if x["id"] not in reading]
+        secs = sum(x["seconds"] for x in its) / max(len(its), 1)
+        return -sum(bool(x["ok"]) for x in its), secs
+    sort = sorted([m for m in results if results[m].get("quick")], key=sorting)[0]
     return {"judge": judge, "sort": sort}
 
 
@@ -195,7 +203,13 @@ def setup(log=print, force=False):
         old = {}
     if not force and old.get("version") == VERSION and old.get("key") == key and old.get("jobs") and \
             time.time() - float(old.get("at") or 0) < 30 * 86400:
-        return old["jobs"]
+        jobs = choose(old.get("exam") or {}) or old["jobs"]      # the stored results, under the current rules
+        if jobs != old["jobs"]:
+            log(f"[brains] jobs worked out again from the last exam: careful looks -> {jobs['judge']}, quick looks "
+                f"-> {jobs['sort']} (was {old['jobs'].get('judge')}, {old['jobs'].get('sort')})")
+            old["jobs"] = jobs
+            json.dump(old, open(OUT, "w"), indent=1)
+        return jobs
     if _testing():
         log("[brains] one of your brain tests is running - the brain exam waits for next time")
         return old.get("jobs") or {}
