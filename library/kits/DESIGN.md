@@ -72,6 +72,26 @@ bakeoffs (the best brain per job stays).
   figure_toy (form + Hunyuan)                          food_item (form + Hunyuan)
   general (assembly / Hunyuan)
 
+## Soft and molded things (plush toys, figures, food) - planned 2026-10-03 after the Furby
+
+What went wrong with the old one-photo way (Furby, 2026-10-03, measured): Hunyuan got ONE photo, so it guessed the
+back (plain white), made the top of the head a flat lid and the ears mush; the hang tag in the photo was built as part
+of the toy; the paint is the photo's own colors with the photo's light still in them (texture median 182 vs the
+photo's 188), so lit again in the viewer the light gray and pale pink read as white; the texture is stitched from many
+small photo pieces (the patchy look).
+
+The kit way, as a person would build it in Blender:
+1. KIND        plush_toy / figure / food_item, with the parts every such thing has (plush toy: body, eyes, nose or
+               beak, ears, feet, tags) and which of them are hard plastic, fabric or fur
+2. FIND        real photos from the front, both sides and the back (the dossier's hunt, zone words per kit)
+3. CLEAN       anything that is not the item is erased from each photo before it is used: hang tags, price
+               stickers, hands, stands, other things, watermarks - found by the sorting brain with a box, erased by
+               the drawing room, and checked: nothing outside those boxes may change
+4. BUILD       the body's shape from every cleaned view (several views, never one); hard parts (eyes, beak, feet)
+               as their own solid parts with their own materials (glossy plastic, felt); fur as a fur material with
+               the photo's colors taken DOWN to true color (the photo's light taken out), not a photo pasted on
+5. CHECK       each side rendered and compared with its own real photo; the colors measured against the photos
+
 ## Build order
 
   1. kit system + cell_battery, can, box_carton - proven end to end on the Duracell, a soda can, the Pop-Tarts box

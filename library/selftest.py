@@ -257,7 +257,8 @@ def run_all(quiet_phone=False):
              (GUARD, t_engineer_guard, 30),
              ("memory: what is loaded", t_memory, 20),
              ("phone buttons (Hart's bot)", t_phone, 30),
-             ("judge (Ollama vision)", t_judge, 240),
+             ("judge (Ollama vision)", t_judge, 900),   # (the brain server is shared: your other tools' long
+             #                                               questions go first - 2026-10-03 one made this wait 5 min)
              ("judges let go of memory", t_free_judges, 60),
              ("cut-out (drawing room)", t_cutout, 120),
              ("label drawer (Qwen-Image-Edit)", t_draw, 480),
