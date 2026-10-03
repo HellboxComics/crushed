@@ -994,6 +994,27 @@ class Bench:
             return f"REFUSED: {rel} does not exist (use new_file for a new file)"
         text = open(p).read()
         n = text.count(old) if old else 0
+        how = ""
+        if n == 0 and old.strip():
+            # the same text with different spacing (it typed 4 spaces where the file has 1): found exactly once while
+            # ignoring spacing, it is the same place - 2026-10-03 a whole session went on edits refused for spacing
+            # alone. Its new text is set at the file's own indent there.
+            olines = old.strip("\n").split("\n")
+            words = lambda ln: r"[ \t]+".join(re.escape(w) for w in ln.split())
+            pat = r"[ \t]*\r?\n[ \t]*".join(words(ln) for ln in olines if ln.strip())
+            hits = list(re.finditer(pat, text))
+            if len(hits) == 1:
+                h = hits[0]
+                ls = text.rfind("\n", 0, h.start()) + 1                  # where its first line starts
+                at_line_start = text[ls:h.start()].strip() == ""
+                file_indent = re.match(r"[ \t]*", text[ls:]).group(0) if at_line_start else ""
+                old_indent = re.match(r"[ \t]*", olines[0]).group(0)
+                nl = new.strip("\n").split("\n")
+                out = [nl[0].lstrip(" \t") if at_line_start else nl[0]]
+                out += [file_indent + ln[len(old_indent):] if ln.startswith(old_indent) else ln for ln in nl[1:]]
+                start = ls + len(file_indent) if at_line_start else h.start()
+                old, new, n = text[start:h.end()], "\n".join(out), 1
+                how = " (found by ignoring spacing; your new text was set at the file's own indent)"
         if n != 1:
             near = ""
             key = (old.strip().splitlines() or [""])[0].strip()[:60]
@@ -1011,7 +1032,7 @@ class Bench:
         if bad:
             open(p, "w").write(text)
             return "REFUSED (put back as it was): " + bad
-        return f"changed {rel}"
+        return f"changed {rel}{how}"
 
     def new_file(self, path, content):
         try:
