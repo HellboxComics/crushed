@@ -448,95 +448,338 @@ def photo_box(front_png, judge=None, log=print):
     return (0.0, 0.55, 1.0, 0.92)
 
 
-def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=print, era=None):
+SHAPE_TOL = math.log(1.2)       # a side's shape in the photo must match the real side within 20%, both ways
+EDGE_ON = 0.35                  # a side squeezed below 35% of its real depth is seen edge-on: never used
+
+
+def _turn_box(b, turn):
+    """A box (fractions) inside a picture turned `turn` degrees clockwise."""
+    if not b or not turn:
+        return b
+    x0, y0, x1, y1 = b
+    if turn == 180:
+        return [1 - x1, 1 - y1, 1 - x0, 1 - y0]
+    if turn == 90:
+        return [1 - y1, x0, 1 - y0, x1]
+    if turn == 270:
+        return [y0, 1 - x1, y1, 1 - x0]
+    return b
+
+
+def _sharp(im):
+    """How sharp a straightened side is (the spread of its fine detail)."""
+    import cv2
+    g = cv2.cvtColor(np.asarray(im.convert("RGB")), cv2.COLOR_RGB2GRAY)
+    s = 640 / max(g.shape)
+    g = cv2.resize(g, (max(8, int(g.shape[1] * s)), max(8, int(g.shape[0] * s))))
+    return float(cv2.Laplacian(g, cv2.CV_64F).var())
+
+
+def _chroma(c):
+    return max(c) - min(c)
+
+
+def _neutralize(png, paper, ref):
+    """Takes a colored cast out of one photographed side (the box's white paper looking pink under a warm lamp),
+    using the paper of the most neutral real side as the true paper. Only a mild cast on light paper is fixed."""
+    gain = np.clip(np.array(ref, np.float32) / np.maximum(np.array(paper, np.float32), 1), 0.75, 1.35)
+    gain *= np.mean(paper) / max(float(np.mean(np.array(paper) * gain)), 1)          # same brightness as before
+    a = np.asarray(Image.open(png).convert("RGB")).astype(np.float32) * gain
+    Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).save(png)
+
+
+def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=print, era=None, dossier=None):
     """All six sides of a box (two for a flat thing) -> one atlas laid out the way shapes/box.py maps it.
-    Every side a photo shows is cut out of that photo on its own (a photo showing the front and the top gives
-    both), straightened, with the room's light taken out. Sides no photo shows get the box's own color and the
-    real logo from the real front. No painting AI draws any side (it can't spell)."""
+
+    With the item's dossier (library/dossier.py) each side follows its plan:
+      - this item's own photo: every photo that shows the side is a candidate and the BEST VIEW WINS (straight-on,
+        big in the frame, sharp) - not simply the first photo. A side's shape must match the real side within 20%
+        both ways; a side seen nearly edge-on is never used.
+      - a sister box's photo (same line, same era): straightened, its item-specific parts (flavor name, nutrition
+        panel, barcode...) covered with the panel's own background and this item's verified fact drawn in their place
+      - rebuilt: from facts only (eraprint), in the closest sister's layout when one was seen
+    Without a dossier: the photos given, best view wins, and the box's own color plus the real logo elsewhere.
+    No painting AI draws any side (it can't spell). skin/sources.json records what each side came from."""
     import panels
     import turnaround as T
     os.makedirs(out_dir, exist_ok=True)
     mm = lambda x: x * 1000
     dims = {"front": (W, H), "back": (W, H)} if flat else \
         {"front": (W, H), "back": (W, H), "left": (D, H), "right": (D, H), "top": (W, D), "bottom": (W, D)}
-    faces, src = {}, {}
+    dos = dossier or {}
+    alias = {"top": "front", "bottom": "back"} if dos.get("route") == "pcb" else {}
+    plan = {alias.get(k, k): v for k, v in (dos.get("faces") or {}).items()}
+    recs = {p["file"]: p for p in dos.get("photos", []) if p.get("file")}
+    masks = {p["file"]: p.get("mask") for p in photos if p.get("mask")}
+
+    # ---- 1. every side every photo shows, each a candidate with a score
+    cands = {}
     for n, p in enumerate(photos):
-        im = Image.open(p["file"]).convert("RGB")
-        m = np.asarray(Image.open(p["mask"]).convert("L").resize(im.size)) / 255.0
-        quads, how = panels.find_faces(m)
-        if not quads:
+        rec = recs.get(p["file"], {})
+        if rec.get("match") not in (None, "exact") and p["file"] != dos.get("picked"):
+            continue                                          # a sister box is used only through its plan (swapped)
+        rfaces = [dict(f, face=alias.get(f["face"], f["face"])) for f in rec.get("faces", [])]
+        edge = {f["face"] for f in rfaces if f.get("edge_on")}
+        q_ai = float(rec.get("quality") or 6)
+        try:
+            im = Image.open(p["file"]).convert("RGB")
+        except Exception as e:
+            log(f"[texture] photo {n + 1} would not open: {e}")
             continue
-        view = (p.get("vet") or {}).get("view") or "front"
-        view = view if view in dims else "front"
-        log(f"[texture] photo {n + 1}: {how}; the biggest side is the {view}")
-        c0 = panels.order_quad(quads[0]).mean(0)
-        named = [(view, quads[0])]
-        for q in quads[1:]:
-            dx, dy = panels.order_quad(q).mean(0) - c0
-            if abs(dy) > abs(dx):
-                side = "top" if dy < 0 else "bottom"
-            else:
-                side = _NEXT.get(view, {}).get("right" if dx > 0 else "left")
-            if side and side in dims:
-                named.append((side, q))
-        for side, q in named:
-            if side in faces:
-                continue                                      # the first (your pick) wins
+        found = []
+        if p.get("mask") and os.path.exists(p["mask"]):
+            m = np.asarray(Image.open(p["mask"]).convert("L").resize(im.size)) / 255.0
+            quads, how = panels.find_faces(m)
+            view = (rfaces[0]["face"] if rfaces else None) or (p.get("vet") or {}).get("view") or "front"
+            if view == "side":
+                view = p.get("plan") if p.get("plan") in ("left", "right") else "left"
+            view = view if view in dims else "front"
+            if quads:
+                log(f"[texture] photo {n + 1} ({os.path.basename(p['file'])}): {how}; the biggest side is the {view}")
+                c0 = panels.order_quad(quads[0]).mean(0)
+                found.append((view, quads[0], m))
+                for q in quads[1:]:
+                    dx, dy = panels.order_quad(q).mean(0) - c0
+                    if abs(dy) > abs(dx):
+                        side = ("top" if dy < 0 else "bottom") if view in ("front", "back") else None
+                    else:
+                        side = _NEXT.get(view, {}).get("right" if dx > 0 else "left")
+                    if side and side in dims:
+                        found.append((side, q, m))
+        primary = found[0][1] if found else None
+        pw0, ph0 = panels.quad_size(primary) if primary is not None else (0, 0)
+        for side, q, m in found:
+            if side in edge:
+                log(f"[texture] {side}: photo {n + 1} sees it edge-on - not used")
+                continue
             pw, ph = dims[side]
+            w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
             qw, qh = panels.quad_size(q)
-            ratio = (qw / max(qh, 1)) / (pw / ph)
-            if side in ("top", "bottom") and view in ("front", "back"):
-                ok = 0.6 < ratio                              # seen from above it looks shallower than it is
-            elif side in ("left", "right") and view in ("front", "back"):
-                ok = ratio < 1.7                              # seen at an angle it looks narrower
+            short = 1.0
+            if q is primary:
+                ok = abs(math.log((qw / max(qh, 1)) / (pw / ph))) < SHAPE_TOL
+                if not ok and n == 0:
+                    log(f"[texture] {side}: your pick's shape is off by more than 20% - used anyway (it is your pick)")
+                    ok = True
             else:
-                ok = abs(np.log(ratio)) < 0.45
-            if not ok and not (n == 0 and side == view):
-                log(f"[texture] {side}: the shape in photo {n + 1} doesn't fit a {side} ({ratio:.2f}) - not used")
+                if side in ("top", "bottom"):                     # shares the width edge with the front/back
+                    shared = abs(math.log(max(qw, 1) / max(pw0, 1)))
+                    short = (qh / max(qw, 1)) / (ph / pw)
+                else:                                             # shares the height edge
+                    shared = abs(math.log(max(qh, 1) / max(ph0, 1)))
+                    short = (qw / max(qh, 1)) / (pw / ph)
+                ok = shared < SHAPE_TOL and EDGE_ON <= short <= 1.25
+                if short < EDGE_ON:
+                    log(f"[texture] {side}: photo {n + 1} sees it nearly edge-on ({short:.2f} of its depth) - not used")
+                    continue
+            if not ok:
+                log(f"[texture] {side}: the shape in photo {n + 1} doesn't fit a {side} - not used")
+                continue
+            face_im = panels.warp_quad(im, m, q, w, h)
+            if (p.get("vet") or {}).get("view") == "back" and side in ("top", "bottom"):
+                face_im = face_im.rotate(180)
+            cover = min(1.0, (qw * qh) / (w * h))
+            cands.setdefault(side, []).append({"im": face_im, "q": q, "m": m, "n": n, "p": p, "cover": cover,
+                                               "short": min(1.0, short), "ai": q_ai, "sharp": _sharp(face_im),
+                                               "how": "straightened from the photo", "px": qw * qh, "wh": (w, h)})
+        # a flat, straight-on side the careful look boxed (a carton laid flat) - no cut-out needed
+        for f in rfaces:
+            side = f["face"] if f["face"] in dims else (p.get("plan") if f["face"] == "side" else None)
+            if not side or side not in dims or not f.get("box") or not f.get("straight_on") or f.get("edge_on"):
+                continue
+            if any(c["p"] is p for c in cands.get(side, [])):
+                continue
+            b = f["box"]
+            crop = im.crop((int(b[0] * im.width), int(b[1] * im.height), int(b[2] * im.width), int(b[3] * im.height)))
+            if f.get("turn"):
+                crop = crop.rotate(-f["turn"], expand=True)
+            pw, ph = dims[side]
+            if abs(math.log((crop.width / max(crop.height, 1)) / (pw / ph))) >= SHAPE_TOL:
+                log(f"[texture] {side}: the boxed side in photo {n + 1} doesn't have the side's shape - not used")
                 continue
             w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
-            face_im = panels.warp_quad(im, m, q, w, h)
-            panels.warp_mask(m, q, w, h).save(os.path.join(out_dir, f"{side}_mask.png"))   # its real outline
-            if view == "back" and side in ("top", "bottom"):
-                face_im = face_im.rotate(180)
-            face_im = panels.delight(face_im)
-            out = os.path.join(out_dir, f"{side}.png")
-            face_im.save(out)
-            if qw * qh < 0.6 * w * h:                         # the photo had fewer pixels than the panel: sharpen up
-                try:
-                    T.upscale(out, force=True)
-                    Image.open(out).convert("RGB").resize((w, h), Image.LANCZOS).save(out)
-                except Exception as e:
-                    log(f"[texture] {side}: sharpening skipped ({e})")
-            faces[side], src[side] = out, f"photo {n + 1}"
-            log(f"[texture] {side}: real photo {n + 1}, straightened to {mm(pw):.0f} x {mm(ph):.0f} mm, room light taken out")
+            face_im = crop.resize((w, h), Image.LANCZOS)
+            cands.setdefault(side, []).append({"im": face_im, "q": None, "m": None, "n": n, "p": p,
+                                               "cover": min(1.0, crop.width * crop.height / (w * h)), "short": 1.0,
+                                               "ai": q_ai, "sharp": _sharp(face_im), "how": "a flat side, cut out",
+                                               "px": crop.width * crop.height, "wh": (w, h)})
+
+    # ---- 2. the best view of each side wins
+    faces, src = {}, {}
+    for side, cs in cands.items():
+        top_sharp = max(c["sharp"] for c in cs) or 1.0
+        for c in cs:
+            c["score"] = (c["cover"] ** 0.5) * c["short"] * (c["sharp"] / top_sharp) ** 0.3 * (0.6 + c["ai"] / 25)
+        cs.sort(key=lambda c: -c["score"])
+        best = cs[0]
+        w, h = best["wh"]
+        if best["q"] is not None:
+            panels.warp_mask(best["m"], best["q"], w, h).save(os.path.join(out_dir, f"{side}_mask.png"))
+        face_im = panels.delight(best["im"])
+        out = os.path.join(out_dir, f"{side}.png")
+        face_im.save(out)
+        if best["px"] < 0.6 * w * h:                          # the photo had fewer pixels than the panel: sharpen up
+            try:
+                T.upscale(out, force=True)
+                Image.open(out).convert("RGB").resize((w, h), Image.LANCZOS).save(out)
+            except Exception as e:
+                log(f"[texture] {side}: sharpening skipped ({e})")
+        p = best["p"]
+        rec = recs.get(p["file"], {})
+        faces[side] = out
+        src[side] = {"source": "photo", "photo": p["file"], "url": rec.get("url", p.get("url", "")),
+                     "page": rec.get("page", p.get("page", "")), "match": rec.get("match") or "your pick",
+                     "how": best["how"], "score": round(best["score"], 3),
+                     "beat": [os.path.basename(c["p"]["file"]) for c in cs[1:4]],
+                     "note": f"best of {len(cs)} view(s), straightened to {mm(dims[side][0]):.0f} x "
+                             f"{mm(dims[side][1]):.0f} mm, room light taken out"}
+        log(f"[texture] {side}: real photo {best['n'] + 1} ({os.path.basename(p['file'])}) - the best of {len(cs)} "
+            f"view(s) (score {best['score']:.2f}), straightened to {mm(dims[side][0]):.0f} x {mm(dims[side][1]):.0f} mm")
     if "front" not in faces:
         raise RuntimeError("no photo shows the front clearly enough to straighten")
     front = Image.open(faces["front"]).convert("RGB")
+    box = logo_box(faces["front"], judge, log)
+    pbox = None
+
+    # ---- 3. sides from a sister box: straightened, its item-specific parts replaced by this item's facts
+    import eraprint
+    c = era if isinstance(era, dict) else None                # the printable facts (packaging only)
+    for side, e in plan.items():
+        if side in faces or side not in dims or e.get("source") != "template_photo" or not e.get("photo"):
+            continue
+        pw, ph = dims[side]
+        w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
+        pbox = pbox or photo_box(faces["front"], judge, log)
+        got = _template_face(e, side, w, h, (mm(pw), mm(ph)), c or {}, front, box, pbox, masks, log)
+        if got is None:
+            log(f"[texture] {side}: the sister box's photo could not be straightened - rebuilt instead")
+            e["source"] = "rebuilt"
+            continue
+        img, swapped, blank = got
+        out = os.path.join(out_dir, f"{side}.png")
+        img.save(out)
+        rec = recs.get(e["photo"], {})
+        faces[side] = out
+        src[side] = {"source": "template", "photo": e["photo"], "url": rec.get("url", ""), "page": e.get("page", ""),
+                     "match": e.get("match"), "product_shown": e.get("product_shown", ""), "swapped": swapped,
+                     "left_blank": blank, "note": e.get("note", "")}
+        log(f"[texture] {side}: a {str(e.get('match')).replace('_', ' ')} box's photo ({os.path.basename(e['photo'])}),"
+            f" swapped: {'; '.join(swapped) or 'nothing'}" + (f"; covered, nothing known to print: {', '.join(blank)}"
+                                                             if blank else ""))
+
+    # ---- one paper for the whole box: a colored cast on a photographed side is taken out
+    papers = {s: panels.paper_color(Image.open(f).convert("RGB")) for s, f in faces.items()}
+    exact = [s for s in papers if src[s]["source"] == "photo"]
+    ref = min((papers[s] for s in exact), key=_chroma) if exact else papers["front"]
+    for s, pc in papers.items():
+        if len(exact) >= 2 and _chroma(ref) < 15 and 15 < _chroma(pc) < 45 and _chroma(pc) > _chroma(ref) + 12:
+            _neutralize(faces[s], pc, ref)
+            src[s]["note"] = src[s].get("note", "") + f"; color cast taken out (its paper {pc} -> like {ref})"
+            log(f"[texture] {s}: a colored cast taken out (paper {pc}, the most neutral real side's paper is {ref})")
+    front = Image.open(faces["front"]).convert("RGB")
+    paper = ref
+
+    # ---- 4. sides no photo shows: rebuilt from facts only (or the box's color and the real logo)
     biggest = max(max(d) for d in dims.values())
-    box = None
     for side, (pw, ph) in dims.items():
         if side in faces:
             continue
         w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
         out = os.path.join(out_dir, f"{side}.png")
-        if min(pw, ph) < 0.12 * biggest:                      # a thin edge: the box's own color
+        e = plan.get(side, {})
+        if c is not None and min(pw, ph) >= 0.12 * biggest:   # printed packaging: the facts, in real type
+            pbox = pbox or photo_box(faces["front"], judge, log)
+            img, used, missing = eraprint.panel_notes(side, c, front, box, pbox, w, h, paper, (mm(pw), mm(ph)),
+                                                      e.get("layout"), e.get("want"))
+            img.save(out)
+            src[side] = {"source": "rebuilt", "drawn": used, "no_fact_for": missing,
+                         "layout_from": e.get("layout_from", ""),
+                         "note": "rebuilt from facts with receipts (exact type, real logo)"
+                                 + (" in a sister box's layout" if e.get("layout") else "")}
+        elif min(pw, ph) < 0.12 * biggest:                    # a thin edge: the box's own color
             panels.brand_panel(front, None, w, h, side).save(out)
-            src[side] = "plain (thin edge)"
+            src[side] = {"source": "plain", "note": "the box's own color (a thin edge)"}
         else:
-            box = box or logo_box(faces["front"], judge, log)
-            if era:                                       # the era's real panels, rebuilt in exact type (his choice)
-                import eraprint
-                pbox = photo_box(faces["front"], judge, log) if side == "back" else None
-                eraprint.panel(side, era, front, box, pbox, w, h, panels.paper_color(front)).save(out)
-                src[side] = "rebuilt as printed in that era (words from your AI's knowledge, exact type, real logo)"
-            else:
-                panels.brand_panel(front, box, w, h, side).save(out)
-                src[side] = "box color + the real logo (no photo of this side)"
+            panels.brand_panel(front, box, w, h, side).save(out)
+            src[side] = {"source": "plain", "note": "the box's own color and the real logo (no photo of this side)"}
         faces[side] = out
-        log(f"[texture] {side}: {src[side]}")
+        log(f"[texture] {side}: {src[side]['note']}" + (f" - drew {', '.join(src[side].get('drawn', []))}"
+                                                        if src[side].get("drawn") else ""))
     atlas = panels.assemble(faces, W, D, H)
     out = os.path.join(out_dir, "atlas.png")
     atlas.save(out)
     json.dump(src, open(os.path.join(out_dir, "sources.json"), "w"), indent=1)
     return out, src
+
+
+def _template_face(e, side, w, h, size_mm, c, front, logo_b, photo_b, masks, log):
+    """A sister box's side, straightened to w x h, with each item-specific part covered by the panel's own
+    background and this item's fact drawn in its place. -> (image, [swapped], [covered, nothing to draw]) or None"""
+    import eraprint
+    import panels
+    try:
+        im = Image.open(e["photo"]).convert("RGB")
+    except Exception:
+        return None
+    fe = e.get("view") or {}
+    face_im = None
+    mk = masks.get(e["photo"])
+    pw_mm, ph_mm = size_mm
+    if mk and os.path.exists(mk) and not fe.get("box"):         # a box in the round: its side found in the cut-out
+        m = np.asarray(Image.open(mk).convert("L").resize(im.size)) / 255.0
+        quads, _ = panels.find_faces(m)
+        for q in quads:
+            qw, qh = panels.quad_size(q)
+            if abs(math.log((qw / max(qh, 1)) / (pw_mm / ph_mm))) < SHAPE_TOL:
+                face_im = panels.warp_quad(im, m, q, w, h)
+                break
+    if face_im is None and fe.get("box"):
+        b = fe["box"]
+        face_im = im.crop((int(b[0] * im.width), int(b[1] * im.height), int(b[2] * im.width), int(b[3] * im.height)))
+        if fe.get("turn"):
+            face_im = face_im.rotate(-fe["turn"], expand=True)
+        if abs(math.log((face_im.width / max(face_im.height, 1)) / (pw_mm / ph_mm))) >= math.log(1.25):
+            return None
+        face_im = face_im.resize((w, h), Image.LANCZOS)
+    if face_im is None:
+        return None
+    face_im = panels.delight(face_im)
+    a = np.asarray(face_im).copy()
+    paper = panels.paper_color(face_im)
+    ink = eraprint.ink_color(front, panels.paper_color(front))
+    ppm = w / pw_mm
+    swapped, blank = [], []
+    pending = []
+    for sb in e.get("swap_boxes") or []:
+        import dossier as DS
+        rb = DS._rel(sb.get("box"), fe.get("box")) if fe.get("box") else sb.get("box")
+        rb = _turn_box(rb, fe.get("turn") or 0)
+        if not rb:
+            continue
+        x0, y0, x1, y1 = int(rb[0] * w), int(rb[1] * h), int(np.ceil(rb[2] * w)), int(np.ceil(rb[3] * h))
+        x0, y0, x1, y1 = max(0, x0 - 3), max(0, y0 - 3), min(w, x1 + 3), min(h, y1 + 3)
+        if x1 - x0 < 4 or y1 - y0 < 4:
+            continue
+        r = max(8, int(0.02 * max(w, h)))
+        ring = np.concatenate([a[max(0, y0 - r):y0, x0:x1].reshape(-1, 3), a[y1:y1 + r, x0:x1].reshape(-1, 3),
+                               a[y0:y1, max(0, x0 - r):x0].reshape(-1, 3), a[y0:y1, x1:x1 + r].reshape(-1, 3)])
+        bg = np.array(paper, np.float32)
+        if len(ring):                                             # the paper around it, not the ink next to it
+            lum = ring.mean(1).astype(np.float32)
+            local = np.median(ring[lum >= np.percentile(lum, 75)], 0).astype(np.float32)
+            gray_shade = (local.max() - local.min()) < 30 and local.mean() < bg.mean() - 20
+            bg = bg if gray_shade else local                  # a shadowed bit of white paper is still white paper
+        a[y0:y1, x0:x1] = bg                                      # covered with the panel's own background
+        pending.append((sb, (x0, y0, x1, y1), tuple(int(v) for v in bg)))
+    img = Image.fromarray(a)
+    for sb, (x0, y0, x1, y1), bg in pending:
+        k = {"graphic": "picture", "barcode": "upc"}.get(sb.get("kind"), sb.get("kind"))
+        el = eraprint.element(k, c, x1 - x0, y1 - y0, ppm, bg, front, logo_b, photo_b, ink) \
+            if k in ("upc", "nutrition", "ingredients", "maker_lines", "legal_lines", "net_weight", "name", "logo",
+                     "picture") else None
+        if el is None:
+            blank.append(sb.get("what", k))
+            continue
+        img.paste(el, (x0 + (x1 - x0 - el.width) // 2, y0 + (y1 - y0 - el.height) // 2), el if el.mode == "RGBA" else None)
+        swapped.append(f"{sb.get('what')} -> this item's {k.replace('_', ' ')}")
+    return img, swapped, blank
