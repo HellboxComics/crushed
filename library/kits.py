@@ -22,7 +22,15 @@ LIB = os.path.join(HERE, "family_library.json")
 
 
 def library():
-    return json.load(open(LIB))
+    """The hand-written kits (family_library.json) plus the kits your AI studied and wrote itself (kitmaker.py)."""
+    lib = json.load(open(LIB))
+    try:
+        import kitmaker
+        for k, v in kitmaker.learned().items():
+            lib["families"].setdefault(k, v)
+    except Exception:
+        pass
+    return lib
 
 
 def get(name):

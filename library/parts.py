@@ -147,6 +147,12 @@ def plan(cid, card, dos, use, out_json, log=print, notes=""):
     fam = families.get((card.get("family_lib") or {}).get("family", "general"))
     c = card.get("construction") or {}
     made = "; ".join(f"{L.get('part')}: {L.get('material')}" for L in c.get("layers", [])) or "unknown"
+    kit_parts = fam.get("parts") or []                     # what every one of this kind is made of (its kit)
+    if kit_parts:
+        notes = (f"Every {fam.get('what', fam['family'])} is made of these parts (its kit; keep them, add what this one "
+                 "has besides, drop only what this one truly lacks): "
+                 + "; ".join(f"{x.get('part')} ({x.get('material')}, {'hard' if x.get('hard') else 'soft'})"
+                             for x in kit_parts) + "\n") + notes
     q = ASK.format(product=card.get("product"), year=card.get("year"), family=fam["family"], what=fam["what"],
                    W=round(W), D=round(D), H=round(H), made=made, pics="; ".join(names) or "none",
                    kinds=", ".join(kinds), notes=(f"Notes from the owner: {notes}\n" if notes else ""))

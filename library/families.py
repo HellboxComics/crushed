@@ -33,12 +33,14 @@ Answer ONLY JSON:
  "confidence": 0-10 (10 = certain from the photo),
  "why": "what in the photo shows it, in one sentence",
  "second": "<the next most likely family key>",
+ "kind_name": "if NO family truly fits, the kind of thing in plain words any person would use (e.g. 'plush toy', 'jeans', 'sneaker', 'graphics card', 'magazine'); else empty",
  "material_outside": "what the outside is made of, e.g. printed paperboard, molded ABS plastic, nylon fabric, steel",
  "is_package": true if it is a package that holds a product, false if it is the product itself}}"""
 
 
 def library():
-    return json.load(open(LIB))
+    import kits
+    return kits.library()                                   # (the hand-written kits plus the ones your AI wrote)
 
 
 def get(name):
@@ -72,10 +74,10 @@ def builder(f):
     """(builder, why) for a family entry right now: its own builder, else the general one, else None + the reason."""
     b, s = f.get("builder"), f.get("builder_status", "missing")
     if b == "organic":
-        if organic_ready():
-            return "organic", "the organic builder (Hunyuan3D) is proven on this Mac"
-        return "assembly", ("the organic builder (Hunyuan3D) is not working on this Mac yet, so the general builder "
-                            "makes it from simple parts - organic curves will be rough until Hunyuan works")
+        # a soft or molded thing is built from its PARTS (the kit's: body, eyes, beak, feet...), each its own solid
+        # with its own material; a one-photo organic guess of the whole thing is never a master asset (the Furby,
+        # 2026-10-03: a blank back, the hang tag built in, the photo's light baked in)
+        return "assembly", "built from its parts (a soft or molded thing is never guessed whole from one photo)"
     if b and s in ("ready", "partial"):
         return b, ("ready" if s == "ready" else "works, with known gaps: " + "; ".join(f.get("gaps", [])))
     return "assembly", f"no {f.get('family')} builder yet - the general builder makes it from its parts"
@@ -101,6 +103,13 @@ def classify(card, picked, use=None, log=print, redo=False, notes=""):
         raise RuntimeError("your AI gave no answer about what kind of thing this is")
     fam = re.sub(r"[^a-z_]", "", str(got.get("family", "")).lower())
     conf = got.get("confidence") if isinstance(got.get("confidence"), (int, float)) else 0
+    if (fam not in lib or conf < 6 or fam == "general") and str(got.get("kind_name") or "").strip() and use and picked:
+        import kitmaker                                     # a kind none of the kits covers: studied and written now
+        kk, kit = kitmaker.ensure(str(got["kind_name"]).strip(), card, picked, use, log)
+        if kk:
+            lib = library()["families"]
+            fam, conf = kk, max(conf, 6)
+            got["why"] = (got.get("why") or "") + f" - a kind your AI studied itself: {kk}"
     if fam not in lib or conf < 6:
         why = (f"unsure ({fam or 'no answer'}, confidence {conf}/10)" if fam in lib or fam else "the photo could not be read")
         fam, conf = "general", conf
