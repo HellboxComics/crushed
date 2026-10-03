@@ -143,4 +143,12 @@ that is Cody's to do.
   - The lathe builder orients every face by the direction the outline walks (an AAA's pressed end was turned inside
     out by the old face-by-face guess, and its steel threw 100 mm spikes when given thickness).
   - Brains: the photo exam picks the judge and sorter from every installed vision brain (brainjobs.py).
-  Next: dossier hunt words from the kit's zones; prove can + carton end to end; media kits.
+  - The asset maker's own files always win over same-named files of other tools (ownmods.py) - every dossier had
+    been failing; every prompt template is tested to fill in (the label prompt had never run).
+  - can kit: a traced can gets the CMI 202 lid (seamed rim, countersink, panel). Pull tab still missing.
+  - Round labels: close-ups placed by scale at the end they show; the writer gets the comparison's fixes; cut-off
+    words printed whole; plain ink over metal ink is not metal.
+  - First Duracell built end to end by Cody's AI with the new setup (19:40 UTC): shape, copper top, PowerCheck
+    meter, maker lines and date right; label layout mistakes traced to the five setup bugs above, rebuilding.
+  Next: prove can + carton end to end; can pull tab (measured by the AI from a top photo); media kits (CD + jewel
+    case, VHS, cassette, cartridges - 90 / 75 / 69 / 58 catalog items).
