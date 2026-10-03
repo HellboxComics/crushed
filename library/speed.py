@@ -109,6 +109,33 @@ def _rate(model, k):
     return sum(got) / max(wall, 0.01)
 
 
+def server_says():
+    """What Ollama's own log says about answering several at once: the setting it started with and how it runs the
+    model (its llama.cpp runner is started with --parallel N; its MLX runner answers one at a time)."""
+    p = os.path.expanduser("~/.ollama/logs/server.log")
+    try:
+        with open(p, "rb") as f:
+            f.seek(max(0, os.path.getsize(p) - 600000))
+            text = f.read().decode("utf-8", "replace")
+    except Exception as e:
+        return f"its log could not be read ({e})"
+    import re
+    out = []
+    cfg = re.findall(r"OLLAMA_NUM_PARALLEL:(\S*)", text)
+    if cfg:
+        out.append(f"it started with OLLAMA_NUM_PARALLEL={cfg[-1] or '(empty = 1)'}")
+    par = re.findall(r"--parallel[ =](\d+)", text)
+    if par:
+        out.append(f"its model runner was started with --parallel {par[-1]}")
+    mlx = [ln for ln in text.splitlines() if "mlx" in ln.lower()][-1:]
+    if mlx:
+        out.append("it mentions MLX: " + mlx[0][-160:])
+    np_ = re.findall(r"n_seq_max\s*=\s*(\d+)|n_parallel\s*=\s*(\d+)", text)
+    if np_:
+        out.append("parallel slots in the runner: " + "/".join(x for x in np_[-1] if x))
+    return "; ".join(out)
+
+
 def setup(log=print, force=False):
     """Make sure the brain server answers WANT at once, measure it, write how many at once to use. -> workers"""
     import vet as V
@@ -123,6 +150,11 @@ def setup(log=print, force=False):
     fresh = old.get("version") == VERSION and old.get("model") == model and old.get("setting") == cur == str(WANT) \
         and old.get("measured") is True and time.time() - float(old.get("at") or 0) < 7 * 86400
     if fresh and not force:
+        if int(old.get("workers") or 1) == 1 and "server_says" not in old:
+            old["server_says"] = server_says()            # why 2 at once was not faster, from Ollama's own log
+            log("[speed] why 2 at once was not faster, from the brain server's own log: " + (old["server_says"] or
+                                                                                            "nothing about it"))
+            json.dump(old, open(OUT, "w"), indent=1)
         return int(old.get("workers") or 1)
     if cur != str(WANT):
         _sh(["launchctl", "setenv", "OLLAMA_NUM_PARALLEL", str(WANT)])
@@ -150,6 +182,12 @@ def setup(log=print, force=False):
     if measured:
         log(f"[speed] measured: 1 at a time {rates[1]:.1f} words/s, 2 at a time {rates[2]:.1f} words/s in total - "
             f"your AI asks {best} at a time" + ("" if best > 1 else " (2 at once was not faster here)"))
+        if best == 1:
+            why = server_says()
+            log("[speed] why, from the brain server's own log: " + (why or "nothing about it in its log"))
+            d = json.load(open(OUT))
+            d["server_says"] = why
+            json.dump(d, open(OUT, "w"), indent=1)
     else:
         log(f"[speed] could not measure ({err}) - one at a time until it can (measured again next start)")
     return best
