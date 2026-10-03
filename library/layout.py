@@ -30,7 +30,7 @@ The words printed on it, each confirmed by two reads: {words}.
 {typical}Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those words
 in its place, size, weight and color. Use only those words, spelled exactly. Where no photo could see, carry the
 design across plainly and put there only those confirmed words that belong there.
-""" + SCHEMA + "\nAnswer ONLY the JSON."
+""" + SCHEMA.replace("{", "{{").replace("}", "}}") + "\nAnswer ONLY the JSON."   # (its braces are not blanks)
 
 AGAIN = """Picture 1 is your rebuilt label, drawn from your layout below. Picture 2 is the real label.
 Your layout: {layout}

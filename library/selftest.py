@@ -14,8 +14,11 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-for p in (HERE, os.path.join(ROOT, "ai", "remaster"), os.path.join(ROOT, "ai"), os.path.expanduser("~/.hellbox/ai")):
-    sys.path.insert(0, p)
+sys.path.insert(0, HERE)
+import ownmods  # noqa: E402  the asset maker's own files always win over same-named files of other tools
+ownmods.install()
+for p in (os.path.join(ROOT, "ai", "remaster"), os.path.join(ROOT, "ai"), "~/.hellbox/ai"):
+    ownmods.add_path(p)
 TMP = tempfile.mkdtemp(prefix="crushed-selftest-")
 RESULTS = []
 
@@ -51,6 +54,29 @@ def sample_photo():
     p = os.path.join(TMP, "sample.jpg")
     im.save(p)
     return p
+
+
+def t_own_files():
+    """Every file name the asset maker shares with your other tools (facts.py, dossier.py ...) loads the asset maker's
+    own, even after those tools put their folders in front (ownmods.py). Without this every dossier failed."""
+    import importlib.util
+    import glob
+    import vet as V                                       # loads the suite's testlock the way a real run does
+    V._test_running()
+    try:
+        import askfirst  # noqa: F401                     # (it puts the phone bot's folder in front)
+    except ImportError:
+        pass
+    import ownmods
+    others = [os.path.expanduser(p) for p in ("~/.hellbox/ai", "~/.hellbox/ai/hart")] + \
+        [os.path.join(ROOT, "ai"), os.path.join(ROOT, "ai", "remaster")]
+    shared = sorted({os.path.basename(f)[:-3] for d in others for f in glob.glob(os.path.join(d, "*.py"))
+                     if os.path.exists(os.path.join(HERE, os.path.basename(f)))})
+    bad = [n for n in shared if os.path.dirname(importlib.util.find_spec(n).origin) != HERE]
+    bad += [f"{n} (loaded from {f})" for n, f in ownmods.wrong()]
+    if bad:
+        raise RuntimeError("these load another tool's file instead of the asset maker's: " + ", ".join(bad))
+    return "shared names load the asset maker's own: " + (", ".join(shared) or "none shared")
 
 
 def t_memory():
@@ -154,7 +180,8 @@ def t_engineer_guard():
     must = ["vet.py", "VET.py", "viewshot.py", "judge.py", "measure.py", "engineer.py", "selftest.py", "watchdog.py",
             "dossier.py", "facts.py", "queue.txt", "families.json", "playbook/playbook.md", "playbook//playbook.md",
             "playbook/lessons.md", "shapes/vet.py", ".gitignore", "shapes/../vet.py", "measure_blender.py",
-            "materials.json", "families.py", "family_library.json", "notes.py", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py"]
+            "materials.json", "families.py", "family_library.json", "notes.py", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
+            "ownmods.py", "layout.py"]
     bad = [p for p in must if not E.locked(p)]
     if bad:
         raise RuntimeError("not locked: " + ", ".join(bad))
@@ -226,7 +253,8 @@ def run_all(quiet_phone=False):
     print("SELF-TEST " + time.strftime("%H:%M"), flush=True)
     HY, GUARD = "Hunyuan3D loads", "your AI's engineer: safety rules"
     optional = {HY, GUARD}                             # these only switch off their own part, never the whole run
-    order = [(GUARD, t_engineer_guard, 30),
+    order = [("the asset maker's own files", t_own_files, 30),
+             (GUARD, t_engineer_guard, 30),
              ("memory: what is loaded", t_memory, 20),
              ("phone buttons (Hart's bot)", t_phone, 30),
              ("judge (Ollama vision)", t_judge, 240),

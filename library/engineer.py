@@ -77,7 +77,8 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 # Paths are inside library/, in lower case (the Mac's disk ignores case: Vet.py IS vet.py there).
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
-                "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py"}
+                "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
+                "ownmods.py", "layout.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
@@ -86,7 +87,7 @@ LOCKED_DIRS = ("playbook/",)
 # file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "era.py", "jsonsafe.py",
-                "speed.py", "brainjobs.py", "sitecustomize.py",
+                "speed.py", "brainjobs.py", "ownmods.py", "sitecustomize.py",
                 "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
@@ -98,7 +99,7 @@ RUN_COUNTED = RUN_PROTECTED | {"build", "trial", "TRIAL", "status", "engineer_tu
 # ADDS any of them compared with the code as it was).
 _RISKY_IMPORTS = {"__main__", "builtins", "importlib", "ctypes", "atexit", "gc", "inspect", "runpy", "run",
                   "engineer", "selftest", "watchdog", "judge", "measure", "measure_blender", "dossier", "facts",
-                  "viewshot",
+                  "viewshot", "ownmods",
                   "sitecustomize", "usercustomize"}
 _RISKY_NAMES = {"setattr", "delattr", "globals", "vars", "exec", "eval", "compile", "__import__", "breakpoint",
                 "__builtins__"}

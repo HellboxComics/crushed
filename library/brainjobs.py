@@ -72,9 +72,9 @@ def _get(path, body=None, timeout=60):
 def _testing():
     """One of Cody's brain tests owns the brain server right now (the suite's testlock)."""
     try:
-        sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
-        import testlock
-        return testlock.testing() and not testlock.mine()
+        import ownmods
+        testlock = ownmods.outside("~/.hellbox/ai/testlock.py", "testlock")   # (it puts its folder in front)
+        return bool(testlock) and testlock.testing() and not testlock.mine()
     except Exception:
         return False
 

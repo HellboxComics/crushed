@@ -142,7 +142,9 @@ def stop_run(why):
 
 def tell(text):
     import sys
-    sys.path.insert(0, os.path.expanduser("~/.hellbox/ai/hart"))
+    p = os.path.expanduser("~/.hellbox/ai/hart")         # (at the END: its dossier.py must never shadow ours)
+    if p not in sys.path:
+        sys.path.append(p)
     try:
         import hart as H
         H.send(text)

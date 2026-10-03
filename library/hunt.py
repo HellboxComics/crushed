@@ -163,7 +163,8 @@ def ebay_browser(words, year=None, listings=12, log=print):
 
 
 def free_sites(words):
-    sys.path.insert(0, os.path.join(os.path.dirname(HERE), "ai", "remaster"))
+    if os.path.join(os.path.dirname(HERE), "ai", "remaster") not in sys.path:
+        sys.path.append(os.path.join(os.path.dirname(HERE), "ai", "remaster"))
     import refs as R
     out = []
     for f in R.openfoodfacts(words, n=6) + R.commons(words, n=8) + R.openverse(words, n=8):

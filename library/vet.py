@@ -10,6 +10,10 @@ import time
 import urllib.error
 import urllib.request
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ownmods  # noqa: E402  (nearly every part of the asset maker loads this file: its own files always win)
+ownmods.install()
+
 OLLAMA = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
 OLLAMA = OLLAMA if OLLAMA.startswith("http") else "http://" + OLLAMA
 PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.8:latest", "qwen3.5:122b-a10b", "qwen2.5vl:7b"]   # best first
@@ -24,9 +28,9 @@ def _test_running():
     """One of Cody's brain tests is scoring a brain right now (the suite's testlock): hands off the brain server -
     his rule, 2026-09-23: "When a brain is testing, all other operations that use said brain need to be refused"."""
     try:
-        sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
-        import testlock
-        return testlock.testing() and not testlock.mine()
+        import ownmods
+        testlock = ownmods.outside("~/.hellbox/ai/testlock.py", "testlock")   # (it puts its folder in front)
+        return bool(testlock) and testlock.testing() and not testlock.mine()
     except Exception:
         return False
 

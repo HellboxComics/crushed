@@ -13,7 +13,7 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    works for this one item is not a fix.
 2. Never weaken the check. You can't anyway: these are LOCKED and every change to them is refused -
    vet.py, viewshot.py, judge.py, measure.py, measure_blender.py, materials.json, dossier.py, facts.py,
-   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py,
+   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, layout.py,
    engineer.py, selftest.py, watchdog.py, this playbook and lessons.md, queue.txt, families.json, and in
    run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every TRIAL
    block and every line that handles the verdict. A builder may not reach into the judge or the

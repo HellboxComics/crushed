@@ -27,7 +27,8 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(os.path.dirname(HERE), "ai", "remaster"))
+if os.path.join(os.path.dirname(HERE), "ai", "remaster") not in sys.path:   # other tools' folders at the END
+    sys.path.append(os.path.join(os.path.dirname(HERE), "ai", "remaster"))
 
 FLAT = ("Picture 1 is part of the printed label of a real product, already unrolled flat from a photograph (it may "
         "be wrinkled, shiny, dirty, faded or blurry, and it only shows the part the camera could see). Picture 2, "

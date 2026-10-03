@@ -22,7 +22,9 @@ Runs on your Mac with your own AI. The same steps for every item, a Duracell, a 
     .venv/bin/python library/run.py --queue 2          (the clock: the next 2 items in library/queue.txt)
 """
 import os as _os, sys as _sys  # noqa: E401
-_sys.path.append(_os.path.dirname(_os.path.abspath(__file__)))
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import ownmods  # noqa: E402  the asset maker's own files always win over same-named files of other tools
+ownmods.install()
 import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import argparse
 import collections
@@ -39,10 +41,8 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(ROOT, "ai", "remaster"))
-sys.path.insert(0, os.path.join(ROOT, "ai"))
-sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
+for _p in (os.path.join(ROOT, "ai", "remaster"), os.path.join(ROOT, "ai"), "~/.hellbox/ai"):
+    ownmods.add_path(_p)                                   # other tools' folders: at the END of the search list
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 OUT = os.path.join(WORK, "library")
 SHELF = os.path.expanduser("~/Desktop/Asset Library")
@@ -654,7 +654,7 @@ def resend():
             and v.get("sent") is False and k not in ap]
     if not late:
         return
-    sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
+    ownmods.add_path("~/.hellbox/ai")
     import askfirst
     for cid in late:
         v = st[cid]
@@ -1314,7 +1314,7 @@ def your_pick(cid, product, cands, d):
         picks.pop(cid)
         json.dump(picks, open(picks_f, "w"), indent=1)
     sheet = pick_sheet(cands, os.path.join(d, "pick_sheet.jpg"))
-    sys.path.insert(0, os.path.expanduser("~/.hellbox/ai"))
+    ownmods.add_path("~/.hellbox/ai")
     import askfirst
     if not askfirst.ask_pick(cid, product, sheet, len(cands)):
         status(cid, step="could not send the photo choice to your phone - will try again next run", ok=False)
