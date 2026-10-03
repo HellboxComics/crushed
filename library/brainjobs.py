@@ -121,13 +121,14 @@ def _one(model, item, think):
     return ans, took, rate
 
 
-def exam(models, log=print, finalists=2):
+def exam(models, log=print, finalists=2, done=None, save=None):
     """Every brain takes the exam with thinking off (the sort job, quick); the best few - and the brain doing the
     careful looks now - take it again with thinking on (the judge job). Thinking takes minutes an answer, so only
-    brains that could win sit that part."""
+    brains that could win sit that part. done = results already taken (an exam cut short by a restart carries on
+    where it stopped); save(res) is called after every brain."""
     import vet as V
     items = [it for it in EXAM if os.path.exists(os.path.join(HUNT, it["photo"]))]
-    res = {}
+    res = {m: dict(v) for m, v in (done or {}).items() if m in models}
     for think in (False, True):
         if think:
             quick = sorted(res, key=lambda m: (-res[m]["quick"]["score"], res[m]["quick"]["seconds"]))
@@ -136,9 +137,12 @@ def exam(models, log=print, finalists=2):
         else:
             todo = list(models)
         for m in todo:
+            if (res.get(m) or {}).get("think" if think else "quick"):
+                continue                                 # taken before a restart
             if _testing():
-                log("[brains] one of your brain tests started - the exam stops here (a test owns the brain server)")
-                return res
+                log("[brains] one of your brain tests started - the exam stops here (a test owns the brain server); "
+                    "it carries on next time from where it stopped")
+                return {}
             row = res.setdefault(m, {})
             score, secs, notes = 0, 0.0, []
             for it in items:
@@ -154,6 +158,8 @@ def exam(models, log=print, finalists=2):
                                                   "items": notes}
             log(f"[brains] {m} ({'thinking' if think else 'quick'}): {score} of {len(items)} right, "
                 f"{secs / max(len(items), 1):.0f} s an answer")
+            if save:
+                save(res)
             try:                                         # let it go before the next one loads
                 V._call("/api/generate", {"model": m, "keep_alive": 0}, timeout=60)
             except Exception:
@@ -215,10 +221,28 @@ def setup(log=print, force=False):
         return old.get("jobs") or {}
     log(f"[brains] {len(vis)} brains on this Mac can see pictures: {', '.join(vis)} - each takes the photo exam "
         "(6 real photos with known answers), thinking on and off, timed")
-    results = exam(vis, log)
+    part = OUT + ".partial"                              # an exam cut short (a restart) carries on, not over
+    try:
+        p = json.load(open(part))
+        done = p.get("exam") if p.get("key") == key and p.get("version") == VERSION else {}
+    except Exception:
+        done = {}
+    if done:
+        log(f"[brains] carrying on the exam from before the restart ({len(done)} brains already taken)")
+
+    def save(res):
+        json.dump({"version": VERSION, "key": key, "exam": res}, open(part + ".tmp", "w"), indent=1)
+        os.replace(part + ".tmp", part)
+    results = exam(vis, log, done=done, save=save)
     jobs = choose(results)
+    if not jobs:                                         # stopped early (one of your tests): carried on next time
+        return old.get("jobs") or {}
     json.dump({"version": VERSION, "key": key, "at": time.time(), "inventory": inv, "exam": results, "jobs": jobs},
               open(OUT, "w"), indent=1)
+    try:
+        os.remove(part)
+    except OSError:
+        pass
     if jobs:
         log(f"[brains] jobs set by the exam: careful looks -> {jobs['judge']}, quick looks -> {jobs['sort']}")
     return jobs
