@@ -79,6 +79,39 @@ def main(photo, out, shape_only=False, paint=None):
     return obj[:-4] + ".glb"
 
 
+def _old_names_load():
+    """Hunyuan3D 2.1's saved image encoder (DINOv2) uses the layer names of the transformers version it was made
+    with (attention.attention.query / key / value, attention.output.dense). The transformers installed here (5.x)
+    names the same layers attention.q_proj / k_proj / v_proj / o_proj, so loading stopped with "missing keys"
+    (2026-10-02 log). Same weights, new names: each old name is matched to the name the model now expects."""
+    import torch.nn as nn
+    if getattr(nn.Module.load_state_dict, "_hellbox_renames", False):
+        return
+    orig = nn.Module.load_state_dict
+    rules = [("attention.attention.query", "attention.q_proj"), ("attention.attention.key", "attention.k_proj"),
+             ("attention.attention.value", "attention.v_proj"), ("attention.output.dense", "attention.o_proj"),
+             ("attention.output.dense", "attention.out_proj"), ("attention.output.dense", "attention.output")]
+
+    def load(self, state_dict, strict=True, *a, **k):
+        want = set(self.state_dict().keys())
+        if not (set(state_dict) - want):
+            return orig(self, state_dict, strict, *a, **k)
+        renamed, n = {}, 0
+        for key, v in state_dict.items():
+            if key not in want:
+                for old, new in rules:
+                    c = key.replace(old, new)
+                    if c != key and c in want:
+                        key, n = c, n + 1
+                        break
+            renamed[key] = v
+        if n:
+            print(f"[hunyuan] {n} saved layer names matched to this transformers version's names", flush=True)
+        return orig(self, renamed, strict, *a, **k)
+    load._hellbox_renames = True
+    nn.Module.load_state_dict = load
+
+
 def shape_torch(photo):
     """The original Hunyuan3D 2.1 shape model (Tencent's PyTorch code) on the Mac's GPU (Apple 'mps'). The Apple-chip
     (MLX) port returned the same surface value everywhere - even on its own demo picture (2026-10-02) - so it never
@@ -87,6 +120,7 @@ def shape_torch(photo):
         import torch
         from PIL import Image
         from hy3dshape.pipelines import Hunyuan3DDiTFlowMatchingPipeline
+        _old_names_load()
         dev = "mps" if torch.backends.mps.is_available() else "cpu"
         pipe = Hunyuan3DDiTFlowMatchingPipeline.from_pretrained("tencent/Hunyuan3D-2.1", subfolder="hunyuan3d-dit-v2-1",
                                                                 device=dev, dtype=torch.float16)
