@@ -43,9 +43,14 @@ are the label's measured background bands: keep them exactly as they are. Words:
 spelled exactly: {words} (a fix asking for a word that is not in this list can't be made - leave that word out).
 Answer ONLY the corrected JSON (the whole layout)."""
 
-COMPARE = """Picture 1 is a rebuilt label; picture 2 is the real one it copies. Answer ONLY JSON:
-{"match": 0-10 how closely picture 1 matches picture 2 in layout, colors, graphics and words,
- "fixes": ["short list of what to change in picture 1"]}"""
+COMPARE = """Picture 1 is flat printed artwork for a label. Picture 2 is the real label, unrolled flat from photos
+of a round object: it still carries the photo's light, shade, glare, curvature and metal sheen, and smeared streaks
+where no photo saw - none of that is part of the printed design and none of it can or should be drawn into picture
+1. Compare ONLY the printed design: where each area, panel, bar, dot, logo and word sits, its size, its color, its
+words. Answer ONLY JSON:
+{"match": 0-10 how closely picture 1's printed design matches picture 2's,
+ "fixes": ["short list of what to change in picture 1's printed design - never lighting, shading, texture, 3D
+   shape, caps or terminals"]}"""
 
 
 def _json(txt):

@@ -42,7 +42,7 @@ Image.open(_p).save(real)
 
 def fake(model, text, images, think=True):
     asked.append(text)
-    if text.startswith("Picture 1 is a rebuilt label"):
+    if text.startswith("Picture 1 is flat printed artwork"):
         return {"match": 6 if len(asked) < 4 else 9, "fixes": ["move the logo up"]}
     lay = json.loads(json.dumps(first))
     if "Your layout:" in text:                               # the improved layout: the logo moved up
@@ -63,7 +63,7 @@ check(any("move the logo up" in a for a in asked if "Your layout:" in a), "the j
 check(any("ONLY the printed sleeve" in a for a in asked[:1]), "the writer is told the metal ends are not the label")
 # a layout that comes back unchanged is not drawn again and again
 asked.clear()
-LAY._ask = lambda m, t, i, think=True: (asked.append(t) or ({"match": 5, "fixes": []} if t.startswith("Picture 1 is a rebuilt")
+LAY._ask = lambda m, t, i, think=True: (asked.append(t) or ({"match": 5, "fixes": []} if t.startswith("Picture 1 is flat printed artwork")
                                                          else json.loads(json.dumps(first))))
 LAY.make("Duracell PowerCheck AA", real, words, 50.0, 46.0, out, model="stand-in", log=print)
 check(sum(1 for a in asked if "Your layout:" in a) == 1, "an unchanged layout stops the rounds")

@@ -731,6 +731,9 @@ def read_words(png, use):
         return []
 
 
+MARKS = {"+", "-", "+/-"}
+
+
 def label_words(pngs, use):
     """The words printed on a label, each confirmed by two independent reads before it may be printed: your AI reads
     every picture twice (two different questions) and the text reader (Apple's own) reads it once; a line counts
@@ -754,12 +757,14 @@ def label_words(pngs, use):
             o = []
         an, bn, on = [norm(x) for x in a], [norm(x) for x in b], [norm(x) for x in o]
         like = lambda w, pool: any(difflib.SequenceMatcher(None, norm(w), x).ratio() >= 0.8 for x in pool if x)
+        mark = lambda w: str(w).strip() in MARKS           # a printed + or - mark (a battery end): one char, no letters
         for w in a:                                        # the first read, confirmed by the second or the reader
-            if norm(w) and like(w, bn + on) and w not in out:
-                out.append(w)
+            if (norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)) and w not in out:
+                out.append(w.strip() if mark(w) else w)
         for w in o:                                        # the reader's lines, confirmed by either AI read
-            if norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out]):
-                out.append(w)
+            if (norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out])) or \
+                    (mark(w) and (w.strip() in a or w.strip() in b) and w.strip() not in out):
+                out.append(w.strip() if mark(w) else w)
     out = whole_words(out)
     say(f"[texture] words confirmed by two reads: {out}")
     return out
