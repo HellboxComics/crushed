@@ -29,7 +29,8 @@ q = lambda **k: dict({"same_line": True, "same_item": True, "kind": "photo", "ye
 dos = {"identity": {"years": [1990, 1999], "year": 1998, "brand": "Duracell", "line": "PowerCheck"},
        "picked": files["pick"],
        "photos": [{"file": files["pick"], "quick": q()},
-                  {"file": files["other_line"], "quick": q(same_line=False)},
+                  {"file": files["other_line"], "quick": q(same_line=True, same_item=False,
+                                                           product_shown="Mallory Duracell mercury battery")},
                   {"file": files["too_late"], "quick": q(years=[2015, 2020])},
                   {"file": files["back"], "quick": q(kind="photo"), "url": "https://example.com/b.jpg"},
                   {"file": files["flat"], "quick": q(kind="flat"), "url": "https://example.com/f.jpg"}]}
@@ -50,6 +51,6 @@ check("PRESS DOTS TO TEST" in added, "every line of a flat label of this very it
 check(not any("MAR 2003" in a for a in added), "a second date code never replaces the item's own")
 check("Made in U.S.A." in added and "SOME AD COPY" not in added, "from another photo only the missing part")
 check(files["other_line"] not in seen and files["too_late"] not in seen and files["pick"] not in seen,
-      "never a different product line, never far outside the era")
+      "never a different product (even one a quick glance called the same line), never far outside the era")
 check(not still and all(r["photo"] and r["url"] for r in receipts), f"nothing missing now, every word with its receipt")
 print(f"\n{ok} checks passed")

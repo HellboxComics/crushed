@@ -43,12 +43,24 @@ def _overlap(ys, lo, hi):
 def candidates(dos, skip=()):
     """Photos already found for the item that could show other parts of its label: the same product line, a real
     photo or a flat (peeled) label, from about the same years - flat labels first, then the same item, then backs."""
-    era = (dos.get("identity") or {}).get("years") or []
+    idn = dos.get("identity") or {}
+    era = idn.get("years") or []
     lo, hi = (era[0] - 6, era[-1] + 6) if era else (0, 9999)
+    line_words = [w for w in re.findall(r"[a-z0-9]+", f"{idn.get('line', '')} {idn.get('variant', '')}".lower())
+                  if len(w) >= 4]
+
+    def ours(p, q):
+        """This photo shows OUR product: the quick look says the exact item, or the careful look matched it, or the
+        product it names carries our line's own words (a "Mallory mercury battery" said to be the same line by a
+        quick glance is not - 2026-10-03)."""
+        if q.get("same_item") or p.get("match") in ("exact", "sister"):
+            return True
+        shown = str(q.get("product_shown") or p.get("product_shown") or "").lower()
+        return bool(line_words) and all(w in shown for w in line_words)
     out = []
     for p in dos.get("photos", []):
         q = p.get("quick") or {}
-        if p["file"] in skip or not os.path.exists(p["file"]) or not q.get("same_line"):
+        if p["file"] in skip or not os.path.exists(p["file"]) or not q.get("same_line") or not ours(p, q):
             continue
         if q.get("kind") not in ("photo", "flat") or not _overlap(q.get("years"), lo, hi):
             continue
