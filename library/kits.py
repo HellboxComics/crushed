@@ -42,8 +42,8 @@ def _named(kit, card):
     return None
 
 
-def _fits(size_mm, card, within=0.15):
-    """The catalog's size for the item agrees with a standard size (each side within 15%)."""
+def _fits(size_mm, card, within=0.05):
+    """The catalog's size for the item agrees with a standard size (each side within 5%, or as given)."""
     s = card.get("size") or []
     if len(s) != 3 or not size_mm:
         return False
@@ -54,14 +54,20 @@ def _fits(size_mm, card, within=0.15):
 
 def pick_variant(kit, card):
     """(variant, why) - the kit's standard size this item is, or (None, why) when it is none of them.
-    Trusted only when the catalog name says it, or the catalog's size agrees with it: a soup can is not forced
-    into a 12 oz soda can's shape, nor an N cell into an AA."""
+    Trusted only when the catalog name says it (and the catalog's size doesn't disagree by more than 25%), or the
+    catalog's size alone agrees within 5%: a soup can or a 330 ml can is not forced into a 12 oz soda can's shape,
+    nor an N cell into an AA."""
     vs = (kit or {}).get("variants") or {}
     v = _named(kit, card)
+    if v and card.get("size") and not _fits(vs[v].get("size_mm"), card, within=0.25):
+        # the name says a size the catalog's measurements don't (a "12 oz" Celsius is a tall slim can, not the
+        # standard 12 oz can): not forced into the standard - traced from the photo at the catalog size
+        return None, (f"the name says {v} but the catalog size {[round(1000 * x, 1) for x in card['size']]} mm is "
+                      f"not {vs[v].get('size_mm')} - traced from the photo at the catalog size")
     if v:
         return v, "named in the catalog"
     for name in sorted(vs, key=lambda n: n != (kit or {}).get("variant_default")):
-        if _fits(vs[name].get("size_mm"), card):
+        if _fits(vs[name].get("size_mm"), card, within=0.05):   # close: a 330 ml can (115 mm) is not a 12 oz (123)
             return name, "the catalog size agrees with the standard"
     return None, "not one of this kind's standard sizes - traced from the photo at the catalog size"
 
