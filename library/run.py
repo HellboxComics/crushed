@@ -827,7 +827,17 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             pp = os.path.join(tex, f"side{len(parts) + 1}.png")
             part.save(pp)
             parts.append(pp)
-    words = label_words(parts, use)
+    # the words are read off the unrolled strips AND off each photo's item as it is: the unrolled strip stops where
+    # the label curves away (about 62 degrees), so a line near the edge in the photo ("100%" over the Duracell's
+    # meter) is only readable in the photo itself (2026-10-03: the judge failed "100%" missing - it was never read)
+    reads_from = list(parts)
+    for i, vf in enumerate(views):
+        try:
+            if vf.get("mask"):
+                reads_from.append(skin.cutout(vf, os.path.join(tex, f"item{i + 1}.png")))
+        except Exception:
+            pass
+    words = label_words(reads_from, use)
     # the printed lines the dossier read off this item's own photo for its label (the same lines the finished model
     # is checked against): allowed too, so the layout can carry them (2026-10-03: "DURACELL INC., Bethel, CT 06801"
     # was checked on the model but never allowed on the label - the writer was told to add it and could not)
@@ -838,7 +848,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             if m.get("kind") in ("text", "panel") and len(t) >= 3 and t not in words:
                 words.append(t)
         words = whole_words(words)
-    R.step("words on the label (each confirmed by two reads)", files=parts, checks=[
+    R.step("words on the label (each confirmed by two reads)", files=reads_from, checks=[
         ("words were read", bool(words), f"{len(words)} words"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])
     status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
@@ -2051,8 +2061,8 @@ def retry_due(cid, v, tries, now):
         at = float(v.get("at") or 0)
     except (TypeError, ValueError):
         at = 0.0
-    if step.startswith("stopped") and at < code_time():
-        wait = 0                                    # it stopped on older code: a fix may be in - tried again now
+    if at < code_time():
+        wait = 0                                    # it stopped or failed on older code: a fix may be in - again now
     return len(today) < RETRIES_PER_DAY and now - at >= wait
 
 
@@ -2092,7 +2102,7 @@ def note_retry(cid):
 def queue(n):
     """The next n items to make, in the order of library/queue.txt (one item per line), skipping ones done and
     ones waiting on you (a pick or a Keep/Redo you haven't given yet). An item that stopped is tried again after
-    1 hour (right away when newer code has arrived since), one that failed the realism check after 6 hours (each at
+    1 hour, one that failed the realism check after 6 hours - either right away when newer code arrived since (each at
     most 3 times a day)."""
     q = [l.strip() for l in open(os.path.join(HERE, "queue.txt")) if l.strip() and not l.startswith("#")] \
         if os.path.exists(os.path.join(HERE, "queue.txt")) else []
