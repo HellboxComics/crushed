@@ -183,6 +183,13 @@ def route_of(card):
     return r if r in FACES else "free"
 
 
+def _same_inputs(a, b):
+    """The same item, size, year, route and pick? (the rules' version is not an input: a dossier made under older
+    rules is brought up to date by replan() from the looks already taken, never thrown away for it)"""
+    strip = lambda d: {k: v for k, v in (d or {}).items() if k != "version"}
+    return bool(a) and strip(a) == strip(b)
+
+
 def _inputs(card, picked):
     return {"product": card.get("product"), "size": card.get("size"), "year": card.get("year"),
             "route": route_of(card), "picked": (picked or {}).get("file") if isinstance(picked, dict) else picked,
@@ -810,13 +817,15 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     pick = picked.get("file") if isinstance(picked, dict) else picked
     sig = _inputs(card, pick)
     old = load(cid)
-    if old and not redo and old.get("inputs") == sig and old.get("done"):
+    same = bool(old) and _same_inputs(old.get("inputs"), sig)
+    if old and not redo and same and old.get("done"):
         log(f"[dossier] {cid}: known already ({len(old.get('photos', []))} photos, made "
             f"{time.strftime('%Y-%m-%d %H:%M', time.localtime(old.get('made_at', 0)))}) - reused")
         if int(old.get("version") or 1) < VERSION:
-            replan(old, log)
+            old["inputs"] = sig
+            replan(old, log)                                  # newer rules: from the looks already taken, in seconds
         return old
-    resume = bool(old) and not redo and old.get("inputs") == sig
+    resume = bool(old) and not redo and same
     if old and not resume:
         _set_aside(cid, "you asked for a Redo" if redo else "its inputs changed (your pick, the product or its size)")
     use = use if use is not None else V.model()
