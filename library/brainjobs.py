@@ -282,12 +282,30 @@ def setup(log=print, force=False):
     coders = sorted({m["name"] for m in inv if "embed" not in m["name"] and
                      any(w in m["name"].lower() for w in ("coder", "coding", "devstral", "code"))})
     key = hashlib.sha1(json.dumps([vis, coders]).encode()).hexdigest()[:12]
+    vis_key = hashlib.sha1(json.dumps(vis).encode()).hexdigest()[:12]
     try:
         old = json.load(open(OUT))
     except Exception:
         old = {}
-    if not force and old.get("version") == VERSION and old.get("key") == key and old.get("jobs") and \
-            time.time() - float(old.get("at") or 0) < 30 * 86400:
+    fresh = time.time() - float(old.get("at") or 0) < 30 * 86400
+    # the photo exam already taken for these same vision brains is never taken again just because the coding brains
+    # (or this file's version) changed: only the missing part is sat
+    photo_done = {k: v for k, v in (old.get("exam") or {}).items() if not k.startswith("_")} \
+        if old.get("vis_key", old.get("key")) == vis_key and fresh else {}
+    if not force and photo_done and old.get("jobs") and not old["jobs"].get("code") and coders:
+        if _testing():
+            return old.get("jobs") or {}
+        jobs = choose(photo_done) or old["jobs"]
+        log(f"[brains] the photo exam is kept; {len(coders)} coding brains take the coding exam: {', '.join(coders)}")
+        cres = code_exam(coders + ([jobs["judge"]] if jobs["judge"] not in coders else []), log)
+        code = choose_code(cres)
+        if code:
+            jobs["code"] = code
+        json.dump({"version": VERSION, "key": key, "vis_key": vis_key, "at": old.get("at"), "inventory": inv,
+                   "exam": dict(photo_done, _coding=cres), "jobs": jobs}, open(OUT, "w"), indent=1)
+        log(f"[brains] the engineer's code -> {jobs.get('code', jobs['judge'])}")
+        return jobs
+    if not force and old.get("version") == VERSION and old.get("key") == key and old.get("jobs") and fresh:
         jobs = choose({k: v for k, v in (old.get("exam") or {}).items() if not k.startswith("_")}) or old["jobs"]
         if jobs and old["jobs"].get("code"):
             jobs["code"] = old["jobs"]["code"]                  # the stored results, under the current rules
@@ -308,6 +326,7 @@ def setup(log=print, force=False):
         done = p.get("exam") if p.get("key") == key and p.get("version") == VERSION else {}
     except Exception:
         done = {}
+    done = dict(photo_done, **(done or {}))                # (and whatever the last full exam already knows)
     if done:
         log(f"[brains] carrying on the exam from before the restart ({len(done)} brains already taken)")
 
@@ -326,8 +345,8 @@ def setup(log=print, force=False):
             results = dict(results, _coding=cres)
     if not jobs:                                         # stopped early (one of your tests): carried on next time
         return old.get("jobs") or {}
-    json.dump({"version": VERSION, "key": key, "at": time.time(), "inventory": inv, "exam": results, "jobs": jobs},
-              open(OUT, "w"), indent=1)
+    json.dump({"version": VERSION, "key": key, "vis_key": vis_key, "at": time.time(), "inventory": inv,
+               "exam": results, "jobs": jobs}, open(OUT, "w"), indent=1)
     try:
         os.remove(part)
     except OSError:
