@@ -18,3 +18,6 @@ site/cube/0044.webp
 site/cube/.freeze
 film/audio/hero_mix.wav
 site/film/
+
+# scratch copies of the code made while working (git worktrees) - never part of the repo
+.claude/
