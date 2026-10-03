@@ -92,6 +92,32 @@ def reader():
         return None
 
 
+def read_lines(png, turns=(0, 180, 90, 270), least=0.5):
+    """The printed lines on a picture, each exactly as the text reader (Apple's own, else tesseract) reads it -
+    for writing artwork with the exact words (a language model is never trusted to spell). [] without a reader."""
+    kind = reader()
+    if kind not in ("ocrmac", "tesseract"):
+        return []
+    from PIL import Image
+    im = Image.open(png).convert("RGB")
+    if max(im.size) < 2400:
+        k = 2400 / max(im.size)
+        im = im.resize((int(im.width * k), int(im.height * k)), Image.LANCZOS)
+    best = []
+    for turn in turns:                                    # the turn that reads the most words wins
+        t = im.rotate(turn, expand=True) if turn else im
+        if kind == "ocrmac":
+            from ocrmac import ocrmac
+            got = [x.strip() for x, conf, box in ocrmac.OCR(t).recognize() if conf >= least and x.strip()]
+        else:
+            import pytesseract
+            got = [ln.strip() for ln in pytesseract.image_to_string(t, config="--psm 11").splitlines() if ln.strip()]
+        got = [g for g in got if len(re.sub(r"[^A-Za-z0-9]", "", g)) >= 2]
+        if sum(len(g) for g in got) > sum(len(b) for b in best):
+            best = got
+    return list(dict.fromkeys(best))
+
+
 def read_text(png, use=None, log=print):
     """All the words on a picture, as one string - read upright and turned both ways, since print on a side often
     runs sideways (a battery's label, a carton's side panel)."""

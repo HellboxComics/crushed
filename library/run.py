@@ -440,8 +440,13 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             lay["width_mm"], lay["height_mm"] = w_mm, h_mm
             png, mr = labelart.render(lay, tex, px=4096)
         else:
-            # the real label from your photo, unrolled flat (read the right way up), and its exact words
-            lab, cov = skin.compose([picked], along, around)
+            # the real label from your photo AND the other photos of this very item (the dossier's): each unrolled
+            # flat (read the right way up) - your pick at the front, the side it can't show from another photo at
+            # the back - and the words on them, each confirmed by two reads
+            views = [picked] + same_design(picked, others, use, want=3, dossier=dos)
+            lab, cov = skin.compose(views, along, around)
+            say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
+                f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
             lab = skin.continue_bands(lab, cov < 0.05)
             real = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
             if reads == "along":
@@ -449,12 +454,18 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             real_png = os.path.join(tex, "real.png")
             real.save(real_png)
             make_room("judging")
-            words = []
-            for i, part in enumerate(skin.sides(picked, "along" if reads == "along" else "around")):
-                pp = os.path.join(tex, f"side{i + 1}.png")
-                part.save(pp)
-                words += [w for w in read_words(pp, use) if w not in words]
-            say(f"[texture] words on the real label: {words}")
+            parts = []
+            for vf in views:
+                try:
+                    got = skin.sides(vf, "along" if reads == "along" else "around") if vf.get("mask") else []
+                except Exception as e:
+                    say(f"[texture] {os.path.basename(vf['file'])}: could not unroll ({e})")
+                    got = []
+                for part in got:
+                    pp = os.path.join(tex, f"side{len(parts) + 1}.png")
+                    part.save(pp)
+                    parts.append(pp)
+            words = label_words(parts, use)
             status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
             import layout as LAY
             png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say)
@@ -697,6 +708,39 @@ def read_words(png, use):
     except Exception as e:
         say(f"[texture] could not read the words: {e}")
         return []
+
+
+def label_words(pngs, use):
+    """The words printed on a label, each confirmed by two independent reads before it may be printed: your AI reads
+    every picture twice (two different questions) and the text reader (Apple's own) reads it once; a line counts
+    when both AI reads saw it, or the text reader saw it too. A word only one read 'saw' is never printed."""
+    import difflib
+    import vet as V
+    import measure as MS
+    norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
+    q2 = ('Read the printed words in this picture again, slowly, line by line, exactly as spelled (keep numbers, '
+          'symbols like (R) and TM, and capitals as printed). Answer ONLY JSON: {"lines": ["..."]}')
+    out = []
+    for png in pngs:
+        a = read_words(png, use)
+        try:
+            b = [x for x in V.ask(use, q2, [png], think=False).get("lines", []) if isinstance(x, str)]
+        except Exception:
+            b = []
+        try:
+            o = MS.read_lines(png)
+        except Exception:
+            o = []
+        an, bn, on = [norm(x) for x in a], [norm(x) for x in b], [norm(x) for x in o]
+        like = lambda w, pool: any(difflib.SequenceMatcher(None, norm(w), x).ratio() >= 0.8 for x in pool if x)
+        for w in a:                                        # the first read, confirmed by the second or the reader
+            if norm(w) and like(w, bn + on) and w not in out:
+                out.append(w)
+        for w in o:                                        # the reader's lines, confirmed by either AI read
+            if norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out]):
+                out.append(w)
+    say(f"[texture] words confirmed by two reads: {out}")
+    return out
 
 
 def run_blender(script, *args):

@@ -34,8 +34,8 @@ def _ask(use, text, images):
     return V.ask(use, text, images, think=True, side=1280) or {}
 
 
-def _strip(pngs, like):
-    """Several pictures of the model side by side in one (the four turns of a round label)."""
+def _strip(pngs, like, name="label_all_turns.png"):
+    """Several pictures side by side in one (the four turns of a round label; the real photos of its sides)."""
     if not pngs:
         return None
     from PIL import Image
@@ -47,7 +47,7 @@ def _strip(pngs, like):
     for i in ims:
         out.paste(i, (x, 0))
         x += i.width
-    p = os.path.join(os.path.dirname(like) or ".", "label_all_turns.png")
+    p = os.path.join(os.path.dirname(like) or ".", name)
     out.save(p)
     return p
 
@@ -69,9 +69,17 @@ def sides(cid, renders, dos, use, route, product="", log=print):
         must = "; ".join(f"{m.get('what')}" + (f" \"{str(m.get('text'))[:60]}\"" if m.get("text") else "")
                          for m in e.get("must_show", [])) or "nothing listed"
         ref = e.get("photo") if e.get("photo") and os.path.exists(e.get("photo")) else None
+        wrap_refs = [ref] + [a for a in (e.get("alternates") or [])[:2] if a and os.path.exists(a)] if ref else []
+        if route == "round" and face == "label" and len(wrap_refs) > 1:
+            # a wrapped label: the real photos of this item from its different sides, side by side - the model's
+            # four turns are judged against all of them, not against the one side the pick happens to show
+            ref = _strip(wrap_refs, model, "label_real_sides.png")
         if e.get("source") == "template_photo":
             ref_note = ("The real photo is of a SISTER product (" + str(e.get("product_shown", "")) + "); these parts "
                         "differ on ours and must show OUR values instead: " + ", ".join(e.get("swap", [])) + ".")
+        elif ref and route == "round" and face == "label" and len(wrap_refs) > 1:
+            ref_note = ("The real photos (side by side) show this exact item from different sides; the label wraps all "
+                        "the way round, so each part of it appears in at least one of them.")
         elif ref:
             ref_note = "The real photo shows this exact item."
         else:

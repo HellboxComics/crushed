@@ -182,9 +182,35 @@ def compose(photos, along_mm, around_mm, W=2048):
         k = keep[0]
         both = (k[1] > 0.05) & (w > 0.05)
         diffs.append(np.abs(small(k[0])[:, both[::16]] - small(l)[:, both[::16]]).mean() if both.any() else 0)
-    if diffs and max(diffs) > 0.05:                                         # the most different one shows another side
+    other_side = 0.10       # measured 2026-10-03: the same side in two photos differs ~0.07-0.09, the opposite ~0.14
+    if diffs and max(diffs) > other_side:                                   # the most different one shows another side
         l, w = strips[1 + int(np.argmax(diffs))]
         keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2)))     # it goes at the back
+    if len(keep) == 1 and len(photos) > 1:
+        # your pick shows only one side: the other photos of this very item (the dossier's) fill the back - the one
+        # that looks most unlike the front is the opposite side, the same rule as several items in one photo
+        more = []
+        for f in photos[1:]:
+            try:
+                items = all_items(f) if f.get("mask") else []    # (a photo without its cut-out can't be unrolled)
+            except Exception:
+                items = []
+            for im, m in items:
+                try:
+                    objs = mosaic.objects(im, m)
+                    o, om = max(objs, key=lambda x: x[1].sum())
+                    more.append(mosaic.strip(o, om, W, H))
+                except Exception:
+                    pass
+        if more:
+            k = keep[0]
+            d = []
+            for l, w in more:
+                both = (k[1] > 0.05) & (w > 0.05)
+                d.append(np.abs(small(k[0])[:, both[::16]] - small(l)[:, both[::16]]).mean() if both.any() else 0)
+            if max(d) > other_side:
+                l, w = more[int(np.argmax(d))]
+                keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2)))
     for l, w in keep:
         better = w[None, :] > cov
         lab = np.where(better[..., None], l, lab)
