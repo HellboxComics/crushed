@@ -160,3 +160,28 @@ def only_words(texts, words):
         if all(tok.lower().strip(".,:;") in allowed for tok in str(t["text"]).split()):
             out.append(t)
     return out
+
+
+# ------------------------------------------------------------------ the insides and the materials: receipts
+def insides_step(spec, recipe, physics):
+    """What is inside the model and what each material is made to behave like, each with its receipt - so nobody
+    has to take the insides on trust. [(what, ok, detail)]: ok None = a handbook value, not measured on this item."""
+    checks = []
+    srcs = (recipe or {}).get("checked_against") or []
+    named = [s.get("source") for s in srcs if isinstance(s, dict) and s.get("source")]
+    parts = [q.get("part") for q in (recipe or {}).get("inside") or []]
+    checks.append(("the insides come from a recipe with receipts", bool(parts) and bool(named),
+                   (f"{len(parts)} inside parts ({', '.join(parts)}) from: " + "; ".join(named)) if parts and named
+                   else ("no inside parts" if not parts else "inside parts with NO source named")))
+    kinds = sorted({q.get("kind") for q in (recipe or {}).get("inside") or [] if q.get("kind")} |
+                   {m.get("kind") for m in ((spec or {}).get("materials") or {}).values() if m.get("kind")})
+    rows = []
+    for k in kinds:
+        ph = (physics or {}).get(k) or {}
+        rows.append(f"{k}: density {ph.get('density', '?')} kg/m3, stiffness {ph.get('stiffness', '?')} Pa, "
+                    f"yield {ph.get('yield', '?')} Pa, fails by {ph.get('fails', '?')}")
+    checks.append(("every material has crush numbers (density, stiffness, yield)",
+                   None if rows else False,
+                   ("handbook values for the material kind, not measured on this item: " + " | ".join(rows))
+                   if rows else "no materials"))
+    return checks

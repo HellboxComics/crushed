@@ -106,7 +106,8 @@ _RISKY_NAMES = {"setattr", "delattr", "globals", "vars", "exec", "eval", "compil
                 "__builtins__"}
 _RISKY_ATTRS = {"__dict__", "__code__", "__globals__", "__builtins__", "__defaults__", "__kwdefaults__",
                 "__closure__", "__subclasses__", "f_globals", "f_locals", "f_back", "putenv"}
-_GUARDED_MODULES = {"vet", "judge", "measure", "viewshot", "run", "__main__", "dossier", "facts", "engineer",
+_GUARDED_MODULES = {"vet", "judge", "measure", "viewshot", "run", "__main__", "dossier", "facts", "engineer", "review",
+                    "labelparts",
                     "cards", "json", "subprocess", "sys", "os", "shutil", "builtins", "time", "io"}
 _MUTATORS = {"append", "extend", "insert", "pop", "remove", "clear", "update", "setdefault", "popitem", "add",
              "discard", "__setitem__", "__delitem__", "sort", "reverse"}
@@ -159,9 +160,29 @@ def setting(name, default=None):
 
 
 def brain():
+    """The engineer's brain: the coding brain the exam chose (brainjobs job "code"), else the judge."""
     sys.path.insert(0, HERE)
     import vet as V
-    return setting("engineer_brain") or V.model()
+    if setting("engineer_brain"):
+        return setting("engineer_brain")
+    try:
+        import brainjobs
+        return brainjobs.job("code") or V.model()
+    except Exception:
+        return V.model()
+
+
+def can_see(model):
+    """Does this brain take pictures? (Ollama's own capabilities list)"""
+    try:
+        import urllib.request
+        sys.path.insert(0, HERE)
+        import vet as V
+        req = urllib.request.Request(V.OLLAMA + "/api/show", data=json.dumps({"model": model}).encode(),
+                                     headers={"content-type": "application/json"})
+        return "vision" in (json.loads(urllib.request.urlopen(req, timeout=30).read()).get("capabilities") or [])
+    except Exception:
+        return True
 
 
 def _judge_model():
@@ -702,6 +723,23 @@ TOOLS = [
     ("lesson", "Write down what you learned: the symptom you saw, its cause, the fix. It goes into the playbook "
                "only if your fix is kept; if not, it is filed under 'tried and not kept'.",
      {"symptom": "string", "cause": "string", "fix": "string"}, ["symptom", "cause", "fix"]),
+    ("compare_colors", "MEASURE two pictures against each other, part by part (a 20 x 10 grid): the share of parts "
+                       "whose color matches and a list of the parts that differ, in words ('x 0.00-0.30 is copper in "
+                       "picture 2 but black in picture 1'). Light and shade don't count as a different color. Use it "
+                       "on a drawn label vs the real one (e.g. 'texture/round1.png' vs 'texture/real.png'), or a "
+                       "model side vs its photo - a measurement, never a guess.",
+     {"a": "string", "b": "string"}, ["a", "b"]),
+    ("read_words", "Read the printed words off a picture with the text reader (and the vision brain, twice): the "
+                   "lines it can read. Use it to check what a label or a model side really says.",
+     {"what": "string"}, ["what"]),
+    ("ask_eyes", "Ask the vision brain a specific question about a picture (any 'what' that look accepts) and get "
+                 "its answer in words - e.g. 'Is the copper band at the top or the bottom end?', 'Which words are "
+                 "cut off?'. Use it when you need eyes on a detail; measure with compare_colors / pixel_stats when "
+                 "a number will do.",
+     {"what": "string", "question": "string", "box": "array"}, ["what", "question"]),
+    ("review_sheet", "The build's review sheet: every step's own checks in order (unrolled photos, words, label "
+                     "tries, box sides, finished model) and the FIRST step that went wrong, with its pictures' "
+                     "names (look at them with look('step:<file name>')).", {}, []),
     ("finish", "You are done: every check passes, or you made it as good as you can. Say what you changed and why, "
                "and what (if anything) is still wrong and its likely cause. Your fix is then confirmed by a second "
                "rebuild and the asset maker's own check before it is kept.", {"summary": "string"}, ["summary"]),
@@ -876,6 +914,50 @@ class Bench:
         w, h = Image.open(p).size
         return f"looking at {what} ({os.path.basename(p)}, {w}x{h} px)" + \
                (f", zoomed to {box}" if box else "") + " - the picture comes with the next message."
+
+    def compare_colors(self, a, b):
+        import layout
+        pa, pb = self._file(a), self._file(b)
+        share, fixes = layout.color_check(pa, pb)
+        return json.dumps({"colors_match": round(share, 2),
+                           "differences": [f.replace("on the real label", "in picture 2").replace("in yours", "in picture 1")
+                                           for f in fixes][:12]})
+
+    def read_words(self, what):
+        import measure
+        p = self._file(what)
+        lines = []
+        try:
+            lines = measure.read_lines(p)
+        except Exception:
+            pass
+        try:
+            txt = measure.read_text(p, use=self.judge)
+        except Exception as e:
+            txt = f"(the vision brain could not read it: {e})"
+        return json.dumps({"text_reader": lines[:40], "vision_brain": str(txt)[:1500]})
+
+    def ask_eyes(self, what, question, box=None):
+        from PIL import Image
+        sys.path.insert(0, HERE)
+        import vet as V
+        p = self._file(what)
+        im = self._crop(Image.open(p), box)
+        tmp = os.path.join(ENG, "eyes.png")
+        im.convert("RGB").save(tmp)
+        q = (f"Look at this picture carefully and answer in plain words, in at most 80 words. {question} "
+             'Answer ONLY JSON: {"answer": "..."}')
+        try:
+            v = V.ask(self.judge or V.model(), q, [tmp], think=False, side=1280) or {}
+            return str(v.get("answer") or v)[:1200]
+        except Exception as e:
+            return f"the vision brain could not answer: {e}"
+
+    def review_sheet(self):
+        import review
+        if not os.path.exists(os.path.join(self.cur["dir"], "review.json")):
+            return "this build wrote no review sheet"
+        return review.load(self.cur["dir"]).text()
 
     def pixel_stats(self, what, box=None):
         import numpy as np
@@ -1269,6 +1351,24 @@ def _lesson_line(cid, item, tag=""):
 
 # ---------------------------------------------------------------- the conversation with its brain
 
+def _describe(judge, im_b64):
+    """The vision brain describes a picture for a brain that can't see: what is there, where, what is wrong."""
+    sys.path.insert(0, HERE)
+    import vet as V
+    import base64
+    tmp = os.path.join(ENG, "describe.png")
+    open(tmp, "wb").write(base64.b64decode(im_b64))
+    q = ("Describe this picture for an engineer who cannot see it: what object or picture it is, every part and "
+         "printed thing you can see and WHERE it sits (top/bottom/left/right, fractions), its colors and materials, "
+         "and anything that looks wrong, odd, missing or unreal. Plain, exact, at most 150 words. "
+         'Answer ONLY JSON: {"description": "..."}')
+    try:
+        v = V.ask(judge or V.model(), q, [tmp], think=False, side=1280) or {}
+        return str(v.get("description") or v)[:1500]
+    except Exception as e:
+        return f"(could not describe: {e})"
+
+
 def _chat(model, messages, tools, timeout=2400):
     sys.path.insert(0, HERE)
     import urllib.error
@@ -1379,9 +1479,14 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
         pass
     messages = [{"role": "system", "content": _system(b)}, {"role": "user", "content": first}]
     tools = tool_specs()
+    sees = can_see(model)
+    eyes = "sees pictures itself" if sees else f"a coding brain - the judge {b.judge} is its eyes"
+    say(f"[engineer] {cid}: brain {model} ({eyes})")
     fns = {"look": b.look, "pixel_stats": b.pixel_stats, "mesh_info": b.mesh_info, "list_files": b.list_files,
            "read_file": b.read_file, "grep": b.grep, "edit_file": b.edit_file, "new_file": b.new_file,
-           "diff": b.diff, "revert": b.revert, "rebuild": b.rebuild, "lesson": b.lesson, "finish": b.finish}
+           "diff": b.diff, "revert": b.revert, "rebuild": b.rebuild, "lesson": b.lesson, "finish": b.finish,
+           "compare_colors": b.compare_colors, "read_words": b.read_words, "ask_eyes": b.ask_eyes,
+           "review_sheet": b.review_sheet}
     allowed = {name: set(props) for name, _, props, _ in TOOLS}
     nudged = 0
     for turn in range(MAX_TURNS):
@@ -1391,8 +1496,15 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
             say(f"[engineer] {cid}: time is nearly up - what it has is checked now")
             break
         if b.pictures:
-            messages.append({"role": "user", "content": "Pictures: " + "; ".join(n for n, _ in b.pictures),
-                             "images": [im for _, im in b.pictures]})
+            if sees:
+                messages.append({"role": "user", "content": "Pictures: " + "; ".join(n for n, _ in b.pictures),
+                                 "images": [im for _, im in b.pictures]})
+            else:                                             # a coding brain without eyes: the judge describes
+                told = []
+                for n, im in b.pictures:
+                    told.append(f"[{n}] " + _describe(b.judge, im))
+                messages.append({"role": "user", "content": "What the vision brain sees in each picture (ask it "
+                                 "more with ask_eyes):\n" + "\n".join(told)})
             b.pictures = []
         _prune(messages)
         beat(f"engineer thinking about {cid} (turn {turn + 1})")

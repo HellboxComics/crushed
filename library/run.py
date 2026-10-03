@@ -467,6 +467,15 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         mimg.save(mr_png)
         status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
+        try:                                                    # the insides and materials, with their receipts
+            import review
+            rec = spec.get("recipe_inline") or jload(os.path.join(HERE, "factory", "recipes",
+                                                                  str(spec.get("recipe", "")) + ".json"), {})
+            review.load(d).step("insides and materials (built like the factory makes it)",
+                                files=[os.path.join(d, "check", "cutaway.png")],
+                                checks=review.insides_step(spec, rec, jload(os.path.join(HERE, "factory", "physics.json"), {})))
+        except Exception as e:
+            say(f"[review] {cid}: the insides could not be put on the sheet ({e})")
         for ext in ("glb", "fbx", "usdc", "blend"):
             if os.path.exists(os.path.join(mdir, spec["id"] + "." + ext)):
                 shutil.copy(os.path.join(mdir, spec["id"] + "." + ext), os.path.join(mdir, cid + "." + ext))
@@ -576,6 +585,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         say(f"[check] viewer shots skipped ({e}) - the studio pictures are used")
     make_room("judging")
     verdict = check_model(cid, card, picked, d, glb, route, fam, shots, close, use)
+    label_passed(cid, d, verdict)
     try:                                                    # the last step on the review sheet
         import review
         probs = verdict.get("problems")
@@ -869,10 +879,25 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     R.step("words on the label (each confirmed by two reads)", files=reads_from, checks=[
         ("words were read", bool(words), f"{len(words)} words"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])
-    status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
     import layout as LAY
+    # A label that was already good is KEPT, not written again (Cody, 2026-10-03: "if the label is wrong, fix the
+    # label; if the internals and shape are correct, keep them"). Kept when the last build's label passed its own
+    # checks and the judge's side-by-side, and nothing that makes it changed: the same words, the same unrolled
+    # photo, the same label code.
+    key = {"words": words, "real": _sha(real_png), "code": _sha(os.path.join(HERE, "layout.py")) +
+           _sha(os.path.join(HERE, "labelart.py"))}
+    kept = jload(os.path.join(tex, "label_kept.json"), {})
+    done_png, done_mr = os.path.join(tex, "label.png"), os.path.join(tex, "label_mr.png")
+    if kept.get("key") == key and kept.get("passed") and os.path.exists(done_png) and os.path.exists(done_mr):
+        say(f"[texture] {cid}: the label from the last build was right (match {kept.get('score')}) and nothing that "
+            "makes it changed - kept, not written again")
+        R.step("label art (kept from the last build: it passed, and its words, photo and code are unchanged)",
+               files=[done_png], checks=[("kept as it was", True, f"match {kept.get('score')}")])
+        return done_png, done_mr
+    status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
     png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
                               typical=kits.typical(kits.get(kit_name), "label"), cover_png=cover_png)
+    json.dump({"key": key, "score": score, "passed": False}, open(os.path.join(tex, "label_kept.json"), "w"), indent=1)
     tries = jload(os.path.join(tex, "rounds.json"), [])
     share = review.metal_share(mr)
     R.step("label art (your AI's layout, drawn in exact type)",
@@ -886,6 +911,32 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
                 (max([t.get("colors") or 0 for t in tries] or [1]) >= 0.85),
                 "; ".join(f"try {t['round']}: {t.get('colors')}" for t in tries if t.get("colors") is not None))])
     return png, mr
+
+
+def _sha(path):
+    import hashlib
+    try:
+        return hashlib.sha1(open(path, "rb").read()).hexdigest()[:16]
+    except OSError:
+        return ""
+
+
+def label_passed(cid, d, verdict):
+    """After the judge: a round label that passed its own step checks AND the judge's side-by-side is marked kept,
+    so the next build of this item reuses it instead of writing it again."""
+    try:
+        import review
+        sheet = review.load(d)
+        art = next((s for s in sheet.steps if s["step"].startswith("label art")), None)
+        ok_step = bool(art) and all(c["ok"] is not False for c in art["checks"])
+        side = ((verdict.get("sides") or {}).get("label") or {}).get("pass")
+        f = os.path.join(d, "texture", "label_kept.json")
+        k = jload(f, {})
+        if k:
+            k["passed"] = bool(ok_step and side)
+            json.dump(k, open(f, "w"), indent=1)
+    except Exception as e:
+        say(f"[texture] {cid}: could not mark the label ({e})")
 
 
 def run_blender(script, *args):

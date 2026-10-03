@@ -30,7 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 OUT = os.path.join(WORK, "brains.json")
-VERSION = 1
+VERSION = 2                  # 2: the coding exam (the engineer's brain)
 HUNT = os.path.join(WORK, "hunt")
 
 DURACELL = {"product": "Duracell Coppertop AA alkaline battery, circa 1998", "year": 1998,
@@ -167,6 +167,83 @@ def exam(models, log=print, finalists=2, done=None, save=None):
     return res
 
 
+# ------------------------------------------------------------------ the coding brain (the engineer's hands)
+CODE_EXAM = [
+    {"id": "fix_off_by_one",
+     "task": "This function should return the average of a list, or 0.0 for an empty list, but it is wrong. Answer "
+             "ONLY the corrected Python function, nothing else.\n\ndef mean(xs):\n    return sum(xs) / len(xs)\n",
+     "check": lambda ns: ns["mean"]([2, 4]) == 3.0 and ns["mean"]([]) == 0.0},
+    {"id": "exact_edit",
+     "task": "In the JSON below, change ONLY the value of \"stroke_w\" from 1.2 to 0.006 and answer ONLY the whole "
+             "corrected JSON.\n\n{\"shapes\": [{\"type\": \"rect\", \"x\": 0.3, \"stroke\": \"#1fd43a\", "
+             "\"stroke_w\": 1.2}, {\"type\": \"rect\", \"x\": 0.5, \"stroke_w\": 0.004}]}",
+     "check": lambda ns: ns["json"]["shapes"][0]["stroke_w"] == 0.006 and ns["json"]["shapes"][1]["stroke_w"] == 0.004
+     and ns["json"]["shapes"][0]["x"] == 0.3},
+    {"id": "find_cause",
+     "task": "A label is drawn all green although its layout says the background is black. The drawing code draws "
+             "each shape's outline with width int(stroke_w * H) pixels where H is the picture height, and this layout "
+             "has an outline with stroke_w = 1.2. In ONE sentence, what is the cause? Answer ONLY JSON: "
+             "{\"cause\": \"...\"}",
+     "check": lambda ns: any(w in str(ns["json"].get("cause", "")).lower() for w in ("1.2", "stroke_w", "width"))
+     and any(w in str(ns["json"].get("cause", "")).lower() for w in ("height", "whole", "entire", "fraction", "covers", "cover", "fill", "larger", "wide"))},
+]
+
+
+def _code_one(model, item):
+    import re
+    import vet as V
+    t = time.time()
+    body = {"model": model, "stream": False, "think": False, "options": {"temperature": 0},
+            "messages": [{"role": "user", "content": item["task"]}]}
+    r = V._call("/api/chat", body, timeout=900)
+    txt = str(r.get("message", {}).get("content", ""))
+    txt = re.sub(r"^```[a-z]*\n|```$", "", txt.strip(), flags=re.M).strip()
+    ns = {}
+    try:
+        if item["id"] == "fix_off_by_one":
+            exec(txt, {}, ns)
+        else:
+            ns["json"] = json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+        ok = bool(item["check"](ns))
+    except Exception:
+        ok = False
+    return ok, time.time() - t
+
+
+def code_exam(models, log=print):
+    res = {}
+    for m in models:
+        if _testing():
+            return res
+        score, secs = 0, 0.0
+        for it in CODE_EXAM:
+            try:
+                ok, took = _code_one(m, it)
+            except Exception:
+                ok, took = False, 0.0
+            score += ok
+            secs += took
+        res[m] = {"score": score, "of": len(CODE_EXAM), "seconds": round(secs, 1)}
+        log(f"[brains] {m} (coding): {score} of {len(CODE_EXAM)} right, {secs / len(CODE_EXAM):.0f} s an answer")
+        try:
+            V_release(m)
+        except Exception:
+            pass
+    return res
+
+
+def V_release(m):
+    import vet as V
+    V._call("/api/generate", {"model": m, "keep_alive": 0}, timeout=60)
+
+
+def choose_code(results):
+    """The engineer's coding brain: the best coding score, then the faster."""
+    if not results:
+        return None
+    return sorted(results, key=lambda m: (-results[m]["score"], results[m]["seconds"]))[0]
+
+
 def choose(results):
     """judge: the best thinking score (every question), then the faster.
     sort: the best quick score on the SORTING questions (is it this item, this size, this era, does it meet the
@@ -202,14 +279,18 @@ def setup(log=print, force=False):
         if m["vision"] and "embed" not in m["name"]:
             by_base.setdefault((m["family"], m["params"], m["quant"]), m["name"])
     vis = sorted(by_base.values())
-    key = hashlib.sha1(json.dumps(vis).encode()).hexdigest()[:12]
+    coders = sorted({m["name"] for m in inv if "embed" not in m["name"] and
+                     any(w in m["name"].lower() for w in ("coder", "coding", "devstral", "code"))})
+    key = hashlib.sha1(json.dumps([vis, coders]).encode()).hexdigest()[:12]
     try:
         old = json.load(open(OUT))
     except Exception:
         old = {}
     if not force and old.get("version") == VERSION and old.get("key") == key and old.get("jobs") and \
             time.time() - float(old.get("at") or 0) < 30 * 86400:
-        jobs = choose(old.get("exam") or {}) or old["jobs"]      # the stored results, under the current rules
+        jobs = choose({k: v for k, v in (old.get("exam") or {}).items() if not k.startswith("_")}) or old["jobs"]
+        if jobs and old["jobs"].get("code"):
+            jobs["code"] = old["jobs"]["code"]                  # the stored results, under the current rules
         if jobs != old["jobs"]:
             log(f"[brains] jobs worked out again from the last exam: careful looks -> {jobs['judge']}, quick looks "
                 f"-> {jobs['sort']} (was {old['jobs'].get('judge')}, {old['jobs'].get('sort')})")
@@ -235,6 +316,14 @@ def setup(log=print, force=False):
         os.replace(part + ".tmp", part)
     results = exam(vis, log, done=done, save=save)
     jobs = choose(results)
+    if jobs:
+        log(f"[brains] {len(coders)} coding brains on this Mac: {', '.join(coders) or 'none'} - each takes the coding "
+            "exam (a bug to fix, an exact edit, a cause to name)")
+        cres = code_exam(coders + ([jobs["judge"]] if jobs["judge"] not in coders else []), log)
+        code = choose_code(cres)
+        if code:
+            jobs["code"] = code
+            results = dict(results, _coding=cres)
     if not jobs:                                         # stopped early (one of your tests): carried on next time
         return old.get("jobs") or {}
     json.dump({"version": VERSION, "key": key, "at": time.time(), "inventory": inv, "exam": results, "jobs": jobs},
@@ -244,7 +333,8 @@ def setup(log=print, force=False):
     except OSError:
         pass
     if jobs:
-        log(f"[brains] jobs set by the exam: careful looks -> {jobs['judge']}, quick looks -> {jobs['sort']}")
+        log(f"[brains] jobs set by the exam: careful looks -> {jobs['judge']}, quick looks -> {jobs['sort']}, "
+            f"the engineer's code -> {jobs.get('code', jobs['judge'])}")
     return jobs
 
 
