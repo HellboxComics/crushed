@@ -202,7 +202,25 @@ def pipeline(cid, redo=False):
         return build(cid, card, picked, others, use, d, mdir, n_found, n_good)
 
     cf = os.path.join(d, "candidates.json")
+    def dig_deeper():
+        rounds = len([1 for k in os.listdir(d) if k.startswith("round_")])
+        if rounds >= 3:
+            status(cid, step="3 rounds and none was right - it needs a photo of your own: put it in "
+                             f"~/crushed-render/remaster/refs-mine named {cid}_1.jpg", ok=False)
+            return
+        open(os.path.join(d, f"round_{rounds + 1}"), "w").write("")
+        status(cid, step=f"you said none fit - digging deeper (round {rounds + 2})")
+        import cards as CD                                        # what was it really called back then? asked again
+        CD.era_version(cid, card, V.model(), log=say, evidence=era_evidence(d), refresh=True)   # with what photos
+        hunt.run(cid, product.split(",")[0], year, log=say, extra=more_searches(card, V.model()))   # showed
+        return pipeline(cid, redo=False)
+
     picks = jload(os.path.join(HB, "picks.json"), {})
+    if picks.get(cid, {}).get("pick") == "none" and os.path.exists(cf):
+        # you turned the photos on your phone down: that answer is taken first (before any new ranking), those
+        # photos are never shown again, and it digs deeper
+        your_pick(cid, product, [], d)
+        return dig_deeper()
     if picks.get(cid, {}).get("pick", "none") != "none" and os.path.exists(cf):
         # you already picked: straight to building, no hunting or ranking again
         status(cid, product=product, route=route, step="your pick is in - building")
@@ -294,17 +312,7 @@ def pipeline(cid, redo=False):
     auto_pick(cid, cands[:9], d)                              # a clear winner is picked without asking you
     picked = your_pick(cid, product, cands[:9], d)
     if picked == "none":                                          # you said none: dig deeper, then ask again
-        rounds = len([1 for k in os.listdir(d) if k.startswith("round_")])
-        if rounds >= 3:
-            status(cid, step="3 rounds and none was right - it needs a photo of your own: put it in "
-                             f"~/crushed-render/remaster/refs-mine named {cid}_1.jpg", ok=False)
-            return
-        open(os.path.join(d, f"round_{rounds + 1}"), "w").write("")
-        status(cid, step=f"you said none fit - digging deeper (round {rounds + 2})")
-        import cards as CD                                        # what was it really called back then? asked again
-        CD.era_version(cid, card, use, log=say, evidence=era_evidence(d), refresh=True)   # with what photos showed
-        hunt.run(cid, product.split(",")[0], year, log=say, extra=more_searches(card, use))
-        return pipeline(cid, redo=False)
+        return dig_deeper()
     if not picked:
         return
     return go(picked, [c for c in cands if c["file"] != picked["file"]], use, len(found), len(cands))
