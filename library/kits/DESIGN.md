@@ -92,6 +92,27 @@ The kit way, as a person would build it in Blender:
                the photo's colors taken DOWN to true color (the photo's light taken out), not a photo pasted on
 5. CHECK       each side rendered and compared with its own real photo; the colors measured against the photos
 
+## After an asset is perfect: the marketplace lane (Cody, 2026-10-03)
+
+One of the two lanes for finished assets. It starts only AFTER an asset passes every check and Cody keeps it - the
+asset is perfected first, then it conforms to these steps. One master catalog, the same clean package sent to several
+stores (no exclusivity anywhere):
+  stores, in order   CGTrader and Fab first (same first ~10-25 excellent assets), then his own site (canonical
+                     product pages, direct checkout), TurboSquid Basic (never SquidGuild - it needs exclusivity),
+                     Superhive (the full Blender source), Sketchfab (showcase only), Unity (themed packs of 25-100)
+  every package      the .blend master with named parts and collections (CLEAN, CUTAWAY, EXPLODED, CRUSH,
+                     GAME_READY), FBX / GLB, 4K and 2K PBR maps, LOD0-LOD3, a collision mesh, variants where they
+                     exist (closed, peeled wrapper, cutaway, exploded, crushed)
+  every listing      interactive preview, turntable, wireframe, cutaway, exploded and crushed pictures; title and
+                     keywords by object and era ("1998 Alkaline AA Battery - Full Interior / Cutaway / PBR")
+  three levels       single objects; themed packs from the catalog's own themes (Sleepover, Road Trip, Arcade
+                     Birthday, 90s School...); big era libraries ("The 1990s", the complete library)
+  learning           which kinds, prices, thumbnails and keywords sell decides what gets built next
+Already made for every kept asset: .blend, .glb, .fbx, .usdc, .obj/.mtl, .3ds, .ma, the phone-size .glb, the cutaway
+picture. Still to build for this lane: LODs, collision mesh, 2K maps, named collections, turntable / wireframe /
+exploded / crushed pictures, listing text, one folder per store. No store accounts are opened by the asset maker -
+that is Cody's to do.
+
 ## Build order
 
   1. kit system + cell_battery, can, box_carton - proven end to end on the Duracell, a soda can, the Pop-Tarts box
