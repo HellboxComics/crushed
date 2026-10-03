@@ -53,12 +53,13 @@ def quick_model():
 
 
 ASK = """Product: {display}
+Its era: {era} - any year in that range is the right era
 Things that mark the right version: {recognize}
 Things that would mean a different version: {avoid}
 Look at this photo and answer ONLY with JSON, no other words:
 {{"match": 0-10 how surely this shows EXACTLY this product: the right brand, line, flavor/model/version and count,
            in the design of that era (a different flavor or version, or a modern redesign, is at most 4),
-  "era_ok": true if the package/design looks like it is from the product's era (its year +/- 3), false if not,
+  "era_ok": true if the package/design looks like it is from the product's era ({era}), false if not,
   "made_year": the year THIS physical item was most likely made, worked out from what is printed on it: copyright
            years, the design, and dates - a "best if installed by", "expires" or "best by" date comes AFTER it was
            made, so subtract the usual shelf life for this kind of product in that era; null if nothing tells,
@@ -116,7 +117,9 @@ def vet(path, display, era="", use=None, think=True, card=None):
         return None
     card = card or {}
     note = str(card.get("owner_note") or "").strip()
-    q = ASK.format(display=display, recognize="; ".join(card.get("recognize", [])) or "(none listed)",
+    import era as ERA
+    q = ASK.format(display=display, era=ERA.describe(card.get("year")) if card.get("year") else "unknown",
+                   recognize="; ".join(card.get("recognize", [])) or "(none listed)",
                    avoid="; ".join(card.get("avoid", [])) or "(none listed)",
                    note_field=NOTE_FIELD.format(note=note.replace('"', "'")) if note else "")
     try:
@@ -124,12 +127,10 @@ def vet(path, display, era="", use=None, think=True, card=None):
     except Exception as e:
         return {"match": 0, "problems": f"could not judge: {e}"}
     v["model"] = use
-    try:                                                # how far the item in the photo was made from the catalog year
-        y, my = int(card.get("year") or 0), v.get("made_year")
-        if y and my not in (None, "", "null") and 1900 < int(str(my)[:4]) < 2100:
-            v["year_off"] = abs(int(str(my)[:4]) - y)
-    except (TypeError, ValueError):
-        pass
+    if card.get("year") and v.get("made_year") not in (None, "", "null"):
+        o = ERA.off(v.get("made_year"), card.get("year"))      # years outside the item's era (0 = inside it)
+        if o is not None:
+            v["year_off"] = o
     if note:
         v["note"] = note[:200]                          # judged against this note (a new note means a new look)
         v["note_rule"] = NOTE_RULE

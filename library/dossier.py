@@ -5,7 +5,8 @@ Before a single face is drawn, your local AI works out what the item really is a
                 it is food, and names the line's sister flavors of that era (sisters are only search words, never
                 facts)
   2. hunt       every side of the item, three ways: this exact item; its sister flavors; this item in nearby years
-                (the catalog year +/- 3 counts as the same era). Short, varied Google Images searches through your
+                (the era is a range people use: a 1998 item is a "90s" item, a 2003 one
+                "early 2000s" - library/era.py). Short, varied Google Images searches through your
                 bot's own browser - at most 16 per item, 20 s apart, about 5 photos kept from each. Every photo
                 ever looked at is written down and reused next time (the first hunt's photos too), so a rebuild
                 never loses the backs and sides already found.
@@ -37,7 +38,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 2                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+VERSION = 3                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+#                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
 LOOK = 3                     # careful looks per side
@@ -288,7 +290,9 @@ def identity(card, picked, use, log=print):
                       _str(s).lower() != idn["variant"].lower()][:6]
     idn["read_from"] = picked if got else "the catalog name only (the picked photo could not be read)"
     idn["year"] = year
-    idn["years"] = [year - 3, year + 3] if year else [1900, 2100]
+    import era as ERA                                     # "90s", "early 2000s" - a range, never one exact year
+    idn["years"] = list(ERA.span(year)) if year else [1900, 2100]
+    idn["era"] = ERA.words(year)
     idn["name"] = " ".join(x for x in (idn["brand"], idn["line"], idn["variant"]) if x)
     return idn
 
@@ -305,10 +309,10 @@ def queries(idn, route, need, done=(), side_words=None):
         line = f"{brand} {line}".strip()
     line2 = re.sub(r"[-']", " ", line).replace("  ", " ").strip()
     var = (idn.get("variant") or "").lower()
+    import era as ERA
     y = idn.get("year")
-    dec = f"{y // 10 * 10}s" if y else ""
+    ew = ERA.words(y) if y else ""                        # "90s" / "early 2000s": how sellers and collectors say it
     sis = [s.lower() for s in idn.get("sisters") or []] or [""]
-    offs = [-1, 1, 0, -2, 2, 3, -3]
     seen = {q.lower().strip() for q in done}
     out, k = [], 0
     for rnd in range(2):                                  # the second round: the other wording of each side
@@ -319,10 +323,9 @@ def queries(idn, route, need, done=(), side_words=None):
             w0 = w[min(rnd, len(w) - 1)]
             w1 = w[min(1 - rnd, len(w) - 1)] if len(w) > 1 else w0
             s = sis[k % len(sis)]
-            yy = (y + offs[k % len(offs)]) if y else ""
             k += 1
-            for q in (f"{y or ''} {line2} {var} {w0}", f"{line2} {s} {yy} {w0}" if s else "",
-                      f"vintage {line if rnd == 0 else line2} {w1} {dec}"):
+            for q in (f"{ew} {line2} {var} {w0}", f"{line2} {s} {ew} {w0}" if s else "",
+                      f"vintage {line if rnd == 0 else line2} {w1} {ew}"):
                 q = re.sub(r"\s+", " ", q).strip()
                 q = " ".join(dict.fromkeys(q.split()))       # a word once ("duracell duracell coppertop" -> once)
                 if q and q.lower() not in seen:
@@ -405,7 +408,7 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
 def quick_look(dos, quick, log=print):
     """The quick first look at every photo not looked at yet (which side, which product, real photo or ad)."""
     idn = dos["identity"]
-    q = QUICK_Q.format(name=idn["name"], year=idn.get("year") or "")
+    q = QUICK_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "")
     todo = [p for p in dos["photos"] if "quick" not in p]
     for k, p in enumerate(todo, 1):
         try:
@@ -460,7 +463,7 @@ def careful_looks(dos, use, log=print):
                if p["file"] != picked and picked else "Picture 1 IS our exact item (picked as true).")
         imgs = [p["file"]] + ([picked] if p["file"] != picked and picked else [])
         try:
-            v = _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("year") or "", y0=era[0], y1=era[1],
+            v = _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "", y0=era[0], y1=era[1],
                                          ref=ref, sides_hint=SIDES_HINT.get(route, "")), imgs, think=True,
                      side=1280) or {}
         except Exception as e:
@@ -780,7 +783,16 @@ def replan(dos, log=print):
     """A dossier made under older rules, brought up to the current ones from the looks already taken - no new
     looks, nothing downloaded: words that can only be a watermark or credit come out of every look and fact, and
     the plan for every side is worked out again (a round item's wrapped side is its label)."""
+    import era as ERA
     import facts as FX
+    idn = dos.setdefault("identity", {})
+    y = idn.get("year") or (dos.get("inputs") or {}).get("year")
+    if y:                                                 # the era as a range people use ("90s", "early 2000s")
+        idn["years"], idn["era"] = list(ERA.span(y)), ERA.words(y)
+        for p in dos.get("photos", []):                   # a photo thrown out only for being outside the old,
+            if str(p.get("why", "")).startswith("its years") and _overlap(p.get("years"), idn["years"]):   # narrower era
+                p["match"] = "near_year"
+                p["why"] = "inside the era once it became a range"
     for p in dos.get("photos", []):
         if not p.get("labeled"):
             continue

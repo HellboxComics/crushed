@@ -5,7 +5,7 @@ Sources, in order:
   2. eBay listings (a real browser engine, Playwright + Chromium, so eBay sees an ordinary visitor; every photo
      of each matching listing is saved, full size)
   3. Open Food Facts, Wikimedia Commons, Openverse (free photo sites, plain web requests)
-Listing titles must match the item and, when the catalog gives a year, carry no year outside the era (+/- 3).
+Listing titles must match the item and, when the catalog gives a year, carry no year outside its era (era.py).
 Photos are only saved here; the local vision model decides later which ones are usable.
 
     python library/hunt.py <catalog id> "<search words>" [year]
@@ -25,12 +25,14 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML,
       "Version/17.0 Safari/605.1.15")
 
 
-def era_ok(title, year, slack=3):
-    """A listing that names a year outside year +/- slack is another version of the product."""
+def era_ok(title, year):
+    """A listing that names only years outside the item's era ("90s", "early 2000s" - era.py) is another version."""
     if not year:
         return True
+    import era as ERA
+    a, b = ERA.span(year)
     ys = [int(y) for y in re.findall(r"\b(19[5-9]\d|20[0-4]\d)\b", title)]
-    return not ys or any(abs(y - year) <= slack for y in ys)
+    return not ys or any(a <= y <= b for y in ys)
 
 
 def words_ok(title, words):
@@ -173,13 +175,14 @@ def free_sites(words):
 def queries(words, year):
     """How a person digs up an old product: the decade and the brand first ('90s duracell', which found the
     1990s PowerCheck batteries at once), then decade + the product, then vintage + product + year."""
+    import era as ERA
     brand = words.split()[0] if words else ""
+    ew = ERA.words(year) if year else ""                  # "90s", "early 2000s" - never one exact year
     qs = []
     if year and year < 2010:
-        dec = f"{str(year)[2]}0s" if year < 2000 else "2000s"
-        qs += [f"{dec} {brand}", f"{dec} {words}", f"vintage {words} {year}"]
+        qs += [f"{ew} {brand}", f"{ew} {words}", f"vintage {words} {ew}"]
     else:
-        qs += [words, f"{words} {year}" if year else words + " product photo"]
+        qs += [words, f"{words} {ew}" if year else words + " product photo"]
     return list(dict.fromkeys(qs))
 
 
@@ -196,7 +199,9 @@ def run(cid, words, year=None, log=print, extra=()):
     hits = []
     try:
         import google_images as G
-        for q in (list(extra) if extra else queries(words, year)):
+        import era as ERA
+        qs = [ERA.in_words(q, year) if year else q for q in (list(extra) if extra else queries(words, year))]
+        for q in dict.fromkeys(qs):                     # every search says the era ("90s"), never one exact year
             for r in G.search_full(q, most=15 if extra else 40, log=log):     # each photo with its source page
                 hits.append((r["url"], r.get("page", ""), f"Google Images: {q}" + (f" | {r['title']}" if r.get("title") else "")))
     except Exception as e:

@@ -26,10 +26,11 @@ sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.path.join(WORK, "notes")
 
-SEARCH_Q = """We are finding photos of one exact real product version. The catalog item: {product} ({year}; the same
-era is {y0} to {y1}). The owner's note about which version to build: "{note}".
+SEARCH_Q = """We are finding photos of one exact real product version. The catalog item: {product} (its era: {era};
+any year in that range is the right era). The owner's note about which version to build: "{note}".
 Write 6 short Google Images searches (3 to 7 words each) that would find clear photos of THAT version - its front,
-and its back and sides. Vary the words the way collectors and sellers describe it (vintage, year, box, back, side).
+and its back and sides. Vary the words the way collectors and sellers describe it (vintage, the era words like
+"{words}", box, back, side). Never put one exact year in a search - use the era words.
 Answer ONLY JSON: {{"searches": ["...", "..."]}}"""
 
 
@@ -62,11 +63,12 @@ def searches(card, note, use, log=print):
     if not (use and note):
         return []
     import vet as V
+    import era as ERA
     y = card.get("year") or 0
     body = {"model": use, "stream": False, "format": "json", "think": False, "options": {"temperature": 0.3},
-            "messages": [{"role": "user", "content": SEARCH_Q.format(product=card.get("product"), year=y or "?",
-                                                                   y0=y - 3 if y else "?", y1=y + 3 if y else "?",
-                                                                   note=note)}]}
+            "messages": [{"role": "user", "content": SEARCH_Q.format(
+                product=card.get("product"), era=ERA.describe(y) if y else "unknown",
+                words=ERA.words(y) or "vintage", note=note)}]}
     try:
         txt = V._call("/api/chat", body).get("message", {}).get("content", "{}")
         got = json.loads(re.search(r"\{.*\}", txt, re.S).group(0)).get("searches") or []

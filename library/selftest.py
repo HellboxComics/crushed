@@ -130,7 +130,7 @@ def t_engineer_guard():
     must = ["vet.py", "VET.py", "viewshot.py", "judge.py", "measure.py", "engineer.py", "selftest.py", "watchdog.py",
             "dossier.py", "facts.py", "queue.txt", "families.json", "playbook/playbook.md", "playbook//playbook.md",
             "playbook/lessons.md", "shapes/vet.py", ".gitignore", "shapes/../vet.py", "measure_blender.py",
-            "materials.json", "families.py", "family_library.json", "notes.py", "catalog.py"]
+            "materials.json", "families.py", "family_library.json", "notes.py", "catalog.py", "era.py", "jsonsafe.py"]
     bad = [p for p in must if not E.locked(p)]
     if bad:
         raise RuntimeError("not locked: " + ", ".join(bad))

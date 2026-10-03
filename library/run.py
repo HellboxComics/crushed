@@ -215,8 +215,16 @@ def pipeline(cid, redo=False):
     for i, f in enumerate(found):
         f["order"] = i
         f["vet"] = (old.get(f["file"]) or {}).get("vet")
-        if f["vet"] and note and (f["vet"].get("note") != note[:200] or f["vet"].get("note_rule") != V.NOTE_RULE):
-            f["vet"] = None                                      # judged before your note: looked at again with it
+        fv = f["vet"]
+        if fv and note and (fv.get("note") != note[:200] or fv.get("note_rule") != V.NOTE_RULE):
+            f["vet"] = fv = None                                 # judged before your note: looked at again with it
+        if fv and not note and fv.get("note"):
+            for k in ("note", "note_ok", "note_rule"):           # judged against a note since taken off: that part
+                fv.pop(k, None)                                  # of the answer no longer counts
+        if fv and fv.get("made_year") not in (None, "", "null") and year:
+            import era as ERA                                    # how far outside the era ("90s"), by today's rule
+            o = ERA.off(fv.get("made_year"), year)
+            fv.pop("year_off", None) if o is None else fv.__setitem__("year_off", o)
     todo = [f for f in found if not f["vet"]][:60]                       # 60 a round, in Google's order
     if quick and len(todo) > 12:
         for k, f in enumerate(todo, 1):
@@ -690,9 +698,9 @@ def auto_pick(cid, cands, d):
         say(f"[pick] not picked by itself: the item in the top photo is only {big} px tall - too small to build "
             "from - you choose")
         return
-    if isinstance(v.get("year_off"), int) and v["year_off"] > 2:
-        say(f"[pick] not picked by itself: the top photo's item was made about {v['year_off']} years from the "
-            "catalog year (read off its printed dates) - you choose")
+    if isinstance(v.get("year_off"), int) and v["year_off"] > 0:
+        say(f"[pick] not picked by itself: the top photo's item was made about {v['year_off']} years outside the "
+            "item's era (read off its printed dates) - you choose")
         return
     if v.get("kind") == "photo" and int(v.get("seen") or 0) >= 3 and v.get("avoid_seen") is not True and lead >= 4:
         json.dump({"files": [{"file": c["file"], "mask": c["mask"], "vet": c["vet"]} for c in cands],
@@ -709,8 +717,8 @@ def rank(f):
     r = v.get("match", 0) + 3 * min(int(v.get("seen") or 0), 5)
     r -= 8 if v.get("avoid_seen") is True else 0
     r -= 8 if v.get("era_ok") is False else 0                 # a modern redesign is not this item
-    if isinstance(v.get("year_off"), int):                    # made years away from the catalog year (read off its
-        r -= 2 * max(0, v["year_off"] - 1)                     # printed dates): the one made closest wins
+    if isinstance(v.get("year_off"), int):                    # made outside the item's era ("90s"), read off its
+        r -= 2 * v["year_off"]                                 # printed dates: the further outside, the lower
     r += 6 if v.get("note_ok") is True else -12 if v.get("note_ok") is False else 0   # your note decides the version
     r += {"photo": 4, "package": 1, "render": -2, "ad": -4}.get(v.get("kind"), 0)
     r += 0.5 if v.get("view") == "front" else 0
