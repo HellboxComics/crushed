@@ -78,7 +78,11 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py"}
-LOCKED_DIRS = ("playbook/", "shapes/specs/", "labels/")      # its rulebook + lessons, measured shapes, hand layouts
+# Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
+# may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
+# a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
+# logo beside the PowerCheck meter; on the real battery they are on opposite sides).
+LOCKED_DIRS = ("playbook/",)
 # file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "sitecustomize.py",

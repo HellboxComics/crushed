@@ -15,7 +15,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-Q = """[side] {first} and {second}. The product: {product}. This is its {face} side.
+Q = """[side] {first} and {second}. The product: {product}. This is its {face} side (a round label is shown
+turned four ways side by side - the real photo may show any of those turns, or several items at different turns).
 {ref_note}
 What must be printed on this side (from the item's dossier): {must}
 Compare them as a buyer would. Answer ONLY JSON:
@@ -33,14 +34,35 @@ def _ask(use, text, images):
     return V.ask(use, text, images, think=True, side=1280) or {}
 
 
+def _strip(pngs, like):
+    """Several pictures of the model side by side in one (the four turns of a round label)."""
+    if not pngs:
+        return None
+    from PIL import Image
+    ims = [Image.open(p).convert("RGB") for p in pngs]
+    h = max(i.height for i in ims)
+    ims = [i.resize((max(1, int(i.width * h / i.height)), h)) for i in ims]
+    out = Image.new("RGB", (sum(i.width for i in ims), h), (255, 0, 255))
+    x = 0
+    for i in ims:
+        out.paste(i, (x, 0))
+        x += i.width
+    p = os.path.join(os.path.dirname(like) or ".", "label_all_turns.png")
+    out.save(p)
+    return p
+
+
 def sides(cid, renders, dos, use, route, product="", log=print):
     faces = dos.get("faces") or {}
     out, failed, problems = {}, [], []
     if not use:
         return {"pass": False, "faces": {}, "failed": ["sides"], "problems": ["sides: no AI to judge the sides"]}
     for face, e in faces.items():
-        names = ["label_0"] if (route == "round" and face == "label") else [face]
-        model = next((renders[n] for n in names if n in renders), None)
+        if route == "round" and face == "label":              # a label wraps all the way round: all four turns,
+            model = _strip([renders[n] for n in ("label_0", "label_90", "label_180", "label_270") if n in renders],
+                           renders.get("label_0", ""))         # so it matches the photo's turn, whichever it is
+        else:
+            model = renders.get(face)
         if not model:
             continue
         must = "; ".join(f"{m.get('what')}" + (f" \"{str(m.get('text'))[:60]}\"" if m.get("text") else "")
