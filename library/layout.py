@@ -81,13 +81,9 @@ def clean_layout(lay, w_mm, h_mm, words, base=()):
         lay["shapes"] = [dict(s) for s in base] + own
         widest = max(base, key=lambda s: s["w"] * s["h"])
         lay["background"] = widest["fill"]
-    allowed = " ".join(words).lower()
+    import review
     out_t = []
-    for t in lay.get("texts", []):
-        if not isinstance(t, dict) or not str(t.get("text", "")).strip():
-            continue
-        if not all(tok.lower().strip(".,:;") in allowed for tok in str(t["text"]).split()):
-            continue                                   # a word that isn't on the real label: dropped
+    for t in review.only_words(lay.get("texts", []), words):   # (locked: only words read off real photos)
         for k in ("x", "y", "h", "w"):
             if k in t and t[k] is not None:
                 t[k] = float(min(max(float(t[k]), 0.0), 1.0))

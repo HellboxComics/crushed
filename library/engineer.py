@@ -78,7 +78,7 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
-                "ownmods.py", "layout.py", "review.py", "labelparts.py"}
+                "ownmods.py", "review.py", "labelparts.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL

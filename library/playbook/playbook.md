@@ -13,7 +13,7 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    works for this one item is not a fix.
 2. Never weaken the check. You can't anyway: these are LOCKED and every change to them is refused -
    vet.py, viewshot.py, judge.py, measure.py, measure_blender.py, materials.json, dossier.py, facts.py,
-   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, layout.py, review.py, labelparts.py,
+   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, review.py, labelparts.py,
    engineer.py, selftest.py, watchdog.py, this playbook and lessons.md, queue.txt, families.json, and in
    run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every TRIAL
    block and every line that handles the verdict. A builder may not reach into the judge or the
@@ -22,6 +22,9 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    texture values, mesh numbers) and write that down in your summary - never "fix" the judge.
    YOURS to fix (build data, not checks): the label layouts in labels/ and the measured shapes in
    shapes/specs/ - when a layout or a measurement is wrong against the real photo, correct it there.
+   YOURS too: how the label writer works - layout.py (its prompts, the measured bands, the rounds, the color
+   check), labelart.py (how a layout is drawn), mosaic.py / unwrap.py / skin.py (how photos are unrolled and
+   stitched). The one rule you can't touch there: only words read off real photos are printed (review.only_words).
 3. One cause at a time. Change one thing, rebuild, look at the same view, compare. If it did not help,
    revert it before trying the next idea.
 4. Evidence before edits. Before you change code, say in one line: the symptom you SEE, the stage that
@@ -127,7 +130,10 @@ Routes are chosen by the item's card: round (lathe), box (carton or box), flat, 
                             welds; the inside parts from the factory recipe; finish maps per part.
 - library/finish.py         surface maps: wrap (shrink sleeve: coat smudges, peel), spun (lathe lines on
                             metal ends), brushed, card, plastic. Normal strength and roughness variation live here.
-- library/labelart.py / layout.py   the flat label artwork and its metal/roughness map (label_mr.png).
+- library/layout.py         the label WRITER: measures the background bands (base_bands), asks the brain for the
+                            layout, draws it, compares (looked + measured colors, color_check), improves it in rounds.
+- library/labelart.py       draws a layout in exact type: shapes, bars, metal map (label_mr.png), words on panels.
+- library/mosaic.py, unwrap.py   a photo of a round item unrolled flat; close-ups placed at the end they show.
 - library/labels/<item>.json  a round item's written label layout: every word, logo and panel and where it sits
                             on the unrolled label (yours to correct when it disagrees with the real photo).
 - library/skin.py, panels.py      box faces from photos: find faces, straighten, remove room light, masks.

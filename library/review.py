@@ -146,3 +146,17 @@ def look_unrolled(real_png, photo, product, use, top="top"):
     ok = v.get("ok")
     ok = (not probs) if ok is None else bool(ok) and not probs
     return ok, "; ".join(probs)[:400] or "nothing wrong seen"
+
+
+# ------------------------------------------------------------------ the one rule the label writer may never break
+def only_words(texts, words):
+    """Only words read off real photos may be printed (Cody's rule: nothing is ever invented). Kept here, locked,
+    so the label writer's own file (layout.py) can be improved by the engineer without this rule being weakened."""
+    allowed = " ".join(str(w) for w in words).lower()
+    out = []
+    for t in texts or []:
+        if not isinstance(t, dict) or not str(t.get("text", "")).strip():
+            continue
+        if all(tok.lower().strip(".,:;") in allowed for tok in str(t["text"]).split()):
+            out.append(t)
+    return out
