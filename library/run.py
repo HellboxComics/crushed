@@ -157,7 +157,7 @@ def pipeline(cid, redo=False):
 
     card = cards.make(cid, log=say)
     cards.construction(cid, card, log=say)                       # how the real thing is made: layers, materials, details
-    ev = cards.era_version(cid, card, V.model(), log=say)       # its own name and look in its
+    ev = cards.era_version(cid, card, V.model(), log=say, evidence=era_evidence(d))   # its own name and look in its
     card["searches"] = list(dict.fromkeys(list(ev.get("searches") or []) + list(card.get("searches") or [])))  # era
     ehk = " | ".join(ev.get("names") or [])
     if ev.get("searches") and card.get("era_hunted") != ehk and \

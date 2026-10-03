@@ -155,6 +155,31 @@ about this product line, answer for THAT era's version only:
 Answer ONLY the JSON."""
 
 
+def _era_web(card, words, log=print):
+    """What sellers and pages call old ones of this item: web search titles and snippets (free search, no key),
+    for the item's full name and for its brand + kind without the catalog's line name (a catalog name can carry a
+    later line name)."""
+    try:
+        import websearch as W
+    except Exception:
+        return []
+    name = str(card.get("product", "")).split(",")[0].strip()
+    toks = name.split()
+    qs = [f"vintage {name} {words}"]
+    if len(toks) > 3:
+        qs.append(f"vintage {toks[0]} {' '.join(toks[2:])} {words}")       # brand + kind, without the line name
+    out = []
+    for q in qs:
+        try:
+            for r in W.search(q, n=8, browser=False) or []:
+                t = re.sub(r"\s+", " ", f"{r.get('title', '')} - {r.get('snippet', '')}").strip(" -")
+                if t:
+                    out.append(t[:160])
+        except Exception as e:
+            log(f"[card] web search for the era's version skipped: {e}")
+    return list(dict.fromkeys(out))[:14]
+
+
 def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
     """What the item was called and looked like IN ITS ERA ("90s"), from your AI's own knowledge plus what the photos
     found so far showed (evidence: names read on photos judged to be from the right era). The catalog may call a
@@ -169,9 +194,15 @@ def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
         return card.get("era_version") or {}
     ev = sorted({str(e).strip()[:80] for e in evidence if str(e).strip()})[:12]
     old = card.get("era_version") or {}
-    if old.get("era") == ERA.words(y) and old.get("names") and not refresh:
-        return old                                    # worked out once; asked again only after you turn photos down
+    if old.get("era") == ERA.words(y) and old.get("names") and not refresh and \
+            (old.get("web") is not None) and (old.get("evidence") or not ev):
+        return old                                    # worked out once; asked again after you turn photos down or
+    #                                                   when photos from the era give it something new to go on
     q = ERA_Q.format(product=card.get("product"), era=ERA.describe(y), words=ERA.words(y))
+    web = _era_web(card, ERA.words(y), log)
+    if web:
+        q += ("\nWeb results about old ones (sellers' listing titles and pages): " + " || ".join(web)
+              + ". The names sellers of old ones put in their titles are good evidence of what it said back then.")
     if ev:
         q += ("\nPhotos already found that a judge placed in that era show the item labeled as: " + "; ".join(ev)
               + ". Use them: a name printed on those photos is better evidence than memory.")
@@ -185,7 +216,7 @@ def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
         log(f"[card] {cid}: could not work out the era's own version ({e})")
         return old
     clean = lambda k, n: [str(x).strip()[:80] for x in v.get(k) or [] if str(x).strip()][:n]
-    ev_out = {"era": ERA.words(y), "evidence": ev, "names": clean("names", 3), "marks": clean("marks", 5),
+    ev_out = {"era": ERA.words(y), "evidence": ev, "web": web, "names": clean("names", 3), "marks": clean("marks", 5),
               "not_then": clean("not_then", 3),
               "searches": [ERA.in_words(x, y) for x in clean("searches", 5)]}
     card["era_version"] = ev_out
