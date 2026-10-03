@@ -6,6 +6,9 @@ The profile is a list of parts (label, steel, cap ...), each a run of (radius, h
 its own smooth strip, so the edges between parts are crisp. The label part gets one clean map: u once around
 (0.5 = the front, facing -Y), v from the bottom of the label to its top, in true proportion. Everything else gets
 a flat top-down map. Saved as .blend, .glb, .fbx and .usdc at real size (meters)."""
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import json
 import math
 import os

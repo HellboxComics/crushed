@@ -30,6 +30,9 @@ How the materials are wired, per format (Blender's own material is the truth for
          bumpInterp 1 (tangent-space normals), bump2d.outNormal -> normalCamera (Maya's standard normal-map
          wiring). Edges are hard where Blender's face is flat-shaded or the edge is marked sharp, soft elsewhere.
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.abspath(__file__)))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import io
 import json
 import os

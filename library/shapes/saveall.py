@@ -13,6 +13,9 @@ pink. Packed and embedded, the .blend and .fbx carry their own pictures and open
 made.json: what this build wrote - the size and fingerprint (sha1) of each file - and what it could not write and
 why. A file left over from an older build has a different fingerprint, so it is never taken for this build's.
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import hashlib
 import json
 import os

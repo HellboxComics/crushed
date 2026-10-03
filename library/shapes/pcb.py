@@ -7,6 +7,9 @@ headers, and the steel bracket on the end. Every part carries its crush physics.
       W, H in meters (the board's length and height); parts.json from your AI reading the photo:
       [{"type": "chip", "box": [x0, y0, x1, y1], "height_mm": 2.5}, ...]   (box as fractions of front.png)
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import json
 import math
 import os

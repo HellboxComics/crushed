@@ -59,6 +59,11 @@ Look at this photo and answer ONLY with JSON, no other words:
 {{"match": 0-10 how surely this shows EXACTLY this product: the right brand, line, flavor/model/version and count,
            in the design of that era (a different flavor or version, or a modern redesign, is at most 4),
   "era_ok": true if the package/design looks like it is from the product's era (its year +/- 3), false if not,
+  "made_year": the year THIS physical item was most likely made, worked out from what is printed on it: copyright
+           years, the design, and dates - a "best if installed by", "expires" or "best by" date comes AFTER it was
+           made, so subtract the usual shelf life for this kind of product in that era; null if nothing tells,
+  "made_year_why": "what you read and how you worked the year out (e.g. 'best if installed by MAR 2003, this kind
+           of product carried a date N years after it was made')",
   "version_seen": "the flavor / model / version and count you can read in the photo, or empty",
   "seen": how many of the "right version" things you can actually see in this photo (0 if none),
   "avoid_seen": true if any of the "different version" things is visible,
@@ -70,7 +75,10 @@ Look at this photo and answer ONLY with JSON, no other words:
   "kind": "photo" if a real photograph of a physical item, "render" if computer-made, "ad" if an advertisement or
           graphic with added words, "package" if the item is still inside retail packaging (when the product IS
           a package - a box, a bag, a can - a real photo of it is "photo"),
-  "problems": "short note of anything wrong, or empty"}}"""
+  "problems": "short note of anything wrong, or empty"{note_field}}}"""
+NOTE_FIELD = """,
+  "note_ok": true if this photo shows what the owner's note asks for, false if it clearly shows something else
+           (the owner's note: "{note}")"""
 
 
 def _img(path, side=1280):
@@ -106,13 +114,23 @@ def vet(path, display, era="", use=None, think=True, card=None):
     if not use:
         return None
     card = card or {}
+    note = str(card.get("owner_note") or "").strip()
     q = ASK.format(display=display, recognize="; ".join(card.get("recognize", [])) or "(none listed)",
-                   avoid="; ".join(card.get("avoid", [])) or "(none listed)")
+                   avoid="; ".join(card.get("avoid", [])) or "(none listed)",
+                   note_field=NOTE_FIELD.format(note=note.replace('"', "'")) if note else "")
     try:
         v = ask(use, q, [path], think)
     except Exception as e:
         return {"match": 0, "problems": f"could not judge: {e}"}
     v["model"] = use
+    try:                                                # how far the item in the photo was made from the catalog year
+        y, my = int(card.get("year") or 0), v.get("made_year")
+        if y and my not in (None, "", "null") and 1900 < int(str(my)[:4]) < 2100:
+            v["year_off"] = abs(int(str(my)[:4]) - y)
+    except (TypeError, ValueError):
+        pass
+    if note:
+        v["note"] = note[:200]                          # judged against this note (a new note means a new look)
     return v
 
 

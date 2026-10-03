@@ -11,6 +11,9 @@ Every part carries its crush physics (factory/physics.json). Saved as .blend .gl
     python carton.py -- W D H out_dir panels_dir name [contents]
       W D H in meters; panels_dir holds front.png back.png left.png right.png top.png bottom.png (library/skin.py)
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import json
 import math
 import os

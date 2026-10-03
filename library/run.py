@@ -21,6 +21,9 @@ Runs on your Mac with your own AI. The same steps for every item, a Duracell, a 
     .venv/bin/python library/run.py --only furby_gray_pink_1998 [--wait] [--redo]
     .venv/bin/python library/run.py --queue 2          (the clock: the next 2 items in library/queue.txt)
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.abspath(__file__)))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import argparse
 import json
 import os
@@ -187,8 +190,8 @@ def pipeline(cid, redo=False):
         card["dossier_path"] = DS.path(cid)
         return build(cid, card, picked, others, use, d, mdir, n_found, n_good)
 
-    picks = jload(os.path.join(HB, "picks.json"), {})
     cf = os.path.join(d, "candidates.json")
+    picks = jload(os.path.join(HB, "picks.json"), {})
     if picks.get(cid, {}).get("pick", "none") != "none" and os.path.exists(cf):
         # you already picked: straight to building, no hunting or ranking again
         status(cid, product=product, route=route, step="your pick is in - building")
@@ -212,6 +215,8 @@ def pipeline(cid, redo=False):
     for i, f in enumerate(found):
         f["order"] = i
         f["vet"] = (old.get(f["file"]) or {}).get("vet")
+        if f["vet"] and note and f["vet"].get("note") != note[:200]:
+            f["vet"] = None                                      # judged before your note: looked at again with it
     todo = [f for f in found if not f["vet"]][:60]                       # 60 a round, in Google's order
     if quick and len(todo) > 12:
         for k, f in enumerate(todo, 1):
@@ -658,6 +663,15 @@ def auto_pick(cid, cands, d):
         return
     v = cands[0].get("vet") or {}
     lead = rank(cands[0]) - (rank(cands[1]) if len(cands) > 1 else 0)
+    import notes as NT
+    note = NT.text(cid)
+    if note and (v.get("note_ok") is not True or v.get("note") != note[:200]):
+        say("[pick] not picked by itself: the top photo was not judged to show what your note asks for - you choose")
+        return                                                # your note decides the version: never guessed past it
+    if isinstance(v.get("year_off"), int) and v["year_off"] > 2:
+        say(f"[pick] not picked by itself: the top photo's item was made about {v['year_off']} years from the "
+            "catalog year (read off its printed dates) - you choose")
+        return
     if v.get("kind") == "photo" and int(v.get("seen") or 0) >= 3 and v.get("avoid_seen") is not True and lead >= 4:
         json.dump({"files": [{"file": c["file"], "mask": c["mask"], "vet": c["vet"]} for c in cands],
                    "asked": time.time(), "auto": True}, open(cf, "w"), indent=1)
@@ -673,6 +687,9 @@ def rank(f):
     r = v.get("match", 0) + 3 * min(int(v.get("seen") or 0), 5)
     r -= 8 if v.get("avoid_seen") is True else 0
     r -= 8 if v.get("era_ok") is False else 0                 # a modern redesign is not this item
+    if isinstance(v.get("year_off"), int):                    # made years away from the catalog year (read off its
+        r -= 2 * max(0, v["year_off"] - 1)                     # printed dates): the one made closest wins
+    r += 6 if v.get("note_ok") is True else -12 if v.get("note_ok") is False else 0   # your note decides the version
     r += {"photo": 4, "package": 1, "render": -2, "ad": -4}.get(v.get("kind"), 0)
     r += 0.5 if v.get("view") == "front" else 0
     return r - f.get("order", 0) * 0.02
@@ -1491,8 +1508,12 @@ def engineer_turn(cid):
         return False
     ok = []
 
+    import notes as NT
+    n_ = NT.get(cid)                                       # your new note on the item: a fresh start for its tries
+    since = max(float(n_.get("at") or 0), float(n_.get("reopened") or 0))
+
     def change(a):
-        recent = [t for t in a.get(cid, []) if isinstance(t, (int, float)) and time.time() - t < 86400]
+        recent = [t for t in a.get(cid, []) if isinstance(t, (int, float)) and time.time() - t < 86400 and t > since]
         if len(recent) < 3:
             recent.append(time.time())
             ok.append(True)
@@ -1806,10 +1827,19 @@ def queue(n):
     out = []
     asking = sum(1 for k, v in st.items() if isinstance(v, dict) and str(v.get("step", "")).startswith(
         "waiting for your pick") and k not in picks)
+    import notes as NT
     for cid in q:
         v = st.get(cid) if isinstance(st.get(cid), dict) else {}
         step = str(v.get("step", ""))
         if step.startswith("in line") and asking >= 5:
+            continue
+        try:
+            n_ = NT.get(cid)
+            noted = max(float(n_.get("at") or 0), float(n_.get("reopened") or 0)) > float(v.get("at") or 0)
+        except (TypeError, ValueError):
+            noted = False
+        if noted and step.startswith(("failed", "stopped", "3 rounds", "no usable")):
+            out.append(cid)                         # your new note on a parked item puts it back in line right away
             continue
         due = retry_due(cid, v, tries, now)
         if due is False:
@@ -1825,7 +1855,11 @@ def queue(n):
 
 
 HUNYUAN_PINS = {"timm": "timm==1.0.27",            # Hunyuan3D-2.1's requirements.txt lists timm without a version
-                "pygltflib": "pygltflib==1.16.3"}   # the version Hunyuan3D-2.1's requirements.txt pins
+                "pygltflib": "pygltflib==1.16.3",   # the version Hunyuan3D-2.1's requirements.txt pins
+                # the painter trims the shape to ~40,000 faces with trimesh's simplify_quadric_decimation, which
+                # needs this (2026-10-03: the Furby stopped there); 0.2.0 has a ready-made Apple-chip wheel for
+                # Python 3.11 and needs only numpy, already there
+                "fast_simplification": "fast-simplification==0.2.0"}
 
 
 def pip_install(python, pkgs, no_deps=False, timeout=900):

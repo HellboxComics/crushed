@@ -12,6 +12,9 @@ Each part is its own object with its own material and its physics values (factor
 
     python assembly.py -- plan.json out_dir name
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import json
 import math
 import os

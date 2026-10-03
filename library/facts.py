@@ -107,24 +107,34 @@ def not_printed(line):
 
 
 def _overlay_words(p):
-    """Every word the careful look or the panel reader said was laid ON TOP of this photo (watermark, sticker...)."""
-    out = [str(o.get("text", "")) for o in p.get("overlays") or [] if isinstance(o, dict)]
-    out += [str(t) for t in ((p.get("panel") or {}).get("overlay_text") or []) if t]
-    return [_norm(t) for t in out if _norm(t)]
+    """(what the careful look said is laid ON TOP of this photo, what the panel reader said is) - normalized words.
+    The careful look (thinking on) is trusted for where an overlay is; the panel reader often lists printed words
+    there by mistake ('Blueberry', 'TO CLOSE INSERT TAB HERE'), so its list only ever takes out an exact line."""
+    look = [_norm(o.get("text", "")) for o in p.get("overlays") or [] if isinstance(o, dict)]
+    panel = [_norm(t) for t in ((p.get("panel") or {}).get("overlay_text") or []) if isinstance(t, str)]
+    return [w for w in look if w], [w for w in panel if w]
 
 
 def _on_overlay(line, words):
+    """Is this line (part of) something laid over the photo? Never true for a long line that merely CONTAINS a short
+    overlay word (2026-10-03: a whole ingredients list was dropped because it contains 'blueberry')."""
+    look, panel = words
     n = _norm(line)
-    return bool(n) and any(n in w or (len(w) >= 4 and w in n) for w in words)
+    if not n:
+        return False
+    if n in panel:
+        return True
+    return any(n == w or n in w or (len(w) >= 4 and w in n and len(w) >= 0.6 * len(n)) for w in look)
 
 
 def marked(p):
-    """Does this photo carry a watermark / credit / sticker? (then its lines count only when another photo agrees)"""
-    if p.get("watermarked") or p.get("overlays") or (p.get("panel") or {}).get("overlay_text"):
+    """Does this photo carry a watermark, credit, sticker or hand over it? (then its lines count only when a clean
+    photo agrees) - the careful look's overlays, or words that can only be a photo's (an email, a photo site)."""
+    if p.get("watermarked") or p.get("overlays"):
         return True
     panel = p.get("panel") or {}
     return any(not_printed(x) for k in ("maker_lines", "legal_lines", "codes", "contents_lines")
-               for x in (panel.get(k) or []) if isinstance(x, str))
+               for x in (panel.get(k) or []) if isinstance(x, str)) or any(not_printed(t) for t in p.get("text") or [])
 
 
 def clean_lines(lines, p=None):
@@ -249,7 +259,7 @@ def clean_panel(p):
         if isinstance(panel.get(k), str) and panel[k] and not clean_lines([panel[k]], p):
             dropped.append(panel[k])
             panel[k] = ""
-    if dropped or panel.get("overlay_text") or p.get("overlays"):
+    if p.get("overlays") or any(not_printed(x) for x in dropped):
         p["watermarked"] = True
     return dropped
 

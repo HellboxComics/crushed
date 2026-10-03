@@ -59,9 +59,11 @@ def menu():
 
 
 def organic_ready():
-    """The organic builder (Hunyuan3D) counts as ready only when the self-test proved it makes a real shape."""
+    """The organic builder (Hunyuan3D) counts as ready only when its test made a real shape AND painted it, the whole
+    way a build uses it (a shape-only proof from before 2026-10-03 does not count)."""
     try:
-        return json.load(open(os.path.join(WORK, "hunyuan_proven.json"))).get("ok") is True
+        p = json.load(open(os.path.join(WORK, "hunyuan_proven.json")))
+        return p.get("ok") is True and p.get("painted") is True
     except Exception:
         return False
 

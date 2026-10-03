@@ -9,6 +9,9 @@ words back and shown on the finished 3D object - so the method is chosen from pr
     .venv/bin/python library/lab.py duracell_coppertop_aa_1998
 Results: ~/crushed-render/remaster/lab/<item>/lab.jpg and on the phone page.
 """
+import os as _os, sys as _sys  # noqa: E401
+_sys.path.append(_os.path.dirname(_os.path.abspath(__file__)))
+import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - see jsonsafe.py)
 import json
 import os
 import shutil

@@ -202,7 +202,9 @@ def check():
 
 
 def test():
-    """Hunyuan on its own demo picture (does this Mac's Hunyuan make shapes at all?)."""
+    """Hunyuan on its own demo picture, the WHOLE way a real build uses it: the shape, then the painter (which first
+    trims the shape to about 40,000 faces). The proof is written only when both work - a shape alone once counted
+    as proof, and the Furby then stopped in the painter's trim step (2026-10-03)."""
     hy = home()
     demo = next((os.path.join(hy, p) for p in ("assets/demo.png", "assets/example_images/004.png", "demo.png")
                  if os.path.exists(os.path.join(hy, p))), None)
@@ -215,19 +217,41 @@ def test():
     proof = os.path.join(work, "hunyuan_proven.json")
     if os.path.exists(proof):                       # an old proof never stands in for this test
         os.replace(proof, proof + ".before")
-    shape = main(demo, out, shape_only=True)
-    print(shape, flush=True)
-    try:                                            # PROOF the organic builder works: a real shape with real faces
-        import json
+    os.makedirs(out, exist_ok=True)
+    for old in ("shape.glb", "textured.glb", "textured.obj"):   # nothing from an earlier test counts
+        if os.path.exists(os.path.join(out, old)):
+            os.replace(os.path.join(out, old), os.path.join(out, old + ".before"))
+    import json
+    res = {"ok": False, "painted": False, "at": time.time(), "shape": "", "textured": ""}
+    try:
+        res["textured"] = main(demo, out)           # exactly what a build runs: the shape, then the paint
+    except BaseException as e:                      # (SystemExit too) the reason goes in the proof file
+        res["note"] = f"stopped: {type(e).__name__}: {e}"[:400]
+        print(f"[hunyuan] the whole run stopped: {res['note']}", flush=True)
+    try:
         import trimesh
-        m = trimesh.load(shape, force="mesh")
-        ok = len(m.faces) > 1000 and float(min(m.extents)) > 0
-        json.dump({"ok": ok, "at": time.time(), "faces": int(len(m.faces)), "shape": shape,
-                   "note": "proven: made a real shape from its own demo picture" if ok else "the shape came out empty"},
-                  open(proof, "w"), indent=1)
-        print(f"[hunyuan] proof: {'a real shape' if ok else 'empty shape'} ({len(m.faces)} faces)", flush=True)
+        shape = os.path.join(out, "shape.glb")
+        if os.path.exists(shape):
+            m = trimesh.load(shape, force="mesh")
+            res.update(shape=shape, faces=int(len(m.faces)),
+                       shape_ok=bool(len(m.faces) > 1000 and float(min(m.extents)) > 0))
+        tex = res.get("textured") or os.path.join(out, "textured.glb")
+        if tex and os.path.exists(tex):
+            sc = trimesh.load(tex)
+            geoms = list(sc.geometry.values()) if hasattr(sc, "geometry") else [sc]
+            mats = [getattr(g.visual, "material", None) for g in geoms]
+            has_map = any(getattr(m, "baseColorTexture", None) is not None or getattr(m, "image", None) is not None
+                          for m in mats)
+            res.update(textured=tex, painted_faces=int(sum(len(g.faces) for g in geoms)), painted=bool(has_map))
+        res["ok"] = bool(res.get("shape_ok") and res.get("painted"))
+        res.setdefault("note", "proven: made and painted a real shape from its own demo picture" if res["ok"] else
+                       "not proven: " + ("the shape came out empty" if not res.get("shape_ok") else
+                                         "the painter made no color map"))
     except Exception as e:
-        print(f"[hunyuan] no proof: {e}", flush=True)
+        res["note"] = res.get("note") or f"no proof: {e}"
+    json.dump(res, open(proof, "w"), indent=1)
+    print(f"[hunyuan] proof: {res['note']} (shape {res.get('faces', 0)} faces, painted {res.get('painted')})",
+          flush=True)
 
 
 if __name__ == "__main__":

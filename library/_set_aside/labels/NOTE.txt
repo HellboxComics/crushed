@@ -1,0 +1,4 @@
+Set aside 2026-10-03 at Cody's direction: the Duracell label layout here was measured BY HAND (by Claude, from a
+photo of Cody's). Cody: "it needs to be able to look at images and create what it needs to with my ai" - so his AI
+writes every label itself from the photos it finds and picks (layout.py). Nothing in the asset maker reads this
+folder. Kept, not deleted; it can go whenever Cody likes.
