@@ -1782,8 +1782,8 @@ document.getElementById("m").src = "models/" + id + ".glb?v=" + (q.get("v") || D
 
 def engineer_turn(cid):
     """May your AI's engineer take this failed model now? (on unless settings.json says "engineer": false; at most
-    3 tries per item a day, so one stubborn item can't hold up the rest of the queue; never while its safety rules
-    fail the self-test)"""
+    3 tries per item a day on the same code - newer code or a new note from you is a fresh start - so one stubborn
+    item can't hold up the rest of the queue; never while its safety rules fail the self-test)"""
     if TRIAL or not setting("engineer"):
         return False
     if jload(os.path.join(WORK, "selftest.json"), {}).get("engineer_guard_ok") is False:
@@ -1792,8 +1792,8 @@ def engineer_turn(cid):
     ok = []
 
     import notes as NT
-    n_ = NT.get(cid)                                       # your new note on the item: a fresh start for its tries
-    since = max(float(n_.get("at") or 0), float(n_.get("reopened") or 0))
+    n_ = NT.get(cid)                                       # your new note on the item, or newer code (a changed
+    since = max(float(n_.get("at") or 0), float(n_.get("reopened") or 0), code_time())   # workflow): a fresh start
 
     def change(a):
         recent = [t for t in a.get(cid, []) if isinstance(t, (int, float)) and time.time() - t < 86400 and t > since]
