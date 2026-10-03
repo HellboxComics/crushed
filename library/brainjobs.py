@@ -121,17 +121,25 @@ def _one(model, item, think):
     return ans, took, rate
 
 
-def exam(models, log=print):
-    """Every brain takes the exam twice: thinking on (the judge job) and thinking off (the sort job)."""
+def exam(models, log=print, finalists=2):
+    """Every brain takes the exam with thinking off (the sort job, quick); the best few - and the brain doing the
+    careful looks now - take it again with thinking on (the judge job). Thinking takes minutes an answer, so only
+    brains that could win sit that part."""
     import vet as V
     items = [it for it in EXAM if os.path.exists(os.path.join(HUNT, it["photo"]))]
     res = {}
-    for m in models:
-        if _testing():
-            log("[brains] one of your brain tests started - the exam stops here (a test owns the brain server)")
-            break
-        row = {}
-        for think in (True, False):
+    for think in (False, True):
+        if think:
+            quick = sorted(res, key=lambda m: (-res[m]["quick"]["score"], res[m]["quick"]["seconds"]))
+            now = V._first(V.PREFER)
+            todo = list(dict.fromkeys(quick[:finalists] + ([now] if now in res else [])))
+        else:
+            todo = list(models)
+        for m in todo:
+            if _testing():
+                log("[brains] one of your brain tests started - the exam stops here (a test owns the brain server)")
+                return res
+            row = res.setdefault(m, {})
             score, secs, notes = 0, 0.0, []
             for it in items:
                 try:
@@ -146,11 +154,10 @@ def exam(models, log=print):
                                                   "items": notes}
             log(f"[brains] {m} ({'thinking' if think else 'quick'}): {score} of {len(items)} right, "
                 f"{secs / max(len(items), 1):.0f} s an answer")
-        res[m] = row
-        try:                                             # let it go before the next one loads
-            V._call("/api/generate", {"model": m, "keep_alive": 0}, timeout=60)
-        except Exception:
-            pass
+            try:                                         # let it go before the next one loads
+                V._call("/api/generate", {"model": m, "keep_alive": 0}, timeout=60)
+            except Exception:
+                pass
     return res
 
 
@@ -158,7 +165,10 @@ def choose(results):
     """judge: best thinking score, then the faster; sort: the fastest quick answerer within 1 of the best quick score."""
     if not results:
         return {}
-    judge = sorted(results, key=lambda m: (-results[m]["think"]["score"], results[m]["think"]["seconds"]))[0]
+    thought = [m for m in results if "think" in results[m]]
+    if not thought:
+        return {}
+    judge = sorted(thought, key=lambda m: (-results[m]["think"]["score"], results[m]["think"]["seconds"]))[0]
     best_quick = max(r["quick"]["score"] for r in results.values())
     sort = sorted([m for m in results if results[m]["quick"]["score"] >= best_quick - 1],
                   key=lambda m: results[m]["quick"]["seconds"])[0]
