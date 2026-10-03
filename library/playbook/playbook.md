@@ -12,13 +12,15 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    battery pass" - it is "what in the battery builder makes every battery look wrong". A fix that only
    works for this one item is not a fix.
 2. Never weaken the check. You can't anyway: these are LOCKED and every change to them is refused -
-   vet.py, viewshot.py, judge.py, measure.py, dossier.py, facts.py, engineer.py, selftest.py,
-   watchdog.py, this playbook and lessons.md, shapes/specs/, labels/, queue.txt, families.json, and in
-   run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every
+   vet.py, viewshot.py, judge.py, measure.py, measure_blender.py, materials.json, dossier.py, facts.py,
+   notes.py, families.py, family_library.json, catalog.py, engineer.py, selftest.py, watchdog.py, this
+   playbook and lessons.md, queue.txt, families.json, and in run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every
    TRIAL block and every line that handles the verdict. A builder may not reach into the judge or the
    asset maker's own modules either (no replacing their functions, no setattr/exec/eval, no sys.modules,
    no new file named like another module). If the judge is wrong, prove it with evidence (zoomed pixels,
    texture values, mesh numbers) and write that down in your summary - never "fix" the judge.
+   YOURS to fix (build data, not checks): the label layouts in labels/ and the measured shapes in
+   shapes/specs/ - when a layout or a measurement is wrong against the real photo, correct it there.
 3. One cause at a time. Change one thing, rebuild, look at the same view, compare. If it did not help,
    revert it before trying the next idea.
 4. Evidence before edits. Before you change code, say in one line: the symptom you SEE, the stage that
@@ -113,7 +115,7 @@ Routes are chosen by the item's card: round (lathe), box (carton or box), flat, 
 
 - library/run.py            the pipeline; build() calls the builders below. (CHECKS, inspect(), the
                             end of build() and the verdict lines are locked.)
-- library/shapes/specs/*.json   (locked) measured round shapes: "profile" (the side outline, bottom to top, in mm),
+- library/shapes/specs/*.json   measured round shapes (yours to correct when a measurement is wrong): "profile" (the side outline, bottom to top, in mm),
                             "materials" (color, roughness, metallic, finish), "construction" (layers, seams).
 - library/outline.py        traces a round profile from the photo and applies the construction (lips, seams).
 - library/shapes/lathe.py   spins the profile into a real mesh; each material is its own part; seams;
@@ -121,6 +123,8 @@ Routes are chosen by the item's card: round (lathe), box (carton or box), flat, 
 - library/finish.py         surface maps: wrap (shrink sleeve: coat smudges, peel), spun (lathe lines on
                             metal ends), brushed, card, plastic. Normal strength and roughness variation live here.
 - library/labelart.py / layout.py   the flat label artwork and its metal/roughness map (label_mr.png).
+- library/labels/<item>.json  a round item's written label layout: every word, logo and panel and where it sits
+                            on the unrolled label (yours to correct when it disagrees with the real photo).
 - library/skin.py, panels.py      box faces from photos: find faces, straighten, remove room light, masks.
 - library/eraprint.py       the box sides no photo shows, rebuilt as printed in that era (nutrition, UPC...).
 - library/shapes/carton.py  a folding carton made like the factory: dieline, creases, folds, flaps, contents.

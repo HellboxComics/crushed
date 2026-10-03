@@ -623,8 +623,9 @@ def check_change(rel, text, new_file=False):
     Returns why it is refused, or ''."""
     lib = rel[len("library/"):] if rel.startswith("library/") else rel
     if locked(lib):
-        return (f"{lib} is locked - the checks, the judge, the playbook, the measured shapes and labels, the queue "
-                "and the engineer itself are never yours to change. Fix the builder or the recipe instead")
+        return (f"{lib} is locked - the checks, the judge, the dossier, the playbook, the queue and the engineer "
+                "itself are never yours to change. Fix the builder, the recipe, the label layout (labels/) or the "
+                "measured shape (shapes/specs/) instead")
     if not rel.endswith(".py"):
         return ""
     if new_file:
@@ -681,8 +682,9 @@ TOOLS = [
      {"pattern": "string", "path": "string"}, ["pattern"]),
     ("edit_file", "Change a file in YOUR copy of the code: replace the exact text old (must appear exactly once, "
                   "copy it from read_file without the line numbers) with new. Python must still compile and JSON "
-                  "must still parse, or the edit is refused. Locked files (the checks, the judge, the playbook, "
-                  "measured shapes, labels, the queue) are refused.",
+                  "must still parse, or the edit is refused. Locked files (the checks, the judge, the dossier, "
+                  "the playbook, the queue) are refused; builders, recipes, label layouts (labels/) and measured "
+                  "shapes (shapes/specs/) are yours to fix.",
      {"path": "string", "old": "string", "new": "string"}, ["path", "old", "new"]),
     ("new_file", "Create a NEW file in your copy of library/ (a helper module, a recipe). It may not share a name "
                  "with another module.",

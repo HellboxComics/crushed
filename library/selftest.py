@@ -137,6 +137,19 @@ def t_engineer_guard():
     if E.locked("finish.py") or E.locked("shapes/lathe.py") or E.locked("factory/recipes/x.json") or \
             E.locked("labels/any.json") or E.locked("shapes/specs/aa_battery.json"):
         raise RuntimeError("build files (builders, recipes, label layouts, measured shapes) are locked by mistake")
+    # what the engineer is TOLD must be what is true: every file its rulebook calls locked is locked, and nothing
+    # it is told is its own is locked (2026-10-03: the label layouts were unlocked, the rulebook still said
+    # "locked", and your AI gave up on a fix it was allowed to make)
+    import re
+    book = open(os.path.join(HERE, "playbook", "playbook.md")).read()
+    rule = book[book.find("2. Never weaken the check"):book.find("3. One cause at a time")]
+    said_locked = [w for w in re.findall(r"[\w./]+\.(?:py|json|txt|md)\b|[\w./]+/(?=[,\s])", rule.split("YOURS")[0])
+                   if w not in ("run.py", "lessons.md")] + ["playbook/lessons.md"]
+    said_mine = re.findall(r"[\w]+/(?:[\w]+/)?(?=[\s,.)])", rule.split("YOURS")[1]) if "YOURS" in rule else []
+    wrong = [w for w in said_locked if not E.locked(w if "/" in w or "." in w else w + "/x")]
+    wrong += [w + " (said to be yours)" for w in said_mine if E.locked(w + "x.json")]
+    if wrong:
+        raise RuntimeError("the engineer's rulebook and its real locks disagree: " + ", ".join(wrong))
     tree = ast.parse(open(os.path.join(HERE, "run.py")).read())
     same = ast.unparse(tree)
     for node in tree.body:                               # the checklist made weaker: must be caught
