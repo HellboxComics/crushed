@@ -38,7 +38,8 @@ across plainly and put there only those confirmed words that belong there.
 AGAIN = """Picture 1 is your rebuilt label, drawn from your layout below. Picture 2 is the real label.
 Your layout: {layout}
 A careful comparison found these differences to fix: {fixes}
-Fix them and every other difference: positions, sizes, colors, missing or extra elements. Words: only these,
+Fix them and every other difference: positions, sizes, colors, missing or extra elements. Shapes marked "base"
+are the label's measured background bands: keep them exactly as they are. Words: only these,
 spelled exactly: {words} (a fix asking for a word that is not in this list can't be made - leave that word out).
 Answer ONLY the corrected JSON (the whole layout)."""
 
@@ -57,9 +58,24 @@ def _ask(model, text, images, think=True):
     return _json(V._call("/api/chat", body, timeout=1800).get("message", {}).get("content", "{}"))
 
 
-def clean_layout(lay, w_mm, h_mm, words):
-    """Keep it drawable: numbers in range, only the read words (anything else the AI typed is dropped)."""
+def clean_layout(lay, w_mm, h_mm, words, base=()):
+    """Keep it drawable: numbers in range, only the read words (anything else the AI typed is dropped); the measured
+    base bands first, and none of the AI's own guesses at them (a rect spanning the whole label is a band)."""
     lay["width_mm"], lay["height_mm"] = w_mm, h_mm
+    if base:
+        axis_w = any(s.get("h") == 1.0 for s in base)
+        own = []
+        for s in lay.get("shapes", []):
+            try:
+                full = (float(s.get("h", 0)) >= 0.9 and float(s.get("w", 0)) >= 0.15) if axis_w else \
+                    (float(s.get("w", 0)) >= 0.9 and float(s.get("h", 0)) >= 0.15)
+            except (TypeError, ValueError):
+                full = False
+            if not (s.get("type", "rect") == "rect" and full and not s.get("stroke")):
+                own.append(s)
+        lay["shapes"] = [dict(s) for s in base] + own
+        widest = max(base, key=lambda s: s["w"] * s["h"])
+        lay["background"] = widest["fill"]
     allowed = " ".join(words).lower()
     out_t = []
     for t in lay.get("texts", []):
@@ -148,6 +164,98 @@ def color_check(png, real_png, cover_png=None, cols=20, rows=10):
     return float(1 - bad.sum() / max(seen.sum(), 1)), fixes
 
 
+# ------------------------------------------------------------------ the base layout, MEASURED (never guessed)
+def base_bands(real_png, cover_png=None, least=0.04):
+    """The label's background bands, measured from the unrolled real label: the copper end, the black body, a
+    stripe - as rect shapes spanning the label, in order. Measured along whichever axis has the bands (along the
+    item for a battery, around for most cans). Only columns a photo saw count. The AI then only places words,
+    panels and marks on top - it can no longer draw the whole label black, or put copper at the wrong end
+    (2026-10-03, Duracell builds 3 and 4). -> (shapes, axis "x" | "y" | None)"""
+    import numpy as np
+    from PIL import Image
+    a = np.asarray(Image.open(real_png).convert("RGB")).astype(float)
+    H, W = a.shape[:2]
+    seen = np.ones((H, W), bool)
+    if cover_png and os.path.exists(cover_png):
+        seen = np.asarray(Image.open(cover_png).convert("L").resize((W, H))) > 0.5 * 255
+
+    def runs(axis):
+        n = W if axis == "x" else H
+        fams, cols = [], []
+        for i in range(n):
+            px = a[:, i][seen[:, i]] if axis == "x" else a[i][seen[i]]
+            if len(px) < 8:
+                fams.append(None)
+                cols.append(None)
+                continue
+            m = np.median(px, 0)
+            fams.append(_family(m))
+            cols.append(m)
+        out, start = [], 0
+        for i in range(1, n + 1):
+            if i == n or fams[i] != fams[start]:
+                if fams[start] is not None and (i - start) / n >= least:
+                    cs = np.array([c for c in cols[start:i] if c is not None])
+                    # the band's print color: the brighter side of its columns (a photo's shade darkens, never lightens)
+                    out.append((start / n, i / n, fams[start], np.percentile(cs, 65, axis=0)))
+                start = i
+        # neighbours of the same family (split by an unseen gap) are one band
+        merged = []
+        for b in out:
+            if merged and merged[-1][2] == b[2] and b[0] - merged[-1][1] < 0.08:
+                merged[-1] = (merged[-1][0], b[1], b[2], (merged[-1][3] + b[3]) / 2)
+            else:
+                merged.append(b)
+        return merged
+    def residual(bands, axis):
+        """How far the seen pixels are, on average, from their band's color: the axis whose bands explain the
+        label better wins (not the one with more bands - stitching streaks make false bands)."""
+        if not bands:
+            return 1e9
+        tot, n = 0.0, 0
+        for p0, p1, fam, col in bands:
+            sl = (slice(None), slice(int(p0 * W), max(int(p1 * W), int(p0 * W) + 1))) if axis == "x" else \
+                (slice(int(p0 * H), max(int(p1 * H), int(p0 * H) + 1)), slice(None))
+            px = a[sl][seen[sl]]
+            if len(px):
+                tot += np.abs(px - col).sum()
+                n += len(px)
+        return tot / max(n, 1)
+    rx, ry = runs("x"), runs("y")
+    bands, axis = (rx, "x") if residual(rx, "x") <= residual(ry, "y") else (ry, "y")
+    if len(bands) < 1:
+        return [], None
+    shapes = []
+    for i, (p0, p1, fam, col) in enumerate(bands):
+        p0 = 0.0 if i == 0 else p0                      # the bands cover the whole label edge to edge
+        p1 = 1.0 if i == len(bands) - 1 else bands[i + 1][0]
+        hexcol = "#%02x%02x%02x" % tuple(int(min(255, max(0, v))) for v in col)
+        s = {"type": "rect", "fill": hexcol, "stroke": None, "stroke_w": 0, "base": True}
+        if axis == "x":
+            s.update(x=round(p0, 4), y=0.0, w=round(p1 - p0, 4), h=1.0)
+        else:
+            s.update(x=0.0, y=round(p0, 4), w=1.0, h=round(p1 - p0, 4))
+        if fam == "warm":
+            s.update(metal=True, shade="copper" if _name(col) in ("copper", "brown", "tan") else None)
+        shapes.append(s)
+    return shapes, axis
+
+
+def describe_bands(shapes, axis):
+    if not shapes:
+        return ""
+    where = "left to right (along the label)" if axis == "x" else "top to bottom"
+    parts = []
+    for s in shapes:
+        p0, p1 = (s["x"], s["x"] + s["w"]) if axis == "x" else (s["y"], s["y"] + s["h"])
+        parts.append(f"{_name(tuple(int(s['fill'][i:i + 2], 16) for i in (1, 3, 5)))}"
+                     f"{' (metal ink)' if s.get('metal') else ''} from {p0:.2f} to {p1:.2f}")
+    return (f"MEASURED from the real photo, the label's background bands, {where}: " + "; ".join(parts) +
+            ". These bands are already drawn as the first shapes of your layout - do not redraw them, do not change "
+            "their colors or edges, and never cover a whole band. Draw only what sits ON them: panels, boxes, "
+            "bars, dots, logos and words.\n")
+
+
 def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, log=print, typical=(), cover_png=None):
     """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
     belongs there, from the confirmed words only."""
@@ -157,8 +265,16 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
     best = (-1, None, None, None)
     tries = []                                         # each try's match and whether it changed (the review sheet)
     tip = ("A label like this normally carries: " + "; ".join(typical) + ".\n") if typical else ""
+    try:
+        base, axis = base_bands(real_png, cover_png)
+    except Exception as e:
+        log(f"[texture] the label's bands could not be measured ({e})")
+        base, axis = [], None
+    if base:
+        log("[texture] " + describe_bands(base, axis).split(". These")[0])
+    tip = describe_bands(base, axis) + tip
     lay = clean_layout(_ask(model, FIRST.format(product=product, w=w_mm, h=h_mm, words=said, typical=tip), [real_png]),
-                       w_mm, h_mm, words)
+                       w_mm, h_mm, words, base)
     for r in range(1, rounds + 1):
         png, mr = labelart.render(lay, out_dir, px=2048, name=f"round{r}")
         try:
@@ -186,7 +302,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
         fixes = "; ".join(map(str, c.get("fixes") or [])) or "(none listed - compare the two pictures yourself)"
         try:
             new = clean_layout(_ask(model, AGAIN.format(layout=json.dumps(lay), words=said, fixes=fixes),
-                                    [png, real_png]), w_mm, h_mm, words)
+                                    [png, real_png]), w_mm, h_mm, words, base)
         except Exception as e:
             log(f"[texture] could not improve the layout: {e}")
             break

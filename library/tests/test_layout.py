@@ -119,6 +119,15 @@ s_good, f_good = LAY.color_check(gp, rp)
 check(s_bad < 0.75 and any("copper on the real label but black" in f for f in f_bad),
       f"a label drawn without its copper end is caught ({s_bad:.0%}): {f_bad[:1]}")
 check(s_good > 0.95 and not f_good, f"copper in light and in shade is still copper ({s_good:.0%})")
+# the background bands are measured, not guessed: a layout the AI wrote all black keeps the measured copper band
+bb, axis = LAY.base_bands(rp)
+check(axis == "x" and len(bb) == 2 and bb[0].get("metal") and bb[0]["w"] < 0.35 and not bb[1].get("metal"),
+      f"copper end then black body measured along the label: {[(b['x'], b['w'], b['fill']) for b in bb]}")
+blk_lay = {"width_mm": 1, "height_mm": 1, "background": "#000000",
+           "shapes": [{"type": "rect", "x": 0, "y": 0, "w": 1, "h": 1, "fill": "#000000"}], "texts": []}
+fixed = LAY.clean_layout(blk_lay, 50, 46, [], bb)
+check(fixed["shapes"][0].get("base") and fixed["shapes"][0].get("metal") and len(fixed["shapes"]) == 2,
+      "the AI's all-black band is dropped and the measured bands come first")
 # a word the photo's edge cut off is printed as the whole word
 import run
 ww = run.whole_words(["DURACELL®", "JAN 2001", "DURA", "ALKALINE", "ALKALINE BATTERY"])
