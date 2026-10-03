@@ -1790,6 +1790,10 @@ if __name__ == "__main__":
         sys.exit(1)
     beat("starting")
     _beating()
+    if a.loop and os.path.exists(os.path.join(WORK, "PAUSE")):
+        # Cody paused the asset maker (2026-10-02) until the redesigned one is installed: nothing is built
+        say("paused - " + open(os.path.join(WORK, "PAUSE")).read().strip()[:200])
+        sys.exit(0)
     if a.loop and sync_code():                         # newest code (with your AI's own fixes): start again on it
         _lock.close()
         os.execv(PY, [PY] + sys.argv)
@@ -1821,6 +1825,9 @@ if __name__ == "__main__":
                 say(f"[phone] resend skipped: {e}")
             todo = queue(a.queue or 3)
             for cid in todo:
+                if os.path.exists(os.path.join(WORK, "PAUSE")):   # paused while running: stop between items
+                    say("paused - stopping between items")
+                    sys.exit(0)
                 if RESTART:                             # your AI's engineer kept a fix: start again on the fixed code
                     say("[update] your AI's engineer kept a fix - restarting on the fixed code")
                     _lock.close()
