@@ -45,6 +45,8 @@ SHELF = os.path.expanduser("~/Desktop/Asset Library")
 PY = sys.executable
 STATUS = os.path.join(OUT, "status.json")
 WAIT = False          # --wait: a run you started yourself waits for your tap instead of moving on
+TRIAL = os.environ.get("CRUSHED_TRIAL") == "1"   # your AI's engineer testing a fix: build + check only, nothing sent
+RESTART = False       # your AI's engineer kept a fix: finish here so the clock starts the fixed code
 HB = os.path.expanduser("~/.hellbox")
 
 
@@ -265,7 +267,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
                     status(cid, step="5/7 your AI writes the era's printed panels (nutrition, ingredients, maker)")
                     era = eraprint.content(product, model=use)
                     card["era_print"] = era
-                    json.dump(card, open(cards.path(cid), "w"), indent=1)
+                    if not TRIAL:
+                        json.dump(card, open(cards.path(cid), "w"), indent=1)
                 except Exception as e:
                     say(f"[texture] era panels skipped ({e})")
         status(cid, step="5/7 texture map: every box face at its measured size")
@@ -294,10 +297,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     glb = os.path.join(mdir, cid + ".glb")
     status(cid, step="5/7 every format (.obj .mtl .3ds .ma), textures, and a cutaway of the insides")
     finish_files(cid, d)
-    pend = os.path.join(ROOT, "assets", "models_pending", cid)       # so the phone page can spin it in 3D right away
-    os.makedirs(pend, exist_ok=True)
-    web = os.path.join(mdir, cid + "_web.glb")
-    shutil.copy(web if os.path.exists(web) else glb, os.path.join(pend, "model.glb"))
+    if not TRIAL:
+        pend = os.path.join(ROOT, "assets", "models_pending", cid)   # so the phone page can spin it in 3D right away
+        os.makedirs(pend, exist_ok=True)
+        web = os.path.join(mdir, cid + "_web.glb")
+        shutil.copy(web if os.path.exists(web) else glb, os.path.join(pend, "model.glb"))
 
     # 6. CHECK: four sides against your photo
     status(cid, step="6/7 pictures from four sides and the judge's check")
@@ -314,6 +318,10 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
     verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
     say(f"[check] {cid}: " + ("passed every realism check" if verdict.get("pass") else
                               "failed: " + ", ".join(verdict.get("failed", [])) + " - " + str(verdict.get("problems"))[:300]))
+    if TRIAL:                                                # the engineer's test: the result, nothing sent anywhere
+        json.dump({"verdict": verdict, "shots": shots, "close": close, "photo": picked["file"]},
+                  open(os.path.join(d, "trial.json"), "w"), indent=1)
+        return verdict
 
     # 7. YOU: Keep or Redo on your phone
     import askfirst
@@ -324,9 +332,29 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
                ref=os.path.relpath(picked["file"], WORK))
         file_away(cid, d)
         return
+    if not verdict.get("pass") and engineer_turn(cid):         # your AI's engineer works out why, and fixes the cause
+        status(cid, step="failed the realism check - your AI's engineer is working out why", verdict=verdict,
+               views=os.path.relpath(shots, WORK), ref=os.path.relpath(picked["file"], WORK))
+        try:
+            import engineer
+            res = engineer.fix(cid, card, verdict, shots, close, picked["file"], d, log=say, beat=beat,
+                               status=lambda **k: status(cid, **k))
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            res = {"kept": False, "why": f"the engineer stopped: {e}"}
+        if res.get("kept"):
+            global RESTART
+            RESTART = True
+            status(cid, step=f"your AI's engineer fixed the builder ({', '.join(res.get('before', []))} -> "
+                             f"{', '.join(res.get('after', [])) or 'all checks pass'}) - rebuilding with the fix",
+                   engineer={k: res.get(k) for k in ("sha", "summary", "before", "after")})
+            return
+        verdict = dict(verdict, engineer=(res.get("summary") or res.get("why") or "")[:600])
     if not verdict.get("pass"):                                  # never shown to you as finished when it isn't
         failed = ", ".join(verdict.get("failed", [])) or "the judge's check"
-        status(cid, step=f"failed the realism check ({failed}) - not sent to you; it gets fixed and rebuilt",
+        tried = (" - your AI's engineer: " + verdict["engineer"][:200]) if verdict.get("engineer") else ""
+        status(cid, step=f"failed the realism check ({failed}) - not sent to you{tried}",
                ok=False, verdict=verdict, views=os.path.relpath(shots, WORK), ref=os.path.relpath(picked["file"], WORK))
         say(f"[check] {cid}: not sent to your phone - failed: {failed}")
         return
@@ -636,6 +664,10 @@ def _beating():
 
 def status(cid, **kw):
     beat(f"{cid}: {kw.get('step', '')}")
+    if TRIAL:                                         # a test build: the real status and your page are left alone
+        if kw.get("step"):
+            say(f"[trial] {kw['step']}")
+        return
     os.makedirs(OUT, exist_ok=True)
     s = json.load(open(STATUS)) if os.path.exists(STATUS) else {}
     if "product" in kw:                               # a fresh run of this item: nothing left over from the last one
@@ -1063,6 +1095,91 @@ document.getElementById("m").src = "models/" + id + ".glb?v=" + (q.get("v") || D
 </script>"""
 
 
+def engineer_turn(cid):
+    """May your AI's engineer take this failed model now? (on unless settings.json says "engineer": false; at most
+    3 tries per item a day, so one stubborn item can't hold up the rest of the queue)"""
+    if TRIAL or not setting("engineer"):
+        return False
+    f = os.path.join(WORK, "engineer", "attempts.json")
+    os.makedirs(os.path.dirname(f), exist_ok=True)
+    a = jload(f, {})
+    recent = [t for t in a.get(cid, []) if time.time() - t < 86400]
+    if len(recent) >= 3:
+        say(f"[engineer] {cid}: already tried 3 times today - left for tomorrow")
+        return False
+    a[cid] = recent + [time.time()]
+    json.dump(a, open(f, "w"), indent=1)
+    return True
+
+
+def trial(cid, tdir, clear=()):
+    """Your AI's engineer testing a fix (run from its own copy of the code): this item rebuilt from your pick into
+    tdir and checked - the steps it didn't change are reused from the last build, nothing is sent or filed."""
+    import cards
+    import vet as V
+    d0 = os.path.join(OUT, cid)
+    skip = {"model", "check", "trial.json"} | set(clear)
+    if os.path.isdir(d0):
+        for n in os.listdir(d0):
+            if n in skip or n.startswith(("view", "round_")):
+                continue
+            src, dst = os.path.join(d0, n), os.path.join(tdir, n)
+            if os.path.isdir(src):
+                shutil.copytree(src, dst, dirs_exist_ok=True)
+            else:
+                shutil.copy2(src, dst)
+    if "parts" in clear and os.path.exists(os.path.join(tdir, "parts.json")):
+        os.remove(os.path.join(tdir, "parts.json"))
+    card = cards.make(cid, log=say)
+    for k in clear:
+        card.pop(k, None)
+    cards.construction(cid, card, log=say)
+    cf = os.path.join(d0, "candidates.json")
+    pick = jload(os.path.join(HB, "picks.json"), {}).get(cid, {}).get("pick", "none")
+    if not os.path.exists(cf) or pick == "none":
+        raise SystemExit(f"{cid}: no picked photo to build from")
+    cands = json.load(open(cf))["files"]
+    picked = cands[int(pick) - 1]
+    os.makedirs(os.path.join(tdir, "model"), exist_ok=True)
+    return build(cid, card, picked, [c for c in cands if c["file"] != picked["file"]], V.model(), tdir,
+                 os.path.join(tdir, "model"), 0, len(cands))
+
+
+def sync_code():
+    """Combine your AI's own kept fixes (local commits) with the newest version from GitHub. A plain 'git pull'
+    refuses when both have new commits, which would leave the asset maker stuck on old code. If they can't be
+    combined, your AI's fixes are kept on a branch of their own (never lost) and the newest version runs.
+    Returns True when the code changed (the run then restarts itself on it)."""
+    def g(*a):
+        return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True, timeout=180)
+    gd = g("rev-parse", "--git-dir").stdout.strip()
+    gd = gd if os.path.isabs(gd) else os.path.join(ROOT, gd)
+    if os.path.isdir(os.path.join(gd, "rebase-merge")) or os.path.isdir(os.path.join(gd, "rebase-apply")):
+        g("rebase", "--abort")
+    if os.path.exists(os.path.join(gd, "CHERRY_PICK_HEAD")):
+        g("cherry-pick", "--abort")
+    g("fetch", "-q")
+    def count(r):
+        x = g("rev-list", "--count", r)
+        return int(x.stdout.strip() or 0) if x.returncode == 0 else 0
+    ahead, behind = count("@{u}..HEAD"), count("HEAD..@{u}")
+    if not behind:
+        return False
+    if not ahead:
+        return g("merge", "-q", "--ff-only", "@{u}").returncode == 0
+    g("checkout", "-q", "--", ".")
+    if g("rebase", "-q", "@{u}").returncode != 0:
+        g("rebase", "--abort")
+        keep = "engineer-kept-" + time.strftime("%Y%m%d-%H%M%S")
+        g("branch", keep)
+        g("reset", "-q", "--hard", "@{u}")
+        say(f"[update] your AI's own fixes could not be combined with the newest version - they are kept on "
+            f"branch {keep} (nothing lost); the newest version runs")
+    else:
+        say(f"[update] the newest version, with your AI's {ahead} own fix(es) on top")
+    return True
+
+
 def newer_version():
     """Is there a newer version of the asset maker than the one running? (checked between items, never mid-item)"""
     try:
@@ -1106,8 +1223,14 @@ if __name__ == "__main__":
     ap.add_argument("--wait", action="store_true", help="wait for your photo pick on the phone")
     ap.add_argument("--loop", action="store_true", help="keep working through the queue: an item waiting on "
                     "your tap is set aside and picked up again the minute you tap; stops after 3 quiet hours")
+    ap.add_argument("--trial", nargs=2, metavar=("ITEM", "FOLDER"), help="(your AI's engineer) test-build one item")
+    ap.add_argument("--clear", default="")
     a = ap.parse_args()
     WAIT = a.wait
+    if a.trial:                                         # the engineer's test build: no lock, nothing sent
+        TRIAL = True
+        trial(a.trial[0], a.trial[1], [c for c in a.clear.split(",") if c])
+        sys.exit(0)
     # ONE run at a time on this Mac, whoever starts it (the clock, the watchdog, a paste): a second one leaves
     # at once. Two runs drawing together ran the memory out and crashed the drawing room (2026-10-02).
     import fcntl
@@ -1124,7 +1247,18 @@ if __name__ == "__main__":
         sys.exit(1)
     beat("starting")
     _beating()
+    if a.loop and sync_code():                         # newest code (with your AI's own fixes): start again on it
+        _lock.close()
+        os.execv(PY, [PY] + sys.argv)
     if a.loop:
+        breq = os.path.join(WORK, "brain_pull.request")
+        if os.path.exists(breq):                         # Claude asked: get these brains onto the Mac (free downloads)
+            names = [l.strip() for l in open(breq) if l.strip() and not l.startswith("#")]
+            os.replace(breq, breq + ".done")
+            subprocess.Popen([PY, os.path.join(HERE, "brainpull.py"), *names],
+                             stdout=open(os.path.expanduser("~/crushed-render/brains.log"), "a"),
+                             stderr=subprocess.STDOUT, start_new_session=True)
+            say(f"[brains] downloading in the background: {', '.join(names)} (progress: ~/crushed-render/brains.log)")
         try:
             resend()                                    # first: anything that never reached your phone
         except Exception as e:
@@ -1145,8 +1279,23 @@ if __name__ == "__main__":
             os.replace(req, req + ".done")
             import hunyuan
             hy = hunyuan.home()
-            r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), "--test"],
-                               capture_output=True, text=True)
+            pip = os.path.join(hy, ".venv", "bin", "pip")
+            # what the original PyTorch shape maker imports that its folder never installed (timm: 2026-10-02 log)
+            NEEDS = {"timm": "timm", "pygltflib": "pygltflib", "xatlas": "xatlas", "einops": "einops",
+                     "omegaconf": "omegaconf", "trimesh": "trimesh", "pymeshlab": "pymeshlab", "cv2": "opencv-python",
+                     "skimage": "scikit-image", "diffusers": "diffusers", "accelerate": "accelerate",
+                     "huggingface_hub": "huggingface_hub", "safetensors": "safetensors", "yaml": "pyyaml"}
+            todo = ["timm", "pygltflib"]
+            for _ in range(5):
+                if todo:
+                    pr = subprocess.run([pip, "install", "-q", *[NEEDS[m] for m in todo]], capture_output=True, text=True)
+                    say(f"[hunyuan test] installed {todo}: " + ("ok" if pr.returncode == 0 else pr.stderr[-300:]))
+                r = subprocess.run([os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"),
+                                    "--test"], capture_output=True, text=True)
+                miss = re.findall(r"No module named '([A-Za-z0-9_]+)", (r.stdout or "") + (r.stderr or ""))
+                todo = sorted({m for m in miss if m in NEEDS})
+                if not todo:
+                    break
             for line in ((r.stdout or "") + (r.stderr or "")[-1500:]).splitlines():
                 if line.startswith("[hunyuan]") or "Error" in line or "error" in line:
                     say("[hunyuan test] " + line[:300])
@@ -1158,6 +1307,10 @@ if __name__ == "__main__":
                 say(f"[phone] resend skipped: {e}")
             todo = queue(a.queue or 3)
             for cid in todo:
+                if RESTART:                             # your AI's engineer kept a fix: start again on the fixed code
+                    say("[update] your AI's engineer kept a fix - restarting on the fixed code")
+                    _lock.close()
+                    os.execv(PY, [PY] + sys.argv)
                 if newer_version():                     # between items: a fix was pushed - finish here, so the
                     say("[update] a newer version is ready - stopping between items so the clock starts it")
                     sys.exit(0)                         # clock starts the newest version within 5 minutes
@@ -1167,6 +1320,10 @@ if __name__ == "__main__":
                     import traceback
                     traceback.print_exc()
                     status(cid, step=f"stopped: {e}"[:300], ok=False)
+            if RESTART:
+                say("[update] your AI's engineer kept a fix - restarting on the fixed code")
+                _lock.close()
+                os.execv(PY, [PY] + sys.argv)
             busy = [c for c in todo if not jload(STATUS, {}).get(c, {}).get("step", "").startswith(("waiting", "done", "stopped", "3 rounds", "in line", "no usable", "failed"))]
             quiet = 0 if busy else quiet + 1
             time.sleep(0 if busy else 30)
