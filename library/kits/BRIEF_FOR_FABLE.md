@@ -13,6 +13,16 @@ Read this, then kits/DESIGN.md (the redesign and its Status), then playbook/play
   mine, while being self aware enough to see its own output, realize what is wrong, and correct it on its own."
   So every bug you fix by hand must ALSO become an automatic step check + a playbook lesson (see Self-review).
 
+## THE LANE (Cody, 2026-10-03 17:50: "your job is not to do ANY of the work OR any of the problem solving. Your job
+## is to make my combination of AI brains work together, think critically enough, render perfection")
+- You do not diagnose an asset's failure and patch the cause yourself. Cody's AI's engineer does that. When a build
+  fails, let the engineer take it (it gets the review sheet, the lit side pictures, the playbook, 3 tries per code
+  version, 3 h each).
+- You watch WHAT STOPPED THE ENGINEER from thinking it through, and fix only that: what it is shown, the tools it
+  has, the rules it reads, its time and tries, which files it may change. Never the asset, never its answer.
+- A workflow bug the engineer is forbidden to touch (a locked check, a camera, the measurement) is yours - but
+  fix the class, then step back again.
+
 ## Standing rules (from Cody; breaking them makes him furious)
 - Talk to him at a 6th-grade level: short words, no jargon (if you must name a thing, say what it is in the same
   sentence). American spelling. Brief. He's often on his phone.
