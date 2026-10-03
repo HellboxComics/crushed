@@ -369,6 +369,38 @@
       "a caution line",
       "a + mark at the plus end",
       "any tester or feature of that era (e.g. a PowerCheck strip with test dots)"
+     ],
+     "expect": [
+      {
+       "what": "the size (AA, AAA, C, D)",
+       "pattern": "\\bSIZE\\b|\\bAA\\b|\\bAAA\\b|\\bLR\\s?(6|03|14|20)\\b",
+       "search": "size"
+      },
+      {
+       "what": "the model numbers (e.g. MN1500 / LR6)",
+       "pattern": "\\bMN\\s?\\d{3,4}\\b|\\bLR\\s?\\d{1,2}\\b|\\bE9[1-5]\\b",
+       "search": "back"
+      },
+      {
+       "what": "the voltage",
+       "pattern": "\\b\\d(\\.\\d)?\\s*V(OLTS?)?\\b",
+       "search": "volts"
+      },
+      {
+       "what": "a caution line",
+       "pattern": "\\bCAUTION\\b|\\bWARNING\\b",
+       "search": "caution"
+      },
+      {
+       "what": "where it was made",
+       "pattern": "\\bMADE\\s+IN\\b",
+       "search": "made in"
+      },
+      {
+       "what": "a date code",
+       "pattern": "\\bBEST\\b|\\bEXP|\\b(19|20)\\d\\d\\b",
+       "search": "date"
+      }
      ]
     },
     {
@@ -848,5 +880,6 @@
   }
  },
  "_side_words": "side_words: how collectors and sellers name each side of this kind of thing in a search (the dossier's hunt uses them instead of box words)",
- "_zone_elements": "zones[].elements: what a rebuilt zone draws from facts with receipts (eraprint: logo, name, picture, net_weight, maker_lines, legal_lines, nutrition, ingredients, upc), in order; zones[].typical: the same in words, for your AI when it rebuilds artwork (kits.py)"
+ "_zone_elements": "zones[].elements: what a rebuilt zone draws from facts with receipts (eraprint: logo, name, picture, net_weight, maker_lines, legal_lines, nutrition, ingredients, upc), in order; zones[].typical: the same in words, for your AI when it rebuilds artwork (kits.py)",
+ "_zone_expect": "zones[].expect: what a label of this kind (nearly) always carries, as patterns the words read off the photos are checked against - anything missing is hunted for in more photos (labelparts.py)"
 }

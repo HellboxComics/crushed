@@ -848,6 +848,19 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             if m.get("kind") in ("text", "panel") and len(t) >= 3 and t not in words:
                 words.append(t)
         words = whole_words(words)
+    # what a label of this kind always carries, and is missing here: found in more photos of the item, read twice
+    import labelparts
+    import vet as V
+    added, receipts, still = labelparts.find(cid, dos, words, kit_name, use, V.quick_model() or use,
+                                             lambda pngs: label_words(pngs, use), log=say)
+    if added:
+        words = whole_words(words + added)
+    json.dump({"added": added, "receipts": receipts, "still_missing": still},
+              open(os.path.join(tex, "label_parts.json"), "w"), indent=1)
+    R.step("what every label of this kind carries", files=list(dict.fromkeys(x["photo"] for x in receipts)), checks=[
+        ("nothing a label like this always carries is missing", True if not still else None,
+         (f"found {len(added)} line(s) in {len({x['photo'] for x in receipts})} more photo(s)" if added else
+          "nothing missing") + (f"; not found anywhere: {', '.join(still)}" if still else ""))])
     R.step("words on the label (each confirmed by two reads)", files=reads_from, checks=[
         ("words were read", bool(words), f"{len(words)} words"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])

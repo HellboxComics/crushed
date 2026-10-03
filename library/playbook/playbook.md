@@ -13,7 +13,7 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    works for this one item is not a fix.
 2. Never weaken the check. You can't anyway: these are LOCKED and every change to them is refused -
    vet.py, viewshot.py, judge.py, measure.py, measure_blender.py, materials.json, dossier.py, facts.py,
-   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, layout.py, review.py,
+   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, layout.py, review.py, labelparts.py,
    engineer.py, selftest.py, watchdog.py, this playbook and lessons.md, queue.txt, families.json, and in
    run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every TRIAL
    block and every line that handles the verdict. A builder may not reach into the judge or the
@@ -214,6 +214,10 @@ Round labels (found by Claude on the Duracell, 2026-10-03 - each is now also a s
   allowed words -> run.round_label allows the dossier's printed lines for the label. What the model is checked for
   must always be something the writer is allowed to print.
 - Words running out of the box they are printed on -> labelart fits words inside the panel under them.
+- The label has only the side the main photo saw (no size, model numbers, voltage, caution, "made in" on a battery)
+  -> no photo used showed the back, and nothing is printed that wasn't read -> labelparts checks the label against
+  what every label of its kind carries (the kit's "expect" list) and finds the missing parts in more photos of the
+  item (flat or peeled labels first, then backs, then a few new searches), each word read twice, with its receipt.
 - A whole colored area missing (the Duracell drawn all black, no copper top) while the comparison brain said
   "match 9" -> a quick look is not a measurement -> layout.color_check measures each part of the drawn label
   against the real one where a photo saw it (light and shade don't count as a different color); the match is

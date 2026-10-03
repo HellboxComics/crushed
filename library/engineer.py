@@ -78,7 +78,7 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
-                "ownmods.py", "layout.py", "review.py"}
+                "ownmods.py", "layout.py", "review.py", "labelparts.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
@@ -87,7 +87,8 @@ LOCKED_DIRS = ("playbook/",)
 # file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "era.py", "jsonsafe.py",
-                "speed.py", "brainjobs.py", "ownmods.py", "review.py", "sitecustomize.py",
+                "speed.py", "brainjobs.py", "ownmods.py", "review.py", "labelparts.py",
+                "sitecustomize.py",
                 "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
