@@ -183,7 +183,7 @@ def pipeline(cid, redo=False):
         say(f"[family] {cid}: {fl['family']} ({fl['confidence']}/10): {fl['why']}")
         status(cid, step="4/7 your AI gets to know the item: every side hunted, every fact with a receipt")
         make_room("judging")
-        DS.ensure(cid, card, picked, use=use, redo=fresh, log=say)
+        DS.ensure(cid, card, picked, use=use, redo=fresh, log=progress(cid, "4/7 your AI gets to know the item"))
         card["dossier_path"] = DS.path(cid)
         return build(cid, card, picked, others, use, d, mdir, n_found, n_good)
 
@@ -327,11 +327,16 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         bld, why = "lathe", "a measured master shape"          # the AA battery, measured by hand
     say(f"[family] {cid}: {fam['family']} -> built by '{bld}' ({why})")
     card["built_by"] = {"family": fam["family"], "builder": bld, "why": why, "gaps": fam.get("gaps", [])}
+    status(cid, family=fam["family"], builder={"lathe": "the round builder", "pcb": "the circuit-card builder",
+                                               "carton": "the carton builder (folded like the factory)",
+                                               "box": "the box builder", "organic": "Hunyuan (organic shapes)",
+                                               "assembly": "the one-off parts builder"}.get(bld, bld))
     if not TRIAL:                                            # kept on the card: the catalog record reads it
         import cards as _cards
         json.dump(card, open(_cards.path(cid), "w"), indent=1)
     import dossier as DS                                     # every route knows the object before it is built -
-    dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)   # made once here, used by every route below
+    dos = DS.ensure(cid, card, picked, use=use, redo=redo,            # made once here, used by every route below
+                    log=progress(cid, "4/7 your AI gets to know the item"))
 
     # 5. BUILD by the family's builder
     if route == "round":
@@ -1030,6 +1035,19 @@ def say(*a):
     print(*a, flush=True)
 
 
+def progress(cid, stage):
+    """A log that also puts what your AI is doing right now on your phone page (the page itself refreshes at most
+    every 90 seconds): "4/7 your AI gets to know the item - careful look 3 of 9 ..." instead of one old line."""
+    def log(*a):
+        say(*a)
+        msg = " ".join(str(x) for x in a)
+        if msg.startswith(("[dossier]", "[facts]", "[family]", "[parts]")):
+            short = re.sub(r"^\[\w+\]\s*", "", msg)
+            short = short[len(cid) + 1:].strip() if short.startswith(cid + ":") else short
+            status(cid, step=f"{stage} - {short[:150]}")
+    return log
+
+
 def beat(doing):
     """The heartbeat the watchdog reads: when the run last did anything, and what."""
     try:
@@ -1426,7 +1444,10 @@ def page():
                     "Spin it in 3D</a>")
         cards.append(f'<section class=card><div class=top><h2>{html.escape(v.get("product", cid))}</h2>'
                      f'<span class="chip {cls}">{words}</span></div>'
-                     f'<p class=step>{html.escape(words.capitalize() if cls == "line" or words.startswith("resending") else str(v.get("step", "")))}</p>{judge}{pics}</section>')
+                     f'<p class=step>{html.escape(words.capitalize() if cls == "line" or words.startswith("resending") else str(v.get("step", "")))}</p>'
+                     + (f'<p class=notes><em>Kind of thing:</em> {html.escape(str(v["family"]).replace("_", " "))}'
+                        f' - built by {html.escape(str(v.get("builder", "")))}</p>' if v.get("family") else "")
+                     + f'{judge}{pics}</section>')
     t = (f'<div class=tally><div><b>{tally["you"]}</b><span>need you</span></div><div><b>{tally["work"]}</b>'
          f'<span>being made</span></div><div><b>{tally["kept"]}</b><span>kept</span></div>'
          f'<div><b>{tally["bad"]}</b><span>need attention</span></div></div>')
