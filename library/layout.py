@@ -16,7 +16,8 @@ SCHEMA = """Write the layout as JSON, positions as fractions of the label (0..1 
 the top), sizes as fractions too:
 {"width_mm": W, "height_mm": H, "background": "#rrggbb",
  "shapes": [{"type": "rect" | "ellipse", "x": , "y": , "w": , "h": , "fill": "#rrggbb" or null,
-             "stroke": "#rrggbb" or null, "stroke_w": line thickness, "metal": true for metallic ink/foil areas,
+             "stroke": "#rrggbb" or null, "stroke_w": line thickness as a fraction of the label's height (0.005 =
+             a thin line), "metal": true for metallic ink/foil areas,
              "shade": "copper" for a copper/gold metallic band},
             {"type": "bar", "x": , "y": , "w": , "h": , "colors": ["#..", "#.."], "stops": [0, .., 1]}   (a color gradient)],
  "texts": [{"text": "EXACT WORDS", "x": , "y": , "h": letter height, "w": width it spans, "color": "#..",
@@ -77,6 +78,12 @@ def clean_layout(lay, w_mm, h_mm, words):
         try:
             for k in ("x", "y", "w", "h"):
                 s[k] = float(min(max(float(s.get(k, 0)), 0.0), 1.0))
+            sw = float(s.get("stroke_w") or 0)
+            if sw > 0.05:                              # given in mm (or px), not as a fraction: a "1.2" outline
+                sw = sw / h_mm if sw <= 5 else 0.006   # was drawn 1.2 label-heights wide and painted it all
+            s["stroke_w"] = min(max(sw, 0.0), 0.03)    # (2026-10-03, the Duracell's whole label went green)
+            if s.get("metal") and not s.get("fill"):   # metal ink with no color given: its real color
+                s["fill"] = "#b87333" if s.get("shade") == "copper" else "#c0c0c0"
             shapes.append(s)
         except Exception:
             pass

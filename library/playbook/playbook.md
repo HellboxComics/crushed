@@ -206,6 +206,9 @@ Round labels (found by Claude on the Duracell, 2026-10-03 - each is now also a s
   -> layout.AGAIN carries them; an unchanged try stops the rounds.
 - Gray circles or the metal ends drawn on the wrapper -> the writer took the unrolled photo's end caps for print
   -> the prompt says the sleeve only; the ends are built by the shape, never printed.
+- A try's picture does not look like its own layout (the whole label one color, the writer "fixing" a color that
+  is already right) -> a number in the layout read the wrong way (a line thickness given in mm drawn as a fraction
+  of the height: stroke_w 1.2 painted everything) -> layout.clean_layout keeps every number in its real range.
 - The whole label reads as metal (materials check: metallic 1.00 on a printed sleeve) -> metal ink under plain
   ink stayed marked as metal in label_mr.png -> labelart: plain ink and letters drawn over metal clear it.
 
