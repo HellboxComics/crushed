@@ -209,6 +209,11 @@ Round labels (found by Claude on the Duracell, 2026-10-03 - each is now also a s
 - A try's picture does not look like its own layout (the whole label one color, the writer "fixing" a color that
   is already right) -> a number in the layout read the wrong way (a line thickness given in mm drawn as a fraction
   of the height: stroke_w 1.2 painted everything) -> layout.clean_layout keeps every number in its real range.
+- The text check misses a printed line the judge keeps asking for ("add DURACELL INC.,") and every try leaves it out
+  -> the line was read off the item's photo by the dossier (and is checked on the model) but was not in the label's
+  allowed words -> run.round_label allows the dossier's printed lines for the label. What the model is checked for
+  must always be something the writer is allowed to print.
+- Words running out of the box they are printed on -> labelart fits words inside the panel under them.
 - The whole label reads as metal (materials check: metallic 1.00 on a printed sleeve) -> metal ink under plain
   ink stayed marked as metal in label_mr.png -> labelart: plain ink and letters drawn over metal clear it.
 
