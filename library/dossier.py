@@ -42,8 +42,8 @@ VERSION = 3                  # 2: a round item's wrapped side is its label; wate
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
-LOOK = 3                     # careful looks per side
-MOST_LOOKS = 18              # careful looks per item, at most
+LOOK = 2                     # careful looks per side (the quick look already ranks every photo)
+MOST_LOOKS = 12              # careful looks per item, at most
 
 FACES = {"box": ["front", "back", "left", "right", "top", "bottom"], "round": ["label", "top", "bottom"],
          "flat": ["front", "back"], "pcb": ["top", "bottom"],
@@ -410,21 +410,29 @@ def quick_look(dos, quick, log=print):
     idn = dos["identity"]
     q = QUICK_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "")
     todo = [p for p in dos["photos"] if "quick" not in p]
-    for k, p in enumerate(todo, 1):
+    import vet as V
+    n_done = [0]
+
+    def look(p):
         try:
-            v = _ask(quick, q, [p["file"]], think=False, side=768) or {}
+            return _ask(quick, q, [p["file"]], think=False, side=768) or {}
         except Exception as e:
-            v = {"face": "none", "useful": 0, "note": f"could not look: {e}"}
+            return {"face": "none", "useful": 0, "note": f"could not look: {e}"}
+
+    def done(i, v):                                       # (several at once when the brain server allows it)
+        p = todo[i]
+        v = v if isinstance(v, dict) else {"face": "none", "useful": 0, "note": f"could not look: {v}"}
         p["quick"] = {"face": v.get("face") if v.get("face") in NAMES + ["several", "mixed", "none"] else "none",
                       "product_shown": _str(v.get("product_shown")), "same_line": v.get("same_line") is True,
                       "same_item": v.get("same_item") is True, "kind": _str(v.get("kind"), 20) or "other",
                       "era": _str(v.get("era"), 40), "years": parse_years(v.get("era")),
                       "useful": float(v.get("useful") or 0) if str(v.get("useful", "")).replace(".", "").isdigit() else 0}
-        if k % 10 == 0:
+        n_done[0] += 1
+        if n_done[0] % 10 == 0:
             save(dos)
-            log(f"[dossier] quick look: {k} of {len(todo)} photos")
+            log(f"[dossier] quick look: {n_done[0]} of {len(todo)} photos")
+    V.parallel(look, todo, done)
     save(dos)
-
 
 def _quick_score(p, era):
     v = p.get("quick") or {}
@@ -455,20 +463,22 @@ def careful_looks(dos, use, log=print):
                  and _could_show(p, face, route) and _overlap((p.get("quick") or {}).get("years") or era, era)]
         cands.sort(key=lambda p: -_quick_score(p, era))
         chosen += cands[:LOOK]
-    chosen = chosen[:MOST_LOOKS]
-    for k, p in enumerate(chosen, 1):
-        if p.get("labeled"):
-            continue
+    chosen = [p for p in chosen[:MOST_LOOKS] if not p.get("labeled")]
+    import vet as V
+
+    def look(p):
         ref = ("Picture 2 is the front of our exact item (the photo picked as true) - compare with it."
                if p["file"] != picked and picked else "Picture 1 IS our exact item (picked as true).")
         imgs = [p["file"]] + ([picked] if p["file"] != picked and picked else [])
-        try:
-            v = _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "", y0=era[0], y1=era[1],
-                                         ref=ref, sides_hint=SIDES_HINT.get(route, "")), imgs, think=True,
-                     side=1280) or {}
-        except Exception as e:
-            log(f"[dossier] careful look failed for {os.path.basename(p['file'])}: {e}")
-            continue
+        return _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "", y0=era[0],
+                                        y1=era[1], ref=ref, sides_hint=SIDES_HINT.get(route, "")), imgs, think=True,
+                    side=1280) or {}
+
+    def done(i, v):                                       # (several at once when the brain server allows it)
+        p = chosen[i]
+        if isinstance(v, Exception):
+            log(f"[dossier] careful look failed for {os.path.basename(p['file'])}: {v}")
+            return
         _apply_label(p, v, era, p["file"] == picked)
         if p.get("overlays"):
             log(f"[dossier] {os.path.basename(p['file'])}: laid over the photo (never copied, never a fact): "
@@ -476,7 +486,7 @@ def careful_looks(dos, use, log=print):
         log(f"[dossier] {os.path.basename(p['file'])}: {p['face']} ({', '.join(f['face'] for f in p['faces'][1:])})"
             f" {p['match']}, {p['product_shown'][:60]}, years {p['years']}, quality {p['quality']}")
         save(dos)
-
+    V.parallel(look, chosen, done)
 
 def _apply_label(p, v, era, is_pick=False):
     faces = []

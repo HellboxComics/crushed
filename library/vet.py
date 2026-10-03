@@ -15,10 +15,59 @@ PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.8:latest", "qwen3.5:122b-a10
 QUICK = ["qwen3.6:35b", "qwen3.5:9b"]     # fast first look (thinking off)
 
 
+CTX = 32768   # one memory size for every question to the brain: Ollama reloads a model whenever the size changes,
+#               and a question with a photo plus a long think must never run out of room (it is cut silently)
+
+
 def _call(path, body, timeout=900):
+    if path in ("/api/chat", "/api/generate") and body.get("model") and (body.get("messages") or body.get("prompt")):
+        body = dict(body, options=dict(body.get("options") or {}))
+        if int(body["options"].get("num_ctx") or 0) < CTX:
+            body["options"]["num_ctx"] = CTX
+        body.setdefault("keep_alive", "30m")
     req = urllib.request.Request(OLLAMA + path, data=json.dumps(body).encode(), headers={"content-type": "application/json"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read())
+
+
+def workers():
+    """How many questions to ask the brain at the same time - measured on this Mac by speed.py (the brain server
+    answering 2 at once makes about twice the words a minute); 1 until measured."""
+    try:
+        w = int(json.load(open(os.path.join(os.path.expanduser(os.environ.get(
+            "CRUSHED_REMASTER_WORK", "~/crushed-render/remaster")), "speed.json"))).get("workers") or 1)
+        return max(1, min(w, 4))
+    except Exception:
+        return 1
+
+
+def parallel(fn, items, done=None):
+    """fn(item) for every item, `workers()` at a time; results in the same order (an error is kept as the result).
+    done(i, result) is called in THIS thread as each one finishes (for progress lines and saving)."""
+    items = list(items)
+    out = [None] * len(items)
+    w = workers()
+    if w <= 1 or len(items) <= 1:
+        for i, it in enumerate(items):
+            try:
+                out[i] = fn(it)
+            except Exception as e:
+                out[i] = e
+            if done:
+                done(i, out[i])
+        return out
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    with ThreadPoolExecutor(max_workers=w) as ex:
+        futs = {ex.submit(fn, it): i for i, it in enumerate(items)}
+        for f in as_completed(futs):
+            i = futs[f]
+            try:
+                out[i] = f.result()
+            except Exception as e:
+                out[i] = e
+            if done:
+                done(i, out[i])
+    return out
 
 
 def has(name):

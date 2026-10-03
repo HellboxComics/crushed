@@ -57,7 +57,8 @@ def sides(cid, renders, dos, use, route, product="", log=print):
     out, failed, problems = {}, [], []
     if not use:
         return {"pass": False, "faces": {}, "failed": ["sides"], "problems": ["sides: no AI to judge the sides"]}
-    for face, e in faces.items():
+    jobs = []                                             # every look at every side, asked several at a time
+    for face, e in faces.items():                         # when the brain server allows it
         if route == "round" and face == "label":              # a label wraps all the way round: all four turns,
             model = _strip([renders[n] for n in ("label_0", "label_90", "label_180", "label_270") if n in renders],
                            renders.get("label_0", ""))         # so it matches the photo's turn, whichever it is
@@ -75,7 +76,6 @@ def sides(cid, renders, dos, use, route, product="", log=print):
             ref_note = "The real photo shows this exact item."
         else:
             ref_note = "There is no real photo of this side; judge the model's side on the list and the print only."
-        verdicts = []
         for order in ((model, ref), (ref, model)) if ref else ((model,),):
             imgs = [x for x in order if x]
             if ref:
@@ -83,12 +83,16 @@ def sides(cid, renders, dos, use, route, product="", log=print):
                 second = "picture 2 is the real photo" if order[0] == model else "picture 2 is the 3D model's side"
             else:
                 first, second = "Picture 1 is the 3D model's side", "there is no second picture"
-            try:
-                v = _ask(use, Q.format(first=first, second=second, product=product, face=face, ref_note=ref_note,
-                                       must=must), imgs)
-            except Exception as ex:
-                v = {"pass": False, "problems": [f"could not judge: {ex}"]}
-            verdicts.append(v)
+            jobs.append((face, Q.format(first=first, second=second, product=product, face=face, ref_note=ref_note,
+                                        must=must), imgs))
+    import vet as V
+    answers = V.parallel(lambda j: _ask(use, j[1], j[2]), jobs)
+    by_face = {}
+    for (face, _, _), v in zip(jobs, answers):
+        if isinstance(v, Exception) or not isinstance(v, dict):
+            v = {"pass": False, "problems": [f"could not judge: {v}"]}
+        by_face.setdefault(face, []).append(v)
+    for face, verdicts in by_face.items():
         ok = all(v.get("pass") is True for v in verdicts)
         probs = []
         for v in verdicts:

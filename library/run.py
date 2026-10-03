@@ -244,19 +244,30 @@ def pipeline(cid, redo=False):
     era_q = {s.lower().strip() for s in (card.get("era_version") or {}).get("searches") or []}
     todo = sorted([f for f in found if not f["vet"]], key=lambda f: (q_of(f) not in era_q, f["order"]))[:60]
     # 60 a round: photos found by the era's own name first ("90s Duracell PowerCheck"), each search in Google's order
-    if quick and len(todo) > 12:
-        for k, f in enumerate(todo, 1):
-            f["quick"] = V.vet(f["file"], disp, use=quick, think=False, card=card) or {}
-            say(f"[quick look {k}/{len(todo)}] {os.path.basename(f['file'])}: match {f['quick'].get('match')}, "
+    careful = 6                                              # the careful look (thinking on) for the best 6 only:
+    if quick and len(todo) > careful:                         # the quick look already sorts out the misses
+        seen_n = [0]
+
+        def quick_done(i, res):
+            f = todo[i]
+            f["quick"] = res if isinstance(res, dict) else {}
+            seen_n[0] += 1
+            say(f"[quick look {seen_n[0]}/{len(todo)}] {os.path.basename(f['file'])}: match {f['quick'].get('match')}, "
                 f"marks seen {f['quick'].get('seen')}, {f['quick'].get('kind')}")
+        V.parallel(lambda f: V.vet(f["file"], disp, use=quick, think=False, card=card) or {}, todo, quick_done)
         todo.sort(key=lambda f: -rank(dict(f, vet=f["quick"])))
-        for f in todo[12:]:
-            f["vet"] = dict(f["quick"], note="only the quick look")
-        todo = todo[:12]
-    for k, f in enumerate(todo, 1):
-        status(cid, step=f"3/7 {use} ranks the best photos: {k} of {len(todo)}")
-        f["vet"] = V.vet(f["file"], disp, use=use, think=True, card=card)
+        for f in todo[careful:]:
+            f["vet"] = dict(f["quick"], only_quick=True)       # (judged by the quick look only)
+        todo = todo[:careful]
+    looked = [0]
+
+    def careful_done(i, res):                                 # (several at once when the brain server allows it)
+        f = todo[i]
+        f["vet"] = res if isinstance(res, dict) else {"match": 0, "problems": f"could not judge: {res}"}
+        looked[0] += 1
+        status(cid, step=f"3/7 {use} ranks the best photos: {looked[0]} of {len(todo)}")
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
+    V.parallel(lambda f: V.vet(f["file"], disp, use=use, think=True, card=card), todo, careful_done)
     json.dump(found, open(vj, "w"), indent=1)
 
     # cut out only the photos good enough to be shown to you (not all of them)
@@ -710,6 +721,9 @@ def auto_pick(cid, cands, d):
     lead = rank(cands[0]) - (rank(cands[1]) if len(cands) > 1 else 0)
     import notes as NT
     note = NT.text(cid)
+    if v.get("only_quick") or v.get("note") == "only the quick look":       # (the second: as written before)
+        say("[pick] not picked by itself: the top photo had only the quick look - you choose")
+        return
     if note and (v.get("note_ok") is not True or v.get("note") != note[:200]):
         say("[pick] not picked by itself: the top photo was not judged to show what your note asks for - you choose")
         return                                                # your note decides the version: never guessed past it
@@ -2063,6 +2077,11 @@ if __name__ == "__main__":
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
             say("self-test failed - nothing run (the reason is on your phone)")
             sys.exit(1)
+        try:
+            import speed                                # the brain answers several questions at once (measured)
+            speed.setup(log=say)
+        except Exception as e:
+            say(f"[speed] skipped: {e}")
         try:
             import families                             # the organic builder not proven yet: test it once a day
             tlog = os.path.join(WORK, "hunyuan_test.log")
