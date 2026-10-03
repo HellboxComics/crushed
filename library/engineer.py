@@ -78,7 +78,7 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
-                "ownmods.py", "layout.py"}
+                "ownmods.py", "layout.py", "review.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
@@ -87,7 +87,7 @@ LOCKED_DIRS = ("playbook/",)
 # file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "era.py", "jsonsafe.py",
-                "speed.py", "brainjobs.py", "ownmods.py", "sitecustomize.py",
+                "speed.py", "brainjobs.py", "ownmods.py", "review.py", "sitecustomize.py",
                 "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
@@ -99,7 +99,7 @@ RUN_COUNTED = RUN_PROTECTED | {"build", "trial", "TRIAL", "status", "engineer_tu
 # ADDS any of them compared with the code as it was).
 _RISKY_IMPORTS = {"__main__", "builtins", "importlib", "ctypes", "atexit", "gc", "inspect", "runpy", "run",
                   "engineer", "selftest", "watchdog", "judge", "measure", "measure_blender", "dossier", "facts",
-                  "viewshot", "ownmods",
+                  "viewshot", "ownmods", "review",
                   "sitecustomize", "usercustomize"}
 _RISKY_NAMES = {"setattr", "delattr", "globals", "vars", "exec", "eval", "compile", "__import__", "breakpoint",
                 "__builtins__"}
@@ -837,7 +837,14 @@ class Bench:
         named = {"check": self.cur.get("shots"), "close": self.cur.get("close"), "photo": self.photo,
                  "before": self.first.get("shots"), "before_close": self.first.get("close"),
                  "cutaway": os.path.join(self.cur["dir"], "check", "cutaway.png")}
-        if what in named:
+        if what.startswith("step:"):                       # a picture from the review sheet, by its file name
+            want = what[5:].strip()
+            try:
+                steps = json.load(open(os.path.join(self.cur["dir"], "review.json"))).get("steps", [])
+            except Exception:
+                steps = []
+            p = next((f for s in steps for f in s.get("files", []) if os.path.basename(f) == want), None)
+        elif what in named:
             p = named[what]
         else:
             p = os.path.realpath(os.path.join(self.cur["dir"], what.removeprefix("build/")))
@@ -1361,6 +1368,14 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
              "With this message: the model all around, its close-ups, and the real photo. Follow the playbook: look "
              "closely (zoom in where each problem is), measure (mesh_info, pixel_stats on its maps), find the code "
              "that makes it, fix the cause in your code copy, rebuild, look again. Start by looking.")
+    try:                                                     # every step's own checks: start where it first went wrong
+        import review
+        if os.path.exists(os.path.join(build_dir, "review.json")):
+            first += ("\n\nThe build's review sheet - every step's own checks, in order (look at a step's pictures "
+                      "with look('step:<file name>')):\n" + review.load(build_dir).text() +
+                      "\nStart at the FIRST step that went wrong: fix that step's code, not the finished model.")
+    except Exception:
+        pass
     messages = [{"role": "system", "content": _system(b)}, {"role": "user", "content": first}]
     tools = tool_specs()
     fns = {"look": b.look, "pixel_stats": b.pixel_stats, "mesh_info": b.mesh_info, "list_files": b.list_files,

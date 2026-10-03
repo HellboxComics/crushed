@@ -91,6 +91,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
     os.makedirs(out_dir, exist_ok=True)
     said = ", ".join(f'"{w}"' for w in words)
     best = (-1, None, None, None)
+    tries = []                                         # each try's match and whether it changed (the review sheet)
     tip = ("A label like this normally carries: " + "; ".join(typical) + ".\n") if typical else ""
     lay = clean_layout(_ask(model, FIRST.format(product=product, w=w_mm, h=h_mm, words=said, typical=tip), [real_png]),
                        w_mm, h_mm, words)
@@ -102,6 +103,8 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
             c = {"match": 0, "fixes": [str(e)]}
         log(f"[texture] label round {r}: match {c.get('match')} - {'; '.join(map(str, c.get('fixes', [])))[:200]}")
         json.dump(lay, open(os.path.join(out_dir, f"round{r}.json"), "w"), indent=1)
+        tries.append({"round": r, "match": c.get("match"), "fixes": c.get("fixes", []), "changed": True})
+        json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
         if (c.get("match") or 0) > best[0]:
             best = (c.get("match") or 0, lay, png, mr)
         if (c.get("match") or 0) >= 9 or r == rounds:
@@ -115,6 +118,8 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
             break
         if json.dumps(new, sort_keys=True) == json.dumps(lay, sort_keys=True):
             log("[texture] the layout came back unchanged - no point drawing it again")
+            tries.append({"round": r + 1, "match": None, "changed": False})
+            json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
             break
         lay = new
     score, lay, _, _ = best

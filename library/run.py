@@ -457,36 +457,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             lay["width_mm"], lay["height_mm"] = w_mm, h_mm
             png, mr = labelart.render(lay, tex, px=4096)
         else:
-            # the real label from your photo AND the other photos of this very item (the dossier's): each unrolled
-            # flat (read the right way up) - your pick at the front, the side it can't show from another photo at
-            # the back - and the words on them, each confirmed by two reads
-            views = [picked] + same_design(picked, others, use, want=3, dossier=dos)
-            lab, cov = skin.compose(views, along, around)
-            say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
-                f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
-            lab = skin.continue_bands(lab, cov < 0.05)
-            real = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
-            if reads == "along":
-                real = real.rotate(90, expand=True)
-            real_png = os.path.join(tex, "real.png")
-            real.save(real_png)
-            make_room("judging")
-            parts = []
-            for vf in views:
-                try:
-                    got = skin.sides(vf, "along" if reads == "along" else "around") if vf.get("mask") else []
-                except Exception as e:
-                    say(f"[texture] {os.path.basename(vf['file'])}: could not unroll ({e})")
-                    got = []
-                for part in got:
-                    pp = os.path.join(tex, f"side{len(parts) + 1}.png")
-                    part.save(pp)
-                    parts.append(pp)
-            words = label_words(parts, use)
-            status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
-            import layout as LAY
-            png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
-                                      typical=kits.typical(kits.get(kit_name), "label"))
+            png, mr = round_label(cid, product, picked, others, use, dos, d, tex, along, around, reads, w_mm, h_mm,
+                                  kit_name)
         lab_png, mr_png = os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")
         img, mimg = Image.open(png).convert("RGB"), Image.open(mr).convert("RGB")
         if reads == "along":                                        # onto the UV map: the plus/top end up
@@ -593,6 +565,15 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         say(f"[check] viewer shots skipped ({e}) - the studio pictures are used")
     make_room("judging")
     verdict = check_model(cid, card, picked, d, glb, route, fam, shots, close, use)
+    try:                                                    # the last step on the review sheet
+        import review
+        probs = verdict.get("problems")
+        review.load(d).step("finished model (exact checks and the judge, each side next to its photo)",
+                            files=[shots] + ([close] if close else []),
+                            checks=[(f, False, str(probs)[:300]) for f in verdict.get("failed", [])] or
+                            [("every realism check", True, "")])
+    except Exception as e:
+        say(f"[review] {cid}: the sheet could not be finished ({e})")
     say(f"[check] {cid}: " + ("passed every realism check" if verdict.get("pass") else
                               "failed: " + ", ".join(verdict.get("failed", [])) + " - " + str(verdict.get("problems"))[:300]))
     if TRIAL:                                                # the engineer's test: the result, nothing sent anywhere
@@ -788,6 +769,65 @@ def whole_words(words):
         if w not in out:
             out.append(w)
     return out
+
+
+def round_label(cid, product, picked, others, use, dos, d, tex, along, around, reads, w_mm, h_mm, kit_name):
+    """A round item's label, made by your AI from the real photos: unrolled, words read twice, layout written and
+    drawn in exact type - every step on the review sheet with its own checks. -> (label png, metal/roughness png)"""
+    from PIL import Image
+    import kits
+    import skin
+    import review                                          # every step shows its work and checks itself
+    # the real label from your photo AND the other photos of this very item (the dossier's): each unrolled
+    # flat (read the right way up) - your pick at the front, the side it can't show from another photo at
+    # the back - and the words on them, each confirmed by two reads
+    views = [picked] + same_design(picked, others, use, want=3, dossier=dos)
+    lab, cov = skin.compose(views, along, around)
+    say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
+        f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
+    lab = skin.continue_bands(lab, cov < 0.05)
+    real = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
+    if reads == "along":
+        real = real.rotate(90, expand=True)
+    real_png = os.path.join(tex, "real.png")
+    real.save(real_png)
+    make_room("judging")
+    R = review.Sheet(d)
+    fl = review.front_length(cov)
+    seen_ok, seen_why = review.look_unrolled(real_png, picked["file"], product, use,
+                                             top="plus" if kit_name == "cylindrical_cell" else "top")
+    R.step("unrolled label (the photos' real pixels)", files=[real_png], checks=[
+        ("the main photo covers the whole length at the front", fl >= 0.9, f"{fl:.0%} of the length"),
+        ("the judge sees nothing stretched, doubled, foreign or metal in it", seen_ok, seen_why)])
+    parts = []
+    for vf in views:
+        try:
+            got = skin.sides(vf, "along" if reads == "along" else "around") if vf.get("mask") else []
+        except Exception as e:
+            say(f"[texture] {os.path.basename(vf['file'])}: could not unroll ({e})")
+            got = []
+        for part in got:
+            pp = os.path.join(tex, f"side{len(parts) + 1}.png")
+            part.save(pp)
+            parts.append(pp)
+    words = label_words(parts, use)
+    R.step("words on the label (each confirmed by two reads)", files=parts, checks=[
+        ("words were read", bool(words), f"{len(words)} words"),
+        ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])
+    status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
+    import layout as LAY
+    png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
+                              typical=kits.typical(kits.get(kit_name), "label"))
+    tries = jload(os.path.join(tex, "rounds.json"), [])
+    share = review.metal_share(mr)
+    R.step("label art (your AI's layout, drawn in exact type)",
+           files=[png] + [os.path.join(tex, f"round{t['round']}.png") for t in tries], checks=[
+               ("the best try matches the real label (7 or more of 10)", score >= 7, f"match {score}"),
+               ("the writer acted on each comparison (every try changed something, while not yet good)",
+                all(t.get("changed", True) for t in tries[1:]) or score >= 7,
+                "; ".join(f"try {t['round']}: match {t.get('match')}" for t in tries)),
+               ("metal ink is no more than a printed sleeve can have (60%)", share <= 0.6, f"{share:.0%} metal")])
+    return png, mr
 
 
 def run_blender(script, *args):

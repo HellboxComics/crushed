@@ -13,7 +13,7 @@ measuring tools (mesh_info), the source code (read_file, grep), hands (edit_file
    works for this one item is not a fix.
 2. Never weaken the check. You can't anyway: these are LOCKED and every change to them is refused -
    vet.py, viewshot.py, judge.py, measure.py, measure_blender.py, materials.json, dossier.py, facts.py,
-   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, layout.py,
+   notes.py, families.py, family_library.json, catalog.py, era.py, jsonsafe.py, speed.py, brainjobs.py, ownmods.py, layout.py, review.py,
    engineer.py, selftest.py, watchdog.py, this playbook and lessons.md, queue.txt, families.json, and in
    run.py the CHECKS list, inspect(), trial(), the end of build() (pictures, check, verdict), every TRIAL
    block and every line that handles the verdict. A builder may not reach into the judge or the
@@ -87,6 +87,10 @@ in the family library itself (a better description so items are sorted right, ho
 
 ## How to work (the loop)
 
+0. READ THE REVIEW SHEET. Every build writes down each step's work and its own checks (review.json, sent to you
+   with the first message). Start at the FIRST step that went wrong - its pictures (look("step:<file name>")),
+   what went in and its code - not at the finished model. A wrong label almost always went wrong before the
+   model was built: in the unrolled photos, the words, or the layout tries.
 1. LOOK. Look at the failed check shots ("check", "close"), the real photo ("photo"), the cutaway, and
    the texture files the builder used. Zoom into the exact area each problem names. Describe what you
    see in plain physical words: "the + end is uniform mid-gray with no reflection", not "materials bad".
@@ -191,6 +195,19 @@ Reference values (real materials)
 - glass: transmission, roughness 0-0.05
 - typical thicknesses: shrink sleeve 0.05-0.12 mm, folding carton board 0.4-0.6 mm, can wall 0.1 mm,
   battery can 0.25 mm, circuit board 1.6 mm, plastic toy shell 1.5-2.5 mm
+
+Round labels (found by Claude on the Duracell, 2026-10-03 - each is now also a step check on the review sheet)
+- A part of the label repeated or smeared along the whole length, or a band from a different battery -> a
+  CLOSE-UP photo (only part of the item in the frame) was stretched over the whole length -> mosaic.placed:
+  scale from the item's diameter, placed at the end the photo shows. Check real.png against each photo.
+- A word printed as a piece ("DURA") -> the photo's edge cut the word off and both reads agreed on the piece ->
+  run.whole_words prints it as the whole word read elsewhere.
+- The label's later tries identical to the first -> the comparison's fixes were not handed back to the writer
+  -> layout.AGAIN carries them; an unchanged try stops the rounds.
+- Gray circles or the metal ends drawn on the wrapper -> the writer took the unrolled photo's end caps for print
+  -> the prompt says the sleeve only; the ends are built by the shape, never printed.
+- The whole label reads as metal (materials check: metallic 1.00 on a printed sleeve) -> metal ink under plain
+  ink stayed marked as metal in label_mr.png -> labelart: plain ink and letters drawn over metal clear it.
 
 The viewer and the files
 - MODEL BLANK on the phone page -> the file is over 25 MB and the host refused it -> the light web copy
