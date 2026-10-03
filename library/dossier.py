@@ -267,11 +267,15 @@ def identity(card, picked, use, log=print):
 
 
 # ------------------------------------------------------------------ 2. the hunt for every side
-def queries(idn, route, need, done=()):
+def queries(idn, route, need, done=(), side_words=None):
     """Short, varied searches for the sides still needed: this exact item, a sister flavor in a nearby year, this
-    line in its decade. Never one that was already run."""
-    words = WORDS.get(route, WORDS["free"])
+    line in its decade. Never one that was already run. side_words: how this item's FAMILY names its sides (a
+    battery's top is its "positive end", not a "lid") - from the family library."""
+    words = dict(WORDS.get(route, WORDS["free"]), **(side_words or {}))
     line = (idn.get("line") or "").lower().replace("’", "'")
+    brand = (idn.get("brand") or "").lower().replace("’", "'")
+    if brand and brand.split()[0] not in line:                # the brand belongs in every search
+        line = f"{brand} {line}".strip()
     line2 = re.sub(r"[-']", " ", line).replace("  ", " ").strip()
     var = (idn.get("variant") or "").lower()
     y = idn.get("year")
@@ -293,6 +297,7 @@ def queries(idn, route, need, done=()):
             for q in (f"{y or ''} {line2} {var} {w0}", f"{line2} {s} {yy} {w0}" if s else "",
                       f"vintage {line if rnd == 0 else line2} {w1} {dec}"):
                 q = re.sub(r"\s+", " ", q).strip()
+                q = " ".join(dict.fromkeys(q.split()))       # a word once ("duracell duracell coppertop" -> once)
                 if q and q.lower() not in seen:
                     seen.add(q.lower())
                     out.append((f, q))
@@ -336,7 +341,13 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
     have = {p["file"] for p in dos["photos"]}
     done = [s["q"] for s in dos["searches"]] + dos.get("searched_before", []) + [p.get("query", "") for p in dos["photos"]]
     left = budget - len(dos["searches"])
-    for face, q in queries(dos["identity"], dos["route"], need, done)[:max(0, left)]:
+    side_words = None
+    try:                                                      # the family's own words for its sides
+        import families
+        side_words = families.get(dos.get("family_lib") or "general").get("side_words")
+    except Exception:
+        pass
+    for face, q in queries(dos["identity"], dos["route"], need, done, side_words)[:max(0, left)]:
         try:
             hits = G.search_full(q, most=12, min_side=500, log=log)
         except Exception as e:
@@ -707,7 +718,8 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     route = route_of(card)
     dos = old if resume else {
         "cid": cid, "version": VERSION, "made_at": time.time(), "inputs": sig, "route": route,
-        "family": card.get("family", ""), "picked": pick, "identity": {}, "size_m": card.get("size"), "faces": {},
+        "family": card.get("family", ""), "family_lib": (card.get("family_lib") or {}).get("family", ""),
+        "picked": pick, "identity": {}, "size_m": card.get("size"), "faces": {},
         "facts": {}, "photos": [], "searches": [], "gaps": [], "done": False}
     if not resume and old:                                    # never lose finds: every photo found before comes along
         keep = ("file", "url", "page", "title", "query", "source", "size", "phash")

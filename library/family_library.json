@@ -1,143 +1,634 @@
 {
  "_about": "THE FAMILY LIBRARY: every kind of object the asset maker knows how to make, and how. Your AI looks at the picked photo and decides which family an item belongs to (library/families.py). The family then decides everything that follows: which sides to hunt, which facts to look up, how it is made in a factory (the recipe), which builder makes it, and which exact checks it must pass. A family whose builder does not exist yet sends the item to the general one-off builder (parts), never to a wrong builder - nothing is ever faked onto a box. builder_status: ready = proven on real items; partial = works but known gaps (listed); missing = no builder yet.",
- "_checks_all": ["size", "blank_faces", "text", "materials", "mesh", "inside_fit", "web_copy", "viewer"],
+ "_checks_all": [
+  "size",
+  "blank_faces",
+  "text",
+  "materials",
+  "mesh",
+  "inside_fit",
+  "web_copy",
+  "viewer"
+ ],
  "families": {
   "folding_carton": {
    "what": "a printed paperboard box folded from one flat sheet, with tuck or glued flaps",
-   "looks_like": ["cereal box", "toaster pastry box", "cracker box", "candy box", "toy or game box made of thin card", "fireworks box"],
-   "not": ["a rigid plastic case", "a corrugated shipping box", "a zippered or fabric bag", "a book"],
-   "route": "box", "builder": "carton", "builder_status": "ready", "recipe": "folding_carton",
-   "faces": ["front", "back", "left", "right", "top", "bottom"],
-   "facts": ["upc", "net_weight", "count", "maker_lines", "legal_lines", "nutrition", "ingredients", "contents"],
-   "checks": ["barcode"],
-   "judge_notes": ["every side printed edge to edge like the real carton", "flaps and creases where the real carton has them", "the barcode on the side the real carton has it"]
+   "looks_like": [
+    "cereal box",
+    "toaster pastry box",
+    "cracker box",
+    "candy box",
+    "toy or game box made of thin card",
+    "fireworks box"
+   ],
+   "not": [
+    "a rigid plastic case",
+    "a corrugated shipping box",
+    "a zippered or fabric bag",
+    "a book"
+   ],
+   "route": "box",
+   "builder": "carton",
+   "builder_status": "ready",
+   "recipe": "folding_carton",
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "upc",
+    "net_weight",
+    "count",
+    "maker_lines",
+    "legal_lines",
+    "nutrition",
+    "ingredients",
+    "contents"
+   ],
+   "checks": [
+    "barcode"
+   ],
+   "judge_notes": [
+    "every side printed edge to edge like the real carton",
+    "flaps and creases where the real carton has them",
+    "the barcode on the side the real carton has it"
+   ]
   },
   "rigid_case": {
    "what": "a hard plastic case or clamshell that holds media or a product",
-   "looks_like": ["VHS clamshell", "audio cassette case", "CD jewel case", "game cartridge case", "DVD case"],
-   "not": ["a cardboard box", "the tape or disc itself"],
-   "route": "box", "builder": "box", "builder_status": "partial", "recipe": "",
-   "gaps": ["built as a solid block: no hinge, no hollow inside, no clear sleeve over the printed insert"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"],
-   "facts": ["upc", "maker_lines", "legal_lines"],
-   "checks": ["barcode"]
+   "looks_like": [
+    "VHS clamshell",
+    "audio cassette case",
+    "CD jewel case",
+    "game cartridge case",
+    "DVD case"
+   ],
+   "not": [
+    "a cardboard box",
+    "the tape or disc itself"
+   ],
+   "route": "box",
+   "builder": "box",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "built as a solid block: no hinge, no hollow inside, no clear sleeve over the printed insert"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "upc",
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": [
+    "barcode"
+   ]
   },
   "media_cartridge": {
    "what": "a tape or cartridge: a molded plastic shell with a label and moving parts inside",
-   "looks_like": ["audio cassette tape", "VHS tape", "video game cartridge", "8-track", "floppy disk"],
-   "not": ["the case it is sold in"],
-   "route": "free", "builder": "assembly", "builder_status": "partial", "recipe": "",
-   "gaps": ["built from parts by the general builder until a cassette/VHS shell builder exists"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"],
-   "facts": ["maker_lines", "legal_lines"], "checks": []
+   "looks_like": [
+    "audio cassette tape",
+    "VHS tape",
+    "video game cartridge",
+    "8-track",
+    "floppy disk"
+   ],
+   "not": [
+    "the case it is sold in"
+   ],
+   "route": "free",
+   "builder": "assembly",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "built from parts by the general builder until a cassette/VHS shell builder exists"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": []
   },
   "printed_circuit_card": {
    "what": "an electronic circuit board with chips and parts on it",
-   "looks_like": ["graphics card", "sound card", "RAM stick", "modem card", "game cartridge board"],
-   "not": ["a device with a plastic shell around the board"],
-   "route": "pcb", "builder": "pcb", "builder_status": "partial", "recipe": "printed_circuit_card",
-   "gaps": ["chips are boxes with the photo on top (no leads/pins)", "the solder side is made up", "the bracket is a flat plate"],
-   "faces": ["top", "bottom"],
-   "facts": ["chip_markings", "maker_lines", "legal_lines"],
-   "checks": ["text"],
-   "judge_notes": ["chip markings sharp and legible", "gold fingers read as gold metal", "the bracket reads as bent steel"]
+   "looks_like": [
+    "graphics card",
+    "sound card",
+    "RAM stick",
+    "modem card",
+    "game cartridge board"
+   ],
+   "not": [
+    "a device with a plastic shell around the board"
+   ],
+   "route": "pcb",
+   "builder": "pcb",
+   "builder_status": "partial",
+   "recipe": "printed_circuit_card",
+   "gaps": [
+    "chips are boxes with the photo on top (no leads/pins)",
+    "the solder side is made up",
+    "the bracket is a flat plate"
+   ],
+   "faces": [
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "chip_markings",
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": [
+    "text"
+   ],
+   "judge_notes": [
+    "chip markings sharp and legible",
+    "gold fingers read as gold metal",
+    "the bracket reads as bent steel"
+   ],
+   "side_words": {
+    "top": [
+     "card",
+     "board front"
+    ],
+    "bottom": [
+     "card back",
+     "solder side"
+    ]
+   }
   },
   "cylindrical_cell": {
    "what": "a round battery cell",
-   "looks_like": ["AA battery", "AAA battery", "C battery", "D battery", "9-volt is NOT this (it is a box shape)"],
-   "not": ["a 9-volt battery", "a button cell", "a battery pack"],
-   "route": "round", "builder": "lathe", "builder_status": "ready", "recipe": "alkaline_cylindrical_cell",
-   "faces": ["label", "top", "bottom"],
-   "facts": ["maker_lines", "legal_lines"],
+   "looks_like": [
+    "AA battery",
+    "AAA battery",
+    "C battery",
+    "D battery",
+    "9-volt is NOT this (it is a box shape)"
+   ],
+   "not": [
+    "a 9-volt battery",
+    "a button cell",
+    "a battery pack"
+   ],
+   "route": "round",
+   "builder": "lathe",
+   "builder_status": "ready",
+   "recipe": "alkaline_cylindrical_cell",
+   "faces": [
+    "label",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines",
+    "legal_lines"
+   ],
    "checks": [],
-   "judge_notes": ["the label covers the can completely and rolls over both shoulders: no bare steel ring showing outside the label", "the + end is a raised steel button", "a thin overlap seam runs down the side"]
+   "judge_notes": [
+    "the label covers the can completely and rolls over both shoulders: no bare steel ring showing outside the label",
+    "the + end is a raised steel button",
+    "a thin overlap seam runs down the side"
+   ],
+   "side_words": {
+    "label": [
+     "battery",
+     "battery label back"
+    ],
+    "top": [
+     "battery positive end",
+     "battery top terminal"
+    ],
+    "bottom": [
+     "battery negative end",
+     "battery bottom"
+    ]
+   }
   },
   "beverage_can": {
    "what": "a drawn aluminum or steel can for drinks or food",
-   "looks_like": ["soda can", "beer can", "energy drink can", "soup can", "tin can"],
-   "not": ["a plastic bottle", "a paint can with a lid"],
-   "route": "round", "builder": "lathe", "builder_status": "partial", "recipe": "aluminum_beverage_can",
-   "gaps": ["no pull tab or countersink detail yet"],
-   "faces": ["label", "top", "bottom"],
-   "facts": ["upc", "net_weight", "maker_lines", "legal_lines", "nutrition", "ingredients"],
-   "checks": ["barcode"]
+   "looks_like": [
+    "soda can",
+    "beer can",
+    "energy drink can",
+    "soup can",
+    "tin can"
+   ],
+   "not": [
+    "a plastic bottle",
+    "a paint can with a lid"
+   ],
+   "route": "round",
+   "builder": "lathe",
+   "builder_status": "partial",
+   "recipe": "aluminum_beverage_can",
+   "gaps": [
+    "no pull tab or countersink detail yet"
+   ],
+   "faces": [
+    "label",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "upc",
+    "net_weight",
+    "maker_lines",
+    "legal_lines",
+    "nutrition",
+    "ingredients"
+   ],
+   "checks": [
+    "barcode"
+   ],
+   "side_words": {
+    "label": [
+     "can",
+     "can back"
+    ],
+    "top": [
+     "can top pull tab",
+     "can lid"
+    ],
+    "bottom": [
+     "can bottom",
+     "can base"
+    ]
+   }
   },
   "bottle_or_jar": {
    "what": "a bottle or jar with a cap or lid",
-   "looks_like": ["soda bottle", "shampoo bottle", "glue bottle", "jar of food", "nail polish bottle"],
-   "not": ["a can"],
-   "route": "round", "builder": "lathe", "builder_status": "partial", "recipe": "",
-   "gaps": ["cap, body and label are separate parts only when the profile is traced in parts", "glass and clear plastic are not see-through yet"],
-   "faces": ["label", "top", "bottom"],
-   "facts": ["upc", "net_weight", "maker_lines", "legal_lines", "nutrition", "ingredients"],
-   "checks": ["barcode"]
+   "looks_like": [
+    "soda bottle",
+    "shampoo bottle",
+    "glue bottle",
+    "jar of food",
+    "nail polish bottle"
+   ],
+   "not": [
+    "a can"
+   ],
+   "route": "round",
+   "builder": "lathe",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "cap, body and label are separate parts only when the profile is traced in parts",
+    "glass and clear plastic are not see-through yet"
+   ],
+   "faces": [
+    "label",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "upc",
+    "net_weight",
+    "maker_lines",
+    "legal_lines",
+    "nutrition",
+    "ingredients"
+   ],
+   "checks": [
+    "barcode"
+   ],
+   "side_words": {
+    "label": [
+     "bottle",
+     "bottle back label"
+    ],
+    "top": [
+     "bottle cap",
+     "cap top"
+    ],
+    "bottom": [
+     "bottle bottom",
+     "bottle base"
+    ]
+   }
   },
   "flexible_wrapper": {
    "what": "a thin sealed wrapper or pouch around a product (crimped or pillow-sealed ends)",
-   "looks_like": ["candy bar wrapper", "chip bag", "taffy bar", "gum pack wrapper", "ramen pack"],
-   "not": ["a box", "a zippered bag"],
-   "route": "free", "builder": "assembly", "builder_status": "partial", "recipe": "",
-   "gaps": ["built from parts by the general builder until a pillow-pack builder exists"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"],
-   "facts": ["upc", "net_weight", "maker_lines", "legal_lines", "nutrition", "ingredients"],
-   "checks": ["barcode"]
+   "looks_like": [
+    "candy bar wrapper",
+    "chip bag",
+    "taffy bar",
+    "gum pack wrapper",
+    "ramen pack"
+   ],
+   "not": [
+    "a box",
+    "a zippered bag"
+   ],
+   "route": "free",
+   "builder": "assembly",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "built from parts by the general builder until a pillow-pack builder exists"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "upc",
+    "net_weight",
+    "maker_lines",
+    "legal_lines",
+    "nutrition",
+    "ingredients"
+   ],
+   "checks": [
+    "barcode"
+   ]
   },
   "soft_bag": {
    "what": "a fabric or vinyl bag, often zippered, sometimes holding a kit",
-   "looks_like": ["zippered emergency kit bag", "pencil case", "lunch bag", "fanny pack", "backpack"],
-   "not": ["a cardboard box", "a hard case"],
-   "route": "free", "builder": "assembly", "builder_status": "partial", "recipe": "",
-   "gaps": ["built from parts by the general builder (body, zipper, handle, contents)"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"],
-   "facts": ["maker_lines", "contents"], "checks": []
+   "looks_like": [
+    "zippered emergency kit bag",
+    "pencil case",
+    "lunch bag",
+    "fanny pack",
+    "backpack"
+   ],
+   "not": [
+    "a cardboard box",
+    "a hard case"
+   ],
+   "route": "free",
+   "builder": "assembly",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "built from parts by the general builder (body, zipper, handle, contents)"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines",
+    "contents"
+   ],
+   "checks": []
   },
   "molded_device": {
    "what": "a gadget or toy with a hard molded plastic shell, buttons and parts",
-   "looks_like": ["Walkman", "Tamagotchi", "Game Boy", "calculator", "pager", "remote control", "flashlight"],
-   "not": ["a soft plush toy", "a bare circuit board"],
-   "route": "free", "builder": "assembly", "builder_status": "partial", "recipe": "",
-   "gaps": ["built from parts by the general builder; organic curves need the organic builder (Hunyuan)"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"],
-   "facts": ["maker_lines", "legal_lines"], "checks": []
+   "looks_like": [
+    "Walkman",
+    "Tamagotchi",
+    "Game Boy",
+    "calculator",
+    "pager",
+    "remote control",
+    "flashlight"
+   ],
+   "not": [
+    "a soft plush toy",
+    "a bare circuit board"
+   ],
+   "route": "free",
+   "builder": "assembly",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "built from parts by the general builder; organic curves need the organic builder (Hunyuan)"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": []
   },
   "clothing": {
    "what": "a garment",
-   "looks_like": ["pants", "shirt", "jacket", "hat", "socks"],
-   "not": ["shoes"],
-   "route": "free", "builder": "organic", "builder_status": "missing", "recipe": "",
-   "gaps": ["needs the organic builder (Hunyuan) working on this Mac, plus cloth thickness and seams"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"], "facts": ["maker_lines"], "checks": []
+   "looks_like": [
+    "pants",
+    "shirt",
+    "jacket",
+    "hat",
+    "socks"
+   ],
+   "not": [
+    "shoes"
+   ],
+   "route": "free",
+   "builder": "organic",
+   "builder_status": "missing",
+   "recipe": "",
+   "gaps": [
+    "needs the organic builder (Hunyuan) working on this Mac, plus cloth thickness and seams"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines"
+   ],
+   "checks": [],
+   "side_words": {
+    "back": [
+     "back",
+     "back view"
+    ],
+    "left": [
+     "side",
+     "side view"
+    ],
+    "right": [
+     "side",
+     "side view"
+    ],
+    "top": [
+     "waistband",
+     "collar"
+    ],
+    "bottom": [
+     "hem",
+     "bottom"
+    ]
+   }
   },
   "footwear": {
    "what": "a shoe or boot",
-   "looks_like": ["sneaker", "skate shoe", "boot", "sandal"],
+   "looks_like": [
+    "sneaker",
+    "skate shoe",
+    "boot",
+    "sandal"
+   ],
    "not": [],
-   "route": "free", "builder": "organic", "builder_status": "missing", "recipe": "",
-   "gaps": ["needs the organic builder (Hunyuan), then sole / upper / laces as separate parts"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"], "facts": ["maker_lines"], "checks": []
+   "route": "free",
+   "builder": "organic",
+   "builder_status": "missing",
+   "recipe": "",
+   "gaps": [
+    "needs the organic builder (Hunyuan), then sole / upper / laces as separate parts"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines"
+   ],
+   "checks": [],
+   "side_words": {
+    "back": [
+     "shoe heel",
+     "heel back"
+    ],
+    "left": [
+     "shoe side",
+     "inside side"
+    ],
+    "right": [
+     "shoe side",
+     "outside side"
+    ],
+    "top": [
+     "shoe top view",
+     "laces top"
+    ],
+    "bottom": [
+     "shoe sole",
+     "outsole bottom"
+    ]
+   }
   },
   "organic_toy": {
    "what": "a toy or figure with soft or sculpted organic shapes",
-   "looks_like": ["Furby", "plush toy", "action figure", "doll", "rubber duck"],
-   "not": ["a boxy gadget"],
-   "route": "free", "builder": "organic", "builder_status": "missing", "recipe": "",
-   "gaps": ["needs the organic builder (Hunyuan) working on this Mac"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"], "facts": ["maker_lines", "legal_lines"], "checks": []
+   "looks_like": [
+    "Furby",
+    "plush toy",
+    "action figure",
+    "doll",
+    "rubber duck"
+   ],
+   "not": [
+    "a boxy gadget"
+   ],
+   "route": "free",
+   "builder": "organic",
+   "builder_status": "missing",
+   "recipe": "",
+   "gaps": [
+    "needs the organic builder (Hunyuan) working on this Mac"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": []
   },
   "flat_printed": {
    "what": "a thin printed sheet or card",
-   "looks_like": ["trading card", "ticket", "sticker", "flyer", "CD sleeve", "coaster", "postcard"],
-   "not": ["a box", "a book"],
-   "route": "flat", "builder": "box", "builder_status": "ready", "recipe": "",
-   "faces": ["front", "back"], "facts": ["maker_lines", "legal_lines"], "checks": []
+   "looks_like": [
+    "trading card",
+    "ticket",
+    "sticker",
+    "flyer",
+    "CD sleeve",
+    "coaster",
+    "postcard"
+   ],
+   "not": [
+    "a box",
+    "a book"
+   ],
+   "route": "flat",
+   "builder": "box",
+   "builder_status": "ready",
+   "recipe": "",
+   "faces": [
+    "front",
+    "back"
+   ],
+   "facts": [
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": []
   },
   "general": {
    "what": "anything that fits no other family: a one-off, built from its parts",
    "looks_like": [],
    "not": [],
-   "route": "free", "builder": "assembly", "builder_status": "partial", "recipe": "",
-   "gaps": ["simple shapes (boxes, cylinders, spun profiles, sheets, tubes) are built from the photo; organic parts need the organic builder (Hunyuan)"],
-   "faces": ["front", "back", "left", "right", "top", "bottom"], "facts": ["maker_lines", "legal_lines"], "checks": []
+   "route": "free",
+   "builder": "assembly",
+   "builder_status": "partial",
+   "recipe": "",
+   "gaps": [
+    "simple shapes (boxes, cylinders, spun profiles, sheets, tubes) are built from the photo; organic parts need the organic builder (Hunyuan)"
+   ],
+   "faces": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "top",
+    "bottom"
+   ],
+   "facts": [
+    "maker_lines",
+    "legal_lines"
+   ],
+   "checks": []
   }
- }
+ },
+ "_side_words": "side_words: how collectors and sellers name each side of this kind of thing in a search (the dossier's hunt uses them instead of box words)"
 }
