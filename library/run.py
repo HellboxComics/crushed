@@ -1960,7 +1960,23 @@ def retry_due(cid, v, tries, now):
         at = float(v.get("at") or 0)
     except (TypeError, ValueError):
         at = 0.0
+    if step.startswith("stopped") and at < code_time():
+        wait = 0                                    # it stopped on older code: a fix may be in - tried again now
     return len(today) < RETRIES_PER_DAY and now - at >= wait
+
+
+_CODE_TIME = []
+
+
+def code_time():
+    """When the code this run uses was made (its git commit time; 0 if unknown)."""
+    if not _CODE_TIME:
+        try:
+            _CODE_TIME.append(float(subprocess.run(["git", "log", "-1", "--format=%ct"], cwd=ROOT, capture_output=True,
+                                                   text=True, timeout=20).stdout.strip() or 0))
+        except Exception:
+            _CODE_TIME.append(0.0)
+    return _CODE_TIME[0]
 
 
 def note_retry(cid):
@@ -1985,7 +2001,8 @@ def note_retry(cid):
 def queue(n):
     """The next n items to make, in the order of library/queue.txt (one item per line), skipping ones done and
     ones waiting on you (a pick or a Keep/Redo you haven't given yet). An item that stopped is tried again after
-    1 hour, one that failed the realism check after 6 hours (each at most 3 times a day)."""
+    1 hour (right away when newer code has arrived since), one that failed the realism check after 6 hours (each at
+    most 3 times a day)."""
     q = [l.strip() for l in open(os.path.join(HERE, "queue.txt")) if l.strip() and not l.startswith("#")] \
         if os.path.exists(os.path.join(HERE, "queue.txt")) else []
     st = read_status()
