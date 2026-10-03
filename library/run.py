@@ -277,6 +277,7 @@ def pipeline(cid, redo=False):
         for f in todo[careful:]:
             f["vet"] = dict(f["quick"], only_quick=True)       # (judged by the quick look only)
         todo = todo[:careful]
+        _atomic_json(vj, found)                                  # saved as it goes: a restart keeps every look
     looked = [0]
 
     def careful_done(i, res):                                 # (several at once when the brain server allows it)
@@ -285,6 +286,7 @@ def pipeline(cid, redo=False):
         looked[0] += 1
         status(cid, step=f"3/7 {use} ranks the best photos: {looked[0]} of {len(todo)}")
         say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
+        _atomic_json(vj, found)
     V.parallel(lambda f: V.vet(f["file"], disp, use=use, think=True, card=card), todo, careful_done)
     json.dump(found, open(vj, "w"), indent=1)
 
@@ -311,6 +313,15 @@ def pipeline(cid, redo=False):
     cands.sort(key=lambda f: -rank(f))
     auto_pick(cid, cands[:9], d)                              # a clear winner is picked without asking you
     picked = your_pick(cid, product, cands[:9], d)
+    if isinstance(picked, dict):
+        mine = jload(os.path.join(HB, "picks.json"), {})
+        st_now = read_status()
+        yours = [c for c, p in mine.items() if c != cid and isinstance(p, dict) and not p.get("auto")
+                 and p.get("pick") not in (None, "none")
+                 and str((st_now.get(c) or {}).get("step", "")).startswith("waiting for your pick")]
+        if yours:                                                 # you picked another item first: that one builds
+            status(cid, step="picked - builds right after the item you picked")   # first, this one right after
+            return
     if picked == "none":                                          # you said none: dig deeper, then ask again
         return dig_deeper()
     if not picked:
@@ -1939,6 +1950,8 @@ def queue(n):
         if step.startswith("waiting for your Keep") and cid not in ap:
             continue
         out.append(cid)
+    # an item you have just answered on your phone (a pick, "none") goes first: you are waiting on it
+    out.sort(key=lambda c: 0 if c in picks or c in ap else 1)
     return out[:n]
 
 
