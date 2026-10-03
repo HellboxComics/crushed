@@ -56,6 +56,63 @@
     "every side printed edge to edge like the real carton",
     "flaps and creases where the real carton has them",
     "the barcode on the side the real carton has it"
+   ],
+   "zones": [
+    {
+     "name": "front",
+     "kind": "rect",
+     "typical": [
+      "the brand logo",
+      "the product name and flavor",
+      "the product picture",
+      "the count and net weight"
+     ]
+    },
+    {
+     "name": "back",
+     "kind": "rect",
+     "typical": [
+      "the brand and product name",
+      "a promotion, game, recipe or product story of that era",
+      "the product picture",
+      "the net weight"
+     ]
+    },
+    {
+     "name": "left",
+     "kind": "rect",
+     "typical": [
+      "the Nutrition Facts panel (in that year's format)",
+      "the ingredients"
+     ]
+    },
+    {
+     "name": "right",
+     "kind": "rect",
+     "typical": [
+      "the brand logo",
+      "the maker's 'distributed by' name and address",
+      "copyright / trademark / recycled-carton lines"
+     ]
+    },
+    {
+     "name": "top",
+     "kind": "rect",
+     "typical": [
+      "the brand logo and product name on the flap",
+      "'to open' / 'to close' instructions",
+      "a recycled-paper seal"
+     ]
+    },
+    {
+     "name": "bottom",
+     "kind": "rect",
+     "typical": [
+      "the barcode (UPC)",
+      "carton and plant codes",
+      "copyright / recycled-carton lines"
+     ]
+    }
    ]
   },
   "rigid_case": {
@@ -223,7 +280,82 @@
      "battery negative end",
      "battery bottom"
     ]
-   }
+   },
+   "template": "cell",
+   "variant_default": "AA",
+   "variants": {
+    "AA": {
+     "size_mm": [
+      14.5,
+      14.5,
+      50.5
+     ],
+     "button_mm": [
+      5.5,
+      1.0
+     ],
+     "source": "IEC 60086-2 LR6 (the measured AA master spec)"
+    },
+    "AAA": {
+     "size_mm": [
+      10.5,
+      10.5,
+      44.5
+     ],
+     "button_mm": [
+      3.8,
+      0.8
+     ],
+     "source": "en.wikipedia.org/wiki/AAA_battery (IEC LR03): 10.5 x 44.5 mm, button max 3.8 mm across, min 0.8 mm high"
+    },
+    "C": {
+     "size_mm": [
+      26.2,
+      26.2,
+      50.0
+     ],
+     "source": "en.wikipedia.org/wiki/C_battery: 26.2 x 50 mm (button not given: scaled from the AA)"
+    },
+    "D": {
+     "size_mm": [
+      33.2,
+      33.2,
+      61.5
+     ],
+     "source": "en.wikipedia.org/wiki/D_battery: nominal 33.2 x 61.5 mm (button not given: scaled from the AA)"
+    }
+   },
+   "zones": [
+    {
+     "name": "label",
+     "kind": "wrap",
+     "typical": [
+      "the brand logo",
+      "the size (AA, AAA, C, D)",
+      "the chemistry and voltage (ALKALINE, 1.5 V)",
+      "the model numbers (e.g. MN1500 / LR6)",
+      "a date code or 'best if installed by' date",
+      "the maker's name and city",
+      "a caution line",
+      "a + mark at the plus end",
+      "any tester or feature of that era (e.g. a PowerCheck strip with test dots)"
+     ]
+    },
+    {
+     "name": "top",
+     "kind": "disc",
+     "typical": [
+      "bare plated steel with the raised + button and pressed rings"
+     ]
+    },
+    {
+     "name": "bottom",
+     "kind": "disc",
+     "typical": [
+      "bare plated steel, flat, with pressed rings"
+     ]
+    }
+   ]
   },
   "beverage_can": {
    "what": "a drawn aluminum or steel can for drinks or food",
@@ -274,7 +406,49 @@
      "can bottom",
      "can base"
     ]
-   }
+   },
+   "variants": {
+    "12 fl oz": {
+     "size_mm": [
+      66.1,
+      66.1,
+      122.7
+     ],
+     "lid_mm": 54.1,
+     "source": "Can Manufacturers Institute 202 can standard (cancentral.com): body 2.602 in across, flange height 4.812 in; en.wikipedia.org/wiki/Drink_can: 4.83 in high, 2.13 in across at the lid, 2.6 in at the body"
+    }
+   },
+   "variant_default": "12 fl oz",
+   "zones": [
+    {
+     "name": "label",
+     "kind": "wrap",
+     "typical": [
+      "the brand logo (often twice, opposite sides)",
+      "the flavor / variety",
+      "the volume (12 FL OZ / 355 mL)",
+      "the Nutrition Facts panel",
+      "the ingredients",
+      "the barcode",
+      "the maker's or bottler's name and address",
+      "a recycling / deposit line (e.g. CA CASH REFUND, ME 5¢)"
+     ]
+    },
+    {
+     "name": "top",
+     "kind": "disc",
+     "typical": [
+      "bare aluminum lid with the pull tab and score line"
+     ]
+    },
+    {
+     "name": "bottom",
+     "kind": "disc",
+     "typical": [
+      "bare aluminum dome, sometimes an ink-jet date code"
+     ]
+    }
+   ]
   },
   "bottle_or_jar": {
    "what": "a bottle or jar with a cap or lid",

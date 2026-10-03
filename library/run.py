@@ -406,11 +406,20 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         import metal
         import outline
         import skin
+        import kits
         master = jload(os.path.join(HERE, "families.json"), {}).get(cid, {})
         sp = os.path.join(HERE, "shapes", "specs", master.get("shape", "") + ".json")
-        if master.get("shape") and os.path.exists(sp):
-            spec = json.load(open(sp))                                # a measured master (the AA battery)
-            if spec.get("construction"):                               # measured by hand: its build is the truth
+        kit_name = (card.get("family_lib") or {}).get("family", "")
+        variant = kits.variant_of(kits.get(kit_name), card)
+        kspec = None if master.get("shape") else kits.spec_for(kit_name, variant)
+        if master.get("shape") and os.path.exists(sp) or kspec:
+            # a thing with a standard size: its exact shape from the kit (a battery's AA / AAA / C / D), never traced
+            spec = json.load(open(sp)) if master.get("shape") and os.path.exists(sp) else kspec
+            if kspec:
+                say(f"[kit] {cid}: {kit_name} {variant} - the exact shape from its standard size ({spec['name']})")
+                sp = os.path.join(d, "shape.json")
+                json.dump(spec, open(sp, "w"), indent=1)
+            if spec.get("construction"):                               # measured: its build is the truth
                 card["construction"] = spec["construction"]
         else:
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
