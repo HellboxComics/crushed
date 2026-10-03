@@ -360,7 +360,7 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
                     log=say)
     say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
     status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
-    j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say)
+    j = judge.sides(cid, m.get("renders_lit") or m["renders"], dos_now, use, route, product=product, log=say)
     verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
     looked = verdict.get("problems")
     looked = looked if isinstance(looked, list) else ([str(looked)] if looked else [])

@@ -223,6 +223,7 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
         checks["model_measured"] = _c(False, f"the model could not be measured in Blender: {e}")
         return _finish(checks, renders)
     renders = {k: v["file"] for k, v in mb["renders"].items()}
+    renders_lit = {k: v["file"] for k, v in (mb.get("renders_lit") or {}).items()}
 
     # size
     want = [x for x in (dos.get("size_m") or [])[:3] if x]
@@ -398,13 +399,14 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
             if a.std() < 4:
                 bad.append(f"{os.path.basename(s)}: blank")
         checks["viewer"] = _c(not bad, "the phone viewer shows the model" if not bad else "; ".join(bad))
-    return _finish(checks, renders, mb)
+    return _finish(checks, renders, mb, renders_lit)
 
 
-def _finish(checks, renders, mb=None):
+def _finish(checks, renders, mb=None, renders_lit=None):
     failed = [k for k, v in checks.items() if not v["pass"]]
-    return {"pass": not failed, "checks": checks, "renders": renders, "failed": failed,
-            "problems": [f"{k}: {checks[k]['why']}" for k in failed], "parts": (mb or {}).get("parts", {})}
+    return {"pass": not failed, "checks": checks, "renders": renders, "renders_lit": renders_lit or {},
+            "failed": failed, "problems": [f"{k}: {checks[k]['why']}" for k in failed],
+            "parts": (mb or {}).get("parts", {})}
 
 
 if __name__ == "__main__":

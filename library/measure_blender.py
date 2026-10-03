@@ -154,32 +154,49 @@ if inside:
 else:
     res["inside_fit"] = {"rays_hitting": 0, "inside_parts": [], "showing_through": {}}
 
-# ONE FLAT-LIT, STRAIGHT-ON PICTURE OF EACH SIDE
-# Unlit: every material shows exactly its printed color (an emission of its base color or base-color map), so the
-# pictures read what is PRINTED, not the lighting. Opaque: a map's alpha never makes a label see-through.
-for m in bpy.data.materials:
-    if not m.use_nodes:
-        continue
-    nt = m.node_tree
-    p = next((n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"), None)
-    outn = next((n for n in nt.nodes if n.type == "OUTPUT_MATERIAL"), None)
-    if not p or not outn:
-        continue
-    em = nt.nodes.new("ShaderNodeEmission")
-    bc = p.inputs["Base Color"]
-    if bc.is_linked:
-        nt.links.new(bc.links[0].from_socket, em.inputs["Color"])
-    else:
-        em.inputs["Color"].default_value = bc.default_value
-    nt.links.new(em.outputs["Emission"], outn.inputs["Surface"])
-    try:
-        m.blend_method = "OPAQUE"
-    except Exception:
-        pass
+# TWO STRAIGHT-ON PICTURES OF EACH SIDE
+# 1. LIT, with the real materials and a soft studio light: what the judge compares with the real photo - a bare steel
+#    end with its raised button, a brushed copper band, a glossy sleeve. (2026-10-03: the judge was shown the unlit
+#    picture, saw a flat gray disc where the + button is, and failed every Duracell for "no raised button".)
+# 2. UNLIT: every material shows exactly its printed color (an emission of its base color or base-color map), so the
+#    exact checks read what is PRINTED, not the lighting. Opaque: a map's alpha never makes a label see-through.
+def _studio():
+    import math
+    # a key, a fill, a back light, and two low raking lights (one from each end) that throw the shadow that shows a
+    # raised button or a pressed ring on an end seen straight-on
+    # (no light sits straight above or below: a polished end would mirror it into the end-on camera and wash out)
+    for loc, e, sz in (((0.45, -0.45, 0.22), 22, 0.5), ((-0.5, -0.2, 0.15), 12, 0.6), ((0.2, 0.5, 0.18), 14, 0.6),
+                       ((0.55, 0.1, 0.06), 12, 0.25), ((-0.5, -0.1, -0.06), 12, 0.25)):
+        L = bpy.data.lights.new("studio", "AREA")
+        L.energy, L.size = e, sz
+        o = bpy.data.objects.new("studio", L)
+        scene.collection.objects.link(o)
+        o.location = c + Vector(loc) * max(size.length * 6, 0.6) / 0.6
+        o.rotation_euler = (-Vector(loc)).to_track_quat("-Z", "Y").to_euler()
+        yield o
+
+
+def _unlit():
+    for m in bpy.data.materials:
+        if not m.use_nodes:
+            continue
+        nt = m.node_tree
+        p = next((n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"), None)
+        outn = next((n for n in nt.nodes if n.type == "OUTPUT_MATERIAL"), None)
+        if not p or not outn:
+            continue
+        em = nt.nodes.new("ShaderNodeEmission")
+        bc = p.inputs["Base Color"]
+        if bc.is_linked:
+            nt.links.new(bc.links[0].from_socket, em.inputs["Color"])
+        else:
+            em.inputs["Color"].default_value = bc.default_value
+        nt.links.new(em.outputs["Emission"], outn.inputs["Surface"])
+        try:
+            m.blend_method = "OPAQUE"
+        except Exception:
+            pass
 scene.render.engine = "CYCLES"
-scene.cycles.samples = 8
-scene.cycles.use_denoising = False
-scene.cycles.max_bounces = 0
 scene.view_settings.view_transform = "Standard"
 scene.render.film_transparent = False
 if not scene.world:
@@ -209,7 +226,7 @@ cam_data.type = "ORTHO"
 cam = bpy.data.objects.new("cam", cam_data)
 scene.collection.objects.link(cam)
 scene.camera = cam
-for name, (d, wa, ha) in sides.items():
+def _aim(d, wa, ha):
     w_m, h_m = size[wa], size[ha]
     cam_data.ortho_scale = max(w_m, h_m) * 1.04
     dist = size.length + 0.05
@@ -222,6 +239,36 @@ for name, (d, wa, ha) in sides.items():
     cam.rotation_euler = Matrix((r, up, -f)).transposed().to_euler()
     cam_data.clip_start = 0.0005                            # never clip the near side of a small object
     cam_data.clip_end = dist * 3
+    return w_m, h_m
+
+
+res["renders_lit"] = {}
+lights = list(_studio())                                    # 1. lit, real materials (the judge's pictures)
+if bg:                                                      # a soft gray studio: metal reflects it, not magenta
+    bg.inputs["Color"].default_value = (0.45, 0.45, 0.47, 1)
+    bg.inputs["Strength"].default_value = 0.6
+scene.cycles.samples = 48
+scene.cycles.use_denoising = True
+scene.cycles.max_bounces = 4
+for name, (d, wa, ha) in sides.items():
+    w_m, h_m = _aim(d, wa, ha)
+    px = min(1536, max(512, int(max(w_m, h_m) * 1000 * PXMM)))
+    scene.render.resolution_x = scene.render.resolution_y = px
+    p = os.path.join(OUT, f"{name}_lit.png")
+    scene.render.filepath = p
+    bpy.ops.render.render(write_still=True)
+    res["renders_lit"][name] = {"file": p, "px": px, "size_mm": [round(w_m * 1000, 1), round(h_m * 1000, 1)]}
+for o in lights:
+    bpy.data.objects.remove(o)
+if bg:
+    bg.inputs["Color"].default_value = (1.0, 0.0, 1.0, 1)
+    bg.inputs["Strength"].default_value = 1.0
+_unlit()                                                    # 2. unlit, the print only (the exact checks' pictures)
+scene.cycles.samples = 8
+scene.cycles.use_denoising = False
+scene.cycles.max_bounces = 0
+for name, (d, wa, ha) in sides.items():
+    w_m, h_m = _aim(d, wa, ha)
     px = min(4096, max(256, int(max(w_m, h_m) * 1000 * PXMM)))
     scene.render.resolution_x = scene.render.resolution_y = px
     p = os.path.join(OUT, f"{name}.png")
