@@ -44,7 +44,7 @@ B.inventory = lambda: [{"name": n, "vision": True, "family": n, "params": "", "q
                         "thinking": True} for n in res]
 vis = sorted(res)
 import hashlib
-key = hashlib.sha1(json.dumps(vis).encode()).hexdigest()[:12]
+key = hashlib.sha1(json.dumps([vis, []]).encode()).hexdigest()[:12]
 import time
 json.dump({"version": B.VERSION, "key": key, "at": time.time(), "exam": res,
            "jobs": {"judge": "slow_best", "sort": "fast_bad"}}, open(B.OUT, "w"))
