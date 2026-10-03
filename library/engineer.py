@@ -61,13 +61,15 @@ OLD_RESULT_CHARS = 600
 AUTHOR = ["-c", "user.name=Asset Engineer (your AI)", "-c", "user.email=engineer@hellbox.local"]
 
 ROUTE_FILES = {                         # which shared files each kind of build uses (for the "still works" check)
-    "round": ("shapes/lathe.py", "finish.py", "outline.py", "labelart.py", "layout.py", "skin.py",
-              "shapes/specs/", "factory/", "labels/", "metal.py", "inks.py"),
+    "round": ("shapes/lathe.py", "shapes/realmat.py", "finish.py", "outline.py", "labelart.py", "layout.py",
+              "skin.py", "shapes/specs/", "factory/", "labels/", "metal.py", "inks.py"),
     "box": ("skin.py", "panels.py", "eraprint.py", "shapes/carton.py", "shapes/box.py", "finish.py", "factory/"),
     "flat": ("skin.py", "panels.py", "eraprint.py", "shapes/box.py", "finish.py"),
     "pcb": ("shapes/pcb.py", "skin.py", "panels.py", "finish.py"),
     "free": ("hunyuan.py", "shapes/resize.py"),
-    "all": ("run.py", "exports.py", "webglb.py", "viewshot.py", "cutaway.py", "vet.py", "cards.py", "preview.py"),
+    "assembly": ("parts.py", "shapes/assembly.py", "shapes/realmat.py", "skin.py", "panels.py"),
+    "all": ("run.py", "exports.py", "webglb.py", "viewshot.py", "cutaway.py", "vet.py", "cards.py", "preview.py",
+            "shapes/saveall.py"),
 }
 
 
@@ -75,7 +77,7 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 # Paths are inside library/, in lower case (the Mac's disk ignores case: Vet.py IS vet.py there).
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
-                "families.json"}
+                "families.json", "families.py", "family_library.json", "catalog.py"}
 LOCKED_DIRS = ("playbook/", "shapes/specs/", "labels/")      # its rulebook + lessons, measured shapes, hand layouts
 # file names no new file may have anywhere in library/ (a copy elsewhere on the search path would be loaded instead)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
@@ -199,6 +201,8 @@ def _fails(v):
 
 
 def _route_of(card, d):
+    if os.path.exists(os.path.join(d, "parts_plan.json")):     # built by the general one-off builder
+        return "assembly"
     if os.path.exists(os.path.join(d, "parts.json")):
         return "pcb"
     if os.path.exists(os.path.join(d, "label.png")):

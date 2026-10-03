@@ -191,6 +191,7 @@ bpy.ops.object.transform_apply(scale=True)
 br.name = br.data.name = "bracket"
 br.data.materials.append(material("bracket_steel", color=(0.72, 0.72, 0.7), metallic=1.0, roughness=0.32))
 physics(br, "bare_steel", "bracket")
+br["beyond_size"] = True                               # attached hardware: not part of the board's catalog size
 objs.append(br)
 bpy.ops.mesh.primitive_cube_add(size=1, location=((bx - 5.5) * S, (H + 6.5) * S, 6.0 * S))  # the screw tab, bent 90°
 tab = bpy.context.active_object
@@ -199,6 +200,7 @@ bpy.ops.object.transform_apply(scale=True)
 tab.name = tab.data.name = "bracket_tab"
 tab.data.materials.append(bpy.data.materials["bracket_steel"])
 physics(tab, "bare_steel", "bracket")
+tab["beyond_size"] = True
 objs.append(tab)
 
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in objs},

@@ -648,10 +648,21 @@ def _rel(b, fb):
     return r if r[2] - r[0] > 0.02 and r[3] - r[1] > 0.02 else None
 
 
-def _must_show_rebuilt(entry, face, route, facts, food):
-    import eraprint
-    want = entry.get("want") or [e["kind"] for e in entry.get("layout") or []] or \
-        eraprint.DEFAULT.get(face, ["logo"]) if route in ("box", "free", "flat") else []
+SIDE_DEFAULTS = {   # what an unseen side of a package must carry when no photo of that era shows its layout
+    "back": ["logo", "name", "picture", "net_weight", "maker_lines"],
+    "left": ["nutrition", "ingredients"],
+    "right": ["logo", "maker_lines", "legal_lines"],
+    "top": ["logo"],
+    "bottom": ["upc", "legal_lines"],
+}
+
+
+def _must_show_rebuilt(entry, face, route, facts, food, kind="packaging"):
+    """What a side rebuilt from facts must show. Only PACKAGING carries printed panels on its unseen sides; a battery
+    end, a can bottom, a circuit card's solder side or the back of a gadget carries nothing it can be held to."""
+    if kind != "packaging" or route not in ("box", "flat"):
+        return []
+    want = entry.get("want") or [e["kind"] for e in entry.get("layout") or []] or SIDE_DEFAULTS.get(face, ["logo"])
     if face == "left" and not food and not entry.get("want") and not entry.get("layout"):
         want = ["logo", "name", "net_weight"]
     known = lambda k: (facts.get(k) or {}).get("status") in ("verified", "single_source") and (facts.get(k) or {}).get("value")
@@ -667,7 +678,9 @@ def _must_show_rebuilt(entry, face, route, facts, food):
             out.append({"what": "product name", "text": "", "kind": "text", "item_specific": True})
         elif f.get("status") in ("verified", "single_source") and f.get("value"):
             v = f["value"]
-            out.append({"what": k.replace("_", " "), "text": v if isinstance(v, str) else json.dumps(v)[:300],
+            txt = ("Nutrition Facts" if k == "nutrition" else v if isinstance(v, str) else
+                   " ".join(str(x) for x in v) if isinstance(v, list) else "")     # the words as printed
+            out.append({"what": k.replace("_", " "), "text": txt,
                         "kind": "barcode" if k == "upc" else "panel" if k == "nutrition" else "text",
                         "item_specific": k in ("upc", "nutrition", "ingredients", "net_weight", "count")})
     return out
@@ -755,7 +768,8 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     food = dos["identity"].get("food")
     for F, e in dos["faces"].items():
         if e["source"] == "rebuilt":
-            e["must_show"] = _must_show_rebuilt(e, F, route, dos["facts"], food)
+            e["must_show"] = _must_show_rebuilt(e, F, route, dos["facts"], food,
+                                                (dos.get("identity") or {}).get("kind", "packaging"))
             got = [m["what"] for m in e["must_show"]]
             e["note"] += f" ({', '.join(got) or 'nothing known to print'})"
         elif e["source"] == "template_photo":                # a sister's side: its own parts replaced by ours

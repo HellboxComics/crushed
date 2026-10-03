@@ -47,7 +47,17 @@ def ip_class(card, dossier):
     return "A", "no brand or licensed art found - generic object"
 
 
-def record(cid, folder, card, dossier=None, physics=None):
+def save_central(rec):
+    """The central catalog copy - written only once the asset is really filed in the Asset Library."""
+    p = os.path.join(WORK, "catalog", rec["item_id"] + ".json")
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    tmp = p + ".tmp"
+    json.dump(rec, open(tmp, "w"), indent=1)
+    os.replace(tmp, p)
+    return p
+
+
+def record(cid, folder, card, dossier=None, physics=None, central=False):
     dossier = dossier or {}
     physics = physics or {}
     idn = dossier.get("identity") or {}
@@ -90,9 +100,10 @@ def record(cid, folder, card, dossier=None, physics=None):
                 rec["ip_class"] = prev["ip_class"]
         except Exception:
             pass
-    os.makedirs(os.path.dirname(old), exist_ok=True)
-    for p in (os.path.join(folder, "asset.json"), old):
-        tmp = p + ".tmp"
-        json.dump(rec, open(tmp, "w"), indent=1)
-        os.replace(tmp, p)
+    p = os.path.join(folder, "asset.json")
+    tmp = p + ".tmp"
+    json.dump(rec, open(tmp, "w"), indent=1)
+    os.replace(tmp, p)
+    if central:
+        save_central(rec)
     return rec

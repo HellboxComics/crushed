@@ -78,4 +78,7 @@ def sides(cid, renders, dos, use, route, product="", log=print):
         if not ok:
             failed.append(f"side_{face}")
             problems.append(f"side_{face}: " + ("; ".join(probs[:3]) or "the two looks disagreed"))
+    if not out:                                             # nothing judged is never a pass
+        return {"pass": False, "faces": {}, "failed": ["sides"],
+                "problems": ["sides: no side could be compared (the dossier has no sides, or the model no pictures)"]}
     return {"pass": not failed, "faces": out, "failed": failed, "problems": problems}

@@ -266,6 +266,51 @@ def pipeline(cid, redo=False):
     return go(picked, [c for c in cands if c["file"] != picked["file"]], use, len(found), len(cands))
 
 
+def route_of_card(card, cid):
+    """(route, family entry) for an item exactly as build() chooses its builder - so a test build's own check and the
+    real build's check measure the same sides."""
+    import families
+    fam = families.get((card.get("family_lib") or {}).get("family", "general"))
+    bld, _ = families.builder(fam)
+    if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
+        bld = "lathe"
+    route = {"lathe": "round", "pcb": "pcb", "carton": "box", "box": fam.get("route", "box"),
+             "organic": "free", "assembly": "assembly"}.get(bld, "assembly")
+    return route, fam
+
+
+def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
+    """THE WHOLE CHECK of a finished model, the same for a real build and for the asset maker's own check of a test
+    build: the exact checks first (measure.py: size, every side, barcode scan, printed words read off the model,
+    materials, mesh, inside parts showing through, the phone copy - measured, never guessed), then each side next to
+    the real photo of that side judged twice (judge.py), then the realism look in the phone viewer (inspect).
+    Anything that could not be checked counts as failed."""
+    import dossier as DS
+    import judge
+    import measure
+    product = card["product"]
+    mdir = os.path.join(d, "model")
+    dos_now = DS.load(cid) or {"size_m": card.get("size"), "faces": {}, "facts": {}}
+    status(cid, step="6/7 the exact checks: real size, every side, barcode, printed words, materials, insides")
+    m = measure.run(cid, d, glb, dos_now, route if route in ("round", "flat", "pcb") else "box", fam=fam,
+                    shots=[x for x in (shots, close) if x], web_glb=os.path.join(mdir, cid + "_web.glb"), use=use,
+                    log=say)
+    say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
+    status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
+    j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say)
+    verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
+    looked = verdict.get("problems")
+    looked = looked if isinstance(looked, list) else ([str(looked)] if looked else [])
+    looked_failed = list(verdict.get("failed", []))
+    if not verdict.get("pass") and not looked_failed:        # the look itself failed (timeout, bad answer): never a pass
+        looked_failed = ["inspect"]
+    failed = [f"measure_{k}" for k in m["failed"]] + j["failed"] + looked_failed
+    verdict = dict(verdict, failed=failed, measure=m["checks"], sides=j["faces"],
+                   problems=m["problems"] + j["problems"] + looked)
+    verdict["pass"] = not failed
+    return verdict
+
+
 def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     """5-7: build by the card's route, check it, send it to you for Keep / Redo. A box, flat thing or circuit card
     follows its dossier (made by pipeline right after your pick; made here if it isn't there yet, and made again
@@ -276,27 +321,26 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     # WHAT KIND OF THING IS THIS: the family your AI read from the photo decides the builder (family_library.json)
     fl = card.get("family_lib") or families.classify(card, picked["file"], use, log=say,
                                                      notes=card.get("owner_note", ""))
-    fam = families.get(fl.get("family", "general"))
+    route, fam = route_of_card(card, cid)
     bld, why = families.builder(fam)
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
         bld, why = "lathe", "a measured master shape"          # the AA battery, measured by hand
-    route = {"lathe": "round", "pcb": "pcb", "carton": "box", "box": fam.get("route", "box"),
-             "organic": "free", "assembly": "assembly"}.get(bld, "assembly")
-    if route not in ("round", "pcb", "box", "flat", "free", "assembly"):
-        route = "box"
     say(f"[family] {cid}: {fam['family']} -> built by '{bld}' ({why})")
     card["built_by"] = {"family": fam["family"], "builder": bld, "why": why, "gaps": fam.get("gaps", [])}
-    import dossier as DS                                     # every route knows the object before it is built
-    DS.ensure(cid, card, picked, use=use, redo=redo, log=say)
+    if not TRIAL:                                            # kept on the card: the catalog record reads it
+        import cards as _cards
+        json.dump(card, open(_cards.path(cid), "w"), indent=1)
+    import dossier as DS                                     # every route knows the object before it is built -
+    dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)   # made once here, used by every route below
 
     # 5. BUILD by the family's builder
     if route == "round":
         import metal
         import outline
         import skin
-        fam = jload(os.path.join(HERE, "families.json"), {}).get(cid, {})
-        sp = os.path.join(HERE, "shapes", "specs", fam.get("shape", "") + ".json")
-        if fam.get("shape") and os.path.exists(sp):
+        master = jload(os.path.join(HERE, "families.json"), {}).get(cid, {})
+        sp = os.path.join(HERE, "shapes", "specs", master.get("shape", "") + ".json")
+        if master.get("shape") and os.path.exists(sp):
             spec = json.load(open(sp))                                # a measured master (the AA battery)
             if spec.get("construction"):                               # measured by hand: its build is the truth
                 card["construction"] = spec["construction"]
@@ -362,7 +406,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         import dossier as DS
         import skin
         W, H = size[0], size[2]
-        dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)     # its top and bottom, planned
+        # its top and bottom, planned (the dossier made above)
         status(cid, step="5/7 the board: its top, straightened, with its real outline")
         make_room("drawing")
         skin.box_skin(product, W, 0.002, H, [picked] + same_design(picked, others, use, want=2, dossier=dos),
@@ -381,7 +425,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         W, D, H = size[:3]
         if route == "flat":
             D = min(D, 0.002)
-        dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)     # every side planned, facts with receipts
+        # every side planned, facts with receipts (the dossier made above)
         import cards
         mats = cards.materials(card)
         surface = ("card" if "printed_card" in mats else "plastic" if "molded_plastic" in mats else
@@ -414,7 +458,6 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         # each part is built as its own solid with its own material, at real size (parts.py + shapes/assembly.py)
         import dossier as DS
         import parts as PT
-        dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)
         status(cid, step="5/7 your AI breaks the object into its real parts (every side the dossier found)")
         make_room("judging")
         plan = PT.plan(cid, card, dos, use, os.path.join(d, "parts_plan.json"), log=say,
@@ -452,26 +495,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     except Exception as e:
         say(f"[check] viewer shots skipped ({e}) - the studio pictures are used")
     make_room("judging")
-    # THE EXACT CHECKS first (measure.py): size, every side, barcode scan, printed words read off the model,
-    # materials, mesh, inside parts showing through, the phone copy - measured, never guessed
-    import dossier as DS
-    import judge
-    import measure
-    dos_now = DS.load(cid) or {"size_m": size, "faces": {}, "facts": {}}
-    status(cid, step="6/7 the exact checks: real size, every side, barcode, printed words, materials, insides")
-    m = measure.run(cid, d, glb, dos_now, route if route in ("round", "flat", "pcb") else "box", fam=fam,
-                    shots=[x for x in (shots, close) if x], web_glb=os.path.join(mdir, cid + "_web.glb"), use=use,
-                    log=say)
-    say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
-    status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
-    j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say)
-    verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
-    looked = verdict.get("problems")
-    looked = looked if isinstance(looked, list) else ([str(looked)] if looked else [])
-    failed = [f"measure_{k}" for k in m["failed"]] + j["failed"] + list(verdict.get("failed", []))
-    verdict = dict(verdict, failed=failed, pass_=not failed, measure=m["checks"], sides=j["faces"],
-                   problems=m["problems"] + j["problems"] + looked)
-    verdict["pass"] = verdict.pop("pass_")
+    verdict = check_model(cid, card, picked, d, glb, route, fam, shots, close, use)
     say(f"[check] {cid}: " + ("passed every realism check" if verdict.get("pass") else
                               "failed: " + ", ".join(verdict.get("failed", [])) + " - " + str(verdict.get("problems"))[:300]))
     if TRIAL:                                                # the engineer's test: the result, nothing sent anywhere
@@ -940,7 +964,7 @@ def file_away(cid, d):
         import cards
         import catalog
         catalog.record(cid, tmp, cards.make(cid), dossier if isinstance(dossier, dict) else None,
-                       jload(os.path.join(tmp, "physics.json"), {}))
+                       jload(os.path.join(tmp, "physics.json"), {}))     # the central copy only once it is filed
     except Exception as e:
         say(f"[keep] {cid}: the catalog record could not be written ({e})")
     deliver.write_readme(tmp, cid, product, not_here, dossier if isinstance(dossier, dict) else None)
@@ -977,6 +1001,13 @@ def file_away(cid, d):
         shutil.copy(web if light else os.path.join(dst, cid + ".glb"), os.path.join(pend, "model.glb"))
     json.dump({"ok": True, "why": "", "started": fin["started"], "at": time.time(), "folder": dst},
               open(stamp, "w"), indent=1)
+    try:                                                   # filed: now the central catalog gets its record
+        import catalog
+        rec = jload(os.path.join(dst, "asset.json"), None)
+        if rec:
+            catalog.save_central(rec)
+    except Exception as e:
+        say(f"[keep] {cid}: the central catalog record could not be written ({e})")
     status(cid, step="done - kept in your Asset Library", ok=True, note=dst)
     say(f"[keep] {cid} -> {dst} (every file opened whole)")
     return dict(res, ok=True, why="", folder=dst)
@@ -1489,7 +1520,8 @@ def _judge_trial(cid, tdir, card, picked):
             verdict = {"pass": False, "problems": f"could not inspect: the viewer pictures failed ({e})"}
     if verdict is None:
         make_room("judging")
-        verdict = inspect(shots, picked["file"], card["product"], V.model(), card=card, close=close)
+        route, fam = route_of_card(card, cid)
+        verdict = check_model(cid, card, picked, tdir, glb, route, fam, shots, close, V.model())
     _atomic_json(os.path.join(tdir, "judged.json"), {"verdict": verdict, "shots": shots, "close": close})
     say(f"[judge] {cid}: " + ("passed every realism check" if verdict.get("pass") else
                               "failed: " + ", ".join(verdict.get("failed", [])) + " " + str(verdict.get("problems"))[:300]))
@@ -1788,6 +1820,7 @@ def hunyuan_test_request():
     hy = hunyuan.home()
     if not hy:
         say("[hunyuan test] Hunyuan3D is not installed on this Mac - nothing to test")
+        open(os.path.join(WORK, "hunyuan_test.log"), "w").write("Hunyuan3D is not installed on this Mac\n")
         return
     py = os.path.join(hy, ".venv", "bin", "python")
     if not os.path.exists(py):

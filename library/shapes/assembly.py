@@ -33,7 +33,13 @@ NORMALS = {"+x": Vector((1, 0, 0)), "-x": Vector((-1, 0, 0)), "+y": Vector((0, 1
            "+z": Vector((0, 0, 1)), "-z": Vector((0, 0, -1))}
 
 
-def material(name, color, rough, metal, image=None):
+sys.path.insert(0, HERE)
+import realmat                                              # noqa: E402  every material in its real-world range
+
+
+def material(name, color, rough, metal, image=None, kind=None):
+    if kind:
+        color, metal, rough = realmat.fit(kind, color, metal, rough, name)
     m = bpy.data.materials.new(name)
     m.use_nodes = True
     b = m.node_tree.nodes["Principled BSDF"]
@@ -93,11 +99,12 @@ def side_uv(bm, uv, side):
 
 def finish(ob, part, bevel=0.0):
     ob.name = ob.data.name = part["name"]
-    base = material(part["name"], part["color"], part["roughness"], part["metallic"])
+    base = material(part["name"], part["color"], part["roughness"], part["metallic"], kind=part["material"])
     ob.data.materials.append(base)
     img = print_image(part)
     if img and ob.type == "MESH":
-        pm = material(part["name"] + "_print", part["color"], part["roughness"], part["metallic"], img)
+        pm = material(part["name"] + "_print", part["color"], part["roughness"], part["metallic"], img,
+                      kind=part["material"])
         ob.data.materials.append(pm)
         bm = bmesh.new()
         bm.from_mesh(ob.data)

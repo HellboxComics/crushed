@@ -38,7 +38,10 @@ def world_bbox(objs):
 
 
 lo, hi = world_bbox(meshes)
-res["overall"] = {"size_m": [round(hi[i] - lo[i], 5) for i in range(3)], "parts": len(meshes)}
+sized = [o for o in meshes if not o.get("beyond_size")] or meshes   # attached hardware (a card's bracket) aside
+slo, shi = world_bbox(sized)
+res["overall"] = {"size_m": [round(shi[i] - slo[i], 5) for i in range(3)], "parts": len(meshes),
+                  "left_out_of_size": [o.name for o in meshes if o.get("beyond_size")]}
 
 
 def img_mean(node):
@@ -195,7 +198,7 @@ if ROUTE == "round":
 elif ROUTE == "flat":
     sides = {k: VIEWS[k] for k in ("front", "back")}
 elif ROUTE == "pcb":
-    sides = {"top": VIEWS["front"], "bottom": VIEWS["back"]}   # a board stands like a box front: its faces are y
+    sides = {"top": VIEWS["top"], "bottom": VIEWS["bottom"]}   # a board lies flat: its faces point up and down
 else:
     sides = VIEWS
 cam_data = bpy.data.cameras.new("cam")

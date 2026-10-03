@@ -203,6 +203,8 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
     got = mb["overall"]["size_m"]
     if len(want) == 3:
         ws, gs = sorted(want), sorted(got)
+        if route in ("pcb", "flat"):                    # a board / sheet: its thickness depends on what stands on it
+            ws, gs = ws[1:], gs[1:]
         off = [abs(g - w) / w for g, w in zip(gs, ws)]
         checks["size"] = _c(max(off) <= SIZE_TOL, "real size matches" if max(off) <= SIZE_TOL else
                             f"the model is {', '.join(f'{g * 1000:.1f}' for g in got)} mm but the real item is "
@@ -231,9 +233,16 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
     bar_faces = [f for f, e in faces.items() if any(m.get("kind") == "barcode" for m in e.get("must_show", []))]
     if bar_faces or "barcode" in fam.get("checks", []):
         if not upc.get("value") or upc.get("status") not in ("verified", "single_source"):
-            checks["barcode"] = _c(not bar_faces, "no verified UPC was found, so no barcode is printed (a gap in the "
-                                   "dossier)" if not bar_faces else "the plan prints a barcode but there is no "
-                                   "verified UPC for it")
+            # no verified UPC: a gap in the dossier, not a fault of the model - as long as the model prints NO barcode
+            # (any barcode it shows would be made up)
+            try:
+                printed = [t for n, png in renders.items() for _, t in read_barcodes(png)]
+                checks["barcode"] = _c(not printed, "no verified UPC was found, and the model prints no barcode (a gap "
+                                       "in the dossier, listed in its gaps)" if not printed else
+                                       f"the model prints a barcode ({', '.join(printed)}) but no real UPC was "
+                                       "verified - a made-up barcode", scanned=printed)
+            except ImportError:
+                checks["barcode"] = _c(False, "the barcode reader (zxing-cpp) is not installed on this Mac")
         else:
             try:
                 seen = {}
@@ -267,7 +276,9 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
                     # (a stylized logo it can't read on the real box either proves nothing about the model)
                     if ref not in ref_read:
                         ref_read[ref] = read_text(ref, use=use, log=log)
-                    if not text_found(_text_of(m["text"]), ref_read[ref])[0]:
+                    on_photo = m.get("sister_text") if e.get("source") == "template_photo" and m.get("sister_text") \
+                        else m["text"]                      # a sister's side shows ITS words where ours now are
+                    if not text_found(_text_of(on_photo), ref_read[ref])[0]:
                         skipped.append(f"{f}: {m.get('what', '')}")
                         continue
                 names = [n for n in side_names(route, f) if n in renders]
