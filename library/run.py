@@ -144,12 +144,31 @@ def pipeline(cid, redo=False):
     if ap.get(cid, {}).get("say") == "keep":
         file_away(cid, d)
         return
+    fresh = redo                                                 # the dossier is made again on --redo or your Redo
     if ap.get(cid, {}).get("say") == "redo":
         start_over(cid, d)
+        fresh = True                                             # (the photos it found before are kept)
 
     card = cards.make(cid, log=say)
     cards.construction(cid, card, log=say)                       # how the real thing is made: layers, materials, details
+    if card.pop("era_print", None) is not None and not TRIAL:    # box words once written from your AI's memory:
+        json.dump(card, open(cards.path(cid), "w"), indent=1)     # never used again - facts come from the dossier
+        say("[dossier] the box words your AI once wrote from memory are dropped from the card - every printed fact "
+            "now comes from the dossier, with its receipt")
     product, size, year, route = card["product"], card["size"], card.get("year"), card["route"]
+
+    def go(picked, others, use, n_found, n_good):
+        """Know the object before building it: the dossier (every side planned, every fact with a receipt) is
+        made or refreshed right after the pick, then the build follows it."""
+        import dossier as DS
+        if route in ("box", "flat"):
+            family_of(card, use)                                 # a circuit card has other sides than a box
+        status(cid, step="4/7 your AI gets to know the item: every side hunted, every fact with a receipt")
+        make_room("judging")
+        DS.ensure(cid, card, picked, use=use, redo=fresh, log=say)
+        card["dossier_path"] = DS.path(cid)
+        return build(cid, card, picked, others, use, d, mdir, n_found, n_good)
+
     picks = jload(os.path.join(HB, "picks.json"), {})
     cf = os.path.join(d, "candidates.json")
     if picks.get(cid, {}).get("pick", "none") != "none" and os.path.exists(cf):
@@ -158,7 +177,7 @@ def pipeline(cid, redo=False):
         cands = json.load(open(cf))["files"]
         picked = your_pick(cid, product, cands, d)
         use = V.model()
-        return build(cid, card, picked, [c for c in cands if c["file"] != picked["file"]], use, d, mdir, 0, len(cands))
+        return go(picked, [c for c in cands if c["file"] != picked["file"]], use, 0, len(cands))
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
         route = "round"                                          # it has a measured master shape (the AA)
     status(cid, product=product, route=route, step="1/7 hunting photos (Google Images, your photos)")
@@ -225,11 +244,13 @@ def pipeline(cid, redo=False):
         return pipeline(cid, redo=False)
     if not picked:
         return
-    return build(cid, card, picked, [c for c in cands if c["file"] != picked["file"]], use, d, mdir, len(found), len(cands))
+    return go(picked, [c for c in cands if c["file"] != picked["file"]], use, len(found), len(cands))
 
 
-def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
-    """5-7: build by the card's route, check it, send it to you for Keep / Redo."""
+def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
+    """5-7: build by the card's route, check it, send it to you for Keep / Redo. A box, flat thing or circuit card
+    follows its dossier (made by pipeline right after your pick; made here if it isn't there yet, and made again
+    with redo=True)."""
     from PIL import Image
     product, size, route = card["product"], card["size"], card["route"]
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
@@ -305,12 +326,14 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
                 shutil.copy(os.path.join(mdir, spec["id"] + "." + ext), os.path.join(mdir, cid + "." + ext))
     elif route in ("box", "flat") and family_of(card, use) == "printed_circuit_card":
         # a circuit card is a board with parts standing on it - built part by part, never a printed slab
+        import dossier as DS
         import skin
         W, H = size[0], size[2]
+        dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)     # its top and bottom, planned
         status(cid, step="5/7 the board: its top, straightened, with its real outline")
         make_room("drawing")
-        skin.box_skin(product, W, 0.002, H, [picked] + same_design(picked, others, use, want=2),
-                      os.path.join(d, "skin"), flat=True, judge=use, log=say)
+        skin.box_skin(product, W, 0.002, H, [picked] + same_design(picked, others, use, want=2, dossier=dos),
+                      os.path.join(d, "skin"), flat=True, judge=use, log=say, dossier=dos)
         status(cid, step="5/7 your AI finds every part on the board (chips, memory, capacitors, connectors)")
         make_room("judging")
         parts = board_parts(os.path.join(d, "skin", "front.png"), product, use)
@@ -320,37 +343,34 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good):
         run_blender("pcb.py", str(W), str(H), mdir, os.path.join(d, "skin", "front.png"),
                     os.path.join(d, "skin", "front_mask.png"), os.path.join(d, "parts.json"), cid)
     elif route in ("box", "flat"):
+        import dossier as DS
         import skin
         W, D, H = size[:3]
         if route == "flat":
             D = min(D, 0.002)
-        same = same_design(picked, others, use, want=5)
-        same += other_sides(cid, card, picked, use, have=[picked] + same)  # backs and sides, hunted on purpose
+        dos = DS.ensure(cid, card, picked, use=use, redo=redo, log=say)     # every side planned, facts with receipts
         import cards
         mats = cards.materials(card)
         surface = ("card" if "printed_card" in mats else "plastic" if "molded_plastic" in mats else
                    "card" if any(k in str(card.get("mat", "")).lower() for k in ("card", "paper", "board")) else "plastic")
         era = None
-        if surface == "card" and route == "box":         # the era's real panels for the sides no photo shows
-            era = card.get("era_print")
-            if not era:
-                try:
-                    import eraprint
-                    status(cid, step="5/7 your AI writes the era's printed panels (nutrition, ingredients, maker)")
-                    era = eraprint.content(product, model=use)
-                    card["era_print"] = era
-                    if not TRIAL:
-                        json.dump(card, open(cards.path(cid), "w"), indent=1)
-                except Exception as e:
-                    say(f"[texture] era panels skipped ({e})")
-        status(cid, step="5/7 texture map: every box face at its measured size")
+        if (dos.get("identity") or {}).get("kind", "packaging") == "packaging" and dos.get("facts"):
+            import eraprint                              # the printed facts with receipts, for the sides no photo shows
+            era = eraprint.from_dossier(dos)
+        status(cid, step="5/7 texture map: every box face at its measured size, each from its plan")
         make_room("drawing")
-        atlas, got = skin.box_skin(product, W, D, H, [picked] + same, os.path.join(d, "skin"),
-                                   flat=route == "flat", judge=use, log=say, era=era)
+        shots = [picked] + same_design(picked, others, use, want=5, dossier=dos)
+        shots += other_sides(cid, card, picked, use, have=shots, dossier=dos)   # backs and sides the dossier found
+        atlas, got = skin.box_skin(product, W, D, H, shots, os.path.join(d, "skin"),
+                                   flat=route == "flat", judge=use, log=say, era=era, dossier=dos)
         status(cid, step="5/7 Blender: the carton made like the factory makes it (flat sheet, creased, folded)"
                if surface == "card" and route == "box" else "5/7 Blender: mesh + UV map + texture map + material")
         if surface == "card" and route == "box":         # a folding carton: its dieline, folded, with what's inside
-            contents = "poptarts_8" if "pop-tarts" in product.lower() else ""
+            import facts as FX
+            contents = FX.carton_contents(dos, W, D, H, os.path.join(d, "contents.json")) or ""
+            cf_ = (dos.get("facts") or {}).get("contents") or {}
+            say(f"[contents] {cid}: " + (f"{json.dumps(cf_.get('value'))} ({cf_.get('status')})" if contents else
+                                        "nothing known to be inside - the box is built empty"))
             run_blender("carton.py", str(W), str(D), str(H), mdir, os.path.join(d, "skin"), cid, contents)
         else:
             run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
@@ -586,20 +606,30 @@ def size_fits(f, size_m, tol=0.35):
 
 
 def more_searches(card, use):
-    """When you turn every photo down: different searches than last time, the way a collector digs."""
+    """When you turn every photo down: different searches than last time, the way a collector digs. Search words
+    only (never facts); none that already ran."""
     import vet as V
+    ran = {s.lower().strip() for s in card.get("searches", [])}
+    ran |= {str(f.get("title", "")).replace("Google Images:", "").strip().lower()
+            for f in jload(os.path.join(WORK, "hunt", card.get("id", ""), "found.json"), [])}
     q = (f"I need real photos of this exact old product: {card['product']}. It is recognized by: "
-         f"{'; '.join(card.get('recognize', []))}. These searches did not find it: {'; '.join(card.get('searches', []))}. "
+         f"{'; '.join(card.get('recognize', []))}. These searches did not find it: {'; '.join(sorted(ran)[:20])}. "
          "Give 5 different Google Images searches a collector would type (other names it was sold under, its "
-         "model or catalog number, 'vintage', 'NOS', 'eBay', the decade). Answer ONLY JSON: {\"searches\": [\"...\"]}")
+         "model or catalog number, 'vintage', 'NOS', 'eBay', the decade), each 2 to 7 words. "
+         "Answer ONLY JSON: {\"searches\": [\"...\"]}")
     try:
         body = {"model": use, "stream": False, "format": "json", "think": True, "options": {"temperature": 0.4},
                 "messages": [{"role": "user", "content": q}]}
         out = [x for x in json.loads(V._call("/api/chat", body)["message"]["content"]).get("searches", [])
-               if isinstance(x, str)][:5]
+               if isinstance(x, str)]
     except Exception as e:
-        say(f"[hunt] no new searches: {e}")
+        say(f"[hunt] no new searches from your AI: {e}")
         out = []
+    name, yr = card["product"].split(",")[0], card.get("year")
+    plain = [f"{str(yr)[2]}0s {name}" if yr and yr < 2000 else name, f"vintage {name} {yr or ''}", f"{name} NOS",
+             f"old {name} ebay"]                                  # a collector's plain searches if your AI gave none
+    out = [re.sub(r"\s+", " ", x).strip() for x in out + plain]
+    out = list(dict.fromkeys(x for x in out if x and x.lower() not in ran and len(x.split()) <= 9))[:5]
     say("[hunt] digging deeper with: " + "; ".join(out))
     return out
 
@@ -1086,60 +1116,30 @@ def family_of(card, use=None):
     return card["family"]
 
 
-SIDES_Q = ("Picture 2 is the {product} you picked. Does picture 1 show THE SAME design version (same artwork, colors "
-           "and words as picture 2, maybe from another angle)? And which side of the box fills most of picture 1? "
-           "Answer ONLY JSON: {{\"same\": true/false, \"view\": \"front\" | \"back\" | \"left\" | \"right\" | \"top\" | "
-           "\"bottom\", \"also\": [other sides partly visible]}}")
-
-
-def other_sides(cid, card, picked, use, have=(), most=12, log=None):
-    """A box has six sides and a buyer turns it over. When the photos so far only show the front, your AI hunts
-    for the back and sides of the very same version (collectors photograph them), and keeps the ones that match
-    your pick. Each kept one is cut out for the box builder."""
-    import hunt
-    import turnaround as T
-    import vet as V
+def other_sides(cid, card, picked, use, have=(), most=12, log=None, dossier=None):
+    """A box has six sides and a buyer turns it over. The dossier (library/dossier.py) has already hunted every side
+    three ways (this item, its sister flavors, nearby years) and planned which photo serves each side - including
+    the backs and sides the FIRST hunt found, so a rebuild never loses them. This hands the box builder the photos
+    its plan uses (this item's own, and the sister boxes whose item-specific parts get swapped), each cut out."""
+    import dossier as DS
     log = log or say
-    seen_views = {((p.get("vet") or {}).get("view")) for p in have}
-    if {"back", "left", "right"} <= seen_views:
-        return []
-    name = card["product"].split(",")[0]
-    yr = card.get("year")
-    qs = [f"{name} box back", f"{name} back of box", f"{name} box side panel"] + \
-         ([f"{name} {yr} box back"] if yr else [])
-    before = {f["file"] for f in jload(os.path.join(WORK, "hunt", cid, "found.json"), [])}
-    try:
-        found = hunt.run(cid, name, yr, log=log, extra=qs)
-    except Exception as e:
-        log(f"[texture] hunting the other sides didn't work: {e}")
-        return []
-    new = [f for f in found if f["file"] not in before][:most]
-    log(f"[texture] other sides: {len(new)} new photos to check")
-    out, got = [], set()
-    for f in new:
-        try:
-            v = V.ask(use, SIDES_Q.format(product=card["product"]), [f["file"], picked["file"]], think=False, side=896)
-        except Exception:
-            continue
-        view = v.get("view")
-        if v.get("same") is not True or view not in ("back", "left", "right", "top", "bottom") or view in got:
-            continue
-        try:
-            f["mask"] = T.photo_mask(f["file"], timeout=180)
-        except Exception as e:
-            log(f"[texture] {view}: cut-out failed ({e})")
-            continue
-        f["vet"] = {"view": view}
-        out.append(f)
-        got.add(view)
-        log(f"[texture] found the real {view} of this box: {os.path.basename(f['file'])}")
-        if len(got) >= 3:
-            break
-    return out
+    dos = dossier or DS.ensure(cid, card, picked, use=use, log=log)
+    seen = {p["file"] for p in have}
+    out = [p for p in DS.face_photos(dos, ("exact_photo", "template_photo")) if p["file"] not in seen][:most]
+    for p in out:
+        log(f"[texture] the plan's {p['plan']}: {os.path.basename(p['file'])} "
+            f"({'this item' if p['source'] == 'exact_photo' else 'a sister box, its own parts swapped'})")
+    return DS.with_masks(out, log)
 
 
-def same_design(picked, others, use, want=2):
-    """Up to two more photos the judge says show the very same design as your pick (for consistency)."""
+def same_design(picked, others, use, want=2, dossier=None):
+    """More photos of the very same design as your pick (for consistency): with a dossier, the photos its careful
+    look found to be this exact item; without one, the judge compares the candidates with your pick."""
+    import dossier as DS
+    if dossier and dossier.get("faces"):
+        out = [p for p in DS.face_photos(dossier, ("exact_photo",)) if p["file"] != picked["file"]][:want]
+        say(f"[texture] the same item as your pick, from the dossier: {len(out)} more photo(s)")
+        return DS.with_masks(out, say)
     import vet as V
     q = ("Do these two photos show the very same product design version (same label artwork, same words and "
          "layout, same colors), even if the angle or lighting differs? Answer ONLY JSON: {\"same\": true/false}")
