@@ -147,6 +147,22 @@ def setup(log=print, force=False):
         old = json.load(open(OUT))
     except Exception:
         old = {}
+    recent = time.time() - float(old.get("at") or 0) < 30 * 86400
+    if old.get("version") == VERSION and old.get("model") == model and old.get("measured") is True and recent \
+            and int(old.get("workers") or 1) == 1 and "2" in (old.get("words_per_second") or {}) and not force:
+        # measured: 2 at once is NOT faster on this Mac (the brain server takes the setting, the model still answers
+        # one at a time) - so the setting is taken back off: it only holds memory for a second answer never given
+        if cur and cur != "1":
+            _sh(["launchctl", "unsetenv", "OLLAMA_NUM_PARALLEL"])
+            log("[speed] 2 at once measured no faster here - the brain server goes back to one at a time (frees the "
+                "memory it kept for a second answer)")
+            restart_ollama(log)
+        if "server_says" not in old:
+            old["server_says"] = server_says()            # why 2 at once was not faster, from Ollama's own log
+            log("[speed] why 2 at once was not faster, from the brain server's own log: " + (old["server_says"] or
+                                                                                            "nothing about it"))
+            json.dump(old, open(OUT, "w"), indent=1)
+        return 1
     fresh = old.get("version") == VERSION and old.get("model") == model and old.get("setting") == cur == str(WANT) \
         and old.get("measured") is True and time.time() - float(old.get("at") or 0) < 7 * 86400
     if fresh and not force:
