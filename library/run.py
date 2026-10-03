@@ -803,6 +803,11 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         real = real.rotate(90, expand=True)
     real_png = os.path.join(tex, "real.png")
     real.save(real_png)
+    seen = Image.fromarray((np.clip(cov, 0, 1) * 255).astype(np.uint8))   # how well each part was seen
+    if reads == "along":
+        seen = seen.rotate(90, expand=True)
+    cover_png = os.path.join(tex, "real_seen.png")
+    seen.save(cover_png)
     make_room("judging")
     R = review.Sheet(d)
     fl = review.front_length(cov)
@@ -839,7 +844,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
     import layout as LAY
     png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
-                              typical=kits.typical(kits.get(kit_name), "label"))
+                              typical=kits.typical(kits.get(kit_name), "label"), cover_png=cover_png)
     tries = jload(os.path.join(tex, "rounds.json"), [])
     share = review.metal_share(mr)
     R.step("label art (your AI's layout, drawn in exact type)",
@@ -848,7 +853,10 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
                ("the writer acted on each comparison (every try changed something, while not yet good)",
                 all(t.get("changed", True) for t in tries[1:]) or score >= 7,
                 "; ".join(f"try {t['round']}: match {t.get('match')}" for t in tries)),
-               ("metal ink is no more than a printed sleeve can have (60%)", share <= 0.6, f"{share:.0%} metal")])
+               ("metal ink is no more than a printed sleeve can have (60%)", share <= 0.6, f"{share:.0%} metal"),
+               ("its colors match the real label where the photos saw it (85%), measured",
+                (max([t.get("colors") or 0 for t in tries] or [1]) >= 0.85),
+                "; ".join(f"try {t['round']}: {t.get('colors')}" for t in tries if t.get("colors") is not None))])
     return png, mr
 
 

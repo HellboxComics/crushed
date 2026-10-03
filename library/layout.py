@@ -91,7 +91,64 @@ def clean_layout(lay, w_mm, h_mm, words):
     return lay
 
 
-def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, log=print, typical=()):
+# ------------------------------------------------------------------ the exact color check (measured, not judged)
+NAMED = {"black": (20, 20, 20), "white": (240, 240, 240), "gray": (128, 128, 128), "silver": (190, 190, 195),
+         "copper": (184, 115, 51), "gold": (212, 175, 55), "tan": (210, 160, 100), "brown": (110, 75, 45),
+         "red": (210, 40, 35), "orange": (240, 130, 30), "yellow": (240, 220, 40), "green": (40, 180, 60),
+         "blue": (40, 80, 200), "purple": (120, 50, 160), "pink": (240, 150, 180)}
+
+
+def _name(rgb):
+    import numpy as np
+    c = np.asarray(rgb, float)
+    return min(NAMED, key=lambda k: float(((np.asarray(NAMED[k]) - c) ** 2).sum()))
+
+
+WARM = {"copper", "gold", "tan", "orange", "brown"}       # metal ink and its lit / shaded tones in a photo
+
+
+def _family(rgb):
+    """A color as a photo's light can't change it: dark, warm metal, light, or its own color."""
+    import numpy as np
+    lum = float(np.dot(np.asarray(rgb, float), [0.299, 0.587, 0.114]))
+    if lum < 70:
+        return "dark"
+    n = _name(rgb)
+    return "warm" if n in WARM else "light" if n in ("white", "silver") else n
+
+
+def color_check(png, real_png, cover_png=None, cols=20, rows=10):
+    """The drawn label against the real one, part by part (a 20 x 10 grid), by measuring colors - the comparison
+    brain said "match 9" for a Duracell drawn all black with no copper top (2026-10-03). Only parts a photo really
+    saw count (cover_png: how well each pixel was seen), and a photo's light and shade never count as a different
+    color (copper lit or shaded is still copper). -> (share of seen parts whose color matches 0..1, [fixes])"""
+    import numpy as np
+    from PIL import Image
+    from scipy import ndimage
+    small = lambda f: np.asarray(Image.open(f).convert("RGB").resize((cols, rows), Image.BOX)).astype(float)
+    a, b = small(png), small(real_png)
+    seen = np.ones((rows, cols), bool)
+    if cover_png and os.path.exists(cover_png):
+        seen = np.asarray(Image.open(cover_png).convert("L").resize((cols, rows), Image.BOX)) > 0.5 * 255
+    na = np.array([[_name(a[y, x]) for x in range(cols)] for y in range(rows)])
+    nb = np.array([[_name(b[y, x]) for x in range(cols)] for y in range(rows)])
+    fa = np.array([[_family(a[y, x]) for x in range(cols)] for y in range(rows)])
+    fb = np.array([[_family(b[y, x]) for x in range(cols)] for y in range(rows)])
+    far = np.sqrt(((a - b) ** 2).sum(-1)) > 90
+    bad = (fa != fb) & far & seen
+    fixes = []
+    for want, got in sorted({(nb[y, x], na[y, x]) for y, x in zip(*np.where(bad))}):
+        lab, n = ndimage.label(bad & (nb == want) & (na == got))
+        for k in range(1, n + 1):
+            ys, xs = np.where(lab == k)
+            if len(ys) < 2:
+                continue                                # one small part: a detail, not a wrong area
+            fixes.append(f"the area x {xs.min() / cols:.2f}-{(xs.max() + 1) / cols:.2f}, y {ys.min() / rows:.2f}-"
+                         f"{(ys.max() + 1) / rows:.2f} is {want} on the real label but {got} in yours")
+    return float(1 - bad.sum() / max(seen.sum(), 1)), fixes
+
+
+def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, log=print, typical=(), cover_png=None):
     """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
     belongs there, from the confirmed words only."""
     model = model or V.model()
@@ -108,9 +165,19 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
             c = _ask(model, COMPARE, [png, real_png], think=False)
         except Exception as e:
             c = {"match": 0, "fixes": [str(e)]}
-        log(f"[texture] label round {r}: match {c.get('match')} - {'; '.join(map(str, c.get('fixes', [])))[:200]}")
+        try:                                           # the measured colors overrule a kind look
+            share, cfix = color_check(png, real_png, cover_png)
+        except Exception as e:
+            share, cfix = 1.0, []
+            log(f"[texture] the color check could not run: {e}")
+        judged = c.get("match") or 0
+        c = dict(c, judged=judged, colors=round(share, 2), match=min(judged, int(round(10 * share))),
+                 fixes=cfix + list(c.get("fixes") or []))
+        log(f"[texture] label round {r}: match {c['match']} (looked {judged}, colors {share:.0%} right) - "
+            f"{'; '.join(map(str, c.get('fixes', [])))[:300]}")
         json.dump(lay, open(os.path.join(out_dir, f"round{r}.json"), "w"), indent=1)
-        tries.append({"round": r, "match": c.get("match"), "fixes": c.get("fixes", []), "changed": True})
+        tries.append({"round": r, "match": c.get("match"), "judged": judged, "colors": c["colors"],
+                      "fixes": c.get("fixes", []), "changed": True})
         json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
         if (c.get("match") or 0) > best[0]:
             best = (c.get("match") or 0, lay, png, mr)

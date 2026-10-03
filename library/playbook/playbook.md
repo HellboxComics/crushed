@@ -214,6 +214,11 @@ Round labels (found by Claude on the Duracell, 2026-10-03 - each is now also a s
   allowed words -> run.round_label allows the dossier's printed lines for the label. What the model is checked for
   must always be something the writer is allowed to print.
 - Words running out of the box they are printed on -> labelart fits words inside the panel under them.
+- A whole colored area missing (the Duracell drawn all black, no copper top) while the comparison brain said
+  "match 9" -> a quick look is not a measurement -> layout.color_check measures each part of the drawn label
+  against the real one where a photo saw it (light and shade don't count as a different color); the match is
+  the lower of the look and the colors, and the measured differences go to the writer as fixes in its own terms
+  ("x 0.00-0.30 is copper on the real label but black in yours").
 - The whole label reads as metal (materials check: metallic 1.00 on a printed sleeve) -> metal ink under plain
   ink stayed marked as metal in label_mr.png -> labelart: plain ink and letters drawn over metal clear it.
 
