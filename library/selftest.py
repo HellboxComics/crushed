@@ -95,12 +95,16 @@ def t_judge():
 
 
 def t_free_judges():
+    """The judging brains are let go when the drawing room needs the memory: every 'let go' is accepted by the brain
+    server. (A brain still answering one of your other tools stays until it's done - the server is shared - so
+    what is still loaded a moment later is reported, not counted as broken: 2026-10-03 your suite was mid-answer.)"""
     import run
-    run.make_room("drawing")
-    import vet as V
-    left = json.loads(urllib.request.urlopen(V.OLLAMA + "/api/ps", timeout=10).read()).get("models", [])
-    if left:
-        raise RuntimeError("still loaded: " + ", ".join(m["name"] for m in left))
+    asked, left = run.make_room("drawing")
+    bad = [n for n, a in asked.items() if not (isinstance(a, dict) and (a.get("done_reason") == "unload" or a.get("done")))]
+    if bad:
+        raise RuntimeError("the brain server did not accept letting go of: " + ", ".join(bad))
+    return (f"let go of {', '.join(asked) or 'nothing loaded'}" +
+            (f"; still answering another tool: {', '.join(left)}" if left else ""))
 
 
 def t_cutout():

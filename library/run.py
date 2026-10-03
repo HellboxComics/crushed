@@ -707,11 +707,22 @@ def make_room(for_what):
     if for_what == "judging":
         T.free_room()
         return
+    ps = lambda: [m["name"] for m in json.loads(urllib.request.urlopen(V.OLLAMA + "/api/ps", timeout=20).read())
+                  .get("models", [])]
     try:
-        for m in json.loads(urllib.request.urlopen(V.OLLAMA + "/api/ps", timeout=20).read()).get("models", []):
-            V._call("/api/generate", {"model": m["name"], "keep_alive": 0}, timeout=60)
+        asked = {}
+        for name in ps():
+            asked[name] = V._call("/api/generate", {"model": name, "keep_alive": 0}, timeout=60)
+        t = time.time()
+        while ps() and time.time() - t < 30:       # a brain answering another of your tools lets go when it's done
+            time.sleep(2)
+        left = ps()
+        if left:
+            say(f"(still loaded - another of your tools is using it: {', '.join(left)})")
+        return asked, left
     except Exception as e:
         say(f"(could not free the judging AIs: {e})")
+        return {}, []
 
 
 def read_words(png, use):
