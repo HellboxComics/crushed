@@ -121,7 +121,7 @@ def setup(log=print, force=False):
     except Exception:
         old = {}
     fresh = old.get("version") == VERSION and old.get("model") == model and old.get("setting") == cur == str(WANT) \
-        and time.time() - float(old.get("at") or 0) < 7 * 86400
+        and old.get("measured") is True and time.time() - float(old.get("at") or 0) < 7 * 86400
     if fresh and not force:
         return int(old.get("workers") or 1)
     if cur != str(WANT):
@@ -132,18 +132,26 @@ def setup(log=print, force=False):
             json.dump({"version": VERSION, "workers": 1, "model": model, "setting": cur, "at": time.time(),
                        "note": "the brain server did not come back after the restart"}, open(OUT, "w"), indent=1)
             return 1
-    try:
-        _rate(model, 1)                                 # loads the brain (not counted)
-        rates = {1: _rate(model, 1)}
-        rates[2] = _rate(model, 2)
-    except Exception as e:
-        log(f"[speed] could not measure ({e}) - asking one at a time")
-        rates = {1: 0}
-    best = 2 if rates.get(2, 0) >= 1.25 * rates.get(1, 1e9) else 1
+    rates, err = {}, ""
+    for attempt in range(3):                              # a server that just restarted may drop the first asks
+        try:
+            _rate(model, 1)                               # loads the brain (not counted)
+            rates = {1: _rate(model, 1)}
+            rates[2] = _rate(model, 2)
+            break
+        except Exception as e:
+            err, rates = str(e), {}
+            time.sleep(20)
+    measured = bool(rates.get(1)) and bool(rates.get(2))
+    best = 2 if measured and rates[2] >= 1.25 * rates[1] else 1
     json.dump({"version": VERSION, "workers": best, "model": model, "setting": str(WANT), "at": time.time(),
-               "words_per_second": {str(k): round(v, 1) for k, v in rates.items()}}, open(OUT, "w"), indent=1)
-    log(f"[speed] measured: 1 at a time {rates.get(1, 0):.1f} words/s, 2 at a time {rates.get(2, 0):.1f} words/s "
-        f"in total - your AI asks {best} at a time" + ("" if best > 1 else " (2 at once was not faster here)"))
+               "measured": measured, "words_per_second": {str(k): round(v, 1) for k, v in rates.items()},
+               "note": "" if measured else f"could not measure: {err}"}, open(OUT, "w"), indent=1)
+    if measured:
+        log(f"[speed] measured: 1 at a time {rates[1]:.1f} words/s, 2 at a time {rates[2]:.1f} words/s in total - "
+            f"your AI asks {best} at a time" + ("" if best > 1 else " (2 at once was not faster here)"))
+    else:
+        log(f"[speed] could not measure ({err}) - one at a time until it can (measured again next start)")
     return best
 
 
