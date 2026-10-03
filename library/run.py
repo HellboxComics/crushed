@@ -2175,6 +2175,11 @@ def queue(n):
     most 3 times a day)."""
     q = [l.strip() for l in open(os.path.join(HERE, "queue.txt")) if l.strip() and not l.startswith("#")] \
         if os.path.exists(os.path.join(HERE, "queue.txt")) else []
+    try:                                                     # what Cody asked for on his phone goes first
+        import portal
+        q = list(dict.fromkeys(portal.queue_first() + q))
+    except Exception:
+        pass
     st = read_status()
     picks = jload(os.path.join(HB, "picks.json"), {})
     ap = jload(os.path.join(HB, "approvals.json"), {})
@@ -2342,6 +2347,11 @@ if __name__ == "__main__":
             resend()                                    # first: anything that never reached your phone
         except Exception as e:
             say(f"[phone] resend skipped: {e}")
+        try:
+            import portal                               # then: what you wrote to it on your phone
+            portal.process(log=say)
+        except Exception as e:
+            say(f"[portal] skipped: {e}")
         if not queue(a.queue or 3):                     # nothing to make right now: done in a second
             sys.exit(0)
         import selftest

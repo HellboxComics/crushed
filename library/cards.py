@@ -102,6 +102,13 @@ def path(cid):
 
 
 def catalog(cid):
+    try:                                                     # an item Cody asked for on his phone (portal.py)
+        import portal
+        e = portal.catalog_entry(cid)
+        if e:
+            return e
+    except Exception:
+        pass
     plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json")))
     beh = json.load(open(os.path.join(ROOT, "assets", "plan", "behavior.json")))
     p = plan.get(cid, {})
