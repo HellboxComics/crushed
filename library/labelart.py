@@ -101,6 +101,7 @@ def render(layout, out_dir, px=4096, name="label"):
             cols = [np.array(rgb(c), float) for c in s["colors"]]
             stops = s.get("stops") or list(np.linspace(0, 1, len(cols)))
             x0, y0, x1, y1 = [int(v) for v in b]
+            dm.rectangle(b, fill=(0, int(255 * layout.get("roughness", 0.45)), 0))    # (plain ink: not metal)
             for x in range(x0, x1):
                 f = (x - x0) / max(x1 - x0 - 1, 1)
                 k = max(i for i in range(len(stops)) if stops[i] <= f) if f > 0 else 0
@@ -126,6 +127,8 @@ def render(layout, out_dir, px=4096, name="label"):
             d.rectangle(b, fill=fill, outline=outline, width=width)
         if s.get("metal"):
             (dm.ellipse if t == "ellipse" else dm.rectangle)(b, fill=(0, int(255 * s.get("roughness", 0.3)), 255))
+        elif fill:                                       # plain ink drawn OVER metal ink is not metal any more
+            (dm.ellipse if t == "ellipse" else dm.rectangle)(b, fill=(0, int(255 * layout.get("roughness", 0.45)), 0))
     texts = no_overlaps([dict(t) for t in layout.get("texts", [])], W, H, d)
     for tx in texts:
         mark = MARKS.get(tx.get("mark"), "")
@@ -147,6 +150,9 @@ def render(layout, out_dir, px=4096, name="label"):
         elif tx.get("align") == "right":
             x -= layer.width
         img.paste(Image.new("RGB", layer.size, rgb(tx.get("color", "#000000"))), (int(x), int(tx["y"] * H)), layer)
+        if not tx.get("metal"):                          # the letters' ink is not metal, even on a copper band
+            mr.paste(Image.new("RGB", layer.size, (0, int(255 * layout.get("roughness", 0.45)), 0)),
+                     (int(x), int(tx["y"] * H)), layer)
         if mark:                                    # (R) / TM: small and raised, like real print
             fm = font("bold", hpx * 0.5)
             mx0, my0, mx1, my1 = d.textbbox((0, 0), mark, font=fm)
