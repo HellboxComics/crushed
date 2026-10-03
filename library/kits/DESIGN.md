@@ -48,6 +48,29 @@ form zone) and the same checks.
                 insides) + each zone rendered straight-on and compared with its real photo (two looks)
 7. FIX          your AI's engineer works on the kit's builder or the item's zone art (never the checks)
 
+## Self-review: your AI checks its own work at every step (Cody's end goal, 2026-10-03)
+
+"The goal is that it can take any item prompt or image, and turn it into a perfect 3d object without your input or
+mine, while being self aware enough to see its own output, realize what is wrong, and correct it on its own."
+
+What Claude did by hand on 2026-10-03 (the Duracell): looked at every step's output, not just the model - the
+photos unrolled into one strip, the words read, each try at the label - found the FIRST step that went wrong
+(a close-up stretched over the whole length; the comparison's fixes never handed back; a cut-off word; the metal
+ends drawn on the wrapper; plain ink counted as metal) and fixed that step for every item of the kind. The asset
+maker must do this itself:
+1. SHOW     every step saves a picture of what it made (the review sheet): composite, words, each label try,
+            each side of the model next to its photo
+2. ASK      every step has its own questions - exact ones measured by code where possible (did this try change
+            anything; is a word a piece of a longer word; how much is marked metal vs how much is copper; does the
+            close-up cover more length than it shows) and looks by the judge brain where only eyes can tell (is any
+            part stretched, doubled or from another object; is anything drawn that isn't on the real item)
+3. TRACE    a failure is traced to the earliest step whose check failed; the engineer gets that step: what went in,
+            what came out, its code, and the lesson for that kind of failure
+4. FIX      the engineer changes that step (never a check), re-runs from that step only, keeps the fix only when
+            that step's check and the final checks pass - and the fix serves every item of the kind
+5. LEARN    every new kind of failure, found by the AI or by Claude, becomes a step check plus a lesson in the
+            playbook, so it is caught by itself next time
+
 ## Brains, one per job
 
   sort    a small fast vision brain: which zone a photo shows, is it the right product, quick ranking
