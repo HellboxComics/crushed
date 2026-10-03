@@ -605,91 +605,277 @@ def more_searches(card, use):
 
 
 def finish_files(cid, d):
-    """Every format and the check pictures for one asset (into <build>/model/export): .obj + .mtl, .3ds, .ma,
-    all textures as PNG, a cutaway picture of the insides. Called right after the build."""
+    """Every format and the check pictures for one asset (into <build>/model/export), right after the build:
+    .obj + .mtl, .3ds, .ma and every texture as PNG + JPG (exports.py), the phone page's light copy (webglb.py) and
+    a cutaway picture of the insides (cutaway.py). Each step has a time limit, and each output must be newer than
+    this run's start - a file left over from an older build counts as missing, and is set aside in
+    <build>/model/stale-<time> so nothing can pick it up as new. The builder's own .blend .glb .fbx .usdc are
+    matched against its made.json (the fingerprint of each file it wrote).
+    -> {"ok", "started", "built_at", "steps": {step: {"ok", "why", "seconds", ...}}}, also kept as
+    model/export/finish.json for file_away."""
+    import deliver
+    started = time.time()
     mdir = os.path.join(d, "model")
-    blend = os.path.join(mdir, cid + ".blend")
     exp = os.path.join(mdir, "export")
-    os.makedirs(os.path.join(exp, "previews"), exist_ok=True)
-    if os.path.exists(blend):
-        r = subprocess.run([PY, os.path.join(HERE, "exports.py"), "--", blend, exp, cid], capture_output=True, text=True)
-        for line in (r.stdout or "").splitlines():
-            if line.startswith("[exports]"):
-                say(line)
-    glb = os.path.join(mdir, cid + ".glb")
-    if os.path.exists(blend):                              # the phone page's light copy (its host refuses > 25 MB)
-        subprocess.run([PY, os.path.join(HERE, "webglb.py"), "--", blend, os.path.join(mdir, cid + "_web.glb")],
-                       capture_output=True, text=True)
-    if os.path.exists(glb):
-        cut = os.path.join(d, "check", "cutaway.png")
-        os.makedirs(os.path.dirname(cut), exist_ok=True)
-        r = subprocess.run([PY, os.path.join(HERE, "cutaway.py"), "--", glb, cut], capture_output=True, text=True)
-        if os.path.exists(cut):
-            from PIL import Image
-            Image.open(cut).convert("RGB").save(os.path.join(exp, "previews", "cutaway.jpg"), quality=92)
+    prev = os.path.join(exp, "previews")
+    blend, glb = os.path.join(mdir, cid + ".blend"), os.path.join(mdir, cid + ".glb")
+    web, cut = os.path.join(mdir, cid + "_web.glb"), os.path.join(d, "check", "cutaway.png")
+    os.makedirs(prev, exist_ok=True)
+    os.makedirs(os.path.dirname(cut), exist_ok=True)
+    stale = os.path.join(mdir, "stale-" + time.strftime("%Y%m%d-%H%M%S"))
+    res = {"ok": False, "started": started, "built_at": None, "steps": {}}
+
+    def fresh(p, since=started):
+        return os.path.exists(p) and os.path.getmtime(p) >= since - 2
+
+    def set_aside(paths):                                 # moved, never deleted: <build>/model/stale-<time>/
+        for p in paths:
+            if os.path.exists(p):
+                os.makedirs(stale, exist_ok=True)
+                shutil.move(p, os.path.join(stale, os.path.relpath(p, d).replace(os.sep, "__")))
+
+    # the builder's files: exactly the ones this build wrote (made.json), not leftovers from an older build
+    made = jload(os.path.join(mdir, "made.json"), None)
+    b = {"ok": False, "why": "", "good": [], "sha1": {}}
+    bad = []
+    for ext in ("blend", "glb", "fbx", "usdc"):
+        p = os.path.join(mdir, f"{cid}.{ext}")
+        if not os.path.exists(p):
+            bad.append(f".{ext} was not made" + (f" ({made['failed'][ext]})" if made and ext in made.get("failed", {})
+                                                 else ""))
+            continue
+        h = deliver.sha1(p)
+        rec = (made or {}).get("files", {}).get(ext)
+        if made and not rec:
+            bad.append(f".{ext} is not from this build ({made.get('failed', {}).get(ext, 'the builder did not write it')})")
+            set_aside([p])
+        elif made and rec["sha1"] != h:
+            bad.append(f".{ext} is an older file, not the one this build wrote")
+            set_aside([p])
+        elif not made and os.path.exists(blend) and abs(os.path.getmtime(p) - os.path.getmtime(blend)) > 900:
+            bad.append(f".{ext} is much older or newer than the .blend (not from the same build)")
+            set_aside([p])
+        else:
+            b["good"].append(ext)
+            b["sha1"][ext] = h
+    if made:
+        res["built_at"] = made.get("started") or made.get("at")
+        if (made.get("files") or {}).get("physics.json"):
+            b["physics_sha1"] = made["files"]["physics.json"]["sha1"]
+    elif os.path.exists(blend):
+        res["built_at"] = os.path.getmtime(blend) - 900
+        b["note"] = "no builder record (built before the delivery check existed) - the file times were used"
+    b["ok"], b["why"] = not bad, "; ".join(bad)
+    res["steps"]["builder"] = b
+    if bad:
+        say(f"[finish] {cid}: builder files: {b['why']}")
+
+    def step(name, script, args, timeout, outputs, src_ok):
+        r = {"ok": False, "why": "", "seconds": 0.0, "outputs": [os.path.relpath(o, d) for o in outputs]}
+        res["steps"][name] = r
+        if not src_ok:
+            r["why"] = f"nothing to make it from ({os.path.basename(args[0])} is missing or from an older build)"
+        else:
+            t0 = time.time()
+            tag = "[" + script.split(".")[0] + "]"
+            try:
+                p = subprocess.run([PY, os.path.join(HERE, script), "--", *args], capture_output=True, text=True,
+                                   timeout=timeout)
+                lines = (p.stdout or "").splitlines()
+                for line in lines:
+                    if line.startswith(tag):
+                        say(line)
+                late = [os.path.basename(o) for o in outputs if not fresh(o)]
+                if p.returncode != 0:
+                    said = [l for l in lines if l.startswith(tag) and "FAILED" in l]
+                    err = [l for l in (p.stderr or "").splitlines() if l.strip()]
+                    r["why"] = f"stopped with an error (code {p.returncode}): " + \
+                               ((said[-1] if said else "") or (err[-1] if err else "no message"))[-300:]
+                elif late:
+                    r["why"] = "did not make " + ", ".join(late)
+                else:
+                    r["ok"] = True
+            except subprocess.TimeoutExpired:
+                r["why"] = f"took longer than {timeout // 60} minutes and was stopped"
+            except Exception as e:
+                r["why"] = f"could not run: {e}"
+            r["seconds"] = round(time.time() - t0, 1)
+        if not r["ok"]:
+            set_aside([o for o in outputs if os.path.exists(o) and not fresh(o)])
+            say(f"[finish] {cid}: {name} FAILED - {r['why']}")
+        return r["ok"]
+
+    blend_ok, glb_ok = "blend" in b["good"], "glb" in b["good"]
+    exp_out = [os.path.join(exp, f"{cid}.{x}") for x in ("obj", "mtl", "3ds", "ma")] + [os.path.join(exp, "exports.json")]
+    if step("exports", "exports.py", [blend, exp, cid], 600, exp_out, blend_ok) and \
+            not jload(os.path.join(exp, "exports.json"), {}).get("ok"):
+        res["steps"]["exports"].update(ok=False, why="exports.json does not say every file was written")
+    step("web_glb", "webglb.py", [blend, web], 600, [web], blend_ok)          # the phone page's light copy
+    if step("cutaway", "cutaway.py", [glb, cut], 900, [cut], glb_ok):
+        try:
+            deliver.picture_pair(cut, os.path.join(prev, "cutaway"))
+        except Exception as e:
+            res["steps"]["cutaway"].update(ok=False, why=f"the picture could not be saved: {e}")
+    if not res["steps"]["cutaway"]["ok"]:
+        set_aside([p for p in (os.path.join(prev, "cutaway.png"), os.path.join(prev, "cutaway.jpg"))
+                   if os.path.exists(p) and not fresh(p)])
+    res["ok"] = all(s.get("ok") for s in res["steps"].values())
+    json.dump(res, open(os.path.join(exp, "finish.json"), "w"), indent=1)
+    say(f"[finish] {cid}: " + ("every format, the phone copy and the cutaway made" if res["ok"] else
+                               "NOT all made: " + "; ".join(f"{k}: {v['why']}" for k, v in res["steps"].items()
+                                                            if not v.get("ok"))))
+    return res
 
 
 def file_away(cid, d):
     """You said Keep (or the check passed): the asset's own folder in ~/Desktop/Asset Library/<item>, holding every
-    format (.blend .fbx .obj+.mtl .3ds .ma .glb .usdc), textures/ (PNG), previews/ (JPG: all around, close-ups,
-    cutaway, the photo it was made from), physics.json (how each part crushes) and made_of.json (how it's made).
-    An older copy of the folder is moved to _to delete first, never deleted."""
-    from PIL import Image
-    dst = os.path.join(SHELF, cid)
-    if os.path.isdir(dst) and os.listdir(dst):
-        old = os.path.expanduser(f"~/Desktop/_to delete/remaster/{cid}-asset-library-{time.strftime('%Y%m%d-%H%M%S')}")
-        os.makedirs(os.path.dirname(old), exist_ok=True)
-        shutil.move(dst, old)
-        open(old + ".txt", "w").write(f"the older copy of {cid} from your Asset Library, replaced by a newer build\n")
-    os.makedirs(os.path.join(dst, "previews"), exist_ok=True)
+    format (.blend .fbx .obj+.mtl .3ds .ma .glb .usdc), textures/ (PNG + JPG), previews/ (PNG + JPG: all around,
+    close-ups, cutaway, studio, the photo it was made from), physics.json (how each part crushes), made_of.json
+    (how it's made) and README.txt (exactly what is in the folder, what isn't and why, where each side came from).
+    The folder is put together fresh in a hidden folder next to it, every file in it is opened again from scratch
+    (deliver.py), and only if every one opens whole is it moved into place. An older folder for the item goes to
+    ~/Desktop/_to delete/asset-library/<item>-<time> with a note - never deleted. Only files THIS build made go in
+    (an output older than its build counts as missing). PNG and JPG of every texture and every preview.
+    -> deliver.verify's result. On success it is marked done here. On failure nothing is filed or marked: the
+    attempt goes to _to delete with a note and {"ok": False, "why": ...} comes back for the caller to show. A build
+    that already failed is not put together again for 6 hours (so a waiting Keep can't fill _to delete).
+    CRUSHED_SHELF points the Asset Library elsewhere (tests); _to delete follows HOME."""
+    import deliver
+    shelf = os.path.expanduser(os.environ.get("CRUSHED_SHELF") or SHELF)
+    trash = os.path.expanduser("~/Desktop/_to delete/asset-library")
     mdir = os.path.join(d, "model")
     exp = os.path.join(mdir, "export")
-    for ext in ("blend", "fbx", "glb", "usdc"):
-        p = os.path.join(mdir, cid + "." + ext)
-        if os.path.exists(p):
-            shutil.copy(p, dst)
-    for ext in ("obj", "mtl", "3ds", "ma"):
-        p = os.path.join(exp, cid + "." + ext)
-        if os.path.exists(p):
-            shutil.copy(p, dst)
-    if os.path.isdir(os.path.join(exp, "textures")):
-        shutil.copytree(os.path.join(exp, "textures"), os.path.join(dst, "textures"), dirs_exist_ok=True)
-    elif os.path.isdir(os.path.join(mdir, "textures")):
-        shutil.copytree(os.path.join(mdir, "textures"), os.path.join(dst, "textures"), dirs_exist_ok=True)
-    for src, name in ((os.path.join(d, "check", "viewer_around.jpg"), "all_around.jpg"),
-                      (os.path.join(d, "check", "viewer_close.jpg"), "close_ups.jpg"),
-                      (os.path.join(exp, "previews", "cutaway.jpg"), "cutaway.jpg"),
-                      (os.path.join(d, "views.jpg"), "studio.jpg")):
-        if os.path.exists(src):
-            shutil.copy(src, os.path.join(dst, "previews", name))
-    ref = jload(os.path.join(STATUS), {}).get(cid, {}).get("ref")
+    ts = time.strftime("%Y%m%d-%H%M%S")
+
+    def put_aside(path, label, note):                    # into _to delete with a note, never deleted
+        os.makedirs(trash, exist_ok=True)
+        to, k = os.path.join(trash, label), 2
+        while os.path.exists(to):
+            to, k = os.path.join(trash, f"{label}-{k}"), k + 1
+        shutil.move(path, to)
+        open(to + ".txt", "w").write(note)
+        return to
+
+    os.makedirs(shelf, exist_ok=True)
+    for n in os.listdir(shelf):                           # an attempt left half-done when a run stopped
+        if n.startswith(f".{cid}.incoming-"):
+            put_aside(os.path.join(shelf, n), f"{cid}-unfinished-{ts}",
+                      f"A half-made copy of {cid} left in your Asset Library when a run stopped partway. "
+                      "Nothing in it was filed. Safe to delete.\n")
+    fin = jload(os.path.join(exp, "finish.json"), None)
+    if not fin or not fin.get("steps"):                   # built before this record existed: make the files now
+        say(f"[keep] {cid}: no record of the finishing step - making every format now")
+        fin = finish_files(cid, d)
+    stamp = os.path.join(exp, "delivery.json")
+    last = jload(stamp, {})
+    if last.get("started") == fin["started"] and last.get("ok") is False and time.time() - last.get("at", 0) < 6 * 3600:
+        say(f"[keep] {cid}: this build already failed the delivery check ({last.get('why')}) - not tried again "
+            "until it is rebuilt (or in 6 hours)")
+        return dict(last, again=True)
+    steps, built = fin.get("steps", {}), fin.get("built_at") or 0
+    tmp = os.path.join(shelf, f".{cid}.incoming-{ts}")
+    os.makedirs(os.path.join(tmp, "textures"))
+    os.makedirs(os.path.join(tmp, "previews"))
+    not_here, extra = [], []
+
+    def fresh(p, since):
+        return os.path.exists(p) and os.path.getmtime(p) >= since - 2
+
+    # the builder's formats: only the files this build wrote, checked again by fingerprint
+    bstep = steps.get("builder", {})
+    for ext in bstep.get("good", []):
+        src = os.path.join(mdir, f"{cid}.{ext}")
+        if os.path.exists(src) and deliver.sha1(src) == bstep.get("sha1", {}).get(ext):
+            shutil.copy2(src, tmp)
+        else:
+            extra.append(f"{cid}.{ext}: changed since this build was finished - rebuild it")
+    if not bstep.get("ok"):
+        not_here.append(f"from the builder: {bstep.get('why') or 'no record'}")
+    # .obj .mtl .3ds .ma and every texture (PNG + JPG): exactly what exports.py wrote for this build
+    man = jload(os.path.join(exp, "exports.json"), {})
+    if steps.get("exports", {}).get("ok") and man.get("ok") and man.get("started", 0) >= fin["started"] - 2:
+        for rel in man.get("files", []):
+            src = os.path.join(exp, rel)
+            if fresh(src, fin["started"]):
+                os.makedirs(os.path.dirname(os.path.join(tmp, rel)), exist_ok=True)
+                shutil.copy2(src, os.path.join(tmp, rel))
+    else:
+        not_here.append(".obj .mtl .3ds .ma and the texture maps: the export step failed - " +
+                        (steps.get("exports", {}).get("why") or "it never ran"))
+    utex = os.path.join(mdir, "textures")                 # pictures the .usdc names that exports didn't write
+    if "usdc" in bstep.get("good", []) and os.path.isdir(utex):
+        for f in sorted(os.listdir(utex)):
+            src, stem = os.path.join(utex, f), os.path.splitext(f)[0]
+            if f.lower().endswith((".png", ".jpg", ".jpeg")) and fresh(src, built) and \
+                    not os.path.exists(os.path.join(tmp, "textures", f)):
+                deliver.picture_pair(src, os.path.join(tmp, "textures", stem))
+    # previews, PNG + JPG: only pictures made after this build
+    shots = ((os.path.join(d, "check", "viewer_around.jpg"), "all_around", built, "the all-around pictures"),
+             (os.path.join(d, "check", "viewer_close.jpg"), "close_ups", built, "the close-up pictures"),
+             (os.path.join(exp, "previews", "cutaway.png"), "cutaway", fin["started"], "the cutaway picture"),
+             (os.path.join(d, "views.jpg"), "studio", built, "the four studio pictures"))
+    for src, name, since, what in shots:
+        if fresh(src, since):
+            deliver.picture_pair(src, os.path.join(tmp, "previews", name))
+        else:
+            why = steps.get("cutaway", {}).get("why") if name == "cutaway" else ""
+            not_here.append(f"{what}: not made for this build" + (f" ({why})" if why else ""))
+    if not any(os.path.exists(os.path.join(tmp, "previews", n + ".png")) for n in ("studio", "all_around")):
+        extra.append("previews/: no picture of the outside was made for this build")
+    ref = jload(STATUS, {}).get(cid, {}).get("ref")
     if ref and os.path.exists(os.path.join(WORK, ref)):
-        Image.open(os.path.join(WORK, ref)).convert("RGB").save(os.path.join(dst, "previews", "made_from_photo.jpg"), quality=92)
-    if os.path.exists(os.path.join(mdir, "physics.json")):
-        shutil.copy(os.path.join(mdir, "physics.json"), dst)
+        deliver.picture_pair(os.path.join(WORK, ref), os.path.join(tmp, "previews", "made_from_photo"))
+    phys = os.path.join(mdir, "physics.json")
+    if os.path.exists(phys) and (deliver.sha1(phys) == bstep.get("physics_sha1") or
+                                 ("physics_sha1" not in bstep and bstep.get("note") and fresh(phys, built))):
+        shutil.copy2(phys, tmp)
+    product = cid
     try:
         import cards
         c = cards.make(cid)
+        product = c.get("product") or cid
         json.dump({"product": c.get("product"), "construction": c.get("construction"), "size_m": c.get("size")},
-                  open(os.path.join(dst, "made_of.json"), "w"), indent=1)
-    except Exception:
-        pass
-    open(os.path.join(dst, "README.txt"), "w").write(
-        f"{cid}\n\n"
-        "Formats: .blend (Blender), .fbx (opens in 3ds Max, Cinema 4D, Maya, Unity, Unreal), .obj + .mtl (opens in\n"
-        "everything), .3ds (3D Studio), .ma (Maya ASCII), .glb (web and game engines), .usdc (USD).\n"
-        "textures/ - every map as PNG.  previews/ - JPG pictures (all around, close-ups, cutaway, the photo it was\n"
-        "made from).  physics.json - how each part behaves when crushed.  made_of.json - how the real one is made.\n"
-        "Real size, in meters.\n\n"
-        "Not included: .max (only 3ds Max itself can write it) and .c4d (needs Maxon's Cineware library); both\n"
-        "programs open the .fbx directly.\n")
-    pend = os.path.join(ROOT, "assets", "models_pending", cid)
-    os.makedirs(pend, exist_ok=True)
-    web = os.path.join(mdir, cid + "_web.glb")
-    if os.path.exists(web) or os.path.exists(os.path.join(mdir, cid + ".glb")):
-        shutil.copy(web if os.path.exists(web) else os.path.join(mdir, cid + ".glb"), os.path.join(pend, "model.glb"))
+                  open(os.path.join(tmp, "made_of.json"), "w"), indent=1)
+    except Exception as e:
+        say(f"[keep] {cid}: made_of.json skipped ({e})")
+    dossier = jload(os.path.join(WORK, "dossier", cid + ".json"), None)
+    deliver.write_readme(tmp, cid, product, not_here, dossier if isinstance(dossier, dict) else None)
+
+    res = deliver.verify(tmp, cid)
+    res["problems"] += extra
+    res["ok"] = res["ok"] and not extra
+    res["not_here"] = not_here
+    if not res["ok"]:
+        cause = [f"the {k} step failed: {v.get('why')}" for k, v in steps.items()
+                 if k in ("builder", "exports") and not v.get("ok")]
+        why = deliver.summary(res) + (" - because " + "; ".join(cause) if cause else "")
+        aside = put_aside(tmp, f"{cid}-failed-check-{ts}",
+                          f"A copy of {cid} that FAILED the delivery check, so it was not put in your Asset Library "
+                          f"(any older copy there is untouched).\nWhy: {why}\n\nEvery problem found:\n" +
+                          "\n".join(["  - missing: " + p for p in res["missing"]] + ["  - " + p for p in res["problems"]])
+                          + "\n\nSafe to delete.\n")
+        out = {"ok": False, "why": why, "started": fin["started"], "at": time.time(), "set_aside": aside,
+               "missing": res["missing"], "problems": res["problems"]}
+        json.dump(out, open(stamp, "w"), indent=1)
+        say(f"[keep] {cid}: delivery check failed - {why}. Not filed (the attempt is in {aside})")
+        return dict(res, **out)
+    dst = os.path.join(shelf, cid)
+    if os.path.lexists(dst):
+        put_aside(dst, f"{cid}-{ts}", f"The older copy of {cid} from your Asset Library, replaced "
+                                      f"{time.strftime('%B %-d, %Y at %-I:%M %p')} by a newer build that passed the "
+                                      "delivery check. Safe to delete once you have looked.\n")
+    os.rename(tmp, dst)
+    if not TRIAL:                                          # so the phone page spins the newest build
+        pend = os.path.join(ROOT, "assets", "models_pending", cid)
+        os.makedirs(pend, exist_ok=True)
+        web = os.path.join(mdir, cid + "_web.glb")
+        light = steps.get("web_glb", {}).get("ok") and fresh(web, fin["started"])
+        shutil.copy(web if light else os.path.join(dst, cid + ".glb"), os.path.join(pend, "model.glb"))
+    json.dump({"ok": True, "why": "", "started": fin["started"], "at": time.time(), "folder": dst},
+              open(stamp, "w"), indent=1)
     status(cid, step="done - kept in your Asset Library", ok=True, note=dst)
-    say(f"[keep] {cid} -> {dst}")
+    say(f"[keep] {cid} -> {dst} (every file opened whole)")
+    return dict(res, ok=True, why="", folder=dst)
 
 
 def start_over(cid, d):

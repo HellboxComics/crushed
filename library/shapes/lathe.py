@@ -356,17 +356,15 @@ for q in recipe.get("inside", []):
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in parts_out},
           open(os.path.join(out, "physics.json"), "w"), indent=1)
 
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out, spec["id"] + ".blend"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import saveall                                           # noqa: E402  library/shapes/saveall.py
+
+saveall.blend(out, spec["id"])                           # every picture packed inside the .blend: it opens anywhere
 bpy.ops.object.select_all(action="DESELECT")
 for o in parts_out:
     o.select_set(True)
 bpy.context.view_layer.objects.active = parts_out[0]
 bpy.ops.export_scene.gltf(filepath=os.path.join(out, spec["id"] + ".glb"), use_selection=True, export_yup=True,
                           export_extras=True)            # each part's physics travels inside the .glb too
-for fmt, call in (("fbx", lambda p: bpy.ops.export_scene.fbx(filepath=p, use_selection=True)),
-                  ("usdc", lambda p: bpy.ops.wm.usd_export(filepath=p, selected_objects_only=True))):
-    try:
-        call(os.path.join(out, spec["id"] + "." + fmt))
-    except Exception as e:
-        print(f"[lathe] {fmt} export unavailable here: {e}")
+saveall.rest(out, spec["id"], "lathe", extras=("physics.json",))   # .fbx (pictures inside) + .usdc + made.json
 print("[lathe]", spec["id"], "parts", ", ".join(o.name for o in parts_out))

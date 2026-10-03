@@ -203,17 +203,15 @@ objs.append(tab)
 
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in objs},
           open(os.path.join(OUT, "physics.json"), "w"), indent=1)
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(OUT, NAME + ".blend"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import saveall                                         # noqa: E402  library/shapes/saveall.py
+
+saveall.blend(OUT, NAME)                               # every picture packed inside the .blend: it opens anywhere
 bpy.ops.object.select_all(action="DESELECT")
 for o in objs:
     o.select_set(True)
 bpy.context.view_layer.objects.active = board
 bpy.ops.export_scene.gltf(filepath=os.path.join(OUT, NAME + ".glb"), use_selection=True, export_yup=True,
                           export_extras=True)
-for fmt, call in (("fbx", lambda p: bpy.ops.export_scene.fbx(filepath=p, use_selection=True)),
-                  ("usdc", lambda p: bpy.ops.wm.usd_export(filepath=p, selected_objects_only=True))):
-    try:
-        call(os.path.join(OUT, NAME + "." + fmt))
-    except Exception as e:
-        print(f"[pcb] {fmt} export unavailable here: {e}")
+saveall.rest(OUT, NAME, "pcb", extras=("physics.json",))     # .fbx (pictures inside) + .usdc + made.json
 print("[pcb]", NAME, "parts:", len(objs))

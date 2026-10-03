@@ -33,8 +33,10 @@ for v in ob.data.vertices:                                 # real size, centered
 ob.data.update()
 bpy.ops.object.shade_smooth()
 base = os.path.join(out, name)
-bpy.ops.wm.save_as_mainfile(filepath=base + ".blend")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import saveall                                             # noqa: E402  library/shapes/saveall.py
+
+saveall.blend(out, name)                                   # every picture packed inside the .blend: it opens anywhere
 bpy.ops.export_scene.gltf(filepath=base + ".glb", export_format="GLB", use_selection=False)
-bpy.ops.export_scene.fbx(filepath=base + ".fbx", path_mode="COPY", embed_textures=True)
-bpy.ops.wm.usd_export(filepath=base + ".usdc")
+saveall.rest(out, name, "resize", selected=False)          # .fbx (pictures inside) + .usdc + made.json
 print("size m:", [round(x, 4) for x in (hi - lo) * s])

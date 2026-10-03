@@ -129,14 +129,11 @@ if __name__ == "__main__":
         mt.node_tree.links.new(sep.outputs["Green"], bsdf.inputs["Roughness"])
         mt.node_tree.links.new(sep.outputs["Blue"], bsdf.inputs["Metallic"])
     me.materials.append(mt)
-    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out, name + ".blend"))
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import saveall                                     # library/shapes/saveall.py
+    saveall.blend(out, name)                           # every picture packed inside the .blend: it opens anywhere
     ob.select_set(True)
     bpy.ops.export_scene.gltf(filepath=os.path.join(out, name + ".glb"), use_selection=True, export_yup=True)
-    for fmt, call in (("fbx", lambda p: bpy.ops.export_scene.fbx(filepath=p, use_selection=True)),
-                      ("usdc", lambda p: bpy.ops.wm.usd_export(filepath=p, selected_objects_only=True))):
-        try:
-            call(os.path.join(out, name + "." + fmt))
-        except Exception as e:
-            print(f"[box] {fmt} export unavailable here: {e}")
+    saveall.rest(out, name, "box")                     # .fbx (pictures inside) + .usdc + made.json
     json.dump(L, open(os.path.join(out, "layout.json"), "w"))
     print("[box]", name, W, D, H)
