@@ -2149,10 +2149,11 @@ if __name__ == "__main__":
         import selftest
         last = jload(os.path.join(WORK, "selftest.json"), {})
         age = time.time() - last.get("at", 0)
-        if not last.get("ok", True) and age < 3600 and not installed:   # failed lately: no rerun for an hour
-            # (unless a missing tool was just installed - then every piece is checked again right away)
-            sys.exit(0)
         head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        if not last.get("ok", True) and age < 3600 and not installed and last.get("code") == head:
+            # failed lately with this same code: no rerun for an hour (a fix pushed since, or a missing tool just
+            # installed: every piece is checked again right away)
+            sys.exit(0)
         fresh = last.get("ok") and age < 6 * 3600 and last.get("code") == head and not installed   # new code: all again
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here
             say("self-test failed - nothing run (the reason is on your phone)")
