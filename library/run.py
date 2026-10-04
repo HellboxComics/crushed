@@ -2107,7 +2107,12 @@ def newer_version():
         if r.returncode != 0 or int(r.stdout.strip() or 0) == 0:
             return False
         up = subprocess.run(["git", "rev-parse", "@{u}"], cwd=ROOT, capture_output=True, text=True, timeout=30)
-        return jload(SYNC_STATE, {}).get("stuck_at") != up.stdout.strip()
+        if jload(SYNC_STATE, {}).get("stuck_at") == up.stdout.strip():
+            return False
+        # only a change to what RUNS is worth a restart (a self-test costs minutes): notes, plans and docs are not
+        d = subprocess.run(["git", "diff", "--name-only", "HEAD..@{u}"], cwd=ROOT, capture_output=True, text=True,
+                           timeout=30).stdout.split()
+        return any(not f.endswith((".md", ".txt")) or f.endswith("queue.txt") or "/playbook/" in f for f in d)
     except Exception:
         return False
 
