@@ -62,14 +62,17 @@ AUTHOR = ["-c", "user.name=Asset Engineer (your AI)", "-c", "user.email=engineer
 
 ROUTE_FILES = {                         # which shared files each kind of build uses (for the "still works" check)
     "round": ("shapes/lathe.py", "shapes/realmat.py", "finish.py", "outline.py", "labelart.py", "layout.py",
-              "skin.py", "shapes/specs/", "factory/", "labels/", "metal.py", "inks.py"),
-    "box": ("skin.py", "panels.py", "eraprint.py", "shapes/carton.py", "shapes/box.py", "finish.py", "factory/"),
-    "flat": ("skin.py", "panels.py", "eraprint.py", "shapes/box.py", "finish.py"),
-    "pcb": ("shapes/pcb.py", "skin.py", "panels.py", "finish.py"),
+              "skin.py", "shapes/specs/", "factory/", "labels/", "metal.py", "inks.py", "mosaic.py", "unwrap.py",
+              "kits.py", "labelparts.py", "parts.py", "shapes/assembly.py", "looks.py"),
+    "box": ("skin.py", "panels.py", "eraprint.py", "shapes/carton.py", "shapes/box.py", "finish.py", "factory/",
+            "facts.py", "kits.py"),
+    "flat": ("skin.py", "panels.py", "eraprint.py", "shapes/box.py", "finish.py", "facts.py", "kits.py"),
+    "pcb": ("shapes/pcb.py", "skin.py", "panels.py", "finish.py", "kits.py"),
     "free": ("hunyuan.py", "shapes/resize.py"),
-    "assembly": ("parts.py", "shapes/assembly.py", "shapes/realmat.py", "skin.py", "panels.py"),
+    "assembly": ("parts.py", "shapes/assembly.py", "shapes/realmat.py", "skin.py", "panels.py", "looks.py", "kits.py",
+                 "shapes/specs/"),
     "all": ("run.py", "exports.py", "webglb.py", "viewshot.py", "cutaway.py", "vet.py", "cards.py", "preview.py",
-            "shapes/saveall.py"),
+            "shapes/saveall.py", "shapes/contract.py", "shapes/uvstats.py", "sizecheck.py"),
 }
 
 

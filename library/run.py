@@ -1666,18 +1666,71 @@ def beat(doing):
         pass
 
 
+def _tree_cpu():
+    """CPU seconds used so far by this run and everything it started (Blender, the exports, Hunyuan): the honest
+    sign that a long job is still computing. -> float, or None when ps can't say."""
+    try:
+        out = subprocess.run(["ps", "-Ao", "pid=,ppid=,cputime="], capture_output=True, text=True, timeout=20).stdout
+    except Exception:
+        return None
+    kids, cpu = {}, {}
+    for line in out.splitlines():
+        parts = line.split()
+        if len(parts) < 3:
+            continue
+        try:
+            pid, ppid = int(parts[0]), int(parts[1])
+        except ValueError:
+            continue
+        t = parts[2]
+        secs = 0.0
+        days = 0
+        if "-" in t:
+            d, t = t.split("-", 1)
+            days = int(d)
+        bits = [float(x) for x in t.split(":")]
+        while len(bits) < 3:
+            bits.insert(0, 0.0)
+        secs = days * 86400 + bits[0] * 3600 + bits[1] * 60 + bits[2]
+        kids.setdefault(ppid, []).append(pid)
+        cpu[pid] = secs
+    total, todo = 0.0, [os.getpid()]
+    while todo:
+        p = todo.pop()
+        total += cpu.get(p, 0.0)
+        todo += kids.get(p, [])
+    return total
+
+
+def _drawing_busy():
+    """Is the drawing room (ComfyUI) working on something right now? (its queue, not just whether it answers)"""
+    try:
+        q = json.loads(urllib.request.urlopen(os.environ.get("DRAWING_ROOM", "http://127.0.0.1:8188") + "/queue",
+                                              timeout=15).read())
+        return bool(q.get("queue_running"))
+    except Exception:
+        return False
+
+
 def _beating():
-    """While the run waits on one long job (a drawing, Hunyuan), it still says it's alive every minute - but only
-    while those jobs really are moving: the drawing room is checked to be answering."""
+    """While the run waits on one long job (a Blender build, Hunyuan, a drawing), it says it's alive every minute -
+    but ONLY while that job is really moving: this run's own process tree has used CPU since the last minute, or
+    the drawing room is busy with a job. (2026-10-04: it used to beat whenever the drawing room merely answered,
+    so a run stalled for hours was never caught by the watchdog.) A brain call needs no fake beat: every one has
+    its own time limit, shorter than the watchdog's patience."""
     import threading
 
     def loop():
+        last = _tree_cpu()
         while True:
             time.sleep(60)
             try:
-                urllib.request.urlopen(os.environ.get("DRAWING_ROOM", "http://127.0.0.1:8188") + "/system_stats",
-                                       timeout=15).read()
-                beat("waiting on a long job (drawing room answering)")
+                now = _tree_cpu()
+                if last is not None and now is not None and now - last >= 2.0:
+                    beat(f"a long job is computing ({now - last:.0f} s of work in the last minute)")
+                elif _drawing_busy():
+                    beat("waiting on a drawing (the drawing room is busy with it)")
+                last = now if now is not None else last
             except Exception:
                 pass
     threading.Thread(target=loop, daemon=True).start()

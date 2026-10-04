@@ -126,4 +126,14 @@ finally:
     else:
         os.remove(qf)
 
+# 7. the heartbeat tells the truth: it beats on real work (CPU used by this run's own processes) or a busy drawing
+#    room - never because the drawing room merely answers
+check("system_stats" not in src.split("def _beating")[1].split("class Waiting")[0] and "_tree_cpu()" in src and "_drawing_busy()" in src,
+      "the long-job heartbeat beats on CPU progress or a running drawing, not on the drawing room answering")
+c0 = run._tree_cpu()
+t = time.time()
+while time.time() - t < 1.3:
+    sum(i * i for i in range(20000))
+check(c0 is not None and run._tree_cpu() >= c0 + 1.0, "CPU work of this process is seen")
+
 print(f"ALL {ok} PASS")
