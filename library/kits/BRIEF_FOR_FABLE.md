@@ -101,6 +101,34 @@ Read this, then kits/DESIGN.md (the redesign and its Status), then playbook/play
    cartridges (90 / 75 / 69 / 58 catalog items).
 6. Later (only after assets are perfect and kept): the marketplace lane and the BuiltInside brand (DESIGN.md).
 
+## Night of 2026-10-03/04 (Fable, commits d491c52..3dff9b7) - what changed in the PROCESS
+- Cody's rule, restated hard: "you step over the line and you void the entire test". Twice I fixed an asset's
+  failure myself (a turned-part size fit); it is REVERTED so his AI's engineer finds it. Build only tools, checks,
+  time, what the engineer is shown, and the process' own efficiency. He also said: "you are the engineer of the
+  engineer ... optimize the process" - that IS the job, actively, not passive watching.
+- Engineer loop: fail fast (test builds skip the judge until exact checks pass; unjudged checks count as still
+  failing - engineer._fails_of); one redo-from-scratch with no code change, then it must change something; a
+  model file is not a picture; STEP_FILES tells it which file makes which step per route; it steps aside when
+  newer code lands before it changed anything (run.py marks the item to be remade on the new code).
+- Code versions: status entries carry 'code'; retries count per version (tries are [time, code]); an item that
+  failed on other code is due at once.
+- Builders: soft parts LOFTED from outlines the planner reads off the photos (assembly.form, parts.py outlines);
+  surfaces per material (shapes/looks.py: fur/weave/grain/brushed normal maps + sheen); ring UVs for lofted and
+  lathe parts; the circuit board's solder side from skin/back.png when a photo exists (pcb.py arg 8).
+- Self-review: parts step (review.parts_checks), circuit-board step (review.pcb_checks), label words step says
+  what was laid over a photo (review.not_on_item, from the dossier's overlays - the two-photo rule was wrong and
+  is gone).
+- Judge inputs (measuring stick, not asset): each side shown unlit (print) AND lit (materials); four label turns
+  as a 2x2 grid at 1600 px; a side compared with ITS crop of the photo (dossier view box), not the whole photo.
+- Brain: every question has a word budget (vet THINK_WORDS/PLAIN_WORDS; a facts read ran 15 min of looping thought).
+- Label rounds continue while the comparison lists fixes (up to 4), stop at 10/no fixes or an unchanged layout.
+- Duracell by Cody's AI: build 9 (3dff9b7 pending) - label PASSED the judge side-by-side for the first time, top
+  passed; bottom failed only because of the whole-photo reference (fixed above); 'details': the judge wants the
+  sleeve's overlap seam (engineer's job). Furby: engineer found the stand-in boxes itself; now lofted parts.
+  3dfx: 83 parts on the board; solder side now real; engineer took it on old code.
+- Lesson for the next engine: every push restarts the Mac between items (self-test ~8 min). Batch pushes; write
+  remaster/restart.request only when a running build would be wasted on code already replaced.
+
 ## Scheduled check-ins already set in this session
 - "Check Duracell 5th build" fires 22:06 UTC (it's really build 6 now). Handle it: read the log + review.json, LOOK,
   fix setup bugs, tell Cody plainly.
