@@ -1,5 +1,6 @@
 """Google Images, the way your X bot uses X: its own ordinary Chromium window with its own profile folder
-(~/.hellbox/ref-browser), started normally and driven at a person's pace. Never your browser or your accounts.
+(~/.hellbox/ref-browser), started by Playwright itself and driven at a person's pace. Never your browser or your
+accounts.
 If Google ever shows "I'm not a robot", nothing answers it: the hunt says so, you tick it once in that window,
 and the next search goes on.
 
@@ -45,81 +46,144 @@ def _up():
         s.close()
 
 
-def restart(log=print):
-    """The reference browser started again from the CURRENT Playwright's Chromium: the one on the port is closed
-    first (it is the asset maker's own window, nothing of Cody's). Needed when the Playwright client and the
-    running browser no longer match (2026-10-04: "Browser context management is not supported" after an update,
-    every hunt failing while the self-test only saw that the port answered)."""
-    try:
-        subprocess.run(["pkill", "-f", f"remote-debugging-port={PORT}"], capture_output=True, timeout=20)
-    except Exception as e:
-        log(f"[google] the old reference browser could not be closed: {e}")
+_PW = [None, None]    # Playwright and the thread it was started in (sync Playwright is bound to one thread)
+_CTX = [None]         # the bot's own browser window (a persistent context on PROFILE), kept open across searches
+
+
+def _flags():
+    extra = os.environ.get("CRUSHED_BROWSER_FLAGS", "").split()      # (tests: --headless=new --no-sandbox)
+    headless = any(x.startswith("--headless") for x in extra)
+    return headless, [x for x in extra if not x.startswith("--headless")]
+
+
+def _close_old():
+    """A reference browser from before 2026-10-04 (started by hand on the debugging port) or a stray Chromium still
+    holding the profile folder: closed, so Playwright's own can open the profile. Nothing of Cody's: only
+    processes started on this profile folder or this port."""
+    for pat in (f"remote-debugging-port={PORT}", f"user-data-dir={PROFILE}"):
+        try:
+            subprocess.run(["pkill", "-f", pat], capture_output=True, timeout=20)
+        except Exception:
+            pass
     for _ in range(20):
         if not _up():
             break
         time.sleep(0.5)
-    ensure()
-    log("[google] the reference browser was started again (fresh Chromium from the current Playwright)")
+    time.sleep(1)
 
 
-def connect(pw):
-    """Playwright attached to the reference browser - checked to really work (a context can be made), started
-    again once when it cannot. -> browser"""
-    try:
-        br = pw.chromium.connect_over_cdp(f"http://127.0.0.1:{PORT}")
-        _ = br.contexts[0] if br.contexts else br.new_context()
-        return br
-    except Exception as e:
-        print(f"[google] could not use the reference browser ({str(e).splitlines()[0][:120]}) - starting it again", flush=True)
-        restart()
-        br = pw.chromium.connect_over_cdp(f"http://127.0.0.1:{PORT}")
-        _ = br.contexts[0] if br.contexts else br.new_context()
-        return br
-
-
-def ensure():
-    if _up():
-        return
+def _context(log=print):
+    """The bot's own browser window, started by Playwright itself (so the two always match - 2026-10-04: a
+    browser started by hand on the debugging port stopped matching the Playwright that drove it and every hunt
+    failed) and kept open across searches, so a captcha Cody ticks once stays ticked. Started again when it was
+    closed."""
+    ctx = _CTX[0]
+    if ctx is not None:
+        try:
+            _ = ctx.pages
+            if ctx.browser is None or ctx.browser.is_connected():
+                return ctx
+        except Exception:
+            pass
+        _CTX[0] = None
+    import threading
+    from playwright.sync_api import sync_playwright
+    if _PW[0] is not None and _PW[1] != threading.get_ident():     # started in another thread (the self-test's
+        close()                                                    # probe): let go and start in this one
+        try:
+            _PW[0].stop()
+        except Exception:
+            pass
+        _PW[0] = None
+    if _PW[0] is None:
+        _PW[0] = sync_playwright().start()
+        _PW[1] = threading.get_ident()
     os.makedirs(PROFILE, exist_ok=True)
-    extra = os.environ.get("CRUSHED_BROWSER_FLAGS", "").split()      # (tests: --headless=new --no-sandbox)
-    subprocess.Popen([_exe(), f"--user-data-dir={PROFILE}", f"--remote-debugging-port={PORT}",
-                      "--remote-debugging-address=127.0.0.1", "--no-first-run", "--no-default-browser-check",
-                      *extra, "https://www.google.com/"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                     start_new_session=True)
-    for _ in range(40):
-        if _up():
-            time.sleep(3)
-            return
-        time.sleep(0.5)
-    raise RuntimeError("the reference browser did not start")
+    headless, args = _flags()
+    for attempt in (1, 2):
+        try:
+            _CTX[0] = _PW[0].chromium.launch_persistent_context(PROFILE, headless=headless, args=args, no_viewport=True,
+                                                               ignore_default_args=["--enable-automation"])
+            break
+        except Exception as e:
+            if attempt == 2:
+                raise RuntimeError(f"the reference browser did not start: {str(e).splitlines()[0][:200]}")
+            log(f"[google] the reference browser could not open its profile ({str(e).splitlines()[0][:100]}) - closing "
+                "whatever still holds it and trying once more")
+            _close_old()
+    import atexit
+    atexit.register(lambda: close())
+    return _CTX[0]
+
+
+def close(stop=False):
+    """The window closed (and, stop=True, Playwright let go too - the self-test's probe thread ends with it)."""
+    try:
+        if _CTX[0] is not None:
+            _CTX[0].close()
+    except Exception:
+        pass
+    _CTX[0] = None
+    if stop and _PW[0] is not None:
+        try:
+            _PW[0].stop()
+        except Exception:
+            pass
+        _PW[0] = _PW[1] = None
+
+
+def ensure(log=print):
+    """The bot's browser window is open and driven by this Playwright."""
+    _context(log)
+
+
+def restart(log=print):
+    """Closed and started again (a fresh Chromium from the current Playwright)."""
+    close()
+    _close_old()
+    _context(log)
+    log("[google] the reference browser was started again")
+
+
+def probe():
+    """Really usable: a page can be opened. -> how many pages the window has (for the self-test)."""
+    ctx = _context()
+    p = ctx.new_page()
+    try:
+        p.goto("about:blank", timeout=15000)
+        return len(ctx.pages)
+    finally:
+        p.close()
 
 
 def _open(url, scroll=True, js=None, log=print):
     """One page in the bot's own window, at a person's pace (20 s between searches). -> (html, js result) or
     (None, None) when Google asks for a person to tick 'I'm not a robot' (never answered here)."""
-    from playwright.sync_api import sync_playwright
-    ensure()
     wait = GAP - (time.time() - _last[0])
     if wait > 0:
         time.sleep(wait)
     _last[0] = time.time()
-    with sync_playwright() as pw:
-        br = connect(pw)
-        ctx = br.contexts[0] if br.contexts else br.new_context()
+    try:
+        ctx = _context(log)
         page = ctx.new_page()
-        try:
-            page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            page.wait_for_timeout(2500)
-            if scroll:
-                page.mouse.wheel(0, 2500)                     # the first rows load more as a person scrolls
-                page.wait_for_timeout(1500)
-            if "/sorry/" in page.url:
-                log("[google] Google wants a person to tick 'I'm not a robot' in the reference browser window "
-                    "on your Mac. Tick it once; the next search goes on. Nothing here answers it.")
-                return None, None
-            return page.content(), (page.evaluate(js) if js else None)
-        finally:
-            page.close()
+    except Exception as e:
+        log(f"[google] the reference browser could not be used ({str(e).splitlines()[0][:120]}) - starting it again")
+        restart(log)
+        ctx = _context(log)
+        page = ctx.new_page()
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(2500)
+        if scroll:
+            page.mouse.wheel(0, 2500)                     # the first rows load more as a person scrolls
+            page.wait_for_timeout(1500)
+        if "/sorry/" in page.url:
+            log("[google] Google wants a person to tick 'I'm not a robot' in the reference browser window "
+                "on your Mac. Tick it once; the next search goes on. Nothing here answers it.")
+            return None, None
+        return page.content(), (page.evaluate(js) if js else None)
+    finally:
+        page.close()
 
 
 def _unesc(s):

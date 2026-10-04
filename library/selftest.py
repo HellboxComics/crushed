@@ -332,11 +332,8 @@ def t_google():
 
     def probe():                                       # really usable, not just a port that answers (2026-10-04);
         try:                                           # in its own thread: this process may hold an asyncio loop,
-            from playwright.sync_api import sync_playwright   # where Playwright's sync API refuses to run
-            G.ensure()
-            with sync_playwright() as pw:
-                br = G.connect(pw)
-                out["n"] = len(br.contexts)
+            out["n"] = G.probe()                       # where Playwright's sync API refuses to run
+            G.close(stop=True)                         # (the hunt opens its own in the run's thread)
         except Exception as e:
             out["err"] = e
     th = threading.Thread(target=probe, daemon=True)
@@ -346,7 +343,7 @@ def t_google():
         raise out["err"]
     if "n" not in out:
         raise RuntimeError("the browser probe did not finish in 80 s")
-    return f"its own browser is up and Playwright can drive it ({out['n']} context(s))"
+    return f"its own browser opens and Playwright drives it ({out['n']} page(s))"
 
 
 def run_all(quiet_phone=False):
