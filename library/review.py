@@ -260,33 +260,29 @@ def parts_checks(plan, asm, kit_parts=()):
     return out
 
 
-def confirmed_across(words, by_png, src_of, patterns=()):
-    """Words that two DIFFERENT photos show (or that match what every label of this kind carries, the kit's
-    patterns, or that are printed marks): a caption, a watermark or a listing's words sit on one photo only and were
-    'confirmed by two reads' of that same photo. -> (kept, left out). Kept here, locked, next to only_words."""
+def not_on_item(words, by_png, src_of, dossier):
+    """Words read off a photo that the dossier's careful look says are laid OVER that photo (a caption, a watermark,
+    a listing's text), or that read as a credit/site name (facts.not_printed): never printed. -> (kept, left out).
+    Kept here, locked, next to only_words. (2026-10-04: 'Remember these?' - a caption - was read as label text.)"""
     import re
+    import facts as FX
     norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
-    srcs = {}
+    photos = {p.get("file"): p for p in (dossier or {}).get("photos") or [] if isinstance(p, dict)}
+    overlay_of = {}                                             # normalized word -> True when some photo's overlay
     for png, lines in (by_png or {}).items():
-        src = src_of.get(png, png)
+        p = photos.get(src_of.get(png, png))
+        if not p:
+            continue
+        ow = FX._overlay_words(p)
         for w in lines:
-            n = norm(w)
-            if n:
-                srcs.setdefault(n, set()).add(src)
-    pats = []
-    for p in patterns or []:
-        try:
-            pats.append(re.compile(p, re.I))
-        except re.error:
-            pass
-    single = len(set(src_of.values())) < 2                  # one photo in all: nothing can be cross-checked
+            if FX._on_overlay(w, ow):
+                overlay_of[norm(w)] = True
     kept, out = [], []
     for w in words:
         n = norm(w)
-        seen = {s for k, v in srcs.items() if k == n or (len(n) >= 4 and (k.startswith(n) or k.endswith(n)
-                                                                            or n.startswith(k) or n.endswith(k))) for s in v}
-        ok = single or len(seen) >= 2 or not n or str(w).strip() in ("+", "-", "+/-") or any(p.search(str(w)) for p in pats)
-        (kept if ok else out).append(w)
+        bad = FX.not_printed(w) or overlay_of.get(n) or any(k and len(n) >= 4 and (k.startswith(n) or k.endswith(n))
+                                                            for k in overlay_of)
+        (out if bad and n else kept).append(w)
     return kept, out
 
 

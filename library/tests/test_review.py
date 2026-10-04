@@ -86,15 +86,14 @@ check(pcbc["every part has a height"][0] is False and pcbc["no part covers more 
 check(pcbc["every part of this kind's kit was found"][0] is None and "memory" in pcbc["every part of this kind's kit was found"][1],
       "a kit part not found is reported, not called broken")
 
-# words confirmed across photos
+# words laid over a photo are never label text
 by_png = {"side1.png": ["DURACELL", "Remember these?", "JAN 2001"], "item1.png": ["DURACELL", "Remember these?", "100%"],
-          "side2.png": ["DURACELL®", "JAN 2001", "MAY EXPLODE OR LEAK."], "item2.png": ["SIZE AA"]}
-src = {"side1.png": "a.jpg", "item1.png": "a.jpg", "side2.png": "b.jpg", "item2.png": "b.jpg"}
-words = ["DURACELL", "Remember these?", "JAN 2001", "100%", "MAY EXPLODE OR LEAK.", "SIZE AA", "+"]
-kept, out = review.confirmed_across(words, by_png, src, [r"\bSIZE\b", r"EXPLODE|LEAK|CAUTION"])
-check(out == ["Remember these?", "100%"], f"words seen on ONE photo only (even twice on it) are left out: {out}")
-check(kept == ["DURACELL", "JAN 2001", "MAY EXPLODE OR LEAK.", "SIZE AA", "+"],
-      "words on two photos, kit lines (caution, SIZE) and marks are kept")
-kept, out = review.confirmed_across(words, {"side1.png": by_png["side1.png"]}, {"side1.png": "a.jpg"}, [])
-check(not out, "with a single photo nothing can be cross-checked: all kept")
+          "side2.png": ["DURACELL®", "JAN 2001", "MAY EXPLODE OR LEAK.", "photo by retrocollector"]}
+src = {"side1.png": "a.jpg", "item1.png": "a.jpg", "side2.png": "b.jpg"}
+dos = {"photos": [{"file": "a.jpg", "overlays": [{"what": "caption", "text": "Remember these?", "box": None}]},
+                  {"file": "b.jpg", "overlays": []}]}
+words = ["DURACELL", "Remember these?", "JAN 2001", "100%", "MAY EXPLODE OR LEAK.", "photo by retrocollector", "+"]
+kept, out = review.not_on_item(words, by_png, src, dos)
+check(out == ["Remember these?", "photo by retrocollector"], f"a caption the dossier saw laid over the photo, and a credit line, are left out: {out}")
+check(kept == ["DURACELL", "JAN 2001", "100%", "MAY EXPLODE OR LEAK.", "+"], "words on the item stay, even ones seen on one photo")
 print(f"\n{ok} checks passed")

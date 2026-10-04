@@ -899,13 +899,11 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             pass
     by_png = {}
     words = label_words(reads_from, use, by_png=by_png)
-    # a line is printed only when two DIFFERENT photos of the item show it, or it is what every label of this kind
-    # carries (the kit): a caption, a watermark or a listing's words sit on ONE photo ("Remember these?", 2026-10-04)
-    expect_pats = [e.get("pattern") for z in (kits.library()["families"].get(kit_name) or {}).get("zones") or []
-                   for e in (z.get("expect") or []) if e.get("pattern")] if kit_name else []
-    words, one_photo = review.confirmed_across(words, by_png, src_of, expect_pats)
-    if one_photo:
-        say(f"[texture] read on ONE photo only - not printed: {one_photo}")
+    # what the dossier's careful look says is laid OVER a photo (a caption, a watermark, a listing's words) is never
+    # label text ("Remember these?" was read off a photo caption, 2026-10-04)
+    words, not_item = review.not_on_item(words, by_png, src_of, dos)
+    if not_item:
+        say(f"[texture] laid over a photo, not on the item - not printed: {not_item}")
     # the printed lines the dossier read off this item's own photo for its label (the same lines the finished model
     # is checked against): allowed too, so the layout can carry them (2026-10-03: "DURACELL INC., Bethel, CT 06801"
     # was checked on the model but never allowed on the label - the writer was told to add it and could not)
@@ -931,8 +929,8 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
           "nothing missing") + (f"; not found anywhere: {', '.join(still)}" if still else ""))])
     R.step("words on the label (each confirmed by two reads)", files=reads_from, checks=[
         ("words were read", bool(words), f"{len(words)} words"),
-        ("every word was seen on two different photos, or is what this kind always carries", True if not one_photo else None,
-         ("left out, seen on one photo only: " + "; ".join(one_photo)[:300]) if one_photo else "all confirmed"),
+        ("nothing laid over a photo (caption, watermark, listing text) is taken as label text", True,
+         ("left out: " + "; ".join(not_item)[:300]) if not_item else "nothing laid over the photos was read"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])
     import layout as LAY
     # A label that was already good is KEPT, not written again (Cody, 2026-10-03: "if the label is wrong, fix the
