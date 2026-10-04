@@ -36,7 +36,10 @@ E._release = lambda m: RELEASED.append(m)
 
 def script(trials, judge, **extra):
     for f in glob.glob(SCRIPT + ".*"):
-        os.rename(f, f + ".used-" + str(time.time()))
+        if ".used-" in f:
+            os.remove(f)
+        else:
+            os.rename(f, f + ".used-" + str(time.time()))
     json.dump(dict({"trials": trials, "judge": judge, "shots_dir": os.path.join(BUILD, "check")}, **extra),
               open(SCRIPT, "w"))
 
@@ -342,6 +345,31 @@ check(res.get("newer_code") is True and res.get("kept") is False, f"it steps asi
 check(calls("trials", C.CID) == 0, "no test build was run on the old code")
 res = run(Brain([[("finish", {"summary": "x"})]]), {"pass": False, "failed": ["shape"], "problems": ["x"]}, newer=lambda: False)
 check(not res.get("newer_code"), "with no newer code it works as before")
+
+# =========================================================== J: fail fast - an unjudged test build
+print("\nJ. a test build whose exact checks failed is not judged; its judge checks count as still failing")
+script({C.CID: [{"failed": ["measure_size", "not_judged"]}]}, {C.CID: [{"failed": ["measure_size", "not_judged"]}]})
+brain = Brain([
+    [("edit_file", {"path": "library/finish.py", "old": "RNG = np.random.default_rng(8)",
+                    "new": "RNG = np.random.default_rng(31)"})],
+    [("rebuild", {"why": "x"})],
+    [("finish", {"summary": "x"})],
+])
+res = run(brain, {"pass": False, "failed": ["measure_size", "shape", "not_cg"], "problems": ["x"]})
+tr = brain.tool_results()
+rb = json.loads(tr[1])
+check(rb.get("not_judged") and rb["failed_now"] == ["measure_size", "not_cg", "shape"],
+      f"the rebuild says it was not judged and counts shape/not_cg as still failing: {rb['failed_now']}")
+check(res.get("kept") is False, "nothing kept: no failure is gone")
+script({C.CID: [{"failed": ["shape"]}, {"failed": ["shape"]}]}, {C.CID: [{"failed": ["shape"]}]})
+brain = Brain([
+    [("edit_file", {"path": "library/finish.py", "old": "RNG = np.random.default_rng(8)",
+                    "new": "RNG = np.random.default_rng(32)"})],
+    [("rebuild", {"why": "x"})],
+    [("finish", {"summary": "fixed the size"})],
+])
+res = run(brain, {"pass": False, "failed": ["measure_size", "shape", "not_cg"], "problems": ["x"]})
+check(res.get("kept") is True, f"a fix that passes the exact checks and then the judge (fully judged) is kept: {res.get('why')}")
 
 # =========================================================== F: context and fingerprint units
 print("\nF. units: old tool results are cut short; the run.py fingerprint")

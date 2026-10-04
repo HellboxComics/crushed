@@ -359,6 +359,14 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
                     shots=[x for x in (shots, close) if x], web_glb=os.path.join(mdir, cid + "_web.glb"), use=use,
                     log=say)
     say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
+    if TRIAL and not m["pass"]:
+        # FAIL FAST in a test build: the judge's looks (8+ brain questions, 15-25 minutes on the shared brain server)
+        # are skipped while an exact check still fails - the engineer learns the exact result in minutes and the
+        # judge looks the moment the exact checks pass. Unjudged checks count as still failing (engineer._fails_of).
+        say(f"[check] {cid}: exact checks failed - the judge's looks are skipped in this test build until they pass")
+        failed = [f"measure_{k}" for k in m["failed"]] + ["not_judged"]
+        return {"pass": False, "failed": failed, "measure": m["checks"], "sides": {},
+                "problems": m["problems"] + ["not judged: the exact checks failed first; the judge looks once they pass"]}
     status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
     j = judge.sides(cid, m.get("renders_lit") or m["renders"], dos_now, use, route, product=product, log=say)
     verdict = inspect(shots, picked["file"], product, use, card=card, close=close)

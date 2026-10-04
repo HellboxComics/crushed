@@ -250,6 +250,9 @@ if sys.argv[1] == "judge":
     vs = types.ModuleType("viewshot")
     vs.shoot = lambda glb, out: (os.path.join(out, "a.jpg"), os.path.join(out, "c.jpg"))
     sys.modules["viewshot"] = vs
+    ms = types.ModuleType("measure")                     # the exact checks pass, so the judge looks (fail fast otherwise)
+    ms.run = lambda *a, **k: {{"pass": True, "failed": [], "problems": [], "checks": {{}}, "renders": [], "renders_lit": []}}
+    sys.modules["measure"] = ms
     run.make_room = lambda w: None
     def fake_inspect(sheet, photo, product, use, card=None, close=None):
         json.dump({{"card_touched": bool(card.get("touched")), "sheet": sheet}}, open(os.path.join(sys.argv[2], "inspect_saw.json"), "w"))

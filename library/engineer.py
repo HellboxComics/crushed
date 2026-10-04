@@ -228,6 +228,35 @@ def _fails(v):
     return list((v or {}).get("failed", [])) if isinstance(v, dict) else []
 
 
+def _fails_of(v, first):
+    """A trial's failures measured against the first (full) check: a test build whose exact checks failed was not
+    judged (fail fast) - every judge check that failed at first counts as still failing."""
+    f = set(_fails(v))
+    if "not_judged" in f:
+        f.discard("not_judged")
+        f |= {x for x in _fails(first) if not x.startswith("measure_")}
+    return f
+
+
+# which file makes which step, per route - so the engineer opens the right file first instead of reading run.py
+# top to bottom (the 3dfx session spent 20 minutes reading run.py before it looked at a single builder)
+STEP_FILES = {
+    "assembly": ("parts.py (the parts PLAN: what your AI is asked, how its answer is cleaned and fitted - parts_plan.json "
+                 "is its output) -> shapes/assembly.py (each part built: box/cylinder/lathe/tube/sphere, form() lofts "
+                 "soft parts from outlines, material()+shapes/looks.py the surfaces) -> measure.py (exact checks)"),
+    "round": ("skin.py compose/sides (the label unrolled from the photos) -> run.py label_words/whole_words (the "
+              "words) -> labelparts.py (what every label of this kind carries) -> layout.py (the label's layout, "
+              "rounds, measured color check) -> labelart.py (drawn in exact type) -> shapes/lathe.py + shapes/specs "
+              "(the body, the ends, the insides) -> measure.py"),
+    "box": ("dossier.py (every side planned: photo / sister / rebuilt) -> skin.py box_skin + panels.py (each side's "
+            "art, atlas.png) -> shapes/box.py or shapes/carton.py (the box) -> measure.py"),
+    "flat": "skin.py box_skin -> shapes/box.py (a thin box) -> measure.py",
+    "pcb": ("skin.py box_skin flat=True (top + solder side straightened) -> run.py board_parts (parts read off the "
+            "top photo, parts.json) -> shapes/pcb.py (the board's outline, each part as a solid, bracket) -> measure.py"),
+    "organic": "hunyuan.py (shape + paint from the photo) -> shapes/resize.py -> measure.py",
+}
+
+
 def _route_of(card, d):
     if os.path.exists(os.path.join(d, "parts_plan.json")):     # built by the general one-off builder
         return "assembly"
@@ -1332,9 +1361,10 @@ class Bench:
         v = t["verdict"]
         if not v:
             return f"THE REBUILD FAILED before the check (it took {t['took']} s). The end of its log:\n{tail}"
-        before = _fails(self.cur.get("verdict"))
+        before = sorted(_fails_of(self.cur.get("verdict"), self.first["verdict"]))
         first = set(_fails(self.first["verdict"]))
-        now = set(_fails(v))
+        now = _fails_of(v, self.first["verdict"])
+        unjudged = "not_judged" in _fails(v)
         self.cur = {"verdict": v, "shots": t["shots"], "close": t["close"], "dir": t["dir"]}
         for w in ("check", "close"):
             try:
@@ -1346,6 +1376,9 @@ class Bench:
                            "now_passing_that_failed_at_first": sorted(first - now),
                            "NEW_failures_that_passed_at_first": sorted(now - first),
                            "judge_says": v.get("problems"),
+                           **({"not_judged": "an exact check still fails, so the judge did not look at this build (it "
+                                             "looks the moment every exact check passes); the judge's checks count "
+                                             "as still failing until then"} if unjudged else {}),
                            "note": "the new check and close-up pictures come with the next message - look at them "
                                    "yourself before you decide whether this change helped. A fix is kept only if "
                                    "nothing that passed at first fails now and at least one failure is gone."},
@@ -1500,6 +1533,10 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
                       "\nStart at the FIRST step that went wrong: fix that step's code, not the finished model.")
     except Exception:
         pass
+    route = _route_of(card, build_dir)
+    if STEP_FILES.get(route):
+        first += (f"\n\nThis item was built by the '{route}' route. The files that make each step, in order: "
+                  f"{STEP_FILES[route]}. Open the file of the step that went wrong; read_file takes start/end lines.")
     messages = [{"role": "system", "content": _system(b)}, {"role": "user", "content": first}]
     tools = tool_specs()
     sees = can_see(model)
@@ -1617,7 +1654,7 @@ def _accept(b, say):
     if not last or last["diff"] != h:
         return False, ("You changed code after your last rebuild (or never rebuilt). Rebuild with exactly these changes "
                        "first - nothing is kept that was not tested.")
-    F0, F1 = set(_fails(b.first["verdict"])), set(_fails(last["verdict"]))
+    F0, F1 = set(_fails(b.first["verdict"])), _fails_of(last["verdict"], b.first["verdict"])
     if not F1 < F0:
         worse = sorted(F1 - F0)
         msg = (f"Your last rebuild failed {sorted(F1)} (at first: {sorted(F0)}). " +
@@ -1640,14 +1677,14 @@ def _accept(b, say):
     if t is None or not t["verdict"]:
         return decide(False, "The confirmation rebuild of the same code did not finish (" +
                       (tail or "")[-600:] + ") - nothing is kept that can't be repeated.")
-    F2 = set(_fails(t["verdict"]))
+    F2 = _fails_of(t["verdict"], b.first["verdict"])
     own = b._judge_own(t)
     if b.stopped:
         return False, b.stopped
     if own is None or "failed" not in own:
         return decide(False, "The asset maker's own check could not judge the confirmation rebuild" +
                       (f" ({str((own or {}).get('problems'))[:300]})" if own else "") + " - nothing is kept unconfirmed.")
-    Fp = set(_fails(own))
+    Fp = _fails_of(own, b.first["verdict"])
     if F2 != F1 or Fp != F1:
         return decide(False, f"The same code built a second time did not come out the same: first {sorted(F1)}, "
                              f"second {sorted(F2)}, the asset maker's own check {sorted(Fp)}. That is luck or noise, "
