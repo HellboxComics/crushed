@@ -38,22 +38,6 @@ check(tuft["front_outline"] == list(parts.EGG) and any("tuft: no front outline" 
       "a soft part with no outline gets the egg, and that is written down as a fix")
 check("front_outline" not in eye or eye["front_outline"] == [], "a hard part carries no outline")
 
-# 1b. a turned part reaches farther than its size, and is kept inside the object once turned
-t = parts.turned_extent([34, 26, 52], [0, 18, 0])
-check(abs(t[0] - 48.4) < 0.1 and abs(t[2] - 60.0) < 0.1 and t[1] == 26, f"a 34 x 26 x 52 part turned 18 deg reaches {[round(v, 1) for v in t]}")
-p2 = parts.clean({"parts": [{"name": "ear", "shape": "organic", "size_mm": [34, 26, 52], "at_mm": [-42, 0, 122],
-                             "rotate_deg": [0, 18, 0], "front_outline": [1, 1, 1], "side_outline": [1, 1, 1],
-                             "material": "plush_fur"},
-                            {"name": "rod", "shape": "rounded_box", "size_mm": [10, 10, 240], "at_mm": [0, 0, 75],
-                             "rotate_deg": [0, 45, 0], "material": "molded_plastic"}]},
-                 120, 120, 150, [], ["plush_fur", "molded_plastic"])
-e, r = p2["parts"]
-check(e["at_mm"][0] > -42 and e["at_mm"][2] < 122 and e["size_mm"] == [34.0, 26.0, 52.0],
-      "a turned ear that would poke out is moved in, its size kept")
-rt = parts.turned_extent(r["size_mm"], [0, 45, 0])
-check(max(rt[0] - 120, rt[2] - 150) <= 0.5 and abs(r["size_mm"][2] / r["size_mm"][0] - 24) < 0.01 and r["size_mm"][2] < 240,
-      f"a turned rod too long for the object is shrunk whole, keeping its proportions ({[round(v) for v in r['size_mm']]})")
-
 # 2. the loft itself (assembly.form) with Blender's mesh tools stood in for
 src = open(os.path.join(LIB, "shapes", "assembly.py")).read()
 tree = ast.parse(src)

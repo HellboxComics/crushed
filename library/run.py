@@ -773,10 +773,11 @@ def read_words(png, use):
 MARKS = {"+", "-", "+/-"}
 
 
-def label_words(pngs, use):
+def label_words(pngs, use, by_png=None):
     """The words printed on a label, each confirmed by two independent reads before it may be printed: your AI reads
     every picture twice (two different questions) and the text reader (Apple's own) reads it once; a line counts
-    when both AI reads saw it, or the text reader saw it too. A word only one read 'saw' is never printed."""
+    when both AI reads saw it, or the text reader saw it too. A word only one read 'saw' is never printed.
+    by_png (a dict) also gets, per picture, the lines confirmed on it."""
     import difflib
     import vet as V
     import measure as MS
@@ -785,6 +786,7 @@ def label_words(pngs, use):
           'symbols like (R) and TM, and capitals as printed). Answer ONLY JSON: {"lines": ["..."]}')
     out = []
     for png in pngs:
+        before = len(out)
         a = read_words(png, use)
         try:
             b = [x for x in V.ask(use, q2, [png], think=False).get("lines", []) if isinstance(x, str)]
@@ -804,6 +806,10 @@ def label_words(pngs, use):
             if (norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out])) or \
                     (mark(w) and (w.strip() in a or w.strip() in b) and w.strip() not in out):
                 out.append(w.strip() if mark(w) else w)
+        if by_png is not None:                             # what THIS picture confirmed (seen here, new or not)
+            here = [w for w in a if norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)]
+            here += [w for w in o if norm(w) and like(w, an + bn)]
+            by_png[png] = list(dict.fromkeys(x.strip() for x in here))
     out = whole_words(out)
     say(f"[texture] words confirmed by two reads: {out}")
     return out
@@ -860,7 +866,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     R.step("unrolled label (the photos' real pixels)", files=[real_png], checks=[
         ("the main photo covers the whole length at the front", fl >= 0.9, f"{fl:.0%} of the length"),
         ("the judge sees nothing stretched, doubled, foreign or metal in it", seen_ok, seen_why)])
-    parts = []
+    parts, src_of = [], {}                                  # each strip and cutout -> the photo it came from
     for vf in views:
         try:
             got = skin.sides(vf, "along" if reads == "along" else "around") if vf.get("mask") else []
@@ -871,6 +877,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             pp = os.path.join(tex, f"side{len(parts) + 1}.png")
             part.save(pp)
             parts.append(pp)
+            src_of[pp] = vf.get("file")
     # the words are read off the unrolled strips AND off each photo's item as it is: the unrolled strip stops where
     # the label curves away (about 62 degrees), so a line near the edge in the photo ("100%" over the Duracell's
     # meter) is only readable in the photo itself (2026-10-03: the judge failed "100%" missing - it was never read)
@@ -879,9 +886,18 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         try:
             if vf.get("mask"):
                 reads_from.append(skin.cutout(vf, os.path.join(tex, f"item{i + 1}.png")))
+                src_of[reads_from[-1]] = vf.get("file")
         except Exception:
             pass
-    words = label_words(reads_from, use)
+    by_png = {}
+    words = label_words(reads_from, use, by_png=by_png)
+    # a line is printed only when two DIFFERENT photos of the item show it, or it is what every label of this kind
+    # carries (the kit): a caption, a watermark or a listing's words sit on ONE photo ("Remember these?", 2026-10-04)
+    expect_pats = [e.get("pattern") for z in (kits.library()["families"].get(kit_name) or {}).get("zones") or []
+                   for e in (z.get("expect") or []) if e.get("pattern")] if kit_name else []
+    words, one_photo = review.confirmed_across(words, by_png, src_of, expect_pats)
+    if one_photo:
+        say(f"[texture] read on ONE photo only - not printed: {one_photo}")
     # the printed lines the dossier read off this item's own photo for its label (the same lines the finished model
     # is checked against): allowed too, so the layout can carry them (2026-10-03: "DURACELL INC., Bethel, CT 06801"
     # was checked on the model but never allowed on the label - the writer was told to add it and could not)
@@ -907,6 +923,8 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
           "nothing missing") + (f"; not found anywhere: {', '.join(still)}" if still else ""))])
     R.step("words on the label (each confirmed by two reads)", files=reads_from, checks=[
         ("words were read", bool(words), f"{len(words)} words"),
+        ("every word was seen on two different photos, or is what this kind always carries", True if not one_photo else None,
+         ("left out, seen on one photo only: " + "; ".join(one_photo)[:300]) if one_photo else "all confirmed"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])
     import layout as LAY
     # A label that was already good is KEPT, not written again (Cody, 2026-10-03: "if the label is wrong, fix the

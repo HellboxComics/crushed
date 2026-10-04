@@ -56,7 +56,7 @@ plan = {"size_mm": [120, 120, 150], "fixed": [],
                   {"name": "feet", "shape": "cylinder", "axis": "x", "size_mm": [20, 20, 100], "at_mm": [0, 0, 10]}]}
 pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 3, "flags": []}, [{"part": "eyes"}, {"part": "body"}])}
 check(pc["the planned parts fill the real size (within 10% each way)"][0] is True, "a plan that fills the real size passes")
-check(pc["no part is turned out of its box"][0] is None and "ears" in pc["no part is turned out of its box"][1],
+check(pc["parts that are turned (rotate_deg)"][0] is None and "ears" in pc["parts that are turned (rotate_deg)"][1],
       "a turned part is named, not called wrong")
 check(pc["every part of this kind's kit is in the plan"] == (False, "missing: eyes"), "a kit part left out of the plan is caught")
 plan["parts"].append({"name": "battery_box", "shape": "rounded_box", "size_mm": [40, 40, 40], "at_mm": [0, 0, 20], "inside": True})
@@ -85,4 +85,16 @@ check(pcbc["every part has a height"][0] is False and pcbc["no part covers more 
       "a part with no height and a part too big are caught")
 check(pcbc["every part of this kind's kit was found"][0] is None and "memory" in pcbc["every part of this kind's kit was found"][1],
       "a kit part not found is reported, not called broken")
+
+# words confirmed across photos
+by_png = {"side1.png": ["DURACELL", "Remember these?", "JAN 2001"], "item1.png": ["DURACELL", "Remember these?", "100%"],
+          "side2.png": ["DURACELL®", "JAN 2001", "MAY EXPLODE OR LEAK."], "item2.png": ["SIZE AA"]}
+src = {"side1.png": "a.jpg", "item1.png": "a.jpg", "side2.png": "b.jpg", "item2.png": "b.jpg"}
+words = ["DURACELL", "Remember these?", "JAN 2001", "100%", "MAY EXPLODE OR LEAK.", "SIZE AA", "+"]
+kept, out = review.confirmed_across(words, by_png, src, [r"\bSIZE\b", r"EXPLODE|LEAK|CAUTION"])
+check(out == ["Remember these?", "100%"], f"words seen on ONE photo only (even twice on it) are left out: {out}")
+check(kept == ["DURACELL", "JAN 2001", "MAY EXPLODE OR LEAK.", "SIZE AA", "+"],
+      "words on two photos, kit lines (caution, SIZE) and marks are kept")
+kept, out = review.confirmed_across(words, {"side1.png": by_png["side1.png"]}, {"side1.png": "a.jpg"}, [])
+check(not out, "with a single photo nothing can be cross-checked: all kept")
 print(f"\n{ok} checks passed")

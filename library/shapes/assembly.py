@@ -224,14 +224,13 @@ def lathe(part):
     prof = part["profile_mm"]
     bm = bmesh.new()
     seg = 96
-    zmid = (min(z for _, z in prof) + max(z for _, z in prof)) / 2        # built around its center, like every part
     rings = []
     for r, z in prof:
         if r <= 1e-6:                                                     # a point on the axis: one vertex
-            rings.append([bm.verts.new((0.0, 0.0, (z - zmid) * S))])
+            rings.append([bm.verts.new((0.0, 0.0, z * S))])
             continue
         rings.append([bm.verts.new((r * S * math.cos(2 * math.pi * k / seg), r * S * math.sin(2 * math.pi * k / seg),
-                                    (z - zmid) * S)) for k in range(seg)])
+                                    z * S)) for k in range(seg)])
     loft_faces(bm, rings, seg)
     bm.verts.ensure_lookup_table()
     bm.verts.index_update()
@@ -242,7 +241,8 @@ def lathe(part):
     bm.free()
     ob = bpy.data.objects.new(part["name"], me)
     bpy.context.collection.objects.link(ob)
-    ob.location = [c * S for c in part["at_mm"]]              # at_mm is the part's center; a turn pivots there
+    x, y, _ = part["at_mm"]
+    ob.location = (x * S, y * S, (part["at_mm"][2] - part["size_mm"][2] / 2) * S)
     return finish(ob, part)
 
 

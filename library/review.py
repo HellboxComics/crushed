@@ -225,9 +225,8 @@ def parts_checks(plan, asm, kit_parts=()):
         off = [abs(reach[k] - [W, D, H][k]) / max([W, D, H][k], 1e-6) for k in range(3)]
         out.append(("the planned parts fill the real size (within 10% each way)", max(off) <= 0.10,
                     f"planned {reach[0]:.0f} x {reach[1]:.0f} x {reach[2]:.0f} mm, real {W:.0f} x {D:.0f} x {H:.0f} mm"))
-        out.append(("no part is turned out of its box", None if rotated else True,
-                    ("turned parts reach past their size box (not counted above): " + ", ".join(rotated)) if rotated
-                    else "no part is turned"))
+        out.append(("parts that are turned (rotate_deg)", None if rotated else True,
+                    ("turned: " + ", ".join(rotated)) if rotated else "no part is turned"))
     inside = [p for p in parts if p.get("inside")]
     if inside:
         def box_of(p):
@@ -259,6 +258,36 @@ def parts_checks(plan, asm, kit_parts=()):
     out.append(("every soft part has its own outline read off the photos (no stand-in, no default egg)", not stand,
                 "; ".join(stand)[:400] or "every soft part lofted from its own outlines"))
     return out
+
+
+def confirmed_across(words, by_png, src_of, patterns=()):
+    """Words that two DIFFERENT photos show (or that match what every label of this kind carries, the kit's
+    patterns, or that are printed marks): a caption, a watermark or a listing's words sit on one photo only and were
+    'confirmed by two reads' of that same photo. -> (kept, left out). Kept here, locked, next to only_words."""
+    import re
+    norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
+    srcs = {}
+    for png, lines in (by_png or {}).items():
+        src = src_of.get(png, png)
+        for w in lines:
+            n = norm(w)
+            if n:
+                srcs.setdefault(n, set()).add(src)
+    pats = []
+    for p in patterns or []:
+        try:
+            pats.append(re.compile(p, re.I))
+        except re.error:
+            pass
+    single = len(set(src_of.values())) < 2                  # one photo in all: nothing can be cross-checked
+    kept, out = [], []
+    for w in words:
+        n = norm(w)
+        seen = {s for k, v in srcs.items() if k == n or (len(n) >= 4 and (k.startswith(n) or k.endswith(n)
+                                                                            or n.startswith(k) or n.endswith(k))) for s in v}
+        ok = single or len(seen) >= 2 or not n or str(w).strip() in ("+", "-", "+/-") or any(p.search(str(w)) for p in pats)
+        (kept if ok else out).append(w)
+    return kept, out
 
 
 # ------------------------------------------------------------------ the insides and the materials: receipts
