@@ -597,8 +597,68 @@ def write_ma():
     _write_atomic(os.path.join(OUT, NAME + ".ma"), "\n".join(L) + "\n", "w")
 
 
+# ---------------------------------------------------------------- the UV layouts: paint-over sheets for new skins
+# For every part that carries a picture, its UV map drawn as wireframe over its own base-color map (uv/<part>.png) and
+# alone on a see-through sheet (uv/<part>_wire.png), at the texture's size: anyone can paint a custom texture on it
+# and it lands exactly where the original did (Cody, 2026-10-03: "so I can reskin whatever object is made").
+UV_LAYOUTS = {}
+
+
+def write_uv_layouts(px=2048):
+    from PIL import ImageDraw
+    os.makedirs(os.path.join(OUT, "uv"), exist_ok=True)
+    for name, tris, mats in MESHES:
+        for mi, mat in enumerate(mats):
+            mine = [t for t in tris if t[0] == mi]
+            if not mine or not any(abs(c[1][0]) > 1e-9 or abs(c[1][1]) > 1e-9 for t in mine for c in t[3]):
+                continue                                      # no UV map on this part: nothing to paint over
+            base, rec_tex, size = None, None, (px, px)
+            if mat:
+                b = _bsdf(mat)
+                img, _ = _source(b.inputs["Base Color"]) if b and "Base Color" in b.inputs else (None, None)
+                if img is not None:
+                    try:
+                        base = _pil_of(img).convert("RGBA")
+                        size = base.size
+                        rec_tex = TEXTURES.get(img.name, {}).get("png", "")
+                    except Exception:
+                        base = None
+            wire = Image.new("RGBA", size, (0, 0, 0, 0))
+            d = ImageDraw.Draw(wire)
+            W, H = size
+            for _, _, _, corners, _ in mine:
+                pts = [(c[1][0] * W, (1 - c[1][1]) * H) for c in corners]
+                d.polygon(pts, outline=(255, 0, 255, 230))
+            stem = re.sub(r"[^A-Za-z0-9_.-]+", "_", f"{name}_{mat.name if mat else mi}").strip("_")
+            wp = os.path.join(OUT, "uv", stem + "_wire.png")
+            wire.save(wp)
+            rec = {"wire": f"uv/{stem}_wire.png", "size": list(size), "part": name, "material": mat.name if mat else ""}
+            if base is not None:
+                over = Image.alpha_composite(base, wire)
+                op = os.path.join(OUT, "uv", stem + ".png")
+                over.save(op)
+                rec["over_texture"] = f"uv/{stem}.png"
+                rec["texture"] = rec_tex
+            UV_LAYOUTS[stem] = rec
+            WROTE.append(wp)
+    if not UV_LAYOUTS:
+        raise RuntimeError("no part has a UV map - nothing can be painted on this model")
+    _write_atomic(os.path.join(OUT, "uv", "README.txt"), "\n".join([
+        f"HOW TO RESKIN {NAME}", "",
+        "Each part that carries a picture has its UV map here - the flat sheet its 3D surface is cut open onto.",
+        "  <part>_wire.png   the UV map alone (magenta wireframe on a see-through sheet), at the texture's size",
+        "  <part>.png        the same wireframe laid over the part's own base-color texture",
+        "To make a custom skin: paint your artwork on a sheet of the same size, using the wireframe as the guide",
+        "(what you paint inside a face lands on that face of the model), save it as a PNG, and point the part's",
+        "base-color texture at your file (textures/<stem>.png - the .mtl, .ma and .blend all read from there),",
+        "or in Blender open the .blend and swap the image in the part's material. The mesh and the UV map never",
+        "change: every skin fits.", ""] + [f"- {k}: {v['part']} / {v['material']}  size {v['size'][0]}x{v['size'][1]}"
+                                           + (f"  texture: {v['texture']}" if v.get('texture') else "")
+                                           for k, v in UV_LAYOUTS.items()]) + "\n", "w")
+
+
 save_all_textures()
-for fn, label in ((write_obj, "obj + mtl"), (write_3ds, "3ds"), (write_ma, "ma")):
+for fn, label in ((write_obj, "obj + mtl"), (write_3ds, "3ds"), (write_ma, "ma"), (write_uv_layouts, "uv layouts")):
     if not MESHES:
         break
     try:
@@ -609,7 +669,7 @@ for fn, label in ((write_obj, "obj + mtl"), (write_3ds, "3ds"), (write_ma, "ma")
         say(f"{label} FAILED: {e}")
 ok = not FAILED
 json.dump({"ok": ok, "name": NAME, "blend": os.path.abspath(BLEND), "started": STARTED, "finished": time.time(),
-           "files": WROTE, "textures": {r["stem"]: r for r in TEXTURES.values()},
+           "files": WROTE, "textures": {r["stem"]: r for r in TEXTURES.values()}, "uv_layouts": UV_LAYOUTS,
            "failed": [{"what": w, "why": y} for w, y in FAILED]},
           open(os.path.join(OUT, "exports.json"), "w"), indent=1)
 if not ok:
