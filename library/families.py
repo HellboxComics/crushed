@@ -22,7 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 LIB = os.path.join(HERE, "family_library.json")
-VERSION = 1
+VERSION = 2                  # 2: the kind is always named (kind_name) and kept on the card
 
 ASK = """[family] Picture 1 is the photo picked as the true "{product}" (catalog size {size} mm, year {year}).
 {notes}Decide what KIND of physical object this is, from what you SEE in the photo (the name is only a hint).
@@ -33,7 +33,7 @@ Answer ONLY JSON:
  "confidence": 0-10 (10 = certain from the photo),
  "why": "what in the photo shows it, in one sentence",
  "second": "<the next most likely family key>",
- "kind_name": "if NO family truly fits, the kind of thing in plain words any person would use (e.g. 'plush toy', 'jeans', 'sneaker', 'graphics card', 'magazine'); else empty",
+ "kind_name": "ALWAYS: the kind of thing in plain words any person would use, as exact as the photo allows (e.g. 'electronic plush toy', 'jeans', 'running sneaker', 'graphics card', 'magazine', 'alkaline battery')",
  "material_outside": "what the outside is made of, e.g. printed paperboard, molded ABS plastic, nylon fabric, steel",
  "is_package": true if it is a package that holds a product, false if it is the product itself}}"""
 
@@ -125,6 +125,7 @@ def classify(card, picked, use=None, log=print, redo=False, notes=""):
         fam, conf = "general", conf
         got["why"] = (got.get("why") or "") + f" - {why}: the general one-off builder makes it from its parts"
     out = {"family": fam, "confidence": conf, "why": str(got.get("why", ""))[:300],
+           "kind_name": str(got.get("kind_name") or "")[:60],
            "second": str(got.get("second", ""))[:40], "material_outside": str(got.get("material_outside", ""))[:80],
            "is_package": got.get("is_package") is True, "picked": picked, "version": VERSION}
     card["family_lib"] = out

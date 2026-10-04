@@ -329,6 +329,47 @@ def pipeline(cid, redo=False):
     return go(picked, [c for c in cands if c["file"] != picked["file"]], use, len(found), len(cands))
 
 
+def ensure_kit(cid, card, fl, photo, use, tries=2):
+    """Every build starts from a finished kit for its kind: the parts it is made of (each with its material), its
+    print zones, its standard sizes with sources. A hand-written kit, a learned one, or one your AI studies right
+    now - from the kind it named itself, then from the family name. No kit -> no build (RuntimeError), never a
+    guess. -> the review checks [(what, ok, detail)]."""
+    import families
+    import kits
+    import kitmaker
+    fl = fl or card.get("family_lib") or {}
+    fam_name = fl.get("family", "general")
+    lib = families.library()["families"]
+    fam = lib.get(fam_name) or {}
+    checks = []
+    if fam_name != "general" and kits.finished(fam):
+        checks.append(("a finished kit for this kind", True,
+                       f"{fam_name}: {len(fam.get('parts') or [])} parts, zones {', '.join(z.get('name', '') for z in kits.zones(fam))}"
+                       + (" (learned by your AI)" if fam.get("learned") else " (hand-written)")))
+        return checks
+    kinds = [k for k in (str(fl.get("kind_name") or "").strip(), str(fl.get("second") or "").strip(),
+                         fam_name if fam_name != "general" else "", str(card.get("product") or "").split(",")[0]) if k]
+    seen = set()
+    for kind in kinds:
+        if kind.lower() in seen:
+            continue
+        seen.add(kind.lower())
+        for attempt in range(tries):
+            kk, kit = kitmaker.ensure(kind, card, photo, use, log=say)
+            if kk and kits.finished(kit):
+                lib = families.library()["families"]
+                fl.update(family=kk)
+                card["family_lib"] = fl
+                checks.append(("a finished kit for this kind", True,
+                               f"studied now as '{kind}' -> {kk}: {len(kit.get('parts') or [])} parts, zones "
+                               f"{', '.join(z.get('name', '') for z in kits.zones(kit))}"))
+                return checks
+            say(f"[kit] {cid}: the study of '{kind}' gave no finished kit (try {attempt + 1} of {tries})")
+    checks.append(("a finished kit for this kind", False, f"no kit could be written for: {', '.join(kinds) or 'this kind'}"))
+    raise RuntimeError("no kit: your AI could not write down what this kind of thing is made of (tried: "
+                       + ", ".join(kinds) + ") - nothing is built from a guess; it is tried again later")
+
+
 def route_of_card(card, cid):
     """(route, family entry) for an item exactly as build() chooses its builder - so a test build's own check and the
     real build's check measure the same sides."""
@@ -413,6 +454,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     fl = card.get("family_lib") or families.classify(card, picked["file"], use, log=say,
                                                      notes=card.get("owner_note", ""))
     route, fam = route_of_card(card, cid)
+    # THE KIT GATE (Cody, 2026-10-04: "if it does not have a kit, it needs to be able to generate one accurately,
+    # this should never happen again, no matter the object"): nothing is built from a family without a finished
+    # kit. Your AI studies the kind now; if it cannot, the build stops and says so - it never builds from a guess.
+    kit_log = ensure_kit(cid, card, fl, picked["file"], use)
+    route, fam = route_of_card(card, cid)
     bld, why = families.builder(fam)
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
         bld, why = "lathe", "a measured master shape"          # the AA battery, measured by hand
@@ -429,7 +475,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     dos = DS.ensure(cid, card, picked, use=use, redo=redo,            # made once here, used by every route below
                     log=progress(cid, "4/7 your AI gets to know the item"))
     import review
-    review.Sheet(d)                                          # a fresh review sheet for THIS build (every route)
+    R0 = review.Sheet(d)                                     # a fresh review sheet for THIS build (every route)
+    R0.step("the kit (what every thing of this kind is made of, by your AI)", checks=kit_log)
 
     # 5. BUILD by the family's builder
     if route == "round":

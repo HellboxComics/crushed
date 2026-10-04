@@ -35,7 +35,7 @@ LEARNED = os.path.join(WORK, "kits", "learned.json")
 VERSION = 1
 ZONE_KINDS = ("wrap", "rect", "disc", "fabric", "form")
 
-STUDY = """[kit] Picture 1 is a real photo of "{product}" (catalog size {size} mm). We are teaching an asset maker how to
+STUDY = """[kit] {photo_note} "{product}" (catalog size {size} mm). We are teaching an asset maker how to
 build EVERY object of this KIND, not just this one - the way a model maker studies a kind of thing before building.
 The kind: "{kind}". Materials the crush physics knows (use ONLY these names for "material"): {materials}.
 Answer ONLY JSON:
@@ -157,7 +157,9 @@ def study(kind, card, photo, use, log=print):
     """Your AI studies a kind of thing once and writes its kit. -> the kit (a family entry) or None with the why."""
     import vet as V
     size = "x".join(str(round(x * 1000)) for x in (card.get("size") or [0, 0, 0])[:3])
-    k = V.ask(use, STUDY.format(product=card.get("product", ""), size=size, kind=kind, materials=", ".join(_materials())),
+    k = V.ask(use, STUDY.format(product=card.get("product", ""), size=size, kind=kind, materials=", ".join(_materials()),
+                                photo_note="Picture 1 is a real photo of" if photo else
+                                "From what you know (no photo is given) about an example of this kind,"),
               [photo] if photo else [], think=True, side=1280) or {}
     if not k.get("parts"):
         log(f"[kit] {kind}: your AI gave no parts for this kind - not written")

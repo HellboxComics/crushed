@@ -94,6 +94,32 @@ def t_judge():
     return f"{m} answered {v}"
 
 
+def t_kit_study():
+    """Your AI can write a kit for a kind it has never met - proved on a plain kind with no photo (brain knowledge
+    alone). Once written it is a real learned kit and the proof is instant from then on; it is studied again only
+    when the kit format (kitmaker.VERSION) or the brain changes."""
+    import kitmaker
+    import kits
+    import vet as V
+    m = V.model()
+    if not m:
+        raise RuntimeError("no brain to study with")
+    kind = "wooden pencil"
+    card = {"id": "selftest_pencil", "product": "Dixon Ticonderoga No. 2 wooden pencil, circa 1998", "size": [0.007, 0.007, 0.19]}
+    L = kitmaker.learned()
+    had = L.get(kitmaker.key(kind))
+    if had and had.get("learned", {}).get("version") == kitmaker.VERSION and had.get("learned", {}).get("by") == m \
+            and kits.finished(had):
+        return f"'{kind}' kit on file from {m}: {len(had.get('parts') or [])} parts, built by {had.get('builder')}"
+    if had:
+        L.pop(kitmaker.key(kind), None)
+        kitmaker._save(L)
+    kk, kit = kitmaker.ensure(kind, card, None, m, log=lambda *a: None)
+    if not kk or not kits.finished(kit):
+        raise RuntimeError(f"your AI could not write a finished kit for a '{kind}' - nothing can be built for a new kind")
+    return f"'{kind}' studied by {m}: {len(kit.get('parts') or [])} parts, zones {', '.join(kit.get('faces') or [])}, built by {kit.get('builder')}"
+
+
 def t_free_judges():
     """The judging brains are let go when the drawing room needs the memory: every 'let go' is accepted by the brain
     server. (A brain still answering one of your other tools stays until it's done - the server is shared - so
@@ -317,6 +343,7 @@ def run_all(quiet_phone=False):
              ("phone buttons (Hart's bot)", t_phone, 30),
              ("judge (Ollama vision)", t_judge, 900),   # (the brain server is shared: your other tools' long
              #                                               questions go first - 2026-10-03 one made this wait 5 min)
+             ("kit study (a kind it has never met)", t_kit_study, 600),
              ("judges let go of memory", t_free_judges, 60),
              ("cut-out (drawing room)", t_cutout, 120),
              ("label drawer (Qwen-Image-Edit)", t_draw, 480),
