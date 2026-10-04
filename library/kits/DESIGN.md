@@ -122,6 +122,10 @@ The kit way, as a person would build it in Blender:
 4. BUILD       the body's shape from every cleaned view (several views, never one); hard parts (eyes, beak, feet)
                as their own solid parts with their own materials (glossy plastic, felt); fur as a fur material with
                the photo's colors taken DOWN to true color (the photo's light taken out), not a photo pasted on
+               DONE 2026-10-04 (first step): every soft part is LOFTED from outlines the planning brain reads off
+               the photos (how wide / how deep at even heights, plus lean) - shapes/assembly.py form(); the box
+               stand-in is gone; the parts review step flags a part whose outline was not read (the default egg).
+               STILL TO DO: tags/hands erased before planning; the fur material; each side compared to its photo.
 5. CHECK       each side rendered and compared with its own real photo; the colors measured against the photos
 
 ## After an asset is perfect: the marketplace lane (Cody, 2026-10-03)

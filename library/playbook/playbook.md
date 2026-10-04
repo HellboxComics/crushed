@@ -97,6 +97,10 @@ revert, rebuild (clear the step you changed), lesson, finish. Measure before you
 A model file (.glb) is not a picture: to SEE the model, look("check") / look("close") (its lit sides next to the
 real photo); for its size and parts, mesh_info. For a parts build, the review sheet's "parts" step tells you
 whether the PLAN already missed the real size or a kit part - fix the plan step (parts.py), not the model.
+Soft parts (ears, tufts, tails, plush bodies, feet) are LOFTED from the outlines the planning brain reads off the
+photos (front_outline / side_outline / lean_mm in parts_plan.json; shapes/assembly.py form()). A soft part that
+looks like a blob or an egg means its outlines were not read (the review sheet's parts step says "egg outline was
+used") - improve what the planner is asked or shown (parts.py ASK, the pictures it gets), never hand-type a shape.
 
 0. READ THE REVIEW SHEET. Every build writes down each step's work and its own checks (review.json, sent to you
    with the first message). Start at the FIRST step that went wrong - its pictures (look("step:<file name>")),

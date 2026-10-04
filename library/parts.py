@@ -9,8 +9,9 @@ size, printed parts carrying their real artwork cut from the photos.
     plan = parts.plan(cid, card, dossier, use, out_json)     # -> the plan (also saved to out_json)
 
 Every part shape is one a builder can make exactly: rounded_box, cylinder, lathe (a spun profile), sheet, tube (a
-bent rod or cable along points), sphere, or organic (a sculpted part, made by the organic builder when it works on
-this Mac, else a rounded stand-in that is flagged). Coordinates: millimeters, origin at the bottom center of the
+bent rod or cable along points), sphere, or organic (a soft or sculpted part - an ear, a tuft, a tail, a plush body,
+a foot - lofted from the outlines your AI reads off the photos: how wide and how deep it is at even heights from
+bottom to top; a sculpted .glb from the organic builder is used instead when the plan gives one). Coordinates: millimeters, origin at the bottom center of the
 object, x = left to right seen from the front, y = front (negative) to back (positive), z = up.
 """
 import json
@@ -21,6 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 SHAPES = ("rounded_box", "cylinder", "lathe", "sheet", "tube", "sphere", "organic")
 SIDES = ("+x", "-x", "+y", "-y", "+z", "-z")
+EGG = (0.0, 0.6, 0.9, 1.0, 0.95, 0.75, 0.4, 0.0)            # the outline used when your AI gives none (flagged)
 
 ASK = """[parts] You are a senior 3D modeler blocking out a production model of a real object, built the way it is
 manufactured. The object: {product} ({year}). Its family: {family} - {what}. Real overall size: {W} x {D} x {H} mm
@@ -30,7 +32,12 @@ Break the object into its real parts (outside shell pieces, panels, trim, zipper
 caps, and what is INSIDE when that is part of the item). Use only these shapes:
   rounded_box (size_mm [x,y,z], bevel_mm), cylinder (size_mm [diameter, diameter, height], axis "x"|"y"|"z"),
   lathe (profile_mm: [[radius, z], ...] bottom to top, axis z), sheet (a thin panel: size_mm with one tiny side),
-  tube (path_mm: [[x,y,z], ...] points along it, radius_mm), sphere (size_mm), organic (a sculpted part: size_mm).
+  tube (path_mm: [[x,y,z], ...] points along it, radius_mm), sphere (size_mm),
+  organic (a soft or sculpted part - plush body, ear, tuft, tail, foot, molded face: size_mm plus its OUTLINES read
+    off the pictures: "front_outline": 7-9 numbers 0..1 = how wide the part is at even heights from its bottom to
+    its top, as a share of size x (an egg: [0, .6, .9, 1, .95, .75, .4, 0]; an ear: [.3, .7, 1, .9, .6, .3, 0]);
+    "side_outline": the same for its depth (size y); "lean_mm": [[dx, dy], ...] the slices' center shift bottom to
+    top when it bends or leans, else []). Every soft part of a plush toy is organic, never a box.
 Coordinates in mm: origin at the bottom center of the whole object; x left->right seen from the front; y front (-) to
 back (+); z up. Every part must sit inside the overall size. Give printed parts their artwork: "print": {{"picture":
 <picture number>, "box": [x0, y0, x1, y1] fractions of that picture where the art is, "side": "-y" (front) | "+y" |
@@ -39,6 +46,7 @@ Materials, one of: {kinds}.
 Answer ONLY JSON:
 {{"parts": [{{"name": "...", "shape": "...", "size_mm": [x, y, z], "at_mm": [x, y, z] (the part's center),
    "rotate_deg": [x, y, z], "bevel_mm": 0.0, "axis": "z", "profile_mm": [], "path_mm": [], "radius_mm": 0.0,
+   "front_outline": [], "side_outline": [], "lean_mm": [],
    "material": "<kind>", "color": [r, g, b] (0..1, the real material's color as seen in the photo, without the room
    light), "roughness": 0.5, "metallic": 0 or 1, "print": null, "inside": false,
    "why": "what in the pictures shows this part"}}],
@@ -83,6 +91,16 @@ def clean(plan, W, D, H, pics, kinds):
                 fixed.append(f"{name}: lathe without a profile - made a cylinder")
             p["profile_mm"] = prof
         axis = p.get("axis") if p.get("axis") in ("x", "y", "z") else "z"
+        outl = {}
+        if shape == "organic":
+            for key in ("front_outline", "side_outline"):
+                o = [min(max(_num(x), 0.0), 1.0) for x in (p.get(key) or []) if isinstance(x, (int, float))]
+                if len(o) < 3 or max(o) <= 0:
+                    fixed.append(f"{name}: no {key.replace('_', ' ')} read off the pictures - an egg outline was used")
+                    o = list(EGG)
+                outl[key] = o[:16]
+            lean = [[_num(q[0]), _num(q[1])] for q in (p.get("lean_mm") or []) if isinstance(q, (list, tuple)) and len(q) >= 2]
+            outl["lean_mm"] = [[min(max(x, -lim[0]), lim[0]), min(max(y, -lim[1]), lim[1])] for x, y in lean][:16]
         ext = list(size)                                     # how far the part reaches along x, y, z
         if shape == "cylinder":
             dia, ln = min(size[0], size[1]), size[2]
@@ -122,6 +140,8 @@ def clean(plan, W, D, H, pics, kinds):
                     "rotate_deg": _vec(p.get("rotate_deg"), 3, 0.0), "bevel_mm": max(0.0, _num(p.get("bevel_mm"))),
                     "axis": axis,
                     "profile_mm": p.get("profile_mm") or [], "path_mm": p.get("path_mm") or [],
+                    "front_outline": outl.get("front_outline", []), "side_outline": outl.get("side_outline", []),
+                    "lean_mm": outl.get("lean_mm", []), "mesh": p.get("mesh") if isinstance(p.get("mesh"), str) else None,
                     "radius_mm": max(0.2, _num(p.get("radius_mm"), 1.0)), "material": mat,
                     "color": [min(max(c, 0.02), 0.95) for c in _vec(p.get("color"), 3, 0.5)],
                     "roughness": min(max(_num(p.get("roughness"), 0.5), 0.02), 1.0),

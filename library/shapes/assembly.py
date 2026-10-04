@@ -7,7 +7,8 @@ Mesh first, then the UV map, then the texture map, then the material - for every
   sheet         a thin panel (a rounded box with one tiny side)
   tube          a bent rod, strap or cable along points
   sphere        a ball, scaled to its size
-  organic       a sculpted part from the organic builder (a .glb given in the plan), else a rounded stand-in
+  organic       a soft or sculpted part lofted from your AI's outlines (ears, tufts, tails, plush bodies), or a
+                sculpted .glb when the plan gives one
 Each part is its own object with its own material and its physics values (factory/physics.json), at real size.
 
     python assembly.py -- plan.json out_dir name
@@ -232,10 +233,90 @@ def organic(part):
             bpy.ops.object.transform_apply(scale=True)
             ob.location = [c * S for c in part["at_mm"]]
             return finish(ob, part)
-    part = dict(part, stand_in=True)                        # no sculpted part yet: a rounded stand-in, flagged
-    ob = box(part, part["size_mm"], min(part["size_mm"]) * 0.45)
-    ob["stand_in"] = True
-    return ob
+    return form(part)
+
+
+def _resample(vals, n):
+    """A list of outline values spread over n slices (straight lines between the given ones)."""
+    vals = [float(v) for v in vals]
+    if len(vals) == 1:
+        return vals * n
+    out = []
+    for i in range(n):
+        t = i / (n - 1) * (len(vals) - 1)
+        j = min(int(t), len(vals) - 2)
+        f = t - j
+        out.append(vals[j] * (1 - f) + vals[j + 1] * f)
+    return out
+
+
+def form(part, slices=24, around=48):
+    """A soft or sculpted part LOFTED from your AI's outlines (read off the photos): elliptical slices from the
+    part's bottom to its top, each slice as wide (x) and as deep (y) as the outlines say, its center shifted by the
+    lean, the whole smoothed. Ears, tufts, tails, plush bodies, molded faces - never a box stand-in."""
+    sx, sy, sz = [float(v) for v in part["size_mm"]]
+    fo = part.get("front_outline") or list(EGG)
+    so = part.get("side_outline") or fo
+    lean = part.get("lean_mm") or []
+    fx = _resample(fo, slices)
+    fy = _resample(so, slices)
+    lx = _resample([q[0] for q in lean], slices) if lean else [0.0] * slices
+    ly = _resample([q[1] for q in lean], slices) if lean else [0.0] * slices
+    tiny = 0.015
+    rxs = [max(max(fx[i], 0.0) * sx / 2, tiny * sx) for i in range(slices)]
+    rys = [max(max(fy[i], 0.0) * sy / 2, tiny * sy) for i in range(slices)]
+    # the lean must not push the part past its own size: the whole is fitted back into size x / size y
+    x0, x1 = min(lx[i] - rxs[i] for i in range(slices)), max(lx[i] + rxs[i] for i in range(slices))
+    y0, y1 = min(ly[i] - rys[i] for i in range(slices)), max(ly[i] + rys[i] for i in range(slices))
+    kx, ky = sx / max(x1 - x0, 1e-9), sy / max(y1 - y0, 1e-9)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    bm = bmesh.new()
+    rings = []
+    for i in range(slices):
+        z = -sz / 2 + sz * i / (slices - 1)
+        ox, oy = (lx[i] - cx) * kx, (ly[i] - cy) * ky
+        rx, ry = rxs[i] * kx, rys[i] * ky
+        if fx[i] * sx / 2 < tiny * sx and fy[i] * sy / 2 < tiny * sy and i in (0, slices - 1):   # a closed end
+            rings.append([bm.verts.new((ox * S, oy * S, z * S))])
+            continue
+        ring = []
+        for k in range(around):
+            a = 2 * math.pi * k / around
+            ring.append(bm.verts.new(((ox + rx * math.cos(a)) * S, (oy + ry * math.sin(a)) * S, z * S)))
+        rings.append(ring)
+    for a, b in zip(rings, rings[1:]):
+        if len(a) == 1 and len(b) == 1:
+            continue
+        if len(a) == 1:
+            for k in range(around):
+                bm.faces.new((a[0], b[(k + 1) % around], b[k]))
+        elif len(b) == 1:
+            for k in range(around):
+                bm.faces.new((a[k], a[(k + 1) % around], b[0]))
+        else:
+            for k in range(around):
+                bm.faces.new((a[k], a[(k + 1) % around], b[(k + 1) % around], b[k]))
+    if len(rings[0]) > 1:                                      # an open end gets a flat cap
+        bm.faces.new(list(reversed(rings[0])))
+    if len(rings[-1]) > 1:
+        bm.faces.new(rings[-1])
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    me = bpy.data.meshes.new(part["name"])
+    bm.to_mesh(me)
+    bm.free()
+    ob = bpy.data.objects.new(part["name"], me)
+    bpy.context.collection.objects.link(ob)
+    bpy.context.view_layer.objects.active = ob
+    ob.select_set(True)
+    ob.location = [c * S for c in part["at_mm"]]
+    sub = ob.modifiers.new("soft", "SUBSURF")
+    sub.levels = sub.render_levels = 1
+    bpy.ops.object.modifier_apply(modifier="soft")
+    ob["lofted_from_outlines"] = True
+    return finish(ob, part)
+
+
+EGG = (0.0, 0.6, 0.9, 1.0, 0.95, 0.75, 0.4, 0.0)
 
 
 made, flags = [], []
@@ -256,8 +337,6 @@ for part in P["parts"]:
             ob = sphere(part)
         else:
             ob = organic(part)
-            if ob.get("stand_in"):
-                flags.append(f"{part['name']}: a rounded stand-in (the organic builder is not working yet)")
         made.append(ob)
     except Exception as e:
         flags.append(f"{part['name']}: could not be built ({e})")

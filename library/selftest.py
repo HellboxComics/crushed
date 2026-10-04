@@ -147,7 +147,45 @@ def t_blender():
     ext = sorted(glb_size_mm(glb))
     if abs(ext[2] - 44.5) > 0.3 or abs(ext[1] - 10.5) > 0.3:
         raise RuntimeError(f"the AAA kit shape came out {ext[1]:.1f} x {ext[2]:.1f} mm, not 10.5 x 44.5")
-    return "box, round and kit (AAA) shapes built"
+    # the parts builder: a soft part lofted from outlines (an ear) next to a hard one (an eye)
+    plan = {"cid": "t", "size_mm": [60, 40, 80], "pictures": [], "family": "general", "fixed": [], "not_modeled": [],
+            "parts": [{"name": "ear", "shape": "organic", "size_mm": [30, 16, 50], "at_mm": [0, 0, 25],
+                       "front_outline": [0.3, 0.7, 1.0, 0.9, 0.6, 0.3, 0.0], "side_outline": [0.6, 1.0, 0.9, 0.7, 0.5, 0.3, 0.0],
+                       "lean_mm": [[0, 0], [4, 0]], "rotate_deg": [0, 0, 0], "bevel_mm": 0, "axis": "z", "profile_mm": [],
+                       "path_mm": [], "radius_mm": 1, "material": "plush_fur", "color": [0.6, 0.6, 0.6],
+                       "roughness": 0.9, "metallic": 0, "print": None, "inside": False, "why": "test"},
+                      {"name": "eye", "shape": "sphere", "size_mm": [12, 12, 12], "at_mm": [0, -10, 60],
+                       "rotate_deg": [0, 0, 0], "bevel_mm": 0, "axis": "z", "profile_mm": [], "path_mm": [],
+                       "radius_mm": 1, "material": "clear_plastic", "color": [0.1, 0.1, 0.1], "roughness": 0.1,
+                       "metallic": 0, "print": None, "inside": False, "why": "test"}]}
+    pp = os.path.join(TMP, "parts_plan.json")
+    json.dump(plan, open(pp, "w"))
+    r = subprocess.run([sys.executable, os.path.join(HERE, "shapes", "assembly.py"), "--", pp, os.path.join(TMP, "parts"),
+                        "t_parts"], capture_output=True, text=True, timeout=300)
+    glb = os.path.join(TMP, "parts", "t_parts.glb")
+    if not os.path.exists(glb):
+        raise RuntimeError("the parts builder: " + (r.stderr or r.stdout)[-300:])
+    ear = mesh_size_mm(glb, "ear")
+    if not ear or abs(ear[2] - 50) > 4 or abs(max(ear[0], ear[1]) - 30) > 3:
+        raise RuntimeError(f"the lofted ear came out {ear}, not about 30 x 16 x 50 mm")
+    return "box, round, kit (AAA) and lofted soft part shapes built"
+
+
+def mesh_size_mm(glb, name):
+    """One named mesh's own size in mm inside a .glb (its corner points), or None."""
+    import struct
+    with open(glb, "rb") as f:
+        f.read(12)
+        n, _ = struct.unpack("<II", f.read(8))
+        g = json.loads(f.read(n))
+    for m in g.get("meshes", []):
+        if m.get("name") == name:
+            acc = [g["accessors"][p["attributes"]["POSITION"]] for p in m["primitives"]]
+            lo = [min(a["min"][i] for a in acc) for i in range(3)]
+            hi = [max(a["max"][i] for a in acc) for i in range(3)]
+            s = [1000 * (h - l) for l, h in zip(lo, hi)]
+            return [s[0], s[2], s[1]]                       # glTF is y-up: back to x, y(depth), z(up)
+    return None
 
 
 def glb_size_mm(glb):

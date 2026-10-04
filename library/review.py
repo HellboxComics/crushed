@@ -211,12 +211,12 @@ def parts_checks(plan, asm, kit_parts=()):
     printed = [p for p in parts if p.get("print")]
     out.append(("printed parts carry artwork cut from the photos", None, f"{len(printed)} printed part(s)"))
     flags = (asm or {}).get("flags") or []
-    stand = [f for f in flags if "stand-in" in f]
+    stand = [f for f in flags if "stand-in" in f] + [f for f in fixed if "egg outline was used" in f]
     broke = [f for f in flags if "could not be built" in f]
     out.append(("every planned part was built", not broke, "; ".join(broke)[:400] or
                 f"{(asm or {}).get('parts', len(parts))} built"))
-    out.append(("no part is a rounded stand-in for a sculpted shape", not stand,
-                "; ".join(stand)[:400] or "no stand-ins"))
+    out.append(("every soft part has its own outline read off the photos (no stand-in, no default egg)", not stand,
+                "; ".join(stand)[:400] or "every soft part lofted from its own outlines"))
     return out
 
 

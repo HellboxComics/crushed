@@ -62,6 +62,6 @@ check(pc["every part of this kind's kit is in the plan"] == (False, "missing: ey
 plan["parts"][0]["size_mm"] = [60, 60, 60]
 pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 2, "flags": ["feet: could not be built (x)", "body: a rounded stand-in (y)"]})}
 check(pc["the planned parts fill the real size (within 10% each way)"][0] is False, "a plan smaller than the real size is caught")
-check(pc["every planned part was built"][0] is False and pc["no part is a rounded stand-in for a sculpted shape"][0] is False,
+check(pc["every planned part was built"][0] is False and pc["every soft part has its own outline read off the photos (no stand-in, no default egg)"][0] is False,
       "a part Blender could not build and a stand-in are caught")
 print(f"\n{ok} checks passed")
