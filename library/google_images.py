@@ -45,13 +45,46 @@ def _up():
         s.close()
 
 
+def restart(log=print):
+    """The reference browser started again from the CURRENT Playwright's Chromium: the one on the port is closed
+    first (it is the asset maker's own window, nothing of Cody's). Needed when the Playwright client and the
+    running browser no longer match (2026-10-04: "Browser context management is not supported" after an update,
+    every hunt failing while the self-test only saw that the port answered)."""
+    try:
+        subprocess.run(["pkill", "-f", f"remote-debugging-port={PORT}"], capture_output=True, timeout=20)
+    except Exception as e:
+        log(f"[google] the old reference browser could not be closed: {e}")
+    for _ in range(20):
+        if not _up():
+            break
+        time.sleep(0.5)
+    ensure()
+    log("[google] the reference browser was started again (fresh Chromium from the current Playwright)")
+
+
+def connect(pw):
+    """Playwright attached to the reference browser - checked to really work (a context can be made), started
+    again once when it cannot. -> browser"""
+    try:
+        br = pw.chromium.connect_over_cdp(f"http://127.0.0.1:{PORT}")
+        _ = br.contexts[0] if br.contexts else br.new_context()
+        return br
+    except Exception as e:
+        print(f"[google] could not use the reference browser ({str(e).splitlines()[0][:120]}) - starting it again", flush=True)
+        restart()
+        br = pw.chromium.connect_over_cdp(f"http://127.0.0.1:{PORT}")
+        _ = br.contexts[0] if br.contexts else br.new_context()
+        return br
+
+
 def ensure():
     if _up():
         return
     os.makedirs(PROFILE, exist_ok=True)
+    extra = os.environ.get("CRUSHED_BROWSER_FLAGS", "").split()      # (tests: --headless=new --no-sandbox)
     subprocess.Popen([_exe(), f"--user-data-dir={PROFILE}", f"--remote-debugging-port={PORT}",
                       "--remote-debugging-address=127.0.0.1", "--no-first-run", "--no-default-browser-check",
-                      "https://www.google.com/"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                      *extra, "https://www.google.com/"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                      start_new_session=True)
     for _ in range(40):
         if _up():
@@ -71,7 +104,7 @@ def _open(url, scroll=True, js=None, log=print):
         time.sleep(wait)
     _last[0] = time.time()
     with sync_playwright() as pw:
-        br = pw.chromium.connect_over_cdp(f"http://127.0.0.1:{PORT}")
+        br = connect(pw)
         ctx = br.contexts[0] if br.contexts else br.new_context()
         page = ctx.new_page()
         try:

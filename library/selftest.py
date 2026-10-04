@@ -328,7 +328,11 @@ def t_phone():
 def t_google():
     import google_images as G
     G.ensure()
-    return "its own browser is up"
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as pw:                      # really usable, not just a port that answers (2026-10-04)
+        br = G.connect(pw)
+        n = len(br.contexts)
+    return f"its own browser is up and Playwright can drive it ({n} context(s))"
 
 
 def run_all(quiet_phone=False):
