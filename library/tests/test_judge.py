@@ -130,4 +130,8 @@ check(judge.look_ok(v) is False and "white dot: 2 on the real one, 1 on the mode
       "a look that says pass but counts 2 dots on the real one and 1 on the model FAILS, naming the count")
 check(judge.look_ok({"pass": True, "same_layout": False, "all_elements": True, "print_ok": True, "missing": []}) is False,
       "pass with same_layout false is not a pass")
+v = {"pass": True, "same_layout": True, "all_elements": True, "print_ok": True, "missing": [], "extra": ["a code '01' not on the real one"]}
+check(judge.look_ok(v) is False and any("not on the real one" in p for p in v["problems"]),
+      "something on the model that the real side does not have fails the look and is named")
+check('"extra"' in judge.Q and "nothing may be invented" in judge.Q, "the judge is asked for extras")
 print(f"\n{ok} checks passed")

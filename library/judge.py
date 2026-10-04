@@ -32,10 +32,12 @@ model's side with the same count and place. Answer ONLY JSON:
  "all_elements": true if every listed element and every element of the inventory is on the model's side, in the same
    number, and legible,
  "missing": ["listed or inventory elements not on the model's side, short of their count, or not legible"],
+ "extra": ["anything printed on the MODEL's side that the real side does not have: a made-up word or code, a logo,
+   mark, line or panel not on the real one (nothing may be invented) - empty when there is nothing extra"],
  "print_ok": true if the model's print is sharp and clean - not blurry, smeared, stretched, cut off, mirrored,
    rotated wrong, and with no room light, glare or shadow baked into it,
  "problems": ["short and specific"],
- "pass": true only if all of the above are true}}"""
+ "pass": true only if all of the above are true and "extra" is empty}}"""
 
 
 TIEBREAK = """[side] {pics} The product: {product}. This is its {face} side. Two careful looks at these same pictures
@@ -53,7 +55,8 @@ def look_ok(v):
     """One look's pass, computed from what it reported (audit 2026-10-04: the brain's own 'pass' was trusted while
     its inventory counts and 'missing' list said otherwise). A look passes only when it said the layout is the
     same, every element is there and legible, the print is clean, nothing is missing, and every inventory element
-    is on the model in the same number. The counts that differ are written into v["_counts"]."""
+    is on the model in the same number, and nothing is on the model that the real side does not have ("extra",
+    2026-10-04: nothing invented is checked by eyes too). The counts that differ are written into v["_counts"]."""
     if not isinstance(v, dict):
         return False
     bad = []
@@ -67,8 +70,11 @@ def look_ok(v):
         if r != m:
             bad.append(f"{e.get('element', 'an element')}: {r} on the real one, {m} on the model")
     v["_counts"] = bad
+    extra = [str(x) for x in (v.get("extra") or []) if str(x).strip()] if isinstance(v.get("extra"), list) else []
+    if extra:
+        v["problems"] = list(v.get("problems") or []) + [f"on the model but not on the real one: {x}" for x in extra]
     return (v.get("pass") is True and v.get("same_layout") is not False and v.get("all_elements") is not False
-            and v.get("print_ok") is not False and not v.get("missing") and not bad)
+            and v.get("print_ok") is not False and not v.get("missing") and not bad and not extra)
 
 
 def _ask(use, text, images):
@@ -120,7 +126,7 @@ def _strip(pngs, like, name="label_all_turns.png"):
     return p
 
 
-QUESTION_VERSION = 5        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
+QUESTION_VERSION = 6        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
 PRIMARY_FACE = {"box": "front", "flat": "front", "pcb": "top", "free": "front", "round": "label"}
 
 

@@ -50,7 +50,9 @@ dos = {"photos": [{"labeled": True, "match": "exact", "text": ["DURACELL", "COPP
 allowed = M.traceable_words(dos)
 check("ENERGIZER" not in allowed and "COPPERTOP" in allowed, "a wrong photo's words are not allowed; the item's are")
 check(M.untraceable("DURACELL COPPERTOP ALKALINE BATTERY TTBOVHNO", allowed) == [], "one stray token of reader noise is not invention")
-check(M.untraceable("DURACELL ENERGIZER MAXIMUM POWER", allowed) == ["ENERGIZER", "MAXIMUM", "POWER"], "words nothing accounts for are called")
+check(M.untraceable("IRACE IRFION VERONE", allowed) == [] and M.untraceable("OWERGHE INECTI", allowed) == [],
+      "a curved label's misreads (a letter or two off a real word) are not invention")
+check(M.untraceable("ENERGIZER MAXIMUM POWERFUL", allowed) == ["ENERGIZER", "MAXIMUM", "POWERFUL"], "three words nothing accounts for are called")
 check(M.untraceable("DURACEL COPERTOP ALKALINEBATTERY", allowed) == [], "misreads and run-together words are not invention")
 check(M.untraceable("DURACELL PHOTOGRAPHIC", allowed) == ["PHOTOGRAPHIC"], "one long invented word is enough")
 bd = os.path.join(W, "b1", "texture")

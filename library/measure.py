@@ -193,52 +193,52 @@ def traceable_words(dos, out_dir=None):
     return {t for x in pool for t in _words(x)}
 
 
-def untraceable(read, allowed, least=5):
+def _edits(a, b):
+    """Levenshtein distance between two short strings."""
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _explained(t, allowed, longer):
+    """Is a read token a real word, a piece of one, two run together, or a reader's misread of one (within a
+    couple of letters of some window of a read word)?"""
+    if t in allowed:
+        return True
+    if any(t in a for a in longer if len(a) > len(t)):
+        return True
+    if any(a in t for a in longer if len(t) - len(a) <= 3):
+        return True
+    if any(t.startswith(a) and t[len(a):] in allowed for a in longer):
+        return True
+    slack = 1 if len(t) < 8 else 2
+    n = len(t)
+    for a in longer:
+        if abs(len(a) - n) > slack and len(a) < n:
+            continue
+        for i in range(0, max(1, len(a) - n + 1 + slack)):
+            w = a[i:i + n]
+            if len(w) >= n - slack and _edits(t, w) <= slack:
+                return True
+    return False
+
+
+def untraceable(read, allowed, least=6):
     """The words in a side's reading that nothing accounts for: real-looking words (letters only, `least`+ long,
-    with a vowel) that are not a read word, not a close misread of one (ratio >= 0.8), not a piece of a longer read
-    word and not two read words run together. Only when a side carries two of them (or one of 9+ letters) is it
-    called: a single stray token is the reader's noise on a turned side, not invention."""
+    with a vowel) that are not a read word, not a piece of one, not two run together and not a reader's misread
+    of one (a rendered curved label is read with a letter or two wrong: 'OWERGHE' is POWERCHECK). Only when a side
+    carries THREE of them (or one of 10+ letters) is it called - a stray token or two is the reader's noise on a
+    turned side, not invention (2026-10-04: a real build was failed for IRACE / IRFION / VERONE)."""
     toks = [t for t in dict.fromkeys(_words(read)) if t.isalpha() and len(t) >= least and re.search(r"[AEIOUY]", t)]
     longer = [a for a in allowed if len(a) >= 4]
-    odd = []
-    for t in toks:
-        if t in allowed:
-            continue
-        if any(t in a for a in longer if len(a) > len(t)):               # a piece of a longer word
-            continue
-        if any(a in t for a in longer if len(t) - len(a) <= 3):          # a read word with a misread tail
-            continue
-        if any(difflib.SequenceMatcher(None, t, a).ratio() >= 0.8 for a in longer):
-            continue
-        if any(t.startswith(a) and t[len(a):] in allowed for a in longer):   # two words run together
-            continue
-        odd.append(t)
-    if len(odd) >= 2 or any(len(t) >= 9 for t in odd):
+    odd = [t for t in toks if not _explained(t, allowed, longer)]
+    if len(odd) >= 3 or any(len(t) >= 10 for t in odd):
         return odd
     return []
-
-
-def text_found(want, got):
-    """Is the printed element `want` in the read text `got`? Short lines: a close match somewhere (small misreads
-    allowed); long text (ingredients): at least 85% of its words found, in any order."""
-    w, g = _words(want), _words(got)
-    if not w:
-        return True, 1.0
-    if len(w) > 12:
-        have = set(g)
-        score = sum(1 for x in w if x in have) / len(w)
-        return score >= 0.85, round(score, 2)
-    ws, gs = "".join(w), "".join(g)                          # spacing never matters ("MN1500" = "MN 1500")
-    if ws in gs:
-        return True, 1.0
-    n, best = len(ws), 0.0
-    for i in range(0, max(1, len(gs) - n + 1)):
-        r = difflib.SequenceMatcher(None, ws, gs[i:i + n]).ratio()
-        if r > best:
-            best = r
-            if best >= 0.97:
-                break
-    return best >= 0.85, round(best, 2)
 
 
 # ------------------------------------------------------------------ the checks
