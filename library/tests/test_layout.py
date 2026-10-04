@@ -61,7 +61,7 @@ check(all(t["text"] != "ALKALINE BATTERY 9000 HOURS" for t in lay["texts"]), "wo
 check(score == 9, f"the best round is kept (match {score})")
 check(sum(1 for a in asked if "Your layout:" in a) >= 2, "a 9 with fixes still listed is not done: another round is asked for")
 check(any("move the logo up" in a for a in asked if "Your layout:" in a), "the judge's fixes are given to the writer")
-check(any("ONLY the printed sleeve" in a for a in asked[:1]), "the writer is told the metal ends are not the label")
+check(any("ONLY the printed label" in a and "unprinted parts" in a for a in asked[:1]), "the writer is told the item's unprinted parts are not the label")
 # lines printed on top of each other are measured where they landed (rotated lines too) and never pass as good
 import labelart as LA
 ov = {"width_mm": 50, "height_mm": 46, "background": "#111111",

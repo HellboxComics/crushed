@@ -9,17 +9,6 @@ from PIL import Image
 import unwrap as U
 
 
-def plus_left(m):
-    """True when the battery's plus button is at the left end: a short run of columns much narrower than the body
-    (the button) sits beyond that end of the body."""
-    cols, t, b = U._edges(m)
-    h = b - t
-    full = np.median(h)
-    button = (h > 0.12 * full) & (h < 0.6 * full)
-    n = len(cols)
-    return button[: n // 6].sum() >= button[-(n // 6):].sum()
-
-
 def strip(img, m, W, H, max_deg=62, flip=False):
     """One photo -> (label H x W, how straight-on each column was 0..1 or 0 = unseen)."""
     if flip:
@@ -80,19 +69,6 @@ def placed(img, m, W, H, expect, max_deg=62):
     rows = np.zeros(H)
     rows[int(round(a * H)):int(round(b * H))] = 1
     return lab, rows[:, None] * w[None, :], (a, b)
-
-
-def metal_end_top(lab, w):
-    """True when the metal-ink band (copper, gold) is in the top half: that end is the battery's plus end."""
-    v = lab[:, w > 0.3][::8, ::8]
-    mx, mn = v.max(-1), v.min(-1)
-    d = np.maximum(mx - mn, 1e-6)
-    r, g, b = v[..., 0], v[..., 1], v[..., 2]
-    hue = np.where(mx == r, ((g - b) / d) % 6, np.where(mx == g, (b - r) / d + 2, (r - g) / d + 4)) * 60
-    sat = (mx - mn) / np.maximum(mx, 1e-6)
-    met = ((hue > 8) & (hue < 55) & (sat > 0.35) & (mx > 0.25)).mean(1)
-    half = len(met) // 2
-    return met[:half].mean() >= met[half:].mean()
 
 
 def _feat(lab):
@@ -217,16 +193,14 @@ def _refine(cur, wsum, lab, w):
     return _vwarp(np.roll(lab, du, axis=1), sc, sh), np.roll(w, du)
 
 
-def build(photos, W=2048, aspect=48.0 / 45.55, metal_top=True, min_score=0.42, log=print):
-    """photos: [(PIL image, mask)], the first is the front. -> (label H x W, coverage weight per column).
-    The first photo is turned so its metal band is at the top (a battery's plus end); every other photo is tried
+def build(photos, W=2048, aspect=48.0 / 45.55, min_score=0.42, log=print):
+    """photos: [(PIL image, mask)], the first is the front, already turned the way the kit says (its top end up).
+    -> (label H x W, coverage weight per column). Every other photo is tried
     both ways round, slid and stretched along its length to match the bands, then slid around to match the print,
     and its colors matched to what is already placed. Then every column comes from the photo that saw it most
     straight-on, with the seams blended away."""
     H = int(round(W * aspect))
     first = strip(*photos[0], W, H)
-    if metal_top and not metal_end_top(*first):
-        first = strip(*photos[0], W, H, flip=True)
     ref = profile(*first)
     placed_strips = [first]
     pending = []

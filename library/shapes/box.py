@@ -27,6 +27,8 @@ mr = argv[5] if len(argv) > 5 and argv[5] not in ("", "-") else None
 name = argv[6] if len(argv) > 6 else "box"
 bevel = (float(argv[7]) if len(argv) > 7 else 0.6) / 1000.0
 surface = argv[8] if len(argv) > 8 else "card"          # what it's made of: card | plastic (library/finish.py)
+flap = (argv[9] if len(argv) > 9 else "0") == "1"       # a tuck lid flap: ONLY when the item's construction / kit
+#                                                         says it has one (audit 2026-10-04: it was on every box)
 os.makedirs(out, exist_ok=True)
 
 
@@ -77,7 +79,7 @@ if __name__ == "__main__":
         m.limit_method = "ANGLE"
         bpy.context.view_layer.objects.active = ob
         bpy.ops.object.modifier_apply(modifier="bevel")
-    if surface == "card" and D > 0.005:            # the top closes with a lid flap: built as its own layer of card
+    if flap and surface == "card" and D > 0.005:   # the top closes with a lid flap: built as its own layer of card
         bm = bmesh.new()                            # (one card thick), its front edge tucked in - a real free edge
         bm.from_mesh(me)                            # and the shadow line every real carton has
         uv = bm.loops.layers.uv.verify()

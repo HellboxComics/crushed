@@ -29,8 +29,8 @@ FIRST = """Picture 1 is the real printed label of: {product}, unrolled flat from
 side facing the camera in the main photo, the two outer edges the opposite side when another photo showed it; blurry,
 shiny or smeared parts are where no photo could see). It is {w:.1f} mm wide and {h:.1f} mm tall.
 The words printed on it, each confirmed by two reads: {words}.
-{typical}Picture 1 is ONLY the printed sleeve: the metal ends, the plus button and the bottom are not part of it - never
-draw them. Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those
+{typical}Picture 1 is ONLY the printed label: the item's unprinted parts (its ends, caps, buttons, rims) are not part of
+it - never draw them. Rebuild this label as clean artwork: every colored area, band, box and graphic, and every one of those
 words in its place, size, weight and color. Use only those words, spelled exactly; a word can appear more than once
 (a logo printed again on the other side). Where no photo could see (smeared, streaked parts), carry the design
 across plainly and put there only those confirmed words that belong there.

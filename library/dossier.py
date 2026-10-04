@@ -81,9 +81,9 @@ ID_Q = """[identity] Picture 1 is the photo picked as the true "{product}". Its 
 {size} mm (width x depth x height), year {year}.
 Read the item in the photo. Copy brand, line, variant, count and size EXACTLY as printed; leave a field empty when
 it can't be read - never fill it in from memory. Answer ONLY JSON:
-{{"brand": "the brand as printed, e.g. Kellogg's",
- "line": "the product line as printed, e.g. Pop-Tarts",
- "variant": "the flavor / version / model as printed, e.g. Frosted Strawberry",
+{{"brand": "the brand as printed (the maker's name on it)",
+ "line": "the product line as printed (the product's own name)",
+ "variant": "the flavor / version / model as printed",
  "count": "how many the package holds, as printed, e.g. 8 TOASTER PASTRIES, or empty",
  "size_text": "the net weight / size line exactly as printed, or empty",
  "maker": "the company named on it, or empty",
@@ -96,7 +96,7 @@ QUICK_Q = """[quick] We are rebuilding: {name} ({year}). Look at this photo. Ans
 {{"face": which side fills most of the photo: "front", "back", "left", "right", "side" (a narrow side when you
    can't tell left from right), "top", "bottom", "label", "several" (a carton cut open and laid flat, or several
    sides flat), "mixed" (a corner view), or "none",
- "product_shown": "brand, line, flavor/version and count you can read, e.g. Kellogg's Pop-Tarts Frosted Cherry 6 ct",
+ "product_shown": "brand, line, flavor/version and count you can read, in that order",
  "same_line": true if it is the same brand and product line as ours (any flavor or version),
  "same_item": true if it is exactly our flavor / version and count,
  "kind": "photo" (a real photo of a real one), "flat" (a real package cut open and laid flat), "render"

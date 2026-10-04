@@ -368,7 +368,7 @@
       "the maker's name and city",
       "a caution line",
       "a + mark at the plus end",
-      "any tester or feature of that era (e.g. a PowerCheck strip with test dots)"
+      "any tester strip or special feature printed on that era's version"
      ],
      "expect": [
       {
@@ -794,7 +794,7 @@
   "organic_toy": {
    "what": "a toy or figure with soft or sculpted organic shapes",
    "looks_like": [
-    "Furby",
+    "electronic plush toy",
     "plush toy",
     "action figure",
     "doll",

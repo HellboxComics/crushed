@@ -11,7 +11,7 @@ label (0..1 across, 0..1 down):
                {"type": "ellipse", "x": .., "y": .., "w": .., "h": .., "fill": "#f2f2f2"},
                {"type": "bar", "x": .., "y": .., "w": .., "h": .., "colors": ["#3fbf4f", "#f4f4f4", "#e8402a"],
                 "stops": [0, 0.55, 0.75, 1]} ],
-   "texts":  [ {"text": "DURACELL", "x": 0.4, "y": 0.05, "h": 0.12, "color": "#ffffff", "weight": "black",
+   "texts":  [ {"text": "BRAND", "x": 0.4, "y": 0.05, "h": 0.12, "color": "#ffffff", "weight": "black",
                 "w": 0.5, "align": "left", "rotate": 0} ] }
   text "h" = letter height as a fraction of the label height; "w" (optional) = squeeze/stretch to exactly that
   width; "weight": regular | bold | black; "mark": "registered" | "tm" adds the small symbol after it.

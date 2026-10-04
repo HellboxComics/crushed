@@ -665,8 +665,10 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                                         "nothing known to be inside - the box is built empty"))
             run_blender("carton.py", str(W), str(D), str(H), mdir, os.path.join(d, "skin"), cid, contents)
         else:
+            made_how = json.dumps(card.get("construction") or {}) + json.dumps(card.get("family_lib") or {})
+            flap = "1" if route == "box" and re.search(r"flap|tuck", made_how, re.I) else "0"
             run_blender("box.py", str(W), str(max(D, 0.0003)), str(H), mdir, atlas, "-", cid,
-                        "0.3" if route == "flat" else "0.6", surface)
+                        "0.3" if route == "flat" else "0.6", surface, flap)
     elif route == "assembly":
         # THE GENERAL ONE-OFF BUILDER: your AI breaks the object into its real parts from every photo of it, and
         # each part is built as its own solid with its own material, at real size (parts.py + shapes/assembly.py)
