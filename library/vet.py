@@ -20,7 +20,7 @@ PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.8:latest", "qwen3.5:122b-a10
 QUICK = ["qwen3.6:35b", "qwen3.5:9b"]     # fast first look (thinking off)
 
 
-THINK_WORDS, PLAIN_WORDS = 6144, 2048   # the most tokens one answer may take (thinking + JSON / JSON alone)
+THINK_WORDS, PLAIN_WORDS = 8192, 4096   # the most tokens one answer may take (thinking + JSON / JSON alone)
 CTX = 32768   # one memory size for every question to the brain: Ollama reloads a model whenever the size changes,
 #               and a question with a photo plus a long think must never run out of room (it is cut silently)
 
