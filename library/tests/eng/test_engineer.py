@@ -314,6 +314,22 @@ run(Brain([look_system]), {"pass": False, "failed": ["print"], "problems": ["x"]
 check(git("rev-parse", kb) == sha_kb, "two sessions later the review branch is untouched")
 check("default_rng(8)" in open(os.path.join(REPO, "library", "finish.py")).read(), "the running code did not take it")
 
+# =========================================================== H: a rebuild with nothing changed
+print("\nH. a rebuild with no code change: refused; one redo-from-scratch allowed, the second refused")
+script({C.CID: [{"failed": ["shape"]}, {"failed": ["shape"]}]}, {C.CID: [{"failed": ["shape"]}]})
+brain = Brain([
+    [("rebuild", {"why": "same again"})],
+    [("rebuild", {"why": "redo the plan", "clear": ["parts"]})],
+    [("rebuild", {"why": "redo the plan once more", "clear": ["parts"]})],
+    [("finish", {"summary": "gave up"})],
+])
+res = run(brain, {"pass": False, "failed": ["shape"], "problems": ["x"]})
+tr = brain.tool_results()
+check(tr[0].startswith("REFUSED") and "changed nothing" in tr[0], "rebuild with no change and no clear is refused")
+check(not tr[1].startswith("REFUSED"), f"the first redo-from-scratch (clear only) runs: {tr[1][:60]}")
+check(tr[2].startswith("REFUSED") and "gamble" in tr[2], "a second redo with still no code change is refused")
+check(calls("trials", C.CID) == 1, f"only one test build ran ({calls('trials', C.CID)})")
+
 # =========================================================== F: context and fingerprint units
 print("\nF. units: old tool results are cut short; the run.py fingerprint")
 msgs = [{"role": "system", "content": "s"}]

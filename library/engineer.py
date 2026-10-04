@@ -848,6 +848,7 @@ class Bench:
         self.done = None
         self.lessons = []
         self.accepted = None
+        self.redo_only = 0                             # the one rebuild allowed with no code change (a step redone)
         self.decided = {}                              # code version (diff hash) -> (kept?, why): never re-rolled
         self.stopped = None                            # set when the session must stop at once
         self.model = None
@@ -1310,11 +1311,18 @@ class Bench:
         bad = self.audit()
         if bad:
             return "REFUSED: your changes break the rules, so they can't be tested: " + bad
-        if self.diff() == "no changes yet" and not clear:
-            return ("REFUSED: you have changed nothing, so a rebuild would make the same model again (a rebuild takes "
-                    "minutes). Find the cause first - look, measure (compare_colors, mesh_info, read_words), read the "
-                    "code that makes that part - then edit it, then rebuild. If you only want a step redone from "
-                    "scratch, say which with clear=[...].")
+        if self.diff() == "no changes yet":
+            if not clear:
+                return ("REFUSED: you have changed nothing, so a rebuild would make the same model again (a rebuild takes "
+                        "minutes). Find the cause first - look, measure (compare_colors, mesh_info, read_words), read the "
+                        "code that makes that part - then edit it, then rebuild. If you only want a step redone from "
+                        "scratch, say which with clear=[...].")
+            if self.redo_only:                             # one redo-from-scratch per session; after that, a fix
+                return ("REFUSED: you already redid a step from scratch with no code change (rebuild "
+                        f"{self.redo_only}) and it failed the same way - redoing it again is a gamble, not a fix. "
+                        "Read the step's code (the review sheet names the step; parts.py plans the parts, "
+                        "shapes/assembly.py builds them), change what makes it wrong, then rebuild.")
+            self.redo_only = n
         self.log(f"[engineer] {self.cid}: rebuild {n} with its fix ({why[:160]})")
         t, tail = self._run_trial(self.cid, clear, why, "try")
         if t is None:
