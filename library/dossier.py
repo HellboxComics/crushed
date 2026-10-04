@@ -38,9 +38,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 4                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+VERSION = 5                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 #                              4: a round end's reference photo must show that end end-on (a disc)
+#                              5: a round item's ends are told apart by the kit (the + button end is the top): the
+#                                 careful looks that named an end are taken again
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
 LOOK = 2                     # careful looks per side (the quick look already ranks every photo)
@@ -466,13 +468,23 @@ def careful_looks(dos, use, log=print):
         chosen += cands[:LOOK]
     chosen = [p for p in chosen[:MOST_LOOKS] if not p.get("labeled")]
     import vet as V
+    hint = SIDES_HINT.get(route, "")
+    if route == "round":                                  # which end is which, from the kit (a battery lying down:
+        try:                                              # the copper + end was called "bottom", 2026-10-04)
+            import kits
+            kit = kits.get(dos.get("family_lib") or "")
+            ends = [f"its {z} end is {'; '.join(kits.typical(kit, z))}" for z in ("top", "bottom") if kits.typical(kit, z)]
+            if ends:
+                hint += " Tell the ends apart by what they are: " + "; ".join(ends) + "."
+        except Exception:
+            pass
 
     def look(p):
         ref = ("Picture 2 is the front of our exact item (the photo picked as true) - compare with it."
                if p["file"] != picked and picked else "Picture 1 IS our exact item (picked as true).")
         imgs = [p["file"]] + ([picked] if p["file"] != picked and picked else [])
         return _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "", y0=era[0],
-                                        y1=era[1], ref=ref, sides_hint=SIDES_HINT.get(route, "")), imgs, think=True,
+                                        y1=era[1], ref=ref, sides_hint=hint), imgs, think=True,
                     side=1280) or {}
 
     def done(i, v):                                       # (several at once when the brain server allows it)
@@ -857,8 +869,21 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
             f"{time.strftime('%Y-%m-%d %H:%M', time.localtime(old.get('made_at', 0)))}) - reused")
         if int(old.get("version") or 1) < VERSION:
             old["inputs"] = sig
+            was = int(old.get("version") or 1)
             replan(old, log)                                  # newer rules: from the looks already taken, in seconds
-        return old
+            if was < 5 and old.get("route") == "round":       # 5: an end named without the kit's help: look again
+                again = [p for p in old.get("photos", []) if p.get("labeled")
+                         and any(f.get("face") in ("top", "bottom") for f in p.get("faces", []))]
+                for p in again:
+                    p["labeled"] = False
+                    p["faces"] = []
+                if again:
+                    old["done"] = False
+                    save(old)
+                    log(f"[dossier] {cid}: {len(again)} careful look(s) named an end of this round item - taken again "
+                        "with the kit's help (which end is the + button)")
+        if old.get("done"):
+            return old
     resume = bool(old) and not redo and same
     if old and not resume:
         _set_aside(cid, "you asked for a Redo" if redo else "its inputs changed (your pick, the product or its size)")
