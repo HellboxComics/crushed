@@ -49,6 +49,28 @@ a tag, a background) are never a fault. Answer ONLY JSON:
  "pass": true only if no named problem is really there}}"""
 
 
+def look_ok(v):
+    """One look's pass, computed from what it reported (audit 2026-10-04: the brain's own 'pass' was trusted while
+    its inventory counts and 'missing' list said otherwise). A look passes only when it said the layout is the
+    same, every element is there and legible, the print is clean, nothing is missing, and every inventory element
+    is on the model in the same number. The counts that differ are written into v["_counts"]."""
+    if not isinstance(v, dict):
+        return False
+    bad = []
+    for e in v.get("inventory") or []:
+        if not isinstance(e, dict):
+            continue
+        try:
+            r, m = int(e.get("real_count") or 0), int(e.get("model_count") or 0)
+        except (TypeError, ValueError):
+            continue
+        if r != m:
+            bad.append(f"{e.get('element', 'an element')}: {r} on the real one, {m} on the model")
+    v["_counts"] = bad
+    return (v.get("pass") is True and v.get("same_layout") is not False and v.get("all_elements") is not False
+            and v.get("print_ok") is not False and not v.get("missing") and not bad)
+
+
 def _ask(use, text, images):
     import vet as V
     return V.ask(use, text, images, think=True, side=1600) or {}
@@ -98,7 +120,7 @@ def _strip(pngs, like, name="label_all_turns.png"):
     return p
 
 
-QUESTION_VERSION = 4        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
+QUESTION_VERSION = 5        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
 PRIMARY_FACE = {"box": "front", "flat": "front", "pcb": "top", "free": "front", "round": "label"}
 
 
@@ -114,7 +136,7 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None, marks=
     out, failed, problems = {}, [], []
     if not use:
         return {"pass": False, "faces": {}, "failed": ["sides"], "problems": ["sides: no AI to judge the sides"]}
-    jobs, keys, shown_of = [], {}, {}                     # every look at every side, asked several at a time
+    jobs, keys, shown_of, unjudged = [], {}, {}, []       # every look at every side, asked several at a time
     for face, e in faces.items():                         # when the brain server allows it
         if route == "round" and face == "label":              # a label wraps all the way round: all four turns,
             turns = ("label_0", "label_90", "label_180", "label_270")   # so it matches the photo's turn, whichever
@@ -124,6 +146,7 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None, marks=
         else:
             model, model_lit = renders.get(face), lit.get(face)
         if not model:
+            unjudged.append(face)
             continue
         must = "; ".join(f"{m.get('what')}" + (f" \"{str(m.get('text'))[:60]}\"" if m.get("text") else "")
                          for m in e.get("must_show", [])) or "nothing listed"
@@ -188,10 +211,11 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None, marks=
         by_face.setdefault(face, []).append(v)
     pics_of = {j[0]: (j[1], j[2]) for j in jobs}            # the first job's prompt pictures per face (model-first)
     for face, verdicts in by_face.items():
+        verdicts = [dict(v, **{"pass": look_ok(v)}) for v in verdicts]   # the pass is computed, not the brain's word
         ok = all(v.get("pass") is True for v in verdicts)
         probs = []
         for v in verdicts:
-            for p in (v.get("problems") or []) + [f"missing: {m}" for m in (v.get("missing") or [])]:
+            for p in (v.get("problems") or []) + [f"missing: {m}" for m in (v.get("missing") or [])] + v.get("_counts", []):
                 if p and p not in probs:
                     probs.append(str(p)[:200])
         agreed = len({bool(v.get("pass")) for v in verdicts}) == 1
@@ -221,6 +245,10 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None, marks=
             problems.append(f"side_{face}: " + ("; ".join(probs[:3]) or "the two looks disagreed"))
     for face, v in kept_faces.items():                      # the sides kept from a pass with the same pictures
         out[face] = v
+    for face in unjudged:                                   # a side the dossier names but the model has no picture of
+        out[face] = {"pass": False, "problems": [f"no picture of the model's {face} side to judge"], "looks": 0}
+        failed.append(f"side_{face}")
+        problems.append(f"side_{face}: the model has no picture of this side to judge")
     if not out:                                             # nothing judged is never a pass
         return {"pass": False, "faces": {}, "failed": ["sides"],
                 "problems": ["sides: no side could be compared (the dossier has no sides, or the model no pictures)"]}

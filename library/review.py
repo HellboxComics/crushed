@@ -67,6 +67,24 @@ def load(build_dir):
     return Sheet(build_dir, fresh=False)
 
 
+def failures(build_dir):
+    """Every step check on the build's sheet that FAILED, as the build's own failures: (["step: <check>", ...],
+    ["<step>: <check> (<detail>)", ...]). A check with ok None (not measured) is not a failure."""
+    import re
+    try:
+        steps = json.load(open(os.path.join(build_dir, "review.json"))).get("steps", [])
+    except Exception:
+        return [], []
+    names, probs = [], []
+    for s in steps:
+        for c in s.get("checks", []):
+            if c.get("ok") is False:
+                short = re.sub(r"\s+", " ", str(c.get("check", "")))[:70]
+                names.append(f"step: {short}")
+                probs.append(f"{s.get('step', '')[:50]}: {short}" + (f" ({c.get('detail', '')[:160]})" if c.get("detail") else ""))
+    return names, probs
+
+
 # ------------------------------------------------------------------ exact checks for a round item's label
 def pieces(words):
     """Words that are only a piece of another word on the label (a word the photo's edge cut off)."""

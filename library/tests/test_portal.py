@@ -70,4 +70,8 @@ json.dump([{"id": 4, "text": f"{nn}: size 5 x 4 x 3 cm", "photo": None}], open(P
 P.process(log=print, model="stand-in")
 check(P.items()[nn]["size"] == [0.05, 0.04, 0.03] and P.queue_first()[0] == nn, "his size reply puts it first in line")
 check(len(sent) == 4 and all(sent), f"one reply per message: {len(sent)}")
+# every message is marked done the moment it is handled: running again replies to nothing (2026-10-04: a 'continue'
+# skipped the save, so replies repeated and notes were rewritten each run)
+P.process(log=print, model="stand-in")
+check(len(sent) == 4, "run again: no message is handled twice")
 print(f"\n{ok} checks passed")

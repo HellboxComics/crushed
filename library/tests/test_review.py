@@ -96,4 +96,15 @@ words = ["DURACELL", "Remember these?", "JAN 2001", "100%", "MAY EXPLODE OR LEAK
 kept, out = review.not_on_item(words, by_png, src, dos)
 check(out == ["Remember these?", "photo by retrocollector"], f"a caption the dossier saw laid over the photo, and a credit line, are left out: {out}")
 check(kept == ["DURACELL", "JAN 2001", "100%", "MAY EXPLODE OR LEAK.", "+"], "words on the item stay, even ones seen on one photo")
+
+# the step checks gate the build: a failed sheet check is a failure of the build
+import tempfile
+bd = tempfile.mkdtemp()
+S = review.Sheet(bd)
+S.step("label art", checks=[("the best try matches the real label (7 or more of 10)", False, "match 4"),
+                            ("metal ink is no more than a printed sleeve can have (60%)", True, "20%"),
+                            ("every kit part is in the plan", None, "not checked")])
+names, probs = review.failures(bd)
+check(names == ["step: the best try matches the real label (7 or more of 10)"] and "match 4" in probs[0],
+      f"a failed step check becomes a build failure by name: {names}")
 print(f"\n{ok} checks passed")

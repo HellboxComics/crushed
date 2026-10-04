@@ -19,6 +19,9 @@ import time
 
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.path.join(WORK, "kept")
+# a test build (the engineer's) READS the shared store but WRITES only to its own (CRUSHED_KEPT_WRITE): code in a
+# test build can never plant a pass that a real build or the asset maker's own check would then reuse
+WRITE_DIR = os.path.expanduser(os.environ.get("CRUSHED_KEPT_WRITE") or DIR)
 
 
 def file_sha(path):
@@ -45,26 +48,60 @@ def key(kind, files=(), *parts):
     return h.hexdigest()[:40]
 
 
-def _path(kind, k):
-    return os.path.join(DIR, kind, k + ".json")
+def _path(kind, k, base=None):
+    return os.path.join(base or DIR, kind, k + ".json")
+
+
+def _read(kind, k):
+    """The record: the writer's own store first (a test build sees what it kept), then the shared store."""
+    for base in dict.fromkeys([WRITE_DIR, DIR]):
+        try:
+            with open(_path(kind, k, base)) as f:
+                return json.load(f)
+        except Exception:
+            continue
+    return None
 
 
 def get(kind, k):
-    try:
-        with open(_path(kind, k)) as f:
-            return json.load(f).get("value")
-    except Exception:
-        return None
+    rec = _read(kind, k)
+    return rec.get("value") if rec else None
 
 
 def put(kind, k, value, note=""):
-    p = _path(kind, k)
+    p = _path(kind, k, WRITE_DIR)
     os.makedirs(os.path.dirname(p), exist_ok=True)
     tmp = p + ".tmp"
     with open(tmp, "w") as f:
         json.dump({"value": value, "at": time.time(), "note": note}, f, indent=1, default=str)
     os.replace(tmp, p)
     return value
+
+
+def forget(cid):
+    """A Redo: every kept answer noted for this item is set aside (moved under kept/_stale/, never deleted), so
+    nothing of a build the owner rejected is reused. -> how many."""
+    import shutil
+    n = 0
+    for base in dict.fromkeys([WRITE_DIR, DIR]):
+        for kind in ("judge-side", "inspect", "words", "labelparts"):
+            folder = os.path.join(base, kind)
+            if not os.path.isdir(folder):
+                continue
+            for f in os.listdir(folder):
+                if not f.endswith(".json"):
+                    continue
+                p = os.path.join(folder, f)
+                try:
+                    note = str(json.load(open(p)).get("note") or "")
+                except Exception:
+                    continue
+                if note == cid or note.startswith(cid + " "):
+                    stale = os.path.join(base, "_stale", kind)
+                    os.makedirs(stale, exist_ok=True)
+                    shutil.move(p, os.path.join(stale, f"{int(time.time())}-{f}"))
+                    n += 1
+    return n
 
 
 # ------------------------------------------------------------------ rendered pictures: the same within render noise
@@ -98,11 +135,8 @@ def get_pictures(kind, k, files):
     """A kept answer for these rendered pictures: the record under key k (made from the non-picture inputs) whose
     stored picture signatures match these files within render noise. None otherwise."""
     import numpy as np
-    rec = None
-    try:
-        with open(_path(kind, k)) as f:
-            rec = json.load(f)
-    except Exception:
+    rec = _read(kind, k)
+    if not rec:
         return None
     sigs = rec.get("sigs") or []
     files = [f for f in files if f]
@@ -122,7 +156,7 @@ def put_pictures(kind, k, files, value, note=""):
             continue
         a = pic_sig(f)
         sigs.append({"hex": a.tobytes().hex(), "shape": list(a.shape)} if a is not None else None)
-    p = _path(kind, k)
+    p = _path(kind, k, WRITE_DIR)
     os.makedirs(os.path.dirname(p), exist_ok=True)
     tmp = p + ".tmp"
     with open(tmp, "w") as f:

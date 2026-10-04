@@ -78,7 +78,8 @@ ROUTE_FILES = {                         # which shared files each kind of build 
 LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "materials.json", "judge.py",
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
-                "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py"}
+                "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py", "kept.py", "cards.py",
+                "deliver.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
@@ -88,12 +89,13 @@ LOCKED_DIRS = ("playbook/",)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "era.py", "jsonsafe.py",
                 "speed.py", "brainjobs.py", "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py",
-                "sitecustomize.py",
+                "kept.py", "cards.py", "deliver.py", "hart.py", "askfirst.py", "testlock.py", "sitecustomize.py",
                 "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
 RUN_FROZEN_DEFS = {"inspect", "trial", "_judge_trial", "_trial_copies", "_atomic_json", "read_json_safe",
-                   "update_json", "read_status", "jload"}
+                   "update_json", "read_status", "jload", "check_model", "version_marks", "route_of_card",
+                   "check_version", "ensure_kit"}
 RUN_COUNTED = RUN_PROTECTED | {"build", "trial", "TRIAL", "status", "engineer_turn", "jload", "say", "beat"}
 
 # Things a builder never needs and that could fool the check from inside a test build (judged by whether the change
@@ -1308,7 +1310,8 @@ class Bench:
         clear = [c for c in (clear or []) if isinstance(c, str) and re.fullmatch(r"[a-z_]{1,30}", c)]
         h = self._diff_hash()
         self.beat(f"engineer: test build of {cid} ({kind})")
-        env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK)
+        env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK,
+                   CRUSHED_KEPT_WRITE=os.path.join(tdir, "kept"))       # it reads the shared keep store, writes its own
         rc, took = run_group(_trial_cmd(cid, tdir, clear), timeout, os.path.join(tdir, "trial.log"), env=env,
                              cwd=WT, beat=lambda: self.beat(f"engineer: test build of {cid} running ({kind})"))
         res = jload(os.path.join(tdir, "trial.json"), {})
@@ -1704,18 +1707,21 @@ def _accept(b, say):
     # three checks of the same code (its rebuild, the confirmation rebuild, the asset maker's own check): the judge
     # is a brain and two looks at the same model can differ - a check counts as failing when at least two of the
     # three say so (2026-10-04: a real fix was thrown away because one look of three added 'materials')
-    from collections import Counter
-    votes = Counter(F1) + Counter(F2) + Counter(Fp)
-    maj = {f for f, n in votes.items() if n >= 2}
+    # the asset maker's OWN check (run by the running code, never the engineer's copy) is a veto: a fix is kept only
+    # when that independent check is itself strictly better than the first check, and the engineer's two rebuilds
+    # agree with it (audit 2026-10-04: a majority of three let the engineer's own code outvote the independent check)
     if F2 != F1 or Fp != F1:
         say(f"[engineer] {b.cid}: the three checks disagree - first {sorted(F1)}, second {sorted(F2)}, the asset "
-            f"maker's own {sorted(Fp)}; failing in at least two of three: {sorted(maj)}")
-    if not maj < F0:
-        return decide(False, f"The same code was checked three times (two rebuilds and the asset maker's own check): "
-                             f"first {sorted(F1)}, second {sorted(F2)}, own {sorted(Fp)}. Counting a check as failed "
-                             f"when at least two of the three say so: {sorted(maj)} - against {sorted(F0)} at first, "
-                             + ("that breaks checks that passed: " + str(sorted(maj - F0)) if maj - F0 else
-                                "no failure is gone") + ". That is not a real fix - find a change that helps every time.")
+            f"maker's own {sorted(Fp)}")
+    if not Fp < F0:
+        return decide(False, f"The asset maker's own independent check of your fix says {sorted(Fp)} (at first: "
+                             f"{sorted(F0)}): " + ("it breaks checks that passed: " + str(sorted(Fp - F0)) if Fp - F0 else
+                                                   "no failure is gone") + ". Only that check decides; your own rebuilds "
+                             f"said {sorted(F1)} and {sorted(F2)}. Find a change the independent check agrees with.")
+    if not (F1 < F0 and F2 < F0):
+        return decide(False, f"Your own two rebuilds of the same code did not both improve on the first check "
+                             f"({sorted(F1)}, {sorted(F2)} against {sorted(F0)}) although the asset maker's own check "
+                             f"says {sorted(Fp)} - that is luck or noise, not a fix that works every time.")
     for other in _neighbors(b):
         o, otail = b._run_trial(other["cid"], [], "does this fix break other items?", "neighbor")
         if b.stopped:

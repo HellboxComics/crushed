@@ -217,8 +217,10 @@ def process(log=print, model=None):
         except Exception as e:
             log(f"[portal] message {mid} could not be handled: {e}")
             done[mid] = {"kind": "error", "why": str(e)[:200], "at": time.time()}
-        _save(DONE, done)
-    return out
+            _reply("Sorry - that message could not be handled (" + str(e)[:80] + "). Try again in other words.")
+        finally:
+            _save(DONE, done)                              # after EVERY message (a 'continue' skipped this before:
+    return out                                             # replies repeated and notes were rewritten each run)
 
 
 def _size_reply(cid, text):

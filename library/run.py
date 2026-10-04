@@ -383,12 +383,25 @@ def route_of_card(card, cid):
     return route, fam
 
 
+_CHECK_VERSION = []
+
+
 def check_version():
-    """How strict the checks are right now: the judge's question version plus the realism checklist. A kept asset
-    that passed an older version is checked again when this moves (the checks only ever get stricter; a model
-    that was good enough yesterday is looked at again today - never thrown away, only re-judged)."""
-    import judge
-    return f"judge{judge.QUESTION_VERSION}-inspect{len(CHECKS)}"
+    """How strict the checks are right now: a hash of the code and words of every check (judge.py, measure.py,
+    measure_blender.py, review.py, materials.json, the realism checklist and the version marks). A kept asset that
+    passed an older version is checked again when this moves (the checks only ever get stricter; a model that was
+    good enough yesterday is looked at again today - never thrown away, only re-judged)."""
+    if not _CHECK_VERSION:
+        import hashlib
+        h = hashlib.sha256()
+        for f in ("judge.py", "measure.py", "measure_blender.py", "review.py", "materials.json"):
+            try:
+                h.update(open(os.path.join(HERE, f), "rb").read())
+            except Exception:
+                h.update(f.encode())
+        h.update(json.dumps(CHECKS, sort_keys=True).encode())
+        _CHECK_VERSION.append("checks-" + h.hexdigest()[:12])
+    return _CHECK_VERSION[0]
 
 
 def version_marks(card):
@@ -411,6 +424,7 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     import dossier as DS
     import judge
     import measure
+    import review
     product = card["product"]
     mdir = os.path.join(d, "model")
     dos_now = DS.load(cid) or {"size_m": card.get("size"), "faces": {}, "facts": {}}
@@ -419,14 +433,21 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
                     shots=[x for x in (shots, close) if x], web_glb=os.path.join(mdir, cid + "_web.glb"), use=use,
                     log=say)
     say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
+    # THE STEP CHECKS GATE THE BUILD (audit 2026-10-04, root cause 1): every review-sheet check that failed - the
+    # label's score, its measured colors, overlapping text, a part Blender could not build, a board with no parts,
+    # the kit - is a failure of the build, named "step: <check>", exactly like an exact check
+    step_fails, step_probs = review.failures(d)
+    if step_fails:
+        say(f"[check] {cid}: {len(step_fails)} step check(s) failed on the review sheet - " + "; ".join(step_probs)[:400])
+    m = dict(m, **{"pass": m["pass"] and not step_fails})
     if TRIAL and not m["pass"]:
         # FAIL FAST in a test build: the judge's looks (8+ brain questions, 15-25 minutes on the shared brain server)
         # are skipped while an exact check still fails - the engineer learns the exact result in minutes and the
         # judge looks the moment the exact checks pass. Unjudged checks count as still failing (engineer._fails_of).
         say(f"[check] {cid}: exact checks failed - the judge's looks are skipped in this test build until they pass")
-        failed = [f"measure_{k}" for k in m["failed"]] + ["not_judged"]
+        failed = [f"measure_{k}" for k in m["failed"]] + step_fails + ["not_judged"]
         return {"pass": False, "failed": failed, "measure": m["checks"], "sides": {},
-                "problems": m["problems"] + ["not judged: the exact checks failed first; the judge looks once they pass"]}
+                "problems": m["problems"] + step_probs + ["not judged: the exact checks failed first; the judge looks once they pass"]}
     status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
     j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say, lit=m.get("renders_lit") or {},
                     marks=version_marks(card))
@@ -436,9 +457,9 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     looked_failed = list(verdict.get("failed", []))
     if not verdict.get("pass") and not looked_failed:        # the look itself failed (timeout, bad answer): never a pass
         looked_failed = ["inspect"]
-    failed = [f"measure_{k}" for k in m["failed"]] + j["failed"] + looked_failed
+    failed = [f"measure_{k}" for k in m["failed"]] + step_fails + j["failed"] + looked_failed
     verdict = dict(verdict, failed=failed, measure=m["checks"], sides=j["faces"],
-                   problems=m["problems"] + j["problems"] + looked)
+                   problems=m["problems"] + step_probs + j["problems"] + looked)
     verdict["pass"] = not failed
     return verdict
 
@@ -1530,10 +1551,17 @@ def start_over(cid, d):
     ap.pop(cid, None)
     json.dump(ap, open(os.path.join(HB, "approvals.json"), "w"), indent=1)
     trash = os.path.expanduser(f"~/Desktop/_to delete/remaster/{cid}-redo-{time.strftime('%Y%m%d-%H%M%S')}")
-    for name in ("model", "skin"):
-        if os.path.exists(os.path.join(d, name)):
-            os.makedirs(trash, exist_ok=True)
+    for name in ("model", "skin", "texture", "parts_plan.json", "parts.json", "review.json"):
+        if os.path.exists(os.path.join(d, name)):            # a Redo means: nothing of this build is good - the
+            os.makedirs(trash, exist_ok=True)                # kept label and the kept passes go too (2026-10-04)
             shutil.move(os.path.join(d, name), os.path.join(trash, name))
+    try:
+        import kept
+        n = kept.forget(cid)
+        if n:
+            say(f"[redo] {cid}: {n} kept pass(es) of this item set aside")
+    except Exception as e:
+        say(f"[redo] {cid}: the kept passes could not be set aside ({e})")
     say(f"[redo] {cid}: the old build is in {trash}")
 
 
@@ -1868,7 +1896,7 @@ def inspect(sheet, photo, product, use, card=None, close=None):
     v["failed"] = failed
     v["pass"] = not failed
     if v["pass"]:
-        kept.put_pictures("inspect", kk, pics, v)
+        kept.put_pictures("inspect", kk, pics, v, note=os.path.basename(os.path.dirname(sheet)) if sheet else "")
     return v
 
 

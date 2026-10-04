@@ -120,4 +120,14 @@ from PIL import ImageDraw
 im = Image.open(renders["bottom"]); ImageDraw.Draw(im).text((400, 400), "X", fill=(255, 255, 255)); im.save(renders["bottom"])
 r = judge.sides("t", renders, d1, "brain", "round", product="AA cell", lit=lit)
 check(len(asked) > n1 and not r["faces"]["bottom"].get("kept"), "a changed picture is judged again")
+
+# the pass is computed from what the look reported, never the brain's own word
+check(judge.look_ok({"pass": True, "same_layout": True, "all_elements": True, "print_ok": True, "missing": [],
+                     "inventory": [{"element": "white dot", "real_count": 2, "model_count": 2}]}) is True, "a clean look passes")
+v = {"pass": True, "same_layout": True, "all_elements": True, "print_ok": True, "missing": [],
+     "inventory": [{"element": "white dot", "real_count": 2, "model_count": 1}]}
+check(judge.look_ok(v) is False and "white dot: 2 on the real one, 1 on the model" in v["_counts"],
+      "a look that says pass but counts 2 dots on the real one and 1 on the model FAILS, naming the count")
+check(judge.look_ok({"pass": True, "same_layout": False, "all_elements": True, "print_ok": True, "missing": []}) is False,
+      "pass with same_layout false is not a pass")
 print(f"\n{ok} checks passed")

@@ -50,8 +50,17 @@ d3.save(r3)
 check(kept.pics_match(kept.pic_sig(r1), kept.pic_sig(r2)), "the same render with sampling noise matches")
 check(not kept.pics_match(kept.pic_sig(r1), kept.pic_sig(r3)), "one changed letter in a small word does not match")
 kk = kept.key("judge-side", [], "item", "label", "must", "brain", 3)
-kept.put_pictures("judge-side", kk, [r1], {"pass": True, "problems": []})
+kept.put_pictures("judge-side", kk, [r1], {"pass": True, "problems": []}, note="duracell_x_1998 label")
 check(kept.get_pictures("judge-side", kk, [r2]) == {"pass": True, "problems": []}, "a kept pass is found for the noisy re-render")
 check(kept.get_pictures("judge-side", kk, [r3]) is None, "and not for the changed one")
 check(kept.get_pictures("judge-side", kk, [r1, r2]) is None, "a different number of pictures never matches")
+
+# a Redo sets the item's kept passes aside
+kept.put_pictures("inspect", kept.key("inspect", [], "q", "brain"), [r1], {"pass": True}, note="duracell_x_1998")
+kept.put("labelparts", kept.key("labelparts", [], "duracell_x_1998"), {"added": []}, note="duracell_x_1998")
+kept.put("words", kept.key("words", [a], "brain-z"), ["X"], note="p1.jpg")
+n = kept.forget("duracell_x_1998")
+check(n == 3, f"the item's judge-side, inspect and label-parts keeps are set aside ({n})")
+check(kept.get_pictures("judge-side", kk, [r2]) is None and kept.get("words", kept.key("words", [a], "brain-z")) == ["X"],
+      "other items' keeps stay")
 print(f"\n{ok} checks passed")

@@ -32,6 +32,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 LEARNED = os.path.join(WORK, "kits", "learned.json")
+# a test build (the engineer's) reads the shared learned kits but writes only its own copy (never shared state)
+LEARNED_WRITE = os.path.join(os.path.expanduser(os.environ["CRUSHED_KEPT_WRITE"]), "learned_kits.json") \
+    if os.environ.get("CRUSHED_KEPT_WRITE") else LEARNED
 VERSION = 1
 ZONE_KINDS = ("wrap", "rect", "disc", "fabric", "form")
 
@@ -61,16 +64,19 @@ Only sizes a result states in numbers; none when no result states them. Never es
 
 
 def learned():
-    try:
-        return json.load(open(LEARNED))
-    except Exception:
-        return {}
+    out = {}
+    for p in dict.fromkeys([LEARNED, LEARNED_WRITE]):
+        try:
+            out.update(json.load(open(p)))
+        except Exception:
+            pass
+    return out
 
 
 def _save(d):
-    os.makedirs(os.path.dirname(LEARNED), exist_ok=True)
-    json.dump(d, open(LEARNED + ".tmp", "w"), indent=1)
-    os.replace(LEARNED + ".tmp", LEARNED)
+    os.makedirs(os.path.dirname(LEARNED_WRITE), exist_ok=True)
+    json.dump(d, open(LEARNED_WRITE + ".tmp", "w"), indent=1)
+    os.replace(LEARNED_WRITE + ".tmp", LEARNED_WRITE)
 
 
 def key(kind):
