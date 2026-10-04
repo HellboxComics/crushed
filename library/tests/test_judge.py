@@ -62,4 +62,40 @@ label_q = [a for a in asked if "its label side" in a[0]]
 check(all(any("label_all_turns" in os.path.basename(p) for p in a[1]) for a in label_q), "the label is judged as its 2x2 grid of turns")
 top_q = [a for a in asked if "its top side" in a[0]]
 check(len(top_q) == 1 and len(top_q[0][1]) == 2 and "There is no real photo" in top_q[0][0], "a side with no photo: one look, unlit + lit, told so")
+
+
+# the two looks disagree: a third look decides, checking the named problems one by one
+seq = {"n": 0}
+
+
+def flaky(use, text, images):
+    asked.append((text, list(images)))
+    if text.startswith("[side] ") and "Two careful looks" in text:
+        return {"confirmed": [], "not_there": ["copper band misplaced"], "pass": True}
+    seq["n"] += 1
+    if seq["n"] % 2 == 0:
+        return {"same_layout": False, "all_elements": True, "missing": [], "print_ok": True,
+                "problems": ["copper band misplaced"], "pass": False}
+    return {"same_layout": True, "all_elements": True, "missing": [], "print_ok": True, "problems": [], "pass": True}
+
+
+judge._ask = flaky
+asked.clear()
+r = judge.sides("t", renders, {"faces": {"bottom": dos["faces"]["bottom"]}}, "brain", "round", product="AA cell", lit=lit)
+check(r["pass"] and r["faces"]["bottom"]["looks"] == 3 and r["faces"]["bottom"]["agreed"] is False,
+      "one look fails, one passes: a third look finds nothing and the side passes")
+check(sum(1 for a in asked if "Two careful looks" in a[0]) == 1 and "copper band misplaced" in
+      [a for a in asked if "Two careful looks" in a[0]][0][0], "the third look is asked about the named problems")
+
+
+def flaky2(use, text, images):
+    if "Two careful looks" in text:
+        return {"confirmed": ["copper band misplaced: the address block sits on copper in picture 1"], "pass": False}
+    return flaky(use, text, images)
+
+
+judge._ask = flaky2
+seq["n"] = 0
+r = judge.sides("t", renders, {"faces": {"bottom": dos["faces"]["bottom"]}}, "brain", "round", product="AA cell", lit=lit)
+check(not r["pass"] and "address block" in r["problems"][0], "a third look that confirms the problem fails the side, naming where")
 print(f"\n{ok} checks passed")

@@ -34,6 +34,17 @@ Compare them as a buyer would. Answer ONLY JSON:
  "pass": true only if all of the above are true}}"""
 
 
+TIEBREAK = """[side] {pics} The product: {product}. This is its {face} side. Two careful looks at these same pictures
+disagreed: one passed the model's side, the other named these problems: {problems}
+Check each named problem against the pictures, slowly. A problem counts only if you can point to it in the
+pictures (where, what). The model is shown with no light (its print) and under studio light (its materials); a
+highlight that follows the shape is light, not a fault. Things in the photo that are not part of the item (a hand,
+a tag, a background) are never a fault. Answer ONLY JSON:
+{{"confirmed": ["each named problem that is really there, with where you see it"],
+ "not_there": ["each named problem you cannot find"],
+ "pass": true only if no named problem is really there}}"""
+
+
 def _ask(use, text, images):
     import vet as V
     return V.ask(use, text, images, think=True, side=1600) or {}
@@ -153,6 +164,7 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
         if isinstance(v, Exception) or not isinstance(v, dict):
             v = {"pass": False, "problems": [f"could not judge: {v}"]}
         by_face.setdefault(face, []).append(v)
+    pics_of = {j[0]: (j[1], j[2]) for j in jobs}            # the first job's prompt pictures per face (model-first)
     for face, verdicts in by_face.items():
         ok = all(v.get("pass") is True for v in verdicts)
         probs = []
@@ -160,8 +172,26 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
             for p in (v.get("problems") or []) + [f"missing: {m}" for m in (v.get("missing") or [])]:
                 if p and p not in probs:
                     probs.append(str(p)[:200])
-        out[face] = {"pass": ok, "problems": probs[:6], "looks": len(verdicts), "agreed": len({bool(v.get("pass"))
-                                                                                             for v in verdicts}) == 1}
+        agreed = len({bool(v.get("pass")) for v in verdicts}) == 1
+        tie = None
+        if not ok and not agreed and probs and face in pics_of:
+            # the two looks disagree: the judge is a brain and one look can be wrong either way - a third look checks
+            # the named problems one by one against the pictures (2026-10-04: the same unchanged label passed twice
+            # and failed the third build on one look)
+            q0, imgs = pics_of[face]
+            pics = q0.split(" The product:")[0].replace("[side] ", "")
+            try:
+                tie = _ask(use, TIEBREAK.format(pics=pics, product=product, face=face, problems="; ".join(probs[:6])), imgs)
+            except Exception as e:
+                tie = {"pass": False, "confirmed": [f"could not take the third look: {e}"]}
+            confirmed = [str(x)[:200] for x in (tie.get("confirmed") or [])]
+            ok = tie.get("pass") is True and not confirmed
+            log(f"[judge] {cid} {face}: the two looks disagreed - a third look " +
+                ("found none of the named problems: it passes" if ok else f"confirmed: {'; '.join(confirmed)[:300]}"))
+            if not ok:
+                probs = confirmed or probs
+        out[face] = {"pass": ok, "problems": probs[:6], "looks": len(verdicts) + (1 if tie is not None else 0),
+                     "agreed": agreed, **({"third_look": tie} if tie is not None else {})}
         if not ok:
             failed.append(f"side_{face}")
             problems.append(f"side_{face}: " + ("; ".join(probs[:3]) or "the two looks disagreed"))
