@@ -38,11 +38,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 5                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+VERSION = 6                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 #                              4: a round end's reference photo must show that end end-on (a disc)
 #                              5: a round item's ends are told apart by the kit (the + button end is the top): the
 #                                 careful looks that named an end are taken again
+#                              6: a round label takes a sister pack's cell with the same artwork as a source: the
+#                                 careful looks are asked "same_artwork" (taken again for sister photos of round items)
 BUDGET = 16                  # Google searches per item, at most (20 s apart)
 PER_SEARCH = 5               # photos kept from each search
 LOOK = 2                     # careful looks per side (the quick look already ranks every photo)
@@ -112,6 +114,9 @@ Look at picture 1 carefully. Answer ONLY JSON:
  "match": "exact" (this very flavor/version and count, from that era), "sister" (the same line and era, another
    flavor/version or count), "near_year" (this item but a different year inside the era), or "wrong" (another
    product, or outside {y0}-{y1}, or a modern redesign),
+ "same_artwork": true when the item's own printed artwork in picture 1 is the SAME as ours (the same label or
+   package art, words and colors) even though the count or pack differs - e.g. one cell of a 4-pack of the same
+   batteries carries the very same label as our single cell; false when its artwork differs,
  "product_shown": "brand, line, flavor/version and count you can read",
  "years": [earliest, latest] year the package could be from (copyright dates, design, nutrition label format),
  "years_why": "what tells you the years",
@@ -535,7 +540,8 @@ def _apply_label(p, v, era, is_pick=False):
     overlays += [{"what": "watermark or credit", "text": _str(t, 200), "box": None}
                  for t in (v.get("text") or []) if FX.not_printed(t)]
     p.update(labeled=True, faces=faces, face=faces[0]["face"] if faces else "none", also=[f["face"] for f in faces[1:]],
-             match=match, product_shown=_str(v.get("product_shown")), years=ys, years_why=_str(v.get("years_why")),
+             match=match, same_artwork=(v.get("same_artwork") is True) or match == "exact",
+             product_shown=_str(v.get("product_shown")), years=ys, years_why=_str(v.get("years_why")),
              text=[_str(t, 200) for t in (v.get("text") or []) if _str(t) and not FX.not_printed(t)][:60], quality=q,
              elements=[e for e in els if not FX.not_printed(e["text"])], overlays=overlays,
              kind=(p.get("quick") or {}).get("kind", "photo"))
@@ -677,7 +683,12 @@ def plan(dos):
                 cands.append((q, p, fe))
         cands.sort(key=lambda c: -c[0])
         free = lambda c: (c[1]["file"], c[2]["face"]) not in taken or c[2]["face"] != "side"
-        exact = [c for c in cands if c[1].get("match") == "exact" and c[0] >= 3 and free(c) and not _covered(c[1], c[2])]
+        # a round item's wrapped label: a sister pack's cell with the SAME artwork (a 4-pack of the same batteries,
+        # seen from other turns) is as good a source for the label as the single cell - the pick alone saw 67% of
+        # the Duracell's label and the rest was in no "exact" photo (2026-10-04)
+        exact = [c for c in cands if (c[1].get("match") == "exact" or (route == "round" and F == "label" and
+                                                                     c[1].get("match") == "sister" and c[1].get("same_artwork")))
+                 and c[0] >= 3 and free(c) and not _covered(c[1], c[2])]
         tmpl = [c for c in cands if c[1].get("match") in ("sister", "near_year") and c[0] >= 4 and free(c)
                 and _shape_ok(c[1], c[2], dims.get(F)) and not _covered(c[1], c[2])]
         sister_seen = [c for c in cands if c[1].get("match") in ("sister", "near_year")]
@@ -871,17 +882,18 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
             old["inputs"] = sig
             was = int(old.get("version") or 1)
             replan(old, log)                                  # newer rules: from the looks already taken, in seconds
-            if was < 5 and old.get("route") == "round":       # 5: an end named without the kit's help: look again
-                again = [p for p in old.get("photos", []) if p.get("labeled")
-                         and any(f.get("face") in ("top", "bottom") for f in p.get("faces", []))]
+            if was < 6 and old.get("route") == "round":       # 5/6: looks taken without the kit's help or the
+                again = [p for p in old.get("photos", []) if p.get("labeled")   # same-artwork question: again
+                         and (was < 5 and any(f.get("face") in ("top", "bottom") for f in p.get("faces", []))
+                              or p.get("match") == "sister" and "same_artwork" not in p)]
                 for p in again:
                     p["labeled"] = False
                     p["faces"] = []
                 if again:
                     old["done"] = False
                     save(old)
-                    log(f"[dossier] {cid}: {len(again)} careful look(s) named an end of this round item - taken again "
-                        "with the kit's help (which end is the + button)")
+                    log(f"[dossier] {cid}: {len(again)} careful look(s) of this round item are taken again under the newer "
+                        "rules (which end is the + button; does a sister pack carry the same label artwork)")
         if old.get("done"):
             return old
     resume = bool(old) and not redo and same
