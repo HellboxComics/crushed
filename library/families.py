@@ -110,8 +110,8 @@ def classify(card, picked, use=None, log=print, redo=False, notes=""):
             lib = library()["families"]
             fam, conf = kk, max(conf, 6)
             got["why"] = (got.get("why") or "") + f" - a kind your AI studied itself: {kk}"
-    if fam in lib and fam != "general" and conf >= 6 and not (lib[fam].get("parts") and lib[fam].get("zones")) \
-            and use and picked:
+    import kits
+    if fam in lib and fam != "general" and conf >= 6 and not kits.finished(lib[fam]) and use and picked:
         import kitmaker                                     # a family without a finished kit: studied now, same key
         kitmaker.ensure(fam, card, picked, use, log)
         lib = library()["families"]

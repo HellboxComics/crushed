@@ -131,6 +131,16 @@ def elements(kit, zone, food=True):
     return els
 
 
+def finished(kit):
+    """A kit the asset maker can build from: it knows the print zones, and either the parts or a builder that
+    makes the whole thing from its own recipe (the lathe, the carton, the circuit card, the box)."""
+    kit = kit or {}
+    if not kit.get("zones") and not kit.get("faces"):
+        return False
+    return bool(kit.get("parts")) or (kit.get("builder") in ("lathe", "carton", "pcb", "box")
+                                      and kit.get("builder_status") in ("ready", "partial"))
+
+
 def typical(kit, zone):
     """What is normally printed on this zone of this kind of thing ([] = nothing in particular)."""
     for z in zones(kit):

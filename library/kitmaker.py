@@ -193,7 +193,7 @@ def ensure(kind, card, photo, use, log=print):
     import kits
     kk = key(kind)
     lib = kits.library()["families"]
-    if kk in lib and lib[kk].get("parts") and lib[kk].get("zones"):
+    if kk in lib and kits.finished(lib[kk]):
         return kk, lib[kk]
     L = learned()
     if kk in L and L[kk].get("learned", {}).get("version") == VERSION:
