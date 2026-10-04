@@ -104,7 +104,52 @@ def _open_in_blender(kind, path, folder):
                 P.append(f"{where} points outside this folder ({fp}), which breaks when the folder moves")
         if not w or not h:
             P.append(f"{where} does not load")
+    if kind == "glb":
+        out["contract"] = _contract_in_blender(meshes, os.path.splitext(os.path.basename(path))[0])
+        P += out["contract"]["problems"]
     return out
+
+
+def _contract_in_blender(meshes, asset):
+    """THE DELIVERABLE CONTRACT, checked on the re-imported .glb (audit 2026-10-04, RC8): every part has a UV map,
+    carries its physics (part, material_kind), is a Principled material, and its pictures are named by what they
+    are (<asset>_<part>_<map>). The size is checked outside, against the catalog (verify size_m)."""
+    import bpy
+    c = {"parts": {}, "problems": [], "bbox_m": None}
+    lo = [1e9] * 3
+    hi = [-1e9] * 3
+    for o in meshes:
+        me = o.data
+        rec = {"uv": bool(me.uv_layers), "part": o.get("part"), "material_kind": o.get("material_kind"),
+               "materials": [s.material.name for s in o.material_slots if s.material], "pictures": []}
+        if not rec["uv"]:
+            c["problems"].append(f"part '{o.name}' has no UV map")
+        if not rec["part"] or not rec["material_kind"]:
+            c["problems"].append(f"part '{o.name}' carries no physics (part / material_kind)")
+        for sl in o.material_slots:
+            m = sl.material
+            if not m:
+                continue
+            if not m.use_nodes or not any(n.type == "BSDF_PRINCIPLED" for n in m.node_tree.nodes):
+                c["problems"].append(f"part '{o.name}': material '{m.name}' is not a Principled BSDF")
+                continue
+            for n in m.node_tree.nodes:
+                if n.type == "TEX_IMAGE" and n.image:
+                    nm = n.image.name
+                    rec["pictures"].append(nm)
+                    stem = os.path.splitext(nm)[0]
+                    if not (stem.startswith(asset + "_") and stem.rsplit("_", 1)[-1] in ("base", "mr", "normal", "coat")):
+                        c["problems"].append(f"part '{o.name}': picture '{nm}' is not named <asset>_<part>_<map>")
+        if not o.get("beyond_size"):
+            for v in o.bound_box:
+                w = o.matrix_world @ __import__("mathutils").Vector(v)
+                for i in range(3):
+                    lo[i], hi[i] = min(lo[i], w[i]), max(hi[i], w[i])
+        c["parts"][o.name] = rec
+    if lo[0] < 1e8:
+        c["bbox_m"] = [round(hi[i] - lo[i], 5) for i in range(3)]
+    c["problems"] = sorted(set(c["problems"]))[:20]
+    return c
 
 
 def _blender(kind, path, folder, timeout=OPEN_TIMEOUT):
@@ -363,7 +408,7 @@ def _pairs(d, what):
 
 
 # ---------------------------------------------------------------- the whole folder
-def verify(folder, name=None, timeout=OPEN_TIMEOUT):
+def verify(folder, name=None, timeout=OPEN_TIMEOUT, size_m=None):
     folder = os.path.abspath(folder)
     res = {"ok": False, "folder": folder, "name": name, "files": {}, "missing": [], "problems": [],
            "not_possible": dict(NOT_POSSIBLE)}
@@ -400,6 +445,16 @@ def verify(folder, name=None, timeout=OPEN_TIMEOUT):
                 blend_pics = len(d["pictures"])
             elif ext in ("glb", "fbx") and blend_pics and not d["pictures"]:
                 probs = probs + ["it carries none of the model's pictures"]
+            if ext == "glb" and d.get("contract"):
+                info["contract"] = {"parts": len(d["contract"]["parts"]), "bbox_m": d["contract"].get("bbox_m")}
+                bb = d["contract"].get("bbox_m")
+                if size_m and bb:                       # real size, as the catalog says, once more on the re-import
+                    want = sorted(float(x) for x in size_m[:3] if x)
+                    got = sorted(bb)[-len(want):]
+                    off = max(abs(g - w) / w for g, w in zip(got, want)) if want else 0
+                    if off > 0.03:
+                        probs = probs + [f"re-imported size {[round(x * 1000, 1) for x in bb]} mm is {off * 100:.0f}% off "
+                                         f"the catalog's {[round(x * 1000, 1) for x in size_m[:3]]} mm"]
         note(f"{name}.{ext}", info, probs)
     if "obj" in present and "mtl" in present and not _obj_names_mtl(present["obj"], present["mtl"]):
         res["problems"].append(f"{name}.obj: it does not name {name}.mtl as its material file")

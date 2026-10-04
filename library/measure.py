@@ -49,6 +49,9 @@ def _text_of(t):
             pass
     return t
 PX_PER_MM = 12
+UV_OVERLAP = 0.10           # share of a part's UV area under another island (shapes/contract.py OVERLAP_MAX)
+UV_COLLAPSED = 0.05         # share of a part's surface mapped to a line or a point
+OPEN_EDGES = 0.005          # share of an outside part's edges that may be open (a hole)
 SIZE_TOL = 0.03
 SHOW_THROUGH = 0.002          # an inside part seen on more than 0.2% of looks shows through
 
@@ -450,7 +453,25 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
             bad.append(f"{part}: inside-out (its faces point inward)")
         if info["faces"] and info.get("degenerate_faces", 0) > max(20, 0.01 * info["faces"]):
             bad.append(f"{part}: {info['degenerate_faces']} broken (zero-size) faces")
-    checks["mesh"] = _c(not bad, "no spikes, no inside-out parts, no broken faces" if not bad else "; ".join(bad))
+        oe = info.get("open_edges") or 0                        # a hole in an outside part (audit 2026-10-04)
+        if oe and not info.get("inside") and oe > OPEN_EDGES * max(info.get("edges") or 0, 1):
+            bad.append(f"{part}: {oe} open edges (holes in its surface)")
+    checks["mesh"] = _c(not bad, "no spikes, no inside-out parts, no broken faces, no holes" if not bad else "; ".join(bad))
+
+    # UVs: one clean map per part (the contract, shapes/contract.py): every face unwrapped, no island under
+    # another, nothing collapsed to a line - or the asset cannot be re-skinned or baked
+    bad = []
+    for part, info in mb["parts"].items():
+        u = info.get("uv") or {}
+        if not u:
+            continue
+        if not u.get("has_uv"):
+            bad.append(f"{part}: no UV map")
+        elif u.get("overlap", 0) > UV_OVERLAP:
+            bad.append(f"{part}: {u['overlap'] * 100:.0f}% of its UV islands lie on top of each other")
+        elif u.get("collapsed", 0) > UV_COLLAPSED:
+            bad.append(f"{part}: {u['collapsed'] * 100:.0f}% of its surface is mapped to nothing")
+    checks["uv"] = _c(not bad, "every part has one clean UV map (no overlaps, nothing collapsed)" if not bad else "; ".join(bad))
 
     # inside fit
     st = mb.get("inside_fit") or {}

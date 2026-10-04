@@ -20,6 +20,7 @@ import sys
 
 import bpy  # noqa: I001
 import bmesh
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "shapes"))
 import numpy as np
 from mathutils import Vector
 
@@ -118,7 +119,12 @@ for o in meshes:
     degen = sum(1 for f in bm.faces if f.calc_area() < 1e-12)
     vol = bm.calc_volume(signed=True) if open_edges == 0 else None
     info.update({"open_edges": open_edges, "non_manifold_edges": nonman, "degenerate_faces": degen,
-                 "signed_volume_mm3": round(vol * 1e9, 3) if vol is not None else None})
+                 "edges": len(bm.edges), "signed_volume_mm3": round(vol * 1e9, 3) if vol is not None else None})
+    try:
+        import uvstats                                      # library/shapes/uvstats.py (the contract's own measure)
+        info["uv"] = uvstats.stats(o)
+    except Exception as e:
+        info["uv"] = {"has_uv": bool(me.uv_layers), "error": str(e)[:200]}
     # spikes: vertices far outside the part's own bulk (a welded seam gone wrong)
     co = np.array([v.co[:] for v in bm.verts]) if bm.verts else np.zeros((0, 3))
     if len(co) > 20:

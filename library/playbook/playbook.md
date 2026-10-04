@@ -112,6 +112,11 @@ pick - when they disagree the real build stops and asks the owner for the size) 
 own verdict on the picked photo - an auto-pick it calls not exact is set aside and chosen again). sizecheck.py is
 locked. If a build you are fixing shows one of these failed, say so in your lesson and stop: no code change makes a
 wrong size or a wrong photo right.
+Every builder's model then goes through shapes/contract.py (locked): one clean UV map per part (a part whose UVs
+overlap or are missing is unwrapped afresh and its look baked into the new map), maps named <asset>_<part>_<map>,
+physics on every part. measure_uv fails when a part still overlaps or collapses after that - which means the
+builder made geometry the unwrap cannot handle (zero-area faces, a part with no faces) - fix the builder's geometry,
+not the contract. measure_mesh now also fails holes (open edges) in an outside part.
 
 A fix is kept only when the asset maker's OWN independent check of your confirmation rebuild is strictly better
 than the first check AND your own two rebuilds agree. A change that fixed something and broke nothing is PROVEN:

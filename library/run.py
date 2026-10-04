@@ -695,6 +695,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         painted = hunyuan_paint(ref, os.path.join(mdir, "hunyuan"))
         status(cid, step="5/7 Blender: real size, every format")
         run_blender("resize.py", painted, str(max(size)), mdir, cid)
+    # THE DELIVERABLE CONTRACT (audit 2026-10-04, RC8): whatever built it, the model goes through one door -
+    # shapes/contract.py: one clean UV map per part (overlapping or missing ones unwrapped afresh and the look baked
+    # into it), maps named <asset>_<part>_<map>, physics on every part, every format written again from that.
+    status(cid, step="5/7 the deliverable contract: one UV map per part, named maps, physics on every part")
+    run_blender("contract.py", os.path.join(mdir, cid + ".blend"), mdir, cid, str(card.get("mat") or ""))
     glb = os.path.join(mdir, cid + ".glb")
     status(cid, step="5/7 every format (.obj .mtl .3ds .ma), textures, and a cutaway of the insides")
     finish_files(cid, d)
@@ -1554,7 +1559,7 @@ def file_away(cid, d):
         say(f"[keep] {cid}: the catalog record could not be written ({e})")
     deliver.write_readme(tmp, cid, product, not_here, dossier if isinstance(dossier, dict) else None)
 
-    res = deliver.verify(tmp, cid)
+    res = deliver.verify(tmp, cid, size_m=card.get("size"))
     res["problems"] += extra
     res["ok"] = res["ok"] and not extra
     res["not_here"] = not_here

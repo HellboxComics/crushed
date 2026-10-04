@@ -86,6 +86,7 @@ def build_parts(d, out, a):
     plan = a.get("plan") or os.path.join(d, "parts_plan.json")
     name = "step_parts"
     log = _blender("assembly.py", plan, out, name)
+    log += _blender("contract.py", os.path.join(out, name + ".blend"), out, name, "")
     glb = os.path.join(out, name + ".glb")
     asm = json.load(open(os.path.join(out, "assembly.json"))) if os.path.exists(os.path.join(out, "assembly.json")) else {}
     import review
@@ -97,6 +98,9 @@ def build_parts(d, out, a):
 def build_round(d, out, a):
     spec = a.get("spec") or os.path.join(d, "shape.json")
     log = _blender("lathe.py", spec, out, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
+    blends = [f for f in os.listdir(out) if f.endswith(".blend") and not f.endswith("_builder.blend")]
+    if blends:
+        log += _blender("contract.py", os.path.join(out, blends[0]), out, blends[0][:-6], "")
     glbs = [f for f in os.listdir(out) if f.endswith(".glb")]
     glb = os.path.join(out, glbs[0]) if glbs else None
     return {"glb": glb, "blender_said": log[-300:], "pictures": _shots(glb, out) if glb else []}
