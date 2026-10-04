@@ -233,7 +233,7 @@
    "recipe": "printed_circuit_card",
    "gaps": [
     "chips are boxes with the photo on top (no leads/pins)",
-    "the solder side is made up",
+    "the solder side is made up only when no photo of it was found (else its real photo)",
     "the bracket is a flat plate"
    ],
    "faces": [
