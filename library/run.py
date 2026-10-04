@@ -2737,13 +2737,19 @@ def queue(n):
     # items whose retry is due, the one that has waited longest first (2026-10-04: the same three items were taken
     # every round and the fourth starved); then items never run, in the list's order; kept items that only need
     # the stricter checks run again come last
+    try:
+        import portal
+        first = {c: i for i, c in enumerate(portal.queue_first())}   # what Cody put first on his phone: FIRST
+    except Exception:
+        first = {}
+
     def order(c):
         v = st.get(c) if isinstance(st.get(c), dict) else {}
         step = str(v.get("step", ""))
         group = 2 if step.startswith("done") else 1 if not v else 0
-        return (0 if c in picks or c in ap else 1, group, float(v.get("at") or 0))
-    out.sort(key=order)
-    return out[:n]
+        return (0 if c in first else 1, first.get(c, 0), 0 if c in picks or c in ap else 1, group, float(v.get("at") or 0))
+    out.sort(key=order)                                       # (2026-10-04: a fresh phone pick jumped the item Cody
+    return out[:n]                                            #  had put first - the Duracell waited behind a VHS)
 
 
 STALE_HOURS = 3        # a "working" status this old with no newer word is a run that died mid-item

@@ -121,6 +121,14 @@ try:
              "b_item": {"step": "done - kept", "at": now - 9 * 3600, "code": run.code_sha(), "check_version": "old"}}, open(run.STATUS, "w"))
     q = run.queue(3)
     check(q == ["a_item", "d_item", "b_item"], f"a parked retry, then a never-run item, then a kept item's re-check: {q}")
+    import portal as _P
+    os.makedirs(_P.DIR, exist_ok=True)
+    open(_P.QUEUE, "w").write("b_item\n")
+    os.makedirs(run.HB, exist_ok=True)
+    _j.dump({"d_item": {"pick": "1"}}, open(os.path.join(run.HB, "picks.json"), "w"))
+    q = run.queue(3)
+    check(q[0] == "b_item", f"what Cody put first on his phone goes first, even before a fresh pick: {q}")
+    os.remove(_P.QUEUE)
 finally:
     if had:
         _sh.move(bak, qf)
