@@ -27,7 +27,13 @@ def library():
     try:
         import kitmaker
         for k, v in kitmaker.learned().items():
-            lib["families"].setdefault(k, v)
+            if k in lib["families"]:                      # a hand-written family your AI finished studying:
+                for kk, vv in v.items():                  # its parts, zones, sizes and side words fill the gaps
+                    if kk in ("parts", "zones", "variants", "variant_default", "side_words", "views_needed",
+                              "construction", "learned") and not lib["families"][k].get(kk):
+                        lib["families"][k][kk] = vv
+            else:
+                lib["families"][k] = v
     except Exception:
         pass
     return lib

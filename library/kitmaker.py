@@ -193,12 +193,13 @@ def ensure(kind, card, photo, use, log=print):
     import kits
     kk = key(kind)
     lib = kits.library()["families"]
-    if kk in lib and (lib[kk].get("zones") or lib[kk].get("parts")):
+    if kk in lib and lib[kk].get("parts") and lib[kk].get("zones"):
         return kk, lib[kk]
     L = learned()
     if kk in L and L[kk].get("learned", {}).get("version") == VERSION:
         return kk, L[kk]
-    log(f"[kit] {card.get('id', '')}: a new kind of thing ({kind}) - your AI studies it and writes its kit")
+    log(f"[kit] {card.get('id', '')}: " + (f"the kind '{kk}' has no finished kit" if kk in lib else
+                                           f"a new kind of thing ({kind})") + " - your AI studies it and writes its kit")
     fam = study(kind, card, photo, use, log)
     if not fam:
         return None, None
