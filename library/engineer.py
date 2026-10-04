@@ -1311,7 +1311,8 @@ class Bench:
         h = self._diff_hash()
         self.beat(f"engineer: test build of {cid} ({kind})")
         env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK,
-                   CRUSHED_KEPT_WRITE=os.path.join(tdir, "kept"))       # it reads the shared keep store, writes its own
+                   CRUSHED_KEPT_WRITE=os.path.join(tdir, "kept"),       # it reads the shared keep store, writes its own
+                   CRUSHED_CLEAR=",".join(clear or []))                 # steps it asked to redo are not read from it
         rc, took = run_group(_trial_cmd(cid, tdir, clear), timeout, os.path.join(tdir, "trial.log"), env=env,
                              cwd=WT, beat=lambda: self.beat(f"engineer: test build of {cid} running ({kind})"))
         res = jload(os.path.join(tdir, "trial.json"), {})
@@ -1657,20 +1658,22 @@ def _accept(b, say):
         return False, b.stopped
     if not [c for c in b.changed() if not c[1].startswith("library/playbook/")]:
         return False, "nothing changed"
-    h = b._diff_hash()
-    if h in b.decided:
+    tried0 = b._own_trials()
+    last_clear = sorted(tried0[-1]["clear"] or []) if tried0 else []
+    h = b._diff_hash() + "|clear=" + ",".join(last_clear)     # the same code rebuilt WITH a step redone from scratch
+    if h in b.decided:                                         # is not the same test (audit 2026-10-04)
         ok, why = b.decided[h]
         return ok, (why if ok else "Same code as before, so the same answer: " + why)
     bad = b.audit()
     if bad:
         return False, "Your changes break the rules and can't be kept: " + bad + ". Revert them."
-    tried = b._own_trials()
-    if tried and tried[-1]["diff"] == h and not tried[-1]["verdict"]:
+    tried = tried0
+    if tried and tried[-1]["diff"] == b._diff_hash() and not tried[-1]["verdict"]:
         return False, ("Your last rebuild with these changes did not finish (it broke or ran over its time) - nothing "
                        "is kept that was not checked. Look at why, fix it, and rebuild.")
     mine = [t for t in tried if t["verdict"]]
     last = mine[-1] if mine else None
-    if not last or last["diff"] != h:
+    if not last or last["diff"] != b._diff_hash():
         return False, ("You changed code after your last rebuild (or never rebuilt). Rebuild with exactly these changes "
                        "first - nothing is kept that was not tested.")
     F0, F1 = set(_fails(b.first["verdict"])), _fails_of(last["verdict"], b.first["verdict"])
@@ -1694,14 +1697,14 @@ def _accept(b, say):
     if b.stopped:
         return False, b.stopped
     if t is None or not t["verdict"]:
-        return decide(False, "The confirmation rebuild of the same code did not finish (" +
+        return (False, "The confirmation rebuild of the same code did not finish (" +
                       (tail or "")[-600:] + ") - nothing is kept that can't be repeated.")
     F2 = _fails_of(t["verdict"], b.first["verdict"])
     own = b._judge_own(t)
     if b.stopped:
         return False, b.stopped
     if own is None or "failed" not in own:
-        return decide(False, "The asset maker's own check could not judge the confirmation rebuild" +
+        return (False, "The asset maker's own check could not judge the confirmation rebuild" +
                       (f" ({str((own or {}).get('problems'))[:300]})" if own else "") + " - nothing is kept unconfirmed.")
     Fp = _fails_of(own, b.first["verdict"])
     # three checks of the same code (its rebuild, the confirmation rebuild, the asset maker's own check): the judge
@@ -1727,13 +1730,18 @@ def _accept(b, say):
         if b.stopped:
             return False, b.stopped
         if o is None or not o["verdict"]:
+            if o is None and "out of time" in (otail or ""):   # the machine ran out of time: not the fix's fault,
+                return (False, f"There was no time left to test the fix on {other['cid']} - nothing is kept "
+                               "unconfirmed; call finish earlier next time.")   # and not cached as an answer
             return decide(False, f"Your fix broke the build of {other['cid']}: {(otail or '')[-1500:]}")
-        new = sorted(set(_fails(o["verdict"])) - set(other["fails"]))
+        before = set(other["fails"])                           # an unjudged (fail-fast) neighbour counts its old
+        now = _fails_of(o["verdict"], {"failed": sorted(before)})   # judge failures as still there, never as new
+        new = sorted(now - before)
         if new:
             return decide(False, f"Your fix made {other['cid']} worse: it now also fails {new} (before it failed "
                                  f"{sorted(other['fails'])}; judge: {o['verdict'].get('problems')}). Fix the cause "
                                  "without breaking it.")
-    if b._diff_hash() != h:
+    if not h.startswith(b._diff_hash()):
         return decide(False, "The code changed by itself while the fix was being confirmed (a test build wrote into "
                              "the code copy) - nothing is kept.")
     bad = b.audit()

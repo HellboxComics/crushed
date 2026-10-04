@@ -225,7 +225,19 @@ def plan(cid, card, dos, use, out_json, log=print, notes=""):
     q = ASK.format(product=card.get("product"), year=card.get("year"), family=fam["family"], what=fam["what"],
                    W=round(W), D=round(D), H=round(H), made=made, pics="; ".join(names) or "none",
                    kinds=", ".join(kinds), notes=(f"Notes from the owner: {notes}\n" if notes else ""))
-    raw = V.ask(use, q, pics, think=True, side=1280) if (use and pics) else {}
+    # the plan is KEPT while nothing that makes it changed: the photos, the size, the kit, the question, the brain
+    # and this file's code (a rebuild for a label or a material does not re-plan the parts; clear=["parts"] or a
+    # change to this file does)
+    import kept
+    import inspect as _inspect
+    pk = kept.key("parts-plan", pics, q, use, kit_parts, _inspect.getsource(clean), _inspect.getsource(measure_colors))
+    raw = kept.get("parts-plan", pk)
+    if raw is None:
+        raw = V.ask(use, q, pics, think=True, side=1280) if (use and pics) else {}
+        if raw and raw.get("parts"):
+            kept.put("parts-plan", pk, raw, note=cid)
+    else:
+        log(f"[parts] {cid}: the plan is kept from the last build (nothing that makes it changed)")
     p = clean(raw or {}, W, D, H, pics, kinds)
     if not p["parts"]:
         raise RuntimeError("your AI could not break this object into parts from its photos")

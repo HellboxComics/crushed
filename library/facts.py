@@ -285,9 +285,10 @@ def read_panels(dos, use=None, log=print, most=8):
         try:
             p["panel"] = V.ask(use, PANEL_Q.format(shown=p.get("product_shown") or dos["identity"].get("name", "")),
                                [p["file"]], think=False, side=1600)
-        except Exception as e:
-            log(f"[facts] could not read {os.path.basename(p['file'])}: {e}")
-            p["panel"] = {}
+        except Exception as e:                           # a failed read is not stored (it would never be read again)
+            log(f"[facts] could not read {os.path.basename(p['file'])}: {e} - read again next time")
+            n -= 1
+            continue
         dropped = clean_panel(p)
         if dropped:
             log(f"[facts] {os.path.basename(p['file'])}: on the photo, not the product (left out): "

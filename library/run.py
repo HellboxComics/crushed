@@ -241,20 +241,24 @@ def pipeline(cid, redo=False):
     vj = os.path.join(d, "vetted.json")
     old = {v["file"]: v for v in jload(vj, [])} if not redo else {}
     use, quick = V.model(), V.quick_model()
+    import kept
+
+    def vet_key(f, model, think):
+        """Everything a photo's judgement depends on (audit 2026-10-04: vets were reused per file path and kept
+        across changes of the marks, the model, the question, the product and the year)."""
+        ev = card.get("era_version") or {}
+        return kept.key("vet", [f["file"]], model, think, V.ASK, V.NOTE_RULE, card.get("product"), card.get("year"),
+                        card.get("recognize"), card.get("avoid"), ev.get("names"), ev.get("marks"), (note or "")[:200])
     seen_q = collections.Counter()
     q_of = lambda f: str(f.get("title", "")).replace("Google Images:", "").split("|")[0].strip().lower()
     for i, f in enumerate(found):
         seen_q[q_of(f)] += 1
         f["order"] = seen_q[q_of(f)] - 1                         # its place in its OWN search (a later hunt's photos
-        f["vet"] = (old.get(f["file"]) or {}).get("vet")         # are not pushed down for coming later)
-        fv = f["vet"]
-        if fv and note and (fv.get("note") != note[:200] or fv.get("note_rule") != V.NOTE_RULE):
-            f["vet"] = fv = None                                 # judged before your note: looked at again with it
-        if fv and (card.get("era_version") or {}).get("names") and fv.get("era_names") != card["era_version"]["names"]:
-            f["vet"] = fv = None                                 # judged before it knew the era's own name and look
-        if fv and not note and fv.get("note"):
-            for k in ("note", "note_ok", "note_rule"):           # judged against a note since taken off: that part
-                fv.pop(k, None)                                  # of the answer no longer counts
+        fv = (old.get(f["file"]) or {}).get("vet")               # are not pushed down for coming later)
+        want = vet_key(f, quick if (fv or {}).get("only_quick") else use, not (fv or {}).get("only_quick"))
+        if fv and (fv.get("key") != want or fv.get("problems", "").startswith("could not judge")):
+            fv = None                                            # judged under other inputs, or never really judged
+        f["vet"] = fv
         if fv and fv.get("made_year") not in (None, "", "null") and year:
             import era as ERA                                    # how far outside the era ("90s"), by today's rule
             o = ERA.off(fv.get("made_year"), year)
@@ -268,24 +272,29 @@ def pipeline(cid, redo=False):
 
         def quick_done(i, res):
             f = todo[i]
-            f["quick"] = res if isinstance(res, dict) else {}
+            f["quick"] = dict(res, key=vet_key(f, quick, False)) if isinstance(res, dict) else None
             seen_n[0] += 1
-            say(f"[quick look {seen_n[0]}/{len(todo)}] {os.path.basename(f['file'])}: match {f['quick'].get('match')}, "
-                f"marks seen {f['quick'].get('seen')}, {f['quick'].get('kind')}")
+            say(f"[quick look {seen_n[0]}/{len(todo)}] {os.path.basename(f['file'])}: " +
+                (f"match {f['quick'].get('match')}, marks seen {f['quick'].get('seen')}, {f['quick'].get('kind')}"
+                 if f["quick"] else f"the quick look failed ({str(res)[:80]}) - not stored, looked at again next time"))
         V.parallel(lambda f: V.vet(f["file"], disp, use=quick, think=False, card=card) or {}, todo, quick_done)
-        todo.sort(key=lambda f: -rank(dict(f, vet=f["quick"])))
+        todo.sort(key=lambda f: -rank(dict(f, vet=f["quick"] or {})))
         for f in todo[careful:]:
-            f["vet"] = dict(f["quick"], only_quick=True)       # (judged by the quick look only)
+            if f["quick"]:                                   # a failed quick look is never stored as a judgement
+                f["vet"] = dict(f["quick"], only_quick=True)   # (judged by the quick look only)
         todo = todo[:careful]
         _atomic_json(vj, found)                                  # saved as it goes: a restart keeps every look
     looked = [0]
 
     def careful_done(i, res):                                 # (several at once when the brain server allows it)
         f = todo[i]
-        f["vet"] = res if isinstance(res, dict) else {"match": 0, "problems": f"could not judge: {res}"}
+        f["vet"] = dict(res, key=vet_key(f, use, True)) if isinstance(res, dict) else None   # a failure is not
+        if not isinstance(res, dict):                                                          # a judgement
+            say(f"[check] {os.path.basename(f['file'])}: the careful look failed ({str(res)[:100]}) - not stored")
         looked[0] += 1
         status(cid, step=f"3/7 {use} ranks the best photos: {looked[0]} of {len(todo)}")
-        say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
+        if f["vet"]:
+            say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
         _atomic_json(vj, found)
     V.parallel(lambda f: V.vet(f["file"], disp, use=use, think=True, card=card), todo, careful_done)
     json.dump(found, open(vj, "w"), indent=1)
@@ -881,9 +890,12 @@ def label_words(pngs, use, by_png=None):
     q2 = ('Read the printed words in this picture again, slowly, line by line, exactly as spelled (keep numbers, '
           'symbols like (R) and TM, and capitals as printed). Answer ONLY JSON: {"lines": ["..."]}')
     import kept
+    import inspect as _inspect
+    code_key = kept.key("code", [], _inspect.getsource(label_words), _inspect.getsource(read_words), q2,
+                        MS.read_lines.__module__)
     out = []
     for png in pngs:
-        k = kept.key("words", [png], use)                  # the same picture read by the same brain: the same words
+        k = kept.key("words", [png], use, code_key)        # the same picture, brain, questions and code: the same words
         had = kept.get("words", k)
         if had is not None:
             if by_png is not None:
@@ -893,15 +905,22 @@ def label_words(pngs, use, by_png=None):
                     out.append(w)
             continue
         before = len(out)
-        a = read_words(png, use)
+        ok_reads = True
+        try:
+            a = read_words(png, use)
+        except Exception as e:
+            say(f"[texture] {os.path.basename(png)}: the first read failed ({str(e)[:80]})")
+            a, ok_reads = [], False
         try:
             b = [x for x in V.ask(use, q2, [png], think=False).get("lines", []) if isinstance(x, str)]
-        except Exception:
-            b = []
+        except Exception as e:
+            say(f"[texture] {os.path.basename(png)}: the second read failed ({str(e)[:80]})")
+            b, ok_reads = [], False
         try:
             o = MS.read_lines(png)
-        except Exception:
-            o = []
+        except Exception as e:
+            say(f"[texture] {os.path.basename(png)}: the text reader failed ({str(e)[:80]})")
+            o, ok_reads = [], False
         an, bn, on = [norm(x) for x in a], [norm(x) for x in b], [norm(x) for x in o]
         like = lambda w, pool: any(difflib.SequenceMatcher(None, norm(w), x).ratio() >= 0.8 for x in pool if x)
         mark = lambda w: str(w).strip() in MARKS           # a printed + or - mark (a battery end): one char, no letters
@@ -917,8 +936,8 @@ def label_words(pngs, use, by_png=None):
         here = list(dict.fromkeys(x.strip() for x in here))
         if by_png is not None:                             # what THIS picture confirmed (seen here, new or not)
             by_png[png] = here
-        if a or b or o:                                    # kept for the next build (nothing read at all is not kept:
-            kept.put("words", k, here, note=os.path.basename(png))   # the brain may have been busy)
+        if ok_reads:                                       # kept only when every reader answered (a read that failed
+            kept.put("words", k, here, note=os.path.basename(png))   # would otherwise be frozen in)
     out = whole_words(out)
     say(f"[texture] words confirmed by two reads: {out}")
     return out
@@ -1019,7 +1038,9 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     import labelparts
     import vet as V
     import kept
-    lk = kept.key("labelparts", [], cid, kit_name, sorted(words), labelparts.VERSION)
+    _kit = kits.library()["families"].get(kit_name) or {}
+    lk = kept.key("labelparts", [], cid, kit_name, sorted(words), labelparts.VERSION, use, V.quick_model(),
+                  sorted(p.get("file", "") for p in (dos.get("photos") or [])), _kit.get("zones"))
     had = kept.get("labelparts", lk)
     if had is not None:
         added, receipts, still = had["added"], had["receipts"], had["still"]
@@ -1028,7 +1049,8 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     else:
         added, receipts, still = labelparts.find(cid, dos, words, kit_name, use, V.quick_model() or use,
                                                  lambda pngs: label_words(pngs, use), log=say)
-        kept.put("labelparts", lk, {"added": added, "receipts": receipts, "still": still}, note=cid)
+        if not (still and not receipts and labelparts.last_hunt_failed()):   # a hunt that could not run is not kept
+            kept.put("labelparts", lk, {"added": added, "receipts": receipts, "still": still}, note=cid)
     if added:
         words = whole_words(words + added)
     json.dump({"added": added, "receipts": receipts, "still_missing": still},
@@ -1048,7 +1070,9 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     # checks and the judge's side-by-side, and nothing that makes it changed: the same words, the same unrolled
     # photo, the same label code.
     key = {"words": words, "real": _sha(real_png), "code": _sha(os.path.join(HERE, "layout.py")) +
-           _sha(os.path.join(HERE, "labelart.py"))}
+           _sha(os.path.join(HERE, "labelart.py")) + _sha(os.path.join(HERE, "review.py")),
+           "brain": use, "size_mm": [round(w_mm, 2), round(h_mm, 2)], "marks": version_marks(card),
+           "typical": kits.typical(kits.get(kit_name), "label"), "product": product}
     kept = jload(os.path.join(tex, "label_kept.json"), {})
     done_png, done_mr = os.path.join(tex, "label.png"), os.path.join(tex, "label_mr.png")
     if kept.get("key") == key and kept.get("passed") and os.path.exists(done_png) and os.path.exists(done_mr):
@@ -1735,13 +1759,18 @@ PARTS_Q = ("Picture 1 is a straight-on photo of the top of a {product}. List eve
 
 
 def board_parts(front, product, use):
-    """Every part on a circuit board, read off the photo by your AI (checked for sense)."""
+    """Every part on a circuit board, read off the photo by your AI (checked for sense). Kept while the photo, the
+    question and the brain are the same; a read that failed is an error, never an empty board."""
     import vet as V
-    try:
+    import kept
+    pk = kept.key("board-parts", [front], PARTS_Q, product, use)
+    r = kept.get("board-parts", pk)
+    if r is None:
         r = V.ask(use, PARTS_Q.format(product=product), [front], think=False, side=1280)
-    except Exception as e:
-        say(f"[pcb] parts not read: {e}")
-        return []
+        if isinstance(r, dict) and r.get("parts"):
+            kept.put("board-parts", pk, r, note=os.path.basename(os.path.dirname(os.path.dirname(front))))
+    else:
+        say("[pcb] the parts read off the board are kept from the last build (same photo, question and brain)")
     out = []
     for p in r.get("parts", []) if isinstance(r, dict) else []:
         try:

@@ -388,10 +388,11 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
     for face, q in queries(dos["identity"], dos["route"], need, done, side_words)[:max(0, left)]:
         try:
             hits = G.search_full(q, most=12, min_side=500, log=log)
-        except Exception as e:
-            log(f"[dossier] Google Images did not work: {e}")
-            dos["searches"].append({"q": q, "n": 0, "at": time.time(), "for": face, "error": str(e)[:200]})
+        except Exception as e:                            # not a search: nothing recorded, the hunt is not complete
+            log(f"[dossier] Google Images did not work: {e} - this search is not counted; the hunt is run again later")
+            dos["hunt_incomplete"] = str(e)[:200]
             break
+        dos.pop("hunt_incomplete", None)
         kept = 0
         for h in hits:
             if kept >= PER_SEARCH:
@@ -422,14 +423,15 @@ def quick_look(dos, quick, log=print):
     n_done = [0]
 
     def look(p):
-        try:
-            return _ask(quick, q, [p["file"]], think=False, side=768) or {}
-        except Exception as e:
-            return {"face": "none", "useful": 0, "note": f"could not look: {e}"}
+        return _ask(quick, q, [p["file"]], think=False, side=768) or {}
+
+    failed = [0]
 
     def done(i, v):                                       # (several at once when the brain server allows it)
         p = todo[i]
-        v = v if isinstance(v, dict) else {"face": "none", "useful": 0, "note": f"could not look: {v}"}
+        if not isinstance(v, dict) or not v:              # a failed look is NOT a look: nothing stored, asked again
+            failed[0] += 1                                # next time (2026-10-04: it was stored as "none, useless")
+            return
         p["quick"] = {"face": v.get("face") if v.get("face") in NAMES + ["several", "mixed", "none"] else "none",
                       "product_shown": _str(v.get("product_shown")), "same_line": v.get("same_line") is True,
                       "same_item": v.get("same_item") is True, "kind": _str(v.get("kind"), 20) or "other",
@@ -440,6 +442,9 @@ def quick_look(dos, quick, log=print):
             save(dos)
             log(f"[dossier] quick look: {n_done[0]} of {len(todo)} photos")
     V.parallel(look, todo, done)
+    if failed[0]:
+        log(f"[dossier] quick look: {failed[0]} of {len(todo)} looks failed (the brain did not answer) - not stored, "
+            "looked at again next time")
     save(dos)
 
 def _quick_score(p, era):
@@ -967,7 +972,23 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     dos["gaps"] = face_gaps + dos["gaps"]
     dos["version"] = VERSION
     dos["made_at"] = time.time()
-    dos["done"] = bool(use)                                   # made without your AI: tried again next time
+    # done only when it is complete: your AI read the identity, the hunt ran without a block, and at least one
+    # careful look succeeded (audit 2026-10-04: a dossier with a failed identity read or a captcha was marked
+    # done and reused forever)
+    looked = sum(1 for p in dos["photos"] if p.get("labeled"))
+    why_not = []
+    if not use:
+        why_not.append("no AI")
+    if "catalog name only" in str(dos["identity"].get("read_from", "")):
+        why_not.append("the identity could not be read from the photo")
+    if dos.get("hunt_incomplete"):
+        why_not.append("the photo hunt was blocked: " + str(dos["hunt_incomplete"]))
+    if not looked:
+        why_not.append("no careful look succeeded")
+    dos["done"] = not why_not
+    dos["incomplete"] = "; ".join(why_not)
+    if why_not:
+        log(f"[dossier] {cid}: NOT complete ({dos['incomplete']}) - it is finished next time")
     save(dos)
     log(f"[dossier] {cid}: " + "; ".join(f"{F} {e['source'].replace('_', ' ')}" for F, e in dos["faces"].items()))
     for g in dos["gaps"]:
@@ -976,18 +997,19 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
 
 
 def ensure(cid, card, picked, use=None, redo=False, log=print):
-    """build() for the asset maker: never stops a build - if the dossier can't be made, an empty one (every side
-    rebuilt plainly, every fact missing) is returned and the reason logged."""
+    """build() for the asset maker. A dossier that cannot be made STOPS the build (audit 2026-10-04: it used to
+    return an empty one and the item was built with no identity, no sides and no facts - and could pass). An
+    incomplete dossier (identity unread, hunt blocked, no careful look) stops it too; the item is tried again later."""
     try:
-        return build(cid, card, picked, log=log, use=use, redo=redo)
+        dos = build(cid, card, picked, log=log, use=use, redo=redo)
     except Exception as e:
         import traceback
         traceback.print_exc()
-        log(f"[dossier] {cid}: could not be made ({e}) - built without it")
-        route = route_of(card)
-        return {"cid": cid, "version": VERSION, "route": route, "identity": {}, "faces": {}, "facts": {},
-                "photos": [], "searches": [], "gaps": [f"no dossier: {e}"], "size_m": card.get("size"),
-                "picked": picked.get("file") if isinstance(picked, dict) else picked}
+        raise RuntimeError(f"the dossier could not be made ({e}) - nothing is built without knowing the item")
+    if not dos.get("done"):
+        raise RuntimeError("the dossier is not complete (" + str(dos.get("incomplete") or "unknown") +
+                           ") - nothing is built without knowing the item; it is finished and built next time")
+    return dos
 
 
 def face_photos(dos, sources=("exact_photo",), with_alternates=True):

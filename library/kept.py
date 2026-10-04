@@ -63,7 +63,17 @@ def _read(kind, k):
     return None
 
 
+# a test build may ask for steps to be redone from scratch (clear=[...]): those kinds are not read from the store
+_CLEAR_KINDS = {"parts": ("parts-plan", "board-parts"), "texture": ("labelparts", "look-unrolled"),
+                "skin": ("look-faces",), "dossier": ("look-faces", "look-unrolled", "labelparts"),
+                "all": ("parts-plan", "board-parts", "labelparts", "look-unrolled", "look-faces", "words",
+                        "judge-side", "inspect")}
+CLEARED = {kk for c in os.environ.get("CRUSHED_CLEAR", "").split(",") if c for kk in _CLEAR_KINDS.get(c.strip(), ())}
+
+
 def get(kind, k):
+    if kind in CLEARED:
+        return None
     rec = _read(kind, k)
     return rec.get("value") if rec else None
 
@@ -135,6 +145,8 @@ def get_pictures(kind, k, files):
     """A kept answer for these rendered pictures: the record under key k (made from the non-picture inputs) whose
     stored picture signatures match these files within render noise. None otherwise."""
     import numpy as np
+    if kind in CLEARED:
+        return None
     rec = _read(kind, k)
     if not rec:
         return None

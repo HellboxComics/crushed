@@ -21,8 +21,9 @@ def sh(*a, cwd=None, check=True):
 
 def make(name, with_data=True):
     T = os.path.join(SCR, "t", name)
-    if os.path.exists(T):
-        shutil.move(T, T + "-old-" + str(os.getpid()))       # never deleted, just set aside
+    if os.path.exists(T):                                    # a test fixture (the session's scratch, not the owner's
+        shutil.rmtree(T, ignore_errors=True)                 # files): remade fresh each run - 16 GB of old copies
+        #                                                      filled the disk on 2026-10-04
     home, repo, work = (os.path.join(T, n) for n in ("home", "repo", "work"))
     os.makedirs(home)
     os.makedirs(repo)

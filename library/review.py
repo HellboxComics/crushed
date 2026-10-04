@@ -128,12 +128,18 @@ Answer ONLY JSON: {{"problems": ["short, specific, naming the side"], "ok": true
 
 
 def look_faces(atlas_png, photo, product, use):
-    """The judge brain looks at a box's six sides next to the main photo."""
+    """The judge brain looks at a box's six sides next to the main photo (kept while the pictures, question and
+    brain are the same)."""
     import vet as V
-    try:
-        v = V.ask(use, FACES_Q.format(product=product), [atlas_png, photo], think=False, side=1280) or {}
-    except Exception as e:
-        return None, f"could not look: {e}"
+    import kept
+    k = kept.key("look-faces", [atlas_png, photo], FACES_Q, product, use)
+    v = kept.get("look-faces", k)
+    if v is None:
+        try:
+            v = V.ask(use, FACES_Q.format(product=product), [atlas_png, photo], think=False, side=1280) or {}
+        except Exception as e:
+            return None, f"could not look: {e}"
+        kept.put("look-faces", k, v)
     probs = [str(p) for p in (v.get("problems") or []) if str(p).strip()]
     ok = v.get("ok")
     ok = (not probs) if ok is None else bool(ok) and not probs
@@ -154,12 +160,18 @@ def box_checks(src, sides=("front", "back", "left", "right", "top", "bottom")):
 
 
 def look_unrolled(real_png, photo, product, use, top="top"):
-    """The judge brain looks at the unrolled label next to the main photo (only eyes can tell some things)."""
+    """The judge brain looks at the unrolled label next to the main photo (only eyes can tell some things; kept
+    while the pictures, question and brain are the same)."""
     import vet as V
-    try:
-        v = V.ask(use, LOOK_Q.format(product=product, top=top), [real_png, photo], think=False, side=1280) or {}
-    except Exception as e:
-        return None, f"could not look: {e}"
+    import kept
+    k = kept.key("look-unrolled", [real_png, photo], LOOK_Q, product, top, use)
+    v = kept.get("look-unrolled", k)
+    if v is None:
+        try:
+            v = V.ask(use, LOOK_Q.format(product=product, top=top), [real_png, photo], think=False, side=1280) or {}
+        except Exception as e:
+            return None, f"could not look: {e}"
+        kept.put("look-unrolled", k, v)
     probs = [str(p) for p in (v.get("problems") or []) if str(p).strip()]
     ok = v.get("ok")
     ok = (not probs) if ok is None else bool(ok) and not probs

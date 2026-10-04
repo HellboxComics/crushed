@@ -92,10 +92,20 @@ def queries(dos, still, done=()):
     return out[:SEARCHES]
 
 
+_HUNT_FAILED = [False]
+
+
+def last_hunt_failed():
+    """Did the last hunt stop because the search could not run (a captcha, no browser)? Its empty result is then
+    not kept - it is tried again next build."""
+    return _HUNT_FAILED[0]
+
+
 def hunt(dos, cid, still, quick, log=print):
     """New photos for the missing parts (a few searches), looked at quickly. -> the new photo records."""
     import dossier as DS
     import google_images as G
+    _HUNT_FAILED[0] = False
     d = os.path.join(DS.WORK, "hunt", cid)
     have = {p["file"] for p in dos["photos"]}
     done = [s["q"] for s in dos.get("searches", [])] + dos.get("searched_before", [])
@@ -105,6 +115,10 @@ def hunt(dos, cid, still, quick, log=print):
             hits = G.search_full(q, most=12, min_side=500, log=log)
         except Exception as e:
             log(f"[label parts] Google Images did not work: {e}")
+            _HUNT_FAILED[0] = True
+            break
+        if hits is None:                                   # (a captcha: not a result)
+            _HUNT_FAILED[0] = True
             break
         kept = 0
         for h in hits:

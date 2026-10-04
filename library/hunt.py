@@ -207,7 +207,9 @@ def run(cid, words, year=None, log=print, extra=()):
                 hits.append((r["url"], r.get("page", ""), f"Google Images: {q}" + (f" | {r['title']}" if r.get("title") else "")))
     except Exception as e:
         log(f"[hunt] Google Images did not work here: {e}")
-    if os.path.exists(KEYS):                            # eBay only if you ever add its free keys
+        if "robot" in str(e) or type(e).__name__ == "Captcha":
+            raise RuntimeError(str(e))                  # a captcha stops the item (it is tried again later), never
+    if os.path.exists(KEYS):                            # a hunt that "found nothing"                            # eBay only if you ever add its free keys
         try:
             hits += ebay_api(words, year, log=log)
         except Exception as e:

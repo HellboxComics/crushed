@@ -213,10 +213,7 @@ def vet(path, display, era="", use=None, think=True, card=None):
                    recognize="; ".join(list(ev.get("marks") or []) + list(card.get("recognize", []))) or "(none listed)",
                    avoid="; ".join(list(ev.get("not_then") or []) + list(card.get("avoid", []))) or "(none listed)",
                    note_field=NOTE_FIELD.format(note=note.replace('"', "'")) if note else "")
-    try:
-        v = ask(use, q, [path], think)
-    except Exception as e:
-        return {"match": 0, "problems": f"could not judge: {e}"}
+    v = ask(use, q, [path], think)                     # an error is an error (never a stored "match 0", 2026-10-04)
     v["model"] = use
     if card.get("year") and v.get("made_year") not in (None, "", "null"):
         o = ERA.off(v.get("made_year"), card.get("year"))      # years outside the item's era (0 = inside it)

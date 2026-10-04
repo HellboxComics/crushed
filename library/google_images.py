@@ -139,13 +139,18 @@ def parse(html, min_side=500):
     return out
 
 
+class Captcha(Exception):
+    """Google wants a person to tick 'I'm not a robot'. A search that hit it is NOT a search with no results
+    (audit 2026-10-04: it was counted as 0 photos, recorded as done, and the dossier marked complete)."""
+
+
 def search_full(q, most=30, min_side=500, log=print):
     """[{"url", "w", "h", "page", "title"}] for a Google Images search, largest real photos first in Google's
-    order. page / title are '' when Google's page doesn't carry them."""
+    order. page / title are '' when Google's page doesn't carry them. Raises Captcha when Google blocks."""
     html, _ = _open("https://www.google.com/search?" + urllib.parse.urlencode({"q": q, "udm": "2", "hl": "en"}),
                     log=log)
     if html is None:
-        return []
+        raise Captcha("Google Images asks a person to tick 'I'm not a robot' in the reference browser on the Mac")
     out = parse(html, min_side)
     log(f"[google] '{q}': {len(out)} full-size photos ({sum(1 for o in out if o['page'])} with their web page)")
     return out[:most]
