@@ -760,6 +760,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                              f"{', '.join(res.get('after', [])) or 'all checks pass'}) - rebuilding with the fix",
                    engineer={k: res.get(k) for k in ("sha", "summary", "before", "after")})
             return
+        if res.get("newer_code") or res.get("machine"):      # not the engineer's doing: the attempt is given back
+            engineer_refund(cid)
         if res.get("newer_code"):                           # remade on the new code first (the retry sees old code)
             status(cid, step="failed the realism check - newer code is in, it is remade on it first", ok=False,
                    verdict=verdict, views=os.path.relpath(shots, WORK), ref=os.path.relpath(picked["file"], WORK))
@@ -1082,6 +1084,10 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
                files=[done_png], checks=[("kept as it was", True, f"match {kept.get('score')}")])
         return done_png, done_mr
     status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
+    json.dump(words, open(os.path.join(tex, "words.json"), "w"), indent=1)        # the label step's inputs, so the
+    json.dump({"product": product, "w_mm": w_mm, "h_mm": h_mm, "marks": version_marks(card),   # engineer can run
+               "typical": kits.typical(kits.get(kit_name), "label")},                            # that one step alone
+              open(os.path.join(tex, "label_meta.json"), "w"), indent=1)
     png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
                               typical=kits.typical(kits.get(kit_name), "label"), cover_png=cover_png,
                               marks=version_marks(card))
@@ -2078,6 +2084,14 @@ def engineer_turn(cid):
     if not ok:
         say(f"[engineer] {cid}: already tried 3 times today - left for tomorrow")
     return bool(ok)
+
+
+def engineer_refund(cid):
+    """An attempt the machine wasted (newer code arrived, the brain did not answer at all) is given back."""
+    def change(a):
+        if a.get(cid):
+            a[cid] = a[cid][:-1]
+    update_json(os.path.join(WORK, "engineer", "attempts.json"), change, backup=False)
 
 
 def _trial_copies(cid, tdir, cards_dir="cards"):

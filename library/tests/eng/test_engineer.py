@@ -415,6 +415,39 @@ res = run(brain, {"pass": False, "failed": ["details", "side_bottom"], "problems
 check(res.get("kept") is True, f"when the own check agrees the fix is kept ({res.get('why')})")
 subprocess.run(["git", "checkout", "-q", "--", "library/finish.py"], cwd=REPO)
 
+# =========================================================== M: a proven fix survives later untested edits
+print("\nM. time runs out after an edit on top of a PROVEN fix: the proven code is put back and kept")
+script({C.CID: [{"failed": ["side_bottom"]}, {"failed": ["side_bottom"]}]}, {C.CID: [{"failed": ["side_bottom"]}]})
+brain = Brain([
+    [("edit_file", {"path": "library/finish.py", "old": "def _blur(a, s):", "new": "STEEL_BASE4 = 0.6\n\n\ndef _blur(a, s):"})],
+    [("rebuild", {"why": "steel"})],
+    [("edit_file", {"path": "library/finish.py", "old": "STEEL_BASE4 = 0.6", "new": "STEEL_BASE4 = 0.7\nEXTRA = 1"})],
+])                                                        # then no more ideas: the session ends without finish
+res = run(brain, {"pass": False, "failed": ["details", "side_bottom"], "problems": ["x"]})
+check(res.get("kept") is True, f"the proven fix is kept although a later edit was never tested ({res.get('why')})")
+check("STEEL_BASE4 = 0.6" in open(os.path.join(REPO, "library", "finish.py")).read() and
+      "EXTRA = 1" not in open(os.path.join(REPO, "library", "finish.py")).read(), "the repo has the PROVEN code, not the untested edit")
+subprocess.run(["git", "checkout", "-q", "--", "library/finish.py"], cwd=REPO)
+
+# =========================================================== N: one step tested alone
+print("\nN. test_step runs one step with its code copy, no rebuild")
+script({C.CID: [{"failed": ["side_label"]}]}, {C.CID: [{"failed": ["side_label"]}]})
+lay = {"width_mm": 50, "height_mm": 46, "background": "#111111",
+       "texts": [{"text": "DURACELL", "x": 0.1, "y": 0.1, "h": 0.1, "color": "#ffffff"},
+                 {"text": "DURACELL", "x": 0.12, "y": 0.12, "h": 0.1, "color": "#ffffff"}]}
+os.makedirs(os.path.join(BUILD, "texture"), exist_ok=True)
+json.dump(lay, open(os.path.join(BUILD, "texture", "try.json"), "w"))
+brain = Brain([
+    [("test_step", {"step": "render_label", "args": {"layout": "texture/try.json"}})],
+    [("finish", {"summary": "x"})],
+])
+res = run(brain, {"pass": False, "failed": ["side_label"], "problems": ["x"]})
+tr = brain.tool_results()
+st = json.loads(tr[0]) if tr[0].startswith("{") else {}
+check(st.get("texts") == 2 and st.get("overlaps") and "DURACELL" in st["overlaps"][0]["a"],
+      f"render_label drew the layout and measured the overlapping lines: {tr[0][:160]}")
+check(calls("trials", C.CID) == 0, "no rebuild was spent")
+
 # =========================================================== F: context and fingerprint units
 print("\nF. units: old tool results are cut short; the run.py fingerprint")
 msgs = [{"role": "system", "content": "s"}]

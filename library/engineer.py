@@ -79,7 +79,7 @@ LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "ma
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
                 "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py", "kept.py", "cards.py",
-                "deliver.py"}
+                "deliver.py", "steptest.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
@@ -89,7 +89,7 @@ LOCKED_DIRS = ("playbook/",)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "era.py", "jsonsafe.py",
                 "speed.py", "brainjobs.py", "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py",
-                "kept.py", "cards.py", "deliver.py", "hart.py", "askfirst.py", "testlock.py", "sitecustomize.py",
+                "kept.py", "cards.py", "deliver.py", "steptest.py", "hart.py", "askfirst.py", "testlock.py", "sitecustomize.py",
                 "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
@@ -245,17 +245,19 @@ def _fails_of(v, first):
 STEP_FILES = {
     "assembly": ("parts.py (the parts PLAN: what your AI is asked, how its answer is cleaned and fitted - parts_plan.json "
                  "is its output) -> shapes/assembly.py (each part built: box/cylinder/lathe/tube/sphere, form() lofts "
-                 "soft parts from outlines, material()+shapes/looks.py the surfaces) -> measure.py (exact checks)"),
+                 "soft parts from outlines, material()+shapes/looks.py the surfaces) -> measure.py (LOCKED: the exact "
+                 "checks). Test a plan change with test_step('build_parts')."),
     "round": ("skin.py compose/sides (the label unrolled from the photos) -> run.py label_words/whole_words (the "
-              "words) -> labelparts.py (what every label of this kind carries) -> layout.py (the label's layout, "
-              "rounds, measured color check) -> labelart.py (drawn in exact type) -> shapes/lathe.py + shapes/specs "
-              "(the body, the ends, the insides) -> measure.py"),
-    "box": ("dossier.py (every side planned: photo / sister / rebuilt) -> skin.py box_skin + panels.py (each side's "
-            "art, atlas.png) -> shapes/box.py or shapes/carton.py (the box) -> measure.py"),
-    "flat": "skin.py box_skin -> shapes/box.py (a thin box) -> measure.py",
+              "words) -> labelparts.py (LOCKED: what every label of this kind carries) -> layout.py (the label's "
+              "layout, rounds, measured color check) -> labelart.py (drawn in exact type) -> shapes/lathe.py + "
+              "shapes/specs (the body, the ends, the insides) -> measure.py (LOCKED). Test a layout change with "
+              "test_step('render_label') or the whole label step with test_step('label')."),
+    "box": ("dossier.py (LOCKED: every side planned - read it with read_file('dossier')) -> skin.py box_skin + "
+            "panels.py (each side's art, atlas.png) -> shapes/box.py or shapes/carton.py (the box) -> measure.py (LOCKED)"),
+    "flat": "skin.py box_skin -> shapes/box.py (a thin box) -> measure.py (LOCKED)",
     "pcb": ("skin.py box_skin flat=True (top + solder side straightened) -> run.py board_parts (parts read off the "
-            "top photo, parts.json) -> shapes/pcb.py (the board's outline, each part as a solid, bracket) -> measure.py"),
-    "organic": "hunyuan.py (shape + paint from the photo) -> shapes/resize.py -> measure.py",
+            "top photo, parts.json) -> shapes/pcb.py (the board's outline, each part as a solid) -> measure.py (LOCKED)"),
+    "organic": "hunyuan.py (shape + paint from the photo) -> shapes/resize.py -> measure.py (LOCKED)",
 }
 
 
@@ -773,6 +775,15 @@ TOOLS = [
     ("review_sheet", "The build's review sheet: every step's own checks in order (unrolled photos, words, label "
                      "tries, box sides, finished model) and the FIRST step that went wrong, with its pictures' "
                      "names (look at them with look('step:<file name>')).", {}, []),
+    ("test_step", "Run ONE step alone with your code (seconds to a few minutes), instead of a full rebuild: "
+                  "step = 'render_label' (args.layout = a layout .json in the build folder, e.g. 'texture/round1.json': "
+                  "draws it, measures its colors against the real label and reports overlapping or off-label text), "
+                  "'label' (the whole label step: words -> layout rounds -> drawn label, with its own checks), "
+                  "'build_parts' (args.plan = a parts plan .json; builds it in Blender and measures every part), "
+                  "'build_round' (args.spec = a shape spec .json), 'measure' (the exact checks on a model: "
+                  "args.glb, default the build's model), 'judge_side' (args.face = one side, judged against its photo). "
+                  "Each returns numbers and brings pictures. Use it to test a change before you spend a rebuild.",
+     {"step": "string", "args": "object"}, ["step"]),
     ("finish", "You are done: every check passes, or you made it as good as you can. Say what you changed and why, "
                "and what (if anything) is still wrong and its likely cause. Your fix is then confirmed by a second "
                "rebuild and the asset maker's own check before it is kept.", {"summary": "string"}, ["summary"]),
@@ -1015,6 +1026,45 @@ class Bench:
                     "spread": round(a[..., i].std(), 1)} for i, n in enumerate(names)}
         return json.dumps({"file": os.path.basename(p), "size": im.size, "channels": rows})
 
+    def test_step(self, step, args=None):
+        """One step, run alone with its code copy on the current build folder (steptest.py), its pictures brought
+        along. Never counts as a rebuild."""
+        if self.stopped:
+            return "REFUSED: " + self.stopped
+        if self.left() < 300:
+            return "REFUSED: out of time"
+        args = args if isinstance(args, dict) else {}
+        n = sum(1 for _ in os.listdir(os.path.join(ENG, "steps"))) + 1 if os.path.isdir(os.path.join(ENG, "steps")) else 1
+        out = os.path.join(ENG, "steps", f"{_stamp()}-{n}-{re.sub(r'[^a-z_]', '', str(step))}")
+        os.makedirs(out, exist_ok=True)
+        kv = []
+        for k, v in args.items():
+            v = str(v)
+            if k in ("layout", "plan", "spec", "glb") and not os.path.isabs(v):     # files are in the build folder
+                v = os.path.join(self.cur["dir"], v.removeprefix("build/"))
+            kv.append(f"{k}={v}")
+        env = dict(os.environ, CRUSHED_TRIAL="1", CRUSHED_REMASTER_WORK=WORK, CRUSHED_KEPT_WRITE=os.path.join(out, "kept"))
+        log = os.path.join(out, "step.log")
+        if self.model:
+            _release(self.model)                           # the step's brain calls need the memory
+        rc, took = run_group([PY, os.path.join(WT, "library", "steptest.py"), str(step), self.cur["dir"], out, *kv],
+                             min(900, int(self.left() - 120)), log, env=env, cwd=WT,
+                             beat=lambda: self.beat(f"engineer: testing the {step} step of {self.cid}"))
+        txt = open(log, errors="replace").read() if os.path.exists(log) else ""
+        m = re.search(r"^STEP (.*)$", txt, re.M)
+        if not m:
+            return f"the step did not finish ({'ran over its time' if rc is None else 'it broke'}). The end of its log:\n{txt[-1500:]}"
+        res = json.loads(m.group(1))
+        for pic in (res.pop("pictures", None) or [])[:4]:
+            try:
+                from PIL import Image
+                self.pictures.append((f"{step}: {os.path.basename(pic)}", _b64(Image.open(pic))))
+            except Exception:
+                pass
+        res["took_seconds"] = took
+        res["note"] = "the pictures come with the next message; this was one step, not a rebuild"
+        return json.dumps(res, default=str)[:9000]
+
     def mesh_info(self):
         glb = os.path.join(self.cur["dir"], "model", self.cid + ".glb")
         if not os.path.exists(glb):
@@ -1036,6 +1086,10 @@ class Bench:
         rel = (path or "").strip().lstrip("/")
         if rel.startswith("wt/"):
             rel = rel[3:]
+        if rel in ("dossier", "dossier.json", "build/dossier.json"):     # what the checks expect (read-only)
+            return os.path.join(WORK, "dossier", self.cid + ".json")
+        if rel in ("card", "card.json", "build/card.json"):
+            return os.path.join(WORK, "cards", self.cid + ".json")
         if not rel.startswith("library") and not os.path.exists(os.path.join(WT, rel)):
             rel = os.path.join("library", rel)
         p = os.path.realpath(os.path.join(WT, rel))
@@ -1382,7 +1436,10 @@ class Bench:
         self.cur = {"verdict": v, "shots": t["shots"], "close": t["close"], "dir": t["dir"]}
         progress = {}
         if now < first:                                    # this code fixed something and broke nothing: proven
-            self.proven = {"diff": t["diff"], "fixed": sorted(first - now), "files": [c[1] for c in self.changed()]}
+            git("add", "-A", "-N", "--", "library", cwd=WT)
+            patch = git("diff", "--binary", "HEAD", "--", "library", ":(exclude)library/playbook", cwd=WT).stdout
+            self.proven = {"diff": t["diff"], "fixed": sorted(first - now), "files": [c[1] for c in self.changed()],
+                           "patch": patch, "clear": list(t.get("clear") or [])}
             progress = {"PROGRESS": f"this change fixed {sorted(first - now)} and broke nothing. KEEP IT - do not "
                                     "revert it. Work on what is left ON TOP of it, or call finish now and this fix is "
                                     "kept for every item of this kind."}
@@ -1566,7 +1623,7 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
            "read_file": b.read_file, "grep": b.grep, "edit_file": b.edit_file, "new_file": b.new_file,
            "diff": b.diff, "revert": b.revert, "rebuild": b.rebuild, "lesson": b.lesson, "finish": b.finish,
            "compare_colors": b.compare_colors, "read_words": b.read_words, "ask_eyes": b.ask_eyes,
-           "review_sheet": b.review_sheet}
+           "review_sheet": b.review_sheet, "test_step": b.test_step}
     allowed = {name: set(props) for name, _, props, _ in TOOLS}
     nudged = 0
     last_newer = 0.0                                          # checked on the first turn, then every 10 minutes
@@ -1601,13 +1658,24 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
                                  "more with ask_eyes):\n" + "\n".join(told)})
             b.pictures = []
         _prune(messages)
+        budget = (f"[budget: {int(b.left() / 60)} min left, {int(b.reserve() / 60)} of them kept for confirming a fix; "
+                  f"rebuilds used {len(b._own_trials())} of {MAX_REBUILDS}; turn {turn + 1} of {MAX_TURNS}]")
+        if messages and messages[-1].get("role") in ("tool", "user"):
+            if messages[-1].get("role") == "user" and not messages[-1].get("images"):
+                messages[-1]["content"] = messages[-1]["content"].rstrip() + "\n" + budget
+            else:
+                messages.append({"role": "user", "content": budget})
         beat(f"engineer thinking about {cid} (turn {turn + 1})")
         try:
             msg = _chat(model, messages, tools, timeout=int(max(60, min(2400, b.left() - b.reserve()))))
         except Exception as e:
             say(f"[engineer] {cid}: its brain did not answer ({e})")
+            if turn == 0:
+                b.machine = f"its brain did not answer on the first turn ({str(e)[:120]})"
             break
         calls = msg.get("tool_calls") or []
+        if calls:
+            nudged = 0                                        # a brain that works is not on the clock of text-only turns
         messages.append({"role": "assistant", "content": msg.get("content", ""), **({"tool_calls": calls} if calls else {})})
         if msg.get("thinking"):
             say(f"[engineer] thinks: {msg['thinking'].strip()[:300]}")
@@ -1658,22 +1726,20 @@ def _accept(b, say):
         return False, b.stopped
     if not [c for c in b.changed() if not c[1].startswith("library/playbook/")]:
         return False, "nothing changed"
-    tried0 = b._own_trials()
-    last_clear = sorted(tried0[-1]["clear"] or []) if tried0 else []
-    h = b._diff_hash() + "|clear=" + ",".join(last_clear)     # the same code rebuilt WITH a step redone from scratch
-    if h in b.decided:                                         # is not the same test (audit 2026-10-04)
+    tried = b._own_trials()
+    mine = [t for t in tried if t["verdict"]]
+    last = next((t for t in reversed(mine) if t["diff"] == b._diff_hash()), None)   # the trial OF this code
+    h = b._diff_hash() + "|clear=" + ",".join(sorted((last or {}).get("clear") or []))   # the same code rebuilt WITH
+    if h in b.decided:                                         # a step redone from scratch is not the same test
         ok, why = b.decided[h]
         return ok, (why if ok else "Same code as before, so the same answer: " + why)
     bad = b.audit()
     if bad:
         return False, "Your changes break the rules and can't be kept: " + bad + ". Revert them."
-    tried = tried0
     if tried and tried[-1]["diff"] == b._diff_hash() and not tried[-1]["verdict"]:
         return False, ("Your last rebuild with these changes did not finish (it broke or ran over its time) - nothing "
                        "is kept that was not checked. Look at why, fix it, and rebuild.")
-    mine = [t for t in tried if t["verdict"]]
-    last = mine[-1] if mine else None
-    if not last or last["diff"] != b._diff_hash():
+    if not last:
         return False, ("You changed code after your last rebuild (or never rebuilt). Rebuild with exactly these changes "
                        "first - nothing is kept that was not tested.")
     F0, F1 = set(_fails(b.first["verdict"])), _fails_of(last["verdict"], b.first["verdict"])
@@ -1791,7 +1857,33 @@ def _file_rejected(b, why):
         _move_to_scratch(p, f"lessons-{b.cid}-filed")
 
 
+def _restore_proven(b, say):
+    """Time or turns ran out after the engineer edited past a PROVEN fix: the proven code is put back so the fix is
+    not lost (audit 2026-10-04: a kept-worthy fix died with 'you changed code after your last rebuild')."""
+    pv = getattr(b, "proven", None)
+    if not pv or not pv.get("patch") or b._diff_hash() == pv["diff"]:
+        return False
+    git("reset", "-q", cwd=WT)
+    git("checkout", "-q", "--", ".", cwd=WT)
+    extra = [f for f in git("ls-files", "--others", "--exclude-standard", "-z", cwd=WT).stdout.split("\0") if f]
+    for f in extra:
+        try:
+            os.remove(os.path.join(WT, f))
+        except OSError:
+            pass
+    pf = os.path.join(_scratch("proven-patch"), "proven.patch")
+    open(pf, "w").write(pv["patch"])
+    r = git("apply", "--binary", pf, cwd=WT)
+    if r.returncode != 0:
+        say(f"[engineer] {b.cid}: the proven fix could not be put back ({r.stderr[-200:]})")
+        return False
+    say(f"[engineer] {b.cid}: later edits were not tested - the PROVEN fix (it fixed {pv['fixed']}) is put back to be kept")
+    return b._diff_hash() == pv["diff"]
+
+
 def _keep(b, base_sha, branch, say):
+    if getattr(b, "machine", None) and not b.trials:
+        return {"kept": False, "machine": True, "branch": branch, "trials": 0, "why": b.machine}
     if getattr(b, "newer_code", False):
         return {"kept": False, "newer_code": True, "branch": branch, "trials": 0,
                 "why": "newer code arrived before it changed anything - the item is rebuilt on the new code first"}
@@ -1801,6 +1893,8 @@ def _keep(b, base_sha, branch, say):
         ok, why = True, "ok"
     elif b.done is None and b.trials:                       # out of turns or time: what it has, if it is better
         ok, why = _accept(b, say)
+        if not ok and _restore_proven(b, say):              # or the proven code, put back
+            ok, why = _accept(b, say)
     else:
         ok, why = False, "nothing better was found"
     if not ok:

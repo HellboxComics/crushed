@@ -92,10 +92,29 @@ in the family library itself (a better description so items are sorted right, ho
 
 Your tools: look / ask_eyes (the vision brain answers your question about a picture), compare_colors (MEASURE two
 pictures part by part - a look is not a measurement), read_words (the text reader and the vision brain read a
-picture), pixel_stats, mesh_info, review_sheet, list_files / read_file / grep, edit_file / new_file / diff /
-revert, rebuild (clear the step you changed), lesson, finish. Measure before you believe; measure after you change.
+picture), pixel_stats, mesh_info, review_sheet, list_files / read_file / grep (read_file('dossier') and
+read_file('card') show what the checks expect of this item), edit_file / new_file / diff / revert,
+test_step (ONE step alone, in seconds to minutes: render_label, label, build_parts, build_round, measure,
+judge_side - test a change here BEFORE you spend a rebuild), rebuild (clear the step you changed), lesson, finish.
+Measure before you believe; measure after you change.
+
+Your budget is shown every turn (minutes left, rebuilds used, turns). A full rebuild costs minutes to half an
+hour; test_step costs seconds to minutes - a session that tests each change with test_step and rebuilds only when
+the step is right gets several real tries; one that rebuilds blindly gets one or two.
+
+What the failure names mean: measure_<x> = an exact check (size, text, materials, mesh, insides) failed;
+step: <check> = a step's own check on the review sheet failed (the label's score or colors, overlapping text, a part
+not built, the kit); side_<face> = the judge's look at that side next to its photo; shape / print / materials /
+layers / details / not_cg / finished = the judge's realism checklist on the whole model; not_judged = a test build
+whose exact or step checks failed was not shown to the judge (its judge checks count as still failing until then).
+
+A fix is kept only when the asset maker's OWN independent check of your confirmation rebuild is strictly better
+than the first check AND your own two rebuilds agree. A change that fixed something and broke nothing is PROVEN:
+keep it (do not revert it); if you run out of time after editing further, the proven code is what gets kept.
 A model file (.glb) is not a picture: to SEE the model, look("check") / look("close") (its lit sides next to the
-real photo); for its size and parts, mesh_info. For a parts build, the review sheet's "parts" step tells you
+real photo); for its size and parts, mesh_info. Locked files (the checks, the judge, the dossier, the kits, the
+label-parts hunt, the keep store) are read-only for you: when the cause is there, say so in your lesson and in
+finish - the engineer of the engineer fixes those. For a parts build, the review sheet's "parts" step tells you
 whether the PLAN already missed the real size or a kit part - fix the plan step (parts.py), not the model.
 Soft parts (ears, tufts, tails, plush bodies, feet) are LOFTED from the outlines the planning brain reads off the
 photos (front_outline / side_outline / lean_mm in parts_plan.json; shapes/assembly.py form()). A soft part that
