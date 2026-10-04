@@ -64,4 +64,17 @@ pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 2, "flags
 check(pc["the planned parts fill the real size (within 10% each way)"][0] is False, "a plan smaller than the real size is caught")
 check(pc["every planned part was built"][0] is False and pc["every soft part has its own outline read off the photos (no stand-in, no default egg)"][0] is False,
       "a part Blender could not build and a stand-in are caught")
+
+# a circuit board's own checks
+pcbc = {c: (o, det) for c, o, det in review.pcb_checks(
+    {"front": {"source": "photo"}, "back": {"source": "plain"}},
+    [{"type": "chip", "box": [0.1, 0.1, 0.3, 0.3], "height_mm": 3}, {"type": "capacitor", "box": [0.5, 0.5, 0.55, 0.6], "height_mm": None},
+     {"type": "connector", "box": [0.0, 0.0, 0.7, 0.6], "height_mm": 8}],
+    [{"part": "memory chips"}, {"part": "chip"}])}
+check(pcbc["the top of the board is a real photo of this item"][0] is True, "a board top from a real photo passes")
+check(pcbc["the solder side is planned from a photo (this item's or a sister card's)"][0] is False, "a plain solder side is caught")
+check(pcbc["every part has a height"][0] is False and pcbc["no part covers more than a third of the board"][0] is False,
+      "a part with no height and a part too big are caught")
+check(pcbc["every part of this kind's kit was found"][0] is None and "memory" in pcbc["every part of this kind's kit was found"][1],
+      "a kit part not found is reported, not called broken")
 print(f"\n{ok} checks passed")

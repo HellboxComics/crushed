@@ -496,6 +496,18 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         parts = board_parts(os.path.join(d, "skin", "front.png"), product, use)
         json.dump(parts, open(os.path.join(d, "parts.json"), "w"), indent=1)
         say(f"[pcb] {cid}: {len(parts)} parts found on the board")
+        try:                                             # the board on the review sheet, with its own checks
+            got = jload(os.path.join(d, "skin", "sources.json"), {})
+            atlas = os.path.join(d, "skin", "atlas.png")
+            kit_parts = (families.get((card.get("family_lib") or {}).get("family", "general")) or {}).get("parts") or []
+            checks = review.pcb_checks(got, parts, kit_parts)
+            if os.path.exists(atlas):
+                seen_ok, seen_why = review.look_faces(atlas, picked["file"], product, use)
+                checks.append(("the judge sees nothing wrong on the top and solder side", seen_ok, seen_why))
+            review.load(d).step("circuit board (top from the photo, solder side planned, parts found on it)",
+                                files=[os.path.join(d, "skin", "front.png"), atlas], checks=checks)
+        except Exception as e:
+            say(f"[review] {cid}: the board could not be put on the sheet ({e})")
         status(cid, step=f"5/7 Blender: the board and its {len(parts)} parts, each its own solid")
         run_blender("pcb.py", str(W), str(H), mdir, os.path.join(d, "skin", "front.png"),
                     os.path.join(d, "skin", "front_mask.png"), os.path.join(d, "parts.json"), cid)

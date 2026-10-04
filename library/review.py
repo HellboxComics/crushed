@@ -162,6 +162,35 @@ def only_words(texts, words):
     return out
 
 
+# ------------------------------------------------------------------ a circuit board: its sides and its parts
+def pcb_checks(src, parts, kit_parts=()):
+    """Exact checks on a circuit board build: the top is a real photo, the solder side is planned, the parts your AI
+    found on the board make sense (enough of them, each with a height, each inside the board). [(what, ok, detail)]"""
+    out = []
+    front = (src.get("front") or {}).get("source")
+    out.append(("the top of the board is a real photo of this item", front == "photo", f"top: {front}"))
+    back = (src.get("back") or {}).get("source")
+    out.append(("the solder side is planned from a photo (this item's or a sister card's)",
+                back in ("photo", "template") if back else False, f"solder side: {back or 'not made'}"))
+    parts = parts or []
+    out.append(("parts were found standing on the board (chips, memory, capacitors, connectors)", len(parts) >= 3,
+                f"{len(parts)} parts: " + ", ".join(sorted({str(p.get('type')) for p in parts})[:10])))
+    no_h = [p for p in parts if not p.get("height_mm")]
+    out.append(("every part has a height", not no_h, f"{len(no_h)} part(s) with no height" if no_h else "all have one"))
+    outside = [p for p in parts if not all(0 <= v <= 1 for v in (p.get("box") or [2]))]
+    out.append(("every part sits inside the board", not outside, f"{len(outside)} outside" if outside else "all inside"))
+    big = [p for p in parts if (p["box"][2] - p["box"][0]) * (p["box"][3] - p["box"][1]) > 0.35]
+    out.append(("no part covers more than a third of the board", not big,
+                f"{len(big)} part(s) too big to be one part" if big else "sizes make sense"))
+    if kit_parts:
+        types = " ".join(str(p.get("type", "")).lower() for p in parts)
+        miss = [k.get("part") for k in kit_parts
+                if not any(w in types for w in str(k.get("part", "")).lower().split() if len(w) > 2)]
+        out.append(("every part of this kind's kit was found", None if miss else True,
+                    ("not found on this board: " + ", ".join(map(str, miss))) if miss else f"all {len(kit_parts)} kit parts"))
+    return out
+
+
 # ------------------------------------------------------------------ the parts builder: the plan checks itself
 def parts_checks(plan, asm, kit_parts=()):
     """Exact checks on a parts plan and what Blender made of it: [(what, ok, detail)]. The plan is your AI's; these
