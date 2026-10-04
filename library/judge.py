@@ -39,6 +39,29 @@ def _ask(use, text, images):
     return V.ask(use, text, images, think=True, side=1600) or {}
 
 
+def _side_crop(photo, box, like, name):
+    """The part of a photo that shows one side (the dossier's box for that side, with a margin), saved next to the
+    model's pictures. None when there is no box or it covers nearly the whole photo."""
+    if not box or len(box) != 4:
+        return None
+    try:
+        from PIL import Image
+        im = Image.open(photo).convert("RGB")
+        W, H = im.size
+        x0, y0, x1, y1 = [max(0.0, min(1.0, float(b))) for b in box]
+        if x1 - x0 >= 0.85 and y1 - y0 >= 0.85:
+            return None
+        mx, my = 0.15 * (x1 - x0), 0.15 * (y1 - y0)
+        crop = im.crop((int(max(0, x0 - mx) * W), int(max(0, y0 - my) * H), int(min(1, x1 + mx) * W), int(min(1, y1 + my) * H)))
+        if min(crop.size) < 40:
+            return None
+        p = os.path.join(os.path.dirname(like) or ".", name)
+        crop.save(p)
+        return p
+    except Exception:
+        return None
+
+
 def _strip(pngs, like, name="label_all_turns.png"):
     """Several pictures in one (the four turns of a round label; the real photos of its sides): four go in a 2 x 2
     grid, not a 1 x 4 strip, so each keeps its detail once the picture is sized for the brain (a 1 x 4 strip at
@@ -82,6 +105,10 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
         must = "; ".join(f"{m.get('what')}" + (f" \"{str(m.get('text'))[:60]}\"" if m.get("text") else "")
                          for m in e.get("must_show", [])) or "nothing listed"
         ref = e.get("photo") if e.get("photo") and os.path.exists(e.get("photo")) else None
+        if ref and not (route == "round" and face == "label"):
+            # the judge gets THIS SIDE of the photo, not the whole photo: a battery's bottom was judged against the
+            # whole picture of the battery lying down ("the model is a disc, not the cylindrical side", 2026-10-04)
+            ref = _side_crop(ref, (e.get("view") or {}).get("box"), model, f"ref_{face}.png") or ref
         wrap_refs = [ref] + [a for a in (e.get("alternates") or [])[:2] if a and os.path.exists(a)] if ref else []
         if route == "round" and face == "label" and len(wrap_refs) > 1:
             # a wrapped label: the real photos of this item from its different sides, side by side - the model's
