@@ -1300,6 +1300,11 @@ class Bench:
         bad = self.audit()
         if bad:
             return "REFUSED: your changes break the rules, so they can't be tested: " + bad
+        if self.diff() == "no changes yet" and not clear:
+            return ("REFUSED: you have changed nothing, so a rebuild would make the same model again (a rebuild takes "
+                    "minutes). Find the cause first - look, measure (compare_colors, mesh_info, read_words), read the "
+                    "code that makes that part - then edit it, then rebuild. If you only want a step redone from "
+                    "scratch, say which with clear=[...].")
         self.log(f"[engineer] {self.cid}: rebuild {n} with its fix ({why[:160]})")
         t, tail = self._run_trial(self.cid, clear, why, "try")
         if t is None:
