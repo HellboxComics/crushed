@@ -3,7 +3,9 @@ tabs and notches included - printed with its traces and silkscreen (the real pho
 its own solid: the chips (their real markings on top), memory, capacitors, crystal, regulator, connectors, pin
 headers, and the steel bracket on the end. Every part carries its crush physics. Saved as .blend .glb .fbx .usdc.
 
-    python pcb.py -- W H out_dir front.png front_mask.png parts.json name
+    python pcb.py -- W H out_dir front.png front_mask.png parts.json name [back.png]
+      back.png: the solder side straightened from a real photo (skin/back.png); without it the solder side is the
+      board's own color with generic traces, and the build says so (nothing printed on it is real)
       W, H in meters (the board's length and height); parts.json from your AI reading the photo:
       [{"type": "chip", "box": [x0, y0, x1, y1], "height_mm": 2.5}, ...]   (box as fractions of front.png)
 """
@@ -23,6 +25,7 @@ from PIL import Image
 argv = sys.argv[sys.argv.index("--") + 1:]
 W, H = float(argv[0]) * 1000, float(argv[1]) * 1000
 OUT, FRONT, MASK, PARTS, NAME = argv[2], argv[3], argv[4], argv[5], argv[6]
+BACK = argv[7] if len(argv) > 7 and argv[7] not in ("", "-") and os.path.exists(argv[7]) else None
 LIB = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, LIB)
 import finish  # noqa: E402
@@ -104,28 +107,35 @@ bm.normal_update()
 for face in bm.faces:                                # top: the photo; bottom: the solder side; edges: FR4
     face.material_index = 0 if face.normal.z > 0.9 else (1 if face.normal.z < -0.9 else 2)
     for loop in face.loops:
-        loop[uvl].uv = (loop.vert.co.x / S / W, loop.vert.co.y / S / H)
+        u, v = loop.vert.co.x / S / W, loop.vert.co.y / S / H
+        if face.material_index == 1 and BACK:             # a photo of the solder side was taken from behind: mirrored
+            u = 1 - u
+        loop[uvl].uv = (u, v)
 me = bpy.data.meshes.new(NAME + "_board")
 bm.to_mesh(me)
 bm.free()
 board = bpy.data.objects.new(NAME + "_board", me)
 bpy.context.scene.collection.objects.link(board)
 front.save(os.path.join(OUT, "textures", NAME + "_board_top.png"))
-# the solder side: the board's own color with trace lines and pads (no photo of it)
-bc = np.median(np.asarray(front.resize((64, 32))).reshape(-1, 3), 0) / 255
-sol = np.ones((1024, 2048, 3), np.float32) * bc * 0.8
-rng = np.random.default_rng(3)
-for _ in range(400):
-    y, x = rng.integers(0, 1024), rng.integers(0, 2048)
-    L = rng.integers(20, 300)
-    if rng.random() < 0.5:
-        sol[y:y + 3, x:x + L] = bc * 1.25
-    else:
-        sol[y:y + L, x:x + 3] = bc * 1.25
-for _ in range(1500):
-    y, x = rng.integers(0, 1020), rng.integers(0, 2044)
-    sol[y:y + 4, x:x + 4] = (0.75, 0.75, 0.72)                 # solder joints
-Image.fromarray((np.clip(sol, 0, 1) * 255).astype(np.uint8)).save(os.path.join(OUT, "textures", NAME + "_board_bottom.png"))
+if BACK:                                               # the solder side: its real photo, straightened by the skin step
+    Image.open(BACK).convert("RGB").save(os.path.join(OUT, "textures", NAME + "_board_bottom.png"))
+    print(f"[pcb] solder side: the real photo ({os.path.basename(BACK)})", flush=True)
+else:                                                  # no photo of it: the board's own color with generic traces
+    bc = np.median(np.asarray(front.resize((64, 32))).reshape(-1, 3), 0) / 255
+    sol = np.ones((1024, 2048, 3), np.float32) * bc * 0.8
+    rng = np.random.default_rng(3)
+    for _ in range(400):
+        y, x = rng.integers(0, 1024), rng.integers(0, 2048)
+        L = rng.integers(20, 300)
+        if rng.random() < 0.5:
+            sol[y:y + 3, x:x + L] = bc * 1.25
+        else:
+            sol[y:y + L, x:x + 3] = bc * 1.25
+    for _ in range(1500):
+        y, x = rng.integers(0, 1020), rng.integers(0, 2044)
+        sol[y:y + 4, x:x + 4] = (0.75, 0.75, 0.72)                 # solder joints
+    Image.fromarray((np.clip(sol, 0, 1) * 255).astype(np.uint8)).save(os.path.join(OUT, "textures", NAME + "_board_bottom.png"))
+    print("[pcb] solder side: NO photo of it - generic traces (nothing printed on it is real)", flush=True)
 fn = finish.make("plastic", os.path.join(OUT, "textures"), NAME + "_board", w=1024, h=512, base_rough=0.45)
 board.data.materials.append(material("board_top", tex=os.path.join(OUT, "textures", NAME + "_board_top.png"),
                                      normal=fn["normal"], roughness=0.62))   # solder mask: satin, not mirror

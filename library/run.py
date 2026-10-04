@@ -509,8 +509,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         except Exception as e:
             say(f"[review] {cid}: the board could not be put on the sheet ({e})")
         status(cid, step=f"5/7 Blender: the board and its {len(parts)} parts, each its own solid")
+        back_png = os.path.join(d, "skin", "back.png")  # the solder side's real photo, when the skin step found one
+        back_src = (jload(os.path.join(d, "skin", "sources.json"), {}).get("back") or {}).get("source")
         run_blender("pcb.py", str(W), str(H), mdir, os.path.join(d, "skin", "front.png"),
-                    os.path.join(d, "skin", "front_mask.png"), os.path.join(d, "parts.json"), cid)
+                    os.path.join(d, "skin", "front_mask.png"), os.path.join(d, "parts.json"), cid,
+                    back_png if back_src in ("photo", "template") and os.path.exists(back_png) else "-")
     elif route in ("box", "flat"):
         import dossier as DS
         import skin

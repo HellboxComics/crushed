@@ -168,7 +168,23 @@ def t_blender():
     ear = mesh_size_mm(glb, "ear")
     if not ear or abs(ear[2] - 50) > 4 or abs(max(ear[0], ear[1]) - 30) > 3:
         raise RuntimeError(f"the lofted ear came out {ear}, not about 30 x 16 x 50 mm")
-    return "box, round, kit (AAA) and lofted soft part shapes built"
+    # the circuit board: a tiny board with a real solder-side photo (the bottom must be that photo, not invented)
+    from PIL import Image
+    pdir = os.path.join(TMP, "pcb")
+    os.makedirs(pdir, exist_ok=True)
+    Image.new("RGB", (256, 128), (40, 90, 50)).save(os.path.join(pdir, "front.png"))
+    Image.new("L", (256, 128), 255).save(os.path.join(pdir, "front_mask.png"))
+    Image.new("RGB", (256, 128), (200, 30, 30)).save(os.path.join(pdir, "back.png"))
+    json.dump([{"type": "chip", "box": [0.3, 0.3, 0.5, 0.6], "height_mm": 2.5}], open(os.path.join(pdir, "parts.json"), "w"))
+    r = subprocess.run([sys.executable, os.path.join(HERE, "shapes", "pcb.py"), "--", "0.1", "0.05", pdir,
+                        os.path.join(pdir, "front.png"), os.path.join(pdir, "front_mask.png"), os.path.join(pdir, "parts.json"),
+                        "t_pcb", os.path.join(pdir, "back.png")], capture_output=True, text=True, timeout=300)
+    if not os.path.exists(os.path.join(pdir, "t_pcb.glb")):
+        raise RuntimeError("the circuit board builder: " + (r.stderr or r.stdout)[-300:])
+    bottom = Image.open(os.path.join(pdir, "textures", "t_pcb_board_bottom.png")).convert("RGB").resize((8, 4))
+    if max(abs(a - b) for px in bottom.getdata() for a, b in zip(px, (200, 30, 30))) > 8:
+        raise RuntimeError("the circuit board's solder side is not its real photo")
+    return "box, round, kit (AAA), lofted soft part and circuit board (real solder side) built"
 
 
 def mesh_size_mm(glb, name):
