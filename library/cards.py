@@ -42,7 +42,8 @@ Answer ONLY JSON, no other words:
 BUILD = """You are the lead 3D artist for a studio known for photoreal product models. Before modeling a real product you
 write down HOW IT IS REALLY MADE, layer by layer, so nothing that makes it look real gets missed (the overlap seam of
 a battery's plastic sleeve, the sleeve's edge rolled over the ends, the pressed rings in a steel cap, the glued flap
-of a carton, the cracked ink along a box's folds, the mold seam on a toy, the stitching on fabric).
+of a carton, the mold seam on a toy, the stitching on fabric). How it is MADE - never its wear, dirt or damage: the
+model is the thing as it left the factory.
 Product: {product}
 Real size (width x depth x height, meters): {size}
 Answer ONLY JSON:
@@ -54,8 +55,8 @@ MATERIALS = ["printed_plastic_sleeve", "printed_paper_label", "printed_card", "b
              "copper", "brass", "gold_plate", "glass", "clear_plastic", "molded_plastic", "soft_rubber", "fabric",
              "plush_fur", "painted_metal", "wood", "leather", "foam"]
 DETAILS = ["sleeve_seam", "rolled_lip", "pressed_rings", "rolled_button", "crimp_ring", "can_rim", "pull_tab",
-           "cap_ridges", "screw_threads", "glue_flap", "flap_seams", "worn_edges", "cracked_ink_folds", "mold_seam",
-           "screws", "stitching", "fur_pile", "sticker", "scratches", "dents", "fingerprints", "dust", "faded_print"]
+           "cap_ridges", "screw_threads", "glue_flap", "flap_seams", "mold_seam", "screws", "stitching", "fur_pile",
+           "sticker"]          # (how it is made; never wear - worn edges, cracked ink, scratches, dust - 2026-10-04)
 
 
 def construction(cid, card=None, model=None, log=print):

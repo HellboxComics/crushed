@@ -767,10 +767,14 @@ def carton_contents(dos, W, D, H, out_path, board_mm=0.45):
     ph = ih / rows - 1.0
     pw = iw
     item = [pw - 22, ph - 19, max(4.0, (pd - 3) / per - 0.4)]
+    pack_kind = "foil_laminate" if v.get("pack") in ("pouch", "packet", "wrapper") else "paper"
+    item_kind = "food_baked" if (dos.get("identity") or {}).get("food") else "molded_plastic"
     out = {"pouches": packs, "per_pouch": per, "pouch_mm": [round(pw, 1), round(ph, 1), round(pd, 1)],
            "pastry_mm": [round(x, 1) for x in item], "rows": rows, "cols": cols,
-           "pouch_kind": "foil_laminate" if v.get("pack") in ("pouch", "packet", "wrapper") else "paper",
-           "pastry_kind": "food_baked" if (dos.get("identity") or {}).get("food") else "molded_plastic",
+           "pack_mm": [round(pw, 1), round(ph, 1), round(pd, 1)], "item_mm": [round(x, 1) for x in item],
+           "pack_kind": pack_kind, "item_kind": item_kind, "item": v.get("item") or "",
+           "item_color": None,                                    # measured only when a photo shows the contents
+           "pouch_kind": pack_kind, "pastry_kind": item_kind,
            "loose": not v.get("per_pack"),
            "layout": f"{cols} deep, {rows} high, standing on their long edge",
            "sizes_note": "sizes worked out to fill this box's real inside "

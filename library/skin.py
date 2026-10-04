@@ -434,8 +434,8 @@ LOGO = ("Picture 1 is the flat front of a product's box. Find the brand name and
 
 
 def logo_box(front_png, judge=None, log=print):
-    """Where the logo is on the real front (fractions), for the sides no photo shows. Checked for sense; if the
-    AI's answer isn't usable, the top part of the front is used."""
+    """Where the logo is on the real front (fractions), for a sister side whose layout shows a logo there. Checked
+    for sense; if the AI's answer isn't usable -> None (never a fixed crop of the front; audit 2026-10-04)."""
     try:
         import vet as V
         b = V.ask(judge or V.model(), LOGO, [front_png], think=False, side=768)   # finding a logo needs no big picture
@@ -447,7 +447,7 @@ def logo_box(front_png, judge=None, log=print):
         log(f"[texture] logo answer not usable: {b}")
     except Exception as e:
         log(f"[texture] logo not found by the AI: {e}")
-    return (0.04, 0.03, 0.96, 0.47)
+    return None
 
 
 _NEXT = {"front": {"left": "left", "right": "right"}, "back": {"left": "right", "right": "left"},
@@ -468,9 +468,10 @@ def photo_box(front_png, judge=None, log=print):
             x0, y0, x1, y1 = (v / 1000 for v in (x0, y0, x1, y1))
         if 0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1 and (x1 - x0) * (y1 - y0) > 0.05:
             return (x0, y0, x1, y1)
+        log(f"[texture] product picture answer not usable: {b}")
     except Exception as e:
         log(f"[texture] product picture not found by the AI: {e}")
-    return (0.0, 0.55, 1.0, 0.92)
+    return None                                          # never a fixed crop of the front (audit 2026-10-04)
 
 
 SHAPE_TOL = math.log(1.2)       # a side's shape in the photo must match the real side within 20%, both ways
@@ -663,8 +664,12 @@ def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=prin
     if "front" not in faces:
         raise RuntimeError("no photo shows the front clearly enough to straighten")
     front = Image.open(faces["front"]).convert("RGB")
-    box = logo_box(faces["front"], judge, log)
+    box = None                                                # found only when a sister's layout places a logo
     pbox = None
+    need_logo = any(e.get("source") == "template_photo" or any(x.get("kind") == "logo" for x in (e.get("layout") or []))
+                    for e in plan.values())
+    if need_logo:
+        box = logo_box(faces["front"], judge, log)
 
     # ---- 3. sides from a sister box: straightened, its item-specific parts replaced by this item's facts
     import eraprint
@@ -674,7 +679,8 @@ def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=prin
             continue
         pw, ph = dims[side]
         w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
-        pbox = pbox or photo_box(faces["front"], judge, log)
+        if pbox is None and any(x.get("kind") in ("graphic", "picture") for x in e.get("swap_boxes") or []):
+            pbox = photo_box(faces["front"], judge, log) or False     # asked once; False = not found
         got = _template_face(e, side, w, h, (mm(pw), mm(ph)), c or {}, front, box, pbox, masks, log)
         if got is None:
             log(f"[texture] {side}: the sister box's photo could not be straightened - rebuilt instead")
@@ -704,29 +710,41 @@ def box_skin(product, W, D, H, photos, out_dir, flat=False, judge=None, log=prin
     front = Image.open(faces["front"]).convert("RGB")
     paper = ref
 
-    # ---- 4. sides no photo shows: rebuilt from facts only (or the box's color and the real logo)
+    # ---- 4. sides no photo shows: the measured paper color plus ONLY facts with receipts (audit 2026-10-04, RC3:
+    #         no logo crop, no product picture, no brand panel, no invented layout - a sister box's layout when one
+    #         was found places the facts; otherwise they are stacked plainly). What was drawn, from which receipt,
+    #         is written in sources.json so nothing on the model is without a source.
     biggest = max(max(d) for d in dims.values())
+    facts_all = (dossier or {}).get("facts") or {}
+    def receipts(ks):
+        out = {}
+        for k in ks:
+            fs = [facts_all.get(k)] + ([facts_all.get("count")] if k == "net_weight" else [])
+            out[k] = [x.get("url") or x.get("file") or x.get("quote") or "" for f in fs if isinstance(f, dict)
+                      for x in f.get("sources") or []]
+        return out
     for side, (pw, ph) in dims.items():
         if side in faces:
             continue
         w, h = canvas(mm(pw), mm(ph), mp=1.2e6)
         out = os.path.join(out_dir, f"{side}.png")
         e = plan.get(side, {})
+        used = []
         if c is not None and min(pw, ph) >= 0.12 * biggest:   # printed packaging: the facts, in real type
-            pbox = pbox or photo_box(faces["front"], judge, log)
+            if e.get("layout") and any(x.get("kind") == "picture" for x in e["layout"]) and pbox is None:
+                pbox = photo_box(faces["front"], judge, log) or False
             img, used, missing = eraprint.panel_notes(side, c, front, box, pbox, w, h, paper, (mm(pw), mm(ph)),
                                                       e.get("layout"), e.get("want"))
-            img.save(out)
-            src[side] = {"source": "rebuilt", "drawn": used, "no_fact_for": missing,
-                         "layout_from": e.get("layout_from", ""),
-                         "note": "rebuilt from facts with receipts (exact type, real logo)"
-                                 + (" in a sister box's layout" if e.get("layout") else "")}
-        elif min(pw, ph) < 0.12 * biggest:                    # a thin edge: the box's own color
+            if used:
+                img.save(out)
+                src[side] = {"source": "rebuilt", "drawn": used, "no_fact_for": missing, "receipts": receipts(used),
+                             "layout_from": e.get("layout_from", ""),
+                             "note": "no photo of this side: the measured paper color and only facts with receipts"
+                                     + (" in a sister box's layout" if e.get("layout") else ", stacked plainly")}
+        if not used:
             panels.brand_panel(front, None, w, h, side).save(out)
-            src[side] = {"source": "plain", "note": "the box's own color (a thin edge)"}
-        else:
-            panels.brand_panel(front, box, w, h, side).save(out)
-            src[side] = {"source": "plain", "note": "the box's own color and the real logo (no photo of this side)"}
+            src[side] = {"source": "plain", "note": "no photo of this side and no fact with a receipt to print: the "
+                                                    "measured paper color only, nothing invented"}
         faces[side] = out
         log(f"[texture] {side}: {src[side]['note']}" + (f" - drew {', '.join(src[side].get('drawn', []))}"
                                                         if src[side].get("drawn") else ""))

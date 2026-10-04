@@ -159,6 +159,62 @@ def _words(t):
     return re.findall(r"[A-Z0-9]+", str(t).upper())
 
 
+def traceable_words(dos, out_dir=None):
+    """Every word that may legitimately be on the model: the text read on the item's photos (and sisters' - a
+    sister's side may be used as a template), the facts with receipts, the identity, the plan's must_show elements,
+    and the label words read for a round item (texture/words.json). -> a set of upper-case tokens."""
+    dos = dos or {}
+    pool = []
+    for p in dos.get("photos") or []:
+        if p.get("match") == "wrong" or not p.get("labeled"):
+            continue
+        pool += list(p.get("text") or [])
+        pool += [e.get("text", "") for e in p.get("elements") or [] if isinstance(e, dict)]
+        pool += [p.get("product_shown", "")]
+    for f, e in (dos.get("faces") or {}).items():
+        for m in e.get("must_show") or []:
+            pool += [m.get("text", ""), m.get("sister_text", "")]
+    for k, f in (dos.get("facts") or {}).items():
+        if isinstance(f, dict) and f.get("status") in ("verified", "single_source"):
+            pool.append(json.dumps(f.get("value"), default=str))
+    idn = dos.get("identity") or {}
+    pool += [str(idn.get(k, "")) for k in ("name", "brand", "line", "variant", "count", "size_text", "maker")]
+    if out_dir:
+        for rel in ("texture/words.json", "words.json"):
+            wp = os.path.join(out_dir, rel)
+            if os.path.exists(wp):
+                try:
+                    pool += [str(w) for w in json.load(open(wp))]
+                except Exception:
+                    pass
+    return {t for x in pool for t in _words(x)}
+
+
+def untraceable(read, allowed, least=5):
+    """The words in a side's reading that nothing accounts for: real-looking words (letters only, `least`+ long,
+    with a vowel) that are not a read word, not a close misread of one (ratio >= 0.8), not a piece of a longer read
+    word and not two read words run together. Only when a side carries two of them (or one of 9+ letters) is it
+    called: a single stray token is the reader's noise on a turned side, not invention."""
+    toks = [t for t in dict.fromkeys(_words(read)) if t.isalpha() and len(t) >= least and re.search(r"[AEIOUY]", t)]
+    longer = [a for a in allowed if len(a) >= 4]
+    odd = []
+    for t in toks:
+        if t in allowed:
+            continue
+        if any(t in a for a in longer if len(a) > len(t)):               # a piece of a longer word
+            continue
+        if any(a in t for a in longer if len(t) - len(a) <= 3):          # a read word with a misread tail
+            continue
+        if any(difflib.SequenceMatcher(None, t, a).ratio() >= 0.8 for a in longer):
+            continue
+        if any(t.startswith(a) and t[len(a):] in allowed for a in longer):   # two words run together
+            continue
+        odd.append(t)
+    if len(odd) >= 2 or any(len(t) >= 9 for t in odd):
+        return odd
+    return []
+
+
 def text_found(want, got):
     """Is the printed element `want` in the read text `got`? Short lines: a close match somewhere (small misreads
     allowed); long text (ingredients): at least 85% of its words found, in any order."""
@@ -340,6 +396,29 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
                                       "on the model: " + "; ".join(found[:6]), found=found)
     except Exception as e:
         checks["no_photo_marks"] = _c(False, f"the model's sides could not be read for watermarks: {e}")
+
+    # words on the model that NOTHING accounts for (audit 2026-10-04, RC3: "nothing invented" was never checked on
+    # the output): every side is read, and a real word on it must be traceable to a photo of the item (or of a
+    # sister whose side was used), a fact with a receipt, the words read for the label, or the plan's own elements
+    try:
+        allowed = traceable_words(dos, d)
+        if not allowed:
+            checks["text_traceable"] = _c(True, "not measured: no photo text or facts to trace the model's words to",
+                                          measured=False)
+        else:
+            found = []
+            for n, png in renders.items():
+                if n not in read:
+                    read[n] = read_text(png, use=use, log=log)
+                odd = untraceable(read[n], allowed)
+                if odd:
+                    found.append(f"{n}: {', '.join(odd[:6])}")
+            checks["text_traceable"] = _c(not found, "every word read on the model traces to a photo, a fact or the "
+                                          "label's words" if not found else "words on the model that no photo, fact "
+                                          "or read label word accounts for (invented, or a sister's words not swapped): "
+                                          + "; ".join(found[:6]), found=found)
+    except Exception as e:
+        checks["text_traceable"] = _c(False, f"the model's words could not be traced: {e}")
 
     # materials
     bad = []

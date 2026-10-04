@@ -80,7 +80,11 @@ pcbc = {c: (o, det) for c, o, det in review.pcb_checks(
      {"type": "connector", "box": [0.0, 0.0, 0.7, 0.6], "height_mm": 8}],
     [{"part": "memory chips"}, {"part": "chip"}])}
 check(pcbc["the top of the board is a real photo of this item"][0] is True, "a board top from a real photo passes")
-check(pcbc["the solder side is planned from a photo (this item's or a sister card's)"][0] is False, "a plain solder side is caught")
+check(pcbc["the solder side is planned from a photo (this item's or a sister card's)"][0] is None
+      and "nothing invented" in pcbc["the solder side is planned from a photo (this item's or a sister card's)"][1],
+      "a plain solder side is a gap on the sheet, not a build failure (nothing is invented on it)")
+pcbc2 = {c: (o, det) for c, o, det in review.pcb_checks({"front": {"source": "photo"}}, [])}
+check(pcbc2["the solder side is planned from a photo (this item's or a sister card's)"][0] is False, "a solder side not made at all is caught")
 check(pcbc["every part has a height"][0] is False and pcbc["no part covers more than a third of the board"][0] is False,
       "a part with no height and a part too big are caught")
 check(pcbc["every part of this kind's kit was found"][0] is None and "memory" in pcbc["every part of this kind's kit was found"][1],

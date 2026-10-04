@@ -156,6 +156,14 @@ def box_checks(src, sides=("front", "back", "left", "right", "top", "bottom")):
     gaps = {s: v.get("no_fact_for") for s, v in src.items() if v.get("source") == "rebuilt" and v.get("no_fact_for")}
     out.append(("rebuilt sides carry what this kind normally has", None if gaps else True,
                 "; ".join(f"{s}: no fact found for {', '.join(g)}" for s, g in gaps.items()) or "all drawn"))
+    plain = [s for s, v in src.items() if v.get("source") == "plain"]
+    out.append(("every side comes from a photo or from facts with receipts", None if plain else True,
+                ("no photo and no receipted fact for: " + ", ".join(plain) + " - left the measured paper color, nothing "
+                 "invented (a gap in the hunt, not a fault of the build)") if plain else "all sides traced"))
+    unsourced = [s for s, v in src.items() if v.get("source") == "rebuilt" and v.get("drawn")
+                 and not all(v.get("receipts", {}).get(k) for k in v["drawn"])]
+    out.append(("everything drawn on a rebuilt side has a receipt", not unsourced,
+                ("drawn without a receipt on: " + ", ".join(unsourced)) if unsourced else "every drawn fact has its source"))
     return out
 
 
@@ -179,17 +187,39 @@ def look_unrolled(real_png, photo, product, use, top="top"):
 
 
 # ------------------------------------------------------------------ the one rule the label writer may never break
+def _toks(s):
+    import re
+    return [t for t in re.findall(r"[a-z0-9]+(?:[.'][a-z0-9]+)*", str(s).lower())]
+
+
 def only_words(texts, words):
     """Only words read off real photos may be printed (Cody's rule: nothing is ever invented). Kept here, locked,
-    so the label writer's own file (layout.py) can be improved by the engineer without this rule being weakened."""
-    allowed = " ".join(str(w) for w in words).lower()
+    so the label writer's own file (layout.py) can be improved by the engineer without this rule being weakened.
+    Token-exact (audit 2026-10-04): every token of a text must be a whole word that was read (never a piece of one:
+    "CELL" is not in "DURACELL"), and a text of several tokens must be a run of tokens from ONE read line (words
+    are never recombined into new phrases). A ® or ™ mark is kept only when a read word carries it."""
+    lines = [_toks(w) for w in words]
+    allowed = {t for ln in lines for t in ln}
+    import re
+    marks_ok = any(re.search(r"®|™|\(r\)|\btm\b", str(w), re.I) for w in words)
     out = []
     for t in texts or []:
         if not isinstance(t, dict) or not str(t.get("text", "")).strip():
             continue
-        if all(tok.lower().strip(".,:;") in allowed for tok in str(t["text"]).split()):
-            out.append(t)
+        toks = _toks(t["text"])
+        if not toks or not all(tok in allowed for tok in toks):
+            continue
+        if len(toks) > 1 and not any(_run_in(toks, ln) for ln in lines):
+            continue
+        if t.get("mark") and not marks_ok:
+            t = {k: v for k, v in t.items() if k != "mark"}
+        out.append(t)
     return out
+
+
+def _run_in(toks, line):
+    n = len(toks)
+    return any(line[i:i + n] == toks for i in range(0, len(line) - n + 1))
 
 
 # ------------------------------------------------------------------ a circuit board: its sides and its parts
@@ -201,7 +231,9 @@ def pcb_checks(src, parts, kit_parts=()):
     out.append(("the top of the board is a real photo of this item", front == "photo", f"top: {front}"))
     back = (src.get("back") or {}).get("source")
     out.append(("the solder side is planned from a photo (this item's or a sister card's)",
-                back in ("photo", "template") if back else False, f"solder side: {back or 'not made'}"))
+                True if back in ("photo", "template") else None if back == "plain" else False,
+                f"solder side: {back or 'not made'}" + (" - no photo of it anywhere: the board's own color, nothing "
+                                                        "invented on it (a gap, not a fault of the build)" if back == "plain" else "")))
     parts = parts or []
     out.append(("parts were found standing on the board (chips, memory, capacitors, connectors)", len(parts) >= 3,
                 f"{len(parts)} parts: " + ", ".join(sorted({str(p.get('type')) for p in parts})[:10])))

@@ -1,7 +1,7 @@
 """A CIRCUIT CARD, MADE THE WAY IT IS MADE: a fiberglass board (FR4, 1.6 mm) cut to its real outline - gold finger
 tabs and notches included - printed with its traces and silkscreen (the real photo), then every part soldered on as
 its own solid: the chips (their real markings on top), memory, capacitors, crystal, regulator, connectors, pin
-headers, and the steel bracket on the end. Every part carries its crush physics. Saved as .blend .glb .fbx .usdc.
+headers, and a metal bracket on the end only when the photo shows one. Every part carries its crush physics. Saved as .blend .glb .fbx .usdc.
 
     python pcb.py -- W H out_dir front.png front_mask.png parts.json name [back.png]
       back.png: the solder side straightened from a real photo (skin/back.png); without it the solder side is the
@@ -120,22 +120,11 @@ front.save(os.path.join(OUT, "textures", NAME + "_board_top.png"))
 if BACK:                                               # the solder side: its real photo, straightened by the skin step
     Image.open(BACK).convert("RGB").save(os.path.join(OUT, "textures", NAME + "_board_bottom.png"))
     print(f"[pcb] solder side: the real photo ({os.path.basename(BACK)})", flush=True)
-else:                                                  # no photo of it: the board's own color with generic traces
-    bc = np.median(np.asarray(front.resize((64, 32))).reshape(-1, 3), 0) / 255
-    sol = np.ones((1024, 2048, 3), np.float32) * bc * 0.8
-    rng = np.random.default_rng(3)
-    for _ in range(400):
-        y, x = rng.integers(0, 1024), rng.integers(0, 2048)
-        L = rng.integers(20, 300)
-        if rng.random() < 0.5:
-            sol[y:y + 3, x:x + L] = bc * 1.25
-        else:
-            sol[y:y + L, x:x + 3] = bc * 1.25
-    for _ in range(1500):
-        y, x = rng.integers(0, 1020), rng.integers(0, 2044)
-        sol[y:y + 4, x:x + 4] = (0.75, 0.75, 0.72)                 # solder joints
+else:                                                  # no photo of it: the board's own measured color, nothing drawn
+    bc = np.median(np.asarray(front.resize((64, 32))).reshape(-1, 3), 0) / 255   # (audit 2026-10-04: no invented
+    sol = np.ones((256, 512, 3), np.float32) * bc                                #  traces or solder joints)
     Image.fromarray((np.clip(sol, 0, 1) * 255).astype(np.uint8)).save(os.path.join(OUT, "textures", NAME + "_board_bottom.png"))
-    print("[pcb] solder side: NO photo of it - generic traces (nothing printed on it is real)", flush=True)
+    print("[pcb] solder side: NO photo of it - the board's own color only, nothing invented on it", flush=True)
 fn = finish.make("plastic", os.path.join(OUT, "textures"), NAME + "_board", w=1024, h=512, base_rough=0.45)
 board.data.materials.append(material("board_top", tex=os.path.join(OUT, "textures", NAME + "_board_top.png"),
                                      normal=fn["normal"], roughness=0.62))   # solder mask: satin, not mirror
@@ -156,6 +145,8 @@ for i, p in enumerate(parts):
     if not (0 <= x0 < x1 <= 1 and 0 <= y0 < y1 <= 1):
         continue
     kind = p.get("type", "chip")
+    if kind == "bracket":                              # built below, on the board's end
+        continue
     h_def, mkind, col, rough = KIND.get(kind, KIND["chip"])
     h = float(p.get("height_mm") or h_def)
     ax, ay = img_xy(x0, y1)
@@ -194,27 +185,24 @@ for i, p in enumerate(parts):
     physics(ob, mkind, kind)
     objs.append(ob)
 
-# ------------------------------------------------------------------ the steel bracket on the end
-side_left = any(p.get("type") == "connector" and float(p["box"][0]) < 0.2 for p in parts if "box" in p)
-bx = 0.0 if side_left or not parts else W
-bpy.ops.mesh.primitive_cube_add(size=1, location=((bx - 0.4) * S, H / 2 * S, 6.0 * S))
-br = bpy.context.active_object
-br.scale = (0.8 * S, (H + 14) * S, 18 * S)
-bpy.ops.object.transform_apply(scale=True)
-br.name = br.data.name = "bracket"
-br.data.materials.append(material("bracket_steel", color=(0.72, 0.72, 0.7), metallic=1.0, roughness=0.32))
-physics(br, "bare_steel", "bracket")
-br["beyond_size"] = True                               # attached hardware: not part of the board's catalog size
-objs.append(br)
-bpy.ops.mesh.primitive_cube_add(size=1, location=((bx - 5.5) * S, (H + 6.5) * S, 6.0 * S))  # the screw tab, bent 90°
-tab = bpy.context.active_object
-tab.scale = (10 * S, 0.8 * S, 18 * S)
-bpy.ops.object.transform_apply(scale=True)
-tab.name = tab.data.name = "bracket_tab"
-tab.data.materials.append(bpy.data.materials["bracket_steel"])
-physics(tab, "bare_steel", "bracket")
-tab["beyond_size"] = True
-objs.append(tab)
+# ------------------------------------------------------------------ a metal bracket on an end: ONLY when the photo
+# shows one (a part of type "bracket" read off the board; audit 2026-10-04: it used to be on every board)
+brackets = [p for p in parts if p.get("type") == "bracket" and "box" in p]
+for i, p in enumerate(brackets):
+    x0, y0, x1, y1 = [float(v) for v in p["box"]]
+    on_left = (x0 + x1) / 2 < 0.5
+    bx = 0.0 if on_left else W
+    bh = float(p.get("height_mm") or 18.0)
+    bpy.ops.mesh.primitive_cube_add(size=1, location=((bx - 0.4) * S, H / 2 * S, bh / 3 * S))
+    br = bpy.context.active_object
+    br.scale = (0.8 * S, (H + 14) * S, bh * S)
+    bpy.ops.object.transform_apply(scale=True)
+    br.name = br.data.name = "bracket" if not i else f"bracket_{i + 1}"
+    br.data.materials.append(material("bracket_steel", color=(0.72, 0.72, 0.7), metallic=1.0, roughness=0.32))
+    physics(br, "bare_steel", "bracket")
+    br["beyond_size"] = True                           # attached hardware: not part of the board's catalog size
+    br["from_photo"] = True
+    objs.append(br)
 
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in objs},
           open(os.path.join(OUT, "physics.json"), "w"), indent=1)

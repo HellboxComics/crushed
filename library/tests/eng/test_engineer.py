@@ -460,7 +460,7 @@ check(all(len(c) < 700 and c.endswith(E.CUT_NOTE) for c in tools[:4]) and all(le
 fp = E.run_fingerprint(run_text)
 check(E.run_fingerprint(run_text.replace("def finish_files(cid, d):", "def finish_files(cid, d):  # x")) == fp,
       "a harmless change elsewhere in run.py is allowed")
-check(E.run_fingerprint(run_text.replace('"not_cg": "the surfaces', '"not_cg": "maybe the surfaces')) != fp,
+check(E.run_fingerprint(run_text.replace('"not_cg": "every material', '"not_cg": "maybe every material')) != fp,
       "a changed check text is caught")
 check(E.run_fingerprint(run_text.replace("verdict = inspect(shots, picked[\"file\"], product, use, card=card, close=close)",
                                          "verdict = {\"pass\": True, \"failed\": []}")) != fp, "a faked verdict is caught")

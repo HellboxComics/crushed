@@ -1850,12 +1850,14 @@ def reference(f, d, upright=False):
     return out
 
 
-PARTS_Q = ("Picture 1 is a straight-on photo of the top of a {product}. List every part soldered on it that stands up "
-           "from the board - chips, memory chips, capacitors, crystals, connectors, pin headers, heatsinks, voltage "
-           "regulators and transistors, sockets, jumpers, LEDs, inductors - biggest first, up to 60. For each: its type "
+PARTS_Q = ("Picture 1 is a straight-on photo of the top of a {product}. List every part soldered or fixed on it that stands "
+           "up from the board - chips, memory chips, capacitors, crystals, connectors, pin headers, heatsinks, voltage "
+           "regulators and transistors, sockets, jumpers, LEDs, inductors, and a metal mounting bracket or backplate "
+           "ONLY if one is really in the photo - biggest first, up to 60. List only what you can see: never a part "
+           "this kind of board usually has. For each: its type "
            "(one of chip, memory_chip, capacitor_electrolytic, capacitor_ceramic, resistor, crystal, connector, "
-           "pin_header, heatsink, inductor, transistor, socket, led, jumper), its box as fractions of the picture "
-           "(x0, y0, x1, y1 - 0..1 from the left edge and from the top edge) and its height in millimeters. "
+           "pin_header, heatsink, inductor, transistor, socket, led, jumper, bracket), its box as fractions of the "
+           "picture (x0, y0, x1, y1 - 0..1 from the left edge and from the top edge) and its height in millimeters. "
            "Answer ONLY JSON: {{\"parts\": [{{\"type\": \"chip\", \"box\": [x0, y0, x1, y1], \"height_mm\": 2.4}}]}}")
 
 
@@ -1972,12 +1974,14 @@ CHECKS = {
                  "gray paint), plastic as plastic, card as printed card; glossy where the real one is glossy",
     "layers": "separate layers read as separate, with real edges where they meet (a label or sleeve over a can, a "
               "cap on a bottle, flaps on a box, a seam where a wrap's ends meet)",
-    "details": "these real details are there: {closeups}",
+    "details": "the small details the REAL PHOTO shows are there (compare with the photo); a detail the photo does "
+               "not show is not required and must not have been added",
     "no_painted_light": "no light, shadow or glare is painted into the colors (a bright patch or dark side that "
                         "doesn't belong to the print)",
     "finished": "every side is finished: nothing blank, stretched, smeared, repeated, blurry or cut off",
-    "not_cg": "the surfaces have the faint variation of a real object (gloss that changes, grain, slight wear) - "
-              "nothing looks like perfectly clean computer plastic",
+    "not_cg": "every material reads as the real material (paper matte and fibrous, metal reflecting, plastic with "
+              "its own sheen, print sitting on its surface) - nothing looks like untextured computer plastic; no "
+              "wear, dirt or damage has been added that the photo does not show",
 }
 
 

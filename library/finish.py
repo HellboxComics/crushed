@@ -6,7 +6,7 @@ every asset, picked by what the surface is made of (the competition's models all
            where the sleeve's two ends meet (at the back, u = 0/1)
   spun     stamped / spun metal (battery ends, can lids, bottle caps): fine circular machining lines and a
            little unevenness in the shine
-  card     printed card or paper (boxes, cards): paper grain in the bump, satin varnish, scuffed edges
+  card     printed card or paper (boxes, cards): paper grain in the bump, satin varnish (nothing worn or scuffed)
   plastic  molded plastic: very fine texture, slightly uneven shine
 
 Each one writes real texture maps (so it carries into .glb / .fbx / .usdc for any game engine):
@@ -88,10 +88,7 @@ def card(w, h, base_rough=0.55):
     fibers = _noise(h, w, 1.2) * 0.6 + _blur(RNG.standard_normal((h, w)), 0.6) * 0.4
     height = fibers + 0.5 * _noise(h, w, 20)
     rough = base_rough + 0.03 * _noise(h, w, w / 40)
-    ys, xs = np.mgrid[0:h, 0:w]
-    edge = np.minimum.reduce([xs, ys, w - 1 - xs, h - 1 - ys]) / (0.02 * min(w, h))
-    rough = rough + 0.2 * np.clip(1 - edge, 0, 1) * (_noise(h, w, 4) > 0.3)      # worn, scuffed edges
-    return {"normal": _normal(height, 0.08), "rough": _g(rough)}
+    return {"normal": _normal(height, 0.08), "rough": _g(rough)}    # (nothing invented at the edges, 2026-10-04)
 
 
 def plastic(w, h, base_rough=0.4):
@@ -117,9 +114,9 @@ def make(kind, out_dir, name, w=2048, h=2048, **kw):
 
 def box_atlas(atlas_png, L, out_dir, kind="card", name="box"):
     """A box's whole texture (the flattened cross from shapes/box.py) finished as the real thing:
-    card - paper grain, satin varnish, and the folds: every edge where the card bends gets a crease in the bump,
-           a little cracked/whitened ink along it, and a scuffed, duller shine (the details that sell a real
-           carton); the top and bottom closing flaps get their seam lines.
+    card - paper grain, satin varnish, and the folds: every edge where the card bends gets a crease in the bump.
+           Nothing is invented on the print (audit 2026-10-04): no cracked ink, no whitening, no scuffing, no flap
+           seam lines that no photo shows - a master asset is the thing as printed.
     plastic - molded plastic, crisp edges, very fine texture.
     -> {"base": path, "normal": path, "mr": path}  (mr in the glTF layout: G roughness, B metallic)"""
     os.makedirs(out_dir, exist_ok=True)
@@ -132,9 +129,7 @@ def box_atlas(atlas_png, L, out_dir, kind="card", name="box"):
         m = card(w, h, 0.5)
         rough = np.asarray(m["rough"])[..., 1] / 255
     height = np.zeros((h, w), np.float32)
-    wear = np.zeros((h, w), np.float32)
     yy, xx = np.mgrid[0:h, 0:w]
-    px = 1.0 / w
     for side, (u0, v0, u1, v1) in L.items():
         x0, x1, y0, y1 = u0 * w, u1 * w, (1 - v1) * h, (1 - v0) * h
         inside = (xx >= x0) & (xx < x1) & (yy >= y0) & (yy < y1)
@@ -142,18 +137,6 @@ def box_atlas(atlas_png, L, out_dir, kind="card", name="box"):
         d = np.where(inside, d, 1e9)
         crease = np.exp(-(d / (0.0012 * w)) ** 2)                 # the fold itself: a soft groove
         height -= 3.0 * crease * inside
-        if kind == "card":
-            n = _noise(h, w, 2.5, seed=sum(map(ord, side)))
-            wear += inside * np.clip(np.exp(-(d / (0.002 * w)) ** 2) * (0.6 + 0.8 * n), 0, 1)
-        if kind == "card" and side in ("top", "bottom"):        # closing flaps: the outer flap's edge line
-            fy = y0 + 0.62 * (y1 - y0) if side == "top" else y0 + 0.38 * (y1 - y0)
-            seam = inside * np.exp(-((yy - fy) / (0.0008 * w)) ** 2)
-            height -= 2.0 * seam
-    if kind == "card":
-        paper = np.array([0.93, 0.92, 0.88], np.float32)        # cracked ink shows the card's own color
-        k = np.clip(wear * 0.55, 0, 0.55)[..., None]
-        base = base * (1 - k) + paper * k
-        rough = np.clip(rough + 0.25 * wear, 0, 1)
     nrm = np.asarray(m["normal"]).astype(np.float32) / 127.5 - 1
     gy, gx = np.gradient(height)
     nrm[..., 0] += -gx * 0.6

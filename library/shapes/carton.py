@@ -5,7 +5,7 @@
   2. real board thickness (0.45 mm): printed outside, plain recycled gray inside, cut edges showing the board
   3. creased and folded: the glue flap inside the back, the bottom flaps folded in (small ones first, then the two
      big ones), the product put in, the dust flaps in, the lid over and its tuck flap tucked inside the front
-  4. inside: what the box really holds (foil pouches with the pastries), each part its own solid
+  4. inside: what the facts say the box holds (packs and items as plain parts, nothing made up), each its own solid
 Every part carries its crush physics (factory/physics.json). Saved as .blend .glb .fbx .usdc + physics.json.
 
     python carton.py -- W D H out_dir panels_dir name [contents]
@@ -94,12 +94,12 @@ if paper:                                              # flaps and the glue stri
 tex_dir = os.path.join(OUT, "textures")
 os.makedirs(tex_dir, exist_ok=True)
 
-# ------------------------------------------------------------------ the finish: creases, cracked ink, worn cut edges
+# ------------------------------------------------------------------ the finish: the creases (a fold is real; no
+# invented cracked ink, whitening or scuffing - audit 2026-10-04: a master asset is the thing as printed)
 base = np.asarray(sheet).astype(np.float32) / 255
 hgt = np.zeros(base.shape[:2], np.float32)
-wear = np.zeros(base.shape[:2], np.float32)
 yy, xx = np.mgrid[0:ch, 0:cw]
-for child, (par, (x0, v0), (x1, v1)) in HINGE.items():  # every crease: a groove and cracked ink along it
+for child, (par, (x0, v0), (x1, v1)) in HINGE.items():  # every crease: a groove
     if x0 == x1:
         d = np.abs(xx - x0 * PPM)
         span = (yy >= (VMAX - max(v0, v1)) * PPM) & (yy <= (VMAX - min(v0, v1)) * PPM)
@@ -107,17 +107,13 @@ for child, (par, (x0, v0), (x1, v1)) in HINGE.items():  # every crease: a groove
         d = np.abs(yy - (VMAX - v0) * PPM)
         span = (xx >= min(x0, x1) * PPM) & (xx <= max(x0, x1) * PPM)
     hgt -= 3.0 * np.exp(-(d / (0.6 * PPM)) ** 2) * span
-    n = finish._noise(ch, cw, 2.0, seed=sum(map(ord, child)))
-    wear += span * np.clip(np.exp(-(d / (1.0 * PPM)) ** 2) * (0.5 + 0.9 * n), 0, 1)
-k = np.clip(wear * 0.6, 0, 0.6)[..., None]
-base = base * (1 - k) + np.array([0.93, 0.92, 0.88], np.float32) * k
 cardm = finish.card(cw, ch, 0.5)
 nrm = np.asarray(cardm["normal"]).astype(np.float32) / 127.5 - 1
 gy, gx = np.gradient(hgt)
 nrm[..., 0] += -gx * 0.6
 nrm[..., 1] += gy * 0.6
 nrm /= np.linalg.norm(nrm, axis=-1, keepdims=True)
-rough = np.clip(np.asarray(cardm["rough"])[..., 1] / 255 + 0.25 * wear, 0, 1)
+rough = np.clip(np.asarray(cardm["rough"])[..., 1] / 255, 0, 1)
 Image.fromarray((np.clip(base, 0, 1) * 255).astype(np.uint8)).save(os.path.join(tex_dir, NAME + "_print.png"))
 Image.fromarray(((nrm * 0.5 + 0.5) * 255).astype(np.uint8)).save(os.path.join(tex_dir, NAME + "_print_normal.png"))
 mr = np.zeros((ch, cw, 3), np.uint8)
@@ -258,35 +254,35 @@ parts = [box]
 # ------------------------------------------------------------------ 4. what's inside
 C = (json.load(open(CONTENTS)) if CONTENTS.endswith(".json") and os.path.exists(CONTENTS)   # from the item's dossier
      else R.get("contents", {}).get(CONTENTS))
-if C:
-    pw, ph, pd = C["pouch_mm"]
-    sw, sh, sd = C["pastry_mm"]
-    rng = np.random.default_rng(5)
-    # the foil: crinkled, a little uneven in its shine
-    nz = finish._noise(1024, 1024, 70) + 0.15 * finish._noise(1024, 1024, 12)   # soft wrinkles, a few sharp creases
-    crinkle = np.abs(nz) ** 0.8
-    gy, gx = np.gradient(crinkle)
-    n = np.stack([-gx * 2.5, gy * 2.5, np.ones_like(gx)], -1)
-    n /= np.linalg.norm(n, axis=-1, keepdims=True)
-    Image.fromarray(((n * 0.5 + 0.5) * 255).astype(np.uint8)).save(os.path.join(tex_dir, "foil_normal.png"))
-    foil = material("foil", color=[0.78, 0.78, 0.8], metallic=1.0, roughness=0.22,
-                    normal=os.path.join(tex_dir, "foil_normal.png"))
-    # the pastry: crust edge, frosting with sprinkles on top
-    tw, th = 768, 532
-    top = np.zeros((th, tw, 3), np.float32)
-    yy2, xx2 = np.mgrid[0:th, 0:tw]
-    edge = np.minimum.reduce([xx2, yy2, tw - 1 - xx2, th - 1 - yy2]) / (0.07 * tw)
-    crust = np.array([0.82, 0.6, 0.38])
-    frost = np.array([0.97, 0.93, 0.93]) + 0.02 * finish._noise(th, tw, 3)[..., None]
-    inside = np.clip((edge - 1) * 2, 0, 1)[..., None]
-    top = crust * (1 - inside) + frost * inside
-    for _ in range(900):
-        y, x = int(rng.uniform(0.12, 0.88) * th), int(rng.uniform(0.1, 0.9) * tw)
-        col = [(0.86, 0.15, 0.25), (0.95, 0.45, 0.6), (0.98, 0.8, 0.2), (0.3, 0.6, 0.9), (0.4, 0.75, 0.4)][rng.integers(0, 5)]
-        top[max(0, y - 2):y + 2, max(0, x - 3):x + 3] = col
-    Image.fromarray((np.clip(top, 0, 1) * 255).astype(np.uint8)).save(os.path.join(tex_dir, "pastry_top.png"))
-    pastry_mat = material("pastry", tex=os.path.join(tex_dir, "pastry_top.png"), roughness=0.7)
-    crust_mat = material("crust", color=[0.78, 0.55, 0.33], roughness=0.85)
+if C and C.get("status") != "missing":
+    # WHAT IS INSIDE, FROM THE FACTS ONLY (audit 2026-10-04, RC3/RC9): the count is a fact; how they are packed is
+    # a fact with a receipt or, when only the family's usual packing is known (status "unverified"), the items sit
+    # loose; sizes fill the box's real inside (contents.json says so). Nothing about the look is made up: a pack is
+    # its material (foil, paper, clear film) with no print; an item is a plain block in a plain color unless the
+    # dossier measured its color. No decoration of any kind is made up.
+    pw, ph, pd = C.get("pack_mm") or C["pouch_mm"]
+    sw, sh, sd = C.get("item_mm") or C["pastry_mm"]
+    pack_kind = C.get("pack_kind") or C.get("pouch_kind") or "paper"
+    item_kind = C.get("item_kind") or C.get("pastry_kind") or "molded_plastic"
+    loose = bool(C.get("loose")) or C.get("status") not in ("verified", "single_source")
+    if pack_kind == "foil_laminate":                     # crinkled foil is what foil IS, not a decoration
+        nz = finish._noise(1024, 1024, 70) + 0.15 * finish._noise(1024, 1024, 12)
+        crinkle = np.abs(nz) ** 0.8
+        gy, gx = np.gradient(crinkle)
+        n = np.stack([-gx * 2.5, gy * 2.5, np.ones_like(gx)], -1)
+        n /= np.linalg.norm(n, axis=-1, keepdims=True)
+        Image.fromarray(((n * 0.5 + 0.5) * 255).astype(np.uint8)).save(os.path.join(tex_dir, "pack_normal.png"))
+        pack_mat = material("pack_foil", color=[0.78, 0.78, 0.8], metallic=1.0, roughness=0.22,
+                            normal=os.path.join(tex_dir, "pack_normal.png"))
+    elif pack_kind in ("clear_plastic", "film"):
+        pack_mat = material("pack_film", color=[0.9, 0.9, 0.9], metallic=0.0, roughness=0.15)
+    else:
+        pack_mat = material("pack_paper", color=[0.9, 0.88, 0.82], roughness=0.8)
+    icol = C.get("item_color") or ([0.7, 0.62, 0.5] if item_kind == "food_baked" else [0.55, 0.55, 0.55])
+    item_mat = material("item", color=[float(x) for x in icol], roughness=0.75)
+    print(f"[carton] inside: {C.get('pouches')} pack(s) of {C.get('per_pouch')} ({pack_kind}, {'loose' if loose else 'packed'}), "
+          f"items as plain {item_kind} blocks" + (" in a measured color" if C.get("item_color") else " in a plain color - no photo of them"),
+          flush=True)
 
     def rounded_box(name, sx, sy, sz, at, mats, bevel):
         bpy.ops.mesh.primitive_cube_add(size=1, location=at)
@@ -307,6 +303,7 @@ if C:
 
     k = 0
     rows_, cols_ = int(C.get("rows", 2)), int(C.get("cols", 2))
+    per = int(C.get("per_pouch") or C.get("per_pack") or 1)
     for row in range(rows_):                               # how many high
         for col in range(cols_):                           # how many deep
             if k >= int(C.get("pouches", rows_ * cols_)):
@@ -315,22 +312,22 @@ if C:
             cy = -D / 2 + T * 3 + pd / 2 + col * (pd + 0.6)
             cz = T * 4 + ph / 2 + row * (ph + 1.0)
             k += 1
-            if not C.get("loose"):                         # items packed in pouches; loose items sit in the box
-                po = rounded_box(f"pouch_{k}", pw, pd, ph, (cx * S, cy * S, cz * S), [foil], bevel=4)
-                # a pouch is a pillow: its middle bulges a little, its sealed ends are pinched flat
-                for v in po.data.vertices:
+            if not loose:                                  # items packed in packs; loose items sit in the box
+                po = rounded_box(f"pack_{k}", pw, pd, ph, (cx * S, cy * S, cz * S), [pack_mat], bevel=4)
+                for v in po.data.vertices:                 # a pack is a pillow: its middle bulges, its ends are flat
                     fx = 1 - min(1, abs(v.co.x) / (pw / 2 * S))
                     v.co.y = cy * S + (v.co.y - cy * S) * (0.75 + 0.25 * math.sin(math.pi * min(1, fx * 1.6) / 2))
-                physics(po, C["pouch_kind"], "pouch")
+                physics(po, pack_kind, "pack")
                 po["inside"] = True                        # inside the box: must never show through it
+                po["from_facts"] = C.get("status")
                 parts.append(po)
-            for s_ in range(C["per_pouch"]):               # the pastries in it, stacked
+            for s_ in range(per):                          # the items in it, stacked
                 py = cy - pd / 2 + 2.5 + sd / 2 + s_ * (sd + 0.4)
-                pa = rounded_box(f"pastry_{k}_{s_ + 1}", sw, sd, sh, (cx * S, py * S, cz * S), [pastry_mat, crust_mat],
-                                 bevel=3)
-                physics(pa, C["pastry_kind"], "pastry")
-                pa["inside"] = True
-                parts.append(pa)
+                it = rounded_box(f"item_{k}_{s_ + 1}", sw, sd, sh, (cx * S, py * S, cz * S), [item_mat], bevel=3)
+                physics(it, item_kind, "item")
+                it["inside"] = True
+                it["plain"] = not C.get("item_color")      # a plain block: no photo of the real thing inside
+                parts.append(it)
 
 json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in parts},
           open(os.path.join(OUT, "physics.json"), "w"), indent=1)

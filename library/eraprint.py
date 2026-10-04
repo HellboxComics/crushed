@@ -496,10 +496,10 @@ def panel_notes(side, c, front, logo_box, photo_box, w, h, paper, size_mm=None, 
     if not want:                                               # (the dossier passes the kit's list for the side)
         import kits
         want = kits.elements(None, side, bool(c.get("food")))
-    known = lambda k: bool(c.get(k)) or (k == "net_weight" and bool(c.get("count")))
-    if not any(known(k) for k in want if k not in ("logo", "name", "picture")):
-        want = ["logo", "name"] + [k for k in want if k not in ("logo", "name")]   # nothing known for this side:
-        #                                                     a clean side with the real logo and the product name
+    # without a real box's layout for this side, only FACTS are drawn - never a logo, a product picture or a
+    # brand panel whose place and size would be made up (audit 2026-10-04, RC3)
+    if not layout:
+        want = [k for k in want if k in ("upc", "nutrition", "ingredients", "maker_lines", "legal_lines", "net_weight")]
     if layout:                                                 # a real box's layout for this side: same places
         for el in layout:
             k, b = el.get("kind"), el.get("box")
