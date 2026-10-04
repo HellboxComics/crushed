@@ -250,6 +250,10 @@ def parts_checks(plan, asm, kit_parts=()):
                     ("missing: " + ", ".join(map(str, miss))) if miss else f"all {len(kit_parts)} kit parts planned"))
     printed = [p for p in parts if p.get("print")]
     out.append(("printed parts carry artwork cut from the photos", None, f"{len(printed)} printed part(s)"))
+    guessed = [str(p.get("name")) for p in parts if not p.get("color_measured") and not p.get("inside")]
+    out.append(("every visible part's color was measured off a photo where it shows (not guessed)",
+                True if not guessed else None,
+                ("color guessed, no photo box given: " + ", ".join(guessed)) if guessed else "all measured"))
     flags = (asm or {}).get("flags") or []
     stand = [f for f in flags if "stand-in" in f] + [f for f in fixed if "egg outline was used" in f]
     broke = [f for f in flags if "could not be built" in f]

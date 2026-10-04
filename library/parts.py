@@ -29,7 +29,8 @@ manufactured. The object: {product} ({year}). Its family: {family} - {what}. Rea
 (width x depth x height). How it is made: {made}
 {notes}The pictures: {pics}
 Break the object into its real parts (outside shell pieces, panels, trim, zipper, buttons, labels, straps, lids,
-caps, and what is INSIDE when that is part of the item). Use only these shapes:
+caps, and what is INSIDE when that is part of the item). Things in a photo that are NOT the item are never parts: a
+hang tag or price sticker, a hand, a stand, a box, packaging, a background, other items, a watermark. Use only these shapes:
   rounded_box (size_mm [x,y,z], bevel_mm), cylinder (size_mm [diameter, diameter, height], axis "x"|"y"|"z"),
   lathe (profile_mm: [[radius, z], ...] bottom to top, axis z), sheet (a thin panel: size_mm with one tiny side),
   tube (path_mm: [[x,y,z], ...] points along it, radius_mm), sphere (size_mm),
@@ -48,7 +49,9 @@ Answer ONLY JSON:
    "rotate_deg": [x, y, z], "bevel_mm": 0.0, "axis": "z", "profile_mm": [], "path_mm": [], "radius_mm": 0.0,
    "front_outline": [], "side_outline": [], "lean_mm": [],
    "material": "<kind>", "color": [r, g, b] (0..1, the real material's color as seen in the photo, without the room
-   light), "roughness": 0.5, "metallic": 0 or 1, "print": null, "inside": false,
+   light), "seen": {{"picture": <picture number>, "box": [x0, y0, x1, y1]}} (where this part shows in a picture, as
+   fractions - its color is then MEASURED there; null for a part no picture shows),
+   "roughness": 0.5, "metallic": 0 or 1, "print": null, "inside": false,
    "why": "what in the pictures shows this part"}}],
  "not_modeled": ["details too small to model, which belong in the normal map instead"]}}"""
 
@@ -136,7 +139,12 @@ def clean(plan, W, D, H, pics, kinds):
                       "side": pr.get("side") if pr.get("side") in SIDES else "-y"}
                 if pr["box"][2] <= pr["box"][0] or pr["box"][3] <= pr["box"][1]:
                     pr = None
-        out.append({"name": name, "shape": shape, "size_mm": size, "at_mm": at,
+        seen = p.get("seen") if isinstance(p.get("seen"), dict) else None
+        if seen:
+            n = int(_num(seen.get("picture"), 0))
+            bx = [min(max(_num(b), 0), 1) for b in _vec(seen.get("box"), 4, 0)]
+            seen = {"photo": pics[n - 1], "box": bx} if 1 <= n <= len(pics) and bx[2] > bx[0] and bx[3] > bx[1] else None
+        out.append({"name": name, "shape": shape, "size_mm": size, "at_mm": at, "seen": seen,
                     "rotate_deg": _vec(p.get("rotate_deg"), 3, 0.0), "bevel_mm": max(0.0, _num(p.get("bevel_mm"))),
                     "axis": axis,
                     "profile_mm": p.get("profile_mm") or [], "path_mm": p.get("path_mm") or [],
@@ -148,6 +156,47 @@ def clean(plan, W, D, H, pics, kinds):
                     "metallic": 1.0 if _num(p.get("metallic")) >= 0.5 else 0.0, "print": pr,
                     "inside": p.get("inside") is True, "why": str(p.get("why", ""))[:200]})
     return {"parts": out, "fixed": fixed, "not_modeled": plan.get("not_modeled") or []}
+
+
+def measure_colors(plan, log=print):
+    """A part's color is MEASURED where it shows in the photo, never taken from the brain's guess alone: the middle
+    half of the box's pixels by brightness (the highlights and the shadows left out), averaged, taken to linear
+    color. The brain's guess is kept in 'color_said'; the measured color is used when they differ (the Furby's gray
+    fur was written as near-white, 2026-10-04). A part no picture shows keeps the brain's color."""
+    import numpy as np
+    from PIL import Image
+    cache = {}
+    n_meas = 0
+    for part in plan.get("parts") or []:
+        seen = part.get("seen")
+        if not seen or not os.path.exists(seen["photo"]):
+            continue
+        try:
+            if seen["photo"] not in cache:
+                cache[seen["photo"]] = np.asarray(Image.open(seen["photo"]).convert("RGB")).astype(np.float32) / 255
+            im = cache[seen["photo"]]
+            H, W = im.shape[:2]
+            x0, y0, x1, y1 = seen["box"]
+            crop = im[int(y0 * H):max(int(y1 * H), int(y0 * H) + 2), int(x0 * W):max(int(x1 * W), int(x0 * W) + 2)]
+            px = crop.reshape(-1, 3)
+            lum = px.mean(1)
+            lo, hi = np.percentile(lum, 25), np.percentile(lum, 75)
+            mid = px[(lum >= lo) & (lum <= hi)]
+            if len(mid) < 4:
+                continue
+            srgb = mid.mean(0)
+            lin = np.where(srgb <= 0.04045, srgb / 12.92, ((srgb + 0.055) / 1.055) ** 2.4)
+            measured = [float(min(max(v, 0.02), 0.95)) for v in lin]
+            part["color_said"] = list(part["color"])
+            if max(abs(a - b) for a, b in zip(measured, part["color"])) > 0.08:
+                part["color"] = measured
+                n_meas += 1
+            part["color_measured"] = measured
+        except Exception as e:
+            log(f"[parts] {part.get('name')}: color not measured ({e})")
+    if n_meas:
+        log(f"[parts] {n_meas} part color(s) taken from the photo where the brain's guess was off")
+    return plan
 
 
 def plan(cid, card, dos, use, out_json, log=print, notes=""):
@@ -180,6 +229,7 @@ def plan(cid, card, dos, use, out_json, log=print, notes=""):
     p = clean(raw or {}, W, D, H, pics, kinds)
     if not p["parts"]:
         raise RuntimeError("your AI could not break this object into parts from its photos")
+    measure_colors(p, log)
     p.update({"cid": cid, "size_mm": [W, D, H], "pictures": pics, "family": fam["family"]})
     json.dump(p, open(out_json, "w"), indent=1)
     log(f"[parts] {cid}: {len(p['parts'])} parts - " + ", ".join(x["name"] for x in p["parts"][:12]))

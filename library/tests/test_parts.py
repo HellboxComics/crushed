@@ -38,6 +38,28 @@ check(tuft["front_outline"] == list(parts.EGG) and any("tuft: no front outline" 
       "a soft part with no outline gets the egg, and that is written down as a fix")
 check("front_outline" not in eye or eye["front_outline"] == [], "a hard part carries no outline")
 
+# 1c. a part's color is measured where it shows in the photo
+from PIL import Image as _I
+import numpy as _np
+photo = os.path.join(os.path.dirname(HERE), "tests", "_gray_fur.png")
+arr = _np.full((200, 300, 3), 200, _np.uint8)
+arr[:, :150] = (120, 120, 125)                                  # the left half: mid gray fur
+arr[20:30, 20:30] = 255                                          # a highlight, left out of the measure
+_I.fromarray(arr).save(photo)
+pl = {"parts": [{"name": "body", "shape": "organic", "size_mm": [100, 100, 100], "at_mm": [0, 0, 50], "color": [0.8, 0.8, 0.82],
+                 "seen": {"photo": photo, "box": [0.0, 0.0, 0.5, 1.0]}, "front_outline": [1, 1, 1], "side_outline": [1, 1, 1]},
+                {"name": "eye", "shape": "sphere", "size_mm": [10, 10, 10], "at_mm": [0, 0, 50], "color": [0.1, 0.1, 0.1], "seen": None}]}
+parts.measure_colors(pl)
+body, eye = pl["parts"]
+check(0.15 < body["color"][0] < 0.25 and body["color_said"] == [0.8, 0.8, 0.82],
+      f"the body's color is measured off the photo (linear {[round(c, 2) for c in body['color']]}), the brain's guess kept aside")
+check(eye["color"] == [0.1, 0.1, 0.1] and "color_measured" not in eye, "a part no picture shows keeps the brain's color")
+raw2 = {"parts": [{"name": "body", "shape": "organic", "size_mm": [100, 100, 100], "at_mm": [0, 0, 50], "material": "plush_fur",
+                   "seen": {"picture": 1, "box": [0, 0, 0.5, 1]}}]}
+p2 = parts.clean(raw2, 120, 120, 150, [photo], ["plush_fur"])
+check(p2["parts"][0]["seen"] == {"photo": photo, "box": [0.0, 0.0, 0.5, 1.0]}, "clean keeps where a part is seen (picture number -> photo)")
+os.remove(photo)
+
 # 2. the loft itself (assembly.form) with Blender's mesh tools stood in for
 src = open(os.path.join(LIB, "shapes", "assembly.py")).read()
 tree = ast.parse(src)
