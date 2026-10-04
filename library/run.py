@@ -1736,6 +1736,11 @@ def _beating():
                 last = now if now is not None else last
             except Exception:
                 pass
+            try:
+                if not TRIAL:
+                    page(force=False)               # the phone page keeps moving even inside a long step (its
+            except Exception:                       # "now:" line is the heartbeat; publish throttles itself to 90 s)
+                pass
     threading.Thread(target=loop, daemon=True).start()
 
 
