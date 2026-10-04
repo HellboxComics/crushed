@@ -1766,7 +1766,7 @@ def status(cid, **kw):
     def change(s):
         if "product" in kw or not isinstance(s.get(cid), dict):   # a fresh run: nothing left over from the last one
             s[cid] = {}
-        s[cid].update(kw, at=time.time(), code=code_sha())
+        s[cid].update(kw, at=float(kw.get("at") or time.time()), code=code_sha())
     update_json(STATUS, change)                      # locked, whole-or-nothing, with a backup
     global _LAST
     final = kw.get("step", "").startswith(("done", "stopped", "no ")) or "ok" in kw
@@ -2597,6 +2597,7 @@ def queue(n):
     except Exception:
         pass
     st = read_status()
+    park_stale(st)                                           # a run that died mid-item is parked, not left "working"
     picks = jload(os.path.join(HB, "picks.json"), {})
     ap = jload(os.path.join(HB, "approvals.json"), {})
     tries = jload(RETRIES, {})
@@ -2633,9 +2634,47 @@ def queue(n):
         if step.startswith("waiting for your size") and not size_in(cid, v):
             continue
         out.append(cid)
-    # an item you have just answered on your phone (a pick, "none") goes first: you are waiting on it
-    out.sort(key=lambda c: 0 if c in picks or c in ap else 1)
+    # an item you have just answered on your phone (a pick, "none") goes first: you are waiting on it; then parked
+    # items whose retry is due, the one that has waited longest first (2026-10-04: the same three items were taken
+    # every round and the fourth starved); then items never run, in the list's order; kept items that only need
+    # the stricter checks run again come last
+    def order(c):
+        v = st.get(c) if isinstance(st.get(c), dict) else {}
+        step = str(v.get("step", ""))
+        group = 2 if step.startswith("done") else 1 if not v else 0
+        return (0 if c in picks or c in ap else 1, group, float(v.get("at") or 0))
+    out.sort(key=order)
     return out[:n]
+
+
+STALE_HOURS = 3        # a "working" status this old with no newer word is a run that died mid-item
+PARKED = ("waiting", "done", "stopped", "3 rounds", "in line", "no usable", "failed", "you said none", "could not send")
+
+
+def park_stale(st=None, hours=STALE_HOURS):
+    """An item whose status still says it is being worked on, hours after the last word, belongs to a run that was
+    killed or crashed (a restart, a power cut, the watchdog): it is parked as "stopped: the run was interrupted"
+    so the retry rules take it again (an hour later, or at once on newer code) and the phone page says what
+    happened - instead of showing "working" for days and never being queued again. -> [parked items]"""
+    st = st if st is not None else read_status()
+    now = time.time()
+    parked = []
+    for cid, v in list(st.items()):
+        if not isinstance(v, dict):
+            continue
+        step = str(v.get("step", ""))
+        try:
+            at = float(v.get("at") or 0)
+        except (TypeError, ValueError):
+            at = 0
+        if step.startswith(PARKED) or not at or now - at < hours * 3600:
+            continue
+        status(cid, step=f"stopped: the run was interrupted while \"{step[:90]}\" ({round((now - at) / 3600)} h ago)",
+               ok=False, at=at + 1)                           # (at kept: it has already waited its hour)
+        st[cid] = dict(v, step=f"stopped: the run was interrupted while \"{step[:90]}\"", at=at + 1)
+        parked.append(cid)
+        say(f"[queue] {cid}: parked - its run was interrupted while \"{step[:60]}\" {round((now - at) / 3600)} h ago")
+    return parked
 
 
 HUNYUAN_PINS = {"timm": "timm==1.0.27",            # Hunyuan3D-2.1's requirements.txt lists timm without a version

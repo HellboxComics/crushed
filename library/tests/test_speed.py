@@ -89,4 +89,41 @@ check(any(f.endswith(".txt") for f in moved) and any(f.startswith("trial-item_a"
 os.utime(new, (old, old))
 check(run.housekeeping(log=lambda *a: None) == 0 and os.path.exists(new), "once a day: nothing more moved today")
 
+# 6. a run that died mid-item is parked and queued again; the queue is fair (longest wait first)
+import json as _j
+now = time.time()
+_j.dump({"a_item": {"step": "5/7 Blender: mesh + UV map", "at": now - 5 * 3600, "code": "x"},
+         "b_item": {"step": "6/7 the judge", "at": now - 600, "code": "x"},
+         "c_item": {"step": "waiting for your pick on your phone (Telegram)", "at": now - 9 * 3600, "code": "x"}},
+        open(run.STATUS, "w"))
+parked = run.park_stale()
+st = run.read_status()
+check(parked == ["a_item"] and st["a_item"]["step"].startswith("stopped: the run was interrupted while \"5/7 Blender")
+      and st["b_item"]["step"].startswith("6/7") and st["c_item"]["step"].startswith("waiting"),
+      f"a 5-hour-old 'working' status is parked as interrupted; a recent one and a waiting one are left: {parked}")
+check(abs(st["a_item"]["at"] - (now - 5 * 3600)) < 5, "its time is kept, so the retry rules take it again at once")
+open(os.path.join(os.path.dirname(run.__file__), "queue.txt")).read() if os.path.exists(os.path.join(os.path.dirname(run.__file__), "queue.txt")) else None
+import shutil as _sh
+qf = os.path.join(os.path.dirname(run.__file__), "queue.txt")
+bak = qf + ".bak-test"
+had = os.path.exists(qf)
+if had:
+    _sh.copy(qf, bak)
+open(qf, "w").write("b_item\na_item\nd_item\n")
+try:
+    _j.dump({"a_item": {"step": "stopped: x", "at": now - 7200, "code": run.code_sha()},
+             "b_item": {"step": "stopped: y", "at": now - 3 * 3600, "code": run.code_sha()},
+             "d_item": {"step": "stopped: z", "at": now - 5000, "code": run.code_sha()}}, open(run.STATUS, "w"))
+    q = run.queue(2)
+    check(q == ["b_item", "a_item"], f"the two that waited longest go first, whatever the list order: {q}")
+    _j.dump({"a_item": {"step": "stopped: x", "at": now - 7200, "code": run.code_sha()},
+             "b_item": {"step": "done - kept", "at": now - 9 * 3600, "code": run.code_sha(), "check_version": "old"}}, open(run.STATUS, "w"))
+    q = run.queue(3)
+    check(q == ["a_item", "d_item", "b_item"], f"a parked retry, then a never-run item, then a kept item's re-check: {q}")
+finally:
+    if had:
+        _sh.move(bak, qf)
+    else:
+        os.remove(qf)
+
 print(f"ALL {ok} PASS")

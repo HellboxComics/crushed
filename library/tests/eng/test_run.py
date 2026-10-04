@@ -84,11 +84,11 @@ run._atomic_json(run.RETRIES, {"f3": [[now - 100, sha], [now - 200, sha], [now -
                                "f2": [[now - 100, "othercode"], [now - 200, "othercode"], [now - 300, "othercode"]]})
 run._CODE_TIME[:] = [now - 30 * 3600]                 # the code is older than every stop: the waits hold
 q = run.queue(20)
-check(q == ["s2", "f2", "d0", "n1"], f"due now (f2's three tries were on other code and don't count; d0 was kept under "
-      f"older checks and is checked again; d1 is current): {q}")
+check(q == ["f2", "s2", "n1", "d0"], f"due now, longest wait first, then never-run, then a re-check (f2's three tries "
+      f"were on other code and don't count; d0 was kept under older checks and is checked again; d1 is current): {q}")
 run._CODE_TIME[:] = [now - 600]                       # newer code arrived after s1 stopped: s1 is tried right away
 q2 = run.queue(20)
-check(q2 == ["s1", "s2", "f1", "f2", "d0", "n1"], f"newer code since s1 stopped and f1 failed -> due now: {q2}")
+check(q2 == ["f2", "f1", "s2", "s1", "n1", "d0"], f"newer code since s1 stopped and f1 failed -> due now: {q2}")
 run._CODE_TIME[:] = [now - 30 * 3600]
 run.note_retry("s2")
 run.note_retry("n1")
