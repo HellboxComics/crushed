@@ -163,6 +163,33 @@ def color_check(png, real_png, cover_png=None, cols=20, rows=10):
                 continue                                # one small part: a detail, not a wrong area
             fixes.append(f"the area x {xs.min() / cols:.2f}-{(xs.max() + 1) / cols:.2f}, y {ys.min() / rows:.2f}-"
                          f"{(ys.max() + 1) / rows:.2f} is {want} on the real label but {got} in yours")
+    # small marks (a dot, a seal, a short stripe) are one cell or less on the coarse grid and were dropped above as
+    # "a detail": a finer pass (3x) finds them - the real label has a mark where the drawn one has none, or the
+    # other way round (2026-10-04: the PowerCheck's second white test dot was never flagged)
+    c2, r2 = cols * 3, rows * 3
+    small2 = lambda f: np.asarray(Image.open(f).convert("RGB").resize((c2, r2), Image.BOX)).astype(float)
+    a2, b2 = small2(png), small2(real_png)
+    seen2 = np.ones((r2, c2), bool)
+    if cover_png and os.path.exists(cover_png):
+        seen2 = np.asarray(Image.open(cover_png).convert("L").resize((c2, r2), Image.BOX)) > 0.5 * 255
+    fa2 = np.array([[_family(a2[y, x]) for x in range(c2)] for y in range(r2)])
+    fb2 = np.array([[_family(b2[y, x]) for x in range(c2)] for y in range(r2)])
+    far2 = np.sqrt(((a2 - b2) ** 2).sum(-1)) > 90
+    bad2 = (fa2 != fb2) & far2 & seen2
+    lab2, n2 = ndimage.label(bad2)
+    marks = 0
+    for k in range(1, n2 + 1):
+        ys, xs = np.where(lab2 == k)
+        if len(ys) < 3 or len(ys) > 40:                     # a sliver at a band's edge, or a big area (the coarse pass)
+            continue
+        want, got = _name(b2[ys, xs].mean(0)), _name(a2[ys, xs].mean(0))
+        if want == got:
+            continue
+        marks += 1
+        if marks <= 8:
+            fixes.append(f"a small mark at x {(xs.min() + xs.max() + 1) / 2 / c2:.2f}, y {(ys.min() + ys.max() + 1) / 2 / r2:.2f} "
+                         f"(about {(xs.max() - xs.min() + 1) / c2:.2f} wide, {(ys.max() - ys.min() + 1) / r2:.2f} tall) "
+                         f"is {want} on the real label but {got} in yours")
     return float(1 - bad.sum() / max(seen.sum(), 1)), fixes
 
 

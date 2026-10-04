@@ -120,6 +120,16 @@ s_good, f_good = LAY.color_check(gp, rp)
 check(s_bad < 0.75 and any("copper on the real label but black" in f for f in f_bad),
       f"a label drawn without its copper end is caught ({s_bad:.0%}): {f_bad[:1]}")
 check(s_good > 0.95 and not f_good, f"copper in light and in shade is still copper ({s_good:.0%})")
+# a small mark (a white test dot) on the real label that the drawn one lacks is named with its place and size
+dot = real.copy()
+dot[200:240, 40:80] = (245, 245, 245)                  # a ~10% x 13% white dot on the copper end
+dp = os.path.join(out, "dot.png")
+Image.fromarray(dot).save(dp)
+s_dot, f_dot = LAY.color_check(gp, dp)
+check(any("small mark" in f and "white" in f and "copper in yours" in f for f in f_dot),
+      f"a missing small white dot is flagged with its place: {[f for f in f_dot if 'small mark' in f][:1]}")
+s_rev, f_rev = LAY.color_check(dp, gp)
+check(any("small mark" in f and "copper on the real label but white" in f for f in f_rev), "and a dot drawn where there is none")
 # the background bands are measured, not guessed: a layout the AI wrote all black keeps the measured copper band
 bb, axis = LAY.base_bands(rp)
 check(axis == "x" and len(bb) == 2 and bb[0].get("metal") and bb[0]["w"] < 0.35 and not bb[1].get("metal"),
