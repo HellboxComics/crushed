@@ -228,6 +228,18 @@ def parts_checks(plan, asm, kit_parts=()):
         out.append(("no part is turned out of its box", None if rotated else True,
                     ("turned parts reach past their size box (not counted above): " + ", ".join(rotated)) if rotated
                     else "no part is turned"))
+    inside = [p for p in parts if p.get("inside")]
+    if inside:
+        def box_of(p):
+            s = [float(x) for x in (p.get("size_mm") or [0, 0, 0])[:3]]
+            a = [float(x) for x in (p.get("at_mm") or [0, 0, 0])[:3]]
+            return [(a[k] - s[k] / 2, a[k] + s[k] / 2) for k in range(3)]
+        outer = [box_of(p) for p in parts if not p.get("inside")]
+        poke = [str(p.get("name")) for p in inside
+                if not any(all(ob[k][0] - 0.5 <= bi[k][0] and bi[k][1] <= ob[k][1] + 0.5 for k in range(3))
+                           for ob in outer for bi in [box_of(p)])]
+        out.append(("every inside part fits within one outer part", not poke,
+                    ("poking out of every outer part: " + ", ".join(poke)) if poke else f"{len(inside)} inside part(s) fit"))
     fixed = plan.get("fixed") or []
     out.append(("every part sat inside the real size as planned", not fixed,
                 "; ".join(fixed)[:400] or "no part had to be moved or shrunk"))

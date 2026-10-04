@@ -59,6 +59,14 @@ check(pc["the planned parts fill the real size (within 10% each way)"][0] is Tru
 check(pc["no part is turned out of its box"][0] is None and "ears" in pc["no part is turned out of its box"][1],
       "a turned part is named, not called wrong")
 check(pc["every part of this kind's kit is in the plan"] == (False, "missing: eyes"), "a kit part left out of the plan is caught")
+plan["parts"].append({"name": "battery_box", "shape": "rounded_box", "size_mm": [40, 40, 40], "at_mm": [0, 0, 20], "inside": True})
+pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 4, "flags": []})}
+check(pc["every inside part fits within one outer part"] == (True, "1 inside part(s) fit"), "an inside part within the body fits")
+plan["parts"][-1]["at_mm"] = [0, 0, 130]
+pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 4, "flags": []})}
+check(pc["every inside part fits within one outer part"][0] is False and "battery_box" in pc["every inside part fits within one outer part"][1],
+      "an inside part poking out of every outer part is caught")
+plan["parts"].pop()
 plan["parts"][0]["size_mm"] = [60, 60, 60]
 pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 2, "flags": ["feet: could not be built (x)", "body: a rounded stand-in (y)"]})}
 check(pc["the planned parts fill the real size (within 10% each way)"][0] is False, "a plan smaller than the real size is caught")
