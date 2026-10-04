@@ -44,20 +44,20 @@ check(abs(t[0] - 48.4) < 0.1 and abs(t[2] - 60.0) < 0.1 and t[1] == 26, f"a 34 x
 p2 = parts.clean({"parts": [{"name": "ear", "shape": "organic", "size_mm": [34, 26, 52], "at_mm": [-42, 0, 122],
                              "rotate_deg": [0, 18, 0], "front_outline": [1, 1, 1], "side_outline": [1, 1, 1],
                              "material": "plush_fur"},
-                            {"name": "rod", "shape": "rounded_box", "size_mm": [10, 10, 140], "at_mm": [0, 0, 75],
+                            {"name": "rod", "shape": "rounded_box", "size_mm": [10, 10, 240], "at_mm": [0, 0, 75],
                              "rotate_deg": [0, 45, 0], "material": "molded_plastic"}]},
                  120, 120, 150, [], ["plush_fur", "molded_plastic"])
 e, r = p2["parts"]
 check(e["at_mm"][0] > -42 and e["at_mm"][2] < 122 and e["size_mm"] == [34.0, 26.0, 52.0],
       "a turned ear that would poke out is moved in, its size kept")
 rt = parts.turned_extent(r["size_mm"], [0, 45, 0])
-check(max(rt[0] - 120, rt[2] - 150) <= 0.5 and abs(r["size_mm"][2] / r["size_mm"][0] - 14) < 0.01,
+check(max(rt[0] - 120, rt[2] - 150) <= 0.5 and abs(r["size_mm"][2] / r["size_mm"][0] - 24) < 0.01 and r["size_mm"][2] < 240,
       f"a turned rod too long for the object is shrunk whole, keeping its proportions ({[round(v) for v in r['size_mm']]})")
 
 # 2. the loft itself (assembly.form) with Blender's mesh tools stood in for
 src = open(os.path.join(LIB, "shapes", "assembly.py")).read()
 tree = ast.parse(src)
-want = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in ("_resample", "form")] + \
+want = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in ("_resample", "form", "loft_faces", "around_uv")] + \
        [n for n in tree.body if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "EGG"]
 code = compile(ast.Module(body=want, type_ignores=[]), "assembly_form", "exec")
 
@@ -67,12 +67,28 @@ class V:
         self.co = co
 
 
+class Loop:
+    def __init__(self, v):
+        self.vert, self.uv = v, {}
+
+    def __getitem__(self, layer):
+        return self.uv.setdefault(layer, types.SimpleNamespace(uv=(0.0, 0.0)))
+
+
+class Face(list):
+    @property
+    def loops(self):
+        if not hasattr(self, "_loops"):
+            self._loops = [Loop(v) for v in self]
+        return self._loops
+
+
 class Faces:
     def __init__(self):
         self.made = []
 
     def new(self, verts):
-        verts = list(verts)
+        verts = Face(verts)
         assert len(set(id(v) for v in verts)) == len(verts), "a face uses one vertex twice"
         self.made.append(verts)
         return verts
@@ -83,8 +99,10 @@ class Faces:
 
 class BM:
     def __init__(self):
-        self.verts = types.SimpleNamespace(new=lambda co: V(co), made=[])
+        self.verts = types.SimpleNamespace(new=lambda co: V(co), made=[], ensure_lookup_table=lambda: None,
+                                           index_update=lambda: None)
         self.faces = Faces()
+        self.loops = types.SimpleNamespace(layers=types.SimpleNamespace(uv=types.SimpleNamespace(verify=lambda: "uv")))
         self.mesh = None
 
     def to_mesh(self, me):
@@ -149,6 +167,11 @@ for f in faces:
         edges[k] = edges.get(k, 0) + 1
 check(all(n == 2 for n in edges.values()), "the lofted surface is closed (every edge shared by two faces)")
 check(ob.d.get("lofted_from_outlines") is True and ob.location == [0, 0, 0.025], "built at the part's center")
+uvs = [lp["uv"].uv for f in faces for lp in f.loops]
+bad = [f for f in faces if len(f) < 48 and max(lp["uv"].uv[0] for lp in f.loops) - min(lp["uv"].uv[0] for lp in f.loops) >= 0.5]
+print("   uv range", min(u for u, _ in uvs), max(u for u, _ in uvs), "straddling", len(bad), [[lp["uv"].uv for lp in f.loops] for f in bad[:2]])
+check(all(0 <= u <= 1.0001 and 0 <= v <= 1 for u, v in uvs) and max(u for u, _ in uvs) > 0.95 and
+      not bad, "every face has a UV map: u once around (no face straddles the seam), v bottom to top; the cap a disc")
 
 # an egg (both ends closed) and an open-bottom cylinder-like outline both close up
 ns["form"](dict(tuft, front_outline=list(parts.EGG), side_outline=list(parts.EGG)))

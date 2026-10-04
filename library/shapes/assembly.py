@@ -39,6 +39,36 @@ NORMALS = {"+x": Vector((1, 0, 0)), "-x": Vector((-1, 0, 0)), "+y": Vector((0, 1
 
 sys.path.insert(0, HERE)
 import realmat                                              # noqa: E402  every material in its real-world range
+import looks                                                # noqa: E402  fur, weave, grain: the surface up close
+
+_LOOK_MAPS = {}
+
+
+def surface(m, b, kind):
+    """The material kind's own surface (fur fibers, a weave, leather grain, brushed metal) as a tiling normal map,
+    plus sheen for fur and cloth - so a gray plush body reads as plush, not as painted plastic."""
+    look = looks.LOOKS.get(kind)
+    if not look:
+        return
+    if kind not in _LOOK_MAPS:
+        _LOOK_MAPS[kind] = looks.normal_map(kind, os.path.join(OUT, "textures", f"look_{kind}.png"))
+    nodes, links = m.node_tree.nodes, m.node_tree.links
+    coord = nodes.new("ShaderNodeTexCoord")
+    mapping = nodes.new("ShaderNodeMapping")
+    mapping.inputs["Scale"].default_value = (look["scale"], look["scale"], 1)
+    links.new(coord.outputs["UV"], mapping.inputs["Vector"])
+    t = nodes.new("ShaderNodeTexImage")
+    t.image = bpy.data.images.load(_LOOK_MAPS[kind])
+    t.image.colorspace_settings.name = "Non-Color"
+    links.new(mapping.outputs["Vector"], t.inputs["Vector"])
+    nm = nodes.new("ShaderNodeNormalMap")
+    nm.inputs["Strength"].default_value = look["strength"]
+    links.new(t.outputs["Color"], nm.inputs["Color"])
+    links.new(nm.outputs["Normal"], b.inputs["Normal"])
+    for name in ("Sheen Weight", "Sheen"):                  # Blender 4 / Blender 3 names
+        if name in b.inputs and look.get("sheen"):
+            b.inputs[name].default_value = look["sheen"]
+            break
 
 
 def material(name, color, rough, metal, image=None, kind=None):
@@ -55,7 +85,40 @@ def material(name, color, rough, metal, image=None, kind=None):
         t.image = bpy.data.images.load(image)
         t.image.colorspace_settings.name = "sRGB"
         m.node_tree.links.new(t.outputs["Color"], b.inputs["Base Color"])
+    if kind:
+        surface(m, b, kind)
     return m
+
+
+def around_uv(bm, rings, around):
+    """A UV map for a part built from rings: u once around, v from its bottom ring to its top ring. A pole (a ring of
+    one vertex) takes the u of the face it is in; the face at the seam wraps to u = 1 instead of straddling."""
+    uv = bm.loops.layers.uv.verify()
+    where, poles = {}, set()
+    key = lambda v: v.index if hasattr(v, "index") else id(v)
+    for i, ring in enumerate(rings):
+        for k, v in enumerate(ring):
+            where[key(v)] = (k / around, i / max(len(rings) - 1, 1))
+            if len(ring) == 1:
+                poles.add(key(v))
+    caps = [set(key(v) for v in rings[0]), set(key(v) for v in rings[-1])]
+    for f in bm.faces:
+        ks = [key(lp.vert) for lp in f.loops]
+        if len(ks) == around and set(ks) in caps:                         # a flat cap: its own disc
+            for lp in f.loops:
+                a = 2 * math.pi * where[key(lp.vert)][0]
+                lp[uv].uv = (0.5 + 0.5 * math.cos(a), 0.5 + 0.5 * math.sin(a))
+            continue
+        us = [where.get(key(lp.vert), (0.0, 0.0)) for lp in f.loops]
+        side = [u for lp, (u, _) in zip(f.loops, us) if key(lp.vert) not in poles]
+        if side and max(side) - min(side) > 0.5:                      # the seam: small u's wrap to 1
+            us = [(u + 1.0 if u < 0.5 else u, v) for u, v in us]
+            side = [u + 1.0 if u < 0.5 else u for u in side]
+        if side and len(side) < len(us):                              # a pole sits at its face's middle u
+            mid = sum(side) / len(side)
+            us = [(mid, v) if key(lp.vert) in poles else (u, v) for lp, (u, v) in zip(f.loops, us)]
+        for lp, (u, v) in zip(f.loops, us):
+            lp[uv].uv = (u, v)
 
 
 def print_image(part):
@@ -161,20 +224,18 @@ def lathe(part):
     prof = part["profile_mm"]
     bm = bmesh.new()
     seg = 96
-    rings = []
     zmid = (min(z for _, z in prof) + max(z for _, z in prof)) / 2        # built around its center, like every part
+    rings = []
     for r, z in prof:
-        ring = [bm.verts.new((r * S * math.cos(2 * math.pi * k / seg), r * S * math.sin(2 * math.pi * k / seg),
-                              (z - zmid) * S)) for k in range(seg)]
-        rings.append(ring)
-    for a, b in zip(rings, rings[1:]):
-        for k in range(seg):
-            bm.faces.new((a[k], a[(k + 1) % seg], b[(k + 1) % seg], b[k]))
-    if prof[0][0] > 0:
-        bm.faces.new(list(reversed(rings[0])))
-    if prof[-1][0] > 0:
-        bm.faces.new(rings[-1])
-    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-7)
+        if r <= 1e-6:                                                     # a point on the axis: one vertex
+            rings.append([bm.verts.new((0.0, 0.0, (z - zmid) * S))])
+            continue
+        rings.append([bm.verts.new((r * S * math.cos(2 * math.pi * k / seg), r * S * math.sin(2 * math.pi * k / seg),
+                                    (z - zmid) * S)) for k in range(seg)])
+    loft_faces(bm, rings, seg)
+    bm.verts.ensure_lookup_table()
+    bm.verts.index_update()
+    around_uv(bm, rings, seg)
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     me = bpy.data.meshes.new(part["name"])
     bm.to_mesh(me)
@@ -183,6 +244,26 @@ def lathe(part):
     bpy.context.collection.objects.link(ob)
     ob.location = [c * S for c in part["at_mm"]]              # at_mm is the part's center; a turn pivots there
     return finish(ob, part)
+
+
+def loft_faces(bm, rings, around):
+    """Faces between rings (a ring of one vertex is a pole: a fan of triangles); open ends get a flat cap."""
+    for a, b in zip(rings, rings[1:]):
+        if len(a) == 1 and len(b) == 1:
+            continue
+        if len(a) == 1:
+            for k in range(around):
+                bm.faces.new((a[0], b[(k + 1) % around], b[k]))
+        elif len(b) == 1:
+            for k in range(around):
+                bm.faces.new((a[k], a[(k + 1) % around], b[0]))
+        else:
+            for k in range(around):
+                bm.faces.new((a[k], a[(k + 1) % around], b[(k + 1) % around], b[k]))
+    if len(rings[0]) > 1:
+        bm.faces.new(list(reversed(rings[0])))
+    if len(rings[-1]) > 1:
+        bm.faces.new(rings[-1])
 
 
 def tube(part):
@@ -284,22 +365,10 @@ def form(part, slices=24, around=48):
             a = 2 * math.pi * k / around
             ring.append(bm.verts.new(((ox + rx * math.cos(a)) * S, (oy + ry * math.sin(a)) * S, z * S)))
         rings.append(ring)
-    for a, b in zip(rings, rings[1:]):
-        if len(a) == 1 and len(b) == 1:
-            continue
-        if len(a) == 1:
-            for k in range(around):
-                bm.faces.new((a[0], b[(k + 1) % around], b[k]))
-        elif len(b) == 1:
-            for k in range(around):
-                bm.faces.new((a[k], a[(k + 1) % around], b[0]))
-        else:
-            for k in range(around):
-                bm.faces.new((a[k], a[(k + 1) % around], b[(k + 1) % around], b[k]))
-    if len(rings[0]) > 1:                                      # an open end gets a flat cap
-        bm.faces.new(list(reversed(rings[0])))
-    if len(rings[-1]) > 1:
-        bm.faces.new(rings[-1])
+    loft_faces(bm, rings, around)
+    bm.verts.ensure_lookup_table()
+    bm.verts.index_update()
+    around_uv(bm, rings, around)
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     me = bpy.data.meshes.new(part["name"])
     bm.to_mesh(me)
