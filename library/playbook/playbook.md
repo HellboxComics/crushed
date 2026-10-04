@@ -117,6 +117,8 @@ overlap or are missing is unwrapped afresh and its look baked into the new map),
 physics on every part. measure_uv fails when a part still overlaps or collapses after that - which means the
 builder made geometry the unwrap cannot handle (zero-area faces, a part with no faces) - fix the builder's geometry,
 not the contract. measure_mesh now also fails holes (open edges) in an outside part.
+A real build now fails fast like a test build: while an exact or step check fails, the judge does not look
+(not_judged). Fix the exact failures first; the judge's side-by-side looks come the moment those pass.
 
 A fix is kept only when the asset maker's OWN independent check of your confirmation rebuild is strictly better
 than the first check AND your own two rebuilds agree. A change that fixed something and broke nothing is PROVEN:

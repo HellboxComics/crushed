@@ -176,9 +176,14 @@ def _img(path, side=1280):
     return base64.b64encode(b.getvalue()).decode()
 
 
+_NO_THINK = set()        # brains that answered 400 to think=True: asked plainly from then on (no wasted first call)
+
+
 def ask(use, text, images, think=True, side=1280):
     """One question to a vision model, answer as JSON. Thinking on gives better judgment; if a model can't think,
-    ask again without it rather than failing."""
+    ask again without it rather than failing (and remember that for the rest of the run)."""
+    if think and use in _NO_THINK:
+        think = False
     # every question has a word budget: a brain that thinks in circles (at temperature 0 it can) would otherwise
     # run to the end of its memory - 30,000 words, half an hour, with the whole line waiting behind it
     body = {"model": use, "stream": False, "format": "json", "think": think,
@@ -189,6 +194,7 @@ def ask(use, text, images, think=True, side=1280):
         txt = _call("/api/chat", body).get("message", {}).get("content", "{}")
     except urllib.error.HTTPError as e:
         if think and e.code == 400:
+            _NO_THINK.add(use)
             return ask(use, text, images, think=False, side=side)
         raise
     m = re.search(r"\{.*\}", txt, re.S)

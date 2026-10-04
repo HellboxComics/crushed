@@ -439,8 +439,8 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     dos_now = DS.load(cid) or {"size_m": card.get("size"), "faces": {}, "facts": {}}
     status(cid, step="6/7 the exact checks: real size, every side, barcode, printed words, materials, insides")
     m = measure.run(cid, d, glb, dos_now, route if route in ("round", "flat", "pcb") else "box", fam=fam,
-                    shots=[x for x in (shots, close) if x], web_glb=os.path.join(mdir, cid + "_web.glb"), use=use,
-                    log=say)
+                    shots=[x for x in (shots, close) if x], use=use, log=say,
+                    web_glb=None if TRIAL else os.path.join(mdir, cid + "_web.glb"))
     say(f"[measure] {cid}: " + ("every exact check passed" if m["pass"] else "; ".join(m["problems"])[:600]))
     # THE STEP CHECKS GATE THE BUILD (audit 2026-10-04, root cause 1): every review-sheet check that failed - the
     # label's score, its measured colors, overlapping text, a part Blender could not build, a board with no parts,
@@ -449,11 +449,12 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     if step_fails:
         say(f"[check] {cid}: {len(step_fails)} step check(s) failed on the review sheet - " + "; ".join(step_probs)[:400])
     m = dict(m, **{"pass": m["pass"] and not step_fails})
-    if TRIAL and not m["pass"]:
-        # FAIL FAST in a test build: the judge's looks (8+ brain questions, 15-25 minutes on the shared brain server)
-        # are skipped while an exact check still fails - the engineer learns the exact result in minutes and the
-        # judge looks the moment the exact checks pass. Unjudged checks count as still failing (engineer._fails_of).
-        say(f"[check] {cid}: exact checks failed - the judge's looks are skipped in this test build until they pass")
+    if not m["pass"] and (TRIAL or not setting("judge_always")):
+        # FAIL FAST (test builds, and real builds too since 2026-10-04 S9): the judge's looks (8+ brain questions,
+        # 15-25 minutes on the shared brain server) are skipped while an exact or step check still fails - the
+        # engineer learns the exact result in minutes and the judge looks the moment those pass. Unjudged checks
+        # count as still failing (engineer._fails_of). settings.json "judge_always": true brings the old way back.
+        say(f"[check] {cid}: exact checks failed - the judge's looks are skipped until they pass")
         failed = [f"measure_{k}" for k in m["failed"]] + step_fails + ["not_judged"]
         return {"pass": False, "failed": failed, "measure": m["checks"], "sides": {},
                 "problems": m["problems"] + step_probs + ["not judged: the exact checks failed first; the judge looks once they pass"]}
@@ -703,25 +704,27 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     status(cid, step="5/7 the deliverable contract: one UV map per part, named maps, physics on every part")
     run_blender("contract.py", os.path.join(mdir, cid + ".blend"), mdir, cid, str(card.get("mat") or ""))
     glb = os.path.join(mdir, cid + ".glb")
-    status(cid, step="5/7 every format (.obj .mtl .3ds .ma), textures, and a cutaway of the insides")
-    finish_files(cid, d)
-    if not TRIAL:
+    if not TRIAL:                                            # (a test build is checked, never filed: no exports,
+        status(cid, step="5/7 every format (.obj .mtl .3ds .ma), textures, and a cutaway of the insides")   # S9)
+        finish_files(cid, d)
         pend = os.path.join(ROOT, "assets", "models_pending", cid)   # so the phone page can spin it in 3D right away
         os.makedirs(pend, exist_ok=True)
         web = os.path.join(mdir, cid + "_web.glb")
         shutil.copy(web if os.path.exists(web) else glb, os.path.join(pend, "model.glb"))
 
-    # 6. CHECK: four sides against your photo
+    # 6. CHECK: the viewer's pictures (the same viewer as your phone page); the studio pictures only if those fail
     status(cid, step="6/7 pictures from four sides and the judge's check")
-    subprocess.run([PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],
-                   check=True, capture_output=True)
-    sheet_views([os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)], os.path.join(d, "views.jpg"))
-    shots, close = os.path.join(d, "views.jpg"), None
-    try:                                                    # the check shots: the same viewer as your phone page
+    shots = close = None
+    try:
         import viewshot
         shots, close = viewshot.shoot(glb, os.path.join(d, "check"))
     except Exception as e:
         say(f"[check] viewer shots skipped ({e}) - the studio pictures are used")
+    if not shots:
+        subprocess.run([PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],
+                       check=True, capture_output=True)
+        sheet_views([os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)], os.path.join(d, "views.jpg"))
+        shots, close = os.path.join(d, "views.jpg"), None
     make_room("judging")
     verdict = check_model(cid, card, picked, d, glb, route, fam, shots, close, use)
     label_passed(cid, d, verdict)
@@ -1154,11 +1157,15 @@ def run_blender(script, *args):
         raise RuntimeError(f"Blender ({script}) failed: " + (r.stderr or r.stdout)[-400:])
 
 
+SETTINGS_DEFAULT = {"judge_always": False}       # switches that are OFF unless you turn them on
+
+
 def setting(name):
-    """Your switches, in ~/crushed-render/remaster/settings.json (both on unless you turn them off):
-    auto_pick - a clear-winner photo is used without asking you; auto_keep - a judge-passed asset is filed
-    without asking you. Close calls and failures always come to your phone."""
-    return jload(os.path.join(WORK, "settings.json"), {}).get(name, True)
+    """Your switches, in ~/crushed-render/remaster/settings.json (on unless you turn them off, except
+    SETTINGS_DEFAULT): auto_pick - a clear-winner photo is used without asking you; auto_keep - a judge-passed
+    asset is filed without asking you; judge_always - the judge looks even when an exact check already failed.
+    Close calls and failures always come to your phone."""
+    return jload(os.path.join(WORK, "settings.json"), {}).get(name, SETTINGS_DEFAULT.get(name, True))
 
 
 def _item_px(f):
@@ -1522,7 +1529,16 @@ def file_away(cid, d):
             if f.lower().endswith((".png", ".jpg", ".jpeg")) and fresh(src, built) and \
                     not os.path.exists(os.path.join(tmp, "textures", f)):
                 deliver.picture_pair(src, os.path.join(tmp, "textures", stem))
-    # previews, PNG + JPG: only pictures made after this build
+    # previews, PNG + JPG: only pictures made after this build. The four studio pictures are made here, for the
+    # build that is filed, not for every build (S9, 2026-10-04: the viewer's pictures carry the checks)
+    glb_now = os.path.join(mdir, cid + ".glb")
+    if not fresh(os.path.join(d, "views.jpg"), built) and os.path.exists(glb_now):
+        try:
+            subprocess.run([PY, os.path.join(HERE, "preview.py"), "--", glb_now, os.path.join(d, "view.png"),
+                            "0,90,180,270"], check=True, capture_output=True, timeout=900)
+            sheet_views([os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)], os.path.join(d, "views.jpg"))
+        except Exception as e:
+            say(f"[keep] {cid}: the studio pictures could not be made ({e})")
     shots = ((os.path.join(d, "check", "viewer_around.jpg"), "all_around", built, "the all-around pictures"),
              (os.path.join(d, "check", "viewer_close.jpg"), "close_ups", built, "the close-up pictures"),
              (os.path.join(exp, "previews", "cutaway.png"), "cutaway", fin["started"], "the cutaway picture"),
@@ -2642,6 +2658,52 @@ def pip_install(python, pkgs, no_deps=False, timeout=900):
     return pr.returncode == 0, ("ok" if pr.returncode == 0 else (pr.stderr or pr.stdout)[-300:])
 
 
+def housekeeping(days_trials=3, days_stale=7, log=None):
+    """Room on the disk (S9, 2026-10-04): the engineer's test builds older than `days_trials` days and the
+    stale-<time> leftovers of finished builds older than `days_stale` days are MOVED to ~/Desktop/_to delete/
+    build-leftovers/<date>/ with a note - never deleted (Cody's rule). Once a day. -> how many were moved."""
+    log = log or say
+    stamp = os.path.join(WORK, "housekeeping.json")
+    last = jload(stamp, {}).get("at", 0)
+    now = time.time()
+    if now - last < 86400:
+        return 0
+    trash = os.path.expanduser("~/Desktop/_to delete/build-leftovers/" + time.strftime("%Y%m%d"))
+    moved = []
+    cands = []
+    tri = os.path.join(WORK, "engineer", "trials")
+    if os.path.isdir(tri):
+        for cid in os.listdir(tri):
+            for t in os.listdir(os.path.join(tri, cid)) if os.path.isdir(os.path.join(tri, cid)) else []:
+                p = os.path.join(tri, cid, t)
+                if os.path.isdir(p) and now - os.path.getmtime(p) > days_trials * 86400:
+                    cands.append((p, f"trial-{cid}-{t}"))
+    lib = os.path.join(WORK, "library")
+    if os.path.isdir(lib):
+        for cid in os.listdir(lib):
+            mdir = os.path.join(lib, cid, "model")
+            if not os.path.isdir(mdir):
+                continue
+            for t in os.listdir(mdir):
+                p = os.path.join(mdir, t)
+                if t.startswith("stale-") and os.path.isdir(p) and now - os.path.getmtime(p) > days_stale * 86400:
+                    cands.append((p, f"stale-{cid}-{t[6:]}"))
+    for p, label in cands:
+        try:
+            os.makedirs(trash, exist_ok=True)
+            to = os.path.join(trash, label)
+            shutil.move(p, to)
+            open(to + ".txt", "w").write(f"Moved here by the asset maker's housekeeping on {time.ctime()}: a build "
+                                         f"leftover from {p} that nothing uses any more. Safe to delete.\n")
+            moved.append(label)
+        except Exception as e:
+            log(f"[housekeeping] {p}: could not be moved ({e})")
+    json.dump({"at": now, "moved": moved}, open(stamp, "w"), indent=1)
+    if moved:
+        log(f"[housekeeping] {len(moved)} build leftover(s) moved to {trash} (a note beside each; safe to delete)")
+    return len(moved)
+
+
 def hunyuan_test_request():
     """Claude asked (WORK/hunyuan_test.request): does Hunyuan make a shape from its own demo picture? Only the two
     packages its folder is known to be missing are installed - at fixed versions, without touching anything they
@@ -2789,6 +2851,10 @@ if __name__ == "__main__":
             hunyuan_test_request()                      # does Hunyuan make a shape from its own demo picture?
         except Exception as e:
             say(f"[hunyuan test] skipped: {e}")
+        try:
+            housekeeping()                              # room on the disk, once a day (moved, never deleted)
+        except Exception as e:
+            say(f"[housekeeping] skipped: {e}")
         quiet = 0
         while quiet < 20:                               # 10 quiet minutes: leave, so the clock can start a fresh one
             try:
