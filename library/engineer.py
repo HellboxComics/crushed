@@ -743,7 +743,9 @@ TOOLS = [
                  "with another module.",
      {"path": "string", "content": "string"}, ["path", "content"]),
     ("diff", "Show every change you have made so far.", {}, []),
-    ("revert", "Undo your changes to one file (path), or all of them (path = 'all').", {"path": "string"}, ["path"]),
+    ("revert", "Undo your changes to one file (path), or all of them (path = 'all'). A change your last rebuild proved "
+               "(it fixed a failure and broke nothing) is not undone unless sure=true.",
+     {"path": "string", "sure": "boolean"}, ["path"]),
     ("rebuild", "Rebuild this item with YOUR copy of the code and run the realism check again (takes minutes). "
                 "clear = cached steps to redo instead of reuse: 'skin' (box faces from photos), 'texture' (label "
                 "art), 'dossier' (what it knows about the item: every side, its facts and their receipts), 'construction' (how it is made), 'parts' "
@@ -878,6 +880,7 @@ class Bench:
         self.lessons = []
         self.accepted = None
         self.redo_only = 0                             # the one rebuild allowed with no code change (a step redone)
+        self.proven = None                             # the last code that fixed something and broke nothing
         self.decided = {}                              # code version (diff hash) -> (kept?, why): never re-rolled
         self.stopped = None                            # set when the session must stop at once
         self.model = None
@@ -1198,7 +1201,14 @@ class Bench:
         d = git("diff", "HEAD", "--", "library", ":(exclude)library/playbook", cwd=WT).stdout
         return (d[:12000] + ("\n(diff cut short)" if len(d) > 12000 else "")) or "no changes yet"
 
-    def revert(self, path):
+    def revert(self, path, sure=False):
+        proven = getattr(self, "proven", None)
+        if proven and not sure and (path == "all" or any(
+                os.path.normpath(path.strip().lstrip("/")).removeprefix("wt/").removeprefix("library/") ==
+                os.path.normpath(f).removeprefix("library/") for f in proven["files"])):
+            return (f"REFUSED: that change is part of the fix your last rebuild PROVED (it fixed {proven['fixed']} and "
+                    "broke nothing). Undoing it throws that away. Keep it and add your next change on top; or call "
+                    "finish now and it is kept. If you truly mean to undo it, call revert again with sure=true.")
         if path == "all":                                       # its whole code copy, back as it was
             git("reset", "-q", cwd=WT)
             git("checkout", "-q", "--", ".", cwd=WT)
@@ -1366,6 +1376,12 @@ class Bench:
         now = _fails_of(v, self.first["verdict"])
         unjudged = "not_judged" in _fails(v)
         self.cur = {"verdict": v, "shots": t["shots"], "close": t["close"], "dir": t["dir"]}
+        progress = {}
+        if now < first:                                    # this code fixed something and broke nothing: proven
+            self.proven = {"diff": t["diff"], "fixed": sorted(first - now), "files": [c[1] for c in self.changed()]}
+            progress = {"PROGRESS": f"this change fixed {sorted(first - now)} and broke nothing. KEEP IT - do not "
+                                    "revert it. Work on what is left ON TOP of it, or call finish now and this fix is "
+                                    "kept for every item of this kind."}
         for w in ("check", "close"):
             try:
                 self.look(w)
@@ -1375,7 +1391,7 @@ class Bench:
                            "failed_before": before, "failed_now": sorted(now),
                            "now_passing_that_failed_at_first": sorted(first - now),
                            "NEW_failures_that_passed_at_first": sorted(now - first),
-                           "judge_says": v.get("problems"),
+                           "judge_says": v.get("problems"), **progress,
                            **({"not_judged": "an exact check still fails, so the judge did not look at this build (it "
                                              "looks the moment every exact check passes); the judge's checks count "
                                              "as still failing until then"} if unjudged else {}),

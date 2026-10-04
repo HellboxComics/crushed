@@ -371,6 +371,26 @@ brain = Brain([
 res = run(brain, {"pass": False, "failed": ["measure_size", "shape", "not_cg"], "problems": ["x"]})
 check(res.get("kept") is True, f"a fix that passes the exact checks and then the judge (fully judged) is kept: {res.get('why')}")
 
+# =========================================================== K: a proven fix is not thrown away
+print("\nK. a rebuild that fixed something says KEEP IT; revert of that file is refused unless sure")
+script({C.CID: [{"failed": ["side_bottom"]}, {"failed": ["side_bottom"]}]}, {C.CID: [{"failed": ["side_bottom"]}]})
+brain = Brain([
+    [("edit_file", {"path": "library/finish.py", "old": "def _blur(a, s):",
+                    "new": "STEEL_BASE = 0.6\n\n\ndef _blur(a, s):"})],
+    [("rebuild", {"why": "steel color"})],
+    [("revert", {"path": "library/finish.py"})],
+    [("revert", {"path": "all"})],
+    [("finish", {"summary": "steel color fixed details"})],
+])
+res = run(brain, {"pass": False, "failed": ["details", "side_bottom"], "problems": ["x"]})
+tr = brain.tool_results()
+print("   rebuild said:", tr[1][:300])
+check("KEEP IT" in json.loads(tr[1]).get("PROGRESS", ""), "the rebuild result says the change fixed details and to keep it")
+check(tr[2].startswith("REFUSED") and "PROVED" in tr[2] and tr[3].startswith("REFUSED"),
+      "revert of the proven file, and revert all, are refused")
+check(res.get("kept") is True, f"the proven fix is kept at finish: {res.get('why')}")
+subprocess.run(["git", "checkout", "-q", "--", "library/finish.py"], cwd=REPO)
+
 # =========================================================== F: context and fingerprint units
 print("\nF. units: old tool results are cut short; the run.py fingerprint")
 msgs = [{"role": "system", "content": "s"}]
