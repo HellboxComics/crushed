@@ -59,6 +59,7 @@ def fake_call(path, body, timeout=900):
     return {"message": {"content": '{"a": 1}'}}
 
 
+_orig_call = vet._call
 vet._call = fake_call
 vet._img = lambda p, side=1280: ""
 vet._NO_THINK.clear()
@@ -135,5 +136,34 @@ t = time.time()
 while time.time() - t < 1.3:
     sum(i * i for i in range(20000))
 check(c0 is not None and run._tree_cpu() >= c0 + 1.0, "CPU work of this process is seen")
+
+# 8. every brain question beats the heart (a kit study's row of questions is progress, not a stall)
+hb = os.path.join(W, "heartbeat.json")
+if os.path.exists(hb):
+    os.remove(hb)
+vet.WORK = W
+import urllib.request as _ur
+real_open = _ur.urlopen
+
+
+class _R:
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+    def read(self):
+        return b'{"message": {"content": "{}"}}'
+
+
+vet._test_running = lambda: False
+_ur.urlopen = lambda req, timeout=0: _R()
+try:
+    _orig_call("/api/chat", {"model": "brain-x", "messages": [{"role": "user", "content": "what kind of thing is this?"}]})
+finally:
+    _ur.urlopen = real_open
+h = json.load(open(hb))
+check(time.time() - h["at"] < 5 and h["doing"].startswith("asking brain-x: what kind"), f"a brain question writes the heartbeat: {h}")
 
 print(f"ALL {ok} PASS")

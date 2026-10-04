@@ -1659,9 +1659,12 @@ def progress(cid, stage):
 
 
 def beat(doing):
-    """The heartbeat the watchdog reads: when the run last did anything, and what."""
+    """The heartbeat the watchdog reads: when the run last did anything, and what (vet.heartbeat writes the same
+    file before every brain question)."""
     try:
-        json.dump({"at": time.time(), "doing": doing}, open(os.path.join(WORK, "heartbeat.json"), "w"))
+        tmp = os.path.join(WORK, "heartbeat.json.tmp")
+        json.dump({"at": time.time(), "doing": doing}, open(tmp, "w"))
+        os.replace(tmp, os.path.join(WORK, "heartbeat.json"))
     except Exception:
         pass
 

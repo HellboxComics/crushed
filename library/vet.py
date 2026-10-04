@@ -36,12 +36,31 @@ def _test_running():
         return False
 
 
+WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
+
+
+def heartbeat(doing):
+    """A question to the brain IS progress: the run's heartbeat (WORK/heartbeat.json, what the watchdog reads) is
+    written before every one, so a long row of brain questions (a kit study, the careful looks) is never taken
+    for a stalled run (2026-10-04, with the honest long-job heartbeat in run._beating)."""
+    try:
+        os.makedirs(WORK, exist_ok=True)
+        tmp = os.path.join(WORK, "heartbeat.json.tmp")
+        json.dump({"at": time.time(), "doing": str(doing)[:200]}, open(tmp, "w"))
+        os.replace(tmp, os.path.join(WORK, "heartbeat.json"))
+    except Exception:
+        pass
+
+
 def _call(path, body, timeout=900):
     if path in ("/api/chat", "/api/generate") and (body.get("messages") or body.get("prompt")):
         waited = 0
         while _test_running() and waited < 3 * 3600:      # wait for the test to finish (checked every minute)
+            heartbeat("waiting: one of Cody's brain tests is running (hands off the brain server)")
             time.sleep(60)
             waited += 60
+        q = (body.get("messages") or [{}])[-1].get("content") if body.get("messages") else body.get("prompt")
+        heartbeat(f"asking {body.get('model')}: {str(q or '')[:90]}")
     if path in ("/api/chat", "/api/generate") and body.get("model") and (body.get("messages") or body.get("prompt")):
         body = dict(body, options=dict(body.get("options") or {}))
         if int(body["options"].get("num_ctx") or 0) < CTX:
