@@ -20,6 +20,7 @@ PREFER = ["qwen3.8:27b-q8_0", "qwen3.8:27b", "qwen3.8:latest", "qwen3.5:122b-a10
 QUICK = ["qwen3.6:35b", "qwen3.5:9b"]     # fast first look (thinking off)
 
 
+THINK_WORDS, PLAIN_WORDS = 6144, 2048   # the most tokens one answer may take (thinking + JSON / JSON alone)
 CTX = 32768   # one memory size for every question to the brain: Ollama reloads a model whenever the size changes,
 #               and a question with a photo plus a long think must never run out of room (it is cut silently)
 
@@ -45,6 +46,7 @@ def _call(path, body, timeout=900):
         body = dict(body, options=dict(body.get("options") or {}))
         if int(body["options"].get("num_ctx") or 0) < CTX:
             body["options"]["num_ctx"] = CTX
+        body["options"].setdefault("num_predict", THINK_WORDS if body.get("think") else PLAIN_WORDS)   # a budget, always
         body.setdefault("keep_alive", "30m")
     req = urllib.request.Request(OLLAMA + path, data=json.dumps(body).encode(), headers={"content-type": "application/json"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -176,7 +178,10 @@ def _img(path, side=1280):
 def ask(use, text, images, think=True, side=1280):
     """One question to a vision model, answer as JSON. Thinking on gives better judgment; if a model can't think,
     ask again without it rather than failing."""
-    body = {"model": use, "stream": False, "format": "json", "think": think, "options": {"temperature": 0},
+    # every question has a word budget: a brain that thinks in circles (at temperature 0 it can) would otherwise
+    # run to the end of its memory - 30,000 words, half an hour, with the whole line waiting behind it
+    body = {"model": use, "stream": False, "format": "json", "think": think,
+            "options": {"temperature": 0, "num_predict": THINK_WORDS if think else PLAIN_WORDS},
             "messages": [{"role": "user", "content": text,
                           "images": [_img(p, side) for p in images]}]}
     try:
@@ -185,7 +190,12 @@ def ask(use, text, images, think=True, side=1280):
         if think and e.code == 400:
             return ask(use, text, images, think=False, side=side)
         raise
-    return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+    m = re.search(r"\{.*\}", txt, re.S)
+    if not m:                                              # it used its budget up thinking: once more, plainly
+        if think:
+            return ask(use, text, images, think=False, side=side)
+        raise ValueError("the brain gave no answer in JSON")
+    return json.loads(m.group(0))
 
 
 def vet(path, display, era="", use=None, think=True, card=None):

@@ -79,4 +79,48 @@ check(R.retry_due("x", v2, {}, now) is False, "failed on this code: waits its 6 
 check(R.retry_due("x", v2, {}, 2000.0 + 6 * 3600) is True, "and is due after them")
 check(R.retry_due("x", {"step": "done", "at": 2000.0}, {}, now) is None, "a done item is not retried")
 R._CODE_TIME[:] = []
+
+
+# --- every brain question has a word budget; an answer that was all thinking is asked again plainly
+import json as _json  # noqa: E402
+import urllib.request as _ur  # noqa: E402
+import vet  # noqa: E402
+_seen = []
+
+
+class _R:
+    def __init__(self, n):
+        self.n = n
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        pass
+
+    def read(self):
+        return _json.dumps({"message": {"content": "(thinking, cut off)" if self.n == 1 else '{"ok": 1}'}}).encode()
+
+
+def _fake(req, timeout=0):
+    _seen.append(_json.loads(req.data))
+    return _R(len(_seen))
+
+
+_real_open, _real_test = _ur.urlopen, vet._test_running
+_ur.urlopen, vet._test_running = _fake, lambda: False
+try:
+    r = vet.ask("m", "q", [], think=True)
+finally:
+    _ur.urlopen, vet._test_running = _real_open, _real_test
+check(r == {"ok": 1} and len(_seen) == 2, "an answer with no JSON (budget spent thinking) is asked again without thinking")
+check(_seen[0]["options"]["num_predict"] == vet.THINK_WORDS and _seen[1]["options"]["num_predict"] == vet.PLAIN_WORDS
+      and _seen[1]["think"] is False, "both questions carry a word budget")
+_seen.clear()
+_ur.urlopen, vet._test_running = _fake, lambda: False
+try:
+    vet._call("/api/chat", {"model": "m", "think": True, "messages": [{"role": "user", "content": "x"}]})
+finally:
+    _ur.urlopen, vet._test_running = _real_open, _real_test
+check(_seen[0]["options"]["num_predict"] == vet.THINK_WORDS, "a call made elsewhere without a budget gets one")
 print(f"\n{ok} checks passed")
