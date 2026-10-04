@@ -65,6 +65,22 @@ def _vec(v, n=3, d=0.0):
     return [_num(x, d) for x in v] + [d] * (n - len(v))
 
 
+def turned_extent(ext, rotate_deg):
+    """How far a part reaches along x, y, z once it is turned (Blender's XYZ turn about its center): the box
+    around the turned box. A part turned 0 reaches exactly its own size."""
+    import math
+    ax, ay, az = [math.radians(_num(a)) for a in _vec(rotate_deg, 3, 0.0)]
+    cx, sx = math.cos(ax), math.sin(ax)
+    cy, sy = math.cos(ay), math.sin(ay)
+    cz, sz = math.cos(az), math.sin(az)
+    rx = [[1, 0, 0], [0, cx, -sx], [0, sx, cx]]
+    ry = [[cy, 0, sy], [0, 1, 0], [-sy, 0, cy]]
+    rz = [[cz, -sz, 0], [sz, cz, 0], [0, 0, 1]]
+    mul = lambda a, b: [[sum(a[i][k] * b[k][j] for k in range(3)) for j in range(3)] for i in range(3)]
+    r = mul(rz, mul(ry, rx))
+    return [sum(abs(r[k][j]) * ext[j] for j in range(3)) for k in range(3)]
+
+
 def clean(plan, W, D, H, pics, kinds):
     """Keeps only parts a builder can make, inside the object's real size; every fix is written in 'fixed'."""
     out, fixed = [], []
@@ -101,26 +117,35 @@ def clean(plan, W, D, H, pics, kinds):
                 outl[key] = o[:16]
             lean = [[_num(q[0]), _num(q[1])] for q in (p.get("lean_mm") or []) if isinstance(q, (list, tuple)) and len(q) >= 2]
             outl["lean_mm"] = [[min(max(x, -lim[0]), lim[0]), min(max(y, -lim[1]), lim[1])] for x, y in lean][:16]
-        ext = list(size)                                     # how far the part reaches along x, y, z
-        if shape == "cylinder":
-            dia, ln = min(size[0], size[1]), size[2]
-            ext = {"x": [ln, dia, dia], "y": [dia, ln, dia], "z": [dia, dia, ln]}[axis]
+        rot = _vec(p.get("rotate_deg"), 3, 0.0)
+        is_turned = any(abs(a) > 0.5 for a in rot)
+
+        def reach(sz):                                       # how far the part reaches along x, y, z, once turned
+            e = list(sz)
+            if shape == "cylinder":
+                dia, ln = min(sz[0], sz[1]), sz[2]
+                e = {"x": [ln, dia, dia], "y": [dia, ln, dia], "z": [dia, dia, ln]}[axis]
+            return turned_extent(e, rot)
+
+        turned = reach(size)
         for k in range(3):                                   # the part stays inside the object's real size
-            half = ext[k] / 2
             lo, hi = (-lim[k], lim[k]) if k < 2 else (0, lim[k])
-            if ext[k] > (hi - lo) * 1.02:
-                fixed.append(f"{name}: reaches {ext[k]:.1f} mm along {'xyz'[k]}, more than the object - fitted")
-                f = (hi - lo) / ext[k]
-                if shape == "cylinder":                      # shrink the matching measure of the cylinder
-                    if ext[k] == size[2] and {"x": 0, "y": 1, "z": 2}[axis] == k:
+            if turned[k] > (hi - lo) * 1.02:
+                fixed.append(f"{name}: reaches {turned[k]:.1f} mm along {'xyz'[k]}"
+                             + (" once turned" if is_turned else "") + ", more than the object - fitted")
+                f = (hi - lo) / turned[k]
+                if is_turned:                                # a turned part keeps its proportions: shrunk whole
+                    size = [v * f for v in size]
+                elif shape == "cylinder":                    # shrink the matching measure of the cylinder
+                    if {"x": 0, "y": 1, "z": 2}[axis] == k:
                         size[2] *= f
                     else:
                         size[0] *= f
                         size[1] *= f
                 else:
                     size[k] *= f
-                ext[k] = hi - lo
-                half = ext[k] / 2
+                turned = reach(size)
+            half = min(turned[k], hi - lo) / 2
             c = min(max(at[k], lo + half), hi - half)
             if abs(c - at[k]) > 0.5:
                 fixed.append(f"{name}: moved {abs(c - at[k]):.1f} mm along {'xyz'[k]} to sit inside the object")

@@ -162,9 +162,10 @@ def lathe(part):
     bm = bmesh.new()
     seg = 96
     rings = []
+    zmid = (min(z for _, z in prof) + max(z for _, z in prof)) / 2        # built around its center, like every part
     for r, z in prof:
-        ring = [bm.verts.new((r * S * math.cos(2 * math.pi * k / seg), r * S * math.sin(2 * math.pi * k / seg), z * S))
-                for k in range(seg)]
+        ring = [bm.verts.new((r * S * math.cos(2 * math.pi * k / seg), r * S * math.sin(2 * math.pi * k / seg),
+                              (z - zmid) * S)) for k in range(seg)]
         rings.append(ring)
     for a, b in zip(rings, rings[1:]):
         for k in range(seg):
@@ -180,8 +181,7 @@ def lathe(part):
     bm.free()
     ob = bpy.data.objects.new(part["name"], me)
     bpy.context.collection.objects.link(ob)
-    x, y, _ = part["at_mm"]
-    ob.location = (x * S, y * S, (part["at_mm"][2] - part["size_mm"][2] / 2) * S)
+    ob.location = [c * S for c in part["at_mm"]]              # at_mm is the part's center; a turn pivots there
     return finish(ob, part)
 
 
