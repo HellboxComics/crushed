@@ -643,7 +643,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         try:
             import engineer
             res = engineer.fix(cid, card, verdict, shots, close, picked["file"], d, log=say, beat=beat,
-                               status=lambda **k: status(cid, **k))
+                               status=lambda **k: status(cid, **k), newer=newer_version)
         except Exception as e:
             import traceback
             traceback.print_exc()
@@ -654,6 +654,11 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             status(cid, step=f"your AI's engineer fixed the builder ({', '.join(res.get('before', []))} -> "
                              f"{', '.join(res.get('after', [])) or 'all checks pass'}) - rebuilding with the fix",
                    engineer={k: res.get(k) for k in ("sha", "summary", "before", "after")})
+            return
+        if res.get("newer_code"):                           # remade on the new code first (the retry sees old code)
+            status(cid, step="failed the realism check - newer code is in, it is remade on it first", ok=False,
+                   verdict=verdict, views=os.path.relpath(shots, WORK), ref=os.path.relpath(picked["file"], WORK))
+            say(f"[check] {cid}: failed on code that is already replaced - remade on the new code next")
             return
         verdict = dict(verdict, engineer=(res.get("summary") or res.get("why") or "")[:600])
     if not verdict.get("pass"):                                  # never shown to you as finished when it isn't
@@ -1464,7 +1469,7 @@ def status(cid, **kw):
     def change(s):
         if "product" in kw or not isinstance(s.get(cid), dict):   # a fresh run: nothing left over from the last one
             s[cid] = {}
-        s[cid].update(kw, at=time.time())
+        s[cid].update(kw, at=time.time(), code=code_sha())
     update_json(STATUS, change)                      # locked, whole-or-nothing, with a backup
     global _LAST
     final = kw.get("step", "").startswith(("done", "stopped", "no ")) or "ok" in kw
@@ -2156,18 +2161,34 @@ def retry_due(cid, v, tries, now):
     wait = next((w for p, w in RETRY_AFTER if step.startswith(p)), None)
     if wait is None:
         return None
-    since = max(now - 86400, code_time())           # newer code starts a fresh count: old tries were on old code
-    today = [t for t in tries.get(cid, []) if isinstance(t, (int, float)) and t >= since]
+    # newer code starts a fresh count: tries on another code version don't count (a try is [time, code] or an
+    # old plain time, which counts as another version)
+    today = [t for t in tries.get(cid, []) if isinstance(t, list) and len(t) == 2 and t[1] == code_sha()
+             and isinstance(t[0], (int, float)) and now - t[0] < 86400]
     try:
         at = float(v.get("at") or 0)
     except (TypeError, ValueError):
         at = 0.0
-    if at < code_time():
-        wait = 0                                    # it stopped or failed on older code: a fix may be in - again now
+    if (v.get("code") and v.get("code") != code_sha()) or (not v.get("code") and at < code_time()):
+        wait = 0                                    # it stopped or failed on other code: a fix may be in - again now
     return len(today) < RETRIES_PER_DAY and now - at >= wait
 
 
 _CODE_TIME = []
+
+
+_CODE_SHA = []
+
+
+def code_sha():
+    """Which code version this run uses (its git commit; '' if unknown)."""
+    if not _CODE_SHA:
+        try:
+            _CODE_SHA.append(subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True,
+                                            timeout=20).stdout.strip())
+        except Exception:
+            _CODE_SHA.append("")
+    return _CODE_SHA[0]
 
 
 def code_time():
@@ -2190,15 +2211,16 @@ def note_retry(cid):
     now = time.time()
 
     def change(t):
-        t[cid] = [x for x in t.get(cid, []) if isinstance(x, (int, float)) and now - x < 86400] + [now]
+        keep = [x for x in t.get(cid, []) if isinstance(x, list) and len(x) == 2 and isinstance(x[0], (int, float))
+                and now - x[0] < 86400]
+        t[cid] = keep + [[now, code_sha()]]
     t = update_json(RETRIES, change, backup=False)
     try:
         hours = (now - float(v.get("at") or now)) / 3600
     except (TypeError, ValueError):
         hours = 0
-    since = max(now - 86400, code_time())
     say(f"[retry] {cid}: trying again by itself ({step[:100]} - {hours:.0f} h ago), try "
-        f"{len([x for x in t[cid] if x >= since])} of {RETRIES_PER_DAY} on this code today")
+        f"{len([x for x in t[cid] if x[1] == code_sha()])} of {RETRIES_PER_DAY} on this code today")
 
 
 def queue(n):

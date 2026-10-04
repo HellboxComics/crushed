@@ -69,16 +69,23 @@ check(title and "Frosted Strawberry" in title.group(1) and "14.7" in title.group
 # --- retries: 3 a day, and a fresh count when newer code arrives
 import run as R  # noqa: E402
 R._CODE_TIME[:] = [1000.0]
+R._CODE_SHA[:] = ["new1"]
 now = 10000.0
-v = {"step": "failed the realism check (x)", "at": 500.0}
-check(R.retry_due("x", v, {"x": [600.0, 700.0, 800.0]}, now) is True,
+v = {"step": "failed the realism check (x)", "at": 500.0, "code": "old0"}
+check(R.retry_due("x", v, {"x": [[600.0, "old0"], [700.0, "old0"], [800.0, "old0"]]}, now) is True,
       "three tries on OLD code do not count: an item failed on old code is due again now")
-check(R.retry_due("x", v, {"x": [1100.0, 1200.0, 1300.0]}, now) is False, "three tries on THIS code: it waits")
-v2 = {"step": "failed the realism check (x)", "at": 2000.0}
+check(R.retry_due("x", v, {"x": [[1100.0, "new1"], [1200.0, "new1"], [1300.0, "new1"]]}, now) is False,
+      "three tries on THIS code: it waits")
+v2 = {"step": "failed the realism check (x)", "at": 2000.0, "code": "new1"}
 check(R.retry_due("x", v2, {}, now) is False, "failed on this code: waits its 6 hours")
 check(R.retry_due("x", v2, {}, 2000.0 + 6 * 3600) is True, "and is due after them")
+v3 = {"step": "failed the realism check (x)", "at": 9990.0, "code": "old0"}
+check(R.retry_due("x", v3, {}, now) is True, "failed a moment ago on OTHER code (the new code was already made): due now")
+check(R.retry_due("x", {"step": "failed the realism check (x)", "at": 500.0}, {"x": [600.0, 700.0, 800.0]}, now) is True,
+      "an old status without a code version: old plain tries don't count, failed before the code was made - due")
 check(R.retry_due("x", {"step": "done", "at": 2000.0}, {}, now) is None, "a done item is not retried")
 R._CODE_TIME[:] = []
+R._CODE_SHA[:] = []
 
 
 # --- every brain question has a word budget; an answer that was all thinking is asked again plainly

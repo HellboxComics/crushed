@@ -71,11 +71,11 @@ class Brain:
 LOG = []
 
 
-def run(brain, verdict):
+def run(brain, verdict, **kw):
     E._chat = brain
     LOG.clear()
     return E.fix(C.CID, dict(CARD), verdict, SHOTS, CLOSE, PHOTO, BUILD, log=lambda s: LOG.append(s),
-                 beat=lambda s: None)
+                 beat=lambda s: None, **kw)
 
 
 def git(*a, cwd=REPO):
@@ -329,6 +329,19 @@ check(tr[0].startswith("REFUSED") and "changed nothing" in tr[0], "rebuild with 
 check(not tr[1].startswith("REFUSED"), f"the first redo-from-scratch (clear only) runs: {tr[1][:60]}")
 check(tr[2].startswith("REFUSED") and "gamble" in tr[2], "a second redo with still no code change is refused")
 check(calls("trials", C.CID) == 1, f"only one test build ran ({calls('trials', C.CID)})")
+
+# =========================================================== I: newer code arrives before it changed anything
+print("\nI. newer code is in and the engineer has changed nothing: it steps aside, the item is remade on the new code")
+script({C.CID: [{"failed": ["shape"]}]}, {C.CID: [{"failed": ["shape"]}]})
+brain = Brain([
+    [("read_file", {"path": "library/finish.py", "start": 1, "end": 5})],
+    [("finish", {"summary": "x"})],
+])
+res = run(brain, {"pass": False, "failed": ["shape"], "problems": ["x"]}, newer=lambda: True)
+check(res.get("newer_code") is True and res.get("kept") is False, f"it steps aside: {res.get('why')}")
+check(calls("trials", C.CID) == 0, "no test build was run on the old code")
+res = run(Brain([[("finish", {"summary": "x"})]]), {"pass": False, "failed": ["shape"], "problems": ["x"]}, newer=lambda: False)
+check(not res.get("newer_code"), "with no newer code it works as before")
 
 # =========================================================== F: context and fingerprint units
 print("\nF. units: old tool results are cut short; the run.py fingerprint")

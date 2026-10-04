@@ -1459,7 +1459,7 @@ def _file_old_pending(cid):
         _move_to_scratch(p, f"lessons-{cid}-filed")
 
 
-def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lambda s: None, status=None):
+def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lambda s: None, status=None, newer=None):
     """Your AI works on one failed model until it passes or it runs out of ideas. Returns what happened."""
     say = log
     status = status or (lambda **k: None)
@@ -1512,12 +1512,26 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
            "review_sheet": b.review_sheet}
     allowed = {name: set(props) for name, _, props, _ in TOOLS}
     nudged = 0
+    last_newer = 0.0                                          # checked on the first turn, then every 10 minutes
     for turn in range(MAX_TURNS):
         if b.stopped:
             break
         if b.left() < b.reserve():
             say(f"[engineer] {cid}: time is nearly up - what it has is checked now")
             break
+        # newer code is in and it has changed nothing yet: the build is remade on the new code first - working out
+        # a failure of code that is already replaced wastes its hours (checked every 10 minutes, cheap)
+        if newer and time.time() - last_newer > 600:
+            last_newer = time.time()
+            try:
+                fresh = bool(newer())
+            except Exception:
+                fresh = False
+            if fresh and b.diff() == "no changes yet" and not b.trials:
+                say(f"[engineer] {cid}: newer code is in and it has changed nothing yet - this build is remade on "
+                    "the new code first")
+                b.newer_code = True
+                break
         if b.pictures:
             if sees:
                 messages.append({"role": "user", "content": "Pictures: " + "; ".join(n for n, _ in b.pictures),
@@ -1700,6 +1714,9 @@ def _file_rejected(b, why):
 
 
 def _keep(b, base_sha, branch, say):
+    if getattr(b, "newer_code", False):
+        return {"kept": False, "newer_code": True, "branch": branch, "trials": 0,
+                "why": "newer code arrived before it changed anything - the item is rebuilt on the new code first"}
     if b.stopped:
         ok, why = False, b.stopped
     elif b.accepted and b.accepted == b._diff_hash():

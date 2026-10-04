@@ -77,10 +77,12 @@ st = {"s1": {"step": "stopped: boom", "at": now - 1800}, "s2": {"step": "stopped
       "d1": {"step": "done - kept in your Asset Library"}, "r1": {"step": "3 rounds and none was right"},
       "k1": {"step": "waiting for your Keep or Redo on your phone"}}
 run._atomic_json(run.STATUS, st)
-run._atomic_json(run.RETRIES, {"f3": [now - 100, now - 200, now - 300], "s2": [now - 90000]})
+sha = run.code_sha()                                   # a try is [time, code version]; tries on other code don't count
+run._atomic_json(run.RETRIES, {"f3": [[now - 100, sha], [now - 200, sha], [now - 300, sha]], "s2": [[now - 90000, sha]],
+                               "f2": [[now - 100, "othercode"], [now - 200, "othercode"], [now - 300, "othercode"]]})
 run._CODE_TIME[:] = [now - 30 * 3600]                 # the code is older than every stop: the waits hold
 q = run.queue(20)
-check(q == ["s2", "f2", "n1"], f"due now: {q}")
+check(q == ["s2", "f2", "n1"], f"due now (f2's three tries were on other code and don't count): {q}")
 run._CODE_TIME[:] = [now - 600]                       # newer code arrived after s1 stopped: s1 is tried right away
 q2 = run.queue(20)
 check(q2 == ["s1", "s2", "f1", "f2", "n1"], f"newer code since s1 stopped and f1 failed -> due now: {q2}")
