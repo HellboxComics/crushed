@@ -1352,6 +1352,8 @@ def file_away(cid, d):
     man = jload(os.path.join(exp, "exports.json"), {})
     if steps.get("exports", {}).get("ok") and man.get("ok") and man.get("started", 0) >= fin["started"] - 2:
         for rel in man.get("files", []):
+            if os.path.isabs(rel):                        # an older manifest named a file by its full path
+                rel = os.path.relpath(rel, exp)
             src = os.path.join(exp, rel)
             if fresh(src, fin["started"]):
                 os.makedirs(os.path.dirname(os.path.join(tmp, rel)), exist_ok=True)

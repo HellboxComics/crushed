@@ -640,9 +640,12 @@ def write_uv_layouts(px=2048):
                 rec["over_texture"] = f"uv/{stem}.png"
                 rec["texture"] = rec_tex
             UV_LAYOUTS[stem] = rec
-            WROTE.append(wp)
+            WROTE.append(f"uv/{stem}_wire.png")               # relative, like every other file in the manifest
+            if base is not None:
+                WROTE.append(f"uv/{stem}.png")
     if not UV_LAYOUTS:
         raise RuntimeError("no part has a UV map - nothing can be painted on this model")
+    WROTE.append("uv/README.txt")
     _write_atomic(os.path.join(OUT, "uv", "README.txt"), "\n".join([
         f"HOW TO RESKIN {NAME}", "",
         "Each part that carries a picture has its UV map here - the flat sheet its 3D surface is cut open onto.",
