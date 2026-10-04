@@ -68,13 +68,15 @@ check(rcs == [0, 0, 0, 0] and json.load(open(counter))["n"] == 200, f"count is {
 # =========================================================== queue retries
 print("\n3. queue: stopped items retried after 1 h, failed ones after 6 h, at most 3 a day; waiting ones left alone")
 now = time.time()
-items = ["s1", "s2", "f1", "f2", "f3", "w1", "d1", "r1", "k1", "n1"]
+items = ["s1", "s2", "f1", "f2", "f3", "w1", "d1", "d0", "r1", "k1", "n1"]
 open(os.path.join(run.HERE, "queue.txt"), "w").write("\n".join(items) + "\n")
 fail = "failed the realism check (print) - not sent to you"
 st = {"s1": {"step": "stopped: boom", "at": now - 1800}, "s2": {"step": "stopped: boom", "at": now - 7200},
       "f1": {"step": fail, "at": now - 5 * 3600}, "f2": {"step": fail, "at": now - 7 * 3600},
       "f3": {"step": fail, "at": now - 7 * 3600}, "w1": {"step": "waiting for your pick on your phone (Telegram)"},
-      "d1": {"step": "done - kept in your Asset Library"}, "r1": {"step": "3 rounds and none was right"},
+      "d1": {"step": "done - kept in your Asset Library", "check_version": run.check_version()},
+      "d0": {"step": "done - kept in your Asset Library", "check_version": "judge1-inspect5"},
+      "r1": {"step": "3 rounds and none was right"},
       "k1": {"step": "waiting for your Keep or Redo on your phone"}}
 run._atomic_json(run.STATUS, st)
 sha = run.code_sha()                                   # a try is [time, code version]; tries on other code don't count
@@ -82,10 +84,11 @@ run._atomic_json(run.RETRIES, {"f3": [[now - 100, sha], [now - 200, sha], [now -
                                "f2": [[now - 100, "othercode"], [now - 200, "othercode"], [now - 300, "othercode"]]})
 run._CODE_TIME[:] = [now - 30 * 3600]                 # the code is older than every stop: the waits hold
 q = run.queue(20)
-check(q == ["s2", "f2", "n1"], f"due now (f2's three tries were on other code and don't count): {q}")
+check(q == ["s2", "f2", "d0", "n1"], f"due now (f2's three tries were on other code and don't count; d0 was kept under "
+      f"older checks and is checked again; d1 is current): {q}")
 run._CODE_TIME[:] = [now - 600]                       # newer code arrived after s1 stopped: s1 is tried right away
 q2 = run.queue(20)
-check(q2 == ["s1", "s2", "f1", "f2", "n1"], f"newer code since s1 stopped and f1 failed -> due now: {q2}")
+check(q2 == ["s1", "s2", "f1", "f2", "d0", "n1"], f"newer code since s1 stopped and f1 failed -> due now: {q2}")
 run._CODE_TIME[:] = [now - 30 * 3600]
 run.note_retry("s2")
 run.note_retry("n1")

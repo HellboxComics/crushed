@@ -342,6 +342,14 @@ def route_of_card(card, cid):
     return route, fam
 
 
+def check_version():
+    """How strict the checks are right now: the judge's question version plus the realism checklist. A kept asset
+    that passed an older version is checked again when this moves (the checks only ever get stricter; a model
+    that was good enough yesterday is looked at again today - never thrown away, only re-judged)."""
+    import judge
+    return f"judge{judge.QUESTION_VERSION}-inspect{len(CHECKS)}"
+
+
 def version_marks(card):
     """What this exact version is known by - the card's own 'recognize' list and the era version's marks (a tester
     strip, white test dots, a logo style, a seal). The label writer must put them on, and the judge looks for each."""
@@ -1459,7 +1467,7 @@ def file_away(cid, d):
             catalog.save_central(rec)
     except Exception as e:
         say(f"[keep] {cid}: the central catalog record could not be written ({e})")
-    status(cid, step="done - kept in your Asset Library", ok=True, note=dst)
+    status(cid, step="done - kept in your Asset Library", ok=True, note=dst, check_version=check_version())
     say(f"[keep] {cid} -> {dst} (every file opened whole)")
     return dict(res, ok=True, why="", folder=dst)
 
@@ -2275,6 +2283,11 @@ def note_retry(cid):
     """Just before an item starts: when it is an automatic retry, count it (3 a day at most) and say so."""
     v = read_status().get(cid, {})
     step = str(v.get("step", "")) if isinstance(v, dict) else ""
+    if step.startswith("done") and v.get("check_version") != check_version():
+        say(f"[retry] {cid}: the checks got stricter since it was kept ({v.get('check_version') or 'older'} -> "
+            f"{check_version()}) "
+            "- built and checked again (what passed is kept; only the new checks cost)")
+        return
     if not any(step.startswith(p) for p, _ in RETRY_AFTER):
         return
     now = time.time()
@@ -2328,6 +2341,9 @@ def queue(n):
             continue
         due = retry_due(cid, v, tries, now)
         if due is False:
+            continue
+        if step.startswith("done") and v.get("check_version") != check_version():
+            out.append(cid)                         # the checks got stricter since it was kept: checked again
             continue
         if due is None and step.startswith(("done", "stopped", "3 rounds", "no usable", "failed")):
             continue
