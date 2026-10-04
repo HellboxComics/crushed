@@ -1700,6 +1700,8 @@ def inspect(sheet, photo, product, use, card=None, close=None):
     what = ("Picture 1 shows the 3D model all around" + ("; picture 2 shows it up close (ends, seams, edges)" if close
             else "") + f"; the last picture is a real photo.")
     q = (f"{what} The product: {product}. A professional, photoreal product model must pass ALL of these checks. "
+         "The real photo may show things that are NOT part of the item (a hang tag, a price sticker, a hand, a stand, "
+         "a box, other items, a watermark): the model must not have those, and missing them is never a fault. "
          f"Answer each one true or false:\n{lines}\nAnswer ONLY JSON: {{" +
          ", ".join(f'"{k}": true/false' for k in CHECKS) + ', "problems": ["short and specific, for each false"]}')
     try:

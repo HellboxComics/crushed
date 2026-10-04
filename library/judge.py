@@ -19,6 +19,8 @@ Q = """[side] {first} and {second}. The product: {product}. This is its {face} s
 turned four ways side by side - the real photo may show any of those turns, or several items at different turns).
 {ref_note}
 What must be printed on this side (from the item's dossier): {must}
+The real photo may show things that are NOT part of the item: a hang tag or price sticker, a hand, a stand, a box,
+a background, other items, a watermark. The model must NOT have those, and missing them is never a fault.
 Compare them as a buyer would. Answer ONLY JSON:
 {{"same_layout": true if the model's side is laid out like the real one (same elements in the same places),
  "all_elements": true if every listed element is on the model's side and legible,
