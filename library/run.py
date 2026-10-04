@@ -2114,6 +2114,10 @@ def inspect(sheet, photo, product, use, card=None, close=None):
 
 
 PAGE_CSS = """
+.now{font:13px var(--mono);color:var(--ink);margin:6px 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px}
+.now .ago{opacity:.6}.card.selftest ul{list-style:none;padding:0;margin:6px 0;font:13px var(--mono)}
+.card.selftest li.ok{opacity:.7}.card.selftest li.bad{color:#e8402a}.card.selftest li.run{color:var(--copper)}
+.card.selftest.bad h2{color:#e8402a}
 :root{--bench:#16171a;--panel:#1f2125;--ink:#ece9e2;--muted:#9c988f;--line:#2d2f34;--copper:#d38945;
  --ok:#3fae63;--bad:#d9573f;--work:#6fa3d8;--display:"Archivo Narrow","Arial Narrow",system-ui,sans-serif;
  --body:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;color-scheme:dark}
@@ -2177,9 +2181,47 @@ def _state(v, cid="", picks=None, ap=None):
     return "work", "working", 2
 
 
-def page():
+SELFTEST_RETRY = 900      # a failed self-test is tried again after this many seconds (same code, nothing installed)
+
+
+def _now_line():
+    """What the run is doing this minute (the heartbeat) and the self-test's progress, for the top of the page."""
+    import html
+    out = []
+    try:
+        hb = jload(os.path.join(WORK, "heartbeat.json"), {})
+        ago = time.time() - float(hb.get("at") or 0)
+        if hb.get("doing"):
+            when = f"{int(ago)} s ago" if ago < 120 else f"{int(ago // 60)} min ago"
+            out.append(f'<p class=now><b>now:</b> {html.escape(str(hb["doing"])[:160])} <span class=ago>({when})</span></p>')
+    except Exception:
+        pass
+    try:
+        pr = jload(os.path.join(WORK, "selftest_progress.json"), {})
+        if pr and time.time() - float(pr.get("at") or 0) < 1800:
+            done = "".join(f'<li class={"ok" if p["ok"] else "bad"}>{html.escape(p["piece"])} {"✓" if p["ok"] else "✗ " + html.escape(str(p.get("note", ""))[:120])}</li>'
+                           for p in pr.get("pieces") or [])
+            out.append(f'<section class="card selftest"><h2>Self-test running since {time.strftime("%-I:%M %p", time.localtime(pr.get("started") or 0))}</h2>'
+                       f'<ul>{done}<li class=run>{html.escape(str(pr.get("running") or ""))} …</li></ul>'
+                       f'<p class=step>Nothing is built until every piece passes.</p></section>')
+        else:
+            st = jload(os.path.join(WORK, "selftest.json"), {})
+            if st and not st.get("ok", True):
+                bad = [r for r in st.get("results") or [] if not r.get("ok")]
+                nxt = time.strftime("%-I:%M %p", time.localtime(float(st.get("at") or 0) + SELFTEST_RETRY))
+                out.append(f'<section class="card selftest bad"><h2>Self-test FAILED at {time.strftime("%-I:%M %p", time.localtime(float(st.get("at") or 0)))}</h2>'
+                           f'<p class=step>{"; ".join(html.escape(r["piece"] + ": " + str(r.get("note", ""))[:160]) for r in bad)}</p>'
+                           f'<p class=notes>Nothing runs until it passes; it is tried again at about {nxt} (or at once when new code arrives).</p></section>')
+    except Exception:
+        pass
+    return "".join(out)
+
+
+def page(force=True):
     """The phone page, https://crushed-remaster.pages.dev: what needs you first, then what's being made, then
-    what's kept. Every built item has its finished 3D model to spin (the newest build, never an older one)."""
+    what's kept. Every built item has its finished 3D model to spin (the newest build, never an older one). The
+    page reloads itself every minute and says what the run is doing right now (the heartbeat) and how a running
+    or failed self-test stands (2026-10-04: it froze for an hour with nothing to say)."""
     import html
     s = jload(STATUS, {})
     picks = jload(os.path.join(HB, "picks.json"), {})
@@ -2210,13 +2252,14 @@ def page():
     t = (f'<div class=tally><div><b>{tally["you"]}</b><span>need you</span></div><div><b>{tally["work"]}</b>'
          f'<span>being made</span></div><div><b>{tally["kept"]}</b><span>kept</span></div>'
          f'<div><b>{tally["bad"]}</b><span>need attention</span></div></div>')
-    doc = (f"<!doctype html><meta charset=utf-8><title>Crushed Asset Library</title>{FONTS}<style>{PAGE_CSS}</style>"
+    doc = (f"<!doctype html><meta charset=utf-8><meta http-equiv=refresh content=60><title>Crushed Asset Library</title>"
+           f"{FONTS}<style>{PAGE_CSS}</style>"
            f'<div class=wrap><header><h1>Crushed Asset Library</h1><span class=when>updated '
-           f'{time.strftime("%a %-I:%M %p")}</span></header>{t}{"".join(cards)}</div>')
+           f'{time.strftime("%a %-I:%M %p")}</span></header>{_now_line()}{t}{"".join(cards)}</div>')
     open(os.path.join(WORK, "index.html"), "w").write(doc)
     open(os.path.join(WORK, "view.html"), "w").write(VIEW)
     import remaster as RM
-    RM.publish(force=True)
+    RM.publish(force=force)
 
 
 VIEW = """<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
@@ -2920,9 +2963,10 @@ if __name__ == "__main__":
         last = jload(os.path.join(WORK, "selftest.json"), {})
         age = time.time() - last.get("at", 0)
         head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-        if not last.get("ok", True) and age < 3600 and not installed and last.get("code") == head:
-            # failed lately with this same code: no rerun for an hour (a fix pushed since, or a missing tool just
-            # installed: every piece is checked again right away)
+        if not last.get("ok", True) and age < SELFTEST_RETRY and not installed and last.get("code") == head:
+            # failed lately with this same code: no rerun for a while (a fix pushed since, or a missing tool just
+            # installed: every piece is checked again right away). 15 min, not an hour (2026-10-04: one slow
+            # answer from the drawing room cost an hour of nothing, with the page frozen)
             sys.exit(0)
         fresh = last.get("ok") and age < 6 * 3600 and last.get("code") == head and not installed   # new code: all again
         if not fresh and not selftest.run_all():        # every piece checked first; a broken one stops it here

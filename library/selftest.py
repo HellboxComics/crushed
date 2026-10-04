@@ -23,12 +23,44 @@ TMP = tempfile.mkdtemp(prefix="crushed-selftest-")
 RESULTS = []
 
 
+PROGRESS = os.path.join(os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster")),
+                        "selftest_progress.json")
+
+
+def _progress(running=None, done=False):
+    """What the self-test is doing right now, for the phone page (run.page reads it): the pieces so far and the
+    one running. Written whole; removed when the self-test is over."""
+    try:
+        if done:
+            if os.path.exists(PROGRESS):
+                os.remove(PROGRESS)
+            return
+        tmp = PROGRESS + ".tmp"
+        json.dump({"started": STARTED[0], "running": running, "pieces": RESULTS, "at": time.time()}, open(tmp, "w"))
+        os.replace(tmp, PROGRESS)
+    except Exception:
+        pass
+
+
+def _page():
+    try:
+        import run
+        run.page(force=False)                          # the phone page, at most every 90 s
+    except Exception:
+        pass
+
+
+STARTED = [0.0]
+
+
 def check(name, fn, limit):
     try:
         import run
         run.beat("self-test: " + name)
     except Exception:
         pass
+    _progress(running=name)
+    _page()
     t = time.time()
     try:
         note = fn() or ""
@@ -349,6 +381,8 @@ def t_google():
 def run_all(quiet_phone=False):
     global SAMPLE
     SAMPLE = sample_photo()
+    STARTED[0] = time.time()
+    RESULTS.clear()
     print("SELF-TEST " + time.strftime("%H:%M"), flush=True)
     HY, GUARD, GOOG = "Hunyuan3D loads", "your AI's engineer: safety rules", "Google Images browser"
     optional = {HY, GUARD, GOOG}                       # these only switch off their own part, never the whole run
@@ -390,6 +424,8 @@ def run_all(quiet_phone=False):
                    "engineer_guard_note": guard["note"], "browser_ok": goog["ok"], "browser_note": goog["note"],
                    "at": time.time(), "results": RESULTS}, f, indent=1)
     os.replace(out + ".tmp", out)
+    _progress(done=True)
+    _page()
     if not goog["ok"] and not quiet_phone:
         try:
             import hart as H
