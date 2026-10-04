@@ -86,9 +86,11 @@ def builder(f):
 def classify(card, picked, use=None, log=print, redo=False, notes=""):
     """The item's family, read from the picked photo. Kept on the card (card["family_lib"]) until a Redo."""
     have = card.get("family_lib") or {}
-    if have.get("family") and have.get("version") == VERSION and not redo and have.get("picked") == picked:
-        return have
     lib = library()["families"]
+    import kits
+    if have.get("family") and have.get("version") == VERSION and not redo and have.get("picked") == picked \
+            and (have["family"] == "general" or kits.finished(lib.get(have["family"]) or {})):
+        return have                                         # (a family still without a kit is looked at again)
     size = "x".join(str(round(x * 1000)) for x in (card.get("size") or [0, 0, 0])[:3])
     got = {}
     if use and picked:
@@ -110,11 +112,14 @@ def classify(card, picked, use=None, log=print, redo=False, notes=""):
             lib = library()["families"]
             fam, conf = kk, max(conf, 6)
             got["why"] = (got.get("why") or "") + f" - a kind your AI studied itself: {kk}"
-    import kits
     if fam in lib and fam != "general" and conf >= 6 and not kits.finished(lib[fam]) and use and picked:
-        import kitmaker                                     # a family without a finished kit: studied now, same key
-        kitmaker.ensure(fam, card, picked, use, log)
+        import kitmaker                                     # a family without a finished kit: your AI studies the
+        kind = str(got.get("kind_name") or "").strip()      # KIND it named (an "electronic plush toy", not the vague
+        kk, kit = kitmaker.ensure(kind or fam, card, picked, use, log)   # "organic toy") and that kit is used
         lib = library()["families"]
+        if kk and kk in lib:
+            fam = kk
+            got["why"] = (got.get("why") or "") + f" - a kind your AI studied itself: {kk}"
     if fam not in lib or conf < 6:
         why = (f"unsure ({fam or 'no answer'}, confidence {conf}/10)" if fam in lib or fam else "the photo could not be read")
         fam, conf = "general", conf
