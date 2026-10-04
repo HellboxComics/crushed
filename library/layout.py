@@ -1,6 +1,7 @@
 """YOUR AI WRITES THE LABEL LAYOUT: it looks at the real label (unrolled flat from your photo), is given the exact
 words read off it, and writes the layout labelart.py draws (colors, bands, boxes, every word with its position and
-size). The drawn label goes back to it next to the real one; it fixes what differs; up to 3 rounds, the best kept.
+size). The drawn label goes back to it next to the real one; it fixes what differs, round after round while anything
+is left to fix (up to 4 rounds); the best kept.
 Words are set in real type, so they are always spelled exactly as read.
 
     png, mr_png, score = make(product, real_flat_png, words, width_mm, height_mm, out_dir)
@@ -257,7 +258,7 @@ def describe_bands(shapes, axis):
             "bars, dots, logos and words.\n")
 
 
-def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, log=print, typical=(), cover_png=None):
+def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, log=print, typical=(), cover_png=None):
     """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
     belongs there, from the confirmed words only."""
     model = model or V.model()
@@ -298,7 +299,9 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=3, lo
         json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
         if (c.get("match") or 0) > best[0]:
             best = (c.get("match") or 0, lay, png, mr)
-        if (c.get("match") or 0) >= 9 or r == rounds:
+        # it stops only when nothing is left to fix (a 9 with "remove the white dot" is not done - the standard is
+        # perfect), when the rounds are used up, or when a round changes nothing
+        if ((c.get("match") or 0) >= 10 and not c.get("fixes")) or r == rounds:
             break
         fixes = "; ".join(map(str, c.get("fixes") or [])) or "(none listed - compare the two pictures yourself)"
         try:

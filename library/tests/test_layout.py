@@ -59,6 +59,7 @@ check(os.path.exists(png) and os.path.exists(mr) and Image.open(png).size[0] >= 
 lay = json.load(open(os.path.join(out, "layout.json")))
 check(all(t["text"] != "ALKALINE BATTERY 9000 HOURS" for t in lay["texts"]), "words not on the real label are dropped")
 check(score == 9, f"the best round is kept (match {score})")
+check(sum(1 for a in asked if "Your layout:" in a) >= 2, "a 9 with fixes still listed is not done: another round is asked for")
 check(any("move the logo up" in a for a in asked if "Your layout:" in a), "the judge's fixes are given to the writer")
 check(any("ONLY the printed sleeve" in a for a in asked[:1]), "the writer is told the metal ends are not the label")
 # a layout that comes back unchanged is not drawn again and again
