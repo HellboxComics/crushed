@@ -107,6 +107,11 @@ step: <check> = a step's own check on the review sheet failed (the label's score
 not built, the kit); side_<face> = the judge's look at that side next to its photo; shape / print / materials /
 layers / details / not_cg / finished = the judge's realism checklist on the whole model; not_judged = a test build
 whose exact or step checks failed was not shown to the judge (its judge checks count as still failing until then).
+Two sheet steps are never yours to fix in code: "the size" (the catalog size against the shape of the item in the
+pick - when they disagree the real build stops and asks the owner for the size) and "the pick" (the careful look's
+own verdict on the picked photo - an auto-pick it calls not exact is set aside and chosen again). sizecheck.py is
+locked. If a build you are fixing shows one of these failed, say so in your lesson and stop: no code change makes a
+wrong size or a wrong photo right.
 
 A fix is kept only when the asset maker's OWN independent check of your confirmation rebuild is strictly better
 than the first check AND your own two rebuilds agree. A change that fixed something and broke nothing is PROVEN:

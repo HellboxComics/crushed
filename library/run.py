@@ -488,6 +488,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     # this should never happen again, no matter the object"): nothing is built from a family without a finished
     # kit. Your AI studies the kind now; if it cannot, the build stops and says so - it never builds from a guess.
     kit_log = ensure_kit(cid, card, fl, picked["file"], use)
+    size_log = size_gate(cid, card, picked)                  # THE SIZE GATE: no size that the photo disagrees with
     route, fam = route_of_card(card, cid)
     bld, why = families.builder(fam)
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
@@ -507,6 +508,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     import review
     R0 = review.Sheet(d)                                     # a fresh review sheet for THIS build (every route)
     R0.step("the kit (what every thing of this kind is made of, by your AI)", checks=kit_log)
+    R0.step("the size (the catalog size against the shape of the item in your pick)", checks=size_log)
+    R0.step("the pick (your AI's own careful look at the picked photo)", checks=pick_gate(cid, dos, picked))
 
     # 5. BUILD by the family's builder
     if route == "round":
@@ -1194,7 +1197,10 @@ def auto_pick(cid, cands, d):
         say(f"[pick] not picked by itself: the top photo's item was made about {v['year_off']} years outside the "
             "item's era (read off its printed dates) - you choose")
         return
-    if v.get("kind") == "photo" and int(v.get("seen") or 0) >= 3 and v.get("avoid_seen") is not True and lead >= 4:
+    if len(cands) < 2:                                        # a lone photo has beaten nothing: you choose
+        say("[pick] not picked by itself: only one photo qualified - you choose")
+        return
+    if v.get("kind") == "photo" and marks_seen(v) >= 3 and v.get("avoid_seen") is not True and lead >= 4:
         json.dump({"files": [{"file": c["file"], "mask": c["mask"], "vet": c["vet"]} for c in cands],
                    "asked": time.time(), "auto": True}, open(cf, "w"), indent=1)
         picks[cid] = {"pick": "1", "at": time.time(), "auto": True}
@@ -1202,11 +1208,28 @@ def auto_pick(cid, cands, d):
         say(f"[pick] clear winner, picked by itself: {os.path.basename(cands[0]['file'])} (lead {lead:.1f})")
 
 
+def marks_seen(v):
+    """How many of the card's right-version marks a look really named (by name, each matched to a listed mark) -
+    never the brain's bare count (audit 2026-10-04: 'seen: 3' was unverifiable and drove the auto-pick)."""
+    names = v.get("marks_seen")
+    if not isinstance(names, list):
+        return 0
+    listed = [str(m).lower().strip() for m in (v.get("marks_listed") or []) if str(m).strip()]
+    n = 0
+    for x in names:
+        x = str(x).lower().strip()
+        if len(x) < 3:
+            continue
+        if any(x == m or x in m or m in x for m in listed):   # named AND one of the listed marks
+            n += 1
+    return n
+
+
 def rank(f):
     """Which photos you see first - the same rule for every item: the card's right-version marks it shows count
     most, a wrong-version mark sinks it, a real photo beats an ad or a render, Google's own order breaks ties."""
     v = f["vet"] or {}
-    r = v.get("match", 0) + 3 * min(int(v.get("seen") or 0), 5)
+    r = v.get("match", 0) + 3 * min(marks_seen(v), 5)
     r -= 8 if v.get("avoid_seen") is True else 0
     r -= 8 if v.get("era_ok") is False else 0                 # a modern redesign is not this item
     if isinstance(v.get("year_off"), int):                    # made outside the item's era ("90s"), read off its
@@ -1637,6 +1660,78 @@ def _beating():
     threading.Thread(target=loop, daemon=True).start()
 
 
+class Waiting(Exception):
+    """The build stopped because it needs YOU (a size, a pick): the message is the item's status, it is not an
+    error and it is not retried by itself - the item goes on when your answer is in."""
+
+
+def phone(text):
+    """A line to your phone (Hart's Telegram); never an error when the phone can't be reached."""
+    try:
+        ownmods.add_path("~/.hellbox/ai/hart")
+        import hart as H
+        H.send(text)
+        return True
+    except Exception as e:
+        say(f"[phone] could not send: {e}")
+        return False
+
+
+def size_gate(cid, card, picked):
+    """THE SIZE GATE (audit 2026-10-04, RC5: a missing size became a 0.1 m cube that passed against itself; a pick
+    whose shape disagreed 20%+ was "used anyway"). The catalog size must agree with the shape of the item in your
+    pick (sizecheck.agree). When it doesn't, the build stops and asks you for the real size - it never builds a
+    thing at a size no photo agrees with. -> the review checks [(what, ok, detail)]."""
+    import sizecheck
+    v = picked.get("vet") or {}
+    if picked.get("mask") and os.path.exists(picked["mask"]):
+        r = sizecheck.agree(card["size"], picked["mask"], v.get("view"), whole=v.get("whole", True),
+                            count=v.get("count") or 1)
+    else:
+        r = {"ok": None, "why": "your pick has no cut-out to measure"}
+    src = card.get("size_source") or "the catalog"
+    say(f"[size] {cid}: {r.get('why')} (size from {src})")
+    if r.get("ok") is False and not TRIAL:                   # (a test build only writes the check down)
+        mm = " x ".join(str(round(x * 1000, 1)) for x in card["size"][:3])
+        name = card.get("product", cid).split(",")[0]
+        status(cid, step="waiting for your size: the catalog size disagrees with the shape in your pick", ok=False,
+               size_check=r, size_source=src)
+        phone(f"{name}: {src} says {mm} mm (W x D x H) but {r.get('why', '')}. Measure a real one (or read a trusted "
+              f"listing) and reply '{cid.replace('_', ' ')}: size W x D x H mm' - it builds at that size.")
+        raise Waiting("waiting for your size: the catalog size disagrees with the shape in your pick - " + r.get("why", ""))
+    return [("the catalog size agrees with the shape of the item in your pick", r.get("ok"),
+             f"{r.get('why', '')} (size from {src})")]
+
+
+def pick_gate(cid, dos, picked):
+    """THE PICK'S OWN LOOK (audit 2026-10-04, RC6: the pick was "exact by definition"). The careful look at your
+    pick records what it saw without being told the answer (dossier look_match). A pick your AI made by itself that
+    its own careful look does not call exact is un-picked: the photo is set aside and the choice is made again
+    (Waiting). Your own pick stands - the sheet only shows what the look said. -> the review checks."""
+    p = next((p for p in dos.get("photos", []) if p.get("file") == picked.get("file")), None)
+    if not p or not p.get("labeled"):
+        return [("your AI's careful look agrees the pick is the exact item", None, "the pick had no careful look")]
+    lm = p.get("look_match") or "?"
+    picks = jload(os.path.join(HB, "picks.json"), {})
+    auto = bool((picks.get(cid) or {}).get("auto"))
+    det = f"the look said {lm}: {p.get('product_shown', '')[:80]}" + (f" ({p['look_why']})" if p.get("look_why") else "")
+    if lm == "exact":
+        return [("your AI's careful look agrees the pick is the exact item", True, det)]
+    if not auto or TRIAL:
+        return [("your AI's careful look agrees the pick is the exact item", None, det + " - your pick stands")]
+    d = os.path.join(OUT, cid)
+    sf = os.path.join(d, "shown.json")
+    json.dump(list(dict.fromkeys(jload(sf, []) + [picked["file"]])), open(sf, "w"), indent=1)
+    picks.pop(cid, None)
+    json.dump(picks, open(os.path.join(HB, "picks.json"), "w"), indent=1)
+    cf = os.path.join(d, "candidates.json")
+    if os.path.exists(cf):
+        os.remove(cf)
+    say(f"[pick] {cid}: the photo your AI picked by itself did not pass its own careful look ({det}) - set aside, "
+        "choosing again")
+    raise Waiting("choosing the photo again: your AI un-picked its own photo (its careful look said " + lm + ")")
+
+
 def status(cid, **kw):
     beat(f"{cid}: {kw.get('step', '')}")
     if TRIAL:                                         # a test build: the real status and your page are left alone
@@ -1990,6 +2085,8 @@ def _state(v, cid="", picks=None, ap=None):
         if picks and cid in picks:
             return "line", "your pick is in - next up", 2
         return "you", "your photo pick", 0
+    if step.startswith("waiting for your size"):
+        return "you", "its real size (text it)", 0
     if step.startswith(("stopped", "3 rounds", "no usable", "you said none", "failed")):
         return "bad", "needs attention", 1
     if step.startswith("in line"):
@@ -2353,6 +2450,38 @@ RETRY_AFTER = (("stopped", 3600), ("failed the realism check", 6 * 3600))   # ho
 RETRIES_PER_DAY = 3
 
 
+def waiting(cid, e):
+    """A build that stopped for YOU (run.Waiting): "waiting for ..." is already the item's status; "choosing the
+    photo again" runs the item once more right away (the pick was set aside - the next best photo is chosen or
+    sent to your phone); anything else is written down as the status."""
+    say(f"[{cid}] {e}")
+    msg = str(e)
+    if msg.startswith("waiting"):
+        return
+    status(cid, step=msg[:300], ok=False)
+    if msg.startswith("choosing the photo again"):
+        try:
+            pipeline(cid, False)
+        except Waiting as e2:
+            say(f"[{cid}] {e2}")
+            if not str(e2).startswith("waiting"):
+                status(cid, step=f"stopped: {e2}"[:300], ok=False)
+        except Exception as e2:
+            import traceback
+            traceback.print_exc()
+            status(cid, step=f"stopped: {e2}"[:300], ok=False)
+
+
+def size_in(cid, v):
+    """Has a size for this item come in from your phone since it stopped to wait for one?"""
+    import portal
+    g = portal.given_size(cid)
+    try:
+        return bool(g) and float(g.get("at") or 0) >= float((v or {}).get("at") or 0) - 1
+    except (TypeError, ValueError):
+        return bool(g)
+
+
 def retry_due(cid, v, tries, now):
     """For an item that stopped (an error) or failed the realism check: True when it may be tried again by itself
     now (1 hour after stopping, 6 hours after failing, at most 3 times a day), False while it waits, None when it is
@@ -2473,6 +2602,8 @@ def queue(n):
         if step.startswith("waiting for your pick") and cid not in picks:
             continue
         if step.startswith("waiting for your Keep") and cid not in ap:
+            continue
+        if step.startswith("waiting for your size") and not size_in(cid, v):
             continue
         out.append(cid)
     # an item you have just answered on your phone (a pick, "none") goes first: you are waiting on it
@@ -2669,6 +2800,8 @@ if __name__ == "__main__":
                 try:
                     note_retry(cid)
                     pipeline(cid, False)
+                except Waiting as e:
+                    waiting(cid, e)
                 except Exception as e:
                     import traceback
                     traceback.print_exc()
@@ -2691,6 +2824,8 @@ if __name__ == "__main__":
             if not a.only:
                 note_retry(cid)
             pipeline(cid, a.redo)
+        except Waiting as e:
+            waiting(cid, e)
         except Exception as e:
             import traceback
             traceback.print_exc()

@@ -79,7 +79,7 @@ LOCKED_FILES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "ma
                 "engineer.py", "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "queue.txt",
                 "families.json", "families.py", "family_library.json", "catalog.py", "era.py", "jsonsafe.py", "speed.py", "brainjobs.py",
                 "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py", "kept.py", "cards.py",
-                "deliver.py", "steptest.py"}
+                "deliver.py", "steptest.py", "sizecheck.py"}
 # Its rulebook and lessons only. The label layouts (labels/) and measured shapes (shapes/specs/) are BUILD data it
 # may correct: the checks never read them (size is checked against the dossier, print against the real photo), and
 # a wrong hand-made layout is exactly what it must be able to fix (2026-10-03: the AA label had the big DURACELL
@@ -89,13 +89,13 @@ LOCKED_DIRS = ("playbook/",)
 LOCKED_NAMES = {"vet.py", "viewshot.py", "measure.py", "measure_blender.py", "judge.py", "engineer.py",
                 "selftest.py", "watchdog.py", "dossier.py", "facts.py", "notes.py", "run.py", "era.py", "jsonsafe.py",
                 "speed.py", "brainjobs.py", "ownmods.py", "review.py", "labelparts.py", "portal.py", "kitmaker.py",
-                "kept.py", "cards.py", "deliver.py", "steptest.py", "hart.py", "askfirst.py", "testlock.py", "sitecustomize.py",
+                "kept.py", "cards.py", "deliver.py", "steptest.py", "sizecheck.py", "hart.py", "askfirst.py", "testlock.py", "sitecustomize.py",
                 "usercustomize.py"}
 # run.py: the checklist, the judge's question, the test-build verdict and every line that handles the verdict
 RUN_PROTECTED = {"CHECKS", "inspect", "verdict", "measure", "judge"}
 RUN_FROZEN_DEFS = {"inspect", "trial", "_judge_trial", "_trial_copies", "_atomic_json", "read_json_safe",
                    "update_json", "read_status", "jload", "check_model", "version_marks", "route_of_card",
-                   "check_version", "ensure_kit"}
+                   "check_version", "ensure_kit", "size_gate", "pick_gate", "marks_seen", "auto_pick", "Waiting"}
 RUN_COUNTED = RUN_PROTECTED | {"build", "trial", "TRIAL", "status", "engineer_turn", "jload", "say", "beat"}
 
 # Things a builder never needs and that could fool the check from inside a test build (judged by whether the change

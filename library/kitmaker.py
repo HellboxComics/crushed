@@ -155,8 +155,34 @@ def _sizes(kind, product, search, use, log):
         s = (d or {}).get("size_mm")
         if isinstance(s, list) and len(s) == 3 and all(isinstance(x, (int, float)) and 0 < x < 5000 for x in s) \
                 and d.get("source"):
+            missing = numbers_missing(s, txt)
+            if missing:                                  # (audit 2026-10-04: a "source" the brain wrote itself is
+                log(f"[kit] size {name} {s} dropped: {missing} not in any result - a size needs its numbers in the source")
+                continue                                 # no source - the numbers must be IN the results)
             out[str(name)[:30]] = {"size_mm": [float(x) for x in s], "source": str(d["source"])[:300]}
     return out
+
+
+def numbers_missing(size_mm, text):
+    """The numbers of a size that do NOT appear in the text (as mm, cm or inches, to the usual rounding) - a size
+    whose numbers are not in its source was remembered or guessed, never read. At most one may be missing (a depth
+    equal to the width is often not repeated)."""
+    import re
+    nums = set()
+    for t in re.findall(r"\d+(?:[.,]\d+)?", text or ""):
+        try:
+            nums.add(float(t.replace(",", ".")))
+        except ValueError:
+            pass
+    miss = []
+    for x in size_mm:
+        x = float(x)
+        forms = [x, x / 10, x / 25.4]                                     # mm, cm, in
+        found = any(abs(n - f) <= max(0.015 * f, 0.051) for f in forms for n in nums)
+        if not found:
+            miss.append(x)
+    seen = len(size_mm) - len(miss)
+    return miss if seen < 2 else []
 
 
 def study(kind, card, photo, use, log=print):

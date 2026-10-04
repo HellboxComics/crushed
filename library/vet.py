@@ -146,7 +146,8 @@ Look at this photo and answer ONLY with JSON, no other words:
   "made_year_why": "what you read and how you worked the year out (e.g. 'best if installed by MAR 2003, this kind
            of product carried a date N years after it was made')",
   "version_seen": "the flavor / model / version and count you can read in the photo, or empty",
-  "seen": how many of the "right version" things you can actually see in this photo (0 if none),
+  "marks_seen": [each "right version" thing you can ACTUALLY SEE in this photo, written exactly as listed above;
+          an empty list if none - never count what you cannot see],
   "avoid_seen": true if any of the "different version" things is visible,
   "count": how many of the product are visible,
   "view": which side faces the camera most: "front", "back", "left", "right", "top", "bottom" or "mixed",
@@ -209,12 +210,16 @@ def vet(path, display, era="", use=None, think=True, card=None):
     ev = card.get("era_version") or {}                  # what it was called and looked like in its era
     if ev.get("names"):
         display = f"{display} - in its era it was sold as: {' / '.join(ev['names'])}"
+    marks = [str(m) for m in list(ev.get("marks") or []) + list(card.get("recognize", []))]
     q = ASK.format(display=display, era=ERA.describe(card.get("year")) if card.get("year") else "unknown",
-                   recognize="; ".join(list(ev.get("marks") or []) + list(card.get("recognize", []))) or "(none listed)",
+                   recognize="; ".join(marks) or "(none listed)",
                    avoid="; ".join(list(ev.get("not_then") or []) + list(card.get("avoid", []))) or "(none listed)",
                    note_field=NOTE_FIELD.format(note=note.replace('"', "'")) if note else "")
     v = ask(use, q, [path], think)                     # an error is an error (never a stored "match 0", 2026-10-04)
     v["model"] = use
+    v["marks_listed"] = marks                           # what it was asked to find: run.marks_seen checks names
+    if not isinstance(v.get("marks_seen"), list):       # an answer asked another way counts no marks
+        v["marks_seen"] = []
     if card.get("year") and v.get("made_year") not in (None, "", "null"):
         o = ERA.off(v.get("made_year"), card.get("year"))      # years outside the item's era (0 = inside it)
         if o is not None:

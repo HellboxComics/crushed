@@ -102,18 +102,25 @@ def path(cid):
 
 
 def catalog(cid):
-    try:                                                     # an item Cody asked for on his phone (portal.py)
-        import portal
-        e = portal.catalog_entry(cid)
-        if e:
-            return e
-    except Exception:
-        pass
+    import portal                                            # an item Cody asked for on his phone (portal.py)
+    e = portal.catalog_entry(cid)
+    given = portal.given_size(cid)                           # a size he sent from his phone wins over any catalog
+    if e:
+        if given:
+            e = dict(e, size=given["size"], size_source=given["source"])
+        return e
     plan = json.load(open(os.path.join(ROOT, "assets", "plan", "items.json")))
     beh = json.load(open(os.path.join(ROOT, "assets", "plan", "behavior.json")))
     p = plan.get(cid, {})
+    if not p and cid not in beh:
+        raise RuntimeError(f"{cid} is in no catalog (assets/plan/items.json) and not a portal item")
+    size, src = (given["size"], given["source"]) if given else (p.get("size") or beh.get(cid, {}).get("size"), "the catalog")
+    if not (isinstance(size, list) and len(size) == 3 and all(isinstance(x, (int, float)) and 0.0005 < x < 5 for x in size)):
+        # NEVER a made-up size (audit 2026-10-04: a 0.1 m cube was the default and passed measure_size against itself)
+        raise RuntimeError(f"no real size in the catalog for {cid} (got {size!r}) - a size is measured or given, never "
+                           "guessed: add it to the catalog or send '<item>: size W x D x H mm' from your phone")
     return {"product": p.get("product") or p.get("display") or cid.replace("_", " "),
-            "size": p.get("size") or beh.get(cid, {}).get("size") or [0.1, 0.1, 0.1],
+            "size": [float(x) for x in size], "size_source": src,
             "mat": beh.get(cid, {}).get("mat", "plastic"),
             "master": json.load(open(os.path.join(ROOT, "assets", "plan", "shapes.json"))).get(cid)}
 
@@ -187,6 +194,22 @@ def _era_web(card, words, log=print):
     return list(dict.fromkeys(out))[:14]
 
 
+def backed_names(names, web, evidence, product=""):
+    """The era names that something other than the brain's memory backs: every distinctive word of the name (one the
+    catalog name itself doesn't carry) appears in a web listing or on a photo from the era. -> (kept, dropped)."""
+    text = " ".join(list(web or []) + list(evidence or [])).lower()
+    own = set(re.findall(r"[a-z0-9]+", str(product).lower()))
+    kept, dropped = [], []
+    for n in names:
+        toks = [t for t in re.findall(r"[a-z0-9]+", n.lower()) if len(t) >= 3]
+        new = [t for t in toks if t not in own]
+        if toks and all(t in text for t in new):
+            kept.append(n)
+        else:
+            dropped.append(n)
+    return kept, dropped
+
+
 def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
     """What the item was called and looked like IN ITS ERA ("90s"), from your AI's own knowledge plus what the photos
     found so far showed (evidence: names read on photos judged to be from the right era). The catalog may call a
@@ -201,7 +224,7 @@ def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
         return card.get("era_version") or {}
     ev = sorted({str(e).strip()[:80] for e in evidence if str(e).strip()})[:12]
     old = card.get("era_version") or {}
-    if old.get("era") == ERA.words(y) and old.get("names") and not refresh and \
+    if old.get("era") == ERA.words(y) and old.get("names") and not refresh and "unbacked" in old and \
             (old.get("web") is not None) and (old.get("evidence") or not ev):
         return old                                    # worked out once; asked again after you turn photos down or
     #                                                   when photos from the era give it something new to go on
@@ -223,7 +246,10 @@ def era_version(cid, card, model=None, log=print, evidence=(), refresh=False):
         log(f"[card] {cid}: could not work out the era's own version ({e})")
         return old
     clean = lambda k, n: [str(x).strip()[:80] for x in v.get(k) or [] if str(x).strip()][:n]
-    ev_out = {"era": ERA.words(y), "evidence": ev, "web": web, "names": clean("names", 3), "marks": clean("marks", 5),
+    names, unbacked = backed_names(clean("names", 3), web, ev, card.get("product", ""))
+    if unbacked:                                          # (audit 2026-10-04: era names from memory sank right photos)
+        log(f"[card] {cid}: era name(s) from memory alone, not used: {', '.join(unbacked)} - no listing or photo says so")
+    ev_out = {"era": ERA.words(y), "evidence": ev, "web": web, "names": names, "unbacked": unbacked, "marks": clean("marks", 5),
               "not_then": clean("not_then", 3),
               "searches": [ERA.in_words(x, y) for x in clean("searches", 5)]}
     card["era_version"] = ev_out

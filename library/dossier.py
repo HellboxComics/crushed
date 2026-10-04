@@ -38,7 +38,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 6                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+VERSION = 7                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 #                              4: a round end's reference photo must show that end end-on (a disc)
 #                              5: a round item's ends are told apart by the kit (the + button end is the top): the
@@ -491,7 +491,9 @@ def careful_looks(dos, use, log=print):
 
     def look(p):
         ref = ("Picture 2 is the front of our exact item (the photo picked as true) - compare with it."
-               if p["file"] != picked and picked else "Picture 1 IS our exact item (picked as true).")
+               if p["file"] != picked and picked else
+               "Picture 1 is the photo that was PICKED as our item - it has not been checked: judge it like any "
+               "other photo and say honestly whether it is exactly this item (audit 2026-10-04).")
         imgs = [p["file"]] + ([picked] if p["file"] != picked and picked else [])
         return _ask(use, LABEL_Q.format(name=idn["name"], year=idn.get("era") or idn.get("year") or "", y0=era[0],
                                         y1=era[1], ref=ref, sides_hint=hint), imgs, think=True,
@@ -525,8 +527,11 @@ def _apply_label(p, v, era, is_pick=False):
     why = ""
     if ys and not _overlap(ys, era):
         match, why = "wrong", f"its years {ys} are outside the era {era}"
+    look_match, look_why = match, why
     if is_pick:
-        match = "exact"                                    # your pick is the item, by definition
+        match = "exact"                                    # the pick is built as the item (run.pick_gate reads what
+        why = ""                                           # the look itself said: look_match; an auto-pick that the
+        #                                                    look calls not exact is un-picked, 2026-10-04)
     els = []
     for e in v.get("elements") or []:
         if not isinstance(e, dict) or not _str(e.get("what")):
@@ -550,6 +555,8 @@ def _apply_label(p, v, era, is_pick=False):
              text=[_str(t, 200) for t in (v.get("text") or []) if _str(t) and not FX.not_printed(t)][:60], quality=q,
              elements=[e for e in els if not FX.not_printed(e["text"])], overlays=overlays,
              kind=(p.get("quick") or {}).get("kind", "photo"))
+    if is_pick:
+        p["look_match"], p["look_why"] = look_match, look_why
     if why:
         p["why"] = why
 
@@ -887,18 +894,20 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
             old["inputs"] = sig
             was = int(old.get("version") or 1)
             replan(old, log)                                  # newer rules: from the looks already taken, in seconds
-            if was < 6 and old.get("route") == "round":       # 5/6: looks taken without the kit's help or the
-                again = [p for p in old.get("photos", []) if p.get("labeled")   # same-artwork question: again
-                         and (was < 5 and any(f.get("face") in ("top", "bottom") for f in p.get("faces", []))
-                              or p.get("match") == "sister" and "same_artwork" not in p)]
+            if was < 7:                                       # 5/6: looks taken without the kit's help or the
+                again = [p for p in old.get("photos", []) if p.get("labeled")   # same-artwork question: again;
+                         and (old.get("route") == "round" and                    # 7: the pick's own look (not told
+                              (was < 5 and any(f.get("face") in ("top", "bottom") for f in p.get("faces", []))   # the answer)
+                               or p.get("match") == "sister" and "same_artwork" not in p)
+                              or p.get("file") == old.get("picked") and "look_match" not in p)]
                 for p in again:
                     p["labeled"] = False
                     p["faces"] = []
                 if again:
                     old["done"] = False
                     save(old)
-                    log(f"[dossier] {cid}: {len(again)} careful look(s) of this round item are taken again under the newer "
-                        "rules (which end is the + button; does a sister pack carry the same label artwork)")
+                    log(f"[dossier] {cid}: {len(again)} careful look(s) are taken again under the newer rules (which end "
+                        "is which; does a sister pack carry the same artwork; the pick judged without being told)")
         if old.get("done"):
             return old
     resume = bool(old) and not redo and same

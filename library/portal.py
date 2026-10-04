@@ -51,7 +51,7 @@ def _load(p, default):
 
 
 def _save(p, v):
-    os.makedirs(DIR, exist_ok=True)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
     tmp = p + ".tmp"
     json.dump(v, open(tmp, "w"), indent=1)
     os.replace(tmp, p)
@@ -157,8 +157,8 @@ def process(log=print, model=None):
             # 1. a note: "note <item>: ..." or "<item words>: ..."
             mm = re.match(r"^(?:note\s+)?([^:]{3,60}):\s*(.+)$", text, re.S | re.I)
             cid = match_item(mm.group(1)) if mm else None
-            if mm and cid and cid in items() and not items()[cid].get("size") and _size_reply(cid, mm.group(2)):
-                _reply(f"Thanks - {items()[cid]['product']} at that size is first in line.")
+            if mm and cid and re.search(r"\bsize\b", mm.group(2), re.I) and _size_reply(cid, mm.group(2)):
+                _reply(f"Thanks - {_known_items().get(cid, cid)} is next, at that size.")
                 done[mid] = {"kind": "size", "item": cid, "at": time.time()}
                 continue
             if mm and cid:
@@ -223,18 +223,42 @@ def process(log=print, model=None):
     return out                                             # replies repeated and notes were rewritten each run)
 
 
+SIZES = os.path.expanduser("~/.hellbox/sizes.json")        # sizes Cody gave on his phone: {cid: {size, source, at}}
+
+
+def given_size(cid):
+    """The real size Cody sent for an item ("<item>: size 66 x 66 x 122 mm"), in metres with its source, or None.
+    It wins over any catalog size (he measured it or read it off a trusted listing)."""
+    try:
+        g = json.load(open(SIZES)).get(cid)
+    except Exception:
+        return None
+    if isinstance(g, dict) and isinstance(g.get("size"), list) and len(g["size"]) == 3:
+        return {"size": [float(x) for x in g["size"]], "source": g.get("source") or "given by Cody on the phone",
+                "at": g.get("at", 0)}
+    return None
+
+
 def _size_reply(cid, text):
-    """"<item>: size 66 x 66 x 122 mm" for an item that waited for its size."""
+    """"<item>: size 66 x 66 x 122 mm" (W x D x H; mm, cm or in) for any item the asset maker knows: written down
+    in ~/.hellbox/sizes.json and the item goes first in line. Width, depth, height - as the thing stands."""
     m = re.search(r"(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)\s*(mm|cm|in)?", text, re.I)
-    if not m:
+    if not m or cid not in _known_items():
         return False
     k = {"cm": 10, "in": 25.4}.get((m.group(4) or "mm").lower(), 1)
     size = [float(m.group(i)) * k for i in (1, 2, 3)]
-    its = items()
-    if cid not in its:
+    if not all(0.5 < x < 5000 for x in size):
         return False
-    its[cid].update(size=[x / 1000 for x in size], size_source="given by Cody on the phone")
-    _save(ITEMS, its)
+    try:
+        allsz = json.load(open(SIZES))
+    except Exception:
+        allsz = {}
+    allsz[cid] = {"size": [x / 1000 for x in size], "source": "given by Cody on the phone", "at": time.time()}
+    _save(SIZES, allsz)
+    its = items()
+    if cid in its:
+        its[cid].update(size=[x / 1000 for x in size], size_source="given by Cody on the phone")
+        _save(ITEMS, its)
     open(QUEUE, "w").write("\n".join([cid] + [c for c in queue_first() if c != cid]) + "\n")
     return True
 
