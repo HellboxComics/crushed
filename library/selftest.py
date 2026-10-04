@@ -350,8 +350,9 @@ def run_all(quiet_phone=False):
     global SAMPLE
     SAMPLE = sample_photo()
     print("SELF-TEST " + time.strftime("%H:%M"), flush=True)
-    HY, GUARD = "Hunyuan3D loads", "your AI's engineer: safety rules"
-    optional = {HY, GUARD}                             # these only switch off their own part, never the whole run
+    HY, GUARD, GOOG = "Hunyuan3D loads", "your AI's engineer: safety rules", "Google Images browser"
+    optional = {HY, GUARD, GOOG}                       # these only switch off their own part, never the whole run
+    #                                                    (a dead photo browser leaves hunts waiting, not every build)
     order = [("the asset maker's own files", t_own_files, 30),
              (GUARD, t_engineer_guard, 30),
              ("memory: what is loaded", t_memory, 20),
@@ -378,6 +379,7 @@ def run_all(quiet_phone=False):
     ok = all(r["ok"] for r in core) and len(core) == len(order) - len(optional)
     hy = next((r for r in RESULTS if r["piece"] == HY), {"ok": False, "note": "not checked"})
     guard = next((r for r in RESULTS if r["piece"] == GUARD), {"ok": False, "note": "not checked"})
+    goog = next((r for r in RESULTS if r["piece"] == GOOG), {"ok": False, "note": "not checked"})
     work = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
     os.makedirs(work, exist_ok=True)
     out = os.path.join(work, "selftest.json")
@@ -385,8 +387,16 @@ def run_all(quiet_phone=False):
         code = subprocess.run(["git", "rev-parse", "HEAD"], cwd=os.path.dirname(HERE), capture_output=True,
                               text=True).stdout.strip()
         json.dump({"ok": ok, "code": code, "hunyuan_ok": hy["ok"], "hunyuan_note": hy["note"], "engineer_guard_ok": guard["ok"],
-                   "engineer_guard_note": guard["note"], "at": time.time(), "results": RESULTS}, f, indent=1)
+                   "engineer_guard_note": guard["note"], "browser_ok": goog["ok"], "browser_note": goog["note"],
+                   "at": time.time(), "results": RESULTS}, f, indent=1)
     os.replace(out + ".tmp", out)
+    if not goog["ok"] and not quiet_phone:
+        try:
+            import hart as H
+            H.send(f"Asset maker self-test: the photo browser (Google Images) is not working - items that still need "
+                   f"photos wait; everything already known builds:\n{goog['note'][:300]}\nSend this to Claude.")
+        except (Exception, SystemExit):
+            pass
     if not guard["ok"] and not quiet_phone:
         try:
             import hart as H
