@@ -2141,7 +2141,8 @@ def retry_due(cid, v, tries, now):
     wait = next((w for p, w in RETRY_AFTER if step.startswith(p)), None)
     if wait is None:
         return None
-    today = [t for t in tries.get(cid, []) if isinstance(t, (int, float)) and now - t < 86400]
+    since = max(now - 86400, code_time())           # newer code starts a fresh count: old tries were on old code
+    today = [t for t in tries.get(cid, []) if isinstance(t, (int, float)) and t >= since]
     try:
         at = float(v.get("at") or 0)
     except (TypeError, ValueError):
@@ -2180,8 +2181,9 @@ def note_retry(cid):
         hours = (now - float(v.get("at") or now)) / 3600
     except (TypeError, ValueError):
         hours = 0
-    say(f"[retry] {cid}: trying again by itself ({step[:100]} - {hours:.0f} h ago), try {len(t[cid])} of "
-        f"{RETRIES_PER_DAY} today")
+    since = max(now - 86400, code_time())
+    say(f"[retry] {cid}: trying again by itself ({step[:100]} - {hours:.0f} h ago), try "
+        f"{len([x for x in t[cid] if x >= since])} of {RETRIES_PER_DAY} on this code today")
 
 
 def queue(n):

@@ -64,4 +64,19 @@ title = re.search(r"is associated with ([^\n]+)", t)
 print("  upcitemdb says:", m and m.group(1), "|", title and title.group(1))
 check(m and re.sub(r"\D", "", m.group(1)) == "038000317101", "upcitemdb page read: UPC-A 0 38000 31710 1")
 check(title and "Frosted Strawberry" in title.group(1) and "14.7" in title.group(1), "upcitemdb title names the item")
+
+
+# --- retries: 3 a day, and a fresh count when newer code arrives
+import run as R  # noqa: E402
+R._CODE_TIME[:] = [1000.0]
+now = 10000.0
+v = {"step": "failed the realism check (x)", "at": 500.0}
+check(R.retry_due("x", v, {"x": [600.0, 700.0, 800.0]}, now) is True,
+      "three tries on OLD code do not count: an item failed on old code is due again now")
+check(R.retry_due("x", v, {"x": [1100.0, 1200.0, 1300.0]}, now) is False, "three tries on THIS code: it waits")
+v2 = {"step": "failed the realism check (x)", "at": 2000.0}
+check(R.retry_due("x", v2, {}, now) is False, "failed on this code: waits its 6 hours")
+check(R.retry_due("x", v2, {}, 2000.0 + 6 * 3600) is True, "and is due after them")
+check(R.retry_due("x", {"step": "done", "at": 2000.0}, {}, now) is None, "a done item is not retried")
+R._CODE_TIME[:] = []
 print(f"\n{ok} checks passed")
