@@ -30,6 +30,15 @@ Items no kit covers (~1,000 of the 2,668 one-offs) use the GENERAL kit: your AI 
 shape with Hunyuan (soft/organic things), with the same zone logic (front/back/left/right/top/bottom rect zones or a
 form zone) and the same checks.
 
+## THE STANDARD (Cody, 2026-10-03 18:46): one universal process for ANY product - battery, Furby, Pop-Tarts, pants,
+## shirt, shoes, CD, magazine, graphics card. Described, or given a reference photo, it makes a perfect 3D rendition
+## on its own, with no input from Claude, ever. Anything less is undelivered.
+So the kits below are NOT hand-written per kind by Claude: your AI studies a new kind of thing once and writes its
+own kit (kitmaker.py - parts and materials, print zones and what they carry, standard sizes with sources, side
+words), checked by code, kept in remaster/kits/learned.json. The hand-written battery / can / carton kits are only
+the first examples of the format. Soft and molded things are built from their kit's parts (the parts builder),
+never guessed whole from one photo.
+
 ## The flow per item (the same steps a person takes in Blender)
 
 1. KNOW IT      kit + variant from the catalog name and a photo (fast brain); the era's own version: what it was sold
