@@ -24,10 +24,14 @@ matte; a highlight or shading that follows the shape there is light, not a fault
 What must be printed on this side (from the item's dossier): {must}
 The real photo may show things that are NOT part of the item: a hang tag or price sticker, a hand, a stand, a box,
 a background, other items, a watermark. The model must NOT have those, and missing them is never a fault.
-Compare them as a buyer would. Answer ONLY JSON:
-{{"same_layout": true if the model's side is laid out like the real one (same elements in the same places),
- "all_elements": true if every listed element is on the model's side and legible,
- "missing": ["listed elements not on the model's side, or not legible"],
+Compare them as a buyer would, element by element: take an inventory of the real side - every logo, text block,
+bar, panel, dot, stripe, seal or mark, and HOW MANY of each (two dots are two, not one) - and find each on the
+model's side with the same count and place. Answer ONLY JSON:
+{{"inventory": [{{"element": "short name", "real_count": n, "model_count": n}}],
+ "same_layout": true if the model's side is laid out like the real one (same elements in the same places),
+ "all_elements": true if every listed element and every element of the inventory is on the model's side, in the same
+   number, and legible,
+ "missing": ["listed or inventory elements not on the model's side, short of their count, or not legible"],
  "print_ok": true if the model's print is sharp and clean - not blurry, smeared, stretched, cut off, mirrored,
    rotated wrong, and with no room light, glare or shadow baked into it,
  "problems": ["short and specific"],
@@ -94,10 +98,11 @@ def _strip(pngs, like, name="label_all_turns.png"):
     return p
 
 
-QUESTION_VERSION = 3        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
+QUESTION_VERSION = 4        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
+PRIMARY_FACE = {"box": "front", "flat": "front", "pcb": "top", "free": "front", "round": "label"}
 
 
-def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
+def sides(cid, renders, dos, use, route, product="", log=print, lit=None, marks=()):
     """Every side of the model next to the real photo of that side, judged twice (two picture orders). renders =
     the unlit pictures (print exactly as drawn); lit = the same sides under studio light (materials).
     A side whose pictures (model unlit + lit, the real photo) and list are byte-for-byte what they were when it
@@ -122,6 +127,8 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
             continue
         must = "; ".join(f"{m.get('what')}" + (f" \"{str(m.get('text'))[:60]}\"" if m.get("text") else "")
                          for m in e.get("must_show", [])) or "nothing listed"
+        if marks and (face == PRIMARY_FACE.get(route) or route == "round" and face == "label"):
+            must += ". Marks of this exact version that must show: " + "; ".join(str(m)[:80] for m in marks[:8])
         ref = e.get("photo") if e.get("photo") and os.path.exists(e.get("photo")) else None
         if ref and not (route == "round" and face == "label"):
             # the judge gets THIS SIDE of the photo, not the whole photo: a battery's bottom was judged against the

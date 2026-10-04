@@ -342,6 +342,17 @@ def route_of_card(card, cid):
     return route, fam
 
 
+def version_marks(card):
+    """What this exact version is known by - the card's own 'recognize' list and the era version's marks (a tester
+    strip, white test dots, a logo style, a seal). The label writer must put them on, and the judge looks for each."""
+    out = []
+    for m in list((card or {}).get("recognize") or []) + list(((card or {}).get("era_version") or {}).get("marks") or []):
+        m = str(m).strip()
+        if m and m.lower() not in {x.lower() for x in out}:
+            out.append(m[:120])
+    return out[:10]
+
+
 def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     """THE WHOLE CHECK of a finished model, the same for a real build and for the asset maker's own check of a test
     build: the exact checks first (measure.py: size, every side, barcode scan, printed words read off the model,
@@ -368,7 +379,8 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
         return {"pass": False, "failed": failed, "measure": m["checks"], "sides": {},
                 "problems": m["problems"] + ["not judged: the exact checks failed first; the judge looks once they pass"]}
     status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
-    j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say, lit=m.get("renders_lit") or {})
+    j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say, lit=m.get("renders_lit") or {},
+                    marks=version_marks(card))
     verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
     looked = verdict.get("problems")
     looked = looked if isinstance(looked, list) else ([str(looked)] if looked else [])
@@ -468,7 +480,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             png, mr = labelart.render(lay, tex, px=4096)
         else:
             png, mr = round_label(cid, product, picked, others, use, dos, d, tex, along, around, reads, w_mm, h_mm,
-                                  kit_name)
+                                  kit_name, card=card)
         lab_png, mr_png = os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")
         img, mimg = Image.open(png).convert("RGB"), Image.open(mr).convert("RGB")
         if reads == "along":                                        # onto the UV map: the plus/top end up
@@ -854,7 +866,7 @@ def whole_words(words):
     return out
 
 
-def round_label(cid, product, picked, others, use, dos, d, tex, along, around, reads, w_mm, h_mm, kit_name):
+def round_label(cid, product, picked, others, use, dos, d, tex, along, around, reads, w_mm, h_mm, kit_name, card=None):
     """A round item's label, made by your AI from the real photos: unrolled, words read twice, layout written and
     drawn in exact type - every step on the review sheet with its own checks. -> (label png, metal/roughness png)"""
     from PIL import Image
@@ -971,7 +983,8 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         return done_png, done_mr
     status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
     png, mr, score = LAY.make(product, real_png, words, w_mm, h_mm, tex, model=use, log=say,
-                              typical=kits.typical(kits.get(kit_name), "label"), cover_png=cover_png)
+                              typical=kits.typical(kits.get(kit_name), "label"), cover_png=cover_png,
+                              marks=version_marks(card))
     json.dump({"key": key, "score": score, "passed": False}, open(os.path.join(tex, "label_kept.json"), "w"), indent=1)
     tries = jload(os.path.join(tex, "rounds.json"), [])
     share = review.metal_share(mr)

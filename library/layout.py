@@ -258,7 +258,8 @@ def describe_bands(shapes, axis):
             "bars, dots, logos and words.\n")
 
 
-def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, log=print, typical=(), cover_png=None):
+def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, log=print, typical=(), cover_png=None,
+         marks=()):
     """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
     belongs there, from the confirmed words only."""
     model = model or V.model()
@@ -267,6 +268,9 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
     best = (-1, None, None, None)
     tries = []                                         # each try's match and whether it changed (the review sheet)
     tip = ("A label like this normally carries: " + "; ".join(typical) + ".\n") if typical else ""
+    if marks:                                             # what THIS version is known by: each must be on the label,
+        tip += ("This exact version is known by these marks - each must be on the label as the real photo shows it, "
+                "in the same number and place (count repeated marks): " + "; ".join(str(m) for m in marks) + ".\n")
     try:
         base, axis = base_bands(real_png, cover_png)
     except Exception as e:
