@@ -17,6 +17,8 @@ import os
 import re
 import time
 
+VERSION = 1                  # bump when the hunt's questions or filters change (a kept result is keyed on it)
+
 SEARCHES = 4                     # new Google searches for the missing parts, at most
 MOST_PHOTOS = 8                  # photos read for the missing parts, at most (two reads each)
 

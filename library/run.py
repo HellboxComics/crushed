@@ -792,8 +792,18 @@ def label_words(pngs, use, by_png=None):
     norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
     q2 = ('Read the printed words in this picture again, slowly, line by line, exactly as spelled (keep numbers, '
           'symbols like (R) and TM, and capitals as printed). Answer ONLY JSON: {"lines": ["..."]}')
+    import kept
     out = []
     for png in pngs:
+        k = kept.key("words", [png], use)                  # the same picture read by the same brain: the same words
+        had = kept.get("words", k)
+        if had is not None:
+            if by_png is not None:
+                by_png[png] = list(had)
+            for w in had:
+                if w not in out:
+                    out.append(w)
+            continue
         before = len(out)
         a = read_words(png, use)
         try:
@@ -814,10 +824,13 @@ def label_words(pngs, use, by_png=None):
             if (norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out])) or \
                     (mark(w) and (w.strip() in a or w.strip() in b) and w.strip() not in out):
                 out.append(w.strip() if mark(w) else w)
+        here = [w for w in a if norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)]
+        here += [w for w in o if norm(w) and like(w, an + bn)]
+        here = list(dict.fromkeys(x.strip() for x in here))
         if by_png is not None:                             # what THIS picture confirmed (seen here, new or not)
-            here = [w for w in a if norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)]
-            here += [w for w in o if norm(w) and like(w, an + bn)]
-            by_png[png] = list(dict.fromkeys(x.strip() for x in here))
+            by_png[png] = here
+        if a or b or o:                                    # kept for the next build (nothing read at all is not kept:
+            kept.put("words", k, here, note=os.path.basename(png))   # the brain may have been busy)
     out = whole_words(out)
     say(f"[texture] words confirmed by two reads: {out}")
     return out
@@ -917,8 +930,17 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     # what a label of this kind always carries, and is missing here: found in more photos of the item, read twice
     import labelparts
     import vet as V
-    added, receipts, still = labelparts.find(cid, dos, words, kit_name, use, V.quick_model() or use,
-                                             lambda pngs: label_words(pngs, use), log=say)
+    import kept
+    lk = kept.key("labelparts", [], cid, kit_name, sorted(words), labelparts.VERSION)
+    had = kept.get("labelparts", lk)
+    if had is not None:
+        added, receipts, still = had["added"], had["receipts"], had["still"]
+        say(f"[label parts] {cid}: the same words and kit as last time - the hunt's result is kept "
+            f"({len(added)} line(s) found before" + (f"; still missing: {', '.join(still)}" if still else "") + ")")
+    else:
+        added, receipts, still = labelparts.find(cid, dos, words, kit_name, use, V.quick_model() or use,
+                                                 lambda pngs: label_words(pngs, use), log=say)
+        kept.put("labelparts", lk, {"added": added, "receipts": receipts, "still": still}, note=cid)
     if added:
         words = whole_words(words + added)
     json.dump({"added": added, "receipts": receipts, "still_missing": still},
@@ -1757,6 +1779,12 @@ def inspect(sheet, photo, product, use, card=None, close=None):
          "a box, other items, a watermark): the model must not have those, and missing them is never a fault. "
          f"Answer each one true or false:\n{lines}\nAnswer ONLY JSON: {{" +
          ", ".join(f'"{k}": true/false' for k in CHECKS) + ', "problems": ["short and specific, for each false"]}')
+    import kept                                            # the same pictures and question as a pass before: kept
+    kk = kept.key("inspect", [], q, use)
+    had = kept.get_pictures("inspect", kk, pics)           # the same pictures, within render noise
+    if had and had.get("pass"):
+        say("[judge] the finished model's pictures are the same as when it passed the realism look - kept")
+        return dict(had, kept=True)
     try:
         v = V.ask(use, q, pics, side=1024)                 # (bigger pictures cost minutes of reading per item)
     except Exception as e:
@@ -1764,6 +1792,8 @@ def inspect(sheet, photo, product, use, card=None, close=None):
     failed = [k for k in CHECKS if v.get(k) is not True]
     v["failed"] = failed
     v["pass"] = not failed
+    if v["pass"]:
+        kept.put_pictures("inspect", kk, pics, v)
     return v
 
 

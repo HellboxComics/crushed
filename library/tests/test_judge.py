@@ -18,7 +18,10 @@ def check(cond, what):
     ok += 1
 
 
+import shutil  # noqa: E402
 T = "/tmp/claude-0/-home-claude-crushed/db81eea7-ef8c-55dd-b827-ea6e2d91f37e/scratchpad/judge_t"
+shutil.rmtree(T, ignore_errors=True)
+shutil.rmtree(os.path.join(os.environ["CRUSHED_REMASTER_WORK"], "kept", "judge-side"), ignore_errors=True)
 os.makedirs(T, exist_ok=True)
 photo = os.path.join(T, "photo.jpg")
 im = Image.new("RGB", (1500, 2000), (200, 200, 200))
@@ -81,6 +84,7 @@ def flaky(use, text, images):
 
 judge._ask = flaky
 asked.clear()
+shutil.rmtree(os.path.join(os.environ["CRUSHED_REMASTER_WORK"], "kept", "judge-side"), ignore_errors=True)
 r = judge.sides("t", renders, {"faces": {"bottom": dos["faces"]["bottom"]}}, "brain", "round", product="AA cell", lit=lit)
 check(r["pass"] and r["faces"]["bottom"]["looks"] == 3 and r["faces"]["bottom"]["agreed"] is False,
       "one look fails, one passes: a third look finds nothing and the side passes")
@@ -96,6 +100,24 @@ def flaky2(use, text, images):
 
 judge._ask = flaky2
 seq["n"] = 0
+shutil.rmtree(os.path.join(os.environ["CRUSHED_REMASTER_WORK"], "kept", "judge-side"), ignore_errors=True)
 r = judge.sides("t", renders, {"faces": {"bottom": dos["faces"]["bottom"]}}, "brain", "round", product="AA cell", lit=lit)
 check(not r["pass"] and "address block" in r["problems"][0], "a third look that confirms the problem fails the side, naming where")
+
+
+# a side that passed stays passed while its pictures are the same (within render noise); a changed picture is judged again
+shutil.rmtree(os.path.join(os.environ["CRUSHED_REMASTER_WORK"], "kept", "judge-side"), ignore_errors=True)
+judge._ask = fake
+asked.clear()
+d1 = {"faces": {"bottom": dos["faces"]["bottom"]}}
+judge.sides("t", renders, d1, "brain", "round", product="AA cell", lit=lit)
+n1 = len(asked)
+r = judge.sides("t", renders, d1, "brain", "round", product="AA cell", lit=lit)
+check(len(asked) == n1 and r["pass"] and r["faces"]["bottom"].get("kept") is True,
+      "the same pictures again: the pass is kept, the judge is not asked")
+Image.new("RGB", (800, 800), (10, 10, 10)).save(renders["bottom"])
+from PIL import ImageDraw
+im = Image.open(renders["bottom"]); ImageDraw.Draw(im).text((400, 400), "X", fill=(255, 255, 255)); im.save(renders["bottom"])
+r = judge.sides("t", renders, d1, "brain", "round", product="AA cell", lit=lit)
+check(len(asked) > n1 and not r["faces"]["bottom"].get("kept"), "a changed picture is judged again")
 print(f"\n{ok} checks passed")

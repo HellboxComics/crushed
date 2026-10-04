@@ -94,15 +94,22 @@ def _strip(pngs, like, name="label_all_turns.png"):
     return p
 
 
+QUESTION_VERSION = 3        # bump when Q / TIEBREAK / the pictures shown change (a kept pass is keyed on it)
+
+
 def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
     """Every side of the model next to the real photo of that side, judged twice (two picture orders). renders =
-    the unlit pictures (print exactly as drawn); lit = the same sides under studio light (materials)."""
+    the unlit pictures (print exactly as drawn); lit = the same sides under studio light (materials).
+    A side whose pictures (model unlit + lit, the real photo) and list are byte-for-byte what they were when it
+    PASSED stays passed - kept, not asked again (Cody: keep what is good, redo what is bad)."""
+    import kept
     faces = dos.get("faces") or {}
     lit = lit or {}
+    kept_faces = {}
     out, failed, problems = {}, [], []
     if not use:
         return {"pass": False, "faces": {}, "failed": ["sides"], "problems": ["sides: no AI to judge the sides"]}
-    jobs = []                                             # every look at every side, asked several at a time
+    jobs, keys, shown_of = [], {}, {}                     # every look at every side, asked several at a time
     for face, e in faces.items():                         # when the brain server allows it
         if route == "round" and face == "label":              # a label wraps all the way round: all four turns,
             turns = ("label_0", "label_90", "label_180", "label_270")   # so it matches the photo's turn, whichever
@@ -143,6 +150,14 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
             except Exception:
                 pass
         shown = [model] + ([model_lit] if model_lit else [])
+        kk = kept.key("judge-side", [], cid, face, must, ref_note, use, QUESTION_VERSION)
+        had = kept.get_pictures("judge-side", kk, shown + [ref])    # the same pictures, within render noise
+        if had and had.get("pass"):
+            kept_faces[face] = dict(had, kept=True)
+            log(f"[judge] {cid} {face}: the same pictures as when it passed - kept, not judged again")
+            continue
+        keys[face] = kk
+        shown_of[face] = shown + [ref]
         for order in ((shown, ref), (ref, shown)) if ref else ((shown, None),):
             imgs, names = [], []
             for x in order:
@@ -192,9 +207,13 @@ def sides(cid, renders, dos, use, route, product="", log=print, lit=None):
                 probs = confirmed or probs
         out[face] = {"pass": ok, "problems": probs[:6], "looks": len(verdicts) + (1 if tie is not None else 0),
                      "agreed": agreed, **({"third_look": tie} if tie is not None else {})}
+        if ok and face in keys:                             # a pass is kept for the next build of the same pictures
+            kept.put_pictures("judge-side", keys[face], shown_of[face], out[face], note=f"{cid} {face}")
         if not ok:
             failed.append(f"side_{face}")
             problems.append(f"side_{face}: " + ("; ".join(probs[:3]) or "the two looks disagreed"))
+    for face, v in kept_faces.items():                      # the sides kept from a pass with the same pictures
+        out[face] = v
     if not out:                                             # nothing judged is never a pass
         return {"pass": False, "faces": {}, "failed": ["sides"],
                 "problems": ["sides: no side could be compared (the dossier has no sides, or the model no pictures)"]}
