@@ -555,6 +555,13 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                        notes=card.get("owner_note", ""))
         status(cid, step=f"5/7 Blender: {len(plan['parts'])} parts, each its own solid with its own material")
         run_blender("assembly.py", os.path.join(d, "parts_plan.json"), mdir, cid)
+        try:                                                # the step shows its work and checks itself
+            kit_parts = (families.get((card.get("family_lib") or {}).get("family", "general")) or {}).get("parts") or []
+            review.load(d).step("parts (your AI's plan from every photo, each built as its own solid)",
+                                files=list(plan.get("pictures") or []) + [os.path.join(d, "parts_plan.json")],
+                                checks=review.parts_checks(plan, jload(os.path.join(mdir, "assembly.json"), {}), kit_parts))
+        except Exception as e:
+            say(f"[review] the parts step could not write its checks: {e}")
     else:
         if not families.organic_ready():
             raise RuntimeError("the organic builder (Hunyuan3D) has not proven it works on this Mac yet")

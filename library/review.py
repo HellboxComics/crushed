@@ -162,6 +162,64 @@ def only_words(texts, words):
     return out
 
 
+# ------------------------------------------------------------------ the parts builder: the plan checks itself
+def parts_checks(plan, asm, kit_parts=()):
+    """Exact checks on a parts plan and what Blender made of it: [(what, ok, detail)]. The plan is your AI's; these
+    only measure it against the real size and the kit, so the engineer starts at the step that went wrong."""
+    W, D, H = [float(x) for x in (plan.get("size_mm") or [0, 0, 0])[:3]]
+    parts = plan.get("parts") or []
+    out = []
+    out.append(("the object was broken into parts", bool(parts), f"{len(parts)} parts: " +
+                ", ".join(str(p.get('name')) for p in parts[:14])))
+    # how far the planned parts reach (each part's center +/- half its size, rotation not counted)
+    lo = [1e9, 1e9, 1e9]
+    hi = [-1e9, -1e9, -1e9]
+    rotated = []
+    for p in parts:
+        s = [float(x) for x in (p.get("size_mm") or [0, 0, 0])[:3]]
+        a = [float(x) for x in (p.get("at_mm") or [0, 0, 0])[:3]]
+        if p.get("shape") == "cylinder":
+            dia, ln = min(s[0], s[1]), s[2]
+            s = {"x": [ln, dia, dia], "y": [dia, ln, dia], "z": [dia, dia, ln]}.get(p.get("axis"), [dia, dia, ln])
+        if p.get("shape") == "lathe" and p.get("profile_mm"):
+            r = max(float(q[0]) for q in p["profile_mm"])
+            zs = [float(q[1]) for q in p["profile_mm"]]
+            s = [2 * r, 2 * r, max(zs) - min(zs)]
+            a = [a[0], a[1], (max(zs) + min(zs)) / 2]
+        if any(abs(float(x)) > 0.5 for x in (p.get("rotate_deg") or [0, 0, 0])):
+            rotated.append(str(p.get("name")))
+        for k in range(3):
+            lo[k] = min(lo[k], a[k] - s[k] / 2)
+            hi[k] = max(hi[k], a[k] + s[k] / 2)
+    if parts:
+        reach = [hi[k] - lo[k] for k in range(3)]
+        off = [abs(reach[k] - [W, D, H][k]) / max([W, D, H][k], 1e-6) for k in range(3)]
+        out.append(("the planned parts fill the real size (within 10% each way)", max(off) <= 0.10,
+                    f"planned {reach[0]:.0f} x {reach[1]:.0f} x {reach[2]:.0f} mm, real {W:.0f} x {D:.0f} x {H:.0f} mm"))
+        out.append(("no part is turned out of its box", None if rotated else True,
+                    ("turned parts reach past their size box (not counted above): " + ", ".join(rotated)) if rotated
+                    else "no part is turned"))
+    fixed = plan.get("fixed") or []
+    out.append(("every part sat inside the real size as planned", not fixed,
+                "; ".join(fixed)[:400] or "no part had to be moved or shrunk"))
+    if kit_parts:
+        names = " ".join(str(p.get("name", "")).lower() for p in parts)
+        miss = [k.get("part") for k in kit_parts
+                if not any(w in names for w in str(k.get("part", "")).lower().split() if len(w) > 2)]
+        out.append(("every part of this kind's kit is in the plan", not miss,
+                    ("missing: " + ", ".join(map(str, miss))) if miss else f"all {len(kit_parts)} kit parts planned"))
+    printed = [p for p in parts if p.get("print")]
+    out.append(("printed parts carry artwork cut from the photos", None, f"{len(printed)} printed part(s)"))
+    flags = (asm or {}).get("flags") or []
+    stand = [f for f in flags if "stand-in" in f]
+    broke = [f for f in flags if "could not be built" in f]
+    out.append(("every planned part was built", not broke, "; ".join(broke)[:400] or
+                f"{(asm or {}).get('parts', len(parts))} built"))
+    out.append(("no part is a rounded stand-in for a sculpted shape", not stand,
+                "; ".join(stand)[:400] or "no stand-ins"))
+    return out
+
+
 # ------------------------------------------------------------------ the insides and the materials: receipts
 def insides_step(spec, recipe, physics):
     """What is inside the model and what each material is made to behave like, each with its receipt - so nobody

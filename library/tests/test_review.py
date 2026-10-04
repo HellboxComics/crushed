@@ -48,4 +48,20 @@ check(bc["the front is a real photo of this item"][0] is False, "a box front tha
 check(bc["every side is made"] == (False, "bottom"), "a missing side is caught")
 check(bc["rebuilt sides carry what this kind normally has"][0] is None and "nutrition" in
       bc["rebuilt sides carry what this kind normally has"][1], "a fact never found is reported, not called broken")
+
+# the parts builder's own checks
+plan = {"size_mm": [120, 120, 150], "fixed": [],
+        "parts": [{"name": "body", "shape": "sphere", "size_mm": [120, 120, 120], "at_mm": [0, 0, 60]},
+                  {"name": "ears", "shape": "rounded_box", "size_mm": [40, 20, 30], "at_mm": [0, 0, 135], "rotate_deg": [0, 30, 0]},
+                  {"name": "feet", "shape": "cylinder", "axis": "x", "size_mm": [20, 20, 100], "at_mm": [0, 0, 10]}]}
+pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 3, "flags": []}, [{"part": "eyes"}, {"part": "body"}])}
+check(pc["the planned parts fill the real size (within 10% each way)"][0] is True, "a plan that fills the real size passes")
+check(pc["no part is turned out of its box"][0] is None and "ears" in pc["no part is turned out of its box"][1],
+      "a turned part is named, not called wrong")
+check(pc["every part of this kind's kit is in the plan"] == (False, "missing: eyes"), "a kit part left out of the plan is caught")
+plan["parts"][0]["size_mm"] = [60, 60, 60]
+pc = {c: (o, det) for c, o, det in review.parts_checks(plan, {"parts": 2, "flags": ["feet: could not be built (x)", "body: a rounded stand-in (y)"]})}
+check(pc["the planned parts fill the real size (within 10% each way)"][0] is False, "a plan smaller than the real size is caught")
+check(pc["every planned part was built"][0] is False and pc["no part is a rounded stand-in for a sculpted shape"][0] is False,
+      "a part Blender could not build and a stand-in are caught")
 print(f"\n{ok} checks passed")

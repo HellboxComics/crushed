@@ -905,6 +905,16 @@ class Bench:
     def look(self, what, box=None):
         from PIL import Image
         p = self._file(what)
+        if what not in ("check", "close", "before", "before_close"):
+            try:
+                Image.open(p).close()
+            except Exception:
+                have = [n for n, f in {"check": self.cur.get("shots"), "close": self.cur.get("close"),
+                                       "photo": self.photo}.items() if f and os.path.exists(str(f))]
+                return (f"{os.path.basename(p)} is not a picture (a model or data file), so there is nothing to look "
+                        f"at in it. To SEE the model, look at {' / '.join(repr(h) for h in have)} (its sides, lit, "
+                        f"next to the real photo) or a picture named on the review sheet (look 'step:<file>'); for "
+                        f"its numbers use mesh_info.")
         im = _grid(p) if what in ("check", "close", "before", "before_close") else Image.open(p)
         im = self._crop(im, box)
         if box and max(im.size) < 1024:                # zoomed: shown bigger

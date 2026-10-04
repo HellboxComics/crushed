@@ -94,6 +94,9 @@ Your tools: look / ask_eyes (the vision brain answers your question about a pict
 pictures part by part - a look is not a measurement), read_words (the text reader and the vision brain read a
 picture), pixel_stats, mesh_info, review_sheet, list_files / read_file / grep, edit_file / new_file / diff /
 revert, rebuild (clear the step you changed), lesson, finish. Measure before you believe; measure after you change.
+A model file (.glb) is not a picture: to SEE the model, look("check") / look("close") (its lit sides next to the
+real photo); for its size and parts, mesh_info. For a parts build, the review sheet's "parts" step tells you
+whether the PLAN already missed the real size or a kit part - fix the plan step (parts.py), not the model.
 
 0. READ THE REVIEW SHEET. Every build writes down each step's work and its own checks (review.json, sent to you
    with the first message). Start at the FIRST step that went wrong - its pictures (look("step:<file name>")),
