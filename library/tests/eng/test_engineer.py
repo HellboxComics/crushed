@@ -169,9 +169,9 @@ check(res.get("branch", "").startswith("engineer/" + C.CID + "-"), f"unique bran
 branch_a = res.get("branch")
 
 # =========================================================== B: set comparison, noise, cached answers, dead ends filed
-print("\nB. set comparison; a second rebuild that disagrees is not kept; the same code gets the same answer")
-script({C.CID: [{"failed": ["details", "shape"]}, {"failed": ["details"]}, {"failed": ["details", "print"]}]},
-       {C.CID: [{"failed": ["details"]}]})
+print("\nB. set comparison; a fix that two of three checks say is no better is not kept; the same code gets the same answer")
+script({C.CID: [{"failed": ["details", "shape"]}, {"failed": ["details"]}, {"failed": ["details", "print", "layers"]}]},
+       {C.CID: [{"failed": ["details", "print", "layers"]}]})
 head_before = git("rev-parse", "HEAD")
 counts = {}
 
@@ -197,7 +197,8 @@ res = run(brain, {"pass": False, "failed": ["details", "layers", "print"], "prob
 users = [m["content"] for m in brain.messages if m.get("role") == "user"]
 check(any("broke checks that passed before: ['shape']" in u for u in users),
       "2 failures vs 3 at first is NOT better when 'shape' newly fails (sets, not counts)")
-check(any("did not come out the same" in u for u in users), "a confirmation rebuild that disagrees is not kept")
+check(any("checked three times" in u and "no failure is gone" in u for u in users),
+      "two of three checks say nothing is fixed: not kept (one lucky rebuild is not a fix)")
 check(counts.get("before") == calls("trials", C.CID) == 3, "finish again with the same code: same answer, no new "
       f"rebuild ({calls('trials', C.CID)} test builds)")
 check(any(u.startswith("Same code as before") for u in users), "the cached answer is said plainly")
@@ -389,6 +390,19 @@ check("KEEP IT" in json.loads(tr[1]).get("PROGRESS", ""), "the rebuild result sa
 check(tr[2].startswith("REFUSED") and "PROVED" in tr[2] and tr[3].startswith("REFUSED"),
       "revert of the proven file, and revert all, are refused")
 check(res.get("kept") is True, f"the proven fix is kept at finish: {res.get('why')}")
+subprocess.run(["git", "checkout", "-q", "--", "library/finish.py"], cwd=REPO)
+
+# =========================================================== L: one odd look of three does not sink a real fix
+print("\nL. a real fix survives one disagreeing look (majority of three)")
+script({C.CID: [{"failed": ["side_bottom"]}, {"failed": ["side_bottom"]}]}, {C.CID: [{"failed": ["details", "materials"]}]})
+brain = Brain([
+    [("edit_file", {"path": "library/finish.py", "old": "def _blur(a, s):", "new": "STEEL_BASE2 = 0.6\n\n\ndef _blur(a, s):"})],
+    [("rebuild", {"why": "steel"})],
+    [("finish", {"summary": "steel fixed details"})],
+])
+res = run(brain, {"pass": False, "failed": ["details", "side_bottom"], "problems": ["x"]})
+check(res.get("kept") is True, f"two rebuilds say side_bottom only; the own look says details+materials: majority wins, kept ({res.get('why')})")
+check(any("three checks disagree" in x for x in LOG), "the disagreement is written in the log")
 subprocess.run(["git", "checkout", "-q", "--", "library/finish.py"], cwd=REPO)
 
 # =========================================================== F: context and fingerprint units

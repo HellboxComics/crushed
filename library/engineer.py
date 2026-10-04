@@ -1701,10 +1701,21 @@ def _accept(b, say):
         return decide(False, "The asset maker's own check could not judge the confirmation rebuild" +
                       (f" ({str((own or {}).get('problems'))[:300]})" if own else "") + " - nothing is kept unconfirmed.")
     Fp = _fails_of(own, b.first["verdict"])
+    # three checks of the same code (its rebuild, the confirmation rebuild, the asset maker's own check): the judge
+    # is a brain and two looks at the same model can differ - a check counts as failing when at least two of the
+    # three say so (2026-10-04: a real fix was thrown away because one look of three added 'materials')
+    from collections import Counter
+    votes = Counter(F1) + Counter(F2) + Counter(Fp)
+    maj = {f for f, n in votes.items() if n >= 2}
     if F2 != F1 or Fp != F1:
-        return decide(False, f"The same code built a second time did not come out the same: first {sorted(F1)}, "
-                             f"second {sorted(F2)}, the asset maker's own check {sorted(Fp)}. That is luck or noise, "
-                             "not a real fix - find a change that helps every time.")
+        say(f"[engineer] {b.cid}: the three checks disagree - first {sorted(F1)}, second {sorted(F2)}, the asset "
+            f"maker's own {sorted(Fp)}; failing in at least two of three: {sorted(maj)}")
+    if not maj < F0:
+        return decide(False, f"The same code was checked three times (two rebuilds and the asset maker's own check): "
+                             f"first {sorted(F1)}, second {sorted(F2)}, own {sorted(Fp)}. Counting a check as failed "
+                             f"when at least two of the three say so: {sorted(maj)} - against {sorted(F0)} at first, "
+                             + ("that breaks checks that passed: " + str(sorted(maj - F0)) if maj - F0 else
+                                "no failure is gone") + ". That is not a real fix - find a change that helps every time.")
     for other in _neighbors(b):
         o, otail = b._run_trial(other["cid"], [], "does this fix break other items?", "neighbor")
         if b.stopped:
