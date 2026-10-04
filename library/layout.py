@@ -135,6 +135,13 @@ def _family(rgb):
     return "warm" if n in WARM else "light" if n in ("white", "silver") else n
 
 
+def _boxes(out_dir, name):
+    try:
+        return json.load(open(os.path.join(out_dir, name + "_boxes.json")))
+    except Exception:
+        return {}
+
+
 def color_check(png, real_png, cover_png=None, cols=20, rows=10):
     """The drawn label against the real one, part by part (a 20 x 10 grid), by measuring colors - the comparison
     brain said "match 9" for a Duracell drawn all black with no copper top (2026-10-03). Only parts a photo really
@@ -320,8 +327,13 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
             share, cfix = 1.0, []
             log(f"[texture] the color check could not run: {e}")
         judged = c.get("match") or 0
-        c = dict(c, judged=judged, colors=round(share, 2), match=min(judged, int(round(10 * share))),
-                 fixes=cfix + list(c.get("fixes") or []))
+        # exact: no two lines printed on top of each other, none past the edge (measured from where each landed)
+        bx = _boxes(out_dir, f"round{r}")
+        ofix = [f"'{o['a']}' is printed on top of '{o['b']}' ({o['share']:.0%} of the smaller) - move or shrink one"
+                for o in bx.get("overlaps", [])] + [f"'{t}' runs off the label" for t in bx.get("off_label", [])]
+        c = dict(c, judged=judged, colors=round(share, 2),
+                 match=min(judged, int(round(10 * share)), 6 if ofix else 10),   # overlapping text is never "good"
+                 fixes=ofix + cfix + list(c.get("fixes") or []), overlaps=len(bx.get("overlaps", [])))
         log(f"[texture] label round {r}: match {c['match']} (looked {judged}, colors {share:.0%} right) - "
             f"{'; '.join(map(str, c.get('fixes', [])))[:300]}")
         json.dump(lay, open(os.path.join(out_dir, f"round{r}.json"), "w"), indent=1)

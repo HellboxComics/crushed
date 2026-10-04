@@ -31,7 +31,7 @@ first = {"width_mm": 1, "height_mm": 1, "background": "#111111",
                      "stops": [0, 1]}],
          "texts": [{"text": "DURACELL", "x": 0.3, "y": 0.4, "h": 0.2, "w": 0.4, "color": "#ffffff", "weight": "black",
                     "align": "center"},
-                   {"text": "JAN 2001", "x": 0.7, "y": 0.1, "h": 0.06, "color": "#ffffff"},
+                   {"text": "JAN 2001", "x": 0.5, "y": 0.1, "h": 0.06, "color": "#ffffff"},
                    {"text": "ALKALINE BATTERY 9000 HOURS", "x": 0.1, "y": 0.6, "h": 0.05}]}
 
 
@@ -62,6 +62,21 @@ check(score == 9, f"the best round is kept (match {score})")
 check(sum(1 for a in asked if "Your layout:" in a) >= 2, "a 9 with fixes still listed is not done: another round is asked for")
 check(any("move the logo up" in a for a in asked if "Your layout:" in a), "the judge's fixes are given to the writer")
 check(any("ONLY the printed sleeve" in a for a in asked[:1]), "the writer is told the metal ends are not the label")
+# lines printed on top of each other are measured where they landed (rotated lines too) and never pass as good
+import labelart as LA
+ov = {"width_mm": 50, "height_mm": 46, "background": "#111111",
+      "texts": [{"text": "ALKALINE 1.5 Volts", "x": 0.5, "y": 0.4, "h": 0.08, "color": "#ffffff"},
+                {"text": "MN1500 LR6", "x": 0.52, "y": 0.42, "h": 0.08, "color": "#ffffff"},
+                {"text": "SIZE AA", "x": 0.1, "y": 0.1, "h": 0.06, "color": "#ffffff", "rotate": 90},
+                {"text": "CAUTION", "x": 0.1, "y": 0.12, "h": 0.06, "color": "#ffffff", "rotate": 90},
+                {"text": "EDGE", "x": 0.95, "y": 0.8, "h": 0.06, "color": "#ffffff"}]}
+LA.render(ov, out, px=1024, name="ov")
+bx = json.load(open(os.path.join(out, "ov_boxes.json")))
+pairs = {tuple(sorted((o["a"], o["b"]))) for o in bx["overlaps"]}
+check(("ALKALINE 1.5 Volts", "MN1500 LR6") in pairs or ("MN1500 LR6", "ALKALINE 1.5 Volts") in pairs,
+      f"two lines printed over each other are measured: {bx['overlaps'][:2]}")
+check(any("SIZE AA" in p and "CAUTION" in p for p in pairs), "rotated lines over each other are measured too")
+check("EDGE" in bx["off_label"], "a line running off the label is named")
 # a layout that comes back unchanged is not drawn again and again
 asked.clear()
 LAY._ask = lambda m, t, i, think=True: (asked.append(t) or ({"match": 5, "fixes": []} if t.startswith("Picture 1 is flat printed artwork")

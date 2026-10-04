@@ -130,6 +130,7 @@ def render(layout, out_dir, px=4096, name="label"):
         elif fill:                                       # plain ink drawn OVER metal ink is not metal any more
             (dm.ellipse if t == "ellipse" else dm.rectangle)(b, fill=(0, int(255 * layout.get("roughness", 0.45)), 0))
     texts = no_overlaps([dict(t) for t in layout.get("texts", [])], W, H, d)
+    placed = []                                          # every line's final box, for the exact overlap check
     for tx in texts:
         mark = MARKS.get(tx.get("mark"), "")
         text = tx["text"]
@@ -167,6 +168,7 @@ def render(layout, out_dir, px=4096, name="label"):
                     x = min(max(x, bx0 + m), bx1 - m - layer.width)
                     tx = dict(tx, y=min(max(y, by0 + m), by1 - m - layer.height) / H)
         img.paste(Image.new("RGB", layer.size, rgb(tx.get("color", "#000000"))), (int(x), int(tx["y"] * H)), layer)
+        placed.append({"text": text, "box": [x / W, tx["y"] * H / H, (x + layer.width) / W, (tx["y"] * H + layer.height) / H]})
         if not tx.get("metal"):                          # the letters' ink is not metal, even on a copper band
             mr.paste(Image.new("RGB", layer.size, (0, int(255 * layout.get("roughness", 0.45)), 0)),
                      (int(x), int(tx["y"] * H)), layer)
@@ -179,7 +181,30 @@ def render(layout, out_dir, px=4096, name="label"):
     c, m = os.path.join(out_dir, name + ".png"), os.path.join(out_dir, name + "_mr.png")
     img.save(c)
     mr.save(m)
+    json.dump({"texts": placed, "overlaps": overlaps(placed), "off_label": off_label(placed)},
+              open(os.path.join(out_dir, name + "_boxes.json"), "w"), indent=1)
     return c, m
+
+
+def overlaps(placed, least=0.15):
+    """Lines of text printed on top of each other, MEASURED from where each really landed (rotated lines included):
+    every pair whose boxes share more than `least` of the smaller box. [(text a, text b, share)]"""
+    out = []
+    for i, a in enumerate(placed):
+        for b in placed[i + 1:]:
+            ax0, ay0, ax1, ay1 = a["box"]
+            bx0, by0, bx1, by1 = b["box"]
+            ix = max(0.0, min(ax1, bx1) - max(ax0, bx0))
+            iy = max(0.0, min(ay1, by1) - max(ay0, by0))
+            small = min((ax1 - ax0) * (ay1 - ay0), (bx1 - bx0) * (by1 - by0))
+            if small > 0 and ix * iy / small > least:
+                out.append({"a": a["text"], "b": b["text"], "share": round(ix * iy / small, 2)})
+    return out
+
+
+def off_label(placed, tol=0.005):
+    """Lines that run past the label's edge."""
+    return [p["text"] for p in placed if p["box"][0] < -tol or p["box"][1] < -tol or p["box"][2] > 1 + tol or p["box"][3] > 1 + tol]
 
 
 if __name__ == "__main__":
