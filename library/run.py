@@ -400,6 +400,8 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
     import dossier as DS                                     # every route knows the object before it is built -
     dos = DS.ensure(cid, card, picked, use=use, redo=redo,            # made once here, used by every route below
                     log=progress(cid, "4/7 your AI gets to know the item"))
+    import review
+    review.Sheet(d)                                          # a fresh review sheet for THIS build (every route)
 
     # 5. BUILD by the family's builder
     if route == "round":
@@ -523,7 +525,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             import review
             make_room("judging")
             seen_ok, seen_why = review.look_faces(atlas, picked["file"], product, use)
-            review.Sheet(d).step("box sides (each from its plan: photo, sister box, or rebuilt from facts)",
+            review.load(d).step("box sides (each from its plan: photo, sister box, or rebuilt from facts)",
                                  files=[atlas], checks=review.box_checks(
                                      got, ("front", "back") if route == "flat" else
                                      ("front", "back", "left", "right", "top", "bottom")) +
@@ -824,7 +826,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     cover_png = os.path.join(tex, "real_seen.png")
     seen.save(cover_png)
     make_room("judging")
-    R = review.Sheet(d)
+    R = review.load(d)
     fl = review.front_length(cov)
     seen_ok, seen_why = review.look_unrolled(real_png, picked["file"], product, use,
                                              top="plus" if kit_name == "cylindrical_cell" else "top")
