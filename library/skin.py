@@ -66,9 +66,28 @@ def all_items(f, upright=True):
     from scipy import ndimage
     im = Image.open(f["file"]).convert("RGB")
     m = np.asarray(Image.open(f["mask"]).convert("L").resize(im.size)) / 255.0
+    W_, H_ = im.size
+    for ob in f.get("overlays") or []:                    # anything laid over the photo is not the item: masked out
+        try:
+            x0, y0, x1, y1 = ob
+            m[int(y0 * H_):int(math.ceil(y1 * H_)), int(x0 * W_):int(math.ceil(x1 * W_))] = 0
+        except (TypeError, ValueError):
+            pass
+    if f.get("box"):                                      # the side's own box (the careful look's): the unroll takes
+        try:                                              # the label, not the whole cut-out (2026-10-05)
+            x0, y0, x1, y1 = f["box"]
+            pad = 0.03
+            bx = (int(max(0, x0 - pad) * W_), int(max(0, y0 - pad) * H_), int(min(1, x1 + pad) * W_), int(min(1, y1 + pad) * H_))
+            if bx[2] - bx[0] > 32 and bx[3] - bx[1] > 32:
+                keep = np.zeros_like(m)
+                keep[bx[1]:bx[3], bx[0]:bx[2]] = m[bx[1]:bx[3], bx[0]:bx[2]]
+                if (keep > 0.5).sum() > 0.2 * max(1, (m > 0.5).sum()) or (keep > 0.5).sum() > 2000:
+                    m = keep
+        except (TypeError, ValueError):
+            pass
     lab, n = ndimage.label(m > 0.5)
     sizes = ndimage.sum(np.ones_like(lab), lab, range(1, n + 1)) if n else []
-    n_items = int((f.get("vet") or {}).get("count") or 1)
+    n_items = int(f.get("items") or (f.get("vet") or {}).get("count") or 1)
     out = []
     for k in [i + 1 for i in np.argsort(-np.asarray(sizes))]:
         if sizes[k - 1] < 0.15 * max(sizes):

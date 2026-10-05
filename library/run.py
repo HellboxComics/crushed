@@ -988,7 +988,19 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     # the real label from your photo AND the other photos of this very item (the dossier's): each unrolled
     # flat (read the right way up) - your pick at the front, the side it can't show from another photo at
     # the back - and the words on them, each confirmed by two reads
-    views = [picked] + same_design(picked, others, use, want=3, dossier=dos)
+    # the label's pixels: the plan's cleanest exact photo first (your pick is the identity, not the pixels by
+    # right - 2026-10-05: three cells under a caption were unrolled as "the label"), each with the box the
+    # careful look drew around the label and any overlay boxes, so the unroll takes the label and nothing else
+    import dossier as DS
+    views = DS.with_masks(DS.label_views(dos, picked), say) if dos and dos.get("faces") else []
+    views = [v for v in views if v.get("mask")]
+    if not views:
+        views = [picked] + same_design(picked, others, use, want=3, dossier=dos)
+    else:
+        say(f"[texture] label pixels from {os.path.basename(views[0]['file'])}"
+            + (" (your pick)" if views[0].get("is_pick") else " (the cleanest exact photo; your pick is the identity)")
+            + (", cropped to the label's box" if views[0].get("box") else "")
+            + (f", {len(views[0].get('overlays') or [])} overlay box(es) masked out" if views[0].get("overlays") else ""))
     lab, cov = skin.compose(views, along, around)
     say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
         f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
@@ -1008,7 +1020,17 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     fl = review.front_length(cov)
     seen_ok, seen_why = review.look_unrolled(real_png, picked["file"], product, use,
                                              top="plus" if kit_name == "cylindrical_cell" else "top")
+    v0 = views[0]
+    src_why = []
+    if v0.get("overlays"):
+        src_why.append(f"{len(v0['overlays'])} thing(s) laid over the photo, masked out")
+    if (v0.get("items") or 1) > 1:
+        src_why.append(f"{v0['items']} copies of the item in the picture")
+    if not v0.get("box"):
+        src_why.append("no box around the label from the careful look: the whole cut-out was unrolled")
     R.step("unrolled label (the photos' real pixels)", files=[real_png], checks=[
+        ("the label's source photo is clean: one copy of the item, boxed, nothing laid over it",
+         not src_why, "; ".join(src_why) or f"from {os.path.basename(v0.get('file', ''))}"),
         ("the main photo covers the whole length at the front", fl >= 0.9, f"{fl:.0%} of the length"),
         ("the judge sees nothing stretched, doubled, foreign or metal in it", seen_ok, seen_why)])
     parts, src_of = [], {}                                  # each strip and cutout -> the photo it came from

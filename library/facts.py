@@ -124,7 +124,19 @@ def _on_overlay(line, words):
         return False
     if n in panel:
         return True
-    return any(n == w or n in w or (len(w) >= 4 and w in n and len(w) >= 0.6 * len(n)) for w in look)
+    if any(n == w or n in w or (len(w) >= 4 and w in n and len(w) >= 0.6 * len(n)) for w in look):
+        return True
+    # a misread of an overlay word is the overlay too: the reader saw "kemember" where the caption said "Remember"
+    # (2026-10-05, printed on the model in letters a third of the label tall). A letter or two off, for words of
+    # six letters and more; each word of the line against each word of the overlay.
+    import difflib
+    own = [t for t in re.findall(r"[a-z0-9]+", str(line).lower()) if len(t) >= 6]
+    ov_words = [t for w in look for t in re.findall(r"[a-z0-9]+", w) if len(t) >= 6]
+    for t in own:
+        for w in ov_words:
+            if abs(len(t) - len(w)) <= 2 and difflib.SequenceMatcher(None, t, w).ratio() >= 0.75:
+                return True
+    return False
 
 
 def marked(p):

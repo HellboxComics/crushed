@@ -38,7 +38,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 7                  # 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
+VERSION = 8                  # 8: the label's pixel source is the best clean photo, not the pick by right; the look counts the items
+#                              7: 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 #                              4: a round end's reference photo must show that end end-on (a disc)
 #                              5: a round item's ends are told apart by the kit (the + button end is the top): the
@@ -122,6 +123,8 @@ Look at picture 1 carefully. Answer ONLY JSON:
  "years_why": "what tells you the years",
  "text": ["every line of words you can read, exactly as printed"],
  "quality": 0-10 (10 = straight-on, filling the frame, sharp, evenly lit, nothing covering it),
+ "items": how many separate copies of the product are in picture 1 (1 for a single one; 3 for three cells lying
+   across each other; a pack of 4 counts as 4),
  "elements": [everything printed on the visible sides: {{"face": "...", "what": "short name, e.g. nutrition panel,
    flavor name, barcode, maker's address, logo, product picture, recycled-paper seal",
    "text": "its words exactly, or empty", "kind": "barcode" | "text" | "panel" | "graphic",
@@ -482,8 +485,9 @@ def _could_show(p, face, route):
     return f == "side" and face in ("left", "right")
 
 
-def careful_looks(dos, use, log=print):
-    """The careful look (thinking on) at your pick and at the best few photos for each side."""
+def careful_looks(dos, use, log=print, only=None):
+    """The careful look (thinking on) at your pick and at the best few photos for each side (only=[photos]: at
+    exactly these - more candidates for one side)."""
     idn = dos["identity"]
     era = idn["years"]
     route = dos["route"]
@@ -496,7 +500,9 @@ def careful_looks(dos, use, log=print):
                  and _could_show(p, face, route) and _overlap((p.get("quick") or {}).get("years") or era, era)]
         cands.sort(key=lambda p: -_quick_score(p, era))
         chosen += cands[:LOOK]
-    chosen = [p for p in chosen[:MOST_LOOKS] if not p.get("labeled")]
+    chosen = [p for p in chosen[:MOST_LOOKS] if not p.get("labeled")] if only is None else [p for p in only if not p.get("labeled")]
+    if not chosen:
+        return
     import vet as V
     hint = SIDES_HINT.get(route, "")
     if route == "round":                                  # which end is which, from the kit (a battery lying down:
@@ -564,6 +570,10 @@ def _apply_label(p, v, era, is_pick=False):
         q = max(0.0, min(10.0, float(v.get("quality"))))
     except (TypeError, ValueError):
         q = 0.0
+    try:
+        items = max(1, int(v.get("items")))
+    except (TypeError, ValueError):
+        items = None                                       # (an older look: not asked)
     overlays = [{"what": _str(o.get("what"), 60), "text": _str(o.get("text"), 200), "box": _box(o.get("box"))}
                 for o in v.get("overlays") or [] if isinstance(o, dict) and (_str(o.get("what")) or _str(o.get("text")))]
     import facts as FX                                     # words on the photo that can only be a watermark or credit
@@ -573,7 +583,7 @@ def _apply_label(p, v, era, is_pick=False):
              match=match, same_artwork=(v.get("same_artwork") is True) or match == "exact",
              product_shown=_str(v.get("product_shown")), years=ys, years_why=_str(v.get("years_why")),
              text=[_str(t, 200) for t in (v.get("text") or []) if _str(t) and not FX.not_printed(t)][:60], quality=q,
-             elements=[e for e in els if not FX.not_printed(e["text"])], overlays=overlays,
+             elements=[e for e in els if not FX.not_printed(e["text"])], overlays=overlays, items=items,
              kind=(p.get("quick") or {}).get("kind", "photo"))
     if is_pick:
         p["look_match"], p["look_why"] = look_match, look_why
@@ -673,6 +683,35 @@ def _end_on(fe):
     return w > 0 and h > 0 and 0.6 <= h / w <= 1.7
 
 
+MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
+
+
+def _poor_source(dos, F):
+    """Why the planned pixel source for side F is poor ("" when it is fine): something laid over it, several copies
+    of the item in the picture, or not seen straight-on."""
+    e = (dos.get("faces") or {}).get(F) or {}
+    if e.get("source") != "exact_photo" or not e.get("photo"):
+        return "no exact photo of this side"
+    p = next((x for x in dos.get("photos", []) if x.get("file") == e["photo"]), {})
+    fe = e.get("view") or {}
+    why = []
+    if _covered(p, fe):
+        why.append("something laid over it")
+    if (p.get("items") or 1) > 1:
+        why.append(f"{p['items']} copies in the picture")
+    if not fe.get("straight_on"):
+        why.append("not seen straight-on")
+    return ", ".join(why)
+
+
+def source_rank(p, fe, q, picked=None):
+    """Sort key for a side's pixel source, best first: nothing laid over it, seen straight-on, ONE copy of the item
+    in the picture, then the look's quality; your pick wins only a tie. The pick is the identity; the pixels come
+    from the best clean photo of this very item (2026-10-05)."""
+    return (1 if _covered(p, fe) else 0, 0 if fe.get("straight_on") else 1, 0 if (p.get("items") or 1) == 1 else 1,
+            -float(q or 0), 0 if p.get("file") == picked else 1)
+
+
 def _covered(p, fe):
     """Is something laid over this side in this photo (a watermark, a sticker, a hand)? A side that is covered is
     never copied onto the model (it may still show where things go)."""
@@ -727,24 +766,31 @@ def plan(dos):
         entry = {"source": "none", "photo": None, "page": "", "product_shown": "", "match": None, "swap": [],
                  "must_show": [], "note": "", "alternates": []}
         if F == PRIMARY[route] and picked:
+            # YOUR PICK IS THE IDENTITY, NOT THE PIXELS BY RIGHT (2026-10-05: the pick showed three cells crossing
+            # under a caption; it was forced as the label's source and the model came out wearing the caption).
+            # The pick joins the exact candidates with its real marks; the best CLEAN source wins (below). What it
+            # lacks is written as a gap either way.
             pp = next((p for p in dos["photos"] if p["file"] == picked), {"file": picked})
             fe = next((f for f in pp.get("faces", []) if face_name(route, f["face"]) == F), {"face": F})
-            if route == "round":                              # the whole wrap: every part of the label in the photo
-                fe = {"face": F, "turn": fe.get("turn", 0), "straight_on": fe.get("straight_on", False)}
-            entry.update(source="exact_photo", photo=picked, page=pp.get("page", ""), match="exact",
-                         product_shown=pp.get("product_shown", ""), note="your pick")
+            if route == "round":                              # the whole wrap, cropped to where the label is
+                fe = {"face": F, "turn": fe.get("turn", 0), "straight_on": fe.get("straight_on", False),
+                      "box": fe.get("box")}
             if _covered(pp, fe):
                 gaps.append(f"{F}: your pick has something laid over this side ("
                             + ", ".join(f"{o['what']} {o['text']!r}" for o in pp.get("overlays", []))[:120]
                             + ") - it must not end up on the model")
-            exact = [(10, pp, fe)] + [c for c in exact if c[1]["file"] != picked]
+            if (pp.get("items") or 1) > 1:
+                gaps.append(f"{F}: your pick shows {pp['items']} of the item - one clean copy is the source for this side")
+            exact = [(max(float(pp.get("quality") or 0), 3.0), pp, fe)] + [c for c in exact if c[1]["file"] != picked]
         if exact:
+            exact.sort(key=lambda c: source_rank(c[1], c[2], c[0], picked))
             q, p, fe = exact[0]
-            if entry["source"] != "exact_photo":
-                entry.update(source="exact_photo", photo=p["file"], page=p.get("page", ""), match="exact",
-                             product_shown=p.get("product_shown", ""),
-                             note=("seen at an angle in the photo" if not fe.get("straight_on") else "seen straight-on")
-                             + (", as a narrow side of the photo" if fe["face"] == "side" else ""))
+            is_pick = p.get("file") == picked
+            entry.update(source="exact_photo", photo=p["file"], page=p.get("page", ""), match="exact",
+                         product_shown=p.get("product_shown", ""),
+                         note=("your pick" if is_pick else "the cleanest exact photo of this side (your pick is the identity)")
+                         + ("" if fe.get("straight_on") else ", seen at an angle in the photo")
+                         + (", as a narrow side of the photo" if fe["face"] == "side" else ""))
             entry["view"] = fe
             entry["alternates"] = [c[1]["file"] for c in exact[1:4]]
             entry["must_show"] = [{"what": e["what"], "text": e["text"], "kind": e["kind"],
@@ -914,20 +960,25 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
             old["inputs"] = sig
             was = int(old.get("version") or 1)
             replan(old, log)                                  # newer rules: from the looks already taken, in seconds
+            again = []
             if was < 7:                                       # 5/6: looks taken without the kit's help or the
                 again = [p for p in old.get("photos", []) if p.get("labeled")   # same-artwork question: again;
                          and (old.get("route") == "round" and                    # 7: the pick's own look (not told
                               (was < 5 and any(f.get("face") in ("top", "bottom") for f in p.get("faces", []))   # the answer)
                                or p.get("match") == "sister" and "same_artwork" not in p)
                               or p.get("file") == old.get("picked") and "look_match" not in p)]
-                for p in again:
-                    p["labeled"] = False
-                    p["faces"] = []
-                if again:
-                    old["done"] = False
-                    save(old)
-                    log(f"[dossier] {cid}: {len(again)} careful look(s) are taken again under the newer rules (which end "
-                        "is which; does a sister pack carry the same artwork; the pick judged without being told)")
+            if was < 8:                                       # 8: how many copies are in the picture (the label's
+                again += [p for p in old.get("photos", []) if p.get("labeled") and "items" not in p   # source rule)
+                          and (p.get("match") == "exact" or p.get("file") == old.get("picked")) and p not in again]
+            for p in again:
+                p["labeled"] = False
+                p["faces"] = []
+            if again:
+                old["done"] = False
+                save(old)
+                log(f"[dossier] {cid}: {len(again)} careful look(s) are taken again under the newer rules (which end "
+                    "is which; does a sister pack carry the same artwork; the pick judged without being told; how "
+                    "many copies are in the picture)")
         if old.get("done"):
             return old
     resume = bool(old) and not redo and same
@@ -996,6 +1047,21 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
     # 4. the plan, 5. the facts
     import facts as FX
     dos["faces"], face_gaps = plan(dos)
+    # the main side's pixel source is poor (something laid over it, several copies in the picture, seen at an
+    # angle) and there are good quick-look candidates nobody looked at carefully: look at up to MORE_FOR_PRIMARY of
+    # them and plan again (2026-10-05: the pick - three cells under a caption - was the only exact label photo
+    # looked at, with 20 single-cell label photos waiting in the quick looks)
+    F = PRIMARY[route]
+    if web and use and _poor_source(dos, F):
+        cands = [p for p in dos["photos"] if not p.get("labeled") and (p.get("quick") or {}).get("same_item")
+                 and (p.get("quick") or {}).get("kind") not in ("render", "ad") and _could_show(p, F, route)
+                 and _overlap((p.get("quick") or {}).get("years") or era, era)]
+        cands.sort(key=lambda p: -_quick_score(p, era))
+        if cands:
+            log(f"[dossier] the {F}'s source is poor ({_poor_source(dos, F)}) - a careful look at "
+                f"{min(len(cands), MORE_FOR_PRIMARY)} more photo(s) of it")
+            careful_looks(dos, use, log, only=cands[:MORE_FOR_PRIMARY])
+            dos["faces"], face_gaps = plan(dos)
     dos["facts"] = FX.gather(dos, log, use, web=web)
     _sides_from_facts(dos)
     dos["gaps"] = face_gaps + dos["gaps"]
@@ -1055,6 +1121,28 @@ def face_photos(dos, sources=("exact_photo",), with_alternates=True):
     pk = dos.get("picked")
     out.sort(key=lambda x: x["file"] != pk)
     return out
+
+
+def label_views(dos, picked, want=4):
+    """The photos a round item's label is unrolled from, best source first: the plan's source for the label (with
+    the box the careful look drew around the label and any overlay boxes, so the unroll takes the label and
+    nothing laid over it), then its alternates. Your pick is the identity; it is in this list only when it is one
+    of the clean sources. Masks are added by the caller."""
+    F = PRIMARY.get(dos.get("route"), "front")
+    e = (dos.get("faces") or {}).get(F) or {}
+    files = ([e.get("photo")] if e.get("source") == "exact_photo" and e.get("photo") else []) + list(e.get("alternates") or [])
+    photos = {p.get("file"): p for p in dos.get("photos", []) if isinstance(p, dict)}
+    out, seen = [], set()
+    for f in files:
+        if not f or f in seen or not os.path.exists(f):
+            continue
+        seen.add(f)
+        p = photos.get(f, {})
+        fe = e.get("view") if f == e.get("photo") else next((x for x in p.get("faces", []) if face_name(dos.get("route"), x["face"]) == F), None)
+        out.append({"file": f, "vet": {"view": F, "count": p.get("items")}, "plan": F, "source": "exact_photo",
+                    "box": (fe or {}).get("box"), "overlays": [o.get("box") for o in p.get("overlays") or [] if o.get("box")],
+                    "items": p.get("items"), "is_pick": f == (picked or {}).get("file") if isinstance(picked, dict) else f == picked})
+    return out[:want]
 
 
 def with_masks(photos, log=print):
