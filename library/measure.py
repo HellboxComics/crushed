@@ -215,6 +215,10 @@ def _explained(t, allowed, longer):
         return True
     if any(t.startswith(a) and t[len(a):] in allowed for a in longer):
         return True
+    # a long token that mostly matches a read word is that word, mangled by the curve ("VOIDURACELI" is DURACELL
+    # read across the label's edge, 2026-10-05) - an invented word looks like a WORD, not like a smear of one
+    if len(t) >= 8 and any(len(a) >= 5 and difflib.SequenceMatcher(None, t, a).ratio() >= 0.6 for a in longer):
+        return True
     slack = 1 if len(t) < 8 else 2
     n = len(t)
     for a in longer:
@@ -247,7 +251,27 @@ def text_found(want, got):
             best = r
             if best >= 0.97:
                 break
-    return best >= 0.85, round(best, 2)
+    need = 0.80 if n >= 25 else 0.85          # a long line (an address) read off a curved render drops a letter or two
+    return best >= need, round(best, 2)
+
+
+def _code_prefix(m):
+    """For an item-specific code with digits (a best-by date, a batch or lot number): the printed words before the
+    digits ("BEST IF INSTALLED BY:"). The digits are a copy's own - the label's source copy says JAN 2001, the
+    pick says MAR 2003 - so the model must carry the line, with SOME date, never one copy's digits in particular
+    (2026-10-05). -> the prefix, or None when this is not such a code."""
+    import re as _re
+    want = _text_of(m.get("text"))
+    what = str(m.get("what") or "").lower()
+    if not (m.get("item_specific") and _re.search(r"\d{2,4}", want)
+            and _re.search(r"date|code|batch|lot\b|best.by|best.if|expir|use.by", what + " " + want.lower())):
+        return None
+    months = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "SEPT", "OCT", "NOV", "DEC", "JANUARY",
+              "FEBRUARY", "MARCH", "APRIL", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"}
+    toks = want.split()
+    while toks and (_re.search(r"\d", toks[-1]) or toks[-1].strip(".,:").upper() in months):
+        toks.pop()                                   # the date itself: digits, and a month name before them
+    return " ".join(toks).strip(" :-")
 
 
 def untraceable(read, allowed, least=6):
@@ -396,7 +420,13 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
                     if n not in read:
                         read[n] = read_text(renders[n], use=use, log=log)
                 got_t = " ".join(read[n] for n in names)
-                ok, score = text_found(_text_of(m["text"]), got_t)
+                pre = _code_prefix(m)
+                if pre is not None:
+                    ok, score = text_found(pre, got_t) if _words(pre) else (True, 1.0)
+                    if ok and not re.search(r"\d{2,4}", got_t):
+                        ok, score = False, 0.0        # the line is there but no date or number follows it
+                else:
+                    ok, score = text_found(_text_of(m["text"]), got_t)
                 if not ok:
                     missing.append(f"{f}: \"{_text_of(m['text'])[:60]}\" ({m.get('what', '')}; best match {score})")
             n = len(want_text) - len(skipped)
@@ -433,7 +463,12 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
                                           measured=False)
         else:
             found = []
-            for n, png in renders.items():
+            # read where the printing faces the camera: a turned side of a round item is read across its curve
+            # and gives smears (PATONTO, GOMMESR for "Patented") that are not invention (2026-10-05); the judge's
+            # own eye (the "extra" rule) still looks at every side
+            facing = [n for n in renders if n.endswith("_0") or n in ("front", "label", "top")] or list(renders)
+            for n in facing:
+                png = renders[n]
                 if n not in read:
                     read[n] = read_text(png, use=use, log=log)
                 odd = untraceable(read[n], allowed)

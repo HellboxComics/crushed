@@ -55,6 +55,15 @@ check(M.untraceable("IRACE IRFION VERONE", allowed) == [] and M.untraceable("OWE
 check(M.untraceable("ENERGIZER MAXIMUM POWERFUL", allowed) == ["ENERGIZER", "MAXIMUM", "POWERFUL"], "three words nothing accounts for are called")
 check(M.untraceable("DURACEL COPERTOP ALKALINEBATTERY", allowed) == [], "misreads and run-together words are not invention")
 check(M.untraceable("DURACELL PHOTOGRAPHIC", allowed) == ["PHOTOGRAPHIC"], "one long invented word is enough")
+check(M.untraceable("VOIDURACELI", allowed) == [], "a long smear of a real word across the label's curve is that word, not invention")
+src_m = open(M.__file__).read()
+check('facing = [n for n in renders if n.endswith("_0")' in src_m, "the traceable check reads the sides that face the camera, not a turned side's smears")
+# an item-specific code with digits: the model must carry the line with SOME date, never one copy's digits
+pre = M._code_prefix({"text": "BEST IF INSTALLED BY: JAN 2001", "what": "best-if-installed-by date code", "item_specific": True})
+check(pre == "BEST IF INSTALLED BY", f"a best-by code is checked by its line ({pre!r}), the date is any copy's")
+check(M._code_prefix({"text": "MN 1500 LR6", "what": "model number", "item_specific": False}) is None, "a model number is checked whole")
+check(M.text_found("Patented DURACELL INC. Bethel, CT 06801", "Patented DURACELL INC. Bethe1 CT 0680I")[0],
+      "a long address line read with a letter or two wrong still counts")
 bd = os.path.join(W, "b1", "texture")
 os.makedirs(bd)
 json.dump(["PATENTED", "POWERCHECK"], open(os.path.join(bd, "words.json"), "w"))
