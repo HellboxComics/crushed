@@ -126,8 +126,18 @@ try:
     open(_P.QUEUE, "w").write("b_item\n")
     os.makedirs(run.HB, exist_ok=True)
     _j.dump({"d_item": {"pick": "1"}}, open(os.path.join(run.HB, "picks.json"), "w"))
+    _j.dump({"a_item": {"step": "stopped: x", "at": now - 7200, "code": run.code_sha()},
+             "b_item": {"step": "stopped: y", "at": now - 3600, "code": run.code_sha()}}, open(run.STATUS, "w"))
     q = run.queue(3)
-    check(q[0] == "b_item", f"what Cody put first on his phone goes first, even before a fresh pick: {q}")
+    check(q == ["b_item"], f"what Cody put first on his phone goes first and ALONE until it is kept: {q}")
+    _j.dump({"a_item": {"step": "stopped: x", "at": now - 7200, "code": run.code_sha()},
+             "b_item": {"step": "waiting for your pick on your phone (Telegram)", "at": now - 60, "code": run.code_sha()}}, open(run.STATUS, "w"))
+    check(run.queue(3) == [], "while the first in line waits on Cody, nothing else starts")
+    _j.dump({"a_item": {"step": "stopped: x", "at": now - 7200, "code": run.code_sha()},
+             "b_item": {"step": "done - kept", "at": now - 60, "code": run.code_sha(), "check_version": run.check_version()}}, open(run.STATUS, "w"))
+    q = run.queue(3)
+    check("a_item" in q and "b_item" not in q, f"once it is kept, the line moves on: {q}")
+    _j.dump({}, open(os.path.join(run.HB, "picks.json"), "w"))
     os.remove(_P.QUEUE)
 finally:
     if had:

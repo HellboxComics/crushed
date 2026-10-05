@@ -2754,7 +2754,17 @@ def queue(n):
         group = 2 if step.startswith("done") else 1 if not v else 0
         return (0 if c in first else 1, first.get(c, 0), 0 if c in picks or c in ap else 1, group, float(v.get("at") or 0))
     out.sort(key=order)                                       # (2026-10-04: a fresh phone pick jumped the item Cody
-    return out[:n]                                            #  had put first - the Duracell waited behind a VHS)
+    #                                                            had put first - the Duracell waited behind a VHS)
+    # ONE AT A TIME (Cody, 2026-10-04: "you would think you want one thing to run through the entire process,
+    # beginning to end, and finish"): while the item first in line is not kept, nothing else starts - not even
+    # while it waits on a pick or a Keep. Off with settings.json "one_at_a_time": false.
+    first_in_line = [c for c, _ in sorted(first.items(), key=lambda kv: kv[1])]
+    if first_in_line and setting("one_at_a_time"):
+        lead = first_in_line[0]
+        lead_step = str((st.get(lead) or {}).get("step", "")) if isinstance(st.get(lead), dict) else ""
+        if not lead_step.startswith("done"):
+            return [lead] if lead in out else []
+    return out[:n]
 
 
 STALE_HOURS = 3        # a "working" status this old with no newer word is a run that died mid-item
