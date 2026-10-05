@@ -12,6 +12,28 @@ import numpy as np
 GRID = 1024
 
 
+def coverage(o, grid=GRID):
+    """Where this part's UV islands cover the map: a grid x grid array of True/False (v up, as a picture), or None
+    when the part has no UV map. The measure averages a part's maps over this - never over the empty background
+    the bake leaves black (2026-10-05: a bare-steel can measured 'metallic 0.71' because 29 % of its map was
+    uncovered background)."""
+    me = o.data
+    if not me.uv_layers or not me.polygons:
+        return None
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    bmesh.ops.triangulate(bm, faces=bm.faces[:])
+    uv = bm.loops.layers.uv.active
+    from PIL import Image, ImageDraw
+    im = Image.new("L", (grid, grid), 0)
+    dr = ImageDraw.Draw(im)
+    for f in bm.faces:
+        pts = [tuple(l[uv].uv) for l in f.loops]
+        dr.polygon([(u * grid, (1 - v) * grid) for u, v in pts], fill=255)
+    bm.free()
+    return np.asarray(im) > 0
+
+
 def stats(o):
     me = o.data
     if not me.uv_layers or not me.polygons:

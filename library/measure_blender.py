@@ -48,17 +48,24 @@ res["overall"] = {"size_m": [round(shi[i] - slo[i], 5) for i in range(3)], "part
                   "left_out_of_size": [o.name for o in meshes if o.get("beyond_size")]}
 
 
-def img_mean(node):
-    """Average of a texture map's channels (0..1), sampled on a grid so big maps stay fast."""
+def img_mean(node, mask=None):
+    """Average of a texture map's channels (0..1) over the texels the part's UVs cover (mask: uvstats.coverage),
+    else over the whole map. Sampled on a grid so big maps stay fast."""
     img = getattr(node, "image", None)
     if not img or not img.size[0]:
         return None
     px = np.array(img.pixels[:], dtype=np.float32)
     if not px.size:
         return None
-    px = px.reshape(img.size[1], img.size[0], img.channels)
+    px = px.reshape(img.size[1], img.size[0], img.channels)[::-1]      # Blender stores rows bottom-up; the mask is a picture
     step = max(1, int(max(img.size) / 256))
-    return [float(x) for x in px[::step, ::step, :3].reshape(-1, 3).mean(0)]
+    sub = px[::step, ::step, :3]
+    if mask is not None:
+        from PIL import Image
+        m = np.asarray(Image.fromarray(mask.astype(np.uint8) * 255).resize((sub.shape[1], sub.shape[0]), Image.NEAREST)) > 0
+        if m.sum() >= 16:                                                # enough covered texels to mean something
+            return [float(x) for x in sub[m].reshape(-1, 3).mean(0)]
+    return [float(x) for x in sub.reshape(-1, 3).mean(0)]
 
 
 def follow(sock):
@@ -85,6 +92,11 @@ for o in meshes:
     plo, phi = world_bbox([o])
     info["size_m"] = [round(phi[i] - plo[i], 5) for i in range(3)]
     mats = []
+    try:
+        import uvstats
+        cover = uvstats.coverage(o)
+    except Exception:
+        cover = None
     for slot in o.material_slots:
         m = slot.material
         if not m or not m.use_nodes:
@@ -97,7 +109,7 @@ for o in meshes:
             s = p.inputs[inp]
             node, chan = follow(s)
             if node is not None:
-                mean = img_mean(node)
+                mean = img_mean(node, cover)
                 if mean is None:
                     continue
                 if key == "base":
@@ -114,6 +126,10 @@ for o in meshes:
     bm = bmesh.new()
     bm.from_mesh(me)
     bm.transform(o.matrix_world)
+    # a glb stores a vertex once per UV seam / sharp edge it sits on, so a closed can comes back as thousands of
+    # one-face edges (2026-10-05: steel 3268 "holes" on a watertight part). Join what the export split (a hair
+    # apart, 0.001 mm), then count: a real hole stays open, a seam does not.
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6)
     open_edges = sum(1 for e in bm.edges if len(e.link_faces) == 1)
     nonman = sum(1 for e in bm.edges if not e.is_manifold)
     degen = sum(1 for f in bm.faces if f.calc_area() < 1e-12)
