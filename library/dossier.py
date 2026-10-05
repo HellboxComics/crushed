@@ -385,14 +385,34 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
         side_words = families.get(dos.get("family_lib") or "general").get("side_words")
     except Exception:
         pass
-    for face, q in queries(dos["identity"], dos["route"], need, done, side_words)[:max(0, left)]:
+    planned = queries(dos["identity"], dos["route"], need, done, side_words)[:max(0, left)]
+    wanted = list(dict.fromkeys(f for f, _ in planned))       # the sides this round meant to search
+    searched = set()                                          # the sides that got at least one search this round
+    ran = 0
+    for face, q in planned:
         try:
             hits = G.search_full(q, most=12, min_side=500, log=log)
-        except Exception as e:                            # not a search: nothing recorded, the hunt is not complete
-            log(f"[dossier] Google Images did not work: {e} - this search is not counted; the hunt is run again later")
-            dos["hunt_incomplete"] = str(e)[:200]
+        except Exception as e:                            # not a search: nothing recorded
+            # A block (a captcha, Google down) is NOT a hunt with no results. But it is not a void hunt either when
+            # every side this round meant to search was searched at least once before the block (2026-10-04: the
+            # Duracell ran 11 of 12 searches, 5+ for each end, then hit a captcha on the 12th - and the whole hunt
+            # was thrown away, the item stopped, every retry stopped the same way). The searches that ran count;
+            # the ones that did not are left for a later round. The hunt is incomplete only when a needed side
+            # was never searched at all.
+            never = [f for f in wanted if f not in searched]
+            if never:
+                log(f"[dossier] Google Images did not work: {e} - this search is not counted; the hunt is run again "
+                    f"later (no search ran yet for: {', '.join(never)})")
+                dos["hunt_incomplete"] = str(e)[:200]
+            else:
+                log(f"[dossier] Google Images stopped answering after {ran} searches: {e} - "
+                    f"every side this round meant to search was searched; what was found counts, the rest is tried "
+                    f"another time")
+                dos.pop("hunt_incomplete", None)
             break
         dos.pop("hunt_incomplete", None)
+        searched.add(face)
+        ran += 1
         kept = 0
         for h in hits:
             if kept >= PER_SEARCH:
