@@ -47,8 +47,8 @@ norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
 # A. one spelling per print
 check(len([k for k in kept if norm(k) == "duracell"]) == 1, "DURACELL / DURACELL(R) is one line")
 check("DURACE M" not in kept and folded.get("DURACE M") == "DURACELL", "the misread 'DURACE M' folds into DURACELL")
-check(sum(1 for k in kept if norm(k).startswith("mn1500") and len(norm(k)) > 6) == 1 and "MN 1500 LRS 15 VOLTS" in kept,
-      "the two spellings of the model line are one, the spelling two pictures confirmed kept")
+check(not any(norm(k).startswith("mn1500") and len(norm(k)) > 6 for k in kept) and "MN 1500" in kept and "LR6" in kept,
+      "both garbled readings of the model line go (one as a second spelling, one as a smear); MN 1500 and LR6 carry it")
 check(len([k for k in kept if norm(k).startswith("alkaline")]) == 1, "ALKALINE 1.5 / 1,5 Volts is one line")
 check(len([k for k in kept if "70f21c" in norm(k)]) == 1, "'Test at 70F' with and without the dash is one line")
 check(len([k for k in kept if norm(k) == "duracellinc"]) <= 1, "DURACELL INC.. / INC., is one line")
@@ -83,5 +83,24 @@ check(review.one_per_print(clean)[0] == clean, "a clean list with no picture rec
 k3, f3 = review.one_per_print(["BEST IF INSTALLED BY:", "JAN 2001", "BEST IF INSTALLED BY: JAN 2001", "MN 1500"])
 check("BEST IF INSTALLED BY: JAN 2001" not in k3 and "JAN 2001" in k3 and "MN 1500" in k3,
       "without pictures: the glued copy goes, the pieces stay")
+
+
+# D. a smear (2026-10-05 14:20, from the run's own log): two reads agreed on 'MN 1500 LAS 15 VOLIS' off a blurry
+# strip, while the other picture confirmed the clean pieces. The smear goes; the pieces carry its facts.
+W2 = ["MN 1500 LAS 15 VOLIS", "100%", "DURACELL", "JAN 2001", "SIZE AA", "ALKALINE 1.5 Volts", "MN1500", "LR6",
+      "MN 1500", "DURACELL® POWERCHECK™", "CAUTION: DO NOT CONNECT UM", "CHARGE OR DISPOSE OF IN FIES"]
+P2 = {"side2.png": ["MN 1500 LAS 15 VOLIS", "CAUTION: DO NOT CONNECT UM", "CHARGE OR DISPOSE OF IN FIES"],
+      "item2.png": ["100%", "DURACELL", "JAN 2001", "SIZE AA", "ALKALINE 1.5 Volts", "MN1500", "LR6", "MN 1500",
+                    "DURACELL® POWERCHECK™"]}
+k4, f4 = review.one_per_print(W2, P2)
+check("MN 1500 LAS 15 VOLIS" not in k4 and f4.get("MN 1500 LAS 15 VOLIS", "").startswith("a smear of"),
+      f"the smear goes: {f4.get('MN 1500 LAS 15 VOLIS')}")
+check("MN 1500" in k4 and "LR6" in k4 and "ALKALINE 1.5 Volts" in k4, "the clean pieces that carry its facts stay")
+check("CAUTION: DO NOT CONNECT UM" in k4 and "CHARGE OR DISPOSE OF IN FIES" in k4,
+      "a line read only once, with words no other line carries, is NOT called a smear (it is the only reading)")
+# the spelling tie: 'LRS 15 VOLTS' vs 'LAS 15 VOLIS', one picture each - the one whose words other readings carry wins
+k5, f5 = review.one_per_print(["MN 1500 LAS 15 VOLIS", "MN 1500 LRS 15 VOLTS", "1.5 VOLTS"],
+                              {"a.png": ["MN 1500 LAS 15 VOLIS"], "b.png": ["MN 1500 LRS 15 VOLTS", "1.5 VOLTS"]})
+check("MN 1500 LRS 15 VOLTS" in k5 and "MN 1500 LAS 15 VOLIS" not in k5, f"on a tie the better-supported spelling wins ({k5})")
 
 print(f"ALL {ok} PASS")

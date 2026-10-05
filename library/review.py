@@ -136,12 +136,19 @@ def one_per_print(words, by_png=None):
         return (len(n) >= 6 and len(kn) >= 6 and not run_in(w, k) and not run_in(k, w)
                 and difflib.SequenceMatcher(None, n, kn).ratio() >= 0.8)
 
-    # A. one spelling per print: the spelling more pictures read exactly so; tie: the one read first
+    all_toks = {}                                            # token -> how many readings carry it
+    for w in words:
+        for t in set(ntoks(w)):
+            all_toks[t] = all_toks.get(t, 0) + 1
+    support = lambda w: sum(1 for t in ntoks(w) if all_toks.get(t, 0) >= 2)   # tokens other readings carry too
+
+    # A. one spelling per print: the spelling more pictures read exactly so, then the one whose words other
+    #    readings carry too ('VOLTS' is read elsewhere, 'VOLIS' nowhere); tie: the one read first
     for w in words:
         twin = next((k for k in kept if spelling_of(w, k)), None)
         if twin is None:
             kept.append(w)
-        elif (len(pics(w)), len(exact(w))) > (len(pics(twin)), len(exact(twin))):
+        elif (len(pics(w)), len(exact(w)), support(w)) > (len(pics(twin)), len(exact(twin)), support(twin)):
             kept[kept.index(twin)] = w
             folded[twin] = w
             for a, b in list(folded.items()):              # what had folded into the old spelling follows
@@ -177,6 +184,24 @@ def one_per_print(words, by_png=None):
             parts = sorted((k for k in kept if run_in(k, w)),
                            key=lambda k: next(i for i in range(len(t)) if t[i:i + len(ntoks(k))] == ntoks(k)))
             folded[w] = " + ".join(parts[:4])
+    # D. a smear: a line of 3+ words where most words are misreads of words in OTHER kept lines and the rest
+    #    were confirmed nowhere else ('MN 1500 LAS 15 VOLIS' beside 'MN 1500', 'LR6', '1.5 Volts' - 2026-10-05
+    #    14:20: two reads agreed on it off a blurry strip; the judge called it a typo every round and the writer,
+    #    rightly, may not invent a spelling). The clean lines carry its facts; it is dropped.
+    def near(tok, pool):
+        return tok in pool or (tok.isalpha() and len(tok) >= 4 and     # letters may be misread; digits must match
+                               any(difflib.SequenceMatcher(None, tok, p).ratio() >= 0.8 for p in pool))
+
+    for w in list(kept):
+        t = ntoks(w)
+        if len(t) < 3:
+            continue
+        others = {x for k in kept if k is not w for x in ntoks(k)}
+        explained = [x for x in t if near(x, others)]
+        odd = [x for x in t if x not in explained]
+        if odd and len(explained) / len(t) >= 0.6 and all(all_toks.get(x, 0) <= 1 for x in odd):
+            kept.remove(w)
+            folded[w] = "a smear of " + ", ".join(k for k in kept if any(near(x, set(ntoks(k))) for x in explained))[:120]
     return kept, folded
 
 
