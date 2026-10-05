@@ -227,6 +227,29 @@ def _explained(t, allowed, longer):
     return False
 
 
+def text_found(want, got):
+    """Is the printed element `want` in the read text `got`? Short lines: a close match somewhere (small misreads
+    allowed); long text (ingredients): at least 85% of its words found, in any order."""
+    w, g = _words(want), _words(got)
+    if not w:
+        return True, 1.0
+    if len(w) > 12:
+        have = set(g)
+        score = sum(1 for x in w if x in have) / len(w)
+        return score >= 0.85, round(score, 2)
+    ws, gs = "".join(w), "".join(g)                          # spacing never matters ("MN1500" = "MN 1500")
+    if ws in gs:
+        return True, 1.0
+    n, best = len(ws), 0.0
+    for i in range(0, max(1, len(gs) - n + 1)):
+        r = difflib.SequenceMatcher(None, ws, gs[i:i + n]).ratio()
+        if r > best:
+            best = r
+            if best >= 0.97:
+                break
+    return best >= 0.85, round(best, 2)
+
+
 def untraceable(read, allowed, least=6):
     """The words in a side's reading that nothing accounts for: real-looking words (letters only, `least`+ long,
     with a vowel) that are not a read word, not a piece of one, not two run together and not a reader's misread

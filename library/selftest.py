@@ -88,6 +88,24 @@ def sample_photo():
     return p
 
 
+def t_names():
+    """No undefined name in any module (2026-10-05: a deleted helper failed every build's text check and the keep
+    step; no unit test ran those lines). pyflakes reads every module whole; missing here, it is installed into
+    this run's own Python once (no network: the check is skipped and says so, never claimed)."""
+    sys.path.insert(0, os.path.join(HERE, "tests"))
+    import test_names
+    bad = test_names.undefined_names(HERE)
+    if bad is None:
+        import subprocess
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "pyflakes"], capture_output=True, timeout=240)
+        bad = test_names.undefined_names(HERE)
+    if bad is None:
+        return "pyflakes could not be installed here - the names check did not run"
+    if bad:
+        raise RuntimeError("undefined names (a build would crash on these lines): " + "; ".join(bad)[:400])
+    return "every module reads clean"
+
+
 def t_own_files():
     """Every file name the asset maker shares with your other tools (facts.py, dossier.py ...) loads the asset maker's
     own, even after those tools put their folders in front (ownmods.py). Without this every dossier failed."""
@@ -388,6 +406,7 @@ def run_all(quiet_phone=False):
     optional = {HY, GUARD, GOOG}                       # these only switch off their own part, never the whole run
     #                                                    (a dead photo browser leaves hunts waiting, not every build)
     order = [("the asset maker's own files", t_own_files, 30),
+             ("no undefined names in the code", t_names, 300),
              (GUARD, t_engineer_guard, 30),
              ("memory: what is loaded", t_memory, 20),
              ("phone buttons (Hart's bot)", t_phone, 30),

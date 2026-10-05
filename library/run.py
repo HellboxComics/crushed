@@ -1560,10 +1560,11 @@ def file_away(cid, d):
     if os.path.exists(phys) and (deliver.sha1(phys) == bstep.get("physics_sha1") or
                                  ("physics_sha1" not in bstep and bstep.get("note") and fresh(phys, built))):
         shutil.copy2(phys, tmp)
-    product = cid
+    product, card = cid, {}
     try:
         import cards
         c = cards.make(cid)
+        card = c
         product = c.get("product") or cid
         json.dump({"product": c.get("product"), "construction": c.get("construction"), "size_m": c.get("size")},
                   open(os.path.join(tmp, "made_of.json"), "w"), indent=1)
