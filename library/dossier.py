@@ -708,7 +708,9 @@ def source_rank(p, fe, q, picked=None):
     """Sort key for a side's pixel source, best first: nothing laid over it, seen straight-on, ONE copy of the item
     in the picture, then the look's quality; your pick wins only a tie. The pick is the identity; the pixels come
     from the best clean photo of this very item (2026-10-05)."""
-    return (1 if _covered(p, fe) else 0, 0 if fe.get("straight_on") else 1, 0 if (p.get("items") or 1) == 1 else 1,
+    # one copy before straight-on: the unroll straightens an angle by math, but three cells crossing never become
+    # one label (2026-10-05: the pick, three cells seen "straight-on", outranked a clean single cell lying flat)
+    return (1 if _covered(p, fe) else 0, 0 if (p.get("items") or 1) == 1 else 1, 0 if fe.get("straight_on") else 1,
             -float(q or 0), 0 if p.get("file") == picked else 1)
 
 
@@ -1141,6 +1143,9 @@ def label_views(dos, picked, want=4):
         fe = e.get("view") if f == e.get("photo") else next((x for x in p.get("faces", []) if face_name(dos.get("route"), x["face"]) == F), None)
         out.append({"file": f, "vet": {"view": F, "count": p.get("items")}, "plan": F, "source": "exact_photo",
                     "box": (fe or {}).get("box"), "overlays": [o.get("box") for o in p.get("overlays") or [] if o.get("box")],
+                    # a round item is unrolled from its WHOLE outline: the box says which item in the photo, it does
+                    # not cut pixels (a label box that leaves out the copper end breaks the cylinder math)
+                    "box_mode": "select" if dos.get("route") == "round" else "crop",
                     "items": p.get("items"), "is_pick": f == (picked or {}).get("file") if isinstance(picked, dict) else f == picked})
     return out[:want]
 

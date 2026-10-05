@@ -73,16 +73,29 @@ def all_items(f, upright=True):
             m[int(y0 * H_):int(math.ceil(y1 * H_)), int(x0 * W_):int(math.ceil(x1 * W_))] = 0
         except (TypeError, ValueError):
             pass
-    if f.get("box"):                                      # the side's own box (the careful look's): the unroll takes
-        try:                                              # the label, not the whole cut-out (2026-10-05)
+    if f.get("box"):                                      # the side's own box (the careful look's), 2026-10-05
+        try:
             x0, y0, x1, y1 = f["box"]
             pad = 0.03
             bx = (int(max(0, x0 - pad) * W_), int(max(0, y0 - pad) * H_), int(min(1, x1 + pad) * W_), int(min(1, y1 + pad) * H_))
             if bx[2] - bx[0] > 32 and bx[3] - bx[1] > 32:
-                keep = np.zeros_like(m)
-                keep[bx[1]:bx[3], bx[0]:bx[2]] = m[bx[1]:bx[3], bx[0]:bx[2]]
-                if (keep > 0.5).sum() > 0.2 * max(1, (m > 0.5).sum()) or (keep > 0.5).sum() > 2000:
-                    m = keep
+                if f.get("box_mode", "crop") == "select":  # a round item: the box says WHICH item; its whole outline
+                    lab0, n0 = ndimage.label(m > 0.5)      # is kept (the cylinder math needs the ends)
+                    keep = np.zeros_like(m)
+                    inside = np.zeros_like(m, dtype=bool)
+                    inside[bx[1]:bx[3], bx[0]:bx[2]] = True
+                    for k in range(1, n0 + 1):
+                        blob = lab0 == k
+                        if blob.sum() and (blob & inside).sum() >= 0.2 * blob.sum():
+                            keep[blob] = m[blob]
+                    if (keep > 0.5).sum() > 500:
+                        m = keep
+                        f = dict(f, items=1)              # the box chose one item: no cutting into side-by-side strips
+                else:                                      # a flat side: the box cuts the side out of the photo
+                    keep = np.zeros_like(m)
+                    keep[bx[1]:bx[3], bx[0]:bx[2]] = m[bx[1]:bx[3], bx[0]:bx[2]]
+                    if (keep > 0.5).sum() > 0.2 * max(1, (m > 0.5).sum()) or (keep > 0.5).sum() > 2000:
+                        m = keep
         except (TypeError, ValueError):
             pass
     lab, n = ndimage.label(m > 0.5)
@@ -199,9 +212,18 @@ def compose(photos, along_mm, around_mm, W=2048):
             except Exception:
                 pass
         return got
-    strips = unrolled(photos[0]) if photos else []
+    strips, first = [], None
+    for i, f in enumerate(photos):                              # the first photo that unrolls leads (2026-10-05:
+        if not f.get("mask"):                                   # the pick could not be unrolled and the build
+            continue                                            # stopped with a clean photo waiting next in line)
+        strips = unrolled(f)
+        if strips:
+            first = i
+            break
     if not strips:
-        raise RuntimeError("could not unroll the label from your photo")
+        raise RuntimeError("could not unroll the label from any of the photos")
+    if first:
+        photos = [photos[first]] + [f for j, f in enumerate(photos) if j != first]
     strips.sort(key=lambda lw: -lw[1].sum())
     keep = [strips[0]]
     small = lambda x: x[::16, ::16]

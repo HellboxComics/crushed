@@ -70,6 +70,9 @@ dos3 = dossier_with([pick])
 faces3, gaps3 = DS.plan(dos3)
 check(faces3["label"]["photo"] == files["pick"] and DS._poor_source(dos3 | {"faces": faces3}, "label"),
       f"with no other exact photo the pick is used and called poor: {DS._poor_source(dos3 | {'faces': faces3}, 'label')}")
+dos4 = dossier_with([photo(files["pick"], 3, True, [], 7), angled])
+faces4, _ = DS.plan(dos4)
+check(faces4["label"]["photo"] == files["angled"], "ONE copy at an angle beats three copies seen straight-on (the math straightens an angle; it never separates crossing cells)")
 
 # 3. label_views carries box, overlays and the count; the pick is only there when it is a source
 dos["faces"] = faces
@@ -91,7 +94,7 @@ im[40:200, 350:750] = (255, 255, 255)                 # a caption laid over the 
 mk[40:200, 350:750] = 255                             # the cut-out wrongly kept it (it touched nothing but was 'bright')
 Image.fromarray(im).save(f)
 Image.fromarray(mk).save(m)
-parts = skin.all_items({"file": f, "mask": m, "box": [0.1, 0.45, 0.9, 0.95], "overlays": [[0.42, 0.05, 0.95, 0.35]], "items": 1})
+parts = skin.all_items({"file": f, "mask": m, "box": [0.1, 0.45, 0.9, 0.95], "overlays": [[0.42, 0.05, 0.95, 0.35]], "items": 1, "box_mode": "crop"})
 check(len(parts) == 1, f"one item comes out of the boxed, overlay-masked photo ({len(parts)})")
 crop, cm = parts[0]
 a = np.asarray(crop)
@@ -99,5 +102,23 @@ check(cm.shape[0] <= 300 and not (np.all(a[cm > 0.5] > 240, axis=-1)).any(),
       "the piece is the item's region only: no caption pixels, nothing above the box")
 parts0 = skin.all_items({"file": f, "mask": m})
 check(any(pm.shape[0] > 300 for _, pm in parts0) or len(parts0) == 2, "without the box and overlays the caption would have been part of the cut-out")
+
+# 5. a round item: the box SELECTS the item (whole outline kept), it never cuts pixels - two cells in one photo
+f2 = os.path.join(W, "p", "two.png")
+m2 = os.path.join(W, "p", "two_mask.png")
+im = np.zeros((600, 800, 3), np.uint8)
+mk = np.zeros((600, 800), np.uint8)
+im[80:220, 60:740] = (200, 120, 40); mk[80:220, 60:740] = 255            # cell A (top), lying across the photo
+im[380:520, 60:740] = (30, 30, 30); mk[380:520, 60:740] = 255            # cell B (bottom)
+Image.fromarray(im).save(f2)
+Image.fromarray(mk).save(m2)
+sel = skin.all_items({"file": f2, "mask": m2, "box": [0.3, 0.62, 0.6, 0.9], "items": 2, "box_mode": "select"})
+check(len(sel) == 1 and sel[0][1].shape[1] >= 680 and np.asarray(sel[0][0])[sel[0][1] > 0.5].mean() < 60,
+      f"select mode: the cell under the box comes out WHOLE ({sel[0][1].shape if sel else None}), the other is left out")
+check("box_mode" in open(DS.__file__).read() and '"select" if dos.get("route") == "round"' in open(DS.__file__).read(),
+      "label_views asks for select mode on a round item")
+check('raise Waiting(msg)' in open(os.path.join(os.path.dirname(DS.__file__), "run.py")).read()
+      and 'def photo_in' in open(os.path.join(os.path.dirname(DS.__file__), "run.py")).read(),
+      "when no photo unrolls, the item waits for a photo of one of them (taken up when it lands) instead of stopping hourly")
 
 print(f"ALL {ok} PASS")

@@ -1001,7 +1001,20 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             + (" (your pick)" if views[0].get("is_pick") else " (the cleanest exact photo; your pick is the identity)")
             + (", cropped to the label's box" if views[0].get("box") else "")
             + (f", {len(views[0].get('overlays') or [])} overlay box(es) masked out" if views[0].get("overlays") else ""))
-    lab, cov = skin.compose(views, along, around)
+    try:
+        lab, cov = skin.compose(views, along, around)
+    except RuntimeError as e:
+        if "could not unroll" not in str(e):
+            raise
+        # no photo of one clean copy of the item could be unrolled: nothing is invented in its place - the item
+        # waits for a photo (yours, on your phone, or the next hunt) instead of stopping every hour on the same wall
+        msg = ("waiting for a photo of ONE of them (lying flat or standing, nothing over it): the label could not be "
+               f"unrolled from any photo so far ({e})")
+        status(cid, step=msg[:300], ok=False)
+        phone(f"{product}: I need one photo of a single one of them, nothing over it, to unroll its label. Put it "
+              f"in ~/crushed-render/remaster/refs-mine as {cid}_1.jpg (it is taken up the moment it lands), or "
+              "wait for the next photo hunt.")
+        raise Waiting(msg)
     say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
         f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
     lab = skin.continue_bands(lab, cov < 0.05)
@@ -2204,6 +2217,8 @@ def _state(v, cid="", picks=None, ap=None):
         return "you", "your photo pick", 0
     if step.startswith("waiting for your size"):
         return "you", "its real size (text it)", 0
+    if step.startswith("waiting for a photo"):
+        return "you", "a photo of one of them", 0
     if step.startswith(("stopped", "3 rounds", "no usable", "you said none", "failed")):
         return "bad", "needs attention", 1
     if step.startswith("in line"):
@@ -2628,6 +2643,19 @@ def waiting(cid, e):
             status(cid, step=f"stopped: {e2}"[:300], ok=False)
 
 
+def photo_in(cid, v):
+    """Has a photo of yours for this item landed in refs-mine since it stopped to wait for one? (or a day passed:
+    the hunt runs again)"""
+    mine = os.path.join(WORK, "refs-mine")
+    since = float((v or {}).get("at") or 0)
+    try:
+        if any(f.startswith(cid) and os.path.getmtime(os.path.join(mine, f)) > since - 1 for f in os.listdir(mine)):
+            return True
+    except OSError:
+        pass
+    return time.time() - since > 86400
+
+
 def size_in(cid, v):
     """Has a size for this item come in from your phone since it stopped to wait for one?"""
     import portal
@@ -2761,6 +2789,8 @@ def queue(n):
         if step.startswith("waiting for your Keep") and cid not in ap:
             continue
         if step.startswith("waiting for your size") and not size_in(cid, v):
+            continue
+        if step.startswith("waiting for a photo") and not photo_in(cid, v):
             continue
         out.append(cid)
     # an item you have just answered on your phone (a pick, "none") goes first: you are waiting on it; then parked
