@@ -121,4 +121,16 @@ check('raise Waiting(msg)' in open(os.path.join(os.path.dirname(DS.__file__), "r
       and 'def photo_in' in open(os.path.join(os.path.dirname(DS.__file__), "run.py")).read(),
       "when no photo unrolls, the item waits for a photo of one of them (taken up when it lands) instead of stopping hourly")
 
+# 6. a changed plan rule reaches a dossier that is already done: the version carries it (2026-10-05 08:29: the new
+#    rank was live but the battery's cached plan still named the pick, so the pick was unrolled again)
+check(DS.VERSION >= 9, f"dossier VERSION {DS.VERSION}: the rank change is carried to kept dossiers by a replan")
+old = dossier_with([pick, clean, angled])
+old["faces"], _ = DS.plan(old)
+old["faces"]["label"]["photo"] = files["pick"]          # as the old rank left it
+old["version"] = 8
+old["done"] = True
+old["cid"] = "x_aa_test"
+DS.replan(old, log=lambda *a: None)
+check(old["faces"]["label"]["photo"] == files["clean"], "replan() moves the label's source to the clean photo")
+
 print(f"ALL {ok} PASS")

@@ -38,7 +38,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 8                  # 8: the label's pixel source is the best clean photo, not the pick by right; the look counts the items
+VERSION = 9                  # 9: a plan rule changed (one copy outranks straight-on): every kept dossier is planned again from its looks
+#                              8: the label's pixel source is the best clean photo, not the pick by right; the look counts the items
 #                              7: 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
 #                              4: a round end's reference photo must show that end end-on (a disc)
