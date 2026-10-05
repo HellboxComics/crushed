@@ -2387,6 +2387,17 @@ h2{font:700 1.08rem/1.2 var(--display);margin:0;flex:1 1 220px;min-width:0;text-
 .spin{justify-self:start;font:600 .9rem var(--body);color:var(--bench);background:var(--copper);padding:8px 14px;
  border-radius:8px;text-decoration:none}
 .spin:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.live summary{font:12px var(--mono);color:var(--muted);cursor:pointer;letter-spacing:.04em;text-transform:uppercase}
+.livelist{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.lstep{border-top:1px solid var(--line);padding-top:8px;display:grid;gap:6px}
+.lhead{display:flex;justify-content:space-between;gap:8px;font-size:.88rem}.lhead .ago{font:11px var(--mono);color:var(--muted);white-space:nowrap}
+.lpics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px}.lpics img{width:100%;border-radius:6px;background:#101113;display:block}
+.marks{list-style:none;margin:0;padding:0;font:12px var(--mono);display:grid;gap:3px}
+.marks li.ok{color:var(--ok)}.marks li.bad{color:var(--bad)}.marks li.na{color:var(--muted)}.marks .det{color:var(--muted)}
+.cut{margin:0;display:grid;gap:4px}.cut img{width:100%;border-radius:8px;background:#101113;display:block}
+.cut figcaption,.parts em,.sides em,.from em{font:10px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-style:normal}
+.parts ul,.sides ul{margin:4px 0 0;padding-left:18px;font-size:.85rem}.parts .det,.sides .det{color:var(--muted);font:12px var(--mono)}
+.from{margin:4px 0 0;font-size:.8rem;color:var(--muted)}
 
 """
 FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&'
@@ -2460,6 +2471,101 @@ def _now_line():
     return "".join(out)
 
 
+def _rel(path):
+    """A picture's path as the page writes it (relative to WORK; the publisher thumbnails and copies it)."""
+    try:
+        return os.path.relpath(path, WORK)
+    except Exception:
+        return path
+
+
+def _live(cid, most=6):
+    """What the item's build has done so far, newest first, each step with its pictures, its own checks (score, what
+    passed, what did not) and its notes - the review sheet (review.json) that every build writes as it goes, plus
+    the label try in progress (texture/rounds.json: your AI's match score and the fixes it named) when it is newer
+    than the sheet's last step. Cody, 2026-10-05: "show me it actually being worked on live" - the page cannot show a
+    Blender window (Blender runs with no screen), so it shows every picture the build makes, as it makes it."""
+    import html
+    d = os.path.join(WORK, "library", cid)
+    steps = list(jload(os.path.join(d, "review.json"), {}).get("steps") or [])
+    last_at = max([float(x.get("at") or 0) for x in steps] or [0])
+    rounds = jload(os.path.join(d, "texture", "rounds.json"), [])
+    if rounds:
+        t = rounds[-1]
+        png = os.path.join(d, "texture", f"round{t.get('round')}.png")
+        if os.path.exists(png) and os.path.getmtime(png) > last_at:
+            fixes = t.get("fixes") or []
+            steps.append({"step": f"label art, try {t.get('round')} (your AI's layout, drawn in exact type) - in progress",
+                          "at": os.path.getmtime(png), "files": [png], "note": "",
+                          "checks": [("match " + str(t.get("match")) + " of 10 by your AI's own eye" +
+                                      (f"; colors {float(t.get('colors')):.0%} right" if t.get("colors") is not None else ""),
+                                      (t.get("match") or 0) >= 7, "; ".join(map(str, fixes))[:400])]})
+    out = []
+    for st in sorted(steps, key=lambda x: -float(x.get("at") or 0))[:most]:
+        pics = "".join(f'<img src="{html.escape(_rel(f))}" alt="">' for f in (st.get("files") or [])[:2]
+                       if os.path.exists(f) and f.lower().endswith((".png", ".jpg", ".jpeg", ".webp")))
+        marks = []
+        for c in st.get("checks") or []:
+            if isinstance(c, dict):
+                what, ok, det = c.get("check"), c.get("ok"), c.get("detail", "")
+            else:
+                what, ok, det = c
+            cls = "ok" if ok else ("bad" if ok is False else "na")
+            marks.append(f'<li class={cls}>{"✓" if ok else ("✗" if ok is False else "·")} {html.escape(str(what))}'
+                         + (f' <span class=det>{html.escape(str(det)[:220])}</span>' if det else "") + "</li>")
+        when = time.strftime("%-I:%M %p", time.localtime(float(st.get("at") or 0)))
+        out.append(f'<li class=lstep><div class=lhead><b>{html.escape(str(st.get("step", "")))}</b><span class=ago>{when}</span></div>'
+                   + (f'<div class=lpics>{pics}</div>' if pics else "")
+                   + (f'<ul class=marks>{"".join(marks)}</ul>' if marks else "")
+                   + (f'<p class=notes>{html.escape(str(st.get("note"))[:300])}</p>' if st.get("note") else "") + "</li>")
+    return f'<details class=live open><summary>steps so far ({len(steps)}) - newest first</summary><ol class=livelist>{"".join(out)}</ol></details>' if out else ""
+
+
+PHYS_FROM = "standard engineering handbook values for this kind of material (library/factory/physics.json), not measured from the item"
+
+
+def _kept_extras(cid):
+    """On a kept item's card: the cutaway (the insides), the parts list with each part's material and crush numbers
+    and WHERE those numbers come from, and every side with where it came from (a photo, or rebuilt from facts).
+    Cody, 2026-10-05: 'a from: line on every physics number and on every side'."""
+    import html
+    d = os.path.join(WORK, "library", cid)
+    out = []
+    cut = os.path.join(d, "check", "cutaway.png")
+    if os.path.exists(cut):
+        out.append(f'<figure class=cut><img src="{html.escape(_rel(cut))}" alt="the model cut open"><figcaption>inside (cutaway)</figcaption></figure>')
+    phys = jload(os.path.join(d, "model", "physics.json"), {})
+    if phys:
+        rows = []
+        for part, v in phys.items():
+            if not isinstance(v, dict):
+                continue
+            nums = ", ".join(x for x in (
+                f"density {v['density']:g} kg/m3" if "density" in v else "",
+                f"stiffness {float(v['stiffness']) / 1e9:g} GPa" if "stiffness" in v else "",
+                f"yields at {float(v['yield']) / 1e6:g} MPa" if "yield" in v else "",
+                f"fails {v['fails']}" if "fails" in v else "",
+                f"sheet {v['sheet_mm']:g} mm" if "sheet_mm" in v else "") if x)
+            rows.append(f'<li><b>{html.escape(str(v.get("part") or part))}</b>: {html.escape(str(v.get("material_kind") or "?"))}'
+                        + (f' <span class=det>{html.escape(nums)}</span>' if nums else "") + "</li>")
+        if rows:
+            out.append(f'<div class=parts><em>parts and how they crush:</em><ul>{"".join(rows)}</ul>'
+                       f'<p class=from><em>from:</em> {html.escape(PHYS_FROM)}</p></div>')
+    dos = jload(os.path.join(WORK, "dossier", cid + ".json"), {})
+    faces = dos.get("faces") or {}
+    if faces:
+        rows = []
+        for F, e in faces.items():
+            src = str((e or {}).get("source") or "").replace("_", " ")
+            why = str((e or {}).get("note") or (e or {}).get("why") or "")
+            photo = os.path.basename(str((e or {}).get("photo") or (e or {}).get("file") or ""))
+            frm = {"photo": f"a photo ({photo})" if photo else "a photo", "rebuilt": "rebuilt from facts with receipts (no photo of this side)",
+                   "plain": "plain: no photo and no fact with a receipt"}.get(src, src or "not recorded")
+            rows.append(f'<li><b>{html.escape(F)}</b> <em>from:</em> {html.escape(frm)}' + (f' <span class=det>{html.escape(why[:160])}</span>' if why else "") + "</li>")
+        out.append(f'<div class=sides><em>sides:</em><ul>{"".join(rows)}</ul></div>')
+    return "".join(out)
+
+
 def page(force=True):
     """The phone page, https://crushed-remaster.pages.dev: what needs you first, then what's being made, then
     what's kept. Every built item has its finished 3D model to spin (the newest build, never an older one). The
@@ -2491,7 +2597,7 @@ def page(force=True):
                      f'<p class=step>{html.escape(words.capitalize() if cls == "line" or words.startswith("resending") else str(v.get("step", "")))}</p>'
                      + (f'<p class=notes><em>Kind of thing:</em> {html.escape(str(v["family"]).replace("_", " "))}'
                         f' - built by {html.escape(str(v.get("builder", "")))}</p>' if v.get("family") else "")
-                     + f'{judge}{pics}</section>')
+                     + f'{judge}{pics}' + (_kept_extras(cid) if cls == "kept" else _live(cid)) + "</section>")
     t = (f'<div class=tally><div><b>{tally["you"]}</b><span>need you</span></div><div><b>{tally["work"]}</b>'
          f'<span>being made</span></div><div><b>{tally["kept"]}</b><span>kept</span></div>'
          f'<div><b>{tally["bad"]}</b><span>need attention</span></div></div>')
