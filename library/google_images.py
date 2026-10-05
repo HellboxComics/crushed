@@ -2,7 +2,11 @@
 (~/.hellbox/ref-browser), started by Playwright itself and driven at a person's pace. Never your browser or your
 accounts.
 If Google ever shows "I'm not a robot", nothing answers it: the hunt says so, you tick it once in that window,
-and the next search goes on.
+and the next search goes on - and Google is left alone for half an hour first (REST), from every item.
+Manners (2026-10-04, after the robot check stopped an item twice in one night): the window does not announce itself
+as automated (navigator.webdriver is false, as in a person's Chrome); searches happen in ONE tab; the words are typed
+into the search box when it is on the page (the address is the fallback); the wait between searches is uneven
+(45-120 s), never a fixed beat; a few scrolls of different lengths, like reading.
 
     search(q)        -> [(image url, width, height)]                      (what the hunt has always used)
     search_full(q)   -> [{"url", "w", "h", "page", "title"}]              (also the web page each photo is on and
@@ -23,8 +27,12 @@ import urllib.parse
 HB = os.path.expanduser("~/.hellbox")
 PROFILE = os.path.join(HB, "ref-browser")
 PORT = 9334                                   # Hart's X window uses 9333
-GAP = 20                                      # seconds between searches, like a person
+GAP = (45, 120)                               # seconds between searches: uneven, like a person (never a fixed beat)
+REST = 30 * 60                                # after a robot check: no Google at all for this long, from any item
+REST_FILE = os.path.join(HB, "google-rest.json")
 _last = [0.0]
+_PAGE = [None]                                # the one tab searches are made in (a person uses one tab, not a new one per search)
+SEARCH_HOSTS = ("google.",)                   # pages whose search box is typed into (tests add their local page)
 INFO = {}                                     # image url -> {"page", "title"} for every photo seen this run
 
 
@@ -100,6 +108,9 @@ def _context(log=print):
         _PW[1] = threading.get_ident()
     os.makedirs(PROFILE, exist_ok=True)
     headless, args = _flags()
+    # Chromium under automation sets navigator.webdriver = true - a flag any site can read that says "a robot is
+    # driving" (measured 2026-10-04: True by default, False with this switch). A person's Chrome never sets it.
+    args = args + ["--disable-blink-features=AutomationControlled"]
     for attempt in (1, 2):
         try:
             _CTX[0] = _PW[0].chromium.launch_persistent_context(PROFILE, headless=headless, args=args, no_viewport=True,
@@ -124,6 +135,7 @@ def close(stop=False):
     except Exception:
         pass
     _CTX[0] = None
+    _PAGE[0] = None
     if stop and _PW[0] is not None:
         try:
             _PW[0].stop()
@@ -156,34 +168,110 @@ def probe():
         p.close()
 
 
-def _open(url, scroll=True, js=None, log=print):
-    """One page in the bot's own window, at a person's pace (20 s between searches). -> (html, js result) or
-    (None, None) when Google asks for a person to tick 'I'm not a robot' (never answered here)."""
-    wait = GAP - (time.time() - _last[0])
+def resting():
+    """Seconds Google is still being left alone after a robot check (0 when it is not). Shared by every item and
+    every run through REST_FILE: one item hitting the check must not have the next item knock a minute later."""
+    try:
+        until = float(json.load(open(REST_FILE)).get("until") or 0)
+    except Exception:
+        return 0
+    return max(0.0, until - time.time())
+
+
+def _rest_now(log=print):
+    try:
+        json.dump({"until": time.time() + REST, "at": time.time()}, open(REST_FILE, "w"))
+    except Exception:
+        pass
+    log(f"[google] Google is left alone for {REST // 60} minutes now (any item) - knocking again right after a robot "
+        "check is what a robot does")
+
+
+def _pace():
+    """Wait like a person between searches: an uneven gap, never the same beat twice."""
+    import random
+    gap = random.uniform(*GAP) if isinstance(GAP, tuple) else GAP
+    wait = gap - (time.time() - _last[0])
     if wait > 0:
         time.sleep(wait)
     _last[0] = time.time()
+
+
+def _tab(ctx):
+    """The one tab searches happen in, opened once and reused (a person searches again in the same tab)."""
+    pg = _PAGE[0]
+    try:
+        if pg is not None and not pg.is_closed():
+            return pg
+    except Exception:
+        pass
+    pages = [p for p in ctx.pages if not p.is_closed()]       # the window opens with one blank tab: use it
+    _PAGE[0] = pages[0] if pages else ctx.new_page()
+    return _PAGE[0]
+
+
+def _type_search(page, q, log=print):
+    """Search the way a person does when the search box is on the page: click it, type the words (with a short
+    pause per key), press Enter, and see the page really go to that search. -> True when it did; False when the
+    box was not there or Enter did not search (then the search goes by address, as before - never a guess that
+    the page in front of us is the one we asked for)."""
+    try:
+        box = page.locator("textarea[name='q'], input[name='q']").first
+        if box.count() == 0:
+            return False
+        before = page.url
+        box.click(timeout=4000)
+        box.fill("", timeout=4000)
+        box.type(q, delay=70, timeout=15000)
+        page.wait_for_timeout(400)
+        box.press("Enter", timeout=4000)
+        page.wait_for_function("u => location.href !== u", arg=before, timeout=15000)
+        page.wait_for_load_state("domcontentloaded", timeout=60000)
+        got = urllib.parse.parse_qs(urllib.parse.urlparse(page.url).query).get("q", [""])[0]
+        if " ".join(got.split()).lower() != " ".join(q.split()).lower():
+            log(f"[google] the page went to '{got[:60]}', not the words typed - searching by address")
+            return False
+        return True
+    except Exception as e:
+        log(f"[google] the search box could not be used ({str(e).splitlines()[0][:80]}) - searching by address")
+        return False
+
+
+def _open(url, scroll=True, js=None, log=print, typed=None):
+    """One search in the bot's own window, at a person's pace: the same tab as before, the words typed into the
+    search box when it is on the page (typed = the words; the address is the fallback), an uneven wait between
+    searches, a scroll like a person reading. -> (html, js result) or (None, None) when Google asks for a person
+    to tick 'I'm not a robot' (never answered here; Google is then left alone for REST)."""
+    left = resting()
+    if left > 0:
+        log(f"[google] Google is being left alone for another {int(left // 60) + 1} min after a robot check - no search")
+        return None, None
+    _pace()
     try:
         ctx = _context(log)
-        page = ctx.new_page()
+        page = _tab(ctx)
     except Exception as e:
         log(f"[google] the reference browser could not be used ({str(e).splitlines()[0][:120]}) - starting it again")
         restart(log)
         ctx = _context(log)
-        page = ctx.new_page()
-    try:
+        page = _tab(ctx)
+    done = False
+    if typed and any(h in (page.url or "") for h in SEARCH_HOSTS) and "/sorry/" not in page.url:
+        done = _type_search(page, typed, log)
+    if not done:
         page.goto(url, wait_until="domcontentloaded", timeout=60000)
-        page.wait_for_timeout(2500)
-        if scroll:
-            page.mouse.wheel(0, 2500)                     # the first rows load more as a person scrolls
-            page.wait_for_timeout(1500)
-        if "/sorry/" in page.url:
-            log("[google] Google wants a person to tick 'I'm not a robot' in the reference browser window "
-                "on your Mac. Tick it once; the next search goes on. Nothing here answers it.")
-            return None, None
-        return page.content(), (page.evaluate(js) if js else None)
-    finally:
-        page.close()
+    page.wait_for_timeout(2500)
+    if scroll:
+        import random
+        for _ in range(random.randint(1, 3)):              # a person scrolls a few times, not one fixed jump
+            page.mouse.wheel(0, random.randint(700, 1400))
+            page.wait_for_timeout(random.randint(500, 1200))
+    if "/sorry/" in page.url:
+        log("[google] Google wants a person to tick 'I'm not a robot' in the reference browser window "
+            "on your Mac. Tick it once; the next search goes on. Nothing here answers it.")
+        _rest_now(log)
+        return None, None
+    return page.content(), (page.evaluate(js) if js else None)
 
 
 def _unesc(s):
@@ -244,8 +332,11 @@ class Captcha(Exception):
 def search_full(q, most=30, min_side=500, log=print):
     """[{"url", "w", "h", "page", "title"}] for a Google Images search, largest real photos first in Google's
     order. page / title are '' when Google's page doesn't carry them. Raises Captcha when Google blocks."""
+    left = resting()
+    if left > 0:
+        raise Captcha(f"Google is being left alone for another {int(left // 60) + 1} min after a robot check")
     html, _ = _open("https://www.google.com/search?" + urllib.parse.urlencode({"q": q, "udm": "2", "hl": "en"}),
-                    log=log)
+                    log=log, typed=q)
     if html is None:
         raise Captcha("Google Images asks a person to tick 'I'm not a robot' in the reference browser on the Mac")
     out = parse(html, min_side)
