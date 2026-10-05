@@ -2789,7 +2789,8 @@ def park_stale(st=None, hours=STALE_HOURS):
             at = 0
         if step.startswith(PARKED) or not at or now - at < hours * 3600:
             continue
-        status(cid, step=f"stopped: the run was interrupted while \"{step[:90]}\" ({round((now - at) / 3600)} h ago)",
+        ago = f"{round((now - at) / 3600)} h ago" if now - at >= 3600 else f"{round((now - at) / 60)} min ago"
+        status(cid, step=f"stopped: the run was interrupted while \"{step[:90]}\" ({ago})",
                ok=False, at=at + 1)                           # (at kept: it has already waited its hour)
         st[cid] = dict(v, step=f"stopped: the run was interrupted while \"{step[:90]}\"", at=at + 1)
         parked.append(cid)
@@ -2952,6 +2953,11 @@ if __name__ == "__main__":
         sys.exit(1)
     beat("starting")
     _beating()
+    if a.loop:
+        try:                                    # a fresh run: nothing is "working" yet - a status left over from
+            park_stale(hours=0)                 # the run that was stopped is parked at once, so the page never
+        except Exception as e:                  # shows a dead item as being made (2026-10-04, the Furby)
+            say(f"[queue] leftovers not parked: {e}")
     if a.loop and os.path.exists(os.path.join(WORK, "PAUSE")):
         # Cody paused the asset maker (2026-10-02) until the redesigned one is installed: nothing is built
         say("paused - " + open(os.path.join(WORK, "PAUSE")).read().strip()[:200])
