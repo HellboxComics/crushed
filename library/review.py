@@ -160,6 +160,8 @@ def one_per_print(words, by_png=None):
     # C. a piece seen only alongside its longer line
     for w in list(kept):
         pw = pics(w)
+        if len(ntoks(w)) == 1 and len(norm(w)) >= 5:          # one long word read as a line of its own is its own
+            continue                                          # print (the DURACELL logo beside 'DURACELL(R) POWERCHECK')
         home = next((k for k in kept if k is not w and run_in(w, k) and pw and pw <= pics(k)), None)
         if home is not None:                               # never seen apart from that longer line
             kept.remove(w)

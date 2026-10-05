@@ -103,4 +103,8 @@ k5, f5 = review.one_per_print(["MN 1500 LAS 15 VOLIS", "MN 1500 LRS 15 VOLTS", "
                               {"a.png": ["MN 1500 LAS 15 VOLIS"], "b.png": ["MN 1500 LRS 15 VOLTS", "1.5 VOLTS"]})
 check("MN 1500 LRS 15 VOLTS" in k5 and "MN 1500 LAS 15 VOLIS" not in k5, f"on a tie the better-supported spelling wins ({k5})")
 
+k6, f6 = review.one_per_print(["DURACELL", "DURACELL® POWERCHECK™", "SIZE", "SIZE AA"],
+                              {"a.png": ["DURACELL", "DURACELL® POWERCHECK™", "SIZE", "SIZE AA"]})
+check("DURACELL" in k6 and "SIZE" not in k6, "a long word read as its own line (the logo) stays even when only seen beside a longer line; a short piece folds")
+
 print(f"ALL {ok} PASS")

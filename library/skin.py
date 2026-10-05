@@ -235,7 +235,13 @@ def compose(photos, along_mm, around_mm, W=2048):
             return 0
         return np.abs(small(k[0]).mean(-1)[both] - small(s[0]).mean(-1)[both]).mean()
     other_side = 0.10       # measured 2026-10-03: the same side in two photos differs ~0.07-0.09, the opposite ~0.14
-    diffs = [unlike(keep[0], s) for s in strips[1:]]
+    # a strip may stand in for the BACK only when it shows the whole length like the front does: a strip that shows
+    # part of the length (a close-up, a cell half hidden behind another) lands as a band at the wrong height and the
+    # reference becomes a collage (2026-10-05 16:53: the PowerCheck box three times in 'the real label', the judge
+    # failing every build for duplicates). Such strips still serve for reading words; never for the reference.
+    rows = lambda s: (s[1].max(1) > 0.05)
+    whole = lambda s: rows(s).sum() >= 0.9 * rows(keep[0]).sum() and (rows(s) & rows(keep[0])).sum() >= 0.9 * rows(keep[0]).sum()
+    diffs = [unlike(keep[0], s) if whole(s) else 0 for s in strips[1:]]
     if diffs and max(diffs) > other_side:                                   # the most different one shows another side
         l, w = strips[1 + int(np.argmax(diffs))]
         keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)))     # it goes at the back
@@ -245,7 +251,7 @@ def compose(photos, along_mm, around_mm, W=2048):
         more = []
         for f in photos[1:]:
             if f.get("mask"):                                    # (a photo without its cut-out can't be unrolled)
-                more += unrolled(f)
+                more += [s for s in unrolled(f) if whole(s)]
         if more:
             d = [unlike(keep[0], s) for s in more]
             if max(d) > other_side:
