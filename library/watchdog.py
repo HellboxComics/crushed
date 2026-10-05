@@ -217,7 +217,10 @@ def main():
         busy = [v for v in st.values() if isinstance(v, dict) and not str(v.get("step", "")).startswith(
             ("waiting", "done", "stopped", "3 rounds", "in line", "no usable", "failed"))]
         newest = max((v.get("at", 0) for v in st.values() if isinstance(v, dict)), default=0)
-        if not busy and time.time() - newest > 600:
+        # a brain question in flight is work too: the heartbeat is written before every one and a question may
+        # take up to 15 min - a run with a fresh heartbeat is never "idle" (2026-10-04: killed mid-question)
+        working = time.time() - beat.get("at", 0) < 20 * 60 and not str(beat.get("doing", "")).startswith("self-test")
+        if not busy and not working and time.time() - newest > 600:
             subprocess.run(["git", "fetch", "-q"], cwd=REPO, timeout=60)
             ahead = subprocess.run(["git", "rev-list", "--count", "HEAD..@{u}"], cwd=REPO, capture_output=True,
                                    text=True).stdout.strip()

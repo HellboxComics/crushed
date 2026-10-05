@@ -155,8 +155,10 @@ def pipeline(cid, redo=False):
         start_over(cid, d)
         fresh = True                                             # (the photos it found before are kept)
 
-    card = cards.make(cid, log=say)
-    cards.construction(cid, card, log=say)                       # how the real thing is made: layers, materials, details
+    status(cid, step="1/7 the card: what this exact item is, how it is made, what it was called in its era")
+    card = cards.make(cid, log=say)                              # (the status says so from the first minute: a run
+    cards.construction(cid, card, log=say)                       # with a stale "waiting" line was judged idle and
+    #                                                              killed for a newer version, 2026-10-04 8:19 PM)
     ev = cards.era_version(cid, card, V.model(), log=say, evidence=era_evidence(d))   # its own name and look in its
     card["searches"] = list(dict.fromkeys(list(ev.get("searches") or []) + list(card.get("searches") or [])))  # era
     ehk = " | ".join(ev.get("names") or [])
