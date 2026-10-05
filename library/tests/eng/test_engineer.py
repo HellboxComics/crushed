@@ -346,6 +346,30 @@ check(res.get("newer_code") is True and res.get("kept") is False, f"it steps asi
 check(calls("trials", C.CID) == 0, "no test build was run on the old code")
 res = run(Brain([[("finish", {"summary": "x"})]]), {"pass": False, "failed": ["shape"], "problems": ["x"]}, newer=lambda: False)
 check(not res.get("newer_code"), "with no newer code it works as before")
+# newer code arrives AFTER it has edited and rebuilt: it still steps aside (2026-10-05: it fought measure checks for
+# 3 hours that a push had already corrected, and the push waited behind it); its tries stay on its own branch
+flips = [False, True, True, True]
+E._NEWER_T = [0.0]
+script({C.CID: [{"failed": ["shape"]}, {"failed": ["shape"]}]}, {C.CID: [{"failed": ["shape"]}, {"failed": ["shape"]}]})
+brain = Brain([
+    [("edit_file", {"path": "library/finish.py", "old": "def plastic(w, h, base_rough=0.4):", "new": "def plastic(w, h, base_rough=0.41):"})],
+    [("rebuild", {"why": "try"})],
+    [("read_file", {"path": "library/finish.py", "start": 1, "end": 3})],
+    [("finish", {"summary": "x"})],
+])
+import time as _t
+real_time = E.time.time
+_tick = [0]
+def _fast():                                              # every call is "10 minutes later"
+    _tick[0] += 600
+    return real_time() + _tick[0]
+E.time.time = _fast
+try:
+    res = run(brain, {"pass": False, "failed": ["shape"], "problems": ["x"]}, newer=lambda: flips.pop(0) if flips else True)
+finally:
+    E.time.time = real_time
+check(res.get("newer_code") is True and res.get("kept") is False, f"newer code mid-work: it steps aside ({res.get('why')})")
+check("stepping aside" in " ".join(LOG), "and says so")
 
 # =========================================================== J: fail fast - an unjudged test build
 print("\nJ. a test build whose exact checks failed is not judged; its judge checks count as still failing")

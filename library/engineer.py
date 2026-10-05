@@ -1630,7 +1630,7 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
            "review_sheet": b.review_sheet, "test_step": b.test_step}
     allowed = {name: set(props) for name, _, props, _ in TOOLS}
     nudged = 0
-    last_newer = 0.0                                          # checked on the first turn, then every 10 minutes
+    last_newer = 0.0                                          # checked on the first turn, then every 5 minutes
     for turn in range(MAX_TURNS):
         if b.stopped:
             break
@@ -1639,15 +1639,19 @@ def fix(cid, card, verdict, shots, close, photo, build_dir, log=print, beat=lamb
             break
         # newer code is in and it has changed nothing yet: the build is remade on the new code first - working out
         # a failure of code that is already replaced wastes its hours (checked every 10 minutes, cheap)
-        if newer and time.time() - last_newer > 600:
+        if newer and time.time() - last_newer > 300:
             last_newer = time.time()
             try:
                 fresh = bool(newer())
             except Exception:
                 fresh = False
-            if fresh and b.diff() == "no changes yet" and not b.trials:
-                say(f"[engineer] {cid}: newer code is in and it has changed nothing yet - this build is remade on "
-                    "the new code first")
+            if fresh:
+                # newer code is in: step aside NOW, whatever it has tried - the new code most often changes the
+                # very checks it is fighting (2026-10-05: it spent 3 hours on measure checks that a push had
+                # already corrected, and the push waited behind it). Its edits live on its own branch; nothing of
+                # the running code is touched; the item is remade on the new code and comes back if still failing.
+                say(f"[engineer] {cid}: newer code is in - stepping aside; this build is remade on the new code first"
+                    + ("" if b.diff() == "no changes yet" else f" (its {len(b.trials)} try/tries stay on branch {branch})"))
                 b.newer_code = True
                 break
         if b.pictures:
@@ -1889,8 +1893,8 @@ def _keep(b, base_sha, branch, say):
     if getattr(b, "machine", None) and not b.trials:
         return {"kept": False, "machine": True, "branch": branch, "trials": 0, "why": b.machine}
     if getattr(b, "newer_code", False):
-        return {"kept": False, "newer_code": True, "branch": branch, "trials": 0,
-                "why": "newer code arrived before it changed anything - the item is rebuilt on the new code first"}
+        return {"kept": False, "newer_code": True, "branch": branch, "trials": len(b.trials),
+                "why": "newer code arrived - the item is rebuilt on the new code first"}
     if b.stopped:
         ok, why = False, b.stopped
     elif b.accepted and b.accepted == b._diff_hash():
