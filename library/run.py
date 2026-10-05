@@ -1865,7 +1865,7 @@ def status(cid, **kw):
     def change(s):
         if "product" in kw or not isinstance(s.get(cid), dict):   # a fresh run: nothing left over from the last one
             s[cid] = {}
-        s[cid].update(kw, at=float(kw.get("at") or time.time()), code=code_sha())
+        s[cid].update(kw, at=float(kw.get("at") or time.time()), code=kw.get("code") or code_sha())
     update_json(STATUS, change)                      # locked, whole-or-nothing, with a backup
     global _LAST
     final = kw.get("step", "").startswith(("done", "stopped", "no ")) or "ok" in kw
@@ -2846,7 +2846,10 @@ def park_stale(st=None, hours=STALE_HOURS):
             continue
         ago = f"{round((now - at) / 3600)} h ago" if now - at >= 3600 else f"{round((now - at) / 60)} min ago"
         status(cid, step=f"stopped: the run was interrupted while \"{step[:90]}\" ({ago})",
-               ok=False, at=at + 1)                           # (at kept: it has already waited its hour)
+               ok=False, at=at + 1, code=v.get("code"))      # (at kept: it has already waited its hour; the code it
+        #                                                       RAN on kept too: parked by a restart onto newer code,
+        #                                                       it is taken again at once - 2026-10-05 09:09: stamped
+        #                                                       with the new code, it waited an idle hour instead)
         st[cid] = dict(v, step=f"stopped: the run was interrupted while \"{step[:90]}\"", at=at + 1)
         parked.append(cid)
         say(f"[queue] {cid}: parked - its run was interrupted while \"{step[:60]}\" {round((now - at) / 3600)} h ago")

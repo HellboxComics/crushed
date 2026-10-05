@@ -103,6 +103,8 @@ check(parked == ["a_item"] and st["a_item"]["step"].startswith("stopped: the run
       and st["b_item"]["step"].startswith("6/7") and st["c_item"]["step"].startswith("waiting"),
       f"a 5-hour-old 'working' status is parked as interrupted; a recent one and a waiting one are left: {parked}")
 check(abs(st["a_item"]["at"] - (now - 5 * 3600)) < 5, "its time is kept, so the retry rules take it again at once")
+check(st["a_item"].get("code") == "x" and run.retry_due("a_item", st["a_item"], {}, now) is True,
+      "the code it RAN on is kept: parked by a restart onto newer code, it is due again at once (not an idle hour)")
 open(os.path.join(os.path.dirname(run.__file__), "queue.txt")).read() if os.path.exists(os.path.join(os.path.dirname(run.__file__), "queue.txt")) else None
 import shutil as _sh
 qf = os.path.join(os.path.dirname(run.__file__), "queue.txt")
