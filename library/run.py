@@ -155,6 +155,7 @@ def pipeline(cid, redo=False):
         start_over(cid, d)
         fresh = True                                             # (the photos it found before are kept)
 
+    boundary(cid, "step")
     status(cid, step="1/7 the card: what this exact item is, how it is made, what it was called in its era")
     card = cards.make(cid, log=say)                              # (the status says so from the first minute: a run
     cards.construction(cid, card, log=say)                       # with a stale "waiting" line was judged idle and
@@ -190,6 +191,7 @@ def pipeline(cid, redo=False):
         made or refreshed right after the pick, then the build follows it."""
         import dossier as DS
         import families
+        boundary(cid, "step")
         status(cid, step="4/7 your AI decides what kind of thing it is (its family) from the photo")
         make_room("judging")
         fl = families.classify(card, picked["file"], use, log=say, redo=fresh, notes=note)
@@ -197,6 +199,7 @@ def pipeline(cid, redo=False):
         if not TRIAL:
             json.dump(card, open(cards.path(cid), "w"), indent=1)
         say(f"[family] {cid}: {fl['family']} ({fl['confidence']}/10): {fl['why']}")
+        boundary(cid, "step")
         status(cid, step="4/7 your AI gets to know the item: every side hunted, every fact with a receipt")
         make_room("judging")
         DS.ensure(cid, card, picked, use=use, redo=fresh, log=progress(cid, "4/7 your AI gets to know the item"))
@@ -232,12 +235,14 @@ def pipeline(cid, redo=False):
         return go(picked, [c for c in cands if c["file"] != picked["file"]], use, 0, len(cands))
     if jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
         route = "round"                                          # it has a measured master shape (the AA)
+    boundary(cid, "step")
     status(cid, product=product, route=route, step="1/7 hunting photos (Google Images, your photos)")
     fj = os.path.join(WORK, "hunt", cid, "found.json")
     found = jload(fj, None) if os.path.exists(fj) and not redo else None
     if found is None:
         found = hunt.run(cid, product.split(",")[0], year, log=say, extra=card["searches"])
 
+    boundary(cid, "step")
     status(cid, step="2/7 ranking the photos against the card")
     make_room("judging")
     vj = os.path.join(d, "vetted.json")
@@ -294,6 +299,7 @@ def pipeline(cid, redo=False):
         if not isinstance(res, dict):                                                          # a judgement
             say(f"[check] {os.path.basename(f['file'])}: the careful look failed ({str(res)[:100]}) - not stored")
         looked[0] += 1
+        boundary(cid, "step")
         status(cid, step=f"3/7 {use} ranks the best photos: {looked[0]} of {len(todo)}")
         if f["vet"]:
             say(f"[check] {os.path.basename(f['file'])}: {json.dumps(f['vet'])[:160]}")
@@ -303,6 +309,7 @@ def pipeline(cid, redo=False):
 
     # cut out only the photos good enough to be shown to you (not all of them)
     good = sorted([f for f in found if f.get("vet") and f["vet"].get("match", 0) >= 7], key=lambda f: -rank(f))[:24]
+    boundary(cid, "step")
     status(cid, step=f"4/7 cutting out the best {len(good)} photos")
     make_room("drawing")
     fails = 0
@@ -439,6 +446,7 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     product = card["product"]
     mdir = os.path.join(d, "model")
     dos_now = DS.load(cid) or {"size_m": card.get("size"), "faces": {}, "facts": {}}
+    boundary(cid, "step")
     status(cid, step="6/7 the exact checks: real size, every side, barcode, printed words, materials, insides")
     m = measure.run(cid, d, glb, dos_now, route if route in ("round", "flat", "pcb") else "box", fam=fam,
                     shots=[x for x in (shots, close) if x], use=use, log=say,
@@ -460,6 +468,7 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
         failed = [f"measure_{k}" for k in m["failed"]] + step_fails + ["not_judged"]
         return {"pass": False, "failed": failed, "measure": m["checks"], "sides": {},
                 "problems": m["problems"] + step_probs + ["not judged: the exact checks failed first; the judge looks once they pass"]}
+    boundary(cid, "step")
     status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
     j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say, lit=m.get("renders_lit") or {},
                     marks=version_marks(card))
@@ -536,6 +545,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             if spec.get("construction"):                               # measured: its build is the truth
                 card["construction"] = spec["construction"]
         else:
+            boundary(cid, "step")
             status(cid, step="5/7 tracing the exact round shape from your photo at real size")
             vs = ((kits.get(kit_name).get("variants") or {}).get(variant) or {}).get("size_mm")
             if vs:                                                 # the kit's standard size (a 12 oz can) wins
@@ -565,6 +575,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         hand = os.path.join(HERE, "labels", cid + ".json")
         import labelart
         if os.path.exists(hand):                                   # a layout measured by hand: used as it is
+            boundary(cid, "step")
             status(cid, step="5/7 texture map: drawing the measured label layout (exact type)")
             lay = json.load(open(hand))
             lay["width_mm"], lay["height_mm"] = w_mm, h_mm
@@ -578,6 +589,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
             img, mimg = img.rotate(-90, expand=True), mimg.rotate(-90, expand=True)
         img.save(lab_png)
         mimg.save(mr_png)
+        boundary(cid, "step")
         status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
         try:                                                    # the insides and materials, with their receipts
@@ -598,10 +610,12 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         import skin
         W, H = size[0], size[2]
         # its top and bottom, planned (the dossier made above)
+        boundary(cid, "step")
         status(cid, step="5/7 the board: its top, straightened, with its real outline")
         make_room("drawing")
         skin.box_skin(product, W, 0.002, H, [picked] + same_design(picked, others, use, want=2, dossier=dos),
                       os.path.join(d, "skin"), flat=True, judge=use, log=say, dossier=dos)
+        boundary(cid, "step")
         status(cid, step="5/7 your AI finds every part on the board (chips, memory, capacitors, connectors)")
         make_room("judging")
         parts = board_parts(os.path.join(d, "skin", "front.png"), product, use)
@@ -619,6 +633,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                                 files=[os.path.join(d, "skin", "front.png"), atlas], checks=checks)
         except Exception as e:
             say(f"[review] {cid}: the board could not be put on the sheet ({e})")
+        boundary(cid, "step")
         status(cid, step=f"5/7 Blender: the board and its {len(parts)} parts, each its own solid")
         back_png = os.path.join(d, "skin", "back.png")  # the solder side's real photo, when the skin step found one
         back_src = (jload(os.path.join(d, "skin", "sources.json"), {}).get("back") or {}).get("source")
@@ -641,6 +656,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         if (dos.get("identity") or {}).get("kind", "packaging") == "packaging" and dos.get("facts"):
             import eraprint                              # the printed facts with receipts, for the sides no photo shows
             era = eraprint.from_dossier(dos)
+        boundary(cid, "step")
         status(cid, step="5/7 texture map: every box face at its measured size, each from its plan")
         make_room("drawing")
         shots = [picked] + same_design(picked, others, use, want=5, dossier=dos)
@@ -658,6 +674,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
                                  [("the judge sees nothing wrong on the sides", seen_ok, seen_why)])
         except Exception as e:
             say(f"[review] {cid}: the sides could not be put on the sheet ({e})")
+        boundary(cid, "step")
         status(cid, step="5/7 Blender: the carton made like the factory makes it (flat sheet, creased, folded)"
                if bld == "carton" else "5/7 Blender: mesh + UV map + texture map + material")
         if bld == "carton":                              # a folding carton: its dieline, folded, with what's inside
@@ -677,10 +694,12 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         # each part is built as its own solid with its own material, at real size (parts.py + shapes/assembly.py)
         import dossier as DS
         import parts as PT
+        boundary(cid, "step")
         status(cid, step="5/7 your AI breaks the object into its real parts (every side the dossier found)")
         make_room("judging")
         plan = PT.plan(cid, card, dos, use, os.path.join(d, "parts_plan.json"), log=say,
                        notes=card.get("owner_note", ""))
+        boundary(cid, "step")
         status(cid, step=f"5/7 Blender: {len(plan['parts'])} parts, each its own solid with its own material")
         run_blender("assembly.py", os.path.join(d, "parts_plan.json"), mdir, cid)
         try:                                                # the step shows its work and checks itself
@@ -694,19 +713,23 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         if not families.organic_ready():
             raise RuntimeError("the organic builder (Hunyuan3D) has not proven it works on this Mac yet")
         ref = reference(picked, d)
+        boundary(cid, "step")
         status(cid, step="5/7 Hunyuan3D makes the shape and paint from your photo")
         make_room("drawing")
         make_room("judging")                                       # Hunyuan gets the memory to itself
         painted = hunyuan_paint(ref, os.path.join(mdir, "hunyuan"))
+        boundary(cid, "step")
         status(cid, step="5/7 Blender: real size, every format")
         run_blender("resize.py", painted, str(max(size)), mdir, cid)
     # THE DELIVERABLE CONTRACT (audit 2026-10-04, RC8): whatever built it, the model goes through one door -
     # shapes/contract.py: one clean UV map per part (overlapping or missing ones unwrapped afresh and the look baked
     # into it), maps named <asset>_<part>_<map>, physics on every part, every format written again from that.
+    boundary(cid, "step")
     status(cid, step="5/7 the deliverable contract: one UV map per part, named maps, physics on every part")
     run_blender("contract.py", os.path.join(mdir, cid + ".blend"), mdir, cid, str(card.get("mat") or ""))
     glb = os.path.join(mdir, cid + ".glb")
     if not TRIAL:                                            # (a test build is checked, never filed: no exports,
+        boundary(cid, "step")
         status(cid, step="5/7 every format (.obj .mtl .3ds .ma), textures, and a cutaway of the insides")   # S9)
         finish_files(cid, d)
         pend = os.path.join(ROOT, "assets", "models_pending", cid)   # so the phone page can spin it in 3D right away
@@ -715,6 +738,7 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         shutil.copy(web if os.path.exists(web) else glb, os.path.join(pend, "model.glb"))
 
     # 6. CHECK: the viewer's pictures (the same viewer as your phone page); the studio pictures only if those fail
+    boundary(cid, "step")
     status(cid, step="6/7 pictures from four sides and the judge's check")
     shots = close = None
     try:
@@ -1133,6 +1157,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         R.step("label art (kept from the last build: it passed, and its words, photo and code are unchanged)",
                files=[done_png], checks=[("kept as it was", True, f"match {kept.get('score')}")])
         return done_png, done_mr
+    boundary(cid, "step")
     status(cid, step=f"5/7 texture map: your AI rebuilds the label as artwork ({len(words)} words, exact type)")
     json.dump(words, open(os.path.join(tex, "words.json"), "w"), indent=1)        # the label step's inputs, so the
     json.dump({"product": product, "w_mm": w_mm, "h_mm": h_mm, "marks": version_marks(card),   # engineer can run
@@ -1782,6 +1807,35 @@ def _beating():
     threading.Thread(target=loop, daemon=True).start()
 
 
+class Restarting(Exception):
+    """A newer version is waiting and the item is at a step boundary: it is parked (its code kept, so it is due again
+    at once) and the run exits for the clock to start the newest version. Cody, 2026-10-05: "this is supposed to be a
+    self sufficient machine" - a push must never wait behind a busy build, and never need Claude's restart file."""
+
+
+_BOUNDARY = {"at": 0.0, "newer": False}
+
+
+def boundary(cid, step=""):
+    """Called at every numbered step of a build. At most every 5 minutes it asks GitHub whether a newer version that
+    changes what runs is waiting (newer_version); if so the build steps out here - between steps, never in the middle
+    of a brain question or a Blender job. Not in a test build."""
+    if TRIAL or not LOOPING[0]:
+        return
+    now = time.time()
+    if now - _BOUNDARY["at"] >= 300:
+        _BOUNDARY["at"] = now
+        try:
+            _BOUNDARY["newer"] = bool(newer_version())
+        except Exception:
+            _BOUNDARY["newer"] = False
+    if _BOUNDARY["newer"]:
+        raise Restarting(step)
+
+
+LOOPING = [False]
+
+
 class Waiting(Exception):
     """The build stopped because it needs YOU (a size, a pick): the message is the item's status, it is not an
     error and it is not retried by itself - the item goes on when your answer is in."""
@@ -2219,6 +2273,8 @@ def _state(v, cid="", picks=None, ap=None):
         return "you", "its real size (text it)", 0
     if step.startswith("waiting for a photo"):
         return "you", "a photo of one of them", 0
+    if step.startswith("paused for the newer version"):
+        return "work", "restarting on the newest version", 2
     if step.startswith(("stopped", "3 rounds", "no usable", "you said none", "failed")):
         return "bad", "needs attention", 1
     if step.startswith("in line"):
@@ -2239,6 +2295,8 @@ def _now_line():
         if hb.get("doing"):
             when = f"{int(ago)} s ago" if ago < 120 else f"{int(ago // 60)} min ago"
             out.append(f'<p class=now><b>now:</b> {html.escape(str(hb["doing"])[:160])} <span class=ago>({when})</span></p>')
+        if _BOUNDARY.get("newer"):
+            out.append('<p class=now><b>a newer version is waiting</b> - it is taken at the next step of the build, by itself</p>')
     except Exception:
         pass
     try:
@@ -2617,7 +2675,7 @@ def newer_version():
 
 
 RETRIES = os.path.join(WORK, "retries.json")
-RETRY_AFTER = (("stopped", 3600), ("failed the realism check", 6 * 3600))   # how long a parked item waits
+RETRY_AFTER = (("paused for the newer version", 0), ("stopped", 3600), ("failed the realism check", 6 * 3600))   # how long a parked item waits
 RETRIES_PER_DAY = 3
 
 
@@ -3100,7 +3158,15 @@ if __name__ == "__main__":
                     os.execv(PY, [PY] + sys.argv)       # and the current code carries on)
                 try:
                     note_retry(cid)
+                    LOOPING[0] = True
                     pipeline(cid, False)
+                except Restarting as e:
+                    v = read_status().get(cid, {})
+                    status(cid, step=f"paused for the newer version - it resumes on it (was at: {str(v.get('step', ''))[:80]})",
+                           ok=False, at=float(v.get("at") or time.time()) - 3600, code=v.get("code"))
+                    say(f"[update] {cid}: a newer version is waiting - stepping out between steps; the clock starts it")
+                    _lock.close()
+                    sys.exit(0)
                 except Waiting as e:
                     waiting(cid, e)
                 except Exception as e:
