@@ -124,7 +124,7 @@ for o in meshes:
                     d[key] = mean
                 else:                                       # glTF: metallic = blue, roughness = green
                     d[key] = mean[2] if key == "metallic" else mean[1]
-                    d[key + "_from"] = "map"
+                d[key + "_from"] = "map"                    # (base too: a baked map rounds to 8 bits, 2026-10-05)
             else:
                 v = s.default_value
                 d[key] = list(v)[:3] if key == "base" else float(v)

@@ -69,6 +69,16 @@ if rng.get("base"):
     lo, hi = rng["base"]
     b = float(np.mean(steel["base"]))
     check(lo - 0.01 <= b <= hi + 0.01, f"and it sits inside bare steel's real range {lo}-{hi} (mean {b:.3f}, map tolerance 0.01)")
+    check(steel.get("base_from") == "map", "the base color is marked as read from a map, so the range check applies the map tolerance")
+    # the range check itself, on this very record: a mean a hair under the floor from 8-bit rounding passes
+    import copy
+    fake = copy.deepcopy(parts["steel"]); fake["material_kind"] = "bare_steel"
+    fake["materials"][0]["base"] = [lo - 0.004, lo - 0.004, lo - 0.004]
+    mb_fake = {"parts": {"steel": fake}, "overall": mb["overall"]}
+    chk = {}
+    _M._materials_check(mb_fake, chk) if hasattr(_M, "_materials_check") else None
+    if chk:
+        check(chk["materials"]["pass"], f"0.004 under the floor from a map passes: {chk['materials']['why'][:80]}")
 
 # 3. a real hole is still a hole: cut a face out of the steel and measure again
 import shutil
