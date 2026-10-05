@@ -1026,7 +1026,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             + (", cropped to the label's box" if views[0].get("box") else "")
             + (f", {len(views[0].get('overlays') or [])} overlay box(es) masked out" if views[0].get("overlays") else ""))
     try:
-        lab, cov = skin.compose(views, along, around)
+        lab, cov = skin.compose(views, along, around, log=say)
     except RuntimeError as e:
         if "could not unroll" not in str(e):
             raise

@@ -187,7 +187,60 @@ FILL = ("This is a flat printed label laid out like a sheet. The gray areas are 
         "anything outside the gray areas. The product: ")
 
 
-def compose(photos, along_mm, around_mm, W=2048):
+def register_strips(front, others, W, log=None):
+    """Place unrolled strips onto the front strip's frame by feature matching - OpenCV's documented pipeline
+    (Feature Matching + Homography tutorial, docs.opencv.org/5.0/py_tutorials/py_features/py_feature_homography):
+    SIFT keypoints, k=2 matches, Lowe's ratio 0.7, MIN_MATCH_COUNT 10, RANSAC with reprojection threshold 5.0,
+    inliers decide. The transform is estimateAffinePartial2D (rotation + uniform scale + shift, 4 degrees of
+    freedom; docs.opencv.org group__calib3d) since the strips are already flat and to scale: only where they sit
+    is unknown. Each placed strip joins the mosaic, so a later strip may match either (a chain, like a panorama).
+    The label wraps around: the shift is taken modulo W. -> [(strip, weight)] starting with the front."""
+    import cv2
+    H = front[0].shape[0]
+    MIN_MATCH_COUNT, RATIO, THRESH = 10, 0.7, 5.0
+    sift = cv2.SIFT_create()
+    bf = cv2.BFMatcher()
+    to8 = lambda l, w: (np.clip(l, 0, 1) * 255).astype(np.uint8)[..., ::-1] * (w[..., None] > 0.05)
+    placed = [front]
+    lab, cov = front[0].copy(), front[1].copy()
+    for l, w in others:
+        img = to8(l, w)
+        kp1, des1 = sift.detectAndCompute(img, (w > 0.05).astype(np.uint8) * 255)
+        kp2, des2 = sift.detectAndCompute(to8(lab, cov), (cov > 0.05).astype(np.uint8) * 255)
+        if des1 is None or des2 is None or len(kp1) < MIN_MATCH_COUNT or len(kp2) < MIN_MATCH_COUNT:
+            continue
+        good = [m for m, n in (p for p in bf.knnMatch(des1, des2, k=2) if len(p) == 2) if m.distance < RATIO * n.distance]
+        if len(good) < MIN_MATCH_COUNT:
+            if log:
+                log(f"[texture] a strip shares too little with the label so far ({len(good)} matches) - left out")
+            continue
+        src = np.float32([kp1[m.queryIdx].pt for m in good]).reshape(-1, 1, 2)
+        dst = np.float32([kp2[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
+        M, inl = cv2.estimateAffinePartial2D(src, dst, method=cv2.RANSAC, ransacReprojThreshold=THRESH)
+        if M is None or inl is None or int(inl.sum()) < MIN_MATCH_COUNT:
+            continue
+        scale = float(np.hypot(M[0, 0], M[0, 1]))
+        angle = float(np.degrees(np.arctan2(M[0, 1], M[0, 0])))
+        if not (0.7 <= scale <= 1.4) or abs(angle) > 10:            # flat, to-scale strips: anything else is a mismatch
+            continue
+        M[0, 2] %= W                                                   # the label wraps around
+        pl, pw = np.zeros_like(lab), np.zeros_like(cov)
+        for shift in (-W, 0, W):
+            Ms = M.copy(); Ms[0, 2] += shift
+            wl = cv2.warpAffine(l.astype(np.float32), Ms, (W, H), flags=cv2.INTER_LINEAR)
+            ww = cv2.warpAffine(w.astype(np.float32), Ms, (W, H), flags=cv2.INTER_LINEAR)
+            better = ww > pw
+            pl = np.where(better[..., None], wl, pl); pw = np.maximum(pw, ww)
+        if log:
+            log(f"[texture] a strip placed by {int(inl.sum())} matched features (shift {M[0, 2]:.0f} px around, "
+                f"{M[1, 2]:.0f} px along, scale {scale:.2f})")
+        placed.append((pl, pw))
+        better = pw > cov
+        lab = np.where(better[..., None], pl, lab); cov = np.maximum(cov, pw)
+    return placed
+
+
+def compose(photos, along_mm, around_mm, W=2048, log=None):
     """The label made from the photos' REAL pixels: each item in your photo unrolled flat by math and laid at its
     place around the label (the fullest at the front; one showing a clearly different side at the back). A photo
     that shows only part of the length (a close-up of one end) covers only that part, at the end it shows
@@ -225,38 +278,15 @@ def compose(photos, along_mm, around_mm, W=2048):
     if first:
         photos = [photos[first]] + [f for j, f in enumerate(photos) if j != first]
     strips.sort(key=lambda lw: -lw[1].sum())
-    keep = [strips[0]]
-    small = lambda x: x[::16, ::16]
-
-    def unlike(k, s):
-        """How different two unrolled views look where both saw the label (0 = nothing in common)."""
-        both = (small(k[1]) > 0.05) & (small(s[1]) > 0.05)
-        if not both.any():
-            return 0
-        return np.abs(small(k[0]).mean(-1)[both] - small(s[0]).mean(-1)[both]).mean()
-    other_side = 0.10       # measured 2026-10-03: the same side in two photos differs ~0.07-0.09, the opposite ~0.14
-    # a strip may stand in for the BACK only when it shows the whole length like the front does: a strip that shows
-    # part of the length (a close-up, a cell half hidden behind another) lands as a band at the wrong height and the
-    # reference becomes a collage (2026-10-05 16:53: the PowerCheck box three times in 'the real label', the judge
-    # failing every build for duplicates). Such strips still serve for reading words; never for the reference.
-    rows = lambda s: (s[1].max(1) > 0.05)
-    whole = lambda s: rows(s).sum() >= 0.9 * rows(keep[0]).sum() and (rows(s) & rows(keep[0])).sum() >= 0.9 * rows(keep[0]).sum()
-    diffs = [unlike(keep[0], s) if whole(s) else 0 for s in strips[1:]]
-    if diffs and max(diffs) > other_side:                                   # the most different one shows another side
-        l, w = strips[1 + int(np.argmax(diffs))]
-        keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)))     # it goes at the back
-    if len(keep) == 1 and len(photos) > 1:
-        # your pick shows only one side: the other photos of this very item (the dossier's) fill the back - the one
-        # that looks most unlike the front is the opposite side, the same rule as several items in one photo
-        more = []
-        for f in photos[1:]:
-            if f.get("mask"):                                    # (a photo without its cut-out can't be unrolled)
-                more += [s for s in unrolled(f) if whole(s)]
-        if more:
-            d = [unlike(keep[0], s) for s in more]
-            if max(d) > other_side:
-                l, w = more[int(np.argmax(d))]
-                keep.append((np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)))
+    # every other strip (the same photo's other items, the other photos) is placed by MATCHING, the documented
+    # way a panorama is stitched - never by a guessed half-turn or a guessed height (2026-10-05 17:34: 'the real
+    # label' was a collage of strips at guessed places, every build failed for duplicates). A strip that shares
+    # no features with what is already placed cannot be placed by anyone: it is left out, the bands fill there.
+    others = strips[1:]
+    for f in photos[1:]:
+        if f.get("mask"):
+            others += unrolled(f)
+    keep = register_strips(strips[0], others, W, log=log)
     for l, w in keep:
         better = w > cov
         lab = np.where(better[..., None], l, lab)
