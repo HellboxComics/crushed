@@ -95,6 +95,91 @@ def pieces(words):
             any(len(norm(t)) > len(norm(w)) and (norm(t).startswith(norm(w)) or norm(t).endswith(norm(w))) for t in toks)]
 
 
+def one_per_print(words, by_png=None):
+    """Each printed line is listed ONCE, however many pictures it was read off (2026-10-05 13:52: the Duracell's
+    words were read off 4 pictures and joined by exact spelling only - 37 'words' for a label of ~18 lines; the
+    writer printed 'DURACELL', 'DURACELL(R)' and 'DURACE M', the maker's line three times, the date twice, and the
+    model came out scrambled). Three rules, in order:
+      A. the same letters, or a near-spelling (80% alike), is the same print: keep the spelling that more pictures
+         confirmed (tie: the one read first);
+      C. a line that is a run of words inside a longer kept line, and was confirmed only on pictures that also
+         confirmed that longer line, is the longer line read in pieces: the longer line carries it. A piece seen on
+         its own somewhere (the DURACELL logo beside 'DURACELL(R) POWERCHECK') is its own print and stays;
+      B. a line that is exactly two or more kept lines glued together is the joined reading: dropped.
+    by_png: {picture: [lines confirmed on it]} from run.label_words. Words with no picture (added from the kit's
+    hunt, the dossier's must_show) are never dropped as a piece - only merged by spelling or as a joined copy.
+    -> (kept, {dropped: kept line it folded into})"""
+    import difflib
+    import re
+    norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s).lower())
+    ntoks = lambda s: [norm(t) for t in str(s).split() if norm(t)]
+    seen_on, seen_exact = {}, {}
+    for png, lines in (by_png or {}).items():
+        for w in lines or []:
+            seen_on.setdefault(norm(w), set()).add(png)
+            seen_exact.setdefault(str(w).strip(), set()).add(png)
+    pics = lambda w: seen_on.get(norm(w), set())
+    exact = lambda w: seen_exact.get(str(w).strip(), set())
+    words = list(dict.fromkeys(str(w).strip() for w in words if str(w).strip()))
+    kept, folded = [], {}
+
+    def run_in(short, long):
+        s, l = ntoks(short), ntoks(long)
+        return bool(s) and len(s) < len(l) and any(l[i:i + len(s)] == s for i in range(len(l) - len(s) + 1))
+
+    def spelling_of(w, k):
+        """w and k are two spellings of one print: the same letters, or 80% alike with neither a run of whole
+        words inside the other (that is a piece, rule C's business: 'SIZE' is not a spelling of 'SIZE AA')."""
+        n, kn = norm(w), norm(k)
+        if n == kn:
+            return True
+        return (len(n) >= 6 and len(kn) >= 6 and not run_in(w, k) and not run_in(k, w)
+                and difflib.SequenceMatcher(None, n, kn).ratio() >= 0.8)
+
+    # A. one spelling per print: the spelling more pictures read exactly so; tie: the one read first
+    for w in words:
+        twin = next((k for k in kept if spelling_of(w, k)), None)
+        if twin is None:
+            kept.append(w)
+        elif (len(pics(w)), len(exact(w))) > (len(pics(twin)), len(exact(twin))):
+            kept[kept.index(twin)] = w
+            folded[twin] = w
+            for a, b in list(folded.items()):              # what had folded into the old spelling follows
+                if b == twin:
+                    folded[a] = w
+        else:
+            folded[w] = twin
+
+    # C. a piece seen only alongside its longer line
+    for w in list(kept):
+        pw = pics(w)
+        home = next((k for k in kept if k is not w and run_in(w, k) and pw and pw <= pics(k)), None)
+        if home is not None:                               # never seen apart from that longer line
+            kept.remove(w)
+            folded[w] = home
+    # B. a joined copy of two or more kept lines
+    lines = {tuple(ntoks(k)): k for k in kept}
+
+    def covered(toks, parts_min=2):
+        best = {0: 0}                                        # position -> fewest parts to reach it
+        for i in range(len(toks)):
+            if i not in best:
+                continue
+            for j in range(i + 1, len(toks) + 1):
+                if tuple(toks[i:j]) in lines and (j - i) < len(toks):
+                    best[j] = min(best.get(j, 99), best[i] + 1)
+        return best.get(len(toks), 0) >= parts_min
+
+    for w in list(kept):
+        t = ntoks(w)
+        if len(t) >= 2 and covered(t):
+            kept.remove(w)
+            parts = sorted((k for k in kept if run_in(k, w)),
+                           key=lambda k: next(i for i in range(len(t)) if t[i:i + len(ntoks(k))] == ntoks(k)))
+            folded[w] = " + ".join(parts[:4])
+    return kept, folded
+
+
 def front_length(cov):
     """How much of the label's length the main photo covers at the front (0..1). Below 0.9: the main photo shows only
     part of the item - its other parts can't be checked against it."""

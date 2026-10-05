@@ -1102,6 +1102,12 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     words, not_item = review.not_on_item(words, by_png, src_of, dos)
     if not_item:
         say(f"[texture] laid over a photo, not on the item - not printed: {not_item}")
+    # the same printed line, read off several pictures, is listed once (2026-10-05 13:52: read off 4 pictures and
+    # joined by exact spelling, the Duracell's words came to 37 and every line was printed two or three times)
+    words, folded = review.one_per_print(words, by_png)
+    if folded:
+        say(f"[texture] one line per print - folded {len(folded)}: " +
+            "; ".join(f"'{a}' -> '{b}'" for a, b in list(folded.items())[:12]))
     # the printed lines the dossier read off this item's own photo for its label (the same lines the finished model
     # is checked against): allowed too, so the layout can carry them (2026-10-03: "DURACELL INC., Bethel, CT 06801"
     # was checked on the model but never allowed on the label - the writer was told to add it and could not)
@@ -1131,6 +1137,8 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             kept.put("labelparts", lk, {"added": added, "receipts": receipts, "still": still}, note=cid)
     if added:
         words = whole_words(words + added)
+    words, folded2 = review.one_per_print(words, by_png)     # a found line that is a spelling of one already here
+    folded.update(folded2)
     json.dump({"added": added, "receipts": receipts, "still_missing": still},
               open(os.path.join(tex, "label_parts.json"), "w"), indent=1)
     R.step("what every label of this kind carries", files=list(dict.fromkeys(x["photo"] for x in receipts)), checks=[
@@ -1141,7 +1149,11 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         ("words were read", bool(words), f"{len(words)} words"),
         ("nothing laid over a photo (caption, watermark, listing text) is taken as label text", True,
          ("left out: " + "; ".join(not_item)[:300]) if not_item else "nothing laid over the photos was read"),
-        ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words)))])
+        ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words))),
+        ("each printed line is listed once (one spelling, no piece seen only beside its line, no glued copy)",
+         not review.one_per_print(words, by_png)[1],
+         (f"folded {len(folded)} second reading(s): " + "; ".join(f"'{a}' -> '{b}'" for a, b in folded.items()))[:300]
+         if folded else f"{len(words)} lines, each once")])
     import layout as LAY
     # A label that was already good is KEPT, not written again (Cody, 2026-10-03: "if the label is wrong, fix the
     # label; if the internals and shape are correct, keep them"). Kept when the last build's label passed its own
