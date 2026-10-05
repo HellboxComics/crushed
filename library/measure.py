@@ -252,7 +252,20 @@ def text_found(want, got):
             if best >= 0.97:
                 break
     need = 0.80 if n >= 25 else 0.85          # a long line (an address) read off a curved render drops a letter or two
-    return best >= need, round(best, 2)
+    if best >= need:
+        return True, round(best, 2)
+    # an element the dossier read as ONE line is often printed as several, placed apart ("Patented" / "DURACELL
+    # INC." / "Bethel, CT 06801" - 2026-10-05 13:49: failed at 0.72 as one run while every word was on the label).
+    # Then it is found when 80% of its words are, anywhere in the reading (a word read with a letter wrong counts)
+    if len(w) >= 3:
+        have = set(g)
+        longer = [x for x in have if len(x) >= 4]
+        hit = lambda x: x in have or (x.isalpha() and len(x) >= 4 and
+                                      any(difflib.SequenceMatcher(None, x, y).ratio() >= 0.8 for y in longer))
+        score = sum(1 for x in w if hit(x)) / len(w)
+        if score >= 0.80:
+            return True, round(max(best, score), 2)
+    return False, round(best, 2)
 
 
 def _code_prefix(m):
