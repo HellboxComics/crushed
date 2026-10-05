@@ -115,7 +115,9 @@ LOOK_Q = """Picture 1 was made by unrolling the printed label of {product} flat 
 along the item, from its {top} end; top to bottom = once around it, the main photo's side in the middle band, other
 photos at the top and bottom edges; smeared streaks = parts no photo saw). Picture 2 is the main photo.
 Is anything in picture 1 WRONG as an unrolled label of this item: a part stretched or squashed along its length, a
-part doubled, a different object, a different version of the item, or the item's metal ends inside the label?
+part doubled, a different object, a different version of the item (other artwork, words or colors), or the item's
+metal ends inside the label? NOT wrong: a date code, batch number or "best by" date that differs between bands -
+the bands come from different real copies of the same item, and those marks differ from copy to copy.
 Answer ONLY JSON: {{"problems": ["short, specific"], "ok": true or false}}"""
 
 

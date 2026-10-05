@@ -1055,7 +1055,9 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     make_room("judging")
     R = review.load(d)
     fl = review.front_length(cov)
-    seen_ok, seen_why = review.look_unrolled(real_png, picked["file"], product, use,
+    # (compared with the photo the label's pixels CAME from - your pick is the identity, not the pixels, 2026-10-05:
+    #  the judge failed a strip for carrying the source's date code instead of the pick's)
+    seen_ok, seen_why = review.look_unrolled(real_png, views[0].get("file") or picked["file"], product, use,
                                              top="plus" if kit_name == "cylindrical_cell" else "top")
     v0 = views[0]
     src_why = []
