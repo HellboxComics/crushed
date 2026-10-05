@@ -60,6 +60,14 @@ def img_mean(node, mask=None):
     px = px.reshape(img.size[1], img.size[0], img.channels)[::-1]      # Blender stores rows bottom-up; the mask is a picture
     step = max(1, int(max(img.size) / 256))
     sub = px[::step, ::step, :3]
+    # a color map is stored sRGB-encoded; the material ranges (and a plain Base Color value) are LINEAR - compare like
+    # with like (2026-10-05: bare steel set to 0.557 linear baked to 0.77 sRGB and "failed" the 0.55-0.75 range;
+    # the engineer chased it for an hour)
+    try:
+        if img.colorspace_settings.name == "sRGB":
+            sub = np.where(sub <= 0.04045, sub / 12.92, ((sub + 0.055) / 1.055) ** 2.4)
+    except Exception:
+        pass
     if mask is not None:
         from PIL import Image
         m = np.asarray(Image.fromarray(mask.astype(np.uint8) * 255).resize((sub.shape[1], sub.shape[0]), Image.NEAREST)) > 0

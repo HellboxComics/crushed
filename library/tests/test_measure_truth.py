@@ -59,7 +59,16 @@ check(all(i.get("signed_volume_mm3") is not None for i in parts.values()), "ever
 # 2. a bare-steel part's maps are read where its UVs cover them, not over the black background
 steel = next(m for m in parts["steel"]["materials"])
 check(steel["metallic"] >= 0.95, f"steel reads fully metallic from its baked map ({steel['metallic']:.2f}, was 0.71 with the background counted)")
-check(0.55 <= steel["base"][0] <= 0.85, f"its base color is the metal's, not darkened by background ({steel['base'][0]:.2f})")
+# the spec says the steel is 0.42 linear and realmat lifts bare steel into its real range (0.55-0.75 LINEAR); the baked
+# map stores that sRGB-encoded (0.77). The measure must read it back as linear, like the ranges and like a plain
+# Base Color value (2026-10-05: it read 0.77 and the engineer chased a color that was already right)
+check(0.50 <= steel["base"][0] <= 0.62, f"its base color is read back in linear, the same space as the ranges ({steel['base'][0]:.3f}, not 0.77 sRGB)")
+import measure as _M
+rng = _M.RANGES.get("bare_steel") or {}
+if rng.get("base"):
+    lo, hi = rng["base"]
+    b = float(np.mean(steel["base"]))
+    check(lo - 0.01 <= b <= hi + 0.01, f"and it sits inside bare steel's real range {lo}-{hi} (mean {b:.3f}, map tolerance 0.01)")
 
 # 3. a real hole is still a hole: cut a face out of the steel and measure again
 import shutil

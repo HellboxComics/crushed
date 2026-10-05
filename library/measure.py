@@ -461,7 +461,8 @@ def run(cid, d, glb, dos, route, fam=None, shots=None, web_glb=None, use=None, l
                 if val is None:
                     continue
                 lo, hi = rng[key]
-                if not (lo - 1e-3 <= val <= hi + 1e-3):
+                tol = 0.01 if m.get(key + "_from") == "map" else 1e-3      # a baked 8-bit map rounds (~0.005 at mid-tones)
+                if not (lo - tol <= val <= hi + tol):
                     bad.append(f"{part} ({(slot_kind or info['material_kind']).replace('_', ' ')}): {key} {val:.2f}, real is "
                                f"{lo:.2f}-{hi:.2f}")
     checks["materials"] = _c(not bad, "every material is in its real-world range" if not bad else "; ".join(bad[:10]))
