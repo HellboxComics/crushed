@@ -73,8 +73,8 @@ png, mr = run.round_label("t", "Duracell AA", picked, [], "stand-in", {}, d, tex
 check(os.path.exists(png) and os.path.exists(mr), "the label and its metal map are drawn")
 rv = json.load(open(os.path.join(d, "review.json")))["steps"]
 names = [s["step"].split(" (")[0] for s in rv]
-check(names == ["unrolled label", "what every label of this kind carries", "words on the label", "label texture"], f"every step is on the review sheet: {names}")
-lt = rv[3]["checks"]
+check(names == ["unrolled label", "what every label of this kind carries", "words on the label", "the whole label drawn from every photo", "label texture"], f"every step is on the review sheet: {names}")
+lt = rv[4]["checks"]
 check(all(c["ok"] is not False for c in lt), f"the label texture's own checks (the real photo, nothing redrawn): {[(c['check'][:30], c['ok'], c['detail'][:40]) for c in lt]}")
 w = [c for s in rv for c in s["checks"] if c["check"].startswith("no word")][0]
 check(w["ok"] is True, "the cut-off 'DURA' never reached the label (printed as the whole word)")

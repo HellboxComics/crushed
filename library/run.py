@@ -1210,13 +1210,35 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     json.dump(words, open(os.path.join(tex, "words.json"), "w"), indent=1)        # the label's words, for the checks
     json.dump({"product": product, "w_mm": w_mm, "h_mm": h_mm, "marks": version_marks(card),
                "typical": kits.typical(kits.get(kit_name), "label")}, open(os.path.join(tex, "label_meta.json"), "w"), indent=1)
-    png, mr, notes = photo_label(product, real_png, cover_png, tex, use, reads, log=say)
+    # THE LABEL IS REDRAWN WHOLE FROM ALL THE EVIDENCE; the photo itself is only the fallback when no drawing passes
+    try:
+        os.remove(os.path.join(tex, "label_complete.json"))
+    except OSError:
+        pass
+    refs = [p for p in reads_from if os.path.basename(p).startswith("item")]
+    refs = refs[1:] + refs[:1] if len(refs) > 1 else refs      # other sides first: picture 1 already holds the front
+    status(cid, step="5/7 texture map: your AI draws the whole label from every photo (and checks it)")
+    drawn, dnotes = draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=say)
+    if drawn:
+        notes = {"cleaned": True, "clean_note": "drawn as clean print artwork from every photo",
+                 "sharpened": True, "sharp_note": "Real-ESRGAN"}
+        png = drawn
+        mr = mr_from_bands(png, real_png, cover_png, tex, notes)
+    else:
+        say(f"[texture] {cid}: the drawing did not pass ({dnotes.get('why')}) - the stitched real photo is the label")
+        png, mr, notes = photo_label(product, real_png, cover_png, tex, use, reads, log=say)
+    R.step("the whole label drawn from every photo (Qwen-Image-Edit, checked by reading the words back and the judge)",
+           files=([png] if drawn else []) + [t["file"] for t in dnotes.get("tries", []) if t.get("file")][:3], checks=[
+               ("a drawing passed (60% of the words read back, design match 6 of 10 or better)", bool(drawn),
+                ("; ".join(f"try {t['try']}: words {t.get('words_found')}, match {t.get('match')}"
+                           for t in dnotes.get("tries", []) if "words_found" in t) or dnotes.get("why", ""))[:300])])
     json.dump({"key": key, "score": None, "passed": False}, open(os.path.join(tex, "label_kept.json"), "w"), indent=1)
     share = review.metal_share(mr)
     seen_share = float((np.asarray(Image.open(cover_png).convert("L")) > 0.05 * 255).mean())
-    R.step("label texture (the real photo, cleaned of glare and sharpened - nothing redrawn)", files=[png, real_png], checks=[
-        ("the label's pixels are the real photo where a photo saw it; the unseen part carries the bands",
-         True, f"{seen_share:.0%} of the label seen in photos"),
+    R.step("label texture" + (" (drawn whole from every photo)" if drawn else " (the real photo, cleaned of glare and sharpened)"),
+           files=[png, real_png], checks=[
+        ("the label covers the whole way around" if drawn else "the label's pixels are the real photo where a photo saw it; the unseen part carries the bands",
+         True, "drawn edge to edge" if drawn else f"{seen_share:.0%} of the label seen in photos"),
         ("the glare clean-up kept every word (else the untouched photo is used)", notes.get("cleaned") is not False,
          notes.get("clean_note", "")),
         ("sharpened (Real-ESRGAN)", notes.get("sharpened", False) is not False, notes.get("sharp_note", "")),
@@ -1253,15 +1275,23 @@ def photo_label(product, real_png, cover_png, tex, use, reads, log=print):
         notes.update(sharpened=True, sharp_note=f"{Image.open(out).size[0]} px wide")
     except Exception as e:
         notes.update(sharpened=None, sharp_note=f"skipped: {str(e)[:80]}")
-    W, H = Image.open(out).size
-    mr = Image.new("RGB", (W, H), (0, int(255 * 0.45), 0))                 # glTF layout: G roughness, B metallic
+    mr_png = mr_from_bands(out, real_png, cover_png, tex, notes)
+    return out, mr_png, notes
+
+
+def mr_from_bands(label_png, real_png, cover_png, tex, notes):
+    """The label's metal/roughness map (glTF: G roughness, B metallic) from the MEASURED background bands of the
+    real photos: a copper band is metal ink, the rest a printed sleeve. -> its path; notes get bands / bands_note."""
+    from PIL import Image, ImageDraw
+    import layout as LAY
+    W, H = Image.open(label_png).size
+    mr = Image.new("RGB", (W, H), (0, int(255 * 0.45), 0))
     try:
         bands, axis = LAY.base_bands(real_png, cover_png)
     except Exception as e:
         bands, axis = [], None
         notes["bands_note"] = f"bands could not be measured: {str(e)[:80]}"
     if bands:
-        from PIL import ImageDraw
         d = ImageDraw.Draw(mr)
         for b in bands:
             if b.get("metal"):
@@ -1270,7 +1300,80 @@ def photo_label(product, real_png, cover_png, tex, use, reads, log=print):
                      f"{sum(1 for b in bands if b.get('metal'))} of them metal")
     mr_png = os.path.join(tex, "label_mr.png")
     mr.save(mr_png)
-    return out, mr_png, notes
+    return mr_png
+
+
+DRAW_LABEL = (
+    "Picture 1 is the printed label of {product}, unrolled flat from real photos: the parts the photos saw are "
+    "real, the rest is blank or smeared. Pictures 2 and 3 are photos of the very same item from other sides. "
+    "Draw the COMPLETE printed label of this item, unrolled flat as one clean sheet of print artwork, the whole way "
+    "around from edge to edge, exactly this width-to-height shape. Every printed element seen in any of the pictures "
+    "goes where it really is on the item - logos, panels, meters, bands, small print - continuing around the "
+    "label the way the real one does. Crisp flat print, even light, no glare, no shine, no shadow, no background, "
+    "no curve, no photo noise. Where no picture shows a part, continue the label's own background and bands - do "
+    "not invent new words or logos. The printed text, spelled exactly: {words}.")
+
+
+def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=print, tries=3):
+    """The label REDRAWN whole from all the evidence (Cody, 2026-10-06 12:48: "stitch together and build out the
+    image on its own - redrawn - then made to look as real as the original; you can't depend on random internet
+    photos as production assets"). Qwen-Image-Edit-2511 takes up to 3 reference pictures and renders precise text
+    (huggingface.co/Qwen/Qwen-Image-Edit-2511; github.com/QwenLM/Qwen-Image): picture 1 the stitched real pieces,
+    pictures 2-3 whole photos of the item from other sides, the exact words read off the photos in the prompt.
+    Each try is checked - Apple's text reader reads the words back (share of the confirmed words found) and the
+    judge compares the design with the photos (0-10) - the best of `tries` kept. -> (png, notes) or (None, notes)."""
+    import turnaround as T
+    import skin
+    import measure as MS
+    import vet as V
+    from PIL import Image
+    notes = {"tries": []}
+    cw, ch = skin.canvas(w_mm, h_mm)
+    said = ", ".join(f'"{w}"' for w in words[:40]) or "(only what the pictures show)"
+    prompt = DRAW_LABEL.format(product=product, words=said)
+    best = None
+    for t in range(tries):
+        out = os.path.join(tex, f"drawn{t + 1}.png")
+        try:
+            T.draw_from_photos(product, [real_png] + list(refs)[:2], out, width=cw, height=ch, prefix=prompt, seed=101 + 37 * t)
+        except Exception as e:
+            log(f"[texture] the label drawing (try {t + 1}) failed: {str(e)[:120]}")
+            notes["tries"].append({"try": t + 1, "error": str(e)[:200]})
+            continue
+        got = " ".join(MS.read_lines(out) or [])
+        norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+        g = norm(got)
+        found = [w for w in words if len(norm(w)) >= 3 and norm(w) in g]
+        share = len(found) / max(1, sum(1 for w in words if len(norm(w)) >= 3))
+        try:
+            v = V.ask(use, ("Picture 1 is a label drawn as flat print artwork. Pictures 2 and 3 are real photos of the "
+                            "item it is meant to be. Does picture 1 carry the same design - the same panels, meters, logos, "
+                            "colors and small print, in the same places and order? Answer ONLY JSON: {\"match\": 0-10, "
+                            "\"wrong\": [\"short, specific\"]}"), [out] + list(refs)[:2], think=False) or {}
+            match = int(v.get("match") or 0)
+        except Exception as e:
+            v, match = {"wrong": [f"the judge could not look: {e}"]}, 0
+        score = round(0.5 * share * 10 + 0.5 * match, 2)
+        notes["tries"].append({"try": t + 1, "words_found": round(share, 2), "match": match, "score": score,
+                               "wrong": (v.get("wrong") or [])[:4], "file": out})
+        log(f"[texture] label drawing try {t + 1}: {share:.0%} of the words read back, design match {match}/10")
+        if best is None or score > best[0]:
+            best = (score, out, share, match)
+        if share >= 0.85 and match >= 8:
+            break
+    if not best or best[2] < 0.6 or best[3] < 6:
+        notes["why"] = ("no try was good enough (needs 60% of the words read back and a design match of 6)" if best
+                        else "the drawing room could not draw")
+        return None, notes
+    final = os.path.join(tex, "label.png")
+    Image.open(best[1]).convert("RGB").resize(Image.open(real_png).size, Image.LANCZOS).save(final)
+    try:
+        T.upscale(final, force=True)
+    except Exception as e:
+        log(f"[texture] the drawn label could not be sharpened ({str(e)[:80]})")
+    notes.update(score=best[0], words_found=best[2], match=best[3], file=best[1])
+    json.dump({"drawn": True, "at": time.time(), "score": best[0]}, open(os.path.join(tex, "label_complete.json"), "w"))
+    return final, notes
 
 
 def _sha(path):
@@ -1302,6 +1405,10 @@ def paint_unseen(cid, d, mdir, spec, tex, reads):
         why = "no source photo with a cut-out to paint from"
     elif not os.path.exists(cover):
         why = "no record of what the photos saw"
+    elif os.path.exists(os.path.join(tex, "label_complete.json")):
+        R.step("the unseen side (nothing left to infer: the label was drawn whole from every photo)",
+               checks=[("the whole label is drawn", True, "the painter is not needed")])
+        return False
     if why:
         R.step("the unseen side (Hunyuan3D-Paint infers it from the photo; the real pixels go over it where seen)",
                checks=[("the unseen side was painted", None, why + " - the bands carry the colors there")])
