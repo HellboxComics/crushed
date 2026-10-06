@@ -40,4 +40,10 @@ views = DS.label_views(dos, {"file": "/p/three.jpg"}, want=20)
 os.path.exists = real
 by = {v["file"]: v for v in views}
 check(by["/p/three.jpg"]["box"] is None and by["/p/exact1.jpg"]["box"] == [0.1, 0.1, 0.9, 0.9], "the front keeps its box; a many-cell alternate has none (every cell is a strip)")
+# a cached dossier whose saved alternates predate the rule still gets every source
+dos["faces"]["label"]["alternates"] = []
+os.path.exists = lambda p: True
+views2 = DS.label_views(dos, {"file": "/p/three.jpg"}, want=20)
+os.path.exists = real
+check({"/p/three.jpg", "/p/sister_same.jpg"} <= {v["file"] for v in views2}, "with no saved alternates the label still reads every source from the rule")
 print(f"ALL {ok} PASS")

@@ -1243,6 +1243,11 @@ def label_views(dos, picked, want=4):
     F = PRIMARY.get(dos.get("route"), "front")
     e = (dos.get("faces") or {}).get(F) or {}
     files = ([e.get("photo")] if e.get("source") == "exact_photo" and e.get("photo") else []) + list(e.get("alternates") or [])
+    if dos.get("route") == "round":
+        # a round label reads its sources from the rule itself, every time - never from a list saved before the
+        # rule changed (2026-10-06 12:14: the cached battery still stitched 4 photos after the rule took in every
+        # credible photo of it)
+        files += [p["file"] for p in _round_sources(dos)]
     photos = {p.get("file"): p for p in dos.get("photos", []) if isinstance(p, dict)}
     out, seen = [], set()
     for f in files:
