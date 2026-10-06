@@ -472,7 +472,12 @@ def check_model(cid, card, picked, d, glb, route, fam, shots, close, use):
     status(cid, step="6/7 each side of the model next to the real photo of that side, judged twice")
     j = judge.sides(cid, m["renders"], dos_now, use, route, product=product, log=say, lit=m.get("renders_lit") or {},
                     marks=version_marks(card))
-    verdict = inspect(shots, picked["file"], product, use, card=card, close=close)
+    # the judge's "real photo" is the one the label was BUILT from (the plan's cleanest exact photo of ONE copy), not
+    # the pick by right: the pick is the identity, and when it shows several cells the judge demands text it reads
+    # on the OTHER cells (2026-10-05 22:38: "the horizontal back battery shows... absent from every model rotation")
+    src = jload(os.path.join(d, "texture", "label_source.json"), {})
+    judge_photo = src["file"] if src.get("file") and os.path.exists(src["file"]) else picked["file"]
+    verdict = inspect(shots, judge_photo, product, use, card=card, close=close)
     looked = verdict.get("problems")
     looked = looked if isinstance(looked, list) else ([str(looked)] if looked else [])
     looked_failed = list(verdict.get("failed", []))
