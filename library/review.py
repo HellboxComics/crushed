@@ -486,6 +486,6 @@ def insides_step(spec, recipe, physics):
                     f"yield {ph.get('yield', '?')} Pa, fails by {ph.get('fails', '?')}")
     checks.append(("every material has crush numbers (density, stiffness, yield)",
                    None if rows else False,
-                   ("handbook values for the material kind, not measured on this item: " + " | ".join(rows))
+                   ("database (physicallybased.info, CC0) and handbook values for the material kind, not measured on this item: " + " | ".join(rows))
                    if rows else "no materials"))
     return checks

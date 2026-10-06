@@ -7,13 +7,29 @@
     1.0
    ],
    "base": [
-    0.55,
-    0.75
+    0.485,
+    0.785
    ],
    "roughness": [
     0.1,
     0.55
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Stainless Steel",
+    "color_linear": [
+     0.669,
+     0.639,
+     0.598
+    ],
+    "metalness": 1,
+    "density": [
+     7500,
+     8000,
+     8000
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "aluminum": {
    "metallic": [
@@ -21,13 +37,27 @@
     1.0
    ],
    "base": [
-    0.8,
-    0.95
+    0.771,
+    1
    ],
    "roughness": [
     0.1,
     0.6
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Aluminum",
+    "color_linear": [
+     0.916,
+     0.923,
+     0.924
+    ],
+    "metalness": 1,
+    "density": [
+     2700
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "chrome": {
    "metallic": [
@@ -35,13 +65,27 @@
     1.0
    ],
    "base": [
-    0.5,
-    0.65
+    0.484,
+    0.784
    ],
    "roughness": [
     0.0,
     0.2
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Nickel",
+    "color_linear": [
+     0.697,
+     0.641,
+     0.563
+    ],
+    "metalness": 1,
+    "density": [
+     8900
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "copper": {
    "metallic": [
@@ -49,13 +93,27 @@
     1.0
    ],
    "base": [
-    0.55,
-    0.8
+    0.542,
+    0.842
    ],
    "roughness": [
     0.15,
     0.5
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Copper",
+    "color_linear": [
+     0.932,
+     0.623,
+     0.522
+    ],
+    "metalness": 1,
+    "density": [
+     8940
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "brass": {
    "metallic": [
@@ -63,13 +121,27 @@
     1.0
    ],
    "base": [
-    0.55,
-    0.85
+    0.554,
+    0.854
    ],
    "roughness": [
     0.15,
     0.5
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Brass",
+    "color_linear": [
+     0.91,
+     0.778,
+     0.423
+    ],
+    "metalness": 1,
+    "density": [
+     8600
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "gold_plate": {
    "metallic": [
@@ -77,13 +149,27 @@
     1.0
    ],
    "base": [
-    0.55,
-    0.8
+    0.563,
+    0.863
    ],
    "roughness": [
     0.1,
     0.45
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Gold",
+    "color_linear": [
+     1.059,
+     0.773,
+     0.307
+    ],
+    "metalness": 1,
+    "density": [
+     19320
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "painted_metal": {
    "metallic": [
@@ -111,7 +197,23 @@
    "roughness": [
     0.08,
     0.5
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Plastic (PVC)",
+    "color_linear": [
+     1,
+     1,
+     1
+    ],
+    "metalness": 0,
+    "density": [
+     1100,
+     1450,
+     1300
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "printed_paper_label": {
    "metallic": [
@@ -125,7 +227,21 @@
    "roughness": [
     0.3,
     0.85
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Office Paper",
+    "color_linear": [
+     0.794,
+     0.834,
+     0.884
+    ],
+    "metalness": 0,
+    "density": [
+     800
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "printed_card": {
    "metallic": [
@@ -139,7 +255,21 @@
    "roughness": [
     0.25,
     0.85
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Cardboard",
+    "color_linear": [
+     0.351,
+     0.208,
+     0.11
+    ],
+    "metalness": 0,
+    "density": [
+     700
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "corrugated_card": {
    "metallic": [
@@ -153,7 +283,21 @@
    "roughness": [
     0.6,
     1.0
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Cardboard",
+    "color_linear": [
+     0.351,
+     0.208,
+     0.11
+    ],
+    "metalness": 0,
+    "density": [
+     700
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "foil_laminate": {
    "metallic": [
@@ -181,7 +325,21 @@
    "roughness": [
     0.0,
     0.15
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Glass (Soda-lime)",
+    "color_linear": [
+     0.984,
+     0.995,
+     0.995
+    ],
+    "metalness": 0,
+    "density": [
+     2520
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "clear_plastic": {
    "metallic": [
@@ -195,7 +353,21 @@
    "roughness": [
     0.0,
     0.3
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Plastic (PET)",
+    "color_linear": [
+     1,
+     1,
+     1
+    ],
+    "metalness": 0,
+    "density": [
+     1380
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "molded_plastic": {
    "metallic": [
@@ -209,7 +381,23 @@
    "roughness": [
     0.15,
     0.85
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Plastic (PP)",
+    "color_linear": [
+     1,
+     1,
+     1
+    ],
+    "metalness": 0,
+    "density": [
+     855,
+     946,
+     900
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "soft_rubber": {
    "metallic": [
@@ -265,7 +453,23 @@
    "roughness": [
     0.6,
     1.0
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Polystyrene (Foam)",
+    "color_linear": [
+     0.8393,
+     0.8384,
+     0.841
+    ],
+    "metalness": 0,
+    "density": [
+     50,
+     80,
+     75
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "wood": {
    "metallic": [
@@ -349,7 +553,21 @@
    "roughness": [
     0.6,
     1.0
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Office Paper",
+    "color_linear": [
+     0.794,
+     0.834,
+     0.884
+    ],
+    "metalness": 0,
+    "density": [
+     800
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "nylon": {
    "metallic": [
@@ -363,7 +581,21 @@
    "roughness": [
     0.3,
     0.8
-   ]
+   ],
+   "source": {
+    "database": "physicallybased.info v2 (CC0)",
+    "material": "Plastic (PC)",
+    "color_linear": [
+     1,
+     1,
+     1
+    ],
+    "metalness": 0,
+    "density": [
+     1200
+    ]
+   },
+   "roughness_note": "finish-dependent (the database lists polished = 0); range kept per kind"
   },
   "food_baked": {
    "metallic": [
@@ -416,5 +648,6 @@
    "raw_board",
    "cut_edge"
   ]
- }
+ },
+ "_about_sources": "kinds with a 'source' take base color (linear mean +-0.15), metalness and density from factory/physicallybased_v2.json, a CC0 snapshot of physicallybased.info (api.physicallybased.info/v2/materials, github.com/AntonPalmqvist/physically-based-api); roughness depends on finish and stays per kind; kinds without a source are handbook/typical values"
 }

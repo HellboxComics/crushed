@@ -2521,7 +2521,7 @@ def _live(cid, most=6):
     return f'<details class=live open><summary>steps so far ({len(steps)}) - newest first</summary><ol class=livelist>{"".join(out)}</ol></details>' if out else ""
 
 
-PHYS_FROM = "standard engineering handbook values for this kind of material (library/factory/physics.json), not measured from the item"
+PHYS_FROM = ("density from physicallybased.info v2 (CC0 database of measured real-material values; snapshot library/factory/physicallybased_v2.json) where it covers the material, else handbook; stiffness and yield are standard engineering handbook values (library/factory/physics.json) - none of it measured from the item")
 
 
 def _kept_extras(cid):

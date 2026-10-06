@@ -92,7 +92,7 @@ check("steps so far (3)" in a, "the count of steps so far")
 kk = html.split("Item K")[1]
 check("inside (cutaway)" in kk and os.path.relpath(cut, W) in kk, "the kept card shows the cutaway")
 check("<b>body</b>: bare_steel" in kk and "density 7850" in kk and "fails dent_fold" in kk, "the parts list with each part's crush numbers")
-check("handbook values" in kk and "not measured from the item" in kk, "a from: line says where the numbers come from, honestly")
+check("physicallybased.info" in kk and "handbook values" in kk and "not measured from the item" in kk, "a from: line says where the numbers come from, honestly (database for density, handbook for the rest)")
 check("<b>label</b> <em>from:</em> a photo (p123.jpg)" in kk, "a side from a photo names the photo")
 check("<b>top</b> <em>from:</em> rebuilt from facts with receipts" in kk, "a rebuilt side says so")
 check("<b>bottom</b> <em>from:</em> plain: no photo and no fact" in kk, "a plain side says so")

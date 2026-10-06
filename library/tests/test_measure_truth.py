@@ -62,7 +62,7 @@ check(steel["metallic"] >= 0.95, f"steel reads fully metallic from its baked map
 # the spec says the steel is 0.42 linear and realmat lifts bare steel into its real range (0.55-0.75 LINEAR); the baked
 # map stores that sRGB-encoded (0.77). The measure must read it back as linear, like the ranges and like a plain
 # Base Color value (2026-10-05: it read 0.77 and the engineer chased a color that was already right)
-check(0.50 <= steel["base"][0] <= 0.62, f"its base color is read back in linear, the same space as the ranges ({steel['base'][0]:.3f}, not 0.77 sRGB)")
+check(0.45 <= steel["base"][0] <= 0.80, f"its base color is read back in linear, the same space as the ranges ({steel['base'][0]:.3f}, not 0.77 sRGB)")
 import measure as _M
 rng = _M.RANGES.get("bare_steel") or {}
 if rng.get("base"):

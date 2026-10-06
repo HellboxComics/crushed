@@ -1,0 +1,1897 @@
+{
+ "header": {
+  "schemaVersion": 2.2,
+  "updated": 202609010742,
+  "license": "CC0 1.0 Universal",
+  "origin": "https://api.physicallybased.info/v2/materials",
+  "deprecated": false,
+  "snapshot_taken": "2026-10-05",
+  "kept_fields": [
+   "name",
+   "color (srgb-linear)",
+   "metalness",
+   "roughness",
+   "density",
+   "category"
+  ],
+  "why": "the source of record for base color, metalness and density of real materials; roughness depends on finish and is kept per kind in materials.json"
+ },
+ "data": [
+  {
+   "name": "Aluminum",
+   "color": [
+    0.916,
+    0.923,
+    0.924
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    2700
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Aluminum (Anodized Red)",
+   "color": [
+    0.6,
+    0.0,
+    0.0
+   ],
+   "metalness": 1,
+   "roughness": 0.3,
+   "density": [
+    2700
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Amber",
+   "color": [
+    0.83,
+    0.288,
+    0.036
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1060,
+    1100
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Asphalt (Fresh)",
+   "color": [
+    0.0429,
+    0.0414,
+    0.0401
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Banana",
+   "color": [
+    0.634,
+    0.532,
+    0.111
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Beer (Pale Lager)",
+   "color": [
+    0.889,
+    0.775,
+    0.558
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Beryllium",
+   "color": [
+    0.539,
+    0.533,
+    0.534
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    1850
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Blackboard",
+   "color": [
+    0.039,
+    0.039,
+    0.039
+   ],
+   "metalness": 0,
+   "roughness": 0.9,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Blood (Deoxygenated)",
+   "color": [
+    0.415,
+    0.0,
+    0.0
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1060
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Blood (Oxygenated)",
+   "color": [
+    0.644,
+    0.003,
+    0.005
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1060
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Bone",
+   "color": [
+    0.793,
+    0.793,
+    0.664
+   ],
+   "metalness": 0,
+   "roughness": 0.9,
+   "density": [
+    1000,
+    2000,
+    1500
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Brass",
+   "color": [
+    0.91,
+    0.778,
+    0.423
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    8600
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Brick",
+   "color": [
+    0.262,
+    0.095,
+    0.061
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": [
+    500,
+    2400,
+    2000
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Car Paint",
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Cardboard",
+   "color": [
+    0.351,
+    0.208,
+    0.11
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    700
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Carrot",
+   "color": [
+    0.713,
+    0.17,
+    0.026
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Cast Iron",
+   "color": [
+    0.027,
+    0.026,
+    0.026
+   ],
+   "metalness": 1,
+   "roughness": 0.3,
+   "density": [
+    6800,
+    7800
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Cesium",
+   "color": [
+    0.718,
+    0.554,
+    0.237
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    1886
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Charcoal",
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": [
+    200,
+    500,
+    200
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Chocolate",
+   "color": [
+    0.162,
+    0.091,
+    0.06
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1229,
+    1336,
+    1300
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Chromium",
+   "color": [
+    0.654,
+    0.685,
+    0.701
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    7200
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Clay",
+   "color": [
+    0.256,
+    0.118,
+    0.091
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    812
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Cobalt",
+   "color": [
+    0.699,
+    0.704,
+    0.671
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    8900
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Coffee",
+   "color": [
+    0.447,
+    0.133,
+    0.034
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Cola",
+   "color": [
+    0.358,
+    0.186,
+    0.085
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Concrete",
+   "color": [
+    0.51,
+    0.51,
+    0.51
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    2400
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Cooking Oil",
+   "color": [
+    0.737911,
+    0.687,
+    0.091
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    920
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Copper",
+   "color": [
+    0.932,
+    0.623,
+    0.522
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    8940
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Cream",
+   "color": [
+    0.976,
+    0.9,
+    0.725
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1010,
+    1020,
+    1012
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Diamond",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    3500
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Egg Shell (Brown)",
+   "color": [
+    0.493,
+    0.248,
+    0.123
+   ],
+   "metalness": 0,
+   "roughness": 0.9,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Egg Shell (White)",
+   "color": [
+    0.61,
+    0.624,
+    0.631
+   ],
+   "metalness": 0,
+   "roughness": 0.9,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Ethanol",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    789
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Eye (Cornea)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": null,
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Eye (Lens)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": null,
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Eye (Sclera)",
+   "color": [
+    0.652,
+    0.5,
+    0.394
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": null,
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Gasoline",
+   "color": [
+    1,
+    0.97,
+    0.617
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    770
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Germanium",
+   "color": [
+    0.5,
+    0.517,
+    0.465
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    5327
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Glass (Borosilicate)",
+   "color": [
+    0.988,
+    0.992,
+    0.985
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    2230
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Glass (Soda-lime)",
+   "color": [
+    0.984,
+    0.995,
+    0.995
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    2520
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Gold",
+   "color": [
+    1.059,
+    0.773,
+    0.307
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    19320
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Grass",
+   "color": [
+    0.105,
+    0.133,
+    0.041
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Gray Card",
+   "color": [
+    0.18,
+    0.18,
+    0.18
+   ],
+   "metalness": 0,
+   "roughness": 0.9,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Honey (Crystallized)",
+   "color": [
+    0.449,
+    0.319,
+    0.011
+   ],
+   "metalness": 0,
+   "roughness": 0.3,
+   "density": [
+    1380,
+    1450,
+    1400
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Honey (Liquid)",
+   "color": [
+    0.831,
+    0.571,
+    0.037
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1380,
+    1450,
+    1400
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Ice",
+   "color": [
+    0.973,
+    0.995,
+    1.0
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    917
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Iridium",
+   "color": [
+    0.745,
+    0.734,
+    0.704
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    22562
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Iron",
+   "color": [
+    0.53,
+    0.513,
+    0.494
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    7870
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Juice (Apple)",
+   "color": [
+    0.856,
+    0.765,
+    0.569
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Juice (Cranberry)",
+   "color": [
+    0.661,
+    0.381,
+    0.28
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Juice (Grape)",
+   "color": [
+    0.348,
+    0.091,
+    0.053
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Juice (Ruby Grapefruit)",
+   "color": [
+    0.09,
+    0.034,
+    0.016
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Juice (White Grapefruit)",
+   "color": [
+    0.973,
+    0.966,
+    0.93
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Ketchup",
+   "color": [
+    0.164,
+    0.006,
+    0.002
+   ],
+   "metalness": 0,
+   "roughness": 0.1,
+   "density": [
+    1055,
+    1165,
+    1100
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Lead",
+   "color": [
+    0.626,
+    0.64,
+    0.693
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    11340
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Lemon",
+   "color": [
+    0.617,
+    0.366,
+    0.045
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Lithium",
+   "color": [
+    0.916,
+    0.89,
+    0.807
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    535
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Magnesium",
+   "color": [
+    0.956,
+    0.953,
+    0.95
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    1737
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Manganese",
+   "color": [
+    0.606,
+    0.592,
+    0.573
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    7476
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Marble",
+   "color": [
+    0.83,
+    0.791,
+    0.753
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    2700
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Mercury",
+   "color": [
+    0.781,
+    0.78,
+    0.778
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    13546
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Milk",
+   "color": [
+    0.815,
+    0.813,
+    0.682
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1026,
+    1035,
+    1030
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "MIT Black",
+   "color": [
+    5e-05,
+    5e-05,
+    5e-05
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Molybdenum",
+   "color": [
+    0.589,
+    0.612,
+    0.594
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    10223
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Musou Black",
+   "color": [
+    0.006,
+    0.006,
+    0.006
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Nickel",
+   "color": [
+    0.697,
+    0.641,
+    0.563
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    8900
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Office Paper",
+   "color": [
+    0.794,
+    0.834,
+    0.884
+   ],
+   "metalness": 0,
+   "roughness": 0.8,
+   "density": [
+    800
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Orange",
+   "color": [
+    0.615,
+    0.205,
+    0.01
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Palladium",
+   "color": [
+    0.734,
+    0.7036,
+    0.662
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    12007
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Pearl",
+   "color": [
+    0.8,
+    0.75,
+    0.7
+   ],
+   "metalness": 0,
+   "roughness": 0.35,
+   "density": [
+    2700
+   ],
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Petroleum",
+   "color": [
+    0.03,
+    0.027,
+    0.024
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    870,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Plastic (Acrylic)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1180
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Plastic (PC)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1200
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Plastic (PET)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1380
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Plastic (PLA)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1210,
+    1430
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Plastic (PP)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    855,
+    946,
+    900
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Plastic (PUR)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1050,
+    1250
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Plastic (PVC)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1100,
+    1450,
+    1300
+   ],
+   "category": [
+    "Plastic"
+   ]
+  },
+  {
+   "name": "Platinum",
+   "color": [
+    0.765,
+    0.73,
+    0.676
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    21450
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Polystyrene (Foam)",
+   "color": [
+    0.8393,
+    0.8384,
+    0.841
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    50,
+    80,
+    75
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Porcelain",
+   "color": [
+    0.745,
+    0.745,
+    0.723
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    2000,
+    2500,
+    2400
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Potassium",
+   "color": [
+    0.983,
+    0.956,
+    0.906
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    859
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Quartz",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    2600
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Rubidium",
+   "color": [
+    0.919,
+    0.859,
+    0.747
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    1534
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Rust",
+   "color": [
+    0.181,
+    0.057,
+    0.017
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Salt",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0.2,
+   "density": [
+    2170
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Sand",
+   "color": [
+    0.44,
+    0.386,
+    0.23074
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": [
+    1440,
+    1680,
+    1500
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Sapphire",
+   "color": [
+    0.67,
+    0.764,
+    0.855
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    3980
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Silicon",
+   "color": [
+    0.345,
+    0.369,
+    0.426
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    2330
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Silver",
+   "color": [
+    0.991,
+    0.985,
+    0.974
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    10500
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Skin I",
+   "color": [
+    0.847,
+    0.638,
+    0.552
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Skin II",
+   "color": [
+    0.799,
+    0.485,
+    0.347
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Skin III",
+   "color": [
+    0.623,
+    0.433,
+    0.343
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Skin IV",
+   "color": [
+    0.436,
+    0.227,
+    0.131
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Skin V",
+   "color": [
+    0.283,
+    0.148,
+    0.079
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Skin VI",
+   "color": [
+    0.09,
+    0.05,
+    0.02
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    1020
+   ],
+   "category": [
+    "Human"
+   ]
+  },
+  {
+   "name": "Snow",
+   "color": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": [
+    90,
+    450,
+    300
+   ],
+   "category": [
+    "Crystal"
+   ]
+  },
+  {
+   "name": "Soap Bubble",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": null,
+   "category": [
+    "Organic"
+   ]
+  },
+  {
+   "name": "Sodium",
+   "color": [
+    0.977,
+    0.962,
+    0.936
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    969
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Spectralon",
+   "color": [
+    0.99,
+    0.99,
+    0.99
+   ],
+   "metalness": 0,
+   "roughness": 0.99,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Stainless Steel",
+   "color": [
+    0.669,
+    0.639,
+    0.598
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    7500,
+    8000,
+    8000
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Terracotta",
+   "color": [
+    0.555,
+    0.212,
+    0.11
+   ],
+   "metalness": 0,
+   "roughness": 1.0,
+   "density": [
+    1800,
+    2200,
+    2000
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Tire",
+   "color": [
+    0.023,
+    0.023,
+    0.023
+   ],
+   "metalness": 0,
+   "roughness": 0.7,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Titanium",
+   "color": [
+    0.441,
+    0.4,
+    0.361
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    4540
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Titanium (Anodized)",
+   "color": [
+    0.441,
+    0.4,
+    0.361
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    4540
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Toilet Paper",
+   "color": [
+    0.83,
+    0.835,
+    0.784
+   ],
+   "metalness": 0,
+   "roughness": 0.9,
+   "density": [
+    20,
+    70,
+    50
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Toner (Black)",
+   "color": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "metalness": 0,
+   "roughness": 0.5,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Toothpaste",
+   "color": [
+    0.9325,
+    0.9369,
+    0.9286
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    1300,
+    1500,
+    1400
+   ],
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Tungsten",
+   "color": [
+    0.537,
+    0.536,
+    0.519
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    19300
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Vanadium",
+   "color": [
+    0.534,
+    0.526,
+    0.546
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    6100
+   ],
+   "category": [
+    "Metal"
+   ]
+  },
+  {
+   "name": "Vodka (40%)",
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    935
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Water",
+   "color": [
+    0.969,
+    0.996,
+    0.997
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Whiteboard",
+   "color": [
+    0.869,
+    0.867,
+    0.771
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": null,
+   "category": [
+    "Manmade"
+   ]
+  },
+  {
+   "name": "Wine (Red)",
+   "color": [
+    0.31,
+    0.081,
+    0.053
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Wine (White)",
+   "color": [
+    0.896,
+    0.885,
+    0.783
+   ],
+   "metalness": 0,
+   "roughness": 0,
+   "density": [
+    958,
+    1000,
+    1000
+   ],
+   "category": [
+    "Liquid"
+   ]
+  },
+  {
+   "name": "Zinc",
+   "color": [
+    0.808,
+    0.844,
+    0.865
+   ],
+   "metalness": 1,
+   "roughness": 0,
+   "density": [
+    7000
+   ],
+   "category": [
+    "Metal"
+   ]
+  }
+ ]
+}
