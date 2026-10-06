@@ -23,6 +23,7 @@ import subprocess
 import sys
 import time
 import urllib.parse
+import urllib.request
 
 HB = os.path.expanduser("~/.hellbox")
 PROFILE = os.path.join(HB, "ref-browser")
@@ -329,9 +330,53 @@ class Captcha(Exception):
     (audit 2026-10-04: it was counted as 0 photos, recorded as done, and the dossier marked complete)."""
 
 
+BRAVE_KEY = os.path.expanduser("~/.hellbox/brave.json")       # {"key": "..."} - Cody's own Brave Search API key
+
+
+def brave_key():
+    try:
+        return (json.load(open(BRAVE_KEY)) or {}).get("key") or None
+    except Exception:
+        return None
+
+
+def brave_images(q, most=30, min_side=500, log=print):
+    """Brave's official image search (Cody said yes, 2026-10-05 22:57): GET api.search.brave.com/res/v1/images/search
+    with q, count (1-200), safesearch, country; header X-Subscription-Token; each result carries properties.url /
+    .width / .height (the full image), url (its web page), title, confidence (api-dashboard.search.brave.com/
+    api-reference/images/image_search). -> the same records the Google path gives, or None when there is no key."""
+    key = brave_key()
+    if not key:
+        return None
+    req = urllib.request.Request("https://api.search.brave.com/res/v1/images/search?" + urllib.parse.urlencode(
+        {"q": q[:400], "count": str(min(200, max(1, most * 3))), "safesearch": "off", "country": "US"}),
+        headers={"X-Subscription-Token": key, "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        data = json.load(r)
+    out = []
+    for it in data.get("results") or []:
+        pr = it.get("properties") or {}
+        u, w, h = pr.get("url"), pr.get("width") or 0, pr.get("height") or 0
+        if not u or (w and h and (int(w) < min_side or int(h) < min_side)):
+            continue
+        out.append({"url": u, "w": int(w or 0), "h": int(h or 0), "page": it.get("url") or "", "title": (it.get("title") or "")[:300],
+                    "confidence": it.get("confidence")})
+        INFO[u] = {"page": out[-1]["page"], "title": out[-1]["title"]}
+    log(f"[brave] '{q}': {len(out)} full-size photos ({sum(1 for o in out if o['page'])} with their web page)")
+    return out[:most]
+
+
 def search_full(q, most=30, min_side=500, log=print):
-    """[{"url", "w", "h", "page", "title"}] for a Google Images search, largest real photos first in Google's
-    order. page / title are '' when Google's page doesn't carry them. Raises Captcha when Google blocks."""
+    """[{"url", "w", "h", "page", "title"}] for an image search, largest real photos first. Brave's official API
+    when its key is on this Mac (no browser, no robot checks); else the browser path against Google Images.
+    page / title are '' when the source doesn't carry them. Raises Captcha when Google blocks."""
+    if brave_key():
+        try:
+            got = brave_images(q, most, min_side, log)
+            if got is not None:
+                return got
+        except Exception as e:
+            log(f"[brave] '{q}': the API call failed ({str(e)[:120]}) - the browser path is used")
     left = resting()
     if left > 0:
         raise Captcha(f"Google is being left alone for another {int(left // 60) + 1} min after a robot check")
