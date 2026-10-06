@@ -1,5 +1,5 @@
 """The whole round-label path end to end (run.round_label), with stand-ins for your AI's brain and the text reader:
-photos unrolled, words read and confirmed, the layout written and drawn, and every step on the review sheet.
+photos unrolled, words read and confirmed, the real photo made the texture (2026-10-05: nothing redrawn), every step on the review sheet.
 (2026-10-03: this path had never run in a test - a broken prompt reached the Mac.)"""
 import json
 import os
@@ -73,7 +73,9 @@ png, mr = run.round_label("t", "Duracell AA", picked, [], "stand-in", {}, d, tex
 check(os.path.exists(png) and os.path.exists(mr), "the label and its metal map are drawn")
 rv = json.load(open(os.path.join(d, "review.json")))["steps"]
 names = [s["step"].split(" (")[0] for s in rv]
-check(names == ["unrolled label", "what every label of this kind carries", "words on the label", "label art"], f"every step is on the review sheet: {names}")
+check(names == ["unrolled label", "what every label of this kind carries", "words on the label", "label texture"], f"every step is on the review sheet: {names}")
+lt = rv[3]["checks"]
+check(all(c["ok"] is not False for c in lt), f"the label texture's own checks (the real photo, nothing redrawn): {[(c['check'][:30], c['ok'], c['detail'][:40]) for c in lt]}")
 w = [c for s in rv for c in s["checks"] if c["check"].startswith("no word")][0]
 check(w["ok"] is True, "the cut-off 'DURA' never reached the label (printed as the whole word)")
 art = rv[2]["checks"]

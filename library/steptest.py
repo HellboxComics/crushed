@@ -64,22 +64,18 @@ def render_label(d, out, a):
 
 
 def label(d, out, a):
-    import layout as LAY
+    """The label step as the build runs it (2026-10-05): the real photo made the texture - cleaned of glare and
+    sharpened, the metal map from the measured bands. Nothing is redrawn from words."""
     tex = os.path.join(d, "texture")
     real = os.path.join(tex, "real.png")
-    words = json.load(open(os.path.join(tex, "words.json"))) if os.path.exists(os.path.join(tex, "words.json")) else []
+    cover = os.path.join(tex, "real_seen.png")
     meta = json.load(open(os.path.join(tex, "label_meta.json"))) if os.path.exists(os.path.join(tex, "label_meta.json")) else {}
-    if not os.path.exists(real) or not words:
-        raise RuntimeError("this build has no texture/real.png or texture/words.json - run the full build once first")
+    if not os.path.exists(real):
+        raise RuntimeError("this build has no texture/real.png - run the full build once first")
     import vet as V
-    png, mr, score = LAY.make(meta.get("product", ""), real, words, float(meta.get("w_mm", 50)), float(meta.get("h_mm", 46)),
-                              out, model=V.model(), log=say, typical=meta.get("typical") or (),
-                              cover_png=os.path.join(tex, "real_seen.png"), marks=meta.get("marks") or ())
-    tries = json.load(open(os.path.join(out, "rounds.json"))) if os.path.exists(os.path.join(out, "rounds.json")) else []
-    boxes = json.load(open(os.path.join(out, "label_boxes.json"))) if os.path.exists(os.path.join(out, "label_boxes.json")) else {}
-    return {"png": png, "best_match": score, "rounds": [{k: t.get(k) for k in ("round", "match", "colors", "changed")} for t in tries],
-            "last_fixes": (tries[-1].get("fixes") if tries else [])[:8], "overlaps": boxes.get("overlaps", []),
-            "pictures": [png] + [os.path.join(out, f"round{t['round']}.png") for t in tries if t.get("match") is not None][:4]}
+    import run as R
+    png, mr, notes = R.photo_label(meta.get("product", ""), real, cover, out, V.model(), "along", log=say)
+    return {"png": png, "mr": mr, "notes": notes, "pictures": [png, real]}
 
 
 def build_parts(d, out, a):

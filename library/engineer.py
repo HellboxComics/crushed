@@ -252,10 +252,10 @@ STEP_FILES = {
                  "soft parts from outlines, material()+shapes/looks.py the surfaces) -> measure.py (LOCKED: the exact "
                  "checks). Test a plan change with test_step('build_parts')."),
     "round": ("skin.py compose/sides (the label unrolled from the photos) -> run.py label_words/whole_words (the "
-              "words) -> labelparts.py (LOCKED: what every label of this kind carries) -> layout.py (the label's "
-              "layout, rounds, measured color check) -> labelart.py (drawn in exact type) -> shapes/lathe.py + "
-              "shapes/specs (the body, the ends, the insides) -> measure.py (LOCKED). Test a layout change with "
-              "test_step('render_label') or the whole label step with test_step('label')."),
+              "words) -> labelparts.py (LOCKED: what every label of this kind carries) -> run.photo_label (the label "
+              "texture IS the stitched real photo: de-glared, sharpened, metal map from layout.base_bands - nothing "
+              "is redrawn from words) -> shapes/lathe.py + shapes/specs (the body, the ends, the insides) -> "
+              "measure.py (LOCKED). Test the label step alone with test_step('label')."),
     "box": ("dossier.py (LOCKED: every side planned - read it with read_file('dossier')) -> skin.py box_skin + "
             "panels.py (each side's art, atlas.png) -> shapes/box.py or shapes/carton.py (the box) -> measure.py (LOCKED)"),
     "flat": "skin.py box_skin -> shapes/box.py (a thin box) -> measure.py (LOCKED)",
@@ -782,7 +782,7 @@ TOOLS = [
     ("test_step", "Run ONE step alone with your code (seconds to a few minutes), instead of a full rebuild: "
                   "step = 'render_label' (args.layout = a layout .json in the build folder, e.g. 'texture/round1.json': "
                   "draws it, measures its colors against the real label and reports overlapping or off-label text), "
-                  "'label' (the whole label step: words -> layout rounds -> drawn label, with its own checks), "
+                  "'label' (the whole label step: the real photo made the texture, cleaned and sharpened, with its metal map), "
                   "'build_parts' (args.plan = a parts plan .json; builds it in Blender and measures every part), "
                   "'build_round' (args.spec = a shape spec .json), 'measure' (the exact checks on a model: "
                   "args.glb, default the build's model), 'judge_side' (args.face = one side, judged against its photo). "
