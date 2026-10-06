@@ -3453,6 +3453,12 @@ if __name__ == "__main__":
             sys.exit(0)
         import selftest
         last = jload(os.path.join(WORK, "selftest.json"), {})
+        # a newer version is taken HERE, before the self-test, by the run itself (2026-10-05 22:59: a failing
+        # self-test re-ran every 15 min on the old code and a run was always alive, so the clock - which pulls only
+        # when none is - never fetched the fix; the page froze for an hour). Nothing is building at this point.
+        if newer_version() and sync_code():
+            say("[sync] a newer version was taken before the self-test - starting again on it")
+            os.execv(sys.executable, [sys.executable] + sys.argv)
         age = time.time() - last.get("at", 0)
         head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
         if not last.get("ok", True) and age < SELFTEST_RETRY and not installed and last.get("code") == head:
