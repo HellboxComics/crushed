@@ -929,10 +929,9 @@ MARKS = {"+", "-", "+/-"}
 
 
 def label_words(pngs, use, by_png=None):
-    """The words printed on a label, each confirmed by two independent reads before it may be printed: your AI reads
-    every picture twice (two different questions) and the text reader (Apple's own) reads it once; a line counts
-    when both AI reads saw it, or the text reader saw it too. A word only one read 'saw' is never printed.
-    by_png (a dict) also gets, per picture, the lines confirmed on it."""
+    """The words printed on a label, read by the established reader: Apple's Vision text reader, every line with
+    its own confidence (0.5 and up kept). Only where no text reader exists do two brain reads have to agree.
+    by_png (a dict) also gets, per picture, the lines read on it."""
     import difflib
     import vet as V
     import measure as MS
@@ -942,7 +941,7 @@ def label_words(pngs, use, by_png=None):
     import kept
     import inspect as _inspect
     code_key = kept.key("code", [], _inspect.getsource(label_words), _inspect.getsource(read_words), q2,
-                        MS.read_lines.__module__)
+                        MS.read_lines.__module__, MS.reader())
     out = []
     for png in pngs:
         k = kept.key("words", [png], use, code_key)        # the same picture, brain, questions and code: the same words
@@ -954,36 +953,39 @@ def label_words(pngs, use, by_png=None):
                 if w not in out:
                     out.append(w)
             continue
-        before = len(out)
         ok_reads = True
-        try:
-            a = read_words(png, use)
-        except Exception as e:
-            say(f"[texture] {os.path.basename(png)}: the first read failed ({str(e)[:80]})")
-            a, ok_reads = [], False
-        try:
-            b = [x for x in V.ask(use, q2, [png], think=False).get("lines", []) if isinstance(x, str)]
-        except Exception as e:
-            say(f"[texture] {os.path.basename(png)}: the second read failed ({str(e)[:80]})")
-            b, ok_reads = [], False
-        try:
-            o = MS.read_lines(png)
-        except Exception as e:
-            say(f"[texture] {os.path.basename(png)}: the text reader failed ({str(e)[:80]})")
-            o, ok_reads = [], False
-        an, bn, on = [norm(x) for x in a], [norm(x) for x in b], [norm(x) for x in o]
-        like = lambda w, pool: any(difflib.SequenceMatcher(None, norm(w), x).ratio() >= 0.8 for x in pool if x)
-        mark = lambda w: str(w).strip() in MARKS           # a printed + or - mark (a battery end): one char, no letters
-        for w in a:                                        # the first read, confirmed by the second or the reader
-            if (norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)) and w not in out:
-                out.append(w.strip() if mark(w) else w)
-        for w in o:                                        # the reader's lines, confirmed by either AI read
-            if (norm(w) and like(w, an + bn) and not like(w, [norm(x) for x in out])) or \
-                    (mark(w) and (w.strip() in a or w.strip() in b) and w.strip() not in out):
-                out.append(w.strip() if mark(w) else w)
-        here = [w for w in a if norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)]
-        here += [w for w in o if norm(w) and like(w, an + bn)]
-        here = list(dict.fromkeys(x.strip() for x in here))
+        if MS.reader() in ("ocrmac", "tesseract"):
+            # Apple's Vision text reader (VNRecognizeTextRequest) returns every line with a confidence of 0.0-1.0
+            # (developer.apple.com/documentation/vision/vnrecognizedtext/confidence); measure.read_lines keeps
+            # lines at 0.5 and up. That is the established reader - no brain reads, no voting (2026-10-05 20:51)
+            try:
+                here = list(dict.fromkeys(x.strip() for x in MS.read_lines(png) if str(x).strip()))
+            except Exception as e:
+                say(f"[texture] {os.path.basename(png)}: the text reader failed ({str(e)[:80]})")
+                here, ok_reads = [], False
+            for w in here:
+                if w not in out:
+                    out.append(w)
+        else:                                              # no text reader on this machine: two brain reads must agree
+            try:
+                a = read_words(png, use)
+            except Exception as e:
+                say(f"[texture] {os.path.basename(png)}: the first read failed ({str(e)[:80]})")
+                a, ok_reads = [], False
+            try:
+                b = [x for x in V.ask(use, q2, [png], think=False).get("lines", []) if isinstance(x, str)]
+            except Exception as e:
+                say(f"[texture] {os.path.basename(png)}: the second read failed ({str(e)[:80]})")
+                b, ok_reads = [], False
+            o = []
+            bn, on = [norm(x) for x in b], [norm(x) for x in o]
+            like = lambda w, pool: any(difflib.SequenceMatcher(None, norm(w), x).ratio() >= 0.8 for x in pool if x)
+            mark = lambda w: str(w).strip() in MARKS           # a printed + or - mark (a battery end): one char, no letters
+            for w in a:                                        # the first read, confirmed by the second
+                if (norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)) and w not in out:
+                    out.append(w.strip() if mark(w) else w)
+            here = [w for w in a if norm(w) and like(w, bn + on) or mark(w) and (w.strip() in b or w.strip() in o)]
+            here = list(dict.fromkeys(x.strip() for x in here))
         if by_png is not None:                             # what THIS picture confirmed (seen here, new or not)
             by_png[png] = here
         if ok_reads:                                       # kept only when every reader answered (a read that failed
