@@ -3,8 +3,9 @@ real surface paint (color + metal/roughness maps, 4096 px). Runs in its own fold
 setup paste) so it never disturbs anything else.
 
     <hunyuan folder>/.venv/bin/python library/hunyuan.py photo.png out_dir [--shape-only]
-    <hunyuan folder>/.venv/bin/python library/hunyuan.py photo.png out_dir --paint exact_shape.glb
-        (paint only: our exact Blender shape keeps its true geometry; Hunyuan paints every side of it)
+    <hunyuan folder>/.venv/bin/python library/hunyuan.py photo.png out_dir --paint exact_shape.glb [--part label]
+        (paint only: our exact Blender shape keeps its true geometry AND its UV layout; Hunyuan paints every side
+         of it - the unseen side inferred from the photo; --part paints one named part of a multi-part model)
 
 Writes out_dir/shape.glb (bare shape) and out_dir/textured.glb (painted). Settings are the ones the Apple-chip
 build was checked with (50 steps, 6 views at 512 px, remeshed to about 40,000 faces before painting)."""
@@ -31,24 +32,42 @@ def home():
     return None
 
 
-def paint_only(photo, out, shape):
-    """Paint an exact shape we built ourselves. Its old maps are dropped so Hunyuan lays out one clean map for the
-    whole object; the geometry is not touched (no remesh)."""
+def paint_only(photo, out, shape, part=None):
+    """Paint an exact shape we built ourselves, in ITS OWN UV layout (Hunyuan3D-Paint keeps a pre-wrapped mesh's
+    UVs - its pipeline: "a hand-authored UV layout produces much cleaner textures" - so the maps it writes line up
+    with our label map pixel for pixel). The geometry is not touched (no remesh). `part`: paint only the named part
+    of a multi-part model (the Duracell's "label" shell); a model's parts each have their own 0..1 UV space, so
+    painting them merged would pile their maps on top of each other. Writes out/textured.obj + .glb with
+    textured.jpg (color), textured_metallic.jpg, textured_roughness.jpg at 4096 px."""
+    import numpy as np
     import trimesh
-    m = trimesh.load(shape, force="mesh")
-    bare = trimesh.Trimesh(vertices=m.vertices, faces=m.faces, process=False)
+    m = trimesh.load(shape)
+    if isinstance(m, trimesh.Scene):
+        geoms = {k: g for k, g in m.geometry.items() if isinstance(g, trimesh.Trimesh)}
+        if part:
+            keys = [k for k in geoms if part.lower() in k.lower()]
+            if not keys:
+                raise RuntimeError(f"no part named like '{part}' in {shape} (parts: {', '.join(geoms)})")
+            m = geoms[min(keys, key=len)]
+        else:
+            m = max(geoms.values(), key=lambda g: len(g.faces))
+    uv = getattr(getattr(m, "visual", None), "uv", None)
+    if uv is None or len(uv) != len(m.vertices):
+        raise RuntimeError("the part has no UV map - this build needs a pre-wrapped mesh (no xatlas here)")
+    bare = trimesh.Trimesh(vertices=np.asarray(m.vertices), faces=np.asarray(m.faces),
+                           visual=trimesh.visual.TextureVisuals(uv=np.asarray(uv)), process=False)
     src = os.path.join(out, "exact_shape.obj")
-    bare.export(src)
+    bare.export(src, include_texture=True)
     t = time.time()
     from textureGenPipeline_mlx import Hunyuan3DPaintConfigMLX, Hunyuan3DPaintPipelineMLX
     paint = Hunyuan3DPaintPipelineMLX(Hunyuan3DPaintConfigMLX(max_num_view=6, resolution=512))
     obj = os.path.join(out, "textured.obj")
     paint(mesh_path=src, image_path=photo, output_mesh_path=obj, use_remesh=False, save_glb=True)
-    print(f"[hunyuan] painted the exact shape in {time.time() - t:.0f}s", flush=True)
+    print(f"[hunyuan] painted the exact shape{' (' + part + ')' if part else ''} in {time.time() - t:.0f}s", flush=True)
     return obj[:-4] + ".glb"
 
 
-def main(photo, out, shape_only=False, paint=None):
+def main(photo, out, shape_only=False, paint=None, part=None):
     hy = home()
     if not hy:
         sys.exit("Hunyuan3D is not installed (looked in " + ", ".join(FOLDERS) + ")")
@@ -58,7 +77,7 @@ def main(photo, out, shape_only=False, paint=None):
     os.chdir(hy)                                    # its settings files are found from its own folder
     sys.path[:0] = [os.path.join(hy, "hy3dshape"), os.path.join(hy, "hy3dpaint"), hy]
     if paint:
-        return paint_only(photo, out, paint)
+        return paint_only(photo, out, paint, part)
     shape = os.path.join(out, "shape.glb")
     t = time.time()
     mesh = shape_torch(photo)                       # the original Hunyuan (PyTorch) on the Apple chip's GPU
@@ -262,4 +281,5 @@ if __name__ == "__main__":
     if "--test" in a:
         test()
         sys.exit(0)
-    print(main(a[1], a[2], "--shape-only" in a, a[a.index("--paint") + 1] if "--paint" in a else None))
+    print(main(a[1], a[2], "--shape-only" in a, a[a.index("--paint") + 1] if "--paint" in a else None,
+               a[a.index("--part") + 1] if "--part" in a else None))

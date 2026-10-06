@@ -592,6 +592,15 @@ def build(cid, card, picked, others, use, d, mdir, n_found, n_good, redo=False):
         boundary(cid, "step")
         status(cid, step="5/7 Blender: mesh + UV map + texture map + material")
         run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
+        # THE UNSEEN SIDE: Hunyuan3D-Paint (Tencent's open image-to-3D texture model, installed and proven on
+        # this Mac) paints the exact label shell all the way around from the cleanest photo - the side no photo
+        # shows is inferred, the documented job of that model. The real stitched pixels then go OVER the paint
+        # wherever a photo saw the label: real where real exists, inferred where not (Cody, 2026-10-05 20:47:
+        # "a reliable AI or established tool that can take multiple photos and infer the side unseen").
+        if not os.path.exists(hand) and paint_unseen(cid, d, mdir, spec, tex, reads):
+            boundary(cid, "step")
+            status(cid, step="5/7 Blender: mesh + UV map + texture map (seen + inferred) + material")
+            run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
         try:                                                    # the insides and materials, with their receipts
             import review
             rec = spec.get("recipe_inline") or jload(os.path.join(HERE, "factory", "recipes",
@@ -1039,6 +1048,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
               f"in ~/crushed-render/remaster/refs-mine as {cid}_1.jpg (it is taken up the moment it lands), or "
               "wait for the next photo hunt.")
         raise Waiting(msg)
+    json.dump({"file": views[0].get("file"), "mask": views[0].get("mask")}, open(os.path.join(tex, "label_source.json"), "w"))
     say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
         f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
     lab = skin.continue_bands(lab, cov < 0.05)
@@ -1245,6 +1255,80 @@ def _sha(path):
         return hashlib.sha1(open(path, "rb").read()).hexdigest()[:16]
     except OSError:
         return ""
+
+
+def paint_unseen(cid, d, mdir, spec, tex, reads):
+    """The label's unseen side, inferred by Hunyuan3D-Paint from the cleanest photo; the real stitched pixels laid
+    over it wherever a photo saw the label. Writes d/label.png + d/label_mr.png in the UV layout. -> True when the
+    label changed (so Blender runs again). Every outcome goes on the review sheet; a failure keeps the band-filled
+    label and says so (nothing stops)."""
+    import review
+    import families
+    from PIL import Image
+    R = review.load(d)
+    glb = os.path.join(mdir, spec["id"] + ".glb")
+    src = jload(os.path.join(tex, "label_source.json"), {})
+    cover = os.path.join(tex, "real_seen.png")
+    why = None
+    if not families.organic_ready():
+        why = "Hunyuan3D-Paint has not proven itself on this Mac yet (families.organic_ready)"
+    elif not os.path.exists(glb):
+        why = "no model to paint yet"
+    elif not src.get("file") or not src.get("mask"):
+        why = "no source photo with a cut-out to paint from"
+    elif not os.path.exists(cover):
+        why = "no record of what the photos saw"
+    if why:
+        R.step("the unseen side (Hunyuan3D-Paint infers it from the photo; the real pixels go over it where seen)",
+               checks=[("the unseen side was painted", None, why + " - the bands carry the colors there")])
+        return False
+    out = os.path.join(tex, "paint")
+    os.makedirs(out, exist_ok=True)
+    try:
+        ref = reference({"file": src["file"], "mask": src["mask"]}, out)
+        make_room("drawing")
+        make_room("judging")                                   # Hunyuan gets the memory to itself
+        boundary(cid, "step")
+        status(cid, step="5/7 texture map: Hunyuan3D-Paint infers the side no photo shows")
+        hunyuan_paint(ref, out, bare=glb, part="label")
+        alb = os.path.join(out, "textured.jpg")
+        met, rgh = os.path.join(out, "textured_metallic.jpg"), os.path.join(out, "textured_roughness.jpg")
+        if not os.path.exists(alb):
+            raise RuntimeError("the painter wrote no color map")
+        lab_png, mr_png = os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")
+        real = Image.open(lab_png).convert("RGB")
+        W, H = real.size
+        paint = Image.open(alb).convert("RGB").resize((W, H), Image.LANCZOS)
+        cov = Image.open(cover).convert("L")
+        if reads == "along":
+            cov = cov.rotate(-90, expand=True)
+        cov = cov.resize((W, H), Image.BILINEAR)
+        from PIL import ImageFilter
+        seen = (np.asarray(cov) > 0.05 * 255).astype(np.uint8) * 255
+        alpha = np.asarray(Image.fromarray(seen).filter(ImageFilter.GaussianBlur(6))).astype(float) / 255.0
+        a = alpha[..., None]
+        mixed = a * np.asarray(real).astype(float) + (1 - a) * np.asarray(paint).astype(float)
+        Image.fromarray(np.clip(mixed, 0, 255).astype(np.uint8)).save(lab_png)
+        Image.open(alb).convert("RGB").save(os.path.join(tex, "label_painted.png"))
+        mr_ours = np.asarray(Image.open(mr_png).convert("RGB").resize((W, H))).astype(float)
+        mr_hy = mr_ours.copy()
+        if os.path.exists(met) and os.path.exists(rgh):          # glTF layout: G roughness, B metallic
+            mr_hy[..., 1] = np.asarray(Image.open(rgh).convert("L").resize((W, H)))
+            mr_hy[..., 2] = np.asarray(Image.open(met).convert("L").resize((W, H)))
+        Image.fromarray(np.clip(a * mr_ours + (1 - a) * mr_hy, 0, 255).astype(np.uint8)).save(mr_png)
+        share = float(alpha.mean())
+        R.step("the unseen side (Hunyuan3D-Paint infers it from the photo; the real pixels go over it where seen)",
+               files=[os.path.join(tex, "label_painted.png"), lab_png], checks=[
+                   ("the unseen side was painted by Hunyuan3D-Paint from the cleanest photo, in the label's own UV layout", True,
+                    f"{1 - share:.0%} of the label inferred, {share:.0%} real photo"),
+                   ("the real pixels sit on top wherever a photo saw the label (soft 6 px edge)", True, "real beats inferred")])
+        say(f"[texture] {cid}: the unseen side painted by Hunyuan3D-Paint ({1 - share:.0%} inferred, {share:.0%} real)")
+        return True
+    except Exception as e:
+        say(f"[texture] {cid}: the unseen side could not be painted ({str(e)[:160]}) - the bands carry the colors there")
+        R.step("the unseen side (Hunyuan3D-Paint infers it from the photo; the real pixels go over it where seen)",
+               checks=[("the unseen side was painted", None, f"not this time: {str(e)[:200]} - the bands carry the colors there")])
+        return False
 
 
 def label_passed(cid, d, verdict):
@@ -2173,9 +2257,9 @@ def same_design(picked, others, use, want=2, dossier=None):
     return out
 
 
-def hunyuan_paint(ref, out, bare=None):
-    """Hunyuan3D 2.1 (Apple-chip build) in its own Python. With an exact shape: paints it. Without: makes the
-    shape from the photo too (soft things)."""
+def hunyuan_paint(ref, out, bare=None, part=None):
+    """Hunyuan3D 2.1 (Apple-chip build) in its own Python. With an exact shape: paints it (in the shape's own UV
+    layout; `part` = one named part of it). Without: makes the shape from the photo too (soft things)."""
     import hunyuan
     hy = hunyuan.home()
     if not hy:
@@ -2186,6 +2270,8 @@ def hunyuan_paint(ref, out, bare=None):
     cmd = [os.path.join(hy, ".venv", "bin", "python"), os.path.join(HERE, "hunyuan.py"), ref, out]
     if bare:
         cmd += ["--paint", bare]
+    if part:
+        cmd += ["--part", part]
     r = subprocess.run(cmd, capture_output=True, text=True)
     for line in (r.stdout or "").splitlines():
         if line.startswith("[hunyuan]"):
