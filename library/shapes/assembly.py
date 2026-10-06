@@ -139,7 +139,9 @@ def print_image(part):
 def physics(ob, part):
     ob["part"], ob["material_kind"] = part["name"], part["material"]
     for k, v in PHYS.get(part["material"], {}).items():
-        ob[k] = v
+        if not isinstance(v, (dict, list)):              # plain values only ('from' - where a number comes from -
+            ob[k] = v                                    # is a record; Blender would make it an IDPropertyGroup)
+    ob["physics_from"] = json.dumps(PHYS.get(part["material"], {}).get("from", "handbook"))
     ob["inside"] = bool(part.get("inside"))
 
 

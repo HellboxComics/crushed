@@ -70,10 +70,20 @@ def setup(log=print):
     r = subprocess.run([npx, "--yes", "wrangler@3", "kv", "namespace", "create", "crushed_inbox"],
                        capture_output=True, text=True, timeout=300)
     m = re.search(r'id\s*=\s*"([0-9a-f]{32})"', r.stdout + r.stderr)
-    if not m:
+    kv_id = m.group(1) if m else None
+    if not kv_id and "already exists" in (r.stdout + r.stderr):
+        # made on an earlier start that did not finish (2026-10-05 22:57): find it by its title
+        r = subprocess.run([npx, "--yes", "wrangler@3", "kv", "namespace", "list"], capture_output=True, text=True, timeout=300)
+        try:
+            txt = r.stdout[r.stdout.index("["):]
+            for ns in json.loads(txt[:txt.rindex("]") + 1]):
+                if ns.get("title", "").endswith("crushed_inbox"):
+                    kv_id = ns.get("id")
+        except Exception as e:
+            log(f"[page] inbox setup: could not list the KV boxes ({e})")
+    if not kv_id:
         log("[page] inbox setup: could not make the KV box: " + (r.stderr or r.stdout)[-300:])
         return None
-    kv_id = m.group(1)
     token = secrets.token_urlsafe(18)
     r2 = subprocess.run([npx, "--yes", "wrangler@3", "kv", "key", "put", "_token", token, "--namespace-id", kv_id],
                         capture_output=True, text=True, timeout=300)

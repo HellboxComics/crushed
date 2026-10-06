@@ -256,6 +256,8 @@ def physics(ob, kind, part):
     for k in ("density", "stiffness", "yield", "fails", "sheet_mm"):
         if k in ph:
             ob[k] = ph[k]
+    ob["physics_from"] = json.dumps(ph.get("from", "handbook"))   # where each number comes from (a record, as text:
+    #                                                               Blender makes a nested dict an IDPropertyGroup)
 
 
 bpy.ops.object.select_all(action="DESELECT")

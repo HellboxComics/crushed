@@ -54,7 +54,9 @@ objs = []
 def physics(ob, kind, part):
     ob["part"], ob["material_kind"] = part, kind
     for k, v in PHYS.get(kind, {}).items():
-        ob[k] = v
+        if not isinstance(v, (dict, list)):              # plain values only (see lathe.physics)
+            ob[k] = v
+    ob["physics_from"] = json.dumps(PHYS.get(kind, {}).get("from", "handbook"))
 
 
 def material(name, color=None, metallic=0.0, roughness=0.5, tex=None, normal=None):
