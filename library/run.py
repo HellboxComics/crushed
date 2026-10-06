@@ -1523,40 +1523,37 @@ def _item_px(f):
 
 
 def auto_pick(cid, cands, d):
-    """Pick for you only when it's clear: the top photo is a real photo showing at least 3 of the card's marks of
-    the right version, no wrong-version mark, and it beats the next one by a wide margin."""
+    """The machine picks its own reference photo, ALWAYS (Cody, 2026-10-05 09:09: "I can submit prompt AND/OR
+    picture and it builds the product. I should not have to pick the image"; 2026-10-06 15:43: it still asked).
+    The pick is only the identity: the label is drawn from every credible photo anyway. The best-ranked candidate
+    is taken; what makes it weak (only a quick look, small, off-era, a lone photo) is written down, never asked.
+    A pick left over from an earlier build whose photos are gone is replaced, never trusted."""
     pf, cf = os.path.join(HB, "picks.json"), os.path.join(d, "candidates.json")
     picks = jload(pf, {})
-    if not setting("auto_pick") or cid in picks or os.path.exists(cf) or not cands:
+    if not cands:
         return
+    if cid in picks and os.path.exists(cf):
+        try:
+            shown = json.load(open(cf)).get("files") or []
+            if all(os.path.exists(x.get("file", "")) for x in shown):
+                return                                         # a pick for THIS build's candidates stands
+        except Exception:
+            pass
     v = cands[0].get("vet") or {}
-    lead = rank(cands[0]) - (rank(cands[1]) if len(cands) > 1 else 0)
-    import notes as NT
-    note = NT.text(cid)
-    if v.get("only_quick") or v.get("note") == "only the quick look":       # (the second: as written before)
-        say("[pick] not picked by itself: the top photo had only the quick look - you choose")
-        return
-    if note and (v.get("note_ok") is not True or v.get("note") != note[:200]):
-        say("[pick] not picked by itself: the top photo was not judged to show what your note asks for - you choose")
-        return                                                # your note decides the version: never guessed past it
-    big = _item_px(cands[0])
-    if big < 800:                                             # a small or blown-up web picture can't carry the print
-        say(f"[pick] not picked by itself: the item in the top photo is only {big} px tall - too small to build "
-            "from - you choose")
-        return
+    weak = []
+    if v.get("only_quick") or v.get("note") == "only the quick look":
+        weak.append("only the quick look")
+    if _item_px(cands[0]) < 800:
+        weak.append(f"the item is {_item_px(cands[0])} px tall")
     if isinstance(v.get("year_off"), int) and v["year_off"] > 0:
-        say(f"[pick] not picked by itself: the top photo's item was made about {v['year_off']} years outside the "
-            "item's era (read off its printed dates) - you choose")
-        return
-    if len(cands) < 2:                                        # a lone photo has beaten nothing: you choose
-        say("[pick] not picked by itself: only one photo qualified - you choose")
-        return
-    if v.get("kind") == "photo" and marks_seen(v) >= 3 and v.get("avoid_seen") is not True and lead >= 4:
-        json.dump({"files": [{"file": c["file"], "mask": c["mask"], "vet": c["vet"]} for c in cands],
-                   "asked": time.time(), "auto": True}, open(cf, "w"), indent=1)
-        picks[cid] = {"pick": "1", "at": time.time(), "auto": True}
-        json.dump(picks, open(pf, "w"), indent=1)
-        say(f"[pick] clear winner, picked by itself: {os.path.basename(cands[0]['file'])} (lead {lead:.1f})")
+        weak.append(f"made about {v['year_off']} years outside the era")
+    if len(cands) < 2:
+        weak.append("the only photo that qualified")
+    json.dump({"files": [{"file": c["file"], "mask": c.get("mask"), "vet": c.get("vet")} for c in cands],
+               "asked": time.time(), "auto": True, "weak": weak}, open(cf, "w"), indent=1)
+    picks[cid] = {"pick": "1", "at": time.time(), "auto": True, "weak": weak}
+    json.dump(picks, open(pf, "w"), indent=1)
+    say(f"[pick] picked by itself: {os.path.basename(cands[0]['file'])}" + (f" (noted: {'; '.join(weak)})" if weak else ""))
 
 
 def marks_seen(v):
@@ -2227,6 +2224,11 @@ def your_pick(cid, product, cands, d):
             return "none"
         f = shown[int(p["pick"]) - 1]
         return next((x for x in cands if x["file"] == f["file"]), f)
+    if cands:                                          # no human pick, ever: the machine picks (auto_pick)
+        auto_pick(cid, cands, d)
+        picks = json.load(open(picks_f)) if os.path.exists(picks_f) else {}
+        if picks.get(cid) and os.path.exists(cf):
+            return your_pick(cid, product, cands, d)
     if os.path.exists(cf):
         status(cid, step="waiting for your pick on your phone (Telegram)", ok=False)
         if WAIT:                                       # started by hand: wait here for the tap (up to 30 min)

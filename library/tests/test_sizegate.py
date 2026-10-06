@@ -120,7 +120,7 @@ q = run.size_gate("t_item", card, picked)
 check(q[0][1] is False and len(phoned) == 1, "a test build writes the check down, stops nothing, phones nobody")
 run.TRIAL = False
 
-# 5. marks counted by name; an auto-pick needs a rival and 3 named marks
+# 5. marks counted by name; the machine always picks, noting what makes a pick weak
 v = {"marks_seen": ["PowerCheck tester strip", "Copper and black", "nonsense", "x"], "marks_listed": ["PowerCheck tester strip", "copper and black", "Duracell logo"]}
 check(run.marks_seen(v) == 2, f"marks counted only by name against the listed marks: {run.marks_seen(v)}")
 check(run.marks_seen({"seen": 5, "marks_listed": ["a", "b"]}) == 0, "a bare count is worth nothing")
@@ -135,7 +135,7 @@ best = {"file": tall, "mask": tall, "vet": {"kind": "photo", "match": 9, "marks_
                                               "marks_listed": ["PowerCheck tester strip", "copper and black", "Duracell logo"]}}
 run.auto_pick("solo", [best], d)
 picks = run.jload(os.path.join(run.HB, "picks.json"), {})
-check("solo" not in picks, "one candidate alone is never auto-picked")
+check(picks.get("solo", {}).get("auto") and "the only photo that qualified" in picks["solo"].get("weak", []), "a lone candidate is picked by the machine, its weakness noted (no human pick - Cody 2026-10-06)")
 rival = {"file": tall, "mask": tall, "vet": {"kind": "photo", "match": 5, "marks_seen": []}}
 run.auto_pick("pair", [best, rival], d)
 picks = run.jload(os.path.join(run.HB, "picks.json"), {})
