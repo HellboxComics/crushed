@@ -2442,6 +2442,17 @@ def _state(v, cid="", picks=None, ap=None):
     if step.startswith("paused for the newer version"):
         return "work", "restarting on the newest version", 2
     if step.startswith(("stopped", "3 rounds", "no usable", "you said none", "failed")):
+        # a stopped item that is not first in line while ONE item is made at a time is not in trouble: it waits
+        # its turn (2026-10-06 08:14: the Furby, cut off by a restart two days ago, read "needs attention" for a day)
+        if ap and (ap.get(cid) or {}).get("say") == "redo":
+            return "line", "redo in - waits its turn", 2
+        try:
+            import portal
+            first = portal.queue_first()
+            if setting("one_at_a_time") and first and cid != first[0] and step.startswith("stopped: the run was interrupted"):
+                return "line", "waits its turn (one at a time)", 2
+        except Exception:
+            pass
         return "bad", "needs attention", 1
     if step.startswith("in line"):
         return "line", "in line", 4
