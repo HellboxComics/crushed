@@ -187,6 +187,19 @@ FILL = ("This is a flat printed label laid out like a sheet. The gray areas are 
         "anything outside the gray areas. The product: ")
 
 
+def shape_ratio(mask):
+    """Length to width of the object in a cut-out, by its principal axes (a rectangle's spread along an axis is its
+    side / sqrt(12), so the ratio of the two spreads is the ratio of the sides, whatever way it lies in the photo).
+    -> float, or None for an empty mask."""
+    ys, xs = np.nonzero(np.asarray(mask) > 0.5)
+    if len(xs) < 50:
+        return None
+    pts = np.stack([xs, ys], 1).astype(float)
+    pts -= pts.mean(0)
+    ev = np.sort(np.linalg.eigvalsh(np.cov(pts.T)))[::-1]
+    return float(np.sqrt(ev[0] / max(ev[1], 1e-9)))
+
+
 def register_strips(front, others, W, log=None):
     """Place unrolled strips onto the front strip's frame by feature matching - OpenCV's documented pipeline
     (Feature Matching + Homography tutorial, docs.opencv.org/5.0/py_tutorials/py_features/py_feature_homography):
@@ -264,12 +277,39 @@ def compose(photos, along_mm, around_mm, W=2048, log=None):
     lab = np.zeros((H, W, 3))
     cov = np.zeros((H, W))
 
+    seen_photos = []
+
+    def same_photo(f):
+        """The same picture saved twice (two web addresses, one photo - 2026-10-06: two of six sources were
+        copies): compared at 24 x 24 gray, a mean difference under 4 levels of 255."""
+        try:
+            t = np.asarray(Image.open(f["file"]).convert("L").resize((24, 24)), dtype=float)
+        except Exception:
+            return False
+        if any(np.abs(t - o).mean() < 4 for o in seen_photos):
+            return True
+        seen_photos.append(t)
+        return False
+
     def unrolled(f):
         got = []
+        if same_photo(f):
+            if log:
+                log(f"[texture] {os.path.basename(f['file'])}: the same photo as one already used - counted once")
+            return got
         for im, m in all_items(f):
             try:
                 objs = mosaic.objects(im, m)
                 o, om = max(objs, key=lambda x: x[1].sum())
+                r = shape_ratio(om)
+                # a cell of another SIZE (a D cell in the same artwork as an AA: 1.8 to 1 against 3.5 to 1 -
+                # 2026-10-06 12:25, the label's "front" was a D cell) lends nothing; seen at an angle a cell
+                # looks shorter, so the floor is 60% of the real ratio
+                if r and not (0.6 * expect <= r <= 1.5 * expect):
+                    if log:
+                        log(f"[texture] {os.path.basename(f['file'])}: a cell shaped {r:.1f} to 1, this item is "
+                            f"{expect:.1f} to 1 - another size, left out")
+                    continue
                 l, w, ab = mosaic.placed(o, om, W, H, expect)
                 if w.max() > 0:
                     got.append((l, w))
