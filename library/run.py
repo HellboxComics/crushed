@@ -1293,14 +1293,22 @@ def paint_unseen(cid, d, mdir, spec, tex, reads):
         boundary(cid, "step")
         status(cid, step="5/7 texture map: Hunyuan3D-Paint infers the side no photo shows")
         hunyuan_paint(ref, out, bare=glb, part="label")
-        alb = os.path.join(out, "textured.jpg")
+        alb = next((p for p in (os.path.join(out, "paint_pbr.png"), os.path.join(out, "textured.jpg"),
+                                os.path.join(out, "textured.png")) if os.path.exists(p)), None)
         met, rgh = os.path.join(out, "textured_metallic.jpg"), os.path.join(out, "textured_roughness.jpg")
-        if not os.path.exists(alb):
-            raise RuntimeError("the painter wrote no color map")
+        if not alb:
+            raise RuntimeError("the painter wrote no color map (looked for paint_pbr.png / textured.jpg)")
         lab_png, mr_png = os.path.join(d, "label.png"), os.path.join(d, "label_mr.png")
         real = Image.open(lab_png).convert("RGB")
         W, H = real.size
-        paint = Image.open(alb).convert("RGB").resize((W, H), Image.LANCZOS)
+        paint = Image.open(alb).convert("RGB")
+        atlas = jload(os.path.join(out, "atlas.json"), {})
+        region = (atlas.get("atlas") or {}).get(atlas.get("main") or "", None)
+        if region:                                         # the label's region of the one atlas, back in its own layout
+            u0, v0, u1, v1 = region
+            pw, ph = paint.size
+            paint = paint.crop((int(u0 * pw), int((1 - v1) * ph), int(u1 * pw), int((1 - v0) * ph)))
+        paint = paint.resize((W, H), Image.LANCZOS)
         cov = Image.open(cover).convert("L")
         if reads == "along":
             cov = cov.rotate(-90, expand=True)

@@ -34,36 +34,69 @@ def home():
 
 def paint_only(photo, out, shape, part=None):
     """Paint an exact shape we built ourselves, in ITS OWN UV layout (Hunyuan3D-Paint keeps a pre-wrapped mesh's
-    UVs - its pipeline: "a hand-authored UV layout produces much cleaner textures" - so the maps it writes line up
-    with our label map pixel for pixel). The geometry is not touched (no remesh). `part`: paint only the named part
-    of a multi-part model (the Duracell's "label" shell); a model's parts each have their own 0..1 UV space, so
-    painting them merged would pile their maps on top of each other. Writes out/textured.obj + .glb with
-    textured.jpg (color), textured_metallic.jpg, textured_roughness.jpg at 4096 px."""
+    UVs - its pipeline: "a hand-authored UV layout produces much cleaner textures"). The geometry is not touched.
+    The WHOLE object is painted (the model is made for closed objects - 2026-10-05 21:40: an isolated open label
+    sleeve came back as nonsense); a model's parts each own a 0..1 UV space, so they are packed into ONE atlas
+    first: `part` (the label) takes the top half full-width, the other parts share the bottom half in a grid.
+    out/atlas.json says where each part's map sits (u0, v0, u1, v1), so the caller cuts its region back out in
+    the part's own layout. Writes out/textured.obj + .glb with the color map (paint_pbr.png in the Apple-chip
+    build, textured.jpg in the PyTorch build)."""
+    import json
     import numpy as np
     import trimesh
     m = trimesh.load(shape)
+    geoms = {}
     if isinstance(m, trimesh.Scene):
         geoms = {k: g for k, g in m.geometry.items() if isinstance(g, trimesh.Trimesh)}
-        if part:
-            keys = [k for k in geoms if part.lower() in k.lower()]
-            if not keys:
-                raise RuntimeError(f"no part named like '{part}' in {shape} (parts: {', '.join(geoms)})")
-            m = geoms[min(keys, key=len)]
-        else:
-            m = max(geoms.values(), key=lambda g: len(g.faces))
-    uv = getattr(getattr(m, "visual", None), "uv", None)
-    if uv is None or len(uv) != len(m.vertices):
-        raise RuntimeError("the part has no UV map - this build needs a pre-wrapped mesh (no xatlas here)")
-    bare = trimesh.Trimesh(vertices=np.asarray(m.vertices), faces=np.asarray(m.faces),
-                           visual=trimesh.visual.TextureVisuals(uv=np.asarray(uv)), process=False)
+    else:
+        geoms = {"mesh": m}
+    with_uv = {k: g for k, g in geoms.items() if getattr(getattr(g, "visual", None), "uv", None) is not None
+               and len(g.visual.uv) == len(g.vertices)}
+    if not with_uv:
+        raise RuntimeError("no part has a UV map - this build needs pre-wrapped meshes (no xatlas here)")
+    main_key = None
+    if part:
+        keys = [k for k in with_uv if part.lower() in k.lower()]
+        if not keys:
+            raise RuntimeError(f"no part named like '{part}' in {shape} (parts: {', '.join(with_uv)})")
+        main_key = min(keys, key=len)
+    others = [k for k in with_uv if k != main_key]
+    atlas = {}
+    if main_key:
+        atlas[main_key] = (0.0, 0.5, 1.0, 1.0)
+        cols = max(1, int(np.ceil(np.sqrt(len(others))))) if others else 1
+        rows = max(1, int(np.ceil(len(others) / cols))) if others else 1
+        for n, k in enumerate(others):
+            c, r = n % cols, n // cols
+            atlas[k] = (c / cols, 0.5 * (1 - (r + 1) / rows), (c + 1) / cols, 0.5 * (1 - r / rows))
+    else:
+        cols = max(1, int(np.ceil(np.sqrt(len(with_uv)))))
+        rows = max(1, int(np.ceil(len(with_uv) / cols)))
+        for n, k in enumerate(with_uv):
+            c, r = n % cols, n // cols
+            atlas[k] = (c / cols, 1 - (r + 1) / rows, (c + 1) / cols, 1 - r / rows)
+    V, F, UV = [], [], []
+    off = 0
+    for k, g in with_uv.items():
+        u0, v0, u1, v1 = atlas[k]
+        uv = np.asarray(g.visual.uv, dtype=float) % 1.0
+        UV.append(np.stack([u0 + uv[:, 0] * (u1 - u0), v0 + uv[:, 1] * (v1 - v0)], 1))
+        V.append(np.asarray(g.vertices))
+        F.append(np.asarray(g.faces) + off)
+        off += len(g.vertices)
+    bare = trimesh.Trimesh(vertices=np.vstack(V), faces=np.vstack(F),
+                           visual=trimesh.visual.TextureVisuals(uv=np.vstack(UV)), process=False)
+    os.makedirs(out, exist_ok=True)
     src = os.path.join(out, "exact_shape.obj")
     bare.export(src, include_texture=True)
+    json.dump({"atlas": atlas, "main": main_key, "parts": list(with_uv)}, open(os.path.join(out, "atlas.json"), "w"), indent=1)
     t = time.time()
     from textureGenPipeline_mlx import Hunyuan3DPaintConfigMLX, Hunyuan3DPaintPipelineMLX
     paint = Hunyuan3DPaintPipelineMLX(Hunyuan3DPaintConfigMLX(max_num_view=6, resolution=512))
     obj = os.path.join(out, "textured.obj")
     paint(mesh_path=src, image_path=photo, output_mesh_path=obj, use_remesh=False, save_glb=True)
-    print(f"[hunyuan] painted the exact shape{' (' + part + ')' if part else ''} in {time.time() - t:.0f}s", flush=True)
+    print(f"[hunyuan] painted the exact shape ({len(with_uv)} parts in one atlas"
+          f"{', ' + main_key + ' on the top half' if main_key else ''}) in {time.time() - t:.0f}s", flush=True)
     return obj[:-4] + ".glb"
 
 

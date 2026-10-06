@@ -50,7 +50,11 @@ run.say = lambda *a, **k: None
 
 def fake_paint(ref, out, bare=None, part=None):
     calls.update(ref=ref, bare=bare, part=part)
-    Image.fromarray(np.full((512, 256, 3), (30, 200, 30), np.uint8)).save(os.path.join(out, "textured.jpg"))   # green paint
+    # the Apple-chip build writes paint_pbr.png: one atlas, the label on the TOP half (atlas.json says so); the
+    # bottom half (the other parts) is painted blue here so a wrong crop would show
+    atlas = np.full((512, 256, 3), (30, 30, 200), np.uint8); atlas[:256] = (30, 200, 30)                    # green = label
+    Image.fromarray(atlas).save(os.path.join(out, "paint_pbr.png"))
+    json.dump({"atlas": {"label": [0.0, 0.5, 1.0, 1.0], "steel": [0.0, 0.0, 1.0, 0.5]}, "main": "label"}, open(os.path.join(out, "atlas.json"), "w"))
     Image.fromarray(np.full((512, 256), 255, np.uint8)).save(os.path.join(out, "textured_metallic.jpg"))
     Image.fromarray(np.full((512, 256), 60, np.uint8)).save(os.path.join(out, "textured_roughness.jpg"))
     return os.path.join(out, "textured.glb")
