@@ -70,4 +70,19 @@ check(not os.path.exists(os.path.join(tex, "label_complete.json")), "and the lab
 src = open(run.__file__).read()
 check("drawn, dnotes = draw_label_full(" in src and "png, mr, notes = photo_label(" in src, "the build draws first and keeps the stitched photo as the fallback")
 check('os.path.exists(os.path.join(tex, "label_complete.json"))' in src, "the painter skips a label drawn whole")
+# many photos: all of them reach the drawing model on one reference sheet (Cody, 2026-10-06 15:47)
+many = []
+for i in range(7):
+    f = os.path.join(tex, f"photo{i}.png"); Image.new("RGB", (300, 200), (20 * i, 80, 120)).save(f); many.append(f)
+calls.clear()
+MS.read_lines = lambda png, **k: ["DURACELL POWERCHECK BEST IF INSTALLED BY: JAN 2001 MN 1500 LR6"]
+V.ask = lambda use, q, imgs, think=False, **k: {"match": 9, "wrong": []}
+png3, notes3 = run.draw_label_full("Duracell AA", real, [refs[0]] + many, words, tex, "judge", 50.5, 45.5, log=lambda *a: None)
+sheet = notes3.get("sheet")
+check(sheet and calls[0]["photos"] == [real, sheet, refs[0]] and notes3.get("sheet_of") == 7,
+      f"seven photos: picture 2 is one sheet of all seven, picture 3 the clearest cut-out ({notes3.get('sheet_of')})")
+sw, shh = Image.open(sheet).size
+check(sw >= 3 * 300 * 0.9 and shh >= 2 * 200 * 0.9, f"the sheet holds them all ({sw} x {shh})")
+src = open(run.__file__).read()
+check("list(dict.fromkeys(v.get(\"file\") for v in views" in src, "the build hands every credible source photo to the drawing")
 print(f"ALL {ok} PASS")

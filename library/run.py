@@ -29,6 +29,7 @@ import jsonsafe  # noqa: E402,F401  (numpy numbers are saved as plain numbers - 
 import argparse
 import collections
 import json
+import math
 import os
 import re
 import shutil
@@ -1215,8 +1216,10 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         os.remove(os.path.join(tex, "label_complete.json"))
     except OSError:
         pass
-    refs = [p for p in reads_from if os.path.basename(p).startswith("item")]
-    refs = refs[1:] + refs[:1] if len(refs) > 1 else refs      # other sides first: picture 1 already holds the front
+    # the references: the clearest single cut-out first, then EVERY credible source photo whole (a photo of three
+    # cells turned three ways shows three sides - it goes on the sheet as it is)
+    cuts = [p for p in reads_from if os.path.basename(p).startswith("item")]
+    refs = cuts[:1] + list(dict.fromkeys(v.get("file") for v in views if v.get("file") and os.path.exists(v["file"])))
     status(cid, step="5/7 texture map: your AI draws the whole label from every photo (and checks it)")
     drawn, dnotes = draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=say)
     if drawn:
@@ -1305,13 +1308,40 @@ def mr_from_bands(label_png, real_png, cover_png, tex, notes):
 
 DRAW_LABEL = (
     "Picture 1 is the printed label of {product}, unrolled flat from real photos: the parts the photos saw are "
-    "real, the rest is blank or smeared. Pictures 2 and 3 are photos of the very same item from other sides. "
+    "real, the rest is blank or smeared. Picture 2 is a sheet of MANY photos of the very same item from every side "
+    "that was found, and picture 3 its clearest single photo: together they show the whole label. "
     "Draw the COMPLETE printed label of this item, unrolled flat as one clean sheet of print artwork, the whole way "
     "around from edge to edge, exactly this width-to-height shape. Every printed element seen in any of the pictures "
     "goes where it really is on the item - logos, panels, meters, bands, small print - continuing around the "
     "label the way the real one does. Crisp flat print, even light, no glare, no shine, no shadow, no background, "
     "no curve, no photo noise. Where no picture shows a part, continue the label's own background and bands - do "
     "not invent new words or logos. The printed text, spelled exactly: {words}.")
+
+
+def reference_sheet(files, out, cell=512, cols=None):
+    """Every reference photo side by side on one sheet (each fitted into a square cell, on white), so a model that
+    takes a few pictures sees all of them at once. -> out"""
+    from PIL import Image
+    ims = []
+    for f in files:
+        try:
+            im = Image.open(f).convert("RGB")
+            im.thumbnail((cell, cell))
+            ims.append(im)
+        except Exception:
+            pass
+    n = max(1, len(ims))
+    cols = cols or int(math.ceil(math.sqrt(n)))
+    rows = int(math.ceil(n / cols))
+    sheet = Image.new("RGB", (cols * cell, rows * cell), (255, 255, 255))
+    for i, im in enumerate(ims):
+        x, y = (i % cols) * cell, (i // cols) * cell
+        sheet.paste(im, (x + (cell - im.width) // 2, y + (cell - im.height) // 2))
+    if max(sheet.size) > 2048:
+        k = 2048 / max(sheet.size)
+        sheet = sheet.resize((int(sheet.width * k), int(sheet.height * k)), Image.LANCZOS)
+    sheet.save(out)
+    return out
 
 
 def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=print, tries=3):
@@ -1331,6 +1361,17 @@ def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=pr
     cw, ch = skin.canvas(w_mm, h_mm)
     said = ", ".join(f'"{w}"' for w in words[:40]) or "(only what the pictures show)"
     prompt = DRAW_LABEL.format(product=product, words=said)
+    # the drawing model takes three pictures; EVERY credible photo of the item must reach it (Cody, 2026-10-06
+    # 15:47: "it should be using multiple images... a complete vision of what it is") - so picture 2 is one
+    # reference sheet of all of them side by side, picture 3 the clearest single photo
+    refs = list(refs)
+    n_all = len(refs)
+    if len(refs) > 2:
+        sheet = reference_sheet(refs[1:], os.path.join(tex, "all_photos_sheet.png"))
+        refs = [sheet, refs[0]]
+        notes["sheet"] = sheet
+        notes["sheet_of"] = n_all - 1
+        log(f"[texture] the drawing sees all {n_all - 1} photos at once on one reference sheet")
     best = None
     for t in range(tries):
         out = os.path.join(tex, f"drawn{t + 1}.png")
