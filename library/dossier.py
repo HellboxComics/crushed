@@ -438,6 +438,64 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
         save(dos)
 
 
+def hunt_around(dos, cid, log=print, use=None, quick=None, coverage=0.0):
+    """A round label whose real pixels cover less than most of the way around after the stitch (2026-10-06 10:21:
+    every same-item photo looked at, 4 clean exact ones, all of the same side - 32% real): one extra round of
+    searches aimed at the OTHER side of the label, then quick and careful looks at what comes in. Once per dossier
+    version (dos['around_hunted']). -> how many new photos came in."""
+    import vet as V
+    if dos.get("around_hunted") == VERSION:
+        return 0
+    dos["around_hunted"] = VERSION
+    idn = dos.get("identity") or {}
+    line = ((idn.get("brand") or "") + " " + (idn.get("line") or "")).strip().lower()
+    y = idn.get("year")
+    era = f" {y}" if y else ""
+    qs = [f"{line}{era} back of label", f"{line}{era} label flat unrolled", f"{line}{era} wrapper", f"{line} label other side",
+          f"{line}{era} rolling on table", f"{line}{era} lot of several", f"{line} vintage lot photo"]
+    done = {s["q"] for s in dos.get("searches", [])} | set(dos.get("searched_before", []))
+    qs = [q for q in qs if q not in done][:6]
+    import google_images as G
+    d = os.path.join(WORK, "hunt", cid)
+    os.makedirs(d, exist_ok=True)
+    have = {p["file"] for p in dos["photos"]}
+    new = 0
+    log(f"[dossier] the label's real pixels cover {coverage:.0%} of the way around - hunting for its other side ({len(qs)} searches)")
+    for q in qs:
+        try:
+            hits = G.search_full(q, most=12, min_side=500, log=log)
+        except Exception as e:
+            log(f"[dossier] the hunt for the other side stopped: {str(e)[:120]}")
+            break
+        kept = 0
+        for h in hits:
+            if kept >= PER_SEARCH:
+                break
+            f = _download(h["url"], d)
+            if not f or f in have:
+                continue
+            have.add(f)
+            kept += 1
+            new += 1
+            dos["photos"].append(_record(f, h["url"], h.get("page", ""), h.get("title", ""), q))
+        dos["searches"].append({"q": q, "n": kept, "at": time.time(), "for": "label (other side)"})
+        log(f"[dossier] search for the label's other side: '{q}' -> {kept} new photos")
+        save(dos)
+    if new:
+        quick_look(dos, quick or V.quick_model() or use or V.model(), log)
+        cands = [p for p in dos["photos"] if not p.get("labeled") and (p.get("quick") or {}).get("same_item")
+                 and (p.get("quick") or {}).get("kind") not in ("render", "ad")]
+        cands.sort(key=lambda p: -_quick_score(p, idn.get("years") or []))
+        if cands and use:
+            careful_looks(dos, use, log, only=cands[:ROUND_LOOKS // 2])
+        dos["faces"], _ = plan(dos)
+        F = PRIMARY.get(dos.get("route"), "front")
+        dos["faces"].setdefault(F, {})["alternates"] = [p["file"] for p in _round_sources(dos)
+                                                        if p["file"] != dos["faces"].get(F, {}).get("photo")]
+    save(dos)
+    return new
+
+
 # ------------------------------------------------------------------ 3. labels
 def quick_look(dos, quick, log=print):
     """The quick first look at every photo not looked at yet (which side, which product, real photo or ad)."""

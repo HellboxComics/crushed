@@ -1056,8 +1056,25 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
               "wait for the next photo hunt.")
         raise Waiting(msg)
     json.dump({"file": views[0].get("file"), "mask": views[0].get("mask")}, open(os.path.join(tex, "label_source.json"), "w"))
-    say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover "
-        f"{(cov.max(0) > 0.05).mean():.0%} of the way around")
+    seen_around = float((cov.max(0) > 0.05).mean())
+    say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover {seen_around:.0%} of the way around")
+    # most of the way around must be REAL: short of that, one hunt aimed at the other side, then the stitch again
+    # (2026-10-06 10:21: 4 clean exact photos, all the same side, 32% real - the back could only be guessed)
+    if seen_around < 0.7 and dos and dos.get("around_hunted") != DS.VERSION:
+        boundary(cid, "step")
+        status(cid, step=f"4/7 the label's real pixels cover {seen_around:.0%} of the way around - hunting for its other side")
+        try:
+            import vet as V
+            new = DS.hunt_around(dos, cid, log=say, use=use, quick=V.quick_model(), coverage=seen_around)
+        except Exception as e:
+            say(f"[texture] the hunt for the other side could not run ({str(e)[:120]})")
+            new = 0
+        if new:
+            views = [v for v in DS.with_masks(DS.label_views(dos, picked, want=12), say) if v.get("mask")] or views
+            json.dump({"file": views[0].get("file"), "mask": views[0].get("mask")}, open(os.path.join(tex, "label_source.json"), "w"))
+            lab, cov = skin.compose(views, along, around, log=say)
+            seen_around = float((cov.max(0) > 0.05).mean())
+            say(f"[texture] after the hunt: the label from {len(views)} photo(s): real pixels cover {seen_around:.0%} of the way around")
     lab = skin.continue_bands(lab, cov < 0.05)
     real = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
     if reads == "along":
