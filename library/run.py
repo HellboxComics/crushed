@@ -3085,6 +3085,10 @@ def retry_due(cid, v, tries, now):
         at = 0.0
     if (v.get("code") and v.get("code") != code_sha()) or (not v.get("code") and at < code_time()):
         wait = 0                                    # it stopped or failed on other code: a fix may be in - again now
+    ap = jload(os.path.join(HB, "approvals.json"), {}).get(cid, {})
+    if ap.get("say") in ("redo", "keep") and float(ap.get("at") or 0) > at - 1:
+        wait = 0                                    # you said Redo (or Keep) after it stopped: that is due now, not
+        return True                                 # in an hour (2026-10-06 07:16: a reset sat idle for an hour)
     return len(today) < RETRIES_PER_DAY and now - at >= wait
 
 
