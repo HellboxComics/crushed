@@ -1032,7 +1032,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     # right - 2026-10-05: three cells under a caption were unrolled as "the label"), each with the box the
     # careful look drew around the label and any overlay boxes, so the unroll takes the label and nothing else
     import dossier as DS
-    views = DS.with_masks(DS.label_views(dos, picked, want=12), say) if dos and dos.get("faces") else []   # every clean source, for the way around
+    views = DS.with_masks(DS.label_views(dos, picked, want=20), say) if dos and dos.get("faces") else []   # every clean source, for the way around
     views = [v for v in views if v.get("mask")]
     if not views:
         views = [picked] + same_design(picked, others, use, want=3, dossier=dos)
@@ -1070,7 +1070,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             say(f"[texture] the hunt for the other side could not run ({str(e)[:120]})")
             new = 0
         if new:
-            views = [v for v in DS.with_masks(DS.label_views(dos, picked, want=12), say) if v.get("mask")] or views
+            views = [v for v in DS.with_masks(DS.label_views(dos, picked, want=20), say) if v.get("mask")] or views
             json.dump({"file": views[0].get("file"), "mask": views[0].get("mask")}, open(os.path.join(tex, "label_source.json"), "w"))
             lab, cov = skin.compose(views, along, around, log=say)
             seen_around = float((cov.max(0) > 0.05).mean())

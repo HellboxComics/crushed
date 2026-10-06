@@ -744,22 +744,27 @@ def _end_on(fe):
 
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
-ROUND_SOURCES = 8            # clean exact single-copy photos a round label wants before the looks stop
+ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
 
 
 def _round_sources(dos):
-    """The photos that may lend a round label real pixels: an exact match (or the same artwork), one copy of the
-    item in the picture, nothing laid over its label."""
+    """EVERY credible photo of this item lends a round label real pixels (Cody, 2026-10-06 10:37: "there is no
+    front and back on a round object... reference all credible sources for a complete image"): an exact match or
+    the same artwork (a nearby year's copy differs in its date code only - the exact front keeps authority over
+    that), ONE OR SEVERAL copies in the picture (three cells turned three ways are three strips - the richest
+    source of the way around; the stitcher unrolls each), nothing laid over the label. Single clean copies first."""
     out = []
     for p in dos.get("photos", []):
-        if not isinstance(p, dict) or not p.get("labeled") or (p.get("items") or 1) != 1:
+        if not isinstance(p, dict) or not p.get("labeled") or p.get("match") == "wrong":
             continue
         if p.get("match") != "exact" and not p.get("same_artwork"):
             continue
         fe = next((f for f in p.get("faces", []) if f.get("face") == "label"), None)
         if fe and not _covered(p, fe):
             out.append(p)
+    out.sort(key=lambda p: (0 if (p.get("items") or 1) == 1 else 1, 0 if p.get("match") == "exact" else 1,
+                            -float(p.get("quality") or 0)))
     return out
 
 
@@ -1246,8 +1251,10 @@ def label_views(dos, picked, want=4):
         seen.add(f)
         p = photos.get(f, {})
         fe = e.get("view") if f == e.get("photo") else next((x for x in p.get("faces", []) if face_name(dos.get("route"), x["face"]) == F), None)
-        out.append({"file": f, "vet": {"view": F, "count": p.get("items")}, "plan": F, "source": "exact_photo",
-                    "box": (fe or {}).get("box"), "overlays": [o.get("box") for o in p.get("overlays") or [] if o.get("box")],
+        several = f != e.get("photo") and (p.get("items") or 1) > 1      # an alternate with several copies: every
+        out.append({"file": f, "vet": {"view": F, "count": p.get("items")}, "plan": F, "source": "exact_photo",   # cell
+                    "box": None if several else (fe or {}).get("box"),                                             # is a strip
+                    "overlays": [o.get("box") for o in p.get("overlays") or [] if o.get("box")],
                     # a round item is unrolled from its WHOLE outline: the box says which item in the photo, it does
                     # not cut pixels (a label box that leaves out the copper end breaks the cylinder math)
                     "box_mode": "select" if dos.get("route") == "round" else "crop",
