@@ -38,7 +38,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 WORK = os.path.expanduser(os.environ.get("CRUSHED_REMASTER_WORK", "~/crushed-render/remaster"))
 DIR = os.environ.get("CRUSHED_DOSSIER_DIR") or os.path.join(WORK, "dossier")   # a test build keeps its own copy
-VERSION = 9                  # 9: a plan rule changed (one copy outranks straight-on): every kept dossier is planned again from its looks
+VERSION = 10                 # 10: a round label is looked at until it has sources to go AROUND (not just one)
+#                               9: a plan rule changed (one copy outranks straight-on): kept dossiers planned again
 #                              8: the label's pixel source is the best clean photo, not the pick by right; the look counts the items
 #                              7: 2: a round item's wrapped side is its label; watermarks are never facts or copied sides
 #                              3: the era is a range people use ("90s", "early 2000s"), never year +/- 3
@@ -685,6 +686,23 @@ def _end_on(fe):
 
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
+ROUND_SOURCES = 8            # clean exact single-copy photos a round label wants before the looks stop
+ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
+
+
+def _round_sources(dos):
+    """The photos that may lend a round label real pixels: an exact match (or the same artwork), one copy of the
+    item in the picture, nothing laid over its label."""
+    out = []
+    for p in dos.get("photos", []):
+        if not isinstance(p, dict) or not p.get("labeled") or (p.get("items") or 1) != 1:
+            continue
+        if p.get("match") != "exact" and not p.get("same_artwork"):
+            continue
+        fe = next((f for f in p.get("faces", []) if f.get("face") == "label"), None)
+        if fe and not _covered(p, fe):
+            out.append(p)
+    return out
 
 
 def _poor_source(dos, F):
@@ -976,6 +994,12 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
             for p in again:
                 p["labeled"] = False
                 p["faces"] = []
+            if was < 10 and old.get("route") == "round" and len(_round_sources(old)) < ROUND_SOURCES and \
+                    any(not p.get("labeled") and (p.get("quick") or {}).get("same_item") for p in old.get("photos", [])):
+                old["done"] = False                           # 10: more careful looks, for the way around
+                save(old)
+                log(f"[dossier] {cid}: a round label with {len(_round_sources(old))} clean exact photo(s) - more of its "
+                    "same-item photos get the careful look (for the way around)")
             if again:
                 old["done"] = False
                 save(old)
@@ -1065,6 +1089,28 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
                 f"{min(len(cands), MORE_FOR_PRIMARY)} more photo(s) of it")
             careful_looks(dos, use, log, only=cands[:MORE_FOR_PRIMARY])
             dos["faces"], face_gaps = plan(dos)
+    # A ROUND LABEL NEEDS THE WAY AROUND (2026-10-06 05:59: 335 photos, 72 the quick look called this very item,
+    # 14 looked at carefully, 3 exact - none showing the back; the painter had to guess it and guessed noise). The
+    # stitcher places real strips only where real photos overlap, so a round item keeps giving same-item photos
+    # the careful look until ROUND_SOURCES clean exact photos exist (that many single-copy photos of a cell all
+    # but surely include the back), ROUND_LOOKS at most. The careful look is the one cost; a guessed back is not.
+    if web and use and route == "round":
+        looked = 0
+        while looked < ROUND_LOOKS and len(_round_sources(dos)) < ROUND_SOURCES:
+            cands = [p for p in dos["photos"] if not p.get("labeled") and (p.get("quick") or {}).get("same_item")
+                     and (p.get("quick") or {}).get("kind") not in ("render", "ad")
+                     and _overlap((p.get("quick") or {}).get("years") or era, era)]
+            if not cands:
+                break
+            cands.sort(key=lambda p: -_quick_score(p, era))
+            batch = cands[:min(8, ROUND_LOOKS - looked)]
+            log(f"[dossier] a round label needs photos all the way around: {len(_round_sources(dos))} clean exact "
+                f"photo(s) so far, {ROUND_SOURCES} wanted - a careful look at {len(batch)} more ({len(cands)} waiting)")
+            careful_looks(dos, use, log, only=batch)
+            looked += len(batch)
+            dos["faces"], face_gaps = plan(dos)
+        dos["faces"].setdefault(PRIMARY[route], {})["alternates"] = [p["file"] for p in _round_sources(dos)
+                                                                     if p["file"] != dos["faces"].get(PRIMARY[route], {}).get("photo")]
     dos["facts"] = FX.gather(dos, log, use, web=web)
     _sides_from_facts(dos)
     dos["gaps"] = face_gaps + dos["gaps"]

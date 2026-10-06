@@ -1032,7 +1032,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     # right - 2026-10-05: three cells under a caption were unrolled as "the label"), each with the box the
     # careful look drew around the label and any overlay boxes, so the unroll takes the label and nothing else
     import dossier as DS
-    views = DS.with_masks(DS.label_views(dos, picked), say) if dos and dos.get("faces") else []
+    views = DS.with_masks(DS.label_views(dos, picked, want=12), say) if dos and dos.get("faces") else []   # every clean source, for the way around
     views = [v for v in views if v.get("mask")]
     if not views:
         views = [picked] + same_design(picked, others, use, want=3, dossier=dos)

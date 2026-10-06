@@ -54,7 +54,7 @@ side = strip(0.45, 0.85, roll=-300, down=37)              # overlaps the front b
 far = strip(0.65, 0.95, roll=120)                         # shares nothing with the front
 noise = (rng.random((H, W, 3)), col(0.1, 0.5)[0].astype(float) * np.ones((H, 1)))   # not this label at all
 placed = skin.register_strips(front, [far, noise, side], W, log=print)
-check(len(placed) == 2, f"of three strips only the one that shares features with the front is placed ({len(placed) - 1} placed)")
+check(len(placed) == 3, f"of three strips the two from this label are placed - the far one through the side one on a second pass - and the noise is left out ({len(placed) - 1} placed)")
 pl, pw = placed[1]
 seen = pw > 0.5
 err = np.abs(pl[seen] - G[seen]).mean()

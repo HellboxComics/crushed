@@ -203,26 +203,27 @@ def register_strips(front, others, W, log=None):
     to8 = lambda l, w: (np.clip(l, 0, 1) * 255).astype(np.uint8)[..., ::-1] * (w[..., None] > 0.05)
     placed = [front]
     lab, cov = front[0].copy(), front[1].copy()
-    for l, w in others:
+    def _place_one(l, w):
+        nonlocal lab, cov
         img = to8(l, w)
         kp1, des1 = sift.detectAndCompute(img, (w > 0.05).astype(np.uint8) * 255)
         kp2, des2 = sift.detectAndCompute(to8(lab, cov), (cov > 0.05).astype(np.uint8) * 255)
         if des1 is None or des2 is None or len(kp1) < MIN_MATCH_COUNT or len(kp2) < MIN_MATCH_COUNT:
-            continue
+            return False
         good = [m for m, n in (p for p in bf.knnMatch(des1, des2, k=2) if len(p) == 2) if m.distance < RATIO * n.distance]
         if len(good) < MIN_MATCH_COUNT:
             if log:
                 log(f"[texture] a strip shares too little with the label so far ({len(good)} matches) - left out")
-            continue
+            return False
         src = np.float32([kp1[m.queryIdx].pt for m in good]).reshape(-1, 1, 2)
         dst = np.float32([kp2[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
         M, inl = cv2.estimateAffinePartial2D(src, dst, method=cv2.RANSAC, ransacReprojThreshold=THRESH)
         if M is None or inl is None or int(inl.sum()) < MIN_MATCH_COUNT:
-            continue
+            return False
         scale = float(np.hypot(M[0, 0], M[0, 1]))
         angle = float(np.degrees(np.arctan2(M[0, 1], M[0, 0])))
         if not (0.7 <= scale <= 1.4) or abs(angle) > 10:            # flat, to-scale strips: anything else is a mismatch
-            continue
+            return False
         M[0, 2] %= W                                                   # the label wraps around
         pl, pw = np.zeros_like(lab), np.zeros_like(cov)
         for shift in (-W, 0, W):
@@ -237,6 +238,16 @@ def register_strips(front, others, W, log=None):
         placed.append((pl, pw))
         better = pw > cov
         lab = np.where(better[..., None], pl, lab); cov = np.maximum(cov, pw)
+        return True
+
+    # several passes: a strip that shares nothing with the front may share plenty with a strip placed later (the
+    # chain a panorama is); the passes stop when a pass places nothing
+    todo = list(others)
+    for _pass in range(3):
+        left = [(l, w) for l, w in todo if not _place_one(l, w)]
+        if len(left) == len(todo):
+            break
+        todo = left
     return placed
 
 
@@ -287,10 +298,13 @@ def compose(photos, along_mm, around_mm, W=2048, log=None):
         if f.get("mask"):
             others += unrolled(f)
     keep = register_strips(strips[0], others, W, log=log)
-    for l, w in keep:
-        better = w > cov
+    front_seen = keep[0][1] > 0.05
+    for i, (l, w) in enumerate(keep):
+        # the front (the plan's cleanest exact photo, the item's own date code) is authoritative wherever it saw
+        # the label; the other strips fill only where it did not (a same-artwork photo may carry another copy's date)
+        better = (w > cov) if i == 0 else ((w > cov) & ~front_seen)
         lab = np.where(better[..., None], l, lab)
-        cov = np.maximum(cov, w)
+        cov = np.maximum(cov, np.where(better, w, 0))
     return lab, cov
 
 
