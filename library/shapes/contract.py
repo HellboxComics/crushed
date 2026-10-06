@@ -446,6 +446,19 @@ def main(blend, out, asset, default_kind):
     # physics.json from the parts themselves
     json.dump({o.name: {k: o[k] for k in o.keys() if not k.startswith("_")} for o in meshes},
               open(os.path.join(out, "physics.json"), "w"), indent=1, default=str)
+    # the one door's mesh hygiene, Blender's own ops: triangulate the way the glTF exporter would (so what is
+    # checked is what is shipped), then dissolve zero-length edges and zero-area faces. (2026-10-05: trimesh's
+    # is_watertight found 3 degenerate triangles and 2 four-face edges on the Duracell's label shell that only
+    # appeared in the exported glb - the exporter's own triangulation of thin quads at the film's edge.)
+    import bmesh
+    for o in meshes:
+        bm = bmesh.new()
+        bm.from_mesh(o.data)
+        bmesh.ops.triangulate(bm, faces=bm.faces[:], quad_method="BEAUTY", ngon_method="BEAUTY")
+        bmesh.ops.dissolve_degenerate(bm, dist=1e-7, edges=bm.edges[:])
+        bm.to_mesh(o.data)
+        bm.free()
+        o.data.validate()
     for o in scene.objects:
         o.select_set(o in meshes)
     import saveall

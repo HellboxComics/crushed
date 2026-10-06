@@ -130,20 +130,40 @@ for o in meshes:
                 d[key] = list(v)[:3] if key == "base" else float(v)
         mats.append(d)
     info["materials"] = mats
-    # mesh health
+    # mesh health - trimesh's documented checks (trimesh.org: Trimesh.is_watertight, .volume, .euler_number,
+    # .is_winding_consistent; process=True merges the vertices a glb split at UV seams, the cause of 2026-10-05's
+    # 3268 false "holes"); boundary edges counted the way trimesh's own is_watertight does (grouping.group_rows on
+    # edges_sorted, require_count=1). bmesh is the fallback until trimesh is installed on this Mac.
     bm = bmesh.new()
     bm.from_mesh(me)
     bm.transform(o.matrix_world)
-    # a glb stores a vertex once per UV seam / sharp edge it sits on, so a closed can comes back as thousands of
-    # one-face edges (2026-10-05: steel 3268 "holes" on a watertight part). Join what the export split (a hair
-    # apart, 0.001 mm), then count: a real hole stays open, a seam does not.
-    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6)
-    open_edges = sum(1 for e in bm.edges if len(e.link_faces) == 1)
-    nonman = sum(1 for e in bm.edges if not e.is_manifold)
-    degen = sum(1 for f in bm.faces if f.calc_area() < 1e-12)
-    vol = bm.calc_volume(signed=True) if open_edges == 0 else None
-    info.update({"open_edges": open_edges, "non_manifold_edges": nonman, "degenerate_faces": degen,
-                 "edges": len(bm.edges), "signed_volume_mm3": round(vol * 1e9, 3) if vol is not None else None})
+    try:
+        import numpy as _np
+        import trimesh
+        bmesh.ops.triangulate(bm, faces=bm.faces[:])
+        bm.verts.ensure_lookup_table()
+        V = _np.array([[v.co.x, v.co.y, v.co.z] for v in bm.verts])
+        F = _np.array([[v.index for v in f.verts] for f in bm.faces])
+        tm = trimesh.Trimesh(vertices=V, faces=F, process=True)
+        tm.merge_vertices()
+        boundary = trimesh.grouping.group_rows(tm.edges_sorted, require_count=1)
+        open_edges = int(len(boundary))
+        nonman = int(len(trimesh.grouping.group_rows(tm.edges_sorted, require_count=3))) if len(tm.edges_sorted) else 0
+        degen = int((tm.area_faces < 1e-12).sum())
+        vol = float(tm.volume) if tm.is_watertight else None
+        info.update({"open_edges": open_edges, "non_manifold_edges": nonman, "degenerate_faces": degen,
+                     "edges": int(len(tm.edges_unique)), "signed_volume_mm3": round(vol * 1e9, 3) if vol is not None else None,
+                     "watertight": bool(tm.is_watertight), "winding_consistent": bool(tm.is_winding_consistent),
+                     "euler_number": int(tm.euler_number), "checked_by": "trimesh"})
+    except ImportError:
+        bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6)
+        open_edges = sum(1 for e in bm.edges if len(e.link_faces) == 1)
+        nonman = sum(1 for e in bm.edges if not e.is_manifold)
+        degen = sum(1 for f in bm.faces if f.calc_area() < 1e-12)
+        vol = bm.calc_volume(signed=True) if open_edges == 0 else None
+        info.update({"open_edges": open_edges, "non_manifold_edges": nonman, "degenerate_faces": degen,
+                     "edges": len(bm.edges), "signed_volume_mm3": round(vol * 1e9, 3) if vol is not None else None,
+                     "checked_by": "bmesh (trimesh not installed yet)"})
     try:
         import uvstats                                      # library/shapes/uvstats.py (the contract's own measure)
         info["uv"] = uvstats.stats(o)

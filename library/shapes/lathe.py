@@ -127,6 +127,10 @@ for rings_ in WRAPS:
             tm[ring[-1]] = ring[0]
 if tm:
     bmesh.ops.weld_verts(bm, targetmap=tm)
+# where a ring sits ON the axis (the pole of a cap) a quad has two corners in one place: after the welds those are
+# zero-length edges and zero-area faces. Blender's own dissolve_degenerate removes them (2026-10-05: trimesh's
+# is_watertight found 192 of them and 96 edges shared by six faces on the can wall; a print check would too).
+bmesh.ops.dissolve_degenerate(bm, dist=1e-9, edges=bm.edges[:])
 bm.normal_update()
 bm.to_mesh(me)
 bm.free()
@@ -343,6 +347,7 @@ def revolve(name, poly, segs=96):
                     bm.faces.new((a[j], a[(j + 1) % segs], b[(j + 1) % segs], b[j]))
             except ValueError:
                 pass
+    bmesh.ops.dissolve_degenerate(bm, dist=1e-9, edges=bm.edges[:])      # (poles: zero-area faces, see above)
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     me2 = bpy.data.meshes.new(name)
     bm.to_mesh(me2)
