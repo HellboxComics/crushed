@@ -213,7 +213,10 @@ def base_bands(real_png, cover_png=None, least=0.04):
     H, W = a.shape[:2]
     seen = np.ones((H, W), bool)
     if cover_png and os.path.exists(cover_png):
-        seen = np.asarray(Image.open(cover_png).convert("L").resize((W, H))) > 0.5 * 255
+        # "seen" is what the rest of the pipeline calls seen: weight > 0.05 (mosaic.placed's weight is a QUALITY
+        # score - angle x closeness x sharpness - so a soft or distant photo is fully seen at 0.2; 2026-10-05 19:22:
+        # this read > 0.5, saw nothing, returned no bands in silence, and the writer painted the copper end black)
+        seen = np.asarray(Image.open(cover_png).convert("L").resize((W, H))) > 0.05 * 255
 
     def runs(axis):
         n = W if axis == "x" else H
@@ -312,6 +315,8 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         base, axis = [], None
     if base:
         log("[texture] " + describe_bands(base, axis).split(". These")[0])
+    else:
+        log("[texture] the label's bands could not be measured: no band covers 4% of the label where a photo saw it")
     tip = describe_bands(base, axis) + tip
     lay = clean_layout(_ask(model, FIRST.format(product=product, w=w_mm, h=h_mm, words=said, typical=tip), [real_png]),
                        w_mm, h_mm, words, base)
