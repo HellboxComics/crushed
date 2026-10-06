@@ -2351,6 +2351,8 @@ def inspect(sheet, photo, product, use, card=None, close=None):
 
 
 PAGE_CSS = """
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.acts button,#addf button{font:inherit;font-size:13px;padding:6px 10px;border-radius:8px;border:1px solid #444;background:#1b1b1b;color:#eee;cursor:pointer}.acts button.job.off{opacity:.55}#addf{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}#addf input[type=text],#addf input:not([type]){flex:1;min-width:180px;font:inherit;padding:6px 8px;border-radius:8px;border:1px solid #444;background:#111;color:#eee}.said{list-style:none;padding:0;margin:4px 0}.said li{font-size:13px;margin:3px 0}.said .when{opacity:.6;margin-right:6px}.machine .chip{font-size:12px}
+
 .now{font:13px var(--mono);color:var(--ink);margin:6px 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px}
 .now .ago{opacity:.6}.card.selftest ul{list-style:none;padding:0;margin:6px 0;font:13px var(--mono)}
 .card.selftest li.ok{opacity:.7}.card.selftest li.bad{color:#e8402a}.card.selftest li.run{color:var(--copper)}
@@ -2566,6 +2568,86 @@ def _kept_extras(cid):
     return "".join(out)
 
 
+def _controls(cid, cls):
+    """Every item's doors, on its card (THE PAGE IS THE MACHINE): Keep / Redo / Retry now / a note. They post to
+    the page's own Function (library/site_root/functions) and the Mac applies them within a minute (inbox.py)."""
+    import html
+    c = html.escape(cid)
+    b = []
+    if cls != "kept":
+        b.append(f'<button data-act=keep data-item="{c}">Keep</button>')
+    b.append(f'<button data-act=redo data-item="{c}">Redo</button>')
+    if cls in ("bad", "work", "you"):
+        b.append(f'<button data-act=retry data-item="{c}">Retry now</button>')
+    b.append(f'<button data-act=note data-item="{c}" data-ask="A note for this item (the blue box version, the 1999 label...)">Note</button>')
+    return '<div class=acts>' + "".join(b) + '</div>'
+
+
+def _machine_bar():
+    """The machine's own doors at the top: add an item (words and/or a photo), restart, jobs on/off, the token,
+    and what the machine said back (portal/replies.json)."""
+    import html
+    import inbox
+    rs = jload(os.path.join(WORK, "portal", "replies.json"), [])[-6:]
+    said = "".join(f'<li><span class=when>{time.strftime("%-I:%M %p", time.localtime(r.get("at", 0)))}</span> '
+                   f'{html.escape(str(r.get("text", "")))}</li>' for r in reversed(rs))
+    off = set()
+    p = os.path.join(HB, "jobs-off.txt")
+    if os.path.exists(p):
+        off = set(open(p).read().split())
+    jobs = sorted(set(["library", "caretaker", "hart", "crusher", "engineer", "council", "shelf", "campaign", "game",
+                       "giveaway", "desk", "nudge", "improve", "braintest", "crushkick"]) | off)
+    chips = "".join(f'<button class="job {"off" if j in off else "on"}" data-act="{"job_on" if j in off else "job_off"}" '
+                    f'data-text="{html.escape(j)}">{html.escape(j)}: {"off" if j in off else "on"}</button>' for j in jobs)
+    ready = "set up" if inbox.conf() else "not set up yet - the run sets it up on its next start"
+    return (f'<section class="card machine"><div class=top><h2>The machine</h2><span class=chip>{ready}</span></div>'
+            f'<form id=addf><input id=addtext placeholder="Add an item: what it is (and the year)" maxlength=200>'
+            f'<input id=addphoto type=file accept="image/*"><button type=submit>Add it (first in line)</button></form>'
+            f'<div class=acts><button data-act=restart>Restart (takes the newest version at the next step)</button>'
+            f'<button id=unlock>Unlock</button></div>'
+            f'<details><summary>jobs on this Mac</summary><div class=acts>{chips}</div></details>'
+            + (f'<details open><summary>the machine said</summary><ul class=said>{said}</ul></details>' if said else "")
+            + '<p id=machine-msg class=notes></p></section>')
+
+
+MACHINE_JS = """<script>
+(function(){
+  const K='crushed_page_token';
+  const tok=()=>localStorage.getItem(K)||'';
+  const msg=document.getElementById('machine-msg');
+  const say=t=>{ if(msg){ msg.textContent=t; } };
+  async function act(body){
+    if(!tok()){ const t=prompt('The page token (in ~/.hellbox/page-token.txt on your Mac):'); if(!t) return; localStorage.setItem(K,t.trim()); }
+    body.token=tok();
+    say('sending...');
+    try{
+      const r=await fetch('/api/act',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+      const j=await r.json();
+      if(j.ok){ say('Got it - the Mac picks it up within a minute.'); }
+      else { say('Not taken: '+(j.why||r.status)); if(r.status===403) localStorage.removeItem(K); }
+    }catch(e){ say('Could not reach the page\'s inbox: '+e); }
+  }
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('button[data-act]'); if(!b) return;
+    e.preventDefault();
+    const body={action:b.dataset.act,item:b.dataset.item||null,text:b.dataset.text||''};
+    if(b.dataset.ask){ const t=prompt(b.dataset.ask); if(!t) return; body.text=t; }
+    act(body);
+  });
+  const u=document.getElementById('unlock'); if(u) u.onclick=e=>{ e.preventDefault(); const t=prompt('The page token (in ~/.hellbox/page-token.txt on your Mac):'); if(t){ localStorage.setItem(K,t.trim()); say('Unlocked.'); } };
+  const f=document.getElementById('addf'); if(f) f.onsubmit=async e=>{
+    e.preventDefault();
+    const text=document.getElementById('addtext').value.trim();
+    const file=document.getElementById('addphoto').files[0];
+    if(!text&&!file){ say('Write what it is, or add a photo.'); return; }
+    let photo=null;
+    if(file){ photo=await new Promise(res=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.readAsDataURL(file); }); }
+    act({action:'add',text:text,photo:photo});
+  };
+})();
+</script>"""
+
+
 def page(force=True):
     """The phone page, https://crushed-remaster.pages.dev: what needs you first, then what's being made, then
     what's kept. Every built item has its finished 3D model to spin (the newest build, never an older one). The
@@ -2597,14 +2679,16 @@ def page(force=True):
                      f'<p class=step>{html.escape(words.capitalize() if cls == "line" or words.startswith("resending") else str(v.get("step", "")))}</p>'
                      + (f'<p class=notes><em>Kind of thing:</em> {html.escape(str(v["family"]).replace("_", " "))}'
                         f' - built by {html.escape(str(v.get("builder", "")))}</p>' if v.get("family") else "")
-                     + f'{judge}{pics}' + (_kept_extras(cid) if cls == "kept" else _live(cid)) + "</section>")
+                     + f'{judge}{pics}' + (_kept_extras(cid) if cls == "kept" else _live(cid))
+                     + _controls(cid, cls) + "</section>")
     t = (f'<div class=tally><div><b>{tally["you"]}</b><span>need you</span></div><div><b>{tally["work"]}</b>'
          f'<span>being made</span></div><div><b>{tally["kept"]}</b><span>kept</span></div>'
          f'<div><b>{tally["bad"]}</b><span>need attention</span></div></div>')
     doc = (f"<!doctype html><meta charset=utf-8><meta http-equiv=refresh content=60><title>Crushed Asset Library</title>"
            f"{FONTS}<style>{PAGE_CSS}</style>"
            f'<div class=wrap><header><h1>Crushed Asset Library</h1><span class=when>updated '
-           f'{time.strftime("%a %-I:%M %p")}</span></header>{_now_line()}{t}{"".join(cards)}</div>')
+           f'{time.strftime("%a %-I:%M %p")}</span></header>{_now_line()}{t}{_machine_bar()}{"".join(cards)}</div>'
+           f'{MACHINE_JS}')
     open(os.path.join(WORK, "index.html"), "w").write(doc)
     open(os.path.join(WORK, "view.html"), "w").write(VIEW)
     import remaster as RM
@@ -3342,7 +3426,13 @@ if __name__ == "__main__":
         except Exception as e:
             say(f"[phone] resend skipped: {e}")
         try:
-            import portal                               # then: what you wrote to it on your phone
+            import inbox                                # THE PAGE IS THE MACHINE: what you did on the page
+            inbox.setup(log=say)                        # (once: the KV box and the token)
+            inbox.poll(log=say)
+        except Exception as e:
+            say(f"[page] inbox skipped: {e}")
+        try:
+            import portal                               # then: what landed in the portal's inbox (the page, or a phone)
             portal.process(log=say)
         except Exception as e:
             say(f"[portal] skipped: {e}")

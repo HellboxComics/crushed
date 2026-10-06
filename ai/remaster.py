@@ -180,9 +180,23 @@ def publish(force=False):
     npx = _npx()
     if not npx:
         return
-    site = os.path.join(WORK, "site")
+    # THE PAGE IS THE MACHINE (2026-10-05): the site is deployed from a root that also holds the page's Function
+    # (functions/, copied from library/site_root) and a wrangler.toml binding its KV box (written by inbox.py when
+    # the box exists). wrangler uploads a functions/ folder found where it runs
+    # (developers.cloudflare.com/pages/get-started/direct-upload/) and reads wrangler.toml there (>= 3.45).
+    root = os.path.join(WORK, "site_root")
+    site = os.path.join(root, "site")
     shutil.rmtree(site, ignore_errors=True)
     os.makedirs(os.path.join(site, "img"))
+    try:
+        src_fn = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library", "site_root", "functions")
+        shutil.rmtree(os.path.join(root, "functions"), ignore_errors=True)
+        shutil.copytree(src_fn, os.path.join(root, "functions"))
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
+        import inbox
+        inbox.write_wrangler_toml(root)
+    except Exception as e:
+        print(f"[page] the page's function could not be staged: {e}", flush=True)
     html_ = open(os.path.join(WORK, "index.html")).read()
     from PIL import Image
 
@@ -212,8 +226,8 @@ def publish(force=False):
             dst = os.path.join(site, "models", n + ".glb")
             if not os.path.exists(dst) and os.path.getsize(g) < 24 * 1024 * 1024:   # the host takes 25 MB a file
                 shutil.copy(g, dst)
-    r = subprocess.run([npx, "--yes", "wrangler@3", "pages", "deploy", site, "--project-name", PROJECT, "--branch", "main",
-                        "--commit-dirty=true"], capture_output=True, text=True)
+    r = subprocess.run([npx, "--yes", "wrangler@3", "pages", "deploy", "site", "--project-name", PROJECT, "--branch", "main",
+                        "--commit-dirty=true"], capture_output=True, text=True, cwd=root)
     open(stamp, "w").write(r.stdout[-500:] + r.stderr[-500:])
 
 

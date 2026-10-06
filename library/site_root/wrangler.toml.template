@@ -1,0 +1,9 @@
+# written by library/inbox.py into the publish folder (WORK/site_root/wrangler.toml); the KV id is this Mac's own.
+# developers.cloudflare.com/pages/functions/wrangler-configuration/ (wrangler >= 3.45)
+name = "{project}"
+pages_build_output_dir = "./site"
+compatibility_date = "2026-10-05"
+
+[[kv_namespaces]]
+binding = "INBOX"
+id = "{kv_id}"

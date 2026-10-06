@@ -108,10 +108,11 @@ def choices(words, most=6):
 
 
 def _reply(text):
+    """What the machine says back: on the page (THE PAGE IS THE MACHINE, 2026-10-05 - portal/replies.json, shown
+    there within a minute). Telegram is no longer part of the workflow."""
     try:
-        sys.path.insert(0, os.path.expanduser("~/.hellbox/ai/hart"))
-        import hart as H
-        H.send(text)
+        import inbox
+        inbox.reply(text)
     except Exception:
         pass
 
