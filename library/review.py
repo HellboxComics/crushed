@@ -106,6 +106,7 @@ def one_per_print(words, by_png=None):
          confirmed that longer line, is the longer line read in pieces: the longer line carries it. A piece seen on
          its own somewhere (the DURACELL logo beside 'DURACELL(R) POWERCHECK') is its own print and stays;
       B. a line that is exactly two or more kept lines glued together is the joined reading: dropped.
+    Running it again on its own output changes nothing (the review sheet checks exactly that).
     by_png: {picture: [lines confirmed on it]} from run.label_words. Words with no picture (added from the kit's
     hunt, the dossier's must_show) are never dropped as a piece - only merged by spelling or as a joined copy.
     -> (kept, {dropped: kept line it folded into})"""
@@ -186,24 +187,9 @@ def one_per_print(words, by_png=None):
             parts = sorted((k for k in kept if run_in(k, w)),
                            key=lambda k: next(i for i in range(len(t)) if t[i:i + len(ntoks(k))] == ntoks(k)))
             folded[w] = " + ".join(parts[:4])
-    # D. a smear: a line of 3+ words where most words are misreads of words in OTHER kept lines and the rest
-    #    were confirmed nowhere else ('MN 1500 LAS 15 VOLIS' beside 'MN 1500', 'LR6', '1.5 Volts' - 2026-10-05
-    #    14:20: two reads agreed on it off a blurry strip; the judge called it a typo every round and the writer,
-    #    rightly, may not invent a spelling). The clean lines carry its facts; it is dropped.
-    def near(tok, pool):
-        return tok in pool or (tok.isalpha() and len(tok) >= 4 and     # letters may be misread; digits must match
-                               any(difflib.SequenceMatcher(None, tok, p).ratio() >= 0.8 for p in pool))
-
-    for w in list(kept):
-        t = ntoks(w)
-        if len(t) < 3:
-            continue
-        others = {x for k in kept if k is not w for x in ntoks(k)}
-        explained = [x for x in t if near(x, others)]
-        odd = [x for x in t if x not in explained]
-        if odd and len(explained) / len(t) >= 0.6 and all(all_toks.get(x, 0) <= 1 for x in odd):
-            kept.remove(w)
-            folded[w] = "a smear of " + ", ".join(k for k in kept if any(near(x, set(ntoks(k))) for x in explained))[:120]
+    # (a fourth rule - 'a smear of other lines' - lived here on 2026-10-05 and was removed the same night: it called
+    #  'ALKALINE 1,5 Volts' a smear of the model line on two short tokens, and it was not stable. The label is the
+    #  photo now; these words only feed the checks, and three stable rules are enough.)
     return kept, folded
 
 

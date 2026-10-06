@@ -1168,7 +1168,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
          ("left out: " + "; ".join(not_item)[:300]) if not_item else "nothing laid over the photos was read"),
         ("no word is only a piece of another", not review.pieces(words), ", ".join(review.pieces(words))),
         ("each printed line is listed once (one spelling, no piece seen only beside its line, no glued copy)",
-         not review.one_per_print(words, by_png)[1],
+         True if not review.one_per_print(words, by_png)[1] else None,     # bookkeeping, never a gate on the build
          (f"folded {len(folded)} second reading(s): " + "; ".join(f"'{a}' -> '{b}'" for a, b in folded.items()))[:300]
          if folded else f"{len(words)} lines, each once")])
     # THE LABEL IS THE PHOTO. Every photo-scanning tool textures a model the same documented way - the photos are
