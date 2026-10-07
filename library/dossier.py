@@ -486,8 +486,18 @@ def hunt_around(dos, cid, log=print, use=None, quick=None, coverage=0.0):
         cands = [p for p in dos["photos"] if not p.get("labeled") and (p.get("quick") or {}).get("same_item")
                  and (p.get("quick") or {}).get("kind") not in ("render", "ad")]
         cands.sort(key=lambda p: -_quick_score(p, idn.get("years") or []))
-        if cands and use:
-            careful_looks(dos, use, log, only=cands[:ROUND_LOOKS // 2])
+        if cands and use:                                 # one at a time, and stop when the hunt runs dry
+            have_n, dry, looked = len(_round_sources(dos)), 0, 0  # (2026-10-06 20:57: 20 careful looks queued,
+            for p in cands[:HUNT_LOOKS]:                          # ~5 min each, most a 9V or a D pack - frozen
+                careful_looks(dos, use, log, only=[p])            # for Cody's eyes)
+                looked += 1
+                n = len(_round_sources(dos))
+                dry = 0 if n > have_n else dry + 1
+                have_n = n
+                save(dos)
+                if dry >= HUNT_DRY:
+                    log(f"[dossier] the hunt for the other side ran dry: {dry} looks in a row added nothing - on to drawing")
+                    break
         dos["faces"], _ = plan(dos)
         F = PRIMARY.get(dos.get("route"), "front")
         dos["faces"].setdefault(F, {})["alternates"] = [p["file"] for p in _round_sources(dos)
@@ -745,6 +755,8 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
+HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
+HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
 
 

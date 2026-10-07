@@ -45,4 +45,16 @@ check(dos.get("around_hunted") == DS.VERSION and all(s.get("for") == "label (oth
 check(DS.hunt_around(dos, "x_aa", log=lambda *a: None, use="judge", quick="quick", coverage=0.32) == 0, "once per dossier version")
 src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "run.py")).read()
 check("if seen_around < 0.7 and dos and dos.get(\"around_hunted\") != DS.VERSION" in src, "the label step hunts around when real pixels cover under 70%")
+# the careful looks at the hunt's photos go one at a time and stop when they run dry (2026-10-06 20:57: 20 queued,
+# ~5 min each, most another size - frozen for over an hour)
+looked = []
+DS.careful_looks = lambda dos, use, log=print, only=None: looked.extend(only)
+for p in dos["photos"]:
+    p["quick"] = {"same_item": True, "kind": "photo"}
+dos["around_hunted"] = None
+dos["searches"] = []
+said = []
+DS.hunt_around(dos, "x_aa", log=said.append, use="judge", quick="quick", coverage=0.32)
+check(len(looked) == DS.HUNT_DRY, f"three looks that add nothing and the hunt stops ({len(looked)} looked)")
+check(any("ran dry" in x for x in said), "it says the hunt ran dry and moves on to drawing")
 print(f"ALL {ok} PASS")
