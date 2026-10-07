@@ -539,9 +539,8 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         if not ok:
             wrong_run += 1
             save(dos)
-            if wrong_run >= 3:
-                log("[dossier] three eBay listings in a row were not this item - the eBay hunt stops")
-                break
+            # every listing of the short ranked list is looked at (2026-10-07 09:40: a stop after three wrong in a
+            # row - a pin, a pin, a 9V - came before the '6 AA' listing Cody found)
             continue
         wrong_run, good = 0, good + 1
         for r in recs[1:]:
@@ -892,7 +891,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 4                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 5                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that

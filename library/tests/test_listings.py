@@ -100,7 +100,7 @@ looked.clear()
 G.search_listings = lambda q, most=24, log=print: [{"id": str(n), "page": f"p{n}", "title": ""} for n in range(6)]
 G.listing = lambda page, log=print: [f"https://i.ebayimg.com/images/g/L1p{page}x/s-l1600.jpg"]
 DS.hunt_listings(dos2, "x_aa", "judge", log=said.append)
-check(len(looked) == 3 and any("three eBay listings" in x for x in said), "three wrong listings in a row and the eBay hunt stops")
+check(len(looked) == 6, f"wrong listings do not stop the hunt: every ranked listing is looked at ({len(looked)})")
 opened = []
 G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.append(url) or ("", [["https://www.ebay.com/itm/257348577422?x=0", ""], ["https://www.ebay.com/itm/Duracell-AA/257348577422?x=1", "Duracell AA Opens in a new window or tab"]]))
 rows = REAL_SEARCH("duracell powercheck aa", log=lambda *a: None)
