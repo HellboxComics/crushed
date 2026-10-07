@@ -87,7 +87,7 @@ os.makedirs(os.path.join(W, "dossier"), exist_ok=True)
 said = []
 new = DS.hunt_listings(dos, "x_aa", "judge", log=said.append)
 check(searched == ["Duracell Coppertop AA alkaline battery", "DURACELL POWERCHECK"], f"eBay searched by the catalog's name and the printed name ({searched})")
-check(looked == ["L3p0.jpg", "L1p0.jpg", "L2p0.jpg", "L9p0.jpg"], f"the listing whose title shares most words is opened first; only main photos get the careful look ({looked})")
+check(looked == ["L3p0.jpg", "L9p0.jpg", "L1p0.jpg", "L2p0.jpg"], f"the listing whose title shares most words is opened first; only main photos get the careful look ({looked})")
 check(len(quick_seen) == 20, f"every photo of every listing gets the quick look ({len(quick_seen)})")
 check(new == 9, f"the two good listings lend their other photos - all but the one the quick look says is not the item ({new})")
 src = {os.path.basename(p["file"]) for p in DS._round_sources(dos)}
@@ -109,4 +109,13 @@ check(len(opened) == 2 and "LH_Sold=1" in opened[1] and "LH_Sold" not in opened[
 check(DS.hunt_due({"listings_hunted": None, "around_hunted": DS.VERSION}), "an item hunted before eBay was added still gets the eBay hunt")
 src = open(DS.__file__).read()
 check(src.index("hunt_listings(dos, cid, use, log)\n") < src.index("    hunt_faces(dos, cid, need, log)"), "the dossier hunts eBay first, before the image searches")
+# the printed name and the era outrank the catalog's generic words
+G.search_listings = lambda q, most=24, log=print: [{"id": "7", "page": "p7", "title": "Duracell Coppertop AA alkaline battery 40 count"},
+                                                    {"id": "8", "page": "p8", "title": "Vintage Duracell PowerCheck AA battery"}]
+G.listing = lambda page, log=print: [f"https://i.ebayimg.com/images/g/X{page}y/s-l1600.jpg"]
+looked.clear()
+dos3 = {"cid": "x_aa", "route": "round", "identity": {"name": "DURACELL POWERCHECK", "year": 1998, "years": [1995, 1999]},
+        "inputs": {"product": "Duracell Coppertop AA alkaline battery, circa 1998"}, "photos": [], "searches": [], "faces": {}, "gaps": []}
+DS.hunt_listings(dos3, "x_aa", "judge", log=lambda *a: None)
+check(looked and "Xp8y" in looked[0], f"the vintage PowerCheck listing is opened before the modern 40-pack ({looked})")
 print(f"ALL {ok} PASS")

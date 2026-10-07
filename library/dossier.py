@@ -462,7 +462,18 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
     cat_name = listing_query({"name": (dos.get("inputs") or {}).get("product") or ""})
     idn_name = listing_query(dos.get("identity") or {})
     qs = [q for q in dict.fromkeys([cat_name, idn_name]) if q]
-    words = set(re.findall(r"[a-z0-9]+", " ".join(qs).lower()))
+    # the name PRINTED on this copy tells its version apart (POWERCHECK = the 90s cell); the catalog's name also fits
+    # every modern pack (2026-10-07 06:15: the top 8 were all modern Coppertop packs). An old item also earns its
+    # era words ("vintage", its decade).
+    tok = lambda x: set(re.findall(r"[a-z0-9]+", str(x).lower()))
+    printed, catalog = tok(idn_name), tok(cat_name)
+    yr = (dos.get("identity") or {}).get("year") or (dos.get("inputs") or {}).get("year")
+    era_w = set()
+    try:
+        if int(yr) <= time.localtime().tm_year - 15:
+            era_w = {"vintage", "old", "nos", f"{str(int(yr))[2]}0s", f"{str(int(yr))[:3]}0s", str(int(yr))}
+    except (TypeError, ValueError):
+        pass
     rows, seen_ids = [], set()
     try:
         for q in qs:
@@ -474,7 +485,8 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         log(f"[dossier] eBay could not be searched: {str(e)[:120]}")
         save(dos)
         return 0
-    score = lambda L: len(words & set(re.findall(r"[a-z0-9]+", L["title"].lower())))
+    score = lambda L: (3 * len(printed & tok(L["title"])) + len(catalog & tok(L["title"]))
+                       + 2 * len(era_w & tok(L["title"])))
     rows.sort(key=lambda L: -score(L))
     q = " / ".join(qs)
     found = []
@@ -871,7 +883,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 2                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 3                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
