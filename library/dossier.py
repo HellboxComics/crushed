@@ -490,12 +490,26 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         log(f"[dossier] eBay could not be searched: {str(e)[:120]}")
         save(dos)
         return 0
-    # the printed words the catalog's name does NOT have are what set this version apart (POWERCHECK); words
-    # both share (duracell, alkaline) say little (2026-10-07 08:35: "alkaline" lifted every modern pack)
-    distinct = printed - catalog
-    score = lambda L: (5 * len(distinct & tok(L["title"])) + 2 * len(era_w & tok(L["title"]))
-                       + len((catalog | printed) & tok(L["title"])))
-    rows.sort(key=lambda L: -score(L))
+    # each word weighted by how RARE it is among the results' titles - tf-idf's idf, log(N / titles with the word)
+    # (Sparck Jones 1972; the standard text-retrieval weight): "powercheck" is rare and says which version, "volts",
+    # "alkaline", "batteries" are on every listing and say nothing (2026-10-07 11:50: the printed name grew "1.5
+    # Volts" and an Osco and an Energizer listing came first). A listing must carry the brand.
+    import math as _m
+    N = max(1, len(rows))
+    df = {}
+    for L in rows:
+        for w in tok(L["title"]):
+            df[w] = df.get(w, 0) + 1
+    idf = lambda w: _m.log((N + 1) / (df.get(w, 0) + 1))
+    brand = tok((dos.get("identity") or {}).get("brand") or "")
+    want = printed | catalog
+
+    def score(L):
+        t = tok(L["title"])
+        if brand and not (brand & t):
+            return 0.0
+        return round(sum(idf(w) for w in want & t) + 2 * len(era_w & t), 2)
+    rows = sorted((L for L in rows if score(L) > 0), key=lambda L: -score(L))   # another brand: never opened
     log("[dossier] eBay listings, best match first: " + " | ".join(f"{score(L)} {L['title'][:50]}" for L in rows[:most]))
     q = " / ".join(qs)
     found = []
@@ -891,7 +905,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 5                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 6                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that

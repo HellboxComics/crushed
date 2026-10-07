@@ -87,7 +87,7 @@ os.makedirs(os.path.join(W, "dossier"), exist_ok=True)
 said = []
 new = DS.hunt_listings(dos, "x_aa", "judge", log=said.append)
 check(searched == ["DURACELL POWERCHECK", "Duracell Coppertop AA alkaline battery"], f"eBay searched by the printed name and the catalog's name ({searched})")
-check(looked == ["L9p0.jpg", "L3p0.jpg", "L1p0.jpg", "L2p0.jpg"], f"the listing whose title shares most words is opened first; only main photos get the careful look ({looked})")
+check(looked == ["L3p0.jpg", "L9p0.jpg", "L1p0.jpg", "L2p0.jpg"], f"the listing whose title shares most words is opened first; only main photos get the careful look ({looked})")
 check(len(quick_seen) == 20, f"every photo of every listing gets the quick look ({len(quick_seen)})")
 check(new == 9, f"the two good listings lend their other photos - all but the one the quick look says is not the item ({new})")
 src = {os.path.basename(p["file"]) for p in DS._round_sources(dos)}
@@ -118,4 +118,15 @@ dos3 = {"cid": "x_aa", "route": "round", "identity": {"name": "DURACELL POWERCHE
         "inputs": {"product": "Duracell Coppertop AA alkaline battery, circa 1998"}, "photos": [], "searches": [], "faces": {}, "gaps": []}
 DS.hunt_listings(dos3, "x_aa", "judge", log=lambda *a: None)
 check(looked and "Xp8y" in looked[0], f"the vintage PowerCheck listing is opened before the modern 40-pack ({looked})")
+# common words weigh little, the brand is required (11:50: "1.5 Volts" lifted an Osco and an Energizer listing)
+G.search_listings = lambda q, most=24, log=print: (
+    [{"id": "o", "page": "po", "title": "VINTAGE 1.5 Volts Osco Alkaline battery Display"},
+     {"id": "e", "page": "pe", "title": "Vintage Energizer AAA Batteries 1.5 Volt Alkaline"},
+     {"id": "g", "page": "pg", "title": "Pair Vintage Duracell Powercheck AA Batteries"}]
+    + [{"id": f"m{i}", "page": f"pm{i}", "title": f"Duracell AA Batteries 1.5 Volts Alkaline {i} pack"} for i in range(8)])
+looked.clear()
+dos4 = {"cid": "x_aa", "route": "round", "identity": {"name": "DURACELL POWERCHECK ALKALINE 1.5 Volts", "brand": "Duracell", "year": 1998,
+        "years": [1995, 1999]}, "inputs": {"product": "Duracell Coppertop AA alkaline battery, circa 1998"}, "photos": [], "searches": [], "faces": {}, "gaps": []}
+DS.hunt_listings(dos4, "x_aa", "judge", log=lambda *a: None)
+check(looked and "Xpgy" in looked[0] and not any("Xpoy" in x or "Xpey" in x for x in looked), f"the rare word wins and other brands are never opened ({looked[:3]})")
 print(f"ALL {ok} PASS")
