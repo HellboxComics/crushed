@@ -454,7 +454,7 @@ def listing_query(idn):
     return re.sub(r"\s+", " ", n).strip(" ,")
 
 
-def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
+def hunt_listings(dos, cid, use, log=print, most=10, good_enough=6):
     """eBay listings (Cody, 2026-10-07 00:32): each listing is ONE copy of the item photographed from every side.
     The careful look checks the listing's MAIN photo only; when it is this item (exact) or the same artwork, every
     photo of that listing is a source for the label - same copy, other angles (the stitch's size gate and feature
@@ -924,7 +924,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 7                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 8                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
