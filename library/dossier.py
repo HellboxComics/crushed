@@ -506,10 +506,10 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
 
     def score(L):
         t = tok(L["title"])
-        if brand and not (brand & t):
-            return 0.0
+        if brand and t and not (brand & t):
+            return -1.0                                   # another brand
         return round(sum(idf(w) for w in want & t) + 2 * len(era_w & t), 2)
-    rows = sorted((L for L in rows if score(L) > 0), key=lambda L: -score(L))   # another brand: never opened
+    rows = sorted((L for L in rows if score(L) >= 0), key=lambda L: -score(L))   # another brand: never opened
     log("[dossier] eBay listings, best match first: " + " | ".join(f"{score(L)} {L['title'][:50]}" for L in rows[:most]))
     q = " / ".join(qs)
     found = []
