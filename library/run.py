@@ -3347,7 +3347,7 @@ def newer_version():
 
 
 RETRIES = os.path.join(WORK, "retries.json")
-RETRY_AFTER = (("paused for the newer version", 0), ("stopped", 3600), ("failed the realism check", 6 * 3600))   # how long a parked item waits
+RETRY_AFTER = (("paused for the newer version", 0), ("stopped: the run was interrupted", 0), ("stopped", 3600), ("failed the realism check", 6 * 3600))   # how long a parked item waits
 RETRIES_PER_DAY = 3
 
 
