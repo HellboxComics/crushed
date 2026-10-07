@@ -468,6 +468,9 @@ def search_listings(q, most=24, log=print):
             title = re.sub(r"\s+", " ", text or "").replace("Opens in a new window or tab", "").strip()
             out.append({"id": m.group(1), "page": f"https://www.ebay.com/itm/{m.group(1)}", "title": title[:200], "sold": what == "sold"})
             n += 1
+        if not n and html and "<title>Sign in" in html:   # eBay shows sold results only to a signed-in person
+            log(f"[ebay] eBay asks for a sign-in before it shows {what} listings - sign in once in the reference "
+                "browser window on the Mac if you want them; nothing here signs in")
         if not n and html:                                # nothing read: the page is kept to see why
             try:
                 open(os.path.join(HB, f"ebay-{what.replace(' ', '-')}-last.html"), "w").write(html)
