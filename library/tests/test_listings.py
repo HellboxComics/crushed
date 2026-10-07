@@ -75,7 +75,7 @@ def fake_quick(dos, quick, log=print):
     for p in dos["photos"]:
         if "quick" not in p:
             quick_seen.append(os.path.basename(p["file"]))
-            p["quick"] = {"same_item": not p["file"].endswith("p4.jpg"), "kind": "photo", "product_shown": "a 9V pack"}
+            p["quick"] = {"same_item": False, "kind": "ad" if p["file"].endswith("p4.jpg") else "photo", "product_shown": "a 9V pack"}
 
 
 DS.quick_look = fake_quick

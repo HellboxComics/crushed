@@ -580,7 +580,11 @@ def hunt_listings(dos, cid, use, log=print, most=10, good_enough=6):
             if r.get("labeled"):
                 continue
             q_ = r.get("quick") or {}
-            if q_ and (not q_.get("same_item") or q_.get("kind") in ("render", "ad")):
+            # one listing is one copy: the quick look only removes a picture that is no photo at all (a render, an
+            # ad). Its "same item" answer is not trusted here - it called 9V packs the item and turned down 3 of every
+            # 4 photos of good listings (2026-10-07 16:25: 4 good listings lent 4 photos); the stitch's size gate
+            # and feature matching drop any photo that does not fit the label
+            if q_ and q_.get("kind") in ("render", "ad"):
                 r["not_source"] = "the quick look: " + (q_.get("product_shown") or q_.get("kind") or "not this item")[:80]
                 continue
             r.update(labeled=True, match=main.get("match"), same_artwork=main.get("same_artwork"),
@@ -924,7 +928,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 8                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 9                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
