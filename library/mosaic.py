@@ -35,14 +35,18 @@ def strip(img, m, W, H, max_deg=62, flip=False):
     return lab, w
 
 
-def placed(img, m, W, H, expect, max_deg=62):
+def placed(img, m, W, H, expect, max_deg=62, whole=False):
     """One photo -> (label H x W, how well each pixel was seen H x W, which part of the length it covers (a, b)
     as fractions). A photo that shows only PART of the object's length (a close-up of one end) covers only that
     part: its scale comes from the object's diameter (the photo's width across the object is the real diameter),
     and it is put at the end that is in the picture - never stretched over the whole length.
-    expect = the object's real length / its real diameter (the kit's numbers)."""
+    expect = the object's real length / its real diameter (the kit's numbers).
+    whole=True: a DRAWN view of the whole item (both ends in the frame by construction) covers the whole length
+    even when the drawing's proportions are a little off (2026-10-06 22:20: a drawn AA came out 2.9 to 1)."""
     lab, w = strip(img, m, W, H, max_deg=max_deg)
     a, b = 0.0, 1.0
+    if whole:
+        return lab, w[None, :] * np.ones((H, 1)), (a, b)
     try:
         _, m2, _ = U.straighten(img, m)
         cols, t, bt = U._edges(m2)

@@ -1219,9 +1219,15 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     # the references: the clearest single cut-out first, then EVERY credible source photo whole (a photo of three
     # cells turned three ways shows three sides - it goes on the sheet as it is)
     cuts = [p for p in reads_from if os.path.basename(p).startswith("item")]
-    refs = cuts[:1] + list(dict.fromkeys(v.get("file") for v in views if v.get("file") and os.path.exists(v["file"])))
-    status(cid, step="5/7 texture map: your AI draws the whole label from every photo (and checks it)")
-    drawn, dnotes = draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=say)
+    sized = same_size_photos([v for v in views if v.get("file") and os.path.exists(v["file"])], w_mm, h_mm, log=say)
+    refs = cuts[:1] + list(dict.fromkeys(v.get("file") for v in sized))
+    keep_w = [str(m.get("text") or "") for m in (lab_face.get("must_show") or [])] if lab_face.get("source") == "exact_photo" else []
+    dwords, dropped = agreed_words(words, by_png, src_of, keep=keep_w)
+    if dropped:
+        say(f"[texture] read on only one photo - not given to the drawing: {dropped[:20]}")
+    boundary(cid, "step")
+    status(cid, step="5/7 texture map: your AI draws the item from every photo, turns it, unrolls it (and checks it)")
+    drawn, dnotes = draw_label_full(product, real_png, refs, dwords, tex, use, w_mm, h_mm, log=say, reads=reads)
     if drawn:
         notes = {"cleaned": True, "clean_note": "drawn as clean print artwork from every photo",
                  "sharpened": True, "sharp_note": "Real-ESRGAN"}
@@ -1230,11 +1236,11 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     else:
         say(f"[texture] {cid}: the drawing did not pass ({dnotes.get('why')}) - the stitched real photo is the label")
         png, mr, notes = photo_label(product, real_png, cover_png, tex, use, reads, log=say)
-    R.step("the whole label drawn from every photo (Qwen-Image-Edit, checked by reading the words back and the judge)",
-           files=([png] if drawn else []) + [t["file"] for t in dnotes.get("tries", []) if t.get("file")][:3], checks=[
-               ("a drawing passed (60% of the words read back, design match 6 of 10 or better)", bool(drawn),
-                ("; ".join(f"try {t['try']}: words {t.get('words_found')}, match {t.get('match')}"
-                           for t in dnotes.get("tries", []) if "words_found" in t) or dnotes.get("why", ""))[:300])])
+    R.step("the whole label drawn from every photo (Qwen-Image-Edit draws the item and turns it; the stitch unrolls it)",
+           files=([png] if drawn else []) + (dnotes.get("views") or [t["file"] for t in dnotes.get("tries", []) if t.get("file")])[:4], checks=[
+               ("a drawing passed (front design match 6 of 10 or better, 85% of the way around, 60% of the words read back)", bool(drawn),
+                ((dnotes.get("why") or "") + " | " + "; ".join(f"front try {t['try']}: words {t.get('words_found')}, match {t.get('match')}"
+                           for t in dnotes.get("tries", []) if "words_found" in t))[:300])])
     json.dump({"key": key, "score": None, "passed": False}, open(os.path.join(tex, "label_kept.json"), "w"), indent=1)
     share = review.metal_share(mr)
     seen_share = float((np.asarray(Image.open(cover_png).convert("L")) > 0.05 * 255).mean())
@@ -1344,76 +1350,183 @@ def reference_sheet(files, out, cell=512, cols=None):
     return out
 
 
-def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=print, tries=3):
+DRAW_FRONT = (
+    "Picture 1 is a sheet of real photos of {product}; picture 2 is its clearest single photo. Make ONE clean studio "
+    "product photo of exactly one {product}: lying on its side, its long axis level and left to right, the label "
+    "turned to the camera the way picture 2 shows it, centered and filling most of the width, on a plain white "
+    "background, soft even light, sharp focus, true colors, no glare, no shadow, no other objects, no hands, no "
+    "words that are not printed on the item. Its true proportions: {size}. Copy the printed design from the photos exactly - logos, panels, "
+    "meters, bands and small print in their real places. The printed text, spelled exactly: {words}.")
+DRAW_TURN = (
+    "Picture 1 is a studio photo of one {product}. Show the SAME item, the same size, place, light and white "
+    "background, rolled {deg} degrees about its own long axis away from the camera (its ends stay where they are), "
+    "so the part of its printed label that was facing away now faces the camera. Picture 2 is a sheet of real "
+    "photos of this item: copy what that part of the label really prints from them - do not invent words or "
+    "logos. The printed text, spelled exactly: {words}.")
+
+
+def agreed_words(words, by_png, src_of, keep=()):
+    """A word goes into the drawing only when the text reader found it on at least TWO different photos - majority
+    voting across independent OCR reads (ROVER, Fiscus 1997, the standard way several reads are combined) - or the
+    dossier's careful look listed it. (2026-10-06 22:20: 'AUBACELLMIGAN', 'SIACE', 'Done', '10' came from single
+    blurry reads; the drawing was graded on them and could never pass.) -> (kept, dropped)"""
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    per_photo = {}
+    for png, lines in (by_png or {}).items():
+        per_photo.setdefault(src_of.get(png) or png, []).append(norm(" ".join(lines or [])))
+    texts = {k: " ".join(v) for k, v in per_photo.items()}
+    kn = {norm(k) for k in keep}
+    kept_, dropped = [], []
+    for w in words:
+        n = norm(w)
+        if not n:
+            continue
+        hits = sum(1 for t in texts.values() if (n in t if len(n) < 5 else fuzz.partial_ratio(n, t) >= 85))
+        (kept_ if hits >= 2 or n in kn else dropped).append(w)
+    return kept_, dropped
+
+
+def same_size_photos(files, along_mm, around_mm, log=print):
+    """Only photos holding a copy of THIS size reach the drawing (2026-10-06 22:20: two D cells in the same artwork
+    were on the reference sheet, though the stitch had already left them out). Measured like the stitch measures."""
+    import skin
+    import mosaic
+    expect = along_mm / (around_mm / math.pi)
+    out = []
+    for f in files:
+        ok = None
+        try:
+            for im, m in skin.all_items(f):
+                objs = mosaic.objects(im, m)
+                o, om = max(objs, key=lambda x: x[1].sum())
+                r = skin.shape_ratio(om)
+                if r:
+                    ok = ok or (0.6 * expect <= r <= 1.5 * expect)
+        except Exception:
+            ok = None
+        if ok is False:
+            log(f"[texture] {os.path.basename(f['file'])}: another size - not on the drawing's reference sheet")
+        else:
+            out.append(f)
+    return out
+
+
+def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=print, tries=3, reads="around"):
     """The label REDRAWN whole from all the evidence (Cody, 2026-10-06 12:48: "stitch together and build out the
-    image on its own - redrawn - then made to look as real as the original; you can't depend on random internet
-    photos as production assets"). Qwen-Image-Edit-2511 takes up to 3 reference pictures and renders precise text
-    (huggingface.co/Qwen/Qwen-Image-Edit-2511; github.com/QwenLM/Qwen-Image): picture 1 the stitched real pieces,
-    pictures 2-3 whole photos of the item from other sides, the exact words read off the photos in the prompt.
-    Each try is checked - Apple's text reader reads the words back (share of the confirmed words found) and the
-    judge compares the design with the photos (0-10) - the best of `tries` kept. -> (png, notes) or (None, notes)."""
+    image on its own - redrawn - then made to look as real as the original"). Qwen-Image-Edit-2511 does what its
+    model card shows it does best - a clean product image from reference photos, and the same object turned to a
+    new view ("novel view synthesis... rotate by 90 or 180 degrees", huggingface.co/Qwen/Qwen-Image-Edit-2509 and
+    2511) - so it draws the item, not a flat sheet (2026-10-06 22:20: asked for a flat sheet it drew a battery on
+    white every time, which would have been wrapped around the battery). Then the SAME stitch used on real photos
+    unrolls the four drawn views (front, 90, 180, 270 degrees) by OpenCV feature matching into the flat label.
+    Checked: the words read back off the drawn views (Apple's text reader), the judge compares the front with the
+    real photos (0-10), and the drawn views must cover the label nearly all the way around.
+    refs[0] = the clearest cut-out, refs[1:] = every credible photo (as {"file","mask"} dicts or paths).
+    -> (png in real_png's layout, notes) or (None, notes)."""
     import turnaround as T
     import skin
     import measure as MS
     import vet as V
     from PIL import Image
     notes = {"tries": []}
-    cw, ch = skin.canvas(w_mm, h_mm)
     said = ", ".join(f'"{w}"' for w in words[:40]) or "(only what the pictures show)"
-    prompt = DRAW_LABEL.format(product=product, words=said)
-    # the drawing model takes three pictures; EVERY credible photo of the item must reach it (Cody, 2026-10-06
-    # 15:47: "it should be using multiple images... a complete vision of what it is") - so picture 2 is one
-    # reference sheet of all of them side by side, picture 3 the clearest single photo
-    refs = list(refs)
-    n_all = len(refs)
-    if len(refs) > 2:
-        sheet = reference_sheet(refs[1:], os.path.join(tex, "all_photos_sheet.png"))
-        refs = [sheet, refs[0]]
-        notes["sheet"] = sheet
-        notes["sheet_of"] = n_all - 1
-        log(f"[texture] the drawing sees all {n_all - 1} photos at once on one reference sheet")
+    files = [r if isinstance(r, str) else r.get("file") for r in refs]
+    files = [f for f in files if f and os.path.exists(f)]
+    if not files:
+        notes["why"] = "no photo to draw from"
+        return None, notes
+    clear = files[0]
+    sheet_src = files[1:] or files[:1]
+    sheet = reference_sheet(sheet_src, os.path.join(tex, "all_photos_sheet.png"))
+    notes["sheet"], notes["sheet_of"] = sheet, len(sheet_src)
+    log(f"[texture] the drawing sees all {len(sheet_src)} photos at once on one reference sheet")
+    vw, vh = 1344, 768                                       # a lying cell fills a wide frame (multiples of 16)
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    countable = [w for w in words if len(norm(w)) >= 3]
+
+    def words_in(pngs):
+        got = norm(" ".join(" ".join(MS.read_lines(p) or []) for p in pngs))
+        found = [w for w in countable if norm(w) in got]
+        return len(found) / max(1, len(countable)), found
+
+    # 1. the front: best of `tries`, judged against the real photos
     best = None
     for t in range(tries):
         out = os.path.join(tex, f"drawn{t + 1}.png")
         try:
-            T.draw_from_photos(product, [real_png] + list(refs)[:2], out, width=cw, height=ch, prefix=prompt, seed=101 + 37 * t)
+            T.draw_from_photos(product, [sheet, clear], out, width=vw, height=vh,
+                               prefix=DRAW_FRONT.format(product=product, words=said, size=f"{w_mm:g} mm long and {h_mm / math.pi:.1f} mm across, {w_mm / (h_mm / math.pi):.1f} times as long as it is wide"), seed=101 + 37 * t)
         except Exception as e:
-            log(f"[texture] the label drawing (try {t + 1}) failed: {str(e)[:120]}")
+            log(f"[texture] the front drawing (try {t + 1}) failed: {str(e)[:120]}")
             notes["tries"].append({"try": t + 1, "error": str(e)[:200]})
             continue
-        got = " ".join(MS.read_lines(out) or [])
-        norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
-        g = norm(got)
-        found = [w for w in words if len(norm(w)) >= 3 and norm(w) in g]
-        share = len(found) / max(1, sum(1 for w in words if len(norm(w)) >= 3))
         try:
-            v = V.ask(use, ("Picture 1 is a label drawn as flat print artwork. Pictures 2 and 3 are real photos of the "
-                            "item it is meant to be. Does picture 1 carry the same design - the same panels, meters, logos, "
-                            "colors and small print, in the same places and order? Answer ONLY JSON: {\"match\": 0-10, "
-                            "\"wrong\": [\"short, specific\"]}"), [out] + list(refs)[:2], think=False) or {}
+            v = V.ask(use, ("Picture 1 is a drawn studio photo of an item. Picture 2 is a sheet of real photos of the "
+                            "item and picture 3 its clearest photo. Does picture 1 show the same item with the same "
+                            "printed design - the same panels, meters, logos, colors and small print in the same places? "
+                            "Answer ONLY JSON: {\"match\": 0-10, \"wrong\": [\"short, specific\"]}"),
+                      [out, sheet, clear], think=False) or {}
             match = int(v.get("match") or 0)
         except Exception as e:
             v, match = {"wrong": [f"the judge could not look: {e}"]}, 0
+        share, _ = words_in([out])
         score = round(0.5 * share * 10 + 0.5 * match, 2)
         notes["tries"].append({"try": t + 1, "words_found": round(share, 2), "match": match, "score": score,
                                "wrong": (v.get("wrong") or [])[:4], "file": out})
-        log(f"[texture] label drawing try {t + 1}: {share:.0%} of the words read back, design match {match}/10")
+        log(f"[texture] front drawing try {t + 1}: {share:.0%} of the words read back, design match {match}/10")
         if best is None or score > best[0]:
             best = (score, out, share, match)
-        if share >= 0.85 and match >= 8:
+        if match >= 8 and share >= 0.5:
             break
-    if not best or best[2] < 0.6 or best[3] < 6:
-        notes["why"] = ("no try was good enough (needs 60% of the words read back and a design match of 6)" if best
+    if not best or best[3] < 6:
+        notes["why"] = ("no front drawing matched the photos (needs a design match of 6)" if best
                         else "the drawing room could not draw")
         return None, notes
+    front = best[1]
+    # 2. the other three quarters, each turned from the drawn front
+    views = [front]
+    for deg in (90, 180, 270):
+        out = os.path.join(tex, f"drawn_turn{deg}.png")
+        try:
+            T.draw_from_photos(product, [front, sheet], out, width=vw, height=vh,
+                               prefix=DRAW_TURN.format(product=product, deg=deg, words=said), seed=7 + deg)
+            views.append(out)
+        except Exception as e:
+            log(f"[texture] the {deg} degree view could not be drawn: {str(e)[:120]}")
+    log(f"[texture] drawn: the front and {len(views) - 1} turned view(s)")
+    # 3. unrolled and stitched exactly like the real photos
+    vs = []
+    for f in views:
+        try:
+            vs.append({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True})
+        except Exception as e:
+            log(f"[texture] {os.path.basename(f)}: cut-out failed ({str(e)[:80]})")
+    try:
+        lab, cov = skin.compose(vs, w_mm, h_mm, log=log)
+    except Exception as e:
+        notes["why"] = f"the drawn views could not be unrolled ({str(e)[:120]})"
+        return None, notes
+    around = float((cov.max(0) > 0.05).mean())
+    share, found = words_in(views)
+    notes.update(around=round(around, 2), words_found=round(share, 2), match=best[3], file=front, views=views)
+    log(f"[texture] the drawn views cover {around:.0%} of the way around; {share:.0%} of the words read back off them")
+    if around < 0.85 or share < 0.6:
+        notes["why"] = (f"the drawn views cover {around:.0%} of the way around (needs 85%) and {share:.0%} of the words "
+                        "read back (needs 60%)")
+        return None, notes
+    lab = skin.continue_bands(lab, cov < 0.05)
+    im = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
+    if reads == "along":
+        im = im.rotate(90, expand=True)
     final = os.path.join(tex, "label.png")
-    Image.open(best[1]).convert("RGB").resize(Image.open(real_png).size, Image.LANCZOS).save(final)
+    im.resize(Image.open(real_png).size, Image.LANCZOS).save(final)
     try:
         T.upscale(final, force=True)
     except Exception as e:
         log(f"[texture] the drawn label could not be sharpened ({str(e)[:80]})")
-    notes.update(score=best[0], words_found=best[2], match=best[3], file=best[1])
-    json.dump({"drawn": True, "at": time.time(), "score": best[0]}, open(os.path.join(tex, "label_complete.json"), "w"))
+    json.dump({"drawn": True, "at": time.time(), "score": best[0], "around": around},
+              open(os.path.join(tex, "label_complete.json"), "w"))
     return final, notes
 
 

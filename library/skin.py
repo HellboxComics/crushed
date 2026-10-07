@@ -310,7 +310,7 @@ def compose(photos, along_mm, around_mm, W=2048, log=None):
                         log(f"[texture] {os.path.basename(f['file'])}: a cell shaped {r:.1f} to 1, this item is "
                             f"{expect:.1f} to 1 - another size, left out")
                     continue
-                l, w, ab = mosaic.placed(o, om, W, H, expect)
+                l, w, ab = mosaic.placed(o, om, W, H, expect, whole=bool(f.get("whole")))
                 if w.max() > 0:
                     got.append((l, w))
             except Exception:
