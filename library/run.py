@@ -1346,11 +1346,11 @@ DRAW_FRONT = (
     "meters, bands and small print in their real places. The printed text, spelled exactly: {words}.")
 
 DRAW_BACK = (
-    "Picture 2 is a studio photo of one {product}, showing the FRONT of its printed label. Picture 1 shows real "
-    "photos of the same item where ANOTHER side of the label faces the camera. Make the same studio photo - the "
-    "same single item, lying the same way, the same size, light and plain white background - but showing that "
-    "other side of the label, copied exactly from picture 1: its logos, panels and small print in their real places. "
-    "Do not show the front's meter or panels again. The printed text on this side, spelled exactly: {words}.")
+    "The pictures are real photos of {product} in which ANOTHER side of its printed label faces the camera - not the "
+    "side with the main panel. Make ONE clean studio product photo of exactly one {product} showing THAT side: "
+    "lying on its side, long axis level and left to right, centered, filling most of the width, plain white "
+    "background, soft even light, sharp, true colors, no glare, no other objects, no hands. Copy that side's logos, "
+    "panels and small print exactly from the photos. The printed text on this side, spelled exactly: {words}.")
 
 
 def agreed_words(words, by_png, src_of, keep=()):
@@ -1472,7 +1472,8 @@ def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=pr
                         else "the drawing room could not draw")
         return None, notes
     front = best[1]
-    # 2. the label's OTHER side. Asked to "turn" the drawn item, the model copied it unchanged (2026-10-07 00:15:
+    # 2. the label's OTHER side (shown the front drawing as well, the model copied the front - 2026-10-07 05:40 -
+    #    so it sees only the photos of that side). Asked to "turn" the drawn item, the model copied it unchanged (2026-10-07 00:15:
     #    all three turned views were the front again). So the other side is drawn from the photos that SHOW it:
     #    a photo whose words are mostly not on the drawn front faces another side (read by Apple's text reader)
     front_txt = norm(" ".join(MS.read_lines(front) or []))
@@ -1497,8 +1498,8 @@ def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=pr
         for t in range(2):
             out = os.path.join(tex, f"drawn_back{t + 1}.png")
             try:
-                T.draw_from_photos(product, [bsheet, front], out, width=vw, height=vh,
-                                   prefix=DRAW_BACK.format(product=product, words=bsaid), seed=211 + 53 * t)
+                T.draw_from_photos(product, back_files[:2] if len(back_files) > 1 else [bsheet], out, width=vw,
+                                   height=vh, prefix=DRAW_BACK.format(product=product, words=bsaid), seed=211 + 53 * t)
             except Exception as e:
                 log(f"[texture] the other side could not be drawn: {str(e)[:120]}")
                 continue

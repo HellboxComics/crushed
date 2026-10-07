@@ -456,13 +456,37 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         return 0
     dos["listings_hunted"] = LISTINGS
     import google_images as G
-    q = listing_query(dos.get("identity") or {})
+    # two searches - the catalog's name for it and the name printed on it - and the listings ranked by how many of
+    # those names' words their titles share, whole words only (2026-10-07 05:40: "DURACELL POWERCHECK" alone gave
+    # AAA, C and D listings first; the AA ones came last and were never reached)
+    cat_name = listing_query({"name": (dos.get("inputs") or {}).get("product") or ""})
+    idn_name = listing_query(dos.get("identity") or {})
+    qs = [q for q in dict.fromkeys([cat_name, idn_name]) if q]
+    words = set(re.findall(r"[a-z0-9]+", " ".join(qs).lower()))
+    rows, seen_ids = [], set()
     try:
-        found = G.listings(q, most=most, log=log)
+        for q in qs:
+            for L in G.search_listings(q, log=log):
+                if L["id"] not in seen_ids:
+                    seen_ids.add(L["id"])
+                    rows.append(L)
     except Exception as e:
         log(f"[dossier] eBay could not be searched: {str(e)[:120]}")
         save(dos)
         return 0
+    score = lambda L: len(words & set(re.findall(r"[a-z0-9]+", L["title"].lower())))
+    rows.sort(key=lambda L: -score(L))
+    q = " / ".join(qs)
+    found = []
+    for L in rows[:most]:
+        try:
+            ph = G.listing(L["page"], log)
+        except Exception as e:
+            log(f"[dossier] eBay listing {L['page']} could not be opened: {str(e)[:80]}")
+            continue
+        if ph:
+            found.append(dict(L, photos=ph))
+            log(f"[ebay] {L['page']}: {len(ph)} photos ({L['title'][:70]})")
     d = os.path.join(WORK, "hunt", cid)
     os.makedirs(d, exist_ok=True)
     have = {p["file"] for p in dos["photos"]}
@@ -847,7 +871,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 1                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 2                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that

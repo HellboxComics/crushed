@@ -73,8 +73,8 @@ check("studio product photo" in front_calls[0]["prefix"] and '"JAN 2001"' in fro
       "it is asked for the ITEM (what it draws well), with the exact words")
 check(len(front_calls) == 2, f"a weak front is drawn again; a strong one stops the tries ({len(front_calls)})")
 check(notes["other_side_photos"] == [refs[3]], f"the photo whose words are not on the front shows the other side ({notes['other_side_photos']})")
-check(back_calls and back_calls[0]["photos"] == [refs[3], notes["file"]] and '"MN 1500 LR6 1.5 VOLTS"' in back_calls[0]["prefix"],
-      "the other side is drawn FROM that photo, beside the drawn front, with its own words")
+check(back_calls and back_calls[0]["photos"] == [refs[3]] and '"MN 1500 LR6 1.5 VOLTS"' in back_calls[0]["prefix"],
+      "the other side is drawn FROM that photo alone (never shown the front, which it copied), with its own words")
 check(notes.get("back") and notes["around"] > 0.7, f"placed at the far side: {notes.get('around')} of the way around")
 check(png and Image.open(png).size == Image.open(real).size, "the label comes out in the real label's layout and size")
 check(os.path.exists(os.path.join(tex, "label_complete.json")), "the label is marked drawn whole (the painter then infers nothing)")

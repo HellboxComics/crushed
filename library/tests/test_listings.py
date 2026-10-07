@@ -12,6 +12,7 @@ from PIL import Image  # noqa: E402
 import dossier as DS  # noqa: E402
 import google_images as G  # noqa: E402
 REAL_LISTINGS = G.listings
+REAL_SEARCH = G.search_listings
 
 ok = 0
 
@@ -33,13 +34,19 @@ check(G.listing_photos(item) == ["https://i.ebayimg.com/images/g/hTMAAeSwfxlphoz
 check(DS.listing_query({"name": "Duracell Coppertop AA alkaline battery, circa 1998"}) == "Duracell Coppertop AA alkaline battery",
       "the eBay search is the item's name, without the era words")
 
-# the hunt: listing 1 wrong, listing 2 this item (5 photos), listing 3 this item
-def fake_listings(q, most=8, log=print):
-    return [{"page": f"https://www.ebay.com/itm/{n}", "title": f"L{n}", "photos": [f"https://i.ebayimg.com/images/g/L{n}p{k}/s-l1600.jpg" for k in range(5)]}
-            for n in (1, 2, 3)]
+# the hunt: two searches (catalog name, printed name), listings ranked by title words; 1 wrong, 2 and 3 this item
+searched = []
 
 
-G.listings = fake_listings
+def fake_search(q, most=24, log=print):
+    searched.append(q)
+    return [{"id": str(n), "page": f"https://www.ebay.com/itm/{n}", "title": t} for n, t in
+            ((9, "Duracell PowerCheck AAA batteries"), (1, "Duracell Coppertop AA battery lot"), (2, "Duracell Coppertop AA battery 1998"),
+             (3, "Duracell Coppertop AA alkaline battery"))]
+
+
+G.search_listings = fake_search
+G.listing = lambda page, log=print: [f"https://i.ebayimg.com/images/g/L{page.rsplit('/', 1)[1]}p{k}/s-l1600.jpg" for k in range(5)]
 
 
 def fake_dl(url, d):
@@ -73,14 +80,16 @@ def fake_quick(dos, quick, log=print):
 
 DS.quick_look = fake_quick
 DS.plan = lambda dos: ({"label": {"photo": None}}, [])
-dos = {"cid": "x_aa", "route": "round", "identity": {"name": "Duracell Coppertop AA, circa 1998", "years": [1995, 1999]},
+dos = {"cid": "x_aa", "route": "round", "identity": {"name": "DURACELL POWERCHECK", "years": [1995, 1999]},
+       "inputs": {"product": "Duracell Coppertop AA alkaline battery, circa 1998"},
        "photos": [], "searches": [], "faces": {}, "gaps": []}
 os.makedirs(os.path.join(W, "dossier"), exist_ok=True)
 said = []
 new = DS.hunt_listings(dos, "x_aa", "judge", log=said.append)
-check(looked == ["L1p0.jpg", "L2p0.jpg", "L3p0.jpg"], f"only each listing's main photo gets the careful look ({looked})")
-check(len(quick_seen) == 15, f"every photo of every listing gets the quick look ({len(quick_seen)})")
-check(new == 6, f"the two good listings lend their other photos - all but the one the quick look says is not the item ({new})")
+check(searched == ["Duracell Coppertop AA alkaline battery", "DURACELL POWERCHECK"], f"eBay searched by the catalog's name and the printed name ({searched})")
+check(looked == ["L3p0.jpg", "L1p0.jpg", "L2p0.jpg", "L9p0.jpg"], f"the listing whose title shares most words is opened first; only main photos get the careful look ({looked})")
+check(len(quick_seen) == 20, f"every photo of every listing gets the quick look ({len(quick_seen)})")
+check(new == 9, f"the two good listings lend their other photos - all but the one the quick look says is not the item ({new})")
 src = {os.path.basename(p["file"]) for p in DS._round_sources(dos)}
 check("L2p3.jpg" in src and "L3p4.jpg" not in src and not any(s.startswith("L1") for s in src), "a good listing's photos are label sources; a wrong one's are not")
 check(all(p.get("listing") for p in dos["photos"]) and dos["listings_hunted"] == DS.LISTINGS, "each photo keeps its listing; the hunt is recorded")
@@ -88,12 +97,14 @@ check(DS.hunt_listings(dos, "x_aa", "judge", log=said.append) == 0, "once per ve
 # three wrong listings in a row: stop
 dos2 = dict(dos, photos=[], listings_hunted=None)
 looked.clear()
-G.listings = lambda q, most=8, log=print: [{"page": f"p{n}", "title": "", "photos": [f"https://i.ebayimg.com/images/g/L1p{n}x/s-l1600.jpg"]} for n in range(6)]
+G.search_listings = lambda q, most=24, log=print: [{"id": str(n), "page": f"p{n}", "title": ""} for n in range(6)]
+G.listing = lambda page, log=print: [f"https://i.ebayimg.com/images/g/L1p{page}x/s-l1600.jpg"]
 DS.hunt_listings(dos2, "x_aa", "judge", log=said.append)
 check(len(looked) == 3 and any("three eBay listings" in x for x in said), "three wrong listings in a row and the eBay hunt stops")
 opened = []
-G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.append(url) or ("", ""))
-REAL_LISTINGS("duracell powercheck aa", log=lambda *a: None)
+G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.append(url) or ("", [["https://www.ebay.com/itm/Duracell-AA/257348577422?x=1", "Duracell AA Opens in a new window or tab"]]))
+rows = REAL_SEARCH("duracell powercheck aa", log=lambda *a: None)
+check(rows and rows[0]["id"] == "257348577422" and rows[0]["title"] == "Duracell AA", f"a result link with a slug in its address is read, its title cleaned ({rows[:1]})")
 check(len(opened) == 2 and "LH_Sold=1" in opened[1] and "LH_Sold" not in opened[0], f"eBay is searched for sale AND sold ({opened})")
 check(DS.hunt_due({"listings_hunted": None, "around_hunted": DS.VERSION}), "an item hunted before eBay was added still gets the eBay hunt")
 src = open(DS.__file__).read()

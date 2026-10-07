@@ -449,25 +449,48 @@ def listing_photos(html, most=16):
     return out[:most]
 
 
-def listings(q, most=8, log=print):
-    """[{"page", "title", "photos": [url, ...]}] for an eBay search: each listing's whole photo gallery."""
-    ids = []                                        # for sale now AND sold before (Cody, 2026-10-07 00:51)
-    for extra, what in (({}, "for sale"), ({"LH_Sold": "1", "LH_Complete": "1"}, "sold")):
-        html, _ = _open("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode(dict({"_nkw": q}, **extra)), log=log)
-        got = listing_ids(html, most)
-        log(f"[ebay] '{q}' ({what}): {len(got)} listings")
-        ids += [i for i in got if i not in ids]
-    ids = ids[:2 * most]
-    out = []
-    for i in ids:
-        page = f"https://www.ebay.com/itm/{i}"
-        h, title = _open(page, scroll=False, js="() => document.title", log=log)
-        photos = listing_photos(h)
-        if photos:
-            out.append({"page": page, "title": (title or "")[:300], "photos": photos})
-            log(f"[ebay] {page}: {len(photos)} photos ({(title or '')[:60]})")
-    return out
+LINKS_JS = """() => Array.from(document.querySelectorAll('a[href*="/itm/"]')).map(a => [a.href, (a.innerText || a.getAttribute('aria-label') || '').trim()])"""
 
+
+def search_listings(q, most=24, log=print):
+    """[{"id", "page", "title"}] on eBay's search pages for q - for sale AND sold (Cody, 2026-10-07 00:51) - read
+    off the result links themselves (their text is the listing's title). Pages are not opened here."""
+    out, seen = [], set()
+    for extra, what in (({}, "for sale"), ({"LH_Sold": "1", "LH_Complete": "1"}, "sold")):
+        html, rows = _open("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode(dict({"_nkw": q}, **extra)),
+                           js=LINKS_JS, log=log)
+        n = 0
+        for href, text in (rows or []):
+            m = re.search(r"/itm/(?:[^/?#]+/)?(\d{9,14})", href or "")
+            if not m or m.group(1) in seen or m.group(1) == "123456":
+                continue
+            seen.add(m.group(1))
+            title = re.sub(r"\s+", " ", text or "").replace("Opens in a new window or tab", "").strip()
+            out.append({"id": m.group(1), "page": f"https://www.ebay.com/itm/{m.group(1)}", "title": title[:200], "sold": what == "sold"})
+            n += 1
+        if not n and html:                                # nothing read: the page is kept to see why
+            try:
+                open(os.path.join(HB, f"ebay-{what.replace(' ', '-')}-last.html"), "w").write(html)
+            except Exception:
+                pass
+        log(f"[ebay] '{q}' ({what}): {n} listings")
+    return out[:most]
+
+
+def listing(page, log=print):
+    """One listing's whole photo gallery: [url, ...] at eBay's largest size."""
+    h, _ = _open(page, scroll=False, log=log)
+    return listing_photos(h)
+
+
+def listings(q, most=8, log=print):
+    """[{"page", "title", "photos": [url, ...]}] - the first `most` listings of a search with their galleries."""
+    out = []
+    for L in search_listings(q, log=log)[:most]:
+        photos = listing(L["page"], log)
+        if photos:
+            out.append(dict(L, photos=photos))
+    return out
 
 if __name__ == "__main__":
     for o in search_full(" ".join(sys.argv[1:])):
