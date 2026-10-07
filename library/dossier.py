@@ -461,7 +461,12 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
     # AAA, C and D listings first; the AA ones came last and were never reached)
     cat_name = listing_query({"name": (dos.get("inputs") or {}).get("product") or ""})
     idn_name = listing_query(dos.get("identity") or {})
-    qs = [q for q in dict.fromkeys([cat_name, idn_name]) if q]
+    yr0 = (dos.get("identity") or {}).get("year") or (dos.get("inputs") or {}).get("year")
+    try:
+        old_item = int(yr0) <= time.localtime().tm_year - 15
+    except (TypeError, ValueError):
+        old_item = False
+    qs = [q for q in dict.fromkeys([("vintage " + idn_name) if old_item and idn_name else "", idn_name, cat_name]) if q]
     # the name PRINTED on this copy tells its version apart (POWERCHECK = the 90s cell); the catalog's name also fits
     # every modern pack (2026-10-07 06:15: the top 8 were all modern Coppertop packs). An old item also earns its
     # era words ("vintage", its decade).
@@ -485,9 +490,13 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         log(f"[dossier] eBay could not be searched: {str(e)[:120]}")
         save(dos)
         return 0
-    score = lambda L: (3 * len(printed & tok(L["title"])) + len(catalog & tok(L["title"]))
-                       + 2 * len(era_w & tok(L["title"])))
+    # the printed words the catalog's name does NOT have are what set this version apart (POWERCHECK); words
+    # both share (duracell, alkaline) say little (2026-10-07 08:35: "alkaline" lifted every modern pack)
+    distinct = printed - catalog
+    score = lambda L: (5 * len(distinct & tok(L["title"])) + 2 * len(era_w & tok(L["title"]))
+                       + len((catalog | printed) & tok(L["title"])))
     rows.sort(key=lambda L: -score(L))
+    log("[dossier] eBay listings, best match first: " + " | ".join(f"{score(L)} {L['title'][:50]}" for L in rows[:most]))
     q = " / ".join(qs)
     found = []
     for L in rows[:most]:
@@ -883,7 +892,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 3                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 4                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
