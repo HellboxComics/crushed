@@ -1224,6 +1224,11 @@ def build(cid, card, picked=None, log=print, use=None, redo=False, quick=None, w
             have.add(f["file"])
     save(dos)
 
+    # 1b. eBay FIRST (Cody, 2026-10-07 05:22: "it's using the same busted ass images" - after the reset the first
+    #     hunt found the same Google photos again, and eBay only came in late, at the label): each good listing is
+    #     one copy of the item from every side, its photos looked at with everything else from the start
+    if web and use:
+        hunt_listings(dos, cid, use, log)
     # 2-3. a quick look at everything; then hunt the sides that still have no likely photo; quick look at those
     quick_look(dos, quick, log)
     era = dos["identity"]["years"]

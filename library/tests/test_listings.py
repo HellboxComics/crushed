@@ -96,4 +96,6 @@ G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.appen
 REAL_LISTINGS("duracell powercheck aa", log=lambda *a: None)
 check(len(opened) == 2 and "LH_Sold=1" in opened[1] and "LH_Sold" not in opened[0], f"eBay is searched for sale AND sold ({opened})")
 check(DS.hunt_due({"listings_hunted": None, "around_hunted": DS.VERSION}), "an item hunted before eBay was added still gets the eBay hunt")
+src = open(DS.__file__).read()
+check(src.index("hunt_listings(dos, cid, use, log)\n") < src.index("    hunt_faces(dos, cid, need, log)"), "the dossier hunts eBay first, before the image searches")
 print(f"ALL {ok} PASS")
