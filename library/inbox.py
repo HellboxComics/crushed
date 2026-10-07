@@ -24,6 +24,10 @@ WORK = os.environ.get("CRUSHED_REMASTER_WORK") or os.path.expanduser("~/crushed-
 HB = os.path.expanduser("~/.hellbox")
 CONF = os.path.join(HB, "page-inbox.json")
 TOKEN_FILE = os.path.join(HB, "page-token.txt")
+# Cloudflare answers Python's default "Python-urllib/3.x" signature with 403 (its error 1010, "access banned based on
+# your browser's signature" - developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/
+# error-1010); measured 2026-10-07: the same request is 200 with a named client
+UA = "hellbox-asset-maker/1.0 (+inbox poll)"
 PROJECT = "crushed-remaster"
 ACTIONS = ("add", "note", "keep", "redo", "retry", "restart", "job_on", "job_off", "pick", "size")
 
@@ -115,7 +119,8 @@ def fetch(timeout=30):
     c = conf()
     if not c:
         return []
-    with urllib.request.urlopen(url("/api/inbox?token=" + c["token"]), timeout=timeout) as r:
+    req = urllib.request.Request(url("/api/inbox?token=" + c["token"]), headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
         return (json.load(r) or {}).get("messages") or []
 
 
@@ -124,7 +129,7 @@ def ack(keys, timeout=30):
     if not c or not keys:
         return
     body = json.dumps({"token": c["token"], "keys": list(keys)}).encode()
-    req = urllib.request.Request(url("/api/ack"), data=body, headers={"content-type": "application/json"})
+    req = urllib.request.Request(url("/api/ack"), data=body, headers={"content-type": "application/json", "User-Agent": UA})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         r.read()
 

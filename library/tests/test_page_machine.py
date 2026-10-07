@@ -123,4 +123,7 @@ check("telegram" not in html.lower(), "no Telegram anywhere on the page")
 root = os.path.join(W, "site_root"); os.makedirs(root, exist_ok=True)
 check(inbox.write_wrangler_toml(root) and ("a" * 32) in open(os.path.join(root, "wrangler.toml")).read()
       and 'binding = "INBOX"' in open(os.path.join(root, "wrangler.toml")).read(), "wrangler.toml binds this Mac's KV box as INBOX")
+import inbox as IB
+src_ib = open(IB.__file__).read()
+check(src_ib.count('"User-Agent": UA') >= 2, "the inbox poll and ack name their client (Cloudflare's 1010 bans Python's default signature)")
 print(f"ALL {ok} PASS")
