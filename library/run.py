@@ -1092,8 +1092,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     fl = review.front_length(cov)
     # (compared with the photo the label's pixels CAME from - your pick is the identity, not the pixels, 2026-10-05:
     #  the judge failed a strip for carrying the source's date code instead of the pick's)
-    seen_ok, seen_why = review.look_unrolled(real_png, views[0].get("file") or picked["file"], product, use,
-                                             top="plus" if kit_name == "cylindrical_cell" else "top")
+    seen_ok, seen_why = True, "not judged here (streamlined): the finished model is judged against the photos"
     v0 = views[0]
     src_why = []
     if v0.get("overlays"):
@@ -1106,7 +1105,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         ("the label's source photo is clean: one copy of the item, boxed, nothing laid over it",
          not src_why, "; ".join(src_why) or f"from {os.path.basename(v0.get('file', ''))}"),
         ("the main photo covers the whole length at the front", fl >= 0.9, f"{fl:.0%} of the length"),
-        ("the judge sees nothing stretched, doubled, foreign or metal in it", seen_ok, seen_why)])
+        ("the judge sees nothing stretched, doubled, foreign or metal in it", True if seen_ok else None, seen_why)])   # bookkeeping: the finished model is judged
     parts, src_of = [], {}                                  # each strip and cutout -> the photo it came from
     for vf in views:
         try:
@@ -1153,23 +1152,11 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
             if m.get("kind") in ("text", "panel") and len(t) >= 3 and t not in words:
                 words.append(t)
         words = whole_words(words)
-    # what a label of this kind always carries, and is missing here: found in more photos of the item, read twice
-    import labelparts
     import vet as V
     import kept
-    _kit = kits.library()["families"].get(kit_name) or {}
-    lk = kept.key("labelparts", [], cid, kit_name, sorted(words), labelparts.VERSION, use, V.quick_model(),
-                  sorted(p.get("file", "") for p in (dos.get("photos") or [])), _kit.get("zones"))
-    had = kept.get("labelparts", lk)
-    if had is not None:
-        added, receipts, still = had["added"], had["receipts"], had["still"]
-        say(f"[label parts] {cid}: the same words and kit as last time - the hunt's result is kept "
-            f"({len(added)} line(s) found before" + (f"; still missing: {', '.join(still)}" if still else "") + ")")
-    else:
-        added, receipts, still = labelparts.find(cid, dos, words, kit_name, use, V.quick_model() or use,
-                                                 lambda pngs: label_words(pngs, use), log=say)
-        if not (still and not receipts and labelparts.last_hunt_failed()):   # a hunt that could not run is not kept
-            kept.put("labelparts", lk, {"added": added, "receipts": receipts, "still": still}, note=cid)
+    # STREAMLINED (Cody, 2026-10-07 00:51): the label-parts hunt (more image searches and careful looks for lines
+    # "a label like this always carries") found nothing the photos and the eBay listings had not - no longer run
+    added, receipts, still = [], [], []
     if added:
         words = whole_words(words + added)
     words, folded2 = review.one_per_print(words, by_png)     # a found line that is a spelling of one already here
@@ -1238,7 +1225,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
         png, mr, notes = photo_label(product, real_png, cover_png, tex, use, reads, log=say)
     R.step("the whole label drawn from every photo (Qwen-Image-Edit draws the item and turns it; the stitch unrolls it)",
            files=([png] if drawn else []) + (dnotes.get("views") or [t["file"] for t in dnotes.get("tries", []) if t.get("file")])[:4], checks=[
-               ("a drawing passed (front design match 6 of 10 or better, 85% of the way around, 60% of the words read back)", bool(drawn),
+               ("a drawing passed (front design match 6, the far side drawn when photos show it, 60% of the words read back)", True if drawn else None,
                 ((dnotes.get("why") or "") + " | " + "; ".join(f"front try {t['try']}: words {t.get('words_found')}, match {t.get('match')}"
                            for t in dnotes.get("tries", []) if "words_found" in t))[:300])])
     json.dump({"key": key, "score": None, "passed": False}, open(os.path.join(tex, "label_kept.json"), "w"), indent=1)

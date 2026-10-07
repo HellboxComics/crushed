@@ -80,5 +80,5 @@ w = [c for s in rv for c in s["checks"] if c["check"].startswith("no word")][0]
 check(w["ok"] is True, "the cut-off 'DURA' never reached the label (printed as the whole word)")
 art = rv[2]["checks"]
 check(all(c["ok"] is not False for c in art), f"the label art's own checks: {[(c['check'][:30], c['ok'], c['detail']) for c in art]}")
-check(any("unrolling the printed label" in q for q in asked), "the judge looked at the unrolled label")
+check(not any("unrolling the printed label" in q for q in asked), "streamlined: no separate judge call on the unrolled label (the finished model is judged)")
 print(f"\n{ok} checks passed")

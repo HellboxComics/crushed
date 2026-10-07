@@ -481,6 +481,11 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
             rec["listing"] = L["page"]
             recs.append(rec)
         main = recs[0]
+        try:                                              # EVERY photo of the listing is looked at (Cody, 2026-10-07
+            import vet as V                               # 00:51: "it should check all images in a listing") - the
+            quick_look(dos, V.quick_model() or use, log)  # quick look on each, the careful look on the main photo
+        except Exception as e:
+            log(f"[dossier] the quick look at the listing's photos failed: {str(e)[:100]}")
         if not main.get("labeled") and use:
             careful_looks(dos, use, log, only=[main])
         ok = main.get("labeled") and (main.get("match") == "exact" or main.get("same_artwork"))
@@ -496,6 +501,10 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         wrong_run, good = 0, good + 1
         for r in recs[1:]:
             if r.get("labeled"):
+                continue
+            q_ = r.get("quick") or {}
+            if q_ and (not q_.get("same_item") or q_.get("kind") in ("render", "ad")):
+                r["not_source"] = "the quick look: " + (q_.get("product_shown") or q_.get("kind") or "not this item")[:80]
                 continue
             r.update(labeled=True, match=main.get("match"), same_artwork=main.get("same_artwork"),
                      years=main.get("years") or [], product_shown=main.get("product_shown", ""),

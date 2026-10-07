@@ -451,9 +451,13 @@ def listing_photos(html, most=16):
 
 def listings(q, most=8, log=print):
     """[{"page", "title", "photos": [url, ...]}] for an eBay search: each listing's whole photo gallery."""
-    html, _ = _open("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode({"_nkw": q}), log=log)
-    ids = listing_ids(html, most)
-    log(f"[ebay] '{q}': {len(ids)} listings")
+    ids = []                                        # for sale now AND sold before (Cody, 2026-10-07 00:51)
+    for extra, what in (({}, "for sale"), ({"LH_Sold": "1", "LH_Complete": "1"}, "sold")):
+        html, _ = _open("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode(dict({"_nkw": q}, **extra)), log=log)
+        got = listing_ids(html, most)
+        log(f"[ebay] '{q}' ({what}): {len(got)} listings")
+        ids += [i for i in got if i not in ids]
+    ids = ids[:2 * most]
     out = []
     for i in ids:
         page = f"https://www.ebay.com/itm/{i}"

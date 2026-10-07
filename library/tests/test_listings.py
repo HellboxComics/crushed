@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from PIL import Image  # noqa: E402
 import dossier as DS  # noqa: E402
 import google_images as G  # noqa: E402
+REAL_LISTINGS = G.listings
 
 ok = 0
 
@@ -60,6 +61,17 @@ def fake_careful(dos, use, log=print, only=None):
 
 
 DS.careful_looks = fake_careful
+quick_seen = []
+
+
+def fake_quick(dos, quick, log=print):
+    for p in dos["photos"]:
+        if "quick" not in p:
+            quick_seen.append(os.path.basename(p["file"]))
+            p["quick"] = {"same_item": not p["file"].endswith("p4.jpg"), "kind": "photo", "product_shown": "a 9V pack"}
+
+
+DS.quick_look = fake_quick
 DS.plan = lambda dos: ({"label": {"photo": None}}, [])
 dos = {"cid": "x_aa", "route": "round", "identity": {"name": "Duracell Coppertop AA, circa 1998", "years": [1995, 1999]},
        "photos": [], "searches": [], "faces": {}, "gaps": []}
@@ -67,9 +79,10 @@ os.makedirs(os.path.join(W, "dossier"), exist_ok=True)
 said = []
 new = DS.hunt_listings(dos, "x_aa", "judge", log=said.append)
 check(looked == ["L1p0.jpg", "L2p0.jpg", "L3p0.jpg"], f"only each listing's main photo gets the careful look ({looked})")
-check(new == 8, f"the two good listings lend their other 8 photos ({new})")
+check(len(quick_seen) == 15, f"every photo of every listing gets the quick look ({len(quick_seen)})")
+check(new == 6, f"the two good listings lend their other photos - all but the one the quick look says is not the item ({new})")
 src = {os.path.basename(p["file"]) for p in DS._round_sources(dos)}
-check({"L2p3.jpg", "L3p4.jpg"} <= src and not any(s.startswith("L1") for s in src), "a good listing's photos are label sources; a wrong one's are not")
+check("L2p3.jpg" in src and "L3p4.jpg" not in src and not any(s.startswith("L1") for s in src), "a good listing's photos are label sources; a wrong one's are not")
 check(all(p.get("listing") for p in dos["photos"]) and dos["listings_hunted"] == DS.LISTINGS, "each photo keeps its listing; the hunt is recorded")
 check(DS.hunt_listings(dos, "x_aa", "judge", log=said.append) == 0, "once per version")
 # three wrong listings in a row: stop
@@ -78,5 +91,9 @@ looked.clear()
 G.listings = lambda q, most=8, log=print: [{"page": f"p{n}", "title": "", "photos": [f"https://i.ebayimg.com/images/g/L1p{n}x/s-l1600.jpg"]} for n in range(6)]
 DS.hunt_listings(dos2, "x_aa", "judge", log=said.append)
 check(len(looked) == 3 and any("three eBay listings" in x for x in said), "three wrong listings in a row and the eBay hunt stops")
+opened = []
+G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.append(url) or ("", ""))
+REAL_LISTINGS("duracell powercheck aa", log=lambda *a: None)
+check(len(opened) == 2 and "LH_Sold=1" in opened[1] and "LH_Sold" not in opened[0], f"eBay is searched for sale AND sold ({opened})")
 check(DS.hunt_due({"listings_hunted": None, "around_hunted": DS.VERSION}), "an item hunted before eBay was added still gets the eBay hunt")
 print(f"ALL {ok} PASS")
