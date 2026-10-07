@@ -462,11 +462,16 @@ def search_listings(q, most=24, log=print):
         n = 0
         for href, text in (rows or []):
             m = re.search(r"/itm/(?:[^/?#]+/)?(\d{9,14})", href or "")
-            if not m or m.group(1) in seen or m.group(1) == "123456":
+            if not m or m.group(1) == "123456":
+                continue
+            title = re.sub(r"\s+", " ", text or "").replace("Opens in a new window or tab", "").strip()[:200]
+            if m.group(1) in seen:                        # each result has several links (the picture's has no
+                row = next((r for r in out if r["id"] == m.group(1)), None)   # text): the longest text is the title
+                if row is not None and len(title) > len(row["title"]):
+                    row["title"] = title
                 continue
             seen.add(m.group(1))
-            title = re.sub(r"\s+", " ", text or "").replace("Opens in a new window or tab", "").strip()
-            out.append({"id": m.group(1), "page": f"https://www.ebay.com/itm/{m.group(1)}", "title": title[:200], "sold": what == "sold"})
+            out.append({"id": m.group(1), "page": f"https://www.ebay.com/itm/{m.group(1)}", "title": title, "sold": what == "sold"})
             n += 1
         if not n and html and "<title>Sign in" in html:   # eBay shows sold results only to a signed-in person
             log(f"[ebay] eBay asks for a sign-in before it shows {what} listings - sign in once in the reference "

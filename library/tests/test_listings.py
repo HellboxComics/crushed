@@ -102,9 +102,9 @@ G.listing = lambda page, log=print: [f"https://i.ebayimg.com/images/g/L1p{page}x
 DS.hunt_listings(dos2, "x_aa", "judge", log=said.append)
 check(len(looked) == 3 and any("three eBay listings" in x for x in said), "three wrong listings in a row and the eBay hunt stops")
 opened = []
-G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.append(url) or ("", [["https://www.ebay.com/itm/Duracell-AA/257348577422?x=1", "Duracell AA Opens in a new window or tab"]]))
+G._open = lambda url, scroll=True, js=None, log=print, typed=None: (opened.append(url) or ("", [["https://www.ebay.com/itm/257348577422?x=0", ""], ["https://www.ebay.com/itm/Duracell-AA/257348577422?x=1", "Duracell AA Opens in a new window or tab"]]))
 rows = REAL_SEARCH("duracell powercheck aa", log=lambda *a: None)
-check(rows and rows[0]["id"] == "257348577422" and rows[0]["title"] == "Duracell AA", f"a result link with a slug in its address is read, its title cleaned ({rows[:1]})")
+check(rows and rows[0]["id"] == "257348577422" and rows[0]["title"] == "Duracell AA", f"a result's picture link (no text) and title link are one listing, titled by the text ({rows[:1]})")
 check(len(opened) == 2 and "LH_Sold=1" in opened[1] and "LH_Sold" not in opened[0], f"eBay is searched for sale AND sold ({opened})")
 check(DS.hunt_due({"listings_hunted": None, "around_hunted": DS.VERSION}), "an item hunted before eBay was added still gets the eBay hunt")
 src = open(DS.__file__).read()
