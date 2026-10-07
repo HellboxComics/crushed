@@ -129,4 +129,23 @@ dos4 = {"cid": "x_aa", "route": "round", "identity": {"name": "DURACELL POWERCHE
         "years": [1995, 1999]}, "inputs": {"product": "Duracell Coppertop AA alkaline battery, circa 1998"}, "photos": [], "searches": [], "faces": {}, "gaps": []}
 DS.hunt_listings(dos4, "x_aa", "judge", log=lambda *a: None)
 check(looked and "Xpgy" in looked[0] and not any("Xpoy" in x or "Xpey" in x for x in looked), f"the rare word wins and other brands are never opened ({looked[:3]})")
+# turned down only for its printed date: one focused design question decides (12:30: Cody's 6-cell listing)
+G.search_listings = lambda q, most=24, log=print: [{"id": "c", "page": "pc", "title": "Duracell PowerCheck Power Check Meter 6 AA Batteries"}]
+G.listing = lambda page, log=print: [f"https://i.ebayimg.com/images/g/C{k}zz/s-l1600.jpg" for k in range(4)]
+
+
+def era_wrong(dos, use, log=print, only=None):
+    for p in only:
+        p.update(labeled=True, match="wrong", why="its years [2003, 2003] are outside the era [1990, 1999]", years=[2003, 2003],
+                 faces=[{"face": "label", "box": None}], items=6)
+
+
+DS.careful_looks = era_wrong
+asked_design = []
+DS._ask = lambda model, text, images, think=False, side=1280: (asked_design.append(images) or {"same_design": True, "why": "same PowerCheck label"})
+dos5 = {"cid": "x_aa", "route": "round", "picked": "/p/pick.jpg", "identity": {"name": "DURACELL POWERCHECK", "brand": "Duracell", "years": [1990, 1999]},
+        "inputs": {"product": "Duracell Coppertop AA alkaline battery"}, "photos": [], "searches": [], "faces": {}, "gaps": []}
+n5 = DS.hunt_listings(dos5, "x_aa", "judge", log=lambda *a: None)
+check(asked_design and asked_design[0][1] == "/p/pick.jpg" and n5 >= 2, f"an era-only 'wrong' gets the design question against the pick, and the listing counts ({n5})")
+check(DS.listing_query({"name": "DURACELL POWERCHECK ALKALINE 1.5 Volts"}) == "DURACELL POWERCHECK ALKALINE", "ratings like '1.5 Volts' never go into the search")
 print(f"ALL {ok} PASS")

@@ -438,11 +438,19 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
         save(dos)
 
 
+SAME_DESIGN_Q = ("Picture 1 is a seller's photo; picture 2 is our item. Leave out date codes, best-by dates and lot "
+                 "numbers - they change from batch to batch. Is the PRINTED DESIGN on the item in picture 1 the same as "
+                 "on picture 2: the same logo, panels, meters, colors, bands and wording in the same places? The same "
+                 "size of item too. Answer ONLY JSON: {\"same_design\": true or false, \"why\": \"short\"}")
+
+
 def listing_query(idn):
     """What a person types into eBay for this item: its name without the era words ("circa 1998") or notes."""
     n = str(idn.get("name") or ((idn.get("brand") or "") + " " + (idn.get("line") or ""))).strip()
     n = re.sub(r"\(.*?\)", "", n)
     n = re.sub(r",?\s*(circa|c\.|from|made in)\b.*$", "", n, flags=re.I)
+    n = re.sub(r"\b[\d.,]+\s*(volts?|v|mah|mm|in|oz|g|ct|count|pack)?\b", " ", n, flags=re.I)   # ratings and counts
+    n = re.sub(r"\b(volts?)\b", " ", n, flags=re.I)  # vary per listing: never search words (07 12:30 "1.5 Volts")
     return re.sub(r"\s+", " ", n).strip(" ,")
 
 
@@ -548,6 +556,17 @@ def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
         if not main.get("labeled") and use:
             careful_looks(dos, use, log, only=[main])
         ok = main.get("labeled") and (main.get("match") == "exact" or main.get("same_artwork"))
+        # turned down ONLY for its years (a printed "best if installed by" date reads years after it was made -
+        # 2026-10-07 12:30: Cody's own 6-cell PowerCheck listing, the same artwork on every side, was "wrong" for
+        # MAR 2003): one focused question - the same printed design, date codes aside? - against the pick
+        if not ok and use and str(main.get("why") or "").startswith("its years") and dos.get("picked"):
+            ys, era = main.get("years") or [], (dos.get("identity") or {}).get("years") or []
+            near = ys and era and ys[0] <= era[1] + 6 and ys[-1] >= era[0] - 6
+            if near:
+                v = _ask(use, SAME_DESIGN_Q, [main["file"], dos["picked"]], think=True) or {}
+                if v.get("same_design") is True:
+                    main.update(match="sister", same_artwork=True, why=f"the same printed design (date codes aside): {_str(v.get('why'), 120)}")
+                    ok = True
         log(f"[dossier] eBay listing {L['page']}: {len(recs)} photos - main photo {main.get('match')}"
             + (" (same artwork)" if main.get("same_artwork") else ""))
         if not ok:
@@ -905,7 +924,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
-LISTINGS = 6                 # the eBay listing hunt's version (once per item per version)
+LISTINGS = 7                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that
