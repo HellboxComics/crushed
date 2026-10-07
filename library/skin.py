@@ -264,6 +264,22 @@ def register_strips(front, others, W, log=None):
     return placed
 
 
+def unroll_view(f, along_mm, around_mm, W=2048, max_deg=62):
+    """One picture of ONE whole item (a drawn view) unrolled flat -> (label H x W, seen H x W) or None. The same
+    unwrap as compose, with the angle limit given."""
+    import mosaic
+    H = int(round(W * along_mm / around_mm))
+    expect = along_mm / (around_mm / math.pi)
+    best = None
+    for im, m in all_items(f):
+        objs = mosaic.objects(im, m)
+        o, om = max(objs, key=lambda x: x[1].sum())
+        l, w, ab = mosaic.placed(o, om, W, H, expect, max_deg=max_deg, whole=bool(f.get("whole")))
+        if w.max() > 0 and (best is None or w.sum() > best[1].sum()):
+            best = (l, w)
+    return best
+
+
 def compose(photos, along_mm, around_mm, W=2048, log=None):
     """The label made from the photos' REAL pixels: each item in your photo unrolled flat by math and laid at its
     place around the label (the fullest at the front; one showing a clearly different side at the back). A photo

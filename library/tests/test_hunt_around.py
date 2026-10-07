@@ -24,6 +24,7 @@ def check(cond, what):
 
 asked = []
 G.search_full = lambda q, most=12, min_side=500, log=print: (asked.append(q) or [{"url": f"https://x.example/{len(asked)}_{i}.jpg", "w": 900, "h": 700, "page": "", "title": ""} for i in range(2)])
+G.listings = lambda q, most=8, log=print: []                    # (eBay: tested in test_listings)
 dl = []
 def fake_dl(url, d):
     f = os.path.join(d, "p" + str(abs(hash(url)) % 10**8) + ".jpg")
@@ -44,7 +45,7 @@ check("duracell coppertop aa 1998 wrapper" not in asked, "a search already run i
 check(dos.get("around_hunted") == DS.VERSION and all(s.get("for") == "label (other side)" for s in dos["searches"][1:]), "recorded on the dossier with its version and its purpose")
 check(DS.hunt_around(dos, "x_aa", log=lambda *a: None, use="judge", quick="quick", coverage=0.32) == 0, "once per dossier version")
 src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "run.py")).read()
-check("if seen_around < 0.7 and dos and dos.get(\"around_hunted\") != DS.VERSION" in src, "the label step hunts around when real pixels cover under 70%")
+check("if seen_around < 0.7 and dos and DS.hunt_due(dos)" in src, "the label step hunts around when real pixels cover under 70%")
 # the careful looks at the hunt's photos go one at a time and stop when they run dry (2026-10-06 20:57: 20 queued,
 # ~5 min each, most another size - frozen for over an hour)
 looked = []

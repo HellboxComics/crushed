@@ -1061,7 +1061,7 @@ def round_label(cid, product, picked, others, use, dos, d, tex, along, around, r
     say(f"[texture] the label from {len(views)} photo(s) of this item: real pixels cover {seen_around:.0%} of the way around")
     # most of the way around must be REAL: short of that, one hunt aimed at the other side, then the stitch again
     # (2026-10-06 10:21: 4 clean exact photos, all the same side, 32% real - the back could only be guessed)
-    if seen_around < 0.7 and dos and dos.get("around_hunted") != DS.VERSION:
+    if seen_around < 0.7 and dos and DS.hunt_due(dos):
         boundary(cid, "step")
         status(cid, step=f"4/7 the label's real pixels cover {seen_around:.0%} of the way around - hunting for its other side")
         try:
@@ -1357,12 +1357,13 @@ DRAW_FRONT = (
     "background, soft even light, sharp focus, true colors, no glare, no shadow, no other objects, no hands, no "
     "words that are not printed on the item. Its true proportions: {size}. Copy the printed design from the photos exactly - logos, panels, "
     "meters, bands and small print in their real places. The printed text, spelled exactly: {words}.")
-DRAW_TURN = (
-    "Picture 1 is a studio photo of one {product}. Show the SAME item, the same size, place, light and white "
-    "background, rolled {deg} degrees about its own long axis away from the camera (its ends stay where they are), "
-    "so the part of its printed label that was facing away now faces the camera. Picture 2 is a sheet of real "
-    "photos of this item: copy what that part of the label really prints from them - do not invent words or "
-    "logos. The printed text, spelled exactly: {words}.")
+
+DRAW_BACK = (
+    "Picture 2 is a studio photo of one {product}, showing the FRONT of its printed label. Picture 1 shows real "
+    "photos of the same item where ANOTHER side of the label faces the camera. Make the same studio photo - the "
+    "same single item, lying the same way, the same size, light and plain white background - but showing that "
+    "other side of the label, copied exactly from picture 1: its logos, panels and small print in their real places. "
+    "Do not show the front's meter or panels again. The printed text on this side, spelled exactly: {words}.")
 
 
 def agreed_words(words, by_png, src_of, keep=()):
@@ -1484,37 +1485,86 @@ def draw_label_full(product, real_png, refs, words, tex, use, w_mm, h_mm, log=pr
                         else "the drawing room could not draw")
         return None, notes
     front = best[1]
-    # 2. the other three quarters, each turned from the drawn front
-    views = [front]
-    for deg in (90, 180, 270):
-        out = os.path.join(tex, f"drawn_turn{deg}.png")
+    # 2. the label's OTHER side. Asked to "turn" the drawn item, the model copied it unchanged (2026-10-07 00:15:
+    #    all three turned views were the front again). So the other side is drawn from the photos that SHOW it:
+    #    a photo whose words are mostly not on the drawn front faces another side (read by Apple's text reader)
+    front_txt = norm(" ".join(MS.read_lines(front) or []))
+    back_files, back_words = [], []
+    letters = lambda x: sum(c.isalpha() for c in x) / max(1, len(x.replace(" ", "")))
+    for f in files:
         try:
-            T.draw_from_photos(product, [front, sheet], out, width=vw, height=vh,
-                               prefix=DRAW_TURN.format(product=product, deg=deg, words=said), seed=7 + deg)
-            views.append(out)
-        except Exception as e:
-            log(f"[texture] the {deg} degree view could not be drawn: {str(e)[:120]}")
-    log(f"[texture] drawn: the front and {len(views) - 1} turned view(s)")
-    # 3. unrolled and stitched exactly like the real photos
+            lines = [l for l in (MS.read_lines(f) or []) if len(norm(l)) >= 4]
+        except Exception:
+            lines = []
+        new_l = [l for l in lines if norm(l) not in front_txt]
+        if len(lines) >= 2 and len(new_l) >= max(2, 0.5 * len(lines)):
+            back_files.append(f)
+            back_words += [l for l in new_l if letters(l) >= 0.4 and l not in back_words]
+    notes["other_side_photos"] = back_files
+    views = [front]
+    back = None
+    if back_files:
+        log(f"[texture] {len(back_files)} photo(s) show another side of the label: {[os.path.basename(f) for f in back_files][:6]}")
+        bsheet = back_files[0] if len(back_files) == 1 else reference_sheet(back_files, os.path.join(tex, "other_side_sheet.png"))
+        bsaid = ", ".join(f'"{w}"' for w in back_words[:30]) or "(only what the pictures show)"
+        for t in range(2):
+            out = os.path.join(tex, f"drawn_back{t + 1}.png")
+            try:
+                T.draw_from_photos(product, [bsheet, front], out, width=vw, height=vh,
+                                   prefix=DRAW_BACK.format(product=product, words=bsaid), seed=211 + 53 * t)
+            except Exception as e:
+                log(f"[texture] the other side could not be drawn: {str(e)[:120]}")
+                continue
+            got = norm(" ".join(MS.read_lines(out) or []))
+            if got and sum(1 for w in back_words if norm(w) in got) == 0 and back_words:
+                log(f"[texture] other side try {t + 1}: none of its own words came out - not used")
+                continue
+            back = out
+            break
+    # 3. unrolled like the real photos (a clean drawing holds up further round its curve: 72 degrees, not 62)
     vs = []
-    for f in views:
+    for f in [front] + ([back] if back else []):
         try:
             vs.append({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True})
         except Exception as e:
             log(f"[texture] {os.path.basename(f)}: cut-out failed ({str(e)[:80]})")
     try:
-        lab, cov = skin.compose(vs, w_mm, h_mm, log=log)
+        Wd = 2048
+        Hd = int(round(Wd * w_mm / h_mm))
+        strips = [skin.unroll_view(v, w_mm, h_mm, Wd, max_deg=72) for v in vs]
+        if not strips or strips[0] is None:
+            raise RuntimeError("the drawn front could not be unrolled")
+        lab, cov = strips[0][0].copy(), strips[0][1].copy()
+        if back and len(strips) > 1 and strips[1] is not None:
+            placed = skin.register_strips(strips[0], [strips[1]], Wd, log=log)
+            if len(placed) > 1:
+                bl, bw = placed[1]
+                cols = np.where(bw.max(0) > 0.05)[0]
+                mid = (cols.mean() if len(cols) else 0) % Wd
+                if min(abs(mid - Wd / 2), Wd - abs(mid - Wd / 2)) < 0.15 * Wd:   # it landed on the front: a copy
+                    log("[texture] the other side came out as the front again - not used")
+                    bl = None
+            else:                                                 # shares nothing with the front: it IS the far
+                bl, bw = np.roll(strips[1][0], Wd // 2, axis=1), np.roll(strips[1][1], Wd // 2, axis=1)  # side
+            if bl is not None:
+                better = (bw > cov) & (cov < 0.05)
+                lab = np.where(better[..., None], bl, lab)
+                cov = np.maximum(cov, np.where(better, bw, 0))
+                notes["back"] = back
     except Exception as e:
         notes["why"] = f"the drawn views could not be unrolled ({str(e)[:120]})"
         return None, notes
+    views = [front] + ([notes["back"]] if notes.get("back") else [])
     around = float((cov.max(0) > 0.05).mean())
     share, found = words_in(views)
     notes.update(around=round(around, 2), words_found=round(share, 2), match=best[3], file=front, views=views)
     log(f"[texture] the drawn views cover {around:.0%} of the way around; {share:.0%} of the words read back off them")
-    if around < 0.85 or share < 0.6:
-        notes["why"] = (f"the drawn views cover {around:.0%} of the way around (needs 85%) and {share:.0%} of the words "
-                        "read back (needs 60%)")
+    if share < 0.6 or (back_files and not notes.get("back")):
+        notes["why"] = (f"{share:.0%} of the words read back (needs 60%)" if share < 0.6 else
+                        "photos show another side of the label, but no drawing of that side came out")
         return None, notes
+    if not back_files:
+        log("[texture] no photo shows another side of the label: the drawn front's own bands carry round the rest")
     lab = skin.continue_bands(lab, cov < 0.05)
     im = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
     if reads == "along":

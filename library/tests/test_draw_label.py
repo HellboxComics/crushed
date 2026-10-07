@@ -49,44 +49,53 @@ def fake_draw(description, photos, out, width=None, height=None, prefix=None, se
 T.draw_from_photos = fake_draw
 T.upscale = lambda png, force=False: png
 T.photo_mask = lambda f, timeout=300: f
-composed = []
+Hd = int(round(2048 * 50.5 / 45.5))
 
 
-def fake_compose(vs, a, b, W=2048, log=None):
-    composed.append([v["file"] for v in vs])
-    return np.full((200, 400, 3), 0.5), np.ones((200, 400))
+def half(at):
+    w = np.zeros((Hd, 2048)); w[:, at:at + 760] = 1
+    return np.full((Hd, 2048, 3), 0.5), w
 
 
-skin.compose = fake_compose
-MS.read_lines = lambda png, **k: ["DURACELL POWERCHECK BEST IF INSTALLED BY: JAN 2001"] if "turn" not in png else ["MN 1500 LR6"]
+skin.unroll_view = lambda v, a, b, W=2048, max_deg=62: half(644)
+skin.register_strips = lambda front, others, W, log=None: [front]      # the far side shares nothing with the front
+FRONT = ["DURACELL POWERCHECK", "BEST IF INSTALLED BY:", "JAN 2001"]
+BACK = ["CAUTION: DO NOT CONNECT IMPROPERLY", "MN 1500 LR6 1.5 VOLTS", "ALKALINE BATTERY"]
+MS.read_lines = lambda png, **k: BACK if ("item3" in png or "back" in png) else FRONT + (["MN 1500 LR6"] if "drawn" in png else [])
 looks = iter([{"match": 5, "wrong": ["meter missing"]}, {"match": 9, "wrong": []}])
 V.ask = lambda use, q, imgs, think=False, **k: next(looks)
 png, notes = run.draw_label_full("Duracell AA", real, refs, words, tex, "judge", 50.5, 45.5, log=lambda *a: None)
-front_calls = [c for c in calls if "turn" not in c["out"]]
-turn_calls = [c for c in calls if "turn" in c["out"]]
+front_calls = [c for c in calls if "back" not in c["out"]]
+back_calls = [c for c in calls if "back" in c["out"]]
 check(front_calls[0]["photos"] == [notes["sheet"], refs[0]] and notes["sheet_of"] == 3,
       "the front is drawn from one sheet of every photo plus the clearest single photo")
 check("studio product photo" in front_calls[0]["prefix"] and '"JAN 2001"' in front_calls[0]["prefix"],
       "it is asked for the ITEM (what it draws well), with the exact words")
 check(len(front_calls) == 2, f"a weak front is drawn again; a strong one stops the tries ({len(front_calls)})")
-check([c["out"].rsplit("turn", 1)[1] for c in turn_calls] == ["90.png", "180.png", "270.png"]
-      and all(c["photos"][0] == notes["file"] for c in turn_calls), "three turned views, each from the kept front")
-check(composed and len(composed[-1]) == 4 and composed[-1][0] == notes["file"], "the four views are unrolled by the same stitch, the front first")
+check(notes["other_side_photos"] == [refs[3]], f"the photo whose words are not on the front shows the other side ({notes['other_side_photos']})")
+check(back_calls and back_calls[0]["photos"] == [refs[3], notes["file"]] and '"MN 1500 LR6 1.5 VOLTS"' in back_calls[0]["prefix"],
+      "the other side is drawn FROM that photo, beside the drawn front, with its own words")
+check(notes.get("back") and notes["around"] > 0.7, f"placed at the far side: {notes.get('around')} of the way around")
 check(png and Image.open(png).size == Image.open(real).size, "the label comes out in the real label's layout and size")
 check(os.path.exists(os.path.join(tex, "label_complete.json")), "the label is marked drawn whole (the painter then infers nothing)")
 
-# not all the way around: no label from the drawing, said why
+# the "other side" came out as the front again: refused, and the label does not pass
 os.remove(os.path.join(tex, "label_complete.json"))
-skin.compose = lambda vs, a, b, W=2048, log=None: (np.zeros((200, 400, 3)), np.pad(np.ones((200, 100)), ((0, 0), (0, 300))))
+calls.clear()
+skin.register_strips = lambda front, others, W, log=None: [front, half(644)]
 V.ask = lambda use, q, imgs, think=False, **k: {"match": 9, "wrong": []}
 png2, notes2 = run.draw_label_full("Duracell AA", real, refs, words, tex, "judge", 50.5, 45.5, log=lambda *a: None)
-check(png2 is None and "way around" in notes2["why"], f"views that cover a quarter of the way around do not pass ({notes2.get('why')})")
+check(png2 is None and "another side" in notes2["why"], f"a far side that lands on the front is a copy: no pass ({notes2.get('why')})")
 check(not os.path.exists(os.path.join(tex, "label_complete.json")), "and the label is not marked drawn whole")
-# a front that does not match the photos: no turns drawn at all
+# no photo shows another side: the front alone, its bands carry round
+MS.read_lines = lambda png, **k: FRONT + (["MN 1500 LR6"] if "drawn" in png else [])
+png4, notes4 = run.draw_label_full("Duracell AA", real, refs, words, tex, "judge", 50.5, 45.5, log=lambda *a: None)
+check(png4 and not notes4["other_side_photos"], "no photo of another side: the drawn front passes alone")
+# a front that does not match the photos: nothing more drawn
 calls.clear()
 V.ask = lambda use, q, imgs, think=False, **k: {"match": 3, "wrong": ["wrong layout"]}
 png3, notes3 = run.draw_label_full("Duracell AA", real, refs, words, tex, "judge", 50.5, 45.5, log=lambda *a: None)
-check(png3 is None and len(calls) == 3 and "match" in notes3["why"], "three weak fronts: nothing turned, said why")
+check(png3 is None and len(calls) == 3 and "match" in notes3["why"], "three weak fronts: nothing more drawn, said why")
 
 # the words: only what two photos agree on
 by_png = {"a1.png": ["DURACELL POWERCHECK", "AUBACELLMIGAN"], "a2.png": ["DURACELL", "POWERCHECK", "Done"],

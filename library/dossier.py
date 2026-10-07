@@ -438,14 +438,97 @@ def hunt_faces(dos, cid, need, log=print, budget=BUDGET):
         save(dos)
 
 
+def listing_query(idn):
+    """What a person types into eBay for this item: its name without the era words ("circa 1998") or notes."""
+    n = str(idn.get("name") or ((idn.get("brand") or "") + " " + (idn.get("line") or ""))).strip()
+    n = re.sub(r"\(.*?\)", "", n)
+    n = re.sub(r",?\s*(circa|c\.|from|made in)\b.*$", "", n, flags=re.I)
+    return re.sub(r"\s+", " ", n).strip(" ,")
+
+
+def hunt_listings(dos, cid, use, log=print, most=8, good_enough=3):
+    """eBay listings (Cody, 2026-10-07 00:32): each listing is ONE copy of the item photographed from every side.
+    The careful look checks the listing's MAIN photo only; when it is this item (exact) or the same artwork, every
+    photo of that listing is a source for the label - same copy, other angles (the stitch's size gate and feature
+    matching still drop any photo that is not the item). Stops after `good_enough` good listings or 3 wrong ones
+    in a row. Once per LISTINGS version. -> how many photos came in from good listings."""
+    if dos.get("listings_hunted") == LISTINGS:
+        return 0
+    dos["listings_hunted"] = LISTINGS
+    import google_images as G
+    q = listing_query(dos.get("identity") or {})
+    try:
+        found = G.listings(q, most=most, log=log)
+    except Exception as e:
+        log(f"[dossier] eBay could not be searched: {str(e)[:120]}")
+        save(dos)
+        return 0
+    d = os.path.join(WORK, "hunt", cid)
+    os.makedirs(d, exist_ok=True)
+    have = {p["file"] for p in dos["photos"]}
+    good, wrong_run, new = 0, 0, 0
+    for L in found:
+        files = [f for f in (_download(u, d) for u in L["photos"]) if f]
+        if not files:
+            continue
+        recs = []
+        for f, u in zip(files, L["photos"]):
+            rec = next((p for p in dos["photos"] if p["file"] == f), None)
+            if rec is None:
+                rec = _record(f, u, L["page"], L["title"], "ebay: " + q, source="ebay listing")
+                dos["photos"].append(rec)
+                have.add(f)
+            rec["listing"] = L["page"]
+            recs.append(rec)
+        main = recs[0]
+        if not main.get("labeled") and use:
+            careful_looks(dos, use, log, only=[main])
+        ok = main.get("labeled") and (main.get("match") == "exact" or main.get("same_artwork"))
+        log(f"[dossier] eBay listing {L['page']}: {len(recs)} photos - main photo {main.get('match')}"
+            + (" (same artwork)" if main.get("same_artwork") else ""))
+        if not ok:
+            wrong_run += 1
+            save(dos)
+            if wrong_run >= 3:
+                log("[dossier] three eBay listings in a row were not this item - the eBay hunt stops")
+                break
+            continue
+        wrong_run, good = 0, good + 1
+        for r in recs[1:]:
+            if r.get("labeled"):
+                continue
+            r.update(labeled=True, match=main.get("match"), same_artwork=main.get("same_artwork"),
+                     years=main.get("years") or [], product_shown=main.get("product_shown", ""),
+                     quality=main.get("quality") or 0, items=None, overlays=[], from_listing=main["file"],
+                     face="label", faces=[{"face": "label", "box": None}])
+            new += 1
+        save(dos)
+        if good >= good_enough:
+            break
+    log(f"[dossier] eBay: {good} listing(s) of this item, {new} more photos of it from every side")
+    if new:
+        dos["faces"], _ = plan(dos)
+        F = PRIMARY.get(dos.get("route"), "front")
+        dos["faces"].setdefault(F, {})["alternates"] = [p["file"] for p in _round_sources(dos)
+                                                        if p["file"] != dos["faces"].get(F, {}).get("photo")]
+    save(dos)
+    return new
+
+
+def hunt_due(dos):
+    """A round label short of real pixels still has a hunt to run: eBay's listings, or the image searches."""
+    return dos.get("listings_hunted") != LISTINGS or dos.get("around_hunted") != VERSION
+
+
 def hunt_around(dos, cid, log=print, use=None, quick=None, coverage=0.0):
     """A round label whose real pixels cover less than most of the way around after the stitch (2026-10-06 10:21:
     every same-item photo looked at, 4 clean exact ones, all of the same side - 32% real): one extra round of
     searches aimed at the OTHER side of the label, then quick and careful looks at what comes in. Once per dossier
     version (dos['around_hunted']). -> how many new photos came in."""
     import vet as V
-    if dos.get("around_hunted") == VERSION:
-        return 0
+    got = hunt_listings(dos, cid, use, log) if use else 0  # every angle of one copy first (eBay)
+    if got or dos.get("around_hunted") == VERSION:
+        return got
     dos["around_hunted"] = VERSION
     idn = dos.get("identity") or {}
     line = ((idn.get("brand") or "") + " " + (idn.get("line") or "")).strip().lower()
@@ -755,6 +838,7 @@ def _end_on(fe):
 
 MORE_FOR_PRIMARY = 6         # extra careful looks when the main side's source is poor
 ROUND_SOURCES = 12           # credible source photos a round label wants before the looks stop
+LISTINGS = 1                 # the eBay listing hunt's version (once per item per version)
 HUNT_LOOKS = 8               # the most careful looks at the hunt's new photos
 HUNT_DRY = 3                 # stop after this many in a row add no source
 ROUND_LOOKS = 40             # the most extra careful looks a round item gets for that

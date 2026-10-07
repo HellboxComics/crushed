@@ -422,6 +422,49 @@ def web_search(q, most=8, log=print):
     return rows[:most]
 
 
+# ------------------------------------------------------------------ marketplace listings
+# (Cody, 2026-10-07 00:32: "one easy search on ebay and I find every angle you could possibly ask for. why isn't AI
+# checking there for images as well?") A seller's listing is ONE physical copy of the item photographed from every
+# side - the most complete set of views a round label can get. Same window, same manners as the image search.
+_ITEM = re.compile(r'https?://www\.ebay\.com/itm/(\d{9,14})')
+_EBIMG = re.compile(r'https?://i\.ebayimg\.com/images/g/([A-Za-z0-9~_\-]{6,})/s-l\d+\.(?:jpg|jpeg|webp|png)', re.I)
+
+
+def listing_ids(html, most=8):
+    """The item numbers on an eBay search page, in the page's order, each once."""
+    out = []
+    for m in _ITEM.finditer(html or ""):
+        if m.group(1) not in out and m.group(1) != "123456":
+            out.append(m.group(1))
+    return out[:most]
+
+
+def listing_photos(html, most=16):
+    """Every gallery photo of one eBay listing, each at the largest size eBay serves (s-l1600), each once."""
+    out = []
+    for m in _EBIMG.finditer(html or ""):
+        u = f"https://i.ebayimg.com/images/g/{m.group(1)}/s-l1600.jpg"
+        if u not in out:
+            out.append(u)
+    return out[:most]
+
+
+def listings(q, most=8, log=print):
+    """[{"page", "title", "photos": [url, ...]}] for an eBay search: each listing's whole photo gallery."""
+    html, _ = _open("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode({"_nkw": q}), log=log)
+    ids = listing_ids(html, most)
+    log(f"[ebay] '{q}': {len(ids)} listings")
+    out = []
+    for i in ids:
+        page = f"https://www.ebay.com/itm/{i}"
+        h, title = _open(page, scroll=False, js="() => document.title", log=log)
+        photos = listing_photos(h)
+        if photos:
+            out.append({"page": page, "title": (title or "")[:300], "photos": photos})
+            log(f"[ebay] {page}: {len(photos)} photos ({(title or '')[:60]})")
+    return out
+
+
 if __name__ == "__main__":
     for o in search_full(" ".join(sys.argv[1:])):
         print(o["w"], o["h"], o["url"], "|", o["page"], "|", o["title"])
