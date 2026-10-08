@@ -449,6 +449,7 @@ def listing_photos(html, most=16):
     return out[:most]
 
 
+_SOLD_SIGNIN = [False]
 LINKS_JS = """() => Array.from(document.querySelectorAll('a[href*="/itm/"]')).map(a => [a.href, (a.innerText || a.getAttribute('aria-label') || '').trim()])"""
 
 
@@ -457,6 +458,8 @@ def search_listings(q, most=24, log=print):
     off the result links themselves (their text is the listing's title). Pages are not opened here."""
     out, seen = [], set()
     for extra, what in (({}, "for sale"), ({"LH_Sold": "1", "LH_Complete": "1"}, "sold")):
+        if what == "sold" and _SOLD_SIGNIN[0]:           # eBay asked for a sign-in once: not asked again this run
+            continue                                    # (each try cost a paced page load - 2026-10-07 21:20)
         html, rows = _open("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode(dict({"_nkw": q}, **extra)),
                            js=LINKS_JS, log=log)
         n = 0
@@ -474,6 +477,7 @@ def search_listings(q, most=24, log=print):
             out.append({"id": m.group(1), "page": f"https://www.ebay.com/itm/{m.group(1)}", "title": title, "sold": what == "sold"})
             n += 1
         if not n and html and "<title>Sign in" in html:   # eBay shows sold results only to a signed-in person
+            _SOLD_SIGNIN[0] = True
             log(f"[ebay] eBay asks for a sign-in before it shows {what} listings - sign in once in the reference "
                 "browser window on the Mac if you want them; nothing here signs in")
         if not n and html:                                # nothing read: the page is kept to see why
