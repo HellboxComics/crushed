@@ -224,6 +224,11 @@ rows2 = [{"title": t} for t in ("Vintage Duracell PowerCheck Lapel Pin", "Durace
                                 "Vintage Duracell PowerCheck AA battery JAN 2001")]
 rk2 = [r["title"] for r in fast.rank_listings(rows2, ["Duracell PowerCheck AA"], "Duracell", 1998, kind="battery")]
 check(rk2 and all("Batter" in t or "batter" in t for t in rk2) and len(rk2) == 2, f"pins, mugs and toys are no listing for a battery ({rk2})")
+rows3 = [{"title": t} for t in ("Duracell 9 Volt Battery MN1604 9V Vintage Still In", "Rare Set Of 4 Duracell Coppertop AA Batteries - Circa 1998",
+                                "Duracell PowerCheck Power Check Meter 6 AA Batteries", "Duracell Coppertop Batteries AA Power Boost Alkaline 24",
+                                "Duracell Coppertop Batteries AA Power Boost Alkaline 40", "Vintage Duracell Coppertop AA battery 1999", "Duracell Coppertop AA 20 pack")]
+rk3 = sorted(r["title"][:12] for r in fast.rank_listings(rows3, ["Duracell Coppertop", "Duracell Powercheck", "Duracell Coppertop AA alkaline battery"], "Duracell", 1998, kind="AA battery"))
+check(rk3 == ["Duracell Pow", "Rare Set Of ", "Vintage Dura"], f"another size and today's packs are left out; the era's own names and years count ({rk3})")
 # several copies in one photo: each cut out as a view of its own
 grp = os.path.join(W, "three.png")
 g3 = np.full((300, 500, 3), 255, np.uint8)

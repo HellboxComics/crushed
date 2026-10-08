@@ -129,10 +129,26 @@ def rank_listings(rows, names, brand, year, kind=""):
     #                                                                 Furby) would drop every listing: used only
     #                                                                 when the titles do say it
 
+    size = [w for w in tok(kind) if re.fullmatch(r"aaa|aa|[cd]|9v|\d+(v|oz|in|mm|ml|l|lb|g)?", w)]
+    with_size = sum(1 for L in rows if set(size) & tok(L["title"])) if size else 0
+    use_size = bool(size) and with_size >= min(3, max(1, len(rows) // 4))
+    common = {w for w, n in df.items() if n > 0.3 * N}         # a word most titles carry says nothing of the era
+    era_named = set().union(*[tok(x) for x in names[:-1]]) if len(names) > 1 else set()   # the era's own names
+    years = set()
+    try:
+        years = {str(y) for y in range(int(year) - 5, int(year) + 6)}   # "circa 1998", "2001" on a date code
+    except (TypeError, ValueError):
+        pass
+    era_words = (era | years | (era_named - b - common - set(size) - tok(kind))) if era else set()
+
     def score(L):
         t = tok(L["title"])
         if b and t and not (b & t):
             return -1.0
+        if use_size and not (set(size) & t):               # another size (11:47: a 9 volt ranked first for an AA)
+            return -1.0
+        if era and not (era_words & t):                    # an old item: the title names its era ("vintage") or
+            return -1.0                                    # its era's own name ("PowerCheck") - not Power Boost
         if use_kind and not any(w.startswith(k) for w in t for k in kd):
             return -1.0
         if (t & MERCH) - named:
