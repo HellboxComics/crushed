@@ -32,7 +32,9 @@ REF_Q = ("We are rebuilding this exact item as a 3D model: {product} (made aroun
          "redesign or another size scores low), \"side\": \"front\" if the side with the main logo or panel faces "
          "the camera, \"back\" if the opposite side (warnings, codes, a second logo), \"several\" if several copies "
          "show different sides, \"end\" if only an end, \"none\" if it is not the item, \"one_item\": true if exactly "
-         "one copy is in the picture}}")
+         "one copy is in the picture, \"kind\": \"item\" if it is the actual product itself, \"merch\" if it is "
+         "merchandise or a look-alike (a pin, magnet, mug, toy, sign, display), \"package\" if only its packaging, "
+         "\"ad\" for an advertisement}}")
 
 DRAW_FRONT = (
     "Picture 1 is a sheet of real photos of {product}, made around {year}; picture 2 is its clearest photo. Make ONE "
@@ -41,14 +43,14 @@ DRAW_FRONT = (
     "picture 2, centered and filling most of the width, on plain white, soft even light, sharp, true colors, no "
     "glare, no other objects, no hands. Its true proportions: {size}. Copy the printed design from the photos - "
     "logo, panels, colors, bands and small print in their real places. Every word printed on it is a real, correctly "
-    "spelled word that makes sense for this product.{fix}")
+    "spelled word that makes sense for this product.{words}{fix}")
 DRAW_BACK = (
     "The pictures are real photos of {product}, made around {year}, in which the OTHER side of its printed label "
     "faces the camera - not the side with the main panel. Make ONE clean studio product photo of exactly one "
     "{product} showing THAT side: lying on its side, long axis level and left to right, centered, filling most of "
     "the width, plain white background, soft even light, sharp, true colors, no glare, no other objects, no hands. "
     "Its true proportions: {size}. Copy that side's logos, panels and small print from the photos. Every word is a "
-    "real, correctly spelled word that makes sense for this product.{fix}")
+    "real, correctly spelled word that makes sense for this product.{words}{fix}")
 PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a sheet of real photos of {product} from around "
           "{year}. Does picture 1 look like a real photo of that same item from that era - the same printed design, "
           "logo, colors and layout, real words that make sense? Answer ONLY JSON: {{\"match\": 0-10, "
@@ -190,11 +192,52 @@ def sort_refs(refs, card, R, log):
         s = int(lk.get("score") or 0)
         if r.get("listing") and r.get("listing_best", 0) >= 7 and lk.get("real_photo") is not False:
             s = max(s, 7)
-        r["score"] = s if lk.get("real_photo") is not False else 0
+        # merchandise in the same artwork (a battery-shaped pin, a magnet - 2026-10-07 22:10: two were on the
+        # drawing's sheet) and ads are no reference for the item itself
+        r["score"] = s if lk.get("real_photo") is not False and lk.get("kind", "item") == "item" else 0
     good = sorted([r for r in refs if r["score"] >= 7], key=lambda r: (-r["score"], 0 if r.get("listing") else 1))
     log(f"[fast] {len(good)} of {len(refs)} photos show this item; "
         f"{sum(1 for r in good if (r.get('look') or {}).get('side') in ('back', 'several'))} show another side")
     return good
+
+
+def photo_words(good, log, most=8):
+    """The printed lines on the best photos, read by Apple's own text reader (measure.read_lines) - kept when read on
+    at least two different photos (majority voting across independent reads, ROVER). Qwen-Image renders exact text
+    when it is GIVEN the words (its model card: precise text rendering); without them it invents (2026-10-07 22:10:
+    'ALKAMEF ATERN', 'AUFALNE BATTEMP')."""
+    import measure as MS
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    reads = []
+    for r in [g for g in good if (g.get("look") or {}).get("side") in ("front", "back", "several")][:most]:
+        try:
+            reads.append([l.strip() for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3])
+        except Exception:
+            pass
+    texts = [norm(" ".join(x)) for x in reads]
+    out = []
+    for lines in reads:
+        for l in lines:
+            n = norm(l)
+            if any(norm(o) == n for o in out):
+                continue
+            hits = sum(1 for t in texts if (n in t if len(n) < 6 else fuzz.partial_ratio(n, t) >= 85))
+            letters = sum(c.isalpha() for c in l) / max(1, len(l.replace(" ", "")))
+            if hits >= 2 and letters >= 0.4:
+                out.append(l)
+    log(f"[fast] words read on at least two photos: {out[:20]}")
+    return out[:30]
+
+
+def words_back(png, words):
+    """Share of the photos' words read back off a drawing (Apple's text reader)."""
+    import measure as MS
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    if not words:
+        return 1.0
+    got = norm(" ".join(MS.read_lines(png) or []))
+    return sum(1 for w in words if norm(w) in got) / len(words)
 
 
 def size_text(w_mm, h_mm):
@@ -202,7 +245,7 @@ def size_text(w_mm, h_mm):
     return f"{w_mm:g} mm long and {dia:.1f} mm across, {w_mm / dia:.1f} times as long as it is wide"
 
 
-def draw(card, good, tex, along, around, R, log, fix="", tries=2):
+def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
     """The front, best of `tries` by the judge against the sheet; then the other side. -> (front, back or None,
     notes)."""
     import turnaround as T
@@ -213,33 +256,39 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=2):
     clear = (singles or good)[0]["file"]
     st = size_text(along, around)
     fx = (" Fix these from the last try: " + "; ".join(fix)) if fix else ""
+    wd = (" The printed text, spelled exactly as on the real item: " + ", ".join(f'"{w}"' for w in words) + ".") if words else ""
     vw, vh = 1344, 768
     best, notes = None, {"tries": []}
     for t in range(tries):
         out = os.path.join(tex, f"front{t + 1}.png")
         T.draw_from_photos(product, [sheet, clear], out, width=vw, height=vh,
-                           prefix=DRAW_FRONT.format(product=product, year=year, size=st, fix=fx),
+                           prefix=DRAW_FRONT.format(product=product, year=year, size=st, fix=fx, words=wd),
                            seed=int(time.time()) % 100000 + 37 * t)
         v = V.ask(V.model(), PICK_Q.format(product=product, year=year), [out, sheet], think=False) or {}
         m = int(v.get("match") or 0)
-        notes["tries"].append({"file": out, "match": m, "wrong": v.get("wrong")})
-        log(f"[fast] front drawing try {t + 1}: matches the real item {m}/10" + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
-        if best is None or m > best[0]:
-            best = (m, out)
-        if m >= 8:
+        wb = words_back(out, words)
+        sc = m + 5 * wb
+        notes["tries"].append({"file": out, "match": m, "words": round(wb, 2), "wrong": v.get("wrong")})
+        log(f"[fast] front drawing try {t + 1}: matches the real item {m}/10, {wb:.0%} of the photos' words read back"
+            + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
+        if best is None or sc > best[0]:
+            best = (sc, out, m, wb)
+        if m >= 8 and wb >= 0.6:
             break
-    backs = [r["file"] for r in good if (r.get("look") or {}).get("side") in ("back", "several")][:4]
+    # the other side only from photos of ONE copy turned that way (2026-10-07 22:10: drawn from "several" photos it
+    # came out as a second front)
+    backs = [r["file"] for r in good if (r.get("look") or {}).get("side") == "back" and (r.get("look") or {}).get("one_item")][:4]
     back = None
     if backs:
         bsrc = backs[:2] if len(backs) <= 2 else [R.reference_sheet(backs, os.path.join(tex, "back_sheet.png"))]
         back = os.path.join(tex, "back.png")
         T.draw_from_photos(product, bsrc, back, width=vw, height=vh,
-                           prefix=DRAW_BACK.format(product=product, year=year, size=st, fix=fx),
+                           prefix=DRAW_BACK.format(product=product, year=year, size=st, fix=fx, words=wd),
                            seed=int(time.time()) % 100000 + 211)
         log(f"[fast] the other side drawn from {len(backs)} photo(s) that show it")
     else:
         log("[fast] no photo shows the other side - the front's own bands carry round the back")
-    return best[1], back, dict(notes, sheet=sheet, clear=clear, front_match=best[0])
+    return best[1], back, dict(notes, sheet=sheet, clear=clear, front_match=best[2], front_words=best[3])
 
 
 def label_from(front, back, along, around, tex, log):
@@ -355,12 +404,19 @@ def build(cid, card, d, R):
         families.classify(card, good[0]["file"], V.model(), log=log)
     sp, spec = shape_spec(cid, card, d, R, log)
     along, around = skin.label_size(spec)
+    words = photo_words(good, log)
     fix, last = [], None
     for rnd in range(2):
         R.boundary(cid, "step")
         R.status(cid, step=f"3/5 drawing the item from {min(len(good), 9)} photos" + (" (again, with the judge's fixes)" if rnd else ""))
         R.make_room("drawing")
-        front, back, dn = draw(card, good, tex, along, around, R, log, fix=fix)
+        front, back, dn = draw(card, good, tex, along, around, R, log, fix=fix, words=words)
+        if dn["front_match"] < 6 or dn["front_words"] < 0.5:     # nothing that does not match is built or filed
+            fix = [f"the drawing must match the real item and carry its real words (it scored {dn['front_match']}/10, "
+                   f"{dn['front_words']:.0%} of the words)"]
+            last = {"realism": 0, "era": 0, "words": 0, "fix": fix, "shots": dn["sheet"], "front": front, "back": back}
+            log(f"[fast] no drawing matched well enough (best {dn['front_match']}/10, {dn['front_words']:.0%} of the words) - drawn again")
+            continue
         png, cover = label_from(front, back, along, around, tex, log)
         mr = R.mr_from_bands(png, png, cover, tex, {})
         shutil.copy(png, os.path.join(d, "label.png"))
@@ -382,6 +438,7 @@ def build(cid, card, d, R):
         v = V.ask(V.model(), JUDGE_Q.format(product=display(card), year=card.get("year") or "its era"), [shots, dn["sheet"]],
                   think=True) or {}
         sc = {k: int(v.get(k) or 0) for k in ("realism", "era", "words")}
+        sc["words"] = min(sc["words"], int(round(10 * dn["front_words"])))   # the words are MEASURED, not only judged
         log(f"[fast] the judge: realism {sc['realism']}/10, era {sc['era']}/10, words {sc['words']}/10"
             + (f" - fix: {'; '.join(v.get('fix') or [])[:300]}" if v.get("fix") else ""))
         last = dict(sc, fix=v.get("fix") or [], shots=shots, front=front, back=back)

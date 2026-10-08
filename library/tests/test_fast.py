@@ -17,6 +17,8 @@ import fast  # noqa: E402
 import vet as V  # noqa: E402
 import turnaround as T  # noqa: E402
 import skin  # noqa: E402
+import measure as MS  # noqa: E402
+MS.read_lines = lambda png, **k: ["DURACELL", "PRESS DOTS TO TEST", "ALKALINE BATTERY"]
 
 ok = 0
 
@@ -48,12 +50,13 @@ def img(name, color=(90, 60, 30)):
 
 refs = [{"file": img("l1a.jpg"), "listing": "1"}, {"file": img("l1b.jpg"), "listing": "1"},
         {"file": img("l2a.jpg"), "listing": "2"}, {"file": img("g1.jpg"), "listing": None},
-        {"file": img("g2.jpg"), "listing": None}]
+        {"file": img("g2.jpg"), "listing": None}, {"file": img("g3.jpg"), "listing": None}]
 looks = {"l1a.jpg": {"real_photo": True, "score": 9, "side": "front", "one_item": True},
          "l1b.jpg": {"real_photo": True, "score": 3, "side": "back", "one_item": False},
          "l2a.jpg": {"real_photo": True, "score": 2, "side": "front"},
          "g1.jpg": {"real_photo": False, "score": 9, "side": "front"},
-         "g2.jpg": {"real_photo": True, "score": 8, "side": "several"}}
+         "g2.jpg": {"real_photo": True, "score": 8, "side": "several"},
+         "g3.jpg": {"real_photo": True, "score": 9, "side": "front", "kind": "merch"}}
 V.ask = lambda use, q, imgs, think=False, side=1280: looks[os.path.basename(imgs[0])] if "Answer ONLY JSON: {\"real_photo\"" in q else {}
 V.quick_model = lambda: "quick"
 V.model = lambda: "judge"
@@ -61,7 +64,9 @@ R = types.SimpleNamespace(WORK=W, say=lambda *a: None)
 good = fast.sort_refs(refs, {"product": "Duracell AA", "year": 1998}, R, lambda *a: None)
 names = [os.path.basename(g["file"]) for g in good]
 check(names[0] == "l1a.jpg" and "l1b.jpg" in names, f"a good listing lends its other photos ({names})")
-check("l2a.jpg" not in names and "g1.jpg" not in names, "a wrong listing and an ad do not count")
+check("l2a.jpg" not in names and "g1.jpg" not in names and "g3.jpg" not in names, "a wrong listing, an ad and merchandise (a pin) do not count")
+wds = fast.photo_words(good, lambda *a: None)
+check("PRESS DOTS TO TEST" in wds, f"the words read on two photos go to the drawing ({wds})")
 
 # draw: the item as a studio photo, the era and real words in the prompt; the other side from its own photos
 calls = []
@@ -79,13 +84,13 @@ tex = os.path.join(W, "tex")
 os.makedirs(tex)
 picks = iter([{"match": 6, "wrong": ["meter missing"]}, {"match": 9}])
 V.ask = lambda use, q, imgs, think=False, side=1280: next(picks)
-front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None)
+front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None, words=wds)
 fc = [c for c in calls if "front" in c["out"]]
 check(len(fc) == 2 and front.endswith("front2.png"), "a weak front is drawn again; the best kept")
-check("studio product photo" in fc[0]["prefix"] and "1998" in fc[0]["prefix"] and "real, correctly spelled word" in fc[0]["prefix"],
+check("studio product photo" in fc[0]["prefix"] and "1998" in fc[0]["prefix"] and '"PRESS DOTS TO TEST"' in fc[0]["prefix"],
       "drawn as the item from its era, with real words")
 bc = [c for c in calls if c["out"].endswith("back.png")]
-check(back and bc and os.path.basename(bc[0]["photos"][0]) in ("l1b.jpg", "g2.jpg"), "the other side drawn from the photos that show it")
+check(not bc, "no photo of ONE copy turned to its back: no back is drawn (a 'several' photo made a second front)")
 
 # label: the drawn views unrolled, the back half a turn round
 T.photo_mask = lambda f, timeout=300: f
@@ -134,6 +139,11 @@ check("the meter is the 2003 style" in second["prefix"], "the second drawing car
 check(filed == ["x_aa"] and out["era"] == 8, "the pass is filed in the Asset Library")
 check(any(a[0] == "lathe.py" for a in blend) and any(a[0] == "contract.py" for a in blend), "built by the real-size round builder and the deliverable contract")
 check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], "five steps on the page")
+# a drawing that never matches is never built or filed
+filed.clear(); blend.clear(); st.clear()
+answers = iter([{"match": 3}] * 8)
+out2 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
+check(not filed and not blend and "failed" in st[-1].get("step", ""), f"no match, nothing built or filed: {st[-1].get('step', '')[:80]}")
 src = open(os.path.join(os.path.dirname(fast.__file__), "run.py")).read()
 check("if fast.applies(cid, card, sys.modules[__name__]):" in src, "the run sends round items down the five steps")
 print(f"ALL {ok} PASS")
