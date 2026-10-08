@@ -56,7 +56,8 @@ PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a real pho
           "logo, colors and layout, real words that make sense? Answer ONLY JSON: {{\"match\": 0-10, "
           "\"wrong\": [\"short, specific\"]}}")
 JUDGE_Q = ("Picture 1 shows our finished 3D model of {product} from several sides. Picture 2 is a sheet of real "
-           "photos of that item from around {year}. Judge it like a collector would. Answer ONLY JSON: "
+           "photos of that item from around {year}. Judge it like a buyer of the best 3D product assets sold on "
+           "TurboSquid or CGTrader would, and like a collector of the real thing. Answer ONLY JSON: "
            "{{\"realism\": 0-10 (does it look like a real physical object: shape, proportions, materials, print "
            "quality), \"era\": 0-10 (is it the right version of this product for {year}: logo, colors, design), "
            "\"words\": 0-10 (is the printed text made of real words that make sense for this product - not gibberish), "
@@ -419,6 +420,17 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     out = a * out + (1 - a) * bg[:, None, :]
     png = os.path.join(tex, "label.png")
     Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8)).save(png)
+    # saleable-asset resolution (Cody, 2026-10-08 01:22: "as high definition and as quality as the best saleable
+    # assets"): Real-ESRGAN x4 (github.com/xinntao/Real-ESRGAN, tiled with overlap) and never under 4096 px around
+    try:
+        T.upscale(png, force=True)
+    except Exception as e:
+        log(f"[fast] the label was not sharpened ({str(e)[:80]})")
+    im = Image.open(png).convert("RGB")
+    if im.width < 4096:
+        im = im.resize((4096, int(round(4096 * im.height / im.width))), Image.LANCZOS)
+        im.save(png)
+    log(f"[fast] the label texture is {im.width} x {im.height} px")
     cover = os.path.join(tex, "label_seen.png")
     Image.fromarray(np.full((H, W), 255, np.uint8)).save(cover)
     return png, cover

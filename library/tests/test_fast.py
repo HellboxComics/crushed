@@ -113,7 +113,7 @@ def fake_unroll(v, a, b, Wd=2048, max_deg=62):
 skin.unroll_view = fake_unroll
 skin.continue_bands = lambda lab, gaps: lab
 png, cover = fast.label_from(front, back, 50.5, 45.5, tex, lambda *a: None)
-check(os.path.exists(png) and Image.open(png).size == (2048, H), "the label is the drawn views on the label's own layout")
+check(os.path.exists(png) and Image.open(png).width >= 4096 and abs(Image.open(png).height / Image.open(png).width - H / 2048) < 0.01, "the label is on its own layout, at least 4096 px around (saleable resolution)")
 
 # the whole build: a pass is filed; a miss is drawn again with the judge's fixes; two misses stop with the reason
 for k in ("label.png",):
