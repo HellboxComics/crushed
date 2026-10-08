@@ -217,4 +217,30 @@ MS.read_lines = lambda png, **k: []
 fast.FILLED.clear()
 png3, _ = fast.label_from(front, back, 50.5, 45.5, tex, lambda *a: None, extra=[front])
 check(reg and fast.FILLED["share"] >= 0.9, f"a view between the sides is placed by matching and fills its stretch ({fast.FILLED.get('share')})")
+
+# the hunt: the item's own kind of thing, never merchandise
+rows2 = [{"title": t} for t in ("Vintage Duracell PowerCheck Lapel Pin", "Duracell Copper Top Coffee Mug 1990s",
+                                "Lot of 3 Vintage Duracell PowerCheck AA Batteries 1998", "Duracell Bunny Plush Toy",
+                                "Vintage Duracell PowerCheck AA battery JAN 2001")]
+rk2 = [r["title"] for r in fast.rank_listings(rows2, ["Duracell PowerCheck AA"], "Duracell", 1998, kind="battery")]
+check(rk2 and all("Batter" in t or "batter" in t for t in rk2) and len(rk2) == 2, f"pins, mugs and toys are no listing for a battery ({rk2})")
+# several copies in one photo: each cut out as a view of its own
+grp = os.path.join(W, "three.png")
+g3 = np.full((300, 500, 3), 255, np.uint8)
+for x0 in (40, 200, 360):
+    g3[30:270, x0:x0 + 80] = (60, 60, 60)
+Image.fromarray(g3).save(grp)
+T.photo_mask = lambda f, timeout=300: (Image.fromarray(((np.asarray(Image.open(f).convert("L")) < 128) * 255).astype(np.uint8)).save(f + "_m.png") or f + "_m.png")
+cops = fast.split_items({"file": grp, "look": {"one_item": False, "score": 9}}, os.path.join(W, "copies"), lambda *a: None)
+check(len(cops) == 3 and all(c["look"]["one_item"] for c in cops), f"three copies in one photo become three views ({len(cops)})")
+# each column comes from the view that saw it most squarely; the seam avoids print
+Hh, Ww = 40, 400
+va = np.full((Hh, Ww, 3), 0.2); vb = np.full((Hh, Ww, 3), 0.2)
+va[:, 150:170] = 0.9                                           # print near view A's squeezed edge
+vb[:, 150:170] = 0.9                                           # the same print, square-on in view B
+wa = np.clip(1 - np.abs(np.arange(Ww) - 100) / 120, 0, 1)      # A looks at column 100
+wb = np.clip(1 - np.abs(np.arange(Ww) - 200) / 120, 0, 1)      # B looks at column 200
+labp, covp = fast.pick_views([(va, wa), (vb, wb)], lambda *a: None)
+check(np.allclose(labp[:, 150:170], 0.9) and covp[:, 380:].max() == 0 and covp[:, :50].max() > 0,
+      "each column from the view that saw it squarely; what no view saw stays unseen")
 print(f"ALL {ok} PASS")

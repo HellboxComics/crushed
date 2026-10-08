@@ -84,9 +84,17 @@ def short_name(product):
     return re.sub(r"\s+", " ", n).strip(" ,")
 
 
-def rank_listings(rows, names, brand, year):
+MERCH = {"pin", "pins", "lapel", "mug", "mugs", "cup", "glass", "magnet", "keychain", "chain", "shirt", "tee",
+         "hat", "cap", "sign", "poster", "ad", "advertisement", "advertising", "toy", "plush", "bunny",
+         "figure", "figurine", "display", "tin", "patch", "sticker", "decal", "ornament", "bag", "backpack",
+         "clock", "lamp", "flashlight", "watch", "empty"}
+
+
+def rank_listings(rows, names, brand, year, kind=""):
     """eBay listings ranked by idf - a word's weight is how rare it is among the results' titles (Sparck Jones 1972)
-    - plus the era's words for an old item; another brand is dropped."""
+    - plus the era's words for an old item; another brand is dropped, and so is a title without the item's own kind
+    of thing (a battery) or one that names merchandise (a pin, a mug) the item is not (2026-10-08 11:10: of 56
+    reference photos, pins, mugs, a bunny toy and a backpack outnumbered the battery)."""
     N = max(1, len(rows))
     df = {}
     for L in rows:
@@ -100,16 +108,22 @@ def rank_listings(rows, names, brand, year):
     except (TypeError, ValueError):
         pass
     b = tok(brand)
+    kd = [k[:5] for k in tok(kind) if len(k) >= 3]
+    named = set().union(*[tok(n) for n in names]) if names else set()
 
     def score(L):
         t = tok(L["title"])
         if b and t and not (b & t):
             return -1.0
+        if kd and not any(w.startswith(k) for w in t for k in kd):
+            return -1.0
+        if (t & MERCH) - named:
+            return -1.0
         return sum(math.log((N + 1) / (df.get(w, 0) + 1)) for w in want & t) + 2 * len(era & t)
     return sorted((L for L in rows if score(L) >= 0), key=lambda L: -score(L))
 
 
-def references(cid, card, R, log, listings=6, google=25):
+def references(cid, card, R, log, listings=10, google=25):
     """[{"file", "url", "page", "listing"}] - eBay listings first (each one copy from every side), then the Google
     hunt's photos. Downloaded into WORK/hunt/<cid>; kept between runs."""
     import google_images as G
@@ -141,11 +155,12 @@ def references(cid, card, R, log, listings=6, google=25):
                     rows.append(L)
         except Exception as e:
             log(f"[fast] eBay could not be searched: {str(e)[:120]}")
-    rows = rank_listings(rows, era_names + [name], brand, year)
+    kind = name.split()[-1] if name else ""                  # the kind of thing: "battery" in "... alkaline battery"
+    rows = rank_listings(rows, era_names + [name], brand, year, kind=kind)
     log("[fast] eBay listings, best match first: " + " | ".join(L["title"][:50] for L in rows[:listings]))
     for L in rows[:listings]:
         try:
-            for u in G.listing(L["page"], log)[:10]:
+            for u in G.listing(L["page"], log)[:12]:
                 f = DS._download(u, d)
                 if f:
                     out.append({"file": f, "url": u, "page": L["page"], "listing": L["id"], "title": L["title"]})
@@ -198,6 +213,10 @@ def sort_refs(refs, card, R, log):
         # drawing's sheet) and ads are no reference for the item itself
         r["score"] = s if lk.get("real_photo") is not False and lk.get("kind", "item") == "item" else 0
     good = sorted([r for r in refs if r["score"] >= 7], key=lambda r: (-r["score"], 0 if r.get("listing") else 1))
+    listed = [r for r in good if r.get("listing")]
+    if len(listed) >= 6:                                     # enough of the real thing from listings found by its
+        good = listed                                        # era's names: the web's photos (modern packs, a newer
+        #                                                      design the quick look scored 9 - 11:10) are left out
     log(f"[fast] {len(good)} of {len(refs)} photos show this item; "
         f"{sum(1 for r in good if (r.get('look') or {}).get('side') in ('back', 'several'))} show another side")
     return good
@@ -257,7 +276,34 @@ DRAW_FACE = (
     "stickers, bars or boxes the photo does not show.{style}{words}{fix}")
 
 
-def faces(good, vocab, log, most=8, want_ratio=None, extra=2):
+def split_items(r, crop_dir, log):
+    """A photo of several copies -> one reference per copy (skin.all_items: each outline on its own), each saved
+    on its own. -> [refs]."""
+    import skin
+    import turnaround as T
+    from PIL import Image
+    out = []
+    try:
+        mask = T.photo_mask(r["file"], timeout=300)
+        items = skin.all_items({"file": r["file"], "mask": mask})
+    except Exception as e:
+        log(f"[fast] {os.path.basename(r['file'])}: the copies could not be cut apart ({str(e)[:80]})")
+        return out
+    if len(items) < 2:
+        return out
+    os.makedirs(crop_dir, exist_ok=True)
+    base = os.path.splitext(os.path.basename(r["file"]))[0]
+    for k, (im, m) in enumerate(items[:6]):
+        f = os.path.join(crop_dir, f"{base}_copy{k + 1}.png")
+        a = np.asarray(im.convert("RGB")).astype(float)
+        mm = (np.asarray(m) > 0.5)[..., None]
+        Image.fromarray(np.where(mm, a, 255).astype(np.uint8)).save(f)   # the copy alone on white
+        out.append(dict(r, file=f, look=dict(r.get("look") or {}, one_item=True), from_photo=r["file"]))
+    log(f"[fast] {os.path.basename(r['file'])}: {len(out)} copies cut apart, each a view of its own")
+    return out
+
+
+def faces(good, vocab, log, most=8, want_ratio=None, extra=3, crop_dir=None):
     """The item's different printed sides, each from ONE clear photo of one copy: the photo read with the most words
     first, then the one whose words share least with it (2026-10-08 04:25: a sheet showing two sides at once was
     merged into one garbled side - the battery's big-logo side and its PowerCheck side). Each face carries the words
@@ -265,10 +311,15 @@ def faces(good, vocab, log, most=8, want_ratio=None, extra=2):
     import measure as MS
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
-    singles = [r for r in good if (r.get("look") or {}).get("one_item")] or good
+    singles = [r for r in good if (r.get("look") or {}).get("one_item")]
+    if crop_dir:                                             # several copies in one photo, each turned another way,
+        for r in good:                                       # are the best evidence of the other sides (11:10: three
+            if not (r.get("look") or {}).get("one_item"):    # standing batteries, three sides, were thrown away)
+                singles += split_items(r, crop_dir, log)
+    singles = singles or good
     if want_ratio:                                           # a photo of the item in its own proportions only: a
         kept_ = []                                           # stubby one (seen end-on, or another size) is drawn
-        for r in singles[:most * 2]:                         # stubby (2026-10-08 03:00: side 2 drawn 2.5 to 1 from
+        for r in singles[:most * 3]:                         # stubby (2026-10-08 03:00: side 2 drawn 2.5 to 1 from
             q = drawn_ratio(r["file"])                       # its photo, three tries, for a 3.6 to 1 cell)
             if q is None or 0.8 * want_ratio <= q <= 1.25 * want_ratio:
                 kept_.append(r)
@@ -276,7 +327,7 @@ def faces(good, vocab, log, most=8, want_ratio=None, extra=2):
                 log(f"[fast] {os.path.basename(r['file'])}: the item shows {q:.1f} to 1 (it is {want_ratio:.1f} to 1) - not drawn from")
         singles = kept_ or singles
     read = []
-    for r in singles[:most]:
+    for r in singles[:most * 2]:
         try:
             lines = [l.strip() for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3]
         except Exception:
@@ -338,7 +389,7 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
     st = size_text(along, around)
     fx = (" Fix these from the last try: " + "; ".join(fix)) if fix else ""
     vw, vh = 1344, 768
-    fs = faces(good, list(words), log, want_ratio=along / (around / math.pi))
+    fs = faces(good, list(words), log, want_ratio=along / (around / math.pi), crop_dir=os.path.join(tex, "copies"))
     if not fs:
         fs = [(good[0]["file"], list(words))]
     drawn, notes = [], {"tries": []}
@@ -397,6 +448,49 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
                                                     front_words=front[3], extra=extra)
 
 
+def pick_views(cands, log, seam=4.0):
+    """Which view each column of the label comes from: the one that saw it most squarely (its weight - the unroll's
+    cos^2 of the angle from the camera), with a seam only where there is little print in both views - the view
+    selection of multi-view texturing (Waechter, Moehrle & Goesele, "Let There Be Color!", ECCV 2014; Lempitsky &
+    Ivanov 2007), here one row of choices around the label, so the exact best (Viterbi dynamic programming) is cheap.
+    13:24: the first view's squeezed edge beat a later view's square-on print ("ALKALINE" read "ALAALING").
+    -> (label H x W x 3, coverage H x W)."""
+    H, W = cands[0][0].shape[:2]
+    K = len(cands)
+    wts = np.stack([np.asarray(w, float) for _, w in cands])           # K x W
+    ok = wts > 0.05
+    m = max(1e-6, float(wts.max()))
+    unary = np.where(ok, 1.0 - wts / m, 1e3)                            # K views + one "unseen" choice
+    unary = np.vstack([unary, np.where(ok.any(0), 1e3, 0.0)[None]])
+    ink = []
+    for px, _ in cands:                                                 # print in each column: mean edge strength
+        g = px.mean(-1)
+        ink.append(np.abs(np.diff(g, axis=1, append=g[:, -1:])).mean(0) + np.abs(np.diff(g, axis=0, append=g[-1:])).mean(0))
+    ink.append(np.zeros(W))
+    ink = np.stack(ink)
+    ink = ink / max(1e-6, float(np.percentile(ink[:K][ok], 95))) if ok.any() else ink
+    cost = unary[:, 0].copy()
+    back = np.zeros((K + 1, W), int)
+    for c in range(1, W):
+        sw = seam * (ink[:, c][:, None] + ink[:, c][None, :])           # switching here cuts through this print
+        np.fill_diagonal(sw, 0.0)
+        tot = cost[None, :] + sw                                        # [to, from]
+        back[:, c] = np.argmin(tot, axis=1)
+        cost = tot[np.arange(K + 1), back[:, c]] + unary[:, c]
+    pick = np.zeros(W, int)
+    pick[-1] = int(np.argmin(cost))
+    for c in range(W - 1, 0, -1):
+        pick[c - 1] = back[pick[c], c]
+    lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
+    for k, (px, w) in enumerate(cands):
+        sel = pick == k
+        lab[:, sel] = px[:, sel]
+        cov[:, sel] = np.maximum(np.asarray(w)[sel], 0.06)
+    log("[fast] each column from the view that saw it most squarely: "
+        + ", ".join(f"view {k + 1} {np.mean(pick == k):.0%}" for k in range(K)) + f", unseen {np.mean(pick == K):.0%}")
+    return lab, cov
+
+
 def match_bands(art, ref, edge):
     """Color transfer (Reinhard, Ashikhmin, Gooch, Shirley 2001: match the mean and spread of each channel in the
     Lab color space) done separately above and below the band edge, so side 2's copper becomes side 1's copper and
@@ -446,6 +540,7 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
     lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
     edge0 = None
     art0, e0 = None, None
+    cands = []                                               # every placed view: (pixels H x W x 3, weight per column)
     wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in list(words)[:24]) + ".") if words else ""
     for i, f in enumerate([front] + ([back] if back else [])):
         try:
@@ -482,8 +577,11 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
         placed = np.zeros((H, W, 3))
         pw = np.zeros((H, W))
         placed[:, c0:c1], pw[:, c0:c1] = art, 1.0
+        wcol = w.max(0)
         if i == 1:                                           # the other side: half a turn round
             placed, pw = np.roll(placed, W // 2, axis=1), np.roll(pw, W // 2, axis=1)
+            wcol = np.roll(wcol, W // 2)
+        cands.append((placed, wcol))
         new = (pw > 0) & (cov == 0)
         lab = np.where(new[..., None], placed, lab)
         cov = np.maximum(cov, pw)
@@ -504,12 +602,15 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
                 log(f"[fast] view {j + 3} shares too little with the sides to be placed - left out")
                 continue
             pl, pw = placed[1]
+            cands.append((pl, pw.max(0)))
             new = (pw > 0.05) & (cov == 0)
             lab = np.where(new[..., None], pl, lab)
             cov = np.where(new, pw, cov)
             log(f"[fast] view {j + 3} placed by its matching print: {new.any(0).mean():.0%} more of the way around")
         except Exception as e:
             log(f"[fast] view {j + 3} could not be placed: {str(e)[:100]}")
+    if len(cands) > 1:                                       # each column from the view that saw it most squarely
+        lab, cov = pick_views(cands, log)
     seen = cov > 0
     FILLED["share"] = float(seen.max(0).mean())
     log(f"[fast] the flat artwork covers {seen.max(0).mean():.0%} of the way around; each row's own background fills the rest")
