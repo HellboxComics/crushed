@@ -466,7 +466,7 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             pass
         wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in ws[:24]) + ".") if ws else ""
         best = None
-        for t in range(tries if k < 2 else min(tries, 2)):
+        for t in range(tries if k < 2 else min(tries, 3)):
             out = os.path.join(tex, f"side{k + 1}_{t + 1}.png")
             # (no style picture: given side 1's drawing as a second picture, side 2 copied side 1's print - 05:55, four
             #  tries at 2/10. One look comes from matching the colors per band afterwards - match_bands)
@@ -527,17 +527,20 @@ def view_words(art, cols):
     return best
 
 
-def place_by_words(views, W, log, least=5, tol=0.03):
+def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
     """Where each view sits round the label: by the printed lines it shares with a view already placed - the same
     words are the same spot on the real label (2026-10-08 14:00: placed by matching shapes, the meter view found 18
     features and landed wrong; the logo side was assumed opposite the PowerCheck side and was not). The first view
     is the reference. -> {view index: column shift}."""
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    skips = [norm(k) for k in skip if len(norm(k)) >= 3]
     words = []
     for v in views:                                          # single words (a line runs along the length, so its
         ws = [(norm(x), c) for t, c in v.get("words") or [] for x in re.split(r"\s+", str(t))]   # words share its
-        ws = [(x, c) for x, c in ws if len(x) >= least]      # column); a word read twice in one view ("DURACELL" in
+        ws = [(x, c) for x, c in ws if len(x) >= least and not any(fuzz.ratio(x, k) >= 85 for k in skips)]
+        #   (the item's own name - "DURACELL" - is printed in several places: no anchor; 20:10 it stacked the logo
+        #    side on the PowerCheck side)                      column); a word read twice in one view ("DURACELL" in
         n = {}                                               # the logo and in "DURACELL INC.") says no one place
         for x, _ in ws:
             n[x] = n.get(x, 0) + 1
@@ -559,6 +562,8 @@ def place_by_words(views, W, log, least=5, tol=0.03):
             circ = lambda x, y: min(abs(x - y), W - abs(x - y))
             sup = [[c for c in cand if circ(c[0], d[0]) <= tol * W] for d in cand]
             grp = max(sup, key=len)
+            if len({c[1] for c in grp}) < need:              # two different words that agree, never one
+                continue
             ang = np.angle(np.mean([np.exp(2j * np.pi * c[0] / W) for c in grp])) * W / (2 * np.pi)
             if best is None or len(grp) > best[2]:
                 best = (j, int(round(ang)) % W, len(grp), sorted({c[1] for c in grp}))
@@ -707,7 +712,7 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
     log(f"[fast] {len(views)} drawn views unrolled; bands and colors matched to view 1")   # et al. 2001, per band)
     for v in views:
         v["words"] = view_words(v["l"], v["cols"])
-    shifts = place_by_words(views, W, log)
+    shifts = place_by_words(views, W, log, skip=re.findall(r"[A-Za-z0-9]+", product.split("(")[0])[:2])
     cands = []
     for k, v in enumerate(views):
         sh = shifts.get(k)
