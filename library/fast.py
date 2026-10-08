@@ -314,6 +314,15 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
             src = skin.cutout({"file": photo, "mask": mask}, os.path.join(tex, f"side{k + 1}_photo.png"))
         except Exception:
             src = photo
+        try:                                                 # lying down, like the drawing: a standing photo is
+            from PIL import Image                            # turned a quarter (its top end to the left) - 05:15:
+            im = Image.open(src)                             # drawn level from a standing photo, the judge called
+            if im.height > 1.3 * im.width:                   # it mirrored and garbled
+                flat = os.path.join(tex, f"side{k + 1}_level.png")
+                im.rotate(90, expand=True, fillcolor="white").save(flat)
+                src = flat
+        except Exception:
+            pass
         wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in ws[:24]) + ".") if ws else ""
         best = None
         for t in range(tries):
