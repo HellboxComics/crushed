@@ -136,8 +136,23 @@ def stop_run(why):
                 os.kill(pid, signal.SIGKILL)
             except (ProcessLookupError, PermissionError):
                 pass
+    clear_room()
     print(f"[watchdog] {why}: stopped {len(plan)} process(es) - " + ", ".join(sorted(set(plan.values()))), flush=True)
     return plan
+
+
+def clear_room():
+    """The drawing room keeps drawing what a stopped run asked for: its queue is emptied and the running job
+    interrupted - ComfyUI's own server routes, POST /queue {"clear": true} and POST /interrupt (ComfyUI server.py).
+    (2026-10-08 00:20: after a restart the self-test's cut-out waited behind the old run's drawing, timed out, and
+    nothing ran for 15 minutes.)"""
+    for path, body in (("/queue", {"clear": True}), ("/interrupt", {})):
+        try:
+            req = urllib.request.Request(ROOM + path, data=json.dumps(body).encode(),
+                                         headers={"content-type": "application/json"})
+            urllib.request.urlopen(req, timeout=10).read()
+        except Exception:
+            pass
 
 
 def tell(text):
