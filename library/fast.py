@@ -86,7 +86,7 @@ def short_name(product):
 
 MERCH = {"pin", "pins", "lapel", "mug", "mugs", "cup", "glass", "magnet", "keychain", "chain", "shirt", "tee",
          "hat", "cap", "sign", "poster", "ad", "advertisement", "advertising", "toy", "plush", "bunny",
-         "figure", "figurine", "display", "tin", "patch", "sticker", "decal", "ornament", "bag", "backpack",
+         "figure", "figurine", "tin", "patch", "sticker", "decal", "ornament", "bag", "backpack",
          "clock", "lamp", "flashlight", "watch", "empty"}
 
 
@@ -132,8 +132,10 @@ def rank_listings(rows, names, brand, year, kind=""):
     size = [w for w in tok(kind) if re.fullmatch(r"aaa|aa|[cd]|9v|\d+(v|oz|in|mm|ml|l|lb|g)?", w)]
     with_size = sum(1 for L in rows if set(size) & tok(L["title"])) if size else 0
     use_size = bool(size) and with_size >= min(3, max(1, len(rows) // 4))
-    common = {w for w, n in df.items() if n > 0.3 * N}         # a word most titles carry says nothing of the era
-    era_named = set().union(*[tok(x) for x in names[:-1]]) if len(names) > 1 else set()   # the era's own names
+    common = {w for w, n in df.items() if n > 0.3 * N} if N >= 10 else set()   # a word most of MANY titles carry
+    #   says nothing of the era (13:24: among 3 titles, "PowerCheck" itself counted as common and the listing fell)
+    era_named = (set().union(*[tok(x) for x in names[:-1]]) - tok(names[-1])) if len(names) > 1 else set()
+    #   the era's own names, less what today's name also says ("Coppertop" is still sold; "PowerCheck" is the era)
     years = set()
     try:
         years = {str(y) for y in range(int(year) - 5, int(year) + 6)}   # "circa 1998", "2001" on a date code
@@ -441,6 +443,10 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
     fs = faces(good, list(words), log, want_ratio=along / (around / math.pi), crop_dir=os.path.join(tex, "copies"))
     if not fs:
         fs = [(good[0]["file"], list(words))]
+    if len(fs[0][1]) < 4:                                    # no photo shows the printed side clearly: drawing from
+        raise RuntimeError(                                  # a warnings strip (3 words) scored 1/10 - 13:24
+            f"no photo shows the item's printed side clearly (the best reads {len(fs[0][1])} words: "
+            f"{', '.join(fs[0][1][:4])}) - the photo hunt needs better listings")
     drawn, notes = [], {"tries": []}
     for k, (photo, ws) in enumerate(fs):
         try:                                                 # the item alone on white: nothing else to copy
