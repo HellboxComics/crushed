@@ -503,7 +503,80 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
                                                     front_words=front[3], extra=extra)
 
 
-def pick_views(cands, log, seam=4.0):
+def view_words(art, cols):
+    """The printed lines on one unrolled view with the label column each sits at: [(text, column)]. The print runs
+    along the length (down the label's rows), so the strip is read turned a quarter, both ways, the way that reads
+    more."""
+    import measure as MS
+    from PIL import Image
+    if not len(cols):
+        return []
+    c0, c1 = int(cols.min()), int(cols.max()) + 1
+    im = Image.fromarray((np.clip(art[:, c0:c1], 0, 1) * 255).astype(np.uint8))
+    cw = c1 - c0
+    best = []
+    for turn in (90, 270):
+        try:
+            got = MS.read_boxes(im.rotate(turn, expand=True))
+        except Exception:
+            got = []
+        # turned 90 (counter-clockwise) a column x lands at row cw-1-x; turned 270 at row x
+        lines = [(t, c0 + ((cw - 1) - cy * cw if turn == 90 else cy * cw)) for t, cx, cy in got]
+        if sum(len(t) for t, _ in lines) > sum(len(t) for t, _ in best):
+            best = lines
+    return best
+
+
+def place_by_words(views, W, log, least=5, tol=0.03):
+    """Where each view sits round the label: by the printed lines it shares with a view already placed - the same
+    words are the same spot on the real label (2026-10-08 14:00: placed by matching shapes, the meter view found 18
+    features and landed wrong; the logo side was assumed opposite the PowerCheck side and was not). The first view
+    is the reference. -> {view index: column shift}."""
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    words = []
+    for v in views:                                          # single words (a line runs along the length, so its
+        ws = [(norm(x), c) for t, c in v.get("words") or [] for x in re.split(r"\s+", str(t))]   # words share its
+        ws = [(x, c) for x, c in ws if len(x) >= least]      # column); a word read twice in one view ("DURACELL" in
+        n = {}                                               # the logo and in "DURACELL INC.") says no one place
+        for x, _ in ws:
+            n[x] = n.get(x, 0) + 1
+        words.append([(x, c) for x, c in ws if n[x] == 1])
+    shifts = {0: 0}
+    while True:
+        best = None
+        for j in range(len(views)):
+            if j in shifts:
+                continue
+            cand = []
+            for i, si in shifts.items():
+                for a, ca in words[i]:
+                    for b, cb in words[j]:
+                        if fuzz.ratio(a, b) >= 88:
+                            cand.append(((ca + si - cb) % W, a))
+            if not cand:
+                continue
+            circ = lambda x, y: min(abs(x - y), W - abs(x - y))
+            sup = [[c for c in cand if circ(c[0], d[0]) <= tol * W] for d in cand]
+            grp = max(sup, key=len)
+            ang = np.angle(np.mean([np.exp(2j * np.pi * c[0] / W) for c in grp])) * W / (2 * np.pi)
+            if best is None or len(grp) > best[2]:
+                best = (j, int(round(ang)) % W, len(grp), sorted({c[1] for c in grp}))
+        if best is None:
+            back = next((k for k, v in enumerate(views) if k not in shifts and v.get("kind") == "back"), None)
+            if back is None:                                 # nothing shared: the other side half a turn round (the
+                break                                        # last resort), and the rest may chain off it
+            shifts[back] = W // 2
+            log(f"[fast] view {back + 1} shares no printed words with the placed views - put opposite view 1")
+            continue
+        j, sh, n, ws = best
+        shifts[j] = sh
+        log(f"[fast] view {j + 1} placed by {n} printed line(s) it shares with the others ({', '.join(ws[:3])}): "
+            f"{sh * 360 // W} degrees round")
+    return shifts
+
+
+def pick_views(cands, log, seam=4.0, blend=16):
     """Which view each column of the label comes from: the one that saw it most squarely (its weight - the unroll's
     cos^2 of the angle from the camera), with a seam only where there is little print in both views - the view
     selection of multi-view texturing (Waechter, Moehrle & Goesele, "Let There Be Color!", ECCV 2014; Lempitsky &
@@ -541,6 +614,15 @@ def pick_views(cands, log, seam=4.0):
         sel = pick == k
         lab[:, sel] = px[:, sel]
         cov[:, sel] = np.maximum(np.asarray(w)[sel], 0.06)
+    for c in range(1, W):                                    # a soft join where one view hands over to the next,
+        k1, k2 = pick[c - 1], pick[c]                        # over the columns both saw (14:00: a hard seam split
+        if k1 == k2 or K in (k1, k2):                        # the copper top)
+            continue
+        for d in range(-blend, blend):
+            cc = c + d
+            if 0 <= cc < W and ok[k1, cc] and ok[k2, cc]:
+                t = (d + blend) / (2 * blend)
+                lab[:, cc] = (1 - t) * cands[k1][0][:, cc] + t * cands[k2][0][:, cc]
     log("[fast] each column from the view that saw it most squarely: "
         + ", ".join(f"view {k + 1} {np.mean(pick == k):.0%}" for k in range(K)) + f", unseen {np.mean(pick == K):.0%}")
     return lab, cov
@@ -592,12 +674,8 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
     from PIL import Image
     W = 2048
     H = int(round(W * along / around))
-    lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
-    edge0 = None
-    art0, e0 = None, None
-    cands = []                                               # every placed view: (pixels H x W x 3, weight per column)
-    wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in list(words)[:24]) + ".") if words else ""
-    for i, f in enumerate([front] + ([back] if back else [])):
+    views = []                                               # every drawn view, unrolled at its own place
+    for i, f in enumerate([front] + ([back] if back else []) + list(extra or [])):
         try:
             got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around, W, max_deg=70)
         except Exception as e:
@@ -606,64 +684,41 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
         if not got:
             continue
         l, w = got
-        cols = np.where(w.max(0) > 0.05)[0]
+        wcol = w.max(0)
+        cols = np.where(wcol > 0.05)[0]
         if not len(cols):
             continue
-        c0, c1 = int(cols.min()), int(cols.max()) + 1
-        strip = np.clip(l[:, c0:c1], 0, 1)
-        sp = os.path.join(tex, f"strip{i + 1}.png")
-        Image.fromarray((strip * 255).astype(np.uint8)).save(sp)
+        art = np.clip(l, 0, 1) * (wcol > 0.05)[None, :, None]
+        if i < 2:
+            Image.fromarray((art[:, cols.min():cols.max() + 1] * 255).astype(np.uint8)).save(os.path.join(tex, f"strip{i + 1}.png"))
         # (no generative "flatten" edit: asked to make the strip flat artwork, Qwen-Image-Edit redrew it as a
-        #  picture of a battery - rounded ends, white margins - 2026-10-08 02:17. The unroll already takes the
-        #  light off each column (mosaic.strip -> unwrap.delight); the drawn studio photo has no glare to speak of)
-        flat = sp
-        art = np.asarray(Image.open(flat).convert("RGB").resize((c1 - c0, H), Image.LANCZOS)) / 255.0
-        edge = band_edge(art)                                # where the band changes (the copper meets the black):
-        if i == 0:                                           # the other side is shifted along the length to meet
-            edge0 = edge                                     # the front's (03:55: two band heights on one battery)
-        elif edge is not None and edge0 is not None and abs(edge - edge0) < 0.15 * H:
-            art = np.roll(art, edge0 - edge, axis=0)
-            log(f"[fast] side 2's band edge moved {edge0 - edge:+d} px to meet side 1's")
-        if i == 0:
-            art0, e0 = art, (edge if edge is not None else H // 3)
-        else:                                                # one battery, one ink: each band of side 2 takes
-            art = match_bands(art, art0, e0)                 # side 1's colors (Reinhard et al. 2001 color transfer,
-            log("[fast] side 2's band colors matched to side 1's")   # per band - 04:45: two coppers, a seam)
-        placed = np.zeros((H, W, 3))
-        pw = np.zeros((H, W))
-        placed[:, c0:c1], pw[:, c0:c1] = art, 1.0
-        wcol = w.max(0)
-        if i == 1:                                           # the other side: half a turn round
-            placed, pw = np.roll(placed, W // 2, axis=1), np.roll(pw, W // 2, axis=1)
-            wcol = np.roll(wcol, W // 2)
-        cands.append((placed, wcol))
-        new = (pw > 0) & (cov == 0)
-        lab = np.where(new[..., None], placed, lab)
-        cov = np.maximum(cov, pw)
-    if cov.max() <= 0:
+        #  picture of a battery - 2026-10-08 02:17. The unroll already takes the light off each column)
+        views.append({"file": f, "l": art, "wcol": wcol, "cols": cols, "edge": band_edge(art[:, cols]),
+                      "kind": "front" if i == 0 else ("back" if (back and i == 1) else "extra")})
+    if not views:
         raise RuntimeError("the drawn item could not be unrolled onto the label")
-    for j, f in enumerate(extra or []):                      # the views between the sides: placed where their print
-        try:                                                 # matches what is already there (OpenCV's documented
-            got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around,
-                                   W, max_deg=70)            # SIFT + RANSAC matching - skin.register_strips), and
-            if not got:                                      # only the columns nothing covers yet are taken
-                continue
-            l, w = got
-            cols = np.where(w.max(0) > 0.05)[0]
-            if art0 is not None and e0 is not None and len(cols):
-                l[:, cols] = match_bands(l[:, cols], art0[:, np.arange(len(cols)) % art0.shape[1]], e0)
-            placed = skin.register_strips((lab, cov), [(l, w)], W, log=log)
-            if len(placed) < 2:
-                log(f"[fast] view {j + 3} shares too little with the sides to be placed - left out")
-                continue
-            pl, pw = placed[1]
-            cands.append((pl, pw.max(0)))
-            new = (pw > 0.05) & (cov == 0)
-            lab = np.where(new[..., None], pl, lab)
-            cov = np.where(new, pw, cov)
-            log(f"[fast] view {j + 3} placed by its matching print: {new.any(0).mean():.0%} more of the way around")
-        except Exception as e:
-            log(f"[fast] view {j + 3} could not be placed: {str(e)[:100]}")
+    v0 = views[0]
+    e0 = v0["edge"] if v0["edge"] is not None else H // 3
+    art0 = v0["l"][:, v0["cols"]]
+    for k, v in enumerate(views[1:], 2):                     # one battery: the bands at one height (03:55: two band
+        if v["edge"] is not None and v0["edge"] is not None and abs(v["edge"] - v0["edge"]) < 0.15 * H:
+            v["l"] = np.roll(v["l"], v0["edge"] - v["edge"], axis=0)        # heights), one ink per band (Reinhard
+        v["l"][:, v["cols"]] = match_bands(v["l"][:, v["cols"]], art0[:, np.arange(len(v["cols"])) % art0.shape[1]], e0)
+    log(f"[fast] {len(views)} drawn views unrolled; bands and colors matched to view 1")   # et al. 2001, per band)
+    for v in views:
+        v["words"] = view_words(v["l"], v["cols"])
+    shifts = place_by_words(views, W, log)
+    cands = []
+    for k, v in enumerate(views):
+        sh = shifts.get(k)
+        if sh is None and k == 0:
+            sh = 0
+        if sh is None:
+            log(f"[fast] view {k + 1} shares no printed words with the placed views - left out")
+            continue
+        cands.append((np.roll(v["l"], sh, axis=1), np.roll(v["wcol"], sh)))
+    lab = cands[0][0].copy()
+    cov = np.tile(np.asarray(cands[0][1]) > 0.05, (H, 1)).astype(float)
     if len(cands) > 1:                                       # each column from the view that saw it most squarely
         lab, cov = pick_views(cands, log)
     seen = cov > 0
@@ -837,6 +892,9 @@ def unknown_words(png, vocab):
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
     known = {norm(t) for v in vocab for t in re.findall(r"[A-Za-z0-9]+", v) if len(t) >= 2}
+    for v in vocab:                                          # two printed words read as one ("BEST IF" -> "BESTIF")
+        ts = re.findall(r"[A-Za-z0-9]+", v)
+        known |= {norm(a + b) for a, b in zip(ts, ts[1:])}
     out = []
     for line in MS.read_lines(png) or []:
         for t in re.findall(r"[A-Za-z]{3,}", line):
@@ -866,11 +924,16 @@ def shape_spec(cid, card, d, R, log):
 def studio_views(glb, d, R, log):
     """Four sides of the finished model on one sheet: the phone viewer's pictures, else Blender's studio ones."""
     import subprocess
-    try:
-        import viewshot
-        shots, _ = viewshot.shoot(glb, os.path.join(d, "check"))
+    try:                                                     # in its own process: the photo hunt's browser runs in
+        import sys                                           # this one, and a second Playwright here refused ("Sync
+        r = subprocess.run([sys.executable, "-c",            # API inside the asyncio loop" - 14:00)
+                            "import sys, json; sys.path.insert(0, sys.argv[1]); import viewshot; "
+                            "print(json.dumps(viewshot.shoot(sys.argv[2], sys.argv[3])[0]))",
+                            HERE, glb, os.path.join(d, "check")], capture_output=True, text=True, timeout=900)
+        shots = json.loads((r.stdout or "null").strip().splitlines()[-1]) if r.stdout.strip() else None
         if shots:
             return shots
+        raise RuntimeError((r.stderr or "no pictures").strip().splitlines()[-1][:120] if r.stderr.strip() else "no pictures")
     except Exception as e:
         log(f"[fast] viewer pictures skipped ({str(e)[:80]}) - studio pictures")
     subprocess.run([R.PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],

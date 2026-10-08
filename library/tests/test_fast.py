@@ -222,8 +222,10 @@ skin.unroll_view = fake_unroll
 T.draw_from_photos = fake_draw
 MS.read_lines = lambda png, **k: []
 fast.FILLED.clear()
+said_words = iter([[("BESTIFINSTALLED", 1000)], [("ALKALINEBATTERY", 1000)], [("BESTIFINSTALLED", 300)]])
+fast.view_words = lambda art, cols: next(said_words)
 png3, _ = fast.label_from(front, back, 50.5, 45.5, tex, lambda *a: None, extra=[front])
-check(reg and fast.FILLED["share"] >= 0.9, f"a view between the sides is placed by matching and fills its stretch ({fast.FILLED.get('share')})")
+check(fast.FILLED["share"] >= 0.9, f"a view between the sides is placed by its words and fills its stretch ({fast.FILLED.get('share')})")
 
 # the hunt: the item's own kind of thing, never merchandise
 rows2 = [{"title": t} for t in ("Vintage Duracell PowerCheck Lapel Pin", "Duracell Copper Top Coffee Mug 1990s",
@@ -241,6 +243,16 @@ rows4 = [{"title": x} for x in ("Pair Vintage Duracell Powercheck AA Batteries F
                                 "Duracell PowerCheck Power Check Meter 6 AA Batteries - No Corrosion, SOLD AS IS")]
 check(len(fast.rank_listings(rows4, ["Duracell Coppertop", "Duracell Powercheck", "Duracell Coppertop AA alkaline battery"], "Duracell", 1998, kind="AA battery")) == 3,
       "collectors' listings ('for collection display') and a few titles that all say PowerCheck are kept")
+# views are placed round the label by the printed words they share (the meter view links PowerCheck and logo sides)
+vw = [{"kind": "front", "words": [("DURACELL POWERCHECK", 1000), ("Patented", 1050)]},
+      {"kind": "back", "words": [("ALKALINE BATTERY", 1020), ("Test at 70F/21C", 900)]},
+      {"kind": "extra", "words": [("Test at 70F/21C", 1250), ("DURACELL POWERCHECK", 700)]}]
+shz = fast.place_by_words(vw, 2048, lambda *a: None)
+check(shz.get(2) == 300 and shz.get(1) == 650, f"the meter view sits by its PowerCheck words, the logo side by its test-at words ({shz})")
+vw2 = [{"kind": "front", "words": [("Patented", 1050)]}, {"kind": "back", "words": [("ALKALINE BATTERY", 1020)]},
+       {"kind": "extra", "words": [("ALKALINE BATTERY", 1100)]}]
+shz2 = fast.place_by_words(vw2, 2048, lambda *a: None)
+check(shz2.get(1) == 1024 and shz2.get(2) == (1020 + 1024 - 1100) % 2048, f"nothing shared: the other side half a turn round, and a view chains off it ({shz2})")
 # several copies in one photo: each cut out as a view of its own
 grp = os.path.join(W, "three.png")
 g3 = np.full((300, 500, 3), 255, np.uint8)

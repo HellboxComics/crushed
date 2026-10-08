@@ -121,6 +121,29 @@ def read_lines(png, turns=(0, 180, 90, 270), least=0.5):
     return list(dict.fromkeys(best))
 
 
+def read_boxes(im, least=0.5):
+    """The printed lines on a picture (a PIL image, read as it is - no turning) with where each sits:
+    [(text, cx, cy)], the center as fractions of the width and height from the TOP-left. Apple's reader gives
+    Vision's boxes, normalized with the origin at the BOTTOM-left (ocrmac.py: bbox.origin of
+    VNRecognizedTextObservation), so y is flipped; tesseract's image_to_data is already top-left in pixels."""
+    kind = reader()
+    out = []
+    if kind == "ocrmac":
+        from ocrmac import ocrmac
+        for text, conf, box in ocrmac.OCR(im).recognize():
+            if conf >= least and text.strip():
+                x, y, w, h = box
+                out.append((text.strip(), x + w / 2, 1 - (y + h / 2)))
+    elif kind == "tesseract":
+        import pytesseract
+        d = pytesseract.image_to_data(im, config="--psm 11", output_type=pytesseract.Output.DICT)
+        W, H = im.size
+        for i, t in enumerate(d["text"]):
+            if t.strip() and float(d["conf"][i]) >= 100 * least:
+                out.append((t.strip(), (d["left"][i] + d["width"][i] / 2) / W, (d["top"][i] + d["height"][i] / 2) / H))
+    return [o for o in out if len(re.sub(r"[^A-Za-z0-9]", "", o[0])) >= 2]
+
+
 def read_text(png, use=None, log=print):
     """All the words on a picture, as one string - read upright and turned both ways, since print on a side often
     runs sideways (a battery's label, a carton's side panel)."""
