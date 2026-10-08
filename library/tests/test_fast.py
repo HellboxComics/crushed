@@ -28,6 +28,7 @@ def check(cond, what):
     ok += 1
 
 
+check(fast.display({"product": "Duracell AA", "era_names": ["Duracell PowerCheck"]}) == "Duracell AA (sold then as Duracell PowerCheck)", "the era's own name goes with the item")
 check(fast.short_name("Duracell Coppertop AA alkaline battery, circa 1998") == "Duracell Coppertop AA alkaline battery", "the search name drops the era words")
 rows = [{"title": t} for t in ("VINTAGE 1.5 Volts Osco Alkaline battery", "Pair Vintage Duracell Powercheck AA Batteries",
                                "Duracell AA Batteries 1.5 Volts Alkaline 24 pack", "Duracell AA Batteries 1.5 Volts Alkaline 40 pack")]

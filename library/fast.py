@@ -66,6 +66,12 @@ def tok(x):
     return set(re.findall(r"[a-z0-9]+", str(x).lower()))
 
 
+def display(card):
+    """The item as its era knew it: "Duracell Coppertop AA alkaline battery (sold then as Duracell PowerCheck)"."""
+    n = card.get("era_names") or []
+    return card["product"] + (f" (sold then as {n[0]})" if n else "")
+
+
 def short_name(product):
     """What a person types into a search box: the catalog name without the era words or ratings."""
     n = re.sub(r"\(.*?\)", "", str(product))
@@ -118,8 +124,10 @@ def references(cid, card, R, log, listings=6, google=25):
         old = int(year) <= time.localtime().tm_year - 15
     except (TypeError, ValueError):
         pass
-    out, rows, seen = [], [], set()
-    for q in dict.fromkeys([("vintage " + name) if old else "", name]):
+    era_names = [short_name(n) for n in (card.get("era_names") or [])][:2]   # what it was SOLD as back then
+    out, rows, seen = [], [], set()                         # ("Duracell PowerCheck"), not only the catalog's name
+    qs = [q for n in era_names for q in (("vintage " + n) if old else "", n)] + [("vintage " + name) if old else "", name]
+    for q in dict.fromkeys(qs):
         if not q:
             continue
         try:
@@ -129,7 +137,7 @@ def references(cid, card, R, log, listings=6, google=25):
                     rows.append(L)
         except Exception as e:
             log(f"[fast] eBay could not be searched: {str(e)[:120]}")
-    rows = rank_listings(rows, [name], brand, year)
+    rows = rank_listings(rows, era_names + [name], brand, year)
     log("[fast] eBay listings, best match first: " + " | ".join(L["title"][:50] for L in rows[:listings]))
     for L in rows[:listings]:
         try:
@@ -158,7 +166,7 @@ def sort_refs(refs, card, R, log):
     """One quick look per photo (the fastest brain that sorts right). A listing whose best photo is this item lends
     all its real photos - one listing is one copy. -> the refs with "look" set, best first."""
     import vet as V
-    q = REF_Q.format(product=card["product"], year=card.get("year") or "its era")
+    q = REF_Q.format(product=display(card), year=card.get("year") or "its era")
     use = V.quick_model() or V.model()
     todo = [r for r in refs if "look" not in r]
 
@@ -199,7 +207,7 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=2):
     notes)."""
     import turnaround as T
     import vet as V
-    product, year = card["product"], card.get("year") or "its era"
+    product, year = display(card), card.get("year") or "its era"
     sheet = R.reference_sheet([r["file"] for r in good[:9]], os.path.join(tex, "refs_sheet.png"))
     singles = [r for r in good if (r.get("look") or {}).get("one_item") and (r.get("look") or {}).get("side") == "front"]
     clear = (singles or good)[0]["file"]
@@ -326,6 +334,13 @@ def build(cid, card, d, R):
     os.makedirs(mdir, exist_ok=True)
     R.boundary(cid, "step")
     R.status(cid, product=product, route="round", step="1/5 reference photos: eBay listings (every side of one copy) and Google")
+    try:                                                     # the era's own name and look ("90s Duracell PowerCheck")
+        import cards
+        ev = cards.era_version(cid, card, V.model(), log=log) or {}
+        card["era_names"] = [str(n) for n in (ev.get("names") or []) if str(n).strip()][:3]
+        log(f"[fast] in its era it was sold as: {', '.join(card['era_names']) or '(unknown)'}")
+    except Exception as e:
+        log(f"[fast] the era's own name could not be worked out ({str(e)[:80]})")
     refs = references(cid, card, R, log)
     R.boundary(cid, "step")
     R.status(cid, step=f"2/5 one quick look at each of {len(refs)} photos: is it this item, which side")
@@ -364,7 +379,7 @@ def build(cid, card, d, R):
         R.status(cid, step="5/5 the judge: realistic, right for its era, real words")
         shots = studio_views(glb, d, R, log)
         R.make_room("judging")
-        v = V.ask(V.model(), JUDGE_Q.format(product=product, year=card.get("year") or "its era"), [shots, dn["sheet"]],
+        v = V.ask(V.model(), JUDGE_Q.format(product=display(card), year=card.get("year") or "its era"), [shots, dn["sheet"]],
                   think=True) or {}
         sc = {k: int(v.get(k) or 0) for k in ("realism", "era", "words")}
         log(f"[fast] the judge: realism {sc['realism']}/10, era {sc['era']}/10, words {sc['words']}/10"
