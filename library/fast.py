@@ -51,7 +51,7 @@ DRAW_BACK = (
     "the width, plain white background, soft even light, sharp, true colors, no glare, no other objects, no hands. "
     "Its true proportions: {size}. Copy that side's logos, panels and small print from the photos. Every word is a "
     "real, correctly spelled word that makes sense for this product.{words}{fix}")
-PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a sheet of real photos of {product} from around "
+PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a real photo of {product} from around "
           "{year}. Does picture 1 look like a real photo of that same item from that era - the same printed design, "
           "logo, colors and layout, real words that make sense? Answer ONLY JSON: {{\"match\": 0-10, "
           "\"wrong\": [\"short, specific\"]}}")
@@ -245,50 +245,99 @@ def size_text(w_mm, h_mm):
     return f"{w_mm:g} mm long and {dia:.1f} mm across, {w_mm / dia:.1f} times as long as it is wide"
 
 
-def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
-    """The front, best of `tries` by the judge against the sheet; then the other side. -> (front, back or None,
-    notes)."""
+DRAW_FACE = (
+    "Picture 1 is a real photo of {product}, made around {year}. Make ONE clean, convincing studio product photo of "
+    "exactly ONE of this item showing the SAME side of it that faces the camera in picture 1 - the same logo, panels, "
+    "colors, bands and small print in the same places: lying on its side, long axis level and left to right, "
+    "centered and filling most of the width, plain white background, soft even light, sharp focus, true colors, "
+    "no glare, no other objects, no hands. Its true proportions: {size}. Every word is real and spelled right.{words}{fix}")
+
+
+def faces(good, vocab, log, most=8):
+    """The item's different printed sides, each from ONE clear photo of one copy: the photo read with the most words
+    first, then the one whose words share least with it (2026-10-08 04:25: a sheet showing two sides at once was
+    merged into one garbled side - the battery's big-logo side and its PowerCheck side). Each face carries the words
+    read on ITS photo, spelled as two photos agree where they do. -> [(photo, [words])], at most 2."""
+    import measure as MS
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    singles = [r for r in good if (r.get("look") or {}).get("one_item")] or good
+    read = []
+    for r in singles[:most]:
+        try:
+            lines = [l.strip() for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3]
+        except Exception:
+            lines = []
+        fixed = []
+        for l in lines:                                      # the agreed spelling where two photos read it
+            best = max(vocab, key=lambda v: fuzz.ratio(norm(v), norm(l)), default=None)
+            if best is not None and fuzz.ratio(norm(best), norm(l)) >= 80:
+                l = best
+            letters = sum(c.isalpha() for c in l) / max(1, len(l.replace(" ", "")))
+            if letters >= 0.5 and l not in fixed:
+                fixed.append(l)
+        read.append((r, fixed))
+    if not read:
+        return []
+    read.sort(key=lambda x: (-len(x[1]), -x[0].get("score", 0)))
+    a = read[0]
+    ta = {norm(w) for w in a[1]}
+    other = None
+    for r, ws in read[1:]:
+        tb = {norm(w) for w in ws}
+        if len(ws) >= 2 and len(ta & tb) / max(1, len(ta | tb)) < 0.3:
+            other = (r, ws)
+            break
+    out = [(a[0]["file"], a[1])] + ([(other[0]["file"], other[1])] if other else [])
+    log("[fast] the item's printed sides: " + " | ".join(f"{os.path.basename(f)}: {ws[:6]}" for f, ws in out))
+    return out
+
+
+def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
+    """Each printed side of the item drawn clean from ONE clear photo of that side, best of `tries` by the judge
+    against that photo and by its words read back. -> (front, back or None, notes)."""
     import turnaround as T
     import vet as V
     product, year = display(card), card.get("year") or "its era"
     sheet = R.reference_sheet([r["file"] for r in good[:9]], os.path.join(tex, "refs_sheet.png"))
-    singles = [r for r in good if (r.get("look") or {}).get("one_item") and (r.get("look") or {}).get("side") == "front"]
-    clear = (singles or good)[0]["file"]
     st = size_text(along, around)
     fx = (" Fix these from the last try: " + "; ".join(fix)) if fix else ""
-    wd = (" The printed text, spelled exactly as on the real item: " + ", ".join(f'"{w}"' for w in words) + ".") if words else ""
     vw, vh = 1344, 768
-    best, notes = None, {"tries": []}
-    for t in range(tries):
-        out = os.path.join(tex, f"front{t + 1}.png")
-        T.draw_from_photos(product, [sheet, clear], out, width=vw, height=vh,
-                           prefix=DRAW_FRONT.format(product=product, year=year, size=st, fix=fx, words=wd),
-                           seed=int(time.time()) % 100000 + 37 * t)
-        v = V.ask(V.model(), PICK_Q.format(product=product, year=year), [out, sheet], think=False) or {}
-        m = int(v.get("match") or 0)
-        wb = words_back(out, words)
-        sc = m + 5 * wb
-        notes["tries"].append({"file": out, "match": m, "words": round(wb, 2), "wrong": v.get("wrong")})
-        log(f"[fast] front drawing try {t + 1}: matches the real item {m}/10, {wb:.0%} of the photos' words read back"
-            + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
-        if best is None or sc > best[0]:
-            best = (sc, out, m, wb)
-        if m >= 8 and wb >= 0.6:
-            break
-    # the other side only from photos of ONE copy turned that way (2026-10-07 22:10: drawn from "several" photos it
-    # came out as a second front)
-    backs = [r["file"] for r in good if (r.get("look") or {}).get("side") == "back" and (r.get("look") or {}).get("one_item")][:4]
-    back = None
-    if backs:
-        bsrc = backs[:2] if len(backs) <= 2 else [R.reference_sheet(backs, os.path.join(tex, "back_sheet.png"))]
-        back = os.path.join(tex, "back.png")
-        T.draw_from_photos(product, bsrc, back, width=vw, height=vh,
-                           prefix=DRAW_BACK.format(product=product, year=year, size=st, fix=fx, words=wd),
-                           seed=int(time.time()) % 100000 + 211)
-        log(f"[fast] the other side drawn from {len(backs)} photo(s) that show it")
-    else:
-        log("[fast] no photo shows the other side - the front's own bands carry round the back")
-    return best[1], back, dict(notes, sheet=sheet, clear=clear, front_match=best[2], front_words=best[3])
+    fs = faces(good, list(words), log)
+    if not fs:
+        fs = [(good[0]["file"], list(words))]
+    drawn, notes = [], {"tries": []}
+    for k, (photo, ws) in enumerate(fs):
+        try:                                                 # the item alone on white: nothing else to copy
+            mask = T.photo_mask(photo, timeout=300)
+            import skin
+            src = skin.cutout({"file": photo, "mask": mask}, os.path.join(tex, f"side{k + 1}_photo.png"))
+        except Exception:
+            src = photo
+        wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in ws[:24]) + ".") if ws else ""
+        best = None
+        for t in range(tries):
+            out = os.path.join(tex, f"side{k + 1}_{t + 1}.png")
+            T.draw_from_photos(product, [src], out, width=vw, height=vh,
+                               prefix=DRAW_FACE.format(product=product, year=year, size=st, fix=fx, words=wd),
+                               seed=int(time.time()) % 100000 + 37 * t)
+            v = V.ask(V.model(), PICK_Q.format(product=product, year=year), [out, src], think=False) or {}
+            m = int(v.get("match") or 0)
+            wb = words_back(out, ws)
+            notes["tries"].append({"file": out, "side": k + 1, "match": m, "words": round(wb, 2), "wrong": v.get("wrong")})
+            log(f"[fast] side {k + 1} drawing try {t + 1}: matches its photo {m}/10, {wb:.0%} of its words read back"
+                + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
+            if best is None or m + 5 * wb > best[0]:
+                best = (m + 5 * wb, out, m, wb)
+            if m >= 8 and wb >= 0.6:
+                break
+        drawn.append(best)
+    front = drawn[0]
+    back = drawn[1] if len(drawn) > 1 and drawn[1][2] >= 6 and drawn[1][3] >= 0.4 else None
+    if len(drawn) > 1 and not back:
+        log("[fast] the other side's drawing did not match its photo - the front's bands carry round the back")
+    return front[1], back[1] if back else None, dict(notes, sheet=sheet, clear=fs[0][0], front_match=front[2],
+                                                    front_words=front[3])
 
 
 def label_from(front, back, along, around, tex, log):
@@ -451,6 +500,6 @@ def build(cid, card, d, R):
                 R.status(cid, step=f"stopped: delivery check failed: {r.get('why')}"[:300], ok=False)
             return last
         fix = [str(x)[:120] for x in (v.get("fix") or [])][:6]
-    R.status(cid, step=f"failed the judge twice (realism {last['realism']}, era {last['era']}, words {last['words']}): "
+    R.status(cid, step=f"failed the realism check: the judge, twice (realism {last['realism']}, era {last['era']}, words {last['words']}): "
                        + "; ".join(last["fix"])[:200], ok=False, views=os.path.relpath(last["shots"], R.WORK))
     return last

@@ -82,18 +82,24 @@ T.draw_from_photos = fake_draw
 R.reference_sheet = lambda files, out, cell=512, cols=None: (Image.new("RGB", (64, 64)).save(out) or out)
 tex = os.path.join(W, "tex")
 os.makedirs(tex)
-picks = iter([{"match": 6, "wrong": ["meter missing"]}, {"match": 9}])
+picks = iter([{"match": 6, "wrong": ["meter missing"]}, {"match": 9}, {"match": 9}, {"match": 9}])
 V.ask = lambda use, q, imgs, think=False, side=1280: next(picks)
-front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None, words=wds)
-fc = [c for c in calls if "front" in c["out"]]
-check(len(fc) == 2 and front.endswith("front2.png"), "a weak front is drawn again; the best kept")
-check("studio product photo" in fc[0]["prefix"] and "1998" in fc[0]["prefix"] and '"PRESS DOTS TO TEST"' in fc[0]["prefix"],
-      "drawn as the item from its era, with real words")
-bc = [c for c in calls if c["out"].endswith("back.png")]
-check(not bc, "no photo of ONE copy turned to its back: no back is drawn (a 'several' photo made a second front)")
-
-# label: the drawn views unrolled, the back half a turn round
 T.photo_mask = lambda f, timeout=300: f
+skin.cutout = lambda f, out: f["file"]
+SIDES = {"l1a.jpg": ["DURACELL", "ALKALINE BATTERY", "PRESS DOTS TO TEST"],
+         "l1b.jpg": ["DURACELL POWERCHECK", "Patented", "BEST IF INSTALLED BY", "JAN 2001"]}
+MS.read_lines = lambda png, **k: SIDES.get(os.path.basename(png), sum(SIDES.values(), []) if "side" in os.path.basename(png) else ["DURACELL", "ALKALINE BATTERY"])
+for g in good:                                             # both one-copy photos
+    g["look"]["one_item"] = True
+front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None, words=wds)
+s1 = [c for c in calls if "side1_" in c["out"]]
+s2 = [c for c in calls if "side2_" in c["out"]]
+check(s1 and s2, f"two printed sides found by their words, each drawn ({len(s1)}, {len(s2)})")
+check(s1[0]["photos"] == [os.path.join(hunt, "l1a.jpg")] or os.path.basename(s1[0]["photos"][0]) in ("l1a.jpg", "l1b.jpg"),
+      "each side drawn from ONE photo of that side")
+check("studio product photo" in s1[0]["prefix"] and "1998" in s1[0]["prefix"] and '"Patented"' in "".join(c["prefix"] for c in s1 + s2),
+      "drawn as the item from its era, with the words read on that side's photo")
+# label: the drawn views unrolled, the back half a turn round
 T.upscale = lambda png, force=False: png
 H = int(round(2048 * 50.5 / 45.5))
 
@@ -124,8 +130,8 @@ R2 = types.SimpleNamespace(WORK=W, say=lambda *a: None, boundary=lambda *a, **k:
                            mr_from_bands=lambda png, real, cov, tex, notes: (Image.new("RGB", (8, 8)).save(os.path.join(tex, "label_mr.png")) or os.path.join(tex, "label_mr.png")),
                            run_blender=lambda *a: blend.append(a), finish_files=lambda cid, d: None,
                            file_away=lambda cid, d: (filed.append(cid) or {"ok": True}), jload=lambda p, dflt: dflt)
-answers = iter([{"match": 9}, {"realism": 8, "era": 5, "words": 8, "fix": ["the meter is the 2003 style"]},
-                {"match": 9}, {"realism": 8, "era": 8, "words": 9}])
+answers = iter([{"match": 9}, {"match": 9}, {"realism": 8, "era": 5, "words": 8, "fix": ["the meter is the 2003 style"]},
+                {"match": 9}, {"match": 9}, {"realism": 8, "era": 8, "words": 9}])
 def _ask(use, q, imgs, think=False, side=1280):
     if "real_photo" in q:
         return looks[os.path.basename(imgs[0])]
@@ -134,14 +140,14 @@ def _ask(use, q, imgs, think=False, side=1280):
 V.ask = _ask
 calls.clear()
 out = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
-second = [c for c in calls if c["out"].endswith("front1.png")][-1]
+second = [c for c in calls if "side1_1" in c["out"]][-1]
 check("the meter is the 2003 style" in second["prefix"], "the second drawing carries the judge's own fixes")
 check(filed == ["x_aa"] and out["era"] == 8, "the pass is filed in the Asset Library")
 check(any(a[0] == "lathe.py" for a in blend) and any(a[0] == "contract.py" for a in blend), "built by the real-size round builder and the deliverable contract")
 check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], "five steps on the page")
 # a drawing that never matches is never built or filed
 filed.clear(); blend.clear(); st.clear()
-answers = iter([{"match": 3}] * 8)
+answers = iter([{"match": 3}] * 12)
 out2 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 check(not filed and not blend and "failed" in st[-1].get("step", ""), f"no match, nothing built or filed: {st[-1].get('step', '')[:80]}")
 src = open(os.path.join(os.path.dirname(fast.__file__), "run.py")).read()
