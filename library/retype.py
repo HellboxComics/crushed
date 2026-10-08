@@ -63,9 +63,36 @@ def _norm(x):
     return re.sub(r"[^a-z0-9]", "", str(x).lower())
 
 
+def canonical(vocab):
+    """One spelling per printed line: readings of the same line (85% alike) are one line, and the reading whose
+    words the other readings share most wins ("DURACELL(R) POWERCHECK(TM)" over "...(TM)A"; "BEST IF INSTALLED BY:"
+    over "...RY:"); stray end punctuation goes ("Patented ." -> "Patented"). 2026-10-08 18:30: the photos' own
+    misreadings were set as crisp type."""
+    from rapidfuzz import fuzz
+    lines = [re.sub(r"\s+[.,:;]+$", "", str(v).strip()) for v in vocab if str(v).strip()]
+    tokf = {}
+    for v in lines:
+        for t in {_norm(x) for x in v.split() if _norm(x)}:
+            tokf[t] = tokf.get(t, 0) + 1
+    groups = []
+    for v in lines:
+        for g in groups:
+            if fuzz.ratio(_norm(v), _norm(g[0])) >= 85:
+                g.append(v)
+                break
+        else:
+            groups.append([v])
+    small = {"a", "an", "at", "to", "of", "in", "by", "for", "on", "the", "and", "or", "if", "is", "it", "do", "not",
+             "no", "be", "as", "with", "use", "only", "made", "test", "dots", "size"}   # common short words: a
+    #   reading that has them ("Test at") beats one that turned them into near-misses ("Test al")
+    best = lambda v: (sum(tokf.get(_norm(x), 0) + (1 if _norm(x) in small else 0) for x in v.split())
+                      / max(1, len(v.split())), -len(v))
+    return [max(g, key=best) for g in groups]
+
+
 def snap(text, vocab, least=80):
-    """The photos' own spelling of a line read off the label, or None when no photo carries it (a misread or a
-    made-up line is painted out and not printed again)."""
+    """The photos' own spelling of a line read off the label - ONLY ever a spelling from the (canonical) word list,
+    never the reader's text - or None when no line matches (that line is left as drawn)."""
     from rapidfuzz import fuzz
     n = _norm(text)
     if len(n) < 2:
@@ -73,10 +100,6 @@ def snap(text, vocab, least=80):
     best = max(vocab, key=lambda v: fuzz.ratio(_norm(v), n), default=None)
     if best is not None and fuzz.ratio(_norm(best), n) >= least:
         return best
-    toks = [_norm(t) for v in vocab for t in re.split(r"\s+", v) if len(_norm(t)) >= 2]
-    words = [w for w in re.split(r"\s+", text) if _norm(w)]
-    if words and all(any(fuzz.ratio(_norm(w), t) >= 88 for t in toks) for w in words):
-        return " ".join(words)
     return None
 
 
@@ -101,6 +124,7 @@ def retype(lab, vocab, log, scale=2):
     import cv2
     H, W = lab.shape[:2]
     img = Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8))
+    vocab = canonical(vocab)
     turn, lines = _lines(img, list(vocab))
     r = np.asarray(img.rotate(turn, expand=True)).copy()
     h, w = r.shape[:2]

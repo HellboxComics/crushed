@@ -39,4 +39,10 @@ check(out.shape[0] == 2 * H and out.shape[1] == 2 * W, f"the label comes back tw
 check(notes["lines"].count("Bethel, CT 06801") == 1 and "Patented" in notes["lines"],
       f"each matched line set again once, spelled as the photos spell it ({notes['lines']})")
 check(notes["dropped"] == ["Qwzx Plimbo"], f"a line no photo's words match is left as drawn ({notes['dropped']})")
+import retype as RT
+cv = RT.canonical(["DURACELL® POWERCHECK™", "DURACELL® POWERCHECK™A", "DURACELLA POWEDCHECKIN", "Test at 70°F/ 21°C",
+                   "Test al 70°F/21°C", "BEST IF INSTALLED BY:", "BEST IF INSTALLED RY:", "Patented ."])
+check(cv == ["DURACELL® POWERCHECK™", "Test at 70°F/ 21°C", "BEST IF INSTALLED BY:", "Patented"], f"one spelling per line, the best-supported reading ({cv})")
+check(RT.snap("DURACELLA POWEDCHECKIN", cv) == "DURACELL® POWERCHECK™" and RT.snap("Zorbex", cv) is None,
+      "a misreading is set in the photos' spelling, never its own")
 print(f"ALL {ok} PASS")
