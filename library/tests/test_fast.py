@@ -91,7 +91,7 @@ SIDES = {"l1a.jpg": ["DURACELL", "ALKALINE BATTERY", "PRESS DOTS TO TEST"],
 MS.read_lines = lambda png, **k: SIDES.get(os.path.basename(png), sum(SIDES.values(), []) if "side" in os.path.basename(png) else ["DURACELL", "ALKALINE BATTERY"])
 for g in good:                                             # both one-copy photos
     g["look"]["one_item"] = True
-front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None, words=wds)
+front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None, words=wds + SIDES["l1b.jpg"])
 s1 = [c for c in calls if "side1_" in c["out"]]
 s2 = [c for c in calls if "side2_" in c["out"]]
 check(s1 and s2, f"two printed sides found by their words, each drawn ({len(s1)}, {len(s2)})")
@@ -138,6 +138,7 @@ def _ask(use, q, imgs, think=False, side=1280):
     a = next(answers)
     return a
 V.ask = _ask
+fast.photo_words = lambda good, log, most=8: sum(SIDES.values(), [])   # both sides' words agreed by two photos
 calls.clear()
 out = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 second = [c for c in calls if "side1_1" in c["out"]][-1]
@@ -150,6 +151,9 @@ filed.clear(); blend.clear(); st.clear()
 answers = iter([{"match": 3}] * 12)
 out2 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 check(not filed and not blend and "failed" in st[-1].get("step", ""), f"no match, nothing built or filed: {st[-1].get('step', '')[:80]}")
+MS.read_lines = lambda png, **k: ["DURACELL", "note", "Bethel", "Wqzzrt"]
+bad = fast.unknown_words(os.path.join(tex, "label.png"), ["DURACELL", "Bethel, CT 06801"])
+check(bad == ["note", "Wqzzrt"], f"made-up words on the finished label are found ({bad})")
 src = open(os.path.join(os.path.dirname(fast.__file__), "run.py")).read()
 check("if fast.applies(cid, card, sys.modules[__name__]):" in src, "the run sends round items down the five steps")
 print(f"ALL {ok} PASS")

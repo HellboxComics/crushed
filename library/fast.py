@@ -61,7 +61,7 @@ JUDGE_Q = ("Picture 1 shows our finished 3D model of {product} from several side
            "quality), \"era\": 0-10 (is it the right version of this product for {year}: logo, colors, design), "
            "\"words\": 0-10 (is the printed text made of real words that make sense for this product - not gibberish), "
            "\"fix\": [\"what to change, short and specific\"]}}")
-PASS = 7                                                    # each of realism, era and words
+PASS = 8                                                    # each of realism, era and words (production)
 
 
 def tok(x):
@@ -269,13 +269,10 @@ def faces(good, vocab, log, most=8):
         except Exception:
             lines = []
         fixed = []
-        for l in lines:                                      # the agreed spelling where two photos read it
-            best = max(vocab, key=lambda v: fuzz.ratio(norm(v), norm(l)), default=None)
-            if best is not None and fuzz.ratio(norm(best), norm(l)) >= 80:
-                l = best
-            letters = sum(c.isalpha() for c in l) / max(1, len(l.replace(" ", "")))
-            if letters >= 0.5 and l not in fixed:
-                fixed.append(l)
+        for l in lines:                                      # ONLY words two photos agree on, in that spelling
+            best = max(vocab, key=lambda v: fuzz.ratio(norm(v), norm(l)), default=None)   # (2026-10-08 01:10: a
+            if best is not None and fuzz.ratio(norm(best), norm(l)) >= 80 and best not in fixed:   # misread "note"
+                fixed.append(best)                                                             # was drawn huge)
         read.append((r, fixed))
     if not read:
         return []
@@ -349,42 +346,96 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
                                                     front_words=front[3])
 
 
-def label_from(front, back, along, around, tex, log):
-    """The drawn views unrolled onto the label (the same cylinder unroll as the photos used): the front in the
-    middle, the other side opposite, the rest its own bands carried round. -> (label png, metal/roughness png)."""
+FLATTEN = (
+    "This is the printed label of {product}, unrolled flat from a photo of the item. Make it the clean, flat PRINT "
+    "ARTWORK itself, as the printer's file would look: perfectly even light, no glare, no shine, no reflections, no "
+    "shading, no curve, no photo noise, crisp sharp print, true flat ink colors. Keep EVERY element exactly where "
+    "it is - every word, letter, logo, panel, meter, color and band unchanged. Do not add or remove anything.{words}")
+
+
+def label_from(front, back, along, around, tex, log, product="", words=()):
+    """The production way a round label texture is made: the drawn views' straight-on middles (the camera saw
+    them square - within 60 degrees of the middle, before the curve stretches the print) unrolled flat, each made
+    into clean flat print artwork by Qwen-Image-Edit as an EDIT (its strength: glare, shading and shine out, every
+    element kept), the front centered, the other side opposite, the rest of each row its own background color
+    (the row's median ink across both sides - never one side's edge carried round as stripes). No baked light:
+    the 3D render lights it (2026-10-08 01:10: glare, edge stretch and green stripes baked into the label).
+    -> (label png, all-seen png)."""
     import skin
     import turnaround as T
     from PIL import Image
     W = 2048
     H = int(round(W * along / around))
     lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
+    wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in list(words)[:24]) + ".") if words else ""
     for i, f in enumerate([front] + ([back] if back else [])):
         try:
-            got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around, W, max_deg=72)
+            got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around, W, max_deg=60)
         except Exception as e:
             log(f"[fast] {os.path.basename(f)} could not be unrolled: {str(e)[:100]}")
             got = None
         if not got:
             continue
         l, w = got
+        cols = np.where(w.max(0) > 0.05)[0]
+        if not len(cols):
+            continue
+        c0, c1 = int(cols.min()), int(cols.max()) + 1
+        strip = np.clip(l[:, c0:c1], 0, 1)
+        sp = os.path.join(tex, f"strip{i + 1}.png")
+        Image.fromarray((strip * 255).astype(np.uint8)).save(sp)
+        flat = os.path.join(tex, f"strip{i + 1}_flat.png")
+        try:                                                 # flat print artwork: an edit, everything kept
+            cw, ch = skin.canvas(strip.shape[1], strip.shape[0])
+            T.draw_from_photos(product, [sp], flat, width=cw, height=ch, prefix=FLATTEN.format(product=product, words=wd), seed=11 + i)
+            if words and words_back(flat, words) + 0.1 < words_back(sp, words):
+                log(f"[fast] side {i + 1}: the flat artwork lost words - the unrolled drawing is kept")
+                flat = sp
+        except Exception as e:
+            log(f"[fast] side {i + 1}: flat artwork not made ({str(e)[:80]})")
+            flat = sp
+        art = np.asarray(Image.open(flat).convert("RGB").resize((c1 - c0, H), Image.LANCZOS)) / 255.0
+        placed = np.zeros((H, W, 3))
+        pw = np.zeros((H, W))
+        placed[:, c0:c1], pw[:, c0:c1] = art, 1.0
         if i == 1:                                           # the other side: half a turn round
-            l, w = np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)
-        better = w > cov
-        lab = np.where(better[..., None], l, lab)
-        cov = np.maximum(cov, w)
-    if cov.max() <= 0.05:
+            placed, pw = np.roll(placed, W // 2, axis=1), np.roll(pw, W // 2, axis=1)
+        new = (pw > 0) & (cov == 0)
+        lab = np.where(new[..., None], placed, lab)
+        cov = np.maximum(cov, pw)
+    if cov.max() <= 0:
         raise RuntimeError("the drawn item could not be unrolled onto the label")
-    log(f"[fast] the drawn views cover {(cov.max(0) > 0.05).mean():.0%} of the way around; the rest carries the bands")
-    lab = skin.continue_bands(lab, cov < 0.05)
+    seen = cov > 0
+    log(f"[fast] the flat artwork covers {seen.max(0).mean():.0%} of the way around; each row's own background fills the rest")
+    bg = np.stack([np.median(lab[r][seen[r]], axis=0) if seen[r].any() else np.zeros(3) for r in range(H)])
+    from scipy import ndimage as _nd                         # the background changes only at a band's edge: each
+    bg = _nd.median_filter(bg, size=(max(3, H // 20) | 1, 1), mode="nearest")   # row's color smoothed along the
+    #                                                          length (a single row's text left ghost stripes)
+    out = np.where(seen[..., None], lab, bg[:, None, :])
+    # a soft join (40 px) where the artwork meets the background, so no hard edge shows
+    from scipy import ndimage
+    dist = ndimage.distance_transform_edt(seen)
+    a = np.clip(dist / 40.0, 0, 1)[..., None]
+    out = a * out + (1 - a) * bg[:, None, :]
     png = os.path.join(tex, "label.png")
-    Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(png)
-    try:
-        T.upscale(png, force=True)
-    except Exception as e:
-        log(f"[fast] the label was not sharpened ({str(e)[:80]})")
+    Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8)).save(png)
     cover = os.path.join(tex, "label_seen.png")
     Image.fromarray(np.full((H, W), 255, np.uint8)).save(cover)
     return png, cover
+
+
+def unknown_words(png, vocab):
+    """Words read off the finished label that no real photo carries (a made-up word, a misread drawn as print)."""
+    import measure as MS
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    known = {norm(t) for v in vocab for t in re.findall(r"[A-Za-z0-9]+", v) if len(t) >= 3}
+    out = []
+    for line in MS.read_lines(png) or []:
+        for t in re.findall(r"[A-Za-z]{4,}", line):
+            if not any(fuzz.ratio(norm(t), k) >= 80 for k in known):
+                out.append(t)
+    return out
 
 
 def shape_spec(cid, card, d, R, log):
@@ -475,7 +526,7 @@ def build(cid, card, d, R):
             last = {"realism": 0, "era": 0, "words": 0, "fix": fix, "shots": dn["sheet"], "front": front, "back": back}
             log(f"[fast] no drawing matched well enough (best {dn['front_match']}/10, {dn['front_words']:.0%} of the words) - drawn again")
             continue
-        png, cover = label_from(front, back, along, around, tex, log)
+        png, cover = label_from(front, back, along, around, tex, log, product=display(card), words=words)
         mr = R.mr_from_bands(png, png, cover, tex, {})
         shutil.copy(png, os.path.join(d, "label.png"))
         shutil.copy(mr, os.path.join(d, "label_mr.png"))
@@ -493,10 +544,24 @@ def build(cid, card, d, R):
         R.status(cid, step="5/5 the judge: realistic, right for its era, real words")
         shots = studio_views(glb, d, R, log)
         R.make_room("judging")
-        v = V.ask(V.model(), JUDGE_Q.format(product=display(card), year=card.get("year") or "its era"), [shots, dn["sheet"]],
+        close = os.path.join(d, "check", "viewer_close.jpg")   # the judge looks CLOSE (01:10: thumbnails hid it)
+        if not (os.path.exists(close) and os.path.getmtime(close) > time.time() - 3600):
+            vs = [os.path.join(d, f"view_{a:03d}.png") for a in (0, 180)]
+            if all(os.path.exists(p) for p in vs):
+                close = os.path.join(d, "close_views.jpg")
+                R.sheet_views(vs, close, cell=(900, 1200))
+            else:
+                close = shots
+        pics = [close, dn["sheet"]]
+        v = V.ask(V.model(), JUDGE_Q.format(product=display(card), year=card.get("year") or "its era"), pics,
                   think=True) or {}
         sc = {k: int(v.get(k) or 0) for k in ("realism", "era", "words")}
         sc["words"] = min(sc["words"], int(round(10 * dn["front_words"])))   # the words are MEASURED, not only judged
+        bad = unknown_words(os.path.join(d, "label.png"), words)
+        if len(bad) > 1:                                     # a made-up word on the label fails it
+            sc["words"] = min(sc["words"], 4)
+            v.setdefault("fix", []).append("made-up words on the label: " + ", ".join(bad[:6]))
+        log(f"[fast] words on the finished label no photo carries: {bad[:8] or 'none'}")
         log(f"[fast] the judge: realism {sc['realism']}/10, era {sc['era']}/10, words {sc['words']}/10"
             + (f" - fix: {'; '.join(v.get('fix') or [])[:300]}" if v.get("fix") else ""))
         last = dict(sc, fix=v.get("fix") or [], shots=shots, front=front, back=back)
