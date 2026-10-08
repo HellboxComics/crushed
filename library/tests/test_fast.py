@@ -69,6 +69,13 @@ check("l2a.jpg" not in names and "g1.jpg" not in names and "g3.jpg" not in names
 wds = fast.photo_words(good, lambda *a: None)
 check("PRESS DOTS TO TEST" in wds, f"the words read on two photos go to the drawing ({wds})")
 
+# a listing lends its photos only to photos of the item itself (12:44: a lot's TrustFire photos, scored 0, got in)
+V.ask = lambda use, q, imgs, think=False, side=1280: {"lz_a.jpg": {"real_photo": True, "score": 9, "side": "front", "one_item": True, "kind": "item"},
+                                                      "lz_b.jpg": {"real_photo": True, "score": 0, "side": "none", "one_item": False, "kind": "item"},
+                                                      "lz_c.jpg": {"real_photo": True, "score": 4, "side": "back", "one_item": True, "kind": "item"}}[os.path.basename(imgs[0])]
+lz = [{"file": img(n), "listing": "9"} for n in ("lz_a.jpg", "lz_b.jpg", "lz_c.jpg")]
+gz = [os.path.basename(g["file"]) for g in fast.sort_refs(lz, {"product": "Duracell AA", "year": 1998}, R, lambda *a: None)]
+check(gz == ["lz_a.jpg", "lz_c.jpg"], f"a listing's photo scored 0 is not lent in ({gz})")
 # draw: the item as a studio photo, the era and real words in the prompt; the other side from its own photos
 calls = []
 

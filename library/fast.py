@@ -194,8 +194,8 @@ def references(cid, card, R, log, listings=10, google=25):
                     rows.append(L)
         except Exception as e:
             log(f"[fast] eBay could not be searched: {str(e)[:120]}")
-    kind = name.split()[-1] if name else ""                  # the kind of thing: "battery" in "... alkaline battery"
-    rows = rank_listings(rows, era_names + [name], brand, year, kind=kind)
+    kind = kp                                                # its size and kind ("AA battery") - 12:44: given only
+    rows = rank_listings(rows, era_names + [name], brand, year, kind=kind)   # "battery", a 9 volt ranked first
     log("[fast] eBay listings, best match first: " + " | ".join(L["title"][:50] for L in rows[:listings]))
     others = []                                              # the other marketplaces and collectors' pages
     for q in dict.fromkeys([q for q in qs if q][:2]):
@@ -255,8 +255,9 @@ def sort_refs(refs, card, R, log):
     for r in refs:
         lk = r.get("look") or {}
         s = int(lk.get("score") or 0)
-        if r.get("listing") and r.get("listing_best", 0) >= 7 and lk.get("real_photo") is not False:
-            s = max(s, 7)
+        if (r.get("listing") and r.get("listing_best", 0) >= 7 and lk.get("real_photo") is not False
+                and lk.get("kind", "item") == "item" and s >= 3):      # lent only to a photo of the item itself
+            s = max(s, 7)                                    # (12:44: a lot's TrustFire photos, scored 0, were lent)
         # merchandise in the same artwork (a battery-shaped pin, a magnet - 2026-10-07 22:10: two were on the
         # drawing's sheet) and ads are no reference for the item itself
         r["score"] = s if lk.get("real_photo") is not False and lk.get("kind", "item") == "item" else 0
