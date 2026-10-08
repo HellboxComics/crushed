@@ -149,7 +149,7 @@ check(any(a[0] == "lathe.py" for a in blend) and any(a[0] == "contract.py" for a
 check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], "five steps on the page")
 # a drawing that never matches is never built or filed
 filed.clear(); blend.clear(); st.clear()
-answers = iter([{"match": 3}] * 12)
+answers = iter([{"match": 3}] * 16)
 out2 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 check(not filed and not blend and "failed" in st[-1].get("step", ""), f"no match, nothing built or filed: {st[-1].get('step', '')[:80]}")
 MS.read_lines = lambda png, **k: ["DURACELL", "note", "Bethel", "Wqzzrt"]
@@ -157,6 +157,9 @@ bad = fast.unknown_words(os.path.join(tex, "label.png"), ["DURACELL", "Bethel, C
 check(bad == ["note", "Wqzzrt"], f"made-up words on the finished label are found ({bad})")
 src = open(os.path.join(os.path.dirname(fast.__file__), "run.py")).read()
 check("if fast.applies(cid, card, sys.modules[__name__]):" in src, "the run sends round items down the five steps")
+art = np.zeros((400, 50, 3)); art[:120] = (0.8, 0.5, 0.2)
+check(abs(fast.band_edge(art) - 119) <= 4, f"the band edge (copper meets black) is found ({fast.band_edge(art)})")
+check(len(s2) and len(s2[0]["photos"]) == 2 and s2[0]["photos"][1] == front, "side 2 is drawn with side 1's drawing as its style (one battery, one look)")
 import inspect
 check("draw_from_photos" not in inspect.getsource(fast.label_from), "no generative edit redraws the unrolled strips (it drew a battery, not a label)")
 print(f"ALL {ok} PASS")

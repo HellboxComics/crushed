@@ -251,7 +251,9 @@ DRAW_FACE = (
     "exactly ONE of this item showing the SAME side of it that faces the camera in picture 1 - the same logo, panels, "
     "colors, bands and small print in the same places: lying on its side, long axis level and left to right, "
     "centered and filling most of the width, plain white background, soft even light, sharp focus, true colors, "
-    "no glare, no other objects, no hands. Its true proportions: {size}. Every word is real and spelled right.{words}{fix}")
+    "no glare, no other objects, no hands. Its true proportions: {size}. Print ONLY the words listed below, spelled "
+    "exactly - where the photo's small print is too small to read, leave that spot plain; never invent small print, "
+    "stickers, bars or boxes the photo does not show.{style}{words}{fix}")
 
 
 def faces(good, vocab, log, most=8, want_ratio=None):
@@ -312,7 +314,7 @@ def drawn_ratio(png):
         return None
 
 
-def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
+def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
     """Each printed side of the item drawn clean from ONE clear photo of that side, best of `tries` by the judge
     against that photo and by its words read back. -> (front, back or None, notes)."""
     import turnaround as T
@@ -346,8 +348,12 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
         best = None
         for t in range(tries):
             out = os.path.join(tex, f"side{k + 1}_{t + 1}.png")
-            T.draw_from_photos(product, [src], out, width=vw, height=vh,
-                               prefix=DRAW_FACE.format(product=product, year=year, size=st, fix=fx, words=wd),
+            style_ref = [drawn[0][1]] if k > 0 and drawn and drawn[0] else []   # one battery, one look: the
+            sty = (" Picture 2 is the OTHER side of this same battery, already drawn: match its copper color, the "  # other
+                   "height of its copper band, its black, its light and its print style exactly - but show the side "   # side
+                   "in picture 1, never picture 2's side." if style_ref else "")   # matches it (03:55: two coppers, two band heights)
+            T.draw_from_photos(product, [src] + style_ref, out, width=vw, height=vh,
+                               prefix=DRAW_FACE.format(product=product, year=year, size=st, fix=fx, words=wd, style=sty),
                                seed=int(time.time()) % 100000 + 37 * t)
             v = V.ask(V.model(), PICK_Q.format(product=product, year=year), [out, src], think=False) or {}
             m = int(v.get("match") or 0)
@@ -365,12 +371,28 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
             if m >= 8 and wb >= 0.6:
                 break
         drawn.append(best)
+        if best and best[2] < 7:
+            log(f"[fast] side {k + 1}: no drawing reached 7/10 against its photo (best {best[2]}/10)")
     front = drawn[0]
-    back = drawn[1] if len(drawn) > 1 and drawn[1][2] >= 6 and drawn[1][3] >= 0.4 else None
+    back = drawn[1] if len(drawn) > 1 and drawn[1][2] >= 7 and drawn[1][3] >= 0.5 else None
     if len(drawn) > 1 and not back:
         log("[fast] the other side's drawing did not match its photo - the front's bands carry round the back")
     return front[1], back[1] if back else None, dict(notes, sheet=sheet, clear=fs[0][0], front_match=front[2],
                                                     front_words=front[3])
+
+
+def band_edge(art):
+    """The row where the label's main band changes (a copper top meeting a black body): the biggest jump in the
+    rows' mean color, smoothed, away from the ends. -> row index or None."""
+    from scipy import ndimage
+    H = art.shape[0]
+    prof = ndimage.uniform_filter1d(art.mean(1), size=max(3, H // 60), axis=0)
+    jump = np.linalg.norm(np.diff(prof, axis=0), axis=1)
+    lo, hi = int(0.08 * H), int(0.92 * H)
+    if hi <= lo:
+        return None
+    r = int(np.argmax(jump[lo:hi])) + lo
+    return r if jump[r] > 0.05 else None
 
 
 def label_from(front, back, along, around, tex, log, product="", words=()):
@@ -386,6 +408,7 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     W = 2048
     H = int(round(W * along / around))
     lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
+    edge0 = None
     wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in list(words)[:24]) + ".") if words else ""
     for i, f in enumerate([front] + ([back] if back else [])):
         try:
@@ -408,6 +431,12 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
         #  light off each column (mosaic.strip -> unwrap.delight); the drawn studio photo has no glare to speak of)
         flat = sp
         art = np.asarray(Image.open(flat).convert("RGB").resize((c1 - c0, H), Image.LANCZOS)) / 255.0
+        edge = band_edge(art)                                # where the band changes (the copper meets the black):
+        if i == 0:                                           # the other side is shifted along the length to meet
+            edge0 = edge                                     # the front's (03:55: two band heights on one battery)
+        elif edge is not None and edge0 is not None and abs(edge - edge0) < 0.15 * H:
+            art = np.roll(art, edge0 - edge, axis=0)
+            log(f"[fast] side 2's band edge moved {edge0 - edge:+d} px to meet side 1's")
         placed = np.zeros((H, W, 3))
         pw = np.zeros((H, W))
         placed[:, c0:c1], pw[:, c0:c1] = art, 1.0
