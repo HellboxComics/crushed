@@ -108,7 +108,7 @@ H = int(round(2048 * 50.5 / 45.5))
 
 def fake_unroll(v, a, b, Wd=2048, max_deg=62):
     h = int(round(Wd * a / b))
-    w = np.zeros((h, 2048)); w[:, 700:1350] = 1
+    w = np.zeros((h, 2048)); w[:, 600:1450] = 1
     return np.full((h, 2048, 3), 0.4), w
 
 
@@ -132,7 +132,7 @@ R2 = types.SimpleNamespace(WORK=W, say=lambda *a: None, boundary=lambda *a, **k:
                            mr_from_bands=lambda png, real, cov, tex, notes: (Image.new("RGB", (8, 8)).save(os.path.join(tex, "label_mr.png")) or os.path.join(tex, "label_mr.png")),
                            run_blender=lambda *a: blend.append(a), finish_files=lambda cid, d: None,
                            file_away=lambda cid, d: (filed.append(cid) or {"ok": True}), jload=lambda p, dflt: dflt)
-judged = iter([{"realism": 8, "era": 5, "words": 8, "fix": ["the meter is the 2003 style"]}, {"realism": 8, "era": 8, "words": 9}])
+judged = iter([{"realism": 8, "era": 8, "words": 9}])
 PICK = {"m": 9}
 def _ask(use, q, imgs, think=False, side=1280):
     if "real_photo" in q:
@@ -144,12 +144,16 @@ V.ask = _ask
 fast.photo_words = lambda good, log, most=8: sum(SIDES.values(), [])   # both sides' words agreed by two photos
 calls.clear()
 out = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
-second = [c for c in calls if "side1_1" in c["out"]][-1]
-check("the meter is the 2003 style" in second["prefix"], "the second drawing carries the judge's own fixes")
 check(filed == ["x_aa"] and out["era"] == 8, "the pass is filed in the Asset Library")
-check(any("gap" in c["out"] for c in calls), "the stretches between the sides were finished in the build")
 check(any(a[0] == "lathe.py" for a in blend) and any(a[0] == "contract.py" for a in blend), "built by the real-size round builder and the deliverable contract")
 check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], "five steps on the page")
+# a judged miss: the matched drawings are kept, never redrawn with the judge's notes (they took side 1 to 2/10)
+filed.clear(); blend.clear(); st.clear(); calls.clear()
+judged = iter([{"realism": 5, "era": 8, "words": 9, "fix": ["make the top a raised button"]}])
+out1 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
+check(not filed and not any("raised button" in (c["prefix"] or "") for c in calls) and len([c for c in calls if "side1_" in c["out"]]) == 1,
+      f"a judged miss stops: nothing redrawn with the judge's notes ({len([c for c in calls if 'side1_' in c['out']])} side-1 drawings)")
+check("failed" in st[-1].get("step", "") and "raised button" in st[-1].get("step", ""), "and the page says why")
 # a drawing that never matches is never built or filed
 filed.clear(); blend.clear(); st.clear()
 PICK["m"] = 3
@@ -184,21 +188,19 @@ errs = [np.abs(np.roll(lab, sh, axis=1)[::16, cols] - l[::16, cols]).mean() for 
 check(abs(int(np.argmin(errs)) * 4 - (Wt // 2 - 600)) <= 16, f"the label wrapped back on the item and unrolled lands on the same columns ({int(np.argmin(errs)) * 4} vs {Wt // 2 - 600})")
 sc = np.zeros(2048, bool); sc[700:1350] = True; sc[1700:2048] = True; sc[:20] = True
 check(fast.gaps(sc) == [(20, 680), (1350, 350)], f"the empty stretches are found, wrapping round ({fast.gaps(sc)})")
-seen = np.tile(sc, (100, 1))
-base = np.full((100, 2048, 3), 0.1)
-fills = []
-def fill_draw(description, photos, out, width=None, height=None, prefix=None, seed=None, timeout=3600):
-    fills.append(prefix); Image.new("RGB", (width, height)).save(out); return out
-T.draw_from_photos = fill_draw
-skin.unroll_view = lambda v, a, b, Wd=2048, max_deg=70: (np.full((100, 2048, 3), 0.7), np.tile((np.abs(np.arange(2048) - 1024) < 300).astype(float), (100, 1)))
-MS.read_lines = lambda png, **k: []
-got = fast.fill_gaps(base.copy(), seen, None, None, 50.5, 45.5, tex, lambda *a: None, product="Duracell AA", year=1998,
-                     words=["MAY EXPLODE OR LEAK"], vocab=["DURACELL", "MAY EXPLODE OR LEAK"])
-check(got[:, 1500].mean() > 0.6 and np.allclose(got[:, 1000], 0.1), "an empty stretch takes the finished print; the drawn sides are untouched")
-check(fills and "NO words" in fills[0] and "FINISHED" in fills[0], "the fill is asked to finish the bands with no print at all")
-MS.read_lines = lambda png, **k: ["Zorbex Quality Plimsoll"]
-got2 = fast.fill_gaps(base.copy(), seen, None, None, 50.5, 45.5, tex, lambda *a: None, vocab=["DURACELL"])
-check(np.allclose(got2, 0.1), "a fill that prints anything (it can only be made up) is not used")
+seen = np.tile(sc, (128, 1))                              # image quilting: the uncovered stretch carries the
+base = np.zeros((128, 2048, 3)); base[:40] = (0.8, 0.5, 0.3); base[40:] = 0.08   # label's own plain bands on, at
+base = np.clip(base + rng.normal(0, 0.01, base.shape), 0, 1)                     # their own heights
+base[60:100, 800:900] = 0.95                                                       # a word on a drawn side
+base[:, ~sc] = 0.0                                                                  # the uncovered stretch: empty
+got = fast.quilt_fill(base.copy(), seen, lambda *a: None)
+gapc = ~sc
+inner = np.zeros(2048, bool); inner[100:620] = True; inner[1420:1630] = True   # away from the soft edges
+check(np.abs(got[:30][:, inner].mean((0, 1)) - (0.8, 0.5, 0.3)).max() < 0.05 and abs(got[50:][:, inner].mean() - 0.08) < 0.03,
+      "the uncovered stretch carries the copper and the black on at their own heights")
+check(got[42:][:, gapc].max() < 0.5, "and no print is copied into it (only print-free patches)")
+check(np.allclose(got[:, sc], base[:, sc]), "the drawn views are untouched")
+check("draw_from_photos" not in inspect.getsource(fast.quilt_fill), "nothing generative draws the uncovered stretch (it printed DURACELL, Pal, FINISHED)")
 MS.read_lines = lambda png, **k: ["DURACELL", "Pal", "POWEDCHECKIN", "PRESS DBTS TO TEST"]
 bad = fast.unknown_words(os.path.join(tex, "label.png"), ["DURACELL", "PRESS DOTS TO TEST", "DURACELL POWERCHECK"])
 check(bad == ["Pal", "POWEDCHECKIN", "DBTS"], f"short and near-miss made-up words are found ({bad})")
