@@ -90,6 +90,20 @@ MERCH = {"pin", "pins", "lapel", "mug", "mugs", "cup", "glass", "magnet", "keych
          "clock", "lamp", "flashlight", "watch", "empty"}
 
 
+MERCH_NO = ("pin", "lapel", "mug", "magnet", "keychain", "sign", "toy", "plush", "shirt", "poster", "figurine",
+            "sticker")                                       # the ones a search leaves out, most common first
+
+
+def kind_phrase(name):
+    """The item itself in two or three words: its size (AA, 9V, 12 oz) and the kind of thing it is - the last word
+    of its name ("Duracell Coppertop AA alkaline battery" -> "AA battery")."""
+    ws = str(name).split()
+    if not ws:
+        return ""
+    size = [w for w in ws[:-1] if re.fullmatch(r"(?i)(aaa|aa|[cd]|9v|\d+(\.\d+)?(v|oz|in|mm|ml|l|lb|g)?)", w)]
+    return " ".join(size[:1] + [ws[-1]])
+
+
 def rank_listings(rows, names, brand, year, kind=""):
     """eBay listings ranked by idf - a word's weight is how rare it is among the results' titles (Sparck Jones 1972)
     - plus the era's words for an old item; another brand is dropped, and so is a title without the item's own kind
@@ -110,12 +124,16 @@ def rank_listings(rows, names, brand, year, kind=""):
     b = tok(brand)
     kd = [k[:5] for k in tok(kind) if len(k) >= 3]
     named = set().union(*[tok(n) for n in names]) if names else set()
+    has = sum(1 for L in rows if any(w.startswith(k) for w in tok(L["title"]) for k in kd)) if kd else 0
+    use_kind = bool(kd) and has >= min(3, max(1, len(rows) // 4))   # a wrong guess at the kind ("pink" for a
+    #                                                                 Furby) would drop every listing: used only
+    #                                                                 when the titles do say it
 
     def score(L):
         t = tok(L["title"])
         if b and t and not (b & t):
             return -1.0
-        if kd and not any(w.startswith(k) for w in t for k in kd):
+        if use_kind and not any(w.startswith(k) for w in t for k in kd):
             return -1.0
         if (t & MERCH) - named:
             return -1.0
@@ -144,12 +162,17 @@ def references(cid, card, R, log, listings=10, google=25):
         pass
     era_names = [short_name(n) for n in (card.get("era_names") or [])][:2]   # what it was SOLD as back then
     out, rows, seen = [], [], set()                         # ("Duracell PowerCheck"), not only the catalog's name
-    qs = [q for n in era_names for q in (("vintage " + n) if old else "", n)] + [("vintage " + name) if old else "", name]
+    kp = kind_phrase(name)                                  # every search names the item itself ("AA battery"):
+    with_kind = lambda n: n if all(w in tok(n) for w in tok(kp)) else f"{n} {kp}"   # 11:28 "vintage Duracell
+    #                                                         Coppertop" pulled up pins and memorabilia (Cody)
+    qs = [q for n in era_names for q in (("vintage " + with_kind(n)) if old else "", with_kind(n))] \
+        + [("vintage " + name) if old else "", name]
+    no = " ".join("-" + w for w in MERCH_NO if w not in tok(name))   # eBay's minus sign leaves a word out
     for q in dict.fromkeys(qs):
         if not q:
             continue
         try:
-            for L in G.search_listings(q, log=log):
+            for L in G.search_listings(f"{q} {no}", log=log):
                 if L["id"] not in seen:
                     seen.add(L["id"])
                     rows.append(L)
@@ -158,9 +181,18 @@ def references(cid, card, R, log, listings=10, google=25):
     kind = name.split()[-1] if name else ""                  # the kind of thing: "battery" in "... alkaline battery"
     rows = rank_listings(rows, era_names + [name], brand, year, kind=kind)
     log("[fast] eBay listings, best match first: " + " | ".join(L["title"][:50] for L in rows[:listings]))
-    for L in rows[:listings]:
+    others = []                                              # the other marketplaces and collectors' pages
+    for q in dict.fromkeys([q for q in qs if q][:2]):
         try:
-            for u in G.listing(L["page"], log)[:12]:
+            others += [L for L in G.market_pages(q, log=log) if L["id"] not in {o["id"] for o in others}]
+        except Exception as e:
+            log(f"[fast] the other marketplaces could not be searched: {str(e)[:120]}")
+    others = rank_listings(others, era_names + [name], brand, year, kind=kind)
+    log("[fast] other marketplaces, best match first: " + " | ".join(f"{L.get('site', '')}: {L['title'][:40]}" for L in others[:6]))
+    for L in rows[:listings] + others[:6]:
+        try:
+            pics = G.listing(L["page"], log) if "ebay.com" in L["page"] else G.page_photos(L["page"], log=log)
+            for u in pics[:12]:
                 f = DS._download(u, d)
                 if f:
                     out.append({"file": f, "url": u, "page": L["page"], "listing": L["id"], "title": L["title"]})

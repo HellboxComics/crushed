@@ -507,3 +507,44 @@ def listings(q, most=8, log=print):
 if __name__ == "__main__":
     for o in search_full(" ".join(sys.argv[1:])):
         print(o["w"], o["h"], o["url"], "|", o["page"], "|", o["title"])
+
+
+# ------------------------------------------------------------------ listings on other marketplaces
+# (Cody, 2026-10-08 11:28: "ebay is one of many sources it should be looking") A collector's or seller's page on
+# Etsy, WorthPoint (sold-item archive), Mercari, Ruby Lane, ShopGoodwill, Poshmark - or a collector's post on
+# Reddit or Flickr - is, like an eBay listing, one real copy photographed from several sides. Found through Google's
+# ordinary web search with its documented site: and OR operators; each page's own large photos are read off it.
+MARKETS = ("etsy.com", "worthpoint.com", "mercari.com", "rubylane.com", "shopgoodwill.com", "poshmark.com",
+           "reddit.com", "flickr.com")
+PAGE_IMG_JS = """(least) => { const out = new Set();
+  const add = (u) => { if (u && /^https?:/.test(u)) out.add(u); };
+  document.querySelectorAll('meta[property="og:image"], meta[name="twitter:image"]').forEach(m => add(m.content));
+  document.querySelectorAll('img').forEach(i => {
+    const big = Math.max(i.naturalWidth || 0, i.naturalHeight || 0);
+    const ss = (i.getAttribute('srcset') || i.getAttribute('data-srcset') || '').split(',').map(x => x.trim().split(' ')[0]).filter(Boolean);
+    if (big >= least) add(i.currentSrc || i.src);
+    if (ss.length && big >= least / 2) add(ss[ss.length - 1]);
+    const lazy = i.getAttribute('data-src') || i.getAttribute('data-zoom-src') || i.getAttribute('data-full');
+    if (lazy && big >= least / 3) add(lazy);
+  });
+  return Array.from(out); }"""
+
+
+def market_pages(q, most=12, log=print):
+    """[{"id", "page", "title"}] - pages on other marketplaces and collectors' sites for q (one Google web search)."""
+    sites = " OR ".join(f"site:{m}" for m in MARKETS)
+    rows = web_search(f"{q} ({sites})", most=most * 2, log=log)
+    out = []
+    for r in rows:
+        host = urllib.parse.urlparse(r["url"]).netloc.lower()
+        if any(host == m or host.endswith("." + m) for m in MARKETS):
+            out.append({"id": r["url"], "page": r["url"], "title": r.get("title", ""), "site": host})
+    log(f"[market] '{q}': {len(out)} pages on " + ", ".join(sorted({o['site'] for o in out})[:6]))
+    return out[:most]
+
+
+def page_photos(page, most=12, least=500, log=print):
+    """The large photos on one marketplace page: [url, ...] (the page's share image first, then its gallery)."""
+    _, urls = _open(page, scroll=True, js=f"() => ({PAGE_IMG_JS})({least})", log=log)
+    urls = [u for u in (urls or []) if not re.search(r"(logo|icon|avatar|sprite|badge|placeholder)", u, re.I)]
+    return urls[:most]
