@@ -121,6 +121,36 @@ def read_lines(png, turns=(0, 180, 90, 270), least=0.5):
     return list(dict.fromkeys(best))
 
 
+def read_boxes_full(im, least=0.5):
+    """As read_boxes, with each line's whole box: [(text, x0, y0, x1, y1)] as fractions from the TOP-left. Apple's
+    reader: one box per line; tesseract: its words joined into lines (block, paragraph, line numbers)."""
+    kind = reader()
+    out = []
+    if kind == "ocrmac":
+        from ocrmac import ocrmac
+        for text, conf, box in ocrmac.OCR(im).recognize():
+            if conf >= least and text.strip():
+                x, y, w, h = box
+                out.append((text.strip(), x, 1 - (y + h), x + w, 1 - y))
+    elif kind == "tesseract":
+        import pytesseract
+        d = pytesseract.image_to_data(im, config="--psm 11", output_type=pytesseract.Output.DICT)
+        W, H = im.size
+        lines = {}
+        for i, t in enumerate(d["text"]):
+            if t.strip() and float(d["conf"][i]) >= 100 * least:
+                k = (d["block_num"][i], d["par_num"][i], d["line_num"][i])
+                x0, y0 = d["left"][i], d["top"][i]
+                x1, y1 = x0 + d["width"][i], y0 + d["height"][i]
+                if k in lines:
+                    a = lines[k]
+                    lines[k] = (a[0] + " " + t.strip(), min(a[1], x0), min(a[2], y0), max(a[3], x1), max(a[4], y1))
+                else:
+                    lines[k] = (t.strip(), x0, y0, x1, y1)
+        out = [(t, x0 / W, y0 / H, x1 / W, y1 / H) for t, x0, y0, x1, y1 in lines.values()]
+    return [o for o in out if len(re.sub(r"[^A-Za-z0-9]", "", o[0])) >= 2]
+
+
 def read_boxes(im, least=0.5):
     """The printed lines on a picture (a PIL image, read as it is - no turning) with where each sits:
     [(text, cx, cy)], the center as fractions of the width and height from the TOP-left. Apple's reader gives

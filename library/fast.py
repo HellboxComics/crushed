@@ -748,6 +748,22 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
     except Exception as e:
         log(f"[fast] the uncovered stretches were not filled ({str(e)[:100]})")
     png = os.path.join(tex, "label.png")
+    sharp = None
+    try:                                                     # every matched printed line set again as real type,
+        import retype                                        # crisp at the label's full size (16:30: the stitched
+        sharp, rn = retype.retype(out, list(words), log, scale=2)   # letters were soft and blotchy at 4096 px)
+    except Exception as e:
+        log(f"[fast] the print could not be set again as type ({str(e)[:100]}) - the drawn print is sharpened instead")
+    if sharp is not None:
+        Image.fromarray((np.clip(sharp, 0, 1) * 255).astype(np.uint8)).save(png)
+        im = Image.open(png).convert("RGB")
+        if im.width < 4096:
+            im = im.resize((4096, int(round(4096 * im.height / im.width))), Image.LANCZOS)
+            im.save(png)
+        log(f"[fast] the label texture is {im.width} x {im.height} px, its print set as type")
+        cover = os.path.join(tex, "label_seen.png")
+        Image.fromarray(np.full((H, W), 255, np.uint8)).save(cover)
+        return png, cover
     Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8)).save(png)
     # saleable-asset resolution (Cody, 2026-10-08 01:22: "as high definition and as quality as the best saleable
     # assets"): Real-ESRGAN x4 (github.com/xinntao/Real-ESRGAN, tiled with overlap) and never under 4096 px around
