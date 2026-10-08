@@ -90,7 +90,7 @@ T.photo_mask = lambda f, timeout=300: f
 skin.cutout = lambda f, out: f["file"]
 SIDES = {"l1a.jpg": ["DURACELL", "ALKALINE BATTERY", "PRESS DOTS TO TEST"],
          "l1b.jpg": ["DURACELL POWERCHECK", "Patented", "BEST IF INSTALLED BY", "JAN 2001"]}
-MS.read_lines = lambda png, **k: SIDES.get(os.path.basename(png), sum(SIDES.values(), []) if "side" in os.path.basename(png) else ["DURACELL", "ALKALINE BATTERY"])
+MS.read_lines = lambda png, **k: [] if "_middle" in png else SIDES.get(os.path.basename(png), sum(SIDES.values(), []) if "side" in os.path.basename(png) else ["DURACELL", "ALKALINE BATTERY"])
 for g in good:                                             # both one-copy photos
     g["look"]["one_item"] = True
 front, back, dn = fast.draw({"product": "Duracell AA", "year": 1998}, good, tex, 50.5, 45.5, R, lambda *a: None, words=wds + SIDES["l1b.jpg"])
@@ -132,13 +132,14 @@ R2 = types.SimpleNamespace(WORK=W, say=lambda *a: None, boundary=lambda *a, **k:
                            mr_from_bands=lambda png, real, cov, tex, notes: (Image.new("RGB", (8, 8)).save(os.path.join(tex, "label_mr.png")) or os.path.join(tex, "label_mr.png")),
                            run_blender=lambda *a: blend.append(a), finish_files=lambda cid, d: None,
                            file_away=lambda cid, d: (filed.append(cid) or {"ok": True}), jload=lambda p, dflt: dflt)
-answers = iter([{"match": 9}, {"match": 9}, {"realism": 8, "era": 5, "words": 8, "fix": ["the meter is the 2003 style"]},
-                {"match": 9}, {"match": 9}, {"realism": 8, "era": 8, "words": 9}])
+judged = iter([{"realism": 8, "era": 5, "words": 8, "fix": ["the meter is the 2003 style"]}, {"realism": 8, "era": 8, "words": 9}])
+PICK = {"m": 9}
 def _ask(use, q, imgs, think=False, side=1280):
     if "real_photo" in q:
         return looks[os.path.basename(imgs[0])]
-    a = next(answers)
-    return a
+    if '"realism"' in q:
+        return next(judged)
+    return {"match": PICK["m"]}
 V.ask = _ask
 fast.photo_words = lambda good, log, most=8: sum(SIDES.values(), [])   # both sides' words agreed by two photos
 calls.clear()
@@ -146,11 +147,12 @@ out = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel"
 second = [c for c in calls if "side1_1" in c["out"]][-1]
 check("the meter is the 2003 style" in second["prefix"], "the second drawing carries the judge's own fixes")
 check(filed == ["x_aa"] and out["era"] == 8, "the pass is filed in the Asset Library")
+check(any("gap" in c["out"] for c in calls), "the stretches between the sides were finished in the build")
 check(any(a[0] == "lathe.py" for a in blend) and any(a[0] == "contract.py" for a in blend), "built by the real-size round builder and the deliverable contract")
 check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], "five steps on the page")
 # a drawing that never matches is never built or filed
 filed.clear(); blend.clear(); st.clear()
-answers = iter([{"match": 3}] * 16)
+PICK["m"] = 3
 out2 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 check(not filed and not blend and "failed" in st[-1].get("step", ""), f"no match, nothing built or filed: {st[-1].get('step', '')[:80]}")
 MS.read_lines = lambda png, **k: ["DURACELL", "note", "Bethel", "Wqzzrt"]
@@ -189,12 +191,28 @@ def fill_draw(description, photos, out, width=None, height=None, prefix=None, se
     fills.append(prefix); Image.new("RGB", (width, height)).save(out); return out
 T.draw_from_photos = fill_draw
 skin.unroll_view = lambda v, a, b, Wd=2048, max_deg=70: (np.full((100, 2048, 3), 0.7), np.tile((np.abs(np.arange(2048) - 1024) < 300).astype(float), (100, 1)))
-MS.read_lines = lambda png, **k: ["MAY EXPLODE OR LEAK"]
+MS.read_lines = lambda png, **k: []
 got = fast.fill_gaps(base.copy(), seen, None, None, 50.5, 45.5, tex, lambda *a: None, product="Duracell AA", year=1998,
                      words=["MAY EXPLODE OR LEAK"], vocab=["DURACELL", "MAY EXPLODE OR LEAK"])
 check(got[:, 1500].mean() > 0.6 and np.allclose(got[:, 1000], 0.1), "an empty stretch takes the finished print; the drawn sides are untouched")
-check(fills and '"MAY EXPLODE OR LEAK"' in fills[0] and "FINISHED" in fills[0], "the fill is asked to finish the label with only the words not yet on it")
+check(fills and "NO words" in fills[0] and "FINISHED" in fills[0], "the fill is asked to finish the bands with no print at all")
 MS.read_lines = lambda png, **k: ["Zorbex Quality Plimsoll"]
 got2 = fast.fill_gaps(base.copy(), seen, None, None, 50.5, 45.5, tex, lambda *a: None, vocab=["DURACELL"])
-check(np.allclose(got2, 0.1), "a fill with made-up words is not used")
+check(np.allclose(got2, 0.1), "a fill that prints anything (it can only be made up) is not used")
+MS.read_lines = lambda png, **k: ["DURACELL", "Pal", "POWEDCHECKIN", "PRESS DBTS TO TEST"]
+bad = fast.unknown_words(os.path.join(tex, "label.png"), ["DURACELL", "PRESS DOTS TO TEST", "DURACELL POWERCHECK"])
+check(bad == ["Pal", "POWEDCHECKIN", "DBTS"], f"short and near-miss made-up words are found ({bad})")
+# views between the two sides: placed by their matching print, only onto what nothing covers yet
+reg = []
+def fake_reg(front, others, Wd, log=None):
+    reg.append(1)
+    l, w = others[0]
+    return [front, (np.roll(l, 700, axis=1), np.roll(w, 700, axis=1))]
+skin.register_strips = fake_reg
+skin.unroll_view = fake_unroll
+T.draw_from_photos = fake_draw
+MS.read_lines = lambda png, **k: []
+fast.FILLED.clear()
+png3, _ = fast.label_from(front, back, 50.5, 45.5, tex, lambda *a: None, extra=[front])
+check(reg and fast.FILLED["share"] >= 0.9, f"a view between the sides is placed by matching and fills its stretch ({fast.FILLED.get('share')})")
 print(f"ALL {ok} PASS")
