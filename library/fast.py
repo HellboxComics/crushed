@@ -349,10 +349,9 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
         best = None
         for t in range(tries):
             out = os.path.join(tex, f"side{k + 1}_{t + 1}.png")
-            style_ref = [drawn[0][1]] if k > 0 and drawn and drawn[0] else []   # one battery, one look: the
-            sty = (" Picture 2 is the OTHER side of this same battery, already drawn: match its copper color, the "  # other
-                   "height of its copper band, its black, its light and its print style exactly - but show the side "   # side
-                   "in picture 1, never picture 2's side." if style_ref else "")   # matches it (03:55: two coppers, two band heights)
+            # (no style picture: given side 1's drawing as a second picture, side 2 copied side 1's print - 05:55, four
+            #  tries at 2/10. One look comes from matching the colors per band afterwards - match_bands)
+            style_ref, sty = [], ""
             T.draw_from_photos(product, [src] + style_ref, out, width=vw, height=vh,
                                prefix=DRAW_FACE.format(product=product, year=year, size=st, fix=fx, words=wd, style=sty),
                                seed=int(time.time()) % 100000 + 37 * t)
