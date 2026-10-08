@@ -156,6 +156,10 @@ def pipeline(cid, redo=False):
         start_over(cid, d)
         fresh = True                                             # (the photos it found before are kept)
 
+    card = cards.make(cid, log=say)
+    import fast                                                  # STREAMLINED (Cody, 2026-10-07 20:34): a round item
+    if fast.applies(cid, card, sys.modules[__name__]):           # takes the five-step build - references, one look
+        return fast.build(cid, card, d, sys.modules[__name__])   # each, draw, model, one judge
     boundary(cid, "step")
     status(cid, step="1/7 the card: what this exact item is, how it is made, what it was called in its era")
     card = cards.make(cid, log=say)                              # (the status says so from the first minute: a run

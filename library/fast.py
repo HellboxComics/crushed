@@ -1,0 +1,384 @@
+"""THE STREAMLINED ROUND BUILD (Cody, 2026-10-07 20:34: "it should take an hour or two, not weeks... it is STILL
+copying and pasting the image rather than drawing one good image... cut out all the bullshit"; 20:36: "it does not
+have to be a pixel for pixel match... it has to say words and make sense... reference the real world item for the
+era and build as accurately and as convincing as possible").
+
+Five steps, nothing else:
+  1. references   eBay listings (one copy, every side; for sale + sold) and the Google image hunt
+  2. sort         ONE quick look per photo: is it this item, which side faces the camera
+  3. draw         Qwen-Image-Edit-2511 draws ONE clean studio photo of the item from a sheet of the best photos,
+                  then its other side from the photos that show it (huggingface.co/Qwen/Qwen-Image-Edit-2511: a
+                  clean product image from reference photos is what it does well - the drawn front scored 9-10/10
+                  against the real photos on 2026-10-06/07); photos are references only, never the texture
+  4. model        the drawn views unrolled onto the exact real-size shape (the same cylinder unroll as before),
+                  Blender: mesh, UV map, texture map, material, insides; every format
+  5. judge        one look at the finished model next to the real photos: realistic, right for its era, real words
+                  that make sense. A miss is drawn again once with the judge's own words; a pass is filed in the
+                  Asset Library.
+"""
+import json
+import math
+import os
+import re
+import time
+
+import numpy as np
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+REF_Q = ("We are rebuilding this exact item as a 3D model: {product} (made around {year}). Look at the photo. Answer "
+         "ONLY JSON: {{\"real_photo\": true if it is a real photograph (not a drawing, render or ad), \"score\": 0-10 how "
+         "surely it shows THIS item - the same product line, printed design and size, from the right era (a newer "
+         "redesign or another size scores low), \"side\": \"front\" if the side with the main logo or panel faces "
+         "the camera, \"back\" if the opposite side (warnings, codes, a second logo), \"several\" if several copies "
+         "show different sides, \"end\" if only an end, \"none\" if it is not the item, \"one_item\": true if exactly "
+         "one copy is in the picture}}")
+
+DRAW_FRONT = (
+    "Picture 1 is a sheet of real photos of {product}, made around {year}; picture 2 is its clearest photo. Make ONE "
+    "clean, convincing studio product photo of exactly one {product} exactly as it looked in {year}: lying on its "
+    "side, its long axis level and left to right, the side with its main logo and panel turned to the camera as in "
+    "picture 2, centered and filling most of the width, on plain white, soft even light, sharp, true colors, no "
+    "glare, no other objects, no hands. Its true proportions: {size}. Copy the printed design from the photos - "
+    "logo, panels, colors, bands and small print in their real places. Every word printed on it is a real, correctly "
+    "spelled word that makes sense for this product.{fix}")
+DRAW_BACK = (
+    "The pictures are real photos of {product}, made around {year}, in which the OTHER side of its printed label "
+    "faces the camera - not the side with the main panel. Make ONE clean studio product photo of exactly one "
+    "{product} showing THAT side: lying on its side, long axis level and left to right, centered, filling most of "
+    "the width, plain white background, soft even light, sharp, true colors, no glare, no other objects, no hands. "
+    "Its true proportions: {size}. Copy that side's logos, panels and small print from the photos. Every word is a "
+    "real, correctly spelled word that makes sense for this product.{fix}")
+PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a sheet of real photos of {product} from around "
+          "{year}. Does picture 1 look like a real photo of that same item from that era - the same printed design, "
+          "logo, colors and layout, real words that make sense? Answer ONLY JSON: {{\"match\": 0-10, "
+          "\"wrong\": [\"short, specific\"]}}")
+JUDGE_Q = ("Picture 1 shows our finished 3D model of {product} from several sides. Picture 2 is a sheet of real "
+           "photos of that item from around {year}. Judge it like a collector would. Answer ONLY JSON: "
+           "{{\"realism\": 0-10 (does it look like a real physical object: shape, proportions, materials, print "
+           "quality), \"era\": 0-10 (is it the right version of this product for {year}: logo, colors, design), "
+           "\"words\": 0-10 (is the printed text made of real words that make sense for this product - not gibberish), "
+           "\"fix\": [\"what to change, short and specific\"]}}")
+PASS = 7                                                    # each of realism, era and words
+
+
+def tok(x):
+    return set(re.findall(r"[a-z0-9]+", str(x).lower()))
+
+
+def short_name(product):
+    """What a person types into a search box: the catalog name without the era words or ratings."""
+    n = re.sub(r"\(.*?\)", "", str(product))
+    n = re.sub(r",?\s*(circa|c\.|from|made in)\b.*$", "", n, flags=re.I)
+    n = re.sub(r"\b[\d.,]+\s*(volts?|v|mah|mm|in|oz|g|ct|count|pack)?\b", " ", n, flags=re.I)
+    return re.sub(r"\s+", " ", n).strip(" ,")
+
+
+def rank_listings(rows, names, brand, year):
+    """eBay listings ranked by idf - a word's weight is how rare it is among the results' titles (Sparck Jones 1972)
+    - plus the era's words for an old item; another brand is dropped."""
+    N = max(1, len(rows))
+    df = {}
+    for L in rows:
+        for w in tok(L["title"]):
+            df[w] = df.get(w, 0) + 1
+    want = set().union(*[tok(n) for n in names]) if names else set()
+    era = set()
+    try:
+        if int(year) <= time.localtime().tm_year - 15:
+            era = {"vintage", "old", "nos", f"{str(int(year))[2]}0s", f"{str(int(year))[:3]}0s"}
+    except (TypeError, ValueError):
+        pass
+    b = tok(brand)
+
+    def score(L):
+        t = tok(L["title"])
+        if b and t and not (b & t):
+            return -1.0
+        return sum(math.log((N + 1) / (df.get(w, 0) + 1)) for w in want & t) + 2 * len(era & t)
+    return sorted((L for L in rows if score(L) >= 0), key=lambda L: -score(L))
+
+
+def references(cid, card, R, log, listings=6, google=25):
+    """[{"file", "url", "page", "listing"}] - eBay listings first (each one copy from every side), then the Google
+    hunt's photos. Downloaded into WORK/hunt/<cid>; kept between runs."""
+    import google_images as G
+    import dossier as DS
+    import hunt
+    d = os.path.join(R.WORK, "hunt", cid)
+    os.makedirs(d, exist_ok=True)
+    cache = os.path.join(d, "fast_refs.json")
+    if os.path.exists(cache):
+        return json.load(open(cache))
+    product, year = card["product"], card.get("year")
+    name = short_name(product)
+    brand = name.split()[0] if name else ""
+    old = False
+    try:
+        old = int(year) <= time.localtime().tm_year - 15
+    except (TypeError, ValueError):
+        pass
+    out, rows, seen = [], [], set()
+    for q in dict.fromkeys([("vintage " + name) if old else "", name]):
+        if not q:
+            continue
+        try:
+            for L in G.search_listings(q, log=log):
+                if L["id"] not in seen:
+                    seen.add(L["id"])
+                    rows.append(L)
+        except Exception as e:
+            log(f"[fast] eBay could not be searched: {str(e)[:120]}")
+    rows = rank_listings(rows, [name], brand, year)
+    log("[fast] eBay listings, best match first: " + " | ".join(L["title"][:50] for L in rows[:listings]))
+    for L in rows[:listings]:
+        try:
+            for u in G.listing(L["page"], log)[:10]:
+                f = DS._download(u, d)
+                if f:
+                    out.append({"file": f, "url": u, "page": L["page"], "listing": L["id"], "title": L["title"]})
+        except Exception as e:
+            log(f"[fast] {L['page']} could not be opened: {str(e)[:80]}")
+    try:
+        found = hunt.run(cid, name, year, log=log)
+    except Exception as e:
+        log(f"[fast] the Google hunt did not run: {str(e)[:120]}")
+        found = []
+    have = {o["file"] for o in out}
+    for f in found[:google]:
+        if f.get("file") and f["file"] not in have and os.path.exists(f["file"]):
+            out.append({"file": f["file"], "url": f.get("url", ""), "page": f.get("page", ""), "listing": None,
+                        "title": f.get("title", "")})
+    json.dump(out, open(cache, "w"), indent=1)
+    log(f"[fast] {len(out)} reference photos ({sum(1 for o in out if o['listing'])} from {min(len(rows), listings)} eBay listings)")
+    return out
+
+
+def sort_refs(refs, card, R, log):
+    """One quick look per photo (the fastest brain that sorts right). A listing whose best photo is this item lends
+    all its real photos - one listing is one copy. -> the refs with "look" set, best first."""
+    import vet as V
+    q = REF_Q.format(product=card["product"], year=card.get("year") or "its era")
+    use = V.quick_model() or V.model()
+    todo = [r for r in refs if "look" not in r]
+
+    def look(r):
+        return V.ask(use, q, [r["file"]], think=False, side=768) or {}
+
+    def done(i, v):
+        todo[i]["look"] = v if isinstance(v, dict) else {}
+    if todo:
+        V.parallel(look, todo, done)
+    by_listing = {}
+    for r in refs:
+        if r.get("listing"):
+            by_listing.setdefault(r["listing"], []).append(r)
+    for lid, rs in by_listing.items():                       # one copy: its best look speaks for every photo of it
+        best = max(int((r.get("look") or {}).get("score") or 0) for r in rs)
+        for r in rs:
+            r["listing_best"] = best
+    for r in refs:
+        lk = r.get("look") or {}
+        s = int(lk.get("score") or 0)
+        if r.get("listing") and r.get("listing_best", 0) >= 7 and lk.get("real_photo") is not False:
+            s = max(s, 7)
+        r["score"] = s if lk.get("real_photo") is not False else 0
+    good = sorted([r for r in refs if r["score"] >= 7], key=lambda r: (-r["score"], 0 if r.get("listing") else 1))
+    log(f"[fast] {len(good)} of {len(refs)} photos show this item; "
+        f"{sum(1 for r in good if (r.get('look') or {}).get('side') in ('back', 'several'))} show another side")
+    return good
+
+
+def size_text(w_mm, h_mm):
+    dia = h_mm / math.pi
+    return f"{w_mm:g} mm long and {dia:.1f} mm across, {w_mm / dia:.1f} times as long as it is wide"
+
+
+def draw(card, good, tex, along, around, R, log, fix="", tries=2):
+    """The front, best of `tries` by the judge against the sheet; then the other side. -> (front, back or None,
+    notes)."""
+    import turnaround as T
+    import vet as V
+    product, year = card["product"], card.get("year") or "its era"
+    sheet = R.reference_sheet([r["file"] for r in good[:9]], os.path.join(tex, "refs_sheet.png"))
+    singles = [r for r in good if (r.get("look") or {}).get("one_item") and (r.get("look") or {}).get("side") == "front"]
+    clear = (singles or good)[0]["file"]
+    st = size_text(along, around)
+    fx = (" Fix these from the last try: " + "; ".join(fix)) if fix else ""
+    vw, vh = 1344, 768
+    best, notes = None, {"tries": []}
+    for t in range(tries):
+        out = os.path.join(tex, f"front{t + 1}.png")
+        T.draw_from_photos(product, [sheet, clear], out, width=vw, height=vh,
+                           prefix=DRAW_FRONT.format(product=product, year=year, size=st, fix=fx),
+                           seed=int(time.time()) % 100000 + 37 * t)
+        v = V.ask(V.model(), PICK_Q.format(product=product, year=year), [out, sheet], think=False) or {}
+        m = int(v.get("match") or 0)
+        notes["tries"].append({"file": out, "match": m, "wrong": v.get("wrong")})
+        log(f"[fast] front drawing try {t + 1}: matches the real item {m}/10" + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
+        if best is None or m > best[0]:
+            best = (m, out)
+        if m >= 8:
+            break
+    backs = [r["file"] for r in good if (r.get("look") or {}).get("side") in ("back", "several")][:4]
+    back = None
+    if backs:
+        bsrc = backs[:2] if len(backs) <= 2 else [R.reference_sheet(backs, os.path.join(tex, "back_sheet.png"))]
+        back = os.path.join(tex, "back.png")
+        T.draw_from_photos(product, bsrc, back, width=vw, height=vh,
+                           prefix=DRAW_BACK.format(product=product, year=year, size=st, fix=fx),
+                           seed=int(time.time()) % 100000 + 211)
+        log(f"[fast] the other side drawn from {len(backs)} photo(s) that show it")
+    else:
+        log("[fast] no photo shows the other side - the front's own bands carry round the back")
+    return best[1], back, dict(notes, sheet=sheet, clear=clear, front_match=best[0])
+
+
+def label_from(front, back, along, around, tex, log):
+    """The drawn views unrolled onto the label (the same cylinder unroll as the photos used): the front in the
+    middle, the other side opposite, the rest its own bands carried round. -> (label png, metal/roughness png)."""
+    import skin
+    import turnaround as T
+    from PIL import Image
+    W = 2048
+    H = int(round(W * along / around))
+    lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
+    for i, f in enumerate([front] + ([back] if back else [])):
+        try:
+            got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around, W, max_deg=72)
+        except Exception as e:
+            log(f"[fast] {os.path.basename(f)} could not be unrolled: {str(e)[:100]}")
+            got = None
+        if not got:
+            continue
+        l, w = got
+        if i == 1:                                           # the other side: half a turn round
+            l, w = np.roll(l, W // 2, axis=1), np.roll(w, W // 2, axis=1)
+        better = w > cov
+        lab = np.where(better[..., None], l, lab)
+        cov = np.maximum(cov, w)
+    if cov.max() <= 0.05:
+        raise RuntimeError("the drawn item could not be unrolled onto the label")
+    log(f"[fast] the drawn views cover {(cov.max(0) > 0.05).mean():.0%} of the way around; the rest carries the bands")
+    lab = skin.continue_bands(lab, cov < 0.05)
+    png = os.path.join(tex, "label.png")
+    Image.fromarray((np.clip(lab, 0, 1) * 255).astype(np.uint8)).save(png)
+    try:
+        T.upscale(png, force=True)
+    except Exception as e:
+        log(f"[fast] the label was not sharpened ({str(e)[:80]})")
+    cover = os.path.join(tex, "label_seen.png")
+    Image.fromarray(np.full((H, W), 255, np.uint8)).save(cover)
+    return png, cover
+
+
+def shape_spec(cid, card, d, R, log):
+    """The exact real-size shape: a measured master shape, else the kit's standard size. -> (spec path, spec)."""
+    import kits
+    master = R.jload(os.path.join(HERE, "families.json"), {}).get(cid, {})
+    sp = os.path.join(HERE, "shapes", "specs", master.get("shape", "") + ".json")
+    if master.get("shape") and os.path.exists(sp):
+        return sp, json.load(open(sp))
+    kit_name = (card.get("family_lib") or {}).get("family", "")
+    variant, why = kits.pick_variant(kits.get(kit_name), card)
+    spec = kits.spec_for(kit_name, variant)
+    if not spec:
+        raise RuntimeError(f"no exact shape for {kit_name or 'this kind'} {variant or ''} - the full build is needed")
+    log(f"[fast] {kit_name} {variant}: the exact shape from its standard size ({why})")
+    sp = os.path.join(d, "shape.json")
+    json.dump(spec, open(sp, "w"), indent=1)
+    return sp, spec
+
+
+def studio_views(glb, d, R, log):
+    """Four sides of the finished model on one sheet: the phone viewer's pictures, else Blender's studio ones."""
+    import subprocess
+    try:
+        import viewshot
+        shots, _ = viewshot.shoot(glb, os.path.join(d, "check"))
+        if shots:
+            return shots
+    except Exception as e:
+        log(f"[fast] viewer pictures skipped ({str(e)[:80]}) - studio pictures")
+    subprocess.run([R.PY, os.path.join(HERE, "preview.py"), "--", glb, os.path.join(d, "view.png"), "0,90,180,270"],
+                   check=True, capture_output=True)
+    out = os.path.join(d, "views.jpg")
+    R.sheet_views([os.path.join(d, f"view_{a:03d}.png") for a in (0, 90, 180, 270)], out)
+    return out
+
+
+def applies(cid, card, R):
+    """Round items go this way (a measured master shape, or the card's round route)."""
+    return bool(R.jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape")) or card.get("route") == "round"
+
+
+def build(cid, card, d, R):
+    """The whole build, five steps. R is the run module (status, boundary, Blender, filing)."""
+    import shutil
+    import skin
+    import vet as V
+    from PIL import Image
+    log = R.say
+    product = card["product"]
+    mdir = os.path.join(d, "model")
+    tex = os.path.join(d, "texture")
+    os.makedirs(tex, exist_ok=True)
+    os.makedirs(mdir, exist_ok=True)
+    R.boundary(cid, "step")
+    R.status(cid, product=product, route="round", step="1/5 reference photos: eBay listings (every side of one copy) and Google")
+    refs = references(cid, card, R, log)
+    R.boundary(cid, "step")
+    R.status(cid, step=f"2/5 one quick look at each of {len(refs)} photos: is it this item, which side")
+    R.make_room("judging")
+    good = sort_refs(refs, card, R, log)
+    json.dump(refs, open(os.path.join(R.WORK, "hunt", cid, "fast_refs.json"), "w"), indent=1)
+    if not good:
+        raise RuntimeError("no photo of this item was found - add one to ~/crushed-render/remaster/refs-mine as "
+                           f"{cid}_1.jpg")
+    if not card.get("family_lib") and not R.jload(os.path.join(HERE, "families.json"), {}).get(cid, {}).get("shape"):
+        import families
+        families.classify(card, good[0]["file"], V.model(), log=log)
+    sp, spec = shape_spec(cid, card, d, R, log)
+    along, around = skin.label_size(spec)
+    fix, last = [], None
+    for rnd in range(2):
+        R.boundary(cid, "step")
+        R.status(cid, step=f"3/5 drawing the item from {min(len(good), 9)} photos" + (" (again, with the judge's fixes)" if rnd else ""))
+        R.make_room("drawing")
+        front, back, dn = draw(card, good, tex, along, around, R, log, fix=fix)
+        png, cover = label_from(front, back, along, around, tex, log)
+        mr = R.mr_from_bands(png, png, cover, tex, {})
+        shutil.copy(png, os.path.join(d, "label.png"))
+        shutil.copy(mr, os.path.join(d, "label_mr.png"))
+        R.boundary(cid, "step")
+        R.status(cid, step="4/5 Blender: real-size mesh, UV map, the drawn label, materials, insides; every format")
+        R.run_blender("lathe.py", sp, mdir, os.path.join(d, "label.png"), os.path.join(d, "label_mr.png"))
+        for ext in ("glb", "fbx", "usdc", "blend"):
+            p = os.path.join(mdir, spec["id"] + "." + ext)
+            if os.path.exists(p):
+                shutil.copy(p, os.path.join(mdir, cid + "." + ext))
+        R.run_blender("contract.py", os.path.join(mdir, cid + ".blend"), mdir, cid, str(card.get("mat") or ""))
+        glb = os.path.join(mdir, cid + ".glb")
+        R.finish_files(cid, d)
+        R.boundary(cid, "step")
+        R.status(cid, step="5/5 the judge: realistic, right for its era, real words")
+        shots = studio_views(glb, d, R, log)
+        R.make_room("judging")
+        v = V.ask(V.model(), JUDGE_Q.format(product=product, year=card.get("year") or "its era"), [shots, dn["sheet"]],
+                  think=True) or {}
+        sc = {k: int(v.get(k) or 0) for k in ("realism", "era", "words")}
+        log(f"[fast] the judge: realism {sc['realism']}/10, era {sc['era']}/10, words {sc['words']}/10"
+            + (f" - fix: {'; '.join(v.get('fix') or [])[:300]}" if v.get("fix") else ""))
+        last = dict(sc, fix=v.get("fix") or [], shots=shots, front=front, back=back)
+        json.dump(last, open(os.path.join(d, "fast_verdict.json"), "w"), indent=1)
+        if all(x >= PASS for x in sc.values()):
+            R.status(cid, verdict={"pass": True, **sc}, views=os.path.relpath(shots, R.WORK),
+                     ref=os.path.relpath(dn["clear"], R.WORK), label=os.path.relpath(os.path.join(d, "label.png"), R.WORK))
+            r = R.file_away(cid, d)
+            if not r.get("ok"):
+                R.status(cid, step=f"stopped: delivery check failed: {r.get('why')}"[:300], ok=False)
+            return last
+        fix = [str(x)[:120] for x in (v.get("fix") or [])][:6]
+    R.status(cid, step=f"failed the judge twice (realism {last['realism']}, era {last['era']}, words {last['words']}): "
+                       + "; ".join(last["fix"])[:200], ok=False, views=os.path.relpath(last["shots"], R.WORK))
+    return last
