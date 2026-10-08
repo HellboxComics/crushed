@@ -291,6 +291,18 @@ def faces(good, vocab, log, most=8):
     return out
 
 
+def drawn_ratio(png):
+    """Length to width of the item in a drawing, by its cut-out's principal axes (skin.shape_ratio). None if unknown."""
+    import skin
+    import turnaround as T
+    from PIL import Image
+    try:
+        m = np.asarray(Image.open(T.photo_mask(png, timeout=300)).convert("L")) / 255.0
+        return skin.shape_ratio(m)
+    except Exception:
+        return None
+
+
 def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
     """Each printed side of the item drawn clean from ONE clear photo of that side, best of `tries` by the judge
     against that photo and by its words read back. -> (front, back or None, notes)."""
@@ -331,6 +343,11 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
             v = V.ask(V.model(), PICK_Q.format(product=product, year=year), [out, src], think=False) or {}
             m = int(v.get("match") or 0)
             wb = words_back(out, ws)
+            ratio = drawn_ratio(out)                         # measured: a stubby drawing (a D cell's shape for an
+            want = along / (around / math.pi)                # AA - 02:17) stretches its print when unrolled
+            if ratio and not (0.8 * want <= ratio <= 1.25 * want):
+                log(f"[fast] side {k + 1} try {t + 1} is drawn {ratio:.1f} to 1, the item is {want:.1f} to 1 - not used")
+                m = min(m, 3)
             notes["tries"].append({"file": out, "side": k + 1, "match": m, "words": round(wb, 2), "wrong": v.get("wrong")})
             log(f"[fast] side {k + 1} drawing try {t + 1}: matches its photo {m}/10, {wb:.0%} of its words read back"
                 + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
@@ -347,18 +364,10 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
                                                     front_words=front[3])
 
 
-FLATTEN = (
-    "This is the printed label of {product}, unrolled flat from a photo of the item. Make it the clean, flat PRINT "
-    "ARTWORK itself, as the printer's file would look: perfectly even light, no glare, no shine, no reflections, no "
-    "shading, no curve, no photo noise, crisp sharp print, true flat ink colors. Keep EVERY element exactly where "
-    "it is - every word, letter, logo, panel, meter, color and band unchanged. Do not add or remove anything.{words}")
-
-
 def label_from(front, back, along, around, tex, log, product="", words=()):
     """The production way a round label texture is made: the drawn views' straight-on middles (the camera saw
     them square - within 60 degrees of the middle, before the curve stretches the print) unrolled flat, each made
-    into clean flat print artwork by Qwen-Image-Edit as an EDIT (its strength: glare, shading and shine out, every
-    element kept), the front centered, the other side opposite, the rest of each row its own background color
+    with the light taken off each column by the unroll itself, the front centered, the other side opposite, the rest of each row its own background color
     (the row's median ink across both sides - never one side's edge carried round as stripes). No baked light:
     the 3D render lights it (2026-10-08 01:10: glare, edge stretch and green stripes baked into the label).
     -> (label png, all-seen png)."""
@@ -385,16 +394,10 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
         strip = np.clip(l[:, c0:c1], 0, 1)
         sp = os.path.join(tex, f"strip{i + 1}.png")
         Image.fromarray((strip * 255).astype(np.uint8)).save(sp)
-        flat = os.path.join(tex, f"strip{i + 1}_flat.png")
-        try:                                                 # flat print artwork: an edit, everything kept
-            cw, ch = skin.canvas(strip.shape[1], strip.shape[0])
-            T.draw_from_photos(product, [sp], flat, width=cw, height=ch, prefix=FLATTEN.format(product=product, words=wd), seed=11 + i)
-            if words and words_back(flat, words) + 0.1 < words_back(sp, words):
-                log(f"[fast] side {i + 1}: the flat artwork lost words - the unrolled drawing is kept")
-                flat = sp
-        except Exception as e:
-            log(f"[fast] side {i + 1}: flat artwork not made ({str(e)[:80]})")
-            flat = sp
+        # (no generative "flatten" edit: asked to make the strip flat artwork, Qwen-Image-Edit redrew it as a
+        #  picture of a battery - rounded ends, white margins - 2026-10-08 02:17. The unroll already takes the
+        #  light off each column (mosaic.strip -> unwrap.delight); the drawn studio photo has no glare to speak of)
+        flat = sp
         art = np.asarray(Image.open(flat).convert("RGB").resize((c1 - c0, H), Image.LANCZOS)) / 255.0
         placed = np.zeros((H, W, 3))
         pw = np.zeros((H, W))

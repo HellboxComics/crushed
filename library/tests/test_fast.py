@@ -79,6 +79,7 @@ def fake_draw(description, photos, out, width=None, height=None, prefix=None, se
 
 
 T.draw_from_photos = fake_draw
+fast.drawn_ratio = lambda png: 50.5 / (45.55 / 3.14159)     # drawn in the item's own proportions
 R.reference_sheet = lambda files, out, cell=512, cols=None: (Image.new("RGB", (64, 64)).save(out) or out)
 tex = os.path.join(W, "tex")
 os.makedirs(tex)
@@ -156,4 +157,6 @@ bad = fast.unknown_words(os.path.join(tex, "label.png"), ["DURACELL", "Bethel, C
 check(bad == ["note", "Wqzzrt"], f"made-up words on the finished label are found ({bad})")
 src = open(os.path.join(os.path.dirname(fast.__file__), "run.py")).read()
 check("if fast.applies(cid, card, sys.modules[__name__]):" in src, "the run sends round items down the five steps")
+import inspect
+check("draw_from_photos" not in inspect.getsource(fast.label_from), "no generative edit redraws the unrolled strips (it drew a battery, not a label)")
 print(f"ALL {ok} PASS")
