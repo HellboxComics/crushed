@@ -160,6 +160,10 @@ check("if fast.applies(cid, card, sys.modules[__name__]):" in src, "the run send
 art = np.zeros((400, 50, 3)); art[:120] = (0.8, 0.5, 0.2)
 check(abs(fast.band_edge(art) - 119) <= 4, f"the band edge (copper meets black) is found ({fast.band_edge(art)})")
 check(len(s2) and len(s2[0]["photos"]) == 2 and s2[0]["photos"][1] == front, "side 2 is drawn with side 1's drawing as its style (one battery, one look)")
+a2 = np.zeros((400, 50, 3)); a2[:120] = (0.9, 0.4, 0.3); a2[120:] = (0.1, 0.1, 0.1)
+r1 = np.zeros((400, 50, 3)); r1[:120] = (0.8, 0.55, 0.25); r1[120:] = (0.05, 0.05, 0.05)
+mb = fast.match_bands(a2, r1, 120)
+check(np.abs(mb[:120].mean((0, 1)) - (0.8, 0.55, 0.25)).max() < 0.05, "side 2's copper takes side 1's copper color")
 import inspect
 check("draw_from_photos" not in inspect.getsource(fast.label_from), "no generative edit redraws the unrolled strips (it drew a battery, not a label)")
 print(f"ALL {ok} PASS")

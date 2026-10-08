@@ -55,8 +55,9 @@ PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a real pho
           "{year}. Does picture 1 look like a real photo of that same item from that era - the same printed design, "
           "logo, colors and layout, real words that make sense? Answer ONLY JSON: {{\"match\": 0-10, "
           "\"wrong\": [\"short, specific\"]}}")
-JUDGE_Q = ("Picture 1 shows our finished 3D model of {product} from several sides. Picture 2 is a sheet of real "
-           "photos of that item from around {year}. Judge it like a buyer of the best 3D product assets sold on "
+JUDGE_Q = ("Pictures 1 and 2 show our finished 3D model of {product}: close-ups, and all the way around. Picture 3 "
+           "is a sheet of real photos of that item from around {year}. The label must look printed all the way round: "
+           "no blank or smeared stretches, no seam, no part where one side's colors differ from the other's. Judge it like a buyer of the best 3D product assets sold on "
            "TurboSquid or CGTrader would, and like a collector of the real thing. Answer ONLY JSON: "
            "{{\"realism\": 0-10 (does it look like a real physical object: shape, proportions, materials, print "
            "quality), \"era\": 0-10 (is it the right version of this product for {year}: logo, colors, design), "
@@ -381,6 +382,26 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
                                                     front_words=front[3])
 
 
+def match_bands(art, ref, edge):
+    """Color transfer (Reinhard, Ashikhmin, Gooch, Shirley 2001: match the mean and spread of each channel in the
+    Lab color space) done separately above and below the band edge, so side 2's copper becomes side 1's copper and
+    its black side 1's black. -> art (H x w x 3, 0..1)."""
+    try:
+        from skimage import color
+        to, back = color.rgb2lab, color.lab2rgb
+    except Exception:                                        # (no scikit-image: the same transfer in RGB)
+        to = back = (lambda x: x)
+    out = art.copy()
+    for a, b in ((0, edge), (edge, art.shape[0])):
+        if b - a < 4:
+            continue
+        src, dst = to(np.clip(art[a:b], 0, 1)), to(np.clip(ref[a:b], 0, 1))
+        ms, ss = src.reshape(-1, 3).mean(0), src.reshape(-1, 3).std(0) + 1e-6
+        md, sd = dst.reshape(-1, 3).mean(0), dst.reshape(-1, 3).std(0) + 1e-6
+        out[a:b] = np.clip(back((src - ms) / ss * sd + md), 0, 1)
+    return out
+
+
 def band_edge(art):
     """The row where the label's main band changes (a copper top meeting a black body): the biggest jump in the
     rows' mean color, smoothed, away from the ends. -> row index or None."""
@@ -397,7 +418,7 @@ def band_edge(art):
 
 def label_from(front, back, along, around, tex, log, product="", words=()):
     """The production way a round label texture is made: the drawn views' straight-on middles (the camera saw
-    them square - within 60 degrees of the middle, before the curve stretches the print) unrolled flat, each made
+    them square - within 70 degrees of the middle, before the curve stretches the print) unrolled flat, each made
     with the light taken off each column by the unroll itself, the front centered, the other side opposite, the rest of each row its own background color
     (the row's median ink across both sides - never one side's edge carried round as stripes). No baked light:
     the 3D render lights it (2026-10-08 01:10: glare, edge stretch and green stripes baked into the label).
@@ -412,7 +433,7 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in list(words)[:24]) + ".") if words else ""
     for i, f in enumerate([front] + ([back] if back else [])):
         try:
-            got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around, W, max_deg=60)
+            got = skin.unroll_view({"file": f, "mask": T.photo_mask(f, timeout=300), "whole": True}, along, around, W, max_deg=70)
         except Exception as e:
             log(f"[fast] {os.path.basename(f)} could not be unrolled: {str(e)[:100]}")
             got = None
@@ -437,6 +458,11 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
         elif edge is not None and edge0 is not None and abs(edge - edge0) < 0.15 * H:
             art = np.roll(art, edge0 - edge, axis=0)
             log(f"[fast] side 2's band edge moved {edge0 - edge:+d} px to meet side 1's")
+        if i == 0:
+            art0, e0 = art, (edge if edge is not None else H // 3)
+        else:                                                # one battery, one ink: each band of side 2 takes
+            art = match_bands(art, art0, e0)                 # side 1's colors (Reinhard et al. 2001 color transfer,
+            log("[fast] side 2's band colors matched to side 1's")   # per band - 04:45: two coppers, a seam)
         placed = np.zeros((H, W, 3))
         pw = np.zeros((H, W))
         placed[:, c0:c1], pw[:, c0:c1] = art, 1.0
@@ -609,7 +635,10 @@ def build(cid, card, d, R):
                 R.sheet_views(vs, close, cell=(900, 1200))
             else:
                 close = shots
-        pics = [close, dn["sheet"]]
+        all_round = os.path.join(d, "check", "viewer_around.jpg")
+        if not (os.path.exists(all_round) and os.path.getmtime(all_round) > time.time() - 3600):
+            all_round = shots
+        pics = [close, all_round, dn["sheet"]]
         v = V.ask(V.model(), JUDGE_Q.format(product=display(card), year=card.get("year") or "its era"), pics,
                   think=True) or {}
         sc = {k: int(v.get(k) or 0) for k in ("realism", "era", "words")}
