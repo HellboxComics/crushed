@@ -17,6 +17,7 @@ import fast  # noqa: E402
 import vet as V  # noqa: E402
 import turnaround as T  # noqa: E402
 import skin  # noqa: E402
+_real_unroll = skin.unroll_view
 import measure as MS  # noqa: E402
 MS.read_lines = lambda png, **k: ["DURACELL", "PRESS DOTS TO TEST", "ALKALINE BATTERY"]
 
@@ -166,4 +167,34 @@ mb = fast.match_bands(a2, r1, 120)
 check(np.abs(mb[:120].mean((0, 1)) - (0.8, 0.55, 0.25)).max() < 0.05, "side 2's copper takes side 1's copper color")
 import inspect
 check("draw_from_photos" not in inspect.getsource(fast.label_from), "no generative edit redraws the unrolled strips (it drew a battery, not a label)")
+
+# the empty stretches between the drawn sides are finished where they face the camera (TEXTure / Text2Tex)
+Wt, Ht = 2048, 2273                                        # a label with bands, print blocks and grain (sharp)
+rng = np.random.default_rng(1)
+lab = np.zeros((Ht, Wt, 3)); lab[:Ht // 3] = (0.8, 0.5, 0.3); lab[Ht // 3:] = 0.08
+for c0, r0 in ((150, 900), (500, 1300), (900, 1000), (1300, 1500), (1700, 1100)):
+    lab[r0:r0 + 500, c0:c0 + 120] = 0.9
+lab = np.clip(lab + rng.normal(0, 0.06, lab.shape), 0, 1)
+v, vm = fast.roll_view(lab, 600, os.path.join(W, "rv.png"))
+l, w = _real_unroll({"file": v, "mask": vm, "whole": True}, 50.5, 45.5, Wt, max_deg=70)
+cols = np.where(w.max(0) > 0.05)[0]
+errs = [np.abs(np.roll(lab, sh, axis=1)[::16, cols] - l[::16, cols]).mean() for sh in range(0, Wt, 4)]
+check(abs(int(np.argmin(errs)) * 4 - (Wt // 2 - 600)) <= 16, f"the label wrapped back on the item and unrolled lands on the same columns ({int(np.argmin(errs)) * 4} vs {Wt // 2 - 600})")
+sc = np.zeros(2048, bool); sc[700:1350] = True; sc[1700:2048] = True; sc[:20] = True
+check(fast.gaps(sc) == [(20, 680), (1350, 350)], f"the empty stretches are found, wrapping round ({fast.gaps(sc)})")
+seen = np.tile(sc, (100, 1))
+base = np.full((100, 2048, 3), 0.1)
+fills = []
+def fill_draw(description, photos, out, width=None, height=None, prefix=None, seed=None, timeout=3600):
+    fills.append(prefix); Image.new("RGB", (width, height)).save(out); return out
+T.draw_from_photos = fill_draw
+skin.unroll_view = lambda v, a, b, Wd=2048, max_deg=70: (np.full((100, 2048, 3), 0.7), np.tile((np.abs(np.arange(2048) - 1024) < 300).astype(float), (100, 1)))
+MS.read_lines = lambda png, **k: ["MAY EXPLODE OR LEAK"]
+got = fast.fill_gaps(base.copy(), seen, None, None, 50.5, 45.5, tex, lambda *a: None, product="Duracell AA", year=1998,
+                     words=["MAY EXPLODE OR LEAK"], vocab=["DURACELL", "MAY EXPLODE OR LEAK"])
+check(got[:, 1500].mean() > 0.6 and np.allclose(got[:, 1000], 0.1), "an empty stretch takes the finished print; the drawn sides are untouched")
+check(fills and '"MAY EXPLODE OR LEAK"' in fills[0] and "FINISHED" in fills[0], "the fill is asked to finish the label with only the words not yet on it")
+MS.read_lines = lambda png, **k: ["Zorbex Quality Plimsoll"]
+got2 = fast.fill_gaps(base.copy(), seen, None, None, 50.5, 45.5, tex, lambda *a: None, vocab=["DURACELL"])
+check(np.allclose(got2, 0.1), "a fill with made-up words is not used")
 print(f"ALL {ok} PASS")

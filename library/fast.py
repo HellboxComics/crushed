@@ -415,7 +415,7 @@ def band_edge(art):
     return r if jump[r] > 0.05 else None
 
 
-def label_from(front, back, along, around, tex, log, product="", words=()):
+def label_from(front, back, along, around, tex, log, product="", words=(), year="its era"):
     """The production way a round label texture is made: the drawn views' straight-on middles (the camera saw
     them square - within 70 degrees of the middle, before the curve stretches the print) unrolled flat, each made
     with the light taken off each column by the unroll itself, the front centered, the other side opposite, the rest of each row its own background color
@@ -429,6 +429,7 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     H = int(round(W * along / around))
     lab, cov = np.zeros((H, W, 3)), np.zeros((H, W))
     edge0 = None
+    art0, e0 = None, None
     wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in list(words)[:24]) + ".") if words else ""
     for i, f in enumerate([front] + ([back] if back else [])):
         try:
@@ -488,6 +489,15 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     dist = ndimage.distance_transform_edt(seen)
     a = np.clip(dist / 40.0, 0, 1)[..., None]
     out = a * out + (1 - a) * bg[:, None, :]
+    try:                                                     # the empty stretches between the sides, finished
+        import measure as MS                                 # (TEXTure / Text2Tex: drawn where they face the camera)
+        from rapidfuzz import fuzz
+        on = " ".join(sum([MS.read_lines(f) or [] for f in [front] + ([back] if back else [])], [])).lower()
+        left = [w for w in words if fuzz.partial_ratio(str(w).lower(), on) < 85]
+        out = fill_gaps(out, seen, art0, e0, along, around, tex, log, product=product,
+                        year=year, words=left, vocab=list(words))
+    except Exception as e:
+        log(f"[fast] the empty stretches were not finished ({str(e)[:100]})")
     png = os.path.join(tex, "label.png")
     Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8)).save(png)
     # saleable-asset resolution (Cody, 2026-10-08 01:22: "as high definition and as quality as the best saleable
@@ -504,6 +514,128 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     cover = os.path.join(tex, "label_seen.png")
     Image.fromarray(np.full((H, W), 255, np.uint8)).save(cover)
     return png, cover
+
+
+def roll_view(lab, center, out, vw=1344, vh=768):
+    """The flat label wrapped back onto the item and seen from the side, column `center` facing the camera - the
+    item lying down, its top (plus) end to the left, on white, like the drawn views (the inverse of
+    skin.unroll_view). -> (png, the picture's item mask png)."""
+    from PIL import Image
+    H, W = lab.shape[:2]
+    L = int(min(0.86 * vw, 0.8 * vh * math.pi * H / W))     # the item's length in the picture (a squat item: its
+    #                                                          width across sets the scale)
+    D = max(8, int(round(L * W / (math.pi * H))))            # its diameter: around / pi, to the length's scale
+    x0, y0 = (vw - L) // 2, (vh - D) // 2
+    img = np.ones((vh, vw, 3))
+    msk = np.zeros((vh, vw))
+    yy = (np.arange(D) + 0.5) / D * 2 - 1                    # -1..1 across the diameter
+    phi = np.arcsin(np.clip(yy, -1, 1))                      # the angle round from the camera
+    cols = (center - phi / (2 * math.pi) * W).astype(int) % W    # (this sense unrolls back onto the same columns:
+    #                                                          round trip within 2% - tested 2026-10-08)
+    rows = np.clip(((np.arange(L) + 0.5) / L * H).astype(int), 0, H - 1)
+    face = lab[rows][:, cols]                                # L x D x 3: along x across
+    shade = (0.62 + 0.38 * np.cos(phi))[None, :, None]       # soft studio light, darker toward the edges
+    img[y0:y0 + D, x0:x0 + L] = np.transpose(face * shade, (1, 0, 2))
+    msk[y0:y0 + D, x0:x0 + L] = 1
+    nub = max(3, D // 4)                                     # the plus terminal's button at the top end
+    img[vh // 2 - nub // 2: vh // 2 + nub // 2, x0 - nub // 2: x0] = 0.72
+    msk[vh // 2 - nub // 2: vh // 2 + nub // 2, x0 - nub // 2: x0] = 1
+    Image.fromarray((np.clip(img, 0, 1) * 255).astype(np.uint8)).save(out)
+    mp = out[:-4] + "_mask.png"
+    Image.fromarray((msk * 255).astype(np.uint8)).save(mp)
+    return out, mp
+
+
+FILL_Q = (
+    "Picture 1 is a photo of {product}, made around {year}, lying on its side. The part of its label facing the "
+    "camera is unfinished: a plain, empty stretch between the printed parts near its top and bottom edges. Make the "
+    "same studio product photo with the label FINISHED: carry the real printed design of this item across the empty "
+    "stretch so it joins the print at both edges with no seam - the same bands, colors and lettering style, only what "
+    "the real item of that era carries on that side. Keep the item's size, position, ends and everything already "
+    "printed exactly where they are; plain white background, soft even light, no glare, sharp focus. {words} Never "
+    "invent other words, stickers, logos, bars or boxes, and never print the big logo a second time.")
+
+
+def fill_gaps(out, seen, art0, e0, along, around, tex, log, product="", year="its era", words=(), vocab=(), tries=2):
+    """The stretches round the label no drawn side covered, finished the way TEXTure (Richardson et al. 2023) and
+    Text2Tex (Chen et al. 2023) paint a 3D texture: turn the item so the empty stretch faces the camera (roll_view),
+    have the image model finish the label in that picture (what it does well: a photo of the item), unroll it back
+    and keep only the empty stretch, color-matched per band (2026-10-08 06:49: a third of the label was plain black,
+    the judge's "near-blank dark side"). A fill with made-up words is not used. -> out (H x W x 3)."""
+    import skin
+    import turnaround as T
+    H, W = out.shape[:2]
+    seen_cols = seen.max(0)
+    runs = gaps(seen_cols)
+    if not runs:
+        return out
+    wd = ("Print ONLY these words, spelled exactly, if any belong there: " + ", ".join(f'"{w}"' for w in list(words)[:12])
+          + ".") if words else "Print no words there."
+    filled = seen_cols.copy()
+    for start, width in runs[:3]:
+        gc = (start + width // 2) % W
+        best = None
+        for t in range(tries):
+            view, _ = roll_view(out, gc, os.path.join(tex, f"gap{gc}_view.png"))
+            drawn = os.path.join(tex, f"gap{gc}_{t + 1}.png")
+            try:
+                T.draw_from_photos(product, [view], drawn, width=1344, height=768,
+                                   prefix=FILL_Q.format(product=product, year=year, words=wd),
+                                   seed=int(time.time()) % 100000 + 53 * t)
+                got = skin.unroll_view({"file": drawn, "mask": T.photo_mask(drawn, timeout=300), "whole": True},
+                                       along, around, W, max_deg=70)
+            except Exception as e:
+                log(f"[fast] the stretch at {gc * 360 // W} degrees could not be finished: {str(e)[:100]}")
+                got = None
+            if not got:
+                continue
+            bad = unknown_words(drawn, vocab) if vocab else []
+            log(f"[fast] the empty stretch at {gc * 360 // W} degrees, try {t + 1}: "
+                + (f"made-up words {bad[:5]} - not used" if len(bad) > 1 else "finished"))
+            if len(bad) <= 1:
+                best = got
+                break
+        if best is None:
+            continue
+        l, w = best
+        l = np.roll(l, gc - W // 2, axis=1)                  # its middle was at the label's middle: back to its place
+        w = np.roll(w.max(0), gc - W // 2)
+        if e0 is not None and art0 is not None:              # one battery, one ink (Reinhard per band)
+            cols = np.where(w > 0.05)[0]
+            if len(cols):
+                l[:, cols] = match_bands(l[:, cols], art0[:, np.arange(len(cols)) % art0.shape[1]], e0)
+        take = (w > 0.05) & (~filled)
+        if not take.any():
+            continue
+        from scipy import ndimage
+        d = ndimage.distance_transform_edt(np.tile(take, (3, 1)))[1]   # crossfade 40 px into the empty stretch
+        a = np.clip(d / 40.0, 0, 1)[None, :, None]
+        out = np.where(take[None, :, None], a * l + (1 - a) * out, out)
+        filled = filled | take
+    log(f"[fast] after finishing the empty stretches the label is printed {filled.mean():.0%} of the way around")
+    return out
+
+
+
+def gaps(seen_cols, least=0.03):
+    """The runs of label columns no drawing covered (wrapping round) -> [(start, width)], widest first."""
+    W = len(seen_cols)
+    if seen_cols.all() or not seen_cols.any():
+        return []
+    s = int(np.argmax(seen_cols))                            # start the walk on a covered column
+    runs, i = [], 0
+    while i < W:
+        c = (s + i) % W
+        if not seen_cols[c]:
+            j = i
+            while j < W and not seen_cols[(s + j) % W]:
+                j += 1
+            if j - i >= least * W:
+                runs.append(((s + i) % W, j - i))
+            i = j
+        else:
+            i += 1
+    return sorted(runs, key=lambda r: -r[1])
 
 
 def unknown_words(png, vocab):
@@ -608,7 +740,8 @@ def build(cid, card, d, R):
             last = {"realism": 0, "era": 0, "words": 0, "fix": fix, "shots": dn["sheet"], "front": front, "back": back}
             log(f"[fast] no drawing matched well enough (best {dn['front_match']}/10, {dn['front_words']:.0%} of the words) - drawn again")
             continue
-        png, cover = label_from(front, back, along, around, tex, log, product=display(card), words=words)
+        png, cover = label_from(front, back, along, around, tex, log, product=display(card), words=words,
+                                year=card.get("year") or "its era")
         mr = R.mr_from_bands(png, png, cover, tex, {})
         shutil.copy(png, os.path.join(d, "label.png"))
         shutil.copy(mr, os.path.join(d, "label_mr.png"))
