@@ -254,7 +254,7 @@ DRAW_FACE = (
     "no glare, no other objects, no hands. Its true proportions: {size}. Every word is real and spelled right.{words}{fix}")
 
 
-def faces(good, vocab, log, most=8):
+def faces(good, vocab, log, most=8, want_ratio=None):
     """The item's different printed sides, each from ONE clear photo of one copy: the photo read with the most words
     first, then the one whose words share least with it (2026-10-08 04:25: a sheet showing two sides at once was
     merged into one garbled side - the battery's big-logo side and its PowerCheck side). Each face carries the words
@@ -263,6 +263,15 @@ def faces(good, vocab, log, most=8):
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
     singles = [r for r in good if (r.get("look") or {}).get("one_item")] or good
+    if want_ratio:                                           # a photo of the item in its own proportions only: a
+        kept_ = []                                           # stubby one (seen end-on, or another size) is drawn
+        for r in singles[:most * 2]:                         # stubby (2026-10-08 03:00: side 2 drawn 2.5 to 1 from
+            q = drawn_ratio(r["file"])                       # its photo, three tries, for a 3.6 to 1 cell)
+            if q is None or 0.8 * want_ratio <= q <= 1.25 * want_ratio:
+                kept_.append(r)
+            else:
+                log(f"[fast] {os.path.basename(r['file'])}: the item shows {q:.1f} to 1 (it is {want_ratio:.1f} to 1) - not drawn from")
+        singles = kept_ or singles
     read = []
     for r in singles[:most]:
         try:
@@ -313,7 +322,7 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=3, words=()):
     st = size_text(along, around)
     fx = (" Fix these from the last try: " + "; ".join(fix)) if fix else ""
     vw, vh = 1344, 768
-    fs = faces(good, list(words), log)
+    fs = faces(good, list(words), log, want_ratio=along / (around / math.pi))
     if not fs:
         fs = [(good[0]["file"], list(words))]
     drawn, notes = [], {"tries": []}
@@ -416,6 +425,10 @@ def label_from(front, back, along, around, tex, log, product="", words=()):
     bg = _nd.median_filter(bg, size=(max(3, H // 20) | 1, 1), mode="nearest")   # row's color smoothed along the
     #                                                          length (a single row's text left ghost stripes)
     out = np.where(seen[..., None], lab, bg[:, None, :])
+    e = max(2, int(0.015 * H))                               # the drawing's own rounded ends are not label: the
+    out[:e] = out[e]                                         # first and last rows (the rolled lips) take the row
+    out[-e:] = out[-e - 1]                                   # just inside (02:17: white lips at both ends)
+    bg[:e], bg[-e:] = bg[e], bg[-e - 1]
     # a soft join (40 px) where the artwork meets the background, so no hard edge shows
     from scipy import ndimage
     dist = ndimage.distance_transform_edt(seen)
