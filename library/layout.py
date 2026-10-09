@@ -20,7 +20,8 @@ the top), sizes as fractions too:
              "stroke": "#rrggbb" or null, "stroke_w": line thickness as a fraction of the label's height (0.005 =
              a thin line), "metal": true for metallic ink/foil areas,
              "shade": "copper" for a copper/gold metallic band},
-            {"type": "bar", "x": , "y": , "w": , "h": , "colors": ["#..", "#.."], "stops": [0, .., 1]}   (a color gradient)],
+            {"type": "bar", "x": , "y": , "w": , "h": , "colors": ["#..", "#.."], "stops": [0, .., 1]}   (a color gradient),
+            {"type": "arrow", "x": , "y": , "w": , "h": , "fill": "#rrggbb", "dir": "right" | "left" | "up" | "down"}],
  "texts": [{"text": "EXACT WORDS", "x": , "y": , "h": letter height, "w": width it spans, "color": "#..",
             "weight": "regular" | "bold" | "black", "align": "left" | "center", "rotate": 0}]}
 List shapes from back to front (big background areas first)."""
@@ -62,6 +63,39 @@ def _ask(model, text, images, think=True):
     body = {"model": model, "stream": False, "format": "json", "think": think, "options": {"temperature": 0.2,
             "num_ctx": 16384}, "messages": [{"role": "user", "content": text, "images": [V._img(p, 1536) for p in images]}]}
     return _json(V._call("/api/chat", body, timeout=1800).get("message", {}).get("content", "{}"))
+
+
+def neutral(c, dark=25, light=40):
+    """A photo's light tints black and white ink (warm room light: the Duracell's black read #191e0d, olive, and its
+    white letters cream #f0e8d0 - the judge: "correct the label black to true black"). A color that is nearly gray -
+    a dark one whose channels differ by under 25, a light one by under 40 - is that gray: the cast taken out (the
+    gray-world assumption, applied only to inks that are near gray). Real colored dark or light inks (navy, forest
+    green, cream) differ by more and are kept."""
+    try:
+        r, g, b = (int(str(c).lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    except Exception:
+        return c
+    lum = 0.299 * r + 0.587 * g + 0.114 * b
+    spread = max(r, g, b) - min(r, g, b)
+    if (lum < 70 and spread < dark) or (lum > 185 and spread < light):
+        v = int(round(lum))
+        return "#%02x%02x%02x" % (v, v, v)
+    return c
+
+
+def _neutral_all(lay):
+    for s in lay.get("shapes", []):
+        for k in ("fill", "stroke"):
+            if s.get(k):
+                s[k] = neutral(s[k])
+        if s.get("colors"):
+            s["colors"] = [neutral(c) for c in s["colors"]]
+    for t in lay.get("texts", []):
+        if t.get("color"):
+            t["color"] = neutral(t["color"])
+    if lay.get("background"):
+        lay["background"] = neutral(lay["background"])
+    return lay
 
 
 def clean_layout(lay, w_mm, h_mm, words, base=()):
@@ -106,7 +140,7 @@ def clean_layout(lay, w_mm, h_mm, words, base=()):
         except Exception:
             pass
     lay["shapes"] = shapes
-    return lay
+    return _neutral_all(lay)
 
 
 # ------------------------------------------------------------------ the exact color check (measured, not judged)
@@ -335,7 +369,12 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         # exact: no two lines printed on top of each other, none past the edge (measured from where each landed)
         bx = _boxes(out_dir, f"round{r}")
         ofix = [f"'{o['a']}' is printed on top of '{o['b']}' ({o['share']:.0%} of the smaller) - move or shrink one"
-                for o in bx.get("overlaps", [])] + [f"'{t}' runs off the label" for t in bx.get("off_label", [])]
+                for o in bx.get("overlaps", [])] + [f"'{t}' runs off the label" for t in bx.get("off_label", [])] + \
+            [f"'{u['text']}' " + ("is printed across a shape (a dot, a box or a band edge sits under part of it) - "
+                                  "move it onto plain ground as the real label has it" if u["why"] == "crosses" else
+                                  "can't be read: its color is almost the color under it - set it where the real "
+                                  "label has it, in a color that stands out")
+             for u in bx.get("unreadable", [])]
         c = dict(c, judged=judged, colors=round(share, 2),
                  match=min(judged, int(round(10 * share)), 6 if ofix else 10),   # overlapping text is never "good"
                  fixes=ofix + cfix + list(c.get("fixes") or []), overlaps=len(bx.get("overlaps", [])))

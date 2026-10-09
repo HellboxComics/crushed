@@ -55,7 +55,8 @@ PICK_Q = ("Picture 1 is a drawn studio photo of an item. Picture 2 is a real pho
           "{year}. Does picture 1 look like a real photo of that same item from that era - the same printed design, "
           "logo, colors and layout, real words that make sense? Answer ONLY JSON: {{\"match\": 0-10, "
           "\"wrong\": [\"short, specific\"]}}")
-JUDGE_Q = ("Pictures 1 and 2 show our finished 3D model of {product}: close-ups, and all the way around. Picture 3 "
+JUDGE_Q = ("Pictures 1 and 2 show our finished 3D model of {product}: close-ups (left to right: the top end seen from "
+           "above, the bottom end seen from below, the back, a top edge), and all the way around. Picture 3 "
            "is a sheet of real photos of that item from around {year}. The label must look printed all the way round: "
            "no blank or smeared stretches, no seam, no part where one side's colors differ from the other's. Judge it like a buyer of the best 3D product assets sold on "
            "TurboSquid or CGTrader would, and like a collector of the real thing. Answer ONLY JSON: "
@@ -296,7 +297,10 @@ def photo_words(good, log, most=8):
                 continue
             hits = sum(1 for t in texts if (n in t if len(n) < 6 else fuzz.partial_ratio(n, t) >= 85))
             letters = sum(c.isalpha() for c in l) / max(1, len(l.replace(" ", "")))
-            if hits >= 2 and letters >= 0.4:
+            # a printed number with its unit is a real line too ("100%" on the PowerCheck meter, "1.5 V", "9V") -
+            # the letters rule alone dropped it (2026-10-09)
+            amount = re.fullmatch(r"\d{1,4}([.,]\d{1,2})?\s?(%|°[CF]?|V|mAh|mm|ml|oz|g)", l.strip(), re.I)
+            if hits >= 2 and (letters >= 0.4 or amount):
                 out.append(l)
     log(f"[fast] words read on at least two photos: {out[:20]}")
     return out[:30]

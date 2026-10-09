@@ -68,6 +68,11 @@ check(names[0] == "l1a.jpg" and "l1b.jpg" in names, f"a good listing lends its o
 check("l2a.jpg" not in names and "g1.jpg" not in names and "g3.jpg" not in names, "a wrong listing, an ad and merchandise (a pin) do not count")
 wds = fast.photo_words(good, lambda *a: None)
 check("PRESS DOTS TO TEST" in wds, f"the words read on two photos go to the drawing ({wds})")
+_rl = MS.read_lines
+MS.read_lines = lambda png, **k: ["DURACELL", "100%", "1.5 V", "|||", "06"]
+wds2 = fast.photo_words(good, lambda *a: None)
+check("100%" in wds2 and "1.5 V" in wds2 and "|||" not in wds2, f"a printed amount (the meter's 100%) is a line too ({wds2})")
+MS.read_lines = _rl
 
 # a listing lends its photos only to photos of the item itself (12:44: a lot's TrustFire photos, scored 0, got in)
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lz_a.jpg": {"real_photo": True, "score": 9, "side": "front", "one_item": True, "kind": "item"},

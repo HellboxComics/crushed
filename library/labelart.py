@@ -112,6 +112,10 @@ def render(layout, out_dir, px=4096, name="label"):
             continue
         fill = rgb(s["fill"]) if s.get("fill") else None
         outline = rgb(s["stroke"]) if s.get("stroke") else None
+        if t == "arrow":                                 # a printed arrow (labels point at things: "press here")
+            d.polygon(arrow(b, s.get("dir", "right")), fill=fill or outline or (20, 20, 20))
+            dm.polygon(arrow(b, s.get("dir", "right")), fill=(0, int(255 * layout.get("roughness", 0.45)), 0))
+            continue
         width = int((s.get("stroke_w") or 0) * H) or (1 if outline else 0)
         if s.get("shade") == "copper" and fill:          # metal ink: an even color with a faint brushed grain.
             x0, y0, x1, y1 = [int(v) for v in b]         # NO painted-in light - the renderer lights it (a texture
@@ -129,6 +133,8 @@ def render(layout, out_dir, px=4096, name="label"):
             (dm.ellipse if t == "ellipse" else dm.rectangle)(b, fill=(0, int(255 * s.get("roughness", 0.3)), 255))
         elif fill:                                       # plain ink drawn OVER metal ink is not metal any more
             (dm.ellipse if t == "ellipse" else dm.rectangle)(b, fill=(0, int(255 * layout.get("roughness", 0.45)), 0))
+    ground = np.asarray(img).astype(float)               # the print under the words (shapes only), for the
+    #                                                      measured can-it-be-read check
     texts = no_overlaps([dict(t) for t in layout.get("texts", [])], W, H, d)
     placed = []                                          # every line's final box, for the exact overlap check
     for tx in texts:
@@ -168,7 +174,9 @@ def render(layout, out_dir, px=4096, name="label"):
                     x = min(max(x, bx0 + m), bx1 - m - layer.width)
                     tx = dict(tx, y=min(max(y, by0 + m), by1 - m - layer.height) / H)
         img.paste(Image.new("RGB", layer.size, rgb(tx.get("color", "#000000"))), (int(x), int(tx["y"] * H)), layer)
-        placed.append({"text": text, "box": [x / W, tx["y"] * H / H, (x + layer.width) / W, (tx["y"] * H + layer.height) / H]})
+        placed.append({"text": text, "box": [x / W, tx["y"] * H / H, (x + layer.width) / W, (tx["y"] * H + layer.height) / H],
+                       **legible(ground, (int(x), int(tx["y"] * H), int(x) + layer.width, int(tx["y"] * H) + layer.height),
+                                 rgb(tx.get("color", "#000000")))})
         if not tx.get("metal"):                          # the letters' ink is not metal, even on a copper band
             mr.paste(Image.new("RGB", layer.size, (0, int(255 * layout.get("roughness", 0.45)), 0)),
                      (int(x), int(tx["y"] * H)), layer)
@@ -181,7 +189,8 @@ def render(layout, out_dir, px=4096, name="label"):
     c, m = os.path.join(out_dir, name + ".png"), os.path.join(out_dir, name + "_mr.png")
     img.save(c)
     mr.save(m)
-    json.dump({"texts": placed, "overlaps": overlaps(placed), "off_label": off_label(placed)},
+    json.dump({"texts": placed, "overlaps": overlaps(placed), "off_label": off_label(placed),
+               "unreadable": unreadable(placed)},
               open(os.path.join(out_dir, name + "_boxes.json"), "w"), indent=1)
     return c, m
 
@@ -199,6 +208,58 @@ def overlaps(placed, least=0.15):
             small = min((ax1 - ax0) * (ay1 - ay0), (bx1 - bx0) * (by1 - by0))
             if small > 0 and ix * iy / small > least:
                 out.append({"a": a["text"], "b": b["text"], "share": round(ix * iy / small, 2)})
+    return out
+
+
+def arrow(b, way="right"):
+    """A plain printed arrow filling box b: a shaft and a triangle head pointing `way` (right/left/up/down)."""
+    x0, y0, x1, y1 = b
+    if way in ("up", "down"):                            # drawn pointing right in a turned box, then turned back
+        pts = arrow((y0, x0, y1, x1), "right" if way == "down" else "left")
+        return [(x, y) for y, x in pts]
+    w, h, cy = x1 - x0, y1 - y0, (y0 + y1) / 2
+    pts = [(0, cy - 0.18 * h), (0.5 * w, cy - 0.18 * h), (0.5 * w, y0), (w, cy), (0.5 * w, y1),
+           (0.5 * w, cy + 0.18 * h), (0, cy + 0.18 * h)]
+    return [(x0 + px, py) if way == "right" else (x1 - px, py) for px, py in pts]
+
+
+def _lum(c):
+    """WCAG 2 relative luminance of an sRGB color (0..1)."""
+    v = np.asarray(c, float) / 255
+    v = np.where(v <= 0.03928, v / 12.92, ((v + 0.055) / 1.055) ** 2.4)
+    return float(v @ [0.2126, 0.7152, 0.0722])
+
+
+def contrast(a, b):
+    """WCAG 2 contrast ratio of two colors: 1 (the same) .. 21 (black on white)."""
+    la, lb = sorted((_lum(a), _lum(b)))
+    return (lb + 0.05) / (la + 0.05)
+
+
+def legible(ground, box, color, near=40.0):
+    """Can this line be read where it landed - MEASURED on the print under it (shapes only): is it on one plain
+    ground (no dot, panel edge or band edge under part of it) and does its ink stand out from that ground?
+    (2026-10-09: "PRESS DOTS" was set dark brown on a black box, and a white test dot sat on "Made in U.S.A." -
+    the look-compare called it 9/10.) -> {"ground": share of the box on its main ground color, "contrast": WCAG}"""
+    H, W = ground.shape[:2]
+    x0, y0, x1, y1 = max(box[0], 0), max(box[1], 0), min(box[2], W), min(box[3], H)
+    if x1 - x0 < 2 or y1 - y0 < 2:
+        return {"ground": 1.0, "contrast": 21.0}
+    px = ground[y0:y1, x0:x1].reshape(-1, 3)
+    med = np.median(px, 0)
+    share = float((np.sqrt(((px - med) ** 2).sum(1)) < near).mean())
+    return {"ground": round(share, 2), "contrast": round(contrast(color, med), 2)}
+
+
+def unreadable(placed, least_ground=0.85, least_contrast=2.0):
+    """Lines that can't be read clean: half on something else (a dot or a panel edge under them), or ink too close
+    to the ground under it (WCAG contrast under 2:1 - the guideline asks 4.5:1 for text; 2 is plainly unreadable)."""
+    out = []
+    for p in placed:
+        if p.get("ground", 1) < least_ground:
+            out.append({"text": p["text"], "why": "crosses"})
+        elif p.get("contrast", 21) < least_contrast:
+            out.append({"text": p["text"], "why": "faint"})
     return out
 
 

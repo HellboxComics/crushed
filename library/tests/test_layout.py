@@ -158,4 +158,25 @@ check(fixed["shapes"][0].get("base") and fixed["shapes"][0].get("metal") and len
 import run
 ww = run.whole_words(["DURACELL®", "JAN 2001", "DURA", "ALKALINE", "ALKALINE BATTERY"])
 check("DURA" not in ww and "ALKALINE" in ww, f"'DURA' (cut off at the photo's edge) becomes the whole word: {ww}")
+# the measured can-it-be-read check (2026-10-09: "PRESS DOTS" dark on a black box, a white dot under "Made in U.S.A.")
+import labelart as LA
+rl = {"width_mm": 50.0, "height_mm": 46.0, "background": "#c87533",
+      "shapes": [{"type": "rect", "x": 0.1, "y": 0.1, "w": 0.5, "h": 0.15, "fill": "#1a1a1a"},
+                 {"type": "ellipse", "x": 0.2, "y": 0.5, "w": 0.1, "h": 0.1, "fill": "#ffffff"},
+                 {"type": "arrow", "x": 0.7, "y": 0.1, "w": 0.1, "h": 0.06, "fill": "#1a1a1a", "dir": "up"}],
+      "texts": [{"text": "PRESS DOTS", "x": 0.12, "y": 0.13, "h": 0.06, "color": "#3a2410"},
+                {"text": "Made in U.S.A.", "x": 0.05, "y": 0.52, "h": 0.05, "color": "#3a2410"},
+                {"text": "TO TEST", "x": 0.12, "y": 0.8, "h": 0.06, "color": "#3a2410"}]}
+LA.render(rl, out, px=1000, name="legible")
+ub = {u["text"]: u["why"] for u in json.load(open(os.path.join(out, "legible_boxes.json")))["unreadable"]}
+check(ub == {"PRESS DOTS": "faint", "Made in U.S.A.": "crosses"}, f"dark-on-black and a dot under words are measured: {ub}")
+check(1.0 <= LA.contrast((0, 0, 0), (0, 0, 0)) < 1.01 and LA.contrast((0, 0, 0), (255, 255, 255)) > 20.9,
+      "WCAG contrast: same color 1, black on white 21")
+apx = Image.open(os.path.join(out, "legible.png")).convert("RGB").load()
+check(apx[750, 100][0] < 60 and apx[750, 140][0] < 60 and apx[712, 140][0] > 150 and apx[712, 96][0] > 150, "an arrow is drawn, pointing up (head at the top)")
+check(LAY.neutral("#191e0d") == "#1b1b1b" and LAY.neutral("#f0e8d0") == "#e8e8e8",
+      f"a photo's tint on black and white ink is taken out ({LAY.neutral('#191e0d')}, {LAY.neutral('#f0e8d0')})")
+check(LAY.neutral("#102a5c") == "#102a5c" and LAY.neutral("#c87533") == "#c87533" and LAY.neutral("#f3e0b0") == "#f3e0b0",
+      "navy, copper and cream are real colors and kept")
+
 print(f"\n{ok} checks passed")
