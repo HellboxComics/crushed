@@ -103,8 +103,8 @@ def fix_tokens(lines):
         near = [t for t in common if abs(len(t) - len(n)) <= 2 and fuzz.ratio(t, n) >= 75]
         if near:
             return max(near, key=lambda t: (freq[t], fuzz.ratio(t, n)))
-        for i in range(2, len(n) - 1):
-            if n[:i] in W and n[i:] in W and len(n[:i]) >= 2 and len(n[i:]) >= 2:
+        for i in range(2, len(n) - 1) if len(n) <= 7 else ():   # short run-togethers only ("TOTEST") - a long
+            if n[:i] in W and n[i:] in W and len(n[:i]) >= 2 and len(n[i:]) >= 2:   # name is one word ("POWERCHECK")
                 return n[:i] + " " + n[i:]
         if len(n) <= 4:
             for i, ch in enumerate(n):
@@ -176,7 +176,10 @@ def _lines(img, vocab):
     """The lines read off the label turned so its print reads across: (turn, [(text, snapped, x0, y0, x1, y1)])."""
     import measure as MS
     best = (90, [], -1)
-    for turn in (90, 270):
+    # the label's own layout fixes the turn: rows run from the top (plus, copper) end, so its print reads from
+    # the top down and a quarter turn counter-clockwise (90) sets it reading across. Never the other way: Apple's
+    # reader reads upside-down print too, and that turn set the type upside down (2026-10-08 21:50)
+    for turn in (90,):
         r = img.rotate(turn, expand=True)
         W, H = r.size
         got = []

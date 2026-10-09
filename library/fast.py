@@ -554,8 +554,8 @@ def view_words(art, cols):
     im = Image.fromarray((np.clip(art[:, c0:c1], 0, 1) * 255).astype(np.uint8))
     cw = c1 - c0
     best = []
-    for turn in (90, 270):
-        try:
+    for turn in (90,):                                       # the print reads from the top (plus) end down: one
+        try:                                                 # turn, never the upside-down one (21:50 retype bug)
             got = MS.read_boxes(im.rotate(turn, expand=True))
         except Exception:
             got = []
@@ -957,7 +957,7 @@ def unknown_words(png, vocab):
         known |= {norm(a + b) for a, b in zip(ts, ts[1:])}
     out = []
     for line in MS.read_lines(png) or []:
-        for t in re.findall(r"[A-Za-z]{3,}", line):
+        for t in re.findall(r"[A-Za-z]{4,}", line):            # (3-letter scraps of real print read as noise)
             if not any(fuzz.ratio(norm(t), k) >= 85 for k in known):
                 out.append(t)
     return out

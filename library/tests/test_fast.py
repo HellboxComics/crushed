@@ -210,7 +210,7 @@ check(np.allclose(got[:, sc], base[:, sc]), "the drawn views are untouched")
 check("draw_from_photos" not in inspect.getsource(fast.quilt_fill), "nothing generative draws the uncovered stretch (it printed DURACELL, Pal, FINISHED)")
 MS.read_lines = lambda png, **k: ["DURACELL", "Pal", "POWEDCHECKIN", "PRESS DBTS TO TEST"]
 bad = fast.unknown_words(os.path.join(tex, "label.png"), ["DURACELL", "PRESS DOTS TO TEST", "DURACELL POWERCHECK"])
-check(bad == ["Pal", "POWEDCHECKIN", "DBTS"], f"short and near-miss made-up words are found ({bad})")
+check(bad == ["POWEDCHECKIN", "DBTS"], f"near-miss made-up words are found ({bad})")
 # views between the two sides: placed by their matching print, only onto what nothing covers yet
 reg = []
 def fake_reg(front, others, Wd, log=None):

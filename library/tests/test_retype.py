@@ -52,4 +52,5 @@ check(RT.snap("DURACELLA DAWEnCHECKIN", fx) == "DURACELL® POWERCHECK™", "a lo
 eb = np.zeros((400, 300, 3)); eb[:120] = (0.8, 0.5, 0.25); eb[:120, :150] *= 0.7; eb[120:] = 0.08
 eo = RT.even_bands(eb)
 check(np.abs(eo[:100, 20:130].mean((0, 1)) - eo[:100, 170:280].mean((0, 1))).max() < 0.02, "one copper all round: a darker view's copper takes the band's one color")
+check(RT.canonical(["DURACELL® POWERCHECK™", "TOTEST"]) == ["DURACELL® POWERCHECK™", "TO TEST"], "a long name stays one word; a short run-together splits")
 print(f"ALL {ok} PASS")
