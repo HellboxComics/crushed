@@ -45,4 +45,8 @@ cv = RT.canonical(["DURACELL® POWERCHECK™", "DURACELL® POWERCHECK™A", "DUR
 check(cv == ["DURACELL® POWERCHECK™", "Test at 70°F/ 21°C", "BEST IF INSTALLED BY:", "Patented"], f"one spelling per line, the best-supported reading ({cv})")
 check(RT.snap("DURACELLA POWEDCHECKIN", cv) == "DURACELL® POWERCHECK™" and RT.snap("Zorbex", cv) is None,
       "a misreading is set in the photos' spelling, never its own")
+fx = RT.canonical(["TOTEST", "DURAGEL®", "DURACELL INC.,", "DURACELL® POWERCHECK™", "BEST IF INSTALLED RY:"])
+check(fx == ["TO TEST", "DURACELL®", "DURACELL INC.,", "DURACELL® POWERCHECK™", "BEST IF INSTALLED BY:"],
+      f"misread words put right: split, the common spelling, a confusable letter ({fx})")
+check(RT.snap("DURACELLA DAWEnCHECKIN", fx) == "DURACELL® POWERCHECK™", "a long line read badly still names its line")
 print(f"ALL {ok} PASS")

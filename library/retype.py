@@ -63,13 +63,81 @@ def _norm(x):
     return re.sub(r"[^a-z0-9]", "", str(x).lower())
 
 
+_WORDS = None
+_SMALL = {"a", "an", "at", "to", "of", "in", "by", "for", "on", "the", "and", "or", "if", "is", "it", "do", "not",
+          "no", "be", "as", "with", "use", "only", "made", "test", "dots", "size", "best", "installed", "press",
+          "battery", "alkaline", "patented", "volts", "caution", "connect", "improperly", "may", "explode", "leak"}
+# letters the reader mixes up (a misread "RY" is "BY"; "DURAGEL" is "DURACELL")
+_CONFUSE = {"r": "bpn", "b": "rh8", "g": "c6", "c": "ge", "a": "eo", "e": "ac", "l": "i1", "i": "l1", "o": "0ce",
+            "n": "mhr", "m": "n", "u": "v", "v": "u", "d": "o", "h": "nb", "t": "f", "f": "t"}
+
+
+def words():
+    """English words: the system's word list (macOS ships /usr/share/dict/words), else a small built-in one."""
+    global _WORDS
+    if _WORDS is None:
+        try:
+            _WORDS = {w.strip().lower() for w in open("/usr/share/dict/words") if w.strip()} | _SMALL
+        except Exception:
+            _WORDS = set(_SMALL)
+    return _WORDS
+
+
+def fix_tokens(lines):
+    """Each misread word in the readings put right, word by word: a rare word near a common one becomes it
+    ("DURAGEL" -> "DURACELL", read in many lines), run-together words are split into real words ("TOTEST" ->
+    "TO TEST"), a short non-word one confusable letter off a real word becomes that word ("RY" -> "BY")."""
+    from rapidfuzz import fuzz
+    W = words()
+    freq = {}
+    for v in lines:
+        for t in {re.sub(r"[^a-z]", "", x.lower()) for x in v.split()}:
+            if t:
+                freq[t] = freq.get(t, 0) + 1
+    common = [t for t, n in freq.items() if n >= 2 and len(t) >= 3]
+
+    def fix(core):
+        n = core.lower()
+        if len(n) < 2 or n in W or freq.get(n, 0) >= 2:
+            return core
+        near = [t for t in common if abs(len(t) - len(n)) <= 2 and fuzz.ratio(t, n) >= 75]
+        if near:
+            return max(near, key=lambda t: (freq[t], fuzz.ratio(t, n)))
+        for i in range(2, len(n) - 1):
+            if n[:i] in W and n[i:] in W and len(n[:i]) >= 2 and len(n[i:]) >= 2:
+                return n[:i] + " " + n[i:]
+        if len(n) <= 4:
+            for i, ch in enumerate(n):
+                for alt in _CONFUSE.get(ch, ""):
+                    cand = n[:i] + alt + n[i + 1:]
+                    if cand in _SMALL:
+                        return cand
+        return core
+
+    out = []
+    for v in lines:
+        toks = []
+        for x in v.split():
+            m = re.match(r"^([^A-Za-z]*)([A-Za-z]+)(.*)$", x)
+            if not m:
+                toks.append(x)
+                continue
+            pre, core, post = m.groups()
+            new = fix(core)
+            if new != core:
+                new = new.upper() if core.isupper() else (new.capitalize() if core[:1].isupper() else new)
+            toks.append(pre + new + post)
+        out.append(" ".join(toks))
+    return out
+
+
 def canonical(vocab):
     """One spelling per printed line: readings of the same line (85% alike) are one line, and the reading whose
     words the other readings share most wins ("DURACELL(R) POWERCHECK(TM)" over "...(TM)A"; "BEST IF INSTALLED BY:"
     over "...RY:"); stray end punctuation goes ("Patented ." -> "Patented"). 2026-10-08 18:30: the photos' own
     misreadings were set as crisp type."""
     from rapidfuzz import fuzz
-    lines = [re.sub(r"\s+[.,:;]+$", "", str(v).strip()) for v in vocab if str(v).strip()]
+    lines = fix_tokens([re.sub(r"\s+[.,:;]+$", "", str(v).strip()) for v in vocab if str(v).strip()])
     tokf = {}
     for v in lines:
         for t in {_norm(x) for x in v.split() if _norm(x)}:
@@ -90,7 +158,7 @@ def canonical(vocab):
     return [max(g, key=best) for g in groups]
 
 
-def snap(text, vocab, least=80):
+def snap(text, vocab, least=None):
     """The photos' own spelling of a line read off the label - ONLY ever a spelling from the (canonical) word list,
     never the reader's text - or None when no line matches (that line is left as drawn)."""
     from rapidfuzz import fuzz
@@ -98,6 +166,7 @@ def snap(text, vocab, least=80):
     if len(n) < 2:
         return None
     best = max(vocab, key=lambda v: fuzz.ratio(_norm(v), n), default=None)
+    least = least or (80 if len(n) < 12 else 70)             # a long line read badly still names its one line
     if best is not None and fuzz.ratio(_norm(best), n) >= least:
         return best
     return None
@@ -138,18 +207,20 @@ def retype(lab, vocab, log, scale=2):
         edge = np.concatenate([box[0], box[-1], box[:, 0], box[:, -1]])
         bg = np.median(edge, axis=0)
         dist = np.abs(box - bg).sum(-1)
-        ink = dist > 60
+        ink = dist > 35                                      # soft letters' faint edges too (18:30: ghosts)
         if not s or not ink.any():                           # a line no photo's words match is left as it is (a
             continue                                         # misread of real print must not become a hole)
         mask[y0:y1, x0:x1] |= (ink * 255).astype(np.uint8)
-        color = tuple(int(c) for c in np.median(box[ink], axis=0))
+        d_ink = dist[ink]                                    # the ink's own color: its strongest third (a soft
+        strong = box[ink][d_ink >= np.percentile(d_ink, 67)]  # letter's edge is half background - 18:30 greyish)
+        color = tuple(int(c) for c in np.median(strong, axis=0))
         area = (x1 - x0) * (y1 - y0)
         k = _norm(s)
         if k in seen and seen[k]["area"] >= area:            # printed twice (two views overlapping): once
             continue
         seen[k] = {"text": s, "box": (x0, y0, x1, y1), "color": color, "area": area}
     keep = list(seen.values())
-    mask = cv2.dilate(mask, np.ones((5, 5), np.uint8))
+    mask = cv2.dilate(mask, np.ones((7, 7), np.uint8))
     clean = cv2.inpaint(r, mask, 5, cv2.INPAINT_TELEA)       # the old soft letters painted out from their band
     big = cv2.resize(clean, (w * scale, h * scale), interpolation=cv2.INTER_LANCZOS4)
     big = cv2.bilateralFilter(big, 9, 30, 9)                  # ink, not noise: smooth, edges kept
