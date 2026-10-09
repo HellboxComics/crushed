@@ -262,7 +262,7 @@ import layout as LAYM
 art_dir = os.path.join(W, "artt"); os.makedirs(art_dir, exist_ok=True)
 Image.new("RGB", (300, 330), (20, 20, 20)).save(os.path.join(art_dir, "flat_ref.png"))      # map: 300 around, 330 along
 seen_read = []
-def fake_make(product, read, words, w, h, out_dir, rounds=4, log=print):
+def fake_make(product, read, words, w, h, out_dir, rounds=4, log=print, typical=()):
     seen_read.append(Image.open(read).size)
     os.makedirs(out_dir, exist_ok=True)
     pth = os.path.join(out_dir, "label.png"); Image.new("RGB", (4096, int(4096 * h / w)), (200, 120, 40)).save(pth)
@@ -272,6 +272,15 @@ got_art = fast.label_art("Duracell AA", art_dir, ["DURACELL"], 50.5, 45.5, lambd
 ga = Image.open(got_art)
 check(seen_read == [(330, 300)] and ga.width >= 4096 and ga.height > ga.width,
       f"the guide is read with the plus end at the left; the artwork comes back in the map's layout ({seen_read}, {ga.size})")
+gx = np.full((330, 300, 3), 20, np.uint8); gx[:, :40] = np.random.default_rng(3).integers(0, 255, (330, 40, 3))
+Image.fromarray(gx).save(os.path.join(art_dir, "flat_ref.png"))                    # print at the left edge (round 0)
+reads = []
+def fake_make2(product, read, words, w, h, out_dir, rounds=4, log=print, typical=()):
+    reads.append(np.asarray(Image.open(read)).astype(float)); return fake_make(product, read, words, w, h, out_dir)
+LAYM.make = fake_make2
+fast.label_art("Duracell AA", art_dir, ["DURACELL"], 50.5, 45.5, lambda *a: None)
+rd = reads[-1]
+check(rd[:15].std() < 5 and rd[-15:].std() < 5, "the seam is put at the plainest place round: nothing printed on the edges that meet")
 LAYM.make = lambda *a, **k: (got_art, got_art, 4)
 check(fast.label_art("Duracell AA", art_dir, ["DURACELL"], 50.5, 45.5, lambda *a: None) is None, "artwork under 6/10: the stitched label is kept")
 # several copies in one photo: each cut out as a view of its own

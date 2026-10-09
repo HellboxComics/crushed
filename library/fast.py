@@ -960,11 +960,24 @@ def label_art(product, tex, words, along, around, log, rounds=4, least=6):
     if not os.path.exists(guide) or not words:
         return None
     g = Image.open(guide).convert("RGB")
-    read = os.path.join(tex, "flat_ref_reading.png")         # reading orientation: the plus end at the left
-    g.rotate(90, expand=True).save(read)
-    out_dir = os.path.join(tex, "art")
+    ga = np.asarray(g).astype(float) / 255.0
+    Wg = ga.shape[1]
+    ink = np.abs(np.diff(ga.mean(-1), axis=1, append=ga.mean(-1)[:, -1:])).mean(0)   # print in each column round
+    from scipy import ndimage
+    ink = ndimage.uniform_filter1d(ink, size=max(9, Wg // 40), mode="wrap")
+    quiet = ink <= ink.min() + 0.15 * (ink.max() - ink.min())
+    runs = gaps(~quiet, least=0.0) if not quiet.all() else [(0, Wg)]   # stretches of plain columns (wrapping)
+    st, wd_ = runs[0] if runs else (int(np.argmin(ink)), 1)
+    seam = (st + wd_ // 2) % Wg                              # the middle of the widest plain stretch: the seam goes there,
+    ga = np.roll(ga, -seam, axis=1)                          # so nothing printed is cut by the label's two edges
+    log(f"[fast] the label's seam is put at the plainest place round ({seam * 360 // Wg} degrees)")   # (05:05: the
+    read = os.path.join(tex, "flat_ref_reading.png")         # logo sat on the edge - "DURACE", ALKALINE BATTERY
+    Image.fromarray((ga * 255).astype(np.uint8)).rotate(90, expand=True).save(read)   # twice). Reading orientation:
+    out_dir = os.path.join(tex, "art")                       # the plus end at the left
     try:
-        png, mr, score = LAY.make(product, read, list(words), along, around, out_dir, rounds=rounds, log=log)
+        png, mr, score = LAY.make(product, read, list(words), along, around, out_dir, rounds=rounds, log=log,
+                                  typical=["each of the listed lines printed exactly once - never the same line twice",
+                                           "nothing crosses the top or bottom edge (they meet when wrapped)"])
     except Exception as e:
         log(f"[fast] the flat label artwork could not be made ({str(e)[:120]}) - the stitched label is kept")
         return None
@@ -973,6 +986,7 @@ def label_art(product, tex, words, along, around, log, rounds=4, least=6):
         log(f"[fast] the artwork is under {least}/10 - the stitched label is kept")
         return None
     art = Image.open(png).convert("RGB").rotate(-90, expand=True)   # back to the map: rows from the plus end
+    art = Image.fromarray(np.roll(np.asarray(art), int(round(seam * art.width / Wg)), axis=1))   # and its place round
     if art.width < 4096:
         art = art.resize((4096, int(round(4096 * art.height / art.width))), Image.LANCZOS)
     dst = os.path.join(tex, "label.png")
