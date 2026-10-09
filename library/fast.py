@@ -503,14 +503,16 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             from PIL import Image                            # a standing photo, the judge called it mirrored), and
             im = Image.open(src)                             # its print the right way up: of the two turns, the one
             turns = (90, 270) if im.height > 1.3 * im.width else (0, 180)   # its words read in (text-orientation
-            turn, read_ = upright(im, ws, turns)             # detection by reading, as Tesseract's OSD does) -
-            if not read_ and k and first_src:                # nothing readable either way (a small copy): the turn
+            turn, read_, sc_ = upright(im, ws, turns)        # detection by reading, as Tesseract's OSD does) -
+            if not read_ and k and first_src:                # no clear answer by reading: the turn
                 turn = same_way(im, first_src, turns)        # whose bands run like side 1's (copper end where side
             if turn:                                         # 1 has it) - 2026-10-09: a copy turned upside down was drawn with
                 flat = os.path.join(tex, f"side{k + 1}_level.png")   # mirrored garble, 3 tries x 2 sides every build
                 im.rotate(turn, expand=True, fillcolor="white").save(flat)
                 src = flat
-                log(f"[fast] side {k + 1}: its photo turned {turn} degrees so its print reads the right way up")
+                log(f"[fast] side {k + 1}: its photo turned {turn} degrees so its print reads the right way up "
+                    f"({'by its words' if read_ else 'by its bands, like side 1' if k else 'as it lies'}; words read "
+                    f"per turn {', '.join(f'{t}: {v:.0f}' for t, v in sc_.items())})")
         except Exception:
             pass
         if k == 0:
@@ -561,7 +563,7 @@ def upright(im, words, turns=(0, 180)):
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
     vocab = [norm(w) for w in words if len(norm(w)) >= 3]
-    best, got = turns[0], -1.0
+    scores = {}
     for t in turns:
         rot = (im.rotate(t, expand=True, fillcolor="white") if t else im).convert("RGB")
         import tempfile
@@ -579,9 +581,12 @@ def upright(im, words, turns=(0, 180)):
             m = max((fuzz.partial_ratio(n, v) for v in vocab), default=0) if vocab else 60
             if m >= 70:
                 score += len(n) * m / 100
-        if score > got:
-            best, got = t, score
-    return best, got > 0
+        scores[t] = score
+    # decided only by a clear margin: Apple's reader reads upside-down print too, nearly as well (2026-10-09: side 1,
+    # already the right way up, was turned 180 on a near tie) -> (turn, decided?, scores)
+    order = sorted(scores, key=lambda t: -scores[t])
+    a, b = scores[order[0]], scores[order[1]] if len(order) > 1 else 0.0
+    return (order[0], True, scores) if a > 0 and a >= 1.5 * b else (turns[0], False, scores)
 
 
 def same_way(im, ref_png, turns=(0, 180)):

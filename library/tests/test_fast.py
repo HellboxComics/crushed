@@ -299,8 +299,11 @@ check(fast.same_way(stand, refp, (90, 270)) == 90, "a standing copy is laid down
 check(fast.same_way(r_.rotate(180), refp, (0, 180)) == 180, "an upside-down copy is turned the right way round")
 _rl2 = MS.read_lines
 MS.read_lines = lambda png, **k: ["PRESS DOTS TO TEST"] if _I.open(png).size[0] > _I.open(png).size[1] and "turn" in png and _I.open(png).getpixel((30, 50))[0] > 150 else []
-t_, ok_ = fast.upright(stand, ["PRESS DOTS"], (90, 270))
+t_, ok_, _ = fast.upright(stand, ["PRESS DOTS"], (90, 270))
 check(ok_ and t_ == 90, f"the turn whose words read wins ({t_}, {ok_})")
+MS.read_lines = lambda png, **k: ["PRESS DOTS TO TEST"]            # a reader that reads both ways (Apple's)
+t2_, ok2_, _ = fast.upright(r_, ["PRESS DOTS"], (0, 180))
+check(t2_ == 0 and not ok2_, f"a near tie is no answer - the photo stays as it lies ({t2_}, {ok2_})")
 MS.read_lines = _rl2
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
