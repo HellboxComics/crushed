@@ -253,6 +253,10 @@ vw2 = [{"kind": "front", "words": [("Patented", 1050), ("DURACELL", 1000)]}, {"k
        {"kind": "extra", "words": [("ALKALINE BATTERY", 1100)]}]
 shz2 = fast.place_by_words(vw2, 2048, lambda *a: None, skip=["Duracell"])
 check(shz2.get(1) == 1024 and shz2.get(2) == (1020 + 1024 - 1100) % 2048, f"the item's own name is no anchor; nothing else shared: the other side half a turn round, and a view chains off it ({shz2})")
+# the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
+V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
+pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
+check(pr == ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST"], f"misreadings put right, nothing added ({pr})")
 # several copies in one photo: each cut out as a view of its own
 grp = os.path.join(W, "three.png")
 g3 = np.full((300, 500, 3), 255, np.uint8)

@@ -38,7 +38,7 @@ out, notes = retype.retype(lab, ["Patented", "Bethel, CT 06801"], lambda *a: Non
 check(out.shape[0] == 2 * H and out.shape[1] == 2 * W, f"the label comes back twice the size ({out.shape})")
 check(notes["lines"].count("Bethel, CT 06801") == 1 and "Patented" in notes["lines"],
       f"each matched line set again once, spelled as the photos spell it ({notes['lines']})")
-check(notes["dropped"] == ["Qwzx Plimbo"], f"a line no photo's words match is left as drawn ({notes['dropped']})")
+check(notes["junk"] == ["Qwzx Plimbo"], f"junk no photo's words come near is painted out ({notes['junk']})")
 import retype as RT
 cv = RT.canonical(["DURACELL® POWERCHECK™", "DURACELL® POWERCHECK™A", "DURACELLA POWEDCHECKIN", "Test at 70°F/ 21°C",
                    "Test al 70°F/21°C", "BEST IF INSTALLED BY:", "BEST IF INSTALLED RY:", "Patented ."])
@@ -49,4 +49,7 @@ fx = RT.canonical(["TOTEST", "DURAGEL®", "DURACELL INC.,", "DURACELL® POWERCHE
 check(fx == ["TO TEST", "DURACELL®", "DURACELL INC.,", "DURACELL® POWERCHECK™", "BEST IF INSTALLED BY:"],
       f"misread words put right: split, the common spelling, a confusable letter ({fx})")
 check(RT.snap("DURACELLA DAWEnCHECKIN", fx) == "DURACELL® POWERCHECK™", "a long line read badly still names its line")
+eb = np.zeros((400, 300, 3)); eb[:120] = (0.8, 0.5, 0.25); eb[:120, :150] *= 0.7; eb[120:] = 0.08
+eo = RT.even_bands(eb)
+check(np.abs(eo[:100, 20:130].mean((0, 1)) - eo[:100, 170:280].mean((0, 1))).max() < 0.02, "one copper all round: a darker view's copper takes the band's one color")
 print(f"ALL {ok} PASS")

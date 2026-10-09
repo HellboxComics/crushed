@@ -302,6 +302,45 @@ def photo_words(good, log, most=8):
     return out[:30]
 
 
+PROOF_Q = (
+    "These are real photos of {product}, made around {year}. A text scanner read the lines below off them; it often "
+    "misreads (it read DURAGEL for DURACELL, POWEDCHECKIN for POWERCHECK, 'Test al' for 'Test at', TOTEST for TO "
+    "TEST). Scanner lines: {lines}. Look at the photos and give every one of those lines spelled EXACTLY as it is "
+    "printed on the item - fix the scanner's mistakes, split or join words as printed, keep the (R) and (TM) marks as "
+    "the symbols \u00ae and \u2122 where printed. Drop a scanner line that is not printed text on the item. Never add "
+    "a line the scanner did not read. Answer ONLY JSON: {{\"lines\": [\"...\", ...]}}")
+
+
+def proofread(words, photos, card, log):
+    """The scanner's lines spelled as printed, by the vision brain that reads like a person (it knows the item) -
+    each answer must be one of the scanner's own lines put right (70% alike or more), so nothing is added that
+    the photos were not read to carry. 2026-10-08 20:40 (Cody): "The fuck is a duragel? ... a label for a battery
+    in the 90s, fucking simple" - the scanner's misreadings were set as type. -> [lines] (the scanner's if it fails)."""
+    import vet as V
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    if not words or not photos:
+        return list(words)
+    try:
+        v = V.ask(V.model(), PROOF_Q.format(product=display(card), year=card.get("year") or "its era",
+                                            lines=json.dumps(list(words), ensure_ascii=False)),
+                  list(photos)[:4], think=True) or {}
+    except Exception as e:
+        log(f"[fast] the proofread did not run ({str(e)[:80]}) - the scanner's lines are used")
+        return list(words)
+    out = []
+    for l in v.get("lines") or []:
+        l = str(l).strip()
+        if l and any(fuzz.ratio(norm(l), norm(w)) >= 70 or fuzz.partial_ratio(norm(l), norm(w)) >= 90 for w in words) \
+                and l not in out:
+            out.append(l)
+    if len(out) < max(2, len(words) // 3):
+        log(f"[fast] the proofread gave too few lines ({out}) - the scanner's lines are used")
+        return list(words)
+    log(f"[fast] the printed lines, proofread by the vision brain: {out}")
+    return out
+
+
 def words_back(png, words):
     """Share of the photos' words read back off a drawing (Apple's text reader)."""
     import measure as MS
@@ -1005,6 +1044,8 @@ def build(cid, card, d, R):
     sp, spec = shape_spec(cid, card, d, R, log)
     along, around = skin.label_size(spec)
     words = photo_words(good, log)
+    words = proofread(words, [g["file"] for g in good if g.get("look", {}).get("one_item")][:4] or [g["file"] for g in good[:4]],
+                      card, log)
     fix, last = [], None
     for rnd in range(2):
         R.boundary(cid, "step")
