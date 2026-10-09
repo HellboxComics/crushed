@@ -166,7 +166,10 @@ rl = {"width_mm": 50.0, "height_mm": 46.0, "background": "#c87533",
                  {"type": "arrow", "x": 0.7, "y": 0.1, "w": 0.1, "h": 0.06, "fill": "#1a1a1a", "dir": "up"}],
       "texts": [{"text": "PRESS DOTS", "x": 0.12, "y": 0.13, "h": 0.06, "color": "#3a2410"},
                 {"text": "Made in U.S.A.", "x": 0.05, "y": 0.52, "h": 0.05, "color": "#3a2410"},
-                {"text": "TO TEST", "x": 0.12, "y": 0.8, "h": 0.06, "color": "#3a2410"}]}
+                {"text": "TO TEST", "x": 0.12, "y": 0.8, "h": 0.06, "color": "#3a2410"},
+                {"text": "100%", "x": 0.42, "y": 0.69, "h": 0.04, "color": "#000000"}]}
+rl["shapes"].append({"type": "bar", "x": 0.37, "y": 0.68, "w": 0.53, "h": 0.07, "colors": ["#00cc00", "#ffffff", "#ff0000"],
+                     "stops": [0, 0.75, 1]})        # words on a gradient meter bar are on plain ground
 LA.render(rl, out, px=1000, name="legible")
 ub = {u["text"]: u["why"] for u in json.load(open(os.path.join(out, "legible_boxes.json")))["unreadable"]}
 check(ub == {"PRESS DOTS": "faint", "Made in U.S.A.": "crosses"}, f"dark-on-black and a dot under words are measured: {ub}")

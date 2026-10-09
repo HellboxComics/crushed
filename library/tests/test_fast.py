@@ -258,6 +258,14 @@ vw2 = [{"kind": "front", "words": [("Patented", 1050), ("DURACELL", 1000)]}, {"k
        {"kind": "extra", "words": [("ALKALINE BATTERY", 1100)]}]
 shz2 = fast.place_by_words(vw2, 2048, lambda *a: None, skip=["Duracell"])
 check(shz2.get(1) == 1024 and shz2.get(2) == (1020 + 1024 - 1100) % 2048, f"the item's own name is no anchor; nothing else shared: the other side half a turn round, and a view chains off it ({shz2})")
+# a view sharing no two words with the placed ones goes in the widest stretch they did not see, never left out
+# (2026-10-09: the big-logo side was left out and its logo quilted over)
+_wc = lambda c0, c1: np.array([1.0 if c0 <= i < c1 else 0.0 for i in range(2048)])
+vw3 = [{"kind": "front", "words": [("Patented", 1000)], "wcol": _wc(624, 1424)},
+       {"kind": "back", "words": [("meter", 1000)], "wcol": _wc(624, 1424)},
+       {"kind": "extra", "words": [("ALKALINE", 1000)], "wcol": _wc(624, 1424)}]
+shz3 = fast.place_by_words(vw3, 2048, lambda *a: None)
+check(shz3.get(1) == 1024 and shz3.get(2) in (512, 1536), f"the logo side fills a stretch no placed view saw ({shz3})")
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)

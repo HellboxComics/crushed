@@ -612,10 +612,31 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
                 best = (j, int(round(ang)) % W, len(grp), sorted({c[1] for c in grp}))
         if best is None:
             back = next((k for k, v in enumerate(views) if k not in shifts and v.get("kind") == "back"), None)
-            if back is None:                                 # nothing shared: the other side half a turn round (the
-                break                                        # last resort), and the rest may chain off it
-            shifts[back] = W // 2
-            log(f"[fast] view {back + 1} shares no printed words with the placed views - put opposite view 1")
+            if back is not None:                             # nothing shared: the other side half a turn round (the
+                shifts[back] = W // 2                        # last resort), and the rest may chain off it
+                log(f"[fast] view {back + 1} shares no printed words with the placed views - put opposite view 1")
+                continue
+            # a view still unplaced is a side no placed view shows (2026-10-09: the big-logo side shared no two
+            # words with the others and was LEFT OUT - the logo was quilted over as plain black): it goes in the
+            # widest stretch round that no placed view saw, centered there
+            j = next((k for k in range(len(views)) if k not in shifts and views[k].get("wcol") is not None), None)
+            if j is None:
+                break
+            seen_ = np.zeros(W, bool)
+            for i, si in shifts.items():
+                seen_ |= np.roll(np.asarray(views[i]["wcol"]) > 0.05, si)
+            if seen_.all():
+                break
+            runs = gaps(seen_, least=0.0)
+            if not runs:
+                break
+            st, wd = max(runs, key=lambda r: r[1])
+            mid = (st + wd // 2) % W
+            wj = np.asarray(views[j]["wcol"], float)
+            cj = int(round(np.angle(np.sum(wj * np.exp(2j * np.pi * np.arange(W) / W))) * W / (2 * np.pi))) % W
+            shifts[j] = (mid - cj) % W
+            log(f"[fast] view {j + 1} shares no two printed words with the placed views - put in the widest stretch "
+                f"they did not see ({wd * 360 // W} degrees wide, at {mid * 360 // W} degrees)")
             continue
         j, sh, n, ws = best
         shifts[j] = sh

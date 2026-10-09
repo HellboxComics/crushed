@@ -336,7 +336,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
     model = model or V.model()
     os.makedirs(out_dir, exist_ok=True)
     said = ", ".join(f'"{w}"' for w in words)
-    best = (-1, None, None, None)
+    best = (-1, None, None, None, None)
     tries = []                                         # each try's match and whether it changed (the review sheet)
     tip = ("A label like this normally carries: " + "; ".join(typical) + ".\n") if typical else ""
     if marks:                                             # what THIS version is known by: each must be on the label,
@@ -384,8 +384,9 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         tries.append({"round": r, "match": c.get("match"), "judged": judged, "colors": c["colors"],
                       "fixes": c.get("fixes", []), "changed": True})
         json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
-        if (c.get("match") or 0) > best[0]:
-            best = (c.get("match") or 0, lay, png, mr)
+        rank = (c.get("match") or 0, judged, share)       # equal matches (a cap at 6): the better-looking, truer-
+        if best[0] == -1 or rank > best[4]:                #   colored round wins, not simply the first
+            best = (c.get("match") or 0, lay, png, mr, rank)
         # it stops only when nothing is left to fix (a 9 with "remove the white dot" is not done - the standard is
         # perfect), when the rounds are used up, or when a round changes nothing
         if ((c.get("match") or 0) >= 10 and not c.get("fixes")) or r == rounds:
@@ -403,7 +404,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
             json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
             break
         lay = new
-    score, lay, _, _ = best
+    score, lay, _, _, _ = best
     json.dump(lay, open(os.path.join(out_dir, "layout.json"), "w"), indent=1)
     png, mr = labelart.render(lay, out_dir, px=4096, name="label")
     return png, mr, score

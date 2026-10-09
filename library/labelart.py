@@ -245,13 +245,20 @@ def legible(ground, box, color, near=40.0):
     x0, y0, x1, y1 = max(box[0], 0), max(box[1], 0), min(box[2], W), min(box[3], H)
     if x1 - x0 < 2 or y1 - y0 < 2:
         return {"ground": 1.0, "contrast": 21.0}
-    px = ground[y0:y1, x0:x1].reshape(-1, 3)
-    med = np.median(px, 0)
-    share = float((np.sqrt(((px - med) ** 2).sum(1)) < near).mean())
+    g = ground[y0:y1, x0:x1]
+    # a crossing is an EDGE under the words (a dot's rim, a box's side, a band's end), not a smooth change: words
+    # printed on a color-gradient meter bar are fine (2026-10-09: the PowerCheck's "100%" on its green-to-white
+    # bar was flagged by a deviation-from-the-middle-color test). An edge = neighbouring pixels differing by more
+    # than `near`; it counts when its run is at least a quarter of the letters' height.
+    ex = np.abs(np.diff(g, axis=1)).max(-1) > near
+    ey = np.abs(np.diff(g, axis=0)).max(-1) > near
+    edge = int(ex.sum() + ey.sum())
+    share = 1.0 - min(1.0, edge / max(0.25 * (y1 - y0), 1)) * 0.5     # 1 = plain ground; <= 0.5 = an edge under it
+    med = np.median(g.reshape(-1, 3), 0)
     return {"ground": round(share, 2), "contrast": round(contrast(color, med), 2)}
 
 
-def unreadable(placed, least_ground=0.85, least_contrast=2.0):
+def unreadable(placed, least_ground=0.6, least_contrast=2.0):
     """Lines that can't be read clean: half on something else (a dot or a panel edge under them), or ink too close
     to the ground under it (WCAG contrast under 2:1 - the guideline asks 4.5:1 for text; 2 is plainly unreadable)."""
     out = []
