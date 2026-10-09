@@ -305,6 +305,14 @@ MS.read_lines = lambda png, **k: ["PRESS DOTS TO TEST"]            # a reader th
 t2_, ok2_, _ = fast.upright(r_, ["PRESS DOTS"], (0, 180))
 check(t2_ == 0 and not ok2_, f"a near tie is no answer - the photo stays as it lies ({t2_}, {ok2_})")
 MS.read_lines = _rl2
+# a photo of ANOTHER version shares words but not print: left out (2026-10-09: a later italic-logo Duracell landed
+# by 'Bethel CT 06801' and the label got a second logo)
+vS = {"kind": "front", "words": [("Patented", 1100), ("Bethel", 1150)], "wcol": _wc(624, 1424), "l": prt * _wc(624, 1424)[None, :, None]}
+vT_same = {"kind": "extra", "words": [("Patented", 800), ("Bethel", 850)], "wcol": _wc(624, 1424),
+           "l": np.roll(prt, -300, axis=1) * _wc(624, 1424)[None, :, None]}
+vT_other = dict(vT_same, l=(rng2.random((60, 2048, 1)).repeat(3, axis=2) * 0.3 + band) * _wc(624, 1424)[None, :, None])
+check(fast.place_by_words([vS, vT_same], 2048, lambda *a: None).get(1) == 300, "the same version, words and print agree: placed")
+check(1 not in fast.place_by_words([vS, vT_other], 2048, lambda *a: None), "another version (words agree, print does not): left out")
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)

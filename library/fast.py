@@ -646,10 +646,14 @@ def overlap_ncc(va, sa, vb, sb, least=0.3, cols=24):
     if va.get("l") is None or vb.get("l") is None or va.get("wcol") is None or vb.get("wcol") is None:
         return None
     a, b = np.roll(va["l"], sa, axis=1), np.roll(vb["l"], sb, axis=1)
-    both = (np.roll(np.asarray(va["wcol"]), sa) > least) & (np.roll(np.asarray(vb["wcol"]), sb) > least)
+    sa_, sb_ = np.roll(np.asarray(va["wcol"]), sa) > least, np.roll(np.asarray(vb["wcol"]), sb) > least
+    both = sa_ & sb_
     if both.sum() < cols:
         return None
-    ga, gb = a[:, both].mean(-1).ravel(), b[:, both].mean(-1).ravel()
+    ga, gb = a.mean(-1), b.mean(-1)                          # the band colors out (each row's own mean over what
+    ga = ga - ga[:, sa_].mean(1, keepdims=True)              # that view saw): the copper/black rows match in any two
+    gb = gb - gb[:, sb_].mean(1, keepdims=True)              # views, only the print tells them apart
+    ga, gb = ga[:, both].ravel(), gb[:, both].ravel()
     ga, gb = ga - ga.mean(), gb - gb.mean()
     den = float(np.sqrt((ga ** 2).sum() * (gb ** 2).sum()))
     return float((ga * gb).sum() / den) if den > 1e-9 else None
@@ -719,10 +723,11 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
             n[x] = n.get(x, 0) + 1
         words.append([(x, c) for x, c in ws if n[x] == 1])
     shifts = {0: 0}
+    rejected = set()
     while True:
         best = None
         for j in range(len(views)):
-            if j in shifts:
+            if j in shifts or j in rejected:
                 continue
             cand = []
             for i, si in shifts.items():
@@ -742,7 +747,7 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
                 if len(wd1) >= 8:                            # cross-correlation, the standard registration check).
                     rs = [overlap_ncc(views[i], shifts[i], views[j], int(round(ang_)) % W) for i in shifts]
                     rs = [r_ for r_ in rs if r_ is not None]  # 2026-10-09: the meter side shared only POWERCHECK
-                    ok1 = not rs or max(rs) >= 0.3           # with the panel side, was put opposite, and the
+                    ok1 = not rs or max(rs) >= 0.1           # with the panel side, was put opposite, and the
                     if ok1:                                  # PowerCheck box was printed twice
                         log(f"[fast] view {j + 1}: one long word ({wd1}) places it" +
                             (f"; the pictures agree where they overlap ({max(rs):.2f})" if rs else ""))
@@ -754,7 +759,7 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
         if best is None:                                     # no shared words: the shared PRINT places it, if the
             reg = None                                       # pictures agree clearly at one spot (see by_print)
             for j in range(len(views)):
-                if j in shifts:
+                if j in shifts or j in rejected:
                     continue
                 for i in list(shifts):
                     got = by_print(views[i], views[j], W)
@@ -766,7 +771,8 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
                 log(f"[fast] view {j + 1} placed by the print it shares with view {i + 1} (pictures agree {r_:.2f}, "
                     f"next best spot {r2:.2f}): {sh * 360 // W} degrees round")
                 continue
-            back = next((k for k, v in enumerate(views) if k not in shifts and v.get("kind") == "back"), None)
+            back = next((k for k, v in enumerate(views) if k not in shifts and k not in rejected
+                         and v.get("kind") == "back"), None)
             if back is not None:                             # nothing shared: the other side half a turn round (the
                 shifts[back] = W // 2                        # last resort), and the rest may chain off it
                 log(f"[fast] view {back + 1} shares no printed words with the placed views - put opposite view 1")
@@ -774,7 +780,8 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
             # a view still unplaced is a side no placed view shows (2026-10-09: the big-logo side shared no two
             # words with the others and was LEFT OUT - the logo was quilted over as plain black): it goes in the
             # widest stretch round that no placed view saw, centered there
-            j = next((k for k in range(len(views)) if k not in shifts and views[k].get("wcol") is not None), None)
+            j = next((k for k in range(len(views)) if k not in shifts and k not in rejected
+                      and views[k].get("wcol") is not None), None)
             if j is None:
                 break
             seen_ = np.zeros(W, bool)
@@ -794,9 +801,18 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
                 f"they did not see ({wd * 360 // W} degrees wide, at {mid * 360 // W} degrees)")
             continue
         j, sh, n, ws = best
+        # the words agree - does the PRINT? A photo of another version of the item (2026-10-09: a later Duracell
+        # with an italic logo and a '+', sharing only 'Bethel CT 06801') lands by its words, but where it overlaps the
+        # placed views its print differs: it is left out (one item's label is made from one version's photos)
+        rs = [r_ for r_ in (overlap_ncc(views[i], shifts[i], views[j], sh) for i in shifts) if r_ is not None]
+        if rs and max(rs) < 0.1:
+            rejected.add(j)
+            log(f"[fast] view {j + 1} shares words ({', '.join(ws[:3])}) but not the print where it overlaps the "
+                f"placed views (agree {max(rs):.2f}) - another version of the item, left out")
+            continue
         shifts[j] = sh
         log(f"[fast] view {j + 1} placed by {n} printed line(s) it shares with the others ({', '.join(ws[:3])}): "
-            f"{sh * 360 // W} degrees round")
+            f"{sh * 360 // W} degrees round" + (f"; the print agrees where they overlap ({max(rs):.2f})" if rs else ""))
     return shifts
 
 
