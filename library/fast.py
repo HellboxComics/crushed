@@ -1112,8 +1112,9 @@ def build(cid, card, d, R):
         png, cover = label_from(front, back, along, around, tex, log, product=display(card), words=words,
                                 year=card.get("year") or "its era", extra=dn.get("extra"))
         made = label_art(display(card), tex, words, along, around, log)
-        if made:
-            png = made
+        if made:                                             # the artwork prints the whole label: the share the
+            png = made                                       # stitched guide's views covered is no cap on it
+            FILLED["share"] = 1.0                            # (09:00: realism held at 6 by the guide's 70%)
         mr = R.mr_from_bands(png, png, cover, tex, {})
         shutil.copy(png, os.path.join(d, "label.png"))
         shutil.copy(mr, os.path.join(d, "label_mr.png"))
