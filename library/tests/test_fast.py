@@ -277,6 +277,18 @@ check(shz4.get(1) == 300, f"one long shared word, pictures agree: placed by it (
 vC = dict(vB, l=np.repeat(rng_.random((40, 2048, 1)), 3, axis=2))
 shz5 = fast.place_by_words([vA, vC], 2048, lambda *a: None)
 check(shz5.get(1) == 1024, f"one long word the pictures contradict is not trusted ({shz5})")
+# no shared words read: the shared PRINT places a view - and unrelated print does not (2026-10-09: the meter side
+# went opposite and the meter was printed twice)
+rng2 = np.random.default_rng(7)
+band = np.zeros((60, 2048, 3)); band[:20] = 0.7                  # a copper band and a black body: no clue alone
+prt = rng2.random((60, 2048, 1)).repeat(3, axis=2) * 0.3 + band
+vP = {"kind": "front", "words": [], "wcol": _wc(624, 1424), "l": prt * _wc(624, 1424)[None, :, None]}
+mv = np.roll(prt, -500, axis=1)                                   # the same label, seen 500 columns further round
+vQ = {"kind": "back", "words": [], "wcol": _wc(624, 1424), "l": mv * _wc(624, 1424)[None, :, None]}
+shp = fast.place_by_words([vP, vQ], 2048, lambda *a: None)
+check(shp.get(1) == 500, f"the shared print places the meter side ({shp})")
+vR = dict(vQ, l=(rng2.random((60, 2048, 1)).repeat(3, axis=2) * 0.3 + band) * _wc(624, 1424)[None, :, None])
+check(fast.by_print(vP, vR, 2048) is None, "print that is not shared places nothing (the other side still goes opposite)")
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)

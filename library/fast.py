@@ -585,6 +585,51 @@ def overlap_ncc(va, sa, vb, sb, least=0.3, cols=24):
     return float((ga * gb).sum() / den) if den > 1e-9 else None
 
 
+def by_print(va, vb, W, step=4, rows=4, least=0.25, floor=0.2, ratio=1.3):
+    """Where view b sits relative to view a, by the print both show: normalized cross-correlation over every turn
+    of b round the label (template matching, the standard registration measure), the band colors taken out first
+    (each row's own mean) so only the print is compared, and only where both saw it. Kept only if the best spot is
+    clear - at least `floor` and `ratio` x the best spot elsewhere (the ratio test of Lowe 2004, for one shift).
+    2026-10-09: the meter side shared no word the scanner read with the others, was put opposite, and the label
+    showed ALKALINE BATTERY / Test at / the meter twice. On that pair this finds the right spot (0.28 vs 0.19).
+    -> (shift in columns, score, next best) or None."""
+    if va.get("l") is None or vb.get("l") is None or va.get("wcol") is None or vb.get("wcol") is None:
+        return None
+    def prep(v):
+        g = np.asarray(v["l"], float).mean(-1)[::rows, ::step]
+        seen = np.asarray(v["wcol"])[::step] > 0.05
+        if seen.sum() < 8:
+            return None, None
+        g = g - g[:, seen].mean(1, keepdims=True)
+        return g, seen
+    a, sa = prep(va)
+    b, sb = prep(vb)
+    if a is None or b is None:
+        return None
+    n = a.shape[1]
+    need = max(8, int(least * min(sa.sum(), sb.sum())))
+    score = np.full(n, -1.0)
+    for s_ in range(n):
+        both = sa & np.roll(sb, s_)
+        if both.sum() < need:
+            continue
+        x = a[:, both].ravel()
+        y = np.roll(b, s_, axis=1)[:, both].ravel()
+        x, y = x - x.mean(), y - y.mean()
+        den = float(np.sqrt((x * x).sum() * (y * y).sum()))
+        if den > 1e-9:
+            score[s_] = float((x * y).sum() / den)
+    k = int(np.argmax(score))
+    if score[k] < floor:
+        return None
+    gap = max(2, n // 40)                                    # the next best spot: away from the best one's slope
+    far = np.array([min(abs(i - k), n - abs(i - k)) > gap for i in range(n)])
+    r2 = float(score[far].max()) if far.any() else -1.0
+    if score[k] < ratio * max(r2, 1e-6):
+        return None
+    return (k * step) % W, float(score[k]), r2
+
+
 def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
     """Where each view sits round the label: by the printed lines it shares with a view already placed - the same
     words are the same spot on the real label (2026-10-08 14:00: placed by matching shapes, the meter view found 18
@@ -636,7 +681,21 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
             ang = np.angle(np.mean([np.exp(2j * np.pi * c[0] / W) for c in grp])) * W / (2 * np.pi)
             if best is None or len(grp) > best[2]:
                 best = (j, int(round(ang)) % W, len(grp), sorted({c[1] for c in grp}))
-        if best is None:
+        if best is None:                                     # no shared words: the shared PRINT places it, if the
+            reg = None                                       # pictures agree clearly at one spot (see by_print)
+            for j in range(len(views)):
+                if j in shifts:
+                    continue
+                for i in list(shifts):
+                    got = by_print(views[i], views[j], W)
+                    if got and (reg is None or got[1] > reg[2]):
+                        reg = (j, (shifts[i] + got[0]) % W, got[1], got[2], i)
+            if reg:
+                j, sh, r_, r2, i = reg
+                shifts[j] = sh
+                log(f"[fast] view {j + 1} placed by the print it shares with view {i + 1} (pictures agree {r_:.2f}, "
+                    f"next best spot {r2:.2f}): {sh * 360 // W} degrees round")
+                continue
             back = next((k for k, v in enumerate(views) if k not in shifts and v.get("kind") == "back"), None)
             if back is not None:                             # nothing shared: the other side half a turn round (the
                 shifts[back] = W // 2                        # last resort), and the rest may chain off it
