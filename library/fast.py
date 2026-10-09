@@ -986,7 +986,8 @@ def label_art(product, tex, words, along, around, log, rounds=4, least=6):
         log(f"[fast] the artwork is under {least}/10 - the stitched label is kept")
         return None
     art = Image.open(png).convert("RGB").rotate(-90, expand=True)   # back to the map: rows from the plus end
-    art = Image.fromarray(np.roll(np.asarray(art), int(round(seam * art.width / Wg)), axis=1))   # and its place round
+    # (NOT turned back to the guide's old place round: that put the seam back through the print - 07:05, ALKALINE
+    #  BATTERY cut at both edges. Which side faces the front does not matter; the seam stays on the plain stretch)
     if art.width < 4096:
         art = art.resize((4096, int(round(4096 * art.height / art.width))), Image.LANCZOS)
     dst = os.path.join(tex, "label.png")
