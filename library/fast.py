@@ -640,13 +640,18 @@ def view_words(art, cols):
     return best
 
 
-def overlap_ncc(va, sa, vb, sb, least=0.3, cols=24):
+def overlap_ncc(va, sa, vb, sb, least=0.25, cols=24):
     """How well two placed views agree where both saw the label well: the normalized cross-correlation of their
     gray print over the shared columns (1 = the same print in the same place). None if they share too few columns."""
     if va.get("l") is None or vb.get("l") is None or va.get("wcol") is None or vb.get("wcol") is None:
         return None
     a, b = np.roll(va["l"], sa, axis=1), np.roll(vb["l"], sb, axis=1)
-    sa_, sb_ = np.roll(np.asarray(va["wcol"]), sa) > least, np.roll(np.asarray(vb["wcol"]), sb) > least
+    # "seen well" relative to each view's own best column: the unroll's weights are a quality score that can top
+    # out well under 0.3 (a soft photo) - a fixed 0.3 found no overlap at all and the check never ran (2026-10-09:
+    # the later italic-logo Duracell was placed by its words again, unchecked)
+    wa_, wb_ = np.asarray(va["wcol"], float), np.asarray(vb["wcol"], float)
+    sa_ = np.roll(wa_ > max(0.05, least * wa_.max()), sa)
+    sb_ = np.roll(wb_ > max(0.05, least * wb_.max()), sb)
     both = sa_ & sb_
     if both.sum() < cols:
         return None
@@ -810,6 +815,8 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
             log(f"[fast] view {j + 1} shares words ({', '.join(ws[:3])}) but not the print where it overlaps the "
                 f"placed views (agree {max(rs):.2f}) - another version of the item, left out")
             continue
+        if not rs:
+            log(f"[fast] view {j + 1}: no overlap with the placed views to check its print against")
         shifts[j] = sh
         log(f"[fast] view {j + 1} placed by {n} printed line(s) it shares with the others ({', '.join(ws[:3])}): "
             f"{sh * 360 // W} degrees round" + (f"; the print agrees where they overlap ({max(rs):.2f})" if rs else ""))

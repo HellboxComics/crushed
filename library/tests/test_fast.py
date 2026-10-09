@@ -313,6 +313,8 @@ vT_same = {"kind": "extra", "words": [("Patented", 800), ("Bethel", 850)], "wcol
 vT_other = dict(vT_same, l=(rng2.random((60, 2048, 1)).repeat(3, axis=2) * 0.3 + band) * _wc(624, 1424)[None, :, None])
 check(fast.place_by_words([vS, vT_same], 2048, lambda *a: None).get(1) == 300, "the same version, words and print agree: placed")
 check(1 not in fast.place_by_words([vS, vT_other], 2048, lambda *a: None), "another version (words agree, print does not): left out")
+vS_soft = dict(vS, wcol=vS["wcol"] * 0.2); vT_soft = dict(vT_other, wcol=vT_other["wcol"] * 0.2)   # soft photos: weights top out at 0.2
+check(1 not in fast.place_by_words([vS_soft, vT_soft], 2048, lambda *a: None), "the check runs on soft photos too (weights under 0.3)")
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
