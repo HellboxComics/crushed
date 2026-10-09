@@ -289,6 +289,19 @@ shp = fast.place_by_words([vP, vQ], 2048, lambda *a: None)
 check(shp.get(1) == 500, f"the shared print places the meter side ({shp})")
 vR = dict(vQ, l=(rng2.random((60, 2048, 1)).repeat(3, axis=2) * 0.3 + band) * _wc(624, 1424)[None, :, None])
 check(fast.by_print(vP, vR, 2048) is None, "print that is not shared places nothing (the other side still goes opposite)")
+# a copy's photo is turned so its print reads the right way up; when nothing reads, its bands run like side 1's
+# (2026-10-09: copies turned upside down were drawn as mirrored garble, 3 tries x 2 sides every build)
+from PIL import Image as _I
+refp = os.path.join(W, "ref_side1.png")
+r_ = _I.new("RGB", (400, 100), "white"); r_.paste((190, 110, 50), (20, 20, 140, 80)); r_.paste((20, 20, 20), (140, 20, 380, 80)); r_.save(refp)
+stand = r_.rotate(270, expand=True, fillcolor="white")          # standing, copper end at the top
+check(fast.same_way(stand, refp, (90, 270)) == 90, "a standing copy is laid down with its copper end where side 1 has it")
+check(fast.same_way(r_.rotate(180), refp, (0, 180)) == 180, "an upside-down copy is turned the right way round")
+_rl2 = MS.read_lines
+MS.read_lines = lambda png, **k: ["PRESS DOTS TO TEST"] if _I.open(png).size[0] > _I.open(png).size[1] and "turn" in png and _I.open(png).getpixel((30, 50))[0] > 150 else []
+t_, ok_ = fast.upright(stand, ["PRESS DOTS"], (90, 270))
+check(ok_ and t_ == 90, f"the turn whose words read wins ({t_}, {ok_})")
+MS.read_lines = _rl2
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)

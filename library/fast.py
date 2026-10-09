@@ -491,6 +491,7 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             f"no photo shows the item's printed side clearly (the best reads {len(fs[0][1])} words: "
             f"{', '.join(fs[0][1][:4])}) - the photo hunt needs better listings")
     drawn, notes = [], {"tries": []}
+    first_src = None
     for k, (photo, ws) in enumerate(fs):
         try:                                                 # the item alone on white: nothing else to copy
             mask = T.photo_mask(photo, timeout=300)
@@ -498,15 +499,22 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             src = skin.cutout({"file": photo, "mask": mask}, os.path.join(tex, f"side{k + 1}_photo.png"))
         except Exception:
             src = photo
-        try:                                                 # lying down, like the drawing: a standing photo is
-            from PIL import Image                            # turned a quarter (its top end to the left) - 05:15:
-            im = Image.open(src)                             # drawn level from a standing photo, the judge called
-            if im.height > 1.3 * im.width:                   # it mirrored and garbled
-                flat = os.path.join(tex, f"side{k + 1}_level.png")
-                im.rotate(90, expand=True, fillcolor="white").save(flat)
+        try:                                                 # lying down, like the drawing (05:15: drawn level from
+            from PIL import Image                            # a standing photo, the judge called it mirrored), and
+            im = Image.open(src)                             # its print the right way up: of the two turns, the one
+            turns = (90, 270) if im.height > 1.3 * im.width else (0, 180)   # its words read in (text-orientation
+            turn, read_ = upright(im, ws, turns)             # detection by reading, as Tesseract's OSD does) -
+            if not read_ and k and first_src:                # nothing readable either way (a small copy): the turn
+                turn = same_way(im, first_src, turns)        # whose bands run like side 1's (copper end where side
+            if turn:                                         # 1 has it) - 2026-10-09: a copy turned upside down was drawn with
+                flat = os.path.join(tex, f"side{k + 1}_level.png")   # mirrored garble, 3 tries x 2 sides every build
+                im.rotate(turn, expand=True, fillcolor="white").save(flat)
                 src = flat
+                log(f"[fast] side {k + 1}: its photo turned {turn} degrees so its print reads the right way up")
         except Exception:
             pass
+        if k == 0:
+            first_src = src
         wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in ws[:24]) + ".") if ws else ""
         best = None
         for t in range(tries if k < 2 else min(tries, 3)):
@@ -544,6 +552,63 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
         log(f"[fast] {len(extra)} of {len(drawn) - 2} views between the sides matched their photos")
     return front[1], back[1] if back else None, dict(notes, sheet=sheet, clear=fs[0][0], front_match=front[2],
                                                     front_words=front[3], extra=extra)
+
+
+def upright(im, words, turns=(0, 180)):
+    """Which of the turns puts the photo's print the right way up: the one whose read lines match the most letters of
+    the item's known words (a reader reads upside-down print as junk or nothing). -> degrees to turn (0 = as is)."""
+    import measure as MS
+    from rapidfuzz import fuzz
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+    vocab = [norm(w) for w in words if len(norm(w)) >= 3]
+    best, got = turns[0], -1.0
+    for t in turns:
+        rot = (im.rotate(t, expand=True, fillcolor="white") if t else im).convert("RGB")
+        import tempfile
+        tmp = os.path.join(tempfile.mkdtemp(), "turn.png")
+        rot.save(tmp)
+        try:
+            lines = MS.read_lines(tmp, turns=(0,)) or []    # read AS turned (read_lines alone tries every turn)
+        except Exception:
+            lines = []
+        score = 0.0
+        for l in lines:
+            n = norm(l)
+            if len(n) < 3:
+                continue
+            m = max((fuzz.partial_ratio(n, v) for v in vocab), default=0) if vocab else 60
+            if m >= 70:
+                score += len(n) * m / 100
+        if score > got:
+            best, got = t, score
+    return best, got > 0
+
+
+def same_way(im, ref_png, turns=(0, 180)):
+    """Of the turns, the one whose color along the item's length runs like the reference photo's (the copper end
+    where side 1 has it): each picture's non-white pixels averaged per column into 48 steps, compared by correlation.
+    -> degrees."""
+    from PIL import Image
+    def prof(img):
+        a = np.asarray(img.convert("RGB").resize((48, 24)), float)
+        keep = a.min(-1) < 235
+        out = np.zeros((48, 3))
+        for c in range(48):
+            px = a[:, c][keep[:, c]]
+            out[c] = px.mean(0) if len(px) else np.nan
+        return out
+    ref = prof(Image.open(ref_png))
+    best, got = turns[0], -2.0
+    for t in turns:
+        p_ = prof(im.rotate(t, expand=True, fillcolor="white") if t else im)
+        ok = ~np.isnan(p_).any(1) & ~np.isnan(ref).any(1)
+        if ok.sum() < 8:
+            continue
+        x, y = p_[ok].ravel() - p_[ok].mean(), ref[ok].ravel() - ref[ok].mean()
+        r = float((x * y).sum() / max(1e-9, np.sqrt((x * x).sum() * (y * y).sum())))
+        if r > got:
+            best, got = t, r
+    return best
 
 
 def view_words(art, cols):
