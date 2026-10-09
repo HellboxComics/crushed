@@ -257,6 +257,23 @@ check(shz2.get(1) == 1024 and shz2.get(2) == (1020 + 1024 - 1100) % 2048, f"the 
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
 check(pr == ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST"], f"misreadings put right, nothing added ({pr})")
+# the label made flat from the start: the stitched label is only the guide, the artwork is drawn and turned back
+import layout as LAYM
+art_dir = os.path.join(W, "artt"); os.makedirs(art_dir, exist_ok=True)
+Image.new("RGB", (300, 330), (20, 20, 20)).save(os.path.join(art_dir, "flat_ref.png"))      # map: 300 around, 330 along
+seen_read = []
+def fake_make(product, read, words, w, h, out_dir, rounds=4, log=print):
+    seen_read.append(Image.open(read).size)
+    os.makedirs(out_dir, exist_ok=True)
+    pth = os.path.join(out_dir, "label.png"); Image.new("RGB", (4096, int(4096 * h / w)), (200, 120, 40)).save(pth)
+    return pth, pth, 8
+LAYM.make = fake_make
+got_art = fast.label_art("Duracell AA", art_dir, ["DURACELL"], 50.5, 45.5, lambda *a: None)
+ga = Image.open(got_art)
+check(seen_read == [(330, 300)] and ga.width >= 4096 and ga.height > ga.width,
+      f"the guide is read with the plus end at the left; the artwork comes back in the map's layout ({seen_read}, {ga.size})")
+LAYM.make = lambda *a, **k: (got_art, got_art, 4)
+check(fast.label_art("Duracell AA", art_dir, ["DURACELL"], 50.5, 45.5, lambda *a: None) is None, "artwork under 6/10: the stitched label is kept")
 # several copies in one photo: each cut out as a view of its own
 grp = os.path.join(W, "three.png")
 g3 = np.full((300, 500, 3), 255, np.uint8)

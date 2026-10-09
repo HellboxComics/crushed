@@ -787,6 +787,7 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
     except Exception as e:
         log(f"[fast] the uncovered stretches were not filled ({str(e)[:100]})")
     png = os.path.join(tex, "label.png")
+    Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8)).save(os.path.join(tex, "flat_ref.png"))  # the guide
     sharp = None
     try:                                                     # every matched printed line set again as real type,
         import retype                                        # crisp at the label's full size (16:30: the stitched
@@ -946,6 +947,40 @@ def gaps(seen_cols, least=0.03):
     return sorted(runs, key=lambda r: -r[1])
 
 
+def label_art(product, tex, words, along, around, log, rounds=4, least=6):
+    """The label made flat from the start, the way label artwork is made (Cody, 2026-10-08 21:57: "your method is
+    still fucked" - stitched curved drawings, read back by a scanner and retyped, carried blur, seams, misreads and
+    upside-down type). The stitched label is only the GUIDE: the vision brain writes the layout from it (bands,
+    panels, meter, dots, every line from the proofread words - layout.py), labelart.py draws it crisp, the two are
+    compared and the layout corrected, round after round. -> label png in the map's layout, or None when the
+    drawn layout matches the guide under `least`/10 (the stitched label is kept)."""
+    import layout as LAY
+    from PIL import Image
+    guide = os.path.join(tex, "flat_ref.png")
+    if not os.path.exists(guide) or not words:
+        return None
+    g = Image.open(guide).convert("RGB")
+    read = os.path.join(tex, "flat_ref_reading.png")         # reading orientation: the plus end at the left
+    g.rotate(90, expand=True).save(read)
+    out_dir = os.path.join(tex, "art")
+    try:
+        png, mr, score = LAY.make(product, read, list(words), along, around, out_dir, rounds=rounds, log=log)
+    except Exception as e:
+        log(f"[fast] the flat label artwork could not be made ({str(e)[:120]}) - the stitched label is kept")
+        return None
+    log(f"[fast] the flat label artwork matches the guide {score}/10")
+    if (score or 0) < least:
+        log(f"[fast] the artwork is under {least}/10 - the stitched label is kept")
+        return None
+    art = Image.open(png).convert("RGB").rotate(-90, expand=True)   # back to the map: rows from the plus end
+    if art.width < 4096:
+        art = art.resize((4096, int(round(4096 * art.height / art.width))), Image.LANCZOS)
+    dst = os.path.join(tex, "label.png")
+    art.save(dst)
+    log(f"[fast] the label is the flat artwork, {art.width} x {art.height} px")
+    return dst
+
+
 def unknown_words(png, vocab):
     """Words read off the finished label that no real photo carries (a made-up word, a misread drawn as print)."""
     import measure as MS
@@ -1061,6 +1096,9 @@ def build(cid, card, d, R):
         FILLED.clear()
         png, cover = label_from(front, back, along, around, tex, log, product=display(card), words=words,
                                 year=card.get("year") or "its era", extra=dn.get("extra"))
+        made = label_art(display(card), tex, words, along, around, log)
+        if made:
+            png = made
         mr = R.mr_from_bands(png, png, cover, tex, {})
         shutil.copy(png, os.path.join(d, "label.png"))
         shutil.copy(mr, os.path.join(d, "label_mr.png"))
