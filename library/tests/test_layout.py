@@ -182,4 +182,23 @@ check(LAY.neutral("#191e0d") == "#1b1b1b" and LAY.neutral("#f0e8d0") == "#e8e8e8
 check(LAY.neutral("#102a5c") == "#102a5c" and LAY.neutral("#c87533") == "#c87533" and LAY.neutral("#f3e0b0") == "#f3e0b0",
       "navy, copper and cream are real colors and kept")
 
+# a layout sent back unchanged while fixes are listed is asked again (numbered, warmer), not taken as done
+calls = []
+_orig_ask = LAY._ask
+def stall_ask(model, text, images, think=True, temp=0.2):
+    calls.append((text[:40], temp))
+    if text.startswith("Picture 1 is the real printed label"):
+        return json.loads(json.dumps(first))
+    if "Answer ONLY JSON:" in text and '"match"' in text:
+        return {"match": 7, "fixes": ["add a white dot"]}
+    if "You sent this layout back unchanged" in text:
+        lay2 = json.loads(json.dumps(first)); lay2["shapes"].append({"type": "ellipse", "x": 0.1, "y": 0.1, "w": 0.05, "h": 0.05, "fill": "#ffffff"})
+        return lay2
+    return json.loads(json.dumps(first))
+LAY._ask = stall_ask
+LAY.make("Duracell AA", real, words, 50.0, 46.0, tempfile.mkdtemp(), rounds=3, log=lambda *a: None)
+check(any(t == 0.6 for _, t in calls) and sum(1 for c in calls if "Answer ONLY JSON:" in c[0] or True) > 3,
+      f"an unchanged layout with fixes listed is asked again ({[t for _, t in calls]})")
+LAY._ask = _orig_ask
+
 print(f"\n{ok} checks passed")

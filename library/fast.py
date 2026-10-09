@@ -570,6 +570,21 @@ def view_words(art, cols):
     return best
 
 
+def overlap_ncc(va, sa, vb, sb, least=0.3, cols=24):
+    """How well two placed views agree where both saw the label well: the normalized cross-correlation of their
+    gray print over the shared columns (1 = the same print in the same place). None if they share too few columns."""
+    if va.get("l") is None or vb.get("l") is None or va.get("wcol") is None or vb.get("wcol") is None:
+        return None
+    a, b = np.roll(va["l"], sa, axis=1), np.roll(vb["l"], sb, axis=1)
+    both = (np.roll(np.asarray(va["wcol"]), sa) > least) & (np.roll(np.asarray(vb["wcol"]), sb) > least)
+    if both.sum() < cols:
+        return None
+    ga, gb = a[:, both].mean(-1).ravel(), b[:, both].mean(-1).ravel()
+    ga, gb = ga - ga.mean(), gb - gb.mean()
+    den = float(np.sqrt((ga ** 2).sum() * (gb ** 2).sum()))
+    return float((ga * gb).sum() / den) if den > 1e-9 else None
+
+
 def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
     """Where each view sits round the label: by the printed lines it shares with a view already placed - the same
     words are the same spot on the real label (2026-10-08 14:00: placed by matching shapes, the meter view found 18
@@ -605,8 +620,19 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
             circ = lambda x, y: min(abs(x - y), W - abs(x - y))
             sup = [[c for c in cand if circ(c[0], d[0]) <= tol * W] for d in cand]
             grp = max(sup, key=len)
-            if len({c[1] for c in grp}) < need:              # two different words that agree, never one
-                continue
+            ang_ = np.angle(np.mean([np.exp(2j * np.pi * c[0] / W) for c in grp])) * W / (2 * np.pi)
+            if len({c[1] for c in grp}) < need:              # two different words that agree - or one long word
+                wd1 = max((c[1] for c in grp), key=len)      # whose spot the PICTURES confirm: the two views agree
+                ok1 = False                                  # do not disagree where they overlap (normalized
+                if len(wd1) >= 8:                            # cross-correlation, the standard registration check).
+                    rs = [overlap_ncc(views[i], shifts[i], views[j], int(round(ang_)) % W) for i in shifts]
+                    rs = [r_ for r_ in rs if r_ is not None]  # 2026-10-09: the meter side shared only POWERCHECK
+                    ok1 = not rs or max(rs) >= 0.3           # with the panel side, was put opposite, and the
+                    if ok1:                                  # PowerCheck box was printed twice
+                        log(f"[fast] view {j + 1}: one long word ({wd1}) places it" +
+                            (f"; the pictures agree where they overlap ({max(rs):.2f})" if rs else ""))
+                if not ok1:
+                    continue
             ang = np.angle(np.mean([np.exp(2j * np.pi * c[0] / W) for c in grp])) * W / (2 * np.pi)
             if best is None or len(grp) > best[2]:
                 best = (j, int(round(ang)) % W, len(grp), sorted({c[1] for c in grp}))
@@ -1002,6 +1028,8 @@ def label_art(product, tex, words, along, around, log, rounds=4, least=6):
     try:
         png, mr, score = LAY.make(product, read, list(words), along, around, out_dir, rounds=rounds, log=log,
                                   typical=["each of the listed lines printed exactly once - never the same line twice",
+                                           "each panel, box, meter and mark printed once: where two photos overlap, "
+                                           "the picture can show the same box twice side by side - draw it once",
                                            "nothing crosses the top or bottom edge (they meet when wrapped)"])
     except Exception as e:
         log(f"[fast] the flat label artwork could not be made ({str(e)[:120]}) - the stitched label is kept")

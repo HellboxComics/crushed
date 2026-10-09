@@ -45,6 +45,15 @@ are the label's measured background bands: keep them exactly as they are. Words:
 spelled exactly: {words} (a fix asking for a word that is not in this list can't be made - leave that word out).
 Answer ONLY the corrected JSON (the whole layout)."""
 
+STRICT = """Picture 1 is your rebuilt label, drawn from your layout below. Picture 2 is the real label.
+Your layout: {layout}
+You sent this layout back unchanged, but these differences are still there. Make EVERY numbered change below in the
+layout - add, move, resize or recolor the shapes and words it names (a "small mark ... white on the real label" is a
+white dot or mark to add there; an area "brown on the real label" is a brown panel to add there):
+{todo}
+Shapes marked "base" stay exactly as they are. Words: only these, spelled exactly: {words}.
+Answer ONLY the corrected JSON (the whole layout) - it must differ from the one above."""
+
 COMPARE = """Picture 1 is flat printed artwork for a label. Picture 2 is the real label, unrolled flat from photos
 of a round object: it still carries the photo's light, shade, glare, curvature and metal sheen, and smeared streaks
 where no photo saw - none of that is part of the printed design and none of it can or should be drawn into picture
@@ -59,9 +68,12 @@ def _json(txt):
     return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
 
 
-def _ask(model, text, images, think=True):
-    body = {"model": model, "stream": False, "format": "json", "think": think, "options": {"temperature": 0.2,
-            "num_ctx": 16384}, "messages": [{"role": "user", "content": text, "images": [V._img(p, 1536) for p in images]}]}
+def _ask(model, text, images, think=True, temp=0.2):
+    # num_ctx 32768: two 1536-px pictures, the whole layout and the brain's thinking overran 16384 - Ollama cuts what
+    # does not fit (its docs: num_ctx is the whole window), and the brain answered with the old layout unchanged
+    # (2026-10-09, the Duracell's label stopped after one round with its white dots still missing)
+    body = {"model": model, "stream": False, "format": "json", "think": think, "options": {"temperature": temp,
+            "num_ctx": 32768}, "messages": [{"role": "user", "content": text, "images": [V._img(p, 1536) for p in images]}]}
     return _json(V._call("/api/chat", body, timeout=1800).get("message", {}).get("content", "{}"))
 
 
@@ -398,6 +410,16 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         except Exception as e:
             log(f"[texture] could not improve the layout: {e}")
             break
+        if json.dumps(new, sort_keys=True) == json.dumps(lay, sort_keys=True) and c.get("fixes"):
+            # unchanged with fixes still listed is a stall, not "done": asked once more, each fix numbered, warmer
+            todo = "\n".join(f"{i}. {f}" for i, f in enumerate(c.get("fixes") or [], 1))
+            log("[texture] the layout came back unchanged with fixes still listed - asking again, each fix numbered")
+            try:
+                new = clean_layout(_ask(model, STRICT.format(layout=json.dumps(lay), words=said, todo=todo),
+                                        [png, real_png], temp=0.6), w_mm, h_mm, words, base)
+            except Exception as e:
+                log(f"[texture] could not improve the layout: {e}")
+                break
         if json.dumps(new, sort_keys=True) == json.dumps(lay, sort_keys=True):
             log("[texture] the layout came back unchanged - no point drawing it again")
             tries.append({"round": r + 1, "match": None, "changed": False})

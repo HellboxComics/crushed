@@ -266,6 +266,17 @@ vw3 = [{"kind": "front", "words": [("Patented", 1000)], "wcol": _wc(624, 1424)},
        {"kind": "extra", "words": [("ALKALINE", 1000)], "wcol": _wc(624, 1424)}]
 shz3 = fast.place_by_words(vw3, 2048, lambda *a: None)
 check(shz3.get(1) == 1024 and shz3.get(2) in (512, 1536), f"the logo side fills a stretch no placed view saw ({shz3})")
+# one long word places a view when the pictures do not disagree where they overlap (2026-10-09: the meter side
+# shared only POWERCHECK with the panel side, went opposite, and the PowerCheck box was printed twice)
+rng_ = np.random.default_rng(1)
+lab_ = np.repeat(rng_.random((40, 2048, 1)), 3, axis=2)
+vA = {"kind": "front", "words": [("POWERCHECK", 1200)], "wcol": _wc(624, 1424), "l": lab_.copy()}
+vB = {"kind": "back", "words": [("POWERCHECK", 900)], "wcol": _wc(624, 1424), "l": np.roll(lab_, -300, axis=1)}
+shz4 = fast.place_by_words([vA, vB], 2048, lambda *a: None)
+check(shz4.get(1) == 300, f"one long shared word, pictures agree: placed by it ({shz4})")
+vC = dict(vB, l=np.repeat(rng_.random((40, 2048, 1)), 3, axis=2))
+shz5 = fast.place_by_words([vA, vC], 2048, lambda *a: None)
+check(shz5.get(1) == 1024, f"one long word the pictures contradict is not trusted ({shz5})")
 # the vision brain proofreads the scanner's lines; it may not add a line the scanner did not read
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
