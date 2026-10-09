@@ -163,11 +163,15 @@ check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5",
 filed.clear(); blend.clear(); st.clear(); calls.clear()
 judged = iter([{"realism": 5, "era": 8, "words": 9, "fix": ["make the top a raised button"]}])
 out1 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
-check(not filed and not any("raised button" in (c["prefix"] or "") for c in calls) and len([c for c in calls if "side1_" in c["out"]]) == 1,
-      f"a judged miss stops: nothing redrawn with the judge's notes ({len([c for c in calls if 'side1_' in c['out']])} side-1 drawings)")
+check(not filed and not any("raised button" in (c["prefix"] or "") for c in calls) and len([c for c in calls if "side1_" in c["out"]]) == 0,
+      f"a judged miss stops: nothing redrawn with the judge's notes, and the matched drawing from the first run is "
+      f"kept, not drawn again ({len([c for c in calls if 'side1_' in c['out']])} side-1 drawings)")
 check("failed" in st[-1].get("step", "") and "raised button" in st[-1].get("step", ""), "and the page says why")
 # a drawing that never matches is never built or filed
 filed.clear(); blend.clear(); st.clear()
+import shutil as _sh, glob as _gl
+for _dd in _gl.glob(os.path.join(W, "**", "drawn"), recursive=True):   # no kept drawings from the runs above
+    _sh.rmtree(_dd)
 PICK["m"] = 3
 out2 = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 check(not filed and not blend and "failed" in st[-1].get("step", ""), f"no match, nothing built or filed: {st[-1].get('step', '')[:80]}")

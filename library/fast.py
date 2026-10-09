@@ -519,7 +519,26 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             first_src = src
         wd = (" The printed text, spelled exactly: " + ", ".join(f'"{w}"' for w in ws[:24]) + ".") if ws else ""
         best = None
-        for t in range(tries if k < 2 else min(tries, 3)):
+        # a drawing that already matched its photo is KEPT across restarts (in the photo hunt's folder, kept on
+        # resets): the same photo, turned the same way, with the same prompt and words is not drawn again - a restart
+        # for a fix later in the line redrew all five sides, ~1.5 h, every time (2026-10-09)
+        import hashlib
+        import shutil
+        prompt_ = DRAW_FACE.format(product=product, year=year, size=st, fix=fx, words=wd, style="")
+        key = hashlib.sha1((os.path.basename(photo) + "|" + hashlib.sha1(open(src, "rb").read()).hexdigest() + "|"
+                            + prompt_ + f"|{vw}x{vh}").encode()).hexdigest()[:16]
+        cache_dir = os.path.join(os.path.dirname(good[0]["file"]), "drawn")
+        hit = os.path.join(cache_dir, key + ".json")
+        try:
+            c_ = json.load(open(hit))
+            if os.path.exists(os.path.join(cache_dir, key + ".png")):
+                out = os.path.join(tex, f"side{k + 1}_1.png")
+                shutil.copy(os.path.join(cache_dir, key + ".png"), out)
+                best = (c_["match"] + 5 * c_["words"], out, c_["match"], c_["words"])
+                log(f"[fast] side {k + 1}: its drawing from an earlier run matched its photo {c_['match']}/10 - kept")
+        except Exception:
+            pass
+        for t in range(0 if best else (tries if k < 2 else min(tries, 3))):
             out = os.path.join(tex, f"side{k + 1}_{t + 1}.png")
             # (no style picture: given side 1's drawing as a second picture, side 2 copied side 1's print - 05:55, four
             #  tries at 2/10. One look comes from matching the colors per band afterwards - match_bands)
@@ -542,6 +561,13 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
                 best = (m + 5 * wb, out, m, wb)
             if m >= 8 and wb >= 0.6:
                 break
+        if best and best[2] >= 7 and best[3] >= 0.5 and not os.path.exists(hit):
+            try:
+                os.makedirs(cache_dir, exist_ok=True)
+                shutil.copy(best[1], os.path.join(cache_dir, key + ".png"))
+                json.dump({"match": best[2], "words": best[3], "photo": os.path.basename(photo)}, open(hit, "w"))
+            except Exception:
+                pass
         drawn.append(best)
         if best and best[2] < 7:
             log(f"[fast] side {k + 1}: no drawing reached 7/10 against its photo (best {best[2]}/10)")
