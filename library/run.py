@@ -3749,6 +3749,12 @@ if __name__ == "__main__":
         sys.exit(1)
     beat("starting")
     _beating()
+    if sys.platform == "darwin":                # the Mac stays awake while this run lives (Apple's caffeinate: -i
+        try:                                    # no idle sleep, -w until this process ends) - 2026-10-10 the Mac
+            subprocess.Popen(["/usr/bin/caffeinate", "-i", "-w", str(os.getpid())],   # slept mid-build, the
+                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)    # watchdog saw no heartbeat
+        except Exception as e:                  # for 72 min and started the build over (the same tool his own
+            say(f"[run] the Mac could not be kept awake ({e})")   # render scripts already use)
     if a.loop:
         try:                                    # a fresh run: nothing is "working" yet - a status left over from
             park_stale(hours=0)                 # the run that was stopped is parked at once, so the page never
