@@ -276,4 +276,15 @@ _hp, _ = _LA.render(_hl, out, px=200, name="half")
 _ha = _np.asarray(Image.open(_hp).convert("L"))
 check(_ha[100, 70] > 200 and _ha[100, 130] < 50, "a half dot prints only its left half")
 
+# white ink photographed in warm light is pale "tan" by its nearest name - it is still light, never copper: a label
+# drawn with the big press dot left out matched the copper and nothing flagged it (2026-10-10 13:50)
+check(LAY._family((238, 207, 137)) == "light" and LAY._family((206, 153, 77)) == "warm" and
+      LAY._family((240, 180, 100)) == "warm" and LAY._family((201, 168, 106)) == "warm",
+      "a pale cream is light; lit copper, gold and the tan date box stay warm metal")
+_rc = os.path.join(out, "cr_real.png"); _dc = os.path.join(out, "cr_drawn.png")
+_im = Image.new("RGB", (600, 300), (206, 153, 77)); _ID.Draw(_im).ellipse((120, 120, 190, 190), fill=(238, 207, 137))
+_im.save(_rc); Image.new("RGB", (600, 300), (198, 129, 46)).save(_dc)
+_s, _f = LAY.color_check(_dc, _rc, most_marks=40)
+check(any("white on the real label but copper in yours" in f for f in _f), f"the missing cream dot on copper is flagged, as white ({_f})")
+
 print(f"\n{ok} checks passed")

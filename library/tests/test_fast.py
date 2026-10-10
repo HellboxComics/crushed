@@ -579,4 +579,31 @@ _got6 = fast.rim_marks("Duracell AA", [_pic], _wl, _lp, _al, _ar, lambda *a: Non
 check(len(_got6) == 2 and {round(s["y"], 3) for s in _got6} == {round(_got6[0]["y"], 3), round(_got6[0]["y"] + 1, 3)} or
       len(_got6) == 2 and _got6[1]["y"] == _got6[0]["y"] + 1.0, "a rim dot across the wrap is drawn at both edges (they meet)")
 
+# close-ups of the two ends, cut from the photos: which end is which measured from the end bands' colors
+_cd2 = tempfile.mkdtemp()
+_bp = os.path.join(_cd2, "bat.jpg"); _bm = os.path.join(_cd2, "bat_mask.png")
+_bim = Image.new("RGB", (900, 400), (255, 255, 255)); from PIL import ImageDraw as _IDr
+_dd = _IDr.Draw(_bim); _dd.rectangle((100, 150, 330, 250), fill=(200, 130, 50)); _dd.rectangle((330, 150, 800, 250), fill=(18, 18, 18))
+_dd.ellipse((775, 180, 805, 210), fill=(245, 245, 245))                    # a white dot on the black end's rim
+_bim.save(_bp); _mm = Image.new("L", (900, 400), 0); _IDr.Draw(_mm).rectangle((100, 150, 805, 250), fill=255); _mm.save(_bm)
+_rc2 = fast.rim_closeups([_bp], (198, 129, 46), (17, 17, 17), _cd2, mask_of=lambda f: _bm)
+_ra = np.asarray(Image.open(_rc2[0]).convert("RGB")).astype(float) if _rc2 else None
+_rb = np.asarray(Image.open(_rc2[1]).convert("RGB")).astype(float) if _rc2 else None
+_warm = lambda a: ((a[..., 0] > 150) & (a[..., 2] < 90)).mean()
+check(_rc2 and _rc2[2] == 1 and _warm(_ra) > _warm(_rb) and (_rb.min(-1) < 40).mean() > (_ra.min(-1) < 40).mean(),
+      "end A's close-up is the copper end, end B's the black end")
+_bim.rotate(90, expand=True).save(_bp); Image.open(_bm).rotate(90, expand=True).save(_bm)
+_rc3 = fast.rim_closeups([_bp], (198, 129, 46), (17, 17, 17), _cd2, mask_of=lambda f: _bm)
+check(_rc3 and _rc3[2] == 1, "standing up too")
+check(fast.rim_closeups([_bp], (20, 20, 20), (17, 17, 17), _cd2, mask_of=lambda f: _bm) is None,
+      "both ends one color: no close-ups (which is which can't be measured)")
+_seenp = []
+def _closeask(q, pics, temp):
+    _seenp.append((q, list(pics)))
+    return {"marks": [_B]}
+_gc = fast.rim_marks("Duracell AA", [_bp], _lay, _lp, _al, _ar, lambda *a: None, ask=_closeask, out_dir=_cd2,
+                     mask_of=lambda f: _bm)
+check(_gc and _seenp and _seenp[0][0].startswith("Picture 1 shows close-ups of END A") and len(_seenp[0][1]) == 3
+      and _seenp[0][1][0].endswith("rims_end_A.jpg"), "the rims are asked about on the close-ups, then a whole photo")
+
 print(f"ALL {ok} PASS")

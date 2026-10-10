@@ -1417,6 +1417,103 @@ Answer ONLY JSON: {{"marks": [{{"end": "A" or "B", "shape": "dot" or "ring" or "
            exactly one of: {lines} - or "none",
  "photos": in how many of the photos you can see it}}]}}"""
 
+RIMS_CLOSE_Q = """Picture 1 shows close-ups of END A of {product} - {a} - cut from real photos of this one version.
+Picture 2 shows close-ups of END B - {b}. Picture 3 is one whole photo, for where things are.
+In every close-up the printed label covers the side and rolls over the rim at the end: the curved edge where the
+side turns into the end. Look closely at the rims.
+Is anything printed ON a rim - a dot, a ring, a band or another mark, in a color that is not the plain label color
+there? Print has a crisp edge and a flat, even color; glare and shine are soft streaks or spots that change from photo
+to photo. A mark on the flat side, even close to the end, is NOT on the rim. The bare metal end, its cap or button are
+not print. A rim mark may show in only some close-ups (the item is turned differently in each). If no rim carries
+print, answer an empty list.
+Answer ONLY JSON: {{"marks": [{{"end": "A" or "B", "shape": "dot" or "ring" or "band" or "mark",
+ "color": one of {colors},
+ "size": its width compared with the item's width (0.1 small, 0.3 a third, 0.5 half),
+ "beside": the line printed on the side that it lines up with along the item (at the same place round the item) -
+           exactly one of: {lines} - or "none",
+ "photos": in how many of the close-ups you can see it}}]}}"""
+
+
+def rim_closeups(photos, col_a, col_b, out_dir, mask_of=None, most=6):
+    """Close-ups of the item's two ENDS cut from the real photos, one sheet per end -> (sheet A, sheet B, how many)
+    or None. A vision model asked about the whole photos said "no print on the rims" twice while the PowerCheck's
+    minus-end dot was plain in them (2026-10-10 13:40): small details are missed at full-photo scale and found when
+    the model is shown the region cropped and enlarged (Zhang et al. 2023/2025, "Visual cropping improves zero-shot
+    question answering of multimodal LLMs" / "MLLMs know where to look"). Which end is which is MEASURED: the label's
+    color near each end against the two end bands of the layout (here copper and black), trying the item lying and
+    standing, kept only when the ends clearly differ. Several items in one photo (stacked or side by side) give one
+    close-up of all their ends together."""
+    from PIL import Image
+    from scipy import ndimage
+    if mask_of is None:
+        import turnaround as T
+        mask_of = lambda f: T.photo_mask(f, timeout=300)
+    ca, cb = np.asarray(col_a, float), np.asarray(col_b, float)
+    if np.linalg.norm(ca - cb) < 80:                         # both ends one color: which is which can't be measured
+        return None
+    shots = {"A": [], "B": []}
+    for f in photos:
+        try:
+            im = Image.open(f).convert("RGB")
+            m = np.asarray(Image.open(mask_of(f)).convert("L").resize(im.size)) > 127
+        except Exception:
+            continue
+        a = np.asarray(im).astype(float)
+        lab, n = ndimage.label(m)
+        if not n:
+            continue
+        sizes = ndimage.sum(m, lab, range(1, n + 1))
+        k = int(np.argmax(sizes)) + 1
+        ys, xs = np.where(lab == k)
+        y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+        best = None
+        for axis in ("x", "y"):                              # lying (ends left and right) or standing (top, bottom)
+            L = (x1 - x0) if axis == "x" else (y1 - y0)
+            if L < 60:
+                continue
+
+            def inner(lo, hi):                               # the label just inside an end (past the metal cap)
+                sl = (slice(y0, y1), slice(lo, hi)) if axis == "x" else (slice(lo, hi), slice(x0, x1))
+                px = a[sl][(lab[sl] == k)]
+                return np.median(px, 0) if len(px) > 50 else None
+            s0 = x0 if axis == "x" else y0
+            s1 = x1 if axis == "x" else y1
+            e0, e1 = inner(int(s0 + 0.10 * L), int(s0 + 0.25 * L)), inner(int(s1 - 0.25 * L), int(s1 - 0.10 * L))
+            if e0 is None or e1 is None:
+                continue
+            d = lambda c, t: float(np.linalg.norm(c - t))
+            keep = (d(e0, ca) + d(e1, cb)) - (d(e0, cb) + d(e1, ca))   # < 0: the first end is A
+            if best is None or abs(keep) > abs(best[0]):
+                best = (keep, axis, L, s0, s1)
+        if best is None or abs(best[0]) < 80:                # the ends don't clearly differ in this photo
+            continue
+        keep, axis, L, s0, s1 = best
+        pad = int(0.04 * L)
+        first = (int(s0 - pad), int(s0 + 0.35 * L))
+        last = (int(s1 - 0.35 * L), int(s1 + pad))
+        box = lambda r: ((max(r[0], 0), max(y0 - pad, 0), min(r[1], im.width), min(y1 + pad, im.height)) if axis == "x"
+                         else (max(x0 - pad, 0), max(r[0], 0), min(x1 + pad, im.width), min(r[1], im.height)))
+        ends = (("A", first), ("B", last)) if keep < 0 else (("A", last), ("B", first))
+        for e, r in ends:
+            c = im.crop(box(r))
+            s = 640 / max(c.size)
+            shots[e].append(c.resize((max(1, int(c.width * s)), max(1, int(c.height * s))), Image.LANCZOS))
+    if not shots["A"] or not shots["B"]:
+        return None
+    os.makedirs(out_dir, exist_ok=True)
+    outs = []
+    for e in ("A", "B"):
+        cells = shots[e][:most]
+        cols = 3 if len(cells) > 4 else 2 if len(cells) > 1 else 1
+        rows = (len(cells) + cols - 1) // cols
+        sheet = Image.new("RGB", (cols * 660, rows * 660), (255, 255, 255))
+        for i, c in enumerate(cells):
+            sheet.paste(c, ((i % cols) * 660 + (660 - c.width) // 2, (i // cols) * 660 + (660 - c.height) // 2))
+        p = os.path.join(out_dir, f"rims_end_{e}.jpg")
+        sheet.save(p, quality=92)
+        outs.append(p)
+    return outs[0], outs[1], min(len(shots["A"]), len(shots["B"]))
+
 
 def lips(spec, along):
     """How far the label rolls over each end, as shares of its length in the artwork (reading orientation):
@@ -1579,9 +1676,13 @@ def rim_shapes(marks, lay, lip_lr, along, around, log):
     return out
 
 
-def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, model=None, ask=None):
-    """-> layout shapes for the print on the label's rolled rims (an empty list when none is agreed)."""
+def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, model=None, ask=None, out_dir=None,
+              mask_of=None):
+    """-> layout shapes for the print on the label's rolled rims (an empty list when none is agreed). The model is
+    shown close-ups of each end cut from the photos (rim_closeups) when the two ends can be told apart, else the
+    whole photos."""
     import hashlib
+    import tempfile
     import labelart
     import layout as LAY
     if not photos or not (lip_lr[0] * along >= 0.3 or lip_lr[1] * along >= 0.3):
@@ -1595,14 +1696,27 @@ def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, mode
         ts = sorted([t for t in lay.get("texts", []) if t.get("text")],
                     key=(lambda t: float(t["x"])) if left else (lambda t: -(float(t["x"]) + float(t.get("w") or 0))))
         near = " and ".join(f"'{t['text']}'" for t in ts[:2])
-        return col, near
-    (ca, na), (cb, nb) = end_says(True), end_says(False)
+        return col, near, (labelart.rgb(band["fill"]) if band else None)
+    (ca, na, ra), (cb, nb, rb) = end_says(True), end_says(False)
     say = lambda c, n, other: (f"the end where the label is {c}" if c and c != other else "one end") + \
         (f" - the side print nearest it is {n}" if n else "")
-    q = RIMS_Q.format(product=product, a=say(ca, na, cb), b=say(cb, nb, ca),
-                      colors=", ".join(LAY.NAMED), lines=", ".join(f'"{t["text"]}"' for t in lay.get("texts", [])))
+    fill = dict(product=product, a=say(ca, na, cb), b=say(cb, nb, ca), colors=", ".join(LAY.NAMED),
+                lines=", ".join(f'"{t["text"]}"' for t in lay.get("texts", [])))
+    close = None
+    if ra is not None and rb is not None:
+        try:
+            close = rim_closeups(photos, ra, rb, out_dir or tempfile.mkdtemp(), mask_of=mask_of)
+        except Exception as e:
+            log(f"[fast] close-ups of the ends could not be cut ({str(e)[:80]})")
+    if close:
+        q = RIMS_CLOSE_Q.format(**fill)
+        orders = [[close[0], close[1], photos[0]]] * 3
+        log(f"[fast] the rims: close-ups of both ends from {close[2]} photo(s)")
+    else:
+        q = RIMS_Q.format(**fill)
+        orders = [list(photos), list(photos)[::-1], list(photos)[1:] + list(photos)[:1]]
     md5 = lambda f: hashlib.md5(open(f, "rb").read()).hexdigest()
-    key = hashlib.md5((q + "|".join(md5(f) for f in photos)).encode()).hexdigest()[:16]
+    key = hashlib.md5((q + "|".join(md5(f) for f in orders[0])).encode()).hexdigest()[:16]
     store = {}
     if cache:
         try:
@@ -1611,7 +1725,6 @@ def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, mode
             store = {}
     raws = store.get("reads", []) if store.get("key") == key else []
     ask = ask or (lambda text, pics, temp: LAY._ask(model or __import__("vet").model(), text, pics, temp=temp))
-    orders = [list(photos), list(photos)[::-1], list(photos)[1:] + list(photos)[:1]]
     reads = [_rim_marks_of(r, lay) for r in raws]
     for k in range(len(raws), 3):
         if len(reads) >= 2 and _same_sets(reads[0], reads[1]):
@@ -1702,7 +1815,7 @@ def label_art(product, tex, words, along, around, log, rounds=4, least=6, photos
     try:                                                     # print on the rolled rims, which the guide can't show
         import labelart
         lay = json.load(open(os.path.join(out_dir, "layout.json")))
-        add = rim_marks(product, list(photos), lay, lip_lr, along, around, log, cache=rims)
+        add = rim_marks(product, list(photos), lay, lip_lr, along, around, log, cache=rims, out_dir=out_dir)
         if add:
             lay["shapes"] = [s for s in lay.get("shapes", []) if not s.get("lip")] + add
             json.dump(lay, open(os.path.join(out_dir, "layout.json"), "w"), indent=1)

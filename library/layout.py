@@ -173,11 +173,30 @@ WARM = {"copper", "gold", "tan", "orange", "brown"}       # metal ink and its li
 def _family(rgb):
     """A color as a photo's light can't change it: dark, warm metal, light, or its own color."""
     import numpy as np
-    lum = float(np.dot(np.asarray(rgb, float), [0.299, 0.587, 0.114]))
+    c = np.asarray(rgb, float)
+    lum = float(np.dot(c, [0.299, 0.587, 0.114]))
     if lum < 70:
         return "dark"
     n = _name(rgb)
-    return "warm" if n in WARM else "light" if n in ("white", "silver") else n
+    if n in WARM:
+        # a PALE warm color is white ink seen in warm room light, not metal: the PowerCheck's white dot photographs
+        # as (238, 207, 137), nearest "tan" - so a label drawn with no dot there matched the copper and no check
+        # flagged it (2026-10-10 13:50: the big press dot left out, "match 9"). Saturation (HSV) tells them apart:
+        # lit copper stays above 0.5, the cream dot is 0.42, lighter than any copper.
+        hi, lo = float(c.max()), float(c.min())
+        if hi > 0.85 * 255 and (hi - lo) / max(hi, 1) < 0.5:
+            return "light"
+        return "warm"
+    return "light" if n in ("white", "silver") else n
+
+
+def _say(rgb):
+    """The color's name as a fix says it: a light color is "white" (white ink in warm light reads "silver" or "tan" by
+    the nearest name - told "silver" the writer would paint a gray dot), else the nearest name."""
+    import numpy as np
+    if _family(rgb) == "light" and float(np.dot(np.asarray(rgb, float), [0.299, 0.587, 0.114])) > 190:
+        return "white"
+    return _name(rgb)
 
 
 def _boxes(out_dir, name):
@@ -200,8 +219,8 @@ def color_check(png, real_png, cover_png=None, cols=20, rows=10, most_marks=8):
     seen = np.ones((rows, cols), bool)
     if cover_png and os.path.exists(cover_png):
         seen = np.asarray(Image.open(cover_png).convert("L").resize((cols, rows), Image.BOX)) > 0.5 * 255
-    na = np.array([[_name(a[y, x]) for x in range(cols)] for y in range(rows)])
-    nb = np.array([[_name(b[y, x]) for x in range(cols)] for y in range(rows)])
+    na = np.array([[_say(a[y, x]) for x in range(cols)] for y in range(rows)])
+    nb = np.array([[_say(b[y, x]) for x in range(cols)] for y in range(rows)])
     fa = np.array([[_family(a[y, x]) for x in range(cols)] for y in range(rows)])
     fb = np.array([[_family(b[y, x]) for x in range(cols)] for y in range(rows)])
     far = np.sqrt(((a - b) ** 2).sum(-1)) > 90
@@ -240,7 +259,7 @@ def color_check(png, real_png, cover_png=None, cols=20, rows=10, most_marks=8):
             # the PowerCheck box, a black strip over the box's left edge, the white test dot turned cream (Cody,
             # 2026-10-10 05:25 screenshot). A real mark (a dot, a seal) is at least two cells each way.
             continue
-        want, got = _name(b2[ys, xs].mean(0)), _name(a2[ys, xs].mean(0))
+        want, got = _say(b2[ys, xs].mean(0)), _say(a2[ys, xs].mean(0))
         if want == got:
             continue
         marks += 1
@@ -533,8 +552,9 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         tries.append({"round": r, "match": c.get("match"), "judged": judged, "colors": c["colors"],
                       "fixes": c.get("fixes", []), "changed": True})
         json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
-        rank = (c.get("match") or 0, -len(ofix), judged, share)   # equal matches (a cap at 6): the round with
-        if best[0] == -1 or rank > best[4]:                #   fewer measured faults, then the better-looking,
+        rank = (c.get("match") or 0, -len(ofix), -len(_mk), judged, share)   # equal matches (a cap at 6): the
+        if best[0] == -1 or rank > best[4]:                #   round with fewer measured faults, then fewer measured
+        #                                                    marks left (a missing dot), then the better-looking,
         #                                                    truer-colored one wins - not simply the first
             best = (c.get("match") or 0, lay, png, mr, rank)
             hard = list(ofix)                              # the kept round's measured faults (overlaps, unreadable
