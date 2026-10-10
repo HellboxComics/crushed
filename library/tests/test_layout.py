@@ -259,4 +259,21 @@ _a2 = _np.asarray(_l2); _tail = _a2[:, _l1.width + 4:]
 _ys = _np.where(_tail.max(1) > 128)[0]
 check(len(_ys) and (_ys.max() - _ys.min()) < 0.6 * _l1.height, f"the (R) is small, not as tall as the letters ({_ys.max() - _ys.min() if len(_ys) else 0} vs {_l1.height})")
 
+# a line ONE cell thin (an edge a little out of place, the guide's stitch line) is never sent as "a small mark": the
+# writer pasted those in as panels (a brown block under the PowerCheck box, a black strip over its edge). A real dot is.
+_ra = os.path.join(out, "sl_real.png"); _da = os.path.join(out, "sl_drawn.png")
+_im = Image.new("RGB", (600, 300), (20, 20, 20)); from PIL import ImageDraw as _ID
+_dr = _ID.Draw(_im); _dr.rectangle((100, 170, 400, 179), fill=(110, 75, 45))      # a thin brown line (1/30 tall)
+_dr.ellipse((470, 60, 530, 120), fill=(240, 240, 240))                            # a white dot (2+ cells each way)
+_im.save(_ra); Image.new("RGB", (600, 300), (20, 20, 20)).save(_da)
+_s, _f = LAY.color_check(_da, _ra, most_marks=40)
+check(not any("brown" in f for f in _f) and any("white on the real label" in f for f in _f),
+      f"a one-cell line is not a mark; the missing dot is ({_f})")
+# half a dot: only that half is printed
+_hl = {"width_mm": 10, "height_mm": 10, "background": "#000000",
+       "shapes": [{"type": "ellipse", "x": 0.2, "y": 0.2, "w": 0.6, "h": 0.6, "fill": "#ffffff", "half": "left"}], "texts": []}
+_hp, _ = _LA.render(_hl, out, px=200, name="half")
+_ha = _np.asarray(Image.open(_hp).convert("L"))
+check(_ha[100, 70] > 200 and _ha[100, 130] < 50, "a half dot prints only its left half")
+
 print(f"\n{ok} checks passed")

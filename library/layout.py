@@ -19,7 +19,8 @@ the top), sizes as fractions too:
  "shapes": [{"type": "rect" | "ellipse", "x": , "y": , "w": , "h": , "fill": "#rrggbb" or null,
              "stroke": "#rrggbb" or null, "stroke_w": line thickness as a fraction of the label's height (0.005 =
              a thin line), "metal": true for metallic ink/foil areas,
-             "shade": "copper" for a copper/gold metallic band},
+             "shade": "copper" for a copper/gold metallic band,
+             "half": "left" | "right" | "top" | "bottom" - ellipse only: just that half is printed (a half dot)},
             {"type": "bar", "x": , "y": , "w": , "h": , "colors": ["#..", "#.."], "stops": [0, .., 1]}   (a color gradient),
             {"type": "arrow", "x": , "y": , "w": , "h": , "fill": "#rrggbb", "dir": "right" | "left" | "up" | "down"}],
  "texts": [{"text": "EXACT WORDS", "x": , "y": , "h": letter height, "w": width it spans, "color": "#..",
@@ -232,6 +233,12 @@ def color_check(png, real_png, cover_png=None, cols=20, rows=10, most_marks=8):
     for k in range(1, n2 + 1):
         ys, xs = np.where(lab2 == k)
         if len(ys) < 3 or len(ys) > 40:                     # a sliver at a band's edge, or a big area (the coarse pass)
+            continue
+        if min(xs.max() - xs.min(), ys.max() - ys.min()) == 0:
+            # ONE cell thin (a line 1/30 of the label): an edge a little out of place, or the guide's stitch line -
+            # never a mark. Sent as "a small mark ... brown" the writer pasted it in as a panel: a brown block under
+            # the PowerCheck box, a black strip over the box's left edge, the white test dot turned cream (Cody,
+            # 2026-10-10 05:25 screenshot). A real mark (a dot, a seal) is at least two cells each way.
             continue
         want, got = _name(b2[ys, xs].mean(0)), _name(a2[ys, xs].mean(0))
         if want == got:

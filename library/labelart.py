@@ -36,6 +36,8 @@ FONTS = {   # this Mac's own fonts first, then free fallbacks
                 "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf", "/usr/share/fonts/truetype/freefont/FreeSans.ttf"],
 }
 MARKS = {"registered": "®", "tm": "™"}
+HALF = {"left": (90, 270), "right": (270, 450), "top": (180, 360), "bottom": (0, 180)}   # which half of a dot is printed
+#        (PIL angles: from 3 o'clock, clockwise)
 
 
 def font(weight, px):
@@ -153,6 +155,12 @@ def render(layout, out_dir, px=4096, name="label"):
             for i, x in enumerate(range(x0, x1)):      # (0.025 read as brushed rings round the copper top - the
                 k = 1 + 0.006 * grain[i]                   #  real printed copper is smooth: 2026-10-10 photos)
                 d.line([(x, y0), (x, y1)], fill=tuple(int(min(255, v * k)) for v in base))
+        elif t == "ellipse" and s.get("half") in HALF:   # half a dot (the PowerCheck icon's dot cut by the cell's
+            d.pieslice(b, *HALF[s["half"]], fill=fill, outline=outline, width=width)   # end: a "D")
+            if s.get("metal") or fill:
+                dm.pieslice(b, *HALF[s["half"]], fill=(0, int(255 * (s.get("roughness", 0.3) if s.get("metal") else
+                                                                     layout.get("roughness", 0.45))), 255 if s.get("metal") else 0))
+            continue
         elif t == "ellipse":
             d.ellipse(b, fill=fill, outline=outline, width=width)
         else:

@@ -1396,6 +1396,248 @@ def quilt_fill(out, seen, log, patch=64, overlap=16, seed=7):
     return out
 
 
+# ------------------------------------------------------------ print on the label's rolled rims (its lips over the ends)
+# The flat guide is unrolled from the SIDE, so print where the sleeve rolls over an end never reaches it - and the
+# layout writer is told the ends are not label. The PowerCheck's second press dot sits there, on the minus end's rim
+# (its own icon draws it as a half dot at the end, with an arrow pressing in from the end): missing on every build
+# (2026-10-04 "the second white test dot"; Cody, 2026-10-10 05:25 "still missing a circle"). So the rims are asked
+# about on their own, in the photos of this one version, read three times at most and kept only when two reads agree
+# (self-consistency, Wang et al. 2022), and drawn on the label's lip zones, in line with the print they line up with.
+RIMS_Q = """These are real photos of ONE version of {product}. Its printed label covers the side and rolls over the
+rim at each end - the curved edge where the side turns into the end. Look closely at both rims in every photo.
+End A: {a}. End B: {b}.
+Is anything printed ON a rim - a dot, a ring, a band or another mark, in a color that is not the plain label color
+there? Only print on the curved rim itself counts: a mark on the flat side, even close to the end, is NOT on the rim.
+The bare metal end, its cap or button, glare, shine and reflections are not print. If no rim carries print, answer an
+empty list.
+Answer ONLY JSON: {{"marks": [{{"end": "A" or "B", "shape": "dot" or "ring" or "band" or "mark",
+ "color": one of {colors},
+ "size": its width compared with the item's width (0.1 small, 0.3 a third, 0.5 half),
+ "beside": the line printed on the side that it lines up with along the item (at the same place round the item) -
+           exactly one of: {lines} - or "none",
+ "photos": in how many of the photos you can see it}}]}}"""
+
+
+def lips(spec, along):
+    """How far the label rolls over each end, as shares of its length in the artwork (reading orientation):
+    (left, right). The lathe maps v = 0 to the label profile's FIRST point, and the artwork is turned so v = 1 is at
+    its left (label_art) - so the left lip is the profile's last end, the right lip its first."""
+    pts = [pt for p in spec.get("profile", []) if p["part"] == "label" for pt in p["pts"]]
+    if len(pts) < 2 or not along:
+        return 0.0, 0.0
+    rmax = max(r for r, z in pts)
+
+    def run(seq):                                            # from the end inward while the sleeve is still curling
+        n = 0.0
+        for a, b in zip(seq, seq[1:]):
+            if a[0] >= rmax - 0.02:
+                break
+            n += math.dist(a, b)
+        return n
+    return run(pts[::-1]) / along, run(pts) / along
+
+
+def _circ(a, b):
+    """Distance round the label (0..1 down the artwork; its top and bottom edges meet when wrapped)."""
+    d = abs(a - b) % 1.0
+    return min(d, 1.0 - d)
+
+
+def _row_of(name, lay):
+    """Where round the label (0..1 down the artwork) the named printed line sits: the middle of the panel it is
+    printed in (a meter box, a seal), else the middle of the line. None when no line of the layout is it."""
+    from rapidfuzz import fuzz
+    norm = lambda s: re.sub(r"[^a-z0-9]", "", str(s or "").lower())
+    if not norm(name) or norm(name) == "none":
+        return None
+    ts = [t for t in lay.get("texts", []) if t.get("text")]
+    best = max(ts, key=lambda t: fuzz.ratio(norm(t["text"]), norm(name)), default=None)
+    if not best or fuzz.ratio(norm(best["text"]), norm(name)) < 85:
+        return None
+    h, w = float(best.get("h") or 0.05), float(best.get("w") or 0.0)
+    cy = float(best["y"]) + h / 2
+    cx = float(best["x"]) - (w / 2 if best.get("align") == "center" else 0.0) + w / 2
+    panels = [s for s in lay.get("shapes", []) if not s.get("base") and not s.get("lip")
+              and s.get("type", "rect") == "rect" and (s.get("stroke") or s.get("fill"))
+              and s["w"] * s["h"] < 0.5 and s["x"] <= cx <= s["x"] + s["w"] and s["y"] <= cy <= s["y"] + s["h"]]
+    if panels:
+        p = min(panels, key=lambda s: s["w"] * s["h"])
+        return p["y"] + p["h"] / 2
+    return cy
+
+
+def _rim_color(c):
+    import layout as LAY
+    c = str(c or "").strip().lower()
+    if re.fullmatch(r"#[0-9a-f]{6}", c):
+        return c
+    for k, v in LAY.NAMED.items():
+        if k in c.split() or k == c:
+            return "#%02x%02x%02x" % v
+    return None
+
+
+def _rim_marks_of(raw, lay):
+    """One read's answer made exact: the end, shape, ink, size, and the place round the label it lines up with
+    (from the layout's own line or panel - a mark that lines up with nothing printed is not placed: never guessed)."""
+    out = []
+    for m in (raw or {}).get("marks") or []:
+        if not isinstance(m, dict):
+            continue
+        end = str(m.get("end", "")).strip().upper()[:1]
+        shape = str(m.get("shape", "")).strip().lower()
+        col = _rim_color(m.get("color"))
+        if end not in ("A", "B") or shape not in ("dot", "ring", "band", "mark") or not col:
+            continue
+        y = None if shape == "band" else _row_of(m.get("beside"), lay)
+        if shape != "band" and y is None:
+            continue
+        try:
+            size = float(m.get("size") or 0.3)
+        except (TypeError, ValueError):
+            size = 0.3
+        out.append({"end": end, "shape": shape, "color": col, "size": min(max(size, 0.08), 0.6), "y": y,
+                    "beside": m.get("beside")})
+    return out
+
+
+def _same_rim_mark(a, b):
+    import labelart
+    import layout as LAY
+    return (a["end"] == b["end"] and a["shape"] == b["shape"]
+            and LAY._family(labelart.rgb(a["color"])) == LAY._family(labelart.rgb(b["color"]))
+            and (a["y"] is None) == (b["y"] is None) and (a["y"] is None or _circ(a["y"], b["y"]) <= 0.12))
+
+
+def _agreed(reads):
+    """The marks at least two reads report (one per mark: the middle place and size of the reads that saw it)."""
+    kept = []
+    for i, rd in enumerate(reads):
+        for m in rd:
+            if any(_same_rim_mark(m, k) for k in kept):
+                continue
+            hits = [m] + [next(o for o in r2 if _same_rim_mark(m, o)) for j, r2 in enumerate(reads)
+                          if j != i and any(_same_rim_mark(m, o) for o in r2)]
+            if len(hits) >= 2:                               # this read and at least one other
+                ys = [x["y"] for x in hits if x["y"] is not None]
+                kept.append(dict(m, y=float(np.median(ys)) if ys else None,
+                                 size=float(np.median([x["size"] for x in hits]))))
+    return kept
+
+
+def _same_sets(a, b):
+    return all(any(_same_rim_mark(x, y) for y in b) for x in a) and all(any(_same_rim_mark(y, x) for x in a) for y in b)
+
+
+def rim_shapes(marks, lay, lip_lr, along, around, log):
+    """The agreed rim marks as layout shapes on the lip zones. A mark that is the same as a mark already printed on
+    the SIDE near that end (same ink and shape, in line with it) is the side mark misread as a rim mark: left out."""
+    import labelart
+    import layout as LAY
+    D = around / math.pi                                     # the item's width
+    out = []
+    for m in marks:
+        zone = (0.0, lip_lr[0]) if m["end"] == "A" else (1.0 - lip_lr[1], 1.0)
+        if (zone[1] - zone[0]) * along < 0.3:
+            log(f"[fast] a {m['color']} {m['shape']} was seen on end {m['end']}'s rim, but this label does not roll over "
+                f"that end - not drawn")
+            continue
+        xm = (zone[0] + zone[1]) / 2
+        fam = LAY._family(labelart.rgb(m["color"]))
+        twin = None
+        for s in lay.get("shapes", []):
+            if s.get("base") or s.get("lip") or not s.get("fill") or s.get("type", "rect") not in ("rect", "ellipse"):
+                continue
+            if LAY._family(labelart.rgb(s["fill"])) != fam or (s.get("type") == "ellipse") != (m["shape"] in ("dot", "ring")):
+                continue
+            if abs(s["x"] + s["w"] / 2 - xm) <= 0.25 and (m["y"] is None or _circ(s["y"] + s["h"] / 2, m["y"]) <= 0.15):
+                twin = s
+                break
+        if twin:
+            log(f"[fast] the {m['shape']} reported on end {m['end']}'s rim is the one printed on the side next to it - "
+                f"not drawn twice")
+            continue
+        d = m["size"] * D
+        if m["shape"] == "band":
+            shp = [{"type": "rect", "x": zone[0], "y": 0.0, "w": zone[1] - zone[0], "h": 1.0, "fill": m["color"],
+                    "stroke": None, "stroke_w": 0.0}]
+        else:
+            w = d / along if m["shape"] != "mark" else min(d / along, zone[1] - zone[0])
+            h = d / around
+            ring = m["shape"] == "ring"
+            one = {"type": "ellipse" if m["shape"] in ("dot", "ring") else "rect", "x": xm - w / 2, "y": m["y"] - h / 2,
+                   "w": w, "h": h, "fill": None if ring else m["color"], "stroke": m["color"] if ring else None,
+                   "stroke_w": 0.004 if ring else 0.0}
+            shp = [one]
+            if one["y"] < 0 or one["y"] + h > 1:              # across the wrap: the rest at the other edge (they meet)
+                shp.append(dict(one, y=one["y"] + (1.0 if one["y"] < 0 else -1.0)))
+        for s in shp:
+            s["lip"] = True                                  # on the rim: not part of the side the rounds compared
+        out += shp
+        log(f"[fast] printed on end {m['end']}'s rim: a {LAY._name(labelart.rgb(m['color']))} {m['shape']}"
+            + (f", in line with '{m.get('beside')}'" if m.get("beside") else "") + " - drawn on the label where it rolls over")
+    return out
+
+
+def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, model=None, ask=None):
+    """-> layout shapes for the print on the label's rolled rims (an empty list when none is agreed)."""
+    import hashlib
+    import labelart
+    import layout as LAY
+    if not photos or not (lip_lr[0] * along >= 0.3 or lip_lr[1] * along >= 0.3):
+        return []
+    base = [s for s in lay.get("shapes", []) if s.get("base")]
+
+    def end_says(left):
+        at = 0.0 if left else 1.0
+        band = next((s for s in base if s["x"] <= at <= s["x"] + s["w"] and s.get("fill")), None)
+        col = LAY._name(labelart.rgb(band["fill"])) if band else None
+        ts = sorted([t for t in lay.get("texts", []) if t.get("text")],
+                    key=(lambda t: float(t["x"])) if left else (lambda t: -(float(t["x"]) + float(t.get("w") or 0))))
+        near = " and ".join(f"'{t['text']}'" for t in ts[:2])
+        return col, near
+    (ca, na), (cb, nb) = end_says(True), end_says(False)
+    say = lambda c, n, other: (f"the end where the label is {c}" if c and c != other else "one end") + \
+        (f" - the side print nearest it is {n}" if n else "")
+    q = RIMS_Q.format(product=product, a=say(ca, na, cb), b=say(cb, nb, ca),
+                      colors=", ".join(LAY.NAMED), lines=", ".join(f'"{t["text"]}"' for t in lay.get("texts", [])))
+    md5 = lambda f: hashlib.md5(open(f, "rb").read()).hexdigest()
+    key = hashlib.md5((q + "|".join(md5(f) for f in photos)).encode()).hexdigest()[:16]
+    store = {}
+    if cache:
+        try:
+            store = json.load(open(cache))
+        except Exception:
+            store = {}
+    raws = store.get("reads", []) if store.get("key") == key else []
+    ask = ask or (lambda text, pics, temp: LAY._ask(model or __import__("vet").model(), text, pics, temp=temp))
+    orders = [list(photos), list(photos)[::-1], list(photos)[1:] + list(photos)[:1]]
+    reads = [_rim_marks_of(r, lay) for r in raws]
+    for k in range(len(raws), 3):
+        if len(reads) >= 2 and _same_sets(reads[0], reads[1]):
+            break
+        try:
+            raw = ask(q, orders[k], 0.2 if k == 0 else 0.6)
+        except Exception as e:
+            log(f"[fast] the rims could not be read ({str(e)[:80]})")
+            continue
+        raws.append(raw)
+        reads.append(_rim_marks_of(raw, lay))
+        if cache:
+            try:
+                json.dump({"key": key, "reads": raws}, open(cache, "w"), indent=1)
+            except Exception:
+                pass
+    if len(reads) < 2:
+        log("[fast] the rims were not read twice - nothing drawn on them (never guessed)")
+        return []
+    agreed = _agreed(reads)
+    if not agreed:
+        log(f"[fast] print on the rolled rims: none that two reads agree on ({len(reads)} reads)")
+        return []
+    return rim_shapes(agreed, lay, lip_lr, along, around, log)
+
+
 def gaps(seen_cols, least=0.03):
     """The runs of label columns no drawing covered (wrapping round) -> [(start, width)], widest first."""
     W = len(seen_cols)
@@ -1417,7 +1659,7 @@ def gaps(seen_cols, least=0.03):
     return sorted(runs, key=lambda r: -r[1])
 
 
-def label_art(product, tex, words, along, around, log, rounds=4, least=6):
+def label_art(product, tex, words, along, around, log, rounds=4, least=6, photos=(), lip_lr=(0.0, 0.0), rims=None):
     """The label made flat from the start, the way label artwork is made (Cody, 2026-10-08 21:57: "your method is
     still fucked" - stitched curved drawings, read back by a scanner and retyped, carried blur, seams, misreads and
     upside-down type). The stitched label is only the GUIDE: the vision brain writes the layout from it (bands,
@@ -1457,6 +1699,16 @@ def label_art(product, tex, words, along, around, log, rounds=4, least=6):
     if (score or 0) < least:
         log(f"[fast] the artwork is under {least}/10 - the stitched label is kept")
         return None
+    try:                                                     # print on the rolled rims, which the guide can't show
+        import labelart
+        lay = json.load(open(os.path.join(out_dir, "layout.json")))
+        add = rim_marks(product, list(photos), lay, lip_lr, along, around, log, cache=rims)
+        if add:
+            lay["shapes"] = [s for s in lay.get("shapes", []) if not s.get("lip")] + add
+            json.dump(lay, open(os.path.join(out_dir, "layout.json"), "w"), indent=1)
+            png, _ = labelart.render(lay, out_dir, px=4096, name="label")
+    except Exception as e:
+        log(f"[fast] the rims could not be checked for print ({str(e)[:120]})")
     art = Image.open(png).convert("RGB").rotate(-90, expand=True)   # back to the map: rows from the plus end
     # (NOT turned back to the guide's old place round: that put the seam back through the print - 07:05, ALKALINE
     #  BATTERY cut at both edges. Which side faces the front does not matter; the seam stays on the plain stretch)
@@ -1587,7 +1839,10 @@ def build(cid, card, d, R):
         FILLED.clear()
         png, cover = label_from(front, back, along, around, tex, log, product=display(card), words=words,
                                 year=card.get("year") or "its era", extra=dn.get("extra"))
-        made = label_art(display(card), tex, words, along, around, log)
+        rim_pics = list(dict.fromkeys(list(versions.sheet_files or []) + [g["file"] for g in whole
+                                                                          if "_copy" not in os.path.basename(g["file"])]))[:5]
+        made = label_art(display(card), tex, words, along, around, log, photos=rim_pics, lip_lr=lips(spec, along),
+                         rims=os.path.join(R.WORK, "hunt", cid, "rims.json"))
         if made:                                             # the artwork prints the whole label: the share the
             png = made                                       # stitched guide's views covered is no cap on it
             FILLED["share"] = 1.0                            # (09:00: realism held at 6 by the guide's 70%)

@@ -164,7 +164,7 @@ _steps = list(dict.fromkeys(s.get("step", "")[:3] for s in st if s.get("step")))
 check(_steps[:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], f"five steps on the page, in order ({_steps})")
 # measured faults left on the label art (text on text, a line printed twice): never kept, whatever the judge says
 _la = fast.label_art
-def _art_with_faults(product, tex_, words_, along_, around_, log_):
+def _art_with_faults(product, tex_, words_, along_, around_, log_, **_kw):
     os.makedirs(os.path.join(tex_, "art"), exist_ok=True)
     json.dump({"score": 6, "hard": ["'DURACELL®' is printed 2 times but the real label shows it 1 time"]},
               open(os.path.join(tex_, "art", "defects.json"), "w"))
@@ -515,5 +515,68 @@ vs6 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, [_gone] + 
 k6 = vs6.keep([_gone] + vgood2)
 check(all(os.path.exists(r["file"]) for r in k6) and len(_asks) <= len(vgood2), f"a missing photo is skipped; one ask per photo when the brain fails ({len(_asks)})")
 MS.read_lines = _rl3
+
+# print on the label's rolled rims (the PowerCheck's second press dot sits on the minus end's rim - never in the side
+# guide): the lips measured from the shape, asked about in the photos, kept only when two reads agree, drawn in line
+_spec = json.load(open(os.path.join(os.path.dirname(fast.__file__), "shapes", "specs", "aa_battery.json")))
+_al, _ar = skin.label_size(_spec)
+_lp = fast.lips(_spec, _al)
+check(abs(_lp[0] * _al - 1.335) < 0.02 and abs(_lp[1] * _al - 2.531) < 0.02,
+      f"the AA sleeve rolls over the plus end 1.3 mm and the minus end 2.5 mm ({_lp[0] * _al:.2f}, {_lp[1] * _al:.2f})")
+_lay = {"width_mm": _al, "height_mm": _ar, "background": "#111111",
+        "shapes": [{"type": "rect", "x": 0, "y": 0, "w": 0.325, "h": 1, "fill": "#c6812e", "base": True},
+                   {"type": "rect", "x": 0.325, "y": 0, "w": 0.675, "h": 1, "fill": "#111111", "base": True},
+                   {"type": "ellipse", "x": 0.175, "y": 0.46, "w": 0.09, "h": 0.09, "fill": "#f0f0f0"},
+                   {"type": "rect", "x": 0.34, "y": 0.40, "w": 0.56, "h": 0.18, "fill": None, "stroke": "#1faa3a"}],
+        "texts": [{"text": "PRESS DOTS", "x": 0.12, "y": 0.345, "h": 0.03, "w": 0.19},
+                  {"text": "100%", "x": 0.395, "y": 0.43, "h": 0.035, "w": 0.11},
+                  {"text": "DURACELL® POWERCHECK™", "x": 0.36, "y": 0.535, "h": 0.035, "w": 0.52},
+                  {"text": "JAN 2002", "x": 0.65, "y": 0.68, "h": 0.035, "w": 0.28}]}
+_rd = tempfile.mkdtemp()
+_pic = os.path.join(_rd, "p.jpg"); Image.new("RGB", (40, 20), (9, 9, 9)).save(_pic)
+_said = []
+def _rim_ask(answers):
+    def a(q, pics, temp):
+        _said.append(q)
+        return answers[min(len(_said) - 1, len(answers) - 1)]
+    return a
+_B = {"end": "B", "shape": "dot", "color": "white", "size": 0.3, "beside": "DURACELL® POWERCHECK™"}
+_Bm = dict(_B, beside="100%", size=0.34)
+_A = {"end": "A", "shape": "dot", "color": "white", "size": 0.3, "beside": "PRESS DOTS"}
+_c = os.path.join(_rd, "rims.json")
+_got = fast.rim_marks("Duracell AA", [_pic], _lay, _lp, _al, _ar, lambda *a: None, cache=_c,
+                      ask=_rim_ask([{"marks": [_B]}, {"marks": [_Bm, _A]}, {"marks": []}]))
+check(len(_said) == 3 and len(_got) == 1 and _got[0]["lip"] and _got[0]["type"] == "ellipse",
+      f"three reads (the first two differ); the dot two reads saw is kept, the one read saw is not ({len(_said)}, {len(_got)})")
+_g = _got[0]
+check(abs(_g["x"] + _g["w"] / 2 - (1 - _lp[1] / 2)) < 1e-6 and abs(_g["y"] + _g["h"] / 2 - 0.49) < 1e-6,
+      f"on the minus end's lip, in line with the middle of the meter box it lines up with ({_g['y'] + _g['h'] / 2:.3f})")
+check(abs(_g["h"] * _ar - 0.32 * _ar / 3.14159265) < 0.2, "its size from the reads (a third of the width)")
+check("the end where the label is copper" in _said[0] and "the end where the label is black" in _said[0]
+      and "PRESS DOTS" in _said[0], "the two ends are named by their band color and the print next to them")
+_said.clear()
+_got2 = fast.rim_marks("Duracell AA", [_pic], _lay, _lp, _al, _ar, lambda *a: None, cache=_c, ask=_rim_ask([{"marks": []}]))
+check(not _said and _got2 == _got, "the reads are kept: a restart asks nothing again")
+_said.clear()
+_logs = []
+_got3 = fast.rim_marks("Duracell AA", [_pic], _lay, _lp, _al, _ar, _logs.append, ask=_rim_ask([{"marks": [_A]}]))
+check(len(_said) == 2 and not _got3 and any("printed on the side next to it" in l for l in _logs),
+      f"two agreeing reads of a 'rim' dot that is the side dot near that end: not drawn twice ({_logs})")
+_said.clear()
+_got4 = fast.rim_marks("Duracell AA", [_pic], _lay, _lp, _al, _ar, lambda *a: None,
+                       ask=_rim_ask([{"marks": [dict(_B, beside="none")]}]))
+check(not _got4, "a rim mark in line with nothing printed is not placed (never guessed)")
+_said.clear()
+check(fast.rim_marks("x", [_pic], _lay, (0.0, 0.0), _al, _ar, lambda *a: None, ask=_rim_ask([{"marks": [_B]}])) == []
+      and not _said, "a label that does not roll over its ends is not asked about")
+_said.clear()
+_got5 = fast.rim_marks("Duracell AA", [_pic], _lay, _lp, _al, _ar, lambda *a: None,
+                       ask=_rim_ask([{"marks": [dict(_B, beside="JAN 2002")]}]))
+check(_got5 and abs(_got5[0]["y"] + _got5[0]["h"] / 2 - (0.68 + 0.0175)) < 1e-6, "in line with a line on no panel: that line's middle")
+_wl = dict(_lay, texts=_lay["texts"] + [{"text": "TOP", "x": 0.4, "y": 0.0, "h": 0.02, "w": 0.1}])
+_got6 = fast.rim_marks("Duracell AA", [_pic], _wl, _lp, _al, _ar, lambda *a: None,
+                       ask=_rim_ask([{"marks": [dict(_B, beside="TOP")]}]))
+check(len(_got6) == 2 and {round(s["y"], 3) for s in _got6} == {round(_got6[0]["y"], 3), round(_got6[0]["y"] + 1, 3)} or
+      len(_got6) == 2 and _got6[1]["y"] == _got6[0]["y"] + 1.0, "a rim dot across the wrap is drawn at both edges (they meet)")
 
 print(f"ALL {ok} PASS")
