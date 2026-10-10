@@ -45,7 +45,9 @@ os.makedirs(hunt)
 
 def img(name, color=(90, 60, 30)):
     f = os.path.join(hunt, name)
-    Image.new("RGB", (300, 200), color).save(f)
+    im = Image.new("RGB", (300, 200), color)
+    im.putpixel((0, 0), tuple(sum(map(ord, name)) * k % 256 for k in (1, 3, 7)))   # each photo its own bytes
+    im.save(f)
     return f
 
 
@@ -158,7 +160,23 @@ calls.clear()
 out = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
 check(filed == ["x_aa"] and out["era"] == 8, "the pass is filed in the Asset Library")
 check(any(a[0] == "lathe.py" for a in blend) and any(a[0] == "contract.py" for a in blend), "built by the real-size round builder and the deliverable contract")
-check([s.get("step", "")[:3] for s in st if s.get("step")][:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], "five steps on the page")
+_steps = list(dict.fromkeys(s.get("step", "")[:3] for s in st if s.get("step")))
+check(_steps[:5] == ["1/5", "2/5", "3/5", "4/5", "5/5"], f"five steps on the page, in order ({_steps})")
+# measured faults left on the label art (text on text, a line printed twice): never kept, whatever the judge says
+_la = fast.label_art
+def _art_with_faults(product, tex_, words_, along_, around_, log_):
+    os.makedirs(os.path.join(tex_, "art"), exist_ok=True)
+    json.dump({"score": 6, "hard": ["'DURACELL®' is printed 2 times but the real label shows it 1 time"]},
+              open(os.path.join(tex_, "art", "defects.json"), "w"))
+    pth = os.path.join(tex_, "label_art_test.png"); Image.new("RGB", (4096, 4600), (20, 20, 20)).save(pth)
+    return pth
+fast.label_art = _art_with_faults
+filed.clear(); blend.clear(); st.clear()
+judged = iter([{"realism": 9, "era": 9, "words": 9}])
+out_f = fast.build("x_aa", {"product": "Duracell AA", "year": 1998, "mat": "steel", "family_lib": {"family": "cylindrical_cell"}}, d, R2)
+check(not filed and out_f["realism"] <= 7 and any("printed 2 times" in f for f in out_f["fix"]),
+      f"measured faults on the label art: not kept though the judge said 9 ({out_f['realism']}, filed {filed})")
+fast.label_art = _la
 # a judged miss: the matched drawings are kept, never redrawn with the judge's notes (they took side 1 to 2/10)
 filed.clear(); blend.clear(); st.clear(); calls.clear()
 judged = iter([{"realism": 5, "era": 8, "words": 9, "fix": ["make the top a raised button"]}])
@@ -262,14 +280,20 @@ vw2 = [{"kind": "front", "words": [("Patented", 1050), ("DURACELL", 1000)]}, {"k
        {"kind": "extra", "words": [("ALKALINE BATTERY", 1100)]}]
 shz2 = fast.place_by_words(vw2, 2048, lambda *a: None, skip=["Duracell"])
 check(shz2.get(1) == 1024 and shz2.get(2) == (1020 + 1024 - 1100) % 2048, f"the item's own name is no anchor; nothing else shared: the other side half a turn round, and a view chains off it ({shz2})")
-# a view sharing no two words with the placed ones goes in the widest stretch they did not see, never left out
-# (2026-10-09: the big-logo side was left out and its logo quilted over)
+# a view that neither words nor print can place is LEFT OUT, never put in a guessed place (2026-10-09: a guessed
+# place put the logo side over the meter side and the PowerCheck box was printed twice)
 _wc = lambda c0, c1: np.array([1.0 if c0 <= i < c1 else 0.0 for i in range(2048)])
 vw3 = [{"kind": "front", "words": [("Patented", 1000)], "wcol": _wc(624, 1424)},
        {"kind": "back", "words": [("meter", 1000)], "wcol": _wc(624, 1424)},
        {"kind": "extra", "words": [("ALKALINE", 1000)], "wcol": _wc(624, 1424)}]
 shz3 = fast.place_by_words(vw3, 2048, lambda *a: None)
-check(shz3.get(1) == 1024 and shz3.get(2) in (512, 1536), f"the logo side fills a stretch no placed view saw ({shz3})")
+check(shz3.get(1) == 1024 and 2 not in shz3, f"a view no words or print can place is left out, not guessed ({shz3})")
+# a long word the pictures contradict: the view is left out, not placed later by any fallback
+_lab_c = np.repeat(np.random.default_rng(3).random((40, 2048, 1)), 3, axis=2)
+vX = {"kind": "front", "words": [("POWERCHECK", 1200)], "wcol": _wc(624, 1424), "l": _lab_c.copy()}
+vY = {"kind": "extra", "words": [("POWERCHECK", 900)], "wcol": _wc(624, 1424),
+      "l": np.repeat(np.random.default_rng(4).random((40, 2048, 1)), 3, axis=2)}
+check(1 not in fast.place_by_words([vX, vY], 2048, lambda *a: None), "a view whose one word the print contradicts is left out")
 # one long word places a view when the pictures do not disagree where they overlap (2026-10-09: the meter side
 # shared only POWERCHECK with the panel side, went opposite, and the PowerCheck box was printed twice)
 rng_ = np.random.default_rng(1)
@@ -280,7 +304,7 @@ shz4 = fast.place_by_words([vA, vB], 2048, lambda *a: None)
 check(shz4.get(1) == 300, f"one long shared word, pictures agree: placed by it ({shz4})")
 vC = dict(vB, l=np.repeat(rng_.random((40, 2048, 1)), 3, axis=2))
 shz5 = fast.place_by_words([vA, vC], 2048, lambda *a: None)
-check(shz5.get(1) == 1024, f"one long word the pictures contradict is not trusted ({shz5})")
+check(1 not in shz5, f"one long word the pictures contradict is not trusted: left out, not put opposite ({shz5})")
 # no shared words read: the shared PRINT places a view - and unrelated print does not (2026-10-09: the meter side
 # went opposite and the meter was printed twice)
 rng2 = np.random.default_rng(7)
@@ -368,4 +392,122 @@ wb = np.clip(1 - np.abs(np.arange(Ww) - 200) / 120, 0, 1)      # B looks at colu
 labp, covp = fast.pick_views([(va, wa), (vb, wb)], lambda *a: None)
 check(np.allclose(labp[:, 150:170], 0.9) and covp[:, 380:].max() == 0 and covp[:, :50].max() > 0,
       "each column from the view that saw it squarely; what no view saw stays unseen")
+# ---- 2026-10-09 audit: one photo once, one version only, measured faults never kept
+import shutil as _sh2
+dup_a = img("dupA.jpg", (10, 20, 30)); dup_b = os.path.join(hunt, "dupB.jpg"); _sh2.copy(dup_a, dup_b)
+ur = fast.unique_refs([{"file": dup_a, "listing": "1"}, {"file": dup_a, "listing": "2"}, {"file": dup_b}, {"file": img("other.jpg", (1, 2, 3))}])
+check([os.path.basename(r["file"]) for r in ur] == ["dupA.jpg", "other.jpg"], f"each photo once, by its bytes ({[os.path.basename(r['file']) for r in ur]})")
+vgood = [{"file": img("vA.jpg", (11, 0, 0)), "listing": "9", "score": 9, "look": {"one_item": True, "side": "front"}},
+         {"file": img("vB.jpg", (12, 0, 0)), "listing": "9", "score": 9, "look": {"one_item": True, "side": "back"}},
+         {"file": img("v1981.jpg", (13, 0, 0)), "listing": "9", "score": 9, "look": {"one_item": False, "side": "front"}},
+         {"file": img("vmix.jpg", (14, 0, 0)), "listing": "8", "score": 9, "look": {"one_item": False, "side": "several"}}]
+_rl3 = MS.read_lines
+MS.read_lines = lambda png, **k: (["DURACELL", "Patented", "Bethel, CT 06801", "JAN 2002"] if "vA" in png else
+                                  ["SIZE AA", "1.5 VOLTS", "CAUTION: DO NOT CONNECT"] if "v1981" in png else ["DURACELL", "ALKALINE BATTERY"])
+asked_v = []
+verdict = {"vB.jpg": "all", "v1981.jpg": "none", "vmix.jpg": "some", "cpy1.png": "none", "cpy2.png": "all"}
+def _vask(use, q, imgs, think=False, side=1280):
+    asked_v.append((os.path.basename(imgs[0]), os.path.basename(imgs[1])))
+    return {"same": verdict.get(os.path.basename(imgs[1]), "all"), "why": "test"}
+V.ask = _vask
+vs = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vgood, R, lambda *a: None)
+check(os.path.basename(vs.anchor) == "vA.jpg", f"the reference copy is the clearest photo of one copy ({os.path.basename(vs.anchor)})")
+kept = vs.keep(vgood)
+kn = {os.path.basename(r["file"]): r["version"] for r in kept}
+check(kn == {"vA.jpg": "all", "vB.jpg": "all", "vmix.jpg": "some"}, f"another version is left out, a mixed photo marked ({kn})")
+check(all(a == "vA.jpg" for a, b in asked_v), "every photo is compared with the reference copy")
+n_before = len(asked_v)
+vs2 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vgood, R, lambda *a: None)
+vs2.keep(vgood)
+check(len(asked_v) == n_before, "a restart does not ask again (answers kept in the photo hunt's folder)")
+MS.read_lines = lambda png, **k: ["SIZE AA", "1.5 VOLTS"] if ("v1981" in png or "vmix" in png) else ["DURACELL", "Patented"]
+wv = fast.photo_words(kept + [dict(kept[0])], lambda *a: None)
+check("SIZE AA" not in wv and "Patented" in wv, f"words only from whole-version photos, each read once ({wv})")
+_split = fast.split_items
+fast.split_items = lambda r, crop_dir, log: [dict(r, file=img("cpy1.png", (20, 0, 0)), look={"one_item": True}),
+                                            dict(r, file=img("cpy2.png", (21, 0, 0)), look={"one_item": True})]
+_vocab = ["DURACELL", "Patented", "Bethel, CT 06801", "JAN 2002", "ALKALINE BATTERY"]
+MS.read_lines = lambda png, **k: _vocab if "cpy1" in png else ["DURACELL", "Patented"]   # the other version reads MOST
+fs_free = fast.faces(kept, _vocab, lambda *a: None, crop_dir=os.path.join(W, "cp"), same=None)
+check(os.path.basename(fs_free[0][0]) == "cpy1.png", "(without the check, that copy would be drawn first)")
+fs_v = fast.faces(kept, _vocab, lambda *a: None, crop_dir=os.path.join(W, "cp"), same=vs.same)
+fsn = [os.path.basename(f) for f, _ in fs_v]
+check("cpy1.png" not in fsn and all("v1981" not in f for f in fsn), f"a copy of another version is never drawn ({fsn})")
+fast.split_items = _split
+MS.read_lines = _rl3
+import layout as LAY2
+rp = LAY2.repeats([{"text": "DURACELL®"}, {"text": "DURACELL®"}, {"text": "DURACELL® POWERCHECK™"}], ["duracell", "duracellpowercheck"])
+check(rp == [("DURACELL®", 2, 1)], f"a line printed more often than the real label shows it is found ({rp})")
+_g2 = os.path.join(W, "guide_twice.png")                      # a real label showing its name twice, read box by box
+_gi = Image.new("RGB", (1600, 600), "white")
+from PIL import ImageDraw as _ID, ImageFont as _IF
+_f = _IF.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 90) if os.path.exists("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf") else None
+_dr = _ID.Draw(_gi); _dr.text((60, 60), "DURACELL", fill="black", font=_f); _dr.text((700, 380), "DURACELL", fill="black", font=_f)
+_gi.save(_g2)
+gc = LAY2.guide_counts(_g2)
+check(gc.count("duracell") == 2, f"a line printed twice on the real label is read twice ({gc})")
+check(LAY2.repeats([{"text": "DURACELL®"}, {"text": "DURACELL®"}], gc) == [], "so it may be printed twice")
+check(LAY2.repeats([{"text": "DURACELL®"}] * 3, gc) == [("DURACELL®", 3, 2)], "but not three times")
+# a version answer that failed is not kept: asked again next time; plain yes/no words are understood
+verdict.clear()
+_calls = []
+def _vask_err(use, q, imgs, think=False, side=1280):
+    _calls.append(1); raise RuntimeError("the brain is loading")
+V.ask = _vask_err
+vgood2 = vgood + [{"file": img("vnew.jpg", (15, 0, 0)), "listing": "9", "score": 9, "look": {"one_item": True}}]
+vs3 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vgood2, R, lambda *a: None)
+kk = {os.path.basename(r["file"]) for r in vs3.keep(vgood2)}
+check("vnew.jpg" in kk, "no answer: the photo stays")
+V.ask = lambda use, q, imgs, think=False, side=1280: {"same": "different", "why": "a later logo"}
+vs4 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vgood2, R, lambda *a: None)
+kk4 = {os.path.basename(r["file"]) for r in vs4.keep(vgood2)}
+check("vnew.jpg" not in kk4, "the failed answer was not kept: asked again, and 'different' means another version")
+# the reference copy: the quick look's own score first, never a photo two listings share (a carousel's)
+vg5 = [{"file": img("w_shared.jpg", (31, 0, 0)), "listing": "9", "score": 9, "shared": True, "look": {"one_item": True, "score": 9}},
+       {"file": img("w_low.jpg", (32, 0, 0)), "listing": "9", "score": 7, "look": {"one_item": True, "score": 4}},
+       {"file": img("w_good.jpg", (33, 0, 0)), "listing": "9", "score": 9, "look": {"one_item": True, "score": 9}}]
+MS.read_lines = lambda png, **k: ["A1", "B22", "C333", "D4444", "E5555"] if ("w_shared" in png or "w_low" in png) else ["DURACELL"]
+os.remove(os.path.join(W, "hunt", "x_aa", "versions.json"))
+vs5 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vg5, R, lambda *a: None)
+check(os.path.basename(vs5.anchor) == "w_good.jpg", f"the reference copy: own score first, not a shared photo ({os.path.basename(vs5.anchor)})")
+MS.read_lines = _rl3
+
+# the drawing cache: side 1 is kept only when it can pass what follows (3/4 of its words read back)
+import types as _ty
+_dw = {"n": 0}
+_tex = os.path.join(W, "library", "x_cache", "texture"); os.makedirs(_tex, exist_ok=True)
+_ph = img("cache_photo.jpg", (40, 50, 60))
+_saved = (fast.faces, fast.words_back, fast.drawn_ratio, T.draw_from_photos, T.photo_mask, skin.cutout, V.ask)
+fast.faces = lambda *a, **k: [(_ph, ["DURACELL", "Patented", "Bethel, CT 06801", "JAN 2002"])]
+fast.drawn_ratio = lambda png: None
+def _fake_draw(product, srcs, out, **k):
+    _dw["n"] += 1; Image.new("RGB", (64, 32), (_dw["n"] * 9 % 256, 0, 0)).save(out)
+T.draw_from_photos = _fake_draw
+T.photo_mask = lambda f, timeout=300: f
+skin.cutout = lambda f, out: (Image.open(f["file"]).save(out) or out)
+V.ask = lambda use, q, imgs, think=False, side=1280: {"match": 8}
+MS.read_lines = lambda png, **k: []
+_Rc = _ty.SimpleNamespace(WORK=W, reference_sheet=lambda files, out: out)
+fast.words_back = lambda png, ws: 0.6
+fast.draw({"product": "Duracell AA", "year": 1998}, [{"file": _ph}], _tex, 50.5, 45.5, _Rc, lambda *a: None, words=["DURACELL"])
+n1 = _dw["n"]
+_cd = os.path.join(W, "hunt", "x_cache", "drawn")
+check(not (os.path.isdir(_cd) and any(f.endswith(".json") for f in os.listdir(_cd))),
+      f"side 1 at 8/10 with 60% of its words is not kept ({n1} tries)")
+fast.words_back = lambda png, ws: 0.8
+fast.draw({"product": "Duracell AA", "year": 1998}, [{"file": _ph}], _tex, 50.5, 45.5, _Rc, lambda *a: None, words=["DURACELL"])
+n2 = _dw["n"]
+check(n2 > n1 and any(f.endswith(".json") for f in os.listdir(_cd)), "drawn again; at 80% of its words it is kept")
+fast.draw({"product": "Duracell AA", "year": 1998}, [{"file": _ph}], _tex, 50.5, 45.5, _Rc, lambda *a: None, words=["DURACELL"])
+check(_dw["n"] == n2, "and the next run uses it without drawing")
+fast.faces, fast.words_back, fast.drawn_ratio, T.draw_from_photos, T.photo_mask, skin.cutout, V.ask = _saved
+# a photo moved away by hand never stops the version check; a failing brain is asked once per run per photo
+_gone = {"file": os.path.join(hunt, "gone.jpg"), "listing": "9", "score": 9, "look": {"one_item": True, "score": 9}}
+_asks = []
+V.ask = lambda use, q, imgs, think=False, side=1280: (_asks.append(1), (_ for _ in ()).throw(RuntimeError("down")))[1]
+vs6 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, [_gone] + vgood2, R, lambda *a: None)
+k6 = vs6.keep([_gone] + vgood2)
+check(all(os.path.exists(r["file"]) for r in k6) and len(_asks) <= len(vgood2), f"a missing photo is skipped; one ask per photo when the brain fails ({len(_asks)})")
+MS.read_lines = _rl3
+
 print(f"ALL {ok} PASS")

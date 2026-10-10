@@ -36,6 +36,15 @@ REF_Q = ("We are rebuilding this exact item as a 3D model: {product} (made aroun
          "merchandise or a look-alike (a pin, magnet, mug, toy, sign, display), \"package\" if only its packaging, "
          "\"ad\" for an advertisement}}")
 
+VERSION_Q = (
+    "Picture 1 is a real photo of {product} as it was sold around {year} - our reference copy. Picture 2 is another "
+    "photo. Is the item in picture 2 the SAME printed version as picture 1? Picture 2 may show a different side of "
+    "the label, with other panels and other words - so judge by the design itself: the logo's lettering style, the "
+    "colors and where they sit, frames, meters, icons and the typefaces. A redesign from another year or decade, a "
+    "different logo style, another product line, another size or another brand is NOT the same version. Answer ONLY "
+    "JSON: {{\"same\": \"all\" if every copy in picture 2 is that same version, \"some\" if only some of its "
+    "copies are, \"none\" if none are, \"why\": \"short\"}}")
+
 DRAW_FRONT = (
     "Picture 1 is a sheet of real photos of {product}, made around {year}; picture 2 is its clearest photo. Make ONE "
     "clean, convincing studio product photo of exactly one {product} exactly as it looked in {year}: lying on its "
@@ -274,6 +283,159 @@ def sort_refs(refs, card, R, log):
     return good
 
 
+def unique_refs(refs):
+    """Each photo once (2026-10-09: an eBay page's carousel photo of ANOTHER listing - a 1981 Duracell - was saved for
+    two listings; read twice, its lines 'SIZE AA', '1.5 VOLTS', 'CAUTION...' counted as read on two photos and were
+    printed on the 1998 label). The same picture under another name is the same photo too (its bytes' hash). A photo
+    found under two different listings is marked "shared": it may belong to neither (a page's carousel), so it is
+    never the reference copy."""
+    import hashlib
+    out, seen = [], {}
+    for r in refs:
+        try:
+            key = hashlib.md5(open(r["file"], "rb").read()).hexdigest()
+        except Exception:
+            key = r.get("file")
+        if key in seen:
+            first = seen[key]
+            if r.get("listing") and first.get("listing") and r.get("listing") != first.get("listing"):
+                first["shared"] = True
+            continue
+        r = dict(r)
+        seen[key] = r
+        out.append(r)
+    return out
+
+
+_YES = ("all", "yes", "true", "same")
+_NO = ("none", "no", "false", "different", "not", "other")
+
+
+class Versions:
+    """One version of the item only (2026-10-09: the photos held a 1981 Duracell, a later italic-logo Duracell and a
+    modern one beside the 1998 PowerCheck; their words and a view of the italic one went onto the label). The
+    reference copy is a photo of ONE copy the quick look scored highest for this item (from a listing when there is
+    one, never one shared by two listings), the clearest of those (most printed lines read). Every other photo, and
+    every copy cut from a photo of several, is compared with it by the vision brain - the SAME printed version (a
+    different side allowed)? Answers are kept in the photo hunt's folder (a restart does not ask again); a failed or
+    unclear answer is not kept and the photo stays (logged).
+    same(file) -> "all" | "some" | "none"."""
+
+    def __init__(self, cid, card, good, R, log):
+        import hashlib
+        self.card, self.log, self.R = card, log, R
+        self.q = VERSION_Q.format(product=display(card), year=card.get("year") or "its era")
+        self.qkey = hashlib.md5(self.q.encode()).hexdigest()[:6]
+        self.path = os.path.join(R.WORK, "hunt", cid, "versions.json")
+        try:
+            self.cache = json.load(open(self.path))
+        except Exception:
+            self.cache = {}
+        self._md5 = lambda f: hashlib.md5(open(f, "rb").read()).hexdigest()
+        self.failed = set()                                  # asked this run without a clear answer: not again now
+        good = [r for r in good if os.path.exists(r.get("file") or "")]   # (a photo moved away by hand: skipped)
+        self.anchor = self._pick(good)
+        try:
+            self.akey = (self._md5(self.anchor)[:12] + self.qkey) if self.anchor else ""
+        except Exception:
+            self.anchor, self.akey = None, ""
+        if self.anchor:
+            log(f"[fast] the reference copy for its version: {os.path.basename(self.anchor)}")
+
+    def _pick(self, good):
+        import measure as MS
+        norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
+        own = lambda r: int((r.get("look") or {}).get("score") or 0)
+        singles = [r for r in good if (r.get("look") or {}).get("one_item") and not r.get("shared")]
+        pool = [r for r in singles if r.get("listing")] or singles or [r for r in good if not r.get("shared")] or good
+        if not pool:
+            return None
+        top = max(own(r) for r in pool)
+        pool = [r for r in pool if own(r) >= top - 1]        # the quick look's own score first (not a listing's lent one)
+        prev = (self.cache.get("_anchor") or {}).get("file")
+        for r in pool:                                       # the same reference copy as last time (no OCR again)
+            if os.path.basename(r["file"]) == prev and os.path.exists(r["file"]):
+                return r["file"]
+
+        def clear(r):
+            try:
+                return sum(1 for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3)
+            except Exception:
+                return 0
+        pick = max(pool, key=lambda r: (clear(r), own(r)))["file"]
+        self.cache["_anchor"] = {"file": os.path.basename(pick)}
+        self._save()
+        return pick
+
+    def _save(self):
+        try:
+            tmp = self.path + ".part"
+            json.dump(self.cache, open(tmp, "w"), indent=1)
+            os.replace(tmp, self.path)
+        except Exception:
+            pass
+
+    def _key(self, f):
+        try:
+            return self.akey + ":" + self._md5(f)[:12]
+        except Exception:
+            return None
+
+    def _ask(self, f):
+        import vet as V
+        v = V.ask(V.model(), self.q, [self.anchor, f], think=False) or {}
+        a = v.get("same")
+        a = ("all" if a else "none") if isinstance(a, bool) else str(a or "").strip().lower()
+        a = "all" if a in _YES else "some" if a == "some" else "none" if a in _NO else ""
+        return {"same": a, "why": str(v.get("why") or "")[:160]}
+
+    def _store(self, f, v):
+        if isinstance(v, Exception) or not isinstance(v, dict) or not v.get("same"):
+            why = str(v)[:80] if isinstance(v, Exception) else (v or {}).get("why", "") if isinstance(v, dict) else ""
+            self.log(f"[fast] {os.path.basename(f)}: no clear answer on its version ({why or 'unclear'}) - kept")
+            self.failed.add(f)
+            return                                           # (not saved: asked again on the next run)
+        self.cache[self._key(f)] = dict(v, file=os.path.basename(f))
+        self._save()
+        self.log(f"[fast] {os.path.basename(f)}: the same version as the reference copy? {v['same']}"
+                 + (f" ({v['why']})" if v.get("why") else ""))
+
+    def same(self, f):
+        if not self.anchor or f == self.anchor:
+            return "all"
+        k = self._key(f)
+        if k is None or f in self.failed:
+            return "all"
+        if k not in self.cache:
+            try:
+                self._store(f, self._ask(f))
+            except Exception as e:
+                self._store(f, e)
+        return (self.cache.get(k) or {}).get("same") or "all"
+
+    def keep(self, good):
+        """The photos of this version: each marked r["version"] = "all", or "some" (only some copies are: only its
+        cut copies, each checked, may be drawn; its lines are not read for the words). Asked together."""
+        import vet as V
+        good = [r for r in good if os.path.exists(r.get("file") or "")]
+        todo = [r["file"] for r in good if self.anchor and r["file"] != self.anchor
+                and self._key(r["file"]) is not None and self._key(r["file"]) not in self.cache]
+        if todo:
+            V.parallel(self._ask, todo, lambda i, v: self._store(todo[i], v))
+        out = []
+        for r in good:
+            v = self.same(r["file"])
+            if v != "none":
+                out.append(dict(r, version=v))
+        dropped = len(good) - len(out)
+        self.log(f"[fast] {len(out)} of {len(good)} photos show this version"
+                 + (f"; {dropped} left out as another version" if dropped else ""))
+        if len(out) * 2 < len(good):
+            self.log("[fast] WARNING: most photos are another version than the reference copy - check the reference "
+                     f"copy ({os.path.basename(self.anchor or '')}) is the right one for this item")
+        return out
+
+
 def photo_words(good, log, most=8):
     """The printed lines on the best photos, read by Apple's own text reader (measure.read_lines) - kept when read on
     at least two different photos (majority voting across independent reads, ROVER). Qwen-Image renders exact text
@@ -283,6 +445,7 @@ def photo_words(good, log, most=8):
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
     reads = []
+    good = [g for g in unique_refs(good) if g.get("version", "all") == "all"]   # one version, each photo once
     for r in [g for g in good if (g.get("look") or {}).get("side") in ("front", "back", "several")][:most]:
         try:
             reads.append([l.strip() for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3])
@@ -397,7 +560,7 @@ def split_items(r, crop_dir, log):
     return out
 
 
-def faces(good, vocab, log, most=8, want_ratio=None, extra=3, crop_dir=None):
+def faces(good, vocab, log, most=8, want_ratio=None, extra=3, crop_dir=None, same=None):
     """The item's different printed sides, each from ONE clear photo of one copy: the photo read with the most words
     first, then the one whose words share least with it (2026-10-08 04:25: a sheet showing two sides at once was
     merged into one garbled side - the battery's big-logo side and its PowerCheck side). Each face carries the words
@@ -405,11 +568,13 @@ def faces(good, vocab, log, most=8, want_ratio=None, extra=3, crop_dir=None):
     import measure as MS
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
-    singles = [r for r in good if (r.get("look") or {}).get("one_item")]
+    singles = [r for r in good if (r.get("look") or {}).get("one_item") and r.get("version", "all") == "all"]
     if crop_dir:                                             # several copies in one photo, each turned another way,
         for r in good:                                       # are the best evidence of the other sides (11:10: three
             if not (r.get("look") or {}).get("one_item"):    # standing batteries, three sides, were thrown away)
-                singles += split_items(r, crop_dir, log)
+                for c in split_items(r, crop_dir, log):      # each copy is checked on its own: a photo of six can
+                    if same is None or same(c["file"]) == "all":   # hold two versions (2026-10-09: a later italic-
+                        singles.append(c)                    # logo Duracell beside the PowerCheck ones)
     singles = singles or good
     if want_ratio:                                           # a photo of the item in its own proportions only: a
         kept_ = []                                           # stubby one (seen end-on, or another size) is drawn
@@ -473,17 +638,19 @@ def drawn_ratio(png):
         return None
 
 
-def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
+def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=(), same=None):
     """Each printed side of the item drawn clean from ONE clear photo of that side, best of `tries` by the judge
     against that photo and by its words read back. -> (front, back or None, notes)."""
     import turnaround as T
     import vet as V
     product, year = display(card), card.get("year") or "its era"
-    sheet = R.reference_sheet([r["file"] for r in good[:9]], os.path.join(tex, "refs_sheet.png"))
+    sheet = R.reference_sheet([r["file"] for r in good if r.get("version", "all") == "all"][:9] or
+                              [r["file"] for r in good[:9]], os.path.join(tex, "refs_sheet.png"))
     st = size_text(along, around)
     fx = (" Fix these from the last try: " + "; ".join(fix)) if fix else ""
     vw, vh = 1344, 768
-    fs = faces(good, list(words), log, want_ratio=along / (around / math.pi), crop_dir=os.path.join(tex, "copies"))
+    fs = faces(good, list(words), log, want_ratio=along / (around / math.pi), crop_dir=os.path.join(tex, "copies"),
+               same=same)
     if not fs:
         fs = [(good[0]["file"], list(words))]
     if len(fs[0][1]) < 4:                                    # no photo shows the printed side clearly: drawing from
@@ -499,6 +666,7 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             src = skin.cutout({"file": photo, "mask": mask}, os.path.join(tex, f"side{k + 1}_photo.png"))
         except Exception:
             src = photo
+        turn = 0
         try:                                                 # lying down, like the drawing (05:15: drawn level from
             from PIL import Image                            # a standing photo, the judge called it mirrored), and
             im = Image.open(src)                             # its print the right way up: of the two turns, the one
@@ -522,20 +690,36 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
         # a drawing that already matched its photo is KEPT across restarts (in the photo hunt's folder, kept on
         # resets): the same photo, turned the same way, with the same prompt and words is not drawn again - a restart
         # for a fix later in the line redrew all five sides, ~1.5 h, every time (2026-10-09)
+        # The key is the photo itself (for a copy cut from a photo of several: that photo's bytes and the copy's
+        # number - the cut-out's own pixels shift a little each time its outline is found again), its turn, the
+        # prompt with its words, and the size. A drawing is kept only when it is good enough for what follows it:
+        # side 1 must read back 3/4 of its words (the judge's words score is capped at that share - 8 needs 75%),
+        # the other sides half their words (what label_from takes); all 7/10 against their photos.
         import hashlib
         import shutil
+        bar_m, bar_w = (7, 0.75) if k == 0 else (7, 0.5)
         prompt_ = DRAW_FACE.format(product=product, year=year, size=st, fix=fx, words=wd, style="")
-        key = hashlib.sha1((os.path.basename(photo) + "|" + hashlib.sha1(open(src, "rb").read()).hexdigest() + "|"
-                            + prompt_ + f"|{vw}x{vh}").encode()).hexdigest()[:16]
-        cache_dir = os.path.join(os.path.dirname(good[0]["file"]), "drawn")
+        cm = re.match(r"(.+)_copy(\d+)\.png$", os.path.basename(photo))
+        parent = next((r["file"] for r in good if cm and os.path.splitext(os.path.basename(r["file"]))[0] == cm.group(1)),
+                      None) if cm else photo
+        try:
+            pbytes = hashlib.md5(open(parent or photo, "rb").read()).hexdigest()
+        except Exception:
+            pbytes = ""
+        key = hashlib.sha1((os.path.basename(photo) + "|" + pbytes + f"|{turn}|" + prompt_ + f"|{vw}x{vh}").encode()
+                           ).hexdigest()[:16]
+        cache_dir = os.path.join(R.WORK, "hunt", os.path.basename(os.path.dirname(os.path.abspath(tex))), "drawn")
         hit = os.path.join(cache_dir, key + ".json")
+        from_cache = False
         try:
             c_ = json.load(open(hit))
-            if os.path.exists(os.path.join(cache_dir, key + ".png")):
+            if os.path.exists(os.path.join(cache_dir, key + ".png")) and c_["match"] >= bar_m and c_["words"] >= bar_w:
                 out = os.path.join(tex, f"side{k + 1}_1.png")
                 shutil.copy(os.path.join(cache_dir, key + ".png"), out)
-                best = (c_["match"] + 5 * c_["words"], out, c_["match"], c_["words"])
-                log(f"[fast] side {k + 1}: its drawing from an earlier run matched its photo {c_['match']}/10 - kept")
+                best = ((True, c_["match"] + 5 * c_["words"]), out, c_["match"], c_["words"])
+                from_cache = True
+                log(f"[fast] side {k + 1}: its drawing from an earlier run matched its photo {c_['match']}/10 and read "
+                    f"back {c_['words']:.0%} of its words - kept, not drawn again")
         except Exception:
             pass
         for t in range(0 if best else (tries if k < 2 else min(tries, 3))):
@@ -557,11 +741,12 @@ def draw(card, good, tex, along, around, R, log, fix="", tries=4, words=()):
             notes["tries"].append({"file": out, "side": k + 1, "match": m, "words": round(wb, 2), "wrong": v.get("wrong")})
             log(f"[fast] side {k + 1} drawing try {t + 1}: matches its photo {m}/10, {wb:.0%} of its words read back"
                 + (f" ({'; '.join(v.get('wrong') or [])[:150]})" if v.get("wrong") else ""))
-            if best is None or m + 5 * wb > best[0]:
-                best = (m + 5 * wb, out, m, wb)
-            if m >= 8 and wb >= 0.6:
+            score_ = (wb >= bar_w, m + 5 * wb)                # a try good enough for what follows ranks first
+            if best is None or score_ > best[0]:              # (side 1 at 9/10 with 70% of its words can never
+                best = (score_, out, m, wb)                   #  pass the words score; 8/10 with 80% can)
+            if m >= max(8, bar_m) and wb >= max(0.6, bar_w):  # (side 1: 3/4 of its words, or it can never pass)
                 break
-        if best and best[2] >= 7 and best[3] >= 0.5 and not os.path.exists(hit):
+        if best and not from_cache and best[2] >= bar_m and best[3] >= bar_w:   # (a fresh one good enough: kept)
             try:
                 os.makedirs(cache_dir, exist_ok=True)
                 shutil.copy(best[1], os.path.join(cache_dir, key + ".png"))
@@ -593,12 +778,13 @@ def upright(im, words, turns=(0, 180)):
     for t in turns:
         rot = (im.rotate(t, expand=True, fillcolor="white") if t else im).convert("RGB")
         import tempfile
-        tmp = os.path.join(tempfile.mkdtemp(), "turn.png")
-        rot.save(tmp)
-        try:
-            lines = MS.read_lines(tmp, turns=(0,)) or []    # read AS turned (read_lines alone tries every turn)
-        except Exception:
-            lines = []
+        with tempfile.TemporaryDirectory() as td:
+            tmp = os.path.join(td, "turn.png")
+            rot.save(tmp)
+            try:
+                lines = MS.read_lines(tmp, turns=(0,)) or []   # read AS turned (read_lines alone tries every turn)
+            except Exception:
+                lines = []
         score = 0.0
         for l in lines:
             n = norm(l)
@@ -612,7 +798,8 @@ def upright(im, words, turns=(0, 180)):
     # already the right way up, was turned 180 on a near tie) -> (turn, decided?, scores)
     order = sorted(scores, key=lambda t: -scores[t])
     a, b = scores[order[0]], scores[order[1]] if len(order) > 1 else 0.0
-    return (order[0], True, scores) if a > 0 and a >= 1.5 * b else (turns[0], False, scores)
+    # at least two words' worth of letters read (a lone 3-letter scrap decides nothing)
+    return (order[0], True, scores) if a >= 8 and a >= 1.5 * b else (turns[0], False, scores)
 
 
 def same_way(im, ref_png, turns=(0, 180)):
@@ -782,6 +969,10 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
                     if ok1:                                  # PowerCheck box was printed twice
                         log(f"[fast] view {j + 1}: one long word ({wd1}) places it" +
                             (f"; the pictures agree where they overlap ({max(rs):.2f})" if rs else ""))
+                    else:                                    # the pictures contradict the word: never placed later
+                        rejected.add(j)                      # by a guess either
+                        log(f"[fast] view {j + 1}: its one shared word ({wd1}) is contradicted by the print where "
+                            f"they overlap (agree {max(rs):.2f}) - left out")
                 if not ok1:
                     continue
             ang = np.angle(np.mean([np.exp(2j * np.pi * c[0] / W) for c in grp])) * W / (2 * np.pi)
@@ -805,41 +996,29 @@ def place_by_words(views, W, log, least=5, tol=0.03, skip=(), need=2):
             back = next((k for k, v in enumerate(views) if k not in shifts and k not in rejected
                          and v.get("kind") == "back"), None)
             if back is not None:                             # nothing shared: the other side half a turn round (the
-                shifts[back] = W // 2                        # last resort), and the rest may chain off it
+                rs = [r_ for r_ in (overlap_ncc(views[i], shifts[i], views[back], W // 2) for i in shifts)
+                      if r_ is not None]                     # last resort) - unless it overlaps a placed view there
+                if rs and max(rs) < 0.1:                     # and its print disagrees
+                    rejected.add(back)
+                    log(f"[fast] view {back + 1}: half a turn round, its print disagrees with the placed views "
+                        f"(agree {max(rs):.2f}) - left out")
+                    continue
+                shifts[back] = W // 2                        # and the rest may chain off it
                 log(f"[fast] view {back + 1} shares no printed words with the placed views - put opposite view 1")
                 continue
-            # a view still unplaced is a side no placed view shows (2026-10-09: the big-logo side shared no two
-            # words with the others and was LEFT OUT - the logo was quilted over as plain black): it goes in the
-            # widest stretch round that no placed view saw, centered there
-            j = next((k for k in range(len(views)) if k not in shifts and k not in rejected
-                      and views[k].get("wcol") is not None), None)
-            if j is None:
-                break
-            seen_ = np.zeros(W, bool)
-            for i, si in shifts.items():
-                seen_ |= np.roll(np.asarray(views[i]["wcol"]) > 0.05, si)
-            if seen_.all():
-                break
-            runs = gaps(seen_, least=0.0)
-            if not runs:
-                break
-            st, wd = max(runs, key=lambda r: r[1])
-            mid = (st + wd // 2) % W
-            wj = np.asarray(views[j]["wcol"], float)
-            cj = int(round(np.angle(np.sum(wj * np.exp(2j * np.pi * np.arange(W) / W))) * W / (2 * np.pi))) % W
-            shifts[j] = (mid - cj) % W
-            log(f"[fast] view {j + 1} shares no two printed words with the placed views - put in the widest stretch "
-                f"they did not see ({wd * 360 // W} degrees wide, at {mid * 360 // W} degrees)")
-            continue
+            # any view still unplaced - by no words, no print - is LEFT OUT, never put in a guessed place: a guess put
+            # the logo side over the meter side and the label showed the PowerCheck box twice (2026-10-09, 4cbbd2b)
+            break
         j, sh, n, ws = best
-        # the words agree - does the PRINT? A photo of another version of the item (2026-10-09: a later Duracell
-        # with an italic logo and a '+', sharing only 'Bethel CT 06801') lands by its words, but where it overlaps the
-        # placed views its print differs: it is left out (one item's label is made from one version's photos)
+        # the words agree - does the PRINT where the views overlap? A view whose print plainly disagrees there is
+        # left out. (Not the guard against another VERSION: a later italic-logo Duracell shares its Patented panel
+        # with the 1998 one and agreed 0.28 on the replay of the 2026-10-09 build - the Versions check before
+        # drawing is that guard.)
         rs = [r_ for r_ in (overlap_ncc(views[i], shifts[i], views[j], sh) for i in shifts) if r_ is not None]
         if rs and max(rs) < 0.1:
             rejected.add(j)
             log(f"[fast] view {j + 1} shares words ({', '.join(ws[:3])}) but not the print where it overlaps the "
-                f"placed views (agree {max(rs):.2f}) - another version of the item, left out")
+                f"placed views (agree {max(rs):.2f}) - left out")
             continue
         if not rs:
             log(f"[fast] view {j + 1}: no overlap with the placed views to check its print against")
@@ -987,7 +1166,7 @@ def label_from(front, back, along, around, tex, log, product="", words=(), year=
         if sh is None and k == 0:
             sh = 0
         if sh is None:
-            log(f"[fast] view {k + 1} shares no printed words with the placed views - left out")
+            log(f"[fast] view {k + 1} could not be placed by its words or its print - left out (never guessed)")
             continue
         cands.append((np.roll(v["l"], sh, axis=1), np.roll(v["wcol"], sh)))
     lab = cands[0][0].copy()
@@ -1310,7 +1489,7 @@ def build(cid, card, d, R):
         log(f"[fast] in its era it was sold as: {', '.join(card['era_names']) or '(unknown)'}")
     except Exception as e:
         log(f"[fast] the era's own name could not be worked out ({str(e)[:80]})")
-    refs = references(cid, card, R, log)
+    refs = unique_refs(references(cid, card, R, log))
     R.boundary(cid, "step")
     R.status(cid, step=f"2/5 one quick look at each of {len(refs)} photos: is it this item, which side")
     R.make_room("judging")
@@ -1324,15 +1503,19 @@ def build(cid, card, d, R):
         families.classify(card, good[0]["file"], V.model(), log=log)
     sp, spec = shape_spec(cid, card, d, R, log)
     along, around = skin.label_size(spec)
+    R.status(cid, step="2/5 one version only: each photo compared with the clearest one")
+    versions = Versions(cid, card, good, R, log)
+    good = versions.keep(good)
     words = photo_words(good, log)
-    words = proofread(words, [g["file"] for g in good if g.get("look", {}).get("one_item")][:4] or [g["file"] for g in good[:4]],
+    whole = [g for g in good if g.get("version", "all") == "all"]
+    words = proofread(words, [g["file"] for g in whole if g.get("look", {}).get("one_item")][:4] or [g["file"] for g in whole[:4]],
                       card, log)
     fix, last = [], None
     for rnd in range(2):
         R.boundary(cid, "step")
         R.status(cid, step=f"3/5 drawing the item from {min(len(good), 9)} photos" + (" (again: no drawing matched its photo)" if rnd else ""))
         R.make_room("drawing")
-        front, back, dn = draw(card, good, tex, along, around, R, log, fix=fix, words=words)
+        front, back, dn = draw(card, good, tex, along, around, R, log, fix=fix, words=words, same=versions.same)
         if dn["front_match"] < 6 or dn["front_words"] < 0.5:     # nothing that does not match is built or filed
             fix = [f"the drawing must match the real item and carry its real words (it scored {dn['front_match']}/10, "
                    f"{dn['front_words']:.0%} of the words)"]
@@ -1346,6 +1529,10 @@ def build(cid, card, d, R):
         if made:                                             # the artwork prints the whole label: the share the
             png = made                                       # stitched guide's views covered is no cap on it
             FILLED["share"] = 1.0                            # (09:00: realism held at 6 by the guide's 70%)
+            try:                                             # its MEASURED faults left at the end (text on text,
+                FILLED["art_defects"] = json.load(open(os.path.join(tex, "art", "defects.json"))).get("hard") or []
+            except Exception:                                # unreadable text, a line printed twice): never kept
+                FILLED["art_defects"] = []                   # with any of them, whatever the judge says
         mr = R.mr_from_bands(png, png, cover, tex, {})
         shutil.copy(png, os.path.join(d, "label.png"))
         shutil.copy(mr, os.path.join(d, "label_mr.png"))
@@ -1387,6 +1574,10 @@ def build(cid, card, d, R):
         if share < 0.75:                                     # three quarters round (the rest is the label's own plain
             sc["realism"] = min(sc["realism"], 6)            # surface, quilted - no invented print)
             v.setdefault("fix", []).append(f"only {share:.0%} of the label was drawn from real views")
+        if FILLED.get("art_defects"):                        # measured faults on the label art: not kept (the judge
+            sc["realism"] = min(sc["realism"], 7)            # passed a label with a doubled box - 2026-10-09)
+            v.setdefault("fix", []).extend(FILLED["art_defects"][:4])
+            log(f"[fast] measured faults left on the label artwork: {'; '.join(FILLED['art_defects'][:4])[:300]}")
         log(f"[fast] {share:.0%} of the label was drawn from real views")
         log(f"[fast] words on the finished label no photo carries: {bad[:8] or 'none'}")
         log(f"[fast] the judge: realism {sc['realism']}/10, era {sc['era']}/10, words {sc['words']}/10"

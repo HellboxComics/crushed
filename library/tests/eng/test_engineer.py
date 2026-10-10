@@ -486,7 +486,7 @@ check(E.run_fingerprint(run_text.replace("def finish_files(cid, d):", "def finis
       "a harmless change elsewhere in run.py is allowed")
 check(E.run_fingerprint(run_text.replace('"not_cg": "every material', '"not_cg": "maybe every material')) != fp,
       "a changed check text is caught")
-check(E.run_fingerprint(run_text.replace("verdict = inspect(shots, picked[\"file\"], product, use, card=card, close=close)",
+check(E.run_fingerprint(run_text.replace("verdict = inspect(shots, judge_photo, product, use, card=card, close=close)",
                                          "verdict = {\"pass\": True, \"failed\": []}")) != fp, "a faked verdict is caught")
 check(E.run_fingerprint(run_text + "\n\ndef build(*a):\n    pass\n") != fp, "a second build() is caught")
 check(E.locked("VET.py") and E.locked("Playbook/playbook.md") and not E.locked("factory/recipes/new.json"),

@@ -490,8 +490,15 @@ def search_listings(q, most=24, log=print):
 
 
 def listing(page, log=print):
-    """One listing's whole photo gallery: [url, ...] at eBay's largest size."""
+    """One listing's whole photo gallery: [url, ...] at eBay's largest size. (Known: every eBay photo on the page is
+    taken, so a carousel's photo of ANOTHER listing can come along - 2026-10-09 a 1981 Duracell; the build's
+    one-version check catches those. The last listing page is kept to tighten this on the page's real markup.)"""
     h, _ = _open(page, scroll=False, log=log)
+    try:
+        if h:
+            open(os.path.join(HB, "ebay-item-last.html"), "w").write(h)
+    except Exception:
+        pass
     return listing_photos(h)
 
 

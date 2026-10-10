@@ -69,9 +69,7 @@ def _json(txt):
 
 
 def _ask(model, text, images, think=True, temp=0.2):
-    # num_ctx 32768: two 1536-px pictures, the whole layout and the brain's thinking overran 16384 - Ollama cuts what
-    # does not fit (its docs: num_ctx is the whole window), and the brain answered with the old layout unchanged
-    # (2026-10-09, the Duracell's label stopped after one round with its white dots still missing)
+    # num_ctx 32768 (vet._call raises every question to 32768 anyway - one size, so Ollama never reloads the model)
     body = {"model": model, "stream": False, "format": "json", "think": think, "options": {"temperature": temp,
             "num_ctx": 32768}, "messages": [{"role": "user", "content": text, "images": [V._img(p, 1536) for p in images]}]}
     return _json(V._call("/api/chat", body, timeout=1800).get("message", {}).get("content", "{}"))
@@ -341,6 +339,47 @@ def describe_bands(shapes, axis):
             "bars, dots, logos and words.\n")
 
 
+def _norm(x):
+    return re.sub(r"[^a-z0-9]", "", str(x).lower())
+
+
+def guide_counts(real_png):
+    """Every printed line on the real label, read off it box by box (lines run left to right in the reading
+    orientation) - a line printed twice is read twice (read_lines would keep it once). [normalized line, ...] -
+    empty when there is no reader."""
+    try:
+        import measure as MS
+        from PIL import Image
+        im = Image.open(real_png).convert("RGB")
+        if max(im.size) < 2400:
+            k = 2400 / max(im.size)
+            im = im.resize((int(im.width * k), int(im.height * k)), Image.LANCZOS)
+        return [_norm(b[0]) for b in (MS.read_boxes_full(im) or []) if len(_norm(b[0])) >= 2]
+    except Exception:
+        return []
+
+
+def repeats(texts, seen_lines, close=90):
+    """Lines the layout prints more often than the real label shows them (2026-10-09: a second DURACELL logo
+    printed). Each text may appear as often as the real label's read lines show it, at least once. MEASURED from
+    the layout itself. -> [(text, times printed, times on the real label)]"""
+    from rapidfuzz import fuzz
+    n = {}
+    first = {}
+    for t in texts or []:
+        k = _norm(t.get("text"))
+        if not k:
+            continue
+        n[k] = n.get(k, 0) + 1
+        first.setdefault(k, t.get("text"))
+    out = []
+    for k, c in n.items():
+        allowed = max(1, sum(1 for l in seen_lines if fuzz.ratio(k, l) >= close))
+        if c > allowed:
+            out.append((first[k], c, allowed))
+    return out
+
+
 def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, log=print, typical=(), cover_png=None,
          marks=()):
     """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
@@ -349,6 +388,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
     os.makedirs(out_dir, exist_ok=True)
     said = ", ".join(f'"{w}"' for w in words)
     best = (-1, None, None, None, None)
+    hard = []
     tries = []                                         # each try's match and whether it changed (the review sheet)
     tip = ("A label like this normally carries: " + "; ".join(typical) + ".\n") if typical else ""
     if marks:                                             # what THIS version is known by: each must be on the label,
@@ -364,6 +404,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
     else:
         log("[texture] the label's bands could not be measured: no band covers 4% of the label where a photo saw it")
     tip = describe_bands(base, axis) + tip
+    seen_lines = guide_counts(real_png)
     lay = clean_layout(_ask(model, FIRST.format(product=product, w=w_mm, h=h_mm, words=said, typical=tip), [real_png]),
                        w_mm, h_mm, words, base)
     for r in range(1, rounds + 1):
@@ -386,7 +427,9 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
                                   "move it onto plain ground as the real label has it" if u["why"] == "crosses" else
                                   "can't be read: its color is almost the color under it - set it where the real "
                                   "label has it, in a color that stands out")
-             for u in bx.get("unreadable", [])]
+             for u in bx.get("unreadable", [])] + \
+            [f"'{t}' is printed {c} times but the real label shows it {a} time{'s' if a > 1 else ''} - keep only "
+             f"the one in its real place" for t, c, a in repeats(lay.get("texts"), seen_lines)]
         c = dict(c, judged=judged, colors=round(share, 2),
                  match=min(judged, int(round(10 * share)), 6 if ofix else 10),   # overlapping text is never "good"
                  fixes=ofix + cfix + list(c.get("fixes") or []), overlaps=len(bx.get("overlaps", [])))
@@ -396,9 +439,12 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         tries.append({"round": r, "match": c.get("match"), "judged": judged, "colors": c["colors"],
                       "fixes": c.get("fixes", []), "changed": True})
         json.dump(tries, open(os.path.join(out_dir, "rounds.json"), "w"), indent=1)
-        rank = (c.get("match") or 0, judged, share)       # equal matches (a cap at 6): the better-looking, truer-
-        if best[0] == -1 or rank > best[4]:                #   colored round wins, not simply the first
+        rank = (c.get("match") or 0, -len(ofix), judged, share)   # equal matches (a cap at 6): the round with
+        if best[0] == -1 or rank > best[4]:                #   fewer measured faults, then the better-looking,
+        #                                                    truer-colored one wins - not simply the first
             best = (c.get("match") or 0, lay, png, mr, rank)
+            hard = list(ofix)                              # the kept round's measured faults (overlaps, unreadable
+            #                                                or repeated lines): the build reads them (defects.json)
         # it stops only when nothing is left to fix (a 9 with "remove the white dot" is not done - the standard is
         # perfect), when the rounds are used up, or when a round changes nothing
         if ((c.get("match") or 0) >= 10 and not c.get("fixes")) or r == rounds:
@@ -428,5 +474,6 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         lay = new
     score, lay, _, _, _ = best
     json.dump(lay, open(os.path.join(out_dir, "layout.json"), "w"), indent=1)
+    json.dump({"score": score, "hard": hard}, open(os.path.join(out_dir, "defects.json"), "w"), indent=1)
     png, mr = labelart.render(lay, out_dir, px=4096, name="label")
     return png, mr, score

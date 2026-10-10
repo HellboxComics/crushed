@@ -249,7 +249,7 @@ def legible(ground, box, color, near=40.0):
     # a crossing is an EDGE under the words (a dot's rim, a box's side, a band's end), not a smooth change: words
     # printed on a color-gradient meter bar are fine (2026-10-09: the PowerCheck's "100%" on its green-to-white
     # bar was flagged by a deviation-from-the-middle-color test). An edge = neighbouring pixels differing by more
-    # than `near`; it counts when its run is at least a quarter of the letters' height.
+    # than `near`; the box crosses something when its edge pixels add up to a quarter of the letters' height.
     ex = np.abs(np.diff(g, axis=1)).max(-1) > near
     ey = np.abs(np.diff(g, axis=0)).max(-1) > near
     edge = int(ex.sum() + ey.sum())

@@ -196,9 +196,35 @@ def stall_ask(model, text, images, think=True, temp=0.2):
         return lay2
     return json.loads(json.dumps(first))
 LAY._ask = stall_ask
-LAY.make("Duracell AA", real, words, 50.0, 46.0, tempfile.mkdtemp(), rounds=3, log=lambda *a: None)
-check(any(t == 0.6 for _, t in calls) and sum(1 for c in calls if "Answer ONLY JSON:" in c[0] or True) > 3,
-      f"an unchanged layout with fixes listed is asked again ({[t for _, t in calls]})")
+_sd = tempfile.mkdtemp()
+LAY.make("Duracell AA", real, words, 50.0, 46.0, _sd, rounds=3, log=lambda *a: None)
+_r2 = json.load(open(os.path.join(_sd, "round2.json")))
+check(any(t == 0.6 for _, t in calls) and any(sh.get("type") == "ellipse" and sh.get("fill") == "#ffffff" for sh in _r2["shapes"]),
+      f"an unchanged layout with fixes listed is asked again, and the new answer is drawn ({[t for _, t in calls]})")
+check(os.path.exists(os.path.join(_sd, "defects.json")) and "hard" in json.load(open(os.path.join(_sd, "defects.json"))),
+      "the kept round's measured faults are written for the build (defects.json)")
+LAY._ask = _orig_ask
+
+# at the same capped score, the round with fewer measured faults is kept (not the one that merely looked better)
+_over = json.loads(json.dumps(first)); _over["texts"] = [{"text": "DURACELL", "x": 0.3, "y": 0.4, "h": 0.2, "w": 0.4, "color": "#ffffff"},
+                                                       {"text": "JAN 2001", "x": 0.32, "y": 0.42, "h": 0.15, "color": "#ffffff"}]
+_clean = json.loads(json.dumps(first)); _clean["texts"] = [{"text": "DURACELL", "x": 0.3, "y": 0.4, "h": 0.2, "w": 0.4, "color": "#ffffff"},
+                                                         {"text": "JAN 2001", "x": 0.5, "y": 0.1, "h": 0.06, "color": "#ffffff"}]
+_seq = {"n": 0}
+def rank_ask(model, text, images, think=True, temp=0.2):
+    if text.startswith("Picture 1 is the real printed label"):
+        return json.loads(json.dumps(_over))
+    if "Answer ONLY JSON:" in text and '"match"' in text:
+        _seq["n"] += 1
+        return {"match": 9 if _seq["n"] == 1 else 6, "fixes": ["x"]}
+    return json.loads(json.dumps(_clean))
+LAY._ask = rank_ask
+_rd = tempfile.mkdtemp()
+LAY.make("Duracell AA", real, words, 50.0, 46.0, _rd, rounds=2, log=lambda *a: None)
+_kept = json.load(open(os.path.join(_rd, "layout.json")))
+_d = json.load(open(os.path.join(_rd, "defects.json")))
+check(any(t["text"] == "JAN 2001" and abs(t["y"] - 0.1) < 0.01 for t in _kept["texts"]) and not _d["hard"],
+      f"same capped score: the round without text on text is kept (faults: {_d['hard']})")
 LAY._ask = _orig_ask
 
 print(f"\n{ok} checks passed")
