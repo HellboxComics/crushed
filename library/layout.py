@@ -41,7 +41,8 @@ across plainly and put there only those confirmed words that belong there.
 AGAIN = """Picture 1 is your rebuilt label, drawn from your layout below. Picture 2 is the real label.
 Your layout: {layout}
 A careful comparison found these differences to fix: {fixes}
-Fix them and every other difference: positions, sizes, colors, missing or extra elements. Shapes marked "base"
+Fix them and every other difference: positions, sizes, colors, missing or extra elements - move, resize or recolor
+a shape that is off; never paste a patch over part of a shape to hide it. Shapes marked "base"
 are the label's measured background bands: keep them exactly as they are. Words: only these,
 spelled exactly: {words} (a fix asking for a word that is not in this list can't be made - leave that word out).
 Answer ONLY the corrected JSON (the whole layout)."""
@@ -50,7 +51,8 @@ STRICT = """Picture 1 is your rebuilt label, drawn from your layout below. Pictu
 Your layout: {layout}
 You sent this layout back unchanged, but these differences are still there. Make EVERY numbered change below in the
 layout - add, move, resize or recolor the shapes and words it names (a "small mark ... white on the real label" is a
-white dot or mark to add there; an area "brown on the real label" is a brown panel to add there):
+white dot or mark to add there; an area "brown on the real label" is a brown panel to add there - unless the change
+names one of your shapes there: then change that shape, never paste a patch over it):
 {todo}
 Shapes marked "base" stay exactly as they are. Words: only these, spelled exactly: {words}.
 Answer ONLY the corrected JSON (the whole layout) - it must differ from the one above."""
@@ -445,6 +447,39 @@ def off_text(fixes, placed, pad=0.01, most=0.5):
     return out
 
 
+KIND = {"rect": "panel", "ellipse": "dot", "bar": "bar", "arrow": "arrow"}
+
+
+def on_shape(fixes, lay):
+    """A measured mark that lies on one of YOUR shapes is that shape's edge out of place, not a missing patch: told
+    "a small mark ... is black on the real label but gray in yours" over the meter's bar, the writer pasted a black
+    box over half the bar (2026-10-10 16:50 build). Such a fix now names the shape under it and asks for that shape
+    to be moved, resized or recolored - never covered."""
+    shapes = [s_ for s_ in (lay or {}).get("shapes", []) if not s_.get("base") and not s_.get("lip")]
+    out = []
+    for f in fixes or []:
+        m = _MARK.search(str(f))
+        if not m:
+            out.append(f)
+            continue
+        cx, cy, mw, mh = (float(m.group(i)) for i in (1, 2, 3, 4))
+        mb = (cx - mw / 2, cy - mh / 2, cx + mw / 2, cy + mh / 2)
+        edge = 0.02                                       # a mark well inside a panel is a mark missing ON it - only
+        under = [s_ for s_ in shapes if s_.get("x", 0) <= cx <= s_.get("x", 0) + s_.get("w", 0)   # one at or over
+                 and s_.get("y", 0) <= cy <= s_.get("y", 0) + s_.get("h", 0)                     # its edge is the
+                 and not (mb[0] > s_["x"] + edge and mb[2] < s_["x"] + s_["w"] - edge             # edge out of place
+                          and mb[1] > s_["y"] + edge and mb[3] < s_["y"] + s_["h"] - edge)]
+        if not under:
+            out.append(f)
+            continue
+        s_ = under[-1]                                    # the one drawn on top
+        kind = KIND.get(s_.get("type", "rect"), "shape")
+        out.append(f"{f} - that spot is on your {kind} at x {s_['x']:.2f}-{s_['x'] + s_['w']:.2f}, y {s_['y']:.2f}-"
+                   f"{s_['y'] + s_['h']:.2f}: move, resize or recolor that {kind} so it matches the real one there "
+                   f"(never paste a patch over part of it)")
+    return out
+
+
 def diff_sheet(png, real_png, fixes, out, most=4, pad=0.05, row_h=260):
     """The measured differences shown close up, numbered in the order of the fixes that name a place: in each row
     the drawn label's part on the left, the real label's same part on the right. A fix given only as numbers ("a
@@ -531,7 +566,7 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         judged = c.get("match") or 0
         # exact: no two lines printed on top of each other, none past the edge (measured from where each landed)
         bx = _boxes(out_dir, f"round{r}")
-        cfix = off_text(cfix, bx.get("texts"))
+        cfix = on_shape(off_text(cfix, bx.get("texts")), lay)
         _mk = [f for f in cfix if _MARK.search(str(f))]
         cfix = [f for f in cfix if not _MARK.search(str(f))] + _mk[:8]
         ofix = [f"'{o['a']}' is printed on top of '{o['b']}' ({o['share']:.0%} of the smaller) - move or shrink one"

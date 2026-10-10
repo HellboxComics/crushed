@@ -287,4 +287,13 @@ _im.save(_rc); Image.new("RGB", (600, 300), (198, 129, 46)).save(_dc)
 _s, _f = LAY.color_check(_dc, _rc, most_marks=40)
 check(any("white on the real label but copper in yours" in f for f in _f), f"the missing cream dot on copper is flagged, as white ({_f})")
 
+# a measured mark over the edge of one of YOUR shapes names that shape (move / resize it); a mark well inside a panel
+# stays a mark to add (2026-10-10: told "black on the real label" over the meter bar, the writer pasted a black box)
+_ly = {"shapes": [{"type": "bar", "x": 0.38, "y": 0.42, "w": 0.5, "h": 0.05},
+                  {"type": "rect", "x": 0.3, "y": 0.1, "w": 0.6, "h": 0.3, "fill": "#222222"}]}
+_os = LAY.on_shape(["a small mark at x 0.61, y 0.47 (about 0.22 wide, 0.07 tall) is black on the real label but gray in yours",
+                    "a small mark at x 0.60, y 0.25 (about 0.05 wide, 0.07 tall) is white on the real label but black in yours"], _ly)
+check("that spot is on your bar" in _os[0] and "never paste a patch" in _os[0] and "your" not in _os[1].split("yours")[1],
+      f"a mark over the bar's edge names the bar; a dot inside a panel stays a dot to add ({_os})")
+
 print(f"\n{ok} checks passed")

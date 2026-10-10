@@ -540,23 +540,46 @@ PROOF_Q = (
     "a line the scanner did not read. Answer ONLY JSON: {{\"lines\": [\"...\", ...]}}")
 
 
-def proofread(words, photos, card, log):
+def proofread(words, photos, card, log, cache=None):
     """The scanner's lines spelled as printed, by the vision brain that reads like a person (it knows the item) -
     each answer must be one of the scanner's own lines put right (70% alike or more), so nothing is added that
     the photos were not read to carry. 2026-10-08 20:40 (Cody): "The fuck is a duragel? ... a label for a battery
-    in the 90s, fucking simple" - the scanner's misreadings were set as type. -> [lines] (the scanner's if it fails)."""
+    in the 90s, fucking simple" - the scanner's misreadings were set as type. -> [lines].
+    The answer is KEPT (cache) for the same lines and photos: a restart never asks again and never gets a worse
+    answer. When the brain can't answer (asked twice, the second time without its slow thinking) the build STOPS
+    and is tried again later - the scanner's misreadings are never used instead (2026-10-10 14:45: the proofread
+    timed out, "TOTEST", "Test al", "DURAGEL®" went to the label writer, and the drawings were redone with them)."""
+    import hashlib
     import vet as V
     from rapidfuzz import fuzz
     norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
     if not words or not photos:
         return list(words)
-    try:
-        v = V.ask(V.model(), PROOF_Q.format(product=display(card), year=card.get("year") or "its era",
-                                            lines=json.dumps(list(words), ensure_ascii=False)),
-                  list(photos)[:4], think=True) or {}
-    except Exception as e:
-        log(f"[fast] the proofread did not run ({str(e)[:80]}) - the scanner's lines are used")
-        return list(words)
+    photos = list(photos)[:4]
+    md5 = lambda f: hashlib.md5(open(f, "rb").read()).hexdigest() if os.path.exists(f) else str(f)
+    key = hashlib.md5(json.dumps([list(words), [md5(f) for f in photos], display(card)], ensure_ascii=False)
+                      .encode()).hexdigest()[:16]
+    if cache:
+        try:
+            st = json.load(open(cache))
+            if st.get("key") == key and st.get("lines"):
+                log(f"[fast] the printed lines, proofread on an earlier run (same lines, same photos): {st['lines']}")
+                return list(st["lines"])
+        except Exception:
+            pass
+    q = PROOF_Q.format(product=display(card), year=card.get("year") or "its era",
+                       lines=json.dumps(list(words), ensure_ascii=False))
+    v, why = None, ""
+    for think in (True, False):
+        try:
+            v = V.ask(V.model(), q, photos, think=think) or {}
+            break
+        except Exception as e:
+            why = str(e)[:80]
+            log(f"[fast] the proofread did not run ({why})" + (" - asked again, without the slow thinking" if think else ""))
+    if v is None:
+        raise RuntimeError(f"the printed words could not be proofread (the vision brain did not answer twice: {why}) - "
+                           "the scanner's misreadings are never set as type; tried again later")
     out = []
     for l in v.get("lines") or []:
         l = str(l).strip()
@@ -564,9 +587,14 @@ def proofread(words, photos, card, log):
                 and l not in out:
             out.append(l)
     if len(out) < max(2, len(words) // 3):
-        log(f"[fast] the proofread gave too few lines ({out}) - the scanner's lines are used")
-        return list(words)
+        raise RuntimeError(f"the proofread gave too few of the printed lines ({out}) - the scanner's misreadings are "
+                           "never set as type; tried again later")
     log(f"[fast] the printed lines, proofread by the vision brain: {out}")
+    if cache:
+        try:
+            json.dump({"key": key, "lines": out, "scanner": list(words)}, open(cache, "w"), indent=1, ensure_ascii=False)
+        except Exception:
+            pass
     return out
 
 
@@ -1419,8 +1447,9 @@ Answer ONLY JSON: {{"marks": [{{"end": "A" or "B", "shape": "dot" or "ring" or "
 
 RIMS_CLOSE_Q = """Picture 1 shows close-ups of END A of {product} - {a} - cut from real photos of this one version.
 Picture 2 shows close-ups of END B - {b}. Picture 3 is one whole photo, for where things are.
-In every close-up the printed label covers the side and rolls over the rim at the end: the curved edge where the
-side turns into the end. Look closely at the rims.
+In the close-ups the item is cut out onto plain gray: everything that is not that gray is the item. The printed label
+covers the side and rolls over the rim at the end: the curved edge where the side turns into the end. Look closely at
+the rims, right at the item's outline.
 Is anything printed ON a rim - a dot, a ring, a band or another mark, in a color that is not the plain label color
 there? Print has a crisp edge and a flat, even color; glare and shine are soft streaks or spots that change from photo
 to photo. A mark on the flat side, even close to the end, is NOT on the rim. The bare metal end, its cap or button are
@@ -1434,9 +1463,10 @@ Answer ONLY JSON: {{"marks": [{{"end": "A" or "B", "shape": "dot" or "ring" or "
  "photos": in how many of the close-ups you can see it}}]}}"""
 
 
-def rim_closeups(photos, col_a, col_b, out_dir, mask_of=None, most=6):
-    """Close-ups of the item's two ENDS cut from the real photos, one sheet per end -> (sheet A, sheet B, how many)
-    or None. A vision model asked about the whole photos said "no print on the rims" twice while the PowerCheck's
+def rim_closeups(photos, col_a, col_b, out_dir, mask_of=None, most=6, expect=None):
+    """Close-ups of the item's two ENDS cut from the real photos, one sheet per end -> (sheet A, sheet B, how many,
+    {end: [spots]}) or None. The spots are MEASURED candidates for rim print (rim_spots), each with its close-up,
+    its place in it, its color and its size across the item. A vision model asked about the whole photos said "no print on the rims" twice while the PowerCheck's
     minus-end dot was plain in them (2026-10-10 13:40): small details are missed at full-photo scale and found when
     the model is shown the region cropped and enlarged (Zhang et al. 2023/2025, "Visual cropping improves zero-shot
     question answering of multimodal LLMs" / "MLLMs know where to look"). Which end is which is MEASURED: the label's
@@ -1452,13 +1482,18 @@ def rim_closeups(photos, col_a, col_b, out_dir, mask_of=None, most=6):
     if np.linalg.norm(ca - cb) < 80:                         # both ends one color: which is which can't be measured
         return None
     shots = {"A": [], "B": []}
+    spots = {}
     for f in photos:
         try:
             im = Image.open(f).convert("RGB")
-            m = np.asarray(Image.open(mask_of(f)).convert("L").resize(im.size)) > 127
+            soft = np.asarray(Image.open(mask_of(f)).convert("L").resize(im.size)).astype(float) / 255.0
+            m = soft > 0.5
         except Exception:
             continue
         a = np.asarray(im).astype(float)
+        # the item cut out onto plain gray: a white dot on the rim sits on the item's outline, and against the
+        # photo's white backdrop it read as backdrop or glare (2026-10-10 17:00: "no print on the rims" again)
+        cut = Image.fromarray((a * soft[..., None] + np.array([96.0, 96.0, 100.0]) * (1 - soft[..., None])).astype(np.uint8))
         lab, n = ndimage.label(m)
         if not n:
             continue
@@ -1494,10 +1529,22 @@ def rim_closeups(photos, col_a, col_b, out_dir, mask_of=None, most=6):
         box = lambda r: ((max(r[0], 0), max(y0 - pad, 0), min(r[1], im.width), min(y1 + pad, im.height)) if axis == "x"
                          else (max(x0 - pad, 0), max(r[0], 0), min(x1 + pad, im.width), min(r[1], im.height)))
         ends = (("A", first), ("B", last)) if keep < 0 else (("A", last), ("B", first))
+        dpx = (L / expect) if expect else None                # the item's width in this photo, in pixels
         for e, r in ends:
-            c = im.crop(box(r))
+            bx = box(r)
+            c = cut.crop(bx)
             s = 640 / max(c.size)
-            shots[e].append(c.resize((max(1, int(c.width * s)), max(1, int(c.height * s))), Image.LANCZOS))
+            c = c.resize((max(1, int(c.width * s)), max(1, int(c.height * s))), Image.LANCZOS)
+            at_first = (r is first)
+            try:
+                sp = rim_spots(a, lab == k, axis, L, (y0, y1, x0, x1), at_first, bx, dpx)
+            except Exception:
+                sp = []
+            for q in sp:                                     # into the close-up's own pixels
+                q["box"] = [(q["box"][0] - bx[0]) * s, (q["box"][1] - bx[1]) * s, (q["box"][2] - bx[0]) * s,
+                            (q["box"][3] - bx[1]) * s]
+            shots[e].append(c)
+            spots.setdefault(e, []).append((c, sp))
     if not shots["A"] or not shots["B"]:
         return None
     os.makedirs(out_dir, exist_ok=True)
@@ -1506,13 +1553,113 @@ def rim_closeups(photos, col_a, col_b, out_dir, mask_of=None, most=6):
         cells = shots[e][:most]
         cols = 3 if len(cells) > 4 else 2 if len(cells) > 1 else 1
         rows = (len(cells) + cols - 1) // cols
-        sheet = Image.new("RGB", (cols * 660, rows * 660), (255, 255, 255))
+        sheet = Image.new("RGB", (cols * 660, rows * 660), (96, 96, 100))
         for i, c in enumerate(cells):
             sheet.paste(c, ((i % cols) * 660 + (660 - c.width) // 2, (i // cols) * 660 + (660 - c.height) // 2))
         p = os.path.join(out_dir, f"rims_end_{e}.jpg")
         sheet.save(p, quality=92)
         outs.append(p)
-    return outs[0], outs[1], min(len(shots["A"]), len(shots["B"]))
+    return outs[0], outs[1], min(len(shots["A"]), len(shots["B"])), spots
+
+
+def rim_spots(a, mk, axis, L, bbox, at_first, crop, dpx=None, most=4):
+    """Measured candidates for print on one rim, in one photo: blobs inside the item's outline, within 5% of its
+    length from that end (per scan line, so a rounded end is followed), whose color is far from the label's own color
+    just inside that end (a white dot on black). Not a candidate: a rim's shadow (darker than a light band), or a blob
+    that runs on along the side (glare streaks and side print lie mostly outside the rim zone). -> [{box (image px),
+    color, size (across the item, as a share of its width)}], biggest first. Proposed here, judged by the vision
+    model with each spot circled and numbered (set-of-mark prompting, Yang et al. 2023)."""
+    from scipy import ndimage
+    y0, y1, x0, x1 = bbox
+    A = a if axis == "x" else np.transpose(a, (1, 0, 2))
+    M = mk if axis == "x" else mk.T
+    if axis == "y":
+        y0, y1, x0, x1 = x0, x1, y0, y1
+        crop = (crop[1], crop[0], crop[3], crop[2])
+    rimw = max(3, int(0.05 * L))
+    zone = np.zeros_like(M)
+    for y in range(y0, y1):
+        row = np.where(M[y])[0]
+        if len(row):
+            e = row.min() if at_first else row.max()
+            if at_first:
+                zone[y, e:e + rimw] = True
+            else:
+                zone[y, max(e - rimw + 1, 0):e + 1] = True
+    sl = slice(int(x0 + 0.10 * L), int(x0 + 0.25 * L)) if at_first else slice(int(x1 - 0.25 * L), int(x1 - 0.10 * L))
+    inner = A[y0:y1, sl][M[y0:y1, sl]]
+    if len(inner) < 50:
+        return []
+    band = np.median(inner, 0)
+    lum = lambda c: float(np.dot(c, [0.299, 0.587, 0.114]))
+    far = (np.linalg.norm(A - band, axis=-1) > 110) & M
+    region = np.zeros_like(M)
+    region[crop[1]:crop[3], crop[0]:crop[2]] = True
+    lb, n = ndimage.label(far & region, structure=np.ones((3, 3)))
+    out = []
+    for j in range(1, n + 1):
+        b = lb == j
+        area = int(b.sum())
+        if area < (0.3 * rimw) ** 2 or (b & zone).sum() < 0.7 * area:
+            continue
+        px = A[b]
+        dist = np.linalg.norm(px - band, axis=-1)
+        c = px[dist >= np.percentile(dist, 75)].mean(0)      # its truest ink: the quarter farthest from the band (a
+        #                                                      rim faces away from the light - its white reads gray)
+        if lum(band) > 80 and lum(c) < 0.7 * lum(band):     # the rim's own shadow on a light band
+            continue
+        if lum(band) <= 80 and lum(c) < lum(band) + 60:      # on a dark band only something lighter can be a mark
+            continue
+        ys, xs = np.where(b)
+        bx = [int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1]
+        across = (ys.max() - ys.min() + 1) / dpx if dpx else None
+        if axis == "y":
+            bx = [bx[1], bx[0], bx[3], bx[2]]
+        out.append({"box": bx, "color": [float(v) for v in c], "size": across, "area": area})
+    return sorted(out, key=lambda q: -q["area"])[:most]
+
+
+def rim_spot_sheet(spots_e, out):
+    """The close-ups of one end that have candidate spots, each spot circled in red and numbered -> (sheet, [spot
+    per number]) or (None, [])."""
+    from PIL import Image, ImageDraw
+    import labelart
+    big = labelart.font("bold", 34)
+    cells, numbered = [], []
+    for c, sp in spots_e:
+        if not sp:
+            continue
+        c = c.copy()
+        d = ImageDraw.Draw(c)
+        for q in sp:
+            numbered.append(q)
+            x0, y0, x1, y1 = q["box"]
+            r = max(x1 - x0, y1 - y0) / 2 + 10
+            cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=(230, 20, 20), width=4)
+            d.text((min(cx + r + 4, c.width - 44), max(min(cy - r - 4, c.height - 44), 2)), str(len(numbered)),
+                   fill=(255, 40, 40), font=big)              # the number inside the picture, by its circle
+        cells.append(c)
+    if not cells:
+        return None, []
+    cols = 3 if len(cells) > 4 else 2 if len(cells) > 1 else 1
+    rows = (len(cells) + cols - 1) // cols
+    sheet = Image.new("RGB", (cols * 660, rows * 660), (96, 96, 100))
+    for i, c in enumerate(cells):
+        sheet.paste(c, ((i % cols) * 660 + (660 - c.width) // 2, (i // cols) * 660 + (660 - c.height) // 2))
+    sheet.save(out, quality=92)
+    return out, numbered
+
+
+RIMS_SPOT_Q = """Picture 1 shows close-ups of END {end} of {product} - {say} - cut out onto plain gray, from real photos
+of this one version. Each red circle with a number marks a spot at the very end of the item, where its printed label
+rolls over the rim. For each number: is that spot PRINT on the label (an even-colored printed dot or patch with a
+clean edge), or something else - glare or a reflection, the bare metal end or its button, a shadow, a finger, dirt or
+background? Picture 2 is one whole photo, for where things are.
+Answer ONLY JSON: {{"printed": [the numbers that are printed marks - an empty list if none is],
+ "shape": "dot" or "ring" or "band" or "mark" (what the printed marks are),
+ "beside": the line printed on the side that the printed mark lines up with along the item (at the same place round
+           the item) - exactly one of: {lines} - or "none"}}"""
 
 
 def lips(spec, along):
@@ -1676,11 +1823,34 @@ def rim_shapes(marks, lay, lip_lr, along, around, log):
     return out
 
 
+def _reads(q, pics, ask, cached, save, parse, same, log, what):
+    """Up to three reads of one question (the same pictures; the 2nd and 3rd warmer), stopping when the first two
+    agree. Raw answers are kept (save) so a restart asks nothing again. -> [parsed read]."""
+    raws = list(cached)
+    reads = [parse(r) for r in raws]
+    for k in range(len(raws), 3):
+        if len(reads) >= 2 and same(reads[0], reads[1]):
+            break
+        try:
+            raw = ask(q, pics, 0.2 if k == 0 else 0.6)
+        except Exception as e:
+            log(f"[fast] {what} could not be read ({str(e)[:80]})")
+            continue
+        raws.append(raw)
+        reads.append(parse(raw))
+        save(raws)
+    return reads
+
+
 def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, model=None, ask=None, out_dir=None,
               mask_of=None):
-    """-> layout shapes for the print on the label's rolled rims (an empty list when none is agreed). The model is
-    shown close-ups of each end cut from the photos (rim_closeups) when the two ends can be told apart, else the
-    whole photos."""
+    """-> layout shapes for the print on the label's rolled rims (an empty list when none is agreed).
+    1. The open question, on close-ups of each end cut from the photos (rim_closeups) when the two ends can be told
+       apart, else on the whole photos.
+    2. When two reads agree on nothing there, the MEASURED candidate spots on each rim (rim_spots) are circled and
+       numbered and each is judged: print, or glare / metal / shadow (set-of-mark prompting). The color and size of
+       a spot two reads call print are measured from the photos; where it sits round the item is the printed line
+       it lines up with (two reads must agree)."""
     import hashlib
     import tempfile
     import labelart
@@ -1702,53 +1872,96 @@ def rim_marks(product, photos, lay, lip_lr, along, around, log, cache=None, mode
         (f" - the side print nearest it is {n}" if n else "")
     fill = dict(product=product, a=say(ca, na, cb), b=say(cb, nb, ca), colors=", ".join(LAY.NAMED),
                 lines=", ".join(f'"{t["text"]}"' for t in lay.get("texts", [])))
+    out_dir = out_dir or tempfile.mkdtemp()
     close = None
     if ra is not None and rb is not None:
         try:
-            close = rim_closeups(photos, ra, rb, out_dir or tempfile.mkdtemp(), mask_of=mask_of)
+            close = rim_closeups(photos, ra, rb, out_dir, mask_of=mask_of, expect=along / (around / math.pi))
         except Exception as e:
             log(f"[fast] close-ups of the ends could not be cut ({str(e)[:80]})")
     if close:
         q = RIMS_CLOSE_Q.format(**fill)
-        orders = [[close[0], close[1], photos[0]]] * 3
+        pics = [close[0], close[1], photos[0]]
         log(f"[fast] the rims: close-ups of both ends from {close[2]} photo(s)")
     else:
         q = RIMS_Q.format(**fill)
-        orders = [list(photos), list(photos)[::-1], list(photos)[1:] + list(photos)[:1]]
+        pics = list(photos)
     md5 = lambda f: hashlib.md5(open(f, "rb").read()).hexdigest()
-    key = hashlib.md5((q + "|".join(md5(f) for f in orders[0])).encode()).hexdigest()[:16]
+    key = hashlib.md5((q + "|".join(md5(f) for f in pics)).encode()).hexdigest()[:16]
     store = {}
     if cache:
         try:
             store = json.load(open(cache))
         except Exception:
             store = {}
-    raws = store.get("reads", []) if store.get("key") == key else []
-    ask = ask or (lambda text, pics, temp: LAY._ask(model or __import__("vet").model(), text, pics, temp=temp))
-    reads = [_rim_marks_of(r, lay) for r in raws]
-    for k in range(len(raws), 3):
-        if len(reads) >= 2 and _same_sets(reads[0], reads[1]):
-            break
-        try:
-            raw = ask(q, orders[k], 0.2 if k == 0 else 0.6)
-        except Exception as e:
-            log(f"[fast] the rims could not be read ({str(e)[:80]})")
-            continue
-        raws.append(raw)
-        reads.append(_rim_marks_of(raw, lay))
+    if store.get("key") != key:
+        store = {"key": key}
+
+    def keep(**kv):
+        store.update(kv)
         if cache:
             try:
-                json.dump({"key": key, "reads": raws}, open(cache, "w"), indent=1)
+                json.dump(store, open(cache, "w"), indent=1)
             except Exception:
                 pass
-    if len(reads) < 2:
-        log("[fast] the rims were not read twice - nothing drawn on them (never guessed)")
+    ask = ask or (lambda text, ims, temp: LAY._ask(model or __import__("vet").model(), text, ims, temp=temp))
+    reads = _reads(q, pics, ask, store.get("reads", []), lambda r: keep(reads=r), lambda r: _rim_marks_of(r, lay),
+                   _same_sets, log, "the rims")
+    agreed = _agreed(reads) if len(reads) >= 2 else []
+    if agreed:
+        return rim_shapes(agreed, lay, lip_lr, along, around, log)
+    log(f"[fast] print on the rolled rims: none that two reads agree on ({len(reads)} reads)"
+        + (" - the measured spots on the rims are judged next" if close and any(sp for e in close[3].values()
+                                                                               for _, sp in e) else ""))
+    if not close:
         return []
-    agreed = _agreed(reads)
-    if not agreed:
-        log(f"[fast] print on the rolled rims: none that two reads agree on ({len(reads)} reads)")
-        return []
-    return rim_shapes(agreed, lay, lip_lr, along, around, log)
+    marks = []
+    for e, says in (("A", fill["a"]), ("B", fill["b"])):
+        sheet, numbered = rim_spot_sheet(close[3].get(e, []), os.path.join(out_dir, f"rims_spots_{e}.jpg"))
+        if not sheet:
+            continue
+        qs = RIMS_SPOT_Q.format(end=e, product=product, say=says, lines=fill["lines"])
+        ks = hashlib.md5((qs + md5(sheet)).encode()).hexdigest()[:16]
+        old = (store.get("spots") or {}).get(e) or {}
+        parse = lambda r: {"printed": sorted({int(x) for x in (r or {}).get("printed") or []
+                                              if str(x).isdigit() and 1 <= int(x) <= len(numbered)}),
+                           "shape": str((r or {}).get("shape") or "dot").lower(),
+                           "y": _row_of((r or {}).get("beside"), lay), "beside": (r or {}).get("beside")}
+        sreads = _reads(qs, [sheet, photos[0]], ask, old.get("reads", []) if old.get("key") == ks else [],
+                        lambda r, e=e, ks=ks: keep(spots=dict(store.get("spots") or {}, **{e: {"key": ks, "reads": r}})),
+                        parse, lambda a, b: a["printed"] == b["printed"], log, f"the spots on end {e}'s rim")
+        if len(sreads) < 2:
+            continue
+        votes = {}
+        for r in sreads:
+            for i in r["printed"]:
+                votes[i] = votes.get(i, 0) + 1
+        yes = [i for i, v in votes.items() if v >= 2]
+        if not yes:
+            log(f"[fast] end {e}'s rim: the {len(numbered)} measured spot(s) are not print (glare, metal or shadow)")
+            continue
+        ys = [r["y"] for r in sreads if r["printed"] and r["y"] is not None]
+        y = None
+        for cand in ys:                                      # two reads must put it at the same place round
+            if sum(1 for o in ys if _circ(o, cand) <= 0.12) >= 2:
+                y = float(np.median([o for o in ys if _circ(o, cand) <= 0.12]))
+                break
+        if y is None:
+            log(f"[fast] end {e}'s rim has print (spots {yes}), but two reads did not agree where it lines up - not placed")
+            continue
+        shapes = [r["shape"] for r in sreads if r["printed"]]
+        shape = max(set(shapes), key=shapes.count) if shapes else "dot"
+        col = np.mean([numbered[i - 1]["color"] for i in yes], axis=0)
+        col = LAY.neutral("#%02x%02x%02x" % tuple(int(round(v)) for v in col))
+        if LAY._family(labelart.rgb(col)) == "light":
+            col = "#f0f0f0"                                 # white ink, as the color check names it
+        sizes = [numbered[i - 1]["size"] for i in yes if numbered[i - 1].get("size")]
+        size = min(max(min(sizes), 0.1), 0.5) if sizes else 0.3   # the most head-on view gives its true width
+        marks.append({"end": e, "shape": shape if shape in ("dot", "ring", "band", "mark") else "dot", "color": col,
+                      "size": size, "y": y, "beside": next((r["beside"] for r in sreads if r["printed"]), None)})
+        log(f"[fast] end {e}'s rim: spots {yes} of {len(numbered)} are print (two reads agree) - measured "
+            f"{LAY._say(labelart.rgb(col))}, {size:.2f} of the item's width")
+    return rim_shapes(marks, lay, lip_lr, along, around, log) if marks else []
 
 
 def gaps(seen_cols, least=0.03):
@@ -1936,7 +2149,7 @@ def build(cid, card, d, R):
     words = photo_words(good, log)
     whole = [g for g in good if g.get("version", "all") == "all"]
     words = proofread(words, [g["file"] for g in whole if g.get("look", {}).get("one_item")][:4] or [g["file"] for g in whole[:4]],
-                      card, log)
+                      card, log, cache=os.path.join(R.WORK, "hunt", cid, "proofread.json"))
     fix, last = [], None
     for rnd in range(2):
         R.boundary(cid, "step")

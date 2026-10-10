@@ -153,6 +153,8 @@ def _ask(use, q, imgs, think=False, side=1280):
         return looks[os.path.basename(imgs[0])]
     if '"realism"' in q:
         return next(judged)
+    if "Scanner lines:" in q:                            # the proofread: the lines as printed
+        return {"lines": json.loads(q.split("Scanner lines: ", 1)[1].split(". Look at", 1)[0])}
     return {"match": PICK["m"]}
 V.ask = _ask
 fast.photo_words = lambda good, log, most=8: sum(SIDES.values(), [])   # both sides' words agreed by two photos
@@ -347,6 +349,28 @@ check(1 not in fast.place_by_words([vS_soft, vT_soft], 2048, lambda *a: None), "
 V.ask = lambda use, q, imgs, think=False, side=1280: {"lines": ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST", "Made in Atlantis"]}
 pr = fast.proofread(["DURAGEL", "BEST IF INSTALLED RY:", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
 check(pr == ["DURACELL", "BEST IF INSTALLED BY:", "TO TEST"], f"misreadings put right, nothing added ({pr})")
+_pc = os.path.join(W, "proof_cache.json")
+_pa = []
+V.ask = lambda use, q, imgs, think=False, side=1280: (_pa.append(think), {"lines": ["DURACELL", "TO TEST"]})[1]
+fast.proofread(["DURAGEL", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None, cache=_pc)
+_pa.clear()
+_pr2 = fast.proofread(["DURAGEL", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None, cache=_pc)
+check(_pr2 == ["DURACELL", "TO TEST"] and not _pa, "the proofread is kept: the same lines and photos are never asked again")
+def _slow(use, q, imgs, think=False, side=1280):
+    _pa.append(think)
+    if think:
+        raise TimeoutError("timed out")
+    return {"lines": ["DURACELL", "TO TEST"]}
+V.ask = _slow; _pa.clear()
+_pr3 = fast.proofread(["DURAGEL", "TOTEST", "X"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
+check(_pr3 == ["DURACELL", "TO TEST"] and _pa == [True, False], "a timed-out proofread is asked again without the slow thinking")
+V.ask = lambda use, q, imgs, think=False, side=1280: (_ for _ in ()).throw(TimeoutError("timed out"))
+try:
+    fast.proofread(["DURAGEL", "TOTEST"], ["a.jpg"], {"product": "Duracell AA", "year": 1998}, lambda *a: None)
+    _stopped = False
+except RuntimeError as e:
+    _stopped = "never set as type" in str(e)
+check(_stopped, "no answer twice: the build stops - the scanner's misreadings are never used")
 # the label made flat from the start: the stitched label is only the guide, the artwork is drawn and turned back
 import layout as LAYM
 art_dir = os.path.join(W, "artt"); os.makedirs(art_dir, exist_ok=True)
@@ -605,5 +629,28 @@ _gc = fast.rim_marks("Duracell AA", [_bp], _lay, _lp, _al, _ar, lambda *a: None,
                      mask_of=lambda f: _bm)
 check(_gc and _seenp and _seenp[0][0].startswith("Picture 1 shows close-ups of END A") and len(_seenp[0][1]) == 3
       and _seenp[0][1][0].endswith("rims_end_A.jpg"), "the rims are asked about on the close-ups, then a whole photo")
+
+# the open question finds nothing: the MEASURED spots on each rim are circled, numbered and judged one by one
+_cd3 = tempfile.mkdtemp()
+_bp3 = os.path.join(_cd3, "bat3.jpg"); _bm3 = os.path.join(_cd3, "bat3_mask.png")
+_b3 = Image.new("RGB", (900, 400), (255, 255, 255)); _d3 = _IDr.Draw(_b3)
+_d3.rectangle((100, 150, 330, 250), fill=(200, 130, 50)); _d3.rectangle((330, 150, 800, 250), fill=(18, 18, 18))
+_d3.ellipse((783, 185, 803, 215), fill=(240, 240, 240))                    # the white dot right on the black rim
+_b3.save(_bp3); _m3 = Image.new("L", (900, 400), 0); _IDr.Draw(_m3).rectangle((100, 150, 803, 250), fill=255); _m3.save(_bm3)
+_sq = []
+def _spotask(q, pics, temp):
+    _sq.append("spots" if "Each red circle" in q else "open")
+    if "Each red circle" in q:
+        return {"printed": [1], "shape": "dot", "beside": "DURACELL\u00ae POWERCHECK\u2122"} if "END B" in q else {"printed": []}
+    return {"marks": []}
+_gs = fast.rim_marks("Duracell AA", [_bp3], _lay, _lp, _al, _ar, lambda *a: None, ask=_spotask, out_dir=_cd3,
+                     mask_of=lambda f: _bm3)
+check(len(_gs) == 1 and _gs[0]["fill"] == "#f0f0f0" and _gs[0]["x"] + _gs[0]["w"] / 2 > 0.9
+      and _sq.count("open") == 2 and "spots" in _sq,
+      f"a measured white spot on the black rim, judged print twice: drawn white on the minus lip ({_gs}, {_sq})")
+check(os.path.exists(os.path.join(_cd3, "rims_spots_B.jpg")), "the numbered spots sheet is kept for the review")
+_gs2 = fast.rim_marks("Duracell AA", [_bp3], _lay, _lp, _al, _ar, lambda *a: None, out_dir=_cd3, mask_of=lambda f: _bm3,
+                      ask=lambda q, p, t: {"printed": []} if "Each red circle" in q else {"marks": []})
+check(_gs2 == [], "the spots judged not print (glare, metal): nothing drawn")
 
 print(f"ALL {ok} PASS")
