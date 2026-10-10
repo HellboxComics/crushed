@@ -411,11 +411,16 @@ def _vask(use, q, imgs, think=False, side=1280):
     return {"same": verdict.get(os.path.basename(imgs[1]), "all"), "why": "test"}
 V.ask = _vask
 vs = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vgood, R, lambda *a: None)
-check(os.path.basename(vs.anchor) == "vA.jpg", f"the reference copy is the clearest photo of one copy ({os.path.basename(vs.anchor)})")
+_sheet_n = [os.path.basename(f) for f in vs.sheet_files]
+check(_sheet_n[0] == "vA.jpg" and "vB.jpg" in _sheet_n and "v1981.jpg" not in _sheet_n,
+      f"the reference: one listing's copy from its sides; a photo that does not fit the others is taken off ({_sheet_n})")
+check(os.path.basename(vs.anchor) == "version_sheet.jpg" and Image.open(vs.anchor).width >= 640, "the reference is a sheet of those photos")
 kept = vs.keep(vgood)
 kn = {os.path.basename(r["file"]): r["version"] for r in kept}
 check(kn == {"vA.jpg": "all", "vB.jpg": "all", "vmix.jpg": "some"}, f"another version is left out, a mixed photo marked ({kn})")
-check(all(a == "vA.jpg" for a, b in asked_v), "every photo is compared with the reference copy")
+_main = [(a, b) for a, b in asked_v if a != "others.jpg"]
+check(_main and all(a == "version_sheet.jpg" for a, b in _main) and ("version_sheet.jpg", "v1981.jpg") in _main,
+      f"every other photo is compared with the reference sheet ({_main})")
 n_before = len(asked_v)
 vs2 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vgood, R, lambda *a: None)
 vs2.keep(vgood)
@@ -469,7 +474,8 @@ vg5 = [{"file": img("w_shared.jpg", (31, 0, 0)), "listing": "9", "score": 9, "sh
 MS.read_lines = lambda png, **k: ["A1", "B22", "C333", "D4444", "E5555"] if ("w_shared" in png or "w_low" in png) else ["DURACELL"]
 os.remove(os.path.join(W, "hunt", "x_aa", "versions.json"))
 vs5 = fast.Versions("x_aa", {"product": "Duracell AA", "year": 1998}, vg5, R, lambda *a: None)
-check(os.path.basename(vs5.anchor) == "w_good.jpg", f"the reference copy: own score first, not a shared photo ({os.path.basename(vs5.anchor)})")
+_s5 = [os.path.basename(f) for f in vs5.sheet_files]
+check(_s5 and _s5[0] == "w_good.jpg" and "w_shared.jpg" not in _s5, f"the reference: own score first, never a shared photo ({_s5})")
 MS.read_lines = _rl3
 
 # the drawing cache: side 1 is kept only when it can pass what follows (3/4 of its words read back)

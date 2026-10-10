@@ -37,13 +37,14 @@ REF_Q = ("We are rebuilding this exact item as a 3D model: {product} (made aroun
          "\"ad\" for an advertisement}}")
 
 VERSION_Q = (
-    "Picture 1 is a real photo of {product} as it was sold around {year} - our reference copy. Picture 2 is another "
-    "photo. Is the item in picture 2 the SAME printed version as picture 1? Picture 2 may show a different side of "
-    "the label, with other panels and other words - so judge by the design itself: the logo's lettering style, the "
-    "colors and where they sit, frames, meters, icons and the typefaces. A redesign from another year or decade, a "
-    "different logo style, another product line, another size or another brand is NOT the same version. Answer ONLY "
-    "JSON: {{\"same\": \"all\" if every copy in picture 2 is that same version, \"some\" if only some of its "
-    "copies are, \"none\" if none are, \"why\": \"short\"}}")
+    "Picture 1 is a sheet of real photos of ONE version of {product} as it was sold around {year} - our reference - "
+    "showing its different sides (one side may carry the big logo, another the small print, a meter or a panel). "
+    "Picture 2 is another photo. Could each item in picture 2 be one of the items in picture 1, seen from some side? "
+    "Judge by the design: the logo's lettering style, the colors and where they sit, frames, meters, icons, the "
+    "typefaces. A side picture 1 does not show is fine if its style matches. A redesign from another year or decade "
+    "(a different logo style, a feature added or missing), another product line, another size or another brand is "
+    "NOT the same version. Answer ONLY JSON: {{\"same\": \"all\" if every item in picture 2 is that same version, "
+    "\"some\" if only some of them are, \"none\" if none are, \"why\": \"short\"}}")
 
 DRAW_FRONT = (
     "Picture 1 is a sheet of real photos of {product}, made around {year}; picture 2 is its clearest photo. Make ONE "
@@ -313,20 +314,23 @@ _NO = ("none", "no", "false", "different", "not", "other")
 
 class Versions:
     """One version of the item only (2026-10-09: the photos held a 1981 Duracell, a later italic-logo Duracell and a
-    modern one beside the 1998 PowerCheck; their words and a view of the italic one went onto the label). The
-    reference copy is a photo of ONE copy the quick look scored highest for this item (from a listing when there is
-    one, never one shared by two listings), the clearest of those (most printed lines read). Every other photo, and
-    every copy cut from a photo of several, is compared with it by the vision brain - the SAME printed version (a
-    different side allowed)? Answers are kept in the photo hunt's folder (a restart does not ask again); a failed or
-    unclear answer is not kept and the photo stays (logged).
-    same(file) -> "all" | "some" | "none"."""
+    modern one beside the 1998 PowerCheck; their words and a view of the italic one went onto the label).
+    The reference is a SHEET of photos of one copy from its different sides - from the listing with the most photos
+    of this item (one listing is one seller's copy), never a photo two listings share (a page's carousel), chosen to
+    show as many sides as possible (each next photo the one whose printed lines overlap least with those already
+    on the sheet). A single side was not enough: compared with only the logo side, the brain called the same
+    battery's PowerCheck side "a different product line" and left out 5 of 7 good photos (2026-10-10 02:00).
+    Every other photo, and every copy cut from a photo of several, is compared with the sheet by the vision brain.
+    Answers are kept in the photo hunt's folder (a restart does not ask again); a failed or unclear answer is not
+    kept and the photo stays (logged). same(file) -> "all" | "some" | "none"."""
 
-    def __init__(self, cid, card, good, R, log):
+    def __init__(self, cid, card, good, R, log, most=4):
         import hashlib
         self.card, self.log, self.R = card, log, R
         self.q = VERSION_Q.format(product=display(card), year=card.get("year") or "its era")
         self.qkey = hashlib.md5(self.q.encode()).hexdigest()[:6]
-        self.path = os.path.join(R.WORK, "hunt", cid, "versions.json")
+        d = os.path.join(R.WORK, "hunt", cid)
+        self.path = os.path.join(d, "versions.json")
         try:
             self.cache = json.load(open(self.path))
         except Exception:
@@ -334,38 +338,96 @@ class Versions:
         self._md5 = lambda f: hashlib.md5(open(f, "rb").read()).hexdigest()
         self.failed = set()                                  # asked this run without a clear answer: not again now
         good = [r for r in good if os.path.exists(r.get("file") or "")]   # (a photo moved away by hand: skipped)
-        self.anchor = self._pick(good)
-        try:
-            self.akey = (self._md5(self.anchor)[:12] + self.qkey) if self.anchor else ""
-        except Exception:
-            self.anchor, self.akey = None, ""
+        self.sheet_files = self._pick(good, most)
+        self.anchor, self.akey = None, ""
+        if self.sheet_files:
+            try:
+                self.anchor = os.path.join(d, "version_sheet.jpg")
+                self._tile(self.sheet_files, self.anchor)
+                self.akey = hashlib.md5("".join(self._md5(f) for f in self.sheet_files).encode()).hexdigest()[:12] \
+                    + self.qkey
+            except Exception as e:
+                log(f"[fast] the reference sheet could not be made ({str(e)[:80]}) - every photo kept")
+                self.anchor, self.akey, self.sheet_files = None, "", []
         if self.anchor:
-            log(f"[fast] the reference copy for its version: {os.path.basename(self.anchor)}")
+            log("[fast] the reference for its version, one copy from its sides: "
+                + ", ".join(os.path.basename(f) for f in self.sheet_files))
 
-    def _pick(self, good):
+    @staticmethod
+    def _tile(files, out, cell=640):
+        from PIL import Image
+        ims = []
+        for f in files:
+            im = Image.open(f).convert("RGB")
+            im.thumbnail((cell, cell))
+            ims.append(im)
+        cols = 2 if len(ims) > 1 else 1
+        rows = (len(ims) + cols - 1) // cols
+        sheet = Image.new("RGB", (cols * cell, rows * cell), (255, 255, 255))
+        for i, im in enumerate(ims):
+            sheet.paste(im, ((i % cols) * cell + (cell - im.width) // 2, (i // cols) * cell + (cell - im.height) // 2))
+        sheet.save(out, quality=92)
+        return out
+
+    def _pick(self, good, most):
         import measure as MS
         norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x).lower())
         own = lambda r: int((r.get("look") or {}).get("score") or 0)
-        singles = [r for r in good if (r.get("look") or {}).get("one_item") and not r.get("shared")]
-        pool = [r for r in singles if r.get("listing")] or singles or [r for r in good if not r.get("shared")] or good
-        if not pool:
-            return None
-        top = max(own(r) for r in pool)
-        pool = [r for r in pool if own(r) >= top - 1]        # the quick look's own score first (not a listing's lent one)
-        prev = (self.cache.get("_anchor") or {}).get("file")
-        for r in pool:                                       # the same reference copy as last time (no OCR again)
-            if os.path.basename(r["file"]) == prev and os.path.exists(r["file"]):
-                return r["file"]
-
-        def clear(r):
+        cand = [r for r in good if not r.get("shared")] or good
+        if not cand:
+            return []
+        prev = self.cache.get("_sheet") or []
+        if prev and all(any(os.path.basename(r["file"]) == p for r in cand) for p in prev):
+            return [next(r["file"] for r in cand if os.path.basename(r["file"]) == p) for p in prev]
+        by = {}
+        for r in cand:
+            if r.get("listing"):
+                by.setdefault(r["listing"], []).append(r)
+        lst = max(by.values(), key=lambda rs: (len(rs), max(own(r) for r in rs))) if by else []
+        if len(lst) >= 2:
+            pool = lst                                       # one seller's copy, all its sides
+        else:
+            top = max(own(r) for r in cand)
+            pool = [r for r in cand if own(r) >= top - 1]
+        lines = {}
+        for r in pool:
             try:
-                return sum(1 for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3)
+                lines[r["file"]] = {norm(l) for l in (MS.read_lines(r["file"]) or []) if len(norm(l)) >= 3}
             except Exception:
-                return 0
-        pick = max(pool, key=lambda r: (clear(r), own(r)))["file"]
-        self.cache["_anchor"] = {"file": os.path.basename(pick)}
+                lines[r["file"]] = set()
+        left = sorted(pool, key=lambda r: (-own(r), -len(lines[r["file"]])))
+        pick = [left.pop(0)]
+        covered = set(lines[pick[0]["file"]])
+        while left and len(pick) < most:                     # each next: the most NEW printed lines (another side)
+            nxt = max(left, key=lambda r: (len(lines[r["file"]] - covered), len(lines[r["file"]]), own(r)))
+            left.remove(nxt)
+            pick.append(nxt)
+            covered |= lines[nxt["file"]]
+        files = [r["file"] for r in pick]
+        if len(files) >= 3:                                  # each sheet photo must fit the others (leave one out):
+            keep_ = []                                       # a carousel photo of another listing saved with this
+            for f in files:                                  # one (2026-10-09: a 1981 Duracell) is taken off
+                others = [g for g in files if g != f]
+                try:
+                    import tempfile
+                    import vet as V
+                    with tempfile.TemporaryDirectory() as td:
+                        sh = self._tile(others, os.path.join(td, "others.jpg"))
+                        v = V.ask(V.model(), self.q, [sh, f], think=False) or {}
+                    a = v.get("same")
+                    a = ("all" if a else "none") if isinstance(a, bool) else str(a or "").strip().lower()
+                except Exception:
+                    a = ""
+                if a in _NO:
+                    self.log(f"[fast] {os.path.basename(f)} does not fit the other photos of its listing "
+                             f"({str(v.get('why') or '')[:120]}) - not on the reference sheet")
+                else:
+                    keep_.append(f)
+            if len(keep_) >= 2:
+                files = keep_
+        self.cache["_sheet"] = [os.path.basename(f) for f in files]
         self._save()
-        return pick
+        return files
 
     def _save(self):
         try:
@@ -397,11 +459,11 @@ class Versions:
             return                                           # (not saved: asked again on the next run)
         self.cache[self._key(f)] = dict(v, file=os.path.basename(f))
         self._save()
-        self.log(f"[fast] {os.path.basename(f)}: the same version as the reference copy? {v['same']}"
+        self.log(f"[fast] {os.path.basename(f)}: the same version as the reference? {v['same']}"
                  + (f" ({v['why']})" if v.get("why") else ""))
 
     def same(self, f):
-        if not self.anchor or f == self.anchor:
+        if not self.anchor or f in self.sheet_files:
             return "all"
         k = self._key(f)
         if k is None or f in self.failed:
@@ -418,7 +480,7 @@ class Versions:
         cut copies, each checked, may be drawn; its lines are not read for the words). Asked together."""
         import vet as V
         good = [r for r in good if os.path.exists(r.get("file") or "")]
-        todo = [r["file"] for r in good if self.anchor and r["file"] != self.anchor
+        todo = [r["file"] for r in good if self.anchor and r["file"] not in self.sheet_files
                 and self._key(r["file"]) is not None and self._key(r["file"]) not in self.cache]
         if todo:
             V.parallel(self._ask, todo, lambda i, v: self._store(todo[i], v))
@@ -431,8 +493,8 @@ class Versions:
         self.log(f"[fast] {len(out)} of {len(good)} photos show this version"
                  + (f"; {dropped} left out as another version" if dropped else ""))
         if len(out) * 2 < len(good):
-            self.log("[fast] WARNING: most photos are another version than the reference copy - check the reference "
-                     f"copy ({os.path.basename(self.anchor or '')}) is the right one for this item")
+            self.log("[fast] WARNING: most photos are another version than the reference sheet - check the sheet "
+                     "(hunt/<item>/version_sheet.jpg) shows the right item")
         return out
 
 
