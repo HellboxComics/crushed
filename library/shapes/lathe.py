@@ -219,7 +219,9 @@ for name in parts:
     if maps.get("normal") and name == "label" and label_mr:  # metal ink on the label: brushed foil sheen
         metal = np.asarray(Image.open(label_mr).convert("RGB"))[..., 2].astype(np.float32) / 255
         if metal.max() > 0.5:
-            maps["normal"] = finish.brushed(maps["normal"], metal, os.path.join(fin_dir, name + "_normal_brushed.png"))
+            maps["normal"] = finish.brushed(maps["normal"], metal, os.path.join(fin_dir, name + "_normal_brushed.png"),
+                                            strength=0.015)  # printed metal ink is near smooth: at 0.05 the copper
+            #                                                  top read as brushed rings (judge + real photos, 2026-10-10)
     if maps.get("normal"):
         tn = _img(mt, maps["normal"])
         nm = mt.node_tree.nodes.new("ShaderNodeNormalMap")

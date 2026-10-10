@@ -186,7 +186,7 @@ def _boxes(out_dir, name):
         return {}
 
 
-def color_check(png, real_png, cover_png=None, cols=20, rows=10):
+def color_check(png, real_png, cover_png=None, cols=20, rows=10, most_marks=8):
     """The drawn label against the real one, part by part (a 20 x 10 grid), by measuring colors - the comparison
     brain said "match 9" for a Duracell drawn all black with no copper top (2026-10-03). Only parts a photo really
     saw count (cover_png: how well each pixel was seen), and a photo's light and shade never count as a different
@@ -237,7 +237,7 @@ def color_check(png, real_png, cover_png=None, cols=20, rows=10):
         if want == got:
             continue
         marks += 1
-        if marks <= 8:
+        if marks <= most_marks:
             fixes.append(f"a small mark at x {(xs.min() + xs.max() + 1) / 2 / c2:.2f}, y {(ys.min() + ys.max() + 1) / 2 / r2:.2f} "
                          f"(about {(xs.max() - xs.min() + 1) / c2:.2f} wide, {(ys.max() - ys.min() + 1) / r2:.2f} tall) "
                          f"is {want} on the real label but {got} in yours")
@@ -380,6 +380,89 @@ def repeats(texts, seen_lines, close=90):
     return out
 
 
+_MARK = re.compile(r"a small mark at x ([0-9.]+), y ([0-9.]+) \(about ([0-9.]+) wide, ([0-9.]+) tall\)")
+_AREA = re.compile(r"the area x ([0-9.]+)-([0-9.]+), y ([0-9.]+)-([0-9.]+)")
+
+
+def fix_box(f):
+    """The place a measured color fix names, as (x0, y0, x1, y1) fractions - or None."""
+    m = _MARK.search(str(f))
+    if m:
+        cx, cy, w, h = (float(v) for v in m.groups())
+        return (cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2)
+    m = _AREA.search(str(f))
+    if m:
+        x0, x1, y0, y1 = (float(v) for v in m.groups())
+        return (x0, y0, x1, y1)
+    return None
+
+
+def off_text(fixes, placed, pad=0.01, most=0.5):
+    """The color fixes that are NOT on the drawn words: letters are set exactly from the read words, so a 'mark' on
+    them is the photo's letters sitting a hair off the typed ones - noise that sent the brain recoloring the logo
+    tan (2026-10-10 round 4) while the tester icon's arrow and the meter's strip went unfixed."""
+    out = []
+    boxes = [p.get("box") for p in placed or [] if p.get("box")]
+    for f in fixes or []:
+        b = fix_box(f)
+        if b is None or not boxes:
+            out.append(f)
+            continue
+        area = max((b[2] - b[0]) * (b[3] - b[1]), 1e-9)
+        cov = 0.0
+        for t in boxes:
+            ix = max(0.0, min(b[2], t[2] + pad) - max(b[0], t[0] - pad))
+            iy = max(0.0, min(b[3], t[3] + pad) - max(b[1], t[1] - pad))
+            cov = max(cov, ix * iy / area)
+        if cov < most:
+            out.append(f)
+    return out
+
+
+def diff_sheet(png, real_png, fixes, out, most=4, pad=0.05, row_h=260):
+    """The measured differences shown close up, numbered in the order of the fixes that name a place: in each row
+    the drawn label's part on the left, the real label's same part on the right. A fix given only as numbers ("a
+    small mark at x 0.67, y 0.20 ... black on the real label but gray in yours") was left undone for four rounds
+    (2026-10-10: the tester icon's arrow and the meter's strip); the brain sees the two parts side by side.
+    -> path, or None when no fix names a place."""
+    from PIL import Image, ImageDraw
+    boxes = [b for b in (fix_box(f) for f in fixes or []) if b][:most]
+    if not boxes:
+        return None
+    a = Image.open(png).convert("RGB")
+    b = Image.open(real_png).convert("RGB").resize(a.size)
+    W, H = a.size
+    rows = []
+    for k, (x0, y0, x1, y1) in enumerate(boxes, 1):
+        p = max(pad, 0.5 * max(x1 - x0, y1 - y0))
+        bx = (int(max(0, x0 - p) * W), int(max(0, y0 - p) * H), int(min(1, x1 + p) * W), int(min(1, y1 + p) * H))
+        if bx[2] - bx[0] < 4 or bx[3] - bx[1] < 4:
+            continue
+        ca, cb = a.crop(bx), b.crop(bx)
+        s_ = row_h / ca.height
+        ca = ca.resize((max(1, int(ca.width * s_)), row_h))
+        cb = cb.resize((max(1, int(cb.width * s_)), row_h))
+        row = Image.new("RGB", (60 + ca.width + 20 + cb.width, row_h), (255, 255, 255))
+        row.paste(ca, (60, 0))
+        row.paste(cb, (60 + ca.width + 20, 0))
+        ImageDraw.Draw(row).text((18, row_h // 2 - 8), str(k), fill=(0, 0, 0))
+        rows.append(row)
+    if not rows:
+        return None
+    sheet = Image.new("RGB", (max(r.width for r in rows), sum(r.height + 12 for r in rows)), (255, 255, 255))
+    y = 0
+    for r in rows:
+        sheet.paste(r, (0, y))
+        y += r.height + 12
+    sheet.save(out)
+    return out
+
+
+SEE_DIFF = (" Picture 3 shows the measured differences close up, numbered in the order of the fixes that name a place: "
+            "in each row YOUR drawing on the left and the REAL label on the right. Make each left part look like its "
+            "right part (a missing arrow, half dot, strip or panel is a shape to add; a wrong color, a shape to recolor).")
+
+
 def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, log=print, typical=(), cover_png=None,
          marks=()):
     """typical: what is normally printed on this kind of label (from its kit) - so the parts no photo shows get what
@@ -414,13 +497,17 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
         except Exception as e:
             c = {"match": 0, "fixes": [str(e)]}
         try:                                           # the measured colors overrule a kind look
-            share, cfix = color_check(png, real_png, cover_png)
+            share, cfix = color_check(png, real_png, cover_png, most_marks=40)   # all the marks, then the ones
+            #                                                    on the typed words dropped (off_text), 8 kept
         except Exception as e:
             share, cfix = 1.0, []
             log(f"[texture] the color check could not run: {e}")
         judged = c.get("match") or 0
         # exact: no two lines printed on top of each other, none past the edge (measured from where each landed)
         bx = _boxes(out_dir, f"round{r}")
+        cfix = off_text(cfix, bx.get("texts"))
+        _mk = [f for f in cfix if _MARK.search(str(f))]
+        cfix = [f for f in cfix if not _MARK.search(str(f))] + _mk[:8]
         ofix = [f"'{o['a']}' is printed on top of '{o['b']}' ({o['share']:.0%} of the smaller) - move or shrink one"
                 for o in bx.get("overlaps", [])] + [f"'{t}' runs off the label" for t in bx.get("off_label", [])] + \
             [f"'{u['text']}' " + ("is printed across a shape (a dot, a box or a band edge sits under part of it) - "
@@ -451,8 +538,14 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
             break
         fixes = "; ".join(map(str, c.get("fixes") or [])) or "(none listed - compare the two pictures yourself)"
         try:
-            new = clean_layout(_ask(model, AGAIN.format(layout=json.dumps(lay), words=said, fixes=fixes),
-                                    [png, real_png]), w_mm, h_mm, words, base)
+            ds = diff_sheet(png, real_png, c.get("fixes"), os.path.join(out_dir, f"diff{r}.png"))
+        except Exception as e:
+            ds = None
+            log(f"[texture] the close-up of the differences could not be made ({str(e)[:80]})")
+        pics, see = ([png, real_png, ds], SEE_DIFF) if ds else ([png, real_png], "")
+        try:
+            new = clean_layout(_ask(model, AGAIN.format(layout=json.dumps(lay), words=said, fixes=fixes).replace(
+                "Answer ONLY", (see.strip() + "\nAnswer ONLY") if see else "Answer ONLY", 1), pics), w_mm, h_mm, words, base)
         except Exception as e:
             log(f"[texture] could not improve the layout: {e}")
             break
@@ -461,8 +554,9 @@ def make(product, real_png, words, w_mm, h_mm, out_dir, model=None, rounds=4, lo
             todo = "\n".join(f"{i}. {f}" for i, f in enumerate(c.get("fixes") or [], 1))
             log("[texture] the layout came back unchanged with fixes still listed - asking again, each fix numbered")
             try:
-                new = clean_layout(_ask(model, STRICT.format(layout=json.dumps(lay), words=said, todo=todo),
-                                        [png, real_png], temp=0.6), w_mm, h_mm, words, base)
+                new = clean_layout(_ask(model, STRICT.format(layout=json.dumps(lay), words=said, todo=todo).replace(
+                    "Answer ONLY", (see.strip() + "\nAnswer ONLY") if see else "Answer ONLY", 1), pics, temp=0.6),
+                    w_mm, h_mm, words, base)
             except Exception as e:
                 log(f"[texture] could not improve the layout: {e}")
                 break

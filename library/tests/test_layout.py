@@ -227,4 +227,36 @@ check(any(t["text"] == "JAN 2001" and abs(t["y"] - 0.1) < 0.01 for t in _kept["t
       f"same capped score: the round without text on text is kept (faults: {_d['hard']})")
 LAY._ask = _orig_ask
 
+# the color fixes on the typed words are noise (letters a hair off the photo's); the rest are shown close up
+_fx = ["a small mark at x 0.30, y 0.40 (about 0.04 wide, 0.04 tall) is black on the real label but white in yours",
+       "a small mark at x 0.80, y 0.85 (about 0.04 wide, 0.04 tall) is brown on the real label but black in yours"]
+_pl = [{"text": "DURACELL", "box": [0.2, 0.3, 0.6, 0.5]}]
+check(LAY.off_text(_fx, _pl) == [_fx[1]], "a mark on the typed words is dropped; one off them is kept")
+_rp = os.path.join(out, "real.png")
+_dsp = LAY.diff_sheet(_rp, _rp, _fx, os.path.join(out, "diff_t.png"))
+check(_dsp and Image.open(_dsp).height > 2 * 260, "the differences are shown close up, one numbered row each")
+_seen_pics = []
+def diff_ask(model, text, images, think=True, temp=0.2):
+    if text.startswith("Picture 1 is the real printed label"):
+        return json.loads(json.dumps(first))
+    if "Answer ONLY JSON:" in text and '"match"' in text:
+        return {"match": 8, "fixes": []}
+    _seen_pics.append((len(images), "Picture 3 shows the measured differences" in text))
+    return json.loads(json.dumps(first))
+LAY._ask = diff_ask
+_cc = LAY.color_check
+LAY.color_check = lambda *a, **k: (0.95, list(_fx))
+LAY.make("Duracell AA", _rp, words, 50.0, 46.0, tempfile.mkdtemp(), rounds=2, log=lambda *a: None)
+LAY.color_check = _cc
+LAY._ask = _orig_ask
+check(_seen_pics and _seen_pics[0] == (3, True), f"the fix round gets the close-ups as picture 3 ({_seen_pics})")
+# a (R) in a line is set small and raised
+import labelart as _LA
+_f = _LA.font("black", 200); _fm = _LA.font("black", 84)
+_l1 = _LA.text_layer("DURACELL", _f, _fm); _l2 = _LA.text_layer("DURACELL®", _f, _fm)
+import numpy as _np
+_a2 = _np.asarray(_l2); _tail = _a2[:, _l1.width + 4:]
+_ys = _np.where(_tail.max(1) > 128)[0]
+check(len(_ys) and (_ys.max() - _ys.min()) < 0.6 * _l1.height, f"the (R) is small, not as tall as the letters ({_ys.max() - _ys.min() if len(_ys) else 0} vs {_l1.height})")
+
 print(f"\n{ok} checks passed")

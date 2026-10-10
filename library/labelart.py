@@ -62,6 +62,34 @@ def _box(t, W, H, d):
     return x, t["y"] * H, x + w, t["y"] * H + hpx
 
 
+def text_layer(text, f, fm):
+    """One line of type as a white-on-black mask, cropped to its ink. A ® in the line is printed small and raised,
+    its top level with the capitals' tops - as on real labels (2026-10-10: 'DURACELL®' was set with a ® as tall as
+    the letters). (™ is already a small raised sign in the typefaces used.)"""
+    import re as _re
+    parts = [p for p in _re.split(r"(®)", text) if p]
+    cap = -f.getbbox("H", anchor="ls")[1]
+    cap_m = -fm.getbbox("H", anchor="ls")[1]
+    asc = max(-f.getbbox(text.replace("®", "") or "H", anchor="ls")[1], cap) + 8
+    desc = max(f.getbbox("gjpqy" + text, anchor="ls")[3], 0) + 8
+    width = int(sum((fm if p == "®" else f).getlength(p) for p in parts) + 0.1 * cap * len(parts)) + 16
+    layer = Image.new("L", (max(width, 8), int(asc + desc)), 0)
+    dl = ImageDraw.Draw(layer)
+    x, base = 8.0, asc
+    for p in parts:
+        if p == "®":
+            x += 0.06 * cap
+            dl.text((x, base - (cap - cap_m)), p, font=fm, fill=255, anchor="ls")
+            x += fm.getlength(p) + 0.04 * cap
+        else:
+            dl.text((x, base), p, font=f, fill=255, anchor="ls")
+            x += f.getlength(p)
+    bb = layer.getbbox()
+    if not bb:
+        return Image.new("L", (8, 8), 0)
+    return layer.crop((max(bb[0] - 4, 0), max(bb[1] - 4, 0), min(bb[2] + 4, layer.width), min(bb[3] + 4, layer.height)))
+
+
 def no_overlaps(texts, W, H, d, gap=0.012):
     """No two lines of text may touch: where one would run into the line below it (overlapping side to side),
     it is made just short enough to stop a small gap above. Shrinks only; keeps every line's top and its words."""
@@ -122,8 +150,8 @@ def render(layout, out_dir, px=4096, name="label"):
             base = np.array(fill, float)                 # with light baked in looks fake from every other angle)
             grain = np.random.default_rng(3).normal(0, 1, max(x1 - x0, 1))
             grain = np.convolve(grain, np.ones(9) / 9, "same")
-            for i, x in enumerate(range(x0, x1)):
-                k = 1 + 0.025 * grain[i]
+            for i, x in enumerate(range(x0, x1)):      # (0.025 read as brushed rings round the copper top - the
+                k = 1 + 0.006 * grain[i]                   #  real printed copper is smooth: 2026-10-10 photos)
                 d.line([(x, y0), (x, y1)], fill=tuple(int(min(255, v * k)) for v in base))
         elif t == "ellipse":
             d.ellipse(b, fill=fill, outline=outline, width=width)
@@ -142,10 +170,7 @@ def render(layout, out_dir, px=4096, name="label"):
         text = tx["text"]
         hpx = tx["h"] * H
         f = font(tx.get("weight", "bold"), hpx * 1.38)
-        x0, y0, x1, y1 = d.textbbox((0, 0), text, font=f)
-        tw, th = x1 - x0, y1 - y0
-        layer = Image.new("L", (int(tw) + 8, int(th) + 8), 0)
-        ImageDraw.Draw(layer).text((4 - x0, 4 - y0), text, font=f, fill=255)
+        layer = text_layer(text, f, font(tx.get("weight", "bold"), hpx * 1.38 * 0.42))
         tgt_h = int(hpx)
         tgt_w = int(tx["w"] * W) if tx.get("w") else int(layer.width * tgt_h / max(layer.height, 1))
         layer = layer.resize((max(tgt_w, 1), max(tgt_h, 1)), Image.LANCZOS)

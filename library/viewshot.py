@@ -37,7 +37,7 @@ def _page(orbits):
             f'<script type=module src="mv.js"></script>{cells}</body>')
 
 
-def shoot(glb, out_dir, port=8791):
+def shoot(glb, out_dir, port=0):
     from playwright.sync_api import sync_playwright
     os.makedirs(out_dir, exist_ok=True)
     root = _viewer()
@@ -48,7 +48,10 @@ def shoot(glb, out_dir, port=8791):
         def log_message(self, *a):
             pass
     H = functools.partial(Quiet, directory=root)
+    # a free port the system picks (port 0), never a fixed one: a viewer left running by a stopped build held 8791
+    # and the judge got Blender's small studio pictures instead (2026-10-10 05:40: "text smeared", "body gray")
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", port), H)
+    port = srv.server_address[1]
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     outs = []
     try:
